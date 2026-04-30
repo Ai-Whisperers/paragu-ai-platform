@@ -1,8 +1,8 @@
 {
   "name": "@ai-whisperers/engine",
   "version": "0.1.0",
-  "private": true,
-  "description": "Composition engine for ParaguAI websites — content resolution and placeholder filling",
+  "private": false,
+  "description": "Composition engine for ParaguAI websites \u2014 content resolution and placeholder filling",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -20,5 +20,15 @@
   "devDependencies": {
     "tsup": "^8.4.0",
     "typescript": "^5.8.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ai-Whisperers/paragu-ai-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ai-Whisperers/paragu-ai-platform/issues"
   }
 }

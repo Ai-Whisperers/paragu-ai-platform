@@ -6,10 +6,20 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "import": "./dist/index.mjs", "require": "./dist/index.js", "types": "./dist/index.d.ts" },
-    "./*": { "import": "./dist/*.mjs", "require": "./dist/*.js", "types": "./dist/*.d.ts" }
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": {
+      "import": "./dist/*.mjs",
+      "require": "./dist/*.js",
+      "types": "./dist/*.d.ts"
+    }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -21,5 +31,15 @@
     "lucide-react": "^0.501.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ai-Whisperers/paragu-ai-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ai-Whisperers/paragu-ai-platform/issues"
   }
 }
