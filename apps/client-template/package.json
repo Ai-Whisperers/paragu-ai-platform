@@ -1,10 +1,17 @@
 {
-  "name": "create-ai-whisperers-client",
+  "name": "@ai-whisperers/create-client",
   "version": "0.1.0",
   "bin": "./index.mjs",
   "description": "Scaffold a new ParaguAI client website",
   "dependencies": {
     "prompts": "^2.4.2",
     "kolorist": "^1.8.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ai-Whisperers/paragu-ai-platform.git"
   }
 }
