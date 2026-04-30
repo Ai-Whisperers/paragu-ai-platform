@@ -1,18 +1,12 @@
 {
   "name": "paragu-ai-platform",
   "private": true,
-  "description": "Multi-tenant website platform for Paraguayan businesses",
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "lint": "turbo lint",
-    "clean": "turbo clean",
-    "create-client": "node scripts/create-client.mjs"
+    "build": "cd packages/ui && npx tsup && cd ../sections && npx tsup && cd ../engine && npx tsup",
+    "publish": "npm run build && cd packages/ui && npm publish --access public && cd ../sections && npm publish --access public && cd ../engine && npm publish --access public"
   },
-  "workspaces": ["packages/*", "apps/*"],
   "devDependencies": {
-    "turbo": "^2.5.0",
-    "typescript": "^5.8.0"
-  },
-  "packageManager": "pnpm@10.0.0"
+    "typescript": "^5.8.0",
+    "tsup": "^8.4.0"
+  }
 }

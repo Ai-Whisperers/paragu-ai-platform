@@ -1,0 +1,5 @@
+export { Header } from "./header"
+export { Footer } from "./footer"
+export { WhatsAppFloat } from "./whatsapp-float"
+export { Hero } from "./hero"
+export { ServicesSection } from "./services"
