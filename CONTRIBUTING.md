@@ -19,14 +19,27 @@ cd packages/ui && npx tsup && cd ../sections && npx tsup && cd ../engine && npx 
 | `packages/sections` | `npx tsup` | GitHub Packages `@ai-whisperers/sections` |
 | `packages/engine` | `npx tsup` | GitHub Packages `@ai-whisperers/engine` |
 
+## Versioning & Changelog
+
+This project uses [Changesets](https://github.com/changesets/changesets) for semantic versioning.
+
+```bash
+# Create a new changeset (describes what changed)
+npx changeset add
+# Bump versions and update CHANGELOG.md files
+npx changeset version
+# Publish all updated packages
+npm run publish-packages
+```
+
 ## Publishing
 
 ```bash
 npm config set @ai-whisperers:registry https://npm.pkg.github.com
 npm config set //npm.pkg.github.com/:_authToken $GH_TOKEN
 
-# For each package:
-npm publish
+# Build and publish all packages
+npm run publish-packages
 ```
 
 ## Coding Standards
