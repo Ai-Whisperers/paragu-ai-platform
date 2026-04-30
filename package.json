@@ -3,10 +3,14 @@
   "private": true,
   "scripts": {
     "build": "cd packages/ui && npx tsup && cd ../sections && npx tsup && cd ../engine && npx tsup",
-    "publish": "npm run build && cd packages/ui && npm publish --access public && cd ../sections && npm publish --access public && cd ../engine && npm publish --access public"
+    "publish": "npm run build && cd packages/ui && npm publish --access public && cd ../sections && npm publish --access public && cd ../engine && npm publish --access public",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "publish-packages": "npm run build && changeset publish"
   },
   "devDependencies": {
-    "typescript": "^5.8.0",
-    "tsup": "^8.4.0"
+    "@changesets/cli": "^2.31.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.0"
   }
 }
