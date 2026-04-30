@@ -1,7 +1,19 @@
-# @ai-whisperers/ui
+# Changelog
 
-## 0.3.0
+## @ai-whisperers/ui v0.2.0 (2026-04-30)
 
-### Minor Changes
+- Initial publish: Button, Card, Dialog, Input, Label, Popover
+- Extracted from dayah-litworks standalone app
+- Source: shadcn/ui with CVA styling
 
-- 43624a8: Set up changesets for automated semantic versioning and changelog generation
+## @ai-whisperers/sections v0.2.0 (2026-04-30)
+
+- Initial publish: Header, Footer, WhatsAppFloat, Hero, ServicesSection
+- Extracted from 3 client apps (dayah, nexa, elviajero)
+- Props-based API for all brand customization
+
+## @ai-whisperers/engine v0.1.0 (2026-04-30)
+
+- Initial publish: Content resolution and $img ref resolver
+- Locale-aware object flattening
+- Extracted from nexa-paraguay standalone app
