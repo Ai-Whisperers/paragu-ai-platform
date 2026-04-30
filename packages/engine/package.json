@@ -1,6 +1,6 @@
 {
   "name": "@ai-whisperers/engine",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "description": "Composition engine for ParaguAI websites — content resolution and placeholder filling",
   "main": "./dist/index.js",
