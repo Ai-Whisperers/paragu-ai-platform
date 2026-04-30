@@ -1,0 +1,24 @@
+{
+  "name": "@ai-whisperers/engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Composition engine for ParaguAI websites — content resolution and placeholder filling",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.0"
+  }
+}

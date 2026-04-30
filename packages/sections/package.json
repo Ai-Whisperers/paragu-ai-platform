@@ -1,0 +1,50 @@
+{
+  "name": "@ai-whisperers/sections",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reusable section components for ParaguAI websites",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./hero": "./dist/hero.js",
+    "./services": "./dist/services.js",
+    "./portfolio": "./dist/portfolio.js",
+    "./testimonials": "./dist/testimonials.js",
+    "./faq": "./dist/faq.js",
+    "./cta-banner": "./dist/cta-banner.js",
+    "./process": "./dist/process.js",
+    "./stats": "./dist/stats.js",
+    "./contact": "./dist/contact.js",
+    "./footer": "./dist/footer.js",
+    "./header": "./dist/header.js",
+    "./whatsapp-float": "./dist/whatsapp-float.js",
+    "./product-catalog": "./dist/product-catalog.js",
+    "./newsletter": "./dist/newsletter.js",
+    "./blog-index": "./dist/blog-index.js",
+    "./blog-post": "./dist/blog-post.js",
+    "./before-after": "./dist/before-after.js",
+    "./intake-form": "./dist/intake-form.js",
+    "./pricing-table": "./dist/pricing-table.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@ai-whisperers/ui": "workspace:*",
+    "lucide-react": "^0.510.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.0.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.0"
+  }
+}
