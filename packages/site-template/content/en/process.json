@@ -1,0 +1,30 @@
+[
+  {
+    "_annotation": {
+      "name": "How It Works / Process Steps",
+      "what": "4-step process showing how a customer engages — contact, evaluation, proposal, execution. Shows how your service delivery works.",
+      "why": "Complexity kills conversions. If a visitor can't immediately understand 'how this works,' they'll leave. Clear steps remove friction and make starting feel effortless.",
+      "ai_popolates": "Step titles and descriptions: Generated to match your service type. Copy is customized per industry.",
+      "your_input": "Confirm your service delivery model (consultation → proposal → execution or self-service). We adjust the process steps accordingly.",
+      "plan": "All plans"
+    },
+    "id": "1",
+    "title": "Contact us",
+    "desc": "Write to us via WhatsApp or fill out the form. We respond in less than 24 hours."
+  },
+  {
+    "id": "2",
+    "title": "We evaluate your situation",
+    "desc": "First free session to understand your business, your challenges and your goals."
+  },
+  {
+    "id": "3",
+    "title": "We propose a plan",
+    "desc": "We build a personalized solution according to your needs and budget."
+  },
+  {
+    "id": "4",
+    "title": "We start working",
+    "desc": "We execute the plan together, with constant support and adjustments as we progress."
+  }
+]

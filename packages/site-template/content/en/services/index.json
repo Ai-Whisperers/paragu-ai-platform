@@ -1,0 +1,28 @@
+{
+  "description": "Services page index with category listing and metadata. AI structures these categories according to the entrepreneur's industry and needs.",
+  "title": "Solutions to grow your business",
+  "subtitle": "Consulting, courses and digital products for Paraguayan entrepreneurs",
+  "categories": [
+    {
+      "id": "asesoria",
+      "title": "Consulting",
+      "description": "Personalized sessions to evaluate and grow your business. One-on-one consulting with experienced professionals.",
+      "icon": "briefcase",
+      "color": "blue"
+    },
+    {
+      "id": "cursos",
+      "title": "Courses & Workshops",
+      "description": "Practical training for entrepreneurs who want concrete results. Marketing, sales, finance and more.",
+      "icon": "book",
+      "color": "green"
+    },
+    {
+      "id": "productos",
+      "title": "Digital Products",
+      "description": "Tools, templates and resources to manage your business. Ready-to-use downloads.",
+      "icon": "download",
+      "color": "purple"
+    }
+  ]
+}

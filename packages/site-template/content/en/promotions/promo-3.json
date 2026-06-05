@@ -1,0 +1,22 @@
+{
+  "_annotation": {
+    "name": "Promotion Card (promo-3.json)",
+    "what": "Individual promotion — 3 mentorship sessions for the price of 2 (SAVE 33%), with title, subtitle, original price, discounted price, validity date, image, CTA, and WhatsApp message.",
+    "why": "Bundle deals increase average order value. A prospect who commits to 3 sessions is more likely to complete the full mentorship than someone who buys one at a time.",
+    "ai_popolates": "Title and subtitle: Generated from your offer. Original/discounted price: AI calculates 33% savings. Validity: Set from your stated promotion period.",
+    "your_input": "Tell us your mentorship offering and the validity dates. We generate the full promo card.",
+    "plan": "All plans"
+  },
+  "description": "Individual promotion with title, description, image, and pricing. Offers a seasonal special to drive engagement. AI generates this data based on season and business demand.",
+  "id": "3",
+  "title": "Launch Mentorship",
+  "description": "3 mentorship sessions for the price of 2",
+  "validUntil": "2026-09-30",
+  "originalPrice": 1600000,
+  "price": 1066666,
+  "image": "/images/promotions/mentorship.png",
+  "badge": "SAVE 33%",
+  "subtitle": "Three coaching sessions for the price of two",
+  "expires": "2026-09-30",
+  "waMessage": "Hello! I want info about the launch mentorship"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "_annotation": {
+      "name": "Statistics",
+      "what": "Section content",
+      "why": "Site section",
+      "ai_popolates": "AI generated",
+      "your_input": "Business data",
+      "plan": "All plans"
+    }
+  },
+  {
+    "label": "SATISFIED_CLIENTS",
+    "value": "X+",
+    "icon": "heart"
+  },
+  {
+    "label": "SERVICES_COMPLETED",
+    "value": "X+",
+    "icon": "star"
+  },
+  {
+    "label": "YEARS_EXPERIENCE",
+    "value": "X+",
+    "icon": "award"
+  },
+  {
+    "label": "HOURS_ATTENDED",
+    "value": "X",
+    "icon": "clock"
+  }
+]

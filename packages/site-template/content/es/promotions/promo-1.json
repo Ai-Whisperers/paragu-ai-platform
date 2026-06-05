@@ -1,0 +1,21 @@
+{
+  "_annotation": {
+    "name": "Promotion Card (promo-1.json)",
+    "what": "Individual promotion with title, subtitle, original price, discounted price, validity date, image, CTA, and feature list.",
+    "why": "A single promotional offer with clear savings (Gs. 70,000 off), defined validity, and visible features removes hesitation and drives immediate booking.",
+    "ai_popolates": "Title and subtitle: Generated from your offer description. Original/discounted price: AI calculates savings percentage. Validity: Set from your stated promotion period. Feature list: AI extracts key inclusions from your service catalog.",
+    "your_input": "Tell us your offer (service package, discount %, validity dates). We generate the full promo card.",
+    "plan": "All plans"
+  },
+  "description": "Promoción individual con título, descripción, imagen y precio. Ofrece un paquete de servicios con descuento para atraer nuevos clientes. La IA genera estos datos a partir de los servicios más populares del negocio.",
+  "id": "1",
+  "title": "Coloración Completa + Tratamiento",
+  "subtitle": "Tinte + corte + hidratación profunda con keratina",
+  "originalPrice": 350000,
+  "price": 280000,
+  "badge": "Ahorrá G. 70.000",
+  "validUntil": "2026-06-30",
+  "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop",
+  "cta": "Reservar Ahora",
+  "features": ["Tinte profesional Wella", "Corte Incluido", "Tratamiento keratina", "Secado y finish"]
+}

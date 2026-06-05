@@ -1,0 +1,31 @@
+{
+  "description": "Example hero — ParaguAI filled content showing platform benefits.",
+  "title": "Your business deserves to be online",
+  "subtitle": "Professional web pages for any type of business in Paraguay",
+  "slides": [
+    {
+      "id": "1",
+      "title": "Your business works 24/7",
+      "subtitle": "While you rest, your page keeps capturing clients. Bookings, inquiries and online orders, without you lifting a finger.",
+      "image": "/images/hero/slide-1.png",
+      "cta": "See Demo",
+      "badge": "For any business"
+    },
+    {
+      "id": "2",
+      "title": "For salons, restaurants, bars, workshops and more",
+      "subtitle": "Regardless of your niche — we have the perfect template for your business. Show your work, accept bookings, and sell more.",
+      "image": "/images/hero/slide-2.png",
+      "cta": "View Templates",
+      "badge": "20+ niches"
+    },
+    {
+      "id": "3",
+      "title": "From chaos to control",
+      "subtitle": "WhatsApp saturated, lost clients, poorly tracked appointments. With your website, everything organized and automated.",
+      "image": "/images/hero/slide-3.png",
+      "cta": "Start Today",
+      "badge": "Easy and fast"
+    }
+  ]
+}

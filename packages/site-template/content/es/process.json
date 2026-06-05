@@ -1,0 +1,25 @@
+[
+  {
+    "_annotation": {
+      "name": "How It Works / Process Steps",
+      "what": "3-step process showing how a customer gets started — choose business type, enter data, go live. Displayed on the homepage.",
+      "why": "Complexity kills conversions. If a visitor can't immediately understand 'how this works,' they'll leave. Three clear steps remove friction and make starting feel effortless.",
+      "ai_popolates": "Step titles and descriptions: Generated to match your business type. Steps are templated but copy is customized per industry (restaurant → menu setup, consulting → service catalog).",
+      "your_input": "Confirm your business type and which of your services are priority. We adjust the process steps accordingly.",
+      "plan": "All plans"
+    },
+    "id": "1",
+    "title": "Elegí tu tipo de negocio",
+    "desc": "Restaurante, taller, bar, consultoría, tienda — tenemos plantillas para todos los rubros. Solo decinos el tuyo."
+  },
+  {
+    "id": "2",
+    "title": "Completá tus datos",
+    "desc": "Nombre, servicios, precios, horarios, fotos, info de contacto. Todo lo que vos ya sabés, lo cargás fácil."
+  },
+  {
+    "id": "3",
+    "title": "¡Listo! Tu página está online",
+    "desc": "En minutos tenés tu página profesional, optimizada para móviles y lista para recibir clientes. Sin complicaciones."
+  }
+]

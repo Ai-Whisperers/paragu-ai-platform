@@ -1,0 +1,36 @@
+[
+  {
+    "_annotation": {
+      "name": "CTA",
+      "what": "Contenido de seccion",
+      "why": "Seccion del sitio",
+      "ai_popolates": "Generado por IA",
+      "your_input": "Datos del negocio",
+      "plan": "Todos los planes"
+    }
+  },
+  {
+    "_annotation": {
+      "name": "CTA Banners",
+      "what": "Full-width call-to-action banners — 2 variants (primary brand, secondary demo) shown on the homepage and service pages.",
+      "why": "CTAs are the final push before a visitor leaves. The 'start free' variant captures leads from people who were convinced by your content. The 'see demo' variant captures skeptics who need proof before committing.",
+      "ai_popolates": "Title and subtitle: Generated from your value prop and primary CTA goal. Button text auto-matched to CTA type (primary=action verb, secondary=social proof).",
+      "your_input": "Tell us your primary conversion goal (more bookings / more enquiries / demo requests).",
+      "plan": "All plans"
+    },
+    "id": "1",
+    "title": "Tu negocio merece estar online",
+    "subtitle": "Creá tu página web profesional en 15 minutos. Sin conocimientos técnicos.",
+    "buttonText": "Empezar Gratis",
+    "buttonLink": "/es",
+    "background": "primary"
+  },
+  {
+    "id": "2",
+    "title": "Vea lo que es posible",
+    "subtitle": "Mira cómo quedó el sitio de un restaurante Asunción — nuestro demo en vivo.",
+    "buttonText": "Ver Demo",
+    "buttonLink": "https://magnolia-peluqueria.paragu-ai.com/es/",
+    "background": "secondary"
+  }
+]

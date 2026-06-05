@@ -1,0 +1,22 @@
+{
+  "_annotation": {
+    "name": "Promotion Card (promo-1.json)",
+    "what": "Individual promotion with title, subtitle, original price, discounted price, validity date, image, CTA, and feature list.",
+    "why": "A single promotional offer with clear savings (30% off), defined validity, and visible features removes hesitation and drives immediate booking.",
+    "ai_popolates": "Title and subtitle: Generated from your offer description. Original/discounted price: AI calculates savings percentage. Validity: Set from your stated promotion period.",
+    "your_input": "Tell us your offer (service package, discount %, validity dates). We generate the full promo card.",
+    "plan": "All plans"
+  },
+  "description": "Individual promotion with title, description, image, and pricing. Offers a discounted service bundle to attract new clients. AI generates this data from the business's most popular services.",
+  "id": "1",
+  "title": "Black Friday for Entrepreneurs",
+  "description": "30% off on Initial Consultation",
+  "validUntil": "2026-12-31",
+  "originalPrice": 150000,
+  "price": 105000,
+  "image": "/images/promotions/black-friday.png",
+  "badge": "30% OFF",
+  "subtitle": "30% off your first consultation",
+  "expires": "2026-12-31",
+  "waMessage": "Hello! I want to know more about the Black Friday promotion"
+}
