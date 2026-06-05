@@ -1,0 +1,14 @@
+{
+  "name": "paragu-ai-platform",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "dev": "pnpm --filter @ai-whisperers/site-template dev"
+  }
+}
