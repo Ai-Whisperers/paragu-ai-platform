@@ -1,0 +1,698 @@
+{
+  "site": {
+    "title": "Oz Montanía",
+    "description": "Artista visual, muralista e ilustrador paraguayo",
+    "url": "https://ozmontania.paragu-ai.com",
+    "whatsapp": "595981234567",
+    "instagram": "@ozmontania",
+    "instagram_url": "https://instagram.com/ozmontania",
+    "facebook": "pyrotaurus",
+    "facebook_url": "https://facebook.com/pyrotaurus",
+    "email": "oz@ozmontania.com"
+  },
+  "nav": {
+    "obra": "Obra",
+    "murales": "Murales",
+    "biografia": "Biografía",
+    "prensa": "Prensa",
+    "tienda": "Tienda",
+    "blog": "Blog",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "headline": "Oz Montanía",
+    "subheadline": "Artista visual, muralista e ilustrador paraguayo",
+    "description": "Más de 20 años transformando muros en historias. De Asunción para el mundo.",
+    "cta_primary": "Ver obra",
+    "cta_secondary": "Contactar",
+    "cover": "/images/oz-portrait.jpg"
+  },
+  "stats": [
+    {
+      "number": "20+",
+      "label": "Años de trayectoria"
+    },
+    {
+      "number": "10",
+      "label": "Países pintados"
+    },
+    {
+      "number": "100+",
+      "label": "Murales realizados"
+    }
+  ],
+  "obra": {
+    "title": "Obras",
+    "description": "Murales, ilustraciones, lienzos y proyectos comerciales",
+    "categories": [
+      "Todas",
+      "Murales",
+      "Ilustraciones",
+      "Lienzos",
+      "Comercial"
+    ],
+    "items": [
+      {
+        "id": "raiz-y-barrio",
+        "title": "Raíz y Barrio",
+        "category": "Murales",
+        "year": 2025,
+        "location": "Shopping Mariscal, Asunción",
+        "technique": "Aerosol y acrílico sobre muro",
+        "dimensions": "30m × 8m",
+        "description": "Mural de gran formato que homenajea a la biodiversidad urbana paraguaya. Inspirado en la frase de Moisés Bertoni: 'Ningún pueblo de la tierra ha entregado a la ciencia médica tantas plantas medicinales como el pueblo guaraní'. Retrata a 17 vecinos reales del barrio Mariscal en escenas cotidianas, integrando especies autóctonas como flor de la tarde, santa lucía, palán palán y plumillas.",
+        "images": [
+          "/images/obra/raiz-y-barrio-1.jpg",
+          "/images/obra/raiz-y-barrio-2.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 120
+      },
+      {
+        "id": "mar-muerto",
+        "title": "Mar Muerto",
+        "category": "Murales",
+        "year": 2023,
+        "location": "Kalia, Cisjordania",
+        "technique": "Aerosol sobre muro",
+        "description": "Mapa dinámico del Mar Muerto en retroceso. En azul añil donde todavía queda agua y en diferentes tonos de rojo los espacios donde antes hubo mar y ahora solo quedan desierto. Realizado para Artists 4 Israel con motivo del Día de la Tierra, junto a una decena de artistas urbanos internacionales.",
+        "images": [
+          "/images/obra/mar-muerto-1.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 120
+      },
+      {
+        "id": "organo-fantasma",
+        "title": "Órgano Fantasma",
+        "category": "Lienzos",
+        "year": 2024,
+        "location": "Galería Arte Actual, Asunción",
+        "technique": "Mixta sobre lienzo",
+        "description": "Exposición individual realizada en la galería Arte Actual. Piezas plásticas que exploran sensaciones abstractas a través de procesos de ilustración. Una investigación visual sobre aquello que ya no está pero sigue vibrando.",
+        "images": [
+          "/images/obra/organo-fantasma-1.jpg",
+          "/images/obra/organo-fantasma-2.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 150
+      },
+      {
+        "id": "mural-oliva",
+        "title": "Mural Oliva y Ayolas",
+        "category": "Murales",
+        "year": 2020,
+        "location": "Oliva c/ Ayolas y O'Leary, Microcentro, Asunción",
+        "technique": "Aerosol sobre muro",
+        "description": "Mural icónico en el microcentro de Asunción, diseñado para refrescar visualmente la ciudad. Una intervención urbana que transforma un edificio del centro en un punto de referencia artístico.",
+        "images": [
+          "/images/obra/mural-oliva-1.jpg"
+        ],
+        "featured": false,
+        "has_print": false
+      },
+      {
+        "id": "nescafe",
+        "title": "Latas Nescafé Edición Limitada",
+        "category": "Comercial",
+        "year": 2024,
+        "location": "Distribución nacional, Paraguay",
+        "technique": "Ilustración digital",
+        "description": "Tres diseños de latas de edición limitada para Nescafé, inspirándose en la vida cotidiana paraguaya. Una colaboración que llevó el arte urbano a las góndolas de todo el país.",
+        "images": [
+          "/images/obra/nescafe-1.jpg"
+        ],
+        "featured": false,
+        "has_print": false
+      },
+      {
+        "id": "sinverguenzas",
+        "title": "Sinvergüenzas",
+        "category": "Murales",
+        "year": 2009,
+        "location": "Centro Cultural de España, Buenos Aires",
+        "technique": "Aerosol sobre muro",
+        "description": "Primera intervención en Buenos Aires, junto al artista Ice. Exposición colectiva que marcó el inicio de su proyección internacional.",
+        "images": [
+          "/images/obra/sinverguenzas-1.jpg"
+        ],
+        "featured": false,
+        "has_print": false
+      },
+      {
+        "id": "cielo-retorcido",
+        "title": "Cielo Retorcido",
+        "category": "Murales",
+        "year": 2022,
+        "location": "Fernando de la Mora, Paraguay",
+        "technique": "Aerosol y acrílico sobre muro",
+        "dimensions": "15m × 6m",
+        "description": "Mural que juega con la perspectiva y el paisaje urbano paraguayo. Un cielo distorsionado que se pliega sobre sí mismo, cuestionando la relación entre lo natural y lo construido en el Área Metropolitana de Asunción.",
+        "images": [
+          "/images/obra/cielo-retorcido-1.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 90
+      },
+      {
+        "id": "semillas-al-aire",
+        "title": "Semillas al Aire",
+        "category": "Ilustraciones",
+        "year": 2021,
+        "location": "Asunción, Paraguay",
+        "technique": "Ilustración digital y tinta",
+        "dimensions": "42cm × 60cm",
+        "description": "Serie de ilustraciones sobre la dispersión de semillas nativas paraguayas. Un trabajo que combina botánica y arte urbano, publicado como serie editorial y expuesto en la galería Espacio Concentra.",
+        "images": [
+          "/images/obra/semillas-al-aire-1.jpg",
+          "/images/obra/semillas-al-aire-2.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 80
+      },
+      {
+        "id": "visor",
+        "title": "Visor",
+        "category": "Ilustraciones",
+        "year": 2018,
+        "location": "Publicado en Paraguay",
+        "technique": "Tinta y acuarela digital",
+        "dimensions": "N/A",
+        "description": "Portada e ilustraciones interiores para la novela gráfica 'Visor'. Un trabajo que fusiona el estilo urbano de Oz con la narrativa secuencial, explorando la identidad paraguaya a través del cómic.",
+        "images": [
+          "/images/obra/visor-1.jpg",
+          "/images/obra/visor-2.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 60
+      },
+      {
+        "id": "guia-del-centro",
+        "title": "Guía del Centro",
+        "category": "Murales",
+        "year": 2019,
+        "location": "Microcentro, Asunción",
+        "technique": "Aerosol sobre muro",
+        "dimensions": "20m × 5m",
+        "description": "Mural colaborativo en el microcentro de Asunción que funciona como una guía visual del barrio. Señala puntos de interés cultural, histórica y comercial a través de un lenguaje gráfico que combina mapas, iconografía popular y lettering.",
+        "images": [
+          "/images/obra/guia-centro-1.jpg"
+        ],
+        "featured": true,
+        "has_print": false
+      },
+      {
+        "id": "estudio-8-mural",
+        "title": "Mural Estudio 8",
+        "category": "Comercial",
+        "year": "2010-2024",
+        "location": "Asunción, Paraguay",
+        "technique": "Aerosol y pintura acrílica",
+        "dimensions": "Varios formatos",
+        "description": "Serie de murales corporativos realizados desde Estudio 8 para marcas y espacios comerciales en Paraguay. Proyectos llave en mano que incluyen branding, diseño de concepto, ejecución y documentación profesional.",
+        "images": [
+          "/images/obra/estudio-8-1.jpg",
+          "/images/obra/estudio-8-2.jpg"
+        ],
+        "featured": true,
+        "has_print": false
+      },
+      {
+        "id": "bienal-sur",
+        "title": "Bienal del Sur",
+        "category": "Murales",
+        "year": 2017,
+        "location": "Asunción, Paraguay",
+        "technique": "Aerosol y acrílico sobre muro",
+        "dimensions": "12m × 4m",
+        "description": "Participación en la Bienal del Sur con un mural que aborda la identidad sudamericana desde la perspectiva del arte urbano. Una reflexión visual sobre lo que significa ser del sur, lejos de los centros hegemónicos del arte.",
+        "images": [
+          "/images/obra/bienal-sur-1.jpg"
+        ],
+        "featured": false,
+        "has_print": false
+      },
+      {
+        "id": "raices-electricas",
+        "title": "Raíces Eléctricas",
+        "category": "Lienzos",
+        "year": 2020,
+        "location": "Colección privada, Asunción",
+        "technique": "Mixta sobre lienzo",
+        "dimensions": "120cm × 80cm",
+        "description": "Pieza de la serie 'Raíces Eléctricas' que explora la tensión entre la tradición y la modernidad en Paraguay. Acrílico, aerosol y collage digital sobre lienzo. Forma parte de una colección privada.",
+        "images": [
+          "/images/obra/raices-electricas-1.jpg"
+        ],
+        "featured": false,
+        "has_print": true,
+        "print_price": 200
+      },
+      {
+        "id": "powerline-fachada",
+        "title": "Fachada Powerline",
+        "category": "Murales",
+        "year": 2014,
+        "location": "Asunción, Paraguay",
+        "technique": "Aerosol sobre muro",
+        "dimensions": "8m × 4m",
+        "description": "Mural de la fachada de Powerline Shop, la primera tienda de graffiti y arte urbano del Paraguay. Un ícono visual que marcó un hito para la escena local y sigue siendo un punto de encuentro para la comunidad urbana de Asunción.",
+        "images": [
+          "/images/obra/powerline-1.jpg"
+        ],
+        "featured": true,
+        "has_print": false
+      }
+    ]
+  },
+  "murales": {
+    "title": "Mapa de Murales",
+    "description": "Explorá los murales de Oz en Asunción, Paraguay y el mundo",
+    "locations": [
+      {
+        "id": "raiz-barrio",
+        "lat": -25.2867,
+        "lng": -57.575,
+        "title": "Raíz y Barrio",
+        "address": "Shopping Mariscal, Asunción",
+        "year": 2025,
+        "image": "/images/obra/raiz-y-barrio-1.jpg"
+      },
+      {
+        "id": "oliva-ayolas",
+        "lat": -25.282,
+        "lng": -57.635,
+        "title": "Mural Oliva y Ayolas",
+        "address": "Oliva c/ Ayolas y O'Leary, Asunción",
+        "year": 2020,
+        "image": "/images/obra/mural-oliva-1.jpg"
+      },
+      {
+        "id": "mar-muerto",
+        "lat": 31.75,
+        "lng": 35.5,
+        "title": "Mar Muerto",
+        "address": "Kalia, Cisjordania",
+        "year": 2023,
+        "image": "/images/obra/mar-muerto-1.jpg"
+      },
+      {
+        "id": "sinverguenzas",
+        "lat": -34.585,
+        "lng": -58.375,
+        "title": "Sinvergüenzas",
+        "address": "Centro Cultural de España, Buenos Aires",
+        "year": 2009,
+        "image": "/images/obra/sinverguenzas-1.jpg"
+      }
+    ]
+  },
+  "biografia": {
+    "title": "Biografía",
+    "intro": "Oscar Saúl Montanía Villar (Asunción, 1985), más conocido como Oz Montanía, es uno de los artistas urbanos, ilustradores y diseñadores gráficos más influyentes de Paraguay y un referente clave del street art en Latinoamérica. Con más de dos décadas de trayectoria, ha transformado el paisaje urbano de Asunción y llevado su arte a ciudades de todo el mundo.",
+    "timeline": [
+      {
+        "year": "1985",
+        "event": "Nace en Asunción, Paraguay",
+        "detail": "Crece en Fernando de la Mora. Sus padres tienen una pequeña distribuidora de libros, lo que despierta su amor por la lectura y las ilustraciones desde muy niño."
+      },
+      {
+        "year": "1995",
+        "event": "Descubre el graffiti",
+        "detail": "Ve los primeros graffitis punk en su barrio. A los 10 años agarra un aerosol por primera vez y pinta en la pared de su propia casa. 'Obviamente es la peor idea', recuerda."
+      },
+      {
+        "year": "1996",
+        "event": "Primeros tags y bombs",
+        "detail": "Inspirado por la cultura del skate y el punk, empieza a pintar en la calle con tags. Su primer dibujo reconocible: un Bart Simpson."
+      },
+      {
+        "year": "2002",
+        "event": "Primer mural formal",
+        "detail": "A los 17 años pinta su primer mural. Sale de su casa y empieza a autosustentarse."
+      },
+      {
+        "year": "2002-2008",
+        "event": "Estudia Diseño Gráfico",
+        "detail": "Cursa Diseño Gráfico en la Universidad Católica de Asunción. Trabaja de día como ilustrador editorial, creativo gráfico y director de arte. 'Yo quería estudiar Artes Visuales, pero necesitaba un oficio pragmático'."
+      },
+      {
+        "year": "2009",
+        "event": "Irrupción internacional",
+        "detail": "Viaja a Buenos Aires e invita al artista Ice a pintar juntos en la muestra Sinvergüenzas del Centro Cultural de España. Este encuentro marca un antes y después en su técnica."
+      },
+      {
+        "year": "2010",
+        "event": "Funda Estudio 8",
+        "detail": "Crea Estudio 8, su estudio de diseño y producción artística, desde donde coordina murales de gran formato y proyectos comerciales."
+      },
+      {
+        "year": "2014",
+        "event": "Abre Powerline Shop",
+        "detail": "Primera tienda especializada en graffiti y arte urbano de Paraguay. Un hito para la escena local que hasta entonces carecía de acceso a materiales."
+      },
+      {
+        "year": "2023",
+        "event": "Mural del Mar Muerto",
+        "detail": "Viaja a Cisjordania invitado por Artists 4 Israel para pintar un mural sobre la desaparición del Mar Muerto. Un mapa dinámico que muestra el retroceso del mar más salado del planeta."
+      },
+      {
+        "year": "2024",
+        "event": "Órgano Fantasma",
+        "detail": "Expone individualmente en la galería Arte Actual de Asunción. Una serie de piezas plásticas que exploran sensaciones abstractas. También diseña las latas edición limitada de Nescafé."
+      },
+      {
+        "year": "2025",
+        "event": "Raíz y Barrio",
+        "detail": "Inaugura su mural más ambicioso en el Shopping Mariscal: 30 metros de ancho que homenajean a la biodiversidad urbana, con 17 vecinos reales retratados. Curaduría de Laura Mandelik."
+      },
+      {
+        "year": "Presente",
+        "event": "Sigue pintando",
+        "detail": "Oz sigue activo con murales por encargo, colaboraciones internacionales y su rol como referente del arte urbano paraguayo."
+      }
+    ],
+    "quote": "En cualquiera de esas categorías uno genera imágenes. Ese puede ser el punto de partida: alguien que hace imágenes. Espero que este oficio me lleve a crear cosas más allá de eso.",
+    "quote_author": "Oz Montanía",
+    "section_influencias": {
+      "title": "Influencias",
+      "text": "Cómic (DC, Marvel, Image, manga), grabado clásico (Gustave Doré, Albrecht Dürer), punk, cultura popular de los 90, mitología guaraní, biodiversidad paraguaya y una curiosidad voraz por la música, el cine y la animación."
+    },
+    "section_filosofia": {
+      "title": "Filosofía",
+      "text": "Oz cree que el arte debe tomar posición sobre derechos humanos y temas ambientales, representar a quienes históricamente no han tenido voz, y construirse desde la honestidad del oficio más que desde las etiquetas del mercado."
+    }
+  },
+  "testimonios": {
+    "title": "Lo que dicen mis clientes",
+    "description": "Editoriales, autores y marcas que han confiado en mi trabajo",
+    "items": [
+      {
+        "text": "Trabajar con Oz fue una experiencia transformadora. Su capacidad para capturar la esencia de nuestro proyecto en un mural de 30 metros es impresionante.",
+        "author": "Laura Mandelik",
+        "role": "Curadora de arte",
+        "project": "Raíz y Barrio"
+      },
+      {
+        "text": "Oz entiende el arte urbano como pocos. Su mural del Mar Muerto no solo es visualmente impactante, sino que comunica un mensaje ambiental urgente.",
+        "author": "Artists 4 Israel",
+        "role": "Organización",
+        "project": "Mural del Mar Muerto"
+      },
+      {
+        "text": "Las latas de edición limitada que diseñó para nosotros fueron un éxito total. Su estilo conecta perfectamente con la cultura paraguaya.",
+        "author": "Nescafé Paraguay",
+        "role": "Marca",
+        "project": "Latas Edición Limitada"
+      }
+    ]
+  },
+  "prensa": {
+    "title": "Prensa",
+    "description": "Artículos, entrevistas y cobertura mediática",
+    "items": [
+      {
+        "media": "Pausa",
+        "media_logo": "",
+        "date": "Julio 2024",
+        "title": "Oz Montanía — Nota de Tapa Edición 300",
+        "excerpt": "La entrevista más completa sobre su vida y obra: infancia, influencias, proceso creativo y filosofía.",
+        "url": "https://www.pausa.com.py/actualidad/nota-de-tapa/oz-montania/7772/",
+        "type": "Entrevista",
+        "featured": true
+      },
+      {
+        "media": "ABC Color",
+        "media_logo": "",
+        "date": "Abril 2023",
+        "title": "El arte del grafiti para dar vida al drama del Mar Muerto",
+        "excerpt": "Oz Montanía, el artista paraguayo que pintó el drama de la desaparición del Mar Muerto en Cisjordania.",
+        "url": "https://www.abc.com.py/internacionales/2023/04/22/el-arte-del-grafiti-para-dar-vida-al-mar-muerto-en-riesgo-de-desaparicion/",
+        "type": "Internacional",
+        "featured": true
+      },
+      {
+        "media": "Última Hora",
+        "media_logo": "",
+        "date": "Octubre 2016",
+        "title": "La OZadía de pintar",
+        "excerpt": "Uno de los pioneros del street art en Paraguay sale del anonimato para hablar sobre pinturas, paredes y arte.",
+        "url": "https://www.ultimahora.com/la-ozadia-pintar-n1031409",
+        "type": "Entrevista",
+        "featured": true
+      },
+      {
+        "media": "Infonegocios",
+        "media_logo": "",
+        "date": "Diciembre 2025",
+        "title": "Raíz y Barrio: el mural que homenajea a la biodiversidad urbana",
+        "excerpt": "La obra de Oz Montanía y Ocho Estudio en el Shopping Mariscal, con curaduría de Laura Mandelik.",
+        "url": "https://infonegocios.com.py/infoarte/raiz-y-barrio-el-mural-que-homenajea-a-la-biodiversidad-urbana-en-el-corazon-del-mariscal",
+        "type": "Nota",
+        "featured": true
+      },
+      {
+        "media": "Graffitimundo",
+        "media_logo": "",
+        "date": "2019",
+        "title": "Interview con Oz Montanía",
+        "excerpt": "Conversación sobre la escena del street art en Paraguay, su relación con Argentina y su evolución artística.",
+        "url": "https://graffitimundo.com/es/blog-2/interviews-blog-2/interview-with-oz-montania/",
+        "type": "Entrevista",
+        "featured": false
+      },
+      {
+        "media": "EFE / ABC Color",
+        "media_logo": "",
+        "date": "Abril 2023",
+        "title": "Oz Montanía pinta el drama del Mar Muerto",
+        "excerpt": "Cobertura de la agencia EFE sobre el proyecto Artists 4 Israel con motivo del Día de la Tierra.",
+        "url": "https://www.abc.com.py/internacionales/2023/04/22/el-arte-del-grafiti-para-dar-vida-al-mar-muerto-en-riesgo-de-desaparicion/",
+        "type": "Internacional",
+        "featured": false
+      },
+      {
+        "media": "La Nación / Foco",
+        "media_logo": "",
+        "date": "Junio 2023",
+        "title": "El arte de Oz",
+        "excerpt": "Perfil del artista y su impacto en la escena cultural paraguaya.",
+        "url": "https://foco.lanacion.com.py/2023/06/05/el-arte-de-oz/",
+        "type": "Perfil",
+        "featured": false
+      },
+      {
+        "media": "Cartel Urbano",
+        "media_logo": "",
+        "date": "2022",
+        "title": "Oz Montanía: el paraguayo que quiere ver el arte urbano de Asunción a la altura del de Bogotá",
+        "excerpt": "Entrevista sobre sus aspiraciones para la escena del street art en Asunción.",
+        "url": "https://cartelurbano.com/arte/oz-montania-el-paraguayo-que-quiere-ver-el-arte-urbano-de-asuncion-la-altura-del-de-bogota",
+        "type": "Entrevista",
+        "featured": false
+      }
+    ]
+  },
+  "tienda": {
+    "title": "Tienda",
+    "description": "Prints de edición limitada y merch oficial de Oz Montanía",
+    "whatsapp_order": true,
+    "items": [
+      {
+        "id": "print-raiz-y-barrio",
+        "name": "Print Raíz y Barrio",
+        "type": "print",
+        "price": 120,
+        "currency": "USD",
+        "image": "/images/prints/raiz-y-barrio-print.jpg",
+        "description": "Reproducción de edición limitada del mural Raíz y Barrio. Impresión fine art sobre papel de algodón.",
+        "sizes": [
+          "40×60 cm",
+          "60×90 cm"
+        ],
+        "available": true,
+        "obra_id": "raiz-y-barrio"
+      },
+      {
+        "id": "print-mar-muerto",
+        "name": "Print Mar Muerto",
+        "type": "print",
+        "price": 120,
+        "currency": "USD",
+        "image": "/images/prints/mar-muerto-print.jpg",
+        "description": "Reproducción de edición limitada del mural del Mar Muerto. Impresión fine art sobre papel de algodón.",
+        "sizes": [
+          "40×60 cm",
+          "60×90 cm"
+        ],
+        "available": true,
+        "obra_id": "mar-muerto"
+      },
+      {
+        "id": "print-organo-fantasma",
+        "name": "Print Órgano Fantasma",
+        "type": "print",
+        "price": 150,
+        "currency": "USD",
+        "image": "/images/prints/organo-fantasma-print.jpg",
+        "description": "Reproducción de edición limitada de la serie Órgano Fantasma. Impresión fine art sobre papel de algodón.",
+        "sizes": [
+          "40×60 cm"
+        ],
+        "available": true,
+        "obra_id": "organo-fantasma"
+      },
+      {
+        "id": "sticker-oz",
+        "name": "Sticker Pack",
+        "type": "merch",
+        "price": 15,
+        "currency": "USD",
+        "image": "/images/merch/stickers.jpg",
+        "description": "Pack de 10 stickers con diseños originales de Oz Montanía.",
+        "sizes": [
+          "Pack × 10"
+        ],
+        "available": true
+      },
+      {
+        "id": "poster-oz",
+        "name": "Póster Colección",
+        "type": "merch",
+        "price": 35,
+        "currency": "USD",
+        "image": "/images/merch/poster.jpg",
+        "description": "Póster A2 en papel ilustración de 250g. Diseño exclusivo.",
+        "sizes": [
+          "A2 (42×59.4 cm)"
+        ],
+        "available": true
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Detrás de escena, procesos, viajes y reflexiones",
+    "items": [
+      {
+        "id": "raiz-y-barrio-making",
+        "title": "Cómo hice Raíz y Barrio",
+        "date": "2025-12-22",
+        "category": "Making of",
+        "excerpt": "El proceso detrás del mural más grande que he pintado hasta ahora: 30 metros de ancho, 17 vecinos retratados y un homenaje a la biodiversidad paraguaya.",
+        "content": "Raíz y Barrio fue un desafío distinto a todo lo que había hecho antes. No solo por el tamaño —30 metros de ancho por 8 de alto— sino por lo que representaba: la primera vez que retrataba a personas reales del barrio en un mural...",
+        "image": "/images/blog/raiz-making.jpg",
+        "featured": true
+      },
+      {
+        "id": "dead-sea-story",
+        "title": "Pintar el Mar Muerto",
+        "date": "2023-04-22",
+        "category": "Viajes",
+        "excerpt": "Un viaje a Cisjordania para pintar un mural sobre la crisis ambiental del Mar Muerto, invitado por Artists 4 Israel para el Día de la Tierra.",
+        "content": "Cuando recibí la invitación de Artists 4 Israel para pintar en Cisjordania, supe que tenía que hacer algo que realmente comunicara la urgencia del problema...",
+        "image": "/images/blog/dead-sea.jpg",
+        "featured": true
+      },
+      {
+        "id": "powerline-historia",
+        "title": "Powerline Shop: la primera tienda de graffiti del Paraguay",
+        "date": "2024-03-15",
+        "category": "Historia",
+        "excerpt": "Cómo nació la idea de abrir la primera tienda especializada en materiales para graffiti y arte urbano en Paraguay.",
+        "content": "Antes de Powerline, conseguir un aerosol de calidad en Paraguay era una odisea. Había que traerlos de Argentina o Brasil, o conformarse con lo que había...",
+        "image": "/images/blog/powerline.jpg",
+        "featured": true
+      }
+    ]
+  },
+  "contacto": {
+    "title": "Contacto",
+    "subtitle": "¿Querés un mural? ¿Una ilustración? ¿Una colaboración?",
+    "description": "Completá el formulario o escribime directamente por WhatsApp. Para proyectos comerciales, presupuestos y colaboraciones.",
+    "whatsapp_message": "Hola Oz! Vi tu trabajo en ozmontania.com y me interesa cotizar un proyecto.",
+    "whatsapp_label": "Escribime por WhatsApp",
+    "form": {
+      "name_label": "Nombre",
+      "email_label": "Email",
+      "phone_label": "Teléfono",
+      "project_type_label": "Tipo de proyecto",
+      "project_types": [
+        "Mural comercial",
+        "Ilustración",
+        "Colaboración artística",
+        "Taller / Workshop",
+        "Entrevista / Prensa",
+        "Otro"
+      ],
+      "budget_label": "Presupuesto estimado",
+      "budget_options": [
+        "Menos de $500",
+        "$500 - $2,000",
+        "$2,000 - $5,000",
+        "$5,000 - $10,000",
+        "Más de $10,000"
+      ],
+      "message_label": "Contame sobre tu proyecto",
+      "file_label": "Foto de referencia (opcional)",
+      "submit_label": "Enviar mensaje"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Oz Montanía. Todos los derechos reservados.",
+    "tagline": "Artista visual paraguayo — Muralismo, ilustración y diseño",
+    "links": {
+      "redes": {
+        "title": "Redes",
+        "items": [
+          {
+            "label": "Instagram",
+            "url": "https://instagram.com/ozmontania"
+          },
+          {
+            "label": "Facebook",
+            "url": "https://facebook.com/pyrotaurus"
+          }
+        ]
+      },
+      "proyectos": {
+        "title": "Proyectos",
+        "items": [
+          {
+            "label": "Estudio 8",
+            "url": "#"
+          },
+          {
+            "label": "Powerline Shop",
+            "url": "#"
+          }
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "items": [
+          {
+            "label": "Términos y condiciones",
+            "url": "/terminos"
+          },
+          {
+            "label": "Privacidad",
+            "url": "/privacidad"
+          }
+        ]
+      }
+    }
+  },
+  "not_found": {
+    "title": "Página no encontrada",
+    "message": "Esta obra no existe... todavía.",
+    "cta": "Volver al inicio",
+    "subtext": "O explorá el mapa de murales para encontrar lo que buscás."
+  }
+}

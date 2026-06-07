@@ -1,0 +1,42 @@
+[
+  {
+    "_annotation": {
+      "name": "Razones (Ejemplo)",
+      "what": "Contenido de seccion",
+      "why": "Seccion del sitio",
+      "ai_popolates": "Generado por IA",
+      "your_input": "Datos del negocio",
+      "plan": "Todos los planes"
+    }
+  },
+  {
+    "title": "TUS_CLIENTES_TE_BUSCAN_EN_GOOGLE",
+    "desc": "Reemplaza esto: qué buscan tus clientes cuando te buscan en Google.",
+    "icon": "search"
+  },
+  {
+    "title": "TU_COMPETENCIA_YA_TIENE_PAGINA",
+    "desc": "Reemplaza esto: tu competencia ya tiene web y te está ganando clientes.",
+    "icon": "trendingUp"
+  },
+  {
+    "title": "WHATSAPP_NO_ES_SUFICIENTE",
+    "desc": "Reemplaza esto: mensajes mezclados, clientes que se pierden, sin seguimiento.",
+    "icon": "messageCircle"
+  },
+  {
+    "title": "NO_SABES_QUIEN_ENTRA",
+    "desc": "Reemplaza esto: Google Analytics muestra quién te visita y qué busca.",
+    "icon": "barChart"
+  },
+  {
+    "title": "PERDES_CLIENTES_CUANDO_CERRAS",
+    "desc": "Reemplaza esto: tu página trabaja 24/7, incluso cuando estás cerrado.",
+    "icon": "clock"
+  },
+  {
+    "title": "NO_TIENES_COMO_MANTENER",
+    "desc": "Reemplaza esto: programa de puntos, gift cards, ofertas exclusivas para retener.",
+    "icon": "heart"
+  }
+]

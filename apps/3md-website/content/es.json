@@ -1,0 +1,649 @@
+{
+  "siteName": "Superspuma",
+  "businessName": "Superspuma",
+  "tagline": "Colchones y Sommiers en Paraguay desde 1976",
+  "metaDescription": "Colchones y sommiers de alta calidad en Paraguay. Fabricación propia desde 1976. Envío a todo el país.",
+  "navigation": {
+    "businessName": "Superspuma",
+    "ctaText": "Consultar por WhatsApp",
+    "ctaHref": "https://wa.me/595974202025?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20colchones%20Superspuma",
+    "items": [
+      {
+        "label": "Inicio",
+        "href": "/"
+      },
+      {
+        "label": "Tienda",
+        "href": "/tienda"
+      },
+      {
+        "label": "Nosotros",
+        "href": "/nosotros"
+      },
+      {
+        "label": "Tiendas",
+        "href": "/tiendas"
+      },
+      {
+        "label": "Guías",
+        "href": "/guias"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto"
+      }
+    ]
+  },
+  "home": {
+    "seo": {
+      "title": "Superspuma — Colchones y Sommiers",
+      "description": "Colchones y sommiers de fabricación propia en Paraguay."
+    },
+    "hero": {
+      "headline": "Colchones y Sommiers <span>de Calidad</span>",
+      "subheadline": "Fabricación propia desde 1976. Envío a todo Paraguay.",
+      "ctaPrimaryText": "Ver productos",
+      "ctaPrimaryHref": "/tienda",
+      "ctaSecondaryText": "WhatsApp",
+      "ctaSecondaryHref": "https://wa.me/595974202025"
+    },
+    "stats": {
+      "title": "Superspuma en Números",
+      "items": {
+        "items": [
+          {
+            "value": "+49",
+            "label": "Años en el mercado",
+            "icon": "Award"
+          },
+          {
+            "value": "+200",
+            "label": "Colaboradores",
+            "icon": "Users"
+          },
+          {
+            "value": "19",
+            "label": "Modelos en catálogo",
+            "icon": "Package"
+          },
+          {
+            "value": "13",
+            "label": "Puntos en el país",
+            "icon": "MapPin"
+          }
+        ]
+      }
+    },
+    "features": {
+      "title": "¿Por qué elegir Superspuma?",
+      "items": {
+        "title": "Nuestra historia",
+        "items": [
+          {
+            "title": "49 años fabricando",
+            "description": "Fundada el 24 de julio de 1976 en Villeta, Paraguay."
+          },
+          {
+            "title": "200+ colaboradores",
+            "description": "Equipo paraguayo comprometido con la calidad."
+          },
+          {
+            "title": "550 unidades/día",
+            "description": "Capacidad de producción diaria en nuestra planta de 7 hectáreas."
+          },
+          {
+            "title": "Flota propia",
+            "description": "40 vehículos para entregas en todo el país."
+          },
+          {
+            "title": "Filial Argentina",
+            "description": "Presencia en Resistencia, Chaco desde hace 21 años. 4.000 sommiers/mes."
+          },
+          {
+            "title": "2.300+ clientes mayoristas",
+            "description": "Distribución en Bristol, Electroban, Misionera, Artaza y más."
+          }
+        ]
+      }
+    },
+    "finalCta": {
+      "title": "¿Listo para descansar mejor?",
+      "description": "Consultá por nuestros colchones y sommiers.",
+      "buttonText": "WhatsApp",
+      "buttonLink": "https://wa.me/595974202025",
+      "secondaryText": "Ver productos",
+      "secondaryLink": "/tienda"
+    }
+  },
+  "products": [
+    {
+      "slug": "titanium",
+      "name": "Titanium",
+      "line": "Premium",
+      "category": "Resorte",
+      "price": "Gs. 1.800.000",
+      "priceFrom": "2 plazas 140x190",
+      "image": "/superspuma/images/products/titanium.png",
+      "description": "Premium con Euro Pillow Top y resortes Bonell reforzados.",
+      "sizes": [
+        "2 plazas 140x190: Gs. 1.800.000",
+        "Queen 160x200: Gs. 2.200.000",
+        "King 180x200: Gs. 2.700.000",
+        "Super King 200x200: Gs. 3.200.000"
+      ],
+      "firmness": "Firme",
+      "warranty": "5 años",
+      "weight": "Hasta 120 kg por lado",
+      "badges": [
+        "Pillow Top",
+        "Antiácaros",
+        "Más vendido"
+      ]
+    },
+    {
+      "slug": "imperial",
+      "name": "Imperial",
+      "line": "Alta Gama",
+      "category": "Resorte",
+      "price": "Gs. 2.230.000",
+      "priceFrom": "2 plazas 140x190",
+      "image": "/superspuma/images/products/imperial.png",
+      "description": "Resortes Bonell con Pillow Top para descanso regenerador.",
+      "sizes": [
+        "2 plazas 140x190: Gs. 2.230.000",
+        "Queen 160x200: Gs. 2.502.000",
+        "King 180x200: Gs. 3.030.000",
+        "Super King 200x200: Gs. 3.652.000"
+      ],
+      "firmness": "Medio-Firme",
+      "warranty": "3 años",
+      "weight": "Hasta 100 kg por lado",
+      "colors": [
+        "Gris",
+        "Beige",
+        "Bordó"
+      ],
+      "badges": [
+        "Pillow Top",
+        "Antiácaros"
+      ]
+    },
+    {
+      "slug": "harmony",
+      "name": "Harmony",
+      "line": "Confort",
+      "category": "Resorte",
+      "price": "Gs. 1.274.000",
+      "priceFrom": "2 plazas 140x190",
+      "image": "/superspuma/images/products/harmony.jpg",
+      "description": "Equilibrio ideal entre soporte y confort con Euro-Top — el más consultado.",
+      "sizes": [
+        "2 plazas 140x190: Gs. 1.274.000",
+        "Queen 160x200: Gs. 1.480.000",
+        "King 180x200: Gs. 1.890.000",
+        "Super King 200x200: Gs. 2.250.000"
+      ],
+      "firmness": "Medio",
+      "warranty": "3 años",
+      "weight": "Hasta 90 kg por lado",
+      "badges": [
+        "Euro-Top",
+        "Antiácaros",
+        "Recomendado"
+      ]
+    },
+    {
+      "slug": "serrat",
+      "name": "Serrat",
+      "line": "Confort",
+      "category": "Resorte",
+      "price": "Gs. 1.150.000",
+      "priceFrom": "2 plazas 140x190",
+      "image": "/superspuma/images/products/serrat.png",
+      "description": "Resorte con superficie suave, firmeza media.",
+      "firmness": "Medio",
+      "warranty": "3 años"
+    },
+    {
+      "slug": "delta-soft",
+      "name": "Delta Soft",
+      "line": "Confort",
+      "category": "Resorte",
+      "price": "Gs. 1.050.000",
+      "image": "/superspuma/images/products/delta-soft.jpg",
+      "description": "Tacto mullido con soporte de resorte.",
+      "firmness": "Suave",
+      "warranty": "3 años"
+    },
+    {
+      "slug": "essential-top",
+      "name": "Essential Top",
+      "line": "Esencial",
+      "category": "Resorte",
+      "price": "Gs. 890.000",
+      "image": "/superspuma/images/products/essential-top.jpg",
+      "description": "Resorte con Pillow Top — entrada a línea Esencial.",
+      "firmness": "Medio",
+      "warranty": "2 años"
+    },
+    {
+      "slug": "renovate",
+      "name": "Renovate",
+      "line": "Esencial",
+      "category": "Resorte",
+      "price": "Gs. 780.000",
+      "image": "/superspuma/images/products/renovate.jpg",
+      "description": "Reemplazo económico para tu viejo colchón.",
+      "firmness": "Medio-Firme",
+      "warranty": "2 años"
+    },
+    {
+      "slug": "impulse",
+      "name": "Impulse",
+      "line": "Infantil",
+      "category": "Resorte",
+      "price": "Gs. 780.000",
+      "image": "/superspuma/images/products/impulse.jpg",
+      "description": "Resorte premium para niños, reversible, antiácaros.",
+      "sizes": [
+        "1 plaza 80x190: Gs. 650.000",
+        "1+ plaza 100x190: Gs. 780.000"
+      ],
+      "firmness": "Medio",
+      "warranty": "2 años",
+      "weight": "Hasta 70 kg",
+      "badges": [
+        "Niños",
+        "Antiácaros"
+      ]
+    },
+    {
+      "slug": "pop-kids",
+      "name": "Pop Kids",
+      "line": "Infantil",
+      "category": "Resorte",
+      "price": "Gs. 649.000",
+      "image": "/superspuma/images/products/pop-kids.jpeg",
+      "description": "Línea económica infantil con diseños divertidos.",
+      "sizes": [
+        "1+ plaza 100x190: Gs. 649.000",
+        "1+ plaza + sommier: Gs. 1.069.000",
+        "1+ plaza + sommier + cabecera: Gs. 1.298.000"
+      ],
+      "firmness": "Medio",
+      "warranty": "2 años",
+      "colors": [
+        "Rosa (nena)",
+        "Celeste (nene)"
+      ],
+      "badges": [
+        "Niños",
+        "Económico"
+      ]
+    },
+    {
+      "slug": "pop-plus-pillow",
+      "name": "Pop Plus Pillow",
+      "line": "Confort",
+      "category": "Resorte",
+      "price": "Gs. 850.000",
+      "image": "/superspuma/images/products/pop-plus-pillow.png",
+      "description": "Pop reforzado con Pillow Top.",
+      "firmness": "Medio-Firme",
+      "warranty": "2 años",
+      "weight": "Hasta 90 kg"
+    },
+    {
+      "slug": "pop-teen",
+      "name": "Pop Teen",
+      "line": "Juvenil",
+      "category": "Resorte",
+      "price": "Gs. 780.000",
+      "image": "/superspuma/images/products/pop-kids.jpeg",
+      "description": "Pop juvenil — precio accesible.",
+      "firmness": "Medio",
+      "warranty": "2 años",
+      "weight": "Hasta 80 kg"
+    },
+    {
+      "slug": "superteen",
+      "name": "Superteen",
+      "line": "Juvenil",
+      "category": "Resorte",
+      "price": "Gs. 980.000",
+      "description": "Línea premium juvenil.",
+      "firmness": "Medio-Firme",
+      "warranty": "3 años"
+    },
+    {
+      "slug": "ortopedico",
+      "name": "Ortopédico",
+      "line": "Premium",
+      "category": "Espuma",
+      "price": "Gs. 1.290.000",
+      "priceFrom": "1+ plaza 120x190",
+      "image": "/superspuma/images/products/titanium.png",
+      "description": "Firmeza máxima — hasta 140 kg, 6 años de garantía.",
+      "sizes": [
+        "1+ plaza 120x190: Gs. 1.290.000",
+        "2 plazas 140x190: Gs. 1.450.000",
+        "Queen 160x200: Gs. 1.750.000",
+        "King 180x200: Gs. 2.050.000"
+      ],
+      "firmness": "Extra firme",
+      "warranty": "6 años",
+      "weight": "Hasta 140 kg por lado",
+      "badges": [
+        "140 kg",
+        "6 años garantía",
+        "Ortopédico"
+      ]
+    },
+    {
+      "slug": "duo-confort",
+      "name": "Duo Confort",
+      "line": "Alta Gama",
+      "category": "Espuma",
+      "price": "Gs. 980.000",
+      "priceFrom": "2 plazas 140x190",
+      "image": "/superspuma/images/products/harmony.jpg",
+      "description": "Viscoelástica adaptable — alivio de puntos de presión.",
+      "sizes": [
+        "2 plazas 140x190: Gs. 980.000",
+        "Queen 160x200: Gs. 1.250.000",
+        "King 180x200: Gs. 1.580.000"
+      ],
+      "firmness": "Adaptable",
+      "warranty": "3 años",
+      "weight": "Hasta 110 kg por lado",
+      "badges": [
+        "Memory Foam",
+        "Adaptable"
+      ]
+    },
+    {
+      "slug": "serena",
+      "name": "Serena",
+      "line": "Confort",
+      "category": "Espuma",
+      "price": "Gs. 850.000",
+      "description": "Espuma de alta densidad con buen confort.",
+      "firmness": "Medio-Firme",
+      "warranty": "3 años"
+    },
+    {
+      "slug": "golden",
+      "name": "Golden",
+      "line": "Confort",
+      "category": "Espuma",
+      "price": "Gs. 696.000",
+      "priceFrom": "1+ plaza 100x190",
+      "image": "/superspuma/images/products/serrat.png",
+      "description": "Espuma reversible con Pillow Top.",
+      "sizes": [
+        "1+ plaza 100x190: Gs. 696.000",
+        "2 plazas 140x190: Gs. 890.000",
+        "Queen 160x200: Gs. 1.050.000"
+      ],
+      "firmness": "Medio",
+      "warranty": "3 años",
+      "badges": [
+        "Reversible"
+      ]
+    },
+    {
+      "slug": "luna-soft",
+      "name": "Luna Soft",
+      "line": "Esencial",
+      "category": "Espuma",
+      "price": "Gs. 500.000",
+      "priceFrom": "1 plaza 80x190",
+      "image": "/superspuma/images/products/serrat.png",
+      "description": "Espuma económica — suave y liviana.",
+      "sizes": [
+        "1 plaza 80x190: Gs. 500.000",
+        "1+ plaza 90x190: Gs. 560.000",
+        "2 plazas 140x190: Gs. 640.000",
+        "Queen 160x200: Gs. 820.000"
+      ],
+      "firmness": "Suave",
+      "warranty": "2 años",
+      "weight": "Hasta 60 kg",
+      "badges": [
+        "Económico"
+      ]
+    },
+    {
+      "slug": "super-kids",
+      "name": "Super Kids",
+      "line": "Infantil",
+      "category": "Espuma",
+      "price": "Gs. 420.000",
+      "description": "Espuma infantil liviana.",
+      "sizes": [
+        "Cuna 80x140: Gs. 420.000",
+        "1 plaza 80x190: Gs. 520.000"
+      ],
+      "firmness": "Suave",
+      "warranty": "2 años",
+      "weight": "Hasta 50 kg",
+      "badges": [
+        "Niños"
+      ]
+    },
+    {
+      "slug": "base-box-baul",
+      "name": "Base Box Baúl",
+      "line": "Accesorio",
+      "category": "Accesorios",
+      "price": "Gs. 890.000",
+      "image": "/superspuma/images/products/renovate.jpg",
+      "description": "Sommier con espacio de guardado bajo la tapa.",
+      "sizes": [
+        "2 plazas 140x190: Gs. 890.000",
+        "Queen 160x200: Gs. 1.150.000",
+        "King 180x200: Gs. 1.490.000"
+      ]
+    },
+    {
+      "slug": "protector-colchon",
+      "name": "Protector Impermeable",
+      "line": "Accesorio",
+      "category": "Accesorios",
+      "price": "Gs. 120.000",
+      "description": "Impermeable y transpirable. Protege tu colchón sin cambiar la sensación.",
+      "badges": [
+        "Impermeable"
+      ]
+    },
+    {
+      "slug": "cubre-colchon",
+      "name": "Cubre Colchón",
+      "line": "Accesorio",
+      "category": "Accesorios",
+      "price": "Gs. 95.000",
+      "description": "Protección acolchada para tu colchón.",
+      "badges": [
+        "Accesorio"
+      ]
+    },
+    {
+      "slug": "almohada-superspuma",
+      "name": "Almohada Superspuma",
+      "line": "Accesorio",
+      "category": "Accesorios",
+      "price": "Gs. 65.000",
+      "description": "Almohada de fibra o espuma. Varias firmezas.",
+      "badges": [
+        "Accesorio"
+      ]
+    }
+  ],
+  "categories": [],
+  "envio": {
+    "title": "Envío a Todo Paraguay",
+    "subtitle": "Entregas rápidas y seguras",
+    "points": [
+      {
+        "icon": "🚚",
+        "title": "Envío Nacional",
+        "description": "Hacemos envíos a todo Paraguay."
+      },
+      {
+        "icon": "⏰",
+        "title": "Entrega Rápida",
+        "description": "Recibí tu pedido en 24-72hs hábiles."
+      },
+      {
+        "icon": "💳",
+        "title": "Pago Seguro",
+        "description": "Aceptamos transferencia, efectivo y tarjeta."
+      }
+    ],
+    "cta": "Consultar por WhatsApp"
+  },
+  "faq": [
+    {
+      "question": "¿Qué medidas de colchones fabrican?",
+      "answer": "Fabricamos todas las medidas estándar: 1 plaza (80x190), 1 plaza y media (100x190), 2 plazas (140x190), Queen (160x200), King (180x200), Super King (200x200). Medidas especiales a pedido (5-10 días hábiles)."
+    },
+    {
+      "question": "¿Cómo elijo la firmeza correcta?",
+      "answer": "Menos de 70kg: media. 70-100kg: media-firme. Más de 100kg o columna: firme. De costado: adaptable (Duo Confort)."
+    },
+    {
+      "question": "¿Resorte o espuma?",
+      "answer": "Resorte: soporte, ventilación, durabilidad. Espuma: económico o viscoelástica. Depende de preferencia y peso."
+    },
+    {
+      "question": "¿Cuánto dura la garantía?",
+      "answer": "Esencial: 2 años. Confort: 3 años. Premium (Titanium): 5 años. Ortopédico: 6 años."
+    },
+    {
+      "question": "¿Hacen envíos a todo el país?",
+      "answer": "Sí. Asunción/Metropolitana: 24-72h. Gratis desde Gs. 1.000.000. Interior: 3-7 días con costo según zona."
+    },
+    {
+      "question": "¿Se llevan mi colchón viejo?",
+      "answer": "Sí, sin costo el mismo día de entrega en compras de colchones nuevos."
+    },
+    {
+      "question": "¿En cuántas cuotas puedo pagar?",
+      "answer": "Hasta 18 cuotas sin interés. Aceptamos todas las tarjetas y transferencia bancaria."
+    },
+    {
+      "question": "¿Cómo cuido mi colchón?",
+      "answer": "Rotar cada 3 meses, usar protector impermeable, ventilar la habitación. Cambiar cada 7-10 años."
+    },
+    {
+      "question": "¿Dónde están las tiendas?",
+      "answer": "7 tiendas en Asunción y Central + 6 centros logísticos en el interior. Ver página Tiendas."
+    },
+    {
+      "question": "¿Puedo probar el colchón en tienda?",
+      "answer": "Sí, tenemos exhibición de los más vendidos. Te recomendamos acostarte 10 minutos."
+    },
+    {
+      "question": "¿Tienen servicio técnico?",
+      "answer": "Sí. Línea 0981 111 222. Evaluación y reparación dentro del período de garantía."
+    }
+  ],
+  "testimonials": [],
+  "contacto": {
+    "title": "Contacto",
+    "subtitle": "Respondemos rápido por WhatsApp.",
+    "whatsapp": "595974202025",
+    "whatsappMessage": "¡Hola! Quiero información sobre colchones",
+    "city": "Villeta, Paraguay",
+    "responseTime": "Respuesta en menos de 1 hora"
+  },
+  "nosotros": {
+    "title": "Sobre Superspuma",
+    "subtitle": "Colchones y Sommiers en Paraguay desde 1976",
+    "story": [
+      "Superspuma nació en 1976 con la misión de ofrecer colchones y sommiers de la más alta calidad en Paraguay.",
+      "Desde entonces, nos hemos dedicado a la fabricación propia con materiales seleccionados, garantizando el mejor descanso para nuestros clientes."
+    ],
+    "values": [
+      {
+        "title": "Calidad",
+        "description": "Materiales de primera y fabricación propia."
+      },
+      {
+        "title": "Tradición",
+        "description": "Casi 50 años de experiencia en Paraguay."
+      }
+    ]
+  },
+  "promociones": {
+    "title": "Promociones",
+    "subtitle": "Consultá por nuestras ofertas",
+    "promotions": []
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "",
+    "categories": [],
+    "posts": []
+  },
+  "footer": {
+    "description": "Colchones y sommiers de fabricación propia desde 1976.",
+    "columns": [
+      {
+        "title": "Enlaces",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": ""
+          },
+          {
+            "label": "Tienda",
+            "href": "/tienda"
+          },
+          {
+            "label": "FAQ",
+            "href": "/faq"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          }
+        ]
+      },
+      {
+        "title": "Ayuda",
+        "links": [
+          {
+            "label": "Envío",
+            "href": "/envio"
+          },
+          {
+            "label": "Privacidad",
+            "href": "/privacidad"
+          },
+          {
+            "label": "Términos",
+            "href": "/terminos"
+          }
+        ]
+      }
+    ],
+    "social": [],
+    "paymentMethods": [
+      {
+        "name": "Transferencia"
+      },
+      {
+        "name": "Efectivo"
+      },
+      {
+        "name": "Tarjeta"
+      }
+    ],
+    "copyright": "© 2026 Superspuma. Todos los derechos reservados."
+  }
+}

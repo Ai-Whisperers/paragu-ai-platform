@@ -1,0 +1,520 @@
+{
+  "siteName": "{{businessName}}",
+  "siteTitle": "{{businessName}} — Escribanía en Paraguay | Fe Pública y Seguridad Jurídica",
+  "siteDescription": "Servicios notariales en Paraguay. Escrituras públicas, poderes, contratos, legalizaciones, apostillas y autenticaciones. Atención personalizada con la confianza de la fe pública.",
+  "navigation": {
+    "businessName": "{{businessName}}",
+    "ctaText": "Consultar por WhatsApp",
+    "ctaHref": "https://wa.me/{{whatsapp}}?text={{whatsappMessage}}",
+    "items": [
+      { "label": "Inicio", "href": "/" },
+      { "label": "Servicios", "href": "/servicios" },
+      { "label": "Nosotros", "href": "/nosotros" },
+      { "label": "FAQ", "href": "/faq" },
+      { "label": "Contacto", "href": "/contacto" }
+    ]
+  },
+  "footer": {
+    "businessName": "{{businessName}}",
+    "tagline": "Fe Pública y Seguridad Jurídica desde {{year}}",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          { "label": "Escrituras Públicas", "href": "/servicios/escrituras" },
+          { "label": "Poderes", "href": "/servicios/poderes" },
+          { "label": "Contratos", "href": "/servicios/contratos" },
+          { "label": "Legalizaciones", "href": "/servicios/legalizaciones" },
+          { "label": "Sucesiones", "href": "/servicios/sucesiones" }
+        ]
+      },
+      {
+        "title": "Información",
+        "links": [
+          { "label": "Sobre Nosotros", "href": "/nosotros" },
+          { "label": "FAQ", "href": "/faq" },
+          { "label": "Contacto", "href": "/contacto" }
+        ]
+      }
+    ],
+    "contact": {
+      "address": "Asunción, Paraguay",
+      "phone": "+595 {{phone}}",
+      "email": "{{email}}",
+      "hours": "Lunes a Viernes: 8:00 - 17:00 | Sábados: 8:00 - 12:00"
+    },
+    "copyright": "© {{year}} {{businessName}}. Todos los derechos reservados.",
+    "madeBy": "Diseño web por Ai-Whisperers"
+  },
+  "home": {
+    "seo": {
+      "title": "{{businessName}} — Escribanía en Paraguay | Fe Pública",
+      "description": "Servicios notariales con fe pública. Escrituras, poderes, contratos, legalizaciones y más en Asunción, Paraguay."
+    },
+    "hero": {
+      "headline": "Fe Pública y <span class=\"text-[var(--color-accent)]\">Seguridad Jurídica</span>",
+      "subheadline": "Servicios notariales para personas y empresas en Paraguay. Escrituras, poderes, contratos y legalizaciones con la confianza que merecés.",
+      "ctaPrimaryText": "Agendar Consulta",
+      "ctaPrimaryHref": "/contacto",
+      "ctaSecondaryText": "Ver Servicios",
+      "ctaSecondaryHref": "/servicios"
+    },
+    "stats": {
+      "title": "",
+      "items": [
+        { "number": "25+", "label": "Años de Experiencia" },
+        { "number": "3000+", "label": "Documentos Notariales" },
+        { "number": "500+", "label": "Clientes Satisfechos" },
+        { "number": "98%", "label": "Trámites Exitosos" }
+      ]
+    },
+    "services": {
+      "title": "Nuestros Servicios Notariales",
+      "subtitle": "Todo lo que necesitás en materia notarial, con la seguridad jurídica que tu tranquilidad merece",
+      "items": [
+        {
+          "id": "escrituras",
+          "icon": "scroll-text",
+          "title": "Escrituras Públicas",
+          "description": "Compraventa de inmuebles, hipotecas, constitución de sociedades y todo acto que requiera escritura pública según la ley paraguaya.",
+          "link": "/servicios/escrituras"
+        },
+        {
+          "id": "poderes",
+          "icon": "file-signature",
+          "title": "Poderes",
+          "description": "Poderes generales, especiales, judiciales y administrativos. Para uso dentro del Paraguay o con validez internacional.",
+          "link": "/servicios/poderes"
+        },
+        {
+          "id": "contratos",
+          "icon": "file-text",
+          "title": "Contratos",
+          "description": "Contratos de alquiler, préstamo, fideicomiso, compraventa de vehículos y más. Redacción, revisión y certificación.",
+          "link": "/servicios/contratos"
+        },
+        {
+          "id": "legalizaciones",
+          "icon": "stamp",
+          "title": "Legalizaciones y Apostillas",
+          "description": "Legalización de documentos públicos, apostilla de La Haya para uso internacional y autenticación de firmas.",
+          "link": "/servicios/legalizaciones"
+        },
+        {
+          "id": "sucesiones",
+          "icon": "landmark",
+          "title": "Sucesiones y Testamentos",
+          "description": "Sucesiones intestadas y testamentarias. Testamentos ológrafos, abiertos y cerrados. Declaratorias de herederos.",
+          "link": "/servicios/sucesiones"
+        },
+        {
+          "id": "societario",
+          "icon": "building",
+          "title": "Actos Societarios",
+          "description": "Constitución de sociedades, asambleas, actas de directorio, aumentos de capital y disoluciones.",
+          "link": "/servicios/societario"
+        }
+      ]
+    },
+    "trust": {
+      "title": "¿Por qué elegir una Escribanía?",
+      "items": [
+        { "icon": "shield-check", "title": "Fe Pública", "description": "Todo documento firmado ante escribano tiene valor legal pleno. No hay posibilidad de impugnación por falsedad." },
+        { "icon": "gavel", "title": "Seguridad Jurídica", "description": "Cada acto notarial se ajusta estrictamente a las leyes paraguayas, garantizando su validez." },
+        { "icon": "archive", "title": "Archivo Seguro", "description": "Los protocolos notariales se conservan por décadas. Siempre podés solicitar copias." },
+        { "icon": "clock", "title": "Rapidez y Eficiencia", "description": "Tramitamos tu documentación en el menor tiempo posible, sin sacrificar la calidad jurídica." }
+      ]
+    },
+    "process": {
+      "title": "¿Cómo trabajamos?",
+      "subtitle": "Un proceso claro y transparente para que sepas exactamente qué esperar",
+      "steps": [
+        { "number": "01", "title": "Consultá", "description": "Contactanos por WhatsApp, email o visitanos. Te asesoramos sobre la documentación necesaria para tu caso." },
+        { "number": "02", "title": "Preparación", "description": "Revisamos tus documentos, redactamos la minuta y preparamos todo para el acto notarial." },
+        { "number": "03", "title": "Firma", "description": "Agendamos la cita para la firma. Leemos el documento en voz alta y procedemos a la firma con todas las formalidades de ley." },
+        { "number": "04", "title": "Entrega", "description": "Recibís tu testimonio o copia debidamente protocolizada. Nos encargamos de los registros correspondientes." }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Respondemos tus dudas sobre servicios notariales en Paraguay",
+      "items": [
+        {
+          "q": "¿Qué documentos necesito para una compraventa de inmueble?",
+          "a": "Necesitás cédula de identidad vigente, título de propiedad (o certificado de registro fiscal), certificado de deuda municipal y de la Administración Nacional de Navegación y Puertos si corresponde, constancia de pago de impuestos inmobiliarios, y certificado de no adeudar de ANDE y ESSAP. Te guiamos en todo el proceso."
+        },
+        {
+          "q": "¿Cuánto cuesta un servicio notarial?",
+          "a": "Los costos varían según el tipo de acto y el valor del bien involucrado. Los honorarios notariales están regulados por el Colegio de Escribanos del Paraguay. Te damos un presupuesto exacto sin compromiso en tu primera consulta."
+        },
+        {
+          "q": "¿Qué es la Apostilla de La Haya?",
+          "a": "Es un método de legalización de documentos públicos para que tengan validez en países firmantes del Convenio de La Haya. Paraguay es parte desde 2014. Nosotros gestionamos la apostilla ante el Ministerio de Relaciones Exteriores para tus documentos."
+        },
+        {
+          "q": "¿Puedo hacer un poder desde el extranjero?",
+          "a": "Sí. Podés otorgar un poder desde el exterior. El documento debe ser legalizado o apostillado en el país de origen, traducido por traductor público matriculado en Paraguay si está en otro idioma, y luego presentado ante escribano para su protocolización."
+        },
+        {
+          "q": "¿Qué diferencia hay entre testamento ológrafo y abierto?",
+          "a": "El testamento ológrafo lo escribís de puño y letra y lo firmás vos mismo. El testamento abierto se otorga ante escribano y testigos, y queda protocolizado. Para el abierto no necesitás saber escribir, solo firmar. Te asesoramos sobre cuál es mejor según tu caso."
+        },
+        {
+          "q": "¿Cuánto tiempo toma una sucesión?",
+          "a": "La sucesión intestada (sin testamento) puede tomar de 3 a 6 meses aproximadamente, dependiendo de la complejidad del patrimonio y si hay acuerdo entre los herederos. La sucesión testamentaria suele ser más rápida. Aceleramos el proceso con gestión eficiente."
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros clientes",
+      "items": [
+        {
+          "name": "María González",
+          "role": "Compradora de inmueble",
+          "text": "Excelente atención. Me explicaron todo el proceso de compraventa paso a paso. Me sentí segura en todo momento."
+        },
+        {
+          "name": "Carlos Benítez",
+          "role": "Empresario",
+          "text": "Rápidos y eficientes. Constituyeron mi sociedad en tiempo récord. Muy recomendados para trámites empresariales."
+        },
+        {
+          "name": "Laura Martínez",
+          "role": "Particular",
+          "text": "Hice mi testamento con ellos. Profesionales, cálidos y resolvieron todas mis dudas. Una tranquilidad para mi familia."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Agendá tu consulta",
+      "subtitle": "Sin compromiso. Te asesoramos sobre el mejor camino para tu trámite notarial.",
+      "ctaText": "Escribinos por WhatsApp",
+      "ctaHref": "https://wa.me/{{whatsapp}}?text={{whatsappMessage}}",
+      "form": {
+        "fields": ["nombre", "email", "telefono", "servicio", "mensaje"]
+      }
+    }
+  },
+  "serviciosPage": {
+    "seo": {
+      "title": "Servicios Notariales | {{businessName}}",
+      "description": "Todos nuestros servicios notariales en Paraguay. Escrituras, poderes, contratos, legalizaciones, sucesiones y actos societarios."
+    },
+    "hero": {
+      "headline": "Servicios Notariales",
+      "subheadline": "Ofrecemos una gama completa de servicios notariales para personas y empresas en Paraguay"
+    },
+    "intro": {
+      "text": "Como escribanos públicos matriculados, estamos habilitados para dar fe pública de todos los actos y contratos que requieran intervención notarial según las leyes paraguayas. Cada servicio se realiza con el más alto estándar de profesionalismo y seguridad jurídica."
+    },
+    "categories": [
+      {
+        "id": "escrituras",
+        "icon": "scroll-text",
+        "title": "Escrituras Públicas",
+        "description": "Todo acto que requiera escritura pública según la ley paraguaya. Incluye compraventa de inmuebles, permutas, hipotecas, anticresis, servidumbres, constitución de sociedades, actas de asamblea y más.",
+        "features": [
+          "Compraventa de inmuebles urbanos y rurales",
+          "Hipotecas y anticresis",
+          "Constitución de SRL, SA y EAS",
+          "Compraventa de vehículos y embarcaciones",
+          "Permutas y donaciones",
+          "Actas de asamblea y directorio"
+        ],
+        "process": [
+          "Reunión inicial para revisar documentación",
+          "Redacción de minuta",
+          "Lectura y firma del documento",
+          "Protocolización en el registro notarial",
+          "Registro ante la DNIT/DGRRCC si corresponde"
+        ]
+      },
+      {
+        "id": "poderes",
+        "icon": "file-signature",
+        "title": "Poderes",
+        "description": "Otorgamiento de poderes generales y especiales para representación en actos judiciales, administrativos, comerciales y personales.",
+        "features": [
+          "Poder general para administrar bienes",
+          "Poder especial para juicios",
+          "Poder para trámites ante DNIT, IPS, MTESS",
+          "Poder para representación societaria",
+          "Poder para trámites bancarios",
+          "Revocación de poderes"
+        ],
+        "process": [
+          "Identificar el alcance del poder necesario",
+          "Redacción del instrumento",
+          "Firma ante escribano",
+          "Registro si corresponde"
+        ]
+      },
+      {
+        "id": "contratos",
+        "icon": "file-text",
+        "title": "Contratos",
+        "description": "Redacción, revisión y certificación de contratos de diversa naturaleza. Garantizamos que el documento refleje fielmente la voluntad de las partes.",
+        "features": [
+          "Contratos de alquiler",
+          "Contratos de préstamo con o sin garantía",
+          "Contratos de fideicomiso",
+          "Cesión de derechos",
+          "Contratos de servicios profesionales",
+          "Contratos de construcción"
+        ],
+        "process": [
+          "Análisis de necesidades y voluntad de las partes",
+          "Redacción del contrato",
+          "Revisión conjunta con las partes",
+          "Firma ante escribano"
+        ]
+      },
+      {
+        "id": "legalizaciones",
+        "icon": "stamp",
+        "title": "Legalizaciones y Apostillas",
+        "description": "Gestionamos la legalización de documentos públicos y la apostilla de La Haya para que tus documentos tengan validez en el extranjero.",
+        "features": [
+          "Apostilla de La Haya ante MRE",
+          "Legalización de documentos para uso en Paraguay desde el exterior",
+          "Autenticación de firmas",
+          "Certificación de copias",
+          "Traducción certificada de documentos",
+          "Legalización de diplomas y títulos"
+        ],
+        "process": [
+          "Revisión del documento a legalizar",
+          "Gestión ante las autoridades correspondientes",
+          "Apostillado o legalización",
+          "Entrega del documento listo para uso internacional"
+        ]
+      },
+      {
+        "id": "sucesiones",
+        "icon": "landmark",
+        "title": "Sucesiones y Testamentos",
+        "description": "Asistencia integral en procesos sucesorios. Testamentos, declaratorias de herederos, partición de bienes y administración de herencias.",
+        "features": [
+          "Testamento ológrafo, abierto y cerrado",
+          "Declaratoria de herederos",
+          "Sucesión intestada",
+          "Sucesión testamentaria",
+          "Partición y adjudicación de bienes",
+          "Aceptación y renuncia de herencia"
+        ],
+        "process": [
+          "Evaluación del patrimonio del causante",
+          "Identificación de herederos",
+          "Preparación de documentación",
+          "Inicio del proceso sucesorio",
+          "Partición y adjudicación de bienes",
+          "Inscripción en registros públicos"
+        ]
+      },
+      {
+        "id": "societario",
+        "icon": "building",
+        "title": "Actos Societarios",
+        "description": "Asistencia en la constitución, modificación y disolución de sociedades. Redacción de contratos sociales, actas y más.",
+        "features": [
+          "Constitución de SRL, SA, EAS y Unipersonal",
+          "Modificación de contratos sociales",
+          "Aumento y reducción de capital",
+          "Transformación, fusión y escisión",
+          "Disolución y liquidación",
+          "Actas de asamblea y directorio"
+        ],
+        "process": [
+          "Definición del tipo societario",
+          "Redacción del contrato social/estatuto",
+          "Constitución por escritura pública",
+          "Inscripción en la DGRRCC",
+          "Obtención del RUC"
+        ]
+      }
+    ],
+    "cta": {
+      "title": "¿Necesitás un servicio que no ves aquí?",
+      "subtitle": "Contactanos. Resolvemos consultas notariales de todo tipo.",
+      "buttonText": "Consultar Ahora",
+      "buttonHref": "https://wa.me/{{whatsapp}}?text={{whatsappMessage}}"
+    }
+  },
+  "nosotrosPage": {
+    "seo": {
+      "title": "Sobre Nosotros | {{businessName}}",
+      "description": "Conocé a nuestro equipo de escribanos públicos en Paraguay. Años de experiencia y compromiso con la seguridad jurídica."
+    },
+    "hero": {
+      "headline": "Sobre Nosotros",
+      "subheadline": "Compromiso con la fe pública y la seguridad jurídica en Paraguay"
+    },
+    "intro": {
+      "title": "Nuestra Historia",
+      "content": "Somos una escribanía con amplia trayectoria en el ámbito notarial paraguayo. Nuestra práctica se basa en los principios de legalidad, seguridad jurídica y servicio al cliente. Cada documento que pasa por nuestras manos es tratado con el máximo rigor profesional y cuidado. Entendemos que detrás de cada trámite hay personas con necesidades, plazos y expectativas. Por eso trabajamos con empatía, claridad y eficiencia.",
+      "vision": "Ser la escribanía de referencia en Paraguay, reconocida por nuestra excelencia técnica, calidez en el trato y compromiso con la seguridad jurídica.",
+      "mission": "Brindar servicios notariales de la más alta calidad, garantizando la legalidad y seguridad de cada acto, con un trato personalizado que hace la diferencia."
+    },
+    "values": [
+      { "icon": "shield-check", "title": "Integridad", "description": "Actuamos con absoluta honestidad y transparencia en cada acto notarial." },
+      { "icon": "gavel", "title": "Excelencia Jurídica", "description": "Nos mantenemos actualizados sobre la legislación y jurisprudencia paraguaya." },
+      { "icon": "users", "title": "Servicio Personalizado", "description": "Cada cliente recibe atención dedicada y explicaciones claras." },
+      { "icon": "clock", "title": "Eficiencia", "description": "Optimizamos cada proceso para brindarte respuestas rápidas sin sacrificar calidad." }
+    ],
+    "team": [
+      {
+        "name": "Dr. Juan Pérez",
+        "role": "Escribano Público Titular",
+        "description": "Matriculado en el Colegio de Escribanos del Paraguay. Más de 15 años de experiencia en derecho notarial y registral.",
+        "education": "Universidad Nacional de Asunción",
+        "image": "/images/team/placeholder-team.jpg"
+      },
+      {
+        "name": "Dra. María López",
+        "role": "Escribana Asociada",
+        "description": "Especialista en derecho societario y contratos. Amplia experiencia en constitución de empresas y actos comerciales.",
+        "education": "Universidad Católica de Asunción",
+        "image": "/images/team/placeholder-team.jpg"
+      },
+      {
+        "name": "Abg. Carlos Martínez",
+        "role": "Asesor Legal",
+        "description": "Especialista en sucesiones y derecho de familia. Encargado del área de testamentos y procesos sucesorios.",
+        "education": "Universidad Nacional de Asunción",
+        "image": "/images/team/placeholder-team.jpg"
+      }
+    ],
+    "cta": {
+      "title": "Agendá una consulta con nuestro equipo",
+      "subtitle": "Sin costo y sin compromiso. Te orientamos sobre tu caso.",
+      "buttonText": "Contactar Ahora",
+      "buttonHref": "https://wa.me/{{whatsapp}}?text={{whatsappMessage}}"
+    }
+  },
+  "contactoPage": {
+    "seo": {
+      "title": "Contacto | {{businessName}}",
+      "description": "Contactanos para consultas notariales. Estamos en Asunción, Paraguay. Atendemos por WhatsApp, teléfono y en oficina."
+    },
+    "hero": {
+      "headline": "Contactanos",
+      "subheadline": "Estamos para ayudarte con tu trámite notarial"
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "items": [
+        { "icon": "map-pin", "label": "Dirección", "value": "Asunción, Paraguay" },
+        { "icon": "phone", "label": "Teléfono", "value": "+595 {{phone}}" },
+        { "icon": "mail", "label": "Email", "value": "{{email}}" },
+        { "icon": "clock", "label": "Horario", "value": "Lunes a Viernes: 8:00 - 17:00 | Sábados: 8:00 - 12:00" }
+      ]
+    },
+    "form": {
+      "title": "Envianos tu consulta",
+      "subtitle": "Respondemos en menos de 24 horas hábiles",
+      "fields": [
+        { "name": "nombre", "label": "Nombre completo", "type": "text", "required": true },
+        { "name": "email", "label": "Correo electrónico", "type": "email", "required": true },
+        { "name": "telefono", "label": "Teléfono", "type": "tel", "required": true },
+        { "name": "servicio", "label": "Servicio de interés", "type": "select", "options": ["Escrituras", "Poderes", "Contratos", "Legalizaciones", "Sucesiones", "Societario", "Otro"], "required": false },
+        { "name": "mensaje", "label": "Mensaje", "type": "textarea", "required": true }
+      ],
+      "submitText": "Enviar Consulta"
+    },
+    "cta": {
+      "title": "¿Preferís una respuesta inmediata?",
+      "subtitle": "Escribinos por WhatsApp y te respondemos al instante",
+      "buttonText": "Escribir por WhatsApp",
+      "buttonHref": "https://wa.me/{{whatsapp}}?text={{whatsappMessage}}"
+    }
+  },
+  "faqPage": {
+    "seo": {
+      "title": "Preguntas Frecuentes | {{businessName}}",
+      "description": "Respuestas a las preguntas más comunes sobre servicios notariales en Paraguay."
+    },
+    "hero": {
+      "headline": "Preguntas Frecuentes",
+      "subheadline": "Respondemos tus dudas sobre trámites notariales"
+    },
+    "categories": [
+      {
+        "title": "Trámites Generales",
+        "items": [
+          {
+            "q": "¿Qué documentos necesito para identificarme ante el escribano?",
+            "a": "Necesitás tu cédula de identidad civil vigente (paraguaya) o pasaporte vigente (extranjeros). Para actos que requieran capacidad especial, pueden solicitarse documentos adicionales."
+          },
+          {
+            "q": "¿Cuánto cuesta una consulta inicial?",
+            "a": "La consulta inicial es sin costo. Te asesoramos sobre la documentación, el proceso y los costos del servicio notarial que necesitás."
+          },
+          {
+            "q": "¿Puedo firmar un documento si estoy en el extranjero?",
+            "a": "Sí. Podés firmar ante un notario en tu país de residencia, apostillar/legalizar el documento y enviarlo a Paraguay. También podemos coordinar videoconferencia para ciertos actos."
+          }
+        ]
+      },
+      {
+        "title": "Inmuebles y Propiedades",
+        "items": [
+          {
+            "q": "¿Qué impuestos debo pagar al comprar un inmueble?",
+            "a": "El comprador paga el Impuesto a la Transferencia de Inmuebles (ITI) del 4% sobre el valor fiscal actualizado. También hay gastos de registro y honorarios notariales. Te damos el presupuesto completo antes de iniciar."
+          },
+          {
+            "q": "¿Es obligatorio firmar escritura pública para comprar un inmueble?",
+            "a": "Sí, según el Código Civil paraguayo, la transferencia de dominio de inmuebles debe hacerse por escritura pública. Es la única forma de inscribir la propiedad a tu nombre en la Dirección General de Registros Públicos."
+          }
+        ]
+      },
+      {
+        "title": "Empresas y Sociedades",
+        "items": [
+          {
+            "q": "¿Qué tipo de sociedad me conviene?",
+            "a": "Depende de tu actividad, capital y cantidad de socios. La SRL es ideal para PYMES, la SA para empresas grandes, y la EAS para pequeños emprendedores. Te asesoramos sin costo."
+          },
+          {
+            "q": "¿Cuánto tiempo toma constituir una sociedad?",
+            "a": "Aproximadamente 2 a 4 semanas, incluyendo la escritura pública, inscripción en la DGRRCC y obtención del RUC. Podemos hacer el proceso en paralelo para agilizar."
+          }
+        ]
+      }
+    ]
+  },
+  "privacidadPage": {
+    "seo": {
+      "title": "Política de Privacidad | {{businessName}}",
+      "description": "Política de privacidad y tratamiento de datos personales de {{businessName}}."
+    },
+    "hero": {
+      "headline": "Política de Privacidad",
+      "subheadline": "Cómo protegemos tus datos personales"
+    },
+    "content": {
+      "sections": [
+        {
+          "title": "1. Información que recopilamos",
+          "text": "Recopilamos información personal que nos proporcionás voluntariamente al contactarnos, como nombre, correo electrónico, número de teléfono y datos de identificación necesarios para los servicios notariales."
+        },
+        {
+          "title": "2. Uso de la información",
+          "text": "Usamos tu información exclusivamente para: brindar los servicios notariales solicitados, comunicarnos con vos sobre tu trámite, cumplir con obligaciones legales y regulatorias, y mejorar nuestros servicios."
+        },
+        {
+          "title": "3. Protección de datos",
+          "text": "Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos personales contra acceso no autorizado, pérdida o destrucción."
+        },
+        {
+          "title": "4. Confidencialidad notarial",
+          "text": "Como escribanos, estamos sujetos al secreto profesional y a la confidencialidad notarial. La información que compartís con nosotros está protegida por ley."
+        },
+        {
+          "title": "5. Tus derechos",
+          "text": "Tenés derecho a acceder, rectificar, cancelar y oponerte al tratamiento de tus datos personales. Contactanos para ejercer estos derechos."
+        }
+      ]
+    }
+  }
+}

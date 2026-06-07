@@ -1,0 +1,363 @@
+{
+  "siteName": "Pitchy Blindex",
+  "businessName": "Pitchy — Vidrios Blindex para la Construcción",
+  "tagline": "Proveemos vidrio templado, laminado y muro cortina para proyectos de construcción en Paraguay.",
+  "metaDescription": "Vidrio Blindex en Paraguay. Proveemos vidrio templado, laminado, DVH, muro cortina y Low-E para edificios comerciales y residenciales. Stock local, entrega rápida.",
+  "site": {
+    "url": "https://pitchy.paragu-ai.com",
+    "title": "Pitchy Blindex — Vidrio para Construcción en Paraguay",
+    "description": "Vidrio Blindex en Paraguay. Proveemos vidrio templado, laminado, DVH, muro cortina y Low-E para edificios comerciales y residenciales."
+  },
+  "theme": {
+    "color": "#0F62FE"
+  },
+  "analytics": {
+    "ga4": ""
+  },
+  "cookieConsent": {
+    "title": "Este sitio usa cookies",
+    "description": "Usamos cookies para mejorar tu experiencia de navegación."
+  },
+  "navigation": {
+    "items": [
+      { "label": "Inicio", "href": "/" },
+      { "label": "Productos", "href": "/productos" },
+      { "label": "Proyectos", "href": "/proyectos" },
+      { "label": "Servicios", "href": "/servicios" },
+      { "label": "Nosotros", "href": "/nosotros" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contacto", "href": "/contacto" }
+    ],
+    "ctaText": "Cotizá tu proyecto",
+    "ctaHref": "https://wa.me/595981277601?text=Hola%20Pitchy%2C%20quiero%20cotizar%20vidrio%20para%20un%20proyecto"
+  },
+  "home": {
+    "hero": {
+      "headline": "Vidrio Blindex para Proyectos de Construcción en Paraguay",
+      "subheadline": "Stock local, entrega inmediata, asistencia técnica. Proveemos vidrio templado, laminado y muro cortina para edificios de hasta 250 metros.",
+      "ctaPrimaryText": "Solicitar cotización",
+      "ctaPrimaryHref": "/cotizar",
+      "ctaSecondaryText": "WhatsApp",
+      "ctaSecondaryHref": "https://wa.me/595981277601"
+    },
+    "features": {
+      "title": "¿Por qué elegirnos?",
+      "items": [
+        {
+          "title": "Stock Local",
+          "description": "Tenemos vidrio en stock. Entregas en 24–48 horas, no semanas de espera como los importadores."
+        },
+        {
+          "title": "Calidad Certificada",
+          "description": "Trabajamos con vidrio Blindex de primera calidad, con certificaciones IRAM e ISO."
+        },
+        {
+          "title": "Asistencia Técnica",
+          "description": "Te asesoramos en la elección del vidrio adecuado para tu proyecto, desde pequeñas obras hasta rascacielos."
+        },
+        {
+          "title": "Facilidades de Pago",
+          "description": "Ofrecemos crédito a 30 y 60 días para empresas constructoras y contratistas."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Cotizá tu proyecto hoy",
+      "description": "Contanos qué necesitás y te enviamos un presupuesto en el día.",
+      "secondaryText": "Escribinos por WhatsApp",
+      "secondaryLink": "https://wa.me/595981277601"
+    }
+  },
+  "products": [
+    {
+      "id": "vidrio-templado",
+      "name": "Vidrio Templado",
+      "description": "Vidrio de seguridad termoendurecido, 4 a 5 veces más resistente que el vidrio común. Ideal para fachadas, barandas, puertas y mamparas.",
+      "features": [
+        "Resistencia 4–5x superior al vidrio común",
+        "Disponible de 4mm a 19mm de espesor",
+        "Tamaño máximo: 2400 x 5000 mm",
+        "Cumple normas IRAM e ISO",
+        "Bordes pulidos y biselados"
+      ],
+      "applications": ["Fachadas de edificios", "Barandas y balcones", "Puertas de vidrio", "Mamparas de baño", "Divisiones de oficinas"],
+      "cta": "Solicitar cotización de vidrio templado"
+    },
+    {
+      "id": "vidrio-laminado",
+      "name": "Vidrio Laminado",
+      "description": "Vidrio de seguridad compuesto por dos o más láminas unidas con PVB. Si se rompe, los fragmentos quedan adheridos al film.",
+      "features": [
+        "Seguridad: los fragmentos no se desprenden",
+        "Reducción acústica de hasta 40 dB",
+        "Protección UV del 99%",
+        "Colores: transparente, satinado, bronce, gris, verde, azul",
+        "Configuraciones: 3+3 a 10+10 mm"
+      ],
+      "applications": ["Fachadas y muro cortina", "Claraboyas y techos", "Barandas de seguridad", "Pisos de vidrio", "Locales comerciales"],
+      "cta": "Solicitar cotización de vidrio laminado"
+    },
+    {
+      "id": "dvh",
+      "name": "DVH — Doble Vidriado Hermético",
+      "description": "Sistema de doble vidrio con cámara de aire o gas argón. Aislamiento térmico y acústico superior para edificios corporativos y viviendas.",
+      "features": [
+        "Aislamiento térmico: U-value desde 1.4 W/m²K",
+        "Reducción acústica de hasta 45 dB",
+        "Disponible con Low-E para control solar",
+        "Cámara de aire o argón",
+        "Configuraciones personalizadas"
+      ],
+      "applications": ["Edificios corporativos", "Hoteles", "Viviendas de alta gama", "Proyectos de eficiencia energética"],
+      "cta": "Solicitar cotización de DVH"
+    },
+    {
+      "id": "muro-cortina",
+      "name": "Muro Cortina",
+      "description": "Sistema de fachada vidriada para edificios de altura. Diseñamos y proveemos sistemas stick y unitized para proyectos de gran escala.",
+      "features": [
+        "Sistemas stick y unitized",
+        "Perfiles de aluminio con ruptura de puente térmico",
+        "Vidrio templado + laminado de alta resistencia",
+        "Ingeniería a medida para cada proyecto",
+        "Cálculo estructural incluido"
+      ],
+      "applications": ["Edificios corporativos", "Torres residenciales", "Centros comerciales", "Hoteles"],
+      "cta": "Solicitar cotización de muro cortina"
+    },
+    {
+      "id": "low-e",
+      "name": "Vidrio Low-E",
+      "description": "Vidrio de baja emisividad con capa microscópica que refleja el calor. Reduce la transferencia térmica manteniendo la transparencia.",
+      "features": [
+        "Reduce la ganancia de calor solar hasta 70%",
+        "Ahorro energético en climatización",
+        "Mantiene la luminosidad natural",
+        "Ideal para el clima cálido de Paraguay",
+        "Múltiples colores y reflectividades"
+      ],
+      "applications": ["Fachadas con control solar", "Edificios sustentables", "Proyectos LEED", "Grandes superficies vidriadas"],
+      "cta": "Solicitar cotización de vidrio Low-E"
+    },
+    {
+      "id": "blindex",
+      "name": "Mamparas de Baño Blindex",
+      "description": "Mamparas en vidrio templado de 8mm con perfilería de aluminio. Variedad de colores y acabados. Medidas estándar y a medida.",
+      "features": [
+        "Vidrio templado de 8mm",
+        "Perfiles: cromo, satinado, negro, dorado",
+        "Sistema de fácil limpieza",
+        "Medidas estándar y a medida",
+        "Instalación profesional incluida"
+      ],
+      "applications": ["Baños residenciales", "Baños de hoteles", "Baños corporativos"],
+      "cta": "Solicitar cotización de Blindex"
+    },
+    {
+      "id": "espejos",
+      "name": "Espejos",
+      "description": "Espejos de alta calidad en medidas estándar y personalizadas. Con y sin marco, biselados o rectos.",
+      "features": [
+        "Vidrio float de primera calidad",
+        "Múltiples tamaños disponibles",
+        "Biselado decorativo",
+        "Con y sin marco",
+        "Fijaciones incluidas"
+      ],
+      "applications": ["Hogares", "Gimnasios", "Locales comerciales", "Hoteles"],
+      "cta": "Solicitar cotización de espejos"
+    },
+    {
+      "id": "reparaciones",
+      "name": "Reparaciones y Reemplazos",
+      "description": "Servicio rápido de reparación y reemplazo de vidrios rotos en edificios comerciales y residenciales.",
+      "features": [
+        "Respuesta en 24 horas",
+        "Stock de medidas comunes",
+        "Corte a medida in situ",
+        "Trabajamos con compañías de seguros",
+        "Garantía de 1 año"
+      ],
+      "applications": ["Vidrios rotos de fachada", "Puertas y ventanas", "Barandas y balcones", "Mamparas"],
+      "cta": "Solicitar reparación urgente"
+    }
+  ],
+  "categories": [
+    { "id": "vidrio-templado", "name": "Vidrio Templado", "icon": "🔷", "description": "Vidrio de seguridad para construcciones" },
+    { "id": "vidrio-laminado", "name": "Vidrio Laminado", "icon": "🪟", "description": "Vidrio de seguridad laminado PVB" },
+    { "id": "dvh", "name": "DVH", "icon": "🪞", "description": "Doble vidriado hermético" },
+    { "id": "muro-cortina", "name": "Muro Cortina", "icon": "🏢", "description": "Sistemas de fachada vidriada" },
+    { "id": "low-e", "name": "Low-E", "icon": "☀️", "description": "Vidrio de baja emisividad" },
+    { "id": "blindex", "name": "Blindex", "icon": "🚿", "description": "Mamparas de baño" },
+    { "id": "espejos", "name": "Espejos", "icon": "🪞", "description": "Espejos medidas especiales" },
+    { "id": "reparaciones", "name": "Reparaciones", "icon": "🔧", "description": "Reparación y reemplazo" }
+  ],
+  "testimonials": [
+    { "name": "Constructora ABC", "text": "Excelente servicio y calidad. Los vidrios llegaron antes de lo previsto.", "rating": 5 },
+    { "name": "Arq. Martínez", "text": "Pitchy nos asesoró en la elección del vidrio adecuado para nuestra fachada. Muy recomendados.", "rating": 5 }
+  ],
+  "contacto": {
+    "info": {
+      "phone": "+595 981 277 601",
+      "whatsapp": "595981277601",
+      "email": "pitchy@example.com",
+      "address": "Asunción, Paraguay"
+    },
+    "hours": "Lunes a viernes: 07:30 a 17:30 | Sábados: 07:30 a 12:00"
+  },
+  "whatsapp": {
+    "defaultMessage": "Hola Pitchy, quiero consultar sobre vidrio para un proyecto."
+  },
+  "nosotros": {
+    "title": "Sobre Pitchy Blindex",
+    "subtitle": "Expertos en vidrio para la construcción en Paraguay",
+    "mission": "Proveer vidrio de la más alta calidad con entrega rápida y asesoramiento técnico personalizado para proyectos de todos los tamaños.",
+    "stats": [
+      { "number": "10+", "label": "Años en el mercado" },
+      { "number": "50,000+", "label": "M² de vidrio suministrados" },
+      { "number": "200+", "label": "Proyectos completados" },
+      { "number": "95%", "label": "Clientes satisfechos" }
+    ],
+    "story": "Con amplia trayectoria en el rubro del vidrio para la construcción, Pitchy Blindex nace de la necesidad de proveer vidrio de calidad con stock local en Paraguay. Trabajamos directamente con Blindex, la marca líder en Latinoamérica, para ofrecer productos certificados con los mejores estándares de calidad. Nuestro equipo asesora a arquitectos, ingenieros y constructores en la selección del vidrio adecuado para cada proyecto, desde pequeñas reformas hasta rascacielos de más de 40 pisos.",
+    "values": [
+      { "title": "Calidad", "description": "Solo trabajamos con vidrio certificado Blindex, con garantía de fábrica." },
+      { "title": "Stock local", "description": "Mantenemos inventario permanente para entregas rápidas." },
+      { "title": "Asesoramiento", "description": "Te ayudamos a elegir el producto correcto para tu proyecto." },
+      { "title": "Confianza", "description": "Relaciones de largo plazo con constructoras y arquitectos." }
+    ]
+  },
+  "servicios": [
+    {
+      "id": "asesoramiento",
+      "title": "Asesoramiento Técnico",
+      "description": "Te ayudamos a seleccionar el vidrio adecuado según las necesidades de tu proyecto: resistencia, aislamiento, control solar y presupuesto.",
+      "icon": "📋"
+    },
+    {
+      "id": "provision",
+      "title": "Provisión de Vidrio",
+      "description": "Suministramos vidrio templado, laminado, DVH, muro cortina y Low-E con stock local. Entregas en 24–48 horas.",
+      "icon": "📦"
+    },
+    {
+      "id": "instalacion",
+      "title": "Instalación Profesional",
+      "description": "Coordinamos la instalación con nuestro equipo de profesionales experimentados en proyectos de todo tamaño.",
+      "icon": "🔨"
+    },
+    {
+      "id": "medicion",
+      "title": "Medición y Presupuesto",
+      "description": "Realizamos la medición in situ y te entregamos un presupuesto detallado sin compromiso.",
+      "icon": "📏"
+    },
+    {
+      "id": "postventa",
+      "title": "Servicio Post-Venta",
+      "description": "Garantía en todos nuestros productos. Servicio de reparación y reemplazo rápido.",
+      "icon": "🛡️"
+    }
+  ],
+  "proyectos": [
+    {
+      "name": "Edificio Residencial Torre Este",
+      "location": "Asunción",
+      "scope": "Suministro de vidrio templado y laminado para fachada — 1.200 m²",
+      "year": "2025",
+      "description": "Vidrio templado 10mm y laminado 6+6 para fachada completa de edificio de 18 pisos."
+    },
+    {
+      "name": "Oficinas Corporativas Centro",
+      "location": "Asunción",
+      "scope": "Muro cortina con DVH Low-E — 850 m²",
+      "year": "2024",
+      "description": "Sistema de muro cortina stick con DVH y vidrio Low-E para control solar."
+    },
+    {
+      "name": "Complejo Hotelero",
+      "location": "Encarnación",
+      "scope": "Barandas de vidrio templado y mamparas Blindex — 300 unidades",
+      "year": "2024",
+      "description": "Barandas de vidrio templado 12mm para balcones y mamparas de baño Blindex."
+    }
+  ],
+  "faq": [
+    { "question": "¿Cuánto tiempo tarda la entrega?", "answer": "Si el producto está en stock, la entrega es en 24–48 horas. Para pedidos especiales o grandes volúmenes, consultar plazo." },
+    { "question": "¿Hacen instalación?", "answer": "Sí, coordinamos instalación profesional con nuestro equipo especializado en fachadas y muro cortina." },
+    { "question": "¿Qué espesor de vidrio necesito para una baranda de balcón?", "answer": "Para barandas residenciales recomendamos vidrio templado de 8mm o 10mm. Para barandas comerciales o de mayor altura, 10mm o 12mm. El espesor depende de la altura de la baranda y la carga de viento." },
+    { "question": "¿El vidrio templado se puede cortar después de fabricado?", "answer": "No. El vidrio templado no puede cortarse, perforarse ni modificarse después del templado. Cualquier modificación debe hacerse antes del tratamiento térmico. Por eso es importante contar con medidas exactas antes de fabricar." },
+    { "question": "¿Ofrecen vidrio con control solar para fachadas?", "answer": "Sí, trabajamos con vidrio Low-E que reduce la ganancia de calor solar hasta un 70%. Ideal para fachadas con orientación norte y oeste en el clima cálido de Paraguay." },
+    { "question": "¿Trabajan con constructoras?", "answer": "Sí, trabajamos con constructoras y contratistas. Ofrecemos crédito a 30 y 60 días para proyectos y obras." },
+    { "question": "¿Qué certificaciones tiene el vidrio?", "answer": "Trabajamos con vidrio Blindex certificado bajo normas IRAM e ISO. Consultanos por certificados específicos para tu proyecto." },
+    { "question": "¿Cuál es la diferencia entre vidrio templado y laminado?", "answer": "El templado es 4–5 veces más resistente que el vidrio común y se rompe en fragmentos pequeños no cortantes. El laminado tiene una capa de PVB que mantiene los fragmentos adheridos si se rompe. Para fachadas se recomienda usar ambos: laminado por seguridad y templado por resistencia." },
+    { "question": "¿Hacen presupuestos sin compromiso?", "answer": "Sí, realizamos la medición y el presupuesto sin cargo. Consultanos por WhatsApp o el formulario de cotización." },
+    { "question": "¿Tienen stock permanente o trabajan sobre pedido?", "answer": "Mantenemos stock permanente de vidrio templado y laminado en medidas estándar. Para proyectos especiales o grandes volúmenes, coordinamos los plazos de fabricación." }
+  ],
+  "blog": [
+    {
+      "slug": "muro-cortina-paraguay-guia",
+      "title": "Muro Cortina en Paraguay: Guía Completa para Proyectos de Altura",
+      "excerpt": "Todo lo que necesitás saber sobre sistemas de muro cortina para edificios en Paraguay: tipos, costos, instalación y mantenimiento.",
+      "date": "2026-05-06",
+      "author": "Pitchy",
+      "category": "Técnico",
+      "content": "El muro cortina es un sistema de fachada vidriada no estructural que se utiliza en edificios de altura. A diferencia de las ventanas tradicionales, el muro cortina se ancla a la estructura del edificio piso por piso, permitiendo fachadas continuas de vidrio que le dan a los edificios su característico aspecto moderno.\n\n## Tipos de Muro Cortina\n\n### Sistema Stick\nEl sistema más común en Paraguay. Los perfiles de aluminio y los paneles de vidrio se ensamblan pieza por pieza en la obra. Ventajas: menor costo, fácil transporte, ideal para proyectos medianos.\n\n### Sistema Unitized\nLos paneles llegan prefabricados de fábrica y solo se cuelgan en la estructura. Ventajas: instalación más rápida, mejor control de calidad, ideal para grandes torres.\n\n## Vidrios Recomendados para Muro Cortina\n\nPara fachadas vidriadas en Paraguay recomendamos:\n- **Vidrio laminado**: seguridad ante impactos y roturas\n- **DVH con Low-E**: control térmico para el clima cálido paraguayo\n- **Vidrio templado**: resistencia estructural\n\n## Mantenimiento\n\nEl muro cortina requiere mantenimiento periódico: limpieza de vidrios, revisión de sellos y juntas, y verificación de anclajes. Con buen mantenimiento, la vida útil supera los 30 años.\n\n¿Estás planificando un proyecto con muro cortina? Contactanos para recibir asesoramiento técnico y presupuesto personalizado."
+    },
+    {
+      "slug": "vidrio-templado-vs-laminado",
+      "title": "Vidrio Templado vs Laminado: ¿Cuál Elegir para tu Proyecto?",
+      "excerpt": "Comparativa completa entre vidrio templado y laminado: diferencias, aplicaciones, resistencia y cuándo usar cada uno.",
+      "date": "2026-05-06",
+      "author": "Pitchy",
+      "category": "Técnico",
+      "content": "Una de las preguntas más frecuentes en la construcción es si usar vidrio templado o laminado. Ambos son vidrios de seguridad, pero funcionan de manera diferente.\n\n## Vidrio Templado\n\nEl vidrio templado pasa por un tratamiento térmico que lo hace 4–5 veces más resistente que el vidrio común. Cuando se rompe, se fragmenta en pequeños trozos no cortantes.\n\n**Usos ideales:**\n- Fachadas y barandas\n- Puertas de vidrio\n- Mamparas de baño\n- Divisiones de oficinas\n\n## Vidrio Laminado\n\nEl vidrio laminado está compuesto por dos o más láminas de vidrio unidas por una capa de PVB (butiral de polivinilo). Si se rompe, los fragmentos quedan adheridos al film.\n\n**Usos ideales:**\n- Fachadas y muro cortina\n- Claraboyas y techos de vidrio\n- Pisos de vidrio\n- Locales comerciales (seguridad antirrobo)\n\n## ¿Cuál Elegir?\n\n| Aplicación | Recomendación |\n|-----------|--------------|\n| Fachada de edificio | Laminado (seguridad) + Templado (resistencia) |\n| Baranda de balcón | Templado (resistencia al impacto) |\n| Techo vidriado | Laminado (los fragmentos no caen) |\n| Puerta de vidrio | Templado (resistencia) |\n| Muro cortina | Laminado + DVH |\n\nEn muchos proyectos se usan ambos: el laminado por seguridad y el templado por resistencia. Consultanos y te asesoramos sin compromiso."
+    },
+    {
+      "slug": "precio-vidrio-fachadas-paraguay",
+      "title": "Precio del Vidrio para Fachadas en Paraguay [2026]",
+      "excerpt": "Guía de precios actualizada para vidrio templado, laminado y muro cortina en Paraguay. Factores que influyen en el costo y cómo presupuestar.",
+      "date": "2026-05-06",
+      "author": "Pitchy",
+      "category": "Comercial",
+      "content": "El precio del vidrio para fachadas en Paraguay varía según el tipo de vidrio, el espesor, el tratamiento y la cantidad. Esta guía te ayudará a entender los factores que influyen en el costo.\n\n## Factores que Afectan el Precio\n\n1. **Tipo de vidrio**: templado, laminado, DVH, Low-E (cada uno tiene un proceso de fabricación diferente)\n2. **Espesor**: a mayor espesor, mayor costo\n3. **Cantidad**: proyectos grandes tienen mejor precio por m²\n4. **Tratamientos adicionales**: biselado, perforaciones, cortes especiales\n5. **Instalación**: el costo de instalación depende de la altura y complejidad\n\n## Rango de Precios Referenciales\n\n| Producto | Precio Aprox. por m² |\n|----------|---------------------|\n| Vidrio Templado 6mm | $XX – $XX |\n| Vidrio Templado 10mm | $XX – $XX |\n| Vidrio Laminado 4+4 | $XX – $XX |\n| DVH 4+12+4 | $XX – $XX |\n| DVH con Low-E | $XX – $XX |\n| Muro Cortina (completo) | $XX – $XX |\n\n*Los precios son referenciales y pueden variar según el proyecto. Solicitá un presupuesto personalizado.*\n\n## Cómo Ahorrar en tu Proyecto\n\n- **Comprá por volumen**: proyectos grandes tienen mejor precio\n- **Estandarizá medidas**: evitar cortes especiales reduce el desperdicio\n- **Elegí el vidrio adecuado**: no uses vidrio más grueso del necesario\n- **Consultá con anticipación**: los precios pueden cambiar según la demanda\n\nSolicitá tu presupuesto sin compromiso. Te enviamos una cotización detallada en el día."
+    }
+  ],
+  "footer": {
+    "description": "Proveemos vidrio templado, laminado, DVH y muro cortina para proyectos de construcción en todo Paraguay.",
+    "columns": [
+      {
+        "title": "Productos",
+        "links": [
+          { "label": "Vidrio Templado", "href": "/productos#vidrio-templado" },
+          { "label": "Vidrio Laminado", "href": "/productos#vidrio-laminado" },
+          { "label": "DVH", "href": "/productos#dvh" },
+          { "label": "Muro Cortina", "href": "/productos#muro-cortina" },
+          { "label": "Blindex", "href": "/productos#blindex" }
+        ]
+      },
+      {
+        "title": "Empresa",
+        "links": [
+          { "label": "Nosotros", "href": "/nosotros" },
+          { "label": "Servicios", "href": "/servicios" },
+          { "label": "Proyectos", "href": "/proyectos" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Contacto", "href": "/contacto" }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          { "label": "WhatsApp", "href": "https://wa.me/595981277601" },
+          { "label": "Tel: +595 981 277 601", "href": "tel:+595981277601" },
+          { "label": "Email", "href": "mailto:pitchy@example.com" }
+        ]
+      }
+    ],
+    "paymentMethods": [],
+    "social": [
+      { "name": "WhatsApp", "url": "https://wa.me/595981277601", "icon": "message-circle" }
+    ],
+    "copyright": "© 2026 Pitchy Blindex. Todos los derechos reservados."
+  }
+}

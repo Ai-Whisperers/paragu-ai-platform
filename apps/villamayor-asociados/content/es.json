@@ -1,0 +1,301 @@
+{
+  "site": {
+    "name": "Villamayor & Asociados",
+    "shortName": "Villamayor",
+    "tagline": "Estudio Jurídico | Fuero Civil y Comercial",
+    "description": "Estudio jurídico paraguayo especializado en derecho civil y comercial. Asesoría legal integral para empresas y particulares en Asunción, Paraguay.",
+    "locale": "es-PY",
+    "phone": "+595 981 324 569",
+    "whatsapp": "595981324569",
+    "email": "contacto@villamayorlaw.com.py",
+    "address": "Asunción, Paraguay",
+    "city": "Asunción",
+    "country": "Paraguay",
+    "founded": 2018,
+    "hours": "Lun–Vie 8:00–18:00 | Sáb 8:00–12:00",
+    "instagram": "villamayorasociados",
+    "linkedin": "villamayor-asociados",
+    "memberships": [
+      "Colegio de Abogados del Paraguay (CAP)",
+      "Cámara de Comercio Paraguayo-Americana (PARAM)"
+    ]
+  },
+  "hero": {
+    "title": "Experiencia Jurídica con Compromiso Personal",
+    "subtitle": "En Villamayor & Asociados ofrecemos asesoría legal integral en derecho civil y comercial. Defendemos tus intereses con excelencia, ética profesional y atención cercana.",
+    "ctaText": "Agendar Consulta",
+    "ctaLink": "https://wa.me/595981324569?text=Hola%2C%20Villamayor%20%26%20Asociados%20-%20Quiero%20agendar%20una%20consulta%20legal",
+    "secondaryCta": "Conocé Nuestros Servicios",
+    "secondaryCtaLink": "/servicios",
+    "stats": [
+      {
+        "value": "+8",
+        "label": "Años de Experiencia"
+      },
+      {
+        "value": "+500",
+        "label": "Casos Atendidos"
+      },
+      {
+        "value": "95%",
+        "label": "Casos Exitosos"
+      },
+      {
+        "value": "PY",
+        "label": "Cobertura Nacional"
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "intro": "Villamayor & Asociados es un estudio jurídico paraguayo con más de 8 años de trayectoria en el fuero civil y comercial. Fundado por el Abog. Alejandro Villamayor, nuestro equipo combina experiencia litigiosa con una visión estratégica del derecho.",
+    "mission": "Brindar asesoría legal de excelencia con estándares internacionales, manteniendo un trato personalizado y cercano con cada cliente.",
+    "vision": "Ser el estudio jurídico de referencia en Paraguay para empresas y particulares que buscan soluciones legales eficientes, éticas y orientadas a resultados.",
+    "values": [
+      {
+        "title": "Excelencia",
+        "desc": "Preparación constante y conocimiento profundo del marco legal paraguayo."
+      },
+      {
+        "title": "Ética",
+        "desc": "Transparencia total en costos, plazos y estrategias legales."
+      },
+      {
+        "title": "Cercanía",
+        "desc": "Respondemos consultas directamente, sin intermediarios ni filtros."
+      },
+      {
+        "title": "Resultados",
+        "desc": "Estrategias diseñadas a medida para cada caso, sin soluciones genéricas."
+      }
+    ]
+  },
+  "services": {
+    "title": "Áreas de Práctica",
+    "subtitle": "Asesoría legal integral en las principales ramas del derecho civil y comercial",
+    "items": [
+      {
+        "icon": "FileText",
+        "title": "Derecho Contractual",
+        "description": "Redacción, revisión y negociación de contratos civiles y comerciales: compraventa, arrendamiento, servicios, sociedades, joint ventures y acuerdos de confidencialidad.",
+        "features": [
+          "Contratos de compraventa",
+          "Arrendamiento y alquileres",
+          "Contratos de servicios",
+          "Acuerdos societarios",
+          "NDA y confidencialidad"
+        ]
+      },
+      {
+        "icon": "Scale",
+        "title": "Litigios Civiles y Comerciales",
+        "description": "Representación judicial en procesos civiles, comerciales y contencioso-administrativos. Defensa estratégica de tus intereses ante los tribunales paraguayos.",
+        "features": [
+          "Juicios ordinarios y sumarios",
+          "Ejecuciones y cobros",
+          "Medidas cautelares",
+          "Recursos y apelaciones",
+          "Arbitraje comercial"
+        ]
+      },
+      {
+        "icon": "Building2",
+        "title": "Derecho Inmobiliario",
+        "description": "Asesoría integral en operaciones inmobiliarias: compraventa, due diligence, verificación de títulos, contratos de arrendamiento y propiedad horizontal.",
+        "features": [
+          "Due diligence de propiedades",
+          "Verificación de títulos",
+          "Contratos de compraventa",
+          "Propiedad horizontal",
+          "Regularización dominial"
+        ]
+      },
+      {
+        "icon": "Heart",
+        "title": "Derecho de Familia",
+        "description": "Asesoría en procesos de familia: divorcios, alimentos, régimen de visitas, filiación, guarda y tutela. Acompañamiento sensible y profesional.",
+        "features": [
+          "Divorcios (mutuo acuerdo y contencioso)",
+          "Pensión alimenticia",
+          "Régimen de visitas",
+          "Guarda y tutela",
+          "Sucesiones y herencias"
+        ]
+      },
+      {
+        "icon": "Briefcase",
+        "title": "Derecho Laboral",
+        "description": "Asesoría a empresas y trabajadores en materia laboral: contratos, despidos, indemnizaciones, negociación colectiva y litigios laborales.",
+        "features": [
+          "Contratos de trabajo",
+          "Despidos e indemnizaciones",
+          "Litigios laborales",
+          "Seguridad social",
+          "Negociación colectiva"
+        ]
+      },
+      {
+        "icon": "Shield",
+        "title": "Derecho Corporativo",
+        "description": "Constitución de sociedades, asesoría a directorios, compliance, fusiones y adquisiciones. Protección legal integral para tu empresa.",
+        "features": [
+          "Constitución de EAS, SRL, SA",
+          "Gobierno corporativo",
+          "Fusiones y adquisiciones",
+          "Compliance empresarial",
+          "Contratos societarios"
+        ]
+      },
+      {
+        "icon": "FileSearch",
+        "title": "Due Diligence y Auditoría Legal",
+        "description": "Evaluación integral de riesgos legales previa a inversiones, fusiones, adquisiciones o cualquier transacción comercial relevante.",
+        "features": [
+          "Auditoría de contratos",
+          "Evaluación de riesgos",
+          "Verificación societaria",
+          "Cumplimiento normativo",
+          "Informes legales"
+        ]
+      },
+      {
+        "icon": "UserCheck",
+        "title": "Inversiones y Residencia",
+        "description": "Asesoría a inversores extranjeros interesados en Paraguay: estructuración de inversiones, régimen tributario preferencial y obtención de residencia.",
+        "features": [
+          "Investor Pass y SUACE",
+          "Estructuración de inversiones",
+          "Régimen tributario IRE 10%",
+          "Residencia permanente",
+          "Asesoría bilingüe"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "title": "¿Cómo Trabajamos?",
+    "subtitle": "Un proceso claro, desde la primera consulta hasta la resolución de tu caso",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Consulta Inicial",
+        "desc": "Conversación sin costo para entender tu situación y objetivos legales."
+      },
+      {
+        "step": "02",
+        "title": "Análisis del Caso",
+        "desc": "Estudio profundo de tu situación, revisión de documentos y diseño de estrategia."
+      },
+      {
+        "step": "03",
+        "title": "Ejecución",
+        "desc": "Gestión de trámites, representación judicial o negociación con actualizaciones periódicas."
+      },
+      {
+        "step": "04",
+        "title": "Seguimiento",
+        "desc": "Cierre del caso y disponibilidad permanente para consultas futuras."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Carlos M.",
+      "text": "Me ayudaron con un contrato de compraventa complicado. Todo quedó impecable y me explicaron cada paso.",
+      "rating": 5
+    },
+    {
+      "name": "Laura G.",
+      "text": "Excelente servicio. Mi caso de divorcio se resolvió rápido y con mucha profesionalidad.",
+      "rating": 5
+    },
+    {
+      "name": "Roberto A.",
+      "text": "Los recomiendo totalmente. Me asesoraron en la constitución de mi empresa y todo salió perfecto.",
+      "rating": 5
+    }
+  ],
+  "faq": [
+    {
+      "q": "¿Cuánto cuesta una consulta inicial?",
+      "a": "La primera consulta es sin costo. En ella evaluamos tu situación, te explicamos las opciones legales disponibles y te damos un presupuesto claro antes de iniciar cualquier gestión."
+    },
+    {
+      "q": "¿Cuánto tiempo toma resolver un caso?",
+      "a": "Depende de la complejidad y la vía procesal. Los casos simples pueden resolverse en semanas; los litigios complejos pueden tomar meses. Te damos plazos realistas desde el inicio."
+    },
+    {
+      "q": "¿Atienden solo en Asunción?",
+      "a": "Nuestra oficina está en Asunción, pero tenemos cobertura en todo el territorio paraguayo. También ofrecemos consultas virtuales."
+    },
+    {
+      "q": "¿Manejan casos de inversores extranjeros?",
+      "a": "Sí. Asesoramos a inversores internacionales en estructuración de inversiones, régimen tributario y residencia. Atención bilingüe español/inglés."
+    },
+    {
+      "q": "¿Qué documentos necesito para la primera consulta?",
+      "a": "Depende del tipo de caso. Te indicaremos los documentos relevantes al agendar tu cita. Si ya tenés contratos, escrituras o notificaciones, traelos."
+    },
+    {
+      "q": "¿Trabajan con honorarios fijos o por hora?",
+      "a": "Ofrecemos ambas modalidades. Para casos puntuales (constitución de empresas, contratos) trabajamos con honorarios fijos. Para litigios, acordamos el modelo que mejor se adapte a tus necesidades."
+    }
+  ],
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Respondemos consultas en el día. Agendá tu cita sin compromiso.",
+    "address_line1": "Asunción, Paraguay",
+    "address_line2": "Zona Central",
+    "map_embed": ""
+  },
+  "blog": {
+    "title": "Blog Jurídico",
+    "subtitle": "Artículos, guías y novedades del derecho civil y comercial en Paraguay",
+    "posts": [
+      {
+        "title": "Guía Completa del Investor Pass 2026 en Paraguay",
+        "slug": "guia-investor-pass-2026",
+        "excerpt": "Todo lo que necesitás saber sobre la nueva ley de residencia por inversión: montos, plazos, requisitos y beneficios.",
+        "date": "2026-04-15",
+        "category": "Inversiones",
+        "readTime": "8 min"
+      },
+      {
+        "title": "¿Qué tipo de sociedad conviene más para tu negocio?",
+        "slug": "tipo-sociedad-negocio-paraguay",
+        "excerpt": "Comparativa entre EAS, SRL y SA: diferencias clave, requisitos de capital y ventajas fiscales de cada figura societaria.",
+        "date": "2026-04-08",
+        "category": "Corporativo",
+        "readTime": "6 min"
+      },
+      {
+        "title": "Due Diligence Inmobiliario: Pasos Esenciales",
+        "slug": "due-diligence-inmobiliario-pasos",
+        "excerpt": "Los 5 pasos clave para verificar la situación legal de una propiedad antes de comprar. Evitá riesgos y sorpresas.",
+        "date": "2026-03-25",
+        "category": "Inmobiliario",
+        "readTime": "5 min"
+      },
+      {
+        "title": "Guía de Divorcio en Paraguay: Procesos y Plazos",
+        "slug": "guia-divorcio-paraguay",
+        "excerpt": "Todo sobre el divorcio en Paraguay: diferencias entre mutuo acuerdo y contencioso, plazos, costos y documentación necesaria.",
+        "date": "2026-03-10",
+        "category": "Familia",
+        "readTime": "7 min"
+      },
+      {
+        "title": "Contratos Comerciales: Cláusulas Esenciales",
+        "slug": "contratos-comerciales-clausulas",
+        "excerpt": "Las cláusulas que todo contrato comercial en Paraguay debería incluir para proteger tus intereses y evitar litigios.",
+        "date": "2026-02-28",
+        "category": "Contractual",
+        "readTime": "6 min"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Villamayor & Asociados. Todos los derechos reservados.",
+    "disclaimer": "Este sitio web es solo para fines informativos y no constituye asesoría legal. Consulte con un abogado para obtener consejo legal específico a su situación."
+  }
+}

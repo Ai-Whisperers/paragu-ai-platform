@@ -4,12 +4,12 @@
  * What it is: Dynamic content loader with a runtime interface that can swap between
  * Supabase (live edits) and local JSON files (static fallback).
  *
- * Why it exists: Provides a consistent API surface (@ai-whisperers/client-kit pattern)
+ * Why it exists: Provides a consistent API surface (@paragu-ai/engine pattern)
  * so the site-template content system is portable to the published package.
  * Currently uses local JSON files via lib/config.server; the interface is ready
  * for a Supabase swap by calling configureContentLoader() or configureSupabaseLoader().
  *
- * Key exports (match @ai-whisperers/client-kit):
+ * Key exports (match @paragu-ai/engine):
  *   configureContentLoader(loader) — plug in a custom async () => SiteContent loader
  *   configureSupabaseLoader(url, key, siteId) — use Supabase as live content store
  *   configureUrlLoader(url) — fetch content JSON from a runtime URL
@@ -17,10 +17,10 @@
  *   useContent() — server-component hook, throws on client side
  *   clearCache() — invalidate the in-memory content cache
  *
- * Standalone path: lib/content-loader.ts (not part of the @ai-whisperers package)
+ * Standalone path: lib/content-loader.ts (not part of the @paragu-ai/engine package)
  */
 import { cache } from "react"
-import type { SiteContent } from "@ai-whisperers/client-kit"
+import type { SiteContent } from "@paragu-ai/engine"
 
 type LoaderFn = () => Promise<SiteContent>
 

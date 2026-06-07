@@ -1,0 +1,1237 @@
+{
+  "siteName": "Fun4Me Store",
+  "businessName": "Fun4Me",
+  "tagline": "Bienestar y Placer",
+  "metaDescription": "Tienda de bienestar y productos para adultos en Paraguay. Envío discreto, calidad garantizada. Vibradores, lencería, BDSM y más.",
+  "navigation": {
+    "businessName": "Fun4Me",
+    "ctaText": "Pedir por WhatsApp",
+    "ctaHref": "https://wa.me/595976569739?text=Hola!%20Quiero%20informacion%20sobre%20productos",
+    "items": [
+      {
+        "label": "Inicio",
+        "href": ""
+      },
+      {
+        "label": "Tienda",
+        "href": "/tienda"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      },
+      {
+        "label": "Promos",
+        "href": "/promociones"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto"
+      }
+    ]
+  },
+  "home": {
+    "seo": {
+      "title": "Fun4Me Store — Bienestar y Placer con Total Discreción",
+      "description": "Vibradores, lencería, BDSM, lubricantes y más. Envío discreto a todo Paraguay. Productos de calidad para tu bienestar íntimo."
+    },
+    "hero": {
+      "headline": "Bienestar y Placer con Total <span>Discreción</span>",
+      "subheadline": "Productos de calidad para tu bienestar íntimo. Envío discreto a todo Paraguay.",
+      "ctaPrimaryText": "Ver Catálogo",
+      "ctaPrimaryHref": "/tienda",
+      "ctaSecondaryText": "Conocé Más",
+      "ctaSecondaryHref": "/envio"
+    },
+    "ageGate": "Este sitio contiene contenido para mayores de 18 años. Al ingresar confirmás que tenés 18 años o más.",
+    "stats": {
+      "title": "Fun4Me en Números",
+      "items": [
+        {
+          "value": "6",
+          "label": "Categorías"
+        },
+        {
+          "value": "14+",
+          "label": "Productos"
+        },
+        {
+          "value": "+50",
+          "label": "Clientas Satisfechas"
+        },
+        {
+          "value": "🇵🇾",
+          "label": "Paraguay"
+        }
+      ]
+    },
+    "features": {
+      "title": "¿Por qué elegir Fun4Me?",
+      "items": [
+        {
+          "icon": "box",
+          "title": "Empaque Neutro",
+          "description": "Todos los pedidos llegan en cajas simples sin logos ni marcas."
+        },
+        {
+          "icon": "shield",
+          "title": "Confidencialidad Total",
+          "description": "No compartimos tus datos con terceros. Privacidad ante todo."
+        },
+        {
+          "icon": "truck",
+          "title": "Envío Rápido",
+          "description": "24-48hs en Asunción. Hacemos envíos a todo Paraguay."
+        },
+        {
+          "icon": "wallet",
+          "title": "Pago Seguro",
+          "description": "Transferencia, depósito y efectivo contra entrega."
+        },
+        {
+          "icon": "message-circle",
+          "title": "Atención Personalizada",
+          "description": "Respondemos rápido por WhatsApp. Cualquier duda, consultanos."
+        },
+        {
+          "icon": "heart",
+          "title": "Calidad Garantizada",
+          "description": "Productos originales de marcas reconocidas."
+        }
+      ]
+    },
+    "featuredProducts": {
+      "title": "Productos Destacados",
+      "subtitle": "Los más elegidos por nuestras clientas"
+    },
+    "newArrivals": {
+      "title": "Novedades",
+      "subtitle": "Lo último en bienestar íntimo"
+    },
+    "testimonials": {
+      "title": "Lo Que Dicen Nuestras Clientes"
+    },
+    "newsletter": {
+      "title": "Recibí Novedades y Ofertas",
+      "description": "Promociones exclusivas, nuevos productos y contenido para tu bienestar. Sin spam, solo lo bueno.",
+      "placeholder": "tu@email.com",
+      "buttonText": "Suscribirme"
+    },
+    "finalCta": {
+      "title": "¿Lista para mimarte?",
+      "description": "Elegí tus productos favoritos y pedilos por WhatsApp con total discreción.",
+      "buttonText": "Ver Catálogo",
+      "buttonLink": "/tienda",
+      "secondaryText": "Consultar por WhatsApp",
+      "secondaryLink": "https://wa.me/595976569739?text=Hola!%20Quiero%20informacion%20sobre%20productos"
+    }
+  },
+  "categories": [
+    {
+      "id": "vibradores",
+      "name": "Vibradores",
+      "description": "Desde clásicos hasta inteligentes. Encontrá el que mejor se adapte a vos.",
+      "image": "/images/categories/vibradores.svg",
+      "icon": "✨"
+    },
+    {
+      "id": "lenceria",
+      "name": "Lencería",
+      "description": "Conjuntos, babydolls, bodys y más. Descubrí tu estilo.",
+      "image": "/images/categories/lenceria.svg",
+      "icon": "💜"
+    },
+    {
+      "id": "bdsm",
+      "name": "BDSM",
+      "description": "Esposas, vendas, fustas y accesorios para explorar nuevas experiencias.",
+      "image": "/images/categories/bdsm.svg",
+      "icon": "⛓️"
+    },
+    {
+      "id": "lubricantes",
+      "name": "Lubricantes",
+      "description": "Base agua, silicona, híbridos. Suaves, duraderos y seguros.",
+      "image": "/images/categories/lubricantes.svg",
+      "icon": "💧"
+    },
+    {
+      "id": "juguetes-anales",
+      "name": "Juguetes Anales",
+      "description": "Placer seguro con diseño ergonómico. Para principiantes y avanzados.",
+      "image": "/images/categories/anales.svg",
+      "icon": "🔮"
+    },
+    {
+      "id": "sets",
+      "name": "Sets",
+      "description": "Combos completos para empezar o regalar. Todo incluido.",
+      "image": "/images/categories/sets.svg",
+      "icon": "🎁"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "slug": "vibrador-clasico-sencillo",
+      "name": "Vibrador Clásico Sencillo",
+      "price": 95000,
+      "currency": "PYG",
+      "category": "vibradores",
+      "description": "Vibrador compacto de silicona hipoalergénica. 7 modos de vibración, funcionamiento silencioso. Ideal para principiantes.",
+      "features": [
+        "Silicona hipoalergénica",
+        "7 modos de vibración",
+        "Funcionamiento silencioso",
+        "A prueba de agua"
+      ],
+      "faq": [
+        {
+          "q": "¿Es ruidoso?",
+          "a": "Es muy silencioso, ideal para uso discreto."
+        },
+        {
+          "q": "¿Es apto para principiantes?",
+          "a": "Sí, es perfecto para quienes recién empiezan."
+        }
+      ],
+      "image": "/images/products/vib-clasico.svg",
+      "featured": true,
+      "new": false,
+      "rating": 5,
+      "reviews": 12,
+      "level": "beginner",
+      "sound": 2,
+      "body_safe": true,
+      "waterproof": true,
+      "rechargeable": true,
+      "material": "silicona",
+      "battery": "2h",
+      "weight": "120g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 2,
+      "slug": "bullet-vibrator",
+      "name": "Bullet Vibrator",
+      "price": 65000,
+      "currency": "PYG",
+      "category": "vibradores",
+      "description": "Mini vibrador de punto preciso. Perfecto para estimulación localizada. Discreto y potente.",
+      "features": [
+        "Estimulación precisa",
+        "Ultra silencioso",
+        "Tamaño mini",
+        "Pilas incluidas"
+      ],
+      "image": "/images/products/vib-bullet.svg",
+      "featured": true,
+      "new": false,
+      "rating": 5,
+      "reviews": 8,
+      "faq": [
+        {
+          "q": "¿Es muy pequeño?",
+          "a": "Su tamaño mini lo hace perfecto para llevarlo a cualquier lado y para estimulación puntual."
+        }
+      ],
+      "level": "beginner",
+      "sound": 1,
+      "body_safe": true,
+      "waterproof": false,
+      "rechargeable": false,
+      "material": "silicona",
+      "battery": "pilas AAA",
+      "weight": "45g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 3,
+      "slug": "vibrador-pareja",
+      "name": "Vibrador Pareja",
+      "price": 145000,
+      "currency": "PYG",
+      "category": "vibradores",
+      "description": "Diseñado para usar en pareja. Estimulación simultánea con control remoto incluido.",
+      "features": [
+        "Control remoto",
+        "2 motores independientes",
+        "Silicona suave",
+        "Recargable USB"
+      ],
+      "image": "/images/products/vib-pareja.svg",
+      "featured": false,
+      "new": true,
+      "rating": 4,
+      "reviews": 6,
+      "faq": [
+        {
+          "q": "¿El control remoto tiene buen alcance?",
+          "a": "Sí, el control remoto funciona hasta 10 metros de distancia."
+        }
+      ],
+      "level": "intermediate",
+      "sound": 3,
+      "body_safe": true,
+      "waterproof": true,
+      "rechargeable": true,
+      "material": "silicona",
+      "battery": "3h",
+      "weight": "200g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 4,
+      "slug": "babydoll-encaje",
+      "name": "Babydoll Encaje",
+      "price": 85000,
+      "currency": "PYG",
+      "category": "lenceria",
+      "description": "Babydoll de encaje suave con tirantes ajustables. Disponible en negro, rojo y blanco.",
+      "features": [
+        "Encaje suave",
+        "Tirantes ajustables",
+        "Talle único (S-2XL)",
+        "Lavable a mano"
+      ],
+      "image": "/images/products/babydoll.svg",
+      "featured": true,
+      "new": false,
+      "rating": 5,
+      "reviews": 15,
+      "faq": [
+        {
+          "q": "¿Cómo se lava?",
+          "a": "Lavable a mano con agua fría y jabón neutro. No usar lavarropas."
+        },
+        {
+          "q": "¿Es ajustable?",
+          "a": "Sí, tiene tirantes ajustables y el talle único se adapta de S a 2XL."
+        }
+      ],
+      "level": "beginner",
+      "sound": 0,
+      "body_safe": true,
+      "waterproof": false,
+      "rechargeable": false,
+      "material": "encaje",
+      "battery": "",
+      "weight": "80g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 5,
+      "slug": "body-lenceria",
+      "name": "Body Lencería",
+      "price": 110000,
+      "currency": "PYG",
+      "category": "lenceria",
+      "description": "Body de encaje transparente con detalles de strass. Cierre en tiro con broches.",
+      "features": [
+        "Encaje con strass",
+        "Broches en tiro",
+        "Talle único",
+        "Elegante y sensual"
+      ],
+      "image": "/images/products/body-lenceria.svg",
+      "featured": false,
+      "new": true,
+      "rating": 4,
+      "reviews": 9,
+      "faq": [
+        {
+          "q": "¿Tiene cierre en la entrepierna?",
+          "a": "Sí, tiene broches en el tiro para mayor comodidad."
+        }
+      ],
+      "level": "intermediate",
+      "sound": 0,
+      "body_safe": true,
+      "waterproof": false,
+      "rechargeable": false,
+      "material": "encaje",
+      "battery": "",
+      "weight": "90g",
+      "stock": "low_stock"
+    },
+    {
+      "id": 6,
+      "slug": "kit-bdsm-basico",
+      "name": "Kit BDSM Básico",
+      "price": 175000,
+      "currency": "PYG",
+      "category": "bdsm",
+      "description": "Kit ideal para empezar: esposas forradas, antifaz de seda, fusta pequeña y vendas.",
+      "features": [
+        "Esposas forradas",
+        "Antifaz de seda",
+        "Fusta incluida",
+        "Vendas para atar"
+      ],
+      "image": "/images/products/kit-bdsm.svg",
+      "featured": true,
+      "new": false,
+      "rating": 5,
+      "reviews": 7,
+      "faq": [
+        {
+          "q": "¿Es seguro para principiantes?",
+          "a": "Sí, el kit está diseñado para quienes quieren explorar de forma segura."
+        }
+      ],
+      "level": "intermediate",
+      "sound": 2,
+      "body_safe": true,
+      "waterproof": false,
+      "rechargeable": false,
+      "material": "metal+terciopelo",
+      "battery": "",
+      "weight": "350g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 7,
+      "slug": "esposas-forradas",
+      "name": "Esposas Forradas",
+      "price": 65000,
+      "currency": "PYG",
+      "category": "bdsm",
+      "description": "Esposas suaves forradas en terciopelo con cierre de seguridad. Ajustables.",
+      "features": [
+        "Terciopelo suave",
+        "Cierre seguridad",
+        "Ajustable",
+        "Cómodas y seguras"
+      ],
+      "image": "/images/products/esposas.svg",
+      "featured": false,
+      "new": false,
+      "rating": 4,
+      "reviews": 5,
+      "faq": [
+        {
+          "q": "¿Son ajustables?",
+          "a": "Sí, tienen cierre de seguridad ajustable y están forradas en terciopelo."
+        }
+      ],
+      "level": "beginner",
+      "sound": 1,
+      "body_safe": true,
+      "waterproof": false,
+      "rechargeable": false,
+      "material": "terciopelo+metal",
+      "battery": "",
+      "weight": "180g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 8,
+      "slug": "lubricante-base-agua-200ml",
+      "name": "Lubricante Base Agua 200ml",
+      "price": 45000,
+      "currency": "PYG",
+      "category": "lubricantes",
+      "description": "Lubricante de larga duración a base de agua. Compatible con todos los juguetes y preservativos.",
+      "features": [
+        "Base agua",
+        "200ml",
+        "Compatible con látex",
+        "Sin fragancia"
+      ],
+      "image": "/images/products/lub-agua.svg",
+      "featured": true,
+      "new": false,
+      "rating": 5,
+      "reviews": 20,
+      "faq": [
+        {
+          "q": "¿Es compatible con preservativos?",
+          "a": "Sí, es compatible con todo tipo de preservativos y juguetes."
+        }
+      ],
+      "level": "beginner",
+      "sound": 0,
+      "body_safe": true,
+      "waterproof": true,
+      "rechargeable": false,
+      "material": "agua+glicerina",
+      "battery": "",
+      "weight": "200ml",
+      "stock": "in_stock"
+    },
+    {
+      "id": 9,
+      "slug": "lubricante-silicona-100ml",
+      "name": "Lubricante Silicona 100ml",
+      "price": 65000,
+      "currency": "PYG",
+      "category": "lubricantes",
+      "description": "Lubricante de silicona ultra suave. Ideal para uso en agua. Dura mucho más que los de base agua.",
+      "features": [
+        "Base silicona",
+        "100ml",
+        "Impermeable",
+        "Ultra duradero"
+      ],
+      "image": "/images/products/lub-silicona.svg",
+      "featured": false,
+      "new": false,
+      "rating": 4,
+      "reviews": 11,
+      "faq": [
+        {
+          "q": "¿Se puede usar en el agua?",
+          "a": "Sí, el lubricante de silicona es impermeable, ideal para ducha o hidromasaje."
+        }
+      ],
+      "level": "intermediate",
+      "sound": 0,
+      "body_safe": true,
+      "waterproof": true,
+      "rechargeable": false,
+      "material": "silicona",
+      "battery": "",
+      "weight": "100ml",
+      "stock": "in_stock"
+    },
+    {
+      "id": 10,
+      "slug": "plug-anal-pequeno",
+      "name": "Plug Anal Pequeño",
+      "price": 55000,
+      "currency": "PYG",
+      "category": "juguetes-anales",
+      "description": "Plug anal de silicona suave con base ancha. Tamaño pequeño ideal para principiantes.",
+      "features": [
+        "Silicona suave",
+        "Base ancha segura",
+        "Tamaño pequeño",
+        "Fácil de limpiar"
+      ],
+      "image": "/images/products/plug-pequeno.svg",
+      "featured": true,
+      "new": false,
+      "rating": 5,
+      "reviews": 10,
+      "faq": [
+        {
+          "q": "¿Duele?",
+          "a": "No, está diseñado para principiantes. Usalo con lubricante para mayor comodidad."
+        }
+      ],
+      "level": "beginner",
+      "sound": 1,
+      "body_safe": true,
+      "waterproof": true,
+      "rechargeable": false,
+      "material": "silicona",
+      "battery": "",
+      "weight": "60g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 11,
+      "slug": "plug-anal-vibrador",
+      "name": "Plug Anal Vibrador",
+      "price": 95000,
+      "currency": "PYG",
+      "category": "juguetes-anales",
+      "description": "Plug anal con vibración incorporada. Control remoto, silicona hipoalergénica.",
+      "features": [
+        "Vibración incorporada",
+        "Control remoto",
+        "Silicona hipoalergénica",
+        "Recargable"
+      ],
+      "image": "/images/products/plug-vibrador.svg",
+      "featured": false,
+      "new": true,
+      "rating": 4,
+      "reviews": 4,
+      "faq": [
+        {
+          "q": "¿Es recargable?",
+          "a": "Sí, viene con cable USB y es recargable."
+        }
+      ],
+      "level": "advanced",
+      "sound": 3,
+      "body_safe": true,
+      "waterproof": true,
+      "rechargeable": true,
+      "material": "silicona+metal",
+      "battery": "2.5h",
+      "weight": "95g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 12,
+      "slug": "set-iniciacion",
+      "name": "Set Iniciación",
+      "price": 175000,
+      "currency": "PYG",
+      "category": "sets",
+      "description": "El set perfecto para empezar: vibrador bullet, lubricante 200ml, babydoll y antifaz. Todo en empaque discreto.",
+      "features": [
+        "Vibrador bullet incluido",
+        "Lubricante 200ml",
+        "Babydoll + antifaz",
+        "Empaque discreto"
+      ],
+      "image": "/images/products/set-iniciacion.svg",
+      "featured": true,
+      "new": false,
+      "rating": 5,
+      "reviews": 14,
+      "faq": [
+        {
+          "q": "¿Viene en empaque discreto?",
+          "a": "Sí, todo se envía en caja neutra sin identificación del contenido."
+        }
+      ],
+      "level": "beginner",
+      "sound": 2,
+      "body_safe": true,
+      "waterproof": false,
+      "rechargeable": false,
+      "material": "silicona+encaje",
+      "battery": "",
+      "weight": "300g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 13,
+      "slug": "set-romance",
+      "name": "Set Romance",
+      "price": 250000,
+      "currency": "PYG",
+      "category": "sets",
+      "description": "Para noches especiales: vibrador pareja, lubricante silicona, body lencería y esposas.",
+      "features": [
+        "Vibrador pareja",
+        "Lubricante silicona",
+        "Body lencería",
+        "Esposas forradas"
+      ],
+      "image": "/images/products/set-romance.svg",
+      "featured": false,
+      "new": true,
+      "rating": 4,
+      "reviews": 6,
+      "faq": [
+        {
+          "q": "¿Es un buen regalo?",
+          "a": "Es el regalo perfecto. Todo incluido en empaque discreto."
+        }
+      ],
+      "level": "advanced",
+      "sound": 3,
+      "body_safe": true,
+      "waterproof": false,
+      "rechargeable": true,
+      "material": "silicona+encaje",
+      "battery": "3h",
+      "weight": "450g",
+      "stock": "in_stock"
+    },
+    {
+      "id": 14,
+      "slug": "vibrador-mariposa",
+      "name": "Vibrador Mariposa",
+      "price": 120000,
+      "currency": "PYG",
+      "category": "vibradores",
+      "description": "Vibrador mariposa con control remoto. Estimulación externa de manos libres. Recargable.",
+      "features": [
+        "Control remoto",
+        "Manos libres",
+        "10 modos",
+        "Recargable USB"
+      ],
+      "image": "/images/products/vib-mariposa.svg",
+      "featured": false,
+      "new": true,
+      "rating": 4,
+      "reviews": 3,
+      "faq": [
+        {
+          "q": "¿Es de manos libres?",
+          "a": "Sí, diseño mariposa con correa ajustable para uso sin manos."
+        }
+      ],
+      "level": "intermediate",
+      "sound": 3,
+      "body_safe": true,
+      "waterproof": true,
+      "rechargeable": true,
+      "material": "silicona",
+      "battery": "2h",
+      "weight": "150g",
+      "stock": "in_stock"
+    }
+  ],
+  "envio": {
+    "title": "Envío Discreto Garantizado",
+    "subtitle": "Tu privacidad es nuestra prioridad",
+    "points": [
+      {
+        "icon": "📦",
+        "title": "Empaque Neutro",
+        "description": "Todos los pedidos se envían en cajas simples sin logos, marcas ni indicaciones del contenido."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Confidencialidad Total",
+        "description": "No compartimos tu información con terceros. Tus datos están protegidos."
+      },
+      {
+        "icon": "🚚",
+        "title": "Envío a Todo Paraguay",
+        "description": "Hacemos envíos a Asunción, Gran Asunción y al interior del país por courier."
+      },
+      {
+        "icon": "⏰",
+        "title": "Entrega Rápida",
+        "description": "Recibí tu pedido en 24-48hs hábiles en Asunción. Interior del país consultar."
+      },
+      {
+        "icon": "💳",
+        "title": "Pago Seguro",
+        "description": "Aceptamos transferencia bancaria, depósito y efectivo contra entrega en Asunción."
+      },
+      {
+        "icon": "💜",
+        "title": "Atención Personalizada",
+        "description": "Cualquier duda, consultanos por WhatsApp. Vamos a responderte rápido."
+      }
+    ],
+    "cta": "Consultar por WhatsApp"
+  },
+  "faq": [
+    {
+      "q": "¿El envío es realmente discreto?",
+      "a": "Sí. Todos los pedidos se envían en cajas neutras, sin logos ni descripciones del contenido. Solo vos vas a saber lo que hay adentro."
+    },
+    {
+      "q": "¿Cuánto tarda el envío?",
+      "a": "En Asunción y Gran Asunción: 24 a 48 horas hábiles. Al interior del país: de 3 a 5 días hábiles."
+    },
+    {
+      "q": "¿Cuáles son los medios de pago?",
+      "a": "Aceptamos transferencia bancaria (Bancard, Familiar), depósito en efectivo, y efectivo contra entrega en Asunción."
+    },
+    {
+      "q": "¿Puedo pasar a retirar?",
+      "a": "Sí, coordinamos retiro en Asunción previa cita por WhatsApp."
+    },
+    {
+      "q": "¿Los productos son originales?",
+      "a": "Todos nuestros productos son originales y de marcas reconocidas. Trabajamos con proveedores certificados."
+    },
+    {
+      "q": "¿Tienen cambios o devoluciones?",
+      "a": "Por razones de higiene, no aceptamos devoluciones de productos abiertos. Si recibís un producto defectuoso, contactanos dentro de las 48hs para gestionar el cambio."
+    },
+    {
+      "q": "¿Venden a menores de edad?",
+      "a": "No. Verificamos la edad de nuestros clientes. Al realizar un pedido confirmás ser mayor de 18 años."
+    },
+    {
+      "q": "¿Hacen envíos al interior?",
+      "a": "Sí. Hacemos envíos al interior del país por courier. El tiempo de entrega es de 3 a 5 días hábiles."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "María",
+      "location": "Asunción",
+      "rating": 5,
+      "text": "Excelente atención y el envío súper discreto. Compré mi primer vibrador y la experiencia fue genial.",
+      "product": "Vibrador Clásico"
+    },
+    {
+      "name": "Ana",
+      "location": "Encarnación",
+      "rating": 5,
+      "text": "El set de iniciación es perfecto. Llegó en una caja normal, nadie se imaginó qué era. Muy recomendado.",
+      "product": "Set Iniciación"
+    },
+    {
+      "name": "Carla",
+      "location": "Ciudad del Este",
+      "rating": 5,
+      "text": "Compro seguido y siempre es la misma calidad. El lubricante de silicona es el mejor que probé.",
+      "product": "Lubricante Silicona"
+    },
+    {
+      "name": "Laura",
+      "location": "Luque",
+      "rating": 5,
+      "text": "La atención por WhatsApp es rapidísima y muy profesional. Me ayudaron a elegir el producto ideal.",
+      "product": "Kit BDSM Básico"
+    }
+  ],
+  "promociones": {
+    "seo": {
+      "title": "Promociones | Fun4Me Store",
+      "description": "Aprovechá nuestras ofertas y promociones en productos de bienestar íntimo. Envío discreto a todo Paraguay."
+    },
+    "title": "Promociones Especiales",
+    "subtitle": "Aprovechá nuestras ofertas antes de que se acaben",
+    "promotions": [
+      {
+        "id": "envio-gratis",
+        "title": "Envío Gratis",
+        "description": "En compras mayores a Gs. 300.000. Válido para Asunción y Gran Asunción.",
+        "badge": "Vigente",
+        "icon": "🚚",
+        "color": "#10B981"
+      },
+      {
+        "id": "set-iniciacion-promo",
+        "title": "Set Iniciación",
+        "description": "El kit perfecto para empezar a explorar. Incluye vibrador, lubricante, babydoll y antifaz.",
+        "badge": "Popular",
+        "icon": "🎁",
+        "color": "#EC4899"
+      },
+      {
+        "id": "2x1-lubricantes",
+        "title": "2x1 en Lubricantes",
+        "description": "Llevate dos lubricantes al precio de uno. Elegí entre base agua y silicona.",
+        "badge": "Oferta",
+        "icon": "💧",
+        "color": "#7C3AED"
+      }
+    ]
+  },
+  "blog": {
+    "seo": {
+      "title": "Blog | Fun4Me Store",
+      "description": "Consejos, guías y contenido sobre bienestar íntimo, sexualidad y cuidado personal."
+    },
+    "title": "Blog de Bienestar",
+    "subtitle": "Consejos, guías y contenido para tu bienestar íntimo",
+    "categories": [
+      "Bienestar",
+      "Consejos",
+      "Guías",
+      "Novedades"
+    ],
+    "posts": [
+      {
+        "slug": "guia-para-principiantes-vibradores",
+        "title": "Guía para Principiantes: Cómo Elegir tu Primer Vibrador",
+        "excerpt": "Todo lo que necesitás saber para dar el primer paso. Tipos, materiales, usos y recomendaciones.",
+        "content": "Elegir tu primer vibrador puede ser abrumador con tantas opciones. Esta guía te ayuda a entender los diferentes tipos...",
+        "author": "Fun4Me",
+        "date": "2026-04-15",
+        "category": "Guías",
+        "image": "/images/blog/vibradores-guia.svg",
+        "readTime": "5 min"
+      },
+      {
+        "slug": "lubricantes-base-agua-vs-silicona",
+        "title": "Lubricantes: Base Agua vs Silicona ¿Cuál Elegir?",
+        "excerpt": "Diferencias, ventajas y usos de cada tipo de lubricante para que elijas el ideal según tus necesidades.",
+        "content": "Los lubricantes son esenciales para una experiencia placentera y segura. Existen dos tipos principales...",
+        "author": "Fun4Me",
+        "date": "2026-04-08",
+        "category": "Consejos",
+        "image": "/images/blog/lubricantes-guia.svg",
+        "readTime": "4 min"
+      },
+      {
+        "slug": "cuidados-de-la-lenceria",
+        "title": "Cómo Cuidar tu Lencería Favorita",
+        "excerpt": "Tips para mantener tus conjuntos de lencería como nuevos por más tiempo.",
+        "content": "La lencería de calidad merece cuidados especiales para que dure más tiempo...",
+        "author": "Fun4Me",
+        "date": "2026-03-28",
+        "category": "Consejos",
+        "image": "/images/blog/lenceria-cuidados.svg",
+        "readTime": "3 min"
+      },
+      {
+        "slug": "bienestar-intimo-que-es",
+        "title": "Bienestar Íntimo: Más que Placer, es Salud",
+        "excerpt": "Descubrí por qué el bienestar íntimo es parte fundamental de tu salud general y cómo cuidarlo.",
+        "content": "El bienestar íntimo va mucho más allá del placer sexual. Es una parte fundamental de nuestra salud física y emocional...",
+        "author": "Fun4Me",
+        "date": "2026-03-20",
+        "category": "Bienestar",
+        "image": "/images/blog/bienestar-intimo.svg",
+        "readTime": "6 min"
+      },
+      {
+        "slug": "introduccion-al-bdsm",
+        "title": "Introducción al BDSM: Empezá de Forma Segura",
+        "excerpt": "Conceptos básicos, reglas de seguridad y cómo explorar esta práctica de manera responsable.",
+        "content": "El BDSM es una práctica consensuada que puede agregar una nueva dimensión a tu vida íntima...",
+        "author": "Fun4Me",
+        "date": "2026-03-10",
+        "category": "Guías",
+        "image": "/images/blog/bdsm-intro.svg",
+        "readTime": "7 min"
+      },
+      {
+        "slug": "juguetes-anales-para-principiantes",
+        "title": "Juguetes Anales: Guía para Principiantes",
+        "excerpt": "Todo lo que necesitás saber para empezar de forma segura y placentera.",
+        "content": "Los juguetes anales pueden ser una adición emocionante a tu repertorio íntimo...",
+        "author": "Fun4Me",
+        "date": "2026-02-28",
+        "category": "Guías",
+        "image": "/images/blog/anales-guia.svg",
+        "readTime": "5 min"
+      }
+    ]
+  },
+  "contacto": {
+    "seo": {
+      "title": "Contacto | Fun4Me Store",
+      "description": "Contactanos por WhatsApp. Respondemos rápido. Envío discreto a todo Paraguay."
+    },
+    "title": "Contacto",
+    "subtitle": "Estamos acá para ayudarte. Respondemos rápido por WhatsApp.",
+    "whatsapp": "+595****4567",
+    "whatsappMessage": "¡Hola! Quiero hacer una consulta sobre productos",
+    "city": "Asunción, Paraguay",
+    "responseTime": "Respuesta en menos de 1 hora"
+  },
+  "nosotros": {
+    "seo": {
+      "title": "Nosotros | Fun4Me Store",
+      "description": "Conocé Fun4Me Store. Tu tienda de bienestar íntimo en Paraguay con envío discreto."
+    },
+    "title": "Sobre Fun4Me",
+    "subtitle": "Bienestar y placer con total discreción",
+    "story": [
+      "Fun4Me nació de la necesidad de ofrecer productos de bienestar íntimo de calidad en Paraguay, con la privacidad y discreción que merecen nuestras clientas.",
+      "Sabemos que comprar productos para el bienestar íntimo puede ser incómodo. Por eso, desde el primer día nos enfocamos en crear una experiencia segura, discreta y accesible para todas.",
+      "Seleccionamos cuidadosamente cada producto para garantizar calidad, seguridad y satisfacción. Trabajamos con proveedores certificados y marcas reconocidas internacionalmente."
+    ],
+    "values": [
+      {
+        "title": "Discreción",
+        "description": "Tu privacidad es nuestra prioridad absoluta."
+      },
+      {
+        "title": "Calidad",
+        "description": "Solo trabajamos con productos certificados."
+      },
+      {
+        "title": "Confianza",
+        "description": "Atención personalizada y respetuosa."
+      },
+      {
+        "title": "Accesibilidad",
+        "description": "Productos de calidad a precios justos."
+      }
+    ]
+  },
+  "footer": {
+    "description": "Tu tienda de bienestar íntimo en Paraguay. Productos de calidad con envío discreto garantizado.",
+    "contactStrip": [
+      {
+        "icon": "📍",
+        "text": "Asunción, Paraguay"
+      },
+      {
+        "icon": "📱",
+        "text": "Respuesta en menos de 1 hora"
+      }
+    ],
+    "columns": [
+      {
+        "title": "Productos",
+        "links": [
+          {
+            "label": "Vibradores",
+            "href": "/tienda?cat=vibradores"
+          },
+          {
+            "label": "Lencería",
+            "href": "/tienda?cat=lenceria"
+          },
+          {
+            "label": "BDSM",
+            "href": "/tienda?cat=bdsm"
+          },
+          {
+            "label": "Lubricantes",
+            "href": "/tienda?cat=lubricantes"
+          },
+          {
+            "label": "Juguetes Anales",
+            "href": "/tienda?cat=juguetes-anales"
+          },
+          {
+            "label": "Sets",
+            "href": "/tienda?cat=sets"
+          }
+        ]
+      },
+      {
+        "title": "Enlaces",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": ""
+          },
+          {
+            "label": "Tienda",
+            "href": "/tienda"
+          },
+          {
+            "label": "Promociones",
+            "href": "/promociones"
+          },
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "FAQ",
+            "href": "/faq"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          }
+        ]
+      },
+      {
+        "title": "Ayuda",
+        "links": [
+          {
+            "label": "Envío Discreto",
+            "href": "/envio"
+          },
+          {
+            "label": "Privacidad",
+            "href": "/privacidad"
+          },
+          {
+            "label": "Términos",
+            "href": "/terminos"
+          },
+          {
+            "label": "Sobre Nosotros",
+            "href": "/nosotros"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Envío Discreto",
+            "href": "/envio"
+          },
+          {
+            "label": "Sobre Nosotros",
+            "href": "/nosotros"
+          },
+          {
+            "label": "Privacidad",
+            "href": "/privacidad"
+          },
+          {
+            "label": "Términos",
+            "href": "/terminos"
+          }
+        ]
+      }
+    ],
+    "social": [
+      {
+        "name": "Instagram",
+        "icon": "instagram",
+        "url": "https://instagram.com/fun4me_py"
+      },
+      {
+        "name": "WhatsApp",
+        "icon": "message-circle",
+        "url": "https://wa.me/595976569739"
+      }
+    ],
+    "paymentMethods": [
+      {
+        "name": "Transferencia Bancaria"
+      },
+      {
+        "name": "Efectivo"
+      },
+      {
+        "name": "Contra Entrega"
+      }
+    ],
+    "copyright": "© 2026 Fun4Me Store. Todos los derechos reservados."
+  },
+  "siteConfig": {
+    "quickExitUrl": "https://www.clima.com.py",
+    "privacyModeDefault": false,
+    "allowGuestBrowsing": true,
+    "showSocialProof": true,
+    "currencySymbol": "Gs.",
+    "currencyCode": "PYG",
+    "altCurrency": {
+      "code": "USD",
+      "symbol": "$",
+      "rate": 7500
+    }
+  },
+  "shipping": {
+    "zones": [
+      {
+        "name": "Asunción",
+        "price": 0,
+        "minFree": 300000,
+        "time": "24-48hs"
+      },
+      {
+        "name": "Gran Asunción",
+        "price": 0,
+        "minFree": 300000,
+        "time": "24-48hs"
+      },
+      {
+        "name": "Interior",
+        "price": 25000,
+        "minFree": 500000,
+        "time": "3-5 días"
+      },
+      {
+        "name": "Ciudad del Este",
+        "price": 30000,
+        "minFree": 500000,
+        "time": "3-5 días"
+      },
+      {
+        "name": "Encarnación",
+        "price": 30000,
+        "minFree": 500000,
+        "time": "3-5 días"
+      }
+    ],
+    "couriers": [
+      "Moto Express",
+      "Bus Encomienda",
+      "Courier Nacional"
+    ],
+    "pickupLocations": [
+      {
+        "name": "Asunción Centro",
+        "address": "Av. Mariscal López 1234",
+        "hours": "Lu-Vi 9-19, Sa 9-13"
+      }
+    ]
+  },
+  "payments": {
+    "methods": [
+      {
+        "name": "Transferencia Bancaria",
+        "icon": "🏦",
+        "details": "Bancard, Familiar, Ueno"
+      },
+      {
+        "name": "Efectivo contra entrega",
+        "icon": "💵",
+        "details": "Solo Asunción y Gran Asunción"
+      },
+      {
+        "name": "Depósito en efectivo",
+        "icon": "🏧",
+        "details": "En cualquier sucursal bancaria"
+      },
+      {
+        "name": "Tigo Money",
+        "icon": "📱",
+        "details": "Envío inmediato"
+      }
+    ],
+    "installments": "Consultá por cuotas sin interés"
+  },
+  "socialProof": {
+    "viewingCount": 12,
+    "showViewing": true,
+    "recentOrders": [
+      {
+        "product": "Vibrador Clásico",
+        "time": "hace 15 min",
+        "city": "Asunción"
+      },
+      {
+        "product": "Set Iniciación",
+        "time": "hace 32 min",
+        "city": "Encarnación"
+      },
+      {
+        "product": "Lubricante Silicona",
+        "time": "hace 1h",
+        "city": "Ciudad del Este"
+      }
+    ],
+    "totalCustomers": 87,
+    "totalOrders": 156
+  },
+  "brand": {
+    "story": "Fun4Me nació de la necesidad de ofrecer productos de bienestar íntimo de calidad en Paraguay, con la privacidad y discreción que merecen nuestras clientas. Somos un emprendimiento paraguayo dedicado al bienestar y la salud sexual positiva.",
+    "mission": "Empoderar a las personas a explorar su bienestar íntimo con total privacidad, información de calidad y productos seguros.",
+    "values": [
+      "Discreción absoluta",
+      "Calidad certificada",
+      "Educación sexual positiva",
+      "Atención personalizada",
+      "Orgullosamente paraguayo"
+    ],
+    "founded": 2025,
+    "founder": "Bram y Rach",
+    "location": "Asunción, Paraguay"
+  },
+  "kinks": [
+    {
+      "id": "principiantes",
+      "name": "Principiantes",
+      "description": "Productos ideales para quienes recién empiezan",
+      "icon": "🌱",
+      "image": "",
+      "productSlugs": [
+        "vibrador-clasico-sencillo",
+        "bullet-vibrator",
+        "lubricante-base-agua-200ml",
+        "plug-anal-pequeno"
+      ]
+    },
+    {
+      "id": "juego-en-pareja",
+      "name": "Juego en Pareja",
+      "description": "Para explorar juntos",
+      "icon": "💑",
+      "image": "",
+      "productSlugs": [
+        "vibrador-pareja",
+        "set-romance",
+        "kit-bdsm-basico",
+        "esposas-forradas"
+      ]
+    },
+    {
+      "id": "lujo",
+      "name": "Lujo",
+      "description": "Selección premium",
+      "icon": "💎",
+      "image": "",
+      "productSlugs": [
+        "set-romance",
+        "vibrador-mariposa",
+        "body-lenceria"
+      ]
+    }
+  ]
+}

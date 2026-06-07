@@ -1,0 +1,50 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+        - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+        - NEXT_PUBLIC_SITE_URL=https://fun4me.paragu-ai.com
+    image: fun4me:prod
+    ports:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_KEY}
+      - JWT_SECRET=${JWT_SECRET}
+      - NEXT_PUBLIC_SITE_URL=https://fun4me.paragu-ai.com
+      - NEXT_PUBLIC_WHATSAPP_NUMBER=+595****9739
+    networks:
+      - agent-net
+    deploy:
+      mode: replicated
+      replicas: 2
+      resources:
+        limits:
+          memory: 512M
+          cpus: '1.0'
+        reservations:
+          memory: 256M
+          cpus: '0.5'
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.fun4me.entrypoints=websecure"
+        - "traefik.http.routers.fun4me.rule=Host(`fun4me.paragu-ai.com`)"
+        - "traefik.http.routers.fun4me.tls=true"
+        - "traefik.http.routers.fun4me.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.fun4me.loadbalancer.server.port=3000"
+        - "traefik.docker.network=agent-net"
+    healthcheck:
+      test: ["CMD-SHELL", "pidof /usr/local/bin/node >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      start_period: 60s
+      retries: 3
+
+networks:
+  agent-net:
+    external: true

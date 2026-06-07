@@ -1,0 +1,189 @@
+{
+  "_meta": {
+    "translationQuality": "native",
+    "author": "ParaguAI / Ai-Whisperers",
+    "lastReviewed": "2026-05-28",
+    "version": "1.0"
+  },
+  "site": {
+    "name": "XXGym",
+    "shortName": "XXGym",
+    "businessName": "XXGym",
+    "tagline": "Gimnasio de musculación y fitness en Fernando zona norte. Equipamiento completo.",
+    "description": "Gimnasio de musculación y fitness en Fernando zona norte. Equipamiento completo.",
+    "phone": "+595 21 678 171",
+    "whatsapp": "595021678171",
+    "email": "",
+    "address": "MFR8+RFF, Fernando de la Mora 110303",
+    "city": "MFR8+RFF",
+    "country": "Paraguay",
+    "hours": "Lunes a Sábado 5:30–22:00 hs",
+    "url": "https://xxgym.com.py"
+  },
+  "navigation": {
+    "businessName": "XXGym",
+    "items": [
+      {
+        "label": "Programas",
+        "href": "#programas"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria"
+      },
+      {
+        "label": "Testimonios",
+        "href": "#testimonios"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ],
+    "ctaText": "Ver planes",
+    "ctaHref": "https://wa.me/595021678171?text=Hola!%20Quiero%20reservar%20un%20turno"
+  },
+  "hero": {
+    "headline": "XXGym",
+    "subheadline": "Musculación y Fitness en Fernando zona norte",
+    "description": "Gimnasio de musculación y fitness en Fernando zona norte. Equipamiento completo.",
+    "ctaPrimaryText": "Ver planes",
+    "ctaPrimaryHref": "https://wa.me/595021678171?text=Hola!%20Quiero%20reservar%20un%20turno",
+    "secondaryCtaText": "Visitar gym",
+    "secondaryCtaHref": "#galeria",
+    "stats": [
+      {
+        "value": "4.7",
+        "label": "Estrellas Google"
+      },
+      {
+        "value": "119",
+        "label": "Reseñas Google"
+      }
+    ]
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "intro": "Servicios profesionales de XXGym",
+    "items": []
+  },
+  "gallery": {
+    "title": "Nuestro Espacio",
+    "intro": "Galería de trabajos de XXGym",
+    "items": [
+      {
+        "src": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80",
+        "alt": "Trabajo 1 - XXGym",
+        "title": "Trabajo 1"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
+        "alt": "Trabajo 2 - XXGym",
+        "title": "Trabajo 2"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1540497077202-7c8a3995f1f2?w=600&q=80",
+        "alt": "Trabajo 3 - XXGym",
+        "title": "Trabajo 3"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=600&q=80",
+        "alt": "Trabajo 4 - XXGym",
+        "title": "Trabajo 4"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros miembros",
+    "items": [
+      {
+        "name": "Pedro Rodríguez",
+        "role": "Cliente",
+        "text": "El mejor gym de la zona norte. Equipamiento nuevo y ambiente top.",
+        "rating": 5
+      },
+      {
+        "name": "Jorge Méndez",
+        "role": "Cliente",
+        "text": "119 reseñas no mienten. XXGym se hizo merecer su lugar.",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Cuál es el horario?",
+        "answer": "Lunes a sábado 5:30 a 22:00. Consultá por horario de clases."
+      },
+      {
+        "question": "¿Hay estacionamiento?",
+        "answer": "Sí, zona de estacionamiento para miembros."
+      },
+      {
+        "question": "¿Cuánto cuesta la mensualidad?",
+        "answer": "Consultá por WhatsApp — tenemos planes flexibles."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Tu transformación empieza hoy",
+    "subtitle": "Lunes a Sábado 5:30–22:00 hs",
+    "cta": {
+      "text": "Escribinos y arrancá tu primera semana",
+      "label": "Inscribirme por WhatsApp"
+    },
+    "whatsappMessage": "Hola! Vi el sitio web de XXGym y quiero consultar por un turno.",
+    "formFields": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Tu nombre",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "label": "Teléfono",
+        "required": true
+      },
+      {
+        "name": "service",
+        "type": "select",
+        "label": "¿Qué servicio te interesa?",
+        "required": true
+      },
+      {
+        "name": "message",
+        "type": "textarea",
+        "label": "Contanos tu idea",
+        "required": false
+      }
+    ]
+  },
+  "footer": {
+    "text": "XXGym — Gimnasio de musculación y fitness en Fernando zona norte. Equipamiento completo.",
+    "copyright": "© 2024 XXGym. Todos los derechos reservados.",
+    "links": [
+      {
+        "label": "Inicio",
+        "href": ""
+      },
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ],
+    "showWhatsapp": true,
+    "showSocial": true
+  }
+}

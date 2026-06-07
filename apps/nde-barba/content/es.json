@@ -1,0 +1,232 @@
+{
+  "_meta": {
+    "translationQuality": "native",
+    "author": "ParaguAI / Ai-Whisperers",
+    "lastReviewed": "2026-05-28",
+    "version": "1.0"
+  },
+  "site": {
+    "name": "Nde Barba",
+    "shortName": "Nde",
+    "businessName": "Nde Barba",
+    "tagline": "Barbería y peluquería masculina en Fernando de la Mora. Cortes modernos y clásicos.",
+    "description": "Barbería y peluquería masculina en Fernando de la Mora. Cortes modernos y clásicos.",
+    "phone": "+595 991 444 268",
+    "whatsapp": "595991444268",
+    "email": "",
+    "address": "Entre Libertad y Nicasio Villalba, Fernando de la Mora 110311",
+    "city": "Entre Libertad y Nicasio Villalba",
+    "country": "Paraguay",
+    "hours": "Martes a Domingo 9:00–20:00 hs",
+    "url": "https://ndebarba.com.py"
+  },
+  "navigation": {
+    "businessName": "Nde Barba",
+    "items": [
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria"
+      },
+      {
+        "label": "Testimonios",
+        "href": "#testimonios"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ],
+    "ctaText": "Reservar turno",
+    "ctaHref": "https://wa.me/595991444268?text=Hola!%20Quiero%20reservar%20un%20turno"
+  },
+  "hero": {
+    "headline": "Nde Barba",
+    "subheadline": "Barbería moderna en Fernando de la Mora",
+    "description": "Barbería y peluquería masculina en Fernando de la Mora. Cortes modernos y clásicos.",
+    "ctaPrimaryText": "Reservar turno",
+    "ctaPrimaryHref": "https://wa.me/595991444268?text=Hola!%20Quiero%20reservar%20un%20turno",
+    "secondaryCtaText": "Ver estilos",
+    "secondaryCtaHref": "#galeria",
+    "stats": [
+      {
+        "value": "4.8",
+        "label": "Estrellas Google"
+      },
+      {
+        "value": "118",
+        "label": "Reseñas Google"
+      }
+    ]
+  },
+  "services": {
+    "title": "Servicios",
+    "intro": "Servicios profesionales de Nde Barba",
+    "items": [
+      {
+        "title": "Corte Clásico",
+        "description": "Fade, skin fade, klasik corte",
+        "icon": "✨",
+        "price": "Gs 50.000"
+      },
+      {
+        "title": "Corte Moderno",
+        "description": "Cejas, diseños, fade creativo",
+        "icon": "✨",
+        "price": "Gs 60.000"
+      },
+      {
+        "title": "Barba",
+        "description": "Arreglo y diseño de barba",
+        "icon": "✨",
+        "price": "Gs 35.000"
+      },
+      {
+        "title": "Corte + Barba",
+        "description": "Paquete completo",
+        "icon": "✨",
+        "price": "Gs 75.000"
+      },
+      {
+        "title": "Cejas",
+        "description": "Diseño y limpieza",
+        "icon": "✨",
+        "price": "Gs 20.000"
+      },
+      {
+        "title": "Tratamiento Capilar",
+        "description": "Mascarilla y masaje",
+        "icon": "✨",
+        "price": "Gs 40.000"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Nuestros Estilos",
+    "intro": "Galería de trabajos de Nde Barba",
+    "items": [
+      {
+        "src": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80",
+        "alt": "Trabajo 1 - Nde Barba",
+        "title": "Trabajo 1"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80",
+        "alt": "Trabajo 2 - Nde Barba",
+        "title": "Trabajo 2"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1503951914875-452162c0f1f1?w=600&q=80",
+        "alt": "Trabajo 3 - Nde Barba",
+        "title": "Trabajo 3"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
+        "alt": "Trabajo 4 - Nde Barba",
+        "title": "Trabajo 4"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "items": [
+      {
+        "name": "Carlos Martínez",
+        "role": "Cliente",
+        "text": "El mejor fade de la zona. Siempre salgo impecable.",
+        "rating": 5
+      },
+      {
+        "name": "Roberto Gómez",
+        "role": "Cliente",
+        "text": "118 reseñas no mienten. Nde Barba es top.",
+        "rating": 5
+      },
+      {
+        "name": "Diego López",
+        "role": "Cliente",
+        "text": "Barba perfect, corte perfecto. Mi spot fijo.",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Hay turno o es por orden?",
+        "answer": "Funcionamos con turno priorizado. Podés venir sin turno pero turno asegura tu horario."
+      },
+      {
+        "question": "¿Los martes atienden?",
+        "answer": "Sí! Martes a domingo de 9:00 a 20:00."
+      },
+      {
+        "question": "¿Trabajan con cabello rizado?",
+        "answer": "Sí, somos expertos en todo tipo de cabello. Evaluamos cada caso."
+      }
+    ]
+  },
+  "contact": {
+    "title": "¿Listo para tu próximo corte?",
+    "subtitle": "Martes a Domingo 9:00–20:00 hs",
+    "cta": {
+      "text": "Escribinos por WhatsApp y reservá tu turno",
+      "label": "Contactar por WhatsApp"
+    },
+    "whatsappMessage": "Hola! Vi el sitio web de Nde Barba y quiero consultar por un turno.",
+    "formFields": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Tu nombre",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "label": "Teléfono",
+        "required": true
+      },
+      {
+        "name": "service",
+        "type": "select",
+        "label": "¿Qué servicio te interesa?",
+        "required": true
+      },
+      {
+        "name": "message",
+        "type": "textarea",
+        "label": "Contanos tu idea",
+        "required": false
+      }
+    ]
+  },
+  "footer": {
+    "text": "Nde Barba — Barbería y peluquería masculina en Fernando de la Mora. Cortes modernos y clásicos.",
+    "copyright": "© 2024 Nde Barba. Todos los derechos reservados.",
+    "links": [
+      {
+        "label": "Inicio",
+        "href": ""
+      },
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ],
+    "showWhatsapp": true,
+    "showSocial": true
+  }
+}

@@ -1,0 +1,10 @@
+.privacy-mode img,
+.privacy-mode .product-image,
+.privacy-mode [class*="product-card"] img {
+  filter: blur(20px) !important;
+  transition: filter 0.3s ease;
+}
+
+.privacy-mode [class*="product-card"]:hover img {
+  filter: blur(0px) !important;
+}

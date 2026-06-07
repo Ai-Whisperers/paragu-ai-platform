@@ -1,6 +1,3 @@
-/**
- * Centralized types barrel
- */
-
-export * from "./api"
-export * from "./content"
+export interface SiteContent {
+  [key: string]: unknown
+}

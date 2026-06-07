@@ -1,0 +1,12 @@
+{
+  "_annotation": {
+    "name": "Feature: gallery",
+    "what": "Feature flags",
+    "why": "Control funcionalidades",
+    "ai_popolates": "Segun plan",
+    "your_input": "Preferencias",
+    "plan": "Todos"
+  },
+  "gallery": true,
+  "instagramFeed": false
+}

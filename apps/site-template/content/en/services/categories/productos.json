@@ -1,0 +1,46 @@
+{
+  "_annotation": {
+    "name": "Digital Products (productos.json)",
+    "what": "Digital product catalog — downloadable tools, templates, and resources with price, description, and duration (0 for instant-download items).",
+    "why": "Digital products have near-zero marginal cost and can be sold 24/7 without your involvement. A well-organized digital catalog generates passive revenue while you sleep.",
+    "ai_popolates": "Product names and descriptions: Generated from your stated offerings. Prices: AI validates against market rates. Bundle recommendations: AI suggests package deals (e.g., 'Kit + Course Premium').",
+    "your_input": "List your digital products with price and description. We format them into the catalog structure and suggest bundles.",
+    "plan": "All plans"
+  },
+  "description": "Digital products with prices and descriptions. Includes downloadable tools, templates, and resources for business management. AI populates data from the entrepreneur's digital catalog.",
+  "id": "productos",
+  "title": "Digital Products",
+  "description": "Tools, templates and resources to manage your business",
+  "icon": "download",
+  "color": "purple",
+  "items": [
+    {
+      "name": "Entrepreneur Kit",
+      "price": 150000,
+      "duration": 0,
+      "popular": true,
+      "desc": "Includes: business plan template, canvas model, monthly budget, opening checklist, 20 social media templates."
+    },
+    {
+      "name": "Digital Marketing Plan",
+      "price": 200000,
+      "duration": 0,
+      "popular": true,
+      "desc": "20-page document with your complete digital marketing strategy. Ready to implement."
+    },
+    {
+      "name": "Social Media Pack",
+      "price": 100000,
+      "duration": 0,
+      "popular": false,
+      "desc": "50 editable templates for Instagram, Facebook and WhatsApp Business. Professional designs ready to customize."
+    },
+    {
+      "name": "Premium Course + Kit",
+      "price": 400000,
+      "duration": 0,
+      "popular": false,
+      "desc": "Combines the Entrepreneur Kit + the Digital Marketing Course at a special price."
+    }
+  ]
+}

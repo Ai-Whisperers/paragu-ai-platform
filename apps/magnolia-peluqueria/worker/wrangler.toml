@@ -1,0 +1,8 @@
+name = "magnolia-peluqueria"
+main = "src/index.ts"
+compatibility_date = "2026-05-26"
+account_id = "9eb1832f3e42a1dbd6ba854f8d6a1cb2"
+
+r2_buckets = [
+  { binding = "MAGNOLIA_PELUQUERIA", bucket_name = "magnolia-peluqueria" }
+]

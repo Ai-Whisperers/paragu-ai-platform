@@ -1,0 +1,300 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import { CreditCard, CircleCheck, CircleX, Clock, ExternalLink, ArrowUp, ArrowDown } from 'lucide-react'
+
+interface Subscription {
+  id: string
+  plan_tier: string
+  plan_name: string
+  price_monthly: number
+  status: string
+  trial_ends_at: string | null
+  current_period_end: string
+  canceled_at: string | null
+  created_at: string
+}
+
+interface Payment {
+  id: string
+  amount: number
+  currency: string
+  status: string
+  paid_at: string | null
+  created_at: string
+}
+
+const PLAN_LABELS: Record<string, string> = {
+  free: 'Gratuito',
+  starter: 'Starter',
+  professional: 'Professional',
+  enterprise: 'Enterprise',
+}
+
+const STATUS_CONFIG: Record<string, { label: string; icon: typeof CircleCheck; color: string }> = {
+  active: { label: 'Activo', icon: CircleCheck, color: 'text-green-600' },
+  trialing: { label: 'Período de prueba', icon: Clock, color: 'text-blue-600' },
+  past_due: { label: 'Vencido', icon: CircleX, color: 'text-red-600' },
+  canceled: { label: 'Cancelado', icon: CircleX, color: 'text-gray-500' },
+  paused: { label: 'Pausado', icon: Clock, color: 'text-amber-600' },
+}
+
+const PAYMENT_STATUS: Record<string, { label: string; color: string }> = {
+  completed: { label: 'Pagado', color: 'text-green-600' },
+  pending: { label: 'Pendiente', color: 'text-amber-600' },
+  failed: { label: 'Fallido', color: 'text-red-600' },
+  refunded: { label: 'Reintegrado', color: 'text-gray-500' },
+}
+
+function formatPrice(amount: number, currency: string): string {
+  if (currency === 'PYG' || !currency) return `Gs ${amount.toLocaleString('es-PY')}`
+  return `$${amount.toFixed(2)}`
+}
+
+function formatDate(iso: string | null): string {
+  if (!iso) return '—'
+  return new Date(iso).toLocaleDateString('es-PY', {
+    year: 'numeric', month: 'long', day: '2-digit',
+  })
+}
+
+export default function BillingPage() {
+  const [subscription, setSubscription] = useState<Subscription | null>(null)
+  const [payments, setPayments] = useState<Payment[]>([])
+  const [loading, setLoading] = useState(true)
+  const [payLink, setPayLink] = useState<string | null>(null)
+  const [generating, setGenerating] = useState(false)
+  const [payError, setPayError] = useState('')
+  const [planOptions, setPlanOptions] = useState<{ upgradeOptions: Array<{ tier: string; price: { monthlyCents: number }; upgradePriceCents: number }>; downgradeOptions: Array<{ tier: string; price: { monthlyCents: number } }> } | null>(null)
+  const [changingPlan, setChangingPlan] = useState(false)
+
+  useEffect(() => {
+    Promise.all([
+      fetch('/api/portal/subscription').then((r) => r.json()),
+      fetch('/api/portal/plans').then((r) => r.json()),
+    ]).then(([subData, plansData]) => {
+      setSubscription(subData.subscription)
+      setPayments(subData.payments ?? [])
+      setPlanOptions(plansData)
+      setLoading(false)
+    }).catch(() => setLoading(false))
+  }, [])
+
+  const generatePayLink = async () => {
+    if (!subscription) return
+    setGenerating(true)
+    setPayError('')
+    try {
+      const res = await fetch('/api/portal/subscription/pay', { method: 'POST' })
+      const data = await res.json()
+      if (data.url) setPayLink(data.url)
+      else setPayError(data.error || 'Error al generar link')
+    } catch {
+      setPayError('Error de conexión')
+    } finally {
+      setGenerating(false)
+    }
+  }
+
+  const changePlan = async (targetTier: string) => {
+    setChangingPlan(true)
+    try {
+      await fetch('/api/portal/plans', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ targetTier }),
+      })
+      window.location.reload()
+    } finally {
+      setChangingPlan(false)
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-600 border-t-transparent" />
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <h1 className="text-2xl font-bold text-gray-900">Facturación</h1>
+        <p className="mt-1 text-sm text-gray-500">
+          Plan y pagos de tu suscripción
+        </p>
+      </div>
+
+      {!subscription ? (
+        <div className="rounded-xl border bg-white p-12 text-center">
+          <CreditCard className="mx-auto h-12 w-12 text-gray-300 mb-4" />
+          <p className="text-gray-500">No tenés un plan activo.</p>
+          <p className="mt-2 text-sm text-gray-400">
+            Contactá a tu administrador para configurar tu suscripción.
+          </p>
+        </div>
+      ) : (
+        <>
+          {/* Current plan */}
+          <div className="rounded-xl border bg-white p-6">
+            <div className="flex items-start justify-between">
+              <div>
+                <h2 className="text-lg font-semibold text-gray-900">Plan actual</h2>
+                <p className="mt-1 text-sm text-gray-500">
+                  {PLAN_LABELS[subscription.plan_tier] || subscription.plan_tier}
+                </p>
+              </div>
+              <div className="text-right">
+                <p className="text-2xl font-bold text-gray-900">
+                  {formatPrice(subscription.price_monthly, 'PYG')}
+                </p>
+                <p className="text-xs text-gray-500">por mes</p>
+              </div>
+            </div>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-lg bg-gray-50 p-4">
+                <p className="text-xs font-medium uppercase tracking-wider text-gray-500">Estado</p>
+                <div className="mt-1 flex items-center gap-1.5">
+                  {(() => {
+                    const cfg = STATUS_CONFIG[subscription.status] || STATUS_CONFIG.active
+                    const Icon = cfg.icon
+                    return (
+                      <>
+                        <Icon className={`h-4 w-4 ${cfg.color}`} />
+                        <span className={`text-sm font-medium ${cfg.color}`}>{cfg.label}</span>
+                      </>
+                    )
+                  })()}
+                </div>
+              </div>
+              <div className="rounded-lg bg-gray-50 p-4">
+                <p className="text-xs font-medium uppercase tracking-wider text-gray-500">Inicio</p>
+                <p className="mt-1 text-sm font-medium text-gray-900">{formatDate(subscription.created_at)}</p>
+              </div>
+              <div className="rounded-lg bg-gray-50 p-4">
+                <p className="text-xs font-medium uppercase tracking-wider text-gray-500">Próximo ciclo</p>
+                <p className="mt-1 text-sm font-medium text-gray-900">{formatDate(subscription.current_period_end)}</p>
+              </div>
+            </div>
+
+            {(subscription.status === 'trialing' || subscription.status === 'past_due') && (
+              <div className="mt-6">
+                {payLink ? (
+                  <a
+                    href={payLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-green-700 transition-colors"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Pagar ahora
+                  </a>
+                ) : (
+                  <button
+                    onClick={generatePayLink}
+                    disabled={generating}
+                    className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50 transition-colors"
+                  >
+                    {generating ? 'Generando...' : 'Generar link de pago'}
+                  </button>
+                )}
+                {payError && <p className="mt-2 text-sm text-red-600">{payError}</p>}
+              </div>
+            )}
+          </div>
+
+          {/* Upgrade/Downgrade options */}
+          {planOptions && (planOptions.upgradeOptions.length > 0 || planOptions.downgradeOptions.length > 0) && (
+            <div className="rounded-xl border bg-white p-6 mt-6">
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">Cambiar de plan</h2>
+              {planOptions.upgradeOptions.length > 0 && (
+                <div className="mb-6">
+                  <p className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-1"><ArrowUp className="h-4 w-4 text-green-600" /> Mejorar plan</p>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {planOptions.upgradeOptions.map((opt) => (
+                      <button
+                        key={opt.tier}
+                        onClick={() => changePlan(opt.tier)}
+                        disabled={changingPlan}
+                        className="rounded-xl border border-green-200 bg-green-50 p-4 text-left transition-all hover:border-green-400 hover:shadow-sm disabled:opacity-50"
+                      >
+                        <p className="font-semibold text-gray-900 capitalize">{opt.tier}</p>
+                        <p className="text-sm text-gray-600">Gs {opt.price.monthlyCents.toLocaleString('es-PY')}/mes</p>
+                        {opt.upgradePriceCents > 0 && (
+                          <p className="text-xs text-green-700 mt-1">Diferencia: Gs {opt.upgradePriceCents.toLocaleString('es-PY')}/mes</p>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {planOptions.downgradeOptions.length > 0 && (
+                <div>
+                  <p className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-1"><ArrowDown className="h-4 w-4 text-amber-600" /> Cambiar a plan inferior</p>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {planOptions.downgradeOptions.map((opt) => (
+                      <button
+                        key={opt.tier}
+                        onClick={() => changePlan(opt.tier)}
+                        disabled={changingPlan}
+                        className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-left transition-all hover:border-gray-400 hover:shadow-sm disabled:opacity-50"
+                      >
+                        <p className="font-semibold text-gray-900 capitalize">{opt.tier}</p>
+                        <p className="text-sm text-gray-600">Gs {opt.price.monthlyCents.toLocaleString('es-PY')}/mes</p>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Payment history */}
+          <div className="rounded-xl border bg-white">
+            <div className="border-b px-6 py-4">
+              <h2 className="text-lg font-semibold text-gray-900">Historial de pagos</h2>
+            </div>
+            {payments.length === 0 ? (
+              <div className="p-12 text-center text-sm text-gray-500">
+                No hay pagos registrados.
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead className="border-b bg-gray-50 text-left text-xs uppercase tracking-wider text-gray-500">
+                    <tr>
+                      <th className="px-6 py-3">Monto</th>
+                      <th className="px-6 py-3">Estado</th>
+                      <th className="px-6 py-3">Fecha</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {payments.map((p) => {
+                      const ps = PAYMENT_STATUS[p.status] || { label: p.status, color: 'text-gray-500' }
+                      return (
+                        <tr key={p.id} className="hover:bg-gray-50">
+                          <td className="px-6 py-3 font-medium text-gray-900">
+                            {formatPrice(p.amount, p.currency)}
+                          </td>
+                          <td className="px-6 py-3">
+                            <span className={`text-sm font-medium ${ps.color}`}>{ps.label}</span>
+                          </td>
+                          <td className="px-6 py-3 text-gray-500">
+                            {formatDate(p.paid_at || p.created_at)}
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        </>
+      )}
+    </div>
+  )
+}

@@ -1,0 +1,202 @@
+{
+  "siteName": "Jota Ink",
+  "businessName": "Jota Ink",
+  "tagline": "Tatuajes en Paraguay — Ink 🇵🇾",
+  "metaDescription": "Jota Ink — tatuajes personalizados en Asunción, Paraguay. Realismo, sombras y grises. Consultas y reservas por WhatsApp.",
+  "site": {
+    "title": "Jota Ink — Tatuajes en Paraguay",
+    "url": "https://jottaink.paragu-ai.com",
+    "description": "Tatuajes personalizados en Asunción, Paraguay. Ink 🇵🇾"
+  },
+  "contact": {
+    "whatsapp": "595971679370"
+  },
+  "whatsapp": {
+    "defaultMessage": "¡Hola Jota! Vi tu web y quiero consultarte sobre un tatuaje 💉"
+  },
+  "theme": {
+    "color": "#0a0a0a",
+    "ink": "#111111",
+    "gold": "#C9A96E"
+  },
+  "navigation": {
+    "businessName": "Jota Ink",
+    "ctaText": "Consultas y Reservas",
+    "ctaHref": "https://wa.me/595971679370?text=¡Hola%20Jota!%20Vi%20tu%20web%20y%20quiero%20consultarte%20sobre%20un%20tatuaje",
+    "items": [
+      { "label": "Inicio", "href": "/" },
+      { "label": "Mi Trabajo", "href": "/trabajo" },
+      { "label": "Servicios", "href": "/servicios" },
+      { "label": "Sobre Mí", "href": "/nosotros" },
+      { "label": "FAQ", "href": "/faq" },
+      { "label": "Contacto", "href": "/contacto" }
+    ]
+  },
+  "home": {
+    "seo": {
+      "title": "Jota Ink — Tatuajes en Paraguay | Ink 🇵🇾",
+      "description": "Tatuajes personalizados en Asunción. Realismo, sombras y grises. Consultá por tu diseño."
+    },
+    "hero": {
+      "headline": "Arte bajo tu <span class='text-accent'>piel</span>",
+      "subheadline": "Tatuajes personalizados en Asunción, Paraguay. Realismo, sombras y grises.",
+      "ctaPrimaryText": "Ver mi trabajo",
+      "ctaPrimaryHref": "/trabajo",
+      "ctaSecondaryText": "WhatsApp 📲",
+      "ctaSecondaryHref": "https://wa.me/595971679370?text=¡Hola%20Jota!%20Vi%20tu%20web%20y%20quiero%20consultarte%20sobre%20un%20tatuaje"
+    },
+    "stats": [
+      { "value": "100+", "label": "Tatuajes realizados" },
+      { "value": "4+", "label": "Años de experiencia" },
+      { "value": "100%", "label": "Personalizados" }
+    ],
+    "styles": {
+      "title": "Estilos",
+      "items": [
+        { "icon": "🎨", "title": "Realismo", "description": "Retratos y diseños hiperrealistas con sombras y detalles precisos." },
+        { "icon": "✒️", "title": "Black & Grey", "description": "Tatuajes en sombras y grises, mi especialidad." },
+        { "icon": "🌿", "title": "Orgánico", "description": "Diseños naturales, flora y fauna con líneas limpias." },
+        { "icon": "⚡", "title": "Personalizado", "description": "Cualquier idea que tengas, la transformamos en arte." }
+      ]
+    },
+    "process": {
+      "title": "¿Cómo funciona?",
+      "steps": [
+        { "number": "1", "title": "Consultá", "description": "Contactame por WhatsApp con tu idea o referencias." },
+        { "number": "2", "title": "Diseñamos", "description": "Trabajamos juntos el diseño hasta que sea perfecto para vos." },
+        { "number": "3", "title": "Agendamos", "description": "Coordinamos fecha y horario para tu sesión." },
+        { "number": "4", "title": "Tatuamos", "description": "Te recibo en mi espacio con toda la higiene y cuidado que te merecés." }
+      ]
+    },
+    "finalCta": {
+      "title": "¿Listo para tu próximo tatuaje?",
+      "description": "Consultame sin compromiso. Te ayudo a diseñar algo único.",
+      "secondaryText": "Escribime por WhatsApp",
+      "secondaryLink": "https://wa.me/595971679370?text=¡Hola%20Jota!%20Vi%20tu%20web%20y%20quiero%20consultarte%20sobre%20un%20tatuaje"
+    }
+  },
+  "trabajo": {
+    "seo": {
+      "title": "Mi Trabajo — Jota Ink",
+      "description": "Galería de tatuajes realizados en Asunción. Realismo, black & grey, diseños personalizados."
+    },
+    "hero": {
+      "headline": "Mi <span class='text-accent'>Portfolio</span>",
+      "subheadline": "Cada tatuaje es una historia. Acá algunos de mis trabajos."
+    },
+    "categories": ["Realismo", "Black & Grey", "Orgánico", "Letras", "Personalizados"],
+    "galleryPlaceholder": "Galería próximamente — seguime en Instagram para ver mis últimos trabajos"
+  },
+  "servicios": {
+    "seo": {
+      "title": "Servicios — Jota Ink",
+      "description": "Servicios de tatuaje en Asunción. Diseño personalizado, sesiones, retoques y más."
+    },
+    "hero": {
+      "headline": "Servicios de <span class='text-accent'>Tatuaje</span>",
+      "subheadline": "Todo lo que necesitás saber para tu próxima experiencia."
+    },
+    "list": [
+      {
+        "title": "Tatuaje personalizado",
+        "description": "Diseño único creado desde tu idea. Incluye consulta, diseño previo y la sesión completa.",
+        "price": "Consultar"
+      },
+      {
+        "title": "Cobertura y retoques",
+        "description": "Tapado de tatuajes antiguos o retoques de trabajos existentes.",
+        "price": "Consultar"
+      },
+      {
+        "title": "Diseño a medida",
+        "description": "Solo diseño digital si querés ver cómo queda antes de tatuarte.",
+        "price": "Consultar"
+      }
+    ],
+    "info": {
+      "title": "Información importante",
+      "items": [
+        "Todos mis trabajos son con cita previa.",
+        "Las sesiones incluyen apósito y cuidados post-tatuaje.",
+        "Usamos materiales descartables y equipos esterilizados.",
+        "Acepto efectivo y transferencias."
+      ]
+    },
+    "finalCta": {
+      "title": "Consultá por precios y disponibilidad",
+      "description": "Cada diseño es único, por eso el precio se define según tamaño, detalle y ubicación.",
+      "buttonText": "Consultar por WhatsApp",
+      "buttonLink": "https://wa.me/595971679370?text=Hola!%20Quiero%20saber%20precios%20de%20tatuajes"
+    }
+  },
+  "faq": {
+    "seo": {
+      "title": "FAQ — Jota Ink",
+      "description": "Preguntas frecuentes sobre tatuajes en Asunción: cuidados, precios, sesiones y más."
+    },
+    "hero": {
+      "headline": "Preguntas <span class='text-accent'>Frecuentes</span>",
+      "subheadline": "Todo lo que siempre quisiste saber antes de tatuarte."
+    },
+    "items": [
+      { "q": "¿Duele tatuarse?", "a": "La experiencia varía según la zona y tu umbral de dolor. Pero te aseguro que el resultado vale cada segundo." },
+      { "q": "¿Cómo cuido mi tatuaje nuevo?", "a": "Te doy instrucciones detalladas post-sesión: mantenerlo limpio, hidratado y evitar sol/piscina las primeras semanas." },
+      { "q": "¿Cuánto tiempo toma un tatuaje?", "a": "Depende del diseño. Desde 1 hora para algo pequeño hasta varias sesiones para proyectos grandes." },
+      { "q": "¿Necesito llevar algo al turno?", "a": "Solo traer ganas. Idealmente venir descansado, bien hidratado y habiendo comido algo." },
+      { "q": "¿Cómo reservo un turno?", "a": "Escribime por WhatsApp, conversamos tu idea, coordinamos diseño y agenda." },
+      { "q": "¿Hacés diseños personalizados?", "a": "Sí, cada tatuaje que hago es único. Trabajamos juntos el diseño hasta que sea exactamente lo que querés." },
+      { "q": "¿Qué métodos de pago aceptás?", "a": "Efectivo y transferencias bancarias. Consultame por la seña para reservar tu turno." },
+      { "q": "¿Tatuás en algún estudio?", "a": "Trabajo en mi espacio privado con todas las condiciones de higiene y comodidad. Escribime y te paso la dirección." }
+    ]
+  },
+  "contacto": {
+    "seo": {
+      "title": "Contacto — Jota Ink",
+      "description": "Contactame por WhatsApp para consultas, presupuestos y turnos. Tatuajes en Asunción, Paraguay."
+    },
+    "hero": {
+      "headline": "Contactame <span class='text-accent'>fácil</span>",
+      "subheadline": "Estoy a un mensaje de distancia."
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "description": "Respondo consultas y coordino turnos por WhatsApp.",
+      "buttonText": "Escribime ahora",
+      "link": "https://wa.me/595971679370?text=¡Hola%20Jota!%20Vi%20tu%20web%20y%20quiero%20consultarte%20sobre%20un%20tatuaje"
+    },
+    "social": {
+      "title": "Seguime",
+      "instagram": "https://www.instagram.com/jottaink_/"
+    },
+    "location": {
+      "title": "Asunción, Paraguay",
+      "description": "Te paso la dirección exacta al coordinar tu turno."
+    }
+  },
+  "footer": {
+    "description": "Tatuajes personalizados en Asunción, Paraguay. Ink 🇵🇾 — cada diseño es una historia.",
+    "columns": [
+      {
+        "title": "Navegación",
+        "links": [
+          { "label": "Inicio", "href": "/" },
+          { "label": "Mi Trabajo", "href": "/trabajo" },
+          { "label": "Servicios", "href": "/servicios" },
+          { "label": "FAQ", "href": "/faq" }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          { "label": "WhatsApp", "href": "https://wa.me/595971679370" },
+          { "label": "Instagram", "href": "https://www.instagram.com/jottaink_/" }
+        ]
+      }
+    ],
+    "social": [
+      { "name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/jottaink_/" },
+      { "name": "WhatsApp", "icon": "message-circle", "url": "https://wa.me/595971679370" }
+    ],
+    "copyright": "© 2026 Jota Ink. Todos los derechos reservados."
+  }
+}

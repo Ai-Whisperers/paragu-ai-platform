@@ -1,0 +1,139 @@
+{
+  "title": "Magnolia Peluquería",
+  "description": "Professional hair salon in Asunción, Paraguay. Balayage, cuts, coloring, keratin and more.",
+  "theme": "magnolia",
+  "vertical": "retail-local",
+  "businessType": "hair_salon",
+  "country": "Paraguay",
+  "domain": "magnolia-peluqueria.com",
+  "path": "",
+  "publicUrl": "https://magnolia-peluqueria.paragu-ai.com",
+  "defaultLocale": "es",
+  "locales": [
+    "es",
+    "en"
+  ],
+  "pages": [
+    "home",
+    "servicios",
+    "nosotros",
+    "booking",
+    "faq",
+    "contacto",
+    "terminos",
+    "privacidad"
+  ],
+  "contact": {
+    "phone": "0981106062",
+    "phoneFormatted": "0981 106 062",
+    "email": "info@magnolia-peluqueria.com",
+    "whatsapp": "595986106062",
+    "instagram": "magnolia_peluqueria",
+    "facebook": "magnolia.peluqueria",
+    "mapsEmbed": "https://www.google.com/maps?q=-25.2971,-57.6401&z=15&output=embed",
+    "mapsUrl": "https://www.google.com/maps?q=Magnolia+Peluqueria+Asuncion+Paraguay&hl=es"
+  },
+  "location": {
+    "address": "Asunción, Paraguay",
+    "addressDetail": "Zona céntrica de Asunción",
+    "city": "Asunción",
+    "department": "Central",
+    "country": "Paraguay",
+    "coordinates": {
+      "lat": -25.2971,
+      "lng": -57.6401
+    }
+  },
+  "hours": {
+    "martes_sabado": "9:00 - 19:00",
+    "cerrado": "Domingos y Lunes cerrados"
+  },
+  "features": {
+    "whatsappFloat": {
+      "enabled": true,
+      "phone": "595986106062",
+      "defaultMessage": "Hola!%20Quiero%20reservar%20una%20cita%20en%20Magnolia"
+    },
+    "cookieConsent": {
+      "enabled": true
+    },
+    "testimonials": {
+      "enabled": true,
+      "carousel": true
+    },
+    "bookingForm": {
+      "enabled": true,
+      "whatsappFallback": true,
+      "supabaseEnabled": true
+    },
+    "promotions": {
+      "enabled": true,
+      "dynamic": true
+    },
+    "gallery": {
+      "enabled": true
+    },
+    "instagramFeed": {
+      "enabled": false,
+      "handle": "magnolia_peluqueria"
+    },
+    "exitIntent": {
+      "enabled": true,
+      "whatsappPrompt": true
+    },
+    "structuredData": {
+      "enabled": true,
+      "businessType": "HairSalon"
+    },
+    "analytics": {
+      "ga4": {
+        "enabled": true,
+        "measurementId": "G-XXXXXXXXXX"
+      }
+    },
+    "ageGate": {
+      "enabled": false
+    },
+    "loyaltyProgram": {
+      "enabled": true
+    },
+    "giftCards": {
+      "enabled": true
+    }
+  },
+  "integrations": {
+    "hubspot": {
+      "portalId": "HS-PORTAL-PARAGUAI",
+      "formId": "contact-form-paragu-ai"
+    },
+    "mailchimp": {
+      "audienceId": "audience-paragu-ai-newsletter"
+    },
+    "analytics": {
+      "ga4": {
+        "measurementId": null,
+        "streamName": "magnolia-peluqueria"
+      }
+    }
+  },
+  "chrome": {
+    "header": {
+      "id": "header",
+      "variant": "standard",
+      "content": "navigation"
+    },
+    "footer": [
+      {
+        "id": "whatsapp-float",
+        "variant": "standard",
+        "content": "whatsapp"
+      },
+      {
+        "id": "footer",
+        "variant": "standard",
+        "content": "footer"
+      }
+    ]
+  },
+  "isLiveProduction": true
+}

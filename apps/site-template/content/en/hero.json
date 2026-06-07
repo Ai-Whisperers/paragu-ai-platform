@@ -1,0 +1,31 @@
+{
+  "description": "Template hero slides — prompts for clients to fill in.",
+  "title": "YOUR_MAIN_BENEFIT",
+  "subtitle": "In 1-2 sentences: what problem do you solve for your clients",
+  "slides": [
+    {
+      "id": "1",
+      "title": "YOUR_PRIMARY_BENEFIT",
+      "subtitle": "In 1-2 sentences: what problem do you solve for your clients",
+      "image": "/images/hero/template-slide-1.png",
+      "cta": "START_YOUR_PAGE",
+      "badge": "YOUR_BUSINESS online"
+    },
+    {
+      "id": "2",
+      "title": "YOUR_SERVICES_CLEARLY",
+      "subtitle": "Show what you offer with photos and descriptions. Clients book directly.",
+      "image": "/images/hero/template-slide-2.png",
+      "cta": "VIEW_SERVICES",
+      "badge": "Simple and direct"
+    },
+    {
+      "id": "3",
+      "title": "AUTOMATIC_BOOKINGS",
+      "subtitle": "Your online calendar. WhatsApp organized. No more lost messages.",
+      "image": "/images/hero/template-slide-3.png",
+      "cta": "TRY_FREE",
+      "badge": "Everything automated"
+    }
+  ]
+}

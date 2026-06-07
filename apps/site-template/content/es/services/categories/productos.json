@@ -1,0 +1,46 @@
+{
+  "_annotation": {
+    "name": "Digital Products (productos.json)",
+    "what": "Digital product catalog — downloadable tools, templates, and resources with price, description, and duration (0 for instant-download items).",
+    "why": "Digital products have near-zero marginal cost and can be sold 24/7 without your involvement. A well-organized digital catalog generates passive revenue while you sleep.",
+    "ai_popolates": "Product names and descriptions: Generated from your stated offerings. Prices: AI validates against market rates. Bundle recommendations: AI suggests package deals (e.g., 'Kit + Course Premium').",
+    "your_input": "List your digital products with price and description. We format them into the catalog structure and suggest bundles.",
+    "plan": "All plans"
+  },
+  "description": "Productos digitales del negocio con precios y descripciones. Incluye herramientas, plantillas y recursos descargables para gestión empresarial. La IA completa los datos según el catálogo digital del emprendedor.",
+  "id": "productos",
+  "title": "Productos Digitales",
+  "description": "Herramientas, plantillas y recursos para gestionar tu negocio",
+  "icon": "download",
+  "color": "purple",
+  "items": [
+    {
+      "name": "Kit de Emprendedor",
+      "price": 150000,
+      "duration": 0,
+      "popular": true,
+      "desc": "Incluye: plan de negocios plantilla, modelo canvas, presupuesto mensual, checklist de apertura, y 20 plantillas de redes."
+    },
+    {
+      "name": "Plan de Marketing Digital",
+      "price": 200000,
+      "duration": 0,
+      "popular": true,
+      "desc": "Documento de 20 páginas con tu estrategia completa de marketing digital. Listo para implementar."
+    },
+    {
+      "name": "Pack de Redes Sociales",
+      "price": 100000,
+      "duration": 0,
+      "popular": false,
+      "desc": "50 plantillas editables para Instagram, Facebook y WhatsApp Business. Diseños profesionales listos para usar."
+    },
+    {
+      "name": "Curso + Kit Premium",
+      "price": 400000,
+      "duration": 0,
+      "popular": false,
+      "desc": "Combina el Kit de Emprendedor + el Curso de Marketing Digital a un precio especial."
+    }
+  ]
+}

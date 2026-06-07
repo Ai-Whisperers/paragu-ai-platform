@@ -1,0 +1,46 @@
+{
+  "_annotation": {
+    "name": "Courses & Workshops (cursos.json)",
+    "what": "Training services catalog — items with name, price (PYG), duration (minutes), description, and popularity flag.",
+    "why": "Course and workshop listings with clear pricing and duration help potential students self-qualify before reaching out. This reduces low-intent inquiries and increases booking conversion.",
+    "ai_popolates": "Course names and descriptions: Generated from your curriculum. Prices: AI validates against market rates. Duration: Calculated from stated content volume. Popular flag: Auto-set based on demand signals.",
+    "your_input": "List your courses/workshops with price, duration, and description. We format them into the catalog structure.",
+    "plan": "All plans"
+  },
+  "description": "Servicios de cursos y talleres con precios, duraciones y descripciones. Capacitación práctica para emprendedores que buscan resultados concretos. La IA completa los datos según la oferta formativa del negocio.",
+  "id": "cursos",
+  "title": "Cursos y Talleres",
+  "description": "Capacitación práctica para emprendedores que quieren resultados",
+  "icon": "book",
+  "color": "green",
+  "items": [
+    {
+      "name": "Curso de Marketing Digital",
+      "price": 350000,
+      "duration": 480,
+      "popular": true,
+      "desc": "Aprendé a promocionar tu negocio online. Contenido en video + materiales descargables + acceso a comunidad."
+    },
+    {
+      "name": "Taller de Ventas",
+      "price": 200000,
+      "duration": 240,
+      "popular": true,
+      "desc": "Técnicas de venta para emprendedores. Práctico, con role-play y ejemplos reales paraguayos."
+    },
+    {
+      "name": "Gestión Financiera Básica",
+      "price": 250000,
+      "duration": 360,
+      "popular": false,
+      "desc": "Manejá las finanzas de tu negocio. Separar gastos, fijar precios, proyectar ingresos."
+    },
+    {
+      "name": "Introducción al E-commerce",
+      "price": 300000,
+      "duration": 300,
+      "popular": false,
+      "desc": "Creá tu tienda online desde cero. Plataformas, pagos, envíos y marketing para e-commerce."
+    }
+  ]
+}

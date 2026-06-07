@@ -1,0 +1,248 @@
+{
+  "site": {
+    "name": "Magnolia Peluquería",
+    "url": "https://magnolia-peluqueria.paragu-ai.com",
+    "theme": {
+      "primary": "rose",
+      "font": "inter"
+    }
+  },
+  "business": {
+    "name": "Magnolia Peluquería",
+    "address": "Av. Mcal. Estigarribia c/ Av. Defensores del Chaco, San Lorenzo, Paraguay",
+    "phone": "+595 971 123 456",
+    "whatsapp": "595971123456",
+    "email": "contacto@magnoliapeluqueria.com.py",
+    "hours": {
+      "lunes": "09:00 - 19:00",
+      "martes": "09:00 - 19:00",
+      "miércoles": "09:00 - 19:00",
+      "jueves": "09:00 - 19:00",
+      "viernes": "09:00 - 20:00",
+      "sábado": "09:00 - 17:00",
+      "domingo": "Cerrado"
+    },
+    "ctaMessage": "Hola! Quiero agendar una cita",
+    "mapsUrl": "https://maps.google.com/?q=San+Lorenzo+Paraguay"
+  },
+  "hero": {
+    "slides": [
+      {
+        "id": "1",
+        "title": "Elegancia y Belleza en San Lorenzo",
+        "subtitle": "Salón de peluquería premium con ambiente rose gold",
+        "image": "/images/hero/hero-slide-1.png",
+        "cta": "Reservar Ahora"
+      },
+      {
+        "id": "2",
+        "title": "Experiencia de Lujo",
+        "subtitle": "Decoración con flores de magnolia y iluminación cálida",
+        "image": "/images/hero/hero-slide-2.png",
+        "cta": "Ver Servicios"
+      },
+      {
+        "id": "3",
+        "title": "Profesionales Certificados",
+        "subtitle": "Más de 10 años de experiencia en belleza",
+        "image": "/images/hero/hero-slide-3.png",
+        "cta": "Conocer Equipo"
+      }
+    ]
+  },
+  "stats": {
+    "customers": "500+",
+    "years": "10+",
+    "services": "30+",
+    "rating": "5.0"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Cuidado premium para tu cabello y belleza",
+    "categories": [
+      {
+        "id": "corte",
+        "name": "Corte y Estilismo",
+        "icon": "scissors",
+        "color": "rose",
+        "description": "Cortes modernos adaptados a tu estilo",
+        "items": [
+          {
+            "name": "Corte Dama",
+            "price": "Gs. 100.000",
+            "duration": "45 min"
+          },
+          {
+            "name": "Corte Caballero",
+            "price": "Gs. 80.000",
+            "duration": "30 min"
+          },
+          {
+            "name": "Corte Infantil",
+            "price": "Gs. 60.000",
+            "duration": "30 min"
+          }
+        ]
+      },
+      {
+        "id": "coloracion",
+        "name": "Coloración",
+        "icon": "palette",
+        "color": "violet",
+        "description": "Técnicas de coloración profesional",
+        "items": [
+          {
+            "name": "Tinte Completo",
+            "price": "Gs. 250.000",
+            "duration": "120 min"
+          },
+          {
+            "name": "Mechas",
+            "price": "Gs. 350.000",
+            "duration": "180 min"
+          },
+          {
+            "name": "Balayage",
+            "price": "Gs. 400.000",
+            "duration": "210 min"
+          }
+        ]
+      },
+      {
+        "id": "tratamientos",
+        "name": "Tratamientos",
+        "icon": "sparkles",
+        "color": "amber",
+        "description": "Treatments para cabello dañado",
+        "items": [
+          {
+            "name": "Hidratación",
+            "price": "Gs. 150.000",
+            "duration": "60 min"
+          },
+          {
+            "name": "Keratina",
+            "price": "Gs. 500.000",
+            "duration": "180 min"
+          },
+          {
+            "name": "Botox Capilar",
+            "price": "Gs. 450.000",
+            "duration": "150 min"
+          }
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Galería de Trabajos",
+    "subtitle": "Conoce nuestros últimos trabajos",
+    "images": [
+      { "src": "/images/gallery/gallery-1.png", "alt": "Corte moderno" },
+      { "src": "/images/gallery/gallery-2.png", "alt": "Coloración rubia" },
+      { "src": "/images/gallery/gallery-3.png", "alt": "Mechas balayage" },
+      { "src": "/images/gallery/gallery-4.png", "alt": "Estilo elegante" },
+      { "src": "/images/gallery/gallery-5.png", "alt": "Coloración rosa" },
+      { "src": "/images/gallery/gallery-6.png", "alt": "Corte bob" }
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "María González",
+      "service": "Coloración",
+      "text": "Excelente servicio, el equipo es muy profesional y el ambiente es increíble.",
+      "rating": 5
+    },
+    {
+      "name": "Laura Pérez",
+      "service": "Corte",
+      "text": "Me encantó mi nuevo corte, definitivamente volveré.",
+      "rating": 5
+    },
+    {
+      "name": "Carmen López",
+      "service": "Tratamiento",
+      "text": "La hidratación dejó mi cabello súper suave, totalmente recomendado.",
+      "rating": 5
+    }
+  ],
+  "reasons": [
+    {
+      "title": "Profesionales Certificados",
+      "description": "Equipo con más de 10 años de experiencia",
+      "icon": "users"
+    },
+    {
+      "title": "Productos Premium",
+      "description": "Solo usamos los mejores productos del mercado",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Ambiente de Lujo",
+      "description": "Decoración con flores de magnolia y rose gold",
+      "icon": "home"
+    }
+  ],
+  "cta": {
+    "title": "¿Lista para tu transformación?",
+    "subtitle": "Reserva tu cita hoy mismo",
+    "primary": "Reservar Ahora",
+    "secondary": "Ver Servicios"
+  },
+  "team": [
+    {
+      "name": "Sofia Martínez",
+      "role": "Estilista Senior",
+      "image": "/images/team/sofia.png",
+      "color": "rose"
+    },
+    {
+      "name": "Valentina Rojas",
+      "role": "Colorista",
+      "image": "/images/team/valentina.png",
+      "color": "violet"
+    }
+  ],
+  "beforeAfter": [
+    {
+      "title": "Transformación Total",
+      "before": "/images/before-after/before-1.png",
+      "after": "/images/before-after/after-1.png"
+    }
+  ],
+  "promotions": [
+    {
+      "title": "Promoción Black Friday",
+      "description": "20% de descuento en todos los servicios",
+      "validUntil": "30 de noviembre",
+      "code": "BLACKFRIDAY"
+    }
+  ],
+  "loyalty": {
+    "title": "Programa de Lealtad",
+    "description": "Acumula puntos en cada visita y obtén descuentos exclusivos",
+    "pointsPerService": 10,
+    "rewardPoints": 100
+  },
+  "giftCards": [
+    {
+      "title": "Gift Card",
+      "description": "El regalo perfecto para cualquier ocasión",
+      "amounts": ["Gs. 100.000", "Gs. 250.000", "Gs. 500.000"]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Necesito reservar cita?",
+      "answer": "Sí, recomendamos reservar con antelación para garantizar disponibilidad."
+    },
+    {
+      "question": "¿Aceptan tarjetas de crédito?",
+      "answer": "Sí, aceptamos todas las tarjetas de crédito y débito."
+    },
+    {
+      "question": "¿Tienen estacionamiento?",
+      "answer": "Sí, tenemos estacionamiento disponible para nuestros clientes."
+    }
+  ]
+}

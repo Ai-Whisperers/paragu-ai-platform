@@ -1,0 +1,541 @@
+{
+  "site": {
+    "name": "Magnolia Peluquería",
+    "description": "Salón de belleza y peluquería en San Lorenzo, Paraguay. Servicio de lujo con estética rose gold.",
+    "url": "https://magnolia-peluqueria.paragu-ai.com",
+    "theme": {
+      "primary": "rose",
+      "secondary": "pink"
+    }
+  },
+  "business": {
+    "name": "Magnolia Peluquería",
+    "tagline": "Donde la belleza florece",
+    "address": "Av. San Lorenzo 1234, San Lorenzo, Paraguay",
+    "phone": "+595 21 123 456",
+    "whatsapp": "595976123456",
+    "email": "info@magnoliapeluqueria.com",
+    "hours": {
+      "weekdays": "Lun-Vie: 9:00 - 20:00",
+      "saturday": "Sábado: 9:00 - 18:00",
+      "sunday": "Domingo: Cerrado"
+    },
+    "coordinates": {
+      "lat": -25.3433,
+      "lng": -57.5098
+    },
+    "instagramUrl": "https://instagram.com/magnoliapeluqueria",
+    "facebookUrl": "https://facebook.com/magnoliapeluqueria",
+    "ctaMessage": "Hola! Quiero agendar una cita en Magnolia"
+  },
+  "hero": {
+    "title": "Transformamos tu mirada con elegancia y sofisticación",
+    "subtitle": "Experimenta el lujo de una peluquería boutique donde cada detalle está pensado para ti",
+    "slides": [
+      {
+        "id": "1",
+        "title": "Corte y Color Exclusivos",
+        "subtitle": "Técnicas avanzadas para el estilo que buscas",
+        "image": "/images/hero/hero-slide-1.png",
+        "cta": "Reservar Cita"
+      },
+      {
+        "id": "2",
+        "title": "Tratamientos Premium",
+        "subtitle": "Cuidado profesional para tu cabello",
+        "image": "/images/hero/hero-slide-2.png",
+        "cta": "Ver Tratamientos"
+      },
+      {
+        "id": "3",
+        "title": "Bridal & Eventos",
+        "subtitle": "Brilla en tus momentos especiales",
+        "image": "/images/hero/hero-slide-3.png",
+        "cta": "Consultar"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "number": "15+",
+      "label": "Años de experiencia"
+    },
+    {
+      "number": "10k+",
+      "label": "Clientes satisfechos"
+    },
+    {
+      "number": "25+",
+      "label": "Estilistas profesionales"
+    },
+    {
+      "number": "4.9",
+      "label": "Valoración media"
+    }
+  ],
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Ofrecemos una gama completa de servicios para realzar tu belleza",
+    "categories": [
+      {
+        "id": "corte",
+        "title": "Cortes",
+        "description": "Cortes modernos y clásicos adaptados a tu rostro",
+        "icon": "scissors",
+        "items": [
+          {
+            "name": "Corte Dama",
+            "price": 250000,
+            "duration": 45
+          },
+          {
+            "name": "Corte Caballero",
+            "price": 150000,
+            "duration": 30
+          },
+          {
+            "name": "Corte Niño",
+            "price": 100000,
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "id": "color",
+        "title": "Coloración",
+        "description": "Técnicas de color de alta gama",
+        "icon": "palette",
+        "items": [
+          {
+            "name": "Tinte Completo",
+            "price": 400000,
+            "duration": 90
+          },
+          {
+            "name": "Mechas",
+            "price": 600000,
+            "duration": 120
+          },
+          {
+            "name": "Balayage",
+            "price": 700000,
+            "duration": 150
+          }
+        ]
+      },
+      {
+        "id": "tratamiento",
+        "title": "Tratamientos",
+        "description": "Tratamientos especializados para tu cabello",
+        "icon": "sparkles",
+        "items": [
+          {
+            "name": "Botox Capilar",
+            "price": 450000,
+            "duration": 60
+          },
+          {
+            "name": "Keratina",
+            "price": 800000,
+            "duration": 120
+          },
+          {
+            "name": "Hidratación Profunda",
+            "price": 200000,
+            "duration": 30
+          }
+        ]
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "id": "1",
+      "url": "/images/gallery/gallery-1.png",
+      "alt": "Corte elegante",
+      "category": "corte"
+    },
+    {
+      "id": "2",
+      "url": "/images/gallery/gallery-2.png",
+      "alt": "Coloración balayage",
+      "category": "color"
+    },
+    {
+      "id": "3",
+      "url": "/images/gallery/gallery-3.png",
+      "alt": "Tratamiento keratina",
+      "category": "tratamiento"
+    },
+    {
+      "id": "4",
+      "url": "/images/gallery/gallery-4.png",
+      "alt": "Estilo bridal",
+      "category": "bridal"
+    },
+    {
+      "id": "5",
+      "url": "/images/gallery/gallery-5.png",
+      "alt": "Peinado evento",
+      "category": "peinado"
+    },
+    {
+      "id": "6",
+      "url": "/images/gallery/gallery-6.png",
+      "alt": "Coloración ombré",
+      "category": "color"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "María González",
+      "text": "El mejor salón de belleza de San Lorenzo. El servicio es increíble y los estilistas son profesionales.",
+      "rating": 5,
+      "image": "/images/testimonials/testimonial-1.png",
+      "date": "2024-03-15"
+    },
+    {
+      "id": "2",
+      "name": "Carmen López",
+      "text": "Me encantó mi nuevo balayage. El color está perfecto y me dieron tips para cuidarlo.",
+      "rating": 5,
+      "image": "/images/testimonials/testimonial-2.png",
+      "date": "2024-03-10"
+    },
+    {
+      "id": "3",
+      "name": "Ana Fernández",
+      "text": "El ambiente es relajante y elegante. Vengo cada mes y siempre salgo feliz.",
+      "rating": 5,
+      "image": "/images/testimonials/testimonial-3.png",
+      "date": "2024-03-05"
+    }
+  ],
+  "reasons": [
+    {
+      "title": "Profesionales Certificados",
+      "description": "Nuestros estilistas están certificados en las últimas técnicas"
+    },
+    {
+      "title": "Productos Premium",
+      "description": "Utilizamos productos de alta calidad para mejores resultados"
+    },
+    {
+      "title": "Atención Personalizada",
+      "description": "Cada cliente es única y merece servicio a medida"
+    },
+    {
+      "title": "Ambiente de Lujo",
+      "description": "Instalaciones modernas con estética rose gold"
+    }
+  ],
+  "cta": {
+    "title": "¿Lista para tu transformación?",
+    "subtitle": "Reserva tu cita hoy y descubre por qué somos el salón preferido en San Lorenzo",
+    "button": "Reservar Ahora"
+  },
+  "team": [
+    {
+      "id": "1",
+      "name": "Laura Martínez",
+      "role": "Directora Creativa",
+      "bio": "15 años de experiencia en coloración y cortes de alta gama",
+      "image": "/images/team/team-1.png",
+      "instagram": "https://instagram.com/laura_magnolia"
+    },
+    {
+      "id": "2",
+      "name": "Sofía Ramírez",
+      "role": "Especialista en Bridal",
+      "bio": "Maestra en peinados para novias y eventos especiales",
+      "image": "/images/team/team-2.png",
+      "instagram": "https://instagram.com/sofia_magnolia"
+    },
+    {
+      "id": "3",
+      "name": "Valentina Benítez",
+      "role": "Colorista",
+      "bio": "Experta en técnicas de coloración modernas",
+      "image": "/images/team/team-3.png",
+      "instagram": "https://instagram.com/valentina_magnolia"
+    },
+    {
+      "id": "4",
+      "name": "Camila Ortiz",
+      "role": "Estilista Senior",
+      "bio": "Especialista en cortes modernos y styling",
+      "image": "/images/team/team-4.png",
+      "instagram": "https://instagram.com/camila_magnolia"
+    }
+  ],
+  "beforeAfter": [
+    {
+      "id": "1",
+      "before": "/images/before-after/before-1.png",
+      "after": "/images/before-after/after-1.png",
+      "title": "Balayage Rubio",
+      "description": "De moreno a rubio natural con mechas finas"
+    },
+    {
+      "id": "2",
+      "before": "/images/before-after/before-2.png",
+      "after": "/images/before-after/after-2.png",
+      "title": "Corte Bob",
+      "description": "Corte moderno con capas"
+    },
+    {
+      "id": "3",
+      "before": "/images/before-after/before-3.png",
+      "after": "/images/before-after/after-3.png",
+      "title": "Keratina",
+      "description": "Alisado con keratina premium"
+    }
+  ],
+  "promotions": [
+    {
+      "id": "1",
+      "title": "Black Friday",
+      "description": "30% de descuento en todos los servicios de coloración",
+      "validUntil": "2024-12-01",
+      "originalPrice": 600000,
+      "price": 420000,
+      "image": "/images/promotions/black-friday.png",
+      "badge": "30% OFF"
+    },
+    {
+      "id": "2",
+      "title": "Combo Novia",
+      "description": "Peinado + maquillaje por un precio especial",
+      "validUntil": "2024-12-31",
+      "originalPrice": 800000,
+      "price": 650000,
+      "image": "/images/promotions/bride.png",
+      "badge": "Promo"
+    },
+    {
+      "id": "3",
+      "title": "Miercoles de Keratina",
+      "description": "Keratina con 20% de descuento todos los miércoles",
+      "validUntil": "2024-12-31",
+      "originalPrice": 800000,
+      "price": 640000,
+      "image": "/images/promotions/keratin.png",
+      "badge": "-20%"
+    }
+  ],
+  "loyalty": {
+    "title": "Programa de Lealtad",
+    "subtitle": "Acumula puntos por cada visita y canjea descuentos",
+    "tiers": [
+      {
+        "name": "Bronce",
+        "points": 0,
+        "benefits": ["1 punto por cada G. 10.000", "10% off en tercer visita"]
+      },
+      {
+        "name": "Plata",
+        "points": 1000,
+        "benefits": ["2 puntos por cada G. 10.000", "15% off en cada quinta visita", "Acceso anticipado a promociones"]
+      },
+      {
+        "name": "Oro",
+        "points": 2500,
+        "benefits": ["3 puntos por cada G. 10.000", "20% off en cada décima visita", "Servicio preferencial", "Regalo de cumpleaños"]
+      }
+    ]
+  },
+  "giftCards": [
+    {
+      "id": "1",
+      "title": "Gift Card Básica",
+      "price": 250000,
+      "description": "Ideal para un corte o tratamiento básico",
+      "image": "/images/giftcards/giftcard-1.png"
+    },
+    {
+      "id": "2",
+      "title": "Gift Card Premium",
+      "price": 500000,
+      "description": "Perfecta para tinte o tratamiento completo",
+      "image": "/images/giftcards/giftcard-2.png"
+    },
+    {
+      "id": "3",
+      "title": "Gift Card VIP",
+      "price": 1000000,
+      "description": "La opción más generosa para quien amas",
+      "image": "/images/giftcards/giftcard-1.png"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "1",
+      "question": "¿Cómo puedo reservar una cita?",
+      "answer": "Puedes reservar por WhatsApp en +595 976 123 456, llámanos al +595 21 123 456, o visítanos en nuestro salón. También tenemos un sistema de reservas online disponible."
+    },
+    {
+      "id": "2",
+      "question": "¿Cuánto tiempo antes debo cancelar?",
+      "answer": "Por favor cancela con al menos 24 horas de antelación para evitar cargos. Esto nos permite ofrecer el horario a otros clientes."
+    },
+    {
+      "id": "3",
+      "question": "¿Usan productos de calidad?",
+      "answer": "Sí, utilizamos exclusivamente productos de alta gama de marcas reconocidas internacionalmente para garantizar los mejores resultados."
+    },
+    {
+      "id": "4",
+      "question": "¿Ofrecen servicios para novias?",
+      "answer": "Sí, tenemos paquetes especiales para novias que incluyen peinado, maquillaje y prueba. Contáctanos para más información."
+    },
+    {
+      "id": "5",
+      "question": "¿Aceptan tarjetas de crédito?",
+      "answer": "Sí, aceptamos todas las tarjetas de crédito y débito principales, además de efectivo y transferencias bancarias."
+    },
+    {
+      "id": "6",
+      "question": "¿Cuáles son sus horarios?",
+      "answer": "Estamos abiertos de Lunes a Viernes de 9:00 a 20:00, Sábados de 9:00 a 18:00, y cerrados los domingos."
+    }
+  ],
+  "blog": [
+    {
+      "id": "1",
+      "title": "Tendencias de color para 2024",
+      "slug": "tendencias-color-2024",
+      "excerpt": "Descubre los colores más populares para este año y cómo lucirlos.",
+      "image": "/images/blog/thumbnail-balayage.png",
+      "date": "2024-03-20",
+      "author": "Laura Martínez",
+      "category": "Coloración"
+    },
+    {
+      "id": "2",
+      "title": "Cómo cuidar tu cabello en verano",
+      "slug": "cuidar-cabello-verano",
+      "excerpt": "Tips esenciales para mantener tu cabello saludable durante los días calurosos.",
+      "image": "/images/blog/thumbnail-haircare.png",
+      "date": "2024-03-18",
+      "author": "Sofía Ramírez",
+      "category": "Cuidado Capilar"
+    },
+    {
+      "id": "3",
+      "title": "Peinados para novias: Guía completa",
+      "slug": "peinados-novias-guia",
+      "excerpt": "Todo lo que necesitas saber para elegir el peinado perfecto para tu día especial.",
+      "image": "/images/blog/thumbnail-bride.png",
+      "date": "2024-03-15",
+      "author": "Sofía Ramírez",
+      "category": "Bridal"
+    },
+    {
+      "id": "4",
+      "title": "Beneficios de la keratina",
+      "slug": "beneficios-keratina",
+      "excerpt": "Descubre por qué la keratina es el tratamiento favorito para alisar cabello.",
+      "image": "/images/blog/thumbnail-keratina.png",
+      "date": "2024-03-12",
+      "author": "Valentina Benítez",
+      "category": "Tratamientos"
+    },
+    {
+      "id": "5",
+      "title": "Cómo mantener tu color por más tiempo",
+      "slug": "mantener-color-tiempo",
+      "excerpt": "Productos y rutinas para que tu tinte dure más y se vea brillante.",
+      "image": "/images/blog/thumbnail-color.png",
+      "date": "2024-03-10",
+      "author": "Laura Martínez",
+      "category": "Coloración"
+    },
+    {
+      "id": "6",
+      "title": "Cortes de pelo para cada rostro",
+      "slug": "cortes-rostro",
+      "excerpt": "Encuentra el corte perfecto según la forma de tu rostro.",
+      "image": "/images/blog/thumbnail-cortes.png",
+      "date": "2024-03-08",
+      "author": "Camila Ortiz",
+      "category": "Cortes"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Shampoo Anti-Frizz",
+      "price": 120000,
+      "description": "Shampoo profesional que reduce el frizz y aporta brillo",
+      "image": "/images/products/shampoo.png",
+      "category": "Cuidado",
+      "stock": 20
+    },
+    {
+      "id": "2",
+      "name": "Acondicionador Hidratante",
+      "price": 140000,
+      "description": "Acondicionador que hidrata profundamente y desenreda",
+      "image": "/images/products/conditioner.png",
+      "category": "Cuidado",
+      "stock": 15
+    },
+    {
+      "id": "3",
+      "name": "Serum Reparador",
+      "price": 180000,
+      "description": "Serum que repara puntas abiertas y aporta brillo",
+      "image": "/images/products/serum.png",
+      "category": "Tratamiento",
+      "stock": 10
+    },
+    {
+      "id": "4",
+      "name": "Mascarilla Keratina",
+      "price": 250000,
+      "description": "Mascarilla con keratina para alisar y fortalecer",
+      "image": "/images/products/mask.png",
+      "category": "Tratamiento",
+      "stock": 12
+    },
+    {
+      "id": "5",
+      "name": "Tijera Profesional",
+      "price": 450000,
+      "description": "Tijera profesional de acero inoxidable",
+      "image": "/images/products/scissors.png",
+      "category": "Herramientas",
+      "stock": 5
+    },
+    {
+      "id": "6",
+      "name": "Secador Iónico",
+      "price": 650000,
+      "description": "Secador ionic profesional con múltiples velocidades",
+      "image": "/images/products/dryer.png",
+      "category": "Herramientas",
+      "stock": 8
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "productId": "1",
+      "userId": "user1",
+      "userName": "María G.",
+      "rating": 5,
+      "comment": "Me encanta este shampoo, deja mi cabello súper suave",
+      "date": "2024-03-20"
+    },
+    {
+      "id": "2",
+      "productId": "3",
+      "userId": "user2",
+      "userName": "Ana R.",
+      "rating": 4,
+      "comment": "Buen producto, pero prefiero el de otra marca",
+      "date": "2024-03-18"
+    }
+  ]
+}

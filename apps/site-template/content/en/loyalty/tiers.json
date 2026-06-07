@@ -1,0 +1,40 @@
+[
+  {
+    "_annotation": {
+      "name": "Loyalty Tiers (Bronze/Silver/Gold)",
+      "what": "Tier definitions for the loyalty program — points thresholds, labels, and benefits per tier. Used by loyalty/index.json to render the program details.",
+      "why": "Tiered loyalty programs create aspirational behavior. When customers know they're 20 points away from Gold status, they return to hit that threshold. Clear tier benefits make the reward tangible.",
+      "ai_popolates": "Points thresholds: AI calculates from your average transaction value. Benefits: Generated to match your margin structure. Higher tiers get exponentially better rewards to incentivize progression.",
+      "your_input": "Tell us your average service price and whether you want 3 or 5 tiers. We configure the points-per-Guaraní ratio and redemption thresholds.",
+      "plan": "Crecimiento+ — Profesional includes custom tier names and rewards"
+    },
+    "name": "bronze",
+    "label": "Bronze",
+    "points": 0,
+    "benefits": [
+      "1 point per G. 10,000 spent",
+      "10% off on your third visit"
+    ]
+  },
+  {
+    "name": "silver",
+    "label": "Silver",
+    "points": 80,
+    "benefits": [
+      "2 points per G. 10,000",
+      "15% off on your fifth visit",
+      "Early access to promotions"
+    ]
+  },
+  {
+    "name": "gold",
+    "label": "Gold",
+    "points": 200,
+    "benefits": [
+      "3 points per G. 10,000",
+      "20% off on your tenth visit",
+      "Priority service",
+      "Birthday gift"
+    ]
+  }
+]

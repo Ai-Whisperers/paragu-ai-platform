@@ -1,0 +1,262 @@
+{
+  "_meta": {
+    "translationQuality": "native",
+    "author": "ParaguAI / Ai-Whisperers",
+    "lastReviewed": "2026-05-28",
+    "version": "1.0"
+  },
+  "site": {
+    "name": "Estudio Medieval S.R.L",
+    "shortName": "Estudio Medieval",
+    "businessName": "Estudio Medieval S.R.L",
+    "tagline": "Tatuajes & Body Piercing en San Lorenzo — 8 años de experiencia",
+    "description": "Estudio de tatuajes y body piercing en San Lorenzo, Paraguay. Más de 8 años en el mercado, 392 reseñas en Google y 58K seguidores en Instagram.",
+    "phone": "+595 961 482 854",
+    "whatsapp": "595961482854",
+    "email": "",
+    "address": "Cnel. Feliciano Duarte 315 esq. Mariscal Estigarribia, San Lorenzo",
+    "city": "San Lorenzo",
+    "country": "Paraguay",
+    "hours": "Lunes a Sábado 10:00–20:00 hs",
+    "founded": "2018",
+    "instagram": "estudiomedievalsrl",
+    "facebook": "estudiomedivalS.R.L",
+    "url": "https://estudiomedieval.com.py"
+  },
+  "navigation": {
+    "businessName": "Estudio Medieval",
+    "items": [
+      { "label": "Inicio", "href": "" },
+      { "label": "Servicios", "href": "/servicios" },
+      { "label": "Galería", "href": "/galeria" },
+      { "label": "Nosotros", "href": "/nosotros" },
+      { "label": "Contacto", "href": "/contacto" }
+    ],
+    "ctaText": "Reservar turno",
+    "ctaHref": "https://wa.me/595961482854?text=Hola!%20Quiero%20reservar%20un%20turno%20en%20Estudio%20Medieval"
+  },
+  "hero": {
+    "headline": "TATUAJES & BODY PIERCING",
+    "subheadline": "8+ años haciendo tatuajes en San Lorenzo",
+    "description": "Estudio de tatuajes y body piercing con la mejor atención y professionalism. Ubicados a 0.8km de la Facultad Politécnica. Reserva tu turno por WhatsApp.",
+    "ctaPrimaryText": "Reservar por WhatsApp",
+    "ctaPrimaryHref": "https://wa.me/595961482854?text=Hola!%20Quiero%20reservar%20un%20turno%20en%20Estudio%20Medieval",
+    "secondaryCtaText": "Ver trabajos",
+    "secondaryCtaHref": "/galeria",
+    "stats": [
+      { "value": "8+", "label": "Años en el mercado" },
+      { "value": "392", "label": "Reseñas en Google" },
+      { "value": "4.6", "label": "Estrellas en Google" },
+      { "value": "58K", "label": "Seguidores en Instagram" }
+    ],
+    "trustBadges": ["S.R.L. Formalmente registrada", "Materiales esterilizados", "Diseño personalizado"],
+    "cover": "/hero-bg.jpg"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "intro": "Desde 2018 dando vida a tatuajes únicos en San Lorenzo",
+    "story": "Estudio Medieval S.R.L nació con la pasión por el arte corporal. Ubicados en el corazón de San Lorenzo, a minutos de la Facultad Politécnica, nos hemos consolidado como uno de los estudios de tatuajes más confiables de Paraguay. Con más de 392 reseñas positivas en Google y una comunidad de 58K seguidores en Instagram, cada día seguimos creando arte en la piel.",
+    "mission": "Brindar un servicio de tatuaje y body piercing de alta calidad, con diseños personalizados, en un ambiente seguro y profesional.",
+    "vision": "Ser el estudio de referencia en Paraguay para quienes buscan arte corporal de calidad.",
+    "values": [
+      { "title": "Calidad", "desc": "Solo usamos materiales de primera calidad y técnicas profesionales." },
+      { "title": "Seguridad", "desc": "Estrictos protocolos de esterilización y limpieza." },
+      { "title": "Diseño único", "desc": "Cada tatuaje es un diseño original pensado para vos." }
+    ],
+    "stats": [
+      { "value": "8+", "label": "Años" },
+      { "value": "392", "label": "Reviews" },
+      { "value": "58K", "label": "IG Seguidores" }
+    ],
+    "images": ["/about-1.jpg", "/about-2.jpg"]
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "intro": "Ofrecemos una amplia gama de servicios de arte corporal",
+    "items": [
+      {
+        "title": "Tatuajes",
+        "description": "Todos los estilos: realismo, blackwork, geométrico, old school, new school, acuarela, japonés, y más. Diseño personalizado incluído.",
+        "icon": "✒️",
+        "features": ["Diseño original", "Consultoría gratuita", "Presupuesto sin compromiso", "Garantía de retoque"]
+      },
+      {
+        "title": "Body Piercing",
+        "description": "Perforaciones corporales de todo tipo: oreja, nariz, labio, ceja, ombligo, íntimo. Materiales quirúrgicos hipoalergénicos.",
+        "icon": "💎",
+        "features": ["Titanio quirúrgico", "Hipoalergénico", "Sterilización garantizada", "Asesoría de cuidado"]
+      },
+      {
+        "title": "Consultas de diseño",
+        "description": "Te ayudamos a definir tu idea y la adaptamos a tu cuerpo. Primera consulta sin costo.",
+        "icon": "📐",
+        "features": ["Sin costo", "Diseños exclusivos", "Adaptación al cuerpo", "Renderizado digital"]
+      },
+      {
+        "title": "Cobertura y retractaje",
+        "description": "Cubrimos tatuajes anteriores que ya no te gusten y retocamos trabajos de otros estudios.",
+        "icon": "🎨",
+        "features": ["Cobertura completa", "Negro cover", "Diseño nuevo", "Trabajos en capas"]
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Nuestros Trabajos",
+    "intro": "Galería de tatuajes y piercings realizados en Estudio Medieval",
+    "items": [
+      { "src": "/gallery/1.jpg", "title": "Brazo completo realismo", "category": "tattoo" },
+      { "src": "/gallery/2.jpg", "title": "Piercing septum", "category": "piercing" },
+      { "src": "/gallery/3.jpg", "title": "Espalda blackwork", "category": "tattoo" },
+      { "src": "/gallery/4.jpg", "title": "Piercing oreja multple", "category": "piercing" },
+      { "src": "/gallery/5.jpg", "title": "Antebrazo japonés", "category": "tattoo" },
+      { "src": "/gallery/6.jpg", "title": "Piercing nariz", "category": "piercing" },
+      { "src": "/gallery/7.jpg", "title": "Pecho geométrico", "category": "tattoo" },
+      { "src": "/gallery/8.jpg", "title": "Cobertura old school", "category": "tattoo" }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "items": [
+      {
+        "name": "María González",
+        "role": "Cliente frecuente",
+        "text": "Llevo 3 años yendo a Estudio Medieval. Siempre me tratan con profesionalismo y el resultado es impecable. 100% recomendado.",
+        "rating": 5
+      },
+      {
+        "name": "Carlos Martínez",
+        "role": "Primera vez",
+        "text": "Me hice mi primer tatuaje aquí y la experiencia fue increíble. Me acompañaron en todo el proceso, desde el diseño hasta el cuidado post-tattoo.",
+        "rating": 5
+      },
+      {
+        "name": "Ana Rodríguez",
+        "role": "Cliente de Instagram",
+        "text": "Seguí su Instagram por meses antes de ir. Vi muchos trabajos que me encantaron. Ahora tengo mi tatuaje soñado y no podría estar más feliz.",
+        "rating": 5
+      },
+      {
+        "name": "Diego Benítez",
+        "role": "Body piercing",
+        "text": "Me hice varios piercings con ellos. El ambiente es super limpio y usan materiales de calidad. Volveré por más.",
+        "rating": 5
+      },
+      {
+        "name": "Lucía Fernández",
+        "role": "Cobertura",
+        "text": "Tenía un tatuaje que odiaba y ellos lo cubrieron perfecto. Ahora tengo algo de lo que me siento orgullosa. Gracias Estudio Medieval!",
+        "rating": 5
+      }
+    ]
+  },
+  "process": [
+    {
+      "step": "1",
+      "title": "Consulta gratis",
+      "desc": "Escribinos por WhatsApp o pasá por el estudio. Te ayudamos a definir tu idea sin costo."
+    },
+    {
+      "step": "2",
+      "title": "Diseño personalizado",
+      "desc": "Creamos el diseño adaptado a vos: tamaño, ubicación, estilo. Lo ajustamos hasta que te guste."
+    },
+    {
+      "step": "3",
+      "title": "Reservá tu turno",
+      "desc": "Coordinamos fecha y hora. Pedís tu depósito y confirmás el turno. Recibís instrucciones de cuidado previo."
+    },
+    {
+      "step": "4",
+      "title": "Tu tatuaje listo",
+      "desc": "El día del turno te recibe con todo preparado. El proceso es incómodo pero manejable. Recibís kit de cuidado post-tattoo."
+    }
+  ],
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Necesito turno o puedo ir directo?",
+        "answer": "Recomendamos turno para tatuajes grandes. Para piercings o consultas menores podés pasar directamente. Siempre es mejor escribir por WhatsApp antes para asegurar disponibilidad."
+      },
+      {
+        "question": "¿Cuánto cuesta un tatuaje?",
+        "answer": "El precio depende del tamaño, complejidad del diseño y tiempo estimado. Trabajos pequeños pueden salir desde Gs. 300.000. Escribinos por WhatsApp con tu idea y te presupuestamos sin compromiso."
+      },
+      {
+        "question": "¿Hacen diseños personalizados?",
+        "answer": "Sí! Cada tatuaje incluye diseño original. No trabajamos con flash sheets genéricos. Te escuchamos, entendemos tu idea y la convertimos en un diseño único para vos."
+      },
+      {
+        "question": "¿Duelen mucho los tatuajes?",
+        "answer": "El dolor varía según la zona del cuerpo. Zonas como costillas, manos y pies son más sensibles. Durante el proceso te mantenemos informado y usamos técnicas para minimizar el discomfort."
+      },
+      {
+        "question": "¿Qué materiales usan?",
+        "answer": "Solo trabajamos con tintas y materiales de grado médico. nuestras agujas son descartables (de un solo uso). Esterilizamos todo el equipo reusable en autoclave."
+      },
+      {
+        "question": "¿Dan garantía de retoque?",
+        "answer": "Sí. Si el tatuaje pierde definición o color por causas relacionadas al trabajo (no por cuidado inadecuado del cliente), hacemos el retoque sin costo."
+      },
+      {
+        "question": "¿Puedo tatuarme si soy menor de edad?",
+        "answer": "No. Para tatuajes se necesita ser mayor de 18 años con identificación oficial. No hacemos excepciones."
+      },
+      {
+        "question": "¿Qué necesito para mi primer tatuaje?",
+        "answer": "Traer tu documento de identidad, no estar en ayunas (comer algo antes ayuda), dormir bien, no haber tomado alcohol 24hs antes, e hidratación adecuada. Te enviamos instrucciones completas al confirmar el turno."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactanos",
+    "subtitle": "Lunes a Sábado 10:00–20:00 hs",
+    "cta": "Escribinos por WhatsApp para reservar tu turno",
+    "whatsappMessage": "Hola! Vi el sitio web y quiero consultar por un tatuaje/piercing.",
+    "formFields": [
+      { "name": "name", "type": "text", "label": "Tu nombre", "required": true },
+      { "name": "phone", "type": "tel", "label": "Teléfono", "required": true },
+      { "name": "service", "type": "select", "label": "¿Qué servicio te interesa?", "required": true },
+      { "name": "message", "type": "textarea", "label": "Contanos tu idea", "required": false }
+    ],
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.9!2d-57.5238!3d-25.2967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE3JzQ0LjAiUyA1N8KwMzEnMjMuMiJF!5e0!3m2!1ses!2spy!4v1"
+  },
+  "footer": {
+    "text": "Estudio Medieval S.R.L — Tatuajes & Body Piercing en San Lorenzo, Paraguay",
+    "copyright": "© 2024 Estudio Medieval S.R.L. Todos los derechos reservados.",
+    "links": [
+      { "label": "Inicio", "href": "" },
+      { "label": "Servicios", "href": "/servicios" },
+      { "label": "Galería", "href": "/galeria" },
+      { "label": "Contacto", "href": "/contacto" }
+    ],
+    "showWhatsapp": true,
+    "showSocial": true
+  },
+  "instagram": {
+    "handle": "@estudiomedievalsrl",
+    "followers": "58,000",
+    "bio": "Tatuajes & Body Piercing | Insumos: @studsuppliestattoo | Showroom: @showroommedieval | Estética: @estudiomedievalstetic",
+    "url": "https://instagram.com/estudiomedievalsrl"
+  },
+  "brands": [
+    {
+      "name": "Tattoo Supplies",
+      "handle": "@studsuppliestattoo",
+      "description": "Venta de insumos para tatuadores",
+      "followers": "~8,000"
+    },
+    {
+      "name": "Showroom Medieval",
+      "handle": "@showroommedieval",
+      "description": "Showroom y venta de productos",
+      "followers": "~3,000"
+    },
+    {
+      "name": "Estética Medieval",
+      "handle": "@estudiomedievalstetic",
+      "description": "Servicios de estética",
+      "followers": "~2,000"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "home": {
+    "sections": [
+      { "id": "hero", "contentKey": "home.hero", "settings": { "variant": "minimal", "background": "dark" } },
+      { "id": "stats", "contentKey": "home.stats", "settings": { "background": "accent" } },
+      { "id": "servicesPreview", "contentKey": "home.services", "settings": { "columns": 3, "background": "default" } },
+      { "id": "trust", "contentKey": "home.trust", "settings": { "variant": "grid", "background": "alt" } },
+      { "id": "process", "contentKey": "home.process", "settings": { "variant": "numbered", "background": "default" } },
+      { "id": "testimonials", "contentKey": "home.testimonials", "settings": { "background": "alt" } },
+      { "id": "faq", "contentKey": "home.faq", "settings": { "variant": "accordion", "background": "default" } },
+      { "id": "contact", "contentKey": "home.contact", "settings": { "background": "dark" } }
+    ]
+  },
+  "servicios": {
+    "sections": [
+      { "id": "hero", "contentKey": "serviciosPage.hero", "settings": { "variant": "minimal", "background": "dark" } },
+      { "id": "intro", "contentKey": "serviciosPage.intro", "settings": { "background": "default" } },
+      { "id": "serviceCategories", "contentKey": "serviciosPage.categories", "settings": { "background": "alt" } },
+      { "id": "ctaBanner", "contentKey": "serviciosPage.cta", "settings": { "background": "accent" } }
+    ]
+  },
+  "nosotros": {
+    "sections": [
+      { "id": "hero", "contentKey": "nosotrosPage.hero", "settings": { "variant": "minimal", "background": "dark" } },
+      { "id": "intro", "contentKey": "nosotrosPage.intro", "settings": { "background": "default" } },
+      { "id": "values", "contentKey": "nosotrosPage.values", "settings": { "background": "alt" } },
+      { "id": "team", "contentKey": "nosotrosPage.team", "settings": { "background": "default" } },
+      { "id": "ctaBanner", "contentKey": "nosotrosPage.cta", "settings": { "background": "accent" } }
+    ]
+  },
+  "contacto": {
+    "sections": [
+      { "id": "hero", "contentKey": "contactoPage.hero", "settings": { "variant": "minimal", "background": "dark" } },
+      { "id": "contactInfo", "contentKey": "contactoPage.info", "settings": { "background": "default" } },
+      { "id": "contactForm", "contentKey": "contactoPage.form", "settings": { "background": "alt" } },
+      { "id": "ctaBanner", "contentKey": "contactoPage.cta", "settings": { "background": "accent" } }
+    ]
+  },
+  "faq": {
+    "sections": [
+      { "id": "hero", "contentKey": "faqPage.hero", "settings": { "variant": "minimal", "background": "dark" } },
+      { "id": "faqCategories", "contentKey": "faqPage.categories", "settings": { "background": "default" } },
+      { "id": "ctaBanner", "contentKey": "home.contact", "settings": { "background": "accent" } }
+    ]
+  },
+  "privacidad": {
+    "sections": [
+      { "id": "hero", "contentKey": "privacidadPage.hero", "settings": { "variant": "minimal", "background": "dark" } },
+      { "id": "privacyContent", "contentKey": "privacidadPage.content", "settings": { "background": "default" } }
+    ]
+  }
+}

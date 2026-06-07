@@ -1,0 +1,1245 @@
+{
+  "site": {
+    "name": "Cerveza Trentina",
+    "shortName": "Trentina",
+    "description": "Cerveza artesanal paraguaya — elaborada en Santa Rita, Alto Paraná con tradición y pasión",
+    "url": "https://trentina.paragu-ai.com",
+    "phone": "+595 983 22 44 73",
+    "whatsapp": "595983224473",
+    "email": "trentina@trentina.com.py",
+    "address": "Alicceo Luiggi Giordani, casi calle Trento, Barrio Alejandrino III, Santa Rita, Alto Paraná",
+    "addressShort": "Santa Rita, Alto Paraná",
+    "hours": "Consultar al WhatsApp",
+    "instagram": "https://instagram.com/cervezatrentina",
+    "facebook": "https://facebook.com/cervezatrentina",
+    "untappd": "https://untappd.com/cervezatrentina",
+    "ogImage": "/images/og.jpg",
+    "brewmaster": "Alexsandro Giordani",
+    "brewmasterTitle": "Sommelier de Cerveza y Maestro Cervecero",
+    "location": "Santa Rita, Alto Paraná, Paraguay",
+    "mapsUrl": "https://maps.google.com/?q=-25.7723,-55.0933",
+    "productionCapacity": "14.000",
+    "productionUsed": "12.000",
+    "founded": "2018"
+  },
+  "navigation": [
+    {
+      "href": "/",
+      "label": "Inicio"
+    },
+    {
+      "href": "/cervezas",
+      "label": "Cervezas"
+    },
+    {
+      "href": "/tienda",
+      "label": "Tienda"
+    },
+    {
+      "href": "/mayoristas",
+      "label": "Mayoristas"
+    },
+    {
+      "href": "/club",
+      "label": "Club"
+    },
+    {
+      "href": "/chopp",
+      "label": "Chopp",
+      "external": false
+    },
+    {
+      "href": "/eventos-corporativos",
+      "label": "Eventos",
+      "external": false
+    },
+    {
+      "href": "/nosotros",
+      "label": "Nosotros"
+    },
+    {
+      "href": "/galeria",
+      "label": "Galería"
+    },
+    {
+      "href": "/comunidad",
+      "label": "Comunidad"
+    },
+    {
+      "href": "/donde-comprar",
+      "label": "Dónde Comprar"
+    },
+    {
+      "href": "/faq",
+      "label": "FAQ"
+    },
+    {
+      "href": "/prensa",
+      "label": "Prensa"
+    },
+    {
+      "href": "/contacto",
+      "label": "Contacto"
+    }
+  ],
+  "home": {
+    "seo": {
+      "title": "Cerveza Trentina — Cerveza artesanal paraguaya | Santa Rita, Alto Paraná",
+      "description": "Cerveza artesanal paraguaya elaborada en Santa Rita. Pilsen, APA, IPA, Metatron IPL y Dunkel Cacao. Servicio de chopp para eventos. Pedí tu pack por WhatsApp."
+    },
+    "hero": {
+      "eyebrow": "Cerveza Trentina",
+      "headline": "Cerveza artesanal con identidad paraguaya",
+      "subheadline": "Elaborada en Santa Rita, Alto Paraná por el Maestro Cervecero Alexsandro Giordani. Pilsen, APA, IPA, Metatron y Dunkel Cacao — cada una con carácter propio.",
+      "ctaPrimaryText": "Ver Cervezas",
+      "ctaPrimaryHref": "/cervezas",
+      "ctaSecondaryText": "Pedir por WhatsApp",
+      "ctaSecondaryHref": "https://wa.me/595983224473",
+      "bgImage": "/images/hero-bg.jpg"
+    },
+    "features": {
+      "title": "Lo que nos define",
+      "subtitle": "Tradición cervecera con ingredientes seleccionados y elaboración artesanal",
+      "items": [
+        {
+          "icon": "beer",
+          "title": "Ley de Pureza Alemana",
+          "description": "Nuestra Pilsen es elaborada rigurosamente bajo la Reinheitsgebot 1516 con cinco tipos de maltas y lúpulos alemanes."
+        },
+        {
+          "icon": "list",
+          "title": "5 Estilos Permanentes",
+          "description": "Pilsen, APA, IPA, Metatron IPL y Dunkel Cacao. Cada uno con personalidad y balance únicos."
+        },
+        {
+          "icon": "glassTulip",
+          "title": "Chopp para Eventos",
+          "description": "Servicio de chopp profesional para fiestas, eventos empresariales y locales. Barriles de 20 litros."
+        },
+        {
+          "icon": "truck",
+          "title": "Packs a Domicilio",
+          "description": "Pedí tus packs por WhatsApp. Longnecks, botellas 500ml y packs mix de todos los estilos."
+        }
+      ]
+    },
+    "stats": {
+      "items": [
+        {
+          "value": "5",
+          "label": "Estilos",
+          "suffix": ""
+        },
+        {
+          "value": "12.000",
+          "label": "Litros / mes",
+          "suffix": "+"
+        },
+        {
+          "value": "50",
+          "label": "IBU max",
+          "suffix": ""
+        },
+        {
+          "value": "100%",
+          "label": "Artesanal",
+          "suffix": ""
+        }
+      ]
+    },
+    "menuSection": {
+      "title": "Nuestras Cervezas",
+      "description": "Conocé cada uno de nuestros estilos",
+      "categories": [
+        {
+          "id": "lagers",
+          "name": "Pilsen",
+          "priceRange": "Gs 130.000 – 300.000/pack"
+        },
+        {
+          "id": "ipas",
+          "name": "IPA",
+          "priceRange": "Gs 400.000/pack"
+        },
+        {
+          "id": "ales",
+          "name": "APA",
+          "priceRange": "Gs 400.000/pack"
+        },
+        {
+          "id": "especiales",
+          "name": "Metatron IPL",
+          "priceRange": "Gs 380.000/pack"
+        },
+        {
+          "id": "stouts",
+          "name": "Dunkel Cacao",
+          "priceRange": "Estacional"
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Querés probar nuestras cervezas?",
+      "subtitle": "Escribinos al WhatsApp y armamos tu pedido",
+      "buttonText": "Pedir Ahora",
+      "buttonHref": "https://wa.me/595983224473"
+    },
+    "promo": {
+      "eyebrow": "¡Atención!",
+      "title": "Tenemos una super promo en las cervezas Trentina por tiempo limitado",
+      "subtitle": "Aprovechá nuestros packs promocionales con los mejores precios del mercado.",
+      "ctaText": "Saber más",
+      "ctaHref": "/tienda"
+    },
+    "metatron": {
+      "title": "Metatron IPL",
+      "description": "India Pale Lager con alma de IPA",
+      "abv": "5.1%",
+      "ibu": "20",
+      "content": "Nuestra India Pale Lager (IPL) es una cerveza de la familia Lager con un final seco y bien atenuado. El carácter a grano puede ser neutro o mostrar cualidades ligeras a pan y galleta. Los sabores a lúpulo tienen un rango medio, a menudo mostrando un carácter floral, especiado o herbal. Relativamente equilibrada y versátil.",
+      "ctaText": "Ver todas las cerervezas",
+      "ctaHref": "/cervezas"
+    },
+    "gallery": {
+      "title": "Momentos de Felicidad",
+      "subtitle": "Galería de momentos Trentina"
+    },
+    "pricing": {
+      "title": "Packs Especiales",
+      "subtitle": "Elegí tu favorito y pedilo por WhatsApp"
+    },
+    "weeklySpecial": {
+      "title": "Pack Promocional",
+      "subtitle": "Ahorrá con nuestros packs — stock limitado",
+      "badge": "Oferta",
+      "item": {
+        "name": "Pack 1 — Longneck Pilsen",
+        "description": "20 longnecks Pilsen de 330ml cada uno. La cerveza dorada, clara y equilibrada con sabor frutal herbal.",
+        "price": "Gs 130.000",
+        "originalPrice": "",
+        "category": "Packs"
+      },
+      "ctaText": "Pedir este Pack",
+      "ctaHref": "https://wa.me/595983224473?text=Hola!%20Quiero%20pedir%20el%20Pack%201%20Longneck%20Pilsen",
+      "validDays": "Sujeto a disponibilidad"
+    },
+    "stockStatus": {
+      "title": "Disponibilidad",
+      "pilsen": "En stock",
+      "apa": "En stock",
+      "ipa": "En stock",
+      "metatron": "Stock limitado",
+      "dunkel": "Próximamente"
+    }
+  },
+  "menu": {
+    "seo": {
+      "title": "Cervezas — Cerveza Trentina | Pilsen, APA, IPA, Metatron, Dunkel",
+      "description": "Conocé todas nuestras cervezas artesanales: Pilsen, APA, IPA, Metatron IPL y Dunkel Cacao. Datos de ABV, IBU y maridaje."
+    },
+    "intro": {
+      "title": "Nuestras Cervezas",
+      "subtitle": "Cada estilo elaborado con dedicación artesanal"
+    },
+    "categories": [
+      {
+        "id": "cervezas",
+        "name": "Cervezas",
+        "icon": "beer",
+        "subcategories": [
+          {
+            "id": "lagers",
+            "name": "Pilsen",
+            "description": "Lager dorada, clara, limpia y equilibrada — elaborada bajo la ley de pureza alemana Reinheitsgebot 1516",
+            "items": [
+              {
+                "name": "Pilsen Trentina",
+                "description": "Elaborada con cinco tipos de maltas de punta combinadas con dos variedades de lúpulos alemanes. Aspecto dorado, claro, con sabor y aroma frutal a herbal. Delicada sequedad y ligero toque picante al final del trago.",
+                "ABV": "5%",
+                "IBU": "15",
+                "price": "Gs 130.000/pack 20x330ml",
+                "maridaje": "Carnes blancas y quesos suaves",
+                "sizes": "330ml (longneck) · 500ml · 1L",
+                "image": "/images/beers/pilsen-glass.jpg"
+              }
+            ]
+          },
+          {
+            "id": "ales",
+            "name": "American Pale Ale",
+            "description": "Refrescante y lupulada con presencia de malta",
+            "items": [
+              {
+                "name": "APA Trentina",
+                "description": "American Pale Ale con aroma a lúpulo moderado a fuerte, carácter cítrico y frutado. Color doréo pálido a ámbar profundo. Equilibrada y fácil de tomar.",
+                "ABV": "5%",
+                "IBU": "30",
+                "price": "Gs 400.000/pack 24x500ml",
+                "maridaje": "Comidas condimentadas y picantes",
+                "image": "/images/beers/apa.jpg"
+              }
+            ]
+          },
+          {
+            "id": "ipas",
+            "name": "India Pale Ale",
+            "description": "Decididamente amarga, lupulada y moderadamente fuerte",
+            "items": [
+              {
+                "name": "IPA Trentina",
+                "description": "American IPA con prominente aroma cítrico, floral, resinoso a pino y frutal derivado de lúpulos americanos. Color de dorado medio a cobre rojizo. Amarga con carácter.",
+                "ABV": "6%",
+                "IBU": "50",
+                "price": "Gs 400.000/pack 24x500ml",
+                "maridaje": "Comidas condimentadas y picantes",
+                "image": "/images/beers/ipa.jpg"
+              }
+            ]
+          },
+          {
+            "id": "especiales",
+            "name": "Metatron IPL",
+            "description": "India Pale Lager — la familia Lager con alma de IPA",
+            "items": [
+              {
+                "name": "Metatron Trentina",
+                "description": "India Pale Lager (IPL) con final seco y bien atenuado. Carácter a grano neutro con ligeras notas a pan y galleta. Sabores a lúpulo medio, con carácter floral, especiado o herbal. Equilibrada y versátil.",
+                "ABV": "5.1%",
+                "IBU": "20",
+                "price": "Gs 380.000/pack 24x500ml",
+                "maridaje": "Carnes asadas, tabla de quesos, picadas",
+                "image": "/images/beers/metatron.jpg"
+              }
+            ]
+          },
+          {
+            "id": "stouts",
+            "name": "Dunkel Cacao",
+            "description": "Munich Dunkel con notas intensas de café y cacao",
+            "items": [
+              {
+                "name": "Dunkel Cacao Trentina",
+                "description": "Munich Dunkel con color rubí profundo, robusta y suave. Notas intensas de café y cacao medio amargo con un delicado dulzor al final del trago. Una experiencia sensorial completa.",
+                "ABV": "5%",
+                "IBU": "20",
+                "price": "Gs 350.000/pack 12x500ml",
+                "maridaje": "Chocolates medio amargo, tiramisú, postres con cacao",
+                "image": "/images/beers/dunkel-bottle.jpg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "seo": {
+      "title": "Galería — Cerveza Trentina",
+      "description": "Fotos de nuestras cervezas, el proceso de elaboración y eventos con chopp Trentina."
+    },
+    "hero": {
+      "title": "Galería",
+      "subtitle": "Momentos de felicidad Trentina"
+    },
+    "images": [
+      {
+        "src": "/images/gallery/gallery-1.jpg",
+        "alt": "Cerveza Pilsen Trentina servida en jarra",
+        "category": "cervezas"
+      },
+      {
+        "src": "/images/gallery/gallery-5.jpg",
+        "alt": "Variedad de cervezas Trentina",
+        "category": "cervezas"
+      },
+      {
+        "src": "/images/gallery/gallery-3.jpg",
+        "alt": "Servicio de chopp Trentina en evento",
+        "category": "eventos"
+      },
+      {
+        "src": "/images/gallery/gallery-4.jpg",
+        "alt": "Proceso de elaboración artesanal",
+        "category": "fabrica"
+      },
+      {
+        "src": "/images/gallery/gallery-2.jpg",
+        "alt": "Chopp tirado de cerveza Trentina",
+        "category": "chopp"
+      },
+      {
+        "src": "/images/gallery/gallery-6.jpg",
+        "alt": "Botellas de cerveza Trentina envasadas",
+        "category": "cervezas"
+      },
+      {
+        "src": "/images/gallery/gallery-7.jpg",
+        "alt": "Eventos y reuniones con Cerveza Trentina",
+        "category": "eventos"
+      },
+      {
+        "src": "/images/gallery/gallery-8.jpg",
+        "alt": "Producción artesanal de Cerveza Trentina",
+        "category": "fabrica"
+      }
+    ]
+  },
+  "about": {
+    "seo": {
+      "title": "Nosotros — Cerveza Trentina | Alexsandro Giordani, Maestro Cervecero",
+      "description": "Conocé la historia de Cerveza Trentina. Elaborada en Santa Rita, Alto Paraná por Alexsandro Giordani, Sommelier de Cerveza y Maestro Cervecero."
+    },
+    "hero": {
+      "title": "Hacemos lo que amamos",
+      "subtitle": "Tradición cervecera artesanal en Santa Rita, Alto Paraná"
+    },
+    "story": [
+      "Cerveza Trentina nace en Santa Rita, Alto Paraná, de la pasión y el conocimiento de Alexsandro Giordani — Sommelier de Cerveza y Maestro Cervecero. Con dedicación artesanal y un compromiso inquebrantable con la calidad, cada lote se elabora respetando los tiempos de fermentación y maduración que cada estilo merece.",
+      "Nuestra Pilsen, la insignia de la casa, es elaborada rigurosamente bajo la ley de pureza alemana Reinheitsgebot 1516, combinando cinco tipos de maltas de punta con dos variedades de lúpulos alemanes. Este respeto por la tradición cervecera europea, fusionado con ingredientes y el carácter paraguayo, es lo que define cada una de nuestras cervezas.",
+      "Hoy producimos más de 12.000 litros mensuales en cinco estilos permanentes: Pilsen, APA, IPA, Metatron IPL y Dunkel Cacao. Además, nuestro servicio de chopp profesional lleva la frescura Trentina a fiestas, eventos empresariales, bares y restaurantes de toda la zona."
+    ],
+    "values": [
+      {
+        "title": "Artesanal",
+        "description": "Cada lote elaborado con manos expertas, sin automatizar. Proceso 100% artesanal."
+      },
+      {
+        "title": "Pureza",
+        "description": "Respetamos la Reinheitsgebot 1516. Ingredientes seleccionados, proceso controlado."
+      },
+      {
+        "title": "Pasión",
+        "description": "Hacemos lo que amamos. Cada botella lleva la dedicación de un Maestro Cervecero."
+      }
+    ],
+    "brewmaster": {
+      "name": "Alexsandro Giordani",
+      "title": "Sommelier de Cerveza y Maestro Cervecero",
+      "description": "Con años de experiencia y formación especializada, Alexsandro lidera la elaboración de cada estilo Trentina con rigor técnico y creatividad artesanal.",
+      "quote": "Cada cerveza que hacemos lleva el mismo principio: ingredientes seleccionados, proceso cuidado, y pasión en cada paso. El resultado se nota en cada sorbo."
+    }
+  },
+  "mayoristas": {
+    "seo": {
+      "title": "Mayoristas — Cerveza Trentina | Precios por volumen para bares y restaurantes",
+      "description": "Vendé Trentina en tu local con precios por volumen. Descuentos para bares, restaurantes y licoreras. Contratos anuales disponibles."
+    },
+    "hero": {
+      "title": "VENDÉ TRENTINA EN TU LOCAL",
+      "subtitle": "Precios preferenciales para bares, restaurantes y licoreras. Descuentos por volumen desde el primer pedido. Contrato anual disponible."
+    },
+    "benefitsTitle": "¿Por qué ser distribuidor Trentina?",
+    "benefits": [
+      {
+        "title": "Producto único en Paraguay",
+        "description": "Metatron Hemp IPL es la única cerveza con terpenos de cáñamo del país. Diferenciación garantizada."
+      },
+      {
+        "title": "Descuentos desde el primer pedido",
+        "description": "Desde 10% off en tu primera compra mayorista. Precios que crecen con tu volumen."
+      },
+      {
+        "title": "Materiales de marketing",
+        "description": "Te entregamos carteles, mantas, vasitos y material POP para que tu local luzca profesional."
+      },
+      {
+        "title": "Equipo en préstamo",
+        "description": "Para contratos de 10+ barriles/mes, prestamos el kegerator sin costo adicional."
+      },
+      {
+        "title": "Capacitación de bartenders",
+        "description": "Te enseñamos a tirar el chopp perfecto y recomendar nuestras cervezas."
+      },
+      {
+        "title": "Acceso a lotes limitados",
+        "description": "Los distribuidores tienen prioridad en ediciones especiales y lotes estacionales."
+      }
+    ],
+    "pricingBarrelsTitle": "Precios por barril (30L) — Bares y Restaurantes",
+    "pricingBarrelsSubtitle": "Contrato mensual. Prix indicatifs. Consultation para volúmenes mayores.",
+    "pricingBarrels": [
+      { "min": 1, "max": 2, "price": "Gs 480.000", "discount": "0%", "note": "Precio lista" },
+      { "min": 3, "max": 5, "price": "Gs 450.000", "discount": "~6%", "note": "Pack básico" },
+      { "min": 6, "max": 10, "price": "Gs 420.000", "discount": "~12%", "note": "Pack estándar" },
+      { "min": 11, "max": 20, "price": "Gs 390.000", "discount": "~19%", "note": "Pack premium" },
+      { "min": 21, "max": null, "price": "Gs 360.000", "discount": "~25%", "note": "Pack enterprise" }
+    ],
+    "pricingPacksTitle": "Precios por pack (24x500ml) — Revendedores",
+    "pricingPacksSubtitle": "Para licoreras y puntos de venta al por menor.",
+    "pricingPacks": [
+      { "min": 10, "max": 24, "price": "Gs 12.500", "discount": "—", "note": "Gs 300K por unidad" },
+      { "min": 25, "max": 49, "price": "Gs 12.000", "discount": "4%", "note": "Gs 288K por unidad" },
+      { "min": 50, "max": 99, "price": "Gs 11.000", "discount": "12%", "note": "Gs 264K por unidad" },
+      { "min": 100, "max": null, "price": "Gs 10.500", "discount": "16%", "note": "Gs 252K por unidad" }
+    ],
+    "processTitle": "¿Cómo empezar?",
+    "process": [
+      { "step": "01", "title": "Consultá", "description": "Escribinos por WhatsApp con el nombre del local y qué volumen manejás." },
+      { "step": "02", "title": "Te armamos la cotización", "description": "Te preparamos una propuesta personalizada según tu volumen y tipo de local." },
+      { "step": "03", "title": "Primera compra", "description": "Arrancás con tu pedido inicial y los beneficios de distribuye Trentina." },
+      { "step": "04", "title": "Relación de largo plazo", "description": "Seguís pedidos mensuales con precios preferenciales y soporte constante." }
+    ],
+    "untappdSection": {
+      "badge": "3.76 ★ en Untappd",
+      "note": "224 check-ins · 62 ratings verificados",
+      "ctaText": "Ver perfil en Untappd",
+      "ctaHref": "https://untappd.com/cervezatrentina"
+    },
+    "formTitle": "¿Querés abrir una cuenta mayorista?",
+    "formSubtitle": "Completá tus datos y te contactamos en 24 horas.",
+    "formFields": {
+      "name": "Nombre del local o negocio",
+      "city": "Ciudad",
+      "phone": "WhatsApp del local",
+      "products": "Productos de interés (barriles / packs / chopp)",
+      "volume": "Volumen estimado mensual",
+      "notes": "Comentarios adicionales (opcional)"
+    },
+    "formSubmit": "Enviar consulta",
+    "testimonialsTitle": "Ya confían en Trentina",
+    "testimonials": [
+      { "name": "Cerveroga Asunción", "type": "Distribuidor oficial", "quote": "Trentina es una de las cervezas más pedidas por nuestros clientes. La IPA y la Metatron se venden solas." },
+      { "name": "Bar El Dólar", "type": "Bar de Asunción", "quote": "Desde que tenemos chopp Trentina, los viernes son otro nivel. La gente pregunta por el nombre." }
+    ],
+    "ctaBottom": {
+      "title": "¿Listo para sumarte?",
+      "subtitle": "Escribinos directamente y te armamos la propuesta.",
+      "buttonText": "WhatsApp Mayoristas",
+      "buttonHref": "https://wa.me/595983224473?text=Hola!%20Quiero%20abrir%20una%20cuenta%20mayorista%20de%20Trentina%20para%20mi%20local"
+    }
+  },
+  "club": {
+    "seo": {
+      "title": "Club Trentina — Cerveza Trentina | Programa de fidelización",
+      "description": "Unite al Club Trentina. Acumulá puntos con cada compra y canjealos por cervezas gratis. Niveles Bronze, Silver y Gold con beneficios exclusivos."
+    },
+    "hero": {
+      "eyebrow": "Club Trentina",
+      "title": "BECÁ UN MEMBRO DEL CLUB",
+      "subtitle": "Accumalá puntos con cada compra y canjealos por las mejores cervezas artesanales de Paraguay. Beneficios exclusivos para los más fans de Trentina."
+    },
+    "howItWorksTitle": "¿Cómo funciona?",
+    "howItWorks": [
+      { "icon": "shopping-bag", "title": "Comprá", "description": "Cada Gs 10.000 en productos Trentina = 1 punto" },
+      { "icon": "star", "title": "Accumalá", "description": "Subí de nivel según tu consumo mensual. Bronze, Silver o Gold." },
+      { "icon": "gift", "title": "Canjeá", "description": "100 puntos = 1 cerveza de tu elección. Sin mínimos, sin tarjetas." }
+    ],
+    "tiersTitle": "Niveles del Club",
+    "tiers": [
+      {
+        "level": "Bronze",
+        "minSpend": "Gs 200.000/mes",
+        "pointsPerGs10k": "1 punto",
+        "color": "#cd7f32",
+        "benefits": [
+          "Puntos acumulables por toda compra",
+          "1 punto cada Gs 10.000",
+          "Acceso a promos exclusivas members",
+          "Cumpleaños: 1 cerveza gratis"
+        ]
+      },
+      {
+        "level": "Silver",
+        "minSpend": "Gs 500.000/mes",
+        "pointsPerGs10k": "3 puntos",
+        "color": "#c0c0c0",
+        "benefits": [
+          "Todo lo de Bronze",
+          "3 puntos cada Gs 10.000",
+          "Early access a ediciones limitadas",
+          "Degustaciones gratuitas cada 3 meses",
+          "Cumpleaños: 2 cervezas gratis"
+        ]
+      },
+      {
+        "level": "Gold",
+        "minSpend": "Gs 1.000.000/mes",
+        "pointsPerGs10k": "5 puntos",
+        "color": "#d4af37",
+        "benefits": [
+          "Todo lo de Silver",
+          "5 puntos cada Gs 10.000",
+          "Acceso prioritario a Metatron Hemp IPL",
+          "Invitaciones a eventos exclusivos",
+          "Tour de fábrica para 2 personas",
+          "Cumpleaños: pack de 6 cervezas"
+        ]
+      }
+    ],
+    "pointsValue": {
+      "title": "¿Cuánto valen los puntos?",
+      "description": "1 punto = Gs 100 de descuento en tu próxima compra. 100 puntos = 1 cerveza gratis de cualquier estilo."
+    },
+    "faqTitle": "Preguntas frecuentes — Club Trentina",
+    "faq": [
+      {
+        "q": "¿Cómo me anoto?",
+        "a": "Escribinos al WhatsApp con tu nombre y número de WhatsApp. Te cargamos 50 puntos de bienvenida."
+      },
+      {
+        "q": "¿Puedo canjear puntos en cualquier momento?",
+        "a": "Sí. Cuando tengas 100+ puntos, escribinos y te decimos qué cerveza querés canjear."
+      },
+      {
+        "q": "¿Los puntos caducan?",
+        "a": "Si no comprás en 6 meses, los puntos quedan inactivos. Una compra los reactiva."
+      },
+      {
+        "q": "¿Puedo transferir puntos a otra persona?",
+        "a": "No. Los puntos son personales e intransferibles."
+      },
+      {
+        "q": "¿Hay costo de inscripción?",
+        "a": "¡No! El Club Trentina es completamente gratuito."
+      }
+    ],
+    "ctaBottom": {
+      "title": "Unite al Club Trentina",
+      "subtitle": "Te regalamos 50 puntos de bienvenida solo por anotar te.",
+      "buttonText": "Anotame por WhatsApp",
+      "buttonHref": "https://wa.me/595983224473?text=Hola!%20Quiero%20anotarme%20al%20Club%20Trentina.%20Mi%20nombre%20es%20___"
+    }
+  },
+  "eventos": {
+    "seo": {
+      "title": "Eventos Corporativos — Cerveza Trentina | Chopp para empresas",
+      "description": "Servicio de chopp profesional para eventos corporativos, casamientos y fiestas privadas. Paquetes desde Gs 800.000. Incluye equipo, staff y personalización."
+    },
+    "hero": {
+      "eyebrow": "Eventos Corporativos",
+      "title": "TU EVENTO MERECE CHOPP DE VERDAD",
+      "subtitle": "Servicio profesional de chopp para empresas, casamientos y fiestas privadas. Instalación completa, staff capacitado y la mejor cerveza artesanal de Paraguay."
+    },
+    "packagesTitle": "Paquetes para tu evento",
+    "packagesSubtitle": "Todos incluyen equipo de chopp completo y asesoramiento personalizado.",
+    "packages": [
+      {
+        "name": "Pack Básico",
+        "price": "Gs 800.000",
+        "minPeople": "50-100 personas",
+        "barrels": "2 barril 30L",
+        "styles": "2 estilos",
+        "includes": [
+          "2 barril 30L (2 estilos a elección)",
+          "Equipo completo de chopp (barril, freezer, Fonts)",
+          "Instalación y retiro del equipo",
+          "4 horas de servicio básico"
+        ],
+        "recommended": false
+      },
+      {
+        "name": "Pack Premium",
+        "price": "Gs 3.200.000",
+        "minPeople": "100-300 personas",
+        "barrels": "5 barril 30L",
+        "styles": "4 estilos",
+        "includes": [
+          "5 barril 30L (4 estilos disponibles)",
+          "Equipo completo con 2 fonts simultáneos",
+          "2 personas de staff capacitado",
+          "Banner personalizado con logo del evento",
+          "Vasos personalizados",
+          "6 horas de servicio"
+        ],
+        "recommended": true
+      },
+      {
+        "name": "Pack Enterprise",
+        "price": "Desde Gs 5.500.000",
+        "minPeople": "300+ personas",
+        "barrels": "10+ barril 30L",
+        "styles": "Todos los estilos",
+        "includes": [
+          "10+ barril 30L (todos los estilos)",
+          "Equipo profesional completo",
+          "3+ personas de staff",
+          "Personalización total (banner, vasos, manteles)",
+          "Menú de maridaje Trentina",
+          "Servicio ampliado + desmontaje incluido",
+          "Condiciones especiales de pago"
+        ],
+        "recommended": false
+      }
+    ],
+    "formTitle": "Solicitar cotización",
+    "formSubtitle": "Completá los datos y te respondemos en menos de 24 horas.",
+    "formFields": {
+      "company": "Nombre de la empresa o organizador",
+      "date": "Fecha estimada del evento",
+      "location": "Ciudad / Lugar del evento",
+      "people": "Cantidad aproximada de personas",
+      "styles": "Estilos de cerveza preferidos",
+      "phone": "Teléfono / WhatsApp",
+      "notes": "Comentarios adicionales"
+    },
+    "formSubmit": "Solicitar cotización",
+    "faqTitle": "Preguntas frecuentes — Eventos",
+    "faq": [
+      {
+        "q": "¿Cuántos litros necesito para X personas?",
+        "a": " Estimado: 0.5L por persona en un evento de 4 horas. Si es más largo, calculá 0.3-0.4L追加 por hora."
+      },
+      {
+        "q": "¿Dan equipo para mi bar?",
+        "a": "Sí. Con contrato mensual de chopp, prestamos el kegerator sin costo. Consultá condiciones."
+      },
+      {
+        "q": "¿Puedo mixear los estilos?",
+        "a": "Sí. En los paquetes Premium y Enterprise podés elegir los estilos que quieras de nuestra línea."
+      },
+      {
+        "q": "¿Hacen servicio fuera de Asunción?",
+        "a": "Sí. Consultá el costo de desplazamiento según la ubicación. Santa Rita y Ciudad del Este tienen recargo reducido."
+      },
+      {
+        "q": "¿Hay alcohol sin?",
+        "a": "Próximamente tendremos opciones sin alcohol. Consultanos."
+      }
+    ],
+    "ctaBottom": {
+      "title": "¿Tenés un evento en mente?",
+      "subtitle": "Escribinos y te-armamos una cotización a medida.",
+      "buttonText": "WhatsApp Eventos",
+      "buttonHref": "https://wa.me/595983224473?text=Hola!%20Quiero%20cotizar%20chopp%20para%20un%20evento.%20Detalles:%20___"
+    }
+  },
+  "faq": {
+    "seo": {
+      "title": "FAQ — Cerveza Trentina | Preguntas frecuentes",
+      "description": "Respondemos las preguntas más frecuentes sobre Cerveza Trentina: productos, pedidos, delivery,ход и услуги."
+    },
+    "hero": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitás saber sobre Trentina antes de escribir al WhatsApp."
+    },
+    "categories": [
+      {
+        "name": "Generales",
+        "faqs": [
+          {
+            "q": "¿Dónde queda la fábrica? ¿Puedo visitarla?",
+            "a": "Estamos en Alicceo Luiggi Giordani, casi calle Trento, Barrio Alejandrino III, Santa Rita, Alto Paraná. Podés visitarnos coordinando turno por WhatsApp."
+          },
+          {
+            "q": "¿Hacen envíos a todo Paraguay?",
+            "a": "Hacemos envíos a Asunción y ciudades del Este. Consultanos el costo de envío según volumen y zona."
+          },
+          {
+            "q": "¿Cuál es la edad mínima para comprar?",
+            "a": "18 años. Validamos edad en la entrega."
+          },
+          {
+            "q": "¿Cómo almaceno la cerveza?",
+            "a": "Guardala en posisição vertical, en lugar fresco y oscuro (idealmente entre 2-8°C). No la expongas a la luz solar directa. Consumila antes de 6 meses para mejor sabor."
+          }
+        ]
+      },
+      {
+        "name": "Productos",
+        "faqs": [
+          {
+            "q": "¿Cuáles cervezas son sin gluten?",
+            "a": "Nuestra Pilsen Sin Gluten tiene certificación. Indicada para personas con celiaquismo. No confundir con opciones 'sin gluten declared' de otras marcas."
+          },
+          {
+            "q": "¿Cuál tiene más alcohol?",
+            "a": "La IPA Trentina con 6% ABV es la de mayor graduación. La Metatron tiene 5.1% y la Pilsen 5%."
+          },
+          {
+            "q": "¿La Metatron tiene cannabis? ¿Es legal?",
+            "a": "La Metatron Hemp IPL contiene terpenos de cáñamo (Hemp) — 0% THC. Es 100% legal en Paraguay y no tiene efectos psicoactivos. Es la única cerveza de este tipo en el país."
+          },
+          {
+            "q": "¿Hay opciones sin alcohol?",
+            "a": "Actualmente no tenemos sin alcohol en nuestro catálogo permanente. Estacionalmente lanzamos ediciones sin."
+          },
+          {
+            "q": "¿Cuáles estilos están disponibles ahora?",
+            "a": "Todos los estilos están en producción. Podés consultar stock por WhatsApp antes de hacer tu pedido."
+          }
+        ]
+      },
+      {
+        "name": "Pedidos",
+        "faqs": [
+          {
+            "q": "¿Cómo hago un pedido?",
+            "a": "Escribinos al WhatsApp con los productos que quieras. Te armamos el carrito, confirmamos precio y coordinamos entrega."
+          },
+          {
+            "q": "¿Cuál es el mínimo de compra?",
+            "a": "No hay pedido mínimo. Pero para delivery gratuitos en Asunción, recomendamos partir de 3 packs."
+          },
+          {
+            "q": "¿Hacen envío a Asunción? ¿Cuánto cuesta?",
+            "a": "Sí. Gratis para pedidos de 3+ packs. Pedidos menores tienen costo de envío según zona."
+          },
+          {
+            "q": "¿Cuánto tarda el delivery?",
+            "a": "En Asunción: 24-48 horas. Santa Rita y zona: de 2-3 días. Eventos: mínimo 5 días de anticipación."
+          }
+        ]
+      },
+      {
+        "name": "Servicios (Chopp)",
+        "faqs": [
+          {
+            "q": "¿Cómo contrato chopp para un evento?",
+            "a": "Escribinos al WhatsApp con la fecha, cantidad de personas, ciudad y estilo que querés. Te armamos la cotización."
+          },
+          {
+            "q": "¿Dan equipo en préstamo para mi bar?",
+            "a": "Sí. Para contratos mensuales de 10+ barriles, préstamo de kegerator sin costo adicional. Incluye mantenimiento."
+          },
+          {
+            "q": "¿Cuántos litros necesito para X personas?",
+            "a": "Como guía general: 0.5L por persona por 4 horas de evento. Para eventos más largos o con mucho calor, calculá 0.6-0.7L por persona."
+          }
+        ]
+      }
+    ],
+    "ctaBottom": {
+      "title": "¿No encontraste lo que buscabas?",
+      "subtitle": "Escribinos al WhatsApp y te respondemos al instante.",
+      "buttonText": "WhatsApp",
+      "buttonHref": "https://wa.me/595983224473"
+    }
+  },
+  "comunidad": {
+    "seo": {
+      "title": "Comunidad — Cerveza Trentina | Blog, recetas y guías",
+      "description": "Blog de Cerveza Trentina. Recetas con cerveza, guías de maridaje, historias de la fábrica y todo sobre el mundo craft beer."
+    },
+    "hero": {
+      "title": "Comunidad Trentina",
+      "subtitle": "Recetas, maridajes, historias y todo sobre el mundo de la cerveza artesanal"
+    },
+    "intro": "Te invitamos a la mesa. Aquí compartimos lo que sabemos — desde técnicas de elaboración hasta combinaciones perfectas con la comida paraguaya.",
+    "articles": [
+      {
+        "slug": "cerveza-101",
+        "title": "Cerveza 101: IPA vs Pilsen vs Lager — Guía para principiantes",
+        "excerpt": "Te explicamos la diferencia entre los principales estilos de cerveza para que puedas pedir con confianza en cualquier bar.",
+        "category": "Educación",
+        "readTime": "5 min",
+        "image": "/images/blog/cerveza-101.jpg"
+      },
+      {
+        "slug": "maridaje-paraguay",
+        "title": "Maridaje con comida paraguaya: De la chipa al milanes con queso",
+        "excerpt": "Nuestra guía completa para combinar las cervezas Trentina con los platos más típicos de Paraguay.",
+        "category": "Maridaje",
+        "readTime": "6 min",
+        "image": "/images/blog/maridaje.jpg"
+      },
+      {
+        "slug": "sin-gluten",
+        "title": "Pilsen Sin Gluten: Cómo la hicimos certificación oficial",
+        "excerpt": "El proceso completo para crear una cerveza sin gluten que no sacrifica sabor. Con certificación aprobada.",
+        "category": "Proceso",
+        "readTime": "8 min",
+        "image": "/images/blog/sin-gluten.jpg"
+      },
+      {
+        "slug": "metatron-hemp",
+        "title": "Qué son los terpenos de cáñamo y por qué los usamos en la Metatron",
+        "excerpt": "Explicamos la ciencia detrás de la Metatron Hemp IPL: terpenos, cáñamo industrial, 0% THC y por qué es legal.",
+        "category": "Producto",
+        "readTime": "7 min",
+        "image": "/images/blog/metatron.jpg"
+      },
+      {
+        "slug": "visita-fabrica",
+        "title": "Cómo visitarnos en Santa Rita — Guía para amantes de la cerveza",
+        "excerpt": "Todo lo que necesitás saber para hacer una visita a la fábrica: horarios, qué ver, degustación y cómo llegar.",
+        "category": "Experiencia",
+        "readTime": "4 min",
+        "image": "/images/blog/fabrica.jpg"
+      },
+      {
+        "slug": "receta-churrasco",
+        "title": "Churrasco bañado en salsa de cerveza — Receta con Trentina IPA",
+        "excerpt": "Receta paso a paso para hacer un churrasco perfecto con salsa reducción de IPA Trentina. Simple y espectacular.",
+        "category": "Recetas",
+        "readTime": "10 min",
+        "image": "/images/blog/churrasco.jpg"
+      }
+    ]
+  },
+  "dondecomprar": {
+    "seo": {
+      "title": "Dónde Comprar — Cerveza Trentina | Puntos de venta",
+      "description": "Encontrá Cerveza Trentina cerca de vos. Fábrica en Santa Rita, Cerveroga en Asunción, bares y restaurantes."
+    },
+    "hero": {
+      "title": "ENCONTRÁ TRENTINA CERCA DE VOS",
+      "subtitle": "Comprá directo en la fábrica, en Cerveroga Asunción o en cualquiera de los locales asociados."
+    },
+    "factory": {
+      "name": "Fábrica Trentina",
+      "address": "Alicceo Luiggi Giordani, casi calle Trento, Barrio Alejandrino III, Santa Rita, Alto Paraná",
+      "description": "Comprá directo en la fábrica. Pedidos por WhatsApp. Visitas guiadas con degustación — coordiná turno.",
+      "ctaText": "WhatsApp fábrica",
+      "ctaHref": "https://wa.me/595983224473"
+    },
+    "cerveroga": {
+      "name": "Cerveroga Asunción",
+      "address": "Asunción, Paraguay",
+      "description": "Todos los establecimientos Cerveroga tienen Trentina disponible. Consultá stock por WhatsApp con Cerveroga.",
+      "products": "Pilsen, APA, IPA, Metatron"
+    },
+    "mapCenter": {
+      "lat": -25.7723,
+      "lng": -55.0933,
+      "zoom": 8
+    },
+    "ctaBottom": {
+      "title": "¿No encontrás Trentina donde siempre comprás?",
+      "subtitle": "Recomendanos tu negocio y lo sumamos a la lista.",
+      "buttonText": "Sugerir punto de venta",
+      "buttonHref": "https://wa.me/595983224473?text=Hola!%20Quiero%20sugerir%20que%20sumen%20Trentina%20en%20___"
+    }
+  },
+  "prensa": {
+    "seo": {
+      "title": "Prensa — Cerveza Trentina | Kit de prensa y datos",
+      "description": "Kit de prensa de Cerveza Trentina. Logos, fotos, biografías y datos para medios y periodistas."
+    },
+    "hero": {
+      "title": "Sala de Prensa",
+      "subtitle": "Datos, imágenes y materiales para medios y periodistas."
+    },
+    "intro": "Cerveza Trentina es la craft brewery artesanal de Santa Rita, Alto Paraná. Desde 2018 produciendo cerveza artesanal con identidad paraguaya.",
+    "stats": [
+      { "label": "Fundada", "value": "2018" },
+      { "label": "Fundador", "value": "Alexsandro Giordani" },
+      { "label": "Capacidad mensual", "value": "14.000 L" },
+      { "label": "Producción actual", "value": "~12.000 L/mes" },
+      { "label": "Estilos permanentes", "value": "5" },
+      { "label": "Producto estrella", "value": "Metatron Hemp IPL" }
+    ],
+    "contactTitle": "Contacto de prensa",
+    "contact": {
+      "phone": "+595 983 22 44 73",
+      "email": "trentina@trentina.com.py",
+      "instagram": "cervezatrentina"
+    },
+    "materialsTitle": "Materiales disponibles",
+    "materials": [
+      { "name": "Logo Trentina (SVG)", "desc": "Logo vectorial para impresión y web" },
+      { "name": "Fotos de producto (HD)", "desc": "Pack de fotos de alta resolución" },
+      { "name": "Biografía Sandro Giordani", "desc": "Biografía del fundador y maestro cervecero" },
+      { "name": "Datos de la marca", "desc": "Factsheet con datos clave de producción" }
+    ],
+    "pitchTitle": "¿Por qué Trentina es noticia?",
+    "pitch": [
+      "Única craft brewery de Santa Rita, Alto Paraná — zona de tradición cervechera.",
+      "Metatron Hemp IPL es la ÚNICA cerveza con terpenos de cáñamo en TODO Paraguay.",
+      "Certificación Sin Gluten en Pilsen — diferenciación técnica vs competencia.",
+      "Producto 100% artesanal, con контроль calidad del maestro cervecero Alexsandro Giordani (Sommelier).",
+      "Servicio de chopp profesional para eventos — segmento que está creciendo fuerte en Asunción.",
+      "Crecimiento sostenido desde 2018 sin inversión externa.",
+      "Sin automatización — cada lote es monitoreado manualmente."
+    ]
+  },
+  "contact": {
+    "seo": {
+      "title": "Contacto — Cerveza Trentina",
+      "description": "Contactanos por WhatsApp al +595 983 22 44 73 o escribinos a trentina@trentina.com.py. Santa Rita, Alto Paraná."
+    },
+    "hero": {
+      "title": "Contacto",
+      "subtitle": "Estamos acá para vos"
+    },
+    "info": [
+      {
+        "icon": "mapPin",
+        "label": "Ubicación",
+        "value": "Alicceo Luiggi Giordani, casi calle Trento, Barrio Alejandrino III, Santa Rita, Alto Paraná"
+      },
+      {
+        "icon": "phone",
+        "label": "WhatsApp",
+        "value": "+595 983 22 44 73"
+      },
+      {
+        "icon": "mail",
+        "label": "Email",
+        "value": "trentina@trentina.com.py"
+      }
+    ],
+    "cta": {
+      "title": "Hacé tu pedido",
+      "subtitle": "Escribinos al WhatsApp y te confirmamos al instante",
+      "buttonText": "Escribir al WhatsApp",
+      "buttonHref": "https://wa.me/595983224473"
+    }
+  },
+  "tienda": {
+    "seo": {
+      "title": "Tienda — Cerveza Trentina | Packs de cerveza artesanal",
+      "description": "Comprá packs de cerveza artesanal Trentina. Pack Longneck Pilsen, Pack Pilsen 500ml, Pack APA, Pack IPA, Pack Metatron. Pedí por WhatsApp."
+    },
+    "hero": {
+      "title": "Tienda",
+      "subtitle": "Elegí tu pack favorito y pedilo por WhatsApp"
+    },
+    "packs": [
+      {
+        "id": "pack-1-longneck",
+        "name": "Pack 1 — Longneck Pilsen",
+        "description": "20 longnecks Pilsen de 330ml cada uno. Cerveza dorada, clara y equilibrada con sabor y aroma frutal a herbal. Elaborada bajo la ley de pureza alemana.",
+        "price": "Gs 130.000",
+        "originalPrice": "",
+        "items": [
+          "20 longnecks Pilsen 330ml"
+        ],
+        "highlight": true
+      },
+      {
+        "id": "pack-2-pilsen",
+        "name": "Pack 2 — Pilsen 500ml",
+        "description": "24 botellas Pilsen de 500ml. La cerveza insignia de la casa con cinco tipos de maltas y lúpulos alemanes.",
+        "price": "Gs 300.000",
+        "originalPrice": "",
+        "items": [
+          "24 botellas Pilsen 500ml"
+        ],
+        "highlight": false
+      },
+      {
+        "id": "pack-3-apa",
+        "name": "Pack 3 — APA",
+        "description": "24 botellas APA (American Pale Ale) de 500ml. Refrescante y lupulada con carácter cítrico y frutado.",
+        "price": "Gs 400.000",
+        "originalPrice": "",
+        "items": [
+          "24 botellas APA 500ml"
+        ],
+        "highlight": false
+      },
+      {
+        "id": "pack-4-ipa",
+        "name": "Pack 4 — IPA",
+        "description": "24 botellas IPA (American IPA) de 500ml. Amarga, lupulada con aroma cítrico, floral y resinoso.",
+        "price": "Gs 400.000",
+        "originalPrice": "",
+        "items": [
+          "24 botellas IPA 500ml"
+        ],
+        "highlight": false
+      },
+      {
+        "id": "pack-5-metatron",
+        "name": "Pack 5 — Metatron IPL",
+        "description": "24 botellas Metatron (India Pale Lager) de 500ml. Final seco, carácter floral y especiado. Versátil y equilibrada.",
+        "price": "Gs 380.000",
+        "originalPrice": "",
+        "items": [
+          "24 botellas Metatron IPL 500ml"
+        ],
+        "highlight": false
+      }
+    ]
+  },
+  "chopp": {
+    "seo": {
+      "title": "Chopp Tirado — Cerveza Trentina | Servicio de chopp para eventos",
+      "description": "Servicio de chopp profesional para fiestas, eventos empresariales y locales. Pilsen, APA, IPA y Metatron. Instalación incluida."
+    },
+    "hero": {
+      "title": "Servicio de Chopp",
+      "subtitle": "Frescura Trentina para tu evento o local"
+    },
+    "intro": {
+      "title": "Chopp Profesional",
+      "description": "Contamos con equipos de servicio de chopp. Atendemos fiestas, eventos empresariales, eventos particulares para fin de semana, e instalación de equipos en bares, restaurantes, pizzerías, churrasquerías y pubs."
+    },
+    "beersOnTap": [
+      {
+        "name": "Pilsen Trentina",
+        "description": "Lager dorada y equilibrada, la clásica de la casa.",
+        "ABV": "5%",
+        "IBU": "15"
+      },
+      {
+        "name": "APA Trentina",
+        "description": "Pale Ale refrescante con carácter cítrico y frutado.",
+        "ABV": "5%",
+        "IBU": "30"
+      },
+      {
+        "name": "IPA Trentina",
+        "description": "IPA lupulada con aroma cítrico y resinoso.",
+        "ABV": "6%",
+        "IBU": "50"
+      },
+      {
+        "name": "Metatron IPL",
+        "description": "India Pale Lager con final seco y notas florales.",
+        "ABV": "5.1%",
+        "IBU": "20"
+      }
+    ],
+    "services": [
+      {
+        "type": "Fiestas",
+        "description": "Servicio completo para fiestas y celebraciones. Incluye equipo de chopp, instalación, vasos y hasta 4 estilos de cerveza. Desde Gs 400.000 por evento. Consumo mínimo: 40 litros."
+      },
+      {
+        "type": "Eventos empresariales",
+        "description": "Servicio profesional para eventos corporativos. Incluye equipo completo, garzón, hasta 2 estilos de cerveza y vasos. Presupuesto a medida según cantidad de invitados."
+      },
+      {
+        "type": "Eventos particulares",
+        "description": "Alquiler de equipo para reuniones de fin de semana. Instalación el viernes, retiro el lunes. Incluye 1-2 estilos. Desde Gs 250.000."
+      },
+      {
+        "type": "Instalación en locales",
+        "description": "Equipos permanentes para bares, restaurantes y pubs. Contrato mensual con mantenimiento incluido. Barriles de 20L a precio preferencial. Consultar condiciones."
+      }
+    ],
+    "cta": {
+      "title": "¿Querés chopp para tu evento?",
+      "subtitle": "Consultanos disponibilidad y armamos el servicio a medida",
+      "buttonText": "Consultar por WhatsApp",
+      "buttonHref": "https://wa.me/595983224473?text=Hola!%20Quiero%20consultar%20sobre%20el%20servicio%20de%20chopp%20para%20un%20evento"
+    }
+  },
+  "order": {
+    "seo": {
+      "title": "Pedidos — Cerveza Trentina",
+      "description": "Armá tu pedido de cervezas Trentina y envialo por WhatsApp. Packs, botellas sueltas y más."
+    },
+    "hero": {
+      "title": "Hacé tu pedido",
+      "subtitle": "Elegí tus cervezas y envialo por WhatsApp"
+    },
+    "categories": [
+      {
+        "id": "lagers",
+        "name": "Pilsen"
+      },
+      {
+        "id": "ales",
+        "name": "APA"
+      },
+      {
+        "id": "ipas",
+        "name": "IPA"
+      },
+      {
+        "id": "especiales",
+        "name": "Metatron"
+      },
+      {
+        "id": "stouts",
+        "name": "Dunkel"
+      },
+      {
+        "id": "packs",
+        "name": "Packs"
+      }
+    ],
+    "cta": {
+      "title": "Confirmá tu pedido",
+      "subtitle": "Revisá tu carrito y envialo por WhatsApp",
+      "buttonText": "Enviar pedido por WhatsApp",
+      "emptyText": "Tu carrito está vacío",
+      "detailsTitle": "Detalles del pedido",
+      "deliveryLabel": "Modalidad",
+      "paymentLabel": "Pago",
+      "observationLabel": "Observaciones",
+      "observationPlaceholder": "Ej: Sin helar, etc.",
+      "nameLabel": "Tu nombre (opcional)",
+      "namePlaceholder": "Ej: Juan Pérez"
+    },
+    "search": {
+      "placeholder": "Buscar cerveza..."
+    }
+  },
+  "emailCapture": {
+    "enabled": true,
+    "title": "Llevate 50 puntos Club gratis",
+    "subtitle": "Anotate al Club Trentina y te regalamos 50 puntos de bienvenida. Además recibís promociones exclusivas.",
+    "placeholder": "Tu email",
+    "buttonText": "Sumarme al Club",
+    "disclaimer": "Sin spam. Vos controlás qué recibís.",
+    "thankYouTitle": "¡Listo! Sumamos tus puntos.",
+    "thankYouSubtitle": "Revisá tu WhatsApp para el alta y empezá a acumular puntos ahora.",
+    "emoji": "🏆"
+  },
+  "stockTracker": {
+    "enabled": true,
+    "title": "Disponibilidad en fábrica",
+    "subtitle": "Stock actual de cada estilo — actualizado cada 30 minutos",
+    "lowStock": "¡Queda poco!",
+    "inStock": "Disponible",
+    "outOfStock": "Agotado",
+    "ctaText": "Reservar packs",
+    "lastUpdated": "Última actualización"
+  },
+  "footer": {
+    "copyright": "© 2026 Cerveza Trentina. Todos los derechos reservados.",
+    "poweredBy": "Ai-Whisperers",
+    "poweredByUrl": "https://paragu-ai.com",
+    "links": [
+      {
+        "label": "Inicio",
+        "href": "/"
+      },
+      {
+        "label": "Cervezas",
+        "href": "/cervezas"
+      },
+      {
+        "label": "Tienda",
+        "href": "/tienda"
+      },
+      {
+        "label": "Mayoristas",
+        "href": "/mayoristas"
+      },
+      {
+        "label": "Club",
+        "href": "/club"
+      },
+      {
+        "label": "Chopp",
+        "href": "/chopp"
+      },
+      {
+        "label": "Eventos",
+        "href": "/eventos-corporativos"
+      },
+      {
+        "label": "Nosotros",
+        "href": "/nosotros"
+      },
+      {
+        "label": "Galería",
+        "href": "/galeria"
+      },
+      {
+        "label": "Comunidad",
+        "href": "/comunidad"
+      },
+      {
+        "label": "Dónde Comprar",
+        "href": "/donde-comprar"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq"
+      },
+      {
+        "label": "Prensa",
+        "href": "/prensa"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto"
+      }
+    ]
+  }
+}

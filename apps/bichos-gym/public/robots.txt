@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bichosgym.paragu-ai.com/sitemap.xml

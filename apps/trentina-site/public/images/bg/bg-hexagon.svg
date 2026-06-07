@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <pattern id="hex" width="40" height="46" patternUnits="userSpaceOnUse">
+    <polygon points="20,2 38,12 38,34 20,44 2,34 2,12" fill="none" stroke="#D4922E" stroke-width="0.3" opacity="0.2"/>
+  </pattern>
+  <rect width="400" height="400" fill="url(#hex)"/>
+</svg>

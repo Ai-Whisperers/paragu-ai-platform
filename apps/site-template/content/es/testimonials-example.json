@@ -1,0 +1,62 @@
+[
+  {
+    "_annotation": {
+      "name": "Testimonials (Template Prompts)",
+      "what": "Example testimonials showing what to collect from real clients.",
+      "why": "Social proof is the #1 conversion driver. Real testimonials with names and specific services beat any copy we could write.",
+      "ai_popolates": "Template prompts only — example content shown, no real data needed.",
+      "your_input": "Replace with real customer quotes (name optional, can be first name + last initial).",
+      "plan": "All plans — Professional tier adds verified review badges"
+    },
+    "id": "1",
+    "name": "NOMBRE_DE_TU_CLIENTE",
+    "text": "Lo que tu cliente real dijo sobre trabajar contigo. Los testimonios genuinos son el activo mas poderoso — pidelos por WhatsApp al terminar el servicio.",
+    "rating": 5,
+    "image": "/images/team/default.png",
+    "date": "2026-05-20",
+    "color": "blue",
+    "initials": "NC",
+    "service": "TU_SERVICIO_PRINCIPAL",
+    "stars": 5,
+    "quote": "Lo que tu cliente real dijo sobre trabajar contigo"
+  },
+  {
+    "id": "2",
+    "name": "NOMBRE_DE_OTRO_CLIENTE",
+    "text": "Otro testimonio real. Usa 3-4 testimonios de clientes satisfechos. Si no tienes todavia, pregunta a tus ultimos 5 clientes.",
+    "rating": 5,
+    "image": "/images/team/default.png",
+    "date": "2026-05-15",
+    "color": "rose",
+    "initials": "NO",
+    "service": "OTRO_SERVICIO",
+    "stars": 5,
+    "quote": "Otro testimonio real"
+  },
+  {
+    "id": "3",
+    "name": "NOMBRE_DE_TERCER_CLIENTE",
+    "text": "Tercer testimonio. Los testimonios con nombres y fotos reales aumentan la confianza en 60%.",
+    "rating": 5,
+    "image": "/images/team/default.png",
+    "date": "2026-05-10",
+    "color": "violet",
+    "initials": "NT",
+    "service": "SERVICIO_ADICIONAL",
+    "stars": 5,
+    "quote": "Tercer testimonio real"
+  },
+  {
+    "id": "4",
+    "name": "NOMBRE_DE_CUARTO_CLIENTE",
+    "text": "Cuarto testimonio. Un visitante que ve 3-4 testimonios reales tiene 4x mas probabilidades de contactarte.",
+    "rating": 5,
+    "image": "/images/team/default.png",
+    "date": "2026-05-05",
+    "color": "amber",
+    "initials": "NC",
+    "service": "OTRO_SERVICIO_MAS",
+    "stars": 5,
+    "quote": "Cuarto testimonio real"
+  }
+]

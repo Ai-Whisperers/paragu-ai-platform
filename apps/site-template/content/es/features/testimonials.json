@@ -1,0 +1,12 @@
+{
+  "_annotation": {
+    "name": "Feature: testimonials",
+    "what": "Feature flags",
+    "why": "Control funcionalidades",
+    "ai_popolates": "Segun plan",
+    "your_input": "Preferencias",
+    "plan": "Todos"
+  },
+  "testimonialsCarousel": true,
+  "testimonials": true
+}

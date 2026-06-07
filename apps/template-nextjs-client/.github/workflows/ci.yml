@@ -1,0 +1,14 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  ci:
+    uses: Ai-Whisperers/ci-cd/.github/workflows/ci-nextjs.yml@main
+    with:
+      site-url: 'http://localhost:3000'
+      package-manager: 'npm'
+      node-version: '20'
+    secrets: inherit

@@ -1,0 +1,26 @@
+{
+  "vertical": "food-beverage",
+  "businessType": "meal_prep",
+  "country": "Paraguay",
+  "domain": "deabastoacasa.com.py",
+  "stagingDomain": "staging.deabastoacasa.com.py",
+  "defaultLocale": "es",
+  "locales": ["es"],
+  "contact": {
+    "phone": "+595981324569",
+    "email": "hola@deabastoacasa.com.py",
+    "whatsapp": "+595981324569",
+    "instagram": "@deabastoacasa"
+  },
+  "location": {
+    "address": "San Lorenzo (ciudad completa)",
+    "city": "San Lorenzo",
+    "neighborhood": "Ciudad Universitaria"
+  },
+  "hours": {
+    "compras": "Martes y Jueves en Abasto + mercado",
+    "entregas": "Sábado 09:00 - 14:00"
+  },
+  "publicUrl": "https://deabastoacasa.paragu-ai.com",
+  "isLiveProduction": false
+}

@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: #1B3A5C;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #0F2440;
+  --color-secondary-foreground: #E2E8F0;
+  --color-accent: #2E86DE;
+  --color-accent-foreground: #FFFFFF;
+  --color-background: #F8F9FA;
+  --color-surface: #FFFFFF;
+  --color-surface-light: #F0F4F8;
+  --color-foreground: #1A1A2E;
+  --color-muted: #F0F4F8;
+  --color-muted-foreground: #6B7280;
+  --color-border: #E5E7EB;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1A1A2E;
+  --color-ring: #1B3A5C;
+  --color-input: #E5E7EB;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+}
+body { background-color: var(--color-background); color: var(--color-foreground); font-family: 'Inter', sans-serif; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+button, a, input, select, textarea { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in-up { animation: fadeInUp 0.6s ease-out; }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+.animate-shimmer { background: linear-gradient(90deg, var(--color-muted) 25%, var(--color-surface-light) 50%, var(--color-muted) 75%); background-size: 200% 100%; animation: shimmer 1.5s ease-in-out infinite; }
+.card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+@keyframes slide-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.animate-slide-up { animation: slide-up 0.3s ease-out; }
+@supports (padding-bottom: env(safe-area-inset-bottom)) { .safe-area-bottom { padding-bottom: env(safe-area-inset-bottom); } }

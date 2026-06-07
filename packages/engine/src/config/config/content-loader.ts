@@ -20,7 +20,7 @@
  * Standalone path: lib/content-loader.ts (not part of the @ai-whisperers package)
  */
 import { cache } from "react"
-import type { SiteContent } from "@ai-whisperers/client-kit"
+import type { SiteContent } from "@paragu-ai/engine"
 
 type LoaderFn = () => Promise<SiteContent>
 

@@ -1,0 +1,698 @@
+{
+  "site": {
+    "title": "Oz Montanía",
+    "description": "Paraguayan visual artist, muralist and illustrator",
+    "url": "https://ozmontania.paragu-ai.com",
+    "whatsapp": "595991501444",
+    "instagram": "@ozmontania",
+    "instagram_url": "https://instagram.com/ozmontania",
+    "facebook": "pyrotaurus",
+    "facebook_url": "https://facebook.com/pyrotaurus",
+    "email": "oz@ozmontania.com"
+  },
+  "nav": {
+    "obra": "Work",
+    "murales": "Murals Map",
+    "biografia": "About",
+    "prensa": "Press",
+    "tienda": "Shop",
+    "blog": "Blog",
+    "contacto": "Contact"
+  },
+  "hero": {
+    "headline": "Oz Montanía",
+    "subheadline": "Paraguayan visual artist, muralist and illustrator",
+    "description": "Over 20 years transforming walls into stories. From Asunción to the world.",
+    "cta_primary": "View work",
+    "cta_secondary": "Get in touch",
+    "cover": "/images/oz-portrait.jpg"
+  },
+  "stats": [
+    {
+      "number": "20+",
+      "label": "Years of experience"
+    },
+    {
+      "number": "10",
+      "label": "Countries painted in"
+    },
+    {
+      "number": "100+",
+      "label": "Murals completed"
+    }
+  ],
+  "obra": {
+    "title": "Works",
+    "description": "Murals, illustrations, canvases and commercial projects",
+    "categories": [
+      "All",
+      "Murals",
+      "Illustrations",
+      "Canvases",
+      "Commercial"
+    ],
+    "items": [
+      {
+        "id": "raiz-y-barrio",
+        "title": "Raíz y Barrio",
+        "category": "Murals",
+        "year": 2025,
+        "location": "Shopping Mariscal, Asunción",
+        "technique": "Spray paint and acrylic on wall",
+        "dimensions": "30m × 8m",
+        "description": "Large-format mural honoring Paraguayan urban biodiversity. Inspired by naturalist Moisés Bertoni. Features 17 real residents of Barrio Mariscal in everyday scenes, integrating native plant species.",
+        "images": [
+          "/images/obra/raiz-y-barrio-1.jpg",
+          "/images/obra/raiz-y-barrio-2.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 120
+      },
+      {
+        "id": "mar-muerto",
+        "title": "Dead Sea",
+        "category": "Murals",
+        "year": 2023,
+        "location": "Kalia, West Bank",
+        "technique": "Spray paint on wall",
+        "description": "Dynamic map of the shrinking Dead Sea. Deep blue where water remains, red where desert has taken over. Created for Artists 4 Israel for Earth Day 2023.",
+        "images": [
+          "/images/obra/mar-muerto-1.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 120
+      },
+      {
+        "id": "organo-fantasma",
+        "title": "Ghost Organ",
+        "category": "Canvases",
+        "year": 2024,
+        "location": "Arte Actual Gallery, Asunción",
+        "technique": "Mixed media on canvas",
+        "description": "Solo exhibition at Arte Actual gallery. Plastic pieces exploring abstract sensations through illustration processes. A visual investigation of what is no longer there but still resonates.",
+        "images": [
+          "/images/obra/organo-fantasma-1.jpg",
+          "/images/obra/organo-fantasma-2.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 150
+      },
+      {
+        "id": "mural-oliva",
+        "title": "Oliva & Ayolas Mural",
+        "category": "Murals",
+        "year": 2020,
+        "location": "Oliva c/ Ayolas y O'Leary, Downtown Asunción",
+        "technique": "Spray paint on wall",
+        "description": "Iconic mural in downtown Asunción, designed to visually refresh the city center. An urban intervention transforming a downtown building into an artistic landmark.",
+        "images": [
+          "/images/obra/mural-oliva-1.jpg"
+        ],
+        "featured": false,
+        "has_print": false
+      },
+      {
+        "id": "nescafe",
+        "title": "Nescafé Limited Edition Cans",
+        "category": "Commercial",
+        "year": 2024,
+        "location": "National distribution, Paraguay",
+        "technique": "Digital illustration",
+        "description": "Three limited edition can designs for Nescafé, inspired by everyday Paraguayan life. A collaboration that brought urban art to supermarket shelves nationwide.",
+        "images": [
+          "/images/obra/nescafe-1.jpg"
+        ],
+        "featured": false,
+        "has_print": false
+      },
+      {
+        "id": "sinverguenzas",
+        "title": "Sinvergüenzas",
+        "category": "Murals",
+        "year": 2009,
+        "location": "Spain Cultural Center, Buenos Aires",
+        "technique": "Spray paint on wall",
+        "description": "First intervention in Buenos Aires, alongside Argentine artist Ice. A group exhibition marking the beginning of his international projection.",
+        "images": [
+          "/images/obra/sinverguenzas-1.jpg"
+        ],
+        "featured": false,
+        "has_print": false
+      },
+      {
+        "id": "cielo-retorcido",
+        "title": "Twisted Sky",
+        "category": "Murals",
+        "year": 2022,
+        "location": "Fernando de la Mora, Paraguay",
+        "technique": "Aerosol and acrylic on wall",
+        "dimensions": "15m × 6m",
+        "description": "A mural that plays with perspective and the Paraguayan urban landscape. A distorted sky folds over itself, questioning the relationship between the natural and the built in the metropolitan area of Asunción.",
+        "images": [
+          "/images/obra/cielo-retorcido-1.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 90
+      },
+      {
+        "id": "semillas-al-aire",
+        "title": "Seeds in the Air",
+        "category": "Illustrations",
+        "year": 2021,
+        "location": "Asunción, Paraguay",
+        "technique": "Digital illustration and ink",
+        "dimensions": "42cm × 60cm",
+        "description": "Series of illustrations about the dispersion of native Paraguayan seeds. Combines botany and urban art, published as an editorial series and exhibited at Espacio Concentra gallery.",
+        "images": [
+          "/images/obra/semillas-al-aire-1.jpg",
+          "/images/obra/semillas-al-aire-2.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 80
+      },
+      {
+        "id": "visor",
+        "title": "Visor",
+        "category": "Illustrations",
+        "year": 2018,
+        "location": "Published in Paraguay",
+        "technique": "Ink and digital watercolor",
+        "dimensions": "N/A",
+        "description": "Cover and interior illustrations for the graphic novel 'Visor'. A work that fuses Oz's urban style with sequential narrative, exploring Paraguayan identity through comics.",
+        "images": [
+          "/images/obra/visor-1.jpg",
+          "/images/obra/visor-2.jpg"
+        ],
+        "featured": true,
+        "has_print": true,
+        "print_price": 60
+      },
+      {
+        "id": "guia-del-centro",
+        "title": "Downtown Guide",
+        "category": "Murals",
+        "year": 2019,
+        "location": "Microcentro, Asunción",
+        "technique": "Aerosol on wall",
+        "dimensions": "20m × 5m",
+        "description": "Collaborative mural in downtown Asunción that functions as a visual guide to the neighborhood. Points to cultural, historical and commercial landmarks through graphic language combining maps, popular iconography and lettering.",
+        "images": [
+          "/images/obra/guia-centro-1.jpg"
+        ],
+        "featured": true,
+        "has_print": false
+      },
+      {
+        "id": "estudio-8-mural",
+        "title": "Estudio 8 Murals",
+        "category": "Commercial",
+        "year": "2010-2024",
+        "location": "Asunción, Paraguay",
+        "technique": "Aerosol and acrylic paint",
+        "dimensions": "Various formats",
+        "description": "Series of corporate murals created through Estudio 8 for Paraguayan brands and commercial spaces. Turnkey projects including branding, concept design, execution and professional documentation.",
+        "images": [
+          "/images/obra/estudio-8-1.jpg",
+          "/images/obra/estudio-8-2.jpg"
+        ],
+        "featured": true,
+        "has_print": false
+      },
+      {
+        "id": "bienal-sur",
+        "title": "Southern Biennial",
+        "category": "Murals",
+        "year": 2017,
+        "location": "Asunción, Paraguay",
+        "technique": "Aerosol and acrylic on wall",
+        "dimensions": "12m × 4m",
+        "description": "Participation in the Southern Biennial with a mural addressing South American identity from an urban art perspective. A visual reflection on what it means to be from the south, far from hegemonic art centers.",
+        "images": [
+          "/images/obra/bienal-sur-1.jpg"
+        ],
+        "featured": false,
+        "has_print": false
+      },
+      {
+        "id": "raices-electricas",
+        "title": "Electric Roots",
+        "category": "Canvases",
+        "year": 2020,
+        "location": "Private collection, Asunción",
+        "technique": "Mixed media on canvas",
+        "dimensions": "120cm × 80cm",
+        "description": "Piece from the 'Electric Roots' series exploring the tension between tradition and modernity in Paraguay. Acrylic, aerosol and digital collage on canvas. Part of a private collection.",
+        "images": [
+          "/images/obra/raices-electricas-1.jpg"
+        ],
+        "featured": false,
+        "has_print": true,
+        "print_price": 200
+      },
+      {
+        "id": "powerline-fachada",
+        "title": "Powerline Facade",
+        "category": "Murals",
+        "year": 2014,
+        "location": "Asunción, Paraguay",
+        "technique": "Aerosol on wall",
+        "dimensions": "8m × 4m",
+        "description": "Facade mural of Powerline Shop, Paraguay's first graffiti and urban art store. A visual icon that marked a milestone for the local scene and remains a meeting point for Asunción's urban art community.",
+        "images": [
+          "/images/obra/powerline-1.jpg"
+        ],
+        "featured": true,
+        "has_print": false
+      }
+    ]
+  },
+  "murales": {
+    "title": "Murals Map",
+    "description": "Explore Oz's murals in Asunción, Paraguay and around the world",
+    "locations": [
+      {
+        "id": "raiz-barrio",
+        "lat": -25.2867,
+        "lng": -57.575,
+        "title": "Raíz y Barrio",
+        "address": "Shopping Mariscal, Asunción",
+        "year": 2025,
+        "image": "/images/obra/raiz-y-barrio-1.jpg"
+      },
+      {
+        "id": "oliva-ayolas",
+        "lat": -25.282,
+        "lng": -57.635,
+        "title": "Oliva & Ayolas Mural",
+        "address": "Oliva c/ Ayolas y O'Leary, Asunción",
+        "year": 2020,
+        "image": "/images/obra/mural-oliva-1.jpg"
+      },
+      {
+        "id": "mar-muerto",
+        "lat": 31.75,
+        "lng": 35.5,
+        "title": "Dead Sea Mural",
+        "address": "Kalia, West Bank",
+        "year": 2023,
+        "image": "/images/obra/mar-muerto-1.jpg"
+      },
+      {
+        "id": "sinverguenzas",
+        "lat": -34.585,
+        "lng": -58.375,
+        "title": "Sinvergüenzas",
+        "address": "Spain Cultural Center, Buenos Aires",
+        "year": 2009,
+        "image": "/images/obra/sinverguenzas-1.jpg"
+      }
+    ]
+  },
+  "biografia": {
+    "title": "About",
+    "intro": "Oscar Saúl Montanía Villar (Asunción, 1985), known as Oz Montanía, is one of Paraguay's most influential urban artists, illustrators and graphic designers, and a key reference for street art in Latin America. With over two decades of work, he has transformed Asunción's urban landscape and taken his art to cities around the world.",
+    "timeline": [
+      {
+        "year": "1985",
+        "event": "Born in Asunción, Paraguay",
+        "detail": "Grows up in Fernando de la Mora. His parents run a small book distribution business, sparking his love for reading and illustrations from early childhood."
+      },
+      {
+        "year": "1995",
+        "event": "Discovers graffiti",
+        "detail": "Sees the first punk graffiti in his neighborhood. At 10, picks up a spray can for the first time and paints his own house wall. 'Obviously the worst idea,' he recalls."
+      },
+      {
+        "year": "1996",
+        "event": "First tags and bombs",
+        "detail": "Inspired by skate and punk culture, starts painting on the street with tags. His first recognizable drawing: Bart Simpson."
+      },
+      {
+        "year": "2002",
+        "event": "First formal mural",
+        "detail": "Paints his first mural at 17. Leaves home and becomes self-sufficient."
+      },
+      {
+        "year": "2002-2008",
+        "event": "Studies Graphic Design",
+        "detail": "Attends Graphic Design at Universidad Católica de Asunción. Works by day as editorial illustrator, graphic creative and art director."
+      },
+      {
+        "year": "2009",
+        "event": "International breakthrough",
+        "detail": "Travels to Buenos Aires and paints with Argentine artist Ice at the Sinvergüenzas show at the Spain Cultural Center. A turning point in his technique."
+      },
+      {
+        "year": "2010",
+        "event": "Founds Estudio 8",
+        "detail": "Creates Estudio 8, his design and art production studio, coordinating large-format murals and commercial projects."
+      },
+      {
+        "year": "2014",
+        "event": "Opens Powerline Shop",
+        "detail": "Paraguay's first specialized graffiti and urban art supply store. A milestone for the local scene which previously lacked access to materials."
+      },
+      {
+        "year": "2023",
+        "event": "Dead Sea Mural",
+        "detail": "Travels to the West Bank invited by Artists 4 Israel to paint a mural about the Dead Sea's disappearance. A dynamic map showing the retreat of the saltiest sea on Earth."
+      },
+      {
+        "year": "2024",
+        "event": "Ghost Organ",
+        "detail": "Solo exhibition at Arte Actual gallery in Asunción. Also designs the limited edition Nescafé cans."
+      },
+      {
+        "year": "2025",
+        "event": "Raíz y Barrio",
+        "detail": "Inaugurates his most ambitious mural at Shopping Mariscal: 30 meters wide honoring urban biodiversity, featuring 17 real neighborhood residents. Curated by Laura Mandelik."
+      },
+      {
+        "year": "Present",
+        "event": "Still painting",
+        "detail": "Oz remains active with commissioned murals, international collaborations and his role as a reference for Paraguayan urban art."
+      }
+    ],
+    "quote": "In any of those categories, you generate images. That can be the starting point: someone who makes images. I hope this craft takes me to create things beyond that.",
+    "quote_author": "Oz Montanía",
+    "section_influencias": {
+      "title": "Influences",
+      "text": "Comics (DC, Marvel, Image, manga), classic engraving (Gustave Doré, Albrecht Dürer), punk, 90s pop culture, Guaraní mythology, Paraguayan biodiversity, and a voracious curiosity for music, film and animation."
+    },
+    "section_filosofia": {
+      "title": "Philosophy",
+      "text": "Oz believes art must take a stand on human rights and environmental issues, represent those historically without a voice, and be built from the honesty of craft rather than market labels."
+    }
+  },
+  "testimonios": {
+    "title": "What clients say",
+    "description": "Publishers, authors and brands who have trusted my work",
+    "items": [
+      {
+        "text": "Working with Oz was a transformative experience. His ability to capture the essence of our project in a 30-meter mural is impressive.",
+        "author": "Laura Mandelik",
+        "role": "Art curator",
+        "project": "Raíz y Barrio"
+      },
+      {
+        "text": "Oz understands urban art like few others. His Dead Sea mural is not only visually striking, but communicates an urgent environmental message.",
+        "author": "Artists 4 Israel",
+        "role": "Organization",
+        "project": "Dead Sea Mural"
+      },
+      {
+        "text": "The limited edition cans he designed for us were a total success. His style perfectly connects with Paraguayan culture.",
+        "author": "Nescafé Paraguay",
+        "role": "Brand",
+        "project": "Limited Edition Cans"
+      }
+    ]
+  },
+  "prensa": {
+    "title": "Press",
+    "description": "Articles, interviews and media coverage",
+    "items": [
+      {
+        "media": "Pausa",
+        "media_logo": "",
+        "date": "July 2024",
+        "title": "Oz Montanía — Cover Story Issue 300",
+        "excerpt": "The most complete interview about his life and work: childhood, influences, creative process and philosophy.",
+        "url": "https://www.pausa.com.py/actualidad/nota-de-tapa/oz-montania/7772/",
+        "type": "Interview",
+        "featured": true
+      },
+      {
+        "media": "ABC Color",
+        "media_logo": "",
+        "date": "April 2023",
+        "title": "The art of graffiti brings the Dead Sea's drama to life",
+        "excerpt": "Oz Montanía, the Paraguayan artist who painted the drama of the Dead Sea's disappearance in the West Bank.",
+        "url": "https://www.abc.com.py/internacionales/2023/04/22/el-arte-del-grafiti-para-dar-vida-al-mar-muerto-en-riesgo-de-desaparicion/",
+        "type": "International",
+        "featured": true
+      },
+      {
+        "media": "Última Hora",
+        "media_logo": "",
+        "date": "October 2016",
+        "title": "The OZ-acity of painting",
+        "excerpt": "One of Paraguay's street art pioneers steps out of anonymity to talk about paints, walls and art.",
+        "url": "https://www.ultimahora.com/la-ozadia-pintar-n1031409",
+        "type": "Interview",
+        "featured": true
+      },
+      {
+        "media": "Infonegocios",
+        "media_logo": "",
+        "date": "December 2025",
+        "title": "Raíz y Barrio: the mural that celebrates urban biodiversity",
+        "excerpt": "Oz Montanía and Ocho Estudio's work at Shopping Mariscal, curated by Laura Mandelik.",
+        "url": "https://infonegocios.com.py/infoarte/raiz-y-barrio-el-mural-que-homenajea-a-la-biodiversidad-urbana-en-el-corazon-del-mariscal",
+        "type": "Feature",
+        "featured": true
+      },
+      {
+        "media": "Graffitimundo",
+        "media_logo": "",
+        "date": "2019",
+        "title": "Interview with Oz Montanía",
+        "excerpt": "A conversation about Paraguay's street art scene, his relationship with Argentina and his artistic evolution.",
+        "url": "https://graffitimundo.com/es/blog-2/interviews-blog-2/interview-with-oz-montania/",
+        "type": "Interview",
+        "featured": false
+      },
+      {
+        "media": "EFE / ABC Color",
+        "media_logo": "",
+        "date": "April 2023",
+        "title": "Oz Montanía paints the Dead Sea drama",
+        "excerpt": "EFE news agency coverage of the Artists 4 Israel Earth Day project.",
+        "url": "https://www.abc.com.py/internacionales/2023/04/22/el-arte-del-grafiti-para-dar-vida-al-mar-muerto-en-riesgo-de-desaparicion/",
+        "type": "International",
+        "featured": false
+      },
+      {
+        "media": "La Nación / Foco",
+        "media_logo": "",
+        "date": "June 2023",
+        "title": "The art of Oz",
+        "excerpt": "Profile of the artist and his impact on Paraguay's cultural scene.",
+        "url": "https://foco.lanacion.com.py/2023/06/05/el-arte-de-oz/",
+        "type": "Profile",
+        "featured": false
+      },
+      {
+        "media": "Cartel Urbano",
+        "media_logo": "",
+        "date": "2022",
+        "title": "Oz Montanía: the Paraguayan who wants Asunción's street art at Bogotá's level",
+        "excerpt": "Interview about his aspirations for Asunción's street art scene.",
+        "url": "https://cartelurbano.com/arte/oz-montania-el-paraguayo-que-quiere-ver-el-arte-urbano-de-asuncion-la-altura-del-de-bogota",
+        "type": "Interview",
+        "featured": false
+      }
+    ]
+  },
+  "tienda": {
+    "title": "Shop",
+    "description": "Limited edition prints and official Oz Montanía merchandise",
+    "whatsapp_order": true,
+    "items": [
+      {
+        "id": "print-raiz-y-barrio",
+        "name": "Raíz y Barrio Print",
+        "type": "print",
+        "price": 120,
+        "currency": "USD",
+        "image": "/images/prints/raiz-y-barrio-print.jpg",
+        "description": "Limited edition fine art print of the Raíz y Barrio mural. Giclée print on cotton paper.",
+        "sizes": [
+          "40×60 cm",
+          "60×90 cm"
+        ],
+        "available": true,
+        "obra_id": "raiz-y-barrio"
+      },
+      {
+        "id": "print-mar-muerto",
+        "name": "Dead Sea Print",
+        "type": "print",
+        "price": 120,
+        "currency": "USD",
+        "image": "/images/prints/mar-muerto-print.jpg",
+        "description": "Limited edition fine art print of the Dead Sea mural. Giclée print on cotton paper.",
+        "sizes": [
+          "40×60 cm",
+          "60×90 cm"
+        ],
+        "available": true,
+        "obra_id": "mar-muerto"
+      },
+      {
+        "id": "print-organo-fantasma",
+        "name": "Ghost Organ Print",
+        "type": "print",
+        "price": 150,
+        "currency": "USD",
+        "image": "/images/prints/organo-fantasma-print.jpg",
+        "description": "Limited edition fine art print from the Ghost Organ series. Giclée print on cotton paper.",
+        "sizes": [
+          "40×60 cm"
+        ],
+        "available": true,
+        "obra_id": "organo-fantasma"
+      },
+      {
+        "id": "sticker-oz",
+        "name": "Sticker Pack",
+        "type": "merch",
+        "price": 15,
+        "currency": "USD",
+        "image": "/images/merch/stickers.jpg",
+        "description": "Pack of 10 stickers with original Oz Montanía designs.",
+        "sizes": [
+          "Pack × 10"
+        ],
+        "available": true
+      },
+      {
+        "id": "poster-oz",
+        "name": "Collection Poster",
+        "type": "merch",
+        "price": 35,
+        "currency": "USD",
+        "image": "/images/merch/poster.jpg",
+        "description": "A2 poster on 250g art paper. Exclusive design.",
+        "sizes": [
+          "A2 (42×59.4 cm)"
+        ],
+        "available": true
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Behind the scenes, processes, travels and reflections",
+    "items": [
+      {
+        "id": "raiz-y-barrio-making",
+        "title": "How I made Raíz y Barrio",
+        "date": "2025-12-22",
+        "category": "Making of",
+        "excerpt": "The process behind the largest mural I've painted to date: 30 meters wide, 17 real neighbors portrayed, and a tribute to Paraguayan biodiversity.",
+        "content": "Raíz y Barrio was a challenge unlike anything I had done before. Not just because of the size — 30 meters wide by 8 meters tall — but because of what it represented: the first time portraying real people from the neighborhood in a mural...",
+        "image": "/images/blog/raiz-making.jpg",
+        "featured": true
+      },
+      {
+        "id": "dead-sea-story",
+        "title": "Painting the Dead Sea",
+        "date": "2023-04-22",
+        "category": "Travels",
+        "excerpt": "A journey to the West Bank to paint a mural about the Dead Sea environmental crisis, invited by Artists 4 Israel for Earth Day.",
+        "content": "When I received the invitation from Artists 4 Israel to paint in the West Bank, I knew I had to do something that truly communicated the urgency of the problem...",
+        "image": "/images/blog/dead-sea.jpg",
+        "featured": true
+      },
+      {
+        "id": "powerline-historia",
+        "title": "Powerline Shop: Paraguay's first graffiti store",
+        "date": "2024-03-15",
+        "category": "History",
+        "excerpt": "How the idea of opening Paraguay's first specialized graffiti and urban art supply store came to be.",
+        "content": "Before Powerline, getting a quality spray can in Paraguay was an odyssey. You had to bring them from Argentina or Brazil, or settle for what was available...",
+        "image": "/images/blog/powerline.jpg",
+        "featured": true
+      }
+    ]
+  },
+  "contacto": {
+    "title": "Contact",
+    "subtitle": "Want a mural? An illustration? A collaboration?",
+    "description": "Fill out the form or write me directly on WhatsApp. For commercial projects, quotes and collaborations.",
+    "whatsapp_message": "Hi Oz! I saw your work at ozmontania.com and I'm interested in getting a quote for a project.",
+    "whatsapp_label": "Message me on WhatsApp",
+    "form": {
+      "name_label": "Name",
+      "email_label": "Email",
+      "phone_label": "Phone",
+      "project_type_label": "Project type",
+      "project_types": [
+        "Commercial mural",
+        "Illustration",
+        "Artistic collaboration",
+        "Workshop",
+        "Interview / Press",
+        "Other"
+      ],
+      "budget_label": "Estimated budget",
+      "budget_options": [
+        "Under $500",
+        "$500 - $2,000",
+        "$2,000 - $5,000",
+        "$5,000 - $10,000",
+        "Over $10,000"
+      ],
+      "message_label": "Tell me about your project",
+      "file_label": "Reference photo (optional)",
+      "submit_label": "Send message"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Oz Montanía. All rights reserved.",
+    "tagline": "Paraguayan visual artist — Muralism, illustration and design",
+    "links": {
+      "redes": {
+        "title": "Social",
+        "items": [
+          {
+            "label": "Instagram",
+            "url": "https://instagram.com/ozmontania"
+          },
+          {
+            "label": "Facebook",
+            "url": "https://facebook.com/pyrotaurus"
+          }
+        ]
+      },
+      "proyectos": {
+        "title": "Projects",
+        "items": [
+          {
+            "label": "Estudio 8",
+            "url": "#"
+          },
+          {
+            "label": "Powerline Shop",
+            "url": "#"
+          }
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "items": [
+          {
+            "label": "Terms & conditions",
+            "url": "/terminos"
+          },
+          {
+            "label": "Privacy",
+            "url": "/privacidad"
+          }
+        ]
+      }
+    }
+  },
+  "not_found": {
+    "title": "Page not found",
+    "message": "This piece doesn't exist... yet.",
+    "cta": "Back to home",
+    "subtext": "Or explore the murals map to find what you're looking for."
+  }
+}

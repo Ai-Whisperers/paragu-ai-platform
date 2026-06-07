@@ -1,0 +1,37 @@
+[
+  {
+    "_annotation": {
+      "name": "Gift Card Products (cards.json)",
+      "what": "Individual gift card products — title, price (PYG), description, image, and icon. Rendered in the gift cards purchase flow.",
+      "why": "Gift cards are a pure revenue channel. Each card product targets a different budget level and occasion (self-gift, birthday, special occasion).",
+      "ai_popolates": "Card amounts: AI calculates from your price range (min service to max package). Descriptions: Generated to match the included service scope. Images: AI selects from your gallery.",
+      "your_input": "Tell us your price range and top 3 services. We configure the card amounts and generate descriptions.",
+      "plan": "Crecimiento+ — Profesional includes custom card designs"
+    },
+    "id": "1",
+    "title": "Gift Card Básico",
+    "name": "Gift Card Básico",
+    "price": 100000,
+    "desc": "Perfecto para una consulta inicial o un taller pequeño",
+    "image": "/images/giftcards/giftcard-1.png",
+    "icon": "gift"
+  },
+  {
+    "id": "2",
+    "title": "Gift Card Profesional",
+    "name": "Gift Card Profesional",
+    "price": 300000,
+    "desc": "Ideal para un plan de negocios o mentoría completa",
+    "image": "/images/giftcards/giftcard-2.png",
+    "icon": "star"
+  },
+  {
+    "id": "3",
+    "title": "Gift Card Premium",
+    "name": "Gift Card Premium",
+    "price": 500000,
+    "desc": "El paquete completo para emprendedores serios",
+    "image": "/images/giftcards/giftcard-3.png",
+    "icon": "crown"
+  }
+]

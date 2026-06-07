@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <ellipse cx="55" cy="55" rx="16" ry="28" fill="rgba(255,255,255,0.6)" transform="rotate(-30 55 55)"/>
+  <ellipse cx="55" cy="55" rx="16" ry="28" fill="rgba(255,255,255,0.8)" transform="rotate(30 55 55)"/>
+  <ellipse cx="55" cy="55" rx="16" ry="28" fill="rgba(255,255,255,0.7)" transform="rotate(90 55 55)"/>
+  <rect x="130" y="32" width="48" height="58" rx="4" fill="rgba(255,255,255,0.4)"/>
+  <rect x="135" y="37" width="38" height="48" rx="2" fill="rgba(255,255,255,0.6)"/>
+  <path d="M178 48 Q188 48 188 58 Q188 68 178 68" fill="rgba(255,255,255,0.4)"/>
+  <ellipse cx="154" cy="35" rx="28" ry="7" fill="rgba(255,255,255,0.3)"/>
+  <text x="200" y="72" font-family="Arial Black, Impact, sans-serif" font-size="40" font-weight="900" fill="white" letter-spacing="2">TRENTINA</text>
+  <text x="202" y="93" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.6)" letter-spacing="3">CERVEZA ARTESANAL</text>
+</svg>

@@ -1,0 +1,52 @@
+{
+  "name": "magnolia-peluqueria",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:ci": "vitest run",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "@ai-whisperers/admin": "workspace:*",
+    "@ai-whisperers/auth": "workspace:*",
+    "@ai-whisperers/commerce": "workspace:*",
+    "@ai-whisperers/i18n": "workspace:*",
+    "@ai-whisperers/sections": "workspace:*",
+    "@ai-whisperers/seo": "workspace:*",
+    "@ai-whisperers/theme": "workspace:*",
+    "@ai-whisperers/ui": "workspace:*",
+    "@ai-whisperers/whatsapp": "workspace:*",
+    "@alloc/quick-lru": "^5.2.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "@tailwindcss/node": "^4.3.0",
+    "@tailwindcss/oxide-linux-x64-gnu": "^4.3.0",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "lucide-react": "^0.510.0",
+    "next": "16.2.4",
+    "postcss": "^8.5.15",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "stripe": "^22.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "jsdom": "^29.1.1",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5",
+    "vitest": "^4.1.7"
+  }
+}

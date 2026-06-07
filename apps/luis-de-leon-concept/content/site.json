@@ -1,0 +1,17 @@
+{
+  "site": {
+    "theme": {
+      "primary": "#0d2137",
+      "secondary": "#2ecc71",
+      "background": "#f8f9fa"
+    },
+    "fonts": {
+      "heading": "Playfair Display",
+      "body": "Montserrat"
+    },
+    "seo": {
+      "ogImage": "/images/og-default.jpg",
+      "twitterHandle": ""
+    }
+  }
+}

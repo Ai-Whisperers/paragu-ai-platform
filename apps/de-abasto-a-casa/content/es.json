@@ -1,0 +1,195 @@
+{
+  "_meta": {
+    "translationQuality": "human",
+    "author": "De Abasto a Casa",
+    "lastReviewed": "2026-05-13"
+  },
+  "navigation": {
+    "businessName": "De Abasto a Casa",
+    "navItems": [
+      { "label": "Servicios", "href": "#servicios" },
+      { "label": "Calculadora", "href": "#calculadora" },
+      { "label": "Galería", "href": "#galeria" },
+      { "label": "FAQ", "href": "#faq" },
+      { "label": "Contacto", "href": "#contacto" }
+    ]
+  },
+  "home": {
+    "seo": {
+      "title": "De Abasto a Casa — Mercado, prep y comidas listas. Puerta a puerta, en San Lorenzo.",
+      "description": "Convertimos el caos del mercado en comida lista. Compras, mise-en-place y freezer meals. San Lorenzo, Paraguay."
+    },
+    "hero": {
+      "headline": "Convertimos el caos del mercado en comida lista",
+      "subheadline": "Compras, prep y freezer meals puerta a puerta en San Lorenzo. Whole-animal, mayorista, sin conservantes.",
+      "ctaPrimary": "Calculá tu ahorro",
+      "ctaSecondary": "Pedir por WhatsApp",
+      "ctaSecondaryHref": "https://wa.me/595981324569?text=Hola%21+Vi+el+sitio+de+De+Abasto+a+Casa+y+quiero+saber+mas.",
+      "ctaPrimaryHref": "#calculadora"
+    },
+    "services": {
+      "title": "Nuestros Niveles de Servicio",
+      "subtitle": "Elegí lo que se adapta a tu semana. Precios referenciales, ajustables según tu hogar.",
+      "levels": [
+        {
+          "name": "Nivel 1 — Compra por Lista",
+          "label": "Raw",
+          "description": "Vos nos mandás la lista, nosotros traemos los ingredientes enteros desde Abasto y mercado. Vos cocinás.",
+          "plans": [
+            { "name": "Básico", "price": "250.000 Gs/semana", "desc": "Lista corta, 1 proveedor. Hasta 15 productos. Delivery incluido.", "duration": "120 min estimado" },
+            { "name": "Completo", "price": "400.000 Gs/semana", "desc": "Lista completa + Abasto + mercado + almacén. Delivery y organizado en cocina.", "duration": "180 min" }
+          ]
+        },
+        {
+          "name": "Nivel 2 — Mise-en-Place Semanal",
+          "label": "Más elegido ★",
+          "description": "Compramos, lavamos, porcionamos y organizamos tu heladera y freezer. Listo para cocinar en minutos.",
+          "plans": [
+            { "name": "Individual", "price": "400.000 Gs/semana", "desc": "1 persona. Prep básico. Proteína + carbos + vegetales porcionados y sellados al vacío.", "duration": "240 min" },
+            { "name": "Pareja", "price": "650.000 Gs/semana", "desc": "2 personas. Prep completo para 2. Organización de heladera y freezer.", "duration": "300 min" },
+            { "name": "Familia", "price": "900.000 Gs/semana", "desc": "3-4 personas. Prep familiar. Variedad, porciones y sustituciones incluidas.", "duration": "360 min" }
+          ]
+        },
+        {
+          "name": "Nivel 3 — Comidas Listas",
+          "label": "Próximamente",
+          "description": "Comidas completas selladas al vacío, listas para recalentar. Requiere habilitación INAN en curso.",
+          "plans": [
+            { "name": "10 comidas/sem", "price": "desde 1.200.000 Gs/semana", "desc": "5 almuerzos + 5 cenas para 1 persona. Variedad rotativa." },
+            { "name": "15 comidas/sem", "price": "desde 1.700.000 Gs/semana", "desc": "Pack familiar. 3 comidas/día durante 5 días laborables." }
+          ]
+        }
+      ],
+      "addons": {
+        "title": "Add-ons opcionales (sumables a cualquier nivel)",
+        "items": [
+          { "name": "Desayunos", "price": "+400.000 Gs/mes" },
+          { "name": "Postres", "price": "+200.000 Gs/mes" },
+          { "name": "Bebidas / snacks", "price": "+300.000 Gs/mes" }
+        ]
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "steps": [
+        { "icon": "MessageSquare", "title": "Conversamos", "description": "10 min por WhatsApp. Armamos tu plan según presupuesto, personas y días que querés recibir." },
+        { "icon": "ClipboardList", "title": "Planeamos tu semana", "description": "Menú base, sustituciones, proveedores, horarios de compra y entrega." },
+        { "icon": "ShoppingBag", "title": "Compramos y prepeamos", "description": "Martes y jueves en Abasto y mercado. Prep en cocina certificada. Sellado al vacío." },
+        { "icon": "Truck", "title": "Entregamos", "description": "Puerta a puerta, con cadena de frío. Organizamos tu heladera y freezer si lo pedís." }
+      ]
+    },
+    "calculator": {
+      "title": "Calculá tu ahorro real",
+      "subtitle": "Números honestos. Si no te conviene, te lo decimos.",
+      "disclaimer": "Estimación referencial. Precios finales se ajustan según tu hogar y nivel de servicio.",
+      "fields": {
+        "gastoSuper": { "label": "Supermercado + carnicería + feria (Gs/semana)", "default": 350000 },
+        "gastoDelivery": { "label": "Delivery / comer afuera (Gs/semana)", "default": 200000 },
+        "comidaTirada": { "label": "Comida que tirás por semana (Gs)", "default": 50000 },
+        "gasLuz": { "label": "Gas + luz + agua de cocina (Gs/semana)", "default": 30000 },
+        "personas": { "label": "Personas en tu hogar", "default": 2 },
+        "valorHora": { "label": "¿Cuánto vale tu hora libre? (Gs)", "default": 30000 },
+        "horasCocina": { "label": "Horas/semana que dedicás a comprar y cocinar", "default": 8 }
+      },
+      "positiveCopy": "Si tu ahorro es grande, tiene sentido probar 1 mes sin compromiso.",
+      "negativeCopy": "Hoy ya sos muy eficiente. Probablemente no te conviene — pero si querés probar 1 mes sin compromiso, escribinos igual.",
+      "cta": "Seguir por WhatsApp con mis números"
+    },
+    "gallery": {
+      "title": "Cortes y calidad",
+      "subtitle": "Whole-animal, mayorista, lo mejor del mercado.",
+      "categories": ["Cortes de Carne", "Mise en Place", "Freezer Meals", "Mercado"]
+    },
+    "sourcing": {
+      "title": "Cómo compramos",
+      "items": [
+        { "icon": "Beef", "title": "Whole-animal", "description": "Animales enteros, cortados y porcionados por nosotros. Mejor calidad, mejor precio por kilo." },
+        { "icon": "Warehouse", "title": "Mayorista Abasto", "description": "Proveedores directos, sin intermediarios. Precios de mercado mayorista trasladados al cliente." },
+        { "icon": "Calendar", "title": "Estacional", "description": "Respetamos el calendario de Paraguay. Compramos lo que está en temporada, más barato y más rico." },
+        { "icon": "ShieldCheck", "title": "Sin conservantes", "description": "Congelamos al instante después del prep. Nunca usamos aditivos ni conservantes." }
+      ]
+    },
+    "team": {
+      "title": "Quién está detrás",
+      "members": [
+        {
+          "name": "Iván Weiss van der Pol",
+          "role": "Fundador & Chef de Mercado",
+          "bio": "Del caos del mercado y la cocina a sistemas que funcionan. Proveedor propio en Abasto, prep semanal para clientes en San Lorenzo desde 2025."
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "items": [
+        { "quote": "Recuperé 20+ horas al mes. No vuelvo a cocinar todos los días.", "author": "Remoto Global", "role": "cliente ilustrativo" },
+        { "quote": "La proteína sellada al vacío dura 4 meses en freezer sin perder sabor. Cambia todo.", "author": "Profesional Médico", "role": "cliente ilustrativo" },
+        { "quote": "Primera vez que pago un servicio con números honestos. No me inflan, me muestran.", "author": "Pareja Commuter", "role": "clientes ilustrativos" }
+      ],
+      "note": "Reemplazar con citas reales de Fran, Junior y Emilio & Lucia cuando se obtenga autorización."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Qué incluye el servicio?",
+          "a": "Incluye: compras en Abasto + mercado, prep (lavado, cortado, porcionado), sellado al vacío, 2 entregas por mes puerta a puerta con cadena de frío, sustituciones hasta 3 menús por mes, precio fijo 6 meses y pausa de vacaciones. No incluye desayunos, bebidas ni postres (disponibles como add-on)."
+        },
+        {
+          "q": "¿Cómo son las entregas?",
+          "a": "Compramos martes y jueves. Entregamos el mismo día, puerta a puerta, con cadena de frío. Coordinamos horario por WhatsApp."
+        },
+        {
+          "q": "¿Puedo pausar el servicio?",
+          "a": "Sí. Tenés 1 mes por año de pausa sin costo (vacaciones, viajes, etc). Avisanos con 48 hrs."
+        },
+        {
+          "q": "¿Qué pasa si no me gusta una comida?",
+          "a": "Garantía de satisfacción: si algo sale mal, lo reemplazamos sin cargo en la próxima entrega."
+        },
+        {
+          "q": "¿En qué casos NO me conviene?",
+          "a": "Honestidad total: si te encanta cocinar, si tu gasto actual es menor a Gs. 2M/mes para 3 personas, o si no tenés freezer. Mejor no te suscribas."
+        },
+        {
+          "q": "¿Cómo pago?",
+          "a": "Transferencia bancaria o efectivo. Sin compromiso en el primer mes. Precio fijo 6 meses al suscribirte."
+        },
+        {
+          "q": "¿Atienden fuera de San Lorenzo?",
+          "a": "Por ahora solo San Lorenzo (ciudad completa). Próximamente Asunción centro."
+        },
+        {
+          "q": "¿Tienen habilitación INAN?",
+          "a": "Nivel 1 y Nivel 2 no requieren habilitación especial (solo compra y prep). Nivel 3 (comidas cocidas listas) está en proceso de habilitación INAN."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Pedinos tu propuesta",
+      "subtitle": "Cobertura en San Lorenzo",
+      "whatsapp": "+595****4569",
+      "email": "hola@deabastoacasa.com.py",
+      "city": "San Lorenzo",
+      "hours": "Martes y Jueves en Abasto + mercado",
+      "delivery": "Sábado 09:00 - 14:00"
+    },
+    "cta": {
+      "title": "Pedí tu propuesta en 5 min por WhatsApp",
+      "button": "Escribir ahora",
+      "href": "https://wa.me/595981324569?text=Hola%21+Vi+el+sitio+de+De+Abasto+a+Casa+y+quiero+saber+mas."
+    }
+  },
+  "footer": {
+    "businessName": "De Abasto a Casa",
+    "city": "San Lorenzo, Paraguay",
+    "copyright": "© 2026 De Abasto a Casa",
+    "navLinks": [
+      { "label": "Servicios", "href": "#servicios" },
+      { "label": "Calculadora", "href": "#calculadora" },
+      { "label": "Galería", "href": "#galeria" },
+      { "label": "FAQ", "href": "#faq" },
+      { "label": "Contacto", "href": "#contacto" }
+    ]
+  }
+}

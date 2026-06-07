@@ -2,13 +2,23 @@
   "name": "paragu-ai-platform",
   "private": true,
   "version": "0.0.0",
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
   "scripts": {
     "build": "pnpm -r run build",
     "lint": "pnpm -r run lint",
-    "dev": "pnpm --filter @ai-whisperers/site-template dev"
+    "dev": "pnpm --filter builder dev",
+    "dev:platform": "pnpm --filter paragu-ai-platform dev",
+    "clean": "pnpm -r clean || true",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "eslint": "^9",
+    "prettier": "^3.8",
+    "pnpm": "^10"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
   }
 }

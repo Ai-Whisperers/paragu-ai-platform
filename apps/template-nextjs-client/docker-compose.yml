@@ -1,0 +1,29 @@
+services:
+  web:
+    build: .
+    image: superspuma:prod
+    ports: ["3000"]
+    networks: [agent-net]
+    deploy:
+      mode: replicated
+      replicas: 2
+      resources:
+        limits: { memory: 512M, cpus: '0.5' }
+        reservations: { memory: 128M, cpus: '0.1' }
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.superspuma.entrypoints=websecure"
+        - "traefik.http.routers.superspuma.rule=Host(`superspuma.paragu-ai.com`)"
+        - "traefik.http.routers.superspuma.tls=true"
+        - "traefik.http.routers.superspuma.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.superspuma.loadbalancer.server.port=3000"
+        - "traefik.docker.network=agent-net"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+networks:
+  agent-net:
+    external: true

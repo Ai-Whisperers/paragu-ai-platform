@@ -1,0 +1,34 @@
+{
+  "name": "camilo-acosta",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "lucide-react": "^0.460.0",
+    "next": "14.2.35",
+    "postcss": "^8",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwindcss": "^3.4.1",
+    "@ai-whisperers/ui": "workspace:*",
+    "@ai-whisperers/ui-extras": "workspace:*",
+    "@ai-whisperers/seo": "workspace:*",
+    "@ai-whisperers/whatsapp": "workspace:*",
+    "@ai-whisperers/theme": "workspace:*",
+    "@ai-whisperers/content": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.41",
+    "@types/react": "18.3.29",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "typescript": "5.9.3"
+  }
+}

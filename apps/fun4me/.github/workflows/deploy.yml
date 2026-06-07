@@ -1,0 +1,20 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  ci:
+    uses: Ai-Whisperers/ci-cd/.github/workflows/ci-nextjs.yml@main
+    with:
+      site-url: 'https://fun4me.paragu-ai.com'
+      package-manager: 'pnpm'
+      node-version: '22'
+    secrets: inherit
+  deploy:
+    needs: ci
+    uses: Ai-Whisperers/ci-cd/.github/workflows/deploy-vps.yml@main
+    with:
+      site-name: 'fun4me'
+      package-manager: 'pnpm'
+      node-version: '22'
+    secrets: inherit

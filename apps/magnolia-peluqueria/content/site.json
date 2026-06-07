@@ -1,0 +1,46 @@
+{
+  "site": {
+    "url": "https://magnolia-peluqueria.paragu-ai.com",
+    "name": "Magnolia Peluquería",
+    "locale": "es-PY",
+    "theme": {
+      "primary": "#0d2137",
+      "secondary": "#2ecc71",
+      "secondaryDark": "#27ae60",
+      "background": "#f8f9fa",
+      "foreground": "#1a1a1a",
+      "foregroundMuted": "#6b7280",
+      "foregroundLight": "#6b7280",
+      "card": "#ffffff",
+      "border": "#e5e7eb",
+      "rose": "#f43f5e",
+      "violet": "#7c3aed",
+      "amber": "#f59e0b",
+      "sky": "#0ea5e9"
+    },
+    "fonts": {
+      "heading": "Playfair Display",
+      "body": "Montserrat"
+    },
+    "seo": {
+      "ogImage": "/images/og-default.jpg",
+      "twitterHandle": "",
+      "analyticsId": "G-XXXXXXXXXX"
+    }
+  },
+  "features": {
+    "exitIntentPopup": true,
+    "cookieConsent": true,
+    "testimonialsCarousel": true,
+    "bookingForm": true,
+    "googleMapsEmbed": true,
+    "breadcrumbs": true,
+    "localBusinessJsonLd": true,
+    "faqJsonLd": true,
+    "beforeAfterSlider": true,
+    "promoBanner": true,
+    "loyaltyProgram": true,
+    "giftCards": true,
+    "instagramLink": true
+  }
+}

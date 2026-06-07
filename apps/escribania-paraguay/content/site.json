@@ -1,0 +1,20 @@
+{
+  "site": {
+    "name": "Escribanía Pública",
+    "businessName": "Escribanía {{businessName}}",
+    "tagline": "Fe Pública y Seguridad Jurídica",
+    "description": "Servicios notariales en Paraguay. Escrituras públicas, poderes, contratos, legalizaciones y más. Atención personalizada con la confianza de la fe pública.",
+    "url": "https://escribania.paragu-ai.com",
+    "phone": "595981000000",
+    "email": "contacto@escribania.com.py",
+    "address": "Asunción, Paraguay",
+    "social": {
+      "instagram": "",
+      "facebook": ""
+    },
+    "whatsapp": {
+      "number": "595981000000",
+      "message": "Hola! Quiero información sobre servicios notariales"
+    }
+  }
+}

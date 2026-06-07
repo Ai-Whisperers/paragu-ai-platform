@@ -1,0 +1,15 @@
+{
+  "_annotation": {
+    "name": "Feature: ecommerce",
+    "what": "Feature flags",
+    "why": "Control funcionalidades",
+    "ai_popolates": "Segun plan",
+    "your_input": "Preferencias",
+    "plan": "Todos"
+  },
+  "ecommerce": true,
+  "products": true,
+  "cart": true,
+  "checkout": true,
+  "storeLocator": false
+}

@@ -1,14 +1,22 @@
-import * as fs from "fs"
-
-export const LOCK_EX = "LOCK_EX"
-export const LOCK_UN = "LOCK_UN"
-
-export function flockSync(fd: number, cmd: "LOCK_EX" | "LOCK_UN"): void {
-  try {
-    const fn = (fs as unknown as { flockSync: (fd: number, op: string) => void }).flockSync
-    fn(fd, cmd === "LOCK_EX" ? "exclusive" : "unlock")
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err)
-    console.error(`[file-lock] flockSync failed: ${msg}`)
-  }
+export const fileLock = {
+  busy: false,
+  queue: [] as Array<() => Promise<void>>,
+  async run(task: () => Promise<void>) {
+    if (!this.busy) {
+      this.busy = true
+      await task()
+      this.busy = false
+      this.runNext()
+      return
+    }
+    this.queue.push(task)
+  },
+  async runNext() {
+    if (this.busy || this.queue.length === 0) return
+    const next = this.queue.shift()!
+    this.busy = true
+    await next()
+    this.busy = false
+    this.runNext()
+  },
 }

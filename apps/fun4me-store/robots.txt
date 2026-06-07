@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://https://fun4me.paragu-ai.com/sitemap.xml

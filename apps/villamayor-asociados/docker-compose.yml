@@ -1,0 +1,38 @@
+services:
+  web:
+    build: .
+    image: villamayor-asociados:prod
+    ports:
+      - "3000"
+    networks:
+      - agent-net
+    environment:
+      - NODE_ENV=production
+    deploy:
+      mode: replicated
+      replicas: 2
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.villamayor.entrypoints=websecure"
+        - "traefik.http.routers.villamayor.rule=Host(`villamayor.paragu-ai.com`)"
+        - "traefik.http.routers.villamayor.tls=true"
+        - "traefik.http.routers.villamayor.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.villamayor.loadbalancer.server.port=3000"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+networks:
+  agent-net:
+    external: true

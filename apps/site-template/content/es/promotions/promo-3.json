@@ -1,0 +1,21 @@
+{
+  "_annotation": {
+    "name": "Promotion Card (promo-3.json)",
+    "what": "Individual promotion — business consulting for events, with title, subtitle, original price, discounted price, validity date, image, CTA, and feature list.",
+    "why": "Event promotions capture seasonal demand (weddings, birthdays) at a higher price point. A G. 100,000 savings creates urgency for business owners planning events.",
+    "ai_popolates": "Title and subtitle: Generated from your event service description. Original/discounted price: AI calculates savings. Features: AI extracts from your service catalog.",
+    "your_input": "Tell us your event service package and the validity dates. We generate the full promo card.",
+    "plan": "All plans"
+  },
+  "description": "Promoción individual con título, descripción, imagen y precio. Ofrece un servicio especial para eventos con tarifa promocional. La IA genera estos datos según la temporada y demanda del negocio.",
+  "id": "3",
+  "title": "Consultoría Premium para Eventos",
+  "subtitle": "Asesoría personalizada para bodas, cumpleaños y eventos especiales",
+  "originalPrice": 500000,
+  "price": 400000,
+  "badge": "Ahorrá G. 100.000",
+  "validUntil": "2026-06-30",
+  "image": "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&h=400&fit=crop",
+  "cta": "Reservar Ahora",
+  "features": ["Consultoría estratégica personalizada", "Análisis de marca y branding", "Plan de marketing digital", "Seguimiento post-evento"]
+}

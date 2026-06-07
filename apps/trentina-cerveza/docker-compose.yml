@@ -1,0 +1,28 @@
+services:
+  trentina:
+    image: trentina:latest
+    ports:
+      - "3144:3000"
+    networks:
+      - agent-net
+    deploy:
+      mode: replicated
+      replicas: 2
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.trentina.entrypoints=websecure"
+        - "traefik.http.routers.trentina.rule=Host(`trentina.paragu-ai.com`)"
+        - "traefik.http.routers.trentina.tls=true"
+        - "traefik.http.routers.trentina.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.trentina.loadbalancer.server.port=3000"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:3000/"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+networks:
+  agent-net:
+    external: true

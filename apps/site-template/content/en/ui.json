@@ -1,0 +1,316 @@
+{
+  "description": "English UI text strings for the entire application. Includes navigation labels, buttons, forms, error messages, and validation. AI adapts these texts automatically based on the business type.",
+  "nav": {
+    "inicio": "Home",
+    "servicios": "Services",
+    "nosotros": "About Us",
+    "reservar": "Book Now",
+    "contacto": "Contact",
+    "ofertas": "Offers",
+    "tarjetas": "Gift Cards",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "tienda": "Store",
+    "miCuenta": "My Account",
+    "mas": "More"
+  },
+  "hero": {
+    "cta": "Book Now",
+    "ctaSecondary": "View Services"
+  },
+  "booking": {
+    "title": "Book an Appointment",
+    "name": "Your name",
+    "phone": "Your WhatsApp",
+    "service": "Service",
+    "date": "Date",
+    "notes": "Additional notes",
+    "submit": "Send via WhatsApp",
+    "success": "Your message opened in WhatsApp!",
+    "selectService": "Choose a service"
+  },
+  "auth": {
+    "miCuentaTitle": "My Account",
+    "phonePlaceholder": "0981 234567",
+    "sendCode": "Send code via WhatsApp",
+    "enterCode": "Enter your 6-digit code",
+    "verify": "Verify",
+    "resend": "Resend code",
+    "invalidCode": "Invalid or expired code",
+    "logout": "Log out",
+    "loading": "Loading...",
+    "autoCreate": "Automatically created when you verify your number",
+    "openWa": "Open WhatsApp to see the code",
+    "codeSent": "We sent you a code via WhatsApp. Enter it below.",
+    "invalidPhone": "Enter a valid number",
+    "serverError": "Connection error",
+    "noAccount": "No account?",
+    "defaultName": "Client",
+    "title": "My Account",
+    "subtitle": "Enter your WhatsApp number to access your account",
+    "description": "Access your account, check your history and loyalty points"
+  },
+  "loyalty": {
+    "title": "Loyalty Program",
+    "subtitle": "Earn points and redeem them for discounts",
+    "howItWorks": "How it works",
+    "earnPoints": "Earn 1 point per G. 10,000",
+    "redeem": "Redeem points",
+    "Visits": "Visits",
+    "Points": "Points",
+    "tiers": {
+      "bronce": "Bronze",
+      "plata": "Silver",
+      "oro": "Gold"
+    },
+    "reservasteCita": "Booked",
+    "completasteVisita": "Visit done",
+    "terceraVisita": "Third visit",
+    "premioEspecial": "Special reward"
+  },
+  "giftCards": {
+    "title": "Gift Cards",
+    "buy": "Buy",
+    "checkBalance": "Check balance",
+    "balance": "Available balance",
+    "validUntil": "Valid until",
+    "from": "From",
+    "to": "To",
+    "message": "Message",
+    "selectAmount": "Choose an amount"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "followUs": "Follow us"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidPhone": "Invalid WhatsApp number",
+    "serverError": "Server error. Try again.",
+    "notFound": "Not found"
+  },
+  "cookies": {
+    "message": "We use cookies to improve your experience on our site.",
+    "accept": "Accept",
+    "learnMore": "Learn more"
+  },
+  "exitIntent": {
+    "title": "Wait!",
+    "message": "We found a special offer for you",
+    "cta": "View Offers",
+    "dismiss": "No thanks"
+  },
+  "promotions": {
+    "title": "Special Offers",
+    "subtitle": "Don't miss our exclusive promotions",
+    "validUntil": "Valid until",
+    "originalPrice": "Original price",
+    "shopNow": "Shop Now"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "See our work"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real opinions from people who visit us"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a complete range of services to grow your business",
+    "bookService": "Book",
+    "verCategoria": "View category",
+    "todosServicios": "All services"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tips, trends and news",
+    "description": "Tips, strategies and news for entrepreneurs.",
+    "read": "Read",
+    "time": "min",
+    "readMore": "Read more",
+    "by": "By"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our services"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Certified professionals who are passionate"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Learn our story",
+    "label": "Meet us",
+    "storyIntro": "Learn our story. We're a team dedicated to offering the best service to our clients in Paraguay.",
+    "storySectionLabel": "Our Story",
+    "storyTitle": "From Passion to Calling",
+    "storyParagraphs": [
+      " was born with a clear mission: to offer quality services that make a difference for our clients. What started as an idea is now an established business.",
+      "With years of experience helping satisfied clients, we've built trust-based relationships founded on results. Every project is an opportunity to exceed the expectations of those who trust us.",
+      "We believe in personalized service. We listen to each client, understand their needs, and deliver solutions that really work. Our commitment is your satisfaction."
+    ],
+    "mission": "Our mission is to offer quality services that transform our clients experience, build lasting trust, and contribute to the growth of our community.",
+    "vision": "To be the leading company in our sector in Paraguay, recognized for excellence in service, constant innovation, and commitment to customer satisfaction."
+  },
+  "process": {
+    "title": "How We Work",
+    "subtitle": "From your inquiry to your page online, every step counts",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Contact us",
+        "description": "Reach out via WhatsApp or fill out the form"
+      },
+      {
+        "step": "2",
+        "title": "We talk",
+        "description": "We analyze your needs and advise you"
+      },
+      {
+        "step": "3",
+        "title": "We deliver",
+        "description": "We deliver the service with the best quality"
+      },
+      {
+        "step": "4",
+        "title": "You enjoy",
+        "description": "Ready to use and start seeing results"
+      }
+    ]
+  },
+  "servicesSpecific": {
+    "needSomethingTitle": "Need something specific?",
+    "needSomethingText": "Contact us and we'll help you find the perfect solution for your business.",
+    "needSomethingBtn": "Hi! I'm interested in your services."
+  },
+  "bookingPage": {
+    "pageTitle": "Book Appointment",
+    "pageSubtitle": "Fill out the form and we'll confirm via WhatsApp in minutes"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We're here for you",
+    "sendMessage": "Send message",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "success": "Message sent!",
+    "address": "Address",
+    "hours": "Hours",
+    "callUs": "Call us"
+  },
+  "cookieConsent": {
+    "title": "Cookie Consent",
+    "description": "We use cookies to improve your browsing experience and analyze traffic."
+  },
+  "giftCardsPage": {
+    "title": "Gift Cards"
+  },
+  "blogPost": {
+    "back": "Back to blog",
+    "share": "Share",
+    "related": "Related posts",
+    "min": "min read",
+    "loyaltyTitle": "Join Our Loyalty Program",
+    "loyaltyDesc": "Earn rewards every visit you complete",
+    "copyLink": "Copy link",
+    "bookingCtaTitle": "Ready for your appointment?",
+    "bookingCtaSubtitle": "Fill out the form and we will confirm via WhatsApp in minutes.",
+    "cta": "Book Now"
+  },
+  "legal": {
+    "privacidad": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated",
+      "sections": [
+        {
+          "title": "1. Data Controller Identification",
+          "content": "TU_NEGOCIO (\"we\", \"us\", or \"the Company\") is the data controller for the personal information you provide through this website and our WhatsApp messaging services.\n\nAddress: TU_CIUDAD, Paraguay\nEmail: contacto@tu-emprendimiento.com\nPhone: +595 981 000 000\nTax ID (RUC): 8000000-1"
+        },
+        {
+          "title": "2. Types of Personal Data We Collect",
+          "content": "We collect the following types of personal data:\n\n• Full name\n• Phone number\n• Email address\n• Appointment data (date, time, requested service)\n• WhatsApp communication history\n• Payment information (processed by third parties)\n• Location data (only if voluntarily provided)"
+        },
+        {
+          "title": "3. Purpose of Data Processing",
+          "content": "We use your personal data for the following purposes:\n\n• Appointment management: Process and confirm your booking requests.\n• WhatsApp communication: Send appointment reminders, confirmations, and service updates.\n• Customer support: Respond to your inquiries and provide technical assistance.\n• Marketing (only with your consent): Send promotions, news, and relevant content from TU_NEGOCIO.\n• Billing and collections: Process service payments.\n• Legal compliance: Maintain records according to Paraguayan legal obligations."
+        },
+        {
+          "title": "4. Legal Basis for Processing",
+          "content": "The processing of your data is carried out under the following legal bases:\n\n• Consent: When you voluntarily provide your data and accept this policy.\n• Contract execution: For the management of services requested by you.\n• Legitimate interest: To improve our services and communicate important updates.\n• Legal obligations: To comply with applicable Paraguayan laws."
+        },
+        {
+          "title": "5. Data Retention Period",
+          "content": "We retain your personal data for the following periods:\n\n• Client data: 5 years after the last interaction.\n• Appointment records: 3 years for accounting and tax compliance.\n• WhatsApp communications: 2 years from the last conversation.\n• Marketing data (if applicable): Until you revoke your consent.\n\nOnce the retention period expires, your data will be securely deleted or anonymized."
+        },
+        {
+          "title": "6. Your Rights (Data Subject Rights)",
+          "content": "You have the following rights regarding your personal data:\n\n• Access: Request a copy of all your personal data we have.\n• Rectification: Correct inaccurate or incomplete data.\n• Erasure: Request deletion of your personal data (when legally possible).\n• Objection: Object to the processing of your data for direct marketing.\n• Restriction: Request that we limit the use of your data in certain circumstances.\n• Portability: Receive your data in a structured, readable format.\n\nTo exercise any of these rights, contact us at contacto@tu-emprendimiento.com. We will respond to your request within 30 business days."
+        },
+        {
+          "title": "7. Sharing Data with Third Parties",
+          "content": "We do not sell or rent your personal data. We share information only in the following cases:\n\n• WhatsApp/Meta: For WhatsApp communication, your data (phone number, messages) is processed by Meta under their Privacy Policy: https://www.whatsapp.com/legal/privacy-policy/\n\n• Payment processors: We share payment data with processors like Bancard, Pagopar, or Tigo Money to manage transactions. These processors have their own privacy policies.\n\n• Hosting and technology services: We store data on secure servers for website operation.\n\n• Legal requirements: We may disclose data if required by law, such as a court order."
+        },
+        {
+          "title": "8. Security Measures",
+          "content": "We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, loss, or alteration:\n\n• Data encryption in transit and at rest\n• Restricted access to authorized personnel only\n• Regular system monitoring\n• Secure data retention policies\n\nHowever, no Internet transmission is 100% secure. We cannot guarantee absolute security for your data."
+        },
+        {
+          "title": "9. Use of Cookies",
+          "content": "Our website uses cookies to:\n\n• Improve user experience\n• Analyze site traffic\n• Personalize content\n\nYou can configure your browser to reject cookies. This may affect some website functionality."
+        },
+        {
+          "title": "10. Changes to This Policy",
+          "content": "We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated \"last updated\" date.\n\nWe recommend reviewing this policy regularly to stay informed about how we protect your data."
+        },
+        {
+          "title": "11. Contact for Data Protection",
+          "content": "If you have questions, concerns, or requests related to this Privacy Policy or the processing of your personal data, contact us:\n\nTu Emprendimiento (TU_NEGOCIO)\nEmail: contacto@tu-emprendimiento.com\nPhone: +595 981 000 000\nAddress: TU_CIUDAD, Paraguay\n\nFor personal data inquiries, we will respond within 30 business days."
+        }
+      ]
+    },
+    "terminos": {
+      "title": "Terms and Conditions",
+      "sections": [
+        {
+          "title": "1. Acceptance of Terms",
+          "body": "By accessing and using our services, you acknowledge that you have read, understood, and expressly accepted these Terms and Conditions in full. If you do not agree with any of these terms, please do not use our services."
+        },
+        {
+          "title": "2. Service Description",
+          "body": "Tu Emprendimiento provides consulting and development services for technology solutions for businesses and entrepreneurs. Our services include, among others: web and application development, artificial intelligence consulting, process automation, and digital transformation solutions.\n\nThe specific service contracted will be detailed in the corresponding commercial proposal or contract."
+        },
+        {
+          "title": "3. Booking and Cancellation Policy",
+          "body": "Bookings: To confirm an appointment or service, the client must make payment in advance.\n\nCancellations: The client may cancel their appointment up to 24 hours before the scheduled time at no cost.\n\nLate cancellations: Cancellations made with less than 24 hours notice will result in the full loss of the amount paid, as the reserved time cannot be recovered.\n\nNo-shows: In case of failure to attend the scheduled appointment without prior notice, 100% of the service cost will be applied as a penalty.\n\nExceptions: In exceptional circumstances (medical emergencies, natural disasters), we will evaluate each case individually."
+        },
+        {
+          "title": "4. Payment Terms",
+          "body": "Payment methods: We accept bank transfers, credit/debit card payments, and digital wallets.\n\nPayment deadlines: Payment must be made in full before the start of any service, unless otherwise agreed in writing.\n\nInvoicing: We issue legal invoices in accordance with current Paraguayan regulations. Please provide your tax information correctly at the time of contracting.\n\nDelinquency: In case of non-payment, Tu Emprendimiento reserves the right to suspend services until the debt is regularized."
+        },
+        {
+          "title": "5. Limitation of Liability",
+          "body": "Tu Emprendimiento shall not be liable for indirect, incidental, special, or consequential damages arising from the use of our services.\n\nOur maximum liability shall in no case exceed the total amount actually paid by the client for the specific service that gave rise to the claim.\n\nWe do not guarantee specific results beyond what is expressly agreed upon in the service contract."
+        },
+        {
+          "title": "6. Intellectual Property",
+          "body": "Source code, designs, documentation, and any material developed specifically for the client shall be their property after full payment of the services, unless otherwise agreed in writing.\n\nTu Emprendimiento retains the right to use generic techniques, tools, and knowledge acquired during the provision of services for other projects.\n\nTrademarks, logos, and copyrighted materials of third parties are the property of their respective owners."
+        },
+        {
+          "title": "7. Applicable Law and Jurisdiction",
+          "body": "These Terms and Conditions are governed by the laws of the Republic of Paraguay.\n\nAny dispute arising from the interpretation or execution of these terms shall be resolved exclusively before the competent courts of the City of TU_CIUDAD, Paraguay, with express waiver of any other jurisdiction."
+        },
+        {
+          "title": "8. Contact Information",
+          "body": "For any questions regarding these Terms and Conditions, you may contact us:\n\nEmail: contacto@tu-emprendimiento.com\nPhone: +595 981 000 000\nAddress: TU_CIUDAD, Paraguay\nTax ID (RUC): 8000000-1"
+        }
+      ]
+    }
+  }
+}

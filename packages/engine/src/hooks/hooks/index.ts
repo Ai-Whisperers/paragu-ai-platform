@@ -1,3 +1,3 @@
-export { useWishlist } from './use-wishlist'
-export { useRecentlyViewed } from './use-recently-viewed'
-export type { RecentItem } from './use-recently-viewed'
+export * from '../use-feature'
+export * from '../use-wishlist'
+export * from '../use-recently-viewed'

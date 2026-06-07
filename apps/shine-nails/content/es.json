@@ -1,0 +1,236 @@
+{
+  "_meta": {
+    "translationQuality": "native",
+    "author": "ParaguAI / Ai-Whisperers",
+    "lastReviewed": "2026-05-28",
+    "version": "1.0"
+  },
+  "site": {
+    "name": "SHINE Nails & Beauty",
+    "shortName": "SHINE",
+    "businessName": "SHINE Nails & Beauty",
+    "tagline": "Uñas acrílicas, gel y esmaltado semipermanente. Manicure y pedicure profesional en San Lorenzo.",
+    "description": "Uñas acrílicas, gel y esmaltado semipermanente. Manicure y pedicure profesional en San Lorenzo.",
+    "phone": "+595 986 693 259",
+    "whatsapp": "595986693259",
+    "email": "",
+    "address": "Luis Morinigo, San Lorenzo 111402",
+    "city": "Luis Morinigo",
+    "country": "Paraguay",
+    "hours": "Lunes a Sábado 9:00–19:00 hs",
+    "url": "https://shinenails.com.py"
+  },
+  "navigation": {
+    "businessName": "SHINE Nails & Beauty",
+    "items": [
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria"
+      },
+      {
+        "label": "Testimonios",
+        "href": "#testimonios"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ],
+    "ctaText": "Reservar turno",
+    "ctaHref": "https://wa.me/595986693259?text=Hola!%20Quiero%20reservar%20un%20turno"
+  },
+  "hero": {
+    "headline": "SHINE Nails & Beauty",
+    "subheadline": "Celeste Villalba — Uñas profesionales en San Lorenzo",
+    "description": "Uñas acrílicas, gel y esmaltado semipermanente. Manicure y pedicure profesional en San Lorenzo.",
+    "ctaPrimaryText": "Reservar turno",
+    "ctaPrimaryHref": "https://wa.me/595986693259?text=Hola!%20Quiero%20reservar%20un%20turno",
+    "secondaryCtaText": "Ver trabajos",
+    "secondaryCtaHref": "#galeria",
+    "stats": [
+      {
+        "value": "4.9",
+        "label": "Estrellas Google"
+      },
+      {
+        "value": "287",
+        "label": "Reseñas Google"
+      }
+    ]
+  },
+  "services": {
+    "title": "Servicios",
+    "intro": "Servicios profesionales de SHINE Nails & Beauty",
+    "items": [
+      {
+        "title": "Uñas Acrílicas",
+        "description": "Uñas duraderas con técnica profesional",
+        "icon": "✨",
+        "price": "Gs 180.000"
+      },
+      {
+        "title": "Uñas en Gel",
+        "description": "Aspecto natural con gel de alta calidad",
+        "icon": "✨",
+        "price": "Gs 150.000"
+      },
+      {
+        "title": "Esmaltado Semipermanente",
+        "description": "Color que dura hasta 3 semanas",
+        "icon": "✨",
+        "price": "Gs 80.000"
+      },
+      {
+        "title": "Manicure Clásico",
+        "description": "Cuidados y estética para tus manos",
+        "icon": "✨",
+        "price": "Gs 50.000"
+      },
+      {
+        "title": "Pedicure",
+        "description": "Tratamiento completo para tus pies",
+        "icon": "✨",
+        "price": "Gs 70.000"
+      },
+      {
+        "title": "Nail Art",
+        "description": "Diseño personalizado y decoraciones",
+        "icon": "✨",
+        "price": "desde Gs 30.000"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Nuestros Trabajos",
+    "intro": "Galería de trabajos de SHINE Nails & Beauty",
+    "items": [
+      {
+        "src": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+        "alt": "Trabajo 1 - SHINE Nails & Beauty",
+        "title": "Trabajo 1"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1610992015732-2449b0f86b0d?w=600&q=80",
+        "alt": "Trabajo 2 - SHINE Nails & Beauty",
+        "title": "Trabajo 2"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1632345031435-8727f6897d42?w=600&q=80",
+        "alt": "Trabajo 3 - SHINE Nails & Beauty",
+        "title": "Trabajo 3"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=600&q=80",
+        "alt": "Trabajo 4 - SHINE Nails & Beauty",
+        "title": "Trabajo 4"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestras clientas",
+    "items": [
+      {
+        "name": "María Fernández",
+        "role": "Cliente",
+        "text": "Las mejores uñas de San Lorenzo. Celeste es una artista!",
+        "rating": 5
+      },
+      {
+        "name": "Ana Rodríguez",
+        "role": "Cliente",
+        "text": "Siempre impecable el trabajo. 4.9⭐ merecido.",
+        "rating": 5
+      },
+      {
+        "name": "Carmen Torres",
+        "role": "Cliente",
+        "text": "Hace 2 años que no cambio de lugar. Excelencia constante.",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Necesito turno?",
+        "answer": "Sí, recomendamos agendar por WhatsApp para garantizar tu lugar."
+      },
+      {
+        "question": "¿Cuánto duran las uñas acrílicas?",
+        "answer": "Con el cuidado adecuado duran 3-4 semanas. Hacemos fills cada 2-3 semanas."
+      },
+      {
+        "question": "¿Hay descuento por referrals?",
+        "answer": "Sí! Si traés una amiga, ambas reciben un 10% de descuento."
+      },
+      {
+        "question": "¿Qué productos usan?",
+        "answer": "Trabajamos con marcas de primera calidad: IBD, OPI, Gelish."
+      }
+    ]
+  },
+  "contact": {
+    "title": "¿Lista para tus uñas perfectas?",
+    "subtitle": "Lunes a Sábado 9:00–19:00 hs",
+    "cta": {
+      "text": "Escribinos por WhatsApp y agendar tu turno",
+      "label": "Contactar por WhatsApp"
+    },
+    "whatsappMessage": "Hola! Vi el sitio web de SHINE Nails & Beauty y quiero consultar por un turno.",
+    "formFields": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Tu nombre",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "label": "Teléfono",
+        "required": true
+      },
+      {
+        "name": "service",
+        "type": "select",
+        "label": "¿Qué servicio te interesa?",
+        "required": true
+      },
+      {
+        "name": "message",
+        "type": "textarea",
+        "label": "Contanos tu idea",
+        "required": false
+      }
+    ]
+  },
+  "footer": {
+    "text": "SHINE Nails & Beauty — Uñas acrílicas, gel y esmaltado semipermanente. Manicure y pedicure profesional en San Lorenzo.",
+    "copyright": "© 2024 SHINE Nails & Beauty. Todos los derechos reservados.",
+    "links": [
+      {
+        "label": "Inicio",
+        "href": ""
+      },
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ],
+    "showWhatsapp": true,
+    "showSocial": true
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "_annotation": {
+      "name": "FAQ (Example)",
+      "what": "Section content",
+      "why": "Site section",
+      "ai_popolates": "AI generated",
+      "your_input": "Business data",
+      "plan": "All plans"
+    }
+  },
+  {
+    "id": "1",
+    "question": "How do I book an appointment?",
+    "answer": "You can book via WhatsApp at 0981 000 000 or directly on this site. We confirm in under 2 hours."
+  },
+  {
+    "id": "2",
+    "question": "What payment methods do you accept?",
+    "answer": "We accept cash, bank transfer, MercadoPago, and Tigo Money. For services over G. 400,000 we offer 3-installment payment."
+  },
+  {
+    "id": "3",
+    "question": "How long does the service take?",
+    "answer": "Depends on the service: simple cut 30-45 min, full color 2.5-3 hours, treatments 45-90 min."
+  },
+  {
+    "id": "4",
+    "question": "Can I cancel or reschedule?",
+    "answer": "Yes, free of charge up to 24 hours before. Cancellations with less than 24h notice lose their slot."
+  },
+  {
+    "id": "5",
+    "question": "Is there a guarantee on services?",
+    "answer": "Yes, if you're not satisfied with the result, we fix it at no additional cost."
+  }
+]

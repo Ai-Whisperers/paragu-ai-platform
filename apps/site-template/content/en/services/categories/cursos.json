@@ -1,0 +1,46 @@
+{
+  "_annotation": {
+    "name": "Courses & Workshops (cursos.json)",
+    "what": "Training services catalog — items with name, price (PYG), duration (minutes), description, and popularity flag.",
+    "why": "Course and workshop listings with clear pricing and duration help potential students self-qualify before reaching out. This reduces low-intent inquiries and increases booking conversion.",
+    "ai_popolates": "Course names and descriptions: Generated from your curriculum. Prices: AI validates against market rates. Duration: Calculated from stated content volume. Popular flag: Auto-set based on demand signals.",
+    "your_input": "List your courses/workshops with price, duration, and description. We format them into the catalog structure.",
+    "plan": "All plans"
+  },
+  "description": "Course and workshop services with prices, durations, and descriptions. Practical training for entrepreneurs seeking concrete results. AI populates data from the business's educational offerings.",
+  "id": "cursos",
+  "title": "Courses & Workshops",
+  "description": "Practical training for entrepreneurs who want results",
+  "icon": "book",
+  "color": "green",
+  "items": [
+    {
+      "name": "Digital Marketing Course",
+      "price": 350000,
+      "duration": 480,
+      "popular": true,
+      "desc": "Learn to promote your business online. Video content + downloadable materials + access to community."
+    },
+    {
+      "name": "Sales Workshop",
+      "price": 200000,
+      "duration": 240,
+      "popular": true,
+      "desc": "Sales techniques for entrepreneurs. Practical, with role-play and real Paraguayan examples."
+    },
+    {
+      "name": "Basic Financial Management",
+      "price": 250000,
+      "duration": 360,
+      "popular": false,
+      "desc": "Manage your business finances. Separate expenses, set prices, project income."
+    },
+    {
+      "name": "Introduction to E-commerce",
+      "price": 300000,
+      "duration": 300,
+      "popular": false,
+      "desc": "Create your online store from scratch. Platforms, payments, shipping and marketing for e-commerce."
+    }
+  ]
+}

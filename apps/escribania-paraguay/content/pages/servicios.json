@@ -1,0 +1,211 @@
+{
+  "escrituras": {
+    "name": "Escrituras Públicas",
+    "icon": "scroll-text",
+    "hero": {
+      "headline": "Escrituras Públicas",
+      "subheadline": "Todo acto que requiera fe pública notarial según la ley paraguaya"
+    },
+    "description": "La escritura pública es el instrumento notarial por excelencia. Como escribanos habilitados, damos fe de los actos y contratos que las partes otorgan ante nosotros, garantizando su legalidad, autenticidad y fecha cierta.",
+    "benefits": [
+      { "icon": "shield-check", "title": "Seguridad Jurídica Plena", "description": "La escritura pública es título ejecutivo. No admite impugnación por falsedad." },
+      { "icon": "book-open", "title": "Protocolo Notarial", "description": "Queda archivada en nuestro protocolo. Podés solicitar copias en cualquier momento." },
+      { "icon": "search", "title": "Control de Legalidad", "description": "El escribano verifica la capacidad legal, la legitimidad y la licitud del acto." }
+    ],
+    "items": [
+      "Compraventa de inmuebles urbanos y rurales",
+      "Hipotecas convencionales y abiertas",
+      "Anticresis",
+      "Servidumbres activas y pasivas",
+      "Usufructo, uso y habitación",
+      "Permutas",
+      "Donaciones entre vivos",
+      "Compraventa de vehículos automotores",
+      "Compraventa de embarcaciones y aeronaves",
+      "Constitución de sociedades (SRL, SA, EAS)",
+      "Modificación de contratos sociales",
+      "Actas de asamblea y directorio"
+    ],
+    "process": [
+      "Reunión inicial para revisar documentación",
+      "Verificación de títulos y gravámenes",
+      "Cálculo de impuestos y gastos",
+      "Redacción de minuta",
+      "Lectura y firma del documento",
+      "Protocolización en el registro notarial",
+      "Registro ante la DNIT/DGRRCC si corresponde"
+    ]
+  },
+  "poderes": {
+    "name": "Poderes",
+    "icon": "file-signature",
+    "hero": {
+      "headline": "Poderes",
+      "subheadline": "Representación legal con todas las formalidades de ley"
+    },
+    "description": "El poder es el instrumento mediante el cual una persona (poderdante) otorga a otra (apoderado) la facultad de representarla en actos jurídicos. Puede ser general o especial, según el alcance que se quiera dar.",
+    "benefits": [
+      { "icon": "user-check", "title": "Representación Legal", "description": "Tu apoderado actúa en tu nombre con plena validez legal." },
+      { "icon": "globe", "title": "Validez Internacional", "description": "Poderes con apostilla de La Haya para usar en el exterior." },
+      { "icon": "refresh-cw", "title": "Revocación Simple", "description": "Podés revocar el poder en cualquier momento ante el mismo escribano." }
+    ],
+    "items": [
+      "Poder general para administrar bienes",
+      "Poder general para pleitos y cobranzas",
+      "Poder especial para juicios",
+      "Poder para trámites ante la DNIT",
+      "Poder para trámites ante IPS y MTESS",
+      "Poder para representación societaria",
+      "Poder para trámites bancarios",
+      "Poder para comprar o vender inmuebles",
+      "Poder para trámites migratorios",
+      "Revocación de poderes"
+    ],
+    "process": [
+      "Identificar el alcance del poder necesario",
+      "Verificar capacidad legal del poderdante",
+      "Redacción del instrumento con cláusulas precisas",
+      "Firma ante escribano con cédula de identidad",
+      "Entrega del testimonio al apoderado"
+    ]
+  },
+  "contratos": {
+    "name": "Contratos",
+    "icon": "file-text",
+    "hero": {
+      "headline": "Contratos",
+      "subheadline": "Documentamos fielmente la voluntad de las partes"
+    },
+    "description": "Redactamos, revisamos y certificamos contratos de diversa naturaleza. Cada contrato se ajusta a la legislación paraguaya vigente y refleja con precisión la voluntad de las partes contratantes.",
+    "benefits": [
+      { "icon": "file-check", "title": "Claridad Jurídica", "description": "Redactamos cláusulas claras que evitan futuros conflictos." },
+      { "icon": "scale", "title": "Equilibrio Contractual", "description": "Buscamos que el contrato sea justo para todas las partes." },
+      { "icon": "certificate", "title": "Certificación Notarial", "description": "La firma ante escribano le da fecha cierta al documento." }
+    ],
+    "items": [
+      "Contratos de alquiler de inmuebles",
+      "Contratos de préstamo con o sin garantía",
+      "Contratos de fideicomiso",
+      "Cesión de derechos y acciones",
+      "Contratos de servicios profesionales",
+      "Contratos de construcción",
+      "Contratos de compraventa de bienes muebles",
+      "Contratos de mutuo",
+      "Contratos de transporte",
+      "Contratos de sociedad accidental"
+    ],
+    "process": [
+      "Análisis de necesidades y voluntad de las partes",
+      "Redacción del contrato con términos precisos",
+      "Revisión conjunta con todas las partes",
+      "Ajustes y modificaciones si son necesarias",
+      "Firma ante escribano"
+    ]
+  },
+  "legalizaciones": {
+    "name": "Legalizaciones y Apostillas",
+    "icon": "stamp",
+    "hero": {
+      "headline": "Legalizaciones y Apostillas",
+      "subheadline": "Tus documentos con validez internacional"
+    },
+    "description": "Gestionamos la legalización de documentos públicos y la Apostilla de La Haya para que tus documentos tengan validez plena en el extranjero. Paraguay es parte del Convenio de La Haya desde 2014.",
+    "benefits": [
+      { "icon": "globe", "title": "Validez Internacional", "description": "Documentos reconocidos en más de 120 países." },
+      { "icon": "zap", "title": "Gestión Rápida", "description": "Coordinamos directamente con el Ministerio de Relaciones Exteriores." },
+      { "icon": "check-circle", "title": "Sin Rechazos", "description": "Garantizamos que la documentación cumpla todos los requisitos." }
+    ],
+    "items": [
+      "Apostilla de La Haya ante el Ministerio de Relaciones Exteriores",
+      "Legalización de documentos públicos para uso en Paraguay desde el exterior",
+      "Autenticación de firmas en documentos privados",
+      "Certificación de copias simples y testimoniadas",
+      "Certificación de documentos para migraciones",
+      "Legalización de diplomas, títulos y certificados de estudio",
+      "Legalización de documentos comerciales",
+      "Traducción certificada de documentos públicos",
+      "Certificación de vida y residencia",
+      "Certificación de documentos para adopción internacional"
+    ],
+    "process": [
+      "Revisión del documento a legalizar o apostillar",
+      "Verificación de firmas y sellos",
+      "Gestión ante las autoridades (MRE, Ministerios)",
+      "Apostillado o legalización",
+      "Entrega del documento listo para uso internacional"
+    ]
+  },
+  "sucesiones": {
+    "name": "Sucesiones y Testamentos",
+    "icon": "landmark",
+    "hero": {
+      "headline": "Sucesiones y Testamentos",
+      "subheadline": "Planificá tu patrimonio y protegé a tu familia"
+    },
+    "description": "Te asistimos en todo el proceso sucesorio, desde la planificación patrimonial con testamentos hasta la declaratoria de herederos y partición de bienes. Actuamos con la sensibilidad y discreción que estos procesos requieren.",
+    "benefits": [
+      { "icon": "heart", "title": "Tranquilidad Familiar", "description": "Tu familia sabe exactamente cómo proceder." },
+      { "icon": "clock", "title": "Proceso Ágil", "description": "Gestionamos cada etapa sin demoras innecesarias." },
+      { "icon": "shield", "title": "Protección Patrimonial", "description": "Asegurás que tus bienes vayan a quienes elegiste." }
+    ],
+    "items": [
+      "Testamento ológrafo: redactado de puño y letra por el testador",
+      "Testamento abierto: otorgado ante escribano y testigos",
+      "Testamento cerrado: escrito y firmado, entregado al escribano en sobre cerrado",
+      "Declaratoria de herederos",
+      "Sucesión intestada (sin testamento)",
+      "Sucesión testamentaria",
+      "Partición y adjudicación de bienes",
+      "Aceptación de herencia con beneficio de inventario",
+      "Renuncia de herencia",
+      "Administración judicial de herencia"
+    ],
+    "process": [
+      "Evaluación del patrimonio del causante",
+      "Identificación de herederos forzosos y voluntarios",
+      "Preparación de documentación",
+      "Inicio del proceso sucesorio judicial o notarial",
+      "Inventario y avalúo de bienes",
+      "Partición y adjudicación de bienes",
+      "Inscripción en registros públicos",
+      "Liquidación de impuestos sucesorios"
+    ]
+  },
+  "societario": {
+    "name": "Actos Societarios",
+    "icon": "building",
+    "hero": {
+      "headline": "Actos Societarios",
+      "subheadline": "Toda la vida de tu sociedad, con respaldo notarial"
+    },
+    "description": "Asistimos a emprendedores y empresarios en cada etapa de la vida societaria. Desde la elección del tipo societario más conveniente hasta la constitución, modificación y disolución de sociedades.",
+    "benefits": [
+      { "icon": "rocket", "title": "Constitución Rápida", "description": "Tu sociedad operativa en semanas, no meses." },
+      { "icon": "trending-up", "title": "Crecimiento Legal", "description": "Aumentos de capital, fusiones y reestructuraciones ágiles." },
+      { "icon": "file-text", "title": "Documentación Completa", "description": "Todos los libros y actas con las formalidades de ley." }
+    ],
+    "items": [
+      "Constitución de Sociedad de Responsabilidad Limitada (SRL)",
+      "Constitución de Sociedad Anónima (SA)",
+      "Constitución de Empresa Asociativa (EAS)",
+      "Constitución de Empresa Unipersonal",
+      "Modificación de contrato social o estatuto",
+      "Aumento y reducción de capital",
+      "Transformación, fusión y escisión de sociedades",
+      "Disolución y liquidación de sociedades",
+      "Actas de asamblea de accionistas",
+      "Actas de directorio",
+      "Nombramiento y remoción de directores",
+      "Emisión de acciones ydebentures"
+    ],
+    "process": [
+      "Definición del tipo societario más conveniente",
+      "Redacción del contrato social o estatuto",
+      "Constitución por escritura pública",
+      "Inscripción en la Dirección General de Registros Públicos",
+      "Publicación en el diario oficial",
+      "Obtención del RUC ante la DNIT",
+      "Habilitación de libros societarios"
+    ]
+  }
+}

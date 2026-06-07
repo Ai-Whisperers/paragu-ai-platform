@@ -1,0 +1,12 @@
+{
+  "_annotation": {
+    "name": "Feature: hero",
+    "what": "Feature flags",
+    "why": "Control funcionalidades",
+    "ai_popolates": "Segun plan",
+    "your_input": "Preferencias",
+    "plan": "Todos"
+  },
+  "exitIntentPopup": true,
+  "process": true
+}

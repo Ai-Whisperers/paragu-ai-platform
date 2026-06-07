@@ -1,0 +1,22 @@
+{
+  "_annotation": {
+    "name": "Promotion Card (promo-2.json)",
+    "what": "Individual promotion — 2x1 on Group Workshops, with title, subtitle, original price, discounted price, validity date, image, CTA, and WhatsApp message.",
+    "why": "A 2x1 offer creates social proof and urgency. The buyer brings a friend, doubling the chance both become repeat customers.",
+    "ai_popolates": "Title and subtitle: Generated from your offer. Original/discounted price: AI calculates the 2x1 economics. Validity: Set from your stated promotion period.",
+    "your_input": "Tell us the workshop you want to promote with 2x1 and the validity dates. We generate the full promo card.",
+    "plan": "All plans"
+  },
+  "description": "Individual promotion with title, description, image, and pricing. Packages complementary services at a preferential rate. AI generates this data from the business's service catalog.",
+  "id": "2",
+  "title": "New Year, New Services",
+  "description": "2x1 on Group Workshops",
+  "validUntil": "2026-06-30",
+  "originalPrice": 200000,
+  "price": 100000,
+  "image": "/images/promotions/new-year.png",
+  "badge": "2x1",
+  "subtitle": "Take two workshops for the price of one",
+  "expires": "2026-06-30",
+  "waMessage": "Hello! I want info about the 2x1 promotion on workshops"
+}

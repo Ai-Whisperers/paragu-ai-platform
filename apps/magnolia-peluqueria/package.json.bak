@@ -1,0 +1,49 @@
+{
+  "name": "magnolia-peluqueria",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:ci": "vitest run",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "@ai-whisperers/admin": "file:/root/ai-whisperers-base/packages/admin",
+    "@ai-whisperers/auth": "file:/root/ai-whisperers-base/packages/auth",
+    "@ai-whisperers/commerce": "file:/root/ai-whisperers-base/packages/commerce",
+    "@ai-whisperers/i18n": "file:/root/ai-whisperers-base/packages/i18n",
+    "@ai-whisperers/sections": "file:/root/ai-whisperers-base/packages/sections",
+    "@ai-whisperers/seo": "file:/root/ai-whisperers-base/packages/seo",
+    "@ai-whisperers/theme": "file:/root/ai-whisperers-base/packages/theme",
+    "@ai-whisperers/ui": "file:/root/ai-whisperers-base/packages/ui",
+    "@ai-whisperers/whatsapp": "file:/root/ai-whisperers-base/packages/whatsapp",
+    "@supabase/supabase-js": "^2.39.0",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "lucide-react": "^1.14.0",
+    "next": "16.2.4",
+    "postcss": "^8.5.15",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "stripe": "^22.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "jsdom": "^29.1.1",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5",
+    "vitest": "^4.1.7"
+  }
+}

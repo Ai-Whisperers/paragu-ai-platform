@@ -1,0 +1,51 @@
+{
+  "name": "pitchy-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "test:ci": "vitest run",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "@ai-whisperers/admin": "workspace:*",
+    "@ai-whisperers/auth": "workspace:*",
+    "@ai-whisperers/commerce": "workspace:*",
+    "@ai-whisperers/i18n": "workspace:*",
+    "@ai-whisperers/seo": "workspace:*",
+    "@ai-whisperers/theme": "workspace:*",
+    "@ai-whisperers/ui": "workspace:*",
+    "@ai-whisperers/whatsapp": "workspace:*",
+    "@radix-ui/react-dialog": "*",
+    "@radix-ui/react-select": "*",
+    "@radix-ui/react-slot": "*",
+    "@supabase/ssr": "*",
+    "@supabase/supabase-js": "*",
+    "@types/react-dom": "^19.2.3",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "class-variance-authority": "*",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.510.0",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "*",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^22.19.17",
+    "@types/react": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.2",
+    "jsdom": "^29.1.1",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.8.0",
+    "vitest": "^4.1.7"
+  }
+}
