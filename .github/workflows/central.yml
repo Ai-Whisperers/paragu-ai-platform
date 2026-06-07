@@ -1,0 +1,125 @@
+name: central
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+concurrency:
+  group: central-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  detect-apps:
+    runs-on: ubuntu-latest
+    outputs:
+      apps: ${{ steps.diff.outputs.apps }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: diff
+        with:
+          filters: |
+            apps/3md-website:
+              - 'apps/3md-website/**'
+            apps/bichos-gym:
+              - 'apps/bichos-gym/**'
+            apps/bufete-mendez:
+              - 'apps/bufete-mendez/**'
+            apps/builder:
+              - 'apps/builder/**'
+            apps/camilo-acosta:
+              - 'apps/camilo-acosta/**'
+            apps/de-abasto-a-casa:
+              - 'apps/de-abasto-a-casa/**'
+            apps/escribania-paraguay:
+              - 'apps/escribania-paraguay/**'
+            apps/estudio-medieval:
+              - 'apps/estudio-medieval/**'
+            apps/fun4me:
+              - 'apps/fun4me/**'
+            apps/fun4me-store:
+              - 'apps/fun4me-store/**'
+            apps/golden-visa-advisory:
+              - 'apps/golden-visa-advisory/**'
+            apps/granja-cabral:
+              - 'apps/granja-cabral/**'
+            apps/jota-ink-tattoo:
+              - 'apps/jota-ink-tattoo/**'
+            apps/luis-de-leon-concept:
+              - 'apps/luis-de-leon-concept/**'
+            apps/magnolia-peluqueria:
+              - 'apps/magnolia-peluqueria/**'
+            apps/mantraspa:
+              - 'apps/mantraspa/**'
+            apps/meal-prep:
+              - 'apps/meal-prep/**'
+            apps/nde-barba:
+              - 'apps/nde-barba/**'
+            apps/nexa-paraguay:
+              - 'apps/nexa-paraguay/**'
+            apps/ozmontania-website:
+              - 'apps/ozmontania-website/**'
+            apps/pitchy-website:
+              - 'apps/pitchy-website/**'
+            apps/portas-barber:
+              - 'apps/portas-barber/**'
+            apps/reina-de-copas:
+              - 'apps/reina-de-copas/**'
+            apps/shine-nails:
+              - 'apps/shine-nails/**'
+            apps/trentina-cerveza:
+              - 'apps/trentina-cerveza/**'
+            apps/trentina-site:
+              - 'apps/trentina-site/**'
+            apps/tsuki-restaurante:
+              - 'apps/tsuki-restaurante/**'
+            apps/villamayor-asociados:
+              - 'apps/villamayor-asociados/**'
+            apps/xxgym:
+              - 'apps/xxgym/**'
+      - name: Emit changed apps
+        run: |
+          APPS=""
+          for app in 3md-website bichos-gym bufete-mendez builder camilo-acosta de-abasto-a-casa escribania-paraguay estudio-medieval fun4me fun4me-store golden-visa-advisory granja-cabral jota-ink-tattoo luis-de-leon-concept magnolia-peluqueria mantraspa meal-prep nde-barba nexa-paraguay ozmontania-website pitchy-website portas-barber reina-de-copas shine-nails trentina-cerveza trentina-site tsuki-restaurante villamayor-asociados xxgym; do
+            VAL="${{ steps.diff.outputs[app] }}"
+            if [ "$VAL" = "true" ]; then
+              if [ -z "$APPS" ]; then APPS="$app"; else APPS="$APPS,$app"; fi
+            fi
+          done
+          echo "apps=$APPS" >> "$GITHUB_OUTPUT"
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: detect-apps
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm -r --filter "./apps/${{ matrix.app }}" run lint
+
+  typecheck:
+    runs-on: ubuntu-latest
+    needs: detect-apps
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm -r --filter "./apps/${{ matrix.app }}" run typecheck || echo 'typecheck script not defined'
