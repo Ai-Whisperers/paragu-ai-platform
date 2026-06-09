@@ -8,6 +8,25 @@
     ".": {
       "types": "./index.ts",
       "import": "./index.ts"
+    },
+    "./server": {
+      "types": "./server.ts",
+      "import": "./server.ts"
+    },
+    "./middleware": {
+      "types": "./middleware.ts",
+      "import": "./middleware.ts"
+    },
+    "./LocaleSwitcher": {
+      "types": "./LocaleSwitcher.tsx",
+      "import": "./LocaleSwitcher.tsx"
     }
+  },
+  "peerDependencies": {
+    "next": ">=16.0.0",
+    "react": ">=18.0.0"
+  },
+  "dependencies": {
+    "typescript": "5.9.3"
   }
 }

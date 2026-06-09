@@ -1,0 +1,55 @@
+{
+  "common": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "contact": "Contato",
+    "book": "Reservar",
+    "learn_more": "Saiba mais",
+    "read_more": "Leia mais",
+    "view_all": "Ver tudo",
+    "send": "Enviar",
+    "name": "Nome",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "message": "Mensagem",
+    "submit": "Enviar",
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "gallery": "Galeria",
+    "contact": "Contato",
+    "blog": "Blog"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados",
+    "follow_us": "Siga-nos",
+    "quick_links": "Links rápidos",
+    "contact_us": "Fale conosco"
+  },
+  "hero": {
+    "welcome": "Bem-vindo",
+    "subtitle": "Seu destino para serviços premium no Paraguai"
+  },
+  "contact": {
+    "title": "Fale conosco",
+    "subtitle": "Estamos aqui para ajudar",
+    "address": "Endereço",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "hours": "Horário",
+    "send_message": "Enviar mensagem"
+  },
+  "booking": {
+    "title": "Reservar horário",
+    "select_service": "Selecione um serviço",
+    "select_date": "Selecione uma data",
+    "select_time": "Selecione um horário",
+    "confirm": "Confirmar reserva"
+  }
+}

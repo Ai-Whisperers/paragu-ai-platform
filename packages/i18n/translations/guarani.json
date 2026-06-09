@@ -1,0 +1,55 @@
+{
+  "common": {
+    "home": "Óga",
+    "about": "Nde rehegua",
+    "services": "Ñemobyta",
+    "contact": "Ñeñe'ẽ",
+    "book": "Moĩmbaw",
+    "learn_more": "Eikuaave",
+    "read_more": "Eñemongetave",
+    "view_all": "Ehecha opaite",
+    "send": "Emondo",
+    "name": "Téra",
+    "email": "Ñanduti veve",
+    "phone": "Pumbyry",
+    "message": "Ñe'ẽ",
+    "submit": "Emondo",
+    "loading": "Oñemokarẽ...",
+    "error": "Oĩ jejavy",
+    "success": "Oĩ porã"
+  },
+  "nav": {
+    "home": "Óga",
+    "about": "Nde rehegua",
+    "services": "Ñemobyta",
+    "gallery": "Ta'anga",
+    "contact": "Ñeñe'ẽ",
+    "blog": "Ñemombe'u"
+  },
+  "footer": {
+    "rights": "Opaite jehepyme'ẽ oñeñangareko",
+    "follow_us": "Eñeñangareko oré ndive",
+    "quick_links": "Joaju pya'e",
+    "contact_us": "Eñe'ẽ oré ndive"
+  },
+  "hero": {
+    "welcome": "Mba'éichapa",
+    "subtitle": "Nde rendápa ñemobyta porã Paraguáipe"
+  },
+  "contact": {
+    "title": "Eñe'ẽ oré ndive",
+    "subtitle": "Jahaséramo ndepytyvõhárõ",
+    "address": "Tendá",
+    "phone": "Pumbyry",
+    "email": "Ñanduti veve",
+    "hours": "Ára",
+    "send_message": "Emondo ñe'ẽ"
+  },
+  "booking": {
+    "title": "Moĩmbaw",
+    "select_service": "Eiporavo ñemobyta",
+    "select_date": "Eiporavo ára",
+    "select_time": "Eiporavo ora",
+    "confirm": "Eñemoneĩ"
+  }
+}

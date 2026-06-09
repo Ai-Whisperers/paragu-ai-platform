@@ -1,0 +1,55 @@
+{
+  "common": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "book": "Reservar",
+    "learn_more": "Saber más",
+    "read_more": "Leer más",
+    "view_all": "Ver todo",
+    "send": "Enviar",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "message": "Mensaje",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "blog": "Blog"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "follow_us": "Síguenos",
+    "quick_links": "Enlaces rápidos",
+    "contact_us": "Contáctanos"
+  },
+  "hero": {
+    "welcome": "Bienvenido",
+    "subtitle": "Tu destino para servicios premium en Paraguay"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "hours": "Horario",
+    "send_message": "Enviar mensaje"
+  },
+  "booking": {
+    "title": "Reservar cita",
+    "select_service": "Selecciona un servicio",
+    "select_date": "Selecciona una fecha",
+    "select_time": "Selecciona una hora",
+    "confirm": "Confirmar reserva"
+  }
+}

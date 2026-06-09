@@ -1,0 +1,55 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "book": "Book",
+    "learn_more": "Learn more",
+    "read_more": "Read more",
+    "view_all": "View all",
+    "send": "Send",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "follow_us": "Follow us",
+    "quick_links": "Quick links",
+    "contact_us": "Contact us"
+  },
+  "hero": {
+    "welcome": "Welcome",
+    "subtitle": "Your destination for premium services in Paraguay"
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "We are here to help",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Hours",
+    "send_message": "Send message"
+  },
+  "booking": {
+    "title": "Book appointment",
+    "select_service": "Select a service",
+    "select_date": "Select a date",
+    "select_time": "Select a time",
+    "confirm": "Confirm booking"
+  }
+}
