@@ -9,7 +9,7 @@ interface SearchInputProps {
   ui: UiSearch
   className?: string
   /** Called on mount if the input gets focus (Cmd+K shortcut). */
-  inputRef?: React.RefObject<HTMLInputElement | null>
+  inputRef?: React.RefObject<HTMLInputElement>
 }
 
 export function SearchInput({ value, onChange, ui, className = '', inputRef }: SearchInputProps) {

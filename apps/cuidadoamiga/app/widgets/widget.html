@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuidado Amiga Widget</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    #map { height: 400px; width: 100%; }
+    .popup a { color: #be123c; text-decoration: none; font-weight: bold; }
+    .popup a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const baseUrl = params.get('base_url') || 'https://cuidadoamiga.com';
+      const lang = params.get('lang') || 'es';
+      const limit = params.get('limit') || '50';
+
+      const map = L.map('map').setView([-25.4, -57.6], 4);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap'
+      }).addTo(map);
+
+      fetch(`${baseUrl}/api/v1/cases?limit=${limit}`)
+        .then(res => res.json())
+        .then(data => {
+          data.data.filter(c => c.lat && c.lng).forEach(c => {
+            const popup = L.popup()
+              .setContent(`<a href="${baseUrl}/${lang}/casos/${c.id}" target="_blank" rel="noopener noreferrer"><strong>${c.nombre}</strong></a><br>${c.ciudad}, ${c.pais}<br><small>${c.fecha}</small>`);
+            L.marker([c.lat, c.lng]).addTo(map).bindPopup(popup);
+          });
+        })
+        .catch(err => console.error('Error cargando casos:', err));
+    })();
+  </script>
+</body>
+</html>
