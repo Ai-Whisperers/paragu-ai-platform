@@ -2,7 +2,7 @@
 
 ## Quick Links
 - **Live:** https://fun4me.paragu-ai.com
-- **Repo:** github.com/Ai-Whisperers/fun4me
+- **Repo:** github.com/Ai-Whisperers/paragu-ai-platform/tree/main/apps/fun4me
 - **Docker service:** fun4me_web (Swarm, 2 replicas)
 - **Traefik:** Host(`fun4me.paragu-ai.com`)
 - **Supabase:** jrekgsnflnugqpsyhnxh.supabase.co

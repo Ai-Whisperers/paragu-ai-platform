@@ -3,7 +3,7 @@
 Artist website for **Oz Montanía** (Oscar Montanía Villar), Paraguayan visual artist, muralist and illustrator.
 
 **Live:** https://ozmontania.paragu-ai.com  
-**Repo:** https://github.com/Ai-Whisperers/ozmontania-website
+**Repo:** https://github.com/Ai-Whisperers/paragu-ai-platform/tree/main/apps/ozmontania-website
 
 ## Stack
 

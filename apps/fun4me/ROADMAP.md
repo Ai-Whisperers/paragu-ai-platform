@@ -942,7 +942,7 @@ YEAR 3+ (diversify):
 
 *Document version: 3.0 — "The Roasted Edition"*
 *Created: 2026-04-03*
-*Repository: github.com/Ai-Whisperers/fun4me-store*
+*Repository: github.com/Ai-Whisperers/paragu-ai-platform/tree/main/apps/fun4me-store*
 *Total features: ~116 (down from 239)*
 *Dev hours: ~450h (down from ~1,200h)*
 *Timeline: 20 weeks with phase gates (down from 24 weeks waterfall)*

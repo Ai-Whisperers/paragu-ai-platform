@@ -2,7 +2,7 @@
 
 ## Quick Links
 - **Live:** https://villamayor.paragu-ai.com
-- **Repo:** github.com/Ai-Whisperers/villamayor-asociados
+- **Repo:** github.com/Ai-Whisperers/paragu-ai-platform/tree/main/apps/villamayor-asociados
 - **Docker service:** villamayor-asociados_web (2 replicas)
 - **VPS:** 72.61.44.159
 - **Traefik:** Host(`villamayor.paragu-ai.com`)

@@ -2,7 +2,7 @@
 
 ## Quick Links
 - **Live:** https://ozmontania.paragu-ai.com
-- **Repo:** github.com/Ai-Whisperers/ozmontania-website
+- **Repo:** github.com/Ai-Whisperers/paragu-ai-platform/tree/main/apps/ozmontania-website
 - **Docker service:** ozmontania_web (2 replicas)
 - **Traefik:** Host(`ozmontania.paragu-ai.com`)
 

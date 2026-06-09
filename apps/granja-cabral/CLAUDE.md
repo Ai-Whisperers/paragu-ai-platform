@@ -2,7 +2,7 @@
 
 ## Quick Links
 - **Live:** https://granjacabral.paragu-ai.com
-- **Repo:** github.com/Ai-Whisperers/granja-cabral
+- **Repo:** github.com/Ai-Whisperers/paragu-ai-platform/tree/main/apps/granja-cabral
 - **Docker service:** granja-cabral_web (1 replica)
 
 ## Pages (page-configs)

@@ -64,7 +64,7 @@ Push a `git push` a `main` — GitHub Actions compila y deploya al VPS automáti
 | `docs/competitive-differentiation-saisha.md` | Diferenciación vs Saisha — comunidad > e-commerce |
 | `docs/quiz-strategy.md` | Concepto y lógica del quiz de talla |
 
-Repo strategy docs: https://github.com/Ai-Whisperers/reina-de-copas (rama main)
+Repo strategy docs: https://github.com/Ai-Whisperers/paragu-ai-platform/tree/main/apps/reina-de-copas (rama main)
 
 ## Recursos
 

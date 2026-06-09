@@ -1,7 +1,7 @@
 # Fun4Me — Upgrade Plan: Store → Full Kink Community Platform
 
 > **Date:** 2026-05-03
-> **Repo:** github.com/Ai-Whisperers/fun4me
+> **Repo:** github.com/Ai-Whisperers/paragu-ai-platform/tree/main/apps/fun4me
 > **Domain:** fun4me.paragu-ai.com
 > **Stack:** Next.js 16 + Supabase + Docker Swarm + Traefik
 

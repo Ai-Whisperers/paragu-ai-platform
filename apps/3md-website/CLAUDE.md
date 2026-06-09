@@ -2,7 +2,7 @@
 
 ## Quick Links
 - **Live:** https://3mind.paragu-ai.com
-- **Repo:** github.com/Ai-Whisperers/3md-website
+- **Repo:** github.com/Ai-Whisperers/paragu-ai-platform/tree/main/apps/3md-website
 - **Docker service:** 30vcs_web (2 replicas)
 - **Traefik:** Host(`3mind.paragu-ai.com`)
 
