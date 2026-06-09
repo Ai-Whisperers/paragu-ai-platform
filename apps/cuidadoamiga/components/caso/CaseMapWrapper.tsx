@@ -1,6 +1,6 @@
-import { createBrowserSupabase } from '@/lib/supabase'
+import { getServerSupabase } from '@/lib/supabase/server'
 import type { Lang } from '@/lib/content'
-import { CaseMap } from './CaseMap'
+import CaseMap from './CaseMap'
 
 interface CaseMapWrapperProps {
   lang: Lang
@@ -28,7 +28,7 @@ export async function CaseMapWrapper({ lang: _lang }: CaseMapWrapperProps) {
     cases = getDemoCases()
   } else {
     try {
-      const supabase = createBrowserSupabase()
+      const supabase = await getServerSupabase()
       const { data, error } = await supabase
         .from('cases')
         .select('id, nombre, victima, fecha, tipo, pais, ciudad, lat, lng')
