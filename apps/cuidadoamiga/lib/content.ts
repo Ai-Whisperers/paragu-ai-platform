@@ -29,9 +29,9 @@ export const DEFAULT_LANG: Lang = 'es'
 export type { SiteContent }
 
 const SITE_BY_LANG: Record<Lang, SiteContent> = {
-  es: { ...siteEs, admin: adminEs } as unknown as SiteContent,
-  pt: { ...sitePt, admin: adminPt } as unknown as SiteContent,
-  en: { ...siteEn, admin: adminEn } as unknown as SiteContent,
+  es: { ...siteEs, admin: adminEs.admin } as unknown as SiteContent,
+  pt: { ...sitePt, admin: adminPt.admin } as unknown as SiteContent,
+  en: { ...siteEn, admin: adminEn.admin } as unknown as SiteContent,
 }
 
 export function isLang(value: string): value is Lang {
