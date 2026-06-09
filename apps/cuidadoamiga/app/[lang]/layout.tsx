@@ -5,6 +5,7 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { JsonLd } from '@/components/shared/JsonLd'
 import { LanguageSwitcher } from '@/components/shared/LanguageSwitcher'
+import { SkipLink } from '@/components/a11y/SkipLink'
 import '@/app/globals.css'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' })
@@ -50,7 +51,6 @@ export default async function LangLayout({
     <html lang={lang} className={inter.className}>
       <body className="min-h-full flex flex-col">
         <SkipLink />
-        <a href="#main" className="skip-link">Saltar al contenido</a>
         <JsonLd
           data={{
             '@context': 'https://schema.org',
