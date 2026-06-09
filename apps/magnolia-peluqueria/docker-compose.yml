@@ -1,38 +1,18 @@
 services:
   web:
-    build: .
     image: magnolia-peluqueria:prod
-    ports:
-      - "3000"
-    networks:
-      - agent-net
-    env_file:
-      - .env.production
     deploy:
-      mode: replicated
-      replicas: 2
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: 512M
-        reservations:
-          cpus: '0.1'
-          memory: 128M
+      replicas: 1
       labels:
         - "traefik.enable=true"
         - "traefik.docker.network=agent-net"
-        - "traefik.http.routers.magnolia.entrypoints=websecure"
-        - "traefik.http.routers.magnolia.rule=Host(`magnolia-peluqueria.paragu-ai.com`)"
-        - "traefik.http.routers.magnolia.tls=true"
-        - "traefik.http.routers.magnolia.tls.certresolver=letsencryptresolver"
-        - "traefik.http.services.magnolia.loadbalancer.server.port=3000"
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 15s
-
+        - "traefik.http.routers.magnolia-peluqueria.entrypoints=websecure"
+        - "traefik.http.routers.magnolia-peluqueria.rule=Host(`magnolia-peluqueria.paragu-ai.com`)"
+        - "traefik.http.routers.magnolia-peluqueria.tls=true"
+        - "traefik.http.routers.magnolia-peluqueria.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.magnolia-peluqueria.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
 networks:
   agent-net:
     external: true

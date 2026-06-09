@@ -1,5 +1,8 @@
 import { Heart, Users, Calendar, Mic2 } from "lucide-react";
+
 import MainLayout from "../../components/MainLayout";
+
+
 
 const milestones = [
   { year: "Origen", title: "Camilo Acosta crea El Gato Siamés", description: "El nombre nace de un juego de palabras: la raza felina y la idea de hermanos siameses, una dualidad que también aparece en su logo." },

@@ -1,25 +1,18 @@
-version: '3.8'
 services:
   web:
-    image: camilo-acosta-web:latest
-    build:
-      context: /root/camilo-acosta
-      dockerfile: /root/camilo-acosta/Dockerfile
-    environment:
-      - NODE_ENV=production
-      - HOST=0.0.0.0
-      - PORT=3000
-    networks:
-      - agent-net
+    image: camilo-acosta:prod
     deploy:
+      replicas: 1
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.camilo-acosta.rule=Host(`elgatosiames.paragu-ai.com`)"
+        - "traefik.docker.network=agent-net"
         - "traefik.http.routers.camilo-acosta.entrypoints=websecure"
+        - "traefik.http.routers.camilo-acosta.rule=Host(`camilo-acosta.paragu-ai.com`)"
         - "traefik.http.routers.camilo-acosta.tls=true"
         - "traefik.http.routers.camilo-acosta.tls.certresolver=letsencryptresolver"
-        - "traefik.http.services.camilo-acosta.loadbalancer.server.port=3000"
-        - "traefik.swarm.network=agent-net"
+        - "traefik.http.services.camilo-acosta.loadbalancer.server.port=80"
+    networks:
+      - agent-net
 networks:
   agent-net:
     external: true

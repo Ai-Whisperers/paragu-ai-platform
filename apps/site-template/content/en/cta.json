@@ -1,8 +1,0 @@
-{
-  "description": "Template CTA prompts — clients fill in their call-to-action.",
-  "title": "LLAMADO_A_ACCION_PRINCIPAL",
-  "subtitle": "Explique por qué el visitante debería actuar ahora (urgencia + beneficio)",
-  "buttonText": "TU_BOTÓN_CTA",
-  "buttonLink": "/en/booking",
-  "image": "/images/cta/banner.png"
-}

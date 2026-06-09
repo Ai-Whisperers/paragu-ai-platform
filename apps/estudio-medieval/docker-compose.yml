@@ -1,0 +1,18 @@
+services:
+  web:
+    image: estudio-medieval:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.estudio-medieval.entrypoints=websecure"
+        - "traefik.http.routers.estudio-medieval.rule=Host(`estudio-medieval.paragu-ai.com`)"
+        - "traefik.http.routers.estudio-medieval.tls=true"
+        - "traefik.http.routers.estudio-medieval.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.estudio-medieval.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

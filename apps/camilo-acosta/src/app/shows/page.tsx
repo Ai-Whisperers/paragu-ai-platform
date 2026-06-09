@@ -1,5 +1,8 @@
 import { Calendar, MapPin, Clock, Ticket, ArrowRight } from "lucide-react";
+
 import MainLayout from "../../components/MainLayout";
+
+
 
 const shows = [
   { id: 1, date: "2026", time: "Agenda abierta", city: "Paraguay", venue: "Teatros, clubes y festivales", address: "Fechas a confirmar por producción", tickets: "/contacto", status: "soon" },

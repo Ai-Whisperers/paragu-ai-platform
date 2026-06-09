@@ -1,6 +1,10 @@
 import Link from "next/link";
+
 import { Calendar, MapPin, ArrowRight, Play, Mail, Mic2 } from "lucide-react";
+
 import MainLayout from "../components/MainLayout";
+
+
 
 const highlights = [
   { label: "Nombre real", value: "Camilo Acosta", icon: "🎭" },

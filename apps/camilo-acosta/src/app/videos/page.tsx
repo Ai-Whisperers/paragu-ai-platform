@@ -1,5 +1,8 @@
 import { Play, Video, ExternalLink, Mic2 } from "lucide-react";
+
 import MainLayout from "../../components/MainLayout";
+
+
 
 const featuredVideos = [
   { id: 1, title: "Entrevista: origen de El Gato Siamés", platform: "Radio Up", image: "/images/gato/standup-context.webp", url: "https://radioup.com.ar/comedia-y-juegos-en-vivo-sala-tempo/", description: "Camilo explica el nombre, la estética del personaje, su humor negro y el formato one-liner." },

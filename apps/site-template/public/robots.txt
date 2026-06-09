@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Sitemap: https://magnolia-peluqueria.paragu-ai.com/sitemap.xml

@@ -1,0 +1,18 @@
+services:
+  web:
+    image: shine-nails:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.shine-nails.entrypoints=websecure"
+        - "traefik.http.routers.shine-nails.rule=Host(`shine-nails.paragu-ai.com`)"
+        - "traefik.http.routers.shine-nails.tls=true"
+        - "traefik.http.routers.shine-nails.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.shine-nails.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

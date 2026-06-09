@@ -1,14 +1,18 @@
 services:
   web:
-    build: .
     image: bufete-mendez:prod
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=production
-    restart: unless-stopped
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.bufete-mendez.rule=Host(`bufete-mendez.paragu-ai.com`)"
-      - "traefik.http.routers.bufete-mendez.entrypoints=websecure"
-      - "traefik.http.services.bufete-mendez.loadbalancer.server.port=3000"
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.bufete-mendez.entrypoints=websecure"
+        - "traefik.http.routers.bufete-mendez.rule=Host(`bufete-mendez.paragu-ai.com`)"
+        - "traefik.http.routers.bufete-mendez.tls=true"
+        - "traefik.http.routers.bufete-mendez.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.bufete-mendez.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

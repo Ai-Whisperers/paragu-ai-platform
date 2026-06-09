@@ -1,28 +1,18 @@
-version: '3.8'
-
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: reina-de-copas:latest
-    restart: always
-    environment:
-      - PORT=3000
-      - NODE_ENV=production
-    networks:
-      - agent-net
+    image: reina-de-copas:prod
     deploy:
       replicas: 1
       labels:
         - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
         - "traefik.http.routers.reina-de-copas.entrypoints=websecure"
         - "traefik.http.routers.reina-de-copas.rule=Host(`reina-de-copas.paragu-ai.com`)"
         - "traefik.http.routers.reina-de-copas.tls=true"
         - "traefik.http.routers.reina-de-copas.tls.certresolver=letsencryptresolver"
         - "traefik.http.services.reina-de-copas.loadbalancer.server.port=3000"
-        - "traefik.docker.network=agent-net"
-
+    networks:
+      - agent-net
 networks:
   agent-net:
     external: true

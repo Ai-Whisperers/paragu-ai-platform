@@ -1,28 +1,18 @@
 services:
   web:
-    image: tsuki:latest
-    ports:
-      - "3000"
-    networks:
-      - agent-net
+    image: tsuki-restaurante:prod
     deploy:
-      mode: replicated
-      replicas: 2
+      replicas: 1
       labels:
         - "traefik.enable=true"
         - "traefik.docker.network=agent-net"
-        - "traefik.http.routers.tsuki.entrypoints=websecure"
-        - "traefik.http.routers.tsuki.rule=Host(`tsuki.paragu-ai.com`)"
-        - "traefik.http.routers.tsuki.tls=true"
-        - "traefik.http.routers.tsuki.tls.certresolver=letsencryptresolver"
-        - "traefik.http.services.tsuki.loadbalancer.server.port=3000"
-    healthcheck:
-      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:3000/"]
-      interval: 15s
-      timeout: 5s
-      retries: 3
-      start_period: 5s
-
+        - "traefik.http.routers.tsuki-restaurante.entrypoints=websecure"
+        - "traefik.http.routers.tsuki-restaurante.rule=Host(`tsuki-restaurante.paragu-ai.com`)"
+        - "traefik.http.routers.tsuki-restaurante.tls=true"
+        - "traefik.http.routers.tsuki-restaurante.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.tsuki-restaurante.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
 networks:
   agent-net:
     external: true

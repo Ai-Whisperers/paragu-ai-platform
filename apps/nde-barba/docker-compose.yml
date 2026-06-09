@@ -1,0 +1,18 @@
+services:
+  web:
+    image: nde-barba:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.nde-barba.entrypoints=websecure"
+        - "traefik.http.routers.nde-barba.rule=Host(`nde-barba.paragu-ai.com`)"
+        - "traefik.http.routers.nde-barba.tls=true"
+        - "traefik.http.routers.nde-barba.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.nde-barba.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

@@ -1,35 +1,18 @@
 services:
   web:
-    build: .
     image: de-abasto-a-casa:prod
-    ports:
-      - target: 3000
-        published: 3000
-        mode: ingress
-    environment:
-      - NODE_ENV=production
-      - NEXT_PUBLIC_BASE_URL=https://deabastoacasa.paragu-ai.com
-    restart: unless-stopped
-    networks:
-      - agent-net
     deploy:
-      mode: replicated
       replicas: 1
       labels:
         - "traefik.enable=true"
-        # Router HTTP
-        - "traefik.http.routers.deabasto-http.rule=Host(`deabastoacasa.paragu-ai.com`)"
-        - "traefik.http.routers.deabasto-http.entrypoints=web"
-        - "traefik.http.routers.deabasto-http.service=deabasto"
-        # Router HTTPS con TLS explícito
-        - "traefik.http.routers.deabasto.rule=Host(`deabastoacasa.paragu-ai.com`)"
-        - "traefik.http.routers.deabasto.entrypoints=websecure"
-        - "traefik.http.routers.deabasto.tls=true"
-        - "traefik.http.routers.deabasto.tls.certresolver=letsencryptresolver"
-        - "traefik.http.routers.deabasto.service=deabasto"
-        # Service
-        - "traefik.http.services.deabasto.loadbalancer.server.port=3000"
-
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.de-abasto-a-casa.entrypoints=websecure"
+        - "traefik.http.routers.de-abasto-a-casa.rule=Host(`de-abasto-a-casa.paragu-ai.com`)"
+        - "traefik.http.routers.de-abasto-a-casa.tls=true"
+        - "traefik.http.routers.de-abasto-a-casa.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.de-abasto-a-casa.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
 networks:
   agent-net:
     external: true

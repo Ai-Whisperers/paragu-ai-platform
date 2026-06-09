@@ -1,32 +1,18 @@
 services:
   web:
     image: mantraspa:prod
-    networks:
-      - agent-net
-    environment:
-      - NODE_ENV=production
     deploy:
-      mode: replicated
-      replicas: 2
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: 512M
+      replicas: 1
       labels:
         - "traefik.enable=true"
         - "traefik.docker.network=agent-net"
-        - "traefik.http.routers.mantra.entrypoints=websecure"
-        - "traefik.http.routers.mantra.rule=Host(`mantraspa.paragu-ai.com`)"
-        - "traefik.http.routers.mantra.tls=true"
-        - "traefik.http.routers.mantra.tls.certresolver=letsencryptresolver"
-        - "traefik.http.services.mantra.loadbalancer.server.port=3000"
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 15s
-
+        - "traefik.http.routers.mantraspa.entrypoints=websecure"
+        - "traefik.http.routers.mantraspa.rule=Host(`mantraspa.paragu-ai.com`)"
+        - "traefik.http.routers.mantraspa.tls=true"
+        - "traefik.http.routers.mantraspa.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.mantraspa.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
 networks:
   agent-net:
     external: true

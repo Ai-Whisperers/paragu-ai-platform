@@ -1,0 +1,18 @@
+services:
+  web:
+    image: xxgym:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.xxgym.entrypoints=websecure"
+        - "traefik.http.routers.xxgym.rule=Host(`xxgym.paragu-ai.com`)"
+        - "traefik.http.routers.xxgym.tls=true"
+        - "traefik.http.routers.xxgym.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.xxgym.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

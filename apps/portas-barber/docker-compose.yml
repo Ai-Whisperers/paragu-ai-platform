@@ -1,0 +1,18 @@
+services:
+  web:
+    image: portas-barber:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.portas-barber.entrypoints=websecure"
+        - "traefik.http.routers.portas-barber.rule=Host(`portas-barber.paragu-ai.com`)"
+        - "traefik.http.routers.portas-barber.tls=true"
+        - "traefik.http.routers.portas-barber.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.portas-barber.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

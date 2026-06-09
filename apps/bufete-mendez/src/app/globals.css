@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @theme {
   --color-primary: #1a1a2e;
@@ -14,8 +16,8 @@
 
 @layer base {
   body {
-    background-color: #ffffff;
-    color: #1a1a2e;
-    font-family: Inter, system-ui, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
   }
 }

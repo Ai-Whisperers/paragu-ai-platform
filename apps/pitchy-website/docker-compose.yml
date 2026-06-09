@@ -1,29 +1,18 @@
 services:
   web:
-    build: .
-    image: pitchy:prod
-    ports: ["3000"]
-    networks: [agent-net]
+    image: pitchy-website:prod
     deploy:
-      mode: replicated
-      replicas: 2
-      resources:
-        limits: { memory: 512M, cpus: '0.5' }
-        reservations: { memory: 128M, cpus: '0.1' }
+      replicas: 1
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.pitchy.entrypoints=websecure"
-        - "traefik.http.routers.pitchy.rule=Host(`pitchy.paragu-ai.com`) || Host(`vitrumpy.paragu-ai.com`)"
-        - "traefik.http.routers.pitchy.tls=true"
-        - "traefik.http.routers.pitchy.tls.certresolver=letsencryptresolver"
-        - "traefik.http.services.pitchy.loadbalancer.server.port=3000"
         - "traefik.docker.network=agent-net"
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 15s
+        - "traefik.http.routers.pitchy-website.entrypoints=websecure"
+        - "traefik.http.routers.pitchy-website.rule=Host(`pitchy-website.paragu-ai.com`)"
+        - "traefik.http.routers.pitchy-website.tls=true"
+        - "traefik.http.routers.pitchy-website.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.pitchy-website.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
 networks:
   agent-net:
     external: true
