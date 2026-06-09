@@ -112,6 +112,113 @@ export interface SiteContent {
   caseTypes: { femicidio: string; abuso: string; acoso: string }
   judicialStates: { en_proceso: string; cerrado: string }
   admin: AdminContent
+  ui: {
+    search: UiSearch
+    filter: UiFilter
+    pagination: UiPagination
+    country: UiCountryPicker
+    date: UiDatePicker
+    stat: UiStatCards
+    chart: UiChart
+    csv: UiCsv
+    tag: UiTagLabels
+    share: UiShare
+    copy: UiCopy
+    alert: UiAlert
+    loading: UiLoading
+  }
+}
+
+// ── UI component content types ──────────────────────────────────────────
+export interface UiSearch {
+  placeholder: string
+  clearButton: string
+  noResults: string
+  resultsCount: string
+  searching: string
+}
+export interface UiFilter {
+  label: string
+  allCountries: string
+  allTypes: string
+  allYears: string
+  selectCountry: string
+  selectType: string
+  reset: string
+  clearAll: string
+}
+export interface UiPagination {
+  previous: string
+  next: string
+  page: string
+  loading: string
+}
+export interface UiCountryPicker {
+  placeholder: string
+  noResults: string
+  allCountries: string
+}
+export interface UiDatePicker {
+  from: string
+  to: string
+  year: string
+  allYears: string
+}
+export interface UiStatCards {
+  totalCases: string
+  totalCountries: string
+  thisYear: string
+  thisMonth: string
+  trendUp: string
+  trendDown: string
+  noChange: string
+}
+export interface UiChart {
+  byYear: string
+  byCountry: string
+  byType: string
+  byJudicialState: string
+  total: string
+  noData: string
+}
+export interface UiCsv {
+  download: string
+  exporting: string
+  error: string
+  success: string
+}
+export interface UiTagLabels {
+  femicidio: string
+  abuso: string
+  acoso: string
+  en_proceso: string
+  cerrado: string
+}
+export interface UiShare {
+  twitter: string
+  whatsapp: string
+  facebook: string
+  copyLink: string
+  copied: string
+  shareLink: string
+}
+export interface UiCopy {
+  copy: string
+  copied: string
+  copyLink: string
+}
+export interface UiAlert {
+  dismiss: string
+  info: string
+  success: string
+  warning: string
+  danger: string
+}
+export interface UiLoading {
+  loading: string
+  saving: string
+  processing: string
+  error: string
 }
 
 export type InfoSection = { title: string; items?: string[]; body?: string }

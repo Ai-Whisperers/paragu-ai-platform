@@ -11,26 +11,62 @@
   },
   "navigation": {
     "items": [
-      { "label": "Mapa", "href": "/es" },
-      { "label": "Dónde denunciar", "href": "/es/recursos" },
-      { "label": "Cómo funciona", "href": "/es/como-funciona" },
-      { "label": "Protocolo", "href": "/es/protocolo" },
-      { "label": "Unirse", "href": "/es/unirse" }
+      {
+        "label": "Mapa",
+        "href": "/es"
+      },
+      {
+        "label": "Dónde denunciar",
+        "href": "/es/recursos"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/es/como-funciona"
+      },
+      {
+        "label": "Protocolo",
+        "href": "/es/protocolo"
+      },
+      {
+        "label": "Unirse",
+        "href": "/es/unirse"
+      }
     ],
-    "primaryCta": { "label": "+ Reportar caso", "href": "/es/reportar" },
-    "adminLink": { "label": "Moderación", "href": "/es/admin" }
+    "primaryCta": {
+      "label": "+ Reportar caso",
+      "href": "/es/reportar"
+    },
+    "adminLink": {
+      "label": "Moderación",
+      "href": "/es/admin"
+    }
   },
   "home": {
     "hero": {
       "eyebrow": "América Latina",
       "headline": "Mapa colaborativo de casos de violencia de género",
       "subheadline": "Cada caso en este mapa fue revisado y aprobado por tres moderadoras independientes. Si conocés un caso con fuente pública verificable, podés reportarlo.",
-      "primaryCta": { "label": "Reportar un caso", "href": "/es/reportar" },
-      "secondaryCta": { "label": "Cómo funciona", "href": "/es/como-funciona" },
+      "primaryCta": {
+        "label": "Reportar un caso",
+        "href": "/es/reportar"
+      },
+      "secondaryCta": {
+        "label": "Cómo funciona",
+        "href": "/es/como-funciona"
+      },
       "stats": [
-        { "value": "20", "label": "Países documentados" },
-        { "value": "3", "label": "Moderadoras por caso" },
-        { "value": "1", "label": "Fuente pública requerida" }
+        {
+          "value": "20",
+          "label": "Países documentados"
+        },
+        {
+          "value": "3",
+          "label": "Moderadoras por caso"
+        },
+        {
+          "value": "1",
+          "label": "Fuente pública requerida"
+        }
       ]
     },
     "intro": {
@@ -138,10 +174,22 @@
         "comoSeEntero": "¿Cómo te enteraste del proyecto?"
       },
       "comoSeEnteroOptions": [
-        { "value": "Redes sociales", "label": "Redes sociales" },
-        { "value": "Organización feminista", "label": "Organización feminista" },
-        { "value": "Me lo compartieron", "label": "Me lo compartieron" },
-        { "value": "Otro", "label": "Otro" }
+        {
+          "value": "Redes sociales",
+          "label": "Redes sociales"
+        },
+        {
+          "value": "Organización feminista",
+          "label": "Organización feminista"
+        },
+        {
+          "value": "Me lo compartieron",
+          "label": "Me lo compartieron"
+        },
+        {
+          "value": "Otro",
+          "label": "Otro"
+        }
       ],
       "consent": [
         "Leí y acepto el protocolo de moderación",
@@ -176,14 +224,32 @@
         "procesoJudicial": "Proceso judicial"
       },
       "tipoOptions": [
-        { "value": "femicidio", "label": "Femicidio" },
-        { "value": "abuso", "label": "Abuso" },
-        { "value": "acoso", "label": "Acoso" }
+        {
+          "value": "femicidio",
+          "label": "Femicidio"
+        },
+        {
+          "value": "abuso",
+          "label": "Abuso"
+        },
+        {
+          "value": "acoso",
+          "label": "Acoso"
+        }
       ],
       "procesoOptions": [
-        { "value": "", "label": "No especificado" },
-        { "value": "en_proceso", "label": "En proceso" },
-        { "value": "cerrado", "label": "Cerrado / sentencia firme" }
+        {
+          "value": "",
+          "label": "No especificado"
+        },
+        {
+          "value": "en_proceso",
+          "label": "En proceso"
+        },
+        {
+          "value": "cerrado",
+          "label": "Cerrado / sentencia firme"
+        }
       ],
       "submitLabel": "Enviar caso"
     },
@@ -241,12 +307,27 @@
     "tagline": "Proyecto de código abierto. Los datos son responsabilidad de las moderadoras verificadas.",
     "disclaimer": "No vendemos ni monetizamos ningún dato personal. La información publicada proviene de fuentes públicas verificadas.",
     "links": [
-      { "label": "Dónde denunciar", "href": "/es/recursos" },
-      { "label": "Cómo funciona", "href": "/es/como-funciona" },
-      { "label": "Protocolo", "href": "/es/protocolo" },
-      { "label": "Unirse", "href": "/es/unirse" }
+      {
+        "label": "Dónde denunciar",
+        "href": "/es/recursos"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/es/como-funciona"
+      },
+      {
+        "label": "Protocolo",
+        "href": "/es/protocolo"
+      },
+      {
+        "label": "Unirse",
+        "href": "/es/unirse"
+      }
     ],
-    "contact": { "label": "Contacto", "email": "cuidadoamiga@proton.me" }
+    "contact": {
+      "label": "Contacto",
+      "email": "cuidadoamiga@proton.me"
+    }
   },
   "errors": {
     "rateLimit": "Demasiados envíos. Esperá unos minutos.",
@@ -265,5 +346,97 @@
   "judicialStates": {
     "en_proceso": "En proceso",
     "cerrado": "Proceso cerrado"
+  },
+  "ui": {
+    "search": {
+      "placeholder": "Buscar por nombre, país o ciudad...",
+      "clearButton": "Limpiar búsqueda",
+      "noResults": "No se encontraron resultados",
+      "resultsCount": "{count} resultados",
+      "searching": "Buscando..."
+    },
+    "filter": {
+      "label": "Filtros",
+      "allCountries": "Todos los países",
+      "allTypes": "Todos los tipos",
+      "allYears": "Todos los años",
+      "selectCountry": "Seleccionar país",
+      "selectType": "Seleccionar tipo",
+      "reset": "Limpiar filtros",
+      "clearAll": "Quitar todos"
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "page": "Página {page} de {total}",
+      "loading": "Cargando más..."
+    },
+    "country": {
+      "placeholder": "Buscar país...",
+      "noResults": "No se encontró el país",
+      "allCountries": "Todos los países"
+    },
+    "date": {
+      "from": "Desde",
+      "to": "Hasta",
+      "year": "Año",
+      "allYears": "Todos los años"
+    },
+    "stat": {
+      "totalCases": "Casos registrados",
+      "totalCountries": "Países alcanzados",
+      "thisYear": "Casos este año",
+      "thisMonth": "Casos este mes",
+      "trendUp": "{pct}% vs. período anterior",
+      "trendDown": "{pct}% vs. período anterior",
+      "noChange": "Sin cambio vs. período anterior"
+    },
+    "chart": {
+      "byYear": "Casos por año",
+      "byCountry": "Casos por país",
+      "byType": "Casos por tipo",
+      "byJudicialState": "Estado judicial",
+      "total": "Total: {count}",
+      "noData": "No hay datos suficientes para mostrar"
+    },
+    "csv": {
+      "download": "Descargar CSV",
+      "exporting": "Generando descarga...",
+      "error": "Error al generar el archivo",
+      "success": "Descarga iniciada"
+    },
+    "tag": {
+      "femicidio": "Femicidio",
+      "abuso": "Abuso",
+      "acoso": "Acoso",
+      "en_proceso": "En proceso",
+      "cerrado": "Cerrado"
+    },
+    "share": {
+      "twitter": "Compartir en X",
+      "whatsapp": "Compartir en WhatsApp",
+      "facebook": "Compartir en Facebook",
+      "copyLink": "Copiar enlace",
+      "copied": "¡Copiado!",
+      "shareLink": "Compartir este caso"
+    },
+    "copy": {
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "copyLink": "Copiar enlace"
+    },
+    "alert": {
+      "dismiss": "Cerrar",
+      "info": "Información",
+      "success": "Operación exitosa",
+      "warning": "Advertencia",
+      "danger": "Error"
+    },
+    "loading": {
+      "loading": "Cargando...",
+      "saving": "Guardando...",
+      "processing": "Procesando...",
+      "error": "Error al cargar"
+    }
   }
 }

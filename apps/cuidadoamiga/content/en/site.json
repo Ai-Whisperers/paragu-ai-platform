@@ -11,26 +11,62 @@
   },
   "navigation": {
     "items": [
-      { "label": "Map", "href": "/en" },
-      { "label": "Where to report", "href": "/en/recursos" },
-      { "label": "How it works", "href": "/en/como-funciona" },
-      { "label": "Protocol", "href": "/en/protocolo" },
-      { "label": "Join us", "href": "/en/unirse" }
+      {
+        "label": "Map",
+        "href": "/en"
+      },
+      {
+        "label": "Where to report",
+        "href": "/en/recursos"
+      },
+      {
+        "label": "How it works",
+        "href": "/en/como-funciona"
+      },
+      {
+        "label": "Protocol",
+        "href": "/en/protocolo"
+      },
+      {
+        "label": "Join us",
+        "href": "/en/unirse"
+      }
     ],
-    "primaryCta": { "label": "+ Report a case", "href": "/en/reportar" },
-    "adminLink": { "label": "Moderation", "href": "/en/admin" }
+    "primaryCta": {
+      "label": "+ Report a case",
+      "href": "/en/reportar"
+    },
+    "adminLink": {
+      "label": "Moderation",
+      "href": "/en/admin"
+    }
   },
   "home": {
     "hero": {
       "eyebrow": "Latin America",
       "headline": "Collaborative map of gender-based violence cases",
       "subheadline": "Every case on this map was reviewed and approved by three independent moderators. If you know of a case with a verifiable public source, you can report it.",
-      "primaryCta": { "label": "Report a case", "href": "/en/reportar" },
-      "secondaryCta": { "label": "How it works", "href": "/en/como-funciona" },
+      "primaryCta": {
+        "label": "Report a case",
+        "href": "/en/reportar"
+      },
+      "secondaryCta": {
+        "label": "How it works",
+        "href": "/en/como-funciona"
+      },
       "stats": [
-        { "value": "20", "label": "Documented countries" },
-        { "value": "3", "label": "Moderators per case" },
-        { "value": "1", "label": "Public source required" }
+        {
+          "value": "20",
+          "label": "Documented countries"
+        },
+        {
+          "value": "3",
+          "label": "Moderators per case"
+        },
+        {
+          "value": "1",
+          "label": "Public source required"
+        }
       ]
     },
     "intro": {
@@ -138,10 +174,22 @@
         "comoSeEntero": "How did you hear about the project?"
       },
       "comoSeEnteroOptions": [
-        { "value": "Redes sociales", "label": "Social media" },
-        { "value": "Organización feminista", "label": "Feminist organization" },
-        { "value": "Me lo compartieron", "label": "Someone shared it with me" },
-        { "value": "Otro", "label": "Other" }
+        {
+          "value": "Redes sociales",
+          "label": "Social media"
+        },
+        {
+          "value": "Organización feminista",
+          "label": "Feminist organization"
+        },
+        {
+          "value": "Me lo compartieron",
+          "label": "Someone shared it with me"
+        },
+        {
+          "value": "Otro",
+          "label": "Other"
+        }
       ],
       "consent": [
         "I have read and accept the moderation protocol",
@@ -176,14 +224,32 @@
         "procesoJudicial": "Judicial process"
       },
       "tipoOptions": [
-        { "value": "femicidio", "label": "Femicide" },
-        { "value": "abuso", "label": "Abuse" },
-        { "value": "acoso", "label": "Harassment" }
+        {
+          "value": "femicidio",
+          "label": "Femicide"
+        },
+        {
+          "value": "abuso",
+          "label": "Abuse"
+        },
+        {
+          "value": "acoso",
+          "label": "Harassment"
+        }
       ],
       "procesoOptions": [
-        { "value": "", "label": "Not specified" },
-        { "value": "en_proceso", "label": "In process" },
-        { "value": "cerrado", "label": "Closed / final sentence" }
+        {
+          "value": "",
+          "label": "Not specified"
+        },
+        {
+          "value": "en_proceso",
+          "label": "In process"
+        },
+        {
+          "value": "cerrado",
+          "label": "Closed / final sentence"
+        }
       ],
       "submitLabel": "Submit case"
     },
@@ -241,12 +307,27 @@
     "tagline": "Open source project. The data is the responsibility of the verified moderators.",
     "disclaimer": "We do not sell or monetize any personal data. The published information comes from verified public sources.",
     "links": [
-      { "label": "Where to report", "href": "/en/recursos" },
-      { "label": "How it works", "href": "/en/como-funciona" },
-      { "label": "Protocol", "href": "/en/protocolo" },
-      { "label": "Join us", "href": "/en/unirse" }
+      {
+        "label": "Where to report",
+        "href": "/en/recursos"
+      },
+      {
+        "label": "How it works",
+        "href": "/en/como-funciona"
+      },
+      {
+        "label": "Protocol",
+        "href": "/en/protocolo"
+      },
+      {
+        "label": "Join us",
+        "href": "/en/unirse"
+      }
     ],
-    "contact": { "label": "Contact", "email": "cuidadoamiga@proton.me" }
+    "contact": {
+      "label": "Contact",
+      "email": "cuidadoamiga@proton.me"
+    }
   },
   "errors": {
     "rateLimit": "Too many submissions. Wait a few minutes.",
@@ -265,5 +346,97 @@
   "judicialStates": {
     "en_proceso": "In process",
     "cerrado": "Process closed"
+  },
+  "ui": {
+    "search": {
+      "placeholder": "Search by name, country or city...",
+      "clearButton": "Clear search",
+      "noResults": "No results found",
+      "resultsCount": "{count} results",
+      "searching": "Searching..."
+    },
+    "filter": {
+      "label": "Filters",
+      "allCountries": "All countries",
+      "allTypes": "All types",
+      "allYears": "All years",
+      "selectCountry": "Select country",
+      "selectType": "Select type",
+      "reset": "Clear filters",
+      "clearAll": "Remove all"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {page} of {total}",
+      "loading": "Loading more..."
+    },
+    "country": {
+      "placeholder": "Search country...",
+      "noResults": "Country not found",
+      "allCountries": "All countries"
+    },
+    "date": {
+      "from": "From",
+      "to": "To",
+      "year": "Year",
+      "allYears": "All years"
+    },
+    "stat": {
+      "totalCases": "Registered cases",
+      "totalCountries": "Countries reached",
+      "thisYear": "Cases this year",
+      "thisMonth": "Cases this month",
+      "trendUp": "{pct}% vs. prior period",
+      "trendDown": "{pct}% vs. prior period",
+      "noChange": "No change vs. prior period"
+    },
+    "chart": {
+      "byYear": "Cases by year",
+      "byCountry": "Cases by country",
+      "byType": "Cases by type",
+      "byJudicialState": "Judicial state",
+      "total": "Total: {count}",
+      "noData": "Not enough data to display"
+    },
+    "csv": {
+      "download": "Download CSV",
+      "exporting": "Generating download...",
+      "error": "Error generating file",
+      "success": "Download started"
+    },
+    "tag": {
+      "femicidio": "Femicide",
+      "abuso": "Abuse",
+      "acoso": "Harassment",
+      "en_proceso": "In progress",
+      "cerrado": "Closed"
+    },
+    "share": {
+      "twitter": "Share on X",
+      "whatsapp": "Share on WhatsApp",
+      "facebook": "Share on Facebook",
+      "copyLink": "Copy link",
+      "copied": "Copied!",
+      "shareLink": "Share this case"
+    },
+    "copy": {
+      "copy": "Copy",
+      "copied": "Copied",
+      "copyLink": "Copy link"
+    },
+    "alert": {
+      "dismiss": "Close",
+      "info": "Information",
+      "success": "Success",
+      "warning": "Warning",
+      "danger": "Error"
+    },
+    "loading": {
+      "loading": "Loading...",
+      "saving": "Saving...",
+      "processing": "Processing...",
+      "error": "Error loading"
+    }
   }
 }
