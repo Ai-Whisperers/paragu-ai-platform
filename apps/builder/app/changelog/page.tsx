@@ -136,7 +136,7 @@ export default function ChangelogPage() {
               Cada cambio relevante a la plataforma. Actualizado continuamente.
               Para el detalle a nivel commit, mirá{' '}
               <a
-                href="https://github.com/Ai-Whisperers/paragu-ai-builder/pulls?q=is%3Apr+is%3Aclosed"
+                href="https://github.com/Ai-Whisperers/paragu-ai-platform/pulls?q=is%3Apr+is%3Aclosed+apps%2Fbuilder"
                 className="underline hover:text-primary"
                 rel="noopener noreferrer"
                 target="_blank"
