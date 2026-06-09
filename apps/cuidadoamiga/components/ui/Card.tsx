@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import type { HTMLAttributes } from 'react'
+import { forwardRef, type HTMLAttributes } from 'react'
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   variant?: 'default' | 'inset' | 'outlined'
@@ -19,10 +19,17 @@ const paddingStyles: Record<NonNullable<CardProps['padding']>, string> = {
   lg: 'p-7',
 }
 
-export function Card({ variant = 'default', padding = 'md', className, children, ...rest }: CardProps) {
+export const Card = forwardRef<HTMLDivElement, CardProps>(function Card(
+  { variant = 'default', padding = 'md', className, children, ...rest },
+  ref,
+) {
   return (
-    <div className={clsx('rounded-xl', variantStyles[variant], paddingStyles[padding], className)} {...rest}>
+    <div
+      ref={ref}
+      className={clsx('rounded-xl', variantStyles[variant], paddingStyles[padding], className)}
+      {...rest}
+    >
       {children}
     </div>
   )
-}
+})

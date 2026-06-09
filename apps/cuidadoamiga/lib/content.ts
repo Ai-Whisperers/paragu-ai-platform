@@ -13,7 +13,9 @@
  */
 
 import siteEs from '@/content/es/site.json'
+import adminEs from '@/content/es/admin.json'
 import type { SiteContent } from '@/lib/content-types'
+import type { AdminContent } from '@/lib/admin-types'
 import sharedRecursos from '@/content/_shared/recursos-latam.json'
 import sharedCountries from '@/content/_shared/countries-latam.json'
 
@@ -21,7 +23,7 @@ export type Lang = 'es' // 'en' and 'pt' will be added in Phase 3
 export type { SiteContent }
 
 const SITE_BY_LANG: Record<Lang, SiteContent> = {
-  es: siteEs as SiteContent,
+  es: { ...siteEs, admin: adminEs } as unknown as SiteContent,
 }
 
 export function isLang(value: string): value is Lang {
@@ -96,4 +98,8 @@ export function getRecursosLatam() {
     emergencia?: string
     recursos: Array<{ nombre: string; tipo: 'linea' | 'org' | 'web'; detalle: string; url?: string }>
   }>
+}
+
+export function getAdmin(lang: Lang = 'es'): AdminContent {
+  return getSite(lang).admin
 }

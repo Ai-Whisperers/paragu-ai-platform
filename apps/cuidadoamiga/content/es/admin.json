@@ -1,0 +1,94 @@
+{
+  "admin": {
+    "panel": {
+      "title": "Panel de moderación",
+      "subtitle": "Tres moderadoras revisan cada caso. Aprobado si las 3 votan sí · Rechazado si 1 vota no.",
+      "logout": "Cerrar sesión",
+      "loggedInAs": "Logueada como",
+      "owner": "Owner",
+      "mod": "Moderadora"
+    },
+    "tabs": {
+      "validar": "Por validar",
+      "pendiente": "Pendientes",
+      "aprobado": "Aprobados",
+      "rechazado": "Rechazados",
+      "solicitudes": "Solicitudes",
+      "crear": "Crear caso"
+    },
+    "filters": {
+      "all": "Todas",
+      "femicidio": "Femicidio",
+      "abuso": "Abuso",
+      "acoso": "Acoso",
+      "search": "Buscar por nombre, país o ciudad..."
+    },
+    "case": {
+      "submittedBy": "Enviado el",
+      "type": "Tipo",
+      "location": "Ubicación",
+      "victim": "Víctima",
+      "description": "Descripción",
+      "sources": "Fuentes",
+      "noSources": "Sin fuentes",
+      "viewOnMap": "Ver en mapa",
+      "viewDetail": "Ver ficha",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "rejectionReason": "Motivo del rechazo (opcional)",
+      "alreadyVoted": "Ya votaste",
+      "voteCount": "{approvals} de 3 aprobaciones",
+      "votesCast": "Votos registrados",
+      "votes": "votos"
+    },
+    "vote": {
+      "approved": "Aprobaste este caso",
+      "rejected": "Rechazaste este caso",
+      "alreadyVoted": "Ya votaste en este caso",
+      "noLongerPending": "Este caso ya no está pendiente",
+      "error": "Error al registrar el voto"
+    },
+    "edit": {
+      "title": "Editar caso",
+      "save": "Guardar",
+      "saving": "Guardando...",
+      "saved": "Cambios guardados",
+      "error": "Error al guardar"
+    },
+    "delete": {
+      "title": "Eliminar caso",
+      "confirm": "¿Eliminar este caso?",
+      "warning": "Esto es permanente. La eliminación queda registrada en el log de auditoría.",
+      "yes": "Sí, eliminar",
+      "deleted": "Caso eliminado"
+    },
+    "empty": {
+      "validar": "No hay casos pendientes de validación",
+      "pendiente": "No hay casos pendientes",
+      "aprobado": "No hay casos aprobados",
+      "rechazado": "No hay casos rechazados",
+      "solicitudes": "No hay solicitudes de moderación",
+      "crear": "Usa el formulario para crear un caso"
+    },
+    "solicitud": {
+      "title": "Solicitud de moderadora",
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "pending": "Pendientes",
+      "approved": "Aprobadas",
+      "rejected": "Rechazadas",
+      "approved_ok": "Solicitud aprobada",
+      "rejected_ok": "Solicitud rechazada"
+    },
+    "create": {
+      "title": "Crear caso (moderadora)",
+      "description": "Los casos creados por moderadoras se publican directamente con estado aprobado.",
+      "submit": "Crear caso",
+      "submitting": "Creando...",
+      "created": "Caso creado",
+      "error": "Error al crear el caso"
+    }
+  }
+}

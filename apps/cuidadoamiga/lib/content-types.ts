@@ -2,6 +2,8 @@
 // types; we declare the shape here so the rest of the codebase can depend on
 // the contract, not on the inference.
 
+import type { AdminContent } from './admin-types'
+
 export interface SiteContent {
   _meta: {
     site: string
@@ -109,6 +111,7 @@ export interface SiteContent {
   }
   caseTypes: { femicidio: string; abuso: string; acoso: string }
   judicialStates: { en_proceso: string; cerrado: string }
+  admin: AdminContent
 }
 
 export type InfoSection = { title: string; items?: string[]; body?: string }
