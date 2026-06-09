@@ -13,14 +13,15 @@
  */
 
 import siteEs from '@/content/es/site.json'
+import type { SiteContent } from '@/lib/content-types'
 import sharedRecursos from '@/content/_shared/recursos-latam.json'
 import sharedCountries from '@/content/_shared/countries-latam.json'
 
 export type Lang = 'es' // 'en' and 'pt' will be added in Phase 3
-export type SiteContent = typeof siteEs
+export type { SiteContent }
 
 const SITE_BY_LANG: Record<Lang, SiteContent> = {
-  es: siteEs,
+  es: siteEs as SiteContent,
 }
 
 export function isLang(value: string): value is Lang {
