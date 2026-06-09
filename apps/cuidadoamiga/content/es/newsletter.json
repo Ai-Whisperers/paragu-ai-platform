@@ -1,0 +1,13 @@
+{
+  "page": {
+    "title": "Newsletter",
+    "description": "Recibe actualizaciones sobre nuevos casos, recursos y eventos de la plataforma."
+  },
+  "form": {
+    "emailPlaceholder": "tu@email.com",
+    "subscribeButton": "Suscribirse",
+    "privacyNote": "Respetamos tu privacidad. Puedes cancelar cuando quieras.",
+    "success": "¡Te has suscrito! Revisa tu correo para confirmar.",
+    "error": "Hubo un error. Inténtalo de nuevo."
+  }
+}

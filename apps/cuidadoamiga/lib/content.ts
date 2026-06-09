@@ -30,7 +30,10 @@ import dataEn from '@/content/en/data.json'
 import blogEs from '@/content/es/blog.json'
 import blogPt from '@/content/pt/blog.json'
 import blogEn from '@/content/en/blog.json'
-import type { SiteContent, SafetyContent, TransparencyContent, DataContent, BlogContent, BlogPost } from '@/lib/content-types'
+import newsletterEs from '@/content/es/newsletter.json'
+import newsletterPt from '@/content/pt/newsletter.json'
+import newsletterEn from '@/content/en/newsletter.json'
+import type { SiteContent, SafetyContent, TransparencyContent, DataContent, BlogContent, BlogPost, NewsletterContent } from '@/lib/content-types'
 import type { AdminContent } from '@/lib/admin-types'
 import sharedRecursos from '@/content/_shared/recursos-latam.json'
 import sharedCountries from '@/content/_shared/countries-latam.json'
@@ -117,6 +120,16 @@ export function getBlog(lang: Lang = DEFAULT_LANG): BlogContent {
 }
 export function getBlogPost(slug: string, lang: Lang = DEFAULT_LANG): BlogPost | undefined {
   return getBlog(lang).posts.find((p) => p.slug === slug)
+}
+
+// Newsletter content
+const NEWSLETTER_BY_LANG: Record<Lang, NewsletterContent> = {
+  es: newsletterEs as NewsletterContent,
+  pt: newsletterPt as NewsletterContent,
+  en: newsletterEn as NewsletterContent,
+}
+export function getNewsletter(lang: Lang = DEFAULT_LANG): NewsletterContent {
+  return NEWSLETTER_BY_LANG[lang] ?? NEWSLETTER_BY_LANG[DEFAULT_LANG]
 }
 
 // ============================================================

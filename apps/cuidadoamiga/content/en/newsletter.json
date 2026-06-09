@@ -1,0 +1,13 @@
+{
+  "page": {
+    "title": "Newsletter",
+    "description": "Receive updates on new cases, resources, and platform events."
+  },
+  "form": {
+    "emailPlaceholder": "you@example.com",
+    "subscribeButton": "Subscribe",
+    "privacyNote": "We respect your privacy. You can unsubscribe anytime.",
+    "success": "You're subscribed! Check your inbox to confirm.",
+    "error": "Something went wrong. Please try again."
+  }
+}

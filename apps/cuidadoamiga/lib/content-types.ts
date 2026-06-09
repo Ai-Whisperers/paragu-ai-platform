@@ -282,3 +282,18 @@ export interface SafetyContent {
     safeModeParam: string
   }
 }
+
+// ── Newsletter content ──────────────────────────────────────────────────────
+export interface NewsletterContent {
+  page: {
+    title: string
+    description: string
+  }
+  form: {
+    emailPlaceholder: string
+    subscribeButton: string
+    privacyNote: string
+    success: string
+    error: string
+  }
+}
