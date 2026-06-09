@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+  packages: write  # for GHCR push
+
 concurrency:
   group: central-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
@@ -27,10 +31,10 @@ jobs:
               - 'apps/bichos-gym/**'
             apps/bufete-mendez:
               - 'apps/bufete-mendez/**'
-            apps/builder:
-              - 'apps/builder/**'
             apps/camilo-acosta:
               - 'apps/camilo-acosta/**'
+            apps/cuidadoamiga:
+              - 'apps/cuidadoamiga/**'
             apps/de-abasto-a-casa:
               - 'apps/de-abasto-a-casa/**'
             apps/escribania-paraguay:
@@ -82,7 +86,7 @@ jobs:
       - name: Emit changed apps
         run: |
           APPS=""
-          for app in 3md-website bichos-gym bufete-mendez builder camilo-acosta de-abasto-a-casa escribania-paraguay estudio-medieval fun4me fun4me-store golden-visa-advisory granja-cabral jota-ink-tattoo luis-de-leon-concept magnolia-peluqueria mantraspa meal-prep nde-barba nexa-paraguay ozmontania-website pitchy-website portas-barber reina-de-copas shine-nails trentina-cerveza trentina-site tsuki-restaurante villamayor-asociados xxgym; do
+          for app in 3md-website bichos-gym bufete-mendez camilo-acosta cuidadoamiga de-abasto-a-casa escribania-paraguay estudio-medieval fun4me fun4me-store golden-visa-advisory granja-cabral jota-ink-tattoo luis-de-leon-concept magnolia-peluqueria mantraspa meal-prep nde-barba nexa-paraguay ozmontania-website pitchy-website portas-barber reina-de-copas shine-nails trentina-cerveza trentina-site tsuki-restaurante villamayor-asociados xxgym; do
             VAL="${{ steps.diff.outputs[app] }}"
             if [ "$VAL" = "true" ]; then
               if [ -z "$APPS" ]; then APPS="$app"; else APPS="$APPS,$app"; fi
@@ -99,7 +103,7 @@ jobs:
         app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -116,10 +120,99 @@ jobs:
         app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm -r --filter "./apps/${{ matrix.app }}" run typecheck || echo 'typecheck script not defined'
+
+  build:
+    runs-on: ubuntu-latest
+    needs: detect-apps
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Build app
+        run: pnpm --filter "./apps/${{ matrix.app }}" build
+      - name: Upload standalone build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-${{ matrix.app }}
+          path: apps/${{ matrix.app }}/.next/
+
+  docker:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: [detect-apps, build]
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-${{ matrix.app }}
+          path: apps/${{ matrix.app }}/.next/
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: apps/${{ matrix.app }}
+          file: apps/${{ matrix.app }}/Dockerfile.standalone
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/${{ matrix.app }}:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/${{ matrix.app }}:latest
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: [detect-apps, docker]
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.9
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+      - name: Deploy to VPS
+        run: |
+          APP="${{ matrix.app }}"
+          IMAGE="ghcr.io/${{ github.repository }}/${APP}:${{ github.sha }}"
+          # Map app name to Docker Swarm service name
+          case "$APP" in
+            golden-visa-advisory)  SVC="golden-visa-advisory_web" ;;
+            pitchy-website)        SVC="pitchy-website_web" ;;
+            trentina-cerveza)      SVC="trentina-cerveza_web" ;;
+            ozmontania-website)    SVC="ozmontania-website_web" ;;
+            meal-prep)             SVC="meal-prep_web" ;;
+            nexa-paraguay)         SVC="nexa-paraguay_web" ;;
+            *)                     SVC="${APP}_web" ;;
+          esac
+          ssh -o StrictHostKeyChecking=accept-new root@72.61.44.159 "
+            docker pull ${IMAGE} &&
+            docker service update --image ${IMAGE} ${SVC} --with-registry-auth 2>&1
+          "

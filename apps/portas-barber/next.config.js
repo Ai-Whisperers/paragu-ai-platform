@@ -6,6 +6,7 @@ const nextConfig = {
       { protocol: 'https', hostname: '**' },
     ],
   },
+  output: 'standalone',
   // Fix path alias for Next.js 15
   webpack: (config) => {
     config.resolve.alias['@'] = '/src';
