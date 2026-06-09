@@ -1,0 +1,160 @@
+{
+  "site": {
+    "name": "HidroBaby Spa",
+    "tagline": "Baby spa, hidroterapia y masajes para bebés — 377 reseñas ⭐5.0 — 3 sucursales",
+    "description": "HidroBaby Spa: hidroterapia, masajes pediátricos, spa anticólicos y natación temprana para bebés. Staff de obstetras y enfermeras. Agua 100% filtrada y desinfección por ozono.",
+    "whatsapp": "595993444222",
+    "phone": "+595 993 444 222",
+    "email": "hidrobaby@hidrobaby-spa.com",
+    "address": "Fernando de la Mora, Paraguay",
+    "googleReviews": 377,
+    "googleRating": 5.0,
+    "branchesCount": 3,
+    "uniqueValue": "Primer baby spa en Paraguay con desinfección por ozono. Agua 100% filtrada y esterilizada."
+  },
+  "hero": {
+    "headline": "HidroBaby Spa",
+    "subheadline": "Baby Spa en Fernando de la Mora — 377 reseñas ⭐5.0 — 3 sucursales",
+    "cta": "Reservar por WhatsApp",
+    "ctaUrl": "https://wa.me/595993444222?text=Hola!%20Quiero%20reservar%20en%20HidroBaby%20Spa"
+  },
+  "navigation": {
+    "items": [
+      { "label": "Inicio", "href": "/" },
+      { "label": "Servicios", "href": "#servicios" },
+      { "label": "Nosotros", "href": "#nosotros" },
+      { "label": "Contacto", "href": "#contacto" }
+    ]
+  },
+  "trustBadges": {
+    "title": "¿Por qué elegir HidroBaby Spa?",
+    "items": [
+      { "label": "🚰 Agua Ozono", "description": "Desinfección por ozono — único en Paraguay" },
+      { "label": "👩‍⚕️ Staff Profesional", "description": "Obstetras y enfermeras especializadas" },
+      { "label": "⭐ 5.0 Rating", "description": "377 reseñas en Google Maps" },
+      { "label": "🏪 3 Sucursales", "description": "Villa Morra, Mariano Roque Alonso y Luque" },
+      { "label": "🧸 Desde 2 Meses", "description": "Hidroterapia para bebés desde los 2 meses" }
+    ]
+  },
+  "about": {
+    "title": "Sobre HidroBaby Spa",
+    "body": "Somos el primer baby spa en Paraguay con sistema de desinfección por ozono. Fundado por Fábio y Fátima, hidroterapeutas especializados en estimulación temprana. Atendemos bebés desde los 2 meses de edad con agua 100% filtrada, control de temperatura y ambiente esterilizado. Contamos con staff de obstetras y enfermeras pediátricas para garantizar la máxima seguridad y bienestar de tu bebé."
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "items": [
+      {
+        "title": "Hidroterapia para Bebés",
+        "description": "Sesiones de estimulación acuática para bebés de 2 a 24 meses. Agua a temperatura controlada con desinfección por ozono.",
+        "price": "₲80.000",
+        "duration": "30 min",
+        "ageRange": "2-24 meses"
+      },
+      {
+        "title": "Baby Spa Anticólicos",
+        "description": "Tratamiento especializado en agua tibia para aliviar cólicos, gases y estreñimiento. Masajes post-sesión incluidos.",
+        "price": "₲120.000",
+        "duration": "45 min",
+        "ageRange": "2-12 meses"
+      },
+      {
+        "title": "Masajes Pediátricos",
+        "description": "Masajes infantiles que favorecen el sueño, la digestión y el vínculo afectivo. Realizados por fisioterapeutas.",
+        "price": "₲90.000",
+        "duration": "30 min",
+        "ageRange": "0-36 meses"
+      },
+      {
+        "title": "Natación Temprana",
+        "description": "Introducción al agua para desarrollar confianza, coordinación y reflejos acuáticos desde el primer año.",
+        "price": "₲100.000",
+        "duration": "40 min",
+        "ageRange": "6-36 meses"
+      },
+      {
+        "title": "Spa Sensorial",
+        "description": "Experiencia multisensorial con luces suaves, sonidos relajantes y texturas adaptadas al desarrollo neurológico del bebé.",
+        "price": "₲150.000",
+        "duration": "50 min",
+        "ageRange": "0-24 meses"
+      },
+      {
+        "title": "Fisioterapia Acuática",
+        "description": "Rehabilitación en agua para bebés con hipotonía, tortícolis o prematurez. Programas diseñados por kinesiólogos.",
+        "price": "₲130.000",
+        "duration": "40 min",
+        "ageRange": "0-36 meses"
+      },
+      {
+        "title": "Pack Completo (5 sesiones)",
+        "description": "5 sesiones de hidroterapia con un 20% de descuento. Incluye masaje pediátrico en cada sesión.",
+        "price": "₲320.000",
+        "duration": "5 sesiones",
+        "ageRange": "2-24 meses"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "q": "¿Desde qué edad pueden asistir los bebés?",
+        "a": "Recibimos bebés desde los 2 meses de edad hasta los 3 años. Cada actividad tiene un rango etario específico para garantizar la seguridad y el desarrollo adecuado."
+      },
+      {
+        "q": "¿Qué es la desinfección por ozono?",
+        "a": "El ozono es un potente desinfectante natural que elimina bacterias, virus y hongos sin usar químicos. Somos el único baby spa en Paraguay con este sistema."
+      },
+      {
+        "q": "¿Necesito llevar algo para mi bebé?",
+        "a": "Solo traé pañal de agua, toalla y ropa cómoda. Nosotros proveemos todo el equipo necesario: flotadores, juguetes acuáticos y productos de higiene hipoalergénicos."
+      },
+      {
+        "q": "¿Cuánto dura cada sesión?",
+        "a": "Las sesiones duran entre 30 y 50 minutos dependiendo del servicio. Recomendamos llegar 10 minutos antes para la preparación del bebé."
+      },
+      {
+        "q": "¿Tienen estacionamiento?",
+        "a": "Sí, las 3 sucursales cuentan con estacionamiento para clientes. También tenemos acceso para cochecitos."
+      },
+      {
+        "q": "¿Cómo reservo?",
+        "a": "Reservá por WhatsApp al +595 993 444 222. Respondemos en minutos y coordinamos el horario según disponibilidad."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Reservá tu cita por WhatsApp. Te responderemos en minutos.",
+    "locations": [
+      {
+        "name": "Villa Morra",
+        "address": "Av. Mariscal López, Villa Morra, Asunción",
+        "hours": "Lun–Sáb 9:00–18:00",
+        "phone": "+595 993 444 222",
+        "whatsapp": "595993444222",
+        "map": "https://maps.google.com/?q=HidroBaby+Spa+Villa+Morra"
+      },
+      {
+        "name": "Mariano Roque Alonso",
+        "address": "Mariano Roque Alonso",
+        "hours": "Lun–Sáb 9:00–18:00",
+        "phone": "+595 993 444 222",
+        "whatsapp": "595993444222",
+        "map": "https://maps.google.com/?q=HidroBaby+Spa+Mariano+Roque+Alonso"
+      },
+      {
+        "name": "Luque",
+        "address": "Dora Gomez Bueno de Acuña, Luque",
+        "hours": "Lun–Sáb 9:00–18:00",
+        "phone": "+595 993 444 222",
+        "whatsapp": "595993444222",
+        "map": "https://maps.google.com/?q=HidroBaby+Spa+Luque"
+      }
+    ]
+  },
+  "footer": {
+    "text": "© 2026 HidroBaby Spa · Fernando de la Mora, Paraguay",
+    "whatsapp": "+595 993 444 222"
+  }
+}

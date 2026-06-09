@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "translationQuality": "native",
+    "author": "ParaguAI / Ai-Whisperers",
+    "lastReviewed": "2026-05-28",
+    "version": "1.0"
+  },
+  "site": {
+    "name": "Arno's Barber Shop",
+    "shortName": "Arno's",
+    "businessName": "Arno's Barber Shop",
+    "tagline": "Barbershop en Fernando de la Mora — Atención profesional",
+    "description": "Arno's Barber Shop. Barbershop en Fernando de la Mora, Paraguay. Atención profesional y personalizada.",
+    "phone": "+595 983 996 086",
+    "whatsapp": "595983996086",
+    "email": "",
+    "address": "Fernando de la Mora, Paraguay",
+    "city": "Fernando de la Mora",
+    "country": "Paraguay",
+    "hours": "Lunes a Sábado 9:00–18:00 hs"
+  },
+  "navigation": {
+    "businessName": "Arno's Barber Shop",
+    "items": [
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "Arno's Barber Shop",
+    "subheadline": "Barbershop",
+    "description": "Arno's Barber Shop — Barbershop en Fernando de la Mora. Atención profesional.",
+    "ctaPrimaryText": "Reservar por WhatsApp"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "items": [
+      {
+        "title": "Corte de cabello",
+        "description": "Fade, taper, undercut o clásico con tijera. Analizamos tu tipo de rostro y textura de cabello para el mejor resultado.",
+        "price": "Desde 25.000 Gs",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Barba y bigote",
+        "description": "Perfilado con navaja caliente, toalla caliente y productos de barba. Incluye hidratación post-afeitado.",
+        "price": "Desde 20.000 Gs",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Tratamientos capilares",
+        "description": "Exfoliación de cuero cabelludo, mascarilla hidratante y masaje relajante. Ideal para caspa, caída o cabello reseco.",
+        "price": "Desde 35.000 Gs",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Coloración",
+        "description": "Tintes naturales, mechas, decoloración o cover de canas. Productos ammonia-free para cuidar el cuero cabelludo.",
+        "price": "Desde 60.000 Gs",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Facial express",
+        "description": "Limpieza facial básica con vapor, extracción de impurezas y mascarilla. 20 minutos de pura frescura.",
+        "price": "Desde 30.000 Gs",
+        "icon": "sparkles"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Galería",
+    "items": [
+      "Trabajo 1",
+      "Trabajo 2",
+      "Trabajo 3",
+      "Trabajo 4",
+      "Trabajo 5",
+      "Trabajo 6"
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Reserva tu cita en Arno's Barber Shop.",
+    "cta": {
+      "text": "+595 983 996 086",
+      "label": "WhatsApp"
+    },
+    "whatsappMessage": "¡Hola! Vi la página de Arno's Barber Shop y me gustaría reservar una cita. ¿Podés confirmarme disponibilidad?"
+  },
+  "footer": {
+    "businessName": "Arno's Barber Shop",
+    "tagline": "© 2026 Arno's Barber Shop. Todos los derechos reservados.",
+    "credits": "Hecho con ❤️ por ParaguAI"
+  }
+}

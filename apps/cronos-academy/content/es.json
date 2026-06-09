@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "translationQuality": "native",
+    "author": "ParaguAI / Ai-Whisperers",
+    "lastReviewed": "2026-05-28",
+    "version": "1.0"
+  },
+  "site": {
+    "name": "Cronos Academy",
+    "shortName": "Cronos",
+    "businessName": "Cronos Academy",
+    "tagline": "Gym en Fernando de la Mora — Atención profesional",
+    "description": "Cronos Academy. Gym en Fernando de la Mora, Paraguay. Atención profesional y personalizada.",
+    "phone": "+595 962 201 042",
+    "whatsapp": "595962201042",
+    "email": "",
+    "address": "Fernando de la Mora, Paraguay",
+    "city": "Fernando de la Mora",
+    "country": "Paraguay",
+    "hours": "Lunes a Sábado 9:00–18:00 hs"
+  },
+  "navigation": {
+    "businessName": "Cronos Academy",
+    "items": [
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "Cronos Academy",
+    "subheadline": "Gym",
+    "description": "Cronos Academy — Gym en Fernando de la Mora. Atención profesional.",
+    "ctaPrimaryText": "Reservar por WhatsApp"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "items": [
+      {
+        "title": "Entrenamiento funcional",
+        "description": "Rutinas adaptadas a tu nivel y objetivo: pérdida de grasa, ganancia muscular o condición física. Seguimiento semanal con medidas.",
+        "price": "Desde 180.000 Gs/mes",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Musculación",
+        "description": "Funcional, HIIT, spinning, zumba y yoga. Horarios matutinos y vespertinos. Máximo 15 personas por clase.",
+        "price": "Desde 120.000 Gs/mes",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Clases grupales",
+        "description": "Sala completa con máquinas guidadas, mancuernas, barras libres y zona de peso corporal. Entrená a tu ritmo.",
+        "price": "Desde 100.000 Gs/mes",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Entrenamiento personal",
+        "description": "Medición de composición corporal (bioimpedancia), test de resistencia y plan nutricional básico. Incluido en la membresía.",
+        "price": "Incluido",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Nutrición deportiva",
+        "description": "Plan alimenticio orientado a tu objetivo. Suplementación recomendada (no vendemos, solo asesoramos).",
+        "price": "Desde 50.000 Gs/consulta",
+        "icon": "sparkles"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Galería",
+    "items": [
+      "Trabajo 1",
+      "Trabajo 2",
+      "Trabajo 3",
+      "Trabajo 4",
+      "Trabajo 5",
+      "Trabajo 6"
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Reserva tu cita en Cronos Academy.",
+    "cta": {
+      "text": "+595 962 201 042",
+      "label": "WhatsApp"
+    },
+    "whatsappMessage": "¡Hola! Vi la página de Cronos Academy y me gustaría reservar una cita. ¿Podés confirmarme disponibilidad?"
+  },
+  "footer": {
+    "businessName": "Cronos Academy",
+    "tagline": "© 2026 Cronos Academy. Todos los derechos reservados.",
+    "credits": "Hecho con ❤️ por ParaguAI"
+  }
+}

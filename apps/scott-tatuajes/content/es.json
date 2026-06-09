@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "translationQuality": "native",
+    "author": "ParaguAI / Ai-Whisperers",
+    "lastReviewed": "2026-05-28",
+    "version": "1.0"
+  },
+  "site": {
+    "name": "Scott Tatuajes",
+    "shortName": "Scott",
+    "businessName": "Scott Tatuajes",
+    "tagline": "Tattoo Studio en Fernando de la Mora — Atención profesional",
+    "description": "Scott Tatuajes. Tattoo Studio en Fernando de la Mora, Paraguay. Atención profesional y personalizada.",
+    "phone": "+595 981 575 176",
+    "whatsapp": "595981575176",
+    "email": "",
+    "address": "Fernando de la Mora, Paraguay",
+    "city": "Fernando de la Mora",
+    "country": "Paraguay",
+    "hours": "Lunes a Sábado 9:00–18:00 hs"
+  },
+  "navigation": {
+    "businessName": "Scott Tatuajes",
+    "items": [
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "Scott Tatuajes",
+    "subheadline": "Tattoo Studio",
+    "description": "Scott Tatuajes — Tattoo Studio en Fernando de la Mora. Atención profesional.",
+    "ctaPrimaryText": "Reservar por WhatsApp"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "items": [
+      {
+        "title": "Tatuajes a color",
+        "description": "Pigmentos de alta duración. Especialistas en pieles latinas para que los colores mantengan vibranza años después.",
+        "price": "Consultar",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Tatuajes blackwork",
+        "description": "Trabajos en sombras, puntillismo y blackwork. Líneas limpias y contrastes perfectos.",
+        "price": "Consultar",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Tatuajes realistas",
+        "description": "Diseños pequeños con significado. Ideal para primeros tatuajes o zonas discretas como muñeca, clavícula o tobillo.",
+        "price": "Desde 150.000 Gs",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Diseños personalizados",
+        "description": "Diseño dibujado directamente sobre la piel sin stencil. Flujo orgánico que se adapta a las curvas del cuerpo.",
+        "price": "Consultar",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Piercings",
+        "description": "Diseños complementarios que cobran sentido juntos. Perfectos para aniversarios o celebraciones especiales.",
+        "price": "Consultar",
+        "icon": "sparkles"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Galería",
+    "items": [
+      "Trabajo 1",
+      "Trabajo 2",
+      "Trabajo 3",
+      "Trabajo 4",
+      "Trabajo 5",
+      "Trabajo 6"
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Reserva tu cita en Scott Tatuajes.",
+    "cta": {
+      "text": "+595 981 575 176",
+      "label": "WhatsApp"
+    },
+    "whatsappMessage": "¡Hola! Vi la página de Scott Tatuajes y me gustaría reservar una cita. ¿Podés confirmarme disponibilidad?"
+  },
+  "footer": {
+    "businessName": "Scott Tatuajes",
+    "tagline": "© 2026 Scott Tatuajes. Todos los derechos reservados.",
+    "credits": "Hecho con ❤️ por ParaguAI"
+  }
+}

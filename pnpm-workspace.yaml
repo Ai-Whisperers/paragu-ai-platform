@@ -1,4 +1,11 @@
 packages:
   - 'packages/**'
   - 'apps/*'
-  - '!apps/template-nextjs-client'
+
+public-hoist-pattern:
+  - 'next'
+  - 'react'
+  - 'react-dom'
+  - '@types/*'
+
+shared-workspace-lockfile: true
