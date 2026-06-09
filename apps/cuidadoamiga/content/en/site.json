@@ -1,0 +1,269 @@
+{
+  "_meta": {
+    "site": "Cuidado Amiga",
+    "tagline": "Collaborative map of gender-based violence cases in Latin America",
+    "description": "Collaborative documentation of femicides and abuse in Latin America. Three verified moderators approve each case before it is published on the map.",
+    "url": "https://cuidadoamiga.com",
+    "owner": "Sofía Juredare",
+    "email": "cuidadoamiga@proton.me",
+    "locale": "en",
+    "country": "Paraguay"
+  },
+  "navigation": {
+    "items": [
+      { "label": "Map", "href": "/en" },
+      { "label": "Where to report", "href": "/en/recursos" },
+      { "label": "How it works", "href": "/en/como-funciona" },
+      { "label": "Protocol", "href": "/en/protocolo" },
+      { "label": "Join us", "href": "/en/unirse" }
+    ],
+    "primaryCta": { "label": "+ Report a case", "href": "/en/reportar" },
+    "adminLink": { "label": "Moderation", "href": "/en/admin" }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Latin America",
+      "headline": "Collaborative map of gender-based violence cases",
+      "subheadline": "Every case on this map was reviewed and approved by three independent moderators. If you know of a case with a verifiable public source, you can report it.",
+      "primaryCta": { "label": "Report a case", "href": "/en/reportar" },
+      "secondaryCta": { "label": "How it works", "href": "/en/como-funciona" },
+      "stats": [
+        { "value": "20", "label": "Documented countries" },
+        { "value": "3", "label": "Moderators per case" },
+        { "value": "1", "label": "Public source required" }
+      ]
+    },
+    "intro": {
+      "title": "What is Cuidado Amiga?",
+      "paragraphs": [
+        "Cuidado Amiga is an open-source project that documents femicides, abuse, and harassment in Latin America. Cases are reported by anyone and approved by three verified moderators before being published on the map.",
+        "We do not sell or monetize any personal data. All published information comes from verified public sources: news articles, official reports, or records from recognized organizations."
+      ]
+    }
+  },
+  "comoFunciona": {
+    "title": "How does Cuidado Amiga work?",
+    "subtitle": "A collaborative map with independent verification. Here is how each case is processed.",
+    "sections": [
+      {
+        "title": "How does a case enter the map?",
+        "items": [
+          "Anyone can report a case using the «+ Report a case» button.",
+          "The case enters pending state — it is not published automatically.",
+          "Three verified moderators review it independently.",
+          "To be approved, it needs at least one verifiable public source: a news article, an official report, or a record from a recognized organization.",
+          "If all three approve → it is published. If any one rejects → it is not published.",
+          "The published case always includes the link to the original source."
+        ]
+      },
+      {
+        "title": "What information is published?",
+        "items": [
+          "Full name of the aggressor",
+          "Date of the event",
+          "Country and city",
+          "Type of case (femicide / abuse / harassment)",
+          "Photo (only if publicly available)",
+          "Link to the verified source"
+        ]
+      },
+      {
+        "title": "What is NOT accepted?",
+        "items": [
+          "Cases without a verifiable public source",
+          "Cases based solely on anonymous testimony without backing",
+          "Information about minors",
+          "Information that could put family members or witnesses at risk",
+          "Reports without a confirmed date"
+        ]
+      },
+      {
+        "title": "Who are the moderators?",
+        "body": "Moderators are manually verified by the Cuidado Amiga team. Each one signs a code of conduct and works independently."
+      },
+      {
+        "title": "Privacy and data",
+        "body": "We do not sell or monetize any personal data. All information published on the map comes from verified public sources. We do not store data from people reporting cases beyond what is necessary for the moderation process."
+      }
+    ]
+  },
+  "protocolo": {
+    "title": "Moderation protocol",
+    "subtitle": "This document defines the criteria and conduct that govern the work of Cuidado Amiga moderators. It must be read before requesting access.",
+    "sections": [
+      {
+        "title": "Criteria for publishing a case",
+        "items": [
+          "It must have at least one verifiable public source: a news article, an official report, or a recognized organization.",
+          "Cases without a name or without a confirmed date are not published.",
+          "The photo must be public — not taken from private social networks."
+        ]
+      },
+      {
+        "title": "What is never published",
+        "items": [
+          "Information about minors.",
+          "The exact address of the victim's home or family.",
+          "Information that could put family members or witnesses at risk."
+        ]
+      },
+      {
+        "title": "Moderator conduct",
+        "items": [
+          "Confidentiality about the data they handle.",
+          "No sharing of screenshots from the administration panel.",
+          "Report any attempt at manipulation or external pressure."
+        ]
+      },
+      {
+        "title": "Causes for removal as a moderator",
+        "items": [
+          "Publishing cases without full validation by 3 moderators.",
+          "Leaking sensitive information.",
+          "Prolonged inactivity without prior notice."
+        ]
+      }
+    ]
+  },
+  "unirse": {
+    "title": "I want to be a moderator",
+    "subtitle": "Applications are reviewed manually. If your application is approved, we will contact you with your access credentials.",
+    "form": {
+      "fields": {
+        "nombre": "Name or alias",
+        "mail": "Contact email",
+        "pais": "Country from which you will moderate",
+        "organizacion": "Organization or collective (optional)",
+        "motivo": "Why do you want to be a moderator?",
+        "comoSeEntero": "How did you hear about the project?"
+      },
+      "comoSeEnteroOptions": [
+        { "value": "Redes sociales", "label": "Social media" },
+        { "value": "Organización feminista", "label": "Feminist organization" },
+        { "value": "Me lo compartieron", "label": "Someone shared it with me" },
+        { "value": "Otro", "label": "Other" }
+      ],
+      "consent": [
+        "I have read and accept the moderation protocol",
+        "I understand that I will be working with sensitive information"
+      ],
+      "submitLabel": "Submit application"
+    },
+    "success": {
+      "title": "Your application was received",
+      "body": "We will contact you in the next few days at the email you provided."
+    }
+  },
+  "reportar": {
+    "title": "Report a case",
+    "subtitle": "Cases are reviewed by the team before being published on the map.",
+    "form": {
+      "fields": {
+        "nombre": "Full name of the aggressor",
+        "victima": "Full name of the victim",
+        "fecha": "Date of the event",
+        "tipo": "Type",
+        "pais": "Country",
+        "descripcion": "Description",
+        "direccion": "Address where the event occurred",
+        "calle": "Street",
+        "numero": "Number",
+        "barrio": "Neighborhood / locality",
+        "ciudad": "City",
+        "cp": "Postal code",
+        "fotoUrl": "URL of aggressor's photo (optional)",
+        "fuentes": "Sources (one per line)",
+        "procesoJudicial": "Judicial process"
+      },
+      "tipoOptions": [
+        { "value": "femicidio", "label": "Femicide" },
+        { "value": "abuso", "label": "Abuse" },
+        { "value": "acoso", "label": "Harassment" }
+      ],
+      "procesoOptions": [
+        { "value": "", "label": "Not specified" },
+        { "value": "en_proceso", "label": "In process" },
+        { "value": "cerrado", "label": "Closed / final sentence" }
+      ],
+      "submitLabel": "Submit case"
+    },
+    "success": {
+      "title": "Case submitted",
+      "body": "The case was submitted correctly and will be reviewed by the moderation team before being published."
+    },
+    "hints": {
+      "victima": "Optional. Only if it is public information.",
+      "fotoUrl": "Only public photos (not from private social networks).",
+      "direccion": "The address is used to locate the marker on the map. The exact street is not displayed publicly."
+    }
+  },
+  "recursos": {
+    "title": "Where to report?",
+    "subtitle": "Emergency lines, organizations, and official resources for gender-based violence victims in Latin America. If you are in immediate danger, call your country's emergency number.",
+    "emergencyBanner": {
+      "title": "If you are in immediate danger",
+      "body": "don't wait — call your country's emergency number (911 in most countries). Your safety comes first."
+    },
+    "recursoTypes": {
+      "linea": "📞 Hotline",
+      "org": "🤝 Organization",
+      "web": "🌐 Official site"
+    },
+    "missingBanner": "Know a resource that is missing? Write to {email} and we will add it."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Can anyone submit a case?",
+        "a": "Anyone can report a case, but no case is published automatically. It goes through review by three independent moderators before appearing on the map."
+      },
+      {
+        "q": "How do I know the information is true?",
+        "a": "Each case requires at least one verifiable public source to be approved: a news article, an official report, or a record from a recognized organization. Without a source it is not published."
+      },
+      {
+        "q": "What happens if someone submits false information?",
+        "a": "The triple-validation system is designed to prevent that. If a false case were published by mistake, anyone can report it to cuidadoamiga@proton.me and it will be removed immediately."
+      },
+      {
+        "q": "Can I report a case from my country even though the site is about Latin America?",
+        "a": "Yes. The site documents cases from all Latin American and Caribbean countries."
+      },
+      {
+        "q": "How can I help?",
+        "a": "You can report cases with verified sources, become a moderator through /unirse, or share the site with feminist organizations in your country.",
+        "isRich": true
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Open source project. The data is the responsibility of the verified moderators.",
+    "disclaimer": "We do not sell or monetize any personal data. The published information comes from verified public sources.",
+    "links": [
+      { "label": "Where to report", "href": "/en/recursos" },
+      { "label": "How it works", "href": "/en/como-funciona" },
+      { "label": "Protocol", "href": "/en/protocolo" },
+      { "label": "Join us", "href": "/en/unirse" }
+    ],
+    "contact": { "label": "Contact", "email": "cuidadoamiga@proton.me" }
+  },
+  "errors": {
+    "rateLimit": "Too many submissions. Wait a few minutes.",
+    "generic": "An error occurred. Please try again.",
+    "geocodeFailed": "Could not locate that address. Check that the city and country are spelled correctly.",
+    "loginInvalid": "Incorrect username or password.",
+    "solicitudConsent": "You must accept both conditions to continue.",
+    "solicitudSend": "There was an error sending your application. Try again.",
+    "caseSend": "Error submitting the case. Please try again."
+  },
+  "caseTypes": {
+    "femicidio": "Femicide",
+    "abuso": "Abuse",
+    "acoso": "Harassment"
+  },
+  "judicialStates": {
+    "en_proceso": "In process",
+    "cerrado": "Process closed"
+  }
+}

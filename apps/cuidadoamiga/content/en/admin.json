@@ -1,0 +1,94 @@
+{
+  "admin": {
+    "panel": {
+      "title": "Moderation panel",
+      "subtitle": "Three moderators review each case. Approved if all 3 vote yes · Rejected if any 1 votes no.",
+      "logout": "Sign out",
+      "loggedInAs": "Logged in as",
+      "owner": "Owner",
+      "mod": "Moderator"
+    },
+    "tabs": {
+      "validar": "To validate",
+      "pendiente": "Pending",
+      "aprobado": "Approved",
+      "rechazado": "Rejected",
+      "solicitudes": "Applications",
+      "crear": "Create case"
+    },
+    "filters": {
+      "all": "All",
+      "femicidio": "Femicide",
+      "abuso": "Abuse",
+      "acoso": "Harassment",
+      "search": "Search by name, country or city..."
+    },
+    "case": {
+      "submittedBy": "Submitted on",
+      "type": "Type",
+      "location": "Location",
+      "victim": "Victim",
+      "description": "Description",
+      "sources": "Sources",
+      "noSources": "No sources",
+      "viewOnMap": "View on map",
+      "viewDetail": "View case",
+      "edit": "Edit",
+      "delete": "Delete",
+      "approve": "Approve",
+      "reject": "Reject",
+      "rejectionReason": "Rejection reason (optional)",
+      "alreadyVoted": "Already voted",
+      "voteCount": "{approvals} of 3 approvals",
+      "votesCast": "Votes cast",
+      "votes": "votes"
+    },
+    "vote": {
+      "approved": "You approved this case",
+      "rejected": "You rejected this case",
+      "alreadyVoted": "You already voted on this case",
+      "noLongerPending": "This case is no longer pending",
+      "error": "Error recording the vote"
+    },
+    "edit": {
+      "title": "Edit case",
+      "save": "Save",
+      "saving": "Saving...",
+      "saved": "Changes saved",
+      "error": "Error saving"
+    },
+    "delete": {
+      "title": "Delete case",
+      "confirm": "Delete this case?",
+      "warning": "This is permanent. The deletion is recorded in the audit log.",
+      "yes": "Yes, delete",
+      "deleted": "Case deleted"
+    },
+    "empty": {
+      "validar": "No cases pending validation",
+      "pendiente": "No pending cases",
+      "aprobado": "No approved cases",
+      "rechazado": "No rejected cases",
+      "solicitudes": "No moderation applications",
+      "crear": "Use the form to create a case"
+    },
+    "solicitud": {
+      "title": "Moderator application",
+      "approve": "Approve",
+      "reject": "Reject",
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "approved_ok": "Application approved",
+      "rejected_ok": "Application rejected"
+    },
+    "create": {
+      "title": "Create case (moderator)",
+      "description": "Cases created by moderators are published directly with approved status.",
+      "submit": "Create case",
+      "submitting": "Creating...",
+      "created": "Case created",
+      "error": "Error creating the case"
+    }
+  }
+}

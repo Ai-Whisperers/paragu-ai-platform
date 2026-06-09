@@ -14,73 +14,54 @@
 
 import siteEs from '@/content/es/site.json'
 import adminEs from '@/content/es/admin.json'
+import sitePt from '@/content/pt/site.json'
+import adminPt from '@/content/pt/admin.json'
+import siteEn from '@/content/en/site.json'
+import adminEn from '@/content/en/admin.json'
 import type { SiteContent } from '@/lib/content-types'
 import type { AdminContent } from '@/lib/admin-types'
 import sharedRecursos from '@/content/_shared/recursos-latam.json'
 import sharedCountries from '@/content/_shared/countries-latam.json'
 
-export type Lang = 'es' // 'en' and 'pt' will be added in Phase 3
+export const SUPPORTED_LANGS = ['es', 'pt', 'en'] as const
+export type Lang = (typeof SUPPORTED_LANGS)[number]
+export const DEFAULT_LANG: Lang = 'es'
 export type { SiteContent }
 
 const SITE_BY_LANG: Record<Lang, SiteContent> = {
   es: { ...siteEs, admin: adminEs } as unknown as SiteContent,
+  pt: { ...sitePt, admin: adminPt } as unknown as SiteContent,
+  en: { ...siteEn, admin: adminEn } as unknown as SiteContent,
 }
 
 export function isLang(value: string): value is Lang {
-  return value === 'es'
+  return (SUPPORTED_LANGS as readonly string[]).includes(value)
 }
 
-export function getSite(lang: Lang = 'es'): SiteContent {
-  return SITE_BY_LANG[lang] ?? SITE_BY_LANG.es
+/** Extract a lang from any path that might start with /es, /pt, or /en. */
+export function langFromPath(path: string): Lang {
+  const seg = path.split('/').filter(Boolean)[0]
+  return isLang(seg ?? '') ? seg : DEFAULT_LANG
 }
 
-export function getNav(lang: Lang = 'es') {
-  return getSite(lang).navigation
+export function getSite(lang: Lang = DEFAULT_LANG): SiteContent {
+  return SITE_BY_LANG[lang] ?? SITE_BY_LANG[DEFAULT_LANG]
 }
 
-export function getHome(lang: Lang = 'es') {
-  return getSite(lang).home
-}
-
-export function getComoFunciona(lang: Lang = 'es') {
-  return getSite(lang).comoFunciona
-}
-
-export function getProtocolo(lang: Lang = 'es') {
-  return getSite(lang).protocolo
-}
-
-export function getUnirse(lang: Lang = 'es') {
-  return getSite(lang).unirse
-}
-
-export function getReportar(lang: Lang = 'es') {
-  return getSite(lang).reportar
-}
-
-export function getRecursos(lang: Lang = 'es') {
-  return getSite(lang).recursos
-}
-
-export function getFAQ(lang: Lang = 'es') {
-  return getSite(lang).faq
-}
-
-export function getFooter(lang: Lang = 'es') {
-  return getSite(lang).footer
-}
-
-export function getErrors(lang: Lang = 'es') {
-  return getSite(lang).errors
-}
-
-export function getCaseTypeLabels(lang: Lang = 'es') {
-  return getSite(lang).caseTypes
-}
-
-export function getJudicialStateLabels(lang: Lang = 'es') {
-  return getSite(lang).judicialStates
-}
+// Per-locale accessors (re-export for components)
+export const getNav = (lang: Lang = DEFAULT_LANG) => getSite(lang).navigation
+export const getHome = (lang: Lang = DEFAULT_LANG) => getSite(lang).home
+export const getComoFunciona = (lang: Lang = DEFAULT_LANG) => getSite(lang).comoFunciona
+export const getProtocolo = (lang: Lang = DEFAULT_LANG) => getSite(lang).protocolo
+export const getUnirse = (lang: Lang = DEFAULT_LANG) => getSite(lang).unirse
+export const getReportar = (lang: Lang = DEFAULT_LANG) => getSite(lang).reportar
+export const getRecursos = (lang: Lang = DEFAULT_LANG) => getSite(lang).recursos
+export const getFAQ = (lang: Lang = DEFAULT_LANG) => getSite(lang).faq
+export const getFooter = (lang: Lang = DEFAULT_LANG) => getSite(lang).footer
+export const getErrors = (lang: Lang = DEFAULT_LANG) => getSite(lang).errors
+export const getCaseTypeLabels = (lang: Lang = DEFAULT_LANG) => getSite(lang).caseTypes
+export const getJudicialStateLabels = (lang: Lang = DEFAULT_LANG) => getSite(lang).judicialStates
+export const getAdmin = (lang: Lang = DEFAULT_LANG): AdminContent => getSite(lang).admin
 
 // ============================================================
 // Shared cross-locale data (content/_shared/*)
@@ -98,8 +79,4 @@ export function getRecursosLatam() {
     emergencia?: string
     recursos: Array<{ nombre: string; tipo: 'linea' | 'org' | 'web'; detalle: string; url?: string }>
   }>
-}
-
-export function getAdmin(lang: Lang = 'es'): AdminContent {
-  return getSite(lang).admin
 }

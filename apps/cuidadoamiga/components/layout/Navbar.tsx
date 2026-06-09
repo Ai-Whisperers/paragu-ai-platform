@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 
 interface NavbarProps {
   lang: Lang
+  currentPath?: string
 }
 
 export function Navbar({ lang }: NavbarProps) {

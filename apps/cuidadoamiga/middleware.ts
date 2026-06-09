@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
+import { SUPPORTED_LANGS, DEFAULT_LANG, type Lang } from '@/lib/content'
 
 // Rate limit in-memory map: max 5 POSTs per 10 minutes per IP.
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
@@ -23,11 +24,40 @@ function isRateLimited(ip: string): boolean {
 export async function middleware(request: NextRequest) {
   const response = NextResponse.next({ request })
 
-  // Rate limit on the public case-submission endpoint
-  if (request.method === 'POST' && request.nextUrl.pathname === '/api/cases') {
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-      || request.headers.get('x-real-ip')
-      || 'unknown'
+  // --- Locale routing: redirect bare paths to the user's preferred locale ---
+  const pathname = request.nextUrl.pathname
+  const hasLangPrefix = SUPPORTED_LANGS.includes(
+    pathname.split('/').filter(Boolean)[0] as Lang,
+  )
+
+  if (!hasLangPrefix) {
+    // Skip Next.js internals and assets
+    if (
+      pathname.startsWith('/_next') ||
+      pathname.startsWith('/api') ||
+      pathname.startsWith('/static') ||
+      pathname.includes('.')
+    ) {
+      return response
+    }
+
+    // Try to detect preferred language from Accept-Language
+    const acceptLang = request.headers.get('accept-language') ?? ''
+    let preferred: Lang = DEFAULT_LANG
+    if (acceptLang.startsWith('pt')) preferred = 'pt'
+    else if (acceptLang.startsWith('en')) preferred = 'en'
+
+    const url = request.nextUrl.clone()
+    url.pathname = `/${preferred}${pathname === '/' ? '' : pathname}`
+    return NextResponse.redirect(url)
+  }
+
+  // --- Rate limit on the public case-submission endpoint ---
+  if (request.method === 'POST' && pathname === '/api/cases') {
+    const ip =
+      request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+      request.headers.get('x-real-ip') ||
+      'unknown'
 
     if (isRateLimited(ip)) {
       return new NextResponse(
@@ -37,7 +67,7 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  // Auth protection for /es/admin/*
+  // --- Auth protection for /xx/admin/* (any locale) ---
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -55,19 +85,20 @@ export async function middleware(request: NextRequest) {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const isAdminRoute = request.nextUrl.pathname.includes('/admin') && !request.nextUrl.pathname.endsWith('/login')
-  const isLoginPage = request.nextUrl.pathname.endsWith('/admin/login')
+  const pathSegs = pathname.split('/').filter(Boolean)
+  const isAdminRoute = pathSegs[1] === 'admin' && pathSegs[2] !== 'login'
+  const isLoginPage = pathSegs[1] === 'admin' && pathSegs[2] === 'login'
 
   if (isAdminRoute && !user) {
-    return NextResponse.redirect(new URL('/es/admin/login', request.url))
+    return NextResponse.redirect(new URL(`/${pathSegs[0]}/admin/login`, request.url))
   }
   if (isLoginPage && user) {
-    return NextResponse.redirect(new URL('/es/admin', request.url))
+    return NextResponse.redirect(new URL(`/${pathSegs[0]}/admin`, request.url))
   }
 
   return response
 }
 
 export const config = {
-  matcher: ['/es/admin/:path*', '/api/cases'],
+  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
 }
