@@ -41,7 +41,8 @@ export function isLang(value: string): value is Lang {
 /** Extract a lang from any path that might start with /es, /pt, or /en. */
 export function langFromPath(path: string): Lang {
   const seg = path.split('/').filter(Boolean)[0]
-  return isLang(seg ?? '') ? seg : DEFAULT_LANG
+  if (seg && isLang(seg)) return seg
+  return DEFAULT_LANG
 }
 
 export function getSite(lang: Lang = DEFAULT_LANG): SiteContent {
