@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "description": "Safety and quick-exit strings for survivor protection"
+  },
+  "exit": {
+    "label": "Salir del sitio",
+    "tooltip": "Presioná Ctrl+E o hacé clic para ir a Google",
+    "keyboardHint": "Ctrl+E",
+    "footerDisclaimer": "Si necesitás salir rápido, usá este botón. No deja rastro en este navegador.",
+    "safeModeParam": "safe"
+  }
+}

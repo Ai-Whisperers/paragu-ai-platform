@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "description": "Statistics and data export page content"
+  },
+  "page": {
+    "title": "Estatísticas",
+    "subtitle": "Dados agregados sobre os casos documentados na plataforma",
+    "exportLabel": "Exportar dados",
+    "noData": "Dados insuficientes para exibir estatísticas.",
+    "filters": {
+      "allCountries": "Todos os países",
+      "allTypes": "Todos os tipos",
+      "allYears": "Todos os anos"
+    }
+  },
+  "sections": {
+    "overview": "Resumo geral",
+    "byCountry": "Por país",
+    "byYear": "Por ano",
+    "byType": "Por tipo de caso",
+    "byJudicialState": "Situação judicial"
+  }
+}

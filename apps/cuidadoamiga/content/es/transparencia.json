@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "description": "Transparency and methodology information"
+  },
+  "page": {
+    "title": "Transparencia",
+    "subtitle": "Cómo verificamos los casos, quiénes moderan y cómo garantizamos la integridad de los datos"
+  },
+  "sections": {
+    "sources": {
+      "title": "Fuentes verificadas",
+      "body": "Cada caso publicado en el mapa tiene al menos una fuente pública verificable: una nota periodística, una denuncia oficial o un registro de una organización reconocida. Las fuentes completas se muestran en la página de cada caso."
+    },
+    "moderation": {
+      "title": "Proceso de moderación",
+      "body": "Cada caso es revisado por tres moderadoras independientes antes de ser aprobado. Si dos de tres moderadoras votan a favor, el caso se publica. Si alguna moderadora detecta un error, el caso se rechaza y quien lo reportó recibe una notificación."
+    },
+    "bias": {
+      "title": "Sesgo y limitaciones",
+      "body": "Este mapa no pretende ser un registro exhaustivo. Dependemos de fuentes públicas y reportes voluntarios. Hay países con más cobertura que otros simplemente porque tienen más prensa libre y organizaciones que documentan estos casos. La ausencia de un caso no significa que no haya ocurrido."
+    },
+    "report": {
+      "title": "Informe anual",
+      "body": "Próximamente publicaremos un informe anual con estadísticas consolidadas, tendencias y recomendaciones de política pública."
+    }
+  }
+}

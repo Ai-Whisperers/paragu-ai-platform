@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "description": "Statistics and data export page content"
+  },
+  "page": {
+    "title": "Statistics",
+    "subtitle": "Aggregated data on cases documented on the platform",
+    "exportLabel": "Export data",
+    "noData": "Not enough data to display statistics.",
+    "filters": {
+      "allCountries": "All countries",
+      "allTypes": "All types",
+      "allYears": "All years"
+    }
+  },
+  "sections": {
+    "overview": "General overview",
+    "byCountry": "By country",
+    "byYear": "By year",
+    "byType": "By case type",
+    "byJudicialState": "Judicial status"
+  }
+}

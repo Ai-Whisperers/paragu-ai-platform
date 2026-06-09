@@ -18,7 +18,19 @@ import sitePt from '@/content/pt/site.json'
 import adminPt from '@/content/pt/admin.json'
 import siteEn from '@/content/en/site.json'
 import adminEn from '@/content/en/admin.json'
-import type { SiteContent } from '@/lib/content-types'
+import safetyEs from '@/content/es/safety.json'
+import safetyPt from '@/content/pt/safety.json'
+import safetyEn from '@/content/en/safety.json'
+import transparenciaEs from '@/content/es/transparencia.json'
+import transparenciaPt from '@/content/pt/transparencia.json'
+import transparenciaEn from '@/content/en/transparencia.json'
+import dataEs from '@/content/es/data.json'
+import dataPt from '@/content/pt/data.json'
+import dataEn from '@/content/en/data.json'
+import blogEs from '@/content/es/blog.json'
+import blogPt from '@/content/pt/blog.json'
+import blogEn from '@/content/en/blog.json'
+import type { SiteContent, SafetyContent, TransparencyContent, DataContent, BlogContent, BlogPost } from '@/lib/content-types'
 import type { AdminContent } from '@/lib/admin-types'
 import sharedRecursos from '@/content/_shared/recursos-latam.json'
 import sharedCountries from '@/content/_shared/countries-latam.json'
@@ -64,6 +76,49 @@ export const getCaseTypeLabels = (lang: Lang = DEFAULT_LANG) => getSite(lang).ca
 export const getJudicialStateLabels = (lang: Lang = DEFAULT_LANG) => getSite(lang).judicialStates
 export const getAdmin = (lang: Lang = DEFAULT_LANG): AdminContent => getSite(lang).admin
 
+// Safety content (exit button)
+const SAFETY_BY_LANG: Record<Lang, SafetyContent> = {
+  es: safetyEs as SafetyContent,
+  pt: safetyPt as SafetyContent,
+  en: safetyEn as SafetyContent,
+}
+export function getSafety(lang: Lang = DEFAULT_LANG): SafetyContent {
+  return SAFETY_BY_LANG[lang] ?? SAFETY_BY_LANG[DEFAULT_LANG]
+}
+
+// Transparency content
+const TRANSPARENCIA_BY_LANG: Record<Lang, TransparencyContent> = {
+  es: transparenciaEs as TransparencyContent,
+  pt: transparenciaPt as TransparencyContent,
+  en: transparenciaEn as TransparencyContent,
+}
+export function getTransparencia(lang: Lang = DEFAULT_LANG): TransparencyContent {
+  return TRANSPARENCIA_BY_LANG[lang] ?? TRANSPARENCIA_BY_LANG[DEFAULT_LANG]
+}
+
+// Data / statistics page content
+const DATA_BY_LANG: Record<Lang, DataContent> = {
+  es: dataEs as DataContent,
+  pt: dataPt as DataContent,
+  en: dataEn as DataContent,
+}
+export function getData(lang: Lang = DEFAULT_LANG): DataContent {
+  return DATA_BY_LANG[lang] ?? DATA_BY_LANG[DEFAULT_LANG]
+}
+
+// Blog content
+const BLOG_BY_LANG: Record<Lang, BlogContent> = {
+  es: blogEs as BlogContent,
+  pt: blogPt as BlogContent,
+  en: blogEn as BlogContent,
+}
+export function getBlog(lang: Lang = DEFAULT_LANG): BlogContent {
+  return BLOG_BY_LANG[lang] ?? BLOG_BY_LANG[DEFAULT_LANG]
+}
+export function getBlogPost(slug: string, lang: Lang = DEFAULT_LANG): BlogPost | undefined {
+  return getBlog(lang).posts.find((p) => p.slug === slug)
+}
+
 // ============================================================
 // Shared cross-locale data (content/_shared/*)
 // ============================================================
@@ -81,3 +136,5 @@ export function getRecursosLatam() {
     recursos: Array<{ nombre: string; tipo: 'linea' | 'org' | 'web'; detalle: string; url?: string }>
   }>
 }
+
+export type { BlogPost }

@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "slug": "what-is-femicide",
+      "title": "What Is Femicide?",
+      "date": "2025-03-08",
+      "excerpt": "Legal and social definition of femicide in Latin America. Differences from homicide, types of femicide, and regional context.",
+      "tags": ["femicide", "definition", "human rights"]
+    },
+    {
+      "slug": "how-to-use-the-map",
+      "title": "How to Use the Cuidado Amiga Map",
+      "date": "2025-03-10",
+      "excerpt": "Step-by-step guide to navigate, search cases, and contribute to the collaborative femicide map of Latin America.",
+      "tags": ["guide", "map", "usage"]
+    },
+    {
+      "slug": "importance-of-data",
+      "title": "The Importance of Open Data Against Gender-Based Violence",
+      "date": "2025-03-15",
+      "excerpt": "Why documenting and making each case visible is essential for prevention, collective memory, and public policy.",
+      "tags": ["data", "transparency", "public policy"]
+    }
+  ]
+}

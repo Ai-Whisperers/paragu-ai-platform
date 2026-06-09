@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "slug": "o-que-e-femicidio",
+      "title": "O que é um feminicídio?",
+      "date": "2025-03-08",
+      "excerpt": "Definição legal e social do feminicídio na América Latina. Diferenças com o homicídio, tipos de feminicídio e contexto regional.",
+      "tags": ["feminicídio", "definição", "direitos humanos"]
+    },
+    {
+      "slug": "como-usar-o-mapa",
+      "title": "Como usar o mapa do Cuidado Amiga",
+      "date": "2025-03-10",
+      "excerpt": "Guia passo a passo para navegar, buscar casos e contribuir com o mapa colaborativo de feminicídios na América Latina.",
+      "tags": ["guia", "mapa", "uso"]
+    },
+    {
+      "slug": "importancia-dos-dados",
+      "title": "A importância dos dados abertos contra a violência de gênero",
+      "date": "2025-03-15",
+      "excerpt": "Por que documentar e visibilizar cada caso é fundamental para a prevenção, memória coletiva e políticas públicas.",
+      "tags": ["dados", "transparência", "políticas públicas"]
+    }
+  ]
+}

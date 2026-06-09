@@ -222,3 +222,63 @@ export interface UiLoading {
 }
 
 export type InfoSection = { title: string; items?: string[]; body?: string }
+
+// ── Transparency page content ────────────────────────────────────────────
+export interface TransparencyContent {
+  _meta: { description: string }
+  page: { title: string; subtitle: string }
+  sections: {
+    sources: { title: string; body: string }
+    moderation: { title: string; body: string }
+    bias: { title: string; body: string }
+    report: { title: string; body: string }
+  }
+}
+
+// ── Data / statistics page content ────────────────────────────────────────
+export interface DataContent {
+  _meta: { description: string }
+  page: {
+    title: string
+    subtitle: string
+    exportLabel: string
+    noData: string
+    filters: {
+      allCountries: string
+      allTypes: string
+      allYears: string
+    }
+  }
+  sections: {
+    overview: string
+    byCountry: string
+    byYear: string
+    byType: string
+    byJudicialState: string
+  }
+}
+
+// ── Blog content ──────────────────────────────────────────────────────────
+export interface BlogPost {
+  slug: string
+  title: string
+  date: string
+  excerpt: string
+  tags: string[]
+}
+
+export interface BlogContent {
+  posts: BlogPost[]
+}
+
+// ── Safety content ────────────────────────────────────────────────────────
+export interface SafetyContent {
+  _meta: { description: string }
+  exit: {
+    label: string
+    tooltip: string
+    keyboardHint: string
+    footerDisclaimer: string
+    safeModeParam: string
+  }
+}
