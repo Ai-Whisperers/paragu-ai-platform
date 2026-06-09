@@ -1,0 +1,269 @@
+{
+  "_meta": {
+    "site": "Cuidado Amiga",
+    "tagline": "Mapa colaborativo de casos de violencia de género en América Latina",
+    "description": "Documentación colaborativa de femicidios y abusos en América Latina. Tres moderadoras verificadas aprueban cada caso antes de publicarse en el mapa.",
+    "url": "https://cuidadoamiga.com",
+    "owner": "Sofía Juredare",
+    "email": "cuidadoamiga@proton.me",
+    "locale": "es",
+    "country": "Paraguay"
+  },
+  "navigation": {
+    "items": [
+      { "label": "Mapa", "href": "/es" },
+      { "label": "Dónde denunciar", "href": "/es/recursos" },
+      { "label": "Cómo funciona", "href": "/es/como-funciona" },
+      { "label": "Protocolo", "href": "/es/protocolo" },
+      { "label": "Unirse", "href": "/es/unirse" }
+    ],
+    "primaryCta": { "label": "+ Reportar caso", "href": "/es/reportar" },
+    "adminLink": { "label": "Moderación", "href": "/es/admin" }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "América Latina",
+      "headline": "Mapa colaborativo de casos de violencia de género",
+      "subheadline": "Cada caso en este mapa fue revisado y aprobado por tres moderadoras independientes. Si conocés un caso con fuente pública verificable, podés reportarlo.",
+      "primaryCta": { "label": "Reportar un caso", "href": "/es/reportar" },
+      "secondaryCta": { "label": "Cómo funciona", "href": "/es/como-funciona" },
+      "stats": [
+        { "value": "20", "label": "Países documentados" },
+        { "value": "3", "label": "Moderadoras por caso" },
+        { "value": "1", "label": "Fuente pública requerida" }
+      ]
+    },
+    "intro": {
+      "title": "Qué es Cuidado Amiga",
+      "paragraphs": [
+        "Cuidado Amiga es un proyecto de código abierto que documenta femicidios, abusos y acosos en América Latina. Los casos son reportados por cualquier persona y aprobados por tres moderadoras verificadas antes de publicarse en el mapa.",
+        "No vendemos ni monetizamos ningún dato personal. Toda la información publicada proviene de fuentes públicas verificadas: notas periodísticas, denuncias oficiales o registros de organizaciones reconocidas."
+      ]
+    }
+  },
+  "comoFunciona": {
+    "title": "¿Cómo funciona Cuidado Amiga?",
+    "subtitle": "Un mapa colaborativo con verificación independiente. Así funciona el proceso de cada caso.",
+    "sections": [
+      {
+        "title": "¿Cómo entra un caso al mapa?",
+        "items": [
+          "Cualquier persona puede reportar un caso desde el botón «+ Reportar caso».",
+          "El caso entra en estado pendiente — no se publica automáticamente.",
+          "Tres moderadoras verificadas lo revisan de forma independiente.",
+          "Para aprobarlo necesita al menos una fuente pública verificable: nota periodística, denuncia oficial o registro de organización reconocida.",
+          "Si las tres aprueban → se publica. Si cualquiera rechaza → no se publica.",
+          "El caso publicado siempre incluye el link a la fuente original."
+        ]
+      },
+      {
+        "title": "¿Qué información se publica?",
+        "items": [
+          "Nombre completo del agresor",
+          "Fecha del hecho",
+          "País y ciudad",
+          "Tipo de caso (femicidio / abuso / acoso)",
+          "Foto (solo si es pública)",
+          "Link a la fuente verificada"
+        ]
+      },
+      {
+        "title": "¿Qué NO se acepta?",
+        "items": [
+          "Casos sin fuente pública verificable",
+          "Casos basados únicamente en testimonio anónimo sin respaldo",
+          "Datos de menores de edad",
+          "Información que pueda poner en riesgo a familiares o testigos",
+          "Denuncias sin fecha confirmada"
+        ]
+      },
+      {
+        "title": "¿Quiénes son las moderadoras?",
+        "body": "Las moderadoras son personas verificadas manualmente por el equipo de Cuidado Amiga. Cada una firma un protocolo de conducta y trabaja de forma independiente."
+      },
+      {
+        "title": "Privacidad y datos",
+        "body": "No vendemos ni monetizamos ningún dato personal. Toda la información publicada en el mapa proviene de fuentes públicas verificadas. No almacenamos datos de quienes reportan casos más allá de lo necesario para el proceso de moderación."
+      }
+    ]
+  },
+  "protocolo": {
+    "title": "Protocolo de moderación",
+    "subtitle": "Este documento define los criterios y conductas que rigen el trabajo de las moderadoras de Cuidado Amiga. Es de lectura obligatoria antes de solicitar acceso.",
+    "sections": [
+      {
+        "title": "Criterios para publicar un caso",
+        "items": [
+          "Debe tener al menos una fuente pública verificable: nota periodística, denuncia oficial, u organización reconocida.",
+          "No se publican casos sin nombre o sin fecha confirmada.",
+          "La foto debe ser pública — no tomada de redes sociales privadas."
+        ]
+      },
+      {
+        "title": "Lo que nunca se publica",
+        "items": [
+          "Datos de menores de edad.",
+          "Dirección exacta del domicilio de la víctima o su familia.",
+          "Información que pueda poner en riesgo a familiares o testigos."
+        ]
+      },
+      {
+        "title": "Conducta de las moderadoras",
+        "items": [
+          "Confidencialidad sobre los datos que manejan.",
+          "No compartir capturas del panel de administración.",
+          "Reportar cualquier intento de manipulación o presión externa."
+        ]
+      },
+      {
+        "title": "Causas de baja como moderadora",
+        "items": [
+          "Publicar casos sin validación completa de las 3 moderadoras.",
+          "Filtrar información sensible.",
+          "Inactividad prolongada sin aviso previo."
+        ]
+      }
+    ]
+  },
+  "unirse": {
+    "title": "Quiero ser moderadora",
+    "subtitle": "Las solicitudes son revisadas manualmente. Si tu solicitud es aprobada, te contactamos con tus credenciales de acceso.",
+    "form": {
+      "fields": {
+        "nombre": "Nombre o alias",
+        "mail": "Mail de contacto",
+        "pais": "País desde donde vas a moderar",
+        "organizacion": "Organización o colectiva (opcional)",
+        "motivo": "¿Por qué querés ser moderadora?",
+        "comoSeEntero": "¿Cómo te enteraste del proyecto?"
+      },
+      "comoSeEnteroOptions": [
+        { "value": "Redes sociales", "label": "Redes sociales" },
+        { "value": "Organización feminista", "label": "Organización feminista" },
+        { "value": "Me lo compartieron", "label": "Me lo compartieron" },
+        { "value": "Otro", "label": "Otro" }
+      ],
+      "consent": [
+        "Leí y acepto el protocolo de moderación",
+        "Entiendo que voy a trabajar con información sensible"
+      ],
+      "submitLabel": "Enviar solicitud"
+    },
+    "success": {
+      "title": "Tu solicitud fue recibida",
+      "body": "Te contactamos en los próximos días al mail que dejaste."
+    }
+  },
+  "reportar": {
+    "title": "Reportar un caso",
+    "subtitle": "Los casos son revisados por el equipo antes de publicarse en el mapa.",
+    "form": {
+      "fields": {
+        "nombre": "Nombre completo del agresor",
+        "victima": "Nombre completo de la víctima",
+        "fecha": "Fecha del hecho",
+        "tipo": "Tipo",
+        "pais": "País",
+        "descripcion": "Descripción",
+        "direccion": "Dirección donde ocurrió el hecho",
+        "calle": "Calle",
+        "numero": "Número",
+        "barrio": "Barrio / localidad",
+        "ciudad": "Ciudad",
+        "cp": "Código postal",
+        "fotoUrl": "URL de foto del agresor (opcional)",
+        "fuentes": "Fuentes (una por línea)",
+        "procesoJudicial": "Proceso judicial"
+      },
+      "tipoOptions": [
+        { "value": "femicidio", "label": "Femicidio" },
+        { "value": "abuso", "label": "Abuso" },
+        { "value": "acoso", "label": "Acoso" }
+      ],
+      "procesoOptions": [
+        { "value": "", "label": "No especificado" },
+        { "value": "en_proceso", "label": "En proceso" },
+        { "value": "cerrado", "label": "Cerrado / sentencia firme" }
+      ],
+      "submitLabel": "Enviar caso"
+    },
+    "success": {
+      "title": "Caso enviado",
+      "body": "El caso fue enviado correctamente y será revisado por el equipo de moderación antes de publicarse."
+    },
+    "hints": {
+      "victima": "Opcional. Solo si es información pública.",
+      "fotoUrl": "Solo fotos públicas (no de redes sociales privadas).",
+      "direccion": "La dirección se usa para ubicar el marcador en el mapa. La calle exacta no se muestra públicamente."
+    }
+  },
+  "recursos": {
+    "title": "¿Dónde denunciar?",
+    "subtitle": "Líneas de emergencia, organizaciones y recursos oficiales para víctimas de violencia de género en América Latina. Si estás en peligro inmediato, llamá al número de emergencias de tu país.",
+    "emergencyBanner": {
+      "title": "Si estás en peligro inmediato",
+      "body": "no esperes — llamá al número de emergencias de tu país (911 en la mayoría de los países). Tu seguridad es lo primero."
+    },
+    "recursoTypes": {
+      "linea": "📞 Línea directa",
+      "org": "🤝 Organización",
+      "web": "🌐 Web oficial"
+    },
+    "missingBanner": "¿Conocés un recurso que falta? Escribinos a {email} y lo sumamos."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "¿Cualquiera puede subir un caso?",
+        "a": "Cualquier persona puede reportar un caso, pero ningún caso se publica automáticamente. Pasa por revisión de tres moderadoras independientes antes de aparecer en el mapa."
+      },
+      {
+        "q": "¿Cómo sé que la información es verdadera?",
+        "a": "Cada caso requiere al menos una fuente pública verificable para ser aprobado: nota periodística, denuncia oficial o registro de una organización reconocida. Sin fuente no se publica."
+      },
+      {
+        "q": "¿Qué pasa si alguien sube información falsa?",
+        "a": "El sistema de triple validación está diseñado para evitar eso. Si un caso falso llegara a publicarse por error, cualquier persona puede reportarlo a cuidadoamiga@proton.me y se da de baja inmediatamente."
+      },
+      {
+        "q": "¿Puedo reportar un caso de mi país aunque el sitio sea de América Latina?",
+        "a": "Sí. El sitio documenta casos de todos los países de América Latina y el Caribe."
+      },
+      {
+        "q": "¿Cómo puedo ayudar?",
+        "a": "Podés reportar casos con fuentes verificadas, convertirte en moderadora desde /unirse, o compartir el sitio con organizaciones feministas de tu país.",
+        "isRich": true
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Proyecto de código abierto. Los datos son responsabilidad de las moderadoras verificadas.",
+    "disclaimer": "No vendemos ni monetizamos ningún dato personal. La información publicada proviene de fuentes públicas verificadas.",
+    "links": [
+      { "label": "Dónde denunciar", "href": "/es/recursos" },
+      { "label": "Cómo funciona", "href": "/es/como-funciona" },
+      { "label": "Protocolo", "href": "/es/protocolo" },
+      { "label": "Unirse", "href": "/es/unirse" }
+    ],
+    "contact": { "label": "Contacto", "email": "cuidadoamiga@proton.me" }
+  },
+  "errors": {
+    "rateLimit": "Demasiados envíos. Esperá unos minutos.",
+    "generic": "Hubo un error. Por favor intentá de nuevo.",
+    "geocodeFailed": "No se pudo ubicar esa dirección. Revisá que la ciudad y el país estén bien escritos.",
+    "loginInvalid": "Usuario o contraseña incorrectos.",
+    "solicitudConsent": "Tenés que aceptar ambas condiciones para continuar.",
+    "solicitudSend": "Hubo un error al enviar tu solicitud. Intentá de nuevo.",
+    "caseSend": "Error al enviar el caso. Por favor intentá de nuevo."
+  },
+  "caseTypes": {
+    "femicidio": "Femicidio",
+    "abuso": "Abuso",
+    "acoso": "Acoso"
+  },
+  "judicialStates": {
+    "en_proceso": "En proceso",
+    "cerrado": "Proceso cerrado"
+  }
+}
