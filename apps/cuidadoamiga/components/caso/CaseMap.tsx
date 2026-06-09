@@ -60,24 +60,6 @@ export default function CaseMap({ cases }: CaseMapProps) {
         shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
       })
 
-      // Lazy-load clustering if many cases
-      void import('leaflet.markercluster').then((mc) => {
-        if (cancelled || !mapRef.current) return
-        L.markerClusterGroup = (mc as unknown as { markerClusterGroup: typeof L.markerClusterGroup }).markerClusterGroup ?? L.markerClusterGroup
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const m = mapInstanceRef.current as any
-        if (m && !m.clusterGroup) {
-          m.clusterGroup = L.markerClusterGroup({
-            showCoverageOnHover: false,
-            spiderfyOnMaxZoom: true,
-            maxClusterRadius: 60,
-          })
-          m.map.addLayer(m.clusterGroup)
-        }
-      }).catch(() => {
-        // Marker cluster is a nice-to-have; silently skip if unavailable
-      })
-
       const map = L.map(mapRef.current, {
         center: [-15, -65],
         zoom: 3,
