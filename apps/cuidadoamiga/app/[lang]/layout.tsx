@@ -49,6 +49,7 @@ export default async function LangLayout({
   return (
     <html lang={lang} className={inter.className}>
       <body className="min-h-full flex flex-col">
+        <SkipLink />
         <a href="#main" className="skip-link">Saltar al contenido</a>
         <JsonLd
           data={{
