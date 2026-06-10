@@ -1,7 +1,8 @@
-import type { NextConfig } from "next"
-export default {
+/** @type {import('next').NextConfig} */
+const config = {
   output: "standalone",
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-} as NextConfig
+};
+module.exports = config;

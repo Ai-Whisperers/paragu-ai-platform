@@ -6,4 +6,4 @@ COPY .next/static ./.next/static
 COPY public ./public
 EXPOSE 3000
 ENV HOSTNAME="0.0.0.0"
-CMD ["node", "server.js"]
+CMD ["node", "apps/reina-de-copas/server.js"]
