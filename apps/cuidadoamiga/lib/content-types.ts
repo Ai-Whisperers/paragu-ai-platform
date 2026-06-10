@@ -263,11 +263,14 @@ export interface BlogPost {
   slug: string
   title: string
   date: string
+  lastUpdated?: string
   excerpt: string
   tags: string[]
+  body?: { es?: string[]; en?: string[]; pt?: string[] } | string
 }
 
 export interface BlogContent {
+  intro: { es: string; en: string; pt: string }
   posts: BlogPost[]
 }
 

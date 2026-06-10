@@ -4,8 +4,11 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X, Scale } from "lucide-react"
 import content from "@/content/es.json"
+import { usePathname } from "next/navigation";
+import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher";
 
 export default function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false)
   const s = content.site
 
@@ -36,7 +39,7 @@ export default function Header() {
               {n.label}
             </Link>
           ))}
-        </nav>
+        <LocaleSwitcher /></nav>
 
         <a href={content.hero.ctaLink} target="_blank" rel="noopener noreferrer"
           className="hide-mobile"

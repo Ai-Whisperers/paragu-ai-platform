@@ -4,8 +4,11 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X, MessageCircle } from 'lucide-react'
 import content from '@/content/es.json'
+import { usePathname } from "next/navigation";
+import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher";
 
 export default function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const nav = content.navigation
@@ -68,7 +71,7 @@ export default function Header() {
             <MessageCircle size={16} />
             {nav.ctaText}
           </a>
-        </nav>
+        <LocaleSwitcher /></nav>
 
         {/* Mobile Toggle */}
         <button

@@ -8,13 +8,16 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
   const { lang: langRaw } = await params
   const lang: Lang = isLang(langRaw) ? langRaw : 'es'
   const blog = getBlog(lang)
-
   const pageTitle = { es: 'Blog', en: 'Blog', pt: 'Blog' }
+  const readMoreLabel = { es: 'Leer más →', en: 'Read more →', pt: 'Ler mais →' }
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-12 md:py-16">
       <Badge tone="rose" className="mb-4">{pageTitle[lang]}</Badge>
-      <h1 className="text-3xl md:text-4xl font-black mb-8">{pageTitle[lang]}</h1>
+      <h1 className="text-3xl md:text-4xl font-black mb-4">{pageTitle[lang]}</h1>
+      <p className="text-base text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed">
+        {blog.intro[lang]}
+      </p>
       <div className="flex flex-col gap-6">
         {blog.posts.map((post: BlogPost) => (
           <Link key={post.slug} href={`/${lang}/blog/${post.slug}`}>
@@ -26,6 +29,9 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
                   </h2>
                   <p className="text-sm text-neutral-500 mt-1">{post.date}</p>
                   <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-2 line-clamp-2">{post.excerpt}</p>
+                  <span className="text-sm text-rose-600 dark:text-rose-400 mt-3 inline-block">
+                    {readMoreLabel[lang]}
+                  </span>
                 </div>
               </div>
               {post.tags.length > 0 && (

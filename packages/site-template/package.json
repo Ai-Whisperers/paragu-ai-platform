@@ -25,7 +25,6 @@
     "@ai-whisperers/commerce": "^0.2.1",
     "@ai-whisperers/content": "^0.3.0",
     "@ai-whisperers/hooks": "^0.2.1",
-    "@ai-whisperers/i18n": "^0.2.2",
     "@ai-whisperers/loyalty": "^0.2.0",
     "@ai-whisperers/payments": "^0.2.1",
     "@ai-whisperers/product": "^0.2.0",

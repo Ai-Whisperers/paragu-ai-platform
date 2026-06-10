@@ -14,7 +14,6 @@
     "@ai-whisperers/admin": "^0.3.1",
     "@ai-whisperers/auth": "^0.2.0",
     "@ai-whisperers/commerce": "^0.2.0",
-    "@ai-whisperers/i18n": "^0.2.0",
     "@ai-whisperers/seo": "^0.2.0",
     "@ai-whisperers/theme": "^0.2.0",
     "@ai-whisperers/ui": "^0.2.0",
@@ -34,7 +33,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "recharts": "*",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.5.0",
+    "@ai-whisperers/i18n-paraguay": "workspace:../.."
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",

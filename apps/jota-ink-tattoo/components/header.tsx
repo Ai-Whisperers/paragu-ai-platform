@@ -3,6 +3,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import content from "@/content/es.json"
+import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher";
 
 const c = content as Record<string, unknown>
 
@@ -41,7 +42,7 @@ export function Header() {
               </Link>
             )
           })}
-        </nav>
+        <LocaleSwitcher /></nav>
 
         <div className="flex items-center gap-2">
           <a href={c.navigation.ctaHref} target="_blank" rel="noopener noreferrer"

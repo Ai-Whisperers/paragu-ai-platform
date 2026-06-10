@@ -1,6 +1,6 @@
 // Locale detection middleware
 // Redirects users from /path to /es/path (or detected locale) if no locale prefix
-import { localeMiddleware } from '@ai-whisperers/i18n/middleware';
+import { localeMiddleware } from '@ai-whisperers/i18n-paraguay/middleware';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {

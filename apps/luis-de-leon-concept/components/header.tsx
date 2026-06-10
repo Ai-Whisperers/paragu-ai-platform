@@ -2,6 +2,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { usePathname } from "next/navigation";
+import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher";
 
 const navItems = [
   { label: "Inicio", href: "/" },
@@ -12,6 +14,7 @@ const navItems = [
 ]
 
 export function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false)
 
   return (
@@ -27,7 +30,7 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-        </nav>
+        <LocaleSwitcher /></nav>
         <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-foreground" aria-label="Menú">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>

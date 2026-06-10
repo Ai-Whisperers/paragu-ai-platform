@@ -1,9 +1,10 @@
 import Link from 'next/link'
-import { getFooter, getSite, type Lang } from '@/lib/content'
+import { getFooter, getSafety, getSite, type Lang } from '@/lib/content'
 
 export function Footer({ lang }: { lang: Lang }) {
   const footer = getFooter(lang)
   const site = getSite(lang)
+  const safety = getSafety(lang)
 
   return (
     <footer className="px-6 py-12 border-t border-border bg-surface-2">
@@ -16,8 +17,11 @@ export function Footer({ lang }: { lang: Lang }) {
             <p className="text-sm text-foreground-muted leading-relaxed max-w-sm mb-3">
               {footer.tagline}
             </p>
-            <p className="text-xs text-violet-700 leading-relaxed max-w-sm bg-violet-600/10 border border-violet-600/20 rounded-lg p-3">
+            <p className="text-xs text-violet-700 leading-relaxed max-w-sm bg-violet-600/10 border border-violet-600/20 rounded-lg p-3 mb-3">
               {footer.disclaimer}
+            </p>
+            <p className="text-xs text-amber-700 leading-relaxed max-w-sm bg-amber-50 border border-amber-200 rounded-lg p-3 dark:bg-amber-900/20 dark:border-amber-800/40 dark:text-amber-300">
+              {safety.exit.footerDisclaimer}
             </p>
           </div>
 

@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
     // Dev mode: return mock
     return NextResponse.json({
       results: [
-        { id: 'example-1', nombre: 'María García', fecha: '2024-03-08', pais: 'Argentina', ciudad: 'Buenos Aires', tipo: 'femicidio', matchField: 'nombre' },
+        { id: 'example-1', nombre: 'María García', fecha: '2024-03-08', pais: 'Paraguay', ciudad: 'Asunción', tipo: 'femicidio', matchField: 'nombre' },
       ].filter((r) =>
         r.nombre.toLowerCase().includes(query) ||
         r.pais.toLowerCase().includes(query) ||

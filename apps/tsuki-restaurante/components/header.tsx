@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import content from "@/content/es.json";
+import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher";
 
 interface NavItem {
   href: string;
@@ -11,6 +12,8 @@ interface NavItem {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const nav = (content.navigation || []) as NavItem[];
   const siteName = (content.site as any)?.shortName || "Tsuki";
@@ -47,7 +50,7 @@ export default function Header() {
               {item.label}
             </a>
           ))}
-        </nav>
+        <LocaleSwitcher /></nav>
 
         <button
           className="md:hidden text-[var(--color-text)] p-2"

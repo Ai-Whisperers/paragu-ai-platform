@@ -2,7 +2,9 @@
   "name": "paragu-ai-platform",
   "version": "1.0.0",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "pnpm -r --filter='!packages/engine' build",
     "build:app": "pnpm --filter=\"{apps/*}\" build",
@@ -25,7 +27,12 @@
       "@types/node": "20.19.0"
     },
     "peerDependencyRules": {
-      "allowAny": ["next", "react", "react-dom", "typescript"]
+      "allowAny": [
+        "next",
+        "react",
+        "react-dom",
+        "typescript"
+      ]
     }
   },
   "devDependencies": {
@@ -38,5 +45,8 @@
   "engines": {
     "node": ">=20.0.0",
     "pnpm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@ai-whisperers/i18n-paraguay": "workspace:packages/i18n"
   }
 }

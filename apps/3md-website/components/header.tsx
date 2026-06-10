@@ -1,7 +1,9 @@
 "use client"
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
+import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher"
 
 const navItems = [
   { label: "Inicio", href: "/" },
@@ -14,6 +16,7 @@ const navItems = [
 export function Header() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -40,7 +43,7 @@ export function Header() {
             className="ml-3 rounded-md bg-secondary px-4 py-2 text-sm font-semibold text-white hover:bg-secondary-dark transition-all">
             Contactanos
           </a>
-        </nav>
+        <LocaleSwitcher /></nav>
         <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-foreground" aria-label="Menu">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>

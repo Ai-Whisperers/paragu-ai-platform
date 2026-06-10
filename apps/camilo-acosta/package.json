@@ -21,7 +21,8 @@
     "@ai-whisperers/seo": "^0.2.0",
     "@ai-whisperers/whatsapp": "^0.2.0",
     "@ai-whisperers/theme": "^0.2.0",
-    "@ai-whisperers/content": "^0.2.0"
+    "@ai-whisperers/content": "^0.2.0",
+    "@ai-whisperers/i18n-paraguay": "workspace:../.."
   },
   "devDependencies": {
     "@types/node": "20.19.41",

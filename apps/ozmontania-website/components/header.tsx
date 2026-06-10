@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import es from '@/content/es.json'
+import { usePathname } from "next/navigation";
+import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher";
 
 const navItems = [
   { href: '/', label: es.nav.obra },
@@ -16,6 +18,7 @@ const navItems = [
 ]
 
 export default function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -72,7 +75,7 @@ export default function Header() {
             <Link href="/contacto" className="ml-4 btn-primary text-sm py-2 px-5">
               {es.nav.contacto}
             </Link>
-          </nav>
+          <LocaleSwitcher /></nav>
 
           {/* Mobile hamburger — animated SVG */}
           <button

@@ -2,8 +2,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X, Dumbbell } from "lucide-react"
-import { LocaleSwitcher } from "@ai-whisperers/i18n/LocaleSwitcher"
-import { useTranslation, getLocale } from "@ai-whisperers/i18n"
+import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher"
+import { useTranslation, getLocale } from "@ai-whisperers/i18n-paraguay"
 import { usePathname } from "next/navigation"
 
 const navKeys = [
