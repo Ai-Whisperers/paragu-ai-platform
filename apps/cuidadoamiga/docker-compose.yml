@@ -1,0 +1,18 @@
+services:
+  web:
+    image: cuidadoamiga:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.cuidadoamiga.entrypoints=websecure"
+        - "traefik.http.routers.cuidadoamiga.rule=Host(`cuidadoamiga.paragu-ai.com`)"
+        - "traefik.http.routers.cuidadoamiga.tls=true"
+        - "traefik.http.routers.cuidadoamiga.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.cuidadoamiga.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

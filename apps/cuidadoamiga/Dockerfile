@@ -3,6 +3,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 COPY .next/standalone ./
 COPY .next/static ./.next/static
+COPY public ./public
 EXPOSE 3000
 ENV HOSTNAME="0.0.0.0"
-CMD ["node", "apps/fun4me-store/server.js"]
+CMD ["node", "apps/cuidadoamiga/server.js"]

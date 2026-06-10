@@ -25,6 +25,8 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
+  trailingSlash: true,
   headers: async () => [{ source: '/(.*)', headers: securityHeaders }],
   // Static case detail pages at /es/casos/[id] need revalidation
   // See: https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config

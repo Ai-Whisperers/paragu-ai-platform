@@ -33,6 +33,6 @@ export function localeMiddleware(request: NextRequest): NextResponse {
 
   // Redirect to locale-prefixed URL
   const newUrl = request.nextUrl.clone();
-  newUrl.pathname = `/${detectedLocale}${pathname === '/' ? '' : pathname}`;
+  newUrl.pathname = `/${detectedLocale}${pathname === '/' ? '' : pathname}${pathname.endsWith('/') ? '' : '/'}`;
   return NextResponse.redirect(newUrl);
 }

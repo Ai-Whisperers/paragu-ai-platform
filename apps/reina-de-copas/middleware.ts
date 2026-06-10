@@ -1,13 +1,11 @@
-// Locale detection middleware — redirects to locale prefix if none present
-import { localeMiddleware } from '@ai-whisperers/i18n-paraguay/middleware';
+// Disabled i18n middleware - this app uses a single Spanish locale
+import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  return localeMiddleware(request);
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\..*).*)',
-  ],
+  matcher: [],
 };
