@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "description": "Centralized glossary of core claims. Each claim has a stable key so copy can reference it without duplicating strings across site.json, blog.json, transparencia.json, etc.",
+    "lastUpdated": "2026-06-09"
+  },
+  "claims": {
+    "whatWeDo": {
+      "es": "Documentamos femicidios, abusos y acosos con verificación humana independiente.",
+      "en": "We document femicides, abuse, and harassment with independent human verification.",
+      "pt": "Documentamos feminicídios, abusos e assédios com verificação humana independente."
+    },
+    "moderationModel": {
+      "es": "Tres moderadoras verificadas revisan cada caso. El caso se publica únicamente con la aprobación de las tres.",
+      "en": "Three verified moderators review each case. A case is published only with all three approvals.",
+      "pt": "Três moderadoras verificadas revisam cada caso. O caso é publicado apenas com a aprovação das três."
+    },
+    "sourceRequirement": {
+      "es": "Cada caso requiere al menos una fuente pública verificable: nota periodística, denuncia oficial o registro de una organización reconocida.",
+      "en": "Each case requires at least one verifiable public source: a press article, an official complaint, or a recognized organization's record.",
+      "pt": "Cada caso requer pelo menos uma fonte pública verificável: matéria jornalística, denúncia oficial ou registro de uma organização reconhecida."
+    },
+    "noDataSelling": {
+      "es": "No vendemos ni monetizamos datos personales. La información publicada proviene exclusivamente de fuentes públicas verificadas.",
+      "en": "We do not sell or monetize personal data. All published information comes exclusively from verified public sources.",
+      "pt": "Não vendemos nem monetizamos dados pessoais. Todas as informações publicadas vêm exclusivamente de fontes públicas verificadas."
+    },
+    "scopeAndBias": {
+      "es": "Este mapa no es un registro exhaustivo. Dependemos de fuentes públicas y reportes voluntarios. La cobertura varía según país.",
+      "en": "This map is not an exhaustive record. We depend on public sources and voluntary reports. Coverage varies by country.",
+      "pt": "Este mapa não é um registro exaustivo. Dependemos de fontes públicas e denúncias voluntárias. A cobertura varia por país."
+    }
+  }
+}

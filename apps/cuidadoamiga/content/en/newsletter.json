@@ -6,8 +6,8 @@
   "form": {
     "emailPlaceholder": "you@example.com",
     "subscribeButton": "Subscribe",
-    "privacyNote": "We respect your privacy. You can unsubscribe anytime.",
-    "success": "You're subscribed! Check your inbox to confirm.",
+    "privacyNote": "We respect your privacy. You can unsubscribe at any time by emailing {email}.",
+    "success": "You're subscribed! You'll receive updates on new cases, resources, and events.",
     "error": "Something went wrong. Please try again."
   }
 }

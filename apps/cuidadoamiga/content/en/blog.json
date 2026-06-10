@@ -1,25 +1,112 @@
 {
+  "_meta": {
+    "description": "Blog posts (3 locales). lastUpdated indicates when content was last reviewed.",
+    "lastUpdated": "2026-06-09"
+  },
+  "intro": {
+    "es": "Artículos sobre femicidio, datos abiertos y cómo usar el mapa. Revisamos cada publicación con el mismo criterio que aplicamos a los casos: fuentes verificables, sin sensacionalismo.",
+    "en": "Articles on femicide, open data, and how to use the map. We review every post with the same standard we apply to cases: verifiable sources, no sensationalism.",
+    "pt": "Artigos sobre feminicídio, dados abertos e como usar o mapa. Revisamos cada publicação com o mesmo critério dos casos: fontes verificáveis, sem sensacionalismo."
+  },
   "posts": [
     {
-      "slug": "what-is-femicide",
-      "title": "What Is Femicide?",
-      "date": "2025-03-08",
-      "excerpt": "Legal and social definition of femicide in Latin America. Differences from homicide, types of femicide, and regional context.",
-      "tags": ["femicide", "definition", "human rights"]
+      "slug": "que-es-un-femicidio",
+      "title": "¿Qué es un femicidio?",
+      "date": "2026-04-15",
+      "lastUpdated": "2026-06-09",
+      "excerpt": "Definición legal y social del femicidio en América Latina. Diferencias con el homicidio, tipos de femicidio y contexto regional.",
+      "tags": ["femicidio", "definición", "derechos humanos"],
+      "body": {
+        "es": [
+          "El femicidio es el asesinato de una mujer por el hecho de ser mujer. A diferencia del homicidio, incluye un componente de violencia de género que puede ser ejercida por la pareja, un familiar, un conocido o un desconocido.",
+          "En América Latina, la mayoría de los femicidios son cometidos por parejas o exparejas de la víctima. Según la CEPAL, alrededor del 60% de los femicidios en la región ocurren en el contexto de violencia doméstica.",
+          "La definición legal varía por país. Algunos países como Argentina, Chile y México tipifican el femicidio como delito autónomo con penas agravadas. Otros lo procesan como homicidio con circunstancias agravantes.",
+          "Tipos de femicidio que reconocemos en este mapa: femicidio íntimo (pareja o expareja), femicidio no íntimo (conocido o desconocido), femicidio por conexión (familiares de la víctima), femicidio sexual, y femicidio por transfeminicidio.",
+          "Este mapa documenta casos verificables de femicidio y otras formas de violencia de género grave. No pretende ser un registro exhaustivo — depende de fuentes públicas y reportes voluntarios."
+        ],
+        "en": [
+          "Femicide is the killing of a woman because she is a woman. Unlike homicide, it includes a gender-based violence component that may be exercised by a partner, a relative, an acquaintance, or a stranger.",
+          "In Latin America, the majority of femicides are committed by the victim's partner or ex-partner. According to ECLAC, around 60% of femicides in the region occur in the context of domestic violence.",
+          "The legal definition varies by country. Some countries — including Argentina, Chile, and Mexico — classify femicide as an autonomous crime with aggravated penalties. Others prosecute it as homicide with aggravating circumstances.",
+          "Types of femicide we recognize on this map: intimate femicide (partner or ex-partner), non-intimate femicide (acquaintance or stranger), connected femicide (victim's family members), sexual femicide, and trans-femicide.",
+          "This map documents verifiable cases of femicide and other serious forms of gender-based violence. It does not claim to be an exhaustive record — it depends on public sources and voluntary reports."
+        ],
+        "pt": [
+          "Femicídio é o assassinato de uma mulher por ser mulher. Diferente do homicídio, inclui um componente de violência de gênero que pode ser exercido pelo parceiro, familiar, conhecido ou desconhecido.",
+          "Na América Latina, a maioria dos femicídios é cometida pelo parceiro ou ex-parceiro da vítima. Segundo a CEPAL, cerca de 60% dos femicídios na região ocorrem no contexto de violência doméstica.",
+          "A definição legal varia por país. Alguns países — incluindo Argentina, Chile e México — tipificam o femicídio como crime autônomo com penas agravadas. Outros processam como homicídio com circunstâncias agravantes.",
+          "Tipos de femicídio que reconhecemos neste mapa: femicídio íntimo (parceiro ou ex-parceiro), femicídio não íntimo (conhecido ou desconhecido), femicídio por conexão (familiares da vítima), femicídio sexual e transfemicídio.",
+          "Este mapa documenta casos verificáveis de femicídio e outras formas graves de violência de gênero. Não pretende ser um registro exaustivo — depende de fontes públicas e relatos voluntários."
+        ]
+      }
     },
     {
-      "slug": "how-to-use-the-map",
-      "title": "How to Use the Cuidado Amiga Map",
-      "date": "2025-03-10",
-      "excerpt": "Step-by-step guide to navigate, search cases, and contribute to the collaborative femicide map of Latin America.",
-      "tags": ["guide", "map", "usage"]
+      "slug": "como-usar-el-mapa",
+      "title": "Cómo usar el mapa de Cuidado Amiga",
+      "date": "2026-04-22",
+      "lastUpdated": "2026-06-09",
+      "excerpt": "Guía paso a paso para navegar, buscar casos y contribuir al mapa colaborativo de femicidios en América Latina.",
+      "tags": ["guía", "mapa", "uso"],
+      "body": {
+        "es": [
+          "El mapa muestra casos verificados de violencia de género en América Latina. Cada marcador representa un caso aprobado por tres moderadoras independientes.",
+          "Para navegar: usá el zoom para ver regiones específicas. Los marcadores se agrupan automáticamente cuando hay muchos casos en una zona. Hacé clic en un marcador para ver detalles del caso: nombre, fecha, lugar, tipo, y fuente verificada.",
+          "Para buscar: usá el ícono de lupa en la barra de navegación. Podés buscar por nombre de la víctima, ciudad, país, o parte de la descripción. Los resultados se ordenan por relevancia.",
+          "Para reportar un caso: hacé clic en el botón «+ Reportar caso» en la esquina superior derecha. Vas a necesitar al menos una fuente pública verificable — nota periodística, denuncia oficial, o registro de una organización reconocida.",
+          "Para reportar un error: si encontrás información incorrecta en un caso, usá el botón «Reportar» en la página de detalle. El equipo de moderación lo revisa en menos de 48 horas.",
+          "Para protegerte mientras navegás: usá el botón «Salir del sitio» en la esquina superior derecha, o presioná Ctrl+E para ir a Google rápidamente sin dejar rastro en tu navegador."
+        ],
+        "en": [
+          "The map displays verified cases of gender-based violence in Latin America. Each marker represents a case approved by three independent moderators.",
+          "To navigate: use zoom to see specific regions. Markers auto-cluster when there are many cases in an area. Click a marker to see case details: name, date, location, type, and verified source.",
+          "To search: use the magnifying glass icon in the navigation bar. You can search by victim name, city, country, or part of the description. Results are ranked by relevance.",
+          "To report a case: click the «+ Report case» button in the top-right corner. You will need at least one verifiable public source — press article, official complaint, or recognized organization record.",
+          "To report an error: if you find incorrect information in a case, use the «Report» button on the detail page. The moderation team reviews it within 48 hours.",
+          "To protect yourself while browsing: use the «Exit site» button in the top-right corner, or press Ctrl+E to go to Google quickly without leaving a trace in your browser."
+        ],
+        "pt": [
+          "O mapa mostra casos verificados de violência de gênero na América Latina. Cada marcador representa um caso aprovado por três moderadoras independentes.",
+          "Para navegar: use o zoom para ver regiões específicas. Os marcadores se agrupam automaticamente quando há muitos casos em uma área. Clique em um marcador para ver detalhes do caso: nome, data, local, tipo e fonte verificada.",
+          "Para buscar: use o ícone de lupa na barra de navegação. Você pode buscar pelo nome da vítima, cidade, país ou parte da descrição. Os resultados são ordenados por relevância.",
+          "Para reportar um caso: clique no botão «+ Reportar caso» no canto superior direito. Você precisará de pelo menos uma fonte pública verificável — matéria jornalística, denúncia oficial ou registro de uma organização reconhecida.",
+          "Para reportar um erro: se encontrar informação incorreta em um caso, use o botão «Reportar» na página de detalhes. A equipe de moderação revisa em até 48 horas.",
+          "Para se proteger enquanto navega: use o botão «Sair do site» no canto superior direito, ou pressione Ctrl+E para ir ao Google rapidamente sem deixar rastro no seu navegador."
+        ]
+      }
     },
     {
-      "slug": "importance-of-data",
-      "title": "The Importance of Open Data Against Gender-Based Violence",
-      "date": "2025-03-15",
-      "excerpt": "Why documenting and making each case visible is essential for prevention, collective memory, and public policy.",
-      "tags": ["data", "transparency", "public policy"]
+      "slug": "importancia-de-los-datos",
+      "title": "La importancia de los datos abiertos contra la violencia de género",
+      "date": "2026-05-02",
+      "lastUpdated": "2026-06-09",
+      "excerpt": "Por qué documentar y visibilizar cada caso es fundamental para la prevención, la memoria colectiva y las políticas públicas.",
+      "tags": ["datos", "transparencia", "políticas públicas"],
+      "body": {
+        "es": [
+          "Los datos abiertos sobre violencia de género son una herramienta fundamental para la prevención. Sin datos verificables, las políticas públicas se diseñan a ciegas y los recursos se asignan sin evidencia.",
+          "Cuando documentamos un caso, lo que hacemos es construir memoria colectiva. Cada caso registrado es un recordatorio de que una persona existió, fue querida, y su ausencia importa.",
+          "La cobertura periodística de un femicidio suele durar 48 horas. Después, el caso desaparece de la conversación pública. Los datos abiertos rompen ese ciclo: el caso queda documentado, geolocalizado, y es consultable años después.",
+          "La Ley de Acceso a la Información Pública en la mayoría de los países de la región permite solicitar estadísticas oficiales. Pero esas estadísticas suelen estar desactualizadas o agregadas de forma que impide el análisis. Un mapa colaborativo complementa esa información con datos verificables de fuente directa.",
+          "Este proyecto publica sus datos en formato CSV descargable desde la página de Datos. Cualquier persona, organización o investigadora puede usar esa información para análisis, investigación o incidencia.",
+          "Si sos investigadora, periodista, o trabajás en una organización y necesitás datos específicos que el mapa no muestra, escribinos a cuidadoamiga@proton.me."
+        ],
+        "en": [
+          "Open data on gender-based violence is a fundamental tool for prevention. Without verifiable data, public policy is designed blindly and resources are allocated without evidence.",
+          "When we document a case, what we are doing is building collective memory. Each registered case is a reminder that a person existed, was loved, and their absence matters.",
+          "Press coverage of a femicide usually lasts 48 hours. After that, the case disappears from public conversation. Open data breaks that cycle: the case is documented, geolocated, and remains queryable years later.",
+          "Right to Information laws in most countries in the region allow requesting official statistics. But those statistics are often outdated or aggregated in ways that prevent analysis. A collaborative map complements that information with verifiable first-source data.",
+          "This project publishes its data in downloadable CSV format from the Data page. Any person, organization, or researcher can use that information for analysis, research, or advocacy.",
+          "If you are a researcher, journalist, or work at an organization and need specific data that the map doesn't show, write to us at cuidadoamiga@proton.me."
+        ],
+        "pt": [
+          "Dados abertos sobre violência de gênero são uma ferramenta fundamental para a prevenção. Sem dados verificáveis, as políticas públicas são desenhadas às cegas e os recursos são alocados sem evidência.",
+          "Quando documentamos um caso, estamos construindo memória coletiva. Cada caso registrado é um lembrete de que uma pessoa existiu, foi amada, e sua ausência importa.",
+          "A cobertura jornalística de um femicídio geralmente dura 48 horas. Depois, o caso desaparece da conversa pública. Os dados abertos quebram esse ciclo: o caso fica documentado, geolocalizado, e é consultável anos depois.",
+          "As Leis de Acesso à Informação na maioria dos países da região permitem solicitar estatísticas oficiais. Mas essas estatísticas costumam estar desatualizadas ou agregadas de forma que impede a análise. Um mapa colaborativo complementa essa informação com dados verificáveis de fonte direta.",
+          "Este projeto publica seus dados em formato CSV para download na página de Dados. Qualquer pessoa, organização ou pesquisadora pode usar essa informação para análise, pesquisa ou incidência.",
+          "Se você é pesquisadora, jornalista, ou trabalha em uma organização e precisa de dados específicos que o mapa não mostra, escreva para cuidadoamiga@proton.me."
+        ]
+      }
     }
   ]
 }

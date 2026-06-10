@@ -13,15 +13,15 @@
     },
     "moderation": {
       "title": "Moderation process",
-      "body": "Each case is reviewed by three independent moderators before approval. If two out of three moderators vote in favor, the case is published. If a moderator detects an error, the case is rejected and the reporter receives a notification."
+      "body": "Every case is reviewed by three independent moderators before being approved. A case is published only when all three moderators approve it. If any moderator detects an error or considers the evidence insufficient, the case is not published. Rejected cases are kept in an internal audit log and are never exposed publicly."
     },
     "bias": {
       "title": "Bias and limitations",
       "body": "This map does not claim to be an exhaustive record. We depend on public sources and voluntary reports. Some countries have more coverage simply because they have more free press and organizations documenting these cases. The absence of a case does not mean it did not occur."
     },
     "report": {
-      "title": "Annual report",
-      "body": "We will soon publish an annual report with consolidated statistics, trends, and public policy recommendations."
+      "title": "Data and reports",
+      "body": "Aggregated statistics are available on the Data page. Detailed per-country reports are published as we accumulate enough documented cases — we are currently consolidating 2024-2025 data."
     }
   }
 }

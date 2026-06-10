@@ -13,15 +13,15 @@
     },
     "moderation": {
       "title": "Proceso de moderación",
-      "body": "Cada caso es revisado por tres moderadoras independientes antes de ser aprobado. Si dos de tres moderadoras votan a favor, el caso se publica. Si alguna moderadora detecta un error, el caso se rechaza y quien lo reportó recibe una notificación."
+      "body": "Cada caso es revisado por tres moderadoras independientes antes de ser aprobado. El caso se publica únicamente cuando las tres moderadoras lo aprueban. Si alguna moderadora detecta un error o considera insuficiente la evidencia, el caso no se publica. Los casos rechazados se conservan en registro interno para auditoría, sin exponerse públicamente."
     },
     "bias": {
       "title": "Sesgo y limitaciones",
       "body": "Este mapa no pretende ser un registro exhaustivo. Dependemos de fuentes públicas y reportes voluntarios. Hay países con más cobertura que otros simplemente porque tienen más prensa libre y organizaciones que documentan estos casos. La ausencia de un caso no significa que no haya ocurrido."
     },
     "report": {
-      "title": "Informe anual",
-      "body": "Próximamente publicaremos un informe anual con estadísticas consolidadas, tendencias y recomendaciones de política pública."
+      "title": "Datos y reportes",
+      "body": "Las estadísticas agregadas están disponibles en la página de Datos. Los reportes detallados por país se publican a medida que acumulamos volumen suficiente de casos documentados — actualmente estamos consolidando datos de 2024-2025."
     }
   }
 }

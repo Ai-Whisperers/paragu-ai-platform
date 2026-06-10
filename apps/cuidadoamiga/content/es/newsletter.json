@@ -6,8 +6,8 @@
   "form": {
     "emailPlaceholder": "tu@email.com",
     "subscribeButton": "Suscribirse",
-    "privacyNote": "Respetamos tu privacidad. Puedes cancelar cuando quieras.",
-    "success": "¡Te has suscrito! Revisa tu correo para confirmar.",
+    "privacyNote": "Respetamos tu privacidad. Puedes cancelar cuando quieras escribiéndonos a {email}.",
+    "success": "¡Te has suscrito! Vas a recibir actualizaciones sobre nuevos casos, recursos y eventos.",
     "error": "Hubo un error. Inténtalo de nuevo."
   }
 }

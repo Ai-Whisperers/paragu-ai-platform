@@ -6,8 +6,8 @@
   "form": {
     "emailPlaceholder": "seu@email.com",
     "subscribeButton": "Inscrever-se",
-    "privacyNote": "Respeitamos sua privacidade. Você pode cancelar a qualquer momento.",
-    "success": "Você está inscrito! Confirme em seu e-mail.",
+    "privacyNote": "Respeitamos sua privacidade. Você pode cancelar a qualquer momento enviando um e-mail para {email}.",
+    "success": "Inscrição confirmada! Você receberá atualizações sobre novos casos, recursos e eventos.",
     "error": "Ocorreu um erro. Tente novamente."
   }
 }
