@@ -28,7 +28,7 @@
     "@ai-whisperers/theme": "^0.2.0",
     "@ai-whisperers/ui": "^0.2.0",
     "@ai-whisperers/whatsapp": "^0.2.0",
-    "@ai-whisperers/i18n-paraguay": "workspace:../.."
+    "@ai-whisperers/i18n-paraguay": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

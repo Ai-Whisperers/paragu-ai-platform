@@ -47,7 +47,7 @@
     "resend": "^6.12.4",
     "tailwind-merge": "^3.5.0",
     "zod": "^3.23.8",
-    "@ai-whisperers/i18n-paraguay": "workspace:../.."
+    "@ai-whisperers/i18n-paraguay": "workspace:*"
   },
   "devDependencies": {
     "@hookform/resolvers": "^3.9.0",

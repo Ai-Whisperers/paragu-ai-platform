@@ -11,7 +11,7 @@
     "next": "16.2.6",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "@ai-whisperers/i18n-paraguay": "workspace:../.."
+    "@ai-whisperers/i18n-paraguay": "workspace:*"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0",

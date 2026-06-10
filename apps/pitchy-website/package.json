@@ -34,7 +34,7 @@
     "react-dom": "^19.0.0",
     "recharts": "*",
     "tailwind-merge": "^3.5.0",
-    "@ai-whisperers/i18n-paraguay": "workspace:../.."
+    "@ai-whisperers/i18n-paraguay": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",
