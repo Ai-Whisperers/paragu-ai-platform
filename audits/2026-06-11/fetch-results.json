@@ -1,0 +1,314 @@
+[
+  {
+    "app": "3md-website",
+    "domain": "3mind.paragu-ai.com",
+    "url": "https://3mind.paragu-ai.com/",
+    "http": "200",
+    "bytes": 50413,
+    "time": "0.102569"
+  },
+  {
+    "app": "arnos-barber-shop",
+    "domain": "arnos.paragu-ai.com",
+    "url": "https://arnos.paragu-ai.com/",
+    "http": "200",
+    "bytes": 35728,
+    "time": "0.131691"
+  },
+  {
+    "app": "bichos-gym",
+    "domain": "bichos-gym.paragu-ai.com",
+    "url": "https://bichos-gym.paragu-ai.com/",
+    "http": "200",
+    "bytes": 103000,
+    "time": "0.215990"
+  },
+  {
+    "app": "bufete-mendez",
+    "domain": "bufete-mendez.paragu-ai.com",
+    "url": "https://bufete-mendez.paragu-ai.com/",
+    "http": "200",
+    "bytes": 6752,
+    "time": "0.150323"
+  },
+  {
+    "app": "camilo-acosta",
+    "domain": "camilo-acosta.paragu-ai.com",
+    "url": "https://camilo-acosta.paragu-ai.com/",
+    "http": "200",
+    "bytes": 54190,
+    "time": "0.136508"
+  },
+  {
+    "app": "cocodrilo-fitness",
+    "domain": "cocodrilo-fitness.paragu-ai.com",
+    "url": "https://cocodrilo-fitness.paragu-ai.com/",
+    "http": "200",
+    "bytes": 52378,
+    "time": "0.552372"
+  },
+  {
+    "app": "cronos-academy",
+    "domain": "cronos.paragu-ai.com",
+    "url": "https://cronos.paragu-ai.com/",
+    "http": "200",
+    "bytes": 35726,
+    "time": "0.516576"
+  },
+  {
+    "app": "cuidadoamiga",
+    "domain": "cuidadoamiga.paragu-ai.com",
+    "url": "https://cuidadoamiga.paragu-ai.com/",
+    "http": "200",
+    "bytes": 47083,
+    "time": "0.238031"
+  },
+  {
+    "app": "dayah-litworks",
+    "domain": "dayahlitworks.paragu-ai.com",
+    "url": "https://dayahlitworks.paragu-ai.com/",
+    "http": "404",
+    "bytes": 19,
+    "time": "0.076478"
+  },
+  {
+    "app": "de-abasto-a-casa",
+    "domain": "de-abasto-a-casa.paragu-ai.com",
+    "url": "https://de-abasto-a-casa.paragu-ai.com/",
+    "http": "200",
+    "bytes": 138668,
+    "time": "0.144126"
+  },
+  {
+    "app": "depiflash",
+    "domain": "depiflash.paragu-ai.com",
+    "url": "https://depiflash.paragu-ai.com/",
+    "http": "200",
+    "bytes": 59249,
+    "time": "0.162621"
+  },
+  {
+    "app": "escribania-paraguay",
+    "domain": "escribania-paraguay.paragu-ai.com",
+    "url": "https://escribania-paraguay.paragu-ai.com/",
+    "http": "200",
+    "bytes": 92046,
+    "time": "0.157375"
+  },
+  {
+    "app": "estudio-medieval",
+    "domain": "estudio-medieval.paragu-ai.com",
+    "url": "https://estudio-medieval.paragu-ai.com/",
+    "http": "200",
+    "bytes": 63287,
+    "time": "0.138090"
+  },
+  {
+    "app": "fun4me",
+    "domain": "fun4me.paragu-ai.com",
+    "url": "https://fun4me.paragu-ai.com/",
+    "http": "200",
+    "bytes": 53654,
+    "time": "0.160593"
+  },
+  {
+    "app": "fun4me-store",
+    "domain": "fun4me-store.paragu-ai.com",
+    "url": "https://fun4me-store.paragu-ai.com/",
+    "http": "200",
+    "bytes": 53489,
+    "time": "0.250283"
+  },
+  {
+    "app": "golden-visa-advisory",
+    "domain": "goldenvisa.paragu-ai.com",
+    "url": "https://goldenvisa.paragu-ai.com/",
+    "http": "200",
+    "bytes": 7940,
+    "time": "0.147544"
+  },
+  {
+    "app": "granja-cabral",
+    "domain": "cabral.paragu-ai.com",
+    "url": "https://cabral.paragu-ai.com/",
+    "http": "200",
+    "bytes": 15370,
+    "time": "0.161595"
+  },
+  {
+    "app": "hidrobaby-spa",
+    "domain": "hidrobaby-spa.paragu-ai.com",
+    "url": "https://hidrobaby-spa.paragu-ai.com/",
+    "http": "200",
+    "bytes": 34389,
+    "time": "0.185787"
+  },
+  {
+    "app": "jota-ink-tattoo",
+    "domain": "jota-ink-tattoo.paragu-ai.com",
+    "url": "https://jota-ink-tattoo.paragu-ai.com/",
+    "http": "200",
+    "bytes": 24798,
+    "time": "0.553000"
+  },
+  {
+    "app": "luis-de-leon-concept",
+    "domain": "luis-de-leon-concept.paragu-ai.com",
+    "url": "https://luis-de-leon-concept.paragu-ai.com/",
+    "http": "200",
+    "bytes": 50662,
+    "time": "0.123602"
+  },
+  {
+    "app": "magnolia-peluqueria",
+    "domain": "magnolia-peluqueria.paragu-ai.com",
+    "url": "https://magnolia-peluqueria.paragu-ai.com/",
+    "http": "200",
+    "bytes": 118454,
+    "time": "0.204041"
+  },
+  {
+    "app": "mantra-spa",
+    "domain": "mantra-spa.paragu-ai.com",
+    "url": "https://mantra-spa.paragu-ai.com/",
+    "http": "200",
+    "bytes": 93087,
+    "time": "0.185143"
+  },
+  {
+    "app": "maskarada",
+    "domain": "maskarada.paragu-ai.com",
+    "url": "https://maskarada.paragu-ai.com/",
+    "http": "200",
+    "bytes": 24839,
+    "time": "0.107345"
+  },
+  {
+    "app": "meal-prep",
+    "domain": "meal-prep.paragu-ai.com",
+    "url": "https://meal-prep.paragu-ai.com/",
+    "http": "200",
+    "bytes": 48424,
+    "time": "0.120714"
+  },
+  {
+    "app": "nde-barba",
+    "domain": "nde-barba.paragu-ai.com",
+    "url": "https://nde-barba.paragu-ai.com/",
+    "http": "200",
+    "bytes": 48758,
+    "time": "0.495614"
+  },
+  {
+    "app": "nexa-paraguay",
+    "domain": "nexa.paragu-ai.com",
+    "url": "https://nexa.paragu-ai.com/",
+    "http": "200",
+    "bytes": 36434,
+    "time": "0.106790"
+  },
+  {
+    "app": "nudo",
+    "domain": "nudo.paragu-ai.com",
+    "url": "https://nudo.paragu-ai.com/",
+    "http": "200",
+    "bytes": 44066,
+    "time": "0.075328"
+  },
+  {
+    "app": "ozmontania-website",
+    "domain": "ozmontania.paragu-ai.com",
+    "url": "https://ozmontania.paragu-ai.com/",
+    "http": "200",
+    "bytes": 65096,
+    "time": "0.578197"
+  },
+  {
+    "app": "pitchy-website",
+    "domain": "pitchy.paragu-ai.com",
+    "url": "https://pitchy.paragu-ai.com/",
+    "http": "200",
+    "bytes": 30864,
+    "time": "0.136458"
+  },
+  {
+    "app": "portas-barber",
+    "domain": "portas-barber.paragu-ai.com",
+    "url": "https://portas-barber.paragu-ai.com/",
+    "http": "200",
+    "bytes": 49410,
+    "time": "0.161258"
+  },
+  {
+    "app": "reina-de-copas",
+    "domain": "reina-de-copas.paragu-ai.com",
+    "url": "https://reina-de-copas.paragu-ai.com/",
+    "http": "200",
+    "bytes": 58900,
+    "time": "0.142349"
+  },
+  {
+    "app": "scott-tatuajes",
+    "domain": "scott-tatuajes.paragu-ai.com",
+    "url": "https://scott-tatuajes.paragu-ai.com/",
+    "http": "200",
+    "bytes": 36920,
+    "time": "0.475363"
+  },
+  {
+    "app": "shine-nails",
+    "domain": "shine-nails.paragu-ai.com",
+    "url": "https://shine-nails.paragu-ai.com/",
+    "http": "200",
+    "bytes": 50350,
+    "time": "0.094102"
+  },
+  {
+    "app": "stroopwafel-huis",
+    "domain": "stroopwafelhuis.paragu-ai.com",
+    "url": "https://stroopwafelhuis.paragu-ai.com/",
+    "http": "200",
+    "bytes": 59218,
+    "time": "0.464599"
+  },
+  {
+    "app": "superspuma",
+    "domain": "superspuma.paragu-ai.com",
+    "url": "https://superspuma.paragu-ai.com/",
+    "http": "200",
+    "bytes": 6700,
+    "time": "0.539455"
+  },
+  {
+    "app": "trentina-cerveza",
+    "domain": "trentina.paragu-ai.com",
+    "url": "https://trentina.paragu-ai.com/",
+    "http": "200",
+    "bytes": 128985,
+    "time": "0.087658"
+  },
+  {
+    "app": "tsuki-restaurante",
+    "domain": "tsuki-restaurante.paragu-ai.com",
+    "url": "https://tsuki-restaurante.paragu-ai.com/",
+    "http": "200",
+    "bytes": 56144,
+    "time": "0.109964"
+  },
+  {
+    "app": "villamayor-asociados",
+    "domain": "villamayor.paragu-ai.com",
+    "url": "https://villamayor.paragu-ai.com/",
+    "http": "200",
+    "bytes": 93727,
+    "time": "0.100985"
+  },
+  {
+    "app": "xxgym",
+    "domain": "xxgym.paragu-ai.com",
+    "url": "https://xxgym.paragu-ai.com/",
+    "http": "200",
+    "bytes": 39287,
+    "time": "0.175763"
+  }
+]

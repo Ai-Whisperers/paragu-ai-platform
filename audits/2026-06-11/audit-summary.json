@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "total_sites": 39,
+    "fetched_ok": 38,
+    "dayah_404": "dayahlitworks.paragu-ai.com and dayah.paragu-ai.com both 404 from Cloudflare edge (i18n middleware dead router, container serves 200 internally)",
+    "content_distribution": {
+      "high_quality_2k_plus_words": 5,
+      "good_1k_to_2k_words": 13,
+      "medium_500_to_1k": 9,
+      "thin_under_500_words": 8,
+      "placeholder_under_100": 4
+    },
+    "seo_gaps": {
+      "missing_sitemap": 18,
+      "no_hreflang": 39,
+      "localbusiness_schema_missing_geo": 13,
+      "localbusiness_schema_missing_hours": 11,
+      "localbusiness_schema_missing_rating": 12,
+      "broken_internal_links": 1
+    }
+  }
+}

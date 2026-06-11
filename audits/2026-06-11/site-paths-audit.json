@@ -1,0 +1,353 @@
+[
+  {
+    "app": "3md-website",
+    "domain": "3mind.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "arnos-barber-shop",
+    "domain": "arnos.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "bichos-gym",
+    "domain": "bichos-gym.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "bufete-mendez",
+    "domain": "bufete-mendez.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "camilo-acosta",
+    "domain": "camilo-acosta.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "cocodrilo-fitness",
+    "domain": "cocodrilo-fitness.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "cronos-academy",
+    "domain": "cronos.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "cuidadoamiga",
+    "domain": "cuidadoamiga.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "200",
+    "/sitemap_index.xml": "200"
+  },
+  {
+    "app": "dayah-litworks",
+    "domain": "dayahlitworks.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "de-abasto-a-casa",
+    "domain": "de-abasto-a-casa.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "depiflash",
+    "domain": "depiflash.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "escribania-paraguay",
+    "domain": "escribania-paraguay.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "estudio-medieval",
+    "domain": "estudio-medieval.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "fun4me",
+    "domain": "fun4me.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "000",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "fun4me-store",
+    "domain": "fun4me-store.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "000",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "golden-visa-advisory",
+    "domain": "goldenvisa.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "granja-cabral",
+    "domain": "cabral.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "hidrobaby-spa",
+    "domain": "hidrobaby-spa.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "jota-ink-tattoo",
+    "domain": "jota-ink-tattoo.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "luis-de-leon-concept",
+    "domain": "luis-de-leon-concept.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "magnolia-peluqueria",
+    "domain": "magnolia-peluqueria.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "mantra-spa",
+    "domain": "mantra-spa.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "maskarada",
+    "domain": "maskarada.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "200",
+    "/sitemap_index.xml": "200"
+  },
+  {
+    "app": "meal-prep",
+    "domain": "meal-prep.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "nde-barba",
+    "domain": "nde-barba.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "nexa-paraguay",
+    "domain": "nexa.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "nudo",
+    "domain": "nudo.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "ozmontania-website",
+    "domain": "ozmontania.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "pitchy-website",
+    "domain": "pitchy.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "portas-barber",
+    "domain": "portas-barber.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "reina-de-copas",
+    "domain": "reina-de-copas.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "scott-tatuajes",
+    "domain": "scott-tatuajes.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "shine-nails",
+    "domain": "shine-nails.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "stroopwafel-huis",
+    "domain": "stroopwafelhuis.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "superspuma",
+    "domain": "superspuma.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "trentina-cerveza",
+    "domain": "trentina.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "tsuki-restaurante",
+    "domain": "tsuki-restaurante.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "villamayor-asociados",
+    "domain": "villamayor.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "200",
+    "/manifest.webmanifest": "200",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  },
+  {
+    "app": "xxgym",
+    "domain": "xxgym.paragu-ai.com",
+    "/robots.txt": "200",
+    "/sitemap.xml": "404",
+    "/manifest.webmanifest": "404",
+    "/sitemap-0.xml": "404",
+    "/sitemap_index.xml": "404"
+  }
+]

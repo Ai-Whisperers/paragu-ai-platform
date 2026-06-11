@@ -1,0 +1,939 @@
+====================================================================================================
+ A (98/100)  trentina-cerveza           trentina.paragu-ai.com
+====================================================================================================
+ Title:     Cerveza Trentina — Cerveza artesanal paraguaya | Santa Rita, Alto Paraná
+ Meta desc: Cerveza artesanal paraguaya elaborada en Santa Rita, Alto Paraná por el Maestro Cervecero Alexsandro Giordani. Pilsen, A
+ H1:        ['Cerveza artesanal con identidad paraguaya']
+ H2 (3):    ['Tenemos una super promo en las cervezas Trentina por tiempo limitado', 'Lo que nos define', 'Metatron IPL']
+ Words:     2715
+ Photos:    12
+ Schema:    ['AggregateRating', 'Brewery', 'OpeningHoursSpecification', 'Person', 'PostalAddress']
+ Phone:     ['59598322447']
+ WA:        ['595983224473']
+ IG:        ['cervezatrentina']
+ FB:        ['cervezatrentina']
+
+ Critique:
+   ✓ Rich content (2000+ words)
+   ✓ Schema.org: AggregateRating, Brewery, OpeningHoursSpecification
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @cervezatrentina
+   ✓ OG image configured
+   ⚠ Schema missing: geo (kills rich results)
+
+====================================================================================================
+ A (93/100)  bichos-gym                 bichos-gym.paragu-ai.com
+====================================================================================================
+ Title:     Bicho's Gym | Gimnasio en Capiatá
+ Meta desc: Gimnasio completo en Capiatá con entrenadores certificados. Pesas, cardio, funcional, crossfit, spinning y yoga. Sumate 
+ H1:        ['Bicho&#x27;s Gym']
+ H2 (3):    ['Nuestros Servicios', 'Nuestro Equipo', 'Horarios de Clases']
+ Words:     2040
+ Photos:    11
+ Schema:    ['LocalBusiness', 'PostalAddress']
+ Phone:     ['+59598610606', '59598610606']
+ WA:        ['595986106062']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Rich content (2000+ words)
+   ✓ Schema.org: LocalBusiness, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ Schema missing: geo, rating (kills rich results)
+
+====================================================================================================
+ A (93/100)  mantra-spa                 mantra-spa.paragu-ai.com
+====================================================================================================
+ Title:     Mantra Spa | Masajes y Tratamientos en Concepción
+ Meta desc: Masajes relajantes, descontracturantes, tratamientos faciales y corporales en Concepción. Bienestar y relax con profesio
+ H1:        ['Mantra Spa']
+ H2 (3):    ['Nuestros Servicios', 'Nuestro Espacio', 'Lo que dicen nuestros clientes']
+ Words:     2248
+ Photos:    9
+ Schema:    ['LocalBusiness', 'PostalAddress']
+ Phone:     ['+59598610606', '59598610606']
+ WA:        ['595986106062']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Rich content (2000+ words)
+   ✓ Schema.org: LocalBusiness, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ Schema missing: geo, rating (kills rich results)
+
+====================================================================================================
+ A (89/100)  de-abasto-a-casa           de-abasto-a-casa.paragu-ai.com
+====================================================================================================
+ Title:     De Abasto a Casa — Mercado, prep y comidas listas. Puerta a puerta, en San Loren
+ Meta desc: Convertimos el caos del mercado en comida lista. Compras, mise-en-place y freezer meals. San Lorenzo, Paraguay.
+ H1:        ['Convertimos el caos del mercado en comida lista']
+ H2 (3):    ['Nuestros Niveles de Servicio', 'Cómo funciona', 'Calculá tu ahorro real']
+ Words:     3325
+ Photos:    0
+ Schema:    ['LocalBusiness', 'PostalAddress']
+ Phone:     ['59598132456']
+ WA:        ['595981324569']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Rich content (2000+ words)
+   ✓ Schema.org: LocalBusiness, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ Schema missing: phone, hours, geo, rating (kills rich results)
+   ⚠ No canonical URL
+
+====================================================================================================
+ A (88/100)  villamayor-asociados       villamayor.paragu-ai.com
+====================================================================================================
+ Title:     Villamayor & Asociados | Estudio Jurídico — Derecho Civil y Comercial
+ Meta desc: Estudio jurídico en Paraguay especializado en derecho civil, comercial, corporativo, inmobiliario, laboral y de familia.
+ H1:        ['Experiencia Jurídica con Compromiso Personal']
+ H2 (3):    ['Sobre Nosotros', 'Áreas de Práctica', '¿Cómo Trabajamos?']
+ Words:     2031
+ Photos:    0
+ Schema:    ['LegalService', 'Offer', 'OfferCatalog', 'Person', 'PostalAddress']
+ Phone:     ['+595 981 324 569', '59598132456']
+ WA:        ['595981324569']
+ IG:        ['villamayorasociados']
+ FB:        []
+
+ Critique:
+   ✓ Rich content (2000+ words)
+   ✓ Schema.org: LegalService, Offer, OfferCatalog
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @villamayorasociados
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+
+====================================================================================================
+ A (87/100)  escribania-paraguay        escribania-paraguay.paragu-ai.com
+====================================================================================================
+ Title:     Escribanía en Paraguay | Fe Pública y Seguridad Jurídica
+ Meta desc: Servicios notariales en Paraguay. Escrituras públicas, poderes, contratos, legalizaciones, apostillas y más. Atención pe
+ H1:        ['Fe Pública y  Seguridad Jurídica']
+ H2 (3):    ['Nuestros Servicios Notariales', '¿Por qué elegir una Escribanía?', '¿Cómo trabajamos?']
+ Words:     2874
+ Photos:    0
+ Schema:    ['ProfessionalService']
+ Phone:     ['59598100000']
+ WA:        ['595981000000']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Rich content (2000+ words)
+   ✓ Schema.org: ProfessionalService
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ Schema missing: address, phone, hours, geo, rating (kills rich results)
+   ⚠ No canonical URL
+
+====================================================================================================
+ A (85/100)  hidrobaby-spa              hidrobaby-spa.paragu-ai.com
+====================================================================================================
+ Title:     HidroBaby Spa | Baby Spa en Fernando de la Mora · Ozono único en Paraguay
+ Meta desc: HidroBaby Spa: hidroterapia, masajes pediátricos, spa anticólicos y natación temprana para bebés. Staff de obstetras y e
+ H1:        ['HidroBaby Spa']
+ H2 (3):    ['¿Por qué elegir HidroBaby Spa?', 'Sobre HidroBaby Spa', 'Nuestros Servicios']
+ Words:     1216
+ Photos:    1
+ Schema:    ['AggregateRating', 'LocalBusiness', 'PostalAddress']
+ Phone:     ['59599344422', '+595 991 691 501']
+ WA:        ['595993444222']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: AggregateRating, LocalBusiness, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ Schema missing: geo (kills rich results)
+   ⚠ No PWA manifest
+
+====================================================================================================
+ A (85/100)  tsuki-restaurante          tsuki-restaurante.paragu-ai.com
+====================================================================================================
+ Title:     Tsuki Restaurante Oriental — Auténtica cocina china y sushi en San Lorenzo
+ Meta desc: Descubrí Tsuki Restaurante Oriental en San Lorenzo. Arrolladitos, sushi, wok, gyozas y más. Abierto los sábados. Pedí po
+ H1:        ['Auténtica cocina oriental']
+ H2 (3):    ['Nuestra cocina', 'Plato limitado — renovamos cada semana', 'Nuestra Carta']
+ Words:     1315
+ Photos:    0
+ Schema:    ['AggregateRating', 'LocalBusiness', 'OpeningHoursSpecification', 'PostalAddress', 'Restaurant']
+ Phone:     ['59597416169', '+595 974 161698']
+ WA:        ['595974161698']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: AggregateRating, LocalBusiness, OpeningHoursSpecification
+   ✓ Phone + WhatsApp both visible
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ Schema missing: geo (kills rich results)
+
+====================================================================================================
+ A (81/100)  fun4me                     fun4me.paragu-ai.com
+====================================================================================================
+ Title:     Fun4Me Store | Tienda Intima en Paraguay
+ Meta desc: Tu tienda online de productos intimos y de bienestar en Asuncion, Paraguay. Envio discreto a todo el pais. Vibradores, l
+ H1:        ['Fun 4 Me']
+ H2 (3):    []
+ Words:     1406
+ Photos:    0
+ Schema:    ['PostalAddress', 'Store']
+ Phone:     ['59597656973']
+ WA:        ['595976569739']
+ IG:        ['fun4me_py']
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: PostalAddress, Store
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @fun4me_py
+   ✓ OG image configured
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ Schema missing: hours, geo, rating (kills rich results)
+   ⚠ No canonical URL
+
+====================================================================================================
+ A (81/100)  fun4me-store               fun4me-store.paragu-ai.com
+====================================================================================================
+ Title:     Fun4Me Store | Tienda Intima en Paraguay
+ Meta desc: Tu tienda online de productos intimos y de bienestar en Asuncion, Paraguay. Envio discreto a todo el pais. Vibradores, l
+ H1:        ['Fun 4 Me']
+ H2 (3):    []
+ Words:     1409
+ Photos:    0
+ Schema:    ['PostalAddress', 'Store']
+ Phone:     ['59597656973']
+ WA:        ['595976569739']
+ IG:        ['fun4me_py']
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: PostalAddress, Store
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @fun4me_py
+   ✓ OG image configured
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ Schema missing: hours, geo, rating (kills rich results)
+   ⚠ No canonical URL
+
+====================================================================================================
+ A (80/100)  depiflash                  depiflash.paragu-ai.com
+====================================================================================================
+ Title:     DepiFlash — Depilación Láser IPL a Domicilio en Asunción
+ Meta desc: Depilación láser IPL a domicilio en Asunción y Gran Asunción. Sin moverte de tu casa. Resultados desde la primera sesión
+ H1:        ['Depilación láser IPL en tu casa']
+ H2 (3):    ['Por qué DepiFlash', 'Cómo funciona', 'Precios por sesión']
+ Words:     1146
+ Photos:    0
+ Schema:    ['Person', 'Service']
+ Phone:     ['59597420202', '+59597420202']
+ WA:        ['595974202025']
+ IG:        ['depiflash.py']
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: Person, Service
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @depiflash.py
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+
+====================================================================================================
+ A (77/100)  nudo                       nudo.paragu-ai.com
+====================================================================================================
+ Title:     Nüdo — Hardcore Metal desde Capiatá, Paraguay
+ Meta desc: Hardcore Metal / Metalcore desde Capiatá, Paraguay. Fundada en 2017. DESAHOGO EP (2025) — Bad Vibes Records.
+ H1:        ['NÜDO']
+ H2 (3):    ['Music', 'Live', 'Videos']
+ Words:     585
+ Photos:    5
+ Schema:    ['LocalBusiness', 'PostalAddress']
+ Phone:     ['59599100000']
+ WA:        ['595991000000']
+ IG:        ['nudo_band']
+ FB:        ['N']
+
+ Critique:
+   ✓ Schema.org: LocalBusiness, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @nudo_band
+   ✓ OG image configured
+   ⚠ No booking/quote CTA in body text
+   ⚠ Schema missing: phone, hours, geo, rating (kills rich results)
+   ⚠ No canonical URL
+
+====================================================================================================
+ A (76/100)  pitchy-website             pitchy.paragu-ai.com
+====================================================================================================
+ Title:     Pitchy Blindex — Vidrio para Construcción en Paraguay
+ Meta desc: Vidrio Blindex en Paraguay. Proveemos vidrio templado, laminado, DVH, muro cortina y Low-E para edificios comerciales y 
+ H1:        ['Vidrio Blindex para Proyectos de Construcción en Paraguay']
+ H2 (3):    ['¿Por qué elegirnos?', 'Nuestros Productos', 'Lo que dicen nuestros clientes']
+ Words:     551
+ Photos:    5
+ Schema:    ['LocalBusiness', 'PostalAddress']
+ Phone:     ['+595 981 277 601', '59598127760']
+ WA:        ['595981277601']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: LocalBusiness, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ Schema missing: hours, geo, rating (kills rich results)
+
+====================================================================================================
+ A (76/100)  stroopwafel-huis           stroopwafelhuis.paragu-ai.com
+====================================================================================================
+ Title:     Stroopwafel Huis — Verse Stroopwafels & Specialty Coffee · Asunción
+ Meta desc: La primera cafetería holandesa del Paraguay. Stroopwafels frescos hechos frente a vos, café de especialidad y un pedacit
+ H1:        ['Verse Stroopwafels &amp; Specialty Coffee']
+ H2 (3):    ['¿Qué es un Stroopwafel?', 'Stroopwafel de la Semana', 'Favoritos']
+ Words:     1642
+ Photos:    0
+ Schema:    ['CafeOrCoffeeShop', 'PostalAddress']
+ Phone:     ['59599150144', '+595 991 501444']
+ WA:        ['595991501444']
+ IG:        ['stroopwafelhuis']
+ FB:        ['stroopwafelhuis']
+
+ Critique:
+   ✓ Schema.org: CafeOrCoffeeShop, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @stroopwafelhuis
+   ✓ OG image configured
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ No PWA manifest
+
+====================================================================================================
+ A (75/100)  magnolia-peluqueria        magnolia-peluqueria.paragu-ai.com
+====================================================================================================
+ Title:     Magnolia Peluquería | Elegancia y Belleza en San Lorenzo
+ Meta desc: Elegancia y Belleza en San Lorenzo
+ H1:        ['Elegancia y Belleza en San Lorenzo']
+ H2 (3):    ['Nuestros Servicios', 'Resultados que Hablan', 'Testimonios Reales']
+ Words:     1399
+ Photos:    15
+ Schema:    []
+ Phone:     ['+595 971 123 456', '59597112345']
+ WA:        ['595971123456']
+ IG:        ['magnolia_peluqueria']
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @magnolia_peluqueria
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ Short meta desc (34 chars)
+
+====================================================================================================
+ B (72/100)  cocodrilo-fitness          cocodrilo-fitness.paragu-ai.com
+====================================================================================================
+ Title:     Complejo Cocodrilo
+ Meta desc: Gimnasio completo, pileta climatizada y las mejores instalaciones para tu entrenamiento
+ H1:        ['Complejo Cocodrilo']
+ H2 (3):    ['Nuestros Servicios', '¿Listo para empezar?']
+ Words:     982
+ Photos:    1
+ Schema:    ['LocalBusiness']
+ Phone:     ['59598610606']
+ WA:        ['595986106062']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: LocalBusiness
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ Schema missing: address, phone, hours, geo, rating (kills rich results)
+
+====================================================================================================
+ B (72/100)  luis-de-leon-concept       luis-de-leon-concept.paragu-ai.com
+====================================================================================================
+ Title:     Luis De León Concept
+ Meta desc: Cortes de alta calidad, coloración experta y asesoría de imagen personalizada
+ H1:        ['Luis De León Concept']
+ H2 (3):    ['Nuestros Servicios', '¿Listo para empezar?']
+ Words:     964
+ Photos:    1
+ Schema:    ['LocalBusiness']
+ Phone:     ['59598610606', '59598100000']
+ WA:        ['595981000000', '595986106062']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: LocalBusiness
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ Short meta desc (77 chars)
+   ⚠ No social proof (no IG/FB link)
+   ⚠ Schema missing: address, phone, hours, geo, rating (kills rich results)
+
+====================================================================================================
+ B (71/100)  camilo-acosta              camilo-acosta.paragu-ai.com
+====================================================================================================
+ Title:     Camilo Acosta - El Gato Siamés
+ Meta desc: Stand up paraguayo: humor negro, one-liners
+ H1:        ['EL GATO  SIAMÉS']
+ H2 (3):    ['Enterate del próximo show', 'Próximos  Shows', 'Humor oscuro, serio y  sin acting de más']
+ Words:     1492
+ Photos:    5
+ Schema:    []
+ Phone:     ['59598112345']
+ WA:        ['595981123456']
+ IG:        ['el.gatosiames']
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @el.gatosiames
+   ✓ OG image configured
+   ⚠ Short meta desc (43 chars)
+   ⚠ No booking/quote CTA in body text
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ B (71/100)  reina-de-copas             reina-de-copas.paragu-ai.com
+====================================================================================================
+ Title:     Reina de Copas Paraguay — Copas y Discos Menstruales
+ Meta desc: Copa y disco menstrual reutilizable. Ecológica, económica y segura. +1750 copas vendidas desde 2018. Envíos a todo Parag
+ H1:        ['Tu período, tu poder']
+ H2 (3):    ['Productos destacados', '¿Por qué elegir Reina de Copas?', '3 pasos para tu libertad']
+ Words:     1388
+ Photos:    7
+ Schema:    []
+ Phone:     ['59598277445']
+ WA:        ['595982774456']
+ IG:        ['reinadecopaspy']
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @reinadecopaspy
+   ✓ OG image configured
+   ⚠ No booking/quote CTA in body text
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ B (70/100)  estudio-medieval           estudio-medieval.paragu-ai.com
+====================================================================================================
+ Title:     Estudio Medieval | Tatuajes & Body Piercing en San Lorenzo, Paraguay
+ Meta desc: 8+ años de experiencia en tatuajes y body piercing. Ubicados en San Lorenzo, a 0.8km de la Facultad Politécnica.
+ H1:        ['TATUAJES &amp; BODY PIERCING']
+ H2 (3):    ['Nuestros Servicios', 'Nuestros Trabajos', 'Lo que dicen nuestros clientes']
+ Words:     1321
+ Photos:    8
+ Schema:    []
+ Phone:     ['59596148285', '+595 961 482 854']
+ WA:        ['595961482854']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ B (69/100)  3md-website                3mind.paragu-ai.com
+====================================================================================================
+ Title:     3 MIND — Agencia Creativa | Marketing, Video, Fotografía
+ Meta desc: Transformamos ideas en experiencias visuales impactantes. Marketing digital, producción audiovisual, fotografía y public
+ H1:        ['Transformamos ideas en   experiencias visuales']
+ H2 (3):    ['Qué hacemos', '¿Listo para crear algo increíble?']
+ Words:     975
+ Photos:    0
+ Schema:    ['Organization', 'PostalAddress']
+ Phone:     ['+59599169150', '59599169150']
+ WA:        ['595991691501']
+ IG:        ['somos3md']
+ FB:        ['p']
+
+ Critique:
+   ✓ Schema.org: Organization, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @somos3md
+   ✓ OG image configured
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ No PWA manifest
+
+====================================================================================================
+ B (68/100)  jota-ink-tattoo            jota-ink-tattoo.paragu-ai.com
+====================================================================================================
+ Title:     Jota Ink — Tatuajes en Paraguay
+ Meta desc: Tatuajes personalizados en Asunción, Paraguay. Ink 🇵🇾
+ H1:        ['Arte bajo tu  piel']
+ H2 (3):    ['Estilos', '¿Cómo funciona?', '¿Listo para tu próximo tatuaje?']
+ Words:     280
+ Photos:    0
+ Schema:    ['LocalBusiness', 'PostalAddress']
+ Phone:     ['59597167937']
+ WA:        ['595971679370']
+ IG:        ['jottaink_']
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: LocalBusiness, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @jottaink_
+   ✓ OG image configured
+   ⚠ Thin content (280 words) — needs expansion
+   ⚠ Short meta desc (53 chars)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ Schema missing: hours, geo, rating (kills rich results)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ B (68/100)  ozmontania-website         ozmontania.paragu-ai.com
+====================================================================================================
+ Title:     Oz Montanía — Artista visual, muralista e ilustrador paraguayo
+ Meta desc: Más de 20 años transformando muros en historias. De Asunción para el mundo.
+ H1:        ['Oz   Montanía']
+ H2 (3):    ['Obras', 'Lo que dicen mis clientes', 'Colaboraciones']
+ Words:     985
+ Photos:    0
+ Schema:    []
+ Phone:     ['59598123456']
+ WA:        ['595981234567']
+ IG:        ['ozmontania']
+ FB:        ['pyrotaurus']
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @ozmontania
+   ✓ OG image configured
+   ⚠ Short meta desc (75 chars)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No canonical URL
+
+====================================================================================================
+ B (65/100)  cuidadoamiga               cuidadoamiga.paragu-ai.com
+====================================================================================================
+ Title:     Cuidado Amiga — Mapa colaborativo de casos de violencia de género en América Lat
+ Meta desc: Documentación colaborativa de femicidios y abusos en América Latina. Tres moderadoras verificadas aprueban cada caso ant
+ H1:        ['Mapa colaborativo de casos de violencia de género']
+ H2 (3):    ['Mapa de casos', 'Qué es Cuidado Amiga', 'Cómo se verifica un caso']
+ Words:     1315
+ Photos:    0
+ Schema:    ['SearchAction', 'WebSite']
+ Phone:     []
+ WA:        []
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: SearchAction, WebSite
+   ✓ OG image configured
+   ✗ NO contact info — leads can't reach you
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+
+====================================================================================================
+ B (63/100)  meal-prep                  meal-prep.paragu-ai.com
+====================================================================================================
+ Title:     Prep — Meal Prep semanal en San Lorenzo | De Abasto a Casa
+ Meta desc: Mise-en-place semanal: compramos, lavamos, porcionamos y organizamos tu heladera. Menos caos, más comida lista. Desde Gs
+ H1:        ['Tu semana,   organizada  desde la heladera']
+ H2 (3):    ['Así funciona', 'Elegí tu plan semanal', 'Calculá tu ahorro']
+ Words:     722
+ Photos:    0
+ Schema:    []
+ Phone:     ['59598123456']
+ WA:        ['595981234567']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ B (63/100)  nde-barba                  nde-barba.paragu-ai.com
+====================================================================================================
+ Title:     Nde Barba | Barbería moderna en Fernando de la Mora
+ Meta desc: Barbería y peluquería masculina en Fernando de la Mora. Cortes modernos y clásicos. 4.8⭐ 118 reseñas Google.
+ H1:        ['Nde Barba']
+ H2 (3):    ['Servicios', 'Nuestros Estilos', 'Lo que dicen nuestros clientes']
+ Words:     635
+ Photos:    4
+ Schema:    []
+ Phone:     ['+595 991 444 268', '59599144426']
+ WA:        ['595991444268']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ B (63/100)  portas-barber              portas-barber.paragu-ai.com
+====================================================================================================
+ Title:     Portas Barber Shop | Barbería clásica en Av. Santa Teresa
+ Meta desc: Barbería clásica en Av. Santa Teresa, Fernando de la Mora. Experiencia premium. 4.9⭐ 162 reseñas Google.
+ H1:        ['Portas Barber Shop']
+ H2 (3):    ['Servicios', 'Nuestros Trabajos', 'Lo que dicen nuestros clientes']
+ Words:     608
+ Photos:    4
+ Schema:    []
+ Phone:     ['+595 994 215 627', '59599421562']
+ WA:        ['595994215627']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ B (63/100)  shine-nails                shine-nails.paragu-ai.com
+====================================================================================================
+ Title:     SHINE Nails & Beauty | Uñas profesionales en San Lorenzo
+ Meta desc: Uñas acrílicas, gel y esmaltado semipermanente en San Lorenzo. Celeste Villalba. 4.9⭐ 287 reseñas Google.
+ H1:        ['SHINE Nails &amp; Beauty']
+ H2 (3):    ['Servicios', 'Nuestros Trabajos', 'Lo que dicen nuestras clientas']
+ Words:     692
+ Photos:    4
+ Schema:    []
+ Phone:     ['+595 986 693 259', '59598669325']
+ WA:        ['595986693259']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ C (57/100)  nexa-paraguay              nexa.paragu-ai.com
+====================================================================================================
+ Title:     nexaparaguay.com
+ Meta desc: Paraguay
+ H1:        []
+ H2 (3):    ['Una oportunidad real para el inversor europeo', 'Un proceso claro, paso a paso', 'Cuatro caminos para establecerse en Paraguay']
+ Words:     1283
+ Photos:    0
+ Schema:    []
+ Phone:     []
+ WA:        []
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ✗ No H1 (CRITICAL for SEO)
+   ⚠ Short meta desc (8 chars)
+   ✗ NO contact info — leads can't reach you
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ C (56/100)  arnos-barber-shop          arnos.paragu-ai.com
+====================================================================================================
+ Title:     Arno's Barber Shop | Barbería en Fernando de la Mora
+ Meta desc: Arno's Barber Shop. Barbershop en Fernando de la Mora, Paraguay. Atención profesional y personalizada.
+ H1:        ['Arno&#x27;s Barber Shop']
+ H2 (3):    ['Nuestros Servicios', 'Galería', '¿Listo para tu nuevo look?']
+ Words:     496
+ Photos:    6
+ Schema:    []
+ Phone:     ['59598399608', '+595 983 996 086']
+ WA:        ['595983996086']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ Thin content (496 words) — needs expansion
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ C (56/100)  cronos-academy             cronos.paragu-ai.com
+====================================================================================================
+ Title:     Cronos Academy | Gimnasio & Fitness en Fernando de la Mora
+ Meta desc: Cronos Academy. Gym en Fernando de la Mora, Paraguay. Atención profesional y personalizada.
+ H1:        ['Cronos Academy']
+ H2 (3):    ['Nuestros Servicios', 'Galería', '¿Listo para entrenar?']
+ Words:     474
+ Photos:    6
+ Schema:    []
+ Phone:     ['+595 962 201 042', '59596220104']
+ WA:        ['595962201042']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ Thin content (474 words) — needs expansion
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ C (56/100)  granja-cabral              cabral.paragu-ai.com
+====================================================================================================
+ Title:     Granja Cabral — Huevos frescos en Coronel Oviedo
+ Meta desc: Huevos frescos recolectados diariamente. Delivery en Coronel Oviedo y Ruta 2. Del nido a tu mesa.
+ H1:        []
+ H2 (3):    []
+ Words:     178
+ Photos:    0
+ Schema:    ['LocalBusiness', 'PostalAddress']
+ Phone:     ['59598291193', '+59598291193']
+ WA:        ['595981324569', '595982911935']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Schema.org: LocalBusiness, PostalAddress
+   ✓ Phone + WhatsApp both visible
+   ✓ OG image configured
+   ✗ Almost empty (178 words) — placeholder-level
+   ✗ No H1 (CRITICAL for SEO)
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ Schema missing: hours, geo, rating (kills rich results)
+   ⚠ No canonical URL
+
+====================================================================================================
+ C (56/100)  scott-tatuajes             scott-tatuajes.paragu-ai.com
+====================================================================================================
+ Title:     Scott Tatuajes | Tatuajes & Body Piercing en Fernando de la Mora
+ Meta desc: Scott Tatuajes. Tattoo Studio en Fernando de la Mora, Paraguay. Atención profesional y personalizada.
+ H1:        ['Scott Tatuajes']
+ H2 (3):    ['Nuestros Servicios', 'Galería', '¿Listo para tu próximo tatuaje?']
+ Words:     469
+ Photos:    6
+ Schema:    []
+ Phone:     ['+595 981 575 176', '59598157517']
+ WA:        ['595981575176']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ Thin content (469 words) — needs expansion
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ C (56/100)  xxgym                      xxgym.paragu-ai.com
+====================================================================================================
+ Title:     XXGym | Gimnasio de musculación y fitness en Fernando zona norte
+ Meta desc: Gimnasio de musculación y fitness en Fernando zona norte, a 1.6km de la Politécnica. 4.7⭐ 119 reseñas Google.
+ H1:        ['XXGym']
+ H2 (3):    ['Nuestros Servicios', 'Nuestro Espacio', 'Lo que dicen nuestros miembros']
+ Words:     463
+ Photos:    4
+ Schema:    []
+ Phone:     ['595021678171', '+595 21 678 171']
+ WA:        ['595021678171']
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ Thin content (463 words) — needs expansion
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ C (51/100)  maskarada                  maskarada.paragu-ai.com
+====================================================================================================
+ Title:     Club maškaráda — La noche donde el deseo usa máscara | Asunción
+ Meta desc: Club maškaráda: BDSM/kink party en Asunción, Paraguay. 11 de junio, Eligio Ayala 1073. Entradas disponibles — escribinos
+ H1:        ['maškaráda']
+ H2 (3):    ['Cómo Funciona', 'La Experiencia', 'Lo Que Dicen']
+ Words:     432
+ Photos:    1
+ Schema:    []
+ Phone:     ['59598120025']
+ WA:        ['595981200255']
+ IG:        ['maskarada.py']
+ FB:        []
+
+ Critique:
+   ✓ Phone + WhatsApp both visible
+   ✓ Instagram: @maskarada.py
+   ✓ Booking CTA in body
+   ✓ OG image configured
+   ⚠ Thin content (432 words) — needs expansion
+   ⚠ No canonical URL
+
+====================================================================================================
+ D (36/100)  bufete-mendez              bufete-mendez.paragu-ai.com
+====================================================================================================
+ Title:     bufete-mendez
+ Meta desc: Bufete de abogados en Asunción, Paraguay — derecho corporativo, civil, laboral y familiar.
+ H1:        ['Home']
+ H2 (3):    []
+ Words:     52
+ Photos:    0
+ Schema:    []
+ Phone:     []
+ WA:        []
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ OG image configured
+   ✗ SHELL — only 52 words rendered, body literally says 'Home'
+   ✗ Title is just the slug ('bufete-mendez') — needs value prop
+   ✗ NO contact info — leads can't reach you
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ D (33/100)  superspuma                 superspuma.paragu-ai.com
+====================================================================================================
+ Title:     superspuma
+ Meta desc: Fabricantes paraguayos de colchones, sommiers y accesorios de descanso desde 1976.
+ H1:        ['Home']
+ H2 (3):    []
+ Words:     49
+ Photos:    0
+ Schema:    []
+ Phone:     []
+ WA:        []
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✓ OG image configured
+   ✗ SHELL — only 49 words rendered, body literally says 'Home'
+   ✗ Title is just the slug ('superspuma') — needs value prop
+   ✗ NO contact info — leads can't reach you
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
+
+====================================================================================================
+ F (17/100)  golden-visa-advisory       goldenvisa.paragu-ai.com
+====================================================================================================
+ Title:     Golden Visa Advisory — Paraguai
+ Meta desc: Market-building advisory firm helping Paraguayan businesses design investment products aligned with international Golden
+ H1:        []
+ H2 (3):    []
+ Words:     30
+ Photos:    0
+ Schema:    []
+ Phone:     []
+ WA:        []
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✗ SHELL — only 30 words rendered, body literally says 'Home'
+   ✗ No H1 (CRITICAL for SEO)
+   ✗ NO contact info — leads can't reach you
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ No canonical URL
+
+====================================================================================================
+ F (0/100)  dayah-litworks             dayahlitworks.paragu-ai.com
+====================================================================================================
+ Title:     (empty)
+ Meta desc: (empty)
+ H1:        []
+ H2 (3):    []
+ Words:     4
+ Photos:    0
+ Schema:    []
+ Phone:     []
+ WA:        []
+ IG:        []
+ FB:        []
+
+ Critique:
+   ✗ SHELL — only 4 words rendered, body literally says 'Home'
+   ✗ No H1 (CRITICAL for SEO)
+   ✗ Missing meta description
+   ✗ NO contact info — leads can't reach you
+   ⚠ No social proof (no IG/FB link)
+   ⚠ No real photos — pure SVG icon design (low trust for services)
+   ⚠ No booking/quote CTA in body text
+   ⚠ No PWA manifest
+   ⚠ No canonical URL
