@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mantraspa.paragu-ai.com/sitemap.xml

@@ -3,7 +3,7 @@ export function CtaBanner() {
     <section className="relative overflow-hidden py-20 bg-gradient-to-r from-secondary to-secondary-dark">
       <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
-          ¿Listo para crear algo increible?
+          ¿Listo para crear algo increíble?
         </h2>
         <p className="mx-auto mb-8 max-w-xl text-lg text-white/80">
           Contanos tu proyecto y te responderemos en menos de 24 horas.

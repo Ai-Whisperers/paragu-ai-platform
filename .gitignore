@@ -22,3 +22,11 @@ dist/
 .idea/
 .vscode/
 apps/ozmontania-website/Estudio8-2026E.pdf
+
+# Build/typecheck artifacts
+*.tsbuildinfo
+
+# Video render artifacts (depiflash worktree temp output)
+apps/depiflash/video-ads/renders/
+apps/depiflash/depiflash-videos.tar.gz
+*.tar.gz

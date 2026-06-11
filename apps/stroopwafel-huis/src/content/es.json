@@ -1,0 +1,220 @@
+{
+  "siteName": "Stroopwafel Huis",
+  "businessName": "Stroopwafel Huis",
+  "tagline": "La primera cafetería holandesa del Paraguay",
+  "navigation": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Menú", "href": "/menu" },
+    { "label": "Nuestra Historia", "href": "/historia" },
+    { "label": "Ubicación", "href": "/ubicacion" },
+    { "label": "Catering", "href": "/catering" },
+    { "label": "FAQ", "href": "/faq" },
+    { "label": "Contacto", "href": "/contacto" }
+  ],
+  "home": {
+    "hero": {
+      "headline": "Verse Stroopwafels & Specialty Coffee",
+      "subheadline": "La primera cafetería holandesa del Paraguay. Stroopwafels frescos hechos frente a vos, todos los días.",
+      "ctaPrimary": "Ver Menú",
+      "ctaSecondary": "Visitanos"
+    },
+    "whatIs": {
+      "title": "¿Qué es un Stroopwafel?",
+      "body": "Dos capas finas y crujientes de masa, unidas por un relleno caliente de caramelo con canela. Nacido en Holanda en 1784, ahora freshly pressed en Asunción. Cada stroopwafel se prepara frente a tus ojos — calentito y recién hecho.",
+      "tip": "Poné tu stroopwafel sobre tu taza de café caliente. El vapor derrite el caramelo y lo hace suave y derretido.",
+      "cta": "Ver el menú completo"
+    },
+    "weeklyFlavor": {
+      "title": "Stroopwafel de la Semana",
+      "subtitle": "Nuevo sabor cada semana. ¿Te lo vas a perder?",
+      "name": "KONINGSDAG ORANGE",
+      "description": "Chocolate naranja, zest de naranja, sprinkles naranjas",
+      "price": "Gs. 30.000",
+      "cta": "Pedir ahora"
+    },
+    "favorites": {
+      "title": "Favoritos",
+      "items": [
+        { "name": "Clásico", "price": "Gs. 15.000", "description": "Fresh-pressed, warm caramel syrup filling" },
+        { "name": "Nutella & Banana", "price": "Gs. 28.000", "description": "Nutella drizzle, fresh banana slices" },
+        { "name": "Dutch Treat Combo", "price": "Gs. 25.000", "description": "Stroopwafel + café de especialidad" },
+        { "name": "Gift Box 6-pack", "price": "Gs. 55.000", "description": "Caja regalo con 6 stroopwafels surtidos" }
+      ]
+    },
+    "story": {
+      "title": "Trajimos un pedacito de Holanda a Paraguay",
+      "body": "Cuando soñamos con abrir Stroopwafel Huis, queríamos compartir algo especial: el aroma de stroopwafels recién hechos, un café perfecto, y esa sensación holandesa de 'gezellig'. Cada stroopwafel se hace frente a vos. Cada café se prepara con cuidado. Y cada rincón de nuestra cafetería fue diseñado para que te sientas como en una casita holandesa en el campo.",
+      "author": "Bram & Rach, Fundadores"
+    },
+    "location": {
+      "title": "Visitanos",
+      "address": "Villa Morra, Asunción, Paraguay",
+    "phone": "+595 991 501444",
+    "email": "hola@stroopwafelhuis.com",
+    "hours": [
+        { "days": "Lunes - Sábado", "time": "8:00 - 20:00" },
+        { "days": "Domingo", "time": "9:00 - 18:00" }
+      ],
+      "cta": "Cómo llegar"
+    },
+    "instagram": {
+      "title": "Seguinos en Instagram",
+      "handle": "@stroopwafelhuis"
+    }
+  },
+  "menu": {
+    "title": "Nuestro Menú",
+    "subtitle": "Todo hecho fresco, con amor holandés",
+    "categories": [
+      {
+        "name": "Stroopwafels Clásicos",
+        "items": [
+          { "name": "Classic Stroopwafel", "price": "Gs. 15.000", "description": "Fresh-pressed, warm caramel syrup filling" },
+          { "name": "Double Stroopwafel", "price": "Gs. 25.000", "description": "Dos stacked con extra caramel" },
+          { "name": "Mini Stroopwafels (3 pcs)", "price": "Gs. 18.000", "description": "Bite-size, perfectos con café" }
+        ]
+      },
+      {
+        "name": "Premium Topped",
+        "items": [
+          { "name": "Nutella & Banana", "price": "Gs. 28.000", "description": "Nutella drizzle, fresh banana slices" },
+          { "name": "Dulce de Leche", "price": "Gs. 25.000", "description": "Local twist — dulce de leche + coconut flakes" },
+          { "name": "White Choc & Strawberry", "price": "Gs. 30.000", "description": "White chocolate drizzle, fresh strawberries" },
+          { "name": "Oreo Monster", "price": "Gs. 32.000", "description": "Crushed Oreos, whipped cream, chocolate sauce" },
+          { "name": "Tropical", "price": "Gs. 30.000", "description": "Mango, passion fruit, coconut, lime zest" },
+          { "name": "Speculoos Dream", "price": "Gs. 28.000", "description": "Speculoos cream, cookie crumble, caramel" },
+          { "name": "Stroopwafel del Mes", "price": "Gs. 30.000", "description": "Rotating monthly special" }
+        ]
+      },
+      {
+        "name": "Speciales",
+        "items": [
+          { "name": "Ice Cream Sandwich", "price": "Gs. 35.000", "description": "Stroopwafel + artisan ice cream" },
+          { "name": "Giant Stroopwafel", "price": "Gs. 50.000", "description": "25cm diameter, custom decorated, para compartir" },
+          { "name": "Stroopwafel S'mores", "price": "Gs. 30.000", "description": "Toasted marshmallow, chocolate" }
+        ]
+      },
+      {
+        "name": "Café Espresso-Based",
+        "items": [
+          { "name": "Espresso (Single)", "price": "Gs. 10.000", "description": "" },
+          { "name": "Espresso (Double)", "price": "Gs. 13.000", "description": "" },
+          { "name": "Americano", "price": "Gs. 14.000", "description": "" },
+          { "name": "Cappuccino", "price": "Gs. 18.000", "description": "" },
+          { "name": "Latte", "price": "Gs. 18.000", "description": "" },
+          { "name": "Flat White", "price": "Gs. 20.000", "description": "" },
+          { "name": "Cortado", "price": "Gs. 15.000", "description": "" },
+          { "name": "Mocha", "price": "Gs. 22.000", "description": "" }
+        ]
+      },
+      {
+        "name": "Dutch Specialties",
+        "items": [
+          { "name": "Koffie Verkeerd", "price": "Gs. 20.000", "description": "Dutch 'wrong coffee' — more milk than coffee" },
+          { "name": "Stroopwafel Latte", "price": "Gs. 25.000", "description": "Latte con homemade stroopwafel caramel syrup" },
+          { "name": "Dutch Hot Chocolate", "price": "Gs. 22.000", "description": "Rich cocoa, real chocolate, whipped cream" },
+          { "name": "Speculoos Latte", "price": "Gs. 25.000", "description": "Espresso + speculoos spice syrup + steamed milk" }
+        ]
+      },
+      {
+        "name": "Cold Drinks",
+        "items": [
+          { "name": "Cold Brew", "price": "Gs. 20.000", "description": "" },
+          { "name": "Iced Latte", "price": "Gs. 20.000", "description": "" },
+          { "name": "Iced Stroopwafel Latte", "price": "Gs. 27.000", "description": "" },
+          { "name": "Frappé", "price": "Gs. 25.000", "description": "Varios sabores" }
+        ]
+      },
+      {
+        "name": "Bebidas",
+        "items": [
+          { "name": "Tea", "price": "Gs. 14.000", "description": "Varias opciones" },
+          { "name": "Fresh Orange Juice", "price": "Gs. 18.000", "description": "" },
+          { "name": "Limonada", "price": "Gs. 15.000", "description": "" },
+          { "name": "Agua (con/sin gas)", "price": "Gs. 8.000", "description": "" },
+          { "name": "Soft Drinks", "price": "Gs. 10.000", "description": "" }
+        ]
+      },
+      {
+        "name": "Dutch Treats",
+        "items": [
+          { "name": "Poffertjes (8 pcs)", "price": "Gs. 22.000", "description": "Mini Dutch pancakes, butter, powdered sugar" },
+          { "name": "Poffertjes Deluxe", "price": "Gs. 28.000", "description": "+ Nutella, fruit, whipped cream" },
+          { "name": "Appeltaart (slice)", "price": "Gs. 20.000", "description": "Dutch apple pie — spiced, deep, with whipped cream" },
+          { "name": "Tompouce", "price": "Gs. 18.000", "description": "Dutch pastry — puff pastry, custard, pink icing" },
+          { "name": "Oliebollen (3 pcs)", "price": "Gs. 18.000", "description": "Dutch 'oil balls' — seasonal" },
+          { "name": "Boterkoek", "price": "Gs. 16.000", "description": "Dutch butter cake, almond-flavored" }
+        ]
+      },
+      {
+        "name": "Salados (11:00-15:00)",
+        "items": [
+          { "name": "Bitterballen (6 pcs)", "price": "Gs. 25.000", "description": "Classic Dutch fried meat croquette balls + mustard" },
+          { "name": "Kroket", "price": "Gs. 20.000", "description": "Dutch croquette on bread roll" },
+          { "name": "Tosti", "price": "Gs. 22.000", "description": "Dutch grilled cheese — ham, cheese, on toast" },
+          { "name": "Uitsmijter", "price": "Gs. 28.000", "description": "Open-face bread + fried eggs + ham + cheese" },
+          { "name": "Cheese Board", "price": "Gs. 35.000", "description": "Selection of Dutch cheeses, crackers, mustard" }
+        ]
+      }
+    ]
+  },
+  "historia": {
+    "title": "Nuestra Historia",
+    "body": "Stroopwafel Huis nació de un sueño simple: traer un pedacito de Holanda al corazón de Paraguay.\n\nEl stroopwafel es el snack más querido de los Países Bajos. En cada mercado de Ámsterdam, en cada estación de tren, en cada casa holandesa — hay stroopwafels. Esa galleta crujiente con caramelo caliente que se derrite sobre tu café.\n\nNosotros quisimos traer esa experiencia aquí. No solo el producto, sino la cultura: el café perfecto, el ambiente acogedor que los holandeses llaman \"gezellig\", y la tradición de tomarse un momento para disfrutar algo simple, bien hecho.\n\nTodo lo que hacemos es fresco. Presionamos cada stroopwafel frente a vos. Preparamos nuestro café con granos de especialidad. Y decoramos cada stroopwafel premium como una pequeña obra de arte.\n\nBienvenido a Stroopwafel Huis. Welkom!",
+    "cta": "Visitanos para probarlo"
+  },
+  "ubicacion": {
+    "title": "Ubicación",
+    "body": "Encontranos en Villa Morra, Asunción. Vení a disfrutar de stroopwafels frescos y café de especialidad.",
+    "address": "Villa Morra, Asunción, Paraguay",
+    "phone": "+595 991 501444",
+    "email": "hola@stroopwafelhuis.com",
+    "hours": [
+      { "days": "Lunes - Sábado", "time": "8:00 - 20:00" },
+      { "days": "Domingo", "time": "9:00 - 18:00" }
+    ]
+  },
+  "catering": {
+    "title": "Catering & Eventos",
+    "body": "Llevá el sabor de Holanda a tu evento. Ofrecemos:\n\n• Corporate Gifts — Cajas personalizadas para empresas\n• Event Catering — Dessert tables, coffee service\n• Workshops — Stroopwafel-making experience, team building\n• Wedding Desserts — Stroopwafel towers, custom flavors\n\nContactanos para un presupuesto personalizado.",
+    "cta": "Pedir presupuesto"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "question": "¿Qué es un stroopwafel?", "answer": "Es una galleta tradicional holandesa: dos capas finas y crujientes de masa unidas por un relleno de caramelo con canela. Inventado en Gouda, Países Bajos, en 1784." },
+      { "question": "¿Hacen los stroopwafels en el momento?", "answer": "Sí! Cada stroopwafel se presiona y rellena frente a vos. Calentito y recién hecho." },
+      { "question": "¿Tienen opciones sin TACC?", "answer": "Actualmente nuestros stroopwafels contienen gluten. Consultanos por opciones sin TACC." },
+      { "question": "¿Hacen entregas a domicilio?", "answer": "Sí, dentro de Asunción metro. También estamos en PedidosYa." },
+      { "question": "¿Tienen estacionamiento?", "answer": "Sí, tenemos estacionamiento para clientes." },
+      { "question": "¿Aceptan tarjetas?", "answer": "Aceptamos tarjetas de crédito/débito, QR (Tigo Money, Personal Pay) y efectivo." },
+      { "question": "¿Cada cuánto cambia el Stroopwafel del Mes?", "answer": "Cada mes tenemos un sabor especial rotativo. Seguinos en Instagram para conocer el nuevo sabor." },
+      { "question": "¿Hacen catering para eventos?", "answer": "Sí! Ofrecemos coffee service, dessert tables, y cajas corporativas. Contactanos para un presupuesto." }
+    ]
+  },
+  "whatsapp": {
+"phone": "+595991501444",
+    "message": "¡Hola! Quiero más información sobre Stroopwafel Huis 🧇"
+  },
+  "contacto": {
+    "title": "Contacto",
+    "subtitle": "Escribinos por WhatsApp o visitanos",
+    "cta": "Enviar mensaje"
+  },
+  "footer": {
+    "text": "© 2026 Stroopwafel Huis · Asunción, Paraguay · Hecho con amor holandés",
+    "social": [
+      { "platform": "Instagram", "url": "https://instagram.com/stroopwafelhuis" },
+      { "platform": "TikTok", "url": "https://tiktok.com/@stroopwafelhuis" },
+      { "platform": "Facebook", "url": "https://facebook.com/stroopwafelhuis" }
+    ]
+  },
+  "privacidad": {
+    "title": "Política de Privacidad",
+    "body": "En Stroopwafel Huis respetamos tu privacidad. Los datos personales que compartís con nosotros se utilizan únicamente para procesar pedidos, responder consultas y mejorar nuestros servicios.\n\nNo compartimos tus datos con terceros sin tu consentimiento explícito.\n\nPodés solicitar la eliminación de tus datos en cualquier momento contactándonos por WhatsApp o email."
+  },
+  "terminos": {
+    "title": "Términos y Condiciones",
+    "body": "Al realizar un pedido en Stroopwafel Huis aceptás estos términos.\n\nLos precios están expresados en Guaraníes (Gs.) e incluyen IVA. Nos reservamos el derecho a modificar precios sin previo aviso.\n\nLos pedidos por delivery están sujetos a disponibilidad y zona de cobertura. El tiempo estimado de entrega puede variar según la demanda.\n\nPara cancelaciones o cambios, contactanos con al menos 2 horas de anticipación."
+  }
+}

@@ -1,0 +1,18 @@
+services:
+  web:
+    image: mantra-spa:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.mantra-spa.entrypoints=websecure"
+        - "traefik.http.routers.mantra-spa.rule=Host(`mantra-spa.paragu-ai.com`)"
+        - "traefik.http.routers.mantra-spa.tls=true"
+        - "traefik.http.routers.mantra-spa.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.mantra-spa.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

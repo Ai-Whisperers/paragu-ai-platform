@@ -13,24 +13,49 @@ const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-int
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
   const site = getSite(isLang(lang) ? lang : 'es')
+  // Use the deployment URL for og:image. NEXT_PUBLIC_SITE_URL is set in Dockerfile.
+  // Default to current deployment (paragu-ai.com subdomain).
+  const deployUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cuidadoamiga.paragu-ai.com'
+  const ogImageUrl = `${deployUrl}/${site._meta.locale}/opengraph-image`
+
   return {
     title: { default: `${site._meta.site} — ${site._meta.tagline}`, template: `%s | ${site._meta.site}` },
     description: site._meta.description,
     keywords: ['femicidio', 'femicide', 'violencia de género', 'gender-based violence', 'América Latina', 'Latin America', 'mapa', 'documentación'],
+    authors: [{ name: site._meta.owner }],
+    creator: site._meta.owner,
+    publisher: site._meta.site,
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
     openGraph: {
-      title: site._meta.site,
+      title: `${site._meta.site} — ${site._meta.tagline}`,
       description: site._meta.description,
-      url: site._meta.url,
+      url: `${deployUrl}/${site._meta.locale}`,
+      siteName: site._meta.site,
+      images: [
+        {
+          url: `${deployUrl}/og/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: site._meta.tagline,
+          type: 'image/png',
+        },
+      ],
       locale: site._meta.locale === 'pt' ? 'pt_BR' : site._meta.locale === 'en' ? 'en_US' : 'es_PY',
       alternateLocale: SUPPORTED_LANGS.filter((l) => l !== site._meta.locale).map((l) =>
         l === 'pt' ? 'pt_BR' : l === 'en' ? 'en_US' : 'es_PY',
       ),
       type: 'website',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: site._meta.site,
+      description: site._meta.description,
+      images: [`${deployUrl}/og/og-image.png`],
+    },
     alternates: {
-      canonical: `${site._meta.url}/${site._meta.locale}`,
+      canonical: `${deployUrl}/${site._meta.locale}`,
       languages: Object.fromEntries(
-        SUPPORTED_LANGS.map((l) => [l, `${site._meta.url}/${l}`]),
+        SUPPORTED_LANGS.map((l) => [l, `${deployUrl}/${l}`]),
       ),
     },
   }

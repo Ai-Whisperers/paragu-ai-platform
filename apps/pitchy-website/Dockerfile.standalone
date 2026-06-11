@@ -3,7 +3,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 COPY .next/standalone ./
 COPY .next/static ./.next/static
-COPY public ./public
+COPY public ./apps/pitchy-website/public
 EXPOSE 3000
 ENV HOSTNAME="0.0.0.0"
-CMD ["node", "server.js"]
+CMD ["node", "apps/pitchy-website/server.js"]

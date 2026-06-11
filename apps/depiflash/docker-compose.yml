@@ -1,0 +1,18 @@
+services:
+  web:
+    image: depiflash:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.depiflash.entrypoints=websecure"
+        - "traefik.http.routers.depiflash.rule=Host(`depiflash.paragu-ai.com`)"
+        - "traefik.http.routers.depiflash.tls=true"
+        - "traefik.http.routers.depiflash.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.depiflash.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

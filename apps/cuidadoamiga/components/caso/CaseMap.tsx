@@ -18,6 +18,7 @@ interface Case {
 
 interface CaseMapProps {
   cases: Case[]
+  lang: string
 }
 
 const TYPE_COLORS: Record<Case['tipo'], string> = {
@@ -37,9 +38,8 @@ function makeIcon(color: string): string {
   return `data:image/svg+xml;base64,${btoa(svg)}`
 }
 
-const CASE_TYPE_LABELS: Record<Case['tipo'], string> = getCaseTypeLabels('es') as Record<Case['tipo'], string>
-
-export default function CaseMap({ cases }: CaseMapProps) {
+export default function CaseMap({ cases, lang }: CaseMapProps) {
+  const CASE_TYPE_LABELS: Record<Case['tipo'], string> = getCaseTypeLabels((lang as 'es' | 'en' | 'pt')) as Record<Case['tipo'], string>
   const mapRef = useRef<HTMLDivElement>(null)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const mapInstanceRef = useRef<any>(null)
@@ -120,7 +120,7 @@ export default function CaseMap({ cases }: CaseMapProps) {
             <div style="font-weight: 700; font-size: 14px; color: #1a202c; margin-bottom: 2px;">${escapeHtml(c.nombre)}</div>
             ${c.victima ? `<div style="font-size: 12px; color: #9333ea; margin-bottom: 2px;">Víctima: ${escapeHtml(c.victima)}</div>` : ''}
             <div style="font-size: 12px; color: #64748b; margin-bottom: 8px;">${c.fecha} · ${escapeHtml(c.pais)}${c.ciudad ? `, ${escapeHtml(c.ciudad)}` : ''}</div>
-            <a href="/es/casos/${encodeURIComponent(c.id)}" style="
+            <a href="/${lang}/casos/${encodeURIComponent(c.id)}" style="
               color: ${color};
               font-size: 12px;
               font-weight: 600;

@@ -20,13 +20,34 @@
   },
   "navigation": {
     "items": [
-      { "label": "Inicio", "href": "/" },
-      { "label": "Productos", "href": "/productos" },
-      { "label": "Proyectos", "href": "/proyectos" },
-      { "label": "Servicios", "href": "/servicios" },
-      { "label": "Nosotros", "href": "/nosotros" },
-      { "label": "Blog", "href": "/blog" },
-      { "label": "Contacto", "href": "/contacto" }
+      {
+        "label": "Inicio",
+        "href": "/"
+      },
+      {
+        "label": "Productos",
+        "href": "/productos"
+      },
+      {
+        "label": "Proyectos",
+        "href": "/proyectos"
+      },
+      {
+        "label": "Servicios",
+        "href": "/servicios"
+      },
+      {
+        "label": "Nosotros",
+        "href": "/nosotros"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto"
+      }
     ],
     "ctaText": "Cotizá tu proyecto",
     "ctaHref": "https://wa.me/595981277601?text=Hola%20Pitchy%2C%20quiero%20cotizar%20vidrio%20para%20un%20proyecto"
@@ -80,8 +101,15 @@
         "Cumple normas IRAM e ISO",
         "Bordes pulidos y biselados"
       ],
-      "applications": ["Fachadas de edificios", "Barandas y balcones", "Puertas de vidrio", "Mamparas de baño", "Divisiones de oficinas"],
-      "cta": "Solicitar cotización de vidrio templado"
+      "applications": [
+        "Fachadas de edificios",
+        "Barandas y balcones",
+        "Puertas de vidrio",
+        "Mamparas de baño",
+        "Divisiones de oficinas"
+      ],
+      "cta": "Solicitar cotización de vidrio templado",
+      "image": "/images/products/vidrio-templado.jpg"
     },
     {
       "id": "vidrio-laminado",
@@ -94,8 +122,15 @@
         "Colores: transparente, satinado, bronce, gris, verde, azul",
         "Configuraciones: 3+3 a 10+10 mm"
       ],
-      "applications": ["Fachadas y muro cortina", "Claraboyas y techos", "Barandas de seguridad", "Pisos de vidrio", "Locales comerciales"],
-      "cta": "Solicitar cotización de vidrio laminado"
+      "applications": [
+        "Fachadas y muro cortina",
+        "Claraboyas y techos",
+        "Barandas de seguridad",
+        "Pisos de vidrio",
+        "Locales comerciales"
+      ],
+      "cta": "Solicitar cotización de vidrio laminado",
+      "image": "/images/products/vidrio-laminado.jpg"
     },
     {
       "id": "dvh",
@@ -108,8 +143,14 @@
         "Cámara de aire o argón",
         "Configuraciones personalizadas"
       ],
-      "applications": ["Edificios corporativos", "Hoteles", "Viviendas de alta gama", "Proyectos de eficiencia energética"],
-      "cta": "Solicitar cotización de DVH"
+      "applications": [
+        "Edificios corporativos",
+        "Hoteles",
+        "Viviendas de alta gama",
+        "Proyectos de eficiencia energética"
+      ],
+      "cta": "Solicitar cotización de DVH",
+      "image": "/images/products/dvh.jpg"
     },
     {
       "id": "muro-cortina",
@@ -122,8 +163,14 @@
         "Ingeniería a medida para cada proyecto",
         "Cálculo estructural incluido"
       ],
-      "applications": ["Edificios corporativos", "Torres residenciales", "Centros comerciales", "Hoteles"],
-      "cta": "Solicitar cotización de muro cortina"
+      "applications": [
+        "Edificios corporativos",
+        "Torres residenciales",
+        "Centros comerciales",
+        "Hoteles"
+      ],
+      "cta": "Solicitar cotización de muro cortina",
+      "image": "/images/products/muro-cortina.jpg"
     },
     {
       "id": "low-e",
@@ -136,8 +183,14 @@
         "Ideal para el clima cálido de Paraguay",
         "Múltiples colores y reflectividades"
       ],
-      "applications": ["Fachadas con control solar", "Edificios sustentables", "Proyectos LEED", "Grandes superficies vidriadas"],
-      "cta": "Solicitar cotización de vidrio Low-E"
+      "applications": [
+        "Fachadas con control solar",
+        "Edificios sustentables",
+        "Proyectos LEED",
+        "Grandes superficies vidriadas"
+      ],
+      "cta": "Solicitar cotización de vidrio Low-E",
+      "image": "/images/products/low-e.jpg"
     },
     {
       "id": "blindex",
@@ -150,8 +203,13 @@
         "Medidas estándar y a medida",
         "Instalación profesional incluida"
       ],
-      "applications": ["Baños residenciales", "Baños de hoteles", "Baños corporativos"],
-      "cta": "Solicitar cotización de Blindex"
+      "applications": [
+        "Baños residenciales",
+        "Baños de hoteles",
+        "Baños corporativos"
+      ],
+      "cta": "Solicitar cotización de Blindex",
+      "image": "/images/products/blindex.jpg"
     },
     {
       "id": "espejos",
@@ -164,8 +222,14 @@
         "Con y sin marco",
         "Fijaciones incluidas"
       ],
-      "applications": ["Hogares", "Gimnasios", "Locales comerciales", "Hoteles"],
-      "cta": "Solicitar cotización de espejos"
+      "applications": [
+        "Hogares",
+        "Gimnasios",
+        "Locales comerciales",
+        "Hoteles"
+      ],
+      "cta": "Solicitar cotización de espejos",
+      "image": "/images/products/espejos.jpg"
     },
     {
       "id": "reparaciones",
@@ -178,23 +242,77 @@
         "Trabajamos con compañías de seguros",
         "Garantía de 1 año"
       ],
-      "applications": ["Vidrios rotos de fachada", "Puertas y ventanas", "Barandas y balcones", "Mamparas"],
-      "cta": "Solicitar reparación urgente"
+      "applications": [
+        "Vidrios rotos de fachada",
+        "Puertas y ventanas",
+        "Barandas y balcones",
+        "Mamparas"
+      ],
+      "cta": "Solicitar reparación urgente",
+      "image": "/images/products/reparaciones.jpg"
     }
   ],
   "categories": [
-    { "id": "vidrio-templado", "name": "Vidrio Templado", "icon": "🔷", "description": "Vidrio de seguridad para construcciones" },
-    { "id": "vidrio-laminado", "name": "Vidrio Laminado", "icon": "🪟", "description": "Vidrio de seguridad laminado PVB" },
-    { "id": "dvh", "name": "DVH", "icon": "🪞", "description": "Doble vidriado hermético" },
-    { "id": "muro-cortina", "name": "Muro Cortina", "icon": "🏢", "description": "Sistemas de fachada vidriada" },
-    { "id": "low-e", "name": "Low-E", "icon": "☀️", "description": "Vidrio de baja emisividad" },
-    { "id": "blindex", "name": "Blindex", "icon": "🚿", "description": "Mamparas de baño" },
-    { "id": "espejos", "name": "Espejos", "icon": "🪞", "description": "Espejos medidas especiales" },
-    { "id": "reparaciones", "name": "Reparaciones", "icon": "🔧", "description": "Reparación y reemplazo" }
+    {
+      "id": "vidrio-templado",
+      "name": "Vidrio Templado",
+      "icon": "🔷",
+      "description": "Vidrio de seguridad para construcciones"
+    },
+    {
+      "id": "vidrio-laminado",
+      "name": "Vidrio Laminado",
+      "icon": "🪟",
+      "description": "Vidrio de seguridad laminado PVB"
+    },
+    {
+      "id": "dvh",
+      "name": "DVH",
+      "icon": "🪞",
+      "description": "Doble vidriado hermético"
+    },
+    {
+      "id": "muro-cortina",
+      "name": "Muro Cortina",
+      "icon": "🏢",
+      "description": "Sistemas de fachada vidriada"
+    },
+    {
+      "id": "low-e",
+      "name": "Low-E",
+      "icon": "☀️",
+      "description": "Vidrio de baja emisividad"
+    },
+    {
+      "id": "blindex",
+      "name": "Blindex",
+      "icon": "🚿",
+      "description": "Mamparas de baño"
+    },
+    {
+      "id": "espejos",
+      "name": "Espejos",
+      "icon": "🪞",
+      "description": "Espejos medidas especiales"
+    },
+    {
+      "id": "reparaciones",
+      "name": "Reparaciones",
+      "icon": "🔧",
+      "description": "Reparación y reemplazo"
+    }
   ],
   "testimonials": [
-    { "name": "Constructora ABC", "text": "Excelente servicio y calidad. Los vidrios llegaron antes de lo previsto.", "rating": 5 },
-    { "name": "Arq. Martínez", "text": "Pitchy nos asesoró en la elección del vidrio adecuado para nuestra fachada. Muy recomendados.", "rating": 5 }
+    {
+      "name": "Constructora ABC",
+      "text": "Excelente servicio y calidad. Los vidrios llegaron antes de lo previsto.",
+      "rating": 5
+    },
+    {
+      "name": "Arq. Martínez",
+      "text": "Pitchy nos asesoró en la elección del vidrio adecuado para nuestra fachada. Muy recomendados.",
+      "rating": 5
+    }
   ],
   "contacto": {
     "info": {
@@ -213,17 +331,41 @@
     "subtitle": "Expertos en vidrio para la construcción en Paraguay",
     "mission": "Proveer vidrio de la más alta calidad con entrega rápida y asesoramiento técnico personalizado para proyectos de todos los tamaños.",
     "stats": [
-      { "number": "10+", "label": "Años en el mercado" },
-      { "number": "50,000+", "label": "M² de vidrio suministrados" },
-      { "number": "200+", "label": "Proyectos completados" },
-      { "number": "95%", "label": "Clientes satisfechos" }
+      {
+        "number": "10+",
+        "label": "Años en el mercado"
+      },
+      {
+        "number": "50,000+",
+        "label": "M² de vidrio suministrados"
+      },
+      {
+        "number": "200+",
+        "label": "Proyectos completados"
+      },
+      {
+        "number": "95%",
+        "label": "Clientes satisfechos"
+      }
     ],
     "story": "Con amplia trayectoria en el rubro del vidrio para la construcción, Pitchy Blindex nace de la necesidad de proveer vidrio de calidad con stock local en Paraguay. Trabajamos directamente con Blindex, la marca líder en Latinoamérica, para ofrecer productos certificados con los mejores estándares de calidad. Nuestro equipo asesora a arquitectos, ingenieros y constructores en la selección del vidrio adecuado para cada proyecto, desde pequeñas reformas hasta rascacielos de más de 40 pisos.",
     "values": [
-      { "title": "Calidad", "description": "Solo trabajamos con vidrio certificado Blindex, con garantía de fábrica." },
-      { "title": "Stock local", "description": "Mantenemos inventario permanente para entregas rápidas." },
-      { "title": "Asesoramiento", "description": "Te ayudamos a elegir el producto correcto para tu proyecto." },
-      { "title": "Confianza", "description": "Relaciones de largo plazo con constructoras y arquitectos." }
+      {
+        "title": "Calidad",
+        "description": "Solo trabajamos con vidrio certificado Blindex, con garantía de fábrica."
+      },
+      {
+        "title": "Stock local",
+        "description": "Mantenemos inventario permanente para entregas rápidas."
+      },
+      {
+        "title": "Asesoramiento",
+        "description": "Te ayudamos a elegir el producto correcto para tu proyecto."
+      },
+      {
+        "title": "Confianza",
+        "description": "Relaciones de largo plazo con constructoras y arquitectos."
+      }
     ]
   },
   "servicios": [
@@ -282,16 +424,46 @@
     }
   ],
   "faq": [
-    { "question": "¿Cuánto tiempo tarda la entrega?", "answer": "Si el producto está en stock, la entrega es en 24–48 horas. Para pedidos especiales o grandes volúmenes, consultar plazo." },
-    { "question": "¿Hacen instalación?", "answer": "Sí, coordinamos instalación profesional con nuestro equipo especializado en fachadas y muro cortina." },
-    { "question": "¿Qué espesor de vidrio necesito para una baranda de balcón?", "answer": "Para barandas residenciales recomendamos vidrio templado de 8mm o 10mm. Para barandas comerciales o de mayor altura, 10mm o 12mm. El espesor depende de la altura de la baranda y la carga de viento." },
-    { "question": "¿El vidrio templado se puede cortar después de fabricado?", "answer": "No. El vidrio templado no puede cortarse, perforarse ni modificarse después del templado. Cualquier modificación debe hacerse antes del tratamiento térmico. Por eso es importante contar con medidas exactas antes de fabricar." },
-    { "question": "¿Ofrecen vidrio con control solar para fachadas?", "answer": "Sí, trabajamos con vidrio Low-E que reduce la ganancia de calor solar hasta un 70%. Ideal para fachadas con orientación norte y oeste en el clima cálido de Paraguay." },
-    { "question": "¿Trabajan con constructoras?", "answer": "Sí, trabajamos con constructoras y contratistas. Ofrecemos crédito a 30 y 60 días para proyectos y obras." },
-    { "question": "¿Qué certificaciones tiene el vidrio?", "answer": "Trabajamos con vidrio Blindex certificado bajo normas IRAM e ISO. Consultanos por certificados específicos para tu proyecto." },
-    { "question": "¿Cuál es la diferencia entre vidrio templado y laminado?", "answer": "El templado es 4–5 veces más resistente que el vidrio común y se rompe en fragmentos pequeños no cortantes. El laminado tiene una capa de PVB que mantiene los fragmentos adheridos si se rompe. Para fachadas se recomienda usar ambos: laminado por seguridad y templado por resistencia." },
-    { "question": "¿Hacen presupuestos sin compromiso?", "answer": "Sí, realizamos la medición y el presupuesto sin cargo. Consultanos por WhatsApp o el formulario de cotización." },
-    { "question": "¿Tienen stock permanente o trabajan sobre pedido?", "answer": "Mantenemos stock permanente de vidrio templado y laminado en medidas estándar. Para proyectos especiales o grandes volúmenes, coordinamos los plazos de fabricación." }
+    {
+      "question": "¿Cuánto tiempo tarda la entrega?",
+      "answer": "Si el producto está en stock, la entrega es en 24–48 horas. Para pedidos especiales o grandes volúmenes, consultar plazo."
+    },
+    {
+      "question": "¿Hacen instalación?",
+      "answer": "Sí, coordinamos instalación profesional con nuestro equipo especializado en fachadas y muro cortina."
+    },
+    {
+      "question": "¿Qué espesor de vidrio necesito para una baranda de balcón?",
+      "answer": "Para barandas residenciales recomendamos vidrio templado de 8mm o 10mm. Para barandas comerciales o de mayor altura, 10mm o 12mm. El espesor depende de la altura de la baranda y la carga de viento."
+    },
+    {
+      "question": "¿El vidrio templado se puede cortar después de fabricado?",
+      "answer": "No. El vidrio templado no puede cortarse, perforarse ni modificarse después del templado. Cualquier modificación debe hacerse antes del tratamiento térmico. Por eso es importante contar con medidas exactas antes de fabricar."
+    },
+    {
+      "question": "¿Ofrecen vidrio con control solar para fachadas?",
+      "answer": "Sí, trabajamos con vidrio Low-E que reduce la ganancia de calor solar hasta un 70%. Ideal para fachadas con orientación norte y oeste en el clima cálido de Paraguay."
+    },
+    {
+      "question": "¿Trabajan con constructoras?",
+      "answer": "Sí, trabajamos con constructoras y contratistas. Ofrecemos crédito a 30 y 60 días para proyectos y obras."
+    },
+    {
+      "question": "¿Qué certificaciones tiene el vidrio?",
+      "answer": "Trabajamos con vidrio Blindex certificado bajo normas IRAM e ISO. Consultanos por certificados específicos para tu proyecto."
+    },
+    {
+      "question": "¿Cuál es la diferencia entre vidrio templado y laminado?",
+      "answer": "El templado es 4–5 veces más resistente que el vidrio común y se rompe en fragmentos pequeños no cortantes. El laminado tiene una capa de PVB que mantiene los fragmentos adheridos si se rompe. Para fachadas se recomienda usar ambos: laminado por seguridad y templado por resistencia."
+    },
+    {
+      "question": "¿Hacen presupuestos sin compromiso?",
+      "answer": "Sí, realizamos la medición y el presupuesto sin cargo. Consultanos por WhatsApp o el formulario de cotización."
+    },
+    {
+      "question": "¿Tienen stock permanente o trabajan sobre pedido?",
+      "answer": "Mantenemos stock permanente de vidrio templado y laminado en medidas estándar. Para proyectos especiales o grandes volúmenes, coordinamos los plazos de fabricación."
+    }
   ],
   "blog": [
     {
@@ -328,35 +500,78 @@
       {
         "title": "Productos",
         "links": [
-          { "label": "Vidrio Templado", "href": "/productos#vidrio-templado" },
-          { "label": "Vidrio Laminado", "href": "/productos#vidrio-laminado" },
-          { "label": "DVH", "href": "/productos#dvh" },
-          { "label": "Muro Cortina", "href": "/productos#muro-cortina" },
-          { "label": "Blindex", "href": "/productos#blindex" }
+          {
+            "label": "Vidrio Templado",
+            "href": "/productos#vidrio-templado"
+          },
+          {
+            "label": "Vidrio Laminado",
+            "href": "/productos#vidrio-laminado"
+          },
+          {
+            "label": "DVH",
+            "href": "/productos#dvh"
+          },
+          {
+            "label": "Muro Cortina",
+            "href": "/productos#muro-cortina"
+          },
+          {
+            "label": "Blindex",
+            "href": "/productos#blindex"
+          }
         ]
       },
       {
         "title": "Empresa",
         "links": [
-          { "label": "Nosotros", "href": "/nosotros" },
-          { "label": "Servicios", "href": "/servicios" },
-          { "label": "Proyectos", "href": "/proyectos" },
-          { "label": "Blog", "href": "/blog" },
-          { "label": "Contacto", "href": "/contacto" }
+          {
+            "label": "Nosotros",
+            "href": "/nosotros"
+          },
+          {
+            "label": "Servicios",
+            "href": "/servicios"
+          },
+          {
+            "label": "Proyectos",
+            "href": "/proyectos"
+          },
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          }
         ]
       },
       {
         "title": "Contacto",
         "links": [
-          { "label": "WhatsApp", "href": "https://wa.me/595981277601" },
-          { "label": "Tel: +595 981 277 601", "href": "tel:+595981277601" },
-          { "label": "Email", "href": "mailto:pitchy@example.com" }
+          {
+            "label": "WhatsApp",
+            "href": "https://wa.me/595981277601"
+          },
+          {
+            "label": "Tel: +595 981 277 601",
+            "href": "tel:+595981277601"
+          },
+          {
+            "label": "Email",
+            "href": "mailto:pitchy@example.com"
+          }
         ]
       }
     ],
     "paymentMethods": [],
     "social": [
-      { "name": "WhatsApp", "url": "https://wa.me/595981277601", "icon": "message-circle" }
+      {
+        "name": "WhatsApp",
+        "url": "https://wa.me/595981277601",
+        "icon": "message-circle"
+      }
     ],
     "copyright": "© 2026 Pitchy Blindex. Todos los derechos reservados."
   }

@@ -21,7 +21,7 @@ export function Hero() {
           <span className="text-secondary">experiencias visuales</span>
         </h1>
         <p className="text-lg md:text-xl text-foreground-light mb-10 max-w-2xl mx-auto">
-          Marketing digital, produccion audiovisual, fotografia y publicidad para marcas que quieren destacar.
+          Marketing digital, producción audiovisual, fotografia y publicidad para marcas que quieren destacar.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href="/portfolio"

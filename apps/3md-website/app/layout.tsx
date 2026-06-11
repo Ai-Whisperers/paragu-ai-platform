@@ -17,19 +17,39 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://3mind.paragu-ai.com"),
   title: {
-    default: "3 MIND — Agencia Creativa | Marketing, Video, Fotografia",
+    default: "3 MIND — Agencia Creativa | Marketing, Video, Fotografía",
     template: "%s | 3 MIND",
   },
-  description: "Transformamos ideas en experiencias visuales impactantes. Marketing digital, produccion audiovisual, fotografia y publicidad en Paraguay.",
+  description: "Transformamos ideas en experiencias visuales impactantes. Marketing digital, producción audiovisual, fotografía y publicidad en Paraguay.",
+  keywords: ["agencia creativa", "marketing digital", "producción audiovisual", "fotografía", "publicidad", "Paraguay", "Asunción"],
+  authors: [{ name: "3 MIND" }],
+  creator: "3 MIND",
+  publisher: "3 MIND",
+  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   icons: { icon: "/favicon.ico" },
   alternates: { canonical: "https://3mind.paragu-ai.com" },
   openGraph: {
     title: "3 MIND — Agencia Creativa",
-    description: "Marketing digital, produccion audiovisual y publicidad en Paraguay.",
+    description: "Marketing digital, producción audiovisual, fotografía y publicidad en Paraguay.",
     url: "https://3mind.paragu-ai.com",
     siteName: "3 MIND",
+    images: [
+      {
+        url: "/og/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "3 MIND — Agencia Creativa en Paraguay",
+        type: "image/png",
+      },
+    ],
     locale: "es_PY",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3 MIND — Agencia Creativa",
+    description: "Marketing digital, producción audiovisual y publicidad en Paraguay.",
+    images: ["/og/og-image.png"],
   },
 }
 
@@ -38,7 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "3 MIND",
-    description: "Agencia creativa de marketing digital, produccion audiovisual, fotografia y publicidad",
+    description: "Agencia creativa de marketing digital, producción audiovisual, fotografía y publicidad",
     url: "https://3mind.paragu-ai.com",
     logo: "https://3mind.paragu-ai.com/images/logo.svg",
     address: { "@type": "PostalAddress", streetAddress: "Fray Luis de Leon C/Venezuela", addressLocality: "Asuncion", addressCountry: "PY" },

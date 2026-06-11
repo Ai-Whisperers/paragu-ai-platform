@@ -1,0 +1,18 @@
+services:
+  web:
+    image: cocodrilo-fitness:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.cocodrilo-fitness.entrypoints=websecure"
+        - "traefik.http.routers.cocodrilo-fitness.rule=Host(`cocodrilo-fitness.paragu-ai.com`)"
+        - "traefik.http.routers.cocodrilo-fitness.tls=true"
+        - "traefik.http.routers.cocodrilo-fitness.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.cocodrilo-fitness.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

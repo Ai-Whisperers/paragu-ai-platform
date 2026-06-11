@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://granjacabral.paragu-ai.com/sitemap.xml

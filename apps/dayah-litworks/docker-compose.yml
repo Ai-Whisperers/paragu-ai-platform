@@ -1,0 +1,18 @@
+services:
+  web:
+    image: dayah-litworks:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.dayah-litworks.entrypoints=websecure"
+        - "traefik.http.routers.dayah-litworks.rule=Host(`dayah-litworks.paragu-ai.com`)"
+        - "traefik.http.routers.dayah-litworks.tls=true"
+        - "traefik.http.routers.dayah-litworks.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.dayah-litworks.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

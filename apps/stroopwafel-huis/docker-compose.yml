@@ -1,0 +1,18 @@
+services:
+  web:
+    image: stroopwafel-huis:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.stroopwafel-huis.entrypoints=websecure"
+        - "traefik.http.routers.stroopwafel-huis.rule=Host(`stroopwafel-huis.paragu-ai.com`)"
+        - "traefik.http.routers.stroopwafel-huis.tls=true"
+        - "traefik.http.routers.stroopwafel-huis.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.stroopwafel-huis.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

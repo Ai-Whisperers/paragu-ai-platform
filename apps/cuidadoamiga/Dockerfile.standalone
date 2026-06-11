@@ -3,8 +3,9 @@ WORKDIR /app
 ENV NODE_ENV=production
 COPY .next/standalone ./
 COPY .next/static ./.next/static
-COPY public ./public
+COPY public ./apps/cuidadoamiga/public
 COPY .env* ./
 EXPOSE 3000
 ENV HOSTNAME="0.0.0.0"
+ENV NEXT_PUBLIC_SITE_URL="https://cuidadoamiga.paragu-ai.com"
 CMD ["node", "apps/cuidadoamiga/server.js"]

@@ -1,0 +1,39 @@
+{
+  "name": "nudo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ai-whisperers/admin": "file:/root/ai-whisperers-base/packages/admin",
+    "@ai-whisperers/auth": "file:/root/ai-whisperers-base/packages/auth",
+    "@ai-whisperers/commerce": "file:/root/ai-whisperers-base/packages/commerce",
+    "@ai-whisperers/i18n": "file:/root/ai-whisperers-base/packages/i18n",
+    "@ai-whisperers/seo": "file:/root/ai-whisperers-base/packages/seo",
+    "@ai-whisperers/theme": "file:/root/ai-whisperers-base/packages/theme",
+    "@ai-whisperers/ui": "file:/root/ai-whisperers-base/packages/ui",
+    "@ai-whisperers/whatsapp": "file:/root/ai-whisperers-base/packages/whatsapp",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.510.0",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.2",
+    "jsdom": "^29.1.1",
+    "tailwindcss": "^4.0.0",
+    "typescript": "5.9.3",
+    "vitest": "^4.1.7"
+  }
+}

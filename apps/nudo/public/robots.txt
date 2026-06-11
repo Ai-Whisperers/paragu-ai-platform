@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nudo.paragu-ai.com/sitemap.xml

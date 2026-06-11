@@ -38,8 +38,8 @@ export function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground-muted mb-4">Servicios</h4>
             <div className="flex flex-col gap-2 text-sm">
               <Link href="/servicios" className="text-foreground-light hover:text-foreground transition-colors">Marketing Digital</Link>
-              <Link href="/servicios" className="text-foreground-light hover:text-foreground transition-colors">Produccion Audiovisual</Link>
-              <Link href="/servicios" className="text-foreground-light hover:text-foreground transition-colors">Fotografia</Link>
+              <Link href="/servicios" className="text-foreground-light hover:text-foreground transition-colors">Producción Audiovisual</Link>
+              <Link href="/servicios" className="text-foreground-light hover:text-foreground transition-colors">Fotografía</Link>
               <Link href="/servicios" className="text-foreground-light hover:text-foreground transition-colors">Publicidad</Link>
             </div>
           </div>

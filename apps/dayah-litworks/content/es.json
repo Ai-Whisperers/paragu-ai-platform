@@ -1,0 +1,945 @@
+{
+  "siteName": "Dayah LitWorks",
+  "businessName": "Dayah LitWorks",
+  "tagline": "Book Cover Design · Autora Amazon Prime Reading",
+  "founded": "2019",
+  "navigation": {
+    "businessName": "Dayah LitWorks",
+    "ctaText": "Pedir por WhatsApp",
+    "ctaHref": "https://wa.me/595986868241?text=Hola!%20Quiero%20info%20sobre%20servicios%20de%20Dayah%20LitWorks",
+    "items": [
+      {
+        "label": "Inicio",
+        "href": "/"
+      },
+      {
+        "label": "Servicios",
+        "href": "/servicios"
+      },
+      {
+        "label": "Premades",
+        "href": "/premades"
+      },
+      {
+        "label": "Portafolio",
+        "href": "/portafolio"
+      },
+      {
+        "label": "Nosotros",
+        "href": "/nosotros"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      },
+      {
+        "label": "Logros",
+        "href": "/logros"
+      }
+    ],
+    "Blog": "/blog"
+  },
+  "home": {
+    "seo": {
+      "title": "Dayah LitWorks — Diseño de Portadas · Autora Amazon Prime Reading · Paraguay",
+      "description": "400+ portadas diseñadas. Autora seleccionada por Amazon Prime Reading. Múltiples bestsellers en Amazon. Portadas personalizadas, premades y maquetación."
+    },
+    "hero": {
+      "image": "/dayah/hero-collage.jpg",
+      "headline": "La única diseñadora de portadas seleccionada por Amazon Prime Reading",
+      "headlineTest": "400+ Portadas · Amazon Prime Reading · Autora Publicada",
+      "subheadline": "Portadas personalizadas y premades para autoras independientes. Detrás de cada diseño hay una autora que ha sido bestseller, ha sido seleccionada por Amazon Prime Reading y sabe lo que tu libro necesita para destacar.",
+      "ctaPrimaryText": "Ver Servicios",
+      "ctaPrimaryHref": "/servicios",
+      "ctaSecondaryText": "Ver Premades",
+      "ctaSecondaryHref": "/premades"
+    },
+    "stats": {
+      "title": "Dayah LitWorks en Números",
+      "items": [
+        {
+          "value": "400+",
+          "label": "Portadas diseñadas"
+        },
+        {
+          "value": "35+",
+          "label": "Títulos en Amazon"
+        },
+        {
+          "value": "1M",
+          "label": "Lecturas en Wattpad"
+        },
+        {
+          "value": "5+",
+          "label": "Años en el mercado"
+        }
+      ]
+    },
+    "features": {
+      "title": "¿Por qué elegir Dayah LitWorks?",
+      "items": [
+        {
+          "title": "Sé lo que funciona en Amazon",
+          "description": "Autora seleccionada por Amazon Prime Reading. Conozco el algoritmo porque mis libros han sido elegidos y renovados año tras año."
+        },
+        {
+          "title": "He Sido Bestseller",
+          "description": "Mis portadas han llevado a múltiples autores al #1 en sus categorías. No solo diseño: entiendo el mercado y diseño para vender."
+        },
+        {
+          "title": "Editorial Tradicional me Buscó",
+          "description": "Editorial Blanco y Negro (Colombia) me contactó directamente. Tuve contrato de publicación tradicional desde el diseño de portadas."
+        },
+        {
+          "title": "400+ Portadas, ~100 Maquetaciones",
+          "description": "Experiencia real con volúmenes reales. Cada portada es una historia distinta, y tengo el ritmo de trabajo para entregar en tiempo y forma."
+        },
+        {
+          "title": "Conozco Ambos Lados del Mostrador",
+          "description": "He sido diseñadora, autora, correctora, estratega de autopublicación y community manager. Tu libro no es solo un diseño para mí — es un proyecto que entiendo completo."
+        }
+      ]
+    },
+    "clients": {
+      "title": "Editoriales y Clientes",
+      "subtitle": "Han confiado en mi trabajo",
+      "editorials": [
+        "Editorial Blanco y Negro SAS (Colombia)",
+        "Castell Ediciones (Paraguay)",
+        "Arandura Editorial (Paraguay)",
+        "El Lector (Paraguay)"
+      ],
+      "authors": [
+        "Gleen Black — #1 Amazon Dark Romance",
+        "Laura A. López — #1 Amazon Regencia Inglesa",
+        "Alma Lawson — #1 Amazon Regencia Inglesa",
+        "Maribel Solle — Bestseller Amazon",
+        "Verónica Mengual — Bestseller Amazon",
+        "Barby Ávalos — Múltiples obras en El Lector"
+      ]
+    },
+    "portfolio": {
+      "title": "Trabajos Recientes",
+      "subtitle": "Portadas que ya están dando que hablar",
+      "items": [
+        {
+          "title": "Extrême",
+          "slug": "extreme",
+          "genre": "Romance Erótico",
+          "image": "/dayah/cover-extreme.webp",
+          "author": "Dayah Araujo"
+        },
+        {
+          "title": "Intense 2° Edición",
+          "slug": "intense",
+          "genre": "Romance Erótico",
+          "image": "/dayah/cover-intense.webp",
+          "author": "Dayah Araujo"
+        },
+        {
+          "title": "Cómo Volver Loco a mi Guardaespaldas",
+          "slug": "volver-loco-guardaespaldas",
+          "genre": "Romance Comedia",
+          "image": "/dayah/cover-volver-loco.webp",
+          "author": "Meyling Soza"
+        },
+        {
+          "title": "El Secreto que nos Unió",
+          "slug": "el-secreto-que-nos-unio",
+          "genre": "Romance",
+          "image": "/dayah/cover-secreto.webp",
+          "author": "Verónica Mengual"
+        },
+        {
+          "title": "Perdóname Padre o Hazme Tuya",
+          "slug": "perdoname-padre-o-hazme-tuya",
+          "genre": "Romance Oscuro",
+          "image": "/dayah/cover-perdoname.webp",
+          "author": "María González"
+        },
+        {
+          "title": "Macarena y sus Ex",
+          "slug": "macarena-y-sus-ex",
+          "genre": "Romance Comedia",
+          "image": "/dayah/cover-macarena.webp",
+          "author": "Lucy Landa"
+        },
+        {
+          "title": "PassionFruit — Vol. I",
+          "slug": "passionfruit-vol1",
+          "genre": "Romance",
+          "image": "/dayah/cover-pf-ebook-vol1.webp",
+          "author": "Ana Lucía Ramírez"
+        },
+        {
+          "title": "PassionFruit — Vol. II",
+          "slug": "passionfruit-vol2",
+          "genre": "Romance",
+          "image": "/dayah/cover-pf-ebook-vol2.webp",
+          "author": "Ana Lucía Ramírez"
+        }
+      ],
+      "ctaText": "Ver todos los trabajos →",
+      "ctaHref": "/portafolio"
+    },
+    "books": {
+      "title": "También Soy Autora",
+      "subtitle": "Diseño portadas porque conozco el camino. Estos son mis libros publicados.",
+      "authorPageUrl": "https://www.amazon.com/author/dayaharaujo",
+      "items": [
+        {
+          "title": "Intense",
+          "format": "Wattpad + Amazon KDP + Editorial Blanco y Negro",
+          "achievement": "+728.000 lecturas · Contrato editorial · ISBN 9789585367135",
+          "platform": "Amazon",
+          "platformUrl": "https://rxe.me/7V2YVQ",
+          "image": "/dayah/cover-intense.webp"
+        },
+        {
+          "title": "Extrême",
+          "format": "Wattpad + Amazon KDP",
+          "achievement": "+270.000 lecturas · +12.200 votos",
+          "platform": "Wattpad",
+          "platformUrl": "https://rxe.me/C8CL3Y",
+          "image": "/dayah/cover-extreme.webp"
+        },
+        {
+          "title": "Seduciendo al Duque de Wellington",
+          "format": "Amazon KDP",
+          "achievement": "Amazon Prime Reading — selección invitation-only, renovado múltiples veces desde 2023",
+          "platform": "Amazon",
+          "platformUrl": "https://rxe.me/GFRHD8"
+        },
+        {
+          "title": "Clandestinos",
+          "format": "Poesía · Amazon KDP",
+          "achievement": "Poemario publicado 2024",
+          "platform": "Amazon",
+          "platformUrl": "https://rxe.me/1BG63S"
+        },
+        {
+          "title": "Arde el Paraíso",
+          "format": "Antología poética · Amazon KDP",
+          "achievement": "Coordinado por Dayah · Escritores paraguayos · Lanzamiento con evento",
+          "platform": "Amazon",
+          "platformUrl": "https://rxe.me/ZST2CX"
+        }
+      ],
+      "ctaText": "Ver todos mis libros en Amazon",
+      "ctaUrl": "https://www.amazon.com/author/dayaharaujo"
+    },
+    "services": {
+      "title": "Mis Servicios",
+      "subtitle": "Soluciones completas de diseño editorial",
+      "items": [
+        {
+          "name": "Portada Personalizada — Ebook",
+          "price": "Gs. 300.000",
+          "priceUsd": "$40 USD",
+          "description": "Portada de libro electrónico con título en PNG, portadilla, 2 banners de revelación y 2 mockups 3D.",
+          "delivery": "1 a 2 semanas",
+          "whatsappCta": "Hola! Quiero cotizar una Portada Personalizada — Ebook (Gs. 300.000)",
+          "crossSell": "Maquetación eBook + Paperback"
+        },
+        {
+          "name": "Portada Personalizada — Tapa Blanda",
+          "price": "Gs. 500.000",
+          "priceUsd": "$65 USD",
+          "description": "Portada frente + lomo + contra, archivo imprimible PDF, título PNG, portadilla, 2 banners y 2 mockups.",
+          "delivery": "1 a 2 semanas",
+          "whatsappCta": "Hola! Quiero cotizar una Portada Personalizada — Tapa Blanda (Gs. 500.000)",
+          "crossSell": "Maquetación Paperback"
+        },
+        {
+          "name": "Portada Paperback + eBook",
+          "price": "Gs. 700.000",
+          "priceUsd": "$90 USD",
+          "description": "El combo completo: portada ebook + tapa blanda. Todo incluido, ahorrá combinando.",
+          "delivery": "2 a 3 semanas",
+          "whatsappCta": "Hola! Quiero cotizar el combo Portada Paperback + eBook (Gs. 700.000)",
+          "crossSell": "Maquetación eBook + Paperback"
+        },
+        {
+          "name": "Premade eBook",
+          "price": "Gs. 150.000",
+          "priceUsd": "$20 USD",
+          "description": "Portada prediseñada de alta calidad. Solo cambiás título y autor. Ideal para lanzamientos rápidos.",
+          "delivery": "1 semana",
+          "whatsappCta": "Hola! Quiero ver premades disponibles para eBook",
+          "crossSell": "Premade eBook + Paperback"
+        },
+        {
+          "name": "Premade eBook + Paperback",
+          "price": "Gs. 250.000",
+          "priceUsd": "$35 USD",
+          "description": "Portada prediseñada en versión ebook + tapa blanda. Lista para publicar en Amazon KDP.",
+          "delivery": "1 a 2 semanas",
+          "whatsappCta": "Hola! Quiero ver premades disponibles para eBook + Paperback",
+          "crossSell": "Mockup 3D"
+        },
+        {
+          "name": "Maquetación eBook",
+          "price": "Gs. 200.000",
+          "priceUsd": "$25 USD",
+          "description": "Formato profesional para Kindle y plataformas digitales. Incluye tabla de contenidos interactiva, portadilla y metadatos.",
+          "delivery": "1 a 2 semanas",
+          "whatsappCta": "Hola! Quiero cotizar Maquetación eBook (Gs. 200.000)"
+        },
+        {
+          "name": "Maquetación Paperback",
+          "price": "Gs. 400.000",
+          "priceUsd": "$50 USD",
+          "description": "Archivo PDF listo para impresión en Amazon KDP. Incluye numeración, márgenes profesionales, portadilla y páginas legales.",
+          "delivery": "1 a 2 semanas",
+          "whatsappCta": "Hola! Quiero cotizar Maquetación Paperback (Gs. 400.000)"
+        },
+        {
+          "name": "Maquetación eBook + Paperback",
+          "price": "Gs. 500.000",
+          "priceUsd": "$65 USD",
+          "description": "Formato completo para digital e impreso. La mejor relación costo-beneficio para tu lanzamiento.",
+          "delivery": "1 a 2 semanas",
+          "whatsappCta": "Hola! Quiero cotizar Maquetación eBook + Paperback (Gs. 500.000)"
+        },
+        {
+          "name": "Corrección Ortotipográfica y de Estilo",
+          "price": "Desde USD $3/1000 palabras",
+          "priceUsd": "",
+          "description": "Revisión profesional antes de maquetar. Se cotiza sobre los primeros 2 capítulos + extensión total.",
+          "delivery": "Según evaluación",
+          "whatsappCta": "Hola! Quiero cotizar Corrección Ortotipográfica"
+        },
+        {
+          "name": "🔥 Paquete Completo: Portada + Maquetación + Corrección",
+          "price": "Gs. 1.200.000",
+          "priceUsd": "$150 USD",
+          "description": "Nos encargamos de todo: portada personalizada, maquetación digital e impresa, y corrección ortotipográfica. El pack todo incluido.",
+          "delivery": "3 a 4 semanas",
+          "whatsappCta": "Hola! Quiero cotizar el Paquete Completo (Gs. 1.200.000)",
+          "crossSell": "Mockups 3D adicionales"
+        }
+      ],
+      "ctaText": "Cotizar por WhatsApp",
+      "ctaHref": "https://wa.me/595986868241?text=Hola!%20Quiero%20cotizar%20un%20servicio"
+    },
+    "testimonials": [
+      {
+        "name": "Paula Da Rocha",
+        "text": "Me ha encantado la portada. No es la primera vez que trabajo contigo, que decido poner en tus manos a uno de mis bebés, y como la primera vez, me ha demostrado que ha sido la mejor decisión. 'Uno siempre vuelve donde fue feliz' — en este caso, donde hicieron un buen trabajo. Eres una artista fabulosa y nunca defraudas.",
+        "rating": 5,
+        "country": "Brasil/España",
+        "service": "Logo · Manual de marca · Portadas múltiples · Diseño interior",
+        "platform": "Booknek + Amazon"
+      },
+      {
+        "name": "Mónica Rodríguez",
+        "text": "La identidad visual de una página no solo se basa en los elementos gráficos para comunicar el concepto de ésta, sino que define la personalidad de quien la maneja. Amé por completo mi logo, me define en su totalidad y no podría estar más que agradecida con Dayah por hacer esto posible.",
+        "rating": 5,
+        "country": "México",
+        "service": "Logo e identidad visual",
+        "date": "Mayo 2023",
+        "platform": "Bookstagrammer"
+      },
+      {
+        "name": "Denisse Quiñones",
+        "text": "Encontrar a Dayah LitWorks y sus diseños ha sido una maravilla, porque no había encontrado a alguien que pudiera plasmar tal y como he imaginado las portadas de mis escritos, logrando así un trabajo final de calidad y llamativo a la vista.",
+        "rating": 5,
+        "country": "República Dominicana",
+        "service": "Rediseño de portada (Compartiendo Regalo) + portadas adicionales"
+      },
+      {
+        "name": "Gimena Bazante",
+        "text": "Cuando conocí a Dayah nos conectamos enseguida. Es súper simpática, amorosa, muy amable y es una genio en lo que hace. Vamos por la tercera portada juntas y definitivamente seguiremos trabajando juntas. Su trabajo es muy profesional, excelente. Además de hacerlo a tu gusto, te da sus opiniones y consejos para que todo quede mejor. Sabe enseguida lo que puede ir bien con tu novela — no sé cómo, pero ella adivina la idea de tu mente y lo hace realidad. Su atención es muy profesional y cálida. Trabajar con Dayah es sentirse segura y apoyada con tu trabajo. La súper recomiendo.",
+        "rating": 5,
+        "country": "Argentina",
+        "service": "Portadas Saga Kuznetsov · Romance de época · cliente recurrente"
+      },
+      {
+        "name": "J.M. Sileiray",
+        "text": "Fue gracias a una autora que conocí a Dayah. La portada de esa chica me cautivó. Desde entonces, ella es la artista detrás de mis portadas. Ya vamos... perdí la cuenta, son demasiadas, y siempre acabo enamorándome de su arte. Es una profesional en su campo y te ofrece sus opiniones, te hace sentir cómoda, pero lo más importante, se ocupa de que estés feliz con su trabajo. Seguiremos colaborando en equipo — ambas compartimos nuestras ideas y al final contemplamos la magia. Es un placer contar contigo como mi diseñadora y amiga incondicional. Gracias a tu labor, las autoras no pueden evitar sentirse felices y emocionadas con el rostro de sus bebés.",
+        "rating": 5,
+        "country": "República Dominicana / EE.UU.",
+        "service": "Portadas múltiples · Corrección ortotipográfica y de estilo · Maquetación interior eBook y físico",
+        "platform": "Booknek + Buenovela + Amazon"
+      }
+    ],
+    "process": {
+      "title": "¿Cómo Trabajo?",
+      "subtitle": "De la idea al libro terminado",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Contacto",
+          "description": "Me escribís por WhatsApp con tu idea. Charlamos sobre tu libro, género, referencias y timeline."
+        },
+        {
+          "number": "2",
+          "title": "Briefing",
+          "description": "Completás un formulario breve con toda la info necesaria: sinopsis, paleta de colores, tipografías, referencias visuales."
+        },
+        {
+          "number": "3",
+          "title": "Anticipo",
+          "description": "Abonás el 50% del proyecto. Una vez recibido, arranco con los bocetos y propuestas."
+        },
+        {
+          "number": "4",
+          "title": "Diseño y Revisión",
+          "description": "Te presento la primera propuesta. Incluye hasta 2 rondas de revisiones para ajustar detalles."
+        },
+        {
+          "number": "5",
+          "title": "Entrega",
+          "description": "Aprobado el diseño final, abonás el 50% restante y recibís todos los archivos listos para publicar."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "¿Lista para darle a tu libro la portada que se merece?",
+      "subtitle": "Escribime por WhatsApp y empecemos a trabajar juntas",
+      "buttonText": "Escribime ahora",
+      "buttonHref": "https://wa.me/595986868241?text=Hola!%20Quiero%20info%20sobre%20servicios%20de%20Dayah%20LitWorks"
+    },
+    "newsletter": {
+      "title": "Recibí tips de diseño editorial",
+      "subtitle": "Nuevos premades, promociones y tips de diseño editorial directo a tu correo.",
+      "placeholder": "Tu correo electrónico",
+      "ctaText": "Suscribirme por WhatsApp"
+    },
+    "certifications": {
+      "title": "Formación Profesional",
+      "subtitle": "Certificaciones y educación continua que respaldan mi trabajo",
+      "institutions": [
+        {
+          "name": "MIT Professional Education",
+          "program": "Technology, Innovation & Strategy",
+          "url": "https://www.linkedin.com/in/daihana-araujo/"
+        },
+        {
+          "name": "University of Chicago",
+          "program": "Professional Achievement Program",
+          "url": "https://www.linkedin.com/in/daihana-araujo/"
+        },
+        {
+          "name": "IE University",
+          "program": "Executive Education",
+          "url": "https://www.linkedin.com/in/daihana-araujo/"
+        },
+        {
+          "name": "ESADE",
+          "program": "Business Management",
+          "url": "https://www.linkedin.com/in/daihana-araujo/"
+        },
+        {
+          "name": "Google",
+          "program": "Digital Marketing & E-commerce Certificate",
+          "url": "https://www.linkedin.com/in/daihana-araujo/"
+        },
+        {
+          "name": "Semrush Academy",
+          "program": "SEO & Content Marketing",
+          "url": "https://www.linkedin.com/in/daihana-araujo/"
+        }
+      ]
+    }
+  },
+  "whatsapp": {
+    "phone": "595986868241",
+    "defaultMessage": "Hola! Quiero info sobre servicios de Dayah LitWorks"
+  },
+  "footer": {
+    "email": "dayahlitworks@gmail.com",
+    "instagram": "https://www.instagram.com/dayah.litworks/",
+    "facebook": "https://www.facebook.com/dayaaharaujo",
+    "linkedin": "https://www.linkedin.com/in/daihana-araujo/"
+  },
+  "terms": {
+    "title": "Términos y Condiciones",
+    "intro": "Al encargar un diseño con Dayah LitWorks, aceptás los siguientes términos:",
+    "sections": [
+      {
+        "title": "Pedidos",
+        "content": "Todos los pedidos se realizan a través de WhatsApp. La confirmación está sujeta a disponibilidad y briefing previo."
+      },
+      {
+        "title": "Pagos",
+        "content": "Se requiere 50% de anticipo para iniciar el proyecto. El saldo restante se paga contra entrega. Aceptamos transferencia bancaria, efectivo (Gs. y USD) y Western Union."
+      },
+      {
+        "title": "Revisiones",
+        "content": "Se incluyen hasta 2 rondas de revisiones en el precio base. Cambios adicionales se cotizan por separado."
+      },
+      {
+        "title": "Cancelaciones",
+        "content": "Si una vez iniciado el proyecto el cliente decidiera rescindir el contrato, no se reembolsará el porcentaje adelantado."
+      },
+      {
+        "title": "Derechos",
+        "content": "Los derechos del diseño pertenecen a Dayah LitWorks hasta que el cliente haya efectuado el 100% del pago."
+      },
+      {
+        "title": "Uso de portfolio",
+        "content": "Dayah LitWorks podrá mostrar los trabajos realizados en su portfolio, redes sociales y página web."
+      },
+      {
+        "title": "Responsabilidad",
+        "content": "El cliente es responsable de revisar el diseño, textos y datos antes de cualquier proceso de impresión o publicación. Dayah LitWorks no se responsabiliza por errores no comunicados durante la revisión."
+      }
+    ]
+  },
+  "about": {
+    "seo": {
+      "title": "Sobre Dayah Araujo — Dayah LitWorks",
+      "description": "Conocé a Dayah Araujo: diseñadora editorial, autora seleccionada por Amazon Prime Reading, con contrato editorial tradicional y más de 400 portadas diseñadas."
+    },
+    "hero": {
+      "headline": "Diseñadora · Autora · Estratega",
+      "subheadline": "400+ portadas, una autora publicada, y muchas historias que contar."
+    },
+    "story": {
+      "paragraphs": [
+        "Soy Dayah Araujo, diseñadora editorial y autora paraguaya. Mi historia con los libros empezó en Wattpad, donde publiqué mi primera novela, Intense. Lo que comenzó como un hobby se convirtió en una carrera cuando +728.000 lecturas después, Editorial Blanco y Negro (Colombia) me contactó para publicar en formato físico.",
+        "Hoy, después de más de 400 portadas diseñadas y 5 libros publicados, entiendo el mercado editorial desde todos los ángulos: como autora que ha sido seleccionada por Amazon Prime Reading, como diseñadora que ha trabajado con editoriales tradicionales y autoras independientes, y como estratega que sabe lo que funciona en cada plataforma.",
+        "Mi formación incluye certificaciones de MIT Professional Education, University of Chicago, IE University, ESADE, Google y Semrush Academy. Todo autodidacta, todo online, todo aplicado.",
+        "En 2022, mi obra Seduciendo al Duque de Wellington ganó el premio **Libros que Dejan Huella Literary Awards** en la categoría Romance Histórico — un reconocimiento formal de la industria, otorgado por terceros. Además, he sido Directora Creativa de XD Creative Lab y Directora Ejecutiva de Aleatorio Agencia, liderando equipos creativos para clientes en Paraguay, Argentina, Colombia y España, con múltiples campañas viralizadas orgánicamente en TikTok.",
+        "Creo en el poder de una buena portada. No es solo un diseño — es la primera impresión que tu lectora tendrá de tu historia. Y esa impresión tiene que ser inolvidable."
+      ]
+    },
+    "values": [
+      {
+        "title": "Calidad sobre cantidad",
+        "description": "Cada portada recibe el mismo nivel de detalle y dedicación, sin importar el presupuesto."
+      },
+      {
+        "title": "Empatía creativa",
+        "description": "Entiendo lo que se siente publicar un libro porque lo vivo. Tu emoción es mi emoción."
+      },
+      {
+        "title": "Profesionalismo",
+        "description": "Plazos claros, comunicación constante, y resultados que superan expectativas."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Cuánto tarda una portada personalizada?",
+        "answer": "Entre 1 y 3 semanas dependiendo de la complejidad del proyecto. Las premades se entregan en 1–2 semanas."
+      },
+      {
+        "question": "¿Cuántas revisiones incluye?",
+        "answer": "Las revisiones están incluidas dentro del plan predefinido. Cambios adicionales fuera del scope pueden tener costo extra."
+      },
+      {
+        "question": "¿Cómo es el proceso de pago?",
+        "answer": "Se requiere un anticipo del 50% para comenzar. El resto al aprobar el diseño final. Aceptamos Western Union, transferencia bancaria y efectivo."
+      },
+      {
+        "question": "¿En qué moneda cobran?",
+        "answer": "Cobramos en USD y en guaraníes (₲). Los precios en guaraníes están en nuestra tabla de servicios."
+      },
+      {
+        "question": "¿Puedo usar la portada en Amazon KDP / Wattpad / editorial?",
+        "answer": "Sí. Los derechos del diseño pertenecen a Dayah LitWorks hasta el pago completo. Una vez pago al 100%, podés usar la portada en la plataforma que elijas."
+      },
+      {
+        "question": "¿Qué es un mockup 3D?",
+        "answer": "Es una imagen realista de tu libro renderizada en 3D. Ideal para promocionar en redes sociales y marketing."
+      },
+      {
+        "question": "¿Qué pasa si cancelo el proyecto?",
+        "answer": "Si el cliente decide rescindir el contrato una vez iniciado el proyecto, el anticipo no es reembolsable."
+      },
+      {
+        "question": "¿Hacés rediseños de portadas existentes?",
+        "answer": "Sí, podés contratar un rediseño como portada personalizada. Envianos la portada actual y tus nuevas ideas."
+      },
+      {
+        "question": "¿Qué necesito enviar para empezar?",
+        "answer": "Título del libro, sinopsis, género, referencias visuales (ideas, tipografías, colores, estilos). Es importante enviar las referencias ANTES de solicitar el diseño."
+      },
+      {
+        "question": "¿En qué idioma diseñás?",
+        "answer": "Diseñamos portadas en español e inglés. Los textos tipográficos se adaptan al idioma de tu libro."
+      },
+      {
+        "question": "¿Podés contratar urgente (48–72h)?",
+        "answer": "Contáctanos por WhatsApp para verificar disponibilidad. Los proyectos urgentes pueden tener un recargo."
+      },
+      {
+        "question": "¿Cómo se entregan los archivos finales?",
+        "answer": "Archivos en alta resolución (JPG, PDF, PNG) listos para subir a tu plataforma. Los mockups se entregan como imágenes renderizadas."
+      }
+    ]
+  },
+  "faqPage": {
+    "seo": {
+      "title": "Preguntas frecuentes — Dayah LitWorks",
+      "description": "Respuestas a las dudas más comunes sobre el diseño de portadas: tiempos, precios, revisiones, formatos y licencia."
+    },
+    "hero": {
+      "title": "Preguntas frecuentes",
+      "subtitle": "Las respuestas cortas que la mayoría de autores necesita antes de arrancar."
+    }
+  },
+  "placeholders": {
+    "businessName": "Dayah LitWorks",
+    "city": "Asunción",
+    "year": 2026
+  },
+  "servicios": {
+    "seo": {
+      "title": "Servicios de Diseño de Portadas | Dayah LitWorks",
+      "description": "Portadas personalizadas, premades, maquetación interior, corrección ortotipográfica y mockups 3D. Todos los servicios editoriales que tu libro necesita."
+    },
+    "hero": {
+      "headline": "Mis Servicios",
+      "subheadline": "Todo lo que necesitás para que tu libro luzca profesional"
+    },
+    "process": {
+      "title": "¿Cómo Trabajamos?",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Briefing",
+          "description": "Me contás sobre tu libro: género, referencias visuales, textos finales. Todo antes de empezar.",
+          "duration": "1–2 días"
+        },
+        {
+          "step": 2,
+          "title": "Cotización + Anticipo",
+          "description": "Te envío una propuesta personalizada. Con el 50% de anticipo arrancamos.",
+          "duration": "2 días"
+        },
+        {
+          "step": 3,
+          "title": "Propuesta Creativa",
+          "description": "Te presento 2 rutas visuales distintas. Elegís la dirección que más te guste.",
+          "duration": "5 días hábiles"
+        },
+        {
+          "step": 4,
+          "title": "Desarrollo + Revisiones",
+          "description": "Refinamos la dirección elegida. Incluye 2 rondas de ajustes.",
+          "duration": "7 días hábiles"
+        },
+        {
+          "step": 5,
+          "title": "Entrega",
+          "description": "Archivos en alta resolución listos para tu plataforma. Mockups incluidos. Derechos transferidos al 100% del pago.",
+          "duration": "1 día"
+        }
+      ]
+    }
+  },
+  "premades": {
+    "seo": {
+      "title": "Premades | Dayah LitWorks — Portadas Listas para tu Libro",
+      "description": "Portadas prediseñadas listas para personalizar con tu título. Desde Gs. 250.000 ($35 USD). Romance, fantasía y más."
+    },
+    "hero": {
+      "headline": "Portadas Premade",
+      "subheadline": "Diseños exclusivos listos para llevar. Personalizamos con tu título y colores."
+    },
+    "items": [
+      {
+        "title": "Alas de Cristal",
+        "genre": "Fantasía",
+        "image": "/dayah/cover-extreme.webp",
+        "priceGs": "Gs. 250.000",
+        "priceUsd": "$35 USD",
+        "slug": "alas-de-cristal"
+      },
+      {
+        "title": "Corazón de Cenizas",
+        "genre": "Romance Oscuro",
+        "image": "/dayah/cover-intense.webp",
+        "priceGs": "Gs. 250.000",
+        "priceUsd": "$35 USD",
+        "slug": "corazon-de-cenizas"
+      },
+      {
+        "title": "Susurros del Bosque",
+        "genre": "Fantasía",
+        "image": "/dayah/cover-secreto.webp",
+        "priceGs": "Gs. 250.000",
+        "priceUsd": "$35 USD",
+        "slug": "susurros-del-bosque"
+      },
+      {
+        "title": "Sombras en el Espejo",
+        "genre": "Suspenso",
+        "image": "/dayah/cover-macarena.webp",
+        "priceGs": "Gs. 250.000",
+        "priceUsd": "$35 USD",
+        "slug": "sombras-en-el-espejo"
+      },
+      {
+        "title": "Galaxia Interior",
+        "genre": "Ciencia Ficción",
+        "image": "/dayah/cover-intense.webp",
+        "priceGs": "Gs. 250.000",
+        "priceUsd": "$35 USD",
+        "slug": "galaxia-interior"
+      },
+      {
+        "title": "El Último Código",
+        "genre": "Thriller",
+        "image": "/dayah/cover-volver-loco.webp",
+        "priceGs": "Gs. 250.000",
+        "priceUsd": "$35 USD",
+        "slug": "el-ultimo-codigo"
+      }
+    ],
+    "ctaText": "Consultar Disponibilidad",
+    "ctaHref": "https://wa.me/595986868241?text=Hola!%20Quiero%20saber%20si%20la%20premade%20{{slug}}%20está%20disponible"
+  },
+  "portafolio": {
+    "seo": {
+      "title": "Portafolio | Dayah LitWorks — Portadas de Libros",
+      "description": "Mirá mis trabajos recientes. Portadas de romance, fantasía y más. Cada diseño cuenta una historia."
+    },
+    "hero": {
+      "headline": "Portafolio",
+      "subheadline": "Trabajos que hablan solos"
+    }
+  },
+  "contacto": {
+    "seo": {
+      "title": "Contacto | Dayah LitWorks",
+      "description": "Contactame por WhatsApp, email o Instagram. Estoy en Asunción, Paraguay, pero trabajo con autoras de todo el mundo."
+    },
+    "hero": {
+      "headline": "Contacto",
+      "subheadline": "Hablemos de tu proyecto"
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "phone": "+595 986 868 241",
+      "whatsapp": "595986868241",
+      "email": "dayahlitworks@gmail.com",
+      "instagram": "@dayah.litworks",
+      "facebook": "https://www.facebook.com/bookc0verdesign/",
+      "linkedin": "https://www.linkedin.com/in/daihana-araujo/",
+      "address": "Asunción, Paraguay"
+    },
+    "address": {
+      "city": "Asunción",
+      "country": "Paraguay",
+      "note": "Trabajo 100% remoto — atendemos autoras de todo el mundo"
+    }
+  },
+  "privacidad": {
+    "seo": {
+      "title": "Política de Privacidad — Dayah LitWorks",
+      "description": "Política de privacidad de Dayah LitWorks. Cómo manejamos tus datos personales."
+    },
+    "hero": {
+      "headline": "Política de Privacidad",
+      "subheadline": "Tu privacidad es importante para nosotras"
+    },
+    "sections": [
+      {
+        "q": "¿Qué información recopilamos?",
+        "a": "Recopilamos la información que nos proporcionás al contactarnos: nombre, dirección de correo electrónico, número de WhatsApp, y detalles sobre tu proyecto de portada. No almacenamos información de pago."
+      },
+      {
+        "q": "¿Cómo usamos tu información?",
+        "a": "Usamos tu información exclusivamente para: comunicarnos con vos sobre tu proyecto de portada, enviarte el presupuesto y los archivos finales, y enviarte información relevante sobre nuestros servicios si aceptaste recibir novedades."
+      },
+      {
+        "q": "¿Compartimos tu información con terceros?",
+        "a": "No vendemos, intercambiamos ni transferimos tu información personal a terceros. Excepciones: cuando sea requerido por ley, o para procesar pagos a través de plataformas de terceros (PayPal)."
+      },
+      {
+        "q": "¿Cómo protegemos tu información?",
+        "a": "Implementamos medidas de seguridad físicas, electrónicas y administrativas para proteger tu información. El acceso a tus datos está restringido solo a las personas que necesitan conocerlos para tu proyecto."
+      },
+      {
+        "q": "Derechos sobre tus datos",
+        "a": "Podés solicitar en cualquier momento: acceder a tus datos personales, rectificar información incorrecta, solicitar la eliminación de tus datos, y oponerte al tratamiento de tus datos para marketing. Escribinos a dayahlitworks@gmail.com."
+      },
+      {
+        "q": "Cambios en esta política",
+        "a": "Podemos actualizar esta política de privacidad periódicamente. Te notificaremos cualquier cambio publicando la nueva política en esta página. Si tenés dudas, contactanos por WhatsApp o email."
+      }
+    ]
+  },
+  "terminos": {
+    "seo": {
+      "title": "Términos y Condiciones — Dayah LitWorks",
+      "description": "Términos y condiciones de contratación de servicios de diseño de portadas de Dayah LitWorks."
+    },
+    "hero": {
+      "headline": "Términos y Condiciones",
+      "subheadline": "Cómo trabajamos y qué esperar"
+    },
+    "sections": [
+      {
+        "q": "Proceso de trabajo",
+        "a": "1. Contactanos por WhatsApp o email. 2. Te enviamos un presupuesto personalizado. 3. Una vez confirmado, iniciamos el diseño. 4. Trabajamos en revisiones hasta que estés 100% satisfecha. 5. Recibís los archivos finales listos para publicar."
+      },
+      {
+        "q": "Pagos",
+        "a": "Aceptamos transferencia bancaria, depósito en efectivo, Western Union y Wise. El pago se realiza 50% al inicio y 50% al entregar el diseño final aprobado. Los precios están en USD y PYG según origen del cliente."
+      },
+      {
+        "q": "Revisiones",
+        "a": "Incluimos revisiones ilimitadas durante la fase creativa del diseño. Una vez aprobada la portada final, cambios adicionales pueden tener un costo extra."
+      },
+      {
+        "q": "Entrega",
+        "a": "Los plazos de entrega se acuerdan al inicio del proyecto. Generalmente: portadas premade en 1 semana, portadas personalizadas en 1 a 2 semanas, maquetación en 1 a 2 semanas."
+      },
+      {
+        "q": "Derechos de autor",
+        "a": "Una vez pagada la totalidad del servicio, los derechos de uso de la portada son transferidos al cliente para su uso en la publicación de la obra. Dayah LitWorks se reserva el derecho de mostrar la portada en su portafolio y redes sociales."
+      },
+      {
+        "q": "Cancelaciones",
+        "a": "Si cancelás antes de iniciar el diseño, el anticipo se reintegra. Si cancelás durante el proceso de diseño, el anticipo no es reembolsable."
+      },
+      {
+        "q": "Contacto",
+        "a": "Para cualquier consulta sobre estos términos, contactanos por WhatsApp al +595 986 868 241 o por email a dayahlitworks@gmail.com."
+      }
+    ]
+  },
+  "blog": {
+    "seo": {
+      "title": "Blog — Dayah LitWorks",
+      "description": "Consejos, guías y recursos para autoras independientes"
+    },
+    "hero": {
+      "headline": "Blog",
+      "subheadline": "Consejos, guías y recursos para autoras independientes"
+    },
+    "posts": [
+      {
+        "slug": "como-elegir-portada-libro",
+        "title": "Cómo Elegir la Portada Perfecta para tu Libro",
+        "excerpt": "La portada es la primera impresión que tu lectora tendrá de tu historia.",
+        "date": "15 marzo 2026",
+        "category": "Consejos",
+        "author": "Dayah LitWorks",
+        "readingTime": "5 min",
+        "content": "Elegir la portada perfecta es una de las decisiones más importantes como autora. Una portada profesional puede ser la diferencia entre una venta y una oportunidad perdida."
+      },
+      {
+        "slug": "tips-portadas-romance",
+        "title": "5 Tips para Portadas de Romance que Venden",
+        "excerpt": "El romance es el género más vendido en Amazon.",
+        "date": "10 marzo 2026",
+        "category": "Romance",
+        "author": "Dayah LitWorks",
+        "readingTime": "4 min",
+        "content": "El género romántico tiene sus propias reglas visuales. Te comparto 5 tips para portadas que realmente venden."
+      },
+      {
+        "slug": "portadas-fantasia",
+        "title": "Portadas de Fantasía: Claves para un Diseño Épico",
+        "excerpt": "La fantasía permite portadas espectaculares.",
+        "date": "5 marzo 2026",
+        "category": "Fantasía",
+        "author": "Dayah LitWorks",
+        "readingTime": "4 min",
+        "content": "Las portadas de fantasía pueden ser visualmente impactantes. Una portada efectiva comunica el mundo de tu historia sin abrumar."
+      },
+      {
+        "slug": "amazon-kdp-portadas",
+        "title": "Optimizá tu Portada para Amazon KDP",
+        "excerpt": "Subir tu portada a Amazon KDP no es solo cuestión de tamaño.",
+        "date": "28 febrero 2026",
+        "category": "Publicación",
+        "author": "Dayah LitWorks",
+        "readingTime": "6 min",
+        "content": "Amazon KDP tiene requisitos específicos. Hay estrategias de diseño que ayudan a tu libro a destacar en búsquedas."
+      },
+      {
+        "slug": "antes-despues-portadas",
+        "title": "Antes y Después: El Impacto de una Portada Profesional",
+        "excerpt": "Casos reales de autoras que transformaron sus ventas.",
+        "date": "20 febrero 2026",
+        "category": "Casos",
+        "author": "Dayah LitWorks",
+        "readingTime": "7 min",
+        "content": "Nada demuestra el valor de una portada profesional como ver los resultados. Casos reales de autoras que rediseñaron y vieron cambios inmediatos."
+      },
+      {
+        "slug": "maquetacion-interior-ebook",
+        "title": "Maquetación Interior: Por Qué es Importante",
+        "excerpt": "Una portada atrae lectores, una maquetación profesional los retiene.",
+        "date": "15 febrero 2026",
+        "category": "Maquetación",
+        "author": "Dayah LitWorks",
+        "readingTime": "5 min",
+        "content": "Muchas autoras se enfocan solo en la portada. Una mala maquetación puede hacer que un lector abandone el libro en los primeros capítulos."
+      }
+    ]
+  },
+  "blogPost": {
+    "como-elegir-portada-libro": {
+      "content": "Elegir la portada perfecta es una de las decisiones más importantes como autora. Una portada profesional puede ser la diferencia entre una venta y una oportunidad perdida.",
+      "sections": [
+        {
+          "title": "Conclusión",
+          "text": "Si necesitás ayuda con tu portada, contactame por WhatsApp."
+        }
+      ]
+    },
+    "tips-portadas-romance": {
+      "content": "El género romántico tiene sus propias reglas visuales. Te comparto 5 tips para portadas que realmente venden.",
+      "sections": [
+        {
+          "title": "Conclusión",
+          "text": "Si necesitás ayuda con tu portada, contactame por WhatsApp."
+        }
+      ]
+    },
+    "portadas-fantasia": {
+      "content": "Las portadas de fantasía pueden ser visualmente impactantes. Una portada efectiva comunica el mundo de tu historia sin abrumar.",
+      "sections": [
+        {
+          "title": "Conclusión",
+          "text": "Si necesitás ayuda con tu portada, contactame por WhatsApp."
+        }
+      ]
+    },
+    "amazon-kdp-portadas": {
+      "content": "Amazon KDP tiene requisitos específicos. Hay estrategias de diseño que ayudan a tu libro a destacar en búsquedas.",
+      "sections": [
+        {
+          "title": "Conclusión",
+          "text": "Si necesitás ayuda con tu portada, contactame por WhatsApp."
+        }
+      ]
+    },
+    "antes-despues-portadas": {
+      "content": "Nada demuestra el valor de una portada profesional como ver los resultados. Casos reales de autoras que rediseñaron y vieron cambios inmediatos.",
+      "sections": [
+        {
+          "title": "Conclusión",
+          "text": "Si necesitás ayuda con tu portada, contactame por WhatsApp."
+        }
+      ]
+    },
+    "maquetacion-interior-ebook": {
+      "content": "Muchas autoras se enfocan solo en la portada. Una mala maquetación puede hacer que un lector abandone el libro en los primeros capítulos.",
+      "sections": [
+        {
+          "title": "Conclusión",
+          "text": "Si necesitás ayuda con tu portada, contactame por WhatsApp."
+        }
+      ]
+    }
+  }
+}

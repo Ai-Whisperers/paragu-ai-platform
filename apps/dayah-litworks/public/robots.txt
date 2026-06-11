@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dayah-litworks.paragu-ai.com/sitemap.xml

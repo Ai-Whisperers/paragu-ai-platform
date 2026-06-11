@@ -1,0 +1,18 @@
+services:
+  web:
+    image: superspuma:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.superspuma.entrypoints=websecure"
+        - "traefik.http.routers.superspuma.rule=Host(`superspuma.paragu-ai.com`)"
+        - "traefik.http.routers.superspuma.tls=true"
+        - "traefik.http.routers.superspuma.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.superspuma.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

@@ -1,0 +1,23 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ci:
+    uses: Ai-Whisperers/ci-cd/.github/workflows/ci-nextjs.yml@main
+    with:
+      site-url: 'https://dayah.paragu-ai.com'
+      package-manager: 'npm'
+      node-version: '20'
+    secrets: inherit
+
+  deploy:
+    needs: ci
+    uses: Ai-Whisperers/ci-cd/.github/workflows/deploy-vps.yml@main
+    with:
+      site-name: 'dayah-litworks'
+      package-manager: 'npm'
+      node-version: '20'
+    secrets: inherit

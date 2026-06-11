@@ -4,6 +4,7 @@ import { getServerSupabase } from '@/lib/supabase/server'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { isLang, getCaseTypeLabels, getJudicialStateLabels, getCountries, type Lang } from '@/lib/content'
+import { getDemoCase } from '@/lib/demo/cases'
 
 const CASE_TYPE_COLORS: Record<string, string> = {
   femicidio: '#be123c',
@@ -19,15 +20,25 @@ export default async function CasoDetailPage({
   const { lang: langRaw, id } = await params
   const lang: Lang = isLang(langRaw) ? langRaw : 'es'
 
-  const supabase = await getServerSupabase()
-  const { data, error } = await supabase
-    .from('cases')
-    .select('*')
-    .eq('id', id)
-    .eq('estado', 'aprobado')
-    .single()
-
-  if (error || !data) notFound()
+  // Try Supabase first, fall back to demo data if not configured
+  let data: any = null
+  try {
+    const supabase = await getServerSupabase()
+    const result = await supabase
+      .from('cases')
+      .select('*')
+      .eq('id', id)
+      .eq('estado', 'aprobado')
+      .single()
+    data = result.data
+  } catch {
+    // No Supabase — use demo
+  }
+  if (!data) {
+    const demo = getDemoCase(id)
+    if (demo) data = demo
+  }
+  if (!data) notFound()
 
   const c = data as {
     id: string
