@@ -41,7 +41,7 @@ export default function AdvancedBookingPage() {
   ]
 
   const getNext7Days = () => {
-    const days = []
+    const days: { value: string; label: string }[] = []
     const today = new Date()
     for (let i = 0; i < 7; i++) {
       const date = new Date(today)

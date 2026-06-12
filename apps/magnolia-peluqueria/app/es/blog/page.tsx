@@ -6,7 +6,7 @@ import { BookOpen, Clock, Calendar } from "lucide-react"
 type Lang = "es" | "en"
 
 export async function generateMetadata({ params }: { params: { lang: Lang } }) {
-  const posts = getAllPosts(params.lang)
+  const posts = getAllPosts()
   return {
     title: params.lang === "en" ? "Blog | Magnolia Hair Salon" : "Blog | Magnolia Peluquería",
     description: params.lang === "en"
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: { lang: Lang } }) {
 }
 
 export default function BlogPage({ params }: { params: { lang: Lang } }) {
-  const posts = getAllPosts(params.lang)
+  const posts = getAllPosts()
   const [featured, ...rest] = posts
   const labels = params.lang === "en"
     ? { title: "Blog", subtitle: "Hair tips, trends & professional advice", read: "Read", time: "min" }

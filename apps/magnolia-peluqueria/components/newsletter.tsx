@@ -24,7 +24,7 @@ const labels: Record<string, { title: string; subtitle: string; namePlaceholder:
   },
 }
 
-export function NewsletterSection({ lang = "es" }: { lang?: "es" | "en" }) {
+export function NewsletterSection({ lang = "es" }: { lang?: "es" | "en" | "en" }) {
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")

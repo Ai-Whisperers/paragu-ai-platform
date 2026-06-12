@@ -1,5 +1,11 @@
 node_modules
-.next
 .git
 .github
 *.log
+
+
+# Allow standalone build artifacts
+!.next/standalone
+!.next/standalone/**
+!.next/static
+!.next/static/**

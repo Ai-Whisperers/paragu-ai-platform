@@ -55,9 +55,9 @@ export default function CaseMap({ cases, lang }: CaseMapProps) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delete (L.Icon.Default.prototype as any)._getIconUrl
       L.Icon.Default.mergeOptions({
-        iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-        iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+        iconRetinaUrl: '/vendor/leaflet/marker-icon-2x.png',
+        iconUrl: '/vendor/leaflet/marker-icon.png',
+        shadowUrl: '/vendor/leaflet/marker-shadow.png',
       })
 
       const map = L.map(mapRef.current, {
@@ -137,7 +137,7 @@ export default function CaseMap({ cases, lang }: CaseMapProps) {
     <>
       <link
         rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        href="/vendor/leaflet/leaflet.css"
       />
       <div ref={mapRef} className="w-full h-full rounded-xl border border-border" />
     </>

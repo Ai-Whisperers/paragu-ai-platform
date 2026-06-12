@@ -4,7 +4,7 @@ import { useState } from "react"
 import { MessageCircle, MapPin, Clock, Phone, Send } from "lucide-react"
 import { business, waLink } from "@/lib/config"
 
-export function ContactSection({ lang = "es" }: { lang?: "es" | "en" }) {
+export function ContactSection({ lang = "es" }: { lang?: "es" | "en" | "en" }) {
   const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
@@ -109,7 +109,7 @@ export function ContactSection({ lang = "es" }: { lang?: "es" | "en" }) {
               </div>
               <div>
                 <p className="text-xs font-bold text-secondary uppercase tracking-wide">{labels.info}</p>
-                <p className="text-sm text-foreground mt-0.5">{business.hours}</p>
+                <p className="text-sm text-foreground mt-0.5">{Object.entries(business.hours).map(([d, h]) => `${d}: ${h}`).join(" · ")}</p>
               </div>
             </div>
             <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 
 interface CookieConsentProps {
-  lang?: "es" | "en"
+  lang?: "es" | "en" | "en"
 }
 
 export function CookieConsent({ lang = "es" }: CookieConsentProps) {

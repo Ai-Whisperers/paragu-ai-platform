@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import content from "@/content/es.json"
 
 const c = content as Record<string, unknown>
-const base = c.site?.url || "https://jottaink.paragu-ai.com"
+const base = "https://jota-ink-tattoo.paragu-ai.com"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

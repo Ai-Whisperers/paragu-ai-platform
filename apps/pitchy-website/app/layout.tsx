@@ -22,9 +22,7 @@ export const metadata: Metadata = {
   creator: "Pitchy Blindex",
   publisher: "Pitchy Blindex",
   robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "https://pitchy-blindex.paragu-ai.com", languages: { "es": "https://pitchy-blindex.paragu-ai.com/" } },
   openGraph: {
     title: c.site?.title || "Pitchy Blindex",
     description: c.site?.description,
@@ -68,6 +66,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               telephone: c.contact?.whatsapp || "",
               image: (c.site?.url || "https://pitchy.paragu-ai.com") + "/og/og-image.png",
               address: { "@type": "PostalAddress", addressLocality: "Asunción", addressCountry: "PY" },
+    geo: { "@type": "GeoCoordinates", latitude: -25.2637, longitude: -57.5759 },
+    "sameAs": [
+      "https://instagram.com/pitchyblindex"
+    ],
               priceRange: "$$$",
             }),
           }}

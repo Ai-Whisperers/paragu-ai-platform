@@ -11,6 +11,7 @@ const securityHeaders = [
 ]
 
 const config: NextConfig = {
+  turbopack: {},
   output: "standalone",
   poweredByHeader: false,
   async headers() {

@@ -8,8 +8,9 @@ export function Gallery() {
   const [selected, setSelected] = useState<number | null>(null)
   const [filter, setFilter] = useState<string>("all")
 
-  const tags = ["all", ...Array.from(new Set(gallery.map(img => img.tag)))]
-  const filtered = filter === "all" ? gallery : gallery.filter(img => img.tag === filter)
+  const galleryItems = (gallery as any).images ?? []
+  const tags: string[] = ["all", ...Array.from(new Set<string>(galleryItems.map((img: any) => img.tag)))]
+  const filtered = filter === "all" ? galleryItems : galleryItems.filter((img: { tag: string }) => img.tag === filter)
 
   return (
     <>
@@ -30,7 +31,7 @@ export function Gallery() {
 
           {/* Filter tabs */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {tags.map(tag => (
+            {tags.map((tag: string) => (
               <button key={tag} onClick={() => setFilter(tag)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   filter === tag ? "bg-primary text-white" : "bg-gray-100 text-foreground-muted hover:bg-gray-200"

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   publisher: "3 MIND",
   robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   icons: { icon: "/favicon.ico" },
-  alternates: { canonical: "https://3mind.paragu-ai.com" },
+  alternates: { canonical: "https://3mind.paragu-ai.com", languages: { "es": "https://3mind.paragu-ai.com/" } },
   openGraph: {
     title: "3 MIND — Agencia Creativa",
     description: "Marketing digital, producción audiovisual, fotografía y publicidad en Paraguay.",

@@ -6,8 +6,9 @@ interface FooterProps {
   tagline?: string
   address?: string
   phone?: string
-  hours?: string
+  hours?: string | Record<string, string>
   waPhone?: string
+  lang?: "es" | "en"
 }
 
 export function Footer({
@@ -18,6 +19,9 @@ export function Footer({
   hours = "Lun-Sáb: 9:00 - 20:00",
   waPhone = "",
 }: FooterProps) {
+  const hoursText = typeof hours === "string"
+    ? hours
+    : Object.entries(hours).map(([d, h]) => `${d}: ${h}`).join(" · ")
   const waMsg = encodeURIComponent("Hola! Quiero más información")
   const waLink = waPhone ? `https://wa.me/${waPhone}?text=${waMsg}` : "#"
 
@@ -52,7 +56,7 @@ export function Footer({
             <div className="text-sm text-white/80 space-y-2">
               {address && <p className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 shrink-0" />{address}</p>}
               {phone && <p className="flex items-center gap-2"><Phone className="w-4 h-4 shrink-0" />{phone}</p>}
-              <p className="flex items-center gap-2"><Clock className="w-4 h-4 shrink-0" />{hours}</p>
+              <p className="flex items-center gap-2"><Clock className="w-4 h-4 shrink-0" />{hoursText}</p>
               {waPhone && (
                 <a href={waLink} target="_blank" rel="noopener noreferrer"
                   className="inline-block mt-2 text-secondary hover:text-secondary-dark transition-colors font-medium">

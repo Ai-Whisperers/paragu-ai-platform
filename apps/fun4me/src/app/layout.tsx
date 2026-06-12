@@ -29,6 +29,7 @@ const jsonLd = {
   "url": "https://fun4me.paragu-ai.com",
   "telephone": "+595****4567",
   "address": { "@type": "PostalAddress", "addressLocality": "Asunción", "addressRegion": "Central", "addressCountry": "PY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": -25.2637, "longitude": -57.5759 },
   "priceRange": "Gs. 45.000 - Gs. 250.000",
   "currenciesAccepted": "PYG",
   "paymentAccepted": "Transferencia, Efectivo, Contra Entrega",
@@ -43,15 +44,39 @@ export const metadata: Metadata = {
   description: "Tienda de bienestar y productos para adultos en Paraguay. Envío discreto, calidad garantizada.",
   icons: { icon: "/favicon.ico" },
   manifest: "/manifest.json",
-  openGraph: { title: "Fun4Me Store — Bienestar y Placer", description: "Productos de calidad para tu bienestar íntimo. Envío discreto a todo Paraguay.", locale: "es_PY", type: "website" },
+  openGraph: {
+    title: "Fun4Me Store — Bienestar y Placer",
+    description: "Productos de calidad para tu bienestar íntimo. Envío discreto a todo Paraguay.",
+    locale: "es_PY",
+    type: "website",
+    images: [
+      { url: "https://fun4me.paragu-ai.com/og/og-image.png",
+    width: 1200, height: 630, alt: "Fun4Me Store - Bienestar y Placer" }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fun4Me Store — Bienestar y Placer",
+    description: "Productos de calidad para tu bienestar íntimo. Envío discreto a todo Paraguay.",
+    images: ["https://fun4me.paragu-ai.com/og/og-image.png"]
+  },
   other: { "apple-mobile-web-app-capable": "yes", "apple-mobile-web-app-status-bar-style": "black-translucent" },
-}
+
+  alternates: { canonical: "https://fun4me.paragu-ai.com", languages: { "es": "https://fun4me.paragu-ai.com/" } },}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const social = c.socialProof || {}
   return (
     <html lang="es" className={inter.className}>
       <head>
+        <meta property="og:image" content="https://fun4me.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://fun4me.paragu-ai.com" />
+        <meta property="og:site_name" content="Fun4me" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://fun4me.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        
         <meta name="theme-color" content="#7C3AED" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

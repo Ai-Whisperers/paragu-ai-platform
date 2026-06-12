@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description: "Masajes relajantes, descontracturantes, tratamientos faciales y corporales en Concepción. Bienestar y relax con profesionales.",
   keywords: ["spa", "masajes", "Concepción", "tratamientos faciales", "bienestar", "relax", "Paraguay"],
   icons: { icon: "/favicon.ico" },
-  alternates: { canonical: "https://mantraspa.paragu-ai.com" },
+  alternates: { canonical: "https://mantra-spa.paragu-ai.com", languages: { "es": "https://mantra-spa.paragu-ai.com/" } },
   robots: {
     index: true,
     follow: true,
@@ -56,6 +56,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     url: "https://mantraspa.paragu-ai.com",
     image: "https://mantraspa.paragu-ai.com/images/og-default.jpg",
     address: { "@type": "PostalAddress", addressLocality: "Concepción", addressCountry: "PY" },
+    geo: { "@type": "GeoCoordinates", latitude: -23.4064, longitude: -57.4344 },
+    "sameAs": [
+      "https://instagram.com/mantraspa.py"
+    ],
     telephone: "+595986106062",
     openingHours: "Mo-Sa 10:00-20:00",
     priceRange: "$$",
@@ -64,6 +68,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={montserrat.variable + " " + playfair.variable}>
       <head>
+        <meta property="og:image" content="https://mantra-spa.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://mantra-spa.paragu-ai.com" />
+        <meta property="og:site_name" content="Mantra Spa" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://mantra-spa.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

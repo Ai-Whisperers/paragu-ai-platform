@@ -4,11 +4,17 @@ export default function JsonLd() {
     "@type": "LocalBusiness",
     "name": "de-abasto-a-casa",
     "url": "https://deabastoacasa.paragu-ai.com",
+    "email": "contacto@deabastoacasa.com.py",
     "description": "",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Asuncion",
       "addressCountry": "PY"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -25.2637,
+      "longitude": -57.5759
     }
   }
 

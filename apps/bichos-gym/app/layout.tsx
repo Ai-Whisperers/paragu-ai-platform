@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description: "Gimnasio completo en Capiatá con entrenadores certificados. Pesas, cardio, funcional, crossfit, spinning y yoga. Sumate y transformá tu cuerpo.",
   keywords: ["gimnasio", "Capiatá", "entrenamiento", "pesas", "crossfit", "funcional", "spinning", "yoga", "fitness", "Paraguay"],
   icons: { icon: "/favicon.ico" },
-  alternates: { canonical: "https://bichos-gym.paragu-ai.com" },
+  alternates: { canonical: "https://bichos-gym.paragu-ai.com", languages: { "es": "https://bichos-gym.paragu-ai.com/" } },
   robots: {
     index: true,
     follow: true,
@@ -54,8 +54,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: "Bicho's Gym",
     description: "Gimnasio completo con entrenadores certificados y el mejor ambiente para alcanzar tus metas fitness",
     url: "https://bichos-gym.paragu-ai.com",
+    "email": "contacto@bichosgym.com.py",
     image: "https://bichos-gym.paragu-ai.com/images/og-default.jpg",
     address: { "@type": "PostalAddress", addressLocality: "Capiatá", addressCountry: "PY" },
+    geo: { "@type": "GeoCoordinates", latitude: -25.3540, longitude: -57.4397 },
     telephone: "+595986106062",
     openingHours: "Mo-Sa 07:00-21:00, Su 09:00-13:00",
     priceRange: "$$",
@@ -64,6 +66,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={montserrat.variable + " " + playfair.variable}>
       <head>
+        <meta property="og:image" content="https://bichos-gym.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://bichos-gym.paragu-ai.com" />
+        <meta property="og:site_name" content="Bichos Gym" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://bichos-gym.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

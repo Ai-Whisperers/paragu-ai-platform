@@ -77,7 +77,7 @@ export function StepIndicator({ current, steps }: StepIndicatorProps) {
 
 interface BookingFormProps {
   supabaseConfigured: boolean
-  lang?: "es" | "en"
+  lang?: "es" | "en" | "en"
 }
 
 export function BookingForm({ supabaseConfigured, lang = "es" }: BookingFormProps) {
@@ -106,7 +106,7 @@ export function BookingForm({ supabaseConfigured, lang = "es" }: BookingFormProp
 
   async function handleSubmit() {
     setSubmitting(true)
-    let apiError = null
+    let apiError: string | null = null
     let fallbackUrl = null
 
     if (supabaseConfigured) {

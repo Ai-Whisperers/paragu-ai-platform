@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import content from "@/content/es.json";
 import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher";

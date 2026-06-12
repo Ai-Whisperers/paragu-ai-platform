@@ -9,7 +9,10 @@ export default function JsonLd() {
       "@type": "PostalAddress",
       "addressLocality": "Asuncion",
       "addressCountry": "PY"
-    }
+    },
+    "sameAs": [
+      "https://instagram.com/fun4me_py"
+    ]
   }
 
   return (

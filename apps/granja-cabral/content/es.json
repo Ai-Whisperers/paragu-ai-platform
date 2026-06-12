@@ -1,0 +1,255 @@
+{
+  "_meta": {
+    "translationQuality": "human",
+    "author": "Granja Cabral",
+    "lastReviewed": "2026-06-11"
+  },
+  "siteName": "Granja Cabral",
+  "tagline": "Huevos frescos de granja en Coronel Oviedo — del nido a tu mesa",
+  "navigation": {
+    "businessName": "Granja Cabral",
+    "navItems": [
+      { "label": "Inicio", "href": "/" },
+      { "label": "Productos", "href": "/#productos" },
+      { "label": "Mayorista", "href": "/#mayorista" },
+      { "label": "Delivery", "href": "/#contacto" },
+      { "label": "FAQ", "href": "/#faq" }
+    ],
+    "ctaText": "Pedir por WhatsApp",
+    "ctaHref": "https://wa.me/595981324569"
+  },
+  "home": {
+    "seo": {
+      "title": "Granja Cabral — Huevos frescos en Coronel Oviedo 🥚",
+      "description": "Huevos frescos recolectados diariamente. Delivery en Coronel Oviedo y Ruta 2. Del nido a tu mesa. Gallinas libres, sin hormonas, garantía de frescura 7 días."
+    },
+    "hero": {
+      "headline": "Huevos frescos, del nido a tu mesa",
+      "subheadline": "Granja familiar en Coronel Oviedo. Gallinas libres de pastoreo, sin hormonas, huevos recolectados a diario. Delivery en Ruta 2 y Caaguazú.",
+      "ctaPrimaryText": "Pedir por WhatsApp",
+      "ctaPrimaryHref": "https://wa.me/595981324569?text=Hola!%20Quiero%20pedir%20huevos%20de%20Granja%20Cabral",
+      "trustBadges": [
+        "Recolección diaria",
+        "Gallinas libres de pastoreo",
+        "Sin hormonas ni antibióticos",
+        "Delivery en 24h"
+      ]
+    },
+    "stats": {
+      "items": [
+        { "value": "1.200+", "label": "Huevos diarios" },
+        { "value": "350", "label": "Gallinas felices" },
+        { "value": "7", "label": "Años de trayectoria" },
+        { "value": "150+", "label": "Clientes activos" },
+        { "value": "100%", "label": "Del nido a tu mesa" }
+      ]
+    },
+    "trustBadgesStrip": {
+      "items": [
+        { "icon": "leaf", "text": "Gallinas de pastoreo", "description": "Libres, felices y bien alimentadas" },
+        { "icon": "bolt", "text": "Frescura diaria", "description": "Recolección todos los días" },
+        { "icon": "truck", "text": "Delivery 24h", "description": "A toda la Ruta 2 y Caaguazú" },
+        { "icon": "shield", "text": "Garantía 7 días", "description": "Si no te gusta, te devolvemos" }
+      ]
+    },
+    "services": {
+      "title": "Nuestros productos",
+      "items": [
+        {
+          "category": "Huevos",
+          "name": "Huevos de gallina de pastoreo (docena)",
+          "price": "Gs. 25.000",
+          "description": "Docena de huevos de gallinas libres. Cáscara marrón, yema intensa, sabor real.",
+          "imageUrl": ""
+        },
+        {
+          "category": "Huevos",
+          "name": "Huevos de codorniz (24 unidades)",
+          "price": "Gs. 30.000",
+          "description": "Huevos de codorniz, perfectos para entradas y picadas. Más ricos en nutrientes.",
+          "imageUrl": ""
+        },
+        {
+          "category": "Huevos",
+          "name": "Huevos XL extra grandes (docena)",
+          "price": "Gs. 32.000",
+          "description": "Selección de los huevos más grandes (>70g). Ideales para repostería y tortillas.",
+          "imageUrl": ""
+        },
+        {
+          "category": "Carne",
+          "name": "Pollo de campo entero",
+          "price": "Gs. 65.000/kg",
+          "description": "Pollos criados libres, alimentados con maíz. Carne firme y con sabor.",
+          "imageUrl": ""
+        },
+        {
+          "category": "Carne",
+          "name": "Pechuga de pollo de campo",
+          "price": "Gs. 75.000/kg",
+          "description": "Pechuga fresca sin hormonas. Cortes especiales para健身 y dieta.",
+          "imageUrl": ""
+        },
+        {
+          "category": "Otros",
+          "name": "Fertilizante orgánico (saco 20kg)",
+          "price": "Gs. 35.000",
+          "description": "Abono natural a base de estiércol compostado. Ideal para huerta y jardín.",
+          "imageUrl": ""
+        }
+      ]
+    },
+    "testimonials": {
+      "items": [
+        {
+          "rating": 5,
+          "quote": "Los mejores huevos que probé. La yema es amarilla intensa y el sabor es completamente distinto al del súper. Mis clientes del restaurante lo notan.",
+          "author": "María González",
+          "role": "Chef — Restaurant La Casa del Campo"
+        },
+        {
+          "rating": 5,
+          "quote": "Pedimos huevos para la panadería hace 6 meses. Siempre frescos, entrega puntual y precio justo. La diferencia se nota en la calidad del producto final.",
+          "author": "Carlos Mendoza",
+          "role": "Dueño — Panadería La Espiga"
+        },
+        {
+          "rating": 5,
+          "quote": "Como entrenadora personal recomiendo sus huevos. Mis clientas siempre notan la diferencia cuando cambian a Granja Cabral. La yema es otro nivel.",
+          "author": "Ana Rodríguez",
+          "role": "Entrenadora — Fitness Wellness Oviedo"
+        }
+      ]
+    },
+    "enhancedFaq": {
+      "items": [
+        {
+          "category": "Producto",
+          "question": "¿Las gallinas viven sueltas o en jaula?",
+          "answer": "Nuestras 350 gallinas viven libres en un galpón de pastoreo con acceso a campo verde durante el día. No usamos jaulas en batería. Pueden correr, picotear y comportarse de forma natural, que es lo que hace la diferencia en la calidad del huevo."
+        },
+        {
+          "category": "Producto",
+          "question": "¿Qué significa que no uso hormonas?",
+          "answer": "Las gallinas no reciben hormonas ni antibióticos. Su alimentación es a base de maíz, soja, alfalfa fresca y suplementos minerales naturales. Por eso nuestros huevos tienen una yema tan amarilla y un sabor más intenso."
+        },
+        {
+          "category": "Producto",
+          "question": "¿Cuánto duran los huevos frescos?",
+          "answer": "A temperatura ambiente duran hasta 15 días, en heladera hasta 2 meses. Pero te recomendamos consumirlos antes de los 7 días para disfrutar el sabor óptimo. Te los entregamos con fecha de recolección."
+        },
+        {
+          "category": "Delivery",
+          "question": "¿Cuáles son las zonas de delivery?",
+          "answer": "Delivery gratis en Coronel Oviedo centro. Para Ruta 2 entre los km 120 y 150 el envío es gratis en pedidos desde Gs. 50.000. Para zonas más alejadas (Caaguazú, Caacupé) consultanos por WhatsApp y vemos el costo."
+        },
+        {
+          "category": "Delivery",
+          "question": "¿Cuál es el pedido mínimo?",
+          "answer": "Pedido mínimo de 2 docenas para delivery en Coronel Oviedo. Para mayoristas el mínimo es de 100 huevos por semana, con descuentos especiales por volumen."
+        },
+        {
+          "category": "Mayorista",
+          "question": "¿Tienen precios especiales para restaurantes?",
+          "answer": "Sí. Trabajamos con restaurantes, panaderías, hoteles y catering. Los planes van desde 100 huevos semanales con 10% de descuento hasta 500+ con 20% de descuento y entrega diaria. Consultanos por WhatsApp."
+        },
+        {
+          "category": "Pago",
+          "question": "¿Qué medios de pago aceptan?",
+          "answer": "Efectivo contra entrega, transferencia bancaria, Tigo Money y Personal Pay. Para mayoristas también facturamos con crédito a 7/15/30 días según volumen."
+        },
+        {
+          "category": "Logística",
+          "question": "¿Puedo ir directo a la granja?",
+          "answer": "Sí, podés visitarnos. Estamos en Ruta 2, Km 125-140, Coronel Oviedo. Te recomendamos coordinar por WhatsApp para asegurarnos de que haya alguien para atenderte y mostrarte las instalaciones."
+        }
+      ]
+    },
+    "newsletter": {
+      "title": "Recibí ofertas y recetas",
+      "subtitle": "Una vez por semana te enviamos promociones especiales, recetas con huevos frescos y noticias de la granja.",
+      "placeholder": "tu@email.com",
+      "submitLabel": "Suscribirme"
+    },
+    "contact": {
+      "title": "Hacé tu pedido",
+      "subtitle": "Respondemos por WhatsApp en minutos. Delivery en Coronel Oviedo y Ruta 2.",
+      "address": "Ruta 2, Km 125-140, Coronel Oviedo, Caaguazú",
+      "whatsapp": "+595981324569"
+    }
+  },
+  "business": {
+    "name": "Granja Cabral",
+    "story": {
+      "mission": "Somos una granja familiar en Coronel Oviedo que desde hace 7 años cría gallinas libres de pastoreo. Empezamos con 30 gallinas en el patio de casa y hoy tenemos 350 aves que nos dan más de 1.200 huevos por día. Trabajamos con el modelo de pastoreo rotativo: las gallinas se mueven cada semana a un sector nuevo del campo, donde picotean insectos, alfalfa y pasto verde, y eso es lo que les da el sabor y color a nuestros huevos.",
+      "vision": "Queremos ser la granja de referencia en Paraguay para quien busca huevos de verdad. No huevos de supermercado, sino huevos como los de antes: con yema amarilla, cáscara firme y sabor intenso. Creemos que vale la pena criar gallinas felices, aunque sea más trabajo.",
+      "values": [
+        "Bienestar animal real — gallinas libres, no en jaula",
+        "Sin hormonas, sin antibióticos, sin atajos",
+        "Transparencia total — podés venir a ver la granja",
+        "Calidad sobre cantidad — no maximizamos producción",
+        "Comunidad — apoyamos a productores locales de maíz"
+      ]
+    },
+    "sustainability": {
+      "description": "Trabajamos con pastoreo rotativo: las gallinas fertilizan naturalmente el campo mientras comen insectos y pasto. El estiércol se composta y se vende como fertilizante orgánico. Cero químicos, cero desperdicio."
+    },
+    "process": [
+      { "step": "Recolección a las 6 AM" },
+      { "step": "Limpieza y clasificación por tamaño" },
+      { "step": "Empaque en bandejas nuevas" },
+      { "step": "Delivery en el día (si pediste antes del mediodía)" }
+    ],
+    "wholesaleTiers": [
+      {
+        "name": "Inicial",
+        "volume": "100 huevos/semana",
+        "discount": "10% off"
+      },
+      {
+        "name": "Regular",
+        "volume": "200-300 huevos/semana",
+        "discount": "15% off"
+      },
+      {
+        "name": "Pro",
+        "volume": "300-500 huevos/semana",
+        "discount": "20% off",
+        "recommended": true
+      },
+      {
+        "name": "Custom",
+        "volume": "500+ huevos/semana",
+        "discount": "A convenir"
+      }
+    ],
+    "delivery": {
+      "zones": [
+        {
+          "name": "Coronel Oviedo centro",
+          "minOrder": "2 docenas",
+          "freeShippingAt": "Gs. 25.000",
+          "cost": "Gratis"
+        },
+        {
+          "name": "Ruta 2 (Km 120-150)",
+          "minOrder": "3 docenas",
+          "freeShippingAt": "Gs. 50.000",
+          "cost": "Gs. 10.000"
+        },
+        {
+          "name": "Caaguazú / Caacupé",
+          "minOrder": "5 docenas",
+          "freeShippingAt": "Gs. 100.000",
+          "cost": "Gs. 20.000"
+        }
+      ]
+    },
+    "gallery": []
+  },
+  "footer": {
+    "businessName": "Granja Cabral",
+    "city": "Coronel Oviedo",
+    "copyright": "© 2026 Granja Cabral. Del nido a tu mesa."
+  }
+}

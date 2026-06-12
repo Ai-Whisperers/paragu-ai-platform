@@ -12,7 +12,7 @@ interface IgPost {
 
 const SHOWN = 6
 
-export function InstagramFeed({ lang = "es" as "es" | "en" }: { lang?: "es" | "en" }) {
+export function InstagramFeed({ lang = "es" as "es" | "en" }: { lang?: "es" | "en" | "en" }) {
   const [posts, setPosts] = useState<IgPost[] | null>(null)
   const [fallback, setFallback] = useState(false)
 

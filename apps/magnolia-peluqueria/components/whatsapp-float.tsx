@@ -9,7 +9,7 @@ const MESSAGES = {
   en: "Hi! I want to ask about their services",
 }
 
-export function WhatsAppFloat({ lang = "es" }: { lang?: "es" | "en" }) {
+export function WhatsAppFloat({ lang = "es" }: { lang?: "es" | "en" | "en" }) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {

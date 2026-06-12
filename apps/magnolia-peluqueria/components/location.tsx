@@ -40,7 +40,7 @@ export function Location() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground mb-0.5">Horarios</p>
-                  <p className="text-foreground-light text-sm">{business.hours}</p>
+                  <p className="text-foreground-light text-sm">{Object.entries(business.hours).map(([d, h]) => `${d}: ${h}`).join(" · ")}</p>
                   <p className="text-xs text-foreground-muted mt-0.5">{business.hoursClosed}</p>
                 </div>
               </div>

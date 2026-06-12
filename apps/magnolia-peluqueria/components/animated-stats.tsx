@@ -75,16 +75,17 @@ function AnimateOnce({ value, label, suffix = "" }: { value: string; label: stri
 }
 
 interface AnimatedStatsProps {
-  lang?: "es" | "en"
+  lang?: "es" | "en" | "en"
 }
 
 export function AnimatedStats({ lang = "es" }: AnimatedStatsProps) {
-  const rawStats = statsData(lang)
-  const stats: StatItem[] = rawStats.map((s: { value: string; label: string }) => ({
-    value: s.value,
-    label: s.label,
-    suffix: s.value.includes("★") ? "★" : s.value.match(/\d/) ? "+" : "",
-  }))
+  const raw = statsData(lang) as unknown as Record<string, string>
+  const stats: StatItem[] = [
+    { value: raw.customers, label: "Clientes Felices" },
+    { value: raw.years, label: "Años de Experiencia" },
+    { value: raw.services, label: "Servicios" },
+    { value: raw.rating, label: "Calificación" },
+  ]
 
   return (
     <section className="py-16 bg-white border-y border-gray-100">

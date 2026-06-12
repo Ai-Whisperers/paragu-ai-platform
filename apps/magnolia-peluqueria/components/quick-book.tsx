@@ -56,7 +56,7 @@ export function QuickBook({ lang }: QuickBookProps) {
 
             {popularItems.length > 0 && (
               <div className="space-y-2 mb-4">
-                {popularItems.map((s, i) => (
+                {popularItems.map((s: any, i: number) => (
                   <a
                     key={i}
                     href={waLink(

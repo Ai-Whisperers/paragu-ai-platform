@@ -3,7 +3,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { business } from "@/lib/config"
 
-export function BottomNav({ lang = "es" }: { lang?: "es" | "en" }) {
+export function BottomNav({ lang = "es" }: { lang?: "es" | "en" | "en" }) {
   const pathname = usePathname()
   if (pathname?.startsWith("/admin")) return null
 

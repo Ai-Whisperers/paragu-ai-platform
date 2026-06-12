@@ -14,16 +14,26 @@ export const metadata: Metadata = {
   title: "Villamayor & Asociados | Estudio Jurídico — Derecho Civil y Comercial",
   description: "Estudio jurídico en Paraguay especializado en derecho civil, comercial, corporativo, inmobiliario, laboral y de familia. Asesoría legal integral en Asunción.",
   keywords: "abogados Paraguay, estudio jurídico Asunción, derecho civil Paraguay, derecho comercial, abogado corporativo, contratos Paraguay, divorcio, inversiones Paraguay",
-  alternates: { canonical: "https://villamayor.paragu-ai.com" },
+  authors: [{ name: "Villamayor & Asociados" }],
+  creator: "Villamayor & Asociados",
+  publisher: "Villamayor & Asociados",
+  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  alternates: { canonical: "https://villamayor.paragu-ai.com", languages: { "es": "https://villamayor.paragu-ai.com/" } },
   icons: { icon: "/favicon.svg" },
   openGraph: {
     title: "Villamayor & Asociados | Estudio Jurídico",
     description: "Asesoría legal integral en Paraguay. Derecho civil, comercial, corporativo, inmobiliario. Primera consulta sin costo.",
     url: "https://villamayor.paragu-ai.com",
     siteName: "Villamayor & Asociados",
-    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: "https://villamayor.paragu-ai.com/og-default.png", width: 1200, height: 630 }, { url: "https://villamayor.paragu-ai.com/og/og-image.png", width: 1200, height: 630 }],
     locale: "es_PY",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Villamayor & Asociados | Estudio Jurídico",
+    description: "Asesoría legal integral en Paraguay. Derecho civil, comercial, corporativo, inmobiliario. Primera consulta sin costo.",
+    images: ["/og-default.png"],
   },
 }
 

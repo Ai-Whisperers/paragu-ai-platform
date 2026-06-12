@@ -1,6 +1,8 @@
 import contentData from "@/content.json"
 import siteConfigData from "@/content/site.json"
 
+export type Lang = "es" | "en"
+
 export type ColorName = "rose" | "violet" | "amber" | "sky"
 export type IconName = "scissors" | "palette" | "sparkles" | "sparkle"
 
@@ -13,22 +15,22 @@ export const siteUrl = siteConfigData.site.url
 type JsonContent = Record<string, any>
 const content = contentData as JsonContent
 
-export function getContent() { return content }
+export function getContent(_lang?: string) { return content }
 
-export function businessData()  { return content.business }
-export function heroSlidesData() { return content.hero.slides }
-export function statsData()        { return content.stats }
-export function servicesData()    { return content.services.categories }
-export function galleryData()     { return content.gallery }
-export function testimonialsData(){ return content.testimonials }
-export function reasonsData()    { return content.reasons }
-export function ctaData()         { return content.cta }
-export function teamData()        { return content.team }
-export function beforeAfterData(){ return content.beforeAfter }
-export function promotionsData() { return content.promotions }
-export function loyaltyData()    { return content.loyalty }
-export function giftCardsData()   { return content.giftCards }
-export function faqsData()        { return content.faqs }
+export function businessData(_lang?: string)  { return content.business }
+export function heroSlidesData(_lang?: string) { return content.hero.slides }
+export function statsData(_lang?: string)        { return content.stats }
+export function servicesData(_lang?: string)    { return content.services.categories }
+export function galleryData(_lang?: string)     { return content.gallery }
+export function testimonialsData(_lang?: string){ return content.testimonials }
+export function reasonsData(_lang?: string)    { return content.reasons }
+export function ctaData(_lang?: string)         { return content.cta }
+export function teamData(_lang?: string)        { return content.team }
+export function beforeAfterData(_lang?: string){ return content.beforeAfter }
+export function promotionsData(_lang?: string) { return content.promotions }
+export function loyaltyData(_lang?: string)    { return content.loyalty }
+export function giftCardsData(_lang?: string)   { return content.giftCards }
+export function faqsData(_lang?: string)        { return content.faqs }
 
 // ── Backwards-compatible static exports ─────────────────────────
 export const business    = content.business

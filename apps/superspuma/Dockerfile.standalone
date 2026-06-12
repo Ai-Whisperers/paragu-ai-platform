@@ -1,12 +1,24 @@
 FROM node:20-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
-COPY .next/standalone ./
-COPY .next/static ./.next/static
-COPY public ./public
-EXPOSE 3000
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
-HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:3000/api/health || exit 1
-  CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:3000/api/health || exit 1
+# Install wget for healthcheck
+RUN apt-get update && apt-get install -y --no-install-recommends wget && rm -rf /var/lib/apt/lists/*
+RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
+# Copy the app bundle
+COPY --chown=nextjs:nodejs .next/standalone/apps/superspuma ./apps/superspuma
+# Copy node_modules at root
+COPY --chown=nextjs:nodejs .next/standalone/node_modules ./node_modules
+# Copy static chunks (JS, CSS) — CRITICAL for Next.js to load assets
+COPY --chown=nextjs:nodejs .next/static ./apps/superspuma/.next/static
+# Copy content (for readFileSync at runtime)
+COPY --chown=nextjs:nodejs ./content ./apps/superspuma/content
+# Copy site.json (sibling of content/)
+COPY --chown=nextjs:nodejs ./site.json ./apps/superspuma/site.json
+# Copy public
+COPY --chown=nextjs:nodejs public ./apps/superspuma/public
+USER nextjs
+EXPOSE 3000
 CMD ["node", "apps/superspuma/server.js"]

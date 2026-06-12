@@ -2,7 +2,7 @@
 import { useState } from "react"
 
 interface CookieConsentProps {
-  lang?: "es" | "en"
+  lang?: "es" | "en" | "en"
 }
 
 export function CookieConsent({ lang = "es" }: CookieConsentProps) {

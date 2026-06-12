@@ -14,7 +14,7 @@ interface Testimonial {
 
 interface TestimonialsCarouselProps {
   testimonials?: Testimonial[]
-  lang?: "es" | "en"
+  lang?: "es" | "en" | "en"
 }
 
 const colorMap: Record<string, string> = {

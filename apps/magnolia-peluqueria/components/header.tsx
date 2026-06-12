@@ -21,7 +21,7 @@ const MORE_ITEMS = [
 ]
 
 interface HeaderProps {
-  lang?: "es"
+  lang?: "es" | "en" | "en"
 }
 
 export function Header({ lang = "es" }: HeaderProps) {

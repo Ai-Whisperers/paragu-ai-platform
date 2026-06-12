@@ -9,7 +9,15 @@ export default function JsonLd() {
       "@type": "PostalAddress",
       "addressLocality": "Asuncion",
       "addressCountry": "PY"
-    }
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -25.2637,
+      "longitude": -57.5759
+    },
+    "sameAs": [
+      "https://instagram.com/nudo.py"
+    ]
   }
 
   return (

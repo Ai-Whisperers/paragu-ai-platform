@@ -23,7 +23,9 @@
       "domingo": "Cerrado"
     },
     "ctaMessage": "Hola! Quiero agendar una cita",
-    "mapsUrl": "https://maps.google.com/?q=San+Lorenzo+Paraguay"
+    "mapsUrl": "https://maps.google.com/?q=San+Lorenzo+Paraguay",
+    "tagline": "Elegancia y Belleza en San Lorenzo",
+    "phoneFormatted": "+595 971 123 456"
   },
   "hero": {
     "slides": [
@@ -138,12 +140,30 @@
     "title": "Galería de Trabajos",
     "subtitle": "Conoce nuestros últimos trabajos",
     "images": [
-      { "src": "/images/gallery/gallery-1.png", "alt": "Corte moderno" },
-      { "src": "/images/gallery/gallery-2.png", "alt": "Coloración rubia" },
-      { "src": "/images/gallery/gallery-3.png", "alt": "Mechas balayage" },
-      { "src": "/images/gallery/gallery-4.png", "alt": "Estilo elegante" },
-      { "src": "/images/gallery/gallery-5.png", "alt": "Coloración rosa" },
-      { "src": "/images/gallery/gallery-6.png", "alt": "Corte bob" }
+      {
+        "src": "/images/gallery/gallery-1.png",
+        "alt": "Corte moderno"
+      },
+      {
+        "src": "/images/gallery/gallery-2.png",
+        "alt": "Coloración rubia"
+      },
+      {
+        "src": "/images/gallery/gallery-3.png",
+        "alt": "Mechas balayage"
+      },
+      {
+        "src": "/images/gallery/gallery-4.png",
+        "alt": "Estilo elegante"
+      },
+      {
+        "src": "/images/gallery/gallery-5.png",
+        "alt": "Coloración rosa"
+      },
+      {
+        "src": "/images/gallery/gallery-6.png",
+        "alt": "Corte bob"
+      }
     ]
   },
   "testimonials": [
@@ -220,15 +240,36 @@
   ],
   "loyalty": {
     "title": "Programa de Lealtad",
-    "description": "Acumula puntos en cada visita y obtén descuentos exclusivos",
     "pointsPerService": 10,
-    "rewardPoints": 100
+    "rewardPoints": 100,
+    "subtitle": "Acumula puntos en cada visita y obtén descuentos exclusivos",
+    "steps": [
+      {
+        "icon": "Sparkles",
+        "after": "Acumulá",
+        "reward": "10 puntos por cada servicio"
+      },
+      {
+        "icon": "Crown",
+        "after": "Sumá",
+        "reward": "Alcanzá 100 puntos"
+      },
+      {
+        "icon": "Gift",
+        "after": "Canjeá",
+        "reward": "Descuento exclusivo en tu próximo servicio"
+      }
+    ]
   },
   "giftCards": [
     {
       "title": "Gift Card",
       "description": "El regalo perfecto para cualquier ocasión",
-      "amounts": ["Gs. 100.000", "Gs. 250.000", "Gs. 500.000"]
+      "amounts": [
+        "Gs. 100.000",
+        "Gs. 250.000",
+        "Gs. 500.000"
+      ]
     }
   ],
   "faqs": [

@@ -34,7 +34,7 @@ const FAQ_ITEMS_EN = [
 ]
 
 interface FAQAccordionProps {
-  lang?: "es" | "en"
+  lang?: "es" | "en" | "en"
 }
 
 export function FAQAccordion({ lang = "es" }: FAQAccordionProps) {

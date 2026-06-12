@@ -22,9 +22,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dayah.paragu-ai.com"),
   title: "Dayah LitWorks — Diseño de Portadas · Autora Amazon Prime Reading · Paraguay",
   description: "400+ portadas diseñadas. Autora seleccionada por Amazon Prime Reading. Portadas personalizadas, premades, maquetación y mockups 3D. Desde Paraguay para el mundo.",
-  alternates: { canonical: "https://dayah.paragu-ai.com" },
+  alternates: { canonical: "https://dayahlitworks.paragu-ai.com", languages: { "es": "https://dayahlitworks.paragu-ai.com/" } },
   icons: [
-    { rel: "icon", url: "/favicon.ico", sizes: "32x32" },
+    { rel: "icon", url: "/favicon.ico",url: "/favicon.ico",
+    address: { "@type": "PostalAddress", addressCountry: "PY" },
+    geo: { "@type": "GeoCoordinates", latitude: -25.2637, longitude: -57.5759 }, sizes: "32x32" },
     { rel: "icon", url: "/favicon.png", sizes: "256x256" },
     { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
   ],
@@ -43,6 +45,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={`${playfair.variable} ${inter.variable}`}>
       <head>
+        <meta property="og:image" content="https://dayah-litworks.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://dayah-litworks.paragu-ai.com" />
+        <meta property="og:site_name" content="Dayah Litworks" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://dayah-litworks.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        
         <meta name="theme-color" content="#0a0a0a" />
         <meta name="mobile-web-app-capable" content="yes" />
         <link rel="preload" href="/dayah/hero-new.webp" as="image" />

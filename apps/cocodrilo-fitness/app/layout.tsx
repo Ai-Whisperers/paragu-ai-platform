@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Complejo Cocodrilo",
   description: "Gimnasio completo, pileta climatizada y las mejores instalaciones para tu entrenamiento",
   icons: { icon: "/favicon.ico" },
-  alternates: { canonical: "https://cocodrilo-fitness.paragu-ai.com" },
+  alternates: { canonical: "https://cocodrilo-fitness.paragu-ai.com", languages: { "es": "https://cocodrilo-fitness.paragu-ai.com/" } },
   openGraph: {
     title: "Complejo Cocodrilo",
     description: "Gimnasio completo, pileta climatizada y las mejores instalaciones para tu entrenamiento",
@@ -44,6 +44,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={montserrat.variable + " " + playfair.variable}>
       <head>
+        <meta property="og:image" content="https://cocodrilo-fitness.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://cocodrilo-fitness.paragu-ai.com" />
+        <meta property="og:site_name" content="Cocodrilo Fitness" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://cocodrilo-fitness.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

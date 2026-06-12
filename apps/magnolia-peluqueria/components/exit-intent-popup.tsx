@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { X, MessageCircle, Star, ChevronLeft, ChevronRight } from "lucide-react"
 import { business } from "@/lib/config"
 
-export function ExitIntentPopup({ lang = "es" }: { lang?: "es" | "en" }) {
+export function ExitIntentPopup({ lang = "es" }: { lang?: "es" | "en" | "en" }) {
   const [visible, setVisible] = useState(false)
   const [dismissed, setDismissed] = useState(false)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)

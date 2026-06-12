@@ -22,8 +22,8 @@ function slugify(name: string): string {
 }
 
 function findService(slug: string): { cat: string; catColor: string; catIcon: string; name: string; desc: string; duration: string; price: string; popular?: boolean } | null {
-  for (const cat of services) {
-    for (const item of cat.items) {
+  for (const cat of services as any) {
+    for (const item of (cat.items as any[])) {
       if (slugify(item.name) === slug) {
         return { ...item, cat: cat.name, catColor: cat.color, catIcon: cat.icon }
       }
@@ -33,9 +33,9 @@ function findService(slug: string): { cat: string; catColor: string; catIcon: st
 }
 
 export async function generateStaticParams() {
-  const params = []
-  for (const cat of services) {
-    for (const item of cat.items) {
+  const params: { lang: string; slug: string }[] = []
+  for (const cat of services as any) {
+    for (const item of (cat.items as any[])) {
       params.push({ lang: "es", slug: slugify(item.name) })
       params.push({ lang: "en", slug: slugify(item.name) })
     }

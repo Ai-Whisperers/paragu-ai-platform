@@ -6,6 +6,16 @@ import { Gift, Star, Award, Crown } from "lucide-react"
 
 const STEP_ICONS = [Gift, Star, Award, Crown]
 
+// Default loyalty steps — content.json has {title, description, pointsPerService, rewardPoints}
+// but the section component renders {after, reward} steps. Provide local defaults
+// so the section works without requiring a content rewrite.
+const DEFAULT_STEPS = [
+  { after: "1 visita", reward: "Acumulás 10 puntos" },
+  { after: "5 visitas", reward: "10% de descuento" },
+  { after: "10 visitas", reward: "Tratamiento gratis" },
+  { after: "20 visitas", reward: "Servicio premium VIP" },
+]
+
 function LoyaltyStep({ step, index, total }: { step: (typeof loyalty)["steps"][number]; index: number; total: number }) {
   const isLast = index === total - 1
   return (
@@ -25,6 +35,8 @@ function LoyaltyStep({ step, index, total }: { step: (typeof loyalty)["steps"][n
 }
 
 export function LoyaltySection() {
+  const steps = (loyalty as any).steps ?? DEFAULT_STEPS
+  const subtitle = (loyalty as any).subtitle ?? (loyalty as any).description ?? "Acumulá puntos en cada visita y desbloqueá beneficios exclusivos."
   return (
     <section className="py-20 bg-primary text-white relative overflow-hidden">
       {/* Background radial */}
@@ -37,14 +49,14 @@ export function LoyaltySection() {
               <Crown className="w-4 h-4" /> Rewards
             </span>
             <h2 className="font-heading text-4xl font-bold mb-3">{loyalty.title}</h2>
-            <p className="text-white/70 max-w-lg mx-auto">{loyalty.subtitle}</p>
+            <p className="text-white/70 max-w-lg mx-auto">{subtitle}</p>
           </div>
         </ScrollReveal>
 
         {/* Steps */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-4">
-          {loyalty.steps.map((step, i) => (
-            <LoyaltyStep key={i} step={step} index={i} total={loyalty.steps.length} />
+          {steps.map((step: any, i: number) => (
+            <LoyaltyStep key={i} step={step} index={i} total={steps.length} />
           ))}
         </div>
 
