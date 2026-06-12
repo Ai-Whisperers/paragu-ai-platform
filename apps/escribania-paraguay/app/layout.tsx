@@ -2,6 +2,7 @@ import CookieConsent from "@/components/CookieConsent"
 import type { Metadata } from "next"
 import { Playfair_Display, Lora, Inter } from "next/font/google"
 import "./globals.css"
+import { Analytics, TrackCtas } from "../components/analytics"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -32,12 +33,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_PY",
   },
-}
+
+  alternates: { canonical: "https://escribania-paraguay.paragu-ai.com", languages: { "es": "https://escribania-paraguay.paragu-ai.com/" } },}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${playfair.variable} ${lora.variable} ${inter.variable}`}>
       <head>
+        <meta property="og:image" content="https://escribania-paraguay.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://escribania-paraguay.paragu-ai.com" />
+        <meta property="og:site_name" content="Escribanía Paraguay" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://escribania-paraguay.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -51,9 +62,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               availableLanguage: ["es"],
             }),
           }}
-        />
-      </head>
+        />   </head>
       <body className="min-h-screen flex flex-col">
+        <Analytics />
+        <TrackCtas />
+
         {children}
               <CookieConsent />
       </body>

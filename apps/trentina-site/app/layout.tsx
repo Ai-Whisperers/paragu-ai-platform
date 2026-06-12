@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WhatsAppFloat from "@/components/whatsapp-float";
 import content from "@/content/es.json";
+import { Analytics, TrackCtas } from "../components/analytics"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -132,7 +133,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="min-h-screen bg-background flex flex-col">
+      <head>
+        <meta property="og:image" content="https://trentina.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://trentina.paragu-ai.com" />
+        <meta property="og:site_name" content="Trentina" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://trentina.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+          </head>
+        <TrackCtas />   <body className="min-h-screen bg-background flex flex-col">
+        <Analytics />
+        <TrackCtas />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

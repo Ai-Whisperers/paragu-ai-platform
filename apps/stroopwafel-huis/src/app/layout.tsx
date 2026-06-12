@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
+import { Analytics, TrackCtas } from "../components/analytics"
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://stroopwafelhuis.paragu-ai.com'),
   title: 'Stroopwafel Huis — Verse Stroopwafels & Specialty Coffee · Asunción',
   description: 'La primera cafetería holandesa del Paraguay. Stroopwafels frescos hechos frente a vos, café de especialidad y un pedacito de Holanda en Asunción.',
-  alternates: { canonical: 'https://stroopwafelhuis.paragu-ai.com' },
+  alternates: { canonical: 'https://stroopwafelhuis.paragu-ai.com', languages: { 'es': 'https://stroopwafelhuis.paragu-ai.com/' } },
   icons: [{ rel: 'icon', url: '/favicon.ico', sizes: '32x32' }],
   openGraph: {
     title: 'Stroopwafel Huis — La primera cafetería holandesa del Paraguay',
@@ -34,6 +35,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='es' className={playfair.variable + ' ' + inter.variable}>
       <head>
+        <meta property="og:image" content="https://stroopwafel-huis.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://stroopwafel-huis.paragu-ai.com" />
+        <meta property="og:site_name" content="Stroopwafel Huis" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://stroopwafel-huis.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        
         <meta name='theme-color' content='#FF6B00' />
         <meta name='mobile-web-app-capable' content='yes' />
         <script type='application/ld+json' dangerouslySetInnerHTML={{
@@ -53,6 +63,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         }} />
       </head>
       <body className='antialiased font-sans'>
+        <Analytics />
+        <TrackCtas />
+
         {children}
       </body>
     </html>

@@ -3,6 +3,28 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { CartProvider } from '@/components/CartContext'
+import { Analytics, TrackCtas } from "../components/analytics"
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Reina de Copas",
+  url: "https://reina-de-copas.paragu-ai.com",
+  image: "https://reina-de-copas.paragu-ai.com/og/og-image.png",
+  telephone: "+595****0000",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Asunción",
+    addressRegion: "Central",
+    addressCountry: "PY"
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -25.2637,
+    longitude: -57.5759
+  },
+  "sameAs": ["https://instagram.com/reinadecopas"]
+}
 
 export const metadata: Metadata = {
   title: 'Reina de Copas Paraguay — Copas y Discos Menstruales',
@@ -22,7 +44,8 @@ export const metadata: Metadata = {
     description: 'Copas y discos menstruales. Ecológicos, económicos, seguros.',
     images: ['/images/og-social.jpg'],
   },
-}
+
+  alternates: { canonical: "https://reina-de-copas.paragu-ai.com", languages: { "es": "https://reina-de-copas.paragu-ai.com/" } },}
 
 export default function RootLayout({
   children,
@@ -32,6 +55,15 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <meta property="og:image" content="https://reina-de-copas.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://reina-de-copas.paragu-ai.com" />
+        <meta property="og:site_name" content="Reina de Copas" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://reina-de-copas.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -42,13 +74,17 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
-      </head>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    </head>
       <body
         style={{
           fontFamily:
             "'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
         }}
       >
+        <Analytics />
+        <TrackCtas />
+
         <CartProvider>
           <Navbar />
           <main>{children}</main>

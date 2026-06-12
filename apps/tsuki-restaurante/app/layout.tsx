@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WhatsAppFloat from "@/components/whatsapp-float";
 import content from "@/content/es.json";
+import { Analytics, TrackCtas } from "../components/analytics"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -48,9 +49,7 @@ export const metadata: Metadata = {
     title: "Tsuki Restaurante Oriental",
     description: "Auténtica cocina oriental en San Lorenzo. Arrolladitos, sushi, wok, gyozas.",
   },
-  alternates: {
-    canonical: "https://tsuki.paragu-ai.com",
-  },
+  alternates: { canonical: "https://tsuki-restaurante.paragu-ai.com", languages: { "es": "https://tsuki-restaurante.paragu-ai.com/" } },
 };
 
 const jsonLd = {
@@ -69,6 +68,10 @@ const jsonLd = {
         postalCode: "111434",
         addressCountry: "PY",
       },
+    geo: { "@type": "GeoCoordinates", latitude: -25.3396, longitude: -57.5190 },
+    "sameAs": [
+      "https://instagram.com/tsuki.restaurante"
+    ],
       servesCuisine: ["Chinese", "Japanese", "Sushi"],
       priceRange: "$$",
       aggregateRating: {
@@ -145,7 +148,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <meta property="og:image" content="https://tsuki-restaurante.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://tsuki-restaurante.paragu-ai.com" />
+        <meta property="og:site_name" content="Tsuki" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://tsuki-restaurante.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />   </head>
       <body className="min-h-screen flex flex-col">
+        <Analytics />
+        <TrackCtas />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -3,6 +3,7 @@ import JsonLd from './components/JsonLd'
 import type { Metadata } from 'next'
 import { Inter, Fraunces } from 'next/font/google'
 import './globals.css'
+import { Analytics, TrackCtas } from "../components/analytics"
 
 const inter = Inter({
   subsets: ['latin'],
@@ -35,12 +36,26 @@ export const metadata: Metadata = {
     icon: '/images/brand/favicon.png',
     apple: '/images/brand/apple-touch-icon.png',
   },
-}
+
+  alternates: { canonical: "https://de-abasto-a-casa.paragu-ai.com", languages: { "es": "https://de-abasto-a-casa.paragu-ai.com/" } },}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${inter.variable} ${fraunces.variable} scroll-smooth`}>
-      <body className="min-h-screen bg-surface text-text font-sans">{children}<JsonLd /><CookieConsent /></body>
+      <head>
+        <meta property="og:image" content="https://de-abasto-a-casa.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://de-abasto-a-casa.paragu-ai.com" />
+        <meta property="og:site_name" content="De Abasto a Casa" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://de-abasto-a-casa.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+          </head>
+        <TrackCtas /><body className="min-h-screen bg-surface text-text font-sans">
+        <Analytics />
+        <TrackCtas />
+{children}<JsonLd /><CookieConsent /></body>
     </html>
   )
 }

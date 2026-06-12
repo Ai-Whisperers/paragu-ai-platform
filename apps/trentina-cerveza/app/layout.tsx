@@ -7,6 +7,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WhatsAppFloat from "@/components/whatsapp-float";
 import content from "@/content/es.json";
+import { Analytics, TrackCtas } from "../components/analytics"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -71,9 +72,7 @@ export const metadata: Metadata = {
       "Descubrí Cerveza Trentina. Cerveza artesanal paraguaya: Pilsen, APA, IPA, Metatron IPL y Dunkel Cacao.",
     images: [`${siteData.url}${siteData.ogImage}`],
   },
-  alternates: {
-    canonical: "https://trentina.paragu-ai.com",
-  },
+  alternates: { canonical: "https://trentina.paragu-ai.com", languages: { "es": "https://trentina.paragu-ai.com/" } },
   robots: {
     index: true,
     follow: true,
@@ -133,7 +132,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="min-h-screen bg-background flex flex-col">
+      <head>
+        <meta property="og:image" content="https://trentina-cerveza.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://trentina-cerveza.paragu-ai.com" />
+        <meta property="og:site_name" content="Trentina Cerveza" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://trentina-cerveza.paragu-ai.com/og/og-image.png" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+          </head>
+        <TrackCtas />   <body className="min-h-screen bg-background flex flex-col">
+        <Analytics />
+        <TrackCtas />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
