@@ -1,6 +1,8 @@
 "use client"
 import Link from "next/link"
 import content from "@/content/es.json"
+import { Gallery } from "@/components/gallery"
+import { TrustStrip, TRUST_ITEMS_VISUAL } from "@/components/truststrip"
 
 const c = content as Record<string, unknown>
 const h = c.home || {}
@@ -97,6 +99,23 @@ export default function Home() {
           {h.finalCta?.secondaryText || "WhatsApp"}
         </a>
       </section>
+
+      {/* TrustStrip */}
+      <section className="py-12 px-4 border-y border-accent/20 bg-accent/5">
+        <div className="max-w-5xl mx-auto">
+          <TrustStrip items={TRUST_ITEMS_VISUAL} variant="horizontal" theme="dark" size="md" />
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <Gallery
+        title="Mi Trabajo"
+        subtitle="Una selección de los tatuajes que he realizado. Cada diseño es único y personalizado."
+        discoverPrefix="/images/gallery/tattoo/"
+        columns={3}
+      />
+
+
     </div>
   )
 }
