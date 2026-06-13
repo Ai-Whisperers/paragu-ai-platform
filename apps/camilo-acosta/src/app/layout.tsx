@@ -43,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:image" content="https://camilo-acosta.paragu-ai.com/og/og-image.png" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
               <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    <link rel="preload" href="/images/gato/hero-camilo-acosta-small.webp" as="image" />
     </head>
       <body className="antialiased">
         <Analytics />
