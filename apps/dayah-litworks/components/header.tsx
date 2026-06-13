@@ -32,7 +32,7 @@ export function Header() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <Link href="/" onClick={close} className="flex items-center gap-2" aria-label="Dayah LitWorks — Ir al inicio">
-            <img src="/dayah/logo-color.png" alt="" className="h-9 w-9 rounded-lg object-contain sm:h-10 sm:w-10" />
+            <img src="/dayah/logo-color-small.webp" alt="" className="h-9 w-9 rounded-lg object-contain sm:h-10 sm:w-10" />
             <span className="hidden text-lg font-bold text-foreground sm:inline">{content.navigation.businessName}</span>
           </Link>
 

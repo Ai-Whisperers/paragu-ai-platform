@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#0a0a0a" />
         <meta name="mobile-web-app-capable" content="yes" />
         <link rel="preload" href="/dayah/hero-new.webp" as="image" />
-        <link rel="preload" href="/dayah/logo-color.png" as="image" />
+        <link rel="preload" href="/dayah/logo-color-small.webp" as="image" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}" />
         <script dangerouslySetInnerHTML={{
@@ -72,7 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "url": "https://dayah.paragu-ai.com",
             "telephone": "+595986868241",
             "email": "dayahlitworks@gmail.com",
-            "image": "https://dayah.paragu-ai.com/dayah/logo-color.png",
+            "image": "https://dayah.paragu-ai.com/dayah/logo-color-small.webp",
             "address": { "@type": "PostalAddress", "addressLocality": "Asunción", "addressCountry": "PY" },
             "founder": { "@type": "Person", "name": "Daihana Araujo" },
             "foundingDate": "2019-11-20",
