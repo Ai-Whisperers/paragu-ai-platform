@@ -9,5 +9,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-12: test: verify post-commit hook v3 (by erebus)
+
+
 - _Awaiting next deploy_
 
