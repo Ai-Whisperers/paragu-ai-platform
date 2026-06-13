@@ -13,6 +13,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-13: feat: ship TrustStrip to 4 top sites (bichos-gym, scott-tatuajes, golden-visa) + 26-image gallery (jota-ink-tattoo) (by erebus)
+
 - 2026-06-13: feat(jota-ink-tattoo): add Gallery + TrustStrip to home page (by erebus)
 
 - _Awaiting next deploy_
