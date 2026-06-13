@@ -9,6 +9,7 @@ import { Location } from "@/components/location"
 import { CtaBanner } from "@/components/cta-banner"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
+import { TrustStrip, TRUST_ITEMS_FITNESS } from "@/components/truststrip"
 
 export default function Home() {
   return (
@@ -19,6 +20,12 @@ export default function Home() {
         subtitle="Gimnasio completo en Capiatá con entrenadores certificados y el mejor ambiente para alcanzar tus metas"
       />
       <Stats />
+      <section className="py-12 px-4 border-y border-border bg-card/50">
+        <div className="max-w-6xl mx-auto">
+          <TrustStrip items={TRUST_ITEMS_FITNESS} variant="horizontal" theme="light" size="md" />
+        </div>
+      </section>
+
       <Services />
       <Trainers />
       <Schedule />

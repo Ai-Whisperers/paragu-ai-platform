@@ -9,6 +9,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-13: feat(jota-ink-tattoo): add Gallery + TrustStrip to home page (by erebus)
+
 - 2026-06-12: feat: post-commit hook for per-site CHANGELOG auto-update (by erebus)
 
 - 2026-06-12: test: cleanup hook v3 test (by erebus)
