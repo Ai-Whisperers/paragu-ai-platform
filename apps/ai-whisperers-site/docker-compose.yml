@@ -11,6 +11,7 @@ services:
         - "traefik.http.routers.ai-whisperers.entrypoints=websecure"
         - "traefik.http.routers.ai-whisperers.tls=true"
         - "traefik.http.routers.ai-whisperers.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.ai-whisperers.middlewares=security-headers@file"
         - "traefik.http.services.ai-whisperers.loadbalancer.server.port=3000"
         # www redirect
         - "traefik.http.routers.ai-whisperers-www.rule=Host(`www.ai-whisperers.org`)"
