@@ -3,7 +3,6 @@
 Single Next.js monorepo for all Ai-Whisperers client sites + shared packages.
 
 ## Top-level layout
-
 ```
 apps/<client>/             -> client website source (one per site)
 packages/@ai-whisperers/*  -> shared packages (sections, SEO, checkout, auth, ...)
@@ -12,6 +11,12 @@ db/migrations/*.sql        -> central schema migrations
 docs/*                     -> architecture, branch protection, migration notes
 scripts/*                  -> shared deploy/build helpers
 ```
+
+> **Package source of truth:** the `packages/@ai-whisperers/*` workspace here is a
+> **stale local fork** (versions typically 1-2 majors behind). The canonical source is
+> **[`Ai-Whisperers/base`](https://github.com/Ai-Whisperers/base)** — when bumping,
+> pull from there, not from a published npm version. Long-term plan: delete the local
+> forks and have all apps consume `@ai-whisperers/*` from GitHub Packages directly.
 
 ## Current client apps
 
@@ -35,7 +40,6 @@ scripts/*                  -> shared deploy/build helpers
 | apps/mantraspa | mantra-spa.paragu-ai.com |
 | apps/meal-prep | meal-prep.paragu-ai.com |
 | apps/nde-barba | nde-barba.paragu-ai.com |
-| apps/nexa-paraguay | nexa.paragu-ai.com |
 | apps/ozmontania-website | ozmontania.paragu-ai.com |
 | apps/pitchy-website | pitchy-blindex.paragu-ai.com |
 | apps/portas-barber | portas-barber.paragu-ai.com |
@@ -53,6 +57,10 @@ scripts/*                  -> shared deploy/build helpers
 pnpm install
 pnpm dev
 ```
+
+> **Note:** `nexa.paragu-ai.com` is served from the standalone
+> [`Ai-Whisperers/nexa-paraguay`](https://github.com/Ai-Whisperers/nexa-paraguay)
+> repo (not from `apps/`). It was removed from this monorepo on 2026-06-15.
 
 ## Deployments
 
