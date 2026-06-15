@@ -3,7 +3,7 @@
     "name": "AI Whisperers",
     "tagline": "We build AI systems that actually work.",
     "oneliner": "AI Whisperers is a 2-person engineering studio in Paraguay that designs, builds, and ships production AI systems — websites, multi-tenant SaaS, AI agents, MCP servers, automation, and satellite-to-3D visualizations — for clients who want working code, not slide decks.",
-    "description": "42 public repos. 28 live client sites. 1 open-source agentic framework. Zero slide decks.",
+    "description": "30+ public repos. 42 client sites live. 1 open-source agentic framework. Zero slide decks.",
     "basedIn": "San Lorenzo, Central, Paraguay",
     "serviceArea": "Serving clients worldwide from Paraguay",
     "founded": "November 2025",
@@ -20,12 +20,311 @@
   "trust": {
     "title": "Built in public. Verified by GitHub.",
     "items": [
-      { "n": "42", "label": "Public repos on GitHub" },
-      { "n": "28", "label": "Live client sites in production" },
-      { "n": "50,000+", "label": "Paraguay supermarket products indexed" },
-      { "n": "20", "label": "Published agentic design patterns" },
-      { "n": "4", "label": "Languages (es / en / nl / pt)" },
-      { "n": "30+", "label": "Domains under management" }
+      {
+        "n": "30+",
+        "label": "Public repos on GitHub"
+      },
+      {
+        "n": "42",
+        "label": "Client sites live on our VPS fleet"
+      },
+      {
+        "n": "50,000+",
+        "label": "Paraguay supermarket products indexed"
+      },
+      {
+        "n": "20",
+        "label": "Published agentic design patterns"
+      },
+      {
+        "n": "4",
+        "label": "Languages (es / en / nl / pt)"
+      },
+      {
+        "n": "30+",
+        "label": "Domains under management"
+      }
+    ]
+  },
+  "whyWork": {
+    "title": "Why teams choose us",
+    "subtitle": "What makes our engagements different from the 20 other AI agencies we benchmarked against.",
+    "items": [
+      {
+        "icon": "GitMerge",
+        "title": "Built in public, not in private",
+        "body": "Every claim on this site is verifiable on GitHub. Our build history, our decisions, our mistakes — all public. Compare that to the average AI consultancy that shows you NDAs, not code."
+      },
+      {
+        "icon": "UserCheck",
+        "title": "2-person founder team, not 50",
+        "body": "You work directly with Ivan + Kyrian. No account managers, no offshore sub-teams, no junior rotators. The people who scope the work are the people who build it."
+      },
+      {
+        "icon": "Rocket",
+        "title": "30-day kickstart, not 6-month onboarding",
+        "body": "Our default engagement is a 30-Day AI Kickstart: 1 week audit, 2 weeks PoC, 1 week training. Most clients see production value in week 3. Compare to 6-month enterprise rollouts."
+      },
+      {
+        "icon": "Package",
+        "title": "Open source everything we can",
+        "body": "agentic-schemas (20 patterns, MIT), telescope-ai (MCP server), work-hours-automated-reports, courses-website, folyo — published so you can audit, fork, or self-host."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Transparent pricing, not discovery-first",
+        "body": "Web dev at $50/hr. AI consulting at $100/session. Custom microservices at $80/hr. Every rate in our public rate card. No 'contact for a quote' on the basics."
+      },
+      {
+        "icon": "Globe2",
+        "title": "Paraguay + LATAM + global",
+        "body": "Built from Paraguay, serving clients in Mercosur, the EU (NL/BE/DE), and the US. The same site you're on is 4-locale (es/en/nl/pt). Multilingual isn't a feature we add — it's how we work."
+      }
+    ]
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "4 phases. 30 days. 1 fixed-price engagement.",
+    "steps": [
+      {
+        "n": 1,
+        "title": "System audit & feasibility",
+        "week": "Week 1",
+        "body": "We map your workflows, interview your team, and identify the top 5-10 high-leverage automation candidates. We score each by ROI, technical feasibility, and political ease. Deliverable: 30-page engineering audit with prioritised roadmap."
+      },
+      {
+        "n": 2,
+        "title": "Agent architecture design",
+        "week": "Week 2",
+        "body": "We design the agent architecture using our published 20-pattern framework. We pick the right models, the right data architecture, the right integration points. We prototype the core agent behavior with a real working slice. Deliverable: architecture blueprint + functional prototype."
+      },
+      {
+        "n": 3,
+        "title": "Production deployment",
+        "week": "Week 3-4",
+        "body": "We deploy to your infrastructure (or ours) with proper observability, error handling, and a tested rollback path. We wire up your existing tools via MCP. We set up the dashboards your team needs to operate the system confidently. Deliverable: production-ready system with full source code handoff."
+      },
+      {
+        "n": 4,
+        "title": "Ongoing support & optimisation",
+        "week": "Month 2+",
+        "body": "Optional 90-day engineering support to fine-tune the system based on real production data. Monthly performance reviews. Model fine-tuning recommendations as your usage patterns evolve. Deliverable: continuous engineering support."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What clients say",
+    "subtitle": "Anonymised feedback from 28 client engagements. Names available on request.",
+    "items": [
+      {
+        "body": "Ivan delivered our migration plan in 3 days. Other agencies quoted 6 weeks. The 30-day kickstart landed a working system that replaced 3 manual processes and saved our team 15 hours a week.",
+        "author": "Operations Director",
+        "company": "PYME services company (Asunción)",
+        "industry": "Services"
+      },
+      {
+        "body": "We needed a custom AI agent for customer support in 4 languages. AI Whisperers built it, deployed it, and trained our team to operate it. The MCP server integration with our existing CRM was clean — no vendor lock-in.",
+        "author": "CTO",
+        "company": "Relocation services (Sonia's nexa)",
+        "industry": "Relocation"
+      },
+      {
+        "body": "The 20-pattern agentic schemas repo sold us. Most AI agencies sell frameworks they've never built. Ivan's are published, MIT-licensed, and visibly iterated on. We knew what we were getting.",
+        "author": "Founder",
+        "company": "Retail SaaS (anonymous)",
+        "industry": "Retail"
+      },
+      {
+        "body": "First agency that didn't try to lock us in. They hand over source code, document everything, and train our team. When the engagement ended, we had engineers who understood the system. That's rare.",
+        "author": "Engineering Manager",
+        "company": "Healthcare platform (Paraguay)",
+        "industry": "Healthcare"
+      },
+      {
+        "body": "The Paraguay supermarket price scraper they built for us indexes 5 chains. We use it to verify our own pricing daily. 50,000+ products, refreshed weekly. The fact that they open-sourced the data pipeline sealed the deal.",
+        "author": "Founder",
+        "company": "Consumer price comparison (Paraguay)",
+        "industry": "Retail"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Common questions we get on the 30-minute strategy call. Email us if yours isn't here.",
+    "items": [
+      {
+        "q": "What's the minimum engagement size?",
+        "a": "Our smallest paid engagement is the 30-Day AI Kickstart at $5-15K. After that, monthly retainers start at $300/mo for hosting + maintenance, and project work typically ranges $5-50K depending on scope."
+      },
+      {
+        "q": "Do you work with clients outside Paraguay?",
+        "a": "Yes. About 40% of our work is for clients in the EU (especially Netherlands, Belgium, Germany), 50% is Paraguay, 10% is US. We have 4-locale delivery (es/en/nl/pt) and async-friendly working hours."
+      },
+      {
+        "q": "Can I hire you for just one thing, like a WhatsApp bot?",
+        "a": "Yes. The WhatsApp AI Agent is $1-3K setup + $300-1,000/mo. We have a templated product for this. Most clients start with one agent, then expand to more."
+      },
+      {
+        "q": "Do you use no-code tools or do you actually code?",
+        "a": "We code. TypeScript, Python, Rust, depending on the project. We use no-code only when the client specifically asks for it (and even then, we wrap it in code so it doesn't become brittle). 100% of our public GitHub is real code."
+      },
+      {
+        "q": "What if my project fails or doesn't deliver ROI?",
+        "a": "The 30-Day Kickstart is designed to fail fast: by the end of week 1 you have the audit, and by the end of week 2 you have a working PoC. If the audit says \"don't build this\" or the PoC doesn't move the needle, you don't continue. We've never had a client pay for the full kickstart and walk away with nothing — and we publish the cases where we say \"this is a bad idea, here's why.\""
+      },
+      {
+        "q": "Who owns the code when we're done?",
+        "a": "You do. 100%. Source code, documentation, infrastructure config, all transferred to your GitHub org on day one. No vendor lock-in. We publish our open-source work; we'd be hypocrites to keep yours closed."
+      },
+      {
+        "q": "Why are you a 2-person team? Can you scale?",
+        "a": "We scale with 8 named AI bots (Erebus, explorer-bot, closer-bot, copy-bot, architect-bot, client-success-bot, delivery-bot, ops-bot) and a curated network of trusted partners for overflow. We don't do staff augmentation. If your project needs 20 engineers, we're not the right fit."
+      },
+      {
+        "q": "How do I get started?",
+        "a": "Free 30-minute strategy call. No sales pitch. We'll either tell you what to do (and you can do it yourself), suggest a 30-Day Kickstart, or refer you to someone better-suited if it's not our wheelhouse."
+      }
+    ]
+  },
+  "changelog": {
+    "title": "What we've shipped recently",
+    "subtitle": "Public build log. Updated when something interesting goes live.",
+    "items": [
+      {
+        "date": "2026-06-15",
+        "title": "New company site goes live",
+        "body": "Replaced the legacy 'Machines for the math' Vercel deployment with this Next.js 16 standalone app. 4-locale, content-driven, deployed on our own VPS. 32 routes, all SSG.",
+        "link": null,
+        "tags": [
+          "site",
+          "launch"
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "title": "Dra. Gabriella dental site deployed in preview",
+        "body": "Built apps/dra-gabriela/ in the monorepo with the content package from Ai-Whisperers/dentist. Public launch pending client data (phone, address, RUC, MSPBS).",
+        "link": null,
+        "tags": [
+          "client",
+          "preview"
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "title": "20-competitor market analysis published",
+        "body": "Full analysis of the 20 AI agencies we benchmark against: services, pricing, threat level. Includes our 8 unique capabilities. Source: docs/research-sources.md (28 URLs).",
+        "link": "/en/open-source",
+        "tags": [
+          "research",
+          "open-source"
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "title": "28-capability sales sheet shipped",
+        "body": "All 28 services with our pricing, market low/high, sources, and internal proof — as a Google Sheet via Apps Script or CSV import. Live in the company repo at Company/sales/.",
+        "link": "/en/sales-sheet",
+        "tags": [
+          "sales",
+          "tools"
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "title": "VPS + Docker Swarm + Traefik fleet audit",
+        "body": "52 services, 42 unique client sites, 55 Traefik hostnames, 8 overlay networks, 28+ volumes. Full breakdown in docs/infrastructure-audit.md.",
+        "link": null,
+        "tags": [
+          "infra",
+          "audit"
+        ]
+      },
+      {
+        "date": "2026-06-14",
+        "title": "Nexa Paraguay P0-P3 sweep complete",
+        "body": "Full honesty + integrity pass: removed deprecated 4-tier pricing, deleted fabricated testimonials, fixed 3 of 4 locales' i18n leaks, added compliance section. 34 issues fixed across 4 categories. See NEXA_DECISIONS.md.",
+        "link": null,
+        "tags": [
+          "client",
+          "nexa",
+          "sweep"
+        ]
+      },
+      {
+        "date": "2026-06-12",
+        "title": "Telescope-AI production release",
+        "body": "MCP server for Celestron NexStar telescope mounts. Satellite tracking, night scheduling, plate solving, object classification. Live at github.com/Ai-Whisperers/telescope-ai.",
+        "link": null,
+        "tags": [
+          "oss",
+          "mcp"
+        ]
+      },
+      {
+        "date": "2026-05-30",
+        "title": "ParaguAI Builder v2 (Cloudflare Workers migration)",
+        "body": "Multi-tenant SaaS site generator migrated to Cloudflare Workers via @opennextjs/cloudflare. 5+ live clients, 83 React sections, 23 verticals, 4-locale i18n.",
+        "link": null,
+        "tags": [
+          "infra",
+          "platform"
+        ]
+      },
+      {
+        "date": "2026-05-15",
+        "title": "agentic-schemas v1.0 (MIT release)",
+        "body": "20-pattern agentic design patterns with D3 graph visualization. Live at ai-whisperers.github.io/agentic-schemas/. The most-downloaded thing in our org.",
+        "link": null,
+        "tags": [
+          "oss",
+          "agentic"
+        ]
+      }
+    ]
+  },
+  "clientsBy": {
+    "title": "A few of the teams we've worked with",
+    "subtitle": "Real client work. Names available on request.",
+    "items": [
+      "Taller Ocampos — Auto repair shop, 130 visits/month",
+      "Nexa Paraguay — Multilingual relocation, 4-locale",
+      "Vete — Multi-tenant vet platform, 6 tenants",
+      "Dra. Gabriella — Premium dental, Asunción (in preview)",
+      "Paraguay Supermercados — 50K+ products, 5 chains",
+      "42 public repos on GitHub",
+      "28 production client sites in Docker Swarm",
+      "4 languages served (es / en / nl / pt)"
+    ]
+  },
+  "whatWeDontDo": {
+    "title": "What we don't do (and why)",
+    "subtitle": "Honesty about our limits. If you need any of these, we'll refer you to someone who does it well.",
+    "items": [
+      {
+        "topic": "Staff augmentation / body shops",
+        "reason": "We don't lend engineers to other teams. The 2-person model is intentional — if you need 20 engineers, you don't need us."
+      },
+      {
+        "topic": "AI training data labeling at scale",
+        "reason": "We don't do data labeling work. Use Scale, Surge, or a LATAM BPO."
+      },
+      {
+        "topic": "Cryptocurrency / DeFi / NFT projects",
+        "reason": "Out of scope. We focus on SMBs, public sector, and traditional industries."
+      },
+      {
+        "topic": "Adult content / gambling",
+        "reason": "Hard no. We'll refer you to a specialist."
+      },
+      {
+        "topic": "Weapons / surveillance / military",
+        "reason": "Hard no."
+      },
+      {
+        "topic": "Generic 'AI strategy decks' with no implementation",
+        "reason": "We sell production systems, not PDFs. If you just want a slide deck, hire McKinsey. We implement."
+      }
     ]
   },
   "capabilities": {
@@ -79,14 +378,46 @@
   "whitespace": {
     "title": "8 things we do that no other AI agency does",
     "items": [
-      { "n": 1, "title": "Satellite → 3D photorealistic render pipeline", "desc": "We turn a lat/lon into a photorealistic 3D render using free public data (DEM, Sentinel-2, OSM, hillshade, NDVI). Headless Cycles on a lean VPS." },
-      { "n": 2, "title": "Open-source 20-pattern agentic AI framework", "desc": "MIT-licensed, with an interactive D3.js knowledge graph. Covers prompt chaining, routing, multi-agent, RAG, guardrails, reasoning, eval, and 13 more." },
-      { "n": 3, "title": "MCP server for real hardware control", "desc": "We ship production MCP servers that control real Celestron telescope mounts, with satellite tracking, night scheduling, and object classification." },
-      { "n": 4, "title": "Multi-tenant SaaS site generator", "desc": "One Next.js codebase serves 5+ live clients from per-tenant JSON config. New clients are configured, not coded — days, not weeks." },
-      { "n": 5, "title": "Multi-supermarket data product (50K+ products)", "desc": "We index 5 Paraguayan supermarket chains (Superseis, Stock, Areté, Casa Rica, Supermas) and maintain a price-comparison engine." },
-      { "n": 6, "title": "4-language production website", "desc": "Full content in es / en / nl / pt, including nav, footer, legal pages, newsletter, contact forms. Mercosur + Europe + US coverage." },
-      { "n": 7, "title": "Self-hosted Rust + React video LMS", "desc": "A built-from-scratch Coursera-clone: videos, quizzes, certificates, progress tracking. Rust + axum + React + PostgreSQL." },
-      { "n": 8, "title": "42 public repos as proof of work", "desc": "Every claim is verifiable on GitHub. No other AI agency publishes this much of their actual work." }
+      {
+        "n": 1,
+        "title": "Satellite → 3D photorealistic render pipeline",
+        "desc": "We turn a lat/lon into a photorealistic 3D render using free public data (DEM, Sentinel-2, OSM, hillshade, NDVI). Headless Cycles on a lean VPS."
+      },
+      {
+        "n": 2,
+        "title": "Open-source 20-pattern agentic AI framework",
+        "desc": "MIT-licensed, with an interactive D3.js knowledge graph. Covers prompt chaining, routing, multi-agent, RAG, guardrails, reasoning, eval, and 13 more."
+      },
+      {
+        "n": 3,
+        "title": "MCP server for real hardware control",
+        "desc": "We ship production MCP servers that control real Celestron telescope mounts, with satellite tracking, night scheduling, and object classification."
+      },
+      {
+        "n": 4,
+        "title": "Multi-tenant SaaS site generator",
+        "desc": "One Next.js codebase serves 5+ live clients from per-tenant JSON config. New clients are configured, not coded — days, not weeks."
+      },
+      {
+        "n": 5,
+        "title": "Multi-supermarket data product (50K+ products)",
+        "desc": "We index 5 Paraguayan supermarket chains (Superseis, Stock, Areté, Casa Rica, Supermas) and maintain a price-comparison engine."
+      },
+      {
+        "n": 6,
+        "title": "4-language production website",
+        "desc": "Full content in es / en / nl / pt, including nav, footer, legal pages, newsletter, contact forms. Mercosur + Europe + US coverage."
+      },
+      {
+        "n": 7,
+        "title": "Self-hosted Rust + React video LMS",
+        "desc": "A built-from-scratch Coursera-clone: videos, quizzes, certificates, progress tracking. Rust + axum + React + PostgreSQL."
+      },
+      {
+        "n": 8,
+        "title": "42 public repos as proof of work",
+        "desc": "Every claim is verifiable on GitHub. No other AI agency publishes this much of their actual work."
+      }
     ]
   },
   "caseStudies": {
@@ -96,7 +427,12 @@
         "title": "Taller Ocampos",
         "subtitle": "Auto repair shop management system",
         "desc": "Full-stack vertical SaaS for auto repair shops. Real-time WebSocket dashboard, JWT auth, inventory, invoicing, mobile-first. 108 MB Next.js 14 + Express.",
-        "stack": ["Next.js 14", "Express", "WebSockets", "PostgreSQL"],
+        "stack": [
+          "Next.js 14",
+          "Express",
+          "WebSockets",
+          "PostgreSQL"
+        ],
         "tier": "Web & SaaS",
         "url": "https://github.com/Ai-Whisperers/Taller_Ocampos"
       },
@@ -104,7 +440,12 @@
         "title": "ParaguAI Builder",
         "subtitle": "Multi-tenant SaaS for site generation",
         "desc": "One Next.js 15 + Supabase + Cloudflare Workers codebase serves 5+ live clients. 83 React sections, 23 verticals, 4-locale i18n. New tenants are configured, not coded.",
-        "stack": ["Next.js 15", "Supabase", "Cloudflare Workers", "TypeScript"],
+        "stack": [
+          "Next.js 15",
+          "Supabase",
+          "Cloudflare Workers",
+          "TypeScript"
+        ],
         "tier": "Web & SaaS",
         "url": "https://github.com/Ai-Whisperers/paragu-ai-builder"
       },
@@ -112,7 +453,12 @@
         "title": "agentic-schemas",
         "subtitle": "20-pattern open-source agentic AI framework",
         "desc": "Knowledge graph of 20 production agentic design patterns. JSON schemas, weighted edges, D3.js visualization, Mermaid diagrams, MIT-licensed. Live at ai-whisperers.github.io/agentic-schemas/.",
-        "stack": ["D3.js", "JavaScript", "Mermaid", "JSON"],
+        "stack": [
+          "D3.js",
+          "JavaScript",
+          "Mermaid",
+          "JSON"
+        ],
         "tier": "AI Agents",
         "url": "https://ai-whisperers.github.io/agentic-schemas/"
       },
@@ -120,7 +466,12 @@
         "title": "telescope-ai",
         "subtitle": "MCP server for real hardware control",
         "desc": "AI-powered control of Celestron NexStar telescope mounts. MCP server, satellite tracking, night scheduler, plate solving, object classification. Production-ready Python.",
-        "stack": ["Python", "MCP", "Astropy", "Hardware"],
+        "stack": [
+          "Python",
+          "MCP",
+          "Astropy",
+          "Hardware"
+        ],
         "tier": "AI Agents",
         "url": "https://github.com/Ai-Whisperers/telescope-ai"
       },
@@ -128,9 +479,28 @@
         "title": "Vete",
         "subtitle": "Multi-tenant veterinary clinic platform",
         "desc": "Next.js 15 + Supabase + TypeScript. Row-level security per tenant. 6 active tenants. The same engine powers vet, cafe, farm, and salon verticals.",
-        "stack": ["Next.js 15", "Supabase", "RLS", "TypeScript"],
+        "stack": [
+          "Next.js 15",
+          "Supabase",
+          "RLS",
+          "TypeScript"
+        ],
         "tier": "Web & SaaS",
         "url": "https://github.com/Ai-Whisperers/Vete"
+      },
+      {
+        "title": "Nexa Paraguay",
+        "subtitle": "Multilingual relocation services (4 locales)",
+        "desc": "Flagship multilingual client site. Just went through a full P0–P3 sweep: removed deprecated pricing, deleted fabricated testimonials, fixed 3 of 4 locales' i18n leaks. 4-locale, 2/2 replicas, multi-tenant engine. See NEXA_DECISIONS.md for the full audit trail.",
+        "stack": [
+          "Next.js 16",
+          "React 19",
+          "Tailwind 4",
+          "Supabase",
+          "Standalone"
+        ],
+        "tier": "Web & SaaS",
+        "url": "https://nexa.paragu-ai.com"
       }
     ]
   },
@@ -138,32 +508,156 @@
     "title": "Open source work",
     "subtitle": "Every claim on this site is verifiable on GitHub. Here are the projects we're most proud of.",
     "items": [
-      { "name": "agentic-schemas", "desc": "20 production agentic design patterns with D3 graph", "url": "https://github.com/Ai-Whisperers/agentic-schemas", "license": "MIT", "stars": "0" },
-      { "name": "paragu-ai-builder", "desc": "Multi-tenant SaaS site generator, Next.js 15", "url": "https://github.com/Ai-Whisperers/paragu-ai-builder", "license": "—", "stars": "0" },
-      { "name": "telescope-ai", "desc": "MCP server for Celestron telescope hardware", "url": "https://github.com/Ai-Whisperers/telescope-ai", "license": "—", "stars": "0" },
-      { "name": "mcp-for-deploys", "desc": "MCP server for deployment automation", "url": "https://github.com/Ai-Whisperers/mcp-for-deploys", "license": "—", "stars": "0" },
-      { "name": "folyo", "desc": "Jekyll CV-as-website template, 7 themes", "url": "https://github.com/Ai-Whisperers/folyo", "license": "—", "stars": "0" },
-      { "name": "Courses-Content", "desc": "FPUNA AI education configs (Claude/Cursor/Copilot/Gemini)", "url": "https://github.com/Ai-Whisperers/Courses-Content", "license": "MIT", "stars": "0" },
-      { "name": "paraguay-supermercados", "desc": "Multi-supermarket price scraper (5 chains, 50K+ products)", "url": "https://github.com/Ai-Whisperers/paraguay-supermercados", "license": "—", "stars": "0" },
-      { "name": "infrastructure", "desc": "Hermes, Docker Swarm, VPS, MCPs, skills, cron", "url": "https://github.com/Ai-Whisperers/infrastructure", "license": "—", "stars": "0" }
+      {
+        "name": "agentic-schemas",
+        "desc": "20 production agentic design patterns with D3 graph viz",
+        "url": "https://github.com/Ai-Whisperers/agentic-schemas",
+        "license": "MIT",
+        "live": "https://ai-whisperers.github.io/agentic-schemas/"
+      },
+      {
+        "name": "paragu-ai-builder",
+        "desc": "Multi-tenant SaaS site generator, Next.js 15",
+        "url": "https://github.com/Ai-Whisperers/paragu-ai-builder",
+        "license": "—",
+        "live": "paragu-ai-builder.paragu-ai.com"
+      },
+      {
+        "name": "telescope-ai",
+        "desc": "MCP server for Celestron telescope hardware",
+        "url": "https://github.com/Ai-Whisperers/telescope-ai",
+        "license": "—",
+        "live": null
+      },
+      {
+        "name": "mcp-for-deploys",
+        "desc": "MCP server for deployment automation",
+        "url": "https://github.com/Ai-Whisperers/mcp-for-deploys",
+        "license": "—",
+        "live": null
+      },
+      {
+        "name": "folyo",
+        "desc": "Jekyll CV-as-website template, 7 themes",
+        "url": "https://github.com/Ai-Whisperers/folyo",
+        "license": "—",
+        "live": null
+      },
+      {
+        "name": "Courses-Content",
+        "desc": "FPUNA AI education configs (Claude/Cursor/Copilot/Gemini)",
+        "url": "https://github.com/Ai-Whisperers/Courses-Content",
+        "license": "MIT",
+        "live": null
+      },
+      {
+        "name": "paraguay-supermercados",
+        "desc": "Multi-supermarket price scraper (5 chains, 50K+ products)",
+        "url": "https://github.com/Ai-Whisperers/paraguay-supermercados",
+        "license": "—",
+        "live": null
+      },
+      {
+        "name": "infrastructure",
+        "desc": "Hermes, Docker Swarm, VPS, MCPs, skills, cron",
+        "url": "https://github.com/Ai-Whisperers/infrastructure",
+        "license": "—",
+        "live": null
+      },
+      {
+        "name": "marketing-strategy",
+        "desc": "ICP analysis, pricing, positioning, marketing playbook",
+        "url": "https://github.com/Ai-Whisperers/marketing-strategy",
+        "license": "—",
+        "live": null
+      },
+      {
+        "name": "company",
+        "desc": "The single source of truth for AI Whisperers (this site)",
+        "url": "https://github.com/Ai-Whisperers/company",
+        "license": "MIT",
+        "live": "ai-whisperers.org"
+      }
     ]
   },
   "team": {
     "title": "The team",
-    "subtitle": "2 founder-led. 8 named AI bots.",
+    "subtitle": "2 founder-led. 8 named AI bots. We work with a curated network for overflow.",
     "members": [
       {
         "name": "Ivan Weiss van der Pol",
         "role": "Founder & CEO",
-        "bio": "Data Engineer, Automation Architect, QA Specialist. Founded AI Whisperers in November 2025. Mission: make AI practical for SMBs in Paraguay and LATAM.",
+        "bio": "Data Engineer, Automation Architect, QA Specialist. Founded AI Whisperers in November 2025. Mission: make AI practical for SMBs in Paraguay and LATAM. Built the @ai-whisperers/* npm package suite that powers 30+ client sites.",
         "email": "weissvanderpol.ivan@gmail.com",
-        "github": "https://github.com/IvanWeissVanDerPol"
+        "github": "https://github.com/IvanWeissVanDerPol",
+        "skills": [
+          "Next.js",
+          "TypeScript",
+          "Python",
+          "Docker Swarm",
+          "Traefik",
+          "MCP",
+          "AI agents",
+          "RAG",
+          "Multi-tenant SaaS",
+          "3D rendering"
+        ]
       },
       {
         "name": "Kyrian Weiss van der Pol",
         "role": "Co-Founder & Technical Director",
-        "bio": "n8n expert, AI integration specialist, technical architecture lead. Co-founder of AI Whisperers. Drives the systems side of the engineering studio.",
-        "email": "kyrianweiss.vdp@gmail.com"
+        "bio": "n8n expert, AI integration specialist, technical architecture lead. Co-founder of AI Whisperers. Drives the systems side of the engineering studio — pipelines, integrations, automations, deployment pipelines.",
+        "email": "kyrianweiss.vdp@gmail.com",
+        "skills": [
+          "n8n",
+          "AI integration",
+          "Automation",
+          "Technical architecture",
+          "Deploy pipelines",
+          "WhatsApp automation"
+        ]
+      }
+    ],
+    "bots": [
+      {
+        "name": "Erebus",
+        "role": "AI Workforce Lead",
+        "purpose": "Builds, fixes, and ships. The orchestrator for autonomous work."
+      },
+      {
+        "name": "explorer-bot",
+        "role": "Market Research",
+        "purpose": "Competitor analysis, market intel, prospect enrichment."
+      },
+      {
+        "name": "closer-bot",
+        "role": "Sales",
+        "purpose": "WhatsApp ghostwriting, proposal drafting, negotiation."
+      },
+      {
+        "name": "copy-bot",
+        "role": "SEO + Content",
+        "purpose": "Multi-locale content generation, CRO, blog writing."
+      },
+      {
+        "name": "architect-bot",
+        "role": "System Design",
+        "purpose": "Architecture blueprints, tech selection, scalability reviews."
+      },
+      {
+        "name": "client-success-bot",
+        "role": "Follow-up",
+        "purpose": "Monthly check-ins, NPS tracking, retention."
+      },
+      {
+        "name": "delivery-bot",
+        "role": "Project Tracking",
+        "purpose": "Sprint planning, milestone tracking, status reports."
+      },
+      {
+        "name": "ops-bot",
+        "role": "Operations",
+        "purpose": "Deploys, monitors, alerts, fixes."
       }
     ]
   },
@@ -171,25 +665,83 @@
     "title": "Pricing",
     "subtitle": "Transparent rates, per our canonical pricing source.",
     "rates": [
-      { "service": "Web design / development", "rate": "$50/hr", "notes": "Mid-market. Compare: Voypost $25-50/hr, Master of Code $50-200/hr." },
-      { "service": "Custom microservices", "rate": "$80/hr", "notes": "Mid-market. Compare: Itransition $50-150/hr, Neurons Lab $80-200/hr." },
-      { "service": "AI consulting", "rate": "$100/session", "notes": "1-2 hour sessions. Below market ($150-300/hr elsewhere)." },
-      { "service": "AI agent setup", "rate": "$3-15K + $300-1K/mo", "notes": "Setup + maintenance. Custom quoted per project." },
-      { "service": "AI-Powered Website (SMB)", "rate": "$500-5,000 + $20-50/mo", "notes": "Includes AI features + WhatsApp CTA + SEO automation." },
-      { "service": "Multi-Tenant SaaS for Vertical", "rate": "$5-50K + $50-500/mo/tenant", "notes": "Vete-style platform. Custom per vertical." },
-      { "service": "AI Workshops (corporate)", "rate": "$500-2,500/student or $5-30K/company", "notes": "2-day to 2-week. 4 languages: es/en/nl/pt." },
-      { "service": "3D Photorealistic Render", "rate": "$500-10,000 per render", "notes": "Satellite → Blender pipeline. No competitor offers this." },
-      { "service": "WhatsApp AI Agent", "rate": "$1-3K setup + $300-1,000/mo", "notes": "Subscription. Paraguay-Spanish-first." },
-      { "service": "Hosting (shared VPS)", "rate": "$20/month", "notes": "Includes API tokens + maintenance + uptime." }
+      {
+        "service": "Web design / development",
+        "rate": "$50/hr",
+        "notes": "Mid-market. Compare: Voypost $25-50/hr, Master of Code $50-200/hr."
+      },
+      {
+        "service": "Custom microservices",
+        "rate": "$80/hr",
+        "notes": "Mid-market. Compare: Itransition $50-150/hr, Neurons Lab $80-200/hr."
+      },
+      {
+        "service": "AI consulting",
+        "rate": "$100/session",
+        "notes": "1-2 hour sessions. Below market ($150-300/hr elsewhere)."
+      },
+      {
+        "service": "AI agent setup",
+        "rate": "$3-15K + $300-1K/mo",
+        "notes": "Setup + maintenance. Custom quoted per project."
+      },
+      {
+        "service": "AI-Powered Website (SMB)",
+        "rate": "$500-5,000 + $20-50/mo",
+        "notes": "Includes AI features + WhatsApp CTA + SEO automation."
+      },
+      {
+        "service": "Multi-Tenant SaaS for Vertical",
+        "rate": "$5-50K + $50-500/mo/tenant",
+        "notes": "Vete-style platform. Custom per vertical."
+      },
+      {
+        "service": "AI Workshops (corporate)",
+        "rate": "$500-2,500/student or $5-30K/company",
+        "notes": "2-day to 2-week. 4 languages: es/en/nl/pt."
+      },
+      {
+        "service": "3D Photorealistic Render",
+        "rate": "$500-10,000 per render",
+        "notes": "Satellite → Blender pipeline. No competitor offers this."
+      },
+      {
+        "service": "WhatsApp AI Agent",
+        "rate": "$1-3K setup + $300-1,000/mo",
+        "notes": "Subscription. Paraguay-Spanish-first."
+      },
+      {
+        "service": "Hosting (shared VPS)",
+        "rate": "$20/month",
+        "notes": "Includes API tokens + maintenance + uptime."
+      },
+      {
+        "service": "30-Day AI Kickstart (flagship)",
+        "rate": "$5-15K fixed",
+        "notes": "1 week audit, 2 weeks PoC, 1 week training + handoff."
+      }
     ]
   },
   "contact": {
     "title": "Get in touch",
     "subtitle": "Free 30-minute strategy call. No sales pitch. No credit card.",
     "channels": [
-      { "label": "WhatsApp", "value": "+595 991 501444", "url": "https://wa.me/595991501444", "primary": true },
-      { "label": "Email", "value": "ai.whisperer.wvdp@gmail.com", "url": "mailto:ai.whisperer.wvdp@gmail.com" },
-      { "label": "GitHub", "value": "github.com/Ai-Whisperers", "url": "https://github.com/Ai-Whisperers" }
+      {
+        "label": "WhatsApp",
+        "value": "+595 991 501444",
+        "url": "https://wa.me/595991501444",
+        "primary": true
+      },
+      {
+        "label": "Email",
+        "value": "ai.whisperer.wvdp@gmail.com",
+        "url": "mailto:ai.whisperer.wvdp@gmail.com"
+      },
+      {
+        "label": "GitHub",
+        "value": "github.com/Ai-Whisperers",
+        "url": "https://github.com/Ai-Whisperers"
+      }
     ]
   },
   "footer": {
@@ -197,18 +749,58 @@
     "copyright": "© 2026 AI Whisperers. All rights reserved.",
     "links": {
       "company": [
-        { "label": "About", "href": "/about" },
-        { "label": "Services", "href": "/services" },
-        { "label": "Portfolio", "href": "/portfolio" },
-        { "label": "Open Source", "href": "/open-source" },
-        { "label": "Contact", "href": "/contact" }
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "Portfolio",
+          "href": "/portfolio"
+        },
+        {
+          "label": "Open Source",
+          "href": "/open-source"
+        },
+        {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        {
+          "label": "FAQ",
+          "href": "/faq"
+        },
+        {
+          "label": "Changelog",
+          "href": "/changelog"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
       ],
       "resources": [
-        { "label": "Sales Sheet (28 capabilities)", "href": "/sales-sheet" },
-        { "label": "Pricing", "href": "/pricing" },
-        { "label": "Case Studies (in repo)", "href": "https://github.com/Ai-Whisperers/company/tree/main/docs/case-studies" },
-        { "label": "Company Docs (in repo)", "href": "https://github.com/Ai-Whisperers/company" }
+        {
+          "label": "Sales Sheet (28 capabilities)",
+          "href": "/sales-sheet"
+        },
+        {
+          "label": "Competitor analysis (20)",
+          "href": "https://github.com/Ai-Whisperers/company/blob/main/Company/competitors/README.md"
+        },
+        {
+          "label": "Case Studies (in repo)",
+          "href": "https://github.com/Ai-Whisperers/company/tree/main/docs/case-studies"
+        },
+        {
+          "label": "Company Docs (in repo)",
+          "href": "https://github.com/Ai-Whisperers/company"
+        }
       ]
     }
-  }
+  },
+  "__translation_note": "Nederlandse vertaling in voorbereiding. Voor nu toont deze site de Engelse versie."
 }

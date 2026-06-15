@@ -12,7 +12,7 @@ export function generateStaticParams() {
 
 const ICON_MAP: Record<string, any> = {
   GitMerge, UserCheck, Rocket, Package, DollarSign, Globe2,
-  Globe2, Bot, MessageCircle, Satellite, Cog, GraduationCap
+  Bot, MessageCircle, Satellite, Cog, GraduationCap
 }
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
@@ -38,7 +38,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 bg-bg-elev border border-border rounded-full text-xs font-mono text-fg-muted">
             <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
-            42 public repos · 28 live client sites · open-source
+            30+ public repos · 42 live client sites · open-source
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
             We build AI systems<br />

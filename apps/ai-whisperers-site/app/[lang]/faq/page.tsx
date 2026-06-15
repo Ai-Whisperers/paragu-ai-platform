@@ -14,8 +14,9 @@ export function generateStaticParams() {
 
 export const metadata = { title: "FAQ" }
 
-export default function FAQ({ params }: { params: { lang: string } }) {
-  const c = CONTENT[params.lang] || en
+export default async function FAQ({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const c = CONTENT[lang] || en
   const faq = c.faq
 
   return (

@@ -3,7 +3,7 @@
     "name": "AI Whisperers",
     "tagline": "We build AI systems that actually work.",
     "oneliner": "AI Whisperers is a 2-person engineering studio in Paraguay that designs, builds, and ships production AI systems — websites, multi-tenant SaaS, AI agents, MCP servers, automation, and satellite-to-3D visualizations — for clients who want working code, not slide decks.",
-    "description": "42 public repos. 28 live client sites. 1 open-source agentic framework. Zero slide decks.",
+    "description": "30+ public repos. 42 client sites live. 1 open-source agentic framework. Zero slide decks.",
     "basedIn": "San Lorenzo, Central, Paraguay",
     "serviceArea": "Serving clients worldwide from Paraguay",
     "founded": "November 2025",
@@ -20,8 +20,8 @@
   "trust": {
     "title": "Built in public. Verified by GitHub.",
     "items": [
-      { "n": "42", "label": "Public repos on GitHub" },
-      { "n": "28", "label": "Live client sites in production" },
+      { "n": "30+", "label": "Public repos on GitHub" },
+      { "n": "42", "label": "Client sites live on our VPS fleet" },
       { "n": "50,000+", "label": "Paraguay supermarket products indexed" },
       { "n": "20", "label": "Published agentic design patterns" },
       { "n": "4", "label": "Languages (es / en / nl / pt)" },

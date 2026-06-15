@@ -12,8 +12,9 @@ export function generateStaticParams() {
 
 export const metadata = { title: "Changelog" }
 
-export default function Changelog({ params }: { params: { lang: string } }) {
-  const c = CONTENT[params.lang] || en
+export default async function Changelog({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const c = CONTENT[lang] || en
   const cl = c.changelog
 
   return (

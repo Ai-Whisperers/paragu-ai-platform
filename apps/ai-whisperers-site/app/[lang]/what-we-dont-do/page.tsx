@@ -12,8 +12,9 @@ export function generateStaticParams() {
 
 export const metadata = { title: "What we don't do" }
 
-export default function WhatWeDontDo({ params }: { params: { lang: string } }) {
-  const c = CONTENT[params.lang] || en
+export default async function WhatWeDontDo({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const c = CONTENT[lang] || en
   const w = c.whatWeDontDo
 
   return (
