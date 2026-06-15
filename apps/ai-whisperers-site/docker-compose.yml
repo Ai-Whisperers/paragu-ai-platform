@@ -1,0 +1,27 @@
+services:
+  web:
+    image: ai-whisperers-site:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        # Apex domain
+        - "traefik.http.routers.ai-whisperers.rule=Host(`ai-whisperers.org`) || Host(`www.ai-whisperers.org`)"
+        - "traefik.http.routers.ai-whisperers.entrypoints=websecure"
+        - "traefik.http.routers.ai-whisperers.tls=true"
+        - "traefik.http.routers.ai-whisperers.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.ai-whisperers.loadbalancer.server.port=3000"
+        # www redirect
+        - "traefik.http.routers.ai-whisperers-www.rule=Host(`www.ai-whisperers.org`)"
+        - "traefik.http.routers.ai-whisperers-www.entrypoints=websecure"
+        - "traefik.http.routers.ai-whisperers-www.tls=true"
+        - "traefik.http.routers.ai-whisperers-www.tls.certresolver=letsencryptresolver"
+        - "traefik.http.middlewares.ai-whisperers-www-redirect.redirectregex.regex=^https?://www\\.(.*)"
+        - "traefik.http.middlewares.ai-whisperers-www-redirect.redirectregex.replacement=https://$${1}"
+        - "traefik.http.routers.ai-whisperers-www.middlewares=ai-whisperers-www-redirect@docker"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

@@ -1,0 +1,26 @@
+{
+  "name": "ai-whisperers-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Whisperers company site — portfolio, services, open source, contact. The canonical company website.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.3.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "lucide-react": "0.510.0",
+    "clsx": "2.1.1",
+    "tailwind-merge": "3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.0.0",
+    "@types/node": "22.0.0",
+    "@types/react": "19.0.0",
+    "typescript": "5.7.2"
+  }
+}
