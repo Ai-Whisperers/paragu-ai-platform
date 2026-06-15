@@ -1,0 +1,75 @@
+{
+  "site": {
+    "name": "Club maškaráda",
+    "tagline": "La noche donde el deseo usa máscara",
+    "description": "Club maškaráda: BDSM/kink party en Asunción, Paraguay. 11 de junio, Eligio Ayala 1073. Entradas disponibles — escribinos al inbox.",
+    "domain": "https://maskarada.paragu-ai.com",
+    "whatsappNumber": "595981200255",
+    "instagramHandle": "maskarada.py",
+    "instagramUrl": "https://www.instagram.com/maskarada.py/",
+    "address": "Eligio Ayala 1073, Asunción",
+    "addressMaps": "https://maps.google.com/?q=Eligio+Ayala+1073+Asunción+Paraguay",
+    "eventDate": "2026-06-11T19:00:00-04:00",
+    "eventDateLabel": "11 de junio, 2026",
+    "eventDateLong": "Jueves 11 de junio, 2026 — 19:00 hs",
+    "eventPassed": true
+  },
+  "hero": {
+    "title": "maškaráda",
+    "subtitle": "club",
+    "tagline": "La noche donde el deseo usa máscara"
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Tres simples pasos para vivir la experiencia maškaráda",
+    "steps": [
+      { "icon": "🎟️", "title": "1. Elegí tu entrada", "description": "Seleccioná tu tipo de entrada en la sección de compra. Cupos limitados — reservá con anticipación." },
+      { "icon": "📱", "title": "2. Recibí confirmación", "description": "Te llegará un mensaje por WhatsApp con tu código QR único de acceso y los detalles del evento." },
+      { "icon": "🚪", "title": "3. Mostrá tu código en puerta", "description": "Presentá tu código QR a la entrada. No olvides tu documento de identidad +18." }
+    ]
+  },
+  "experience": {
+    "title": "La Experiencia",
+    "items": [
+      { "icon": "🎭", "title": "Misterio", "description": "El anonimato libera. Con o sin máscara, explorá tus deseos en un espacio seguro y sin juicios." },
+      { "icon": "⛓️", "title": "Kink & BDSM", "description": "Espacios de juego, shibari, disciplinas, y exploración sensorial con protocolo SSC/RACK." },
+      { "icon": "🎶", "title": "Música y Performances", "description": "DJ sets, body painting en vivo, performances eróticas y un ambiente cuidado hasta el último detalle." }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen",
+    "subtitle": "Voces de la comunidad que ya vivió la experiencia",
+    "items": [
+      { "rating": "★★★★★", "author": "Invitada", "text": "Un espacio único en Asunción. La atención al detalle, la iluminación, la música... todo está cuidado con un nivel que no esperaba. Me sentí libre y segura." },
+      { "rating": "★★★★★", "author": "Invitado", "text": "Finalmente un espacio para la exploración kink con seriedad y respeto. Las rules están claras, el ambiente es seguro, y la gente es increíble." },
+      { "rating": "★★★★★", "author": "Invitada", "text": "El dresscode, la energía, las performances en vivo... es una experiencia que tenés que vivir al menos una vez. Ya quiero que llegue la próxima." },
+      { "rating": "★★★★★", "author": "Invitado", "text": "El concepto de 'máscara' como liberación es poderoso. Conocés gente increíble, explorás sin prejuicios. Une experiencia transformadora." }
+    ]
+  },
+  "eventDetails": {
+    "title": "El Evento",
+    "items": [
+      { "icon": "📅", "title": "Cuándo", "description": "Jueves 11 de junio, 2026 — 19:00 hs" },
+      { "icon": "📍", "title": "Dónde", "description": "Eligio Ayala 1073, Asunción — Ver en Google Maps", "link": "https://maps.google.com/?q=Eligio+Ayala+1073+Asunción+Paraguay" },
+      { "icon": "🎟️", "title": "Entradas", "description": "Pre-venta: 40.000 Gs. Cupos limitados — entrada solo con reserva previa." },
+      { "icon": "🔞", "title": "Edad mínima", "description": "+18. Se requerirá documento de identidad." },
+      { "icon": "👗", "title": "Dresscode sugerido", "description": "Sexy, dark, leather, lace, latex, fetish, fantasía, o simplemente vos. Máscaras bienvenidas." }
+    ]
+  },
+  "nav": [
+    { "href": "/", "label": "Inicio" },
+    { "href": "/sobre", "label": "Sobre" },
+    { "href": "/galeria", "label": "Galería" },
+    { "href": "/reglas", "label": "Reglas" },
+    { "href": "/tienda", "label": "Tienda" },
+    { "href": "/faq", "label": "FAQ" },
+    { "href": "/contacto", "label": "Contacto" },
+    { "href": "/staff", "label": "Staff" },
+    { "href": "/entradas", "label": "Entradas", "cta": true }
+  ],
+  "footer": {
+    "tagline": "La noche donde el deseo usa máscara. Eventos BDSM/kink en Asunción, Paraguay.",
+    "copyright": "© 2026 Club maškaráda. Todos los derechos reservados.",
+    "disclaimer": "+18 • Eventos privados • Asunción, Paraguay"
+  }
+}

@@ -1,0 +1,26 @@
+services:
+  web:
+    image: maskarada:prod
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 256M
+        reservations:
+          cpus: '0.05'
+          memory: 64M
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.maskarada.entrypoints=websecure"
+        - "traefik.http.routers.maskarada.rule=Host(`maskarada.paragu-ai.com`)"
+        - "traefik.http.routers.maskarada.tls=true"
+        - "traefik.http.routers.maskarada.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.maskarada.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

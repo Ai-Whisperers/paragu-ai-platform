@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mask-50: #1a1a1a;
+  --color-mask-100: #2a2a2a;
+  --color-mask-200: #3a3a3a;
+  --color-mask-300: #555;
+  --color-mask-400: #777;
+  --color-mask-500: #999;
+  --color-mask-600: #bbb;
+  --color-mask-700: #ddd;
+  --color-mask-800: #eee;
+  --color-mask-900: #f5f5f5;
+  --color-blood-500: #8b0000;
+  --color-blood-600: #a00000;
+  --color-blood-700: #c00000;
+  --color-gold-400: #c9a84c;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #e0c060;
+  --color-purple-dark: #1a052e;
+  --color-purple-mid: #6a1b9a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #0a0a0a;
+  color: #d1d5db;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Glow effects */
+.glow-red {
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.3);
+}
+.glow-gold {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+.text-glow {
+  text-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+}
+
+/* Scroll-triggered fade-in animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.reveal.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Monospace numbers for countdown */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mask overlay gradient */
+.mask-gradient {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a052e 30%, #2a0010 60%, #0a0a0a 100%);
+}
+
+/* Photo grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+/* Hero text reveal animations */
+.reveal-text {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.reveal-text-delayed {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
