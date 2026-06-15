@@ -3,11 +3,13 @@ import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import en from "@/content/en/site.json"
 import es from "@/content/es/site.json"
+import nl from "@/content/nl/site.json"
+import pt from "@/content/pt/site.json"
 
 const LOCALES = ["en", "es", "nl", "pt"] as const
 type Locale = (typeof LOCALES)[number]
 
-const CONTENT: Record<Locale, any> = { en, es, nl: en, pt: en }
+const CONTENT: Record<Locale, any> = { en, es, nl, pt }
 
 export function generateStaticParams() {
   return LOCALES.map(l => ({ lang: l }))
