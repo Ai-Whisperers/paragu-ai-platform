@@ -34,28 +34,28 @@ export default function Comunidad() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
           <Link
+            href="/eventos"
+            className="block border border-blood-500/20 rounded-xl p-6 bg-white/[0.02] hover:border-blood-500/40 transition-all"
+          >
+            <div className="text-3xl mb-3">📅</div>
+            <h2 className="text-lg font-semibold text-white mb-1">Eventos formales</h2>
+            <p className="text-sm text-gray-400">Calendario de ediciones de gran formato: próximos, pasados, line-up, preventa.</p>
+          </Link>
+          <Link
+            href="/encuentros"
+            className="block border border-gold-400/20 rounded-xl p-6 bg-white/[0.02] hover:border-gold-400/40 transition-all"
+          >
+            <div className="text-3xl mb-3">☕</div>
+            <h2 className="text-lg font-semibold text-white mb-1">Encuentros regulares</h2>
+            <p className="text-sm text-gray-400">Munches, rope jams, workshops. Sin play, principiantes bienvenidos.</p>
+          </Link>
+          <Link
             href="/reglas"
             className="block border border-white/5 rounded-xl p-6 bg-white/[0.02] hover:border-gold-400/30 transition-all"
           >
             <div className="text-3xl mb-3">🤝</div>
             <h2 className="text-lg font-semibold text-white mb-1">Reglas del Club</h2>
             <p className="text-sm text-gray-400">El código de conducta. Lectura obligatoria antes de cualquier evento.</p>
-          </Link>
-          <Link
-            href="/aprender/primera-fiesta"
-            className="block border border-white/5 rounded-xl p-6 bg-white/[0.02] hover:border-gold-400/30 transition-all"
-          >
-            <div className="text-3xl mb-3">🎟️</div>
-            <h2 className="text-lg font-semibold text-white mb-1">Tu primera fiesta</h2>
-            <p className="text-sm text-gray-400">Dresscode, código de vestimenta, qué esperar, qué llevar.</p>
-          </Link>
-          <Link
-            href="/staff"
-            className="block border border-white/5 rounded-xl p-6 bg-white/[0.02] hover:border-gold-400/30 transition-all"
-          >
-            <div className="text-3xl mb-3">🛡️</div>
-            <h2 className="text-lg font-semibold text-white mb-1">Equipo & Staff</h2>
-            <p className="text-sm text-gray-400">Las personas que sostienen el espacio: organización, seguridad, performances.</p>
           </Link>
         </div>
 

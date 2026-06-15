@@ -19,6 +19,9 @@
     { "href": "/actividades", "label": "Actividades" },
     { "href": "/comunidad", "label": "Comunidad" },
     { "href": "/aprender", "label": "Aprender" },
+    { "href": "/historia", "label": "Historia" },
+    { "href": "/eventos", "label": "Eventos" },
+    { "href": "/encuentros", "label": "Encuentros" },
     { "href": "/tienda", "label": "Tienda" },
     { "href": "/tienda/carrito", "label": "🛒 Carrito" },
     { "href": "/contacto", "label": "Contacto" }
