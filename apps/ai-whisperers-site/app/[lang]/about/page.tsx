@@ -8,8 +8,9 @@ export function generateStaticParams() { return LOCALES.map(l => ({ lang: l })) 
 
 export const metadata = { title: "About" }
 
-export default function About({ params }: { params: { lang: string } }) {
-  const c = CONTENT[params.lang] || en
+export default async function About({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const c = CONTENT[lang] || en
   const team = c.team
   const site = c.site
   return (

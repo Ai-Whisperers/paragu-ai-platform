@@ -9,8 +9,9 @@ export function generateStaticParams() { return LOCALES.map(l => ({ lang: l })) 
 
 export const metadata = { title: "Open Source" }
 
-export default function OpenSource({ params }: { params: { lang: string } }) {
-  const c = CONTENT[params.lang] || en
+export default async function OpenSource({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const c = CONTENT[lang] || en
   const oss = c.openSource
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

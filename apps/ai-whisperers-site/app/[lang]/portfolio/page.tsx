@@ -9,8 +9,9 @@ export function generateStaticParams() { return LOCALES.map(l => ({ lang: l })) 
 
 export const metadata = { title: "Portfolio" }
 
-export default function Portfolio({ params }: { params: { lang: string } }) {
-  const c = CONTENT[params.lang] || en
+export default async function Portfolio({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const c = CONTENT[lang] || en
   const cases = c.caseStudies
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

@@ -10,9 +10,10 @@ export function generateStaticParams() {
   return LOCALES.map(l => ({ lang: l }))
 }
 
-export default function Home({ params }: { params: { lang: string } }) {
-  const c = CONTENT[params.lang] || en
-  const base = `/${params.lang}`
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const c = CONTENT[lang] || en
+  const base = `/${lang}`
   const trust = c.trust
   const caps = c.capabilities
   const ws = c.whitespace

@@ -10,10 +10,11 @@ export function generateStaticParams() { return LOCALES.map(l => ({ lang: l })) 
 
 export const metadata = { title: "Services" }
 
-export default function Services({ params }: { params: { lang: string } }) {
-  const c = CONTENT[params.lang] || en
+export default async function Services({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const c = CONTENT[lang] || en
   const p = c.pricing
-  const base = `/${params.lang}`
+  const base = `/${lang}`
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-12">

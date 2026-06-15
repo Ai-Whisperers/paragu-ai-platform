@@ -10,8 +10,9 @@ export function generateStaticParams() { return LOCALES.map(l => ({ lang: l })) 
 
 export const metadata = { title: "Contact" }
 
-export default function Contact({ params }: { params: { lang: string } }) {
-  const c = CONTENT[params.lang] || en
+export default async function Contact({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const c = CONTENT[lang] || en
   const contact = c.contact
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

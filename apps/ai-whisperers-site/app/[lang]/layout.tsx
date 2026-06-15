@@ -13,14 +13,15 @@ export function generateStaticParams() {
   return LOCALES.map(l => ({ lang: l }))
 }
 
-export default function LangLayout({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
-  if (!LOCALES.includes(params.lang as Locale)) notFound()
-  const content = CONTENT[params.lang as Locale]
+export default async function LangLayout({ children, params }: { children: React.ReactNode; params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  if (!LOCALES.includes(lang as Locale)) notFound()
+  const content = CONTENT[lang as Locale]
   return (
     <>
-      <Navbar lang={params.lang} content={content} />
+      <Navbar lang={lang} content={content} />
       <main className="min-h-screen">{children}</main>
-      <Footer lang={params.lang} content={content} />
+      <Footer lang={lang} content={content} />
     </>
   )
 }
