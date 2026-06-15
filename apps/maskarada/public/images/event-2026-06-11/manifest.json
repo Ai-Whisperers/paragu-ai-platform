@@ -1,0 +1,74 @@
+[
+  {
+    "source": "IMG_0006.JPG",
+    "dest": "hero.jpg",
+    "width": 5259,
+    "height": 3944,
+    "category": "hero",
+    "size_bytes": 796541
+  },
+  {
+    "source": "IMG_0080.JPG",
+    "dest": "atmosphere-01.jpg",
+    "width": 4276,
+    "height": 3207,
+    "category": "atmosphere",
+    "size_bytes": 624647
+  },
+  {
+    "source": "IMG_0071.JPG",
+    "dest": "atmosphere-02.jpg",
+    "width": 5048,
+    "height": 3786,
+    "category": "atmosphere",
+    "size_bytes": 1870064
+  },
+  {
+    "source": "IMG_0088.JPG",
+    "dest": "atmosphere-03.jpg",
+    "width": 6000,
+    "height": 4000,
+    "category": "atmosphere",
+    "size_bytes": 916339
+  },
+  {
+    "source": "IMG_0073.JPG",
+    "dest": "atmosphere-04.jpg",
+    "width": 4568,
+    "height": 3426,
+    "category": "atmosphere",
+    "size_bytes": 1311585
+  },
+  {
+    "source": "IMG_0085.JPG",
+    "dest": "atmosphere-05.jpg",
+    "width": 5753,
+    "height": 3835,
+    "category": "atmosphere",
+    "size_bytes": 824141
+  },
+  {
+    "source": "IMG_0084.JPG",
+    "dest": "crowd-02.jpg",
+    "width": 4752,
+    "height": 3564,
+    "category": "crowd",
+    "size_bytes": 766167
+  },
+  {
+    "source": "IMG_0027.JPG",
+    "dest": "performance-01.jpg",
+    "width": 3426,
+    "height": 4568,
+    "category": "performance",
+    "size_bytes": 1691057
+  },
+  {
+    "source": "IMG_0058.JPG",
+    "dest": "performance-02.jpg",
+    "width": 3629,
+    "height": 5443,
+    "category": "performance",
+    "size_bytes": 2482007
+  }
+]
