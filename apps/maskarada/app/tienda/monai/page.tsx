@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { addToCart } from "@/lib/cart";
 
 interface Product {
   id: string;
@@ -36,7 +37,7 @@ const WHATSAPP = "595981200255";
 export default function Monai() {
   const [selected, setSelected] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState(1);
-  const [step, setStep] = useState<"select" | "transfer">("select");
+  const [step, setStep] = useState<"select" | "transfer" | "added">("select");
 
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
@@ -239,20 +240,58 @@ export default function Monai() {
                   <div className="text-sm text-gray-400 mb-6">
                     Total: <span className="text-gold-400 font-semibold">Gs {fmt(total)}</span>
                   </div>
+                  <button
+                    onClick={() => {
+                      addToCart({
+                        id: selected.id,
+                        vendor: "Moñai Ropes",
+                        name: selected.name,
+                        variant: `${selected.tag} · ${selected.color}`,
+                        unitPrice: selected.price,
+                        quantity,
+                        source: "monai",
+                      });
+                      setStep("added");
+                    }}
+                    className="block w-full bg-blood-500 hover:bg-blood-600 text-white text-center py-3 rounded-full text-sm uppercase tracking-widest font-semibold transition-all mb-3"
+                  >
+                    Agregar al carrito
+                  </button>
                   <a
                     href={whatsappOrder()}
                     target="_blank"
                     rel="noopener"
-                    className="block w-full bg-blood-500 hover:bg-blood-600 text-white text-center py-3 rounded-full text-sm uppercase tracking-widest font-semibold transition-all mb-3"
+                    className="block w-full border border-white/10 hover:border-white/30 text-gray-400 hover:text-white text-center py-3 rounded-full text-sm uppercase tracking-widest transition-all"
                   >
-                    Comprar por WhatsApp
+                    Comprar directo por WhatsApp
                   </a>
                   <button
                     onClick={() => setStep("transfer")}
-                    className="block w-full border border-white/10 hover:border-white/30 text-gray-400 hover:text-white py-3 rounded-full text-sm transition-all"
+                    className="block w-full text-gray-500 hover:text-white text-xs mt-3 transition-all"
                   >
                     Ya hice la transferencia →
                   </button>
+                </>
+              ) : step === "added" ? (
+                <>
+                  <p className="text-sm text-gray-300 mb-2">✅ Agregado al carrito</p>
+                  <p className="text-xs text-gray-500 mb-6">
+                    {quantity}x {selected.name} — Gs {fmt(total)}
+                  </p>
+                  <div className="flex flex-col gap-2">
+                    <a
+                      href="/tienda/carrito"
+                      className="block w-full bg-gold-400/90 hover:bg-gold-400 text-black text-center py-3 rounded-full text-sm uppercase tracking-widest font-semibold transition-all"
+                    >
+                      Ver carrito
+                    </a>
+                    <button
+                      onClick={() => { setStep("select"); setSelected(null); }}
+                      className="block w-full text-gray-400 hover:text-white text-xs mt-2"
+                    >
+                      Seguir comprando
+                    </button>
+                  </div>
                 </>
               ) : (
                 <>

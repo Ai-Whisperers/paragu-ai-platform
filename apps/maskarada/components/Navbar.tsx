@@ -4,10 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { content } from "@/lib/content";
+import { useCartCount } from "@/lib/cart";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const cartCount = useCartCount();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/5">
@@ -24,27 +26,24 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className="hidden md:flex items-center gap-6 text-sm uppercase tracking-widest">
+        <div className="hidden md:flex items-center gap-5 text-sm uppercase tracking-widest">
           {content.nav.map((item) => {
-            const active = pathname === item.href;
-            if (item.cta) {
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="bg-blood-500 hover:bg-blood-600 text-white px-5 py-2 rounded-full text-xs font-semibold transition-all hover:glow-red"
-                >
-                  {item.label}
-                </Link>
-              );
-            }
+            const active = pathname === item.href || pathname.startsWith(item.href + "/");
+            const isCart = item.href === "/tienda/carrito";
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`hover:text-gold-400 transition-colors ${active ? "text-gold-400" : "text-gray-400"}`}
+                className={`relative hover:text-gold-400 transition-colors ${
+                  active ? "text-gold-400" : "text-gray-400"
+                }`}
               >
                 {item.label}
+                {isCart && cartCount > 0 && (
+                  <span className="absolute -top-2 -right-3 bg-blood-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                    {cartCount}
+                  </span>
+                )}
               </Link>
             );
           })}
@@ -68,18 +67,23 @@ export default function Navbar() {
       >
         <div className="flex flex-col py-4 px-4 gap-3 text-sm uppercase tracking-widest">
           {content.nav.map((item) => {
-            const active = pathname === item.href;
-            const className = item.cta
-              ? "bg-blood-500 text-white px-5 py-3 rounded-full text-center text-xs font-semibold mt-2"
-              : `py-2 hover:text-gold-400 ${active ? "text-gold-400" : "text-gray-400"}`;
+            const active = pathname === item.href || pathname.startsWith(item.href + "/");
+            const isCart = item.href === "/tienda/carrito";
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className={className}
+                className={`flex items-center gap-2 ${
+                  active ? "text-gold-400" : "text-gray-400"
+                }`}
               >
                 {item.label}
+                {isCart && cartCount > 0 && (
+                  <span className="bg-blood-500 text-white text-[10px] font-bold rounded-full px-1.5">
+                    {cartCount}
+                  </span>
+                )}
               </Link>
             );
           })}

@@ -16,27 +16,20 @@ export const content = contentJson as {
     eventDateLong: string;
     eventPassed: boolean;
   };
-  hero: { title: string; subtitle: string; tagline: string };
-  howItWorks: {
-    title: string;
-    subtitle: string;
-    steps: Array<{ icon: string; title: string; description: string }>;
-  };
-  experience: {
-    title: string;
-    items: Array<{ icon: string; title: string; description: string }>;
-  };
-  testimonials: {
-    title: string;
-    subtitle: string;
-    items: Array<{ rating: string; author: string; text: string }>;
-  };
-  eventDetails: {
-    title: string;
-    items: Array<{ icon: string; title: string; description: string; link?: string }>;
-  };
   nav: Array<{ href: string; label: string; cta?: boolean }>;
-  footer: { tagline: string; copyright: string; disclaimer: string };
+  footer: {
+    tagline: string;
+    copyright: string;
+    disclaimer: string;
+    contentDisclaimer: string;
+  };
+  ageGate: {
+    enabled: boolean;
+    title: string;
+    body: string;
+    rememberDays: number;
+  };
+  hero: { title: string; subtitle: string; tagline: string };
 };
 
 export function whatsappLink(message = "Hola! Quiero info sobre maškaráda"): string {
