@@ -11,3 +11,4 @@
 | `SITES_VS_MONOREPO_AUDIT.md` | Per-site vs monorepo architecture audit |
 | `NEXA_AUDIT_CORRECTION.md` | Correction to the 2026-06-15 audit (5 apps thought broken have content elsewhere) |
 | `PRE_EXISTING_BUILD_FAILURES.md` | Pre-existing build failures in platform apps (discovered 2026-06-15 baseline check) |
+| `PLATFORM_APP_AUDIT.md` | 2026-06-15 audit: which of 39 apps are live-deployed vs scaffold-only vs dead |
