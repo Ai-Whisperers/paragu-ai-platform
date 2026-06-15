@@ -60,7 +60,7 @@ That's 38 of 39 in the apps loop. Wait — the loop lists 36 unique apps (some d
 
 | Service | Image | Status |
 |---|---|---|
-| `maskarada_web` | maskarada:prod | Running but no source. Either: (a) source was archived in another repo, or (b) a previous app dir was deleted. Action: investigate and either link or archive. |
+| `maskarada_web` | maskarada:prod | ✅ Live and correct. **Source is NOT in this monorepo** — it's a standalone SvelteKit site at `Ai-Whisperers/maskarada` (intentionally external per `SITES_VS_MONOREPO_AUDIT.md` line 33: "External — leave alone"). See `/root/maskarada` for source. |
 | `nexa-paraguay_web` | nexa-paraguay:prod-20260615-1107 | ✅ Live and correct. Source is the standalone personal repo (not in this monorepo). |
 | `nexa-preview_web` | nexa-paraguay:prod-test-1102 | Stale — running a test build (prod-test-1102) that was supposed to be temporary. Action: update to current prod image or remove. |
 
@@ -72,7 +72,7 @@ That's 38 of 39 in the apps loop. Wait — the loop lists 36 unique apps (some d
 
 ## Action items remaining (out of scope today)
 
-- [ ] `maskarada_web` orphan — investigate or archive
+- [x] `maskarada_web` — **NOT an orphan, my audit was wrong**. Maskarada is intentionally external (per `docs/SITES_VS_MONOREPO_AUDIT.md` line 33). Source is at `Ai-Whisperers/maskarada` and `/root/maskarada`. Audit doc updated 2026-06-15.
 - [ ] `nexa-preview_web` running stale `prod-test-1102` image — update or remove
 - [ ] `trentina-site` app dir — archive (replaced by `trentina-cerveza`)
 - [ ] `builder` and `site-template` — exclude from CI apps loop (not deployable)
