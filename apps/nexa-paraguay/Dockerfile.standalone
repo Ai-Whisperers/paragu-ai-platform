@@ -1,9 +1,0 @@
-FROM node:20-slim AS runner
-WORKDIR /app
-ENV NODE_ENV=production
-COPY .next/standalone ./
-COPY .next/static ./apps/nexa-paraguay/.next/static
-COPY public ./apps/nexa-paraguay/public
-EXPOSE 3000
-ENV HOSTNAME="0.0.0.0"
-CMD ["node", "apps/nexa-paraguay/server.js"]

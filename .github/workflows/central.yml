@@ -67,8 +67,6 @@ jobs:
               - 'apps/meal-prep/**'
             apps/nde-barba:
               - 'apps/nde-barba/**'
-            apps/nexa-paraguay:
-              - 'apps/nexa-paraguay/**'
             apps/ozmontania-website:
               - 'apps/ozmontania-website/**'
             apps/pitchy-website:
@@ -94,7 +92,7 @@ jobs:
       - name: Emit changed apps
         run: |
           APPS=""
-          for app in 3md-website arnos-barber-shop bichos-gym bufete-mendez camilo-acosta cronos-academy cuidadoamiga de-abasto-a-casa escribania-paraguay estudio-medieval fun4me fun4me fun4me-store golden-visa-advisory granja-cabral hidrobaby-spa jota-ink-tattoo luis-de-leon-concept magnolia-peluqueria mantraspa meal-prep nde-barba nexa-paraguay ozmontania-website pitchy-website portas-barber reina-de-copas scott-tatuajes tsuki-restaurante villamayor-asociados xxgym; do
+          for app in 3md-website arnos-barber-shop bichos-gym bufete-mendez camilo-acosta cronos-academy cuidadoamiga de-abasto-a-casa escribania-paraguay estudio-medieval fun4me fun4me fun4me-store golden-visa-advisory granja-cabral hidrobaby-spa jota-ink-tattoo luis-de-leon-concept magnolia-peluqueria mantraspa meal-prep nde-barba ozmontania-website pitchy-website portas-barber reina-de-copas scott-tatuajes tsuki-restaurante villamayor-asociados xxgym; do
             VAL="${{ steps.diff.outputs[app] }}"
             if [ "$VAL" = "true" ]; then
               if [ -z "$APPS" ]; then APPS="$app"; else APPS="$APPS,$app"; fi
@@ -218,7 +216,6 @@ jobs:
             trentina-cerveza)      SVC="trentina-cerveza_web" ;;
             ozmontania-website)    SVC="ozmontania-website_web" ;;
             meal-prep)             SVC="meal-prep_web" ;;
-            nexa-paraguay)         SVC="nexa-paraguay_web" ;;
             hidrobaby-spa)          SVC="hidrobaby-spa_web" ;;
             arnos-barber-shop)    SVC="arnos-barber-shop_web" ;;
             cronos-academy)        SVC="cronos-academy_web" ;;

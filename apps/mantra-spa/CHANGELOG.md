@@ -10,5 +10,7 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-13: perf: image sweep - convert 274 oversized PNG/JPG to WebP across 10 apps (by erebus)
+
 - _Awaiting next deploy_
 
