@@ -1,0 +1,44 @@
+{
+  "title": "Atención dental en Asunción — pacientes internacionales",
+  "subtitle": "Evaluación honesta, planes escritos, precios publicados y comunicación en inglés.",
+  "cta_primary": "Iniciar segunda opinión",
+  "cta_secondary": "Ver precios",
+  "sections": [
+    {
+      "heading": "Por qué pacientes internacionales eligen este consultorio",
+      "body": "En Paraguay suele haber diferencias de idioma, precios poco claros y tratamientos apresurados. Acá la consulta, la planificación y el informe escrito son en inglés si lo preferís. Los precios son públicos, se explica cada paso y la derivación a especialistas es honesta."
+    },
+    {
+      "heading": "Qué esperar",
+      "items": [
+        "Visita completa en inglés — sin traducciones incompletas.",
+        "Plan de tratamiento escrito con opciones, plazos y precios.",
+        "Segundas opiniones para tratamientos iniciados en otra parte.",
+        "Pago por transferencia o Pagopar; factura legal para reembolso."
+      ]
+    },
+    {
+      "heading": "Casos frecuentes",
+      "items": [
+        "Prevención y operatoria dental.",
+        "Endodoncia y tratamiento conservador.",
+        "Estética: carillas, porcelana, blanqueamiento.",
+        "Segundas opiniones antes de implantes o cirugías mayores."
+      ]
+    },
+    {
+      "heading": "Datos prácticos",
+      "items": [
+        "Primera consulta: 45–60 minutos.",
+        "Llevá radiografías y registros previos si los tenés.",
+        "Coordinación preferida por WhatsApp.",
+        "Orientación ante urgencias locales."
+      ]
+    }
+  ],
+  "precio_nota": "Precios de referencia publicados. Presupuesto final confirmado antes de iniciar.",
+  "process_link": "/es/filosofia",
+  "faq_link": "/es/faq",
+  "precios_link": "/es/precios",
+  "testimonials_link": "/es#testimonials"
+}

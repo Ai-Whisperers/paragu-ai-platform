@@ -1,0 +1,51 @@
+{
+  "title": "About Dra. Gabriella González Pane",
+  "subtitle": "Twenty years of conservative dentistry, written plans, and honest second opinions — in Spanish and English.",
+  "sections": [
+    {
+      "heading": "Background",
+      "body": "Dra. Gabriella González Pane graduated around 2005 from the Universidad Autónoma del Paraguay. Since then she has built her practice on one rule: evaluate before acting. Over two decades she has treated thousands of patients, with a focus on restorative dentistry, endodontics, aesthetic care, and second-opinion reviews. English-language care for international patients has been part of her work for years."
+    },
+    {
+      "heading": "Clinical philosophy",
+      "items": [
+        "Conservative-first: preserve healthy tooth structure whenever possible.",
+        "No overtreatment: she will tell you when work isn’t needed.",
+        "Transparent pricing: published prices and written quotes.",
+        "Honest referrals: if specialization is required, she coordinates it.",
+        "Quality materials: German composite and premium laboratory work.",
+        "Written planning: every case reviewed before any irreversible step."
+      ]
+    },
+    {
+      "heading": "Experience",
+      "bullets": [
+        "~20 years in general and conservative dentistry.",
+        "~130 patients per month at current practice.",
+        "Complex cases: restorations, endodontics, aesthetic dentistry.",
+        "English proficiency: regular international patient base.",
+        "42 restorations completed in May 2026 alone."
+      ]
+    },
+    {
+      "heading": "Credentials",
+      "bullets": [
+        "DDS — Universidad Autónoma del Paraguay (~2005).",
+        "MSPBS registration: pending (pending independent licensure).",
+        "RUC: pending.",
+        "Current practice: Odontología 3, Asunción."
+      ]
+    },
+    {
+      "heading": "Outside the chair",
+      "body": "She lives in Luque and is building a practice focused on patients who want clarity over pressure. Her goal is to create a calm, transparent space where expats and local families can get honest assessment, written plans, and reliable treatment — without the rush and overtreatment common in volume-driven clinics."
+    }
+  ],
+  "cta": {
+    "primary": "Book consult",
+    "secondary": "Request second opinion",
+    "whatsapp": true
+  },
+  "trust_badges": ["German materials", "Biosecurity", "Legal invoices", "Written plans"],
+  "schedule_link": "/en/contact"
+}

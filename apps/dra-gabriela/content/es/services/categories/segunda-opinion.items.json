@@ -1,0 +1,4 @@
+[
+  { "name": "Segunda opinión", "priceGs": 450000, "duration": "45-60 min", "highlights": ["Informe por escrito", "Revisión sin conflicto de interés"], "cta": "Pedir segunda opinión" },
+  { "name": "Segunda opinión + plan de tratamiento", "priceGs": 600000, "duration": "60-90 min", "highlights": ["Plan escrito con opciones", "Comparativa de costos"], "cta": "Solicitar plan completo" }
+]

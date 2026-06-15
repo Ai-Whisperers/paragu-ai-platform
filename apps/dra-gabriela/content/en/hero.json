@@ -1,0 +1,39 @@
+{
+  "title": "Dentistry with judgment. Not with rush.",
+  "subtitle": "Second opinions, treatment planning, and transparent pricing — before any procedure.",
+  "cta_primary": "Plan sin compromiso",
+  "cta_secondary": "Segunda opinión escrita",
+  "contact_phone": "PENDING",
+  "office_hours_short": "Mon–Fri 9–18 | Sat 8–12",
+  "top_bar": {
+    "phone": "PENDING",
+    "hours": "Lu–Vi 9:00–18:00 · Sá 8:00–12:00"
+  },
+  "slides": [
+    {
+      "id": "1",
+      "title": "Dentistry with judgment. Not with rush.",
+      "subtitle": "An honest evaluation, a written plan, and a clear explanation before any procedure.",
+      "image": "/images/hero/dra-gp-hero-1.jpg",
+      "cta": "Plan sin compromiso",
+      "badge": "Spanish · English",
+      "trust_line": "20+ years · conservative-first"
+    },
+    {
+      "id": "2",
+      "title": "We plan before we act",
+      "subtitle": "We don't sell procedures. We diagnose first and show you every option, with price and timeline.",
+      "image": "/images/hero/dra-gp-hero-2.jpg",
+      "cta": "View services",
+      "badge": "Written treatment plan"
+    },
+    {
+      "id": "3",
+      "title": "Honest second opinions",
+      "subtitle": "Another dentist says you need a procedure? We review your case with no conflict of interest.",
+      "image": "/images/hero/dra-gp-hero-3.jpg",
+      "cta": "Request second opinion",
+      "badge": "No-obligation written plan"
+    }
+  ]
+}

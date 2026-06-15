@@ -1,0 +1,44 @@
+{
+  "title": "Dental care in Asunción — for English-speaking patients",
+  "subtitle": "Honest assessment, written plans, fixed pricing, and bilingual communication.",
+  "cta_primary": "Start second opinion",
+  "cta_secondary": "View pricing",
+  "sections": [
+    {
+      "heading": "Why English-speaking patients choose this practice",
+      "body": "International patients usually find Paraguay affordable, but not always transparent. Here, the consultation, planning, and written reports are in English. Pricing is published, procedures are explained in advance, and referrals are honest."
+    },
+    {
+      "heading": "What to expect",
+      "items": [
+        "Full visit in English — no translation gaps.",
+        "Written treatment plan with options, timing, and reference pricing.",
+        "Second opinions for cases started elsewhere.",
+        "Payment via transfer or Pagopar; legal invoice for reimbursement claims."
+      ]
+    },
+    {
+      "heading": "Common cases",
+      "items": [
+        "Preventive care and restorations.",
+        "Endodontics and conservative treatment.",
+        "Aesthetic work: composite veneers, porcelain, whitening.",
+        "Second opinions before implants or major surgery."
+      ]
+    },
+    {
+      "heading": "Practical notes",
+      "items": [
+        "First visit: 45–60 minutes.",
+        "Bring prior X-rays and records if available.",
+        "WhatsApp-based coordination preferred.",
+        "Local emergency guidance provided if needed."
+      ]
+    }
+  ],
+  "pricing_note": "Reference prices published. Final quote confirmed before treatment starts.",
+  "process_link": "/en/philosophy",
+  "faq_link": "/en/faq",
+  "pricing_link": "/en/pricing",
+  "testimonials_link": "/en#testimonials"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "title": "Tu boca se lo merece",
+    "subtitle": "La mejor forma de saber qué necesitás es una consulta de evaluación. Sin compromiso.",
+    "buttonText": "Escribime por WhatsApp",
+    "buttonLink": "https://wa.me/595981000000?text=Hola%20Dra.%20GP%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta.",
+    "background": "primary"
+  },
+  {
+    "id": "2",
+    "title": "¿Estás en Asunción y buscás un dentista de confianza?",
+    "subtitle": "Aceptamos nuevos pacientes. Agenda por WhatsApp.",
+    "buttonText": "Contactar ahora",
+    "buttonLink": "/es/contacto",
+    "background": "secondary"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "_comment": "JSON-LD aggregate review payload. Build should inject this when site.json.schema.reviewSchema is true.",
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Dra. Gabriella González Pane",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "20",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Second opinion — written, honest, no-obligation",
+  "subtitle": "You already have a diagnosis from another dentist. Before any irreversible step, get a written review with your actual options.",
+  "cta_primary": "Request second opinion",
+  "cta_secondary": "View services",
+  "sections": [
+    {
+      "heading": "Why get a second opinion",
+      "body": "A second opinion can confirm a diagnosis, change the treatment, or catch options the first provider missed. For crowns, implants, root canals, extractions, or full-mouth plans, a fresh professional review is one of the lowest-risk, highest-value decisions you can make."
+    },
+    {
+      "heading": "What you receive",
+      "items": [
+        "Clinical review of your existing studies and records.",
+        "Honest written report: what is actually needed, what can be avoided.",
+        "Alternative options with timelines and reference pricing.",
+        "No obligation to continue treatment here."
+      ]
+    },
+    {
+      "heading": "What to bring",
+      "items": [
+        "X-rays or CBCT files.",
+        "Previous estimates or treatment plans.",
+        "Any clinical records and notes from the first provider."
+      ]
+    },
+    {
+      "heading": "Timing and format",
+      "items": [
+        "Review turnaround: 2–3 business days.",
+        "Delivered as a written document you can keep or share.",
+        "Includes findings, options, recommendations, and referenced pricing."
+      ]
+    },
+    {
+      "heading": "When a second opinion matters most",
+        "items": [
+        "A major procedure was recommended after only a brief exam.",
+        "You feel the plan skipped alternatives or timelines.",
+        "You want a Spanish/English review before committing.",
+        "You had a bad experience and want an independent check.",
+        "The proposed treatment feels rushed or pressure-heavy."
+      ]
+    }
+  ],
+  "pricing_ref": "Gs 450,000 — Gs 600,000 with full treatment plan",
+  "scheme": {
+    "type": "Service",
+    "name": "Second opinion / written review"
+  },
+  "faq_link": "/en/faq",
+  "process_link": "/en/philosophy",
+  "testimonials_link": "/en#testimonials"
+}

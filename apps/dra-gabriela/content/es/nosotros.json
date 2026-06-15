@@ -1,0 +1,51 @@
+{
+  "title": "Sobre la Dra. Gabriella González Pane",
+  "subtitle": "Veinte años de odontología conservadora, planes escritos y segundas opiniones honestas — en español e inglés.",
+  "sections": [
+    {
+      "heading": "Trayectoria",
+      "body": "La Dra. Gabriella González Pane se graduó alrededor de 2005 en la Universidad Autónoma del Paraguay. Desde entonces su práctica se basa en una regla: evaluar antes de actuar. En más de dos décadas ha atendido miles de pacientes, con foco en operatoria dental, endodoncia, estética y revisiones de segunda opinión. La atención en inglés para pacientes extranjeros es parte de su trabajo habitual."
+    },
+    {
+      "heading": "Filosofía clínica",
+      "items": [
+        "Enfoque conservador: preservar la estructura sana del diente siempre que sea posible.",
+        "Sin sobretratamiento: te dice cuándo no hace falta trabajo.",
+        "Precios transparentes: lista pública y presupuesto escrito.",
+        "Derivación honesta: si hace falta un especialista, lo coordina.",
+        "Materiales premium: resina alemana y laboratorio de primera.",
+        "Planificación escrita: revisión detallada antes de cualquier paso irreversible."
+      ]
+    },
+    {
+      "heading": "Experiencia",
+      "bullets": [
+        "~20 años en odontología general y conservadora.",
+        "~130 pacientes por mes en su práctica actual.",
+        "Casos complejos: restauraciones, endodoncia, estética.",
+        "Inglés fluido: base de pacientes internacionales.",
+        "42 restauraciones en mayo de 2026."
+      ]
+    },
+    {
+      "heading": "Credenciales",
+      "bullets": [
+        "DDS — Universidad Autónoma del Paraguay (~2005).",
+        "Inscripción MSPBS: pendiente (habilitación independiente).",
+        "RUC: pendiente.",
+        "Práctica actual: Odontología 3, Asunción."
+      ]
+    },
+    {
+      "heading": "Fuera del consultorio",
+      "body": "Vive en Luque y está construyendo un espacio orientado a pacientes que priorizan claridad sobre presión. Su objetivo es un consultorio tranquilo, transparente, donde familias locales y expats puedan obtener evaluación honesta, planes escritos y tratamiento confiable sin apuros ni sobretratamiento."
+    }
+  ],
+  "cta": {
+    "primary": "Pedir plan sin compromiso",
+    "secondary": "Solicitar segunda opinión",
+    "whatsapp": true
+  },
+  "trust_badges": ["Materiales alemanes", "Bioseguridad", "Factura legal", "Planes escritos"],
+  "schedule_link": "/es/contacto"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "You were told you need treatment and you're not sure",
+    "desc": "I've spent 20 years doing complex restorative cases patients called 'lost causes.' If your diagnosis doesn't add up, bring it in. I'll review with no conflict of interest.",
+    "icon": "search"
+  },
+  {
+    "title": "You want a written plan before anything irreversible happens",
+    "desc": "No acting before you understand. I deliver a written treatment plan with options, timing, and pricing. You decide when you have the full picture.",
+    "icon": "fileText"
+  },
+  {
+    "title": "You value materials and technique over speed or volume",
+    "desc": "I use high-grade German composite and laboratory materials because durability matters more than finishing the day's quota.",
+    "icon": "shield"
+  },
+  {
+    "title": "You want a dentist who genuinely listens",
+    "desc": "My first visits are for diagnosis and explanation, not for starting treatment. Time spent planning pays back tenfold.",
+    "icon": "messageCircle"
+  },
+  {
+    "title": "You need a specialist referral without pressure to do everything in-house",
+    "desc": "There is no such thing as a 'jack of all trades.' If your case needs a specialist, I refer you and coordinate the process.",
+    "icon": "users"
+  },
+  {
+    "title": "You want clear pricing before starting",
+    "desc": "I publish real pricing for standard procedures. For larger cases, I give you a written plan quote so you know what to expect.",
+    "icon": "barChart"
+  }
+]

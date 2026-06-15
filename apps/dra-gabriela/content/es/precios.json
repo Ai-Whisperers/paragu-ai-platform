@@ -1,0 +1,215 @@
+{
+  "title": "Precios",
+  "slug": "precios",
+  "metaDescription": "Precios de consulta dental en Paraguay. Valores de referencia para limpiezas, endodoncias, implantes, coronas y estética en Asunción.",
+  "og": {
+    "title": "Precios dentales — Dra. Gabriella González Pane",
+    "description": "Lista de precios publicada: sin letra chica ni sorpresas."
+  },
+  "pricing": {
+    "currency": "Gs",
+    "usd_approx": "Gs 7,800 = USD 1",
+    "disclaimer": "Precios referenciales. Costo final confirmado en consulta antes de cualquier procedimiento. No incluye laboratorio excepto donde se indica.",
+    "cta_whatsapp": true,
+    "cta_whatsapp_text": "Pedir presupuesto por WhatsApp",
+    "consultation": [
+      {
+        "name": "Consulta estándar",
+        "price": 300000,
+        "duration": "30 min",
+        "note": "Evaluación básica"
+      },
+      {
+        "name": "Consulta extendida",
+        "price": 400000,
+        "duration": "45–60 min",
+        "note": "Caso complejo"
+      }
+    ],
+    "second_opinion": {
+      "name": "Segunda opinión escrita",
+      "price": 450000,
+      "duration": "2–3 días",
+      "includes": ["Revisión de historial", "Examen clínico", "Informe escrito"],
+      "note": "Servicio standalone. No incluido en planes corporativos."
+    },
+    "treatment_planning": {
+      "name": "Planificación de tratamiento",
+      "price": 600000,
+      "duration": "1–3 días",
+      "includes": ["Diagnóstico por imágenes", "Propuesta de opciones", "Presupuesto escrito"],
+      "note": "Plan sin compromiso."
+    },
+    "complex_planning": {
+      "name": "Planificación compleja",
+      "price": 800000,
+      "duration": "60–90 min",
+      "note": "Boca completa / interdisciplinario"
+    },
+    "preventive": [
+      {
+        "name": "Profilaxis (limpieza)",
+        "price": 280000,
+        "duration": "40 min"
+      },
+      {
+        "name": "Limpieza profunda (curetaje)",
+        "price": 400000,
+        "duration": "Por cuadrante"
+      },
+      {
+        "name": "Pulido",
+        "price": 150000,
+        "note": "Add-on"
+      }
+    ],
+    "operatoria": [
+      {
+        "name": "Restauración simple (1 superficie)",
+        "price": 350000
+      },
+      {
+        "name": "Restauración mediana (2 superficies)",
+        "price": 450000
+      },
+      {
+        "name": "Restauración compleja (3+ superficies)",
+        "price": 550000
+      },
+      {
+        "name": "Restauración compleja (anatomía extensa)",
+        "price": 700000,
+        "note": "MOD, caries extensa"
+      }
+    ],
+    "endodoncia": [
+      {
+        "name": "Anterior",
+        "price": 500000
+      },
+      {
+        "name": "Premolar",
+        "price": 700000
+      },
+      {
+        "name": "Molar",
+        "price": 1200000
+      },
+      {
+        "name": "Molar (complejo / retratamiento)",
+        "price": 1500000
+      }
+    ],
+    "exodoncia": [
+      {
+        "name": "Extracción simple",
+        "price": 180000
+      },
+      {
+        "name": "Extracción quirúrgica",
+        "price": 350000
+      },
+      {
+        "name": "Muela del juicio (simple)",
+        "price": 400000
+      },
+      {
+        "name": "Muela del juicio (quirúrgica)",
+        "price": 600000
+      }
+    ],
+    "protesis": [
+      {
+        "name": "Corona zirconia",
+        "price": 3500000,
+        "note": "Por pieza, con laboratorio"
+      },
+      {
+        "name": "Corona E-max",
+        "price": 4500000,
+        "note": "Por pieza, con laboratorio"
+      },
+      {
+        "name": "Prótesis fija completa (arcada)",
+        "price": 2500000
+      },
+      {
+        "name": "Prótesis parcial flexible",
+        "price": 1800000
+      },
+      {
+        "name": "Póntico",
+        "price": 1200000,
+        "note": "Por unidad"
+      }
+    ],
+    "implantes": [
+      {
+        "name": "Implante titanio estándar",
+        "price": 1200000,
+        "note": "No incluye corona"
+      },
+      {
+        "name": "Implante titanio Swiss",
+        "price": 1800000,
+        "note": "No incluye corona"
+      },
+      {
+        "name": "Corona sobre pilar personalizado",
+        "price": 4000000
+      },
+      {
+        "name": "Injerto óseo (pequeño)",
+        "price": 600000
+      },
+      {
+        "name": "Injerto óseo (grande)",
+        "price": 1200000
+      }
+    ],
+    "estetica": [
+      {
+        "name": "Blanqueamiento domiciliario (arcada)",
+        "price": 1200000
+      },
+      {
+        "name": "Blanqueamiento consultorio (arcada)",
+        "price": 1800000
+      },
+      {
+        "name": "Carilla directa composite (por diente)",
+        "price": 600000
+      },
+      {
+        "name": "Carilla porcelana (por pieza)",
+        "price": 3500000,
+        "note": "Con laboratorio"
+      }
+    ],
+    "odontopediatria": [
+      {
+        "name": "Consulta niño",
+        "price": 200000,
+        "note": "Hasta 12 años"
+      },
+      {
+        "name": "Flúor",
+        "price": 100000
+      },
+      {
+        "name": "Restauración simple niño",
+        "price": 200000
+      },
+      {
+        "name": "Corona acero inoxidable",
+        "price": 400000
+      }
+    ],
+    "corporate_note": "Planes empresariales disponibles. Segunda opinión y planificación compleja son servicios standalone, no incluidos en cuotas corporativas.",
+    "payment": {
+      "methods": ["Efectivo", "Transferencia", "Pagopar", "Bancard POS"],
+      "financing": "Para casos > Gs 1M: hasta 12 cuotas con Pagopar/Bancard",
+      "discount": "Pago en efectivo: 2–5% descuento"
+    }
+  }
+}

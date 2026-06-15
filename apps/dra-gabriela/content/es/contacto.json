@@ -1,0 +1,49 @@
+{
+  "title": "Contacto y turnos",
+  "subtitle": "Coordinación por WhatsApp. Horarios claros, acceso práctico y disponibilidad real.",
+  "sections": [
+    {
+      "heading": "Mejor forma de contactarnos",
+      "body": "WhatsApp es el canal más rápido para consultas, disponibilidad y coordinación. Para facturas formales o derivaciones, también respondemos por email."
+    },
+    {
+      "heading": "Medios de contacto",
+      "methods": [
+        { "type": "WhatsApp", "label": "WhatsApp", "value": "PENDIENTE", "primary": true },
+        { "type": "Email", "label": "Email", "value": "hola@dra-gp.com.py", "primary": false },
+        { "type": "Phone", "label": "Teléfono", "value": "PENDIENTE", "primary": false }
+      ]
+    },
+    {
+      "heading": "Horarios",
+      "hours": {
+        "mon": "09:00-18:00",
+        "tue": "09:00-18:00",
+        "wed": "09:00-18:00",
+        "thu": "09:00-18:00",
+        "fri": "09:00-18:00",
+        "sat": "08:00-12:00",
+        "sun": "Cerrado"
+      },
+      "note": "Disponibilidad de sábados confirmada."
+    },
+    {
+      "heading": "Ubicación y acceso",
+      "body": "Dirección actual: Odontología 3, Asunción. Ubicación preferida a futuro: Luque, pendiente confirmación de alquiler. Instrucciones de acceso y estacionamiento se envían al confirmar el turno."
+    },
+    {
+      "heading": "Disponibilidad",
+      "body": "Se aceptan pacientes nuevos. Primera cita normalmente dentro de la primera o segunda semana."
+    }
+  ],
+  "map": {
+    "embed": true,
+    "query": "Odontología 3, Asunción, Paraguay",
+    "coords": { "lat": -25.2836, "lng": -57.4831 }
+  },
+  "cta": {
+    "primary": "Pedir plan sin compromiso",
+    "secondary": "Solicitar segunda opinión",
+    "whatsapp": true
+  }
+}

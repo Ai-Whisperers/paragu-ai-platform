@@ -1,0 +1,215 @@
+{
+  "title": "Pricing",
+  "slug": "pricing",
+  "metaDescription": "Transparent dental pricing in Paraguay. Reference fees for consultations, cleanings, root canals, implants, crowns, and cosmetic dentistry in Asunción.",
+  "og": {
+    "title": "Dental Pricing — Dra. Gabriella González Pane",
+    "description": "Clear, published prices for comprehensive dentistry in Asunción. No hidden fees."
+  },
+  "pricing": {
+    "currency": "Gs",
+    "usd_approx": "Gs 7,800 = USD 1",
+    "disclaimer": "Reference prices. Final cost confirmed at consultation before any procedure. Laboratory fees included only where noted.",
+    "cta_whatsapp": true,
+    "cta_whatsapp_text": "Request a quote by WhatsApp",
+    "consultation": [
+      {
+        "name": "Standard consultation",
+        "price": 300000,
+        "duration": "30 min",
+        "note": "Basic evaluation"
+      },
+      {
+        "name": "Extended consultation",
+        "price": 400000,
+        "duration": "45–60 min",
+        "note": "Complex cases"
+      }
+    ],
+    "second_opinion": {
+      "name": "Written second opinion",
+      "price": 450000,
+      "duration": "2–3 days",
+      "includes": ["Record review", "Clinical exam", "Written report"],
+      "note": "Standalone service. Not included in corporate plans."
+    },
+    "treatment_planning": {
+      "name": "Treatment planning",
+      "price": 600000,
+      "duration": "1–3 days",
+      "includes": ["Diagnostic imaging", "Options proposal", "Written estimate"],
+      "note": "No-obligation plan."
+    },
+    "complex_planning": {
+      "name": "Complex planning",
+      "price": 800000,
+      "duration": "60–90 min",
+      "note": "Full mouth / multidisciplinary"
+    },
+    "preventive": [
+      {
+        "name": "Prophylaxis (cleaning)",
+        "price": 280000,
+        "duration": "40 min"
+      },
+      {
+        "name": "Deep cleaning (scaling and root planing)",
+        "price": 400000,
+        "duration": "Per quadrant"
+      },
+      {
+        "name": "Polishing",
+        "price": 150000,
+        "note": "Add-on"
+      }
+    ],
+    "operatoria": [
+      {
+        "name": "Simple restoration (1 surface)",
+        "price": 350000
+      },
+      {
+        "name": "Medium restoration (2 surfaces)",
+        "price": 450000
+      },
+      {
+        "name": "Complex restoration (3+ surfaces)",
+        "price": 550000
+      },
+      {
+        "name": "Complex restoration (extensive anatomy)",
+        "price": 700000,
+        "note": "MOD, extensive caries"
+      }
+    ],
+    "endodoncia": [
+      {
+        "name": "Anterior",
+        "price": 500000
+      },
+      {
+        "name": "Premolar",
+        "price": 700000
+      },
+      {
+        "name": "Molar",
+        "price": 1200000
+      },
+      {
+        "name": "Molar (complex / retreatment)",
+        "price": 1500000
+      }
+    ],
+    "exodoncia": [
+      {
+        "name": "Simple extraction",
+        "price": 180000
+      },
+      {
+        "name": "Surgical extraction",
+        "price": 350000
+      },
+      {
+        "name": "Wisdom tooth (simple)",
+        "price": 400000
+      },
+      {
+        "name": "Wisdom tooth (surgical)",
+        "price": 600000
+      }
+    ],
+    "protesis": [
+      {
+        "name": "Zirconia crown",
+        "price": 3500000,
+        "note": "Per tooth, with lab"
+      },
+      {
+        "name": "E.max crown",
+        "price": 4500000,
+        "note": "Per tooth, with lab"
+      },
+      {
+        "name": "Fixed full-arch prosthesis",
+        "price": 2500000
+      },
+      {
+        "name": "Flexible partial denture",
+        "price": 1800000
+      },
+      {
+        "name": "Pontic",
+        "price": 1200000,
+        "note": "Per unit"
+      }
+    ],
+    "implantes": [
+      {
+        "name": "Standard titanium implant",
+        "price": 1200000,
+        "note": "Excludes crown"
+      },
+      {
+        "name": "Swiss titanium implant",
+        "price": 1800000,
+        "note": "Excludes crown"
+      },
+      {
+        "name": "Custom abutment crown",
+        "price": 4000000
+      },
+      {
+        "name": "Bone graft (small)",
+        "price": 600000
+      },
+      {
+        "name": "Bone graft (large)",
+        "price": 1200000
+      }
+    ],
+    "estetica": [
+      {
+        "name": "Home whitening (full arch)",
+        "price": 1200000
+      },
+      {
+        "name": "In-office whitening (full arch)",
+        "price": 1800000
+      },
+      {
+        "name": "Direct composite veneer (per tooth)",
+        "price": 600000
+      },
+      {
+        "name": "Porcelain veneer (per tooth)",
+        "price": 3500000,
+        "note": "With lab"
+      }
+    ],
+    "odontopediatria": [
+      {
+        "name": "Child consultation",
+        "price": 200000,
+        "note": "Up to 12 years"
+      },
+      {
+        "name": "Fluoride",
+        "price": 100000
+      },
+      {
+        "name": "Simple pediatric restoration",
+        "price": 200000
+      },
+      {
+        "name": "Stainless steel crown",
+        "price": 400000
+      }
+    ],
+    "corporate_note": "Corporate plans available. Second opinions and complex planning are standalone services and are not included in corporate installments.",
+    "payment": {
+      "methods": ["Cash", "Bank transfer", "Pagopar", "Bancard POS"],
+      "financing": "Cases over Gs 1M: up to 12 installments with Pagopar or Bancard",
+      "discount": "Cash payment: 2–5% discount"
+    }
+  }
+}

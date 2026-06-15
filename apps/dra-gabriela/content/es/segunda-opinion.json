@@ -1,0 +1,55 @@
+{
+  "title": "Segunda opinión — escrita, honesta y sin compromiso",
+  "subtitle": "Ya tenés un diagnóstico de otro odontólogo. Antes de cualquier paso irreversible, conseguí una revisión escrita con tus opciones reales.",
+  "cta_primary": "Solicitar segunda opinión",
+  "cta_secondary": "Ver servicios",
+  "sections": [
+    {
+      "heading": "Por qué pedir una segunda opinión",
+      "body": "Una segunda opinión puede confirmar un diagnóstico, cambiar el tratamiento o detectar opciones que el primer profesional no consideró. Para coronas, implantes, endodoncias, extracciones o planes de boca completa, una revisión independiente es una de las decisiones de menor riesgo y mayor valor."
+    },
+    {
+      "heading": "Qué recibís",
+      "items": [
+        "Revisión clínica de tus estudios y registros.",
+        "Informe escrito honesto: qué es realmente necesario y qué se puede evitar.",
+        "Opciones alternativas con plazos y precios de referencia.",
+        "Sin obligación de continuar el tratamiento acá."
+      ]
+    },
+    {
+      "heading": "Qué traer",
+      "items": [
+        "Radiografías o archivos CBCT.",
+        "Presupuestos o planes de tratamiento previos.",
+        "Registros clínicos y notas del primer profesional."
+      ]
+    },
+    {
+      "heading": "Plazo y formato",
+      "items": [
+        "Entrega: 2–3 días hábiles.",
+        "Formato: informe escrito para que guardes o compartas.",
+        "Incluye hallazgos, opciones, recomendaciones y precios de referencia."
+      ]
+    },
+    {
+      "heading": "Cuando más importa pedirla",
+      "items": [
+        "Te recomendaron un procedimiento mayor tras una revisión breve.",
+        "Sentís que el plan salteó alternativas o no explicó plazos.",
+        "Querés una revisión en español/inglés antes de comprometerte.",
+        "Tuviste una mala experiencia y buscás una revisión independiente.",
+        "La propuesta se sintió apresurada o con presión para decidir ya."
+      ]
+    }
+  ],
+  "precio_ref": "Gs 450,000 — Gs 600,000 con plan de tratamiento completo",
+  "schema": {
+    "type": "Service",
+    "name": "Segunda opinión escrita"
+  },
+  "faq_link": "/es/faq",
+  "process_link": "/es/filosofia",
+  "testimonials_link": "/es#testimonials"
+}

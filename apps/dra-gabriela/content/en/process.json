@@ -1,0 +1,39 @@
+{
+  "steps": [
+    {
+      "order": 1,
+      "title": "Contacto sin compromiso",
+      "subtitle": "Escribinos por WhatsApp o formulario. Te respondemos en menos de 24 horas.",
+      "icon": "message",
+      "duration": "24h",
+      "actions": ["WhatsApp", "Web form", "Phone"]
+    },
+    {
+      "order": 2,
+      "title": "Consulta de evaluación",
+      "subtitle": "Examen clínico, radiografías digitales y explicación de hallazgos. Sin presión.",
+      "icon": "calendar",
+      "duration": "45–60 min",
+      "actions": ["Bring ID", "Bring prior studies if available"]
+    },
+    {
+      "order": 3,
+      "title": "Plan por escrito",
+      "subtitle": "Recibís un plan detallado: opciones, precios, plazos y riesgos. Lo decidís vos.",
+      "icon": "file-text",
+      "duration": "1–3 días",
+      "actions": ["PDF", "Transparent pricing"]
+    },
+    {
+      "order": 4,
+      "title": "Tratamiento con seguimiento",
+      "subtitle": "Ejecutamos el plan acordado. Controlamos cada fase y te actualizamos en cada paso.",
+      "icon": "heart",
+      "duration": "Varies",
+      "actions": ["Progress callbacks", "WhatsApp channel"]
+    }
+  ],
+  "what_to_bring": ["DNI", "Obra social / private insurance card", "Prior radiographs or records"],
+  "cancellation_policy": "24h notice appreciated",
+  "guarantee": "Written plan before any treatment begins"
+}

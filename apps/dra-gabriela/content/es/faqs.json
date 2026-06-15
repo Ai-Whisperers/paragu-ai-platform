@@ -1,0 +1,122 @@
+{
+  "title": "Preguntas frecuentes",
+  "groups": [
+    {
+      "name": "General",
+      "items": [
+        {
+          "q": "¿Cuánto cuesta la consulta?",
+          "a": "La consulta inicial cuesta entre Gs 300,000 y 450,000 según la complejidad. Incluye revisión, diagnóstico y un presupuesto claro. No hay sorpresas."
+        },
+        {
+          "q": "¿Trabajan con seguros?",
+          "a": "Somos consultorio privado, no tenemos contrato directo con aseguradoras. Emitimos factura legal con RUC para que reclames el reembolso por tu cuenta. La mayoría de los seguros lo permite."
+        },
+        {
+          "q": "¿Hablan inglés?",
+          "a": "Sí. Atiendo pacientes extranjeros de forma regular y la consulta completa puede ser en inglés si lo preferís."
+        },
+        {
+          "q": "¿Cuánto dura una consulta?",
+          "a": "Primera consulta: 45–60 minutos. Controles: 20–30 minutos. Para procedimientos específicos te digo el tiempo exacto antes de empezar."
+        },
+        {
+          "q": "¿Qué debo llevar a la primera consulta?",
+          "a": "Radiografías o estudios previos, tarjeta de seguro o cobertura (sirve para reembolso), lista de medicamentos y preguntas escritas para no olvidarte."
+        },
+        {
+          "q": "¿Están tomando pacientes nuevos?",
+          "a": "Sí. Escribime por WhatsApp y coordinamos."
+        },
+        {
+          "q": "¿Qué pasa si no necesito tratamiento?",
+          "a": "Si no necesitás tratamiento, te lo digo. No invento problemas para cobrar de más. Mi trabajo es evaluar con honestidad."
+        },
+        {
+          "q": "¿Hay estacionamiento?",
+          "a": "Te paso las indicaciones de acceso y dónde dejar el auto cuando confirmes la cita."
+        }
+      ]
+    },
+    {
+      "name": "Tratamientos",
+      "items": [
+        {
+          "q": "¿Hacen endodoncia?",
+          "a": "Sí. Si el caso es muy complejo, lo derivo a un endodontista de confianza. No hago lo que no puedo hacer bien."
+        },
+        {
+          "q": "¿Hacen extracciones?",
+          "a": "Extracciones simples, sí. Para muelas del juicio o casos quirúrgicos trabajo con cirujanos maxilofaciales de confianza y coordino todo."
+        },
+        {
+          "q": "¿Hacen coronas o puentes?",
+          "a": "Sí. Uso zirconia porque es la más resistente y biocompatible. Te explico las opciones y vos decidís con toda la información."
+        },
+        {
+          "q": "¿Atienden niños?",
+          "a": "Desde 10–12 años. Para niños más pequeños o con necesidades de conducta específicas derivo a un odontopediatra de confianza. No empiezo si el niño no está cómodo."
+        },
+        {
+          "q": "¿Hacen estética dental?",
+          "a": "Carillas directas, carillas de porcelana y blanqueamiento. Mi filosofía es conservar lo máximo posible. No hago trabajo innecesario solo por estética."
+        },
+        {
+          "q": "¿Atienden urgencias?",
+          "a": "Por dolor fuerte, sangrado o algo roto, escribime por WhatsApp inmediatamente. Para casos graves —inflamación con fiebre o trauma— te indico si conviene ir a una guardia."
+        }
+      ]
+    },
+    {
+      "name": "Segunda opinión",
+      "items": [
+        {
+          "q": "¿Hacen segunda opinión?",
+          "a": "Sí, es uno de mis servicios principales. Traé los estudios y te doy una opinión honesta por escrito antes de cualquier paso irreversible."
+        },
+        {
+          "q": "¿Qué incluye la segunda opinión escrita?",
+          "a": "Revisión del caso, examen clínico, informe escrito con hallazgos y opciones. No repite automáticamente el tratamiento original — te dice si tiene sentido."
+        },
+        {
+          "q": "¿Qué debo traer?",
+          "a": "Radiografías, presupuestos previos y registros clínicos. Cuanta más información, más precisa es la opinión."
+        }
+      ]
+    },
+    {
+      "name": "Precios y pago",
+      "items": [
+        {
+          "q": "¿Cómo puedo pagar?",
+          "a": "Efectivo, transferencia, Pagopar o Bancard POS. En casos grandes se pueden coordinar cuotas. Todo con factura legal."
+        },
+        {
+          "q": "¿Los precios publicados son finales?",
+          "a": "Son precios de referencia. El costo final se confirma en la consulta antes de empezar cualquier procedimiento."
+        },
+        {
+          "q": "¿Hay financiación?",
+          "a": "Para casos mayores a Gs 1M hay cuotas por Pagopar o Bancard. El costo de la financiación lo absorbe el paciente."
+        }
+      ]
+    },
+    {
+      "name": "Turnos",
+      "items": [
+        {
+          "q": "¿Cómo cancelo o reprogramo?",
+          "a": "Avísame por WhatsApp con al menos 24 horas de anticipación. No hay multa, solo solicito aviso para darle el turno a otra persona."
+        },
+        {
+          "q": "¿Hay lista de espera?",
+          "a": "No. Normalmente tengo disponibilidad dentro de la primera o segunda semana."
+        },
+        {
+          "q": "¿Qué pasa si llego tarde?",
+          "a": "Llamame o escribime por WhatsApp en cuanto puedas. Si puedo reubicarte el mismo día, lo hago; si no, coordinamos el próximo turno disponible."
+        }
+      ]
+    }
+  ]
+}

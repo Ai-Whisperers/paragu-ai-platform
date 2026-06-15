@@ -1,0 +1,49 @@
+{
+  "title": "Contact and appointments",
+  "subtitle": "WhatsApp-based coordination. Clear hours, practical access guidance, and honest availability.",
+  "sections": [
+    {
+      "heading": "Best way to reach us",
+      "body": "WhatsApp is the fastest channel for questions, availability, and coordination. For formal invoices or referrals, email works too."
+    },
+    {
+      "heading": "Contact methods",
+      "methods": [
+        { "type": "WhatsApp", "label": "WhatsApp", "value": "PENDING", "primary": true },
+        { "type": "Email", "label": "Email", "value": "hola@dra-gp.com.py", "primary": false },
+        { "type": "Phone", "label": "Phone", "value": "PENDING", "primary": false }
+      ]
+    },
+    {
+      "heading": "Hours",
+      "hours": {
+        "mon": "09:00-18:00",
+        "tue": "09:00-18:00",
+        "wed": "09:00-18:00",
+        "thu": "09:00-18:00",
+        "fri": "09:00-18:00",
+        "sat": "08:00-12:00",
+        "sun": "Closed"
+      },
+      "note": "Saturday morning availability confirmed."
+    },
+    {
+      "heading": "Location and access",
+      "body": "Current practice address: Odontología 3, Asunción. Preferred future location: Luque, pending lease confirmation. Access and parking guidance updated at booking."
+    },
+    {
+      "heading": "Availability",
+      "body": "New patients accepted. First appointments usually available within one to two weeks."
+    }
+  ],
+  "map": {
+    "embed": true,
+    "query": "Odontología 3, Asunción, Paraguay",
+    "coords": { "lat": -25.2836, "lng": -57.4831 }
+  },
+  "cta": {
+    "primary": "Plan sin compromiso",
+    "secondary": "Solicitar segunda opinión",
+    "whatsapp": true
+  }
+}

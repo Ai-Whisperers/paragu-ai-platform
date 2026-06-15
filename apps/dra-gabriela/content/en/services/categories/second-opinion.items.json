@@ -1,0 +1,4 @@
+[
+  { "name": "Second opinion", "priceGs": 450000, "duration": "45-60 min", "highlights": ["Written documentation", "Review with no conflict of interest"], "cta": "Request second opinion" },
+  { "name": "Second opinion + treatment plan", "priceGs": 600000, "duration": "60-90 min", "highlights": ["Written plan with options", "Cost comparison"], "cta": "Request full plan" }
+]

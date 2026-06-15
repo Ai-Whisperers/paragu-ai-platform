@@ -1,0 +1,39 @@
+{
+  "title": "Odontología con criterio. Sin apuro.",
+  "subtitle": "Segunda opinión escrita, plan de tratamiento transparente y atención personalizada.",
+  "cta_primary": "Pedir plan sin compromiso",
+  "cta_secondary": "Solicitar segunda opinión",
+  "contact_phone": "PENDIENTE",
+  "office_hours_short": "Lu–Vi 9–18 | Sá 8–12",
+  "top_bar": {
+    "phone": "PENDIENTE",
+    "hours": "Lu–Vi 9:00–18:00 · Sá 8:00–12:00"
+  },
+  "slides": [
+    {
+      "id": "1",
+      "title": "Odontología con criterio. Sin apuro.",
+      "subtitle": "Evaluación honesta, plan escrito y explicación clara antes de cualquier procedimiento.",
+      "image": "/images/hero/dra-gp-hero-1.jpg",
+      "cta": "Pedir plan sin compromiso",
+      "badge": "Español · English",
+      "trust_line": "20+ años · enfoque conservador"
+    },
+    {
+      "id": "2",
+      "title": "Planificamos antes de actuar",
+      "subtitle": "No vendemos procedimientos. Diagnosticamos primero y mostramos todas las opciones, con precio y plazo.",
+      "image": "/images/hero/dra-gp-hero-2.jpg",
+      "cta": "Ver servicios",
+      "badge": "Plan de tratamiento escrito"
+    },
+    {
+      "id": "3",
+      "title": "Segundas opiniones honestas",
+      "subtitle": "¿Otro odontólogo te indicó un procedimiento? Revisamos tu caso sin conflicto de interés.",
+      "image": "/images/hero/dra-gp-hero-3.jpg",
+      "cta": "Solicitar segunda opinión",
+      "badge": "Plan escrito sin compromiso"
+    }
+  ]
+}

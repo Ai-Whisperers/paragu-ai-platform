@@ -1,0 +1,39 @@
+{
+  "pasos": [
+    {
+      "orden": 1,
+      "titulo": "Contacto sin compromiso",
+      "subtitulo": "Escribinos por WhatsApp o formulario. Te respondemos en menos de 24 horas.",
+      "icono": "message",
+      "duracion": "24h",
+      "acciones": ["WhatsApp", "Formulario web", "Llamada"]
+    },
+    {
+      "orden": 2,
+      "titulo": "Consulta de evaluación",
+      "subtitulo": "Examen clínico, radiografías digitales y explicación de hallazgos. Sin presión.",
+      "icono": "calendar",
+      "duracion": "45–60 min",
+      "acciones": ["Traer DNI", "Traer estudios previos si los tiene"]
+    },
+    {
+      "orden": 3,
+      "titulo": "Plan por escrito",
+      "subtitulo": "Recibís un plan detallado: opciones, precios, plazos y riesgos. Lo decidís vos.",
+      "icono": "file-text",
+      "duracion": "1–3 días",
+      "acciones": ["PDF descargable", "Precios transparentes"]
+    },
+    {
+      "orden": 4,
+      "titulo": "Tratamiento con seguimiento",
+      "subtitulo": "Ejecutamos el plan acordado. Controlamos cada fase y te actualizamos en cada paso.",
+      "icono": "heart",
+      "duracion": "Varía",
+      "acciones": ["Seguimiento por WhatsApp", "Actualizaciones fase a fase"]
+    }
+  ],
+  "que_traer": ["DNI", "Obra social / seguro privado", "Estudios previos si los tiene"],
+  "politica_cancelacion": "Agradecemos aviso con 24h de anticipación",
+  "garantia": "Plan escrito antes de iniciar cualquier tratamiento"
+}

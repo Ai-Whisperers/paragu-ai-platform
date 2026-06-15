@@ -1,0 +1,55 @@
+{
+  "_comment": "JSON-LD FAQPage payload. Build should inject this when site.json.schema.faqPage is true.",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you treat expats and English-speaking patients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Consultations, explanations, and written reports are available in English."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you issue written treatment plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every new patient gets a written plan with options, timeline, and reference pricing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a second opinion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — written second opinions are one of our core services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods are available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cash, bank transfer, Pagopar, and Bancard POS. Financing available on cases over Gs 1M."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are prices transparent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Reference prices are published on the pricing page. Final cost is confirmed before any procedure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept corporate plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Standalone services such as second opinions and complex planning are not included in corporate installments."
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Services",
+  "subtitle": "Every service starts with an honest assessment, not a sales pitch.",
+  "tabs": [
+    { "id": "second-opinion", "label": "Second Opinion" },
+    { "id": "treatment-planning", "label": "Planning" },
+    { "id": "general-dentistry", "label": "General Dentistry" },
+    { "id": "cosmetic-dentistry", "label": "Cosmetic Dentistry" },
+    { "id": "oral-rehabilitation", "label": "Oral Rehabilitation" }
+  ],
+  "bundles": [
+    {
+      "id": "1",
+      "name": "Initial evaluation",
+      "description": "Clinical review, Q&A, and a written plan in one visit.",
+      "priceGs": 300000,
+      "link": "/en/services/second-opinion"
+    },
+    {
+      "id": "2",
+      "name": "Written care plan",
+      "description": "Treatment options with documentation, timeline, and reference pricing.",
+      "priceGs": 600000,
+      "link": "/en/services/treatment-planning"
+    }
+  ]
+}
