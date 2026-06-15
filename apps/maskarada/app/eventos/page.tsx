@@ -219,12 +219,21 @@ export default function Eventos() {
           <p className="text-sm text-gray-500 mb-4">
             Munches, rope jams, workshops y otras reuniones regulares viven en /encuentros.
           </p>
-          <Link
-            href="/encuentros"
-            className="inline-block border border-gold-400/40 hover:border-gold-400 text-gold-400 hover:text-gold-300 px-6 py-2.5 rounded-full text-sm uppercase tracking-widest transition-all"
-          >
-            Ver encuentros →
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              href="/encuentros"
+              className="inline-block border border-gold-400/40 hover:border-gold-400 text-gold-400 hover:text-gold-300 px-6 py-2.5 rounded-full text-sm uppercase tracking-widest transition-all"
+            >
+              Ver encuentros →
+            </Link>
+            <a
+              href="/api/calendar.ics"
+              className="text-xs text-gray-500 hover:text-gold-400 transition-colors uppercase tracking-widest border-b border-dotted border-gray-600 hover:border-gold-400 pb-0.5"
+              title="Suscribite desde tu app de calendario"
+            >
+              📆 Suscribite al calendario (.ics)
+            </a>
+          </div>
         </div>
       </div>
     </div>

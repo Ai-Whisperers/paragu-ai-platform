@@ -172,14 +172,23 @@ export default function Encuentros() {
 
         <div className="p-8 border border-white/5 rounded-xl bg-white/[0.02] text-center">
           <p className="text-gray-300 mb-4">¿Te gustaría proponer un formato nuevo de encuentro?</p>
-          <a
-            href={`https://wa.me/${content.site.whatsappNumber}?text=Hola!%20Quiero%20proponer%20un%20tipo%20de%20encuentro%20para%20la%20comunidad`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block border border-gold-400/40 hover:border-gold-400 text-gold-400 hover:text-gold-300 px-6 py-2.5 rounded-full text-sm uppercase tracking-widest transition-all"
-          >
-            Proponer un encuentro
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href={`https://wa.me/${content.site.whatsappNumber}?text=Hola!%20Quiero%20proponer%20un%20tipo%20de%20encuentro%20para%20la%20comunidad`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-gold-400/40 hover:border-gold-400 text-gold-400 hover:text-gold-300 px-6 py-2.5 rounded-full text-sm uppercase tracking-widest transition-all"
+            >
+              Proponer un encuentro
+            </a>
+            <a
+              href="/api/calendar.ics"
+              className="text-xs text-gray-500 hover:text-gold-400 transition-colors uppercase tracking-widest border-b border-dotted border-gray-600 hover:border-gold-400 pb-0.5"
+              title="Suscribite desde tu app de calendario"
+            >
+              📆 Suscribite al calendario (.ics)
+            </a>
+          </div>
         </div>
       </div>
     </div>

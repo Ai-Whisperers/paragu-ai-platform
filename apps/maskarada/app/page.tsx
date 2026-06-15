@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Countdown from "@/components/Countdown";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import UpcomingEventsWidget from "@/components/UpcomingEventsWidget";
 import { activities } from "@/lib/activities";
 import { guides } from "@/lib/guides";
 import { content, whatsappLink } from "@/lib/content";
@@ -262,6 +263,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Upcoming events widget */}
+      <UpcomingEventsWidget />
 
       {/* Tienda teaser */}
       <section className="py-24 px-4 bg-white/[0.02] border-y border-white/5">

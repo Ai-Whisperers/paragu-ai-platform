@@ -1,11 +1,12 @@
 import Link from "next/link";
+import NewsletterSignup from "./NewsletterSignup";
 import { content } from "@/lib/content";
 
 export default function Footer() {
   return (
     <footer className="relative z-10 border-t border-white/5 bg-[#0a0a0a]/80">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">🎭</span>
@@ -47,9 +48,19 @@ export default function Footer() {
             </a>
             <p className="text-xs text-gray-600">{content.footer.disclaimer}</p>
           </div>
+          <div>
+            <h3 className="text-xs uppercase tracking-widest text-gold-400 mb-4">Newsletter</h3>
+            <NewsletterSignup />
+            <p className="text-[10px] text-gray-600 mt-2 leading-relaxed">
+              Una o dos veces por mes, cuando hay algo concreto. No spam.
+            </p>
+          </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
-          {content.footer.copyright}
+        <div className="pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-600">
+          <span>{content.footer.copyright}</span>
+          <Link href="/privacidad" className="hover:text-gray-400 transition-colors">
+            Privacidad
+          </Link>
         </div>
       </div>
     </footer>
