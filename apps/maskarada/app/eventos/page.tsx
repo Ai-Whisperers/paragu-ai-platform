@@ -1,38 +1,19 @@
 import Link from "next/link";
-import { events, getEventsByKind, getUpcoming, type EventKind } from "@/lib/events-v2";
+import { events, getEventsByKind, getUpcoming, type EventKind, type EncuentroFormat, FORMAT_LABEL, FORMAT_EMOJI, FORMAT_COLOR } from "@/lib/events-v2";
 import { content } from "@/lib/content";
 
 export const metadata = {
   title: "Eventos — Club maškaráda",
   description:
-    "Calendario de eventos de maškaráda: ediciones de gran formato, próximos, pasados. Entradas, preventa, dresscode y line-up.",
+    "Calendario de eventos de maškaráda: ediciones de gran formato y encuentros regulares (munches, rope jams, workshops). Próximos y pasados.",
 };
 
-// Compute a "next 30 days" list by simple date arithmetic.
-function inWindow(iso: string, days: number): boolean {
-  const d = new Date(iso);
-  const now = new Date();
-  return d.getTime() >= now.getTime() && d.getTime() <= now.getTime() + days * 86400000;
-}
-
-function statusBadge(status: string, date: string) {
-  if (status === "cancelled") return { label: "Cancelado", cls: "bg-red-500/20 text-red-400 border-red-500/30" };
-  if (status === "past") return { label: "Pasado", cls: "bg-white/5 text-gray-500 border-white/10" };
-  if (new Date(date).toDateString() === new Date().toDateString())
-    return { label: "Hoy", cls: "bg-gold-400/20 text-gold-400 border-gold-400/30" };
-  return { label: "Próximo", cls: "bg-blood-500/20 text-blood-500 border-blood-500/30" };
-}
-
-export default function Eventos() {
-  const upcomingEventos = getEventsByKind("evento").filter((e) => e.status === "upcoming");
-  const pastEventos = getEventsByKind("evento").filter((e) => e.status === "past");
-  const next30 = upcomingEventos.filter((e) => inWindow(e.date, 30));
-
-  // Calendar grid: the next 6 weeks, events plotted on their day
+// Calendar grid: the next 6 weeks
+function buildCalendar() {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const start = new Date(today);
-  start.setDate(today.getDate() - today.getDay()); // Sunday
+  start.setDate(today.getDate() - today.getDay());
   const days: { date: Date; events: typeof events }[] = [];
   for (let i = 0; i < 42; i++) {
     const d = new Date(start);
@@ -43,8 +24,67 @@ export default function Eventos() {
     });
     days.push({ date: d, events: dayEvents });
   }
+  return { days, start, today };
+}
 
+function statusBadge(status: string, date: string) {
+  if (status === "cancelled")
+    return { label: "Cancelado", cls: "bg-red-500/20 text-red-400 border-red-500/30" };
+  if (status === "past")
+    return { label: "Pasado", cls: "bg-white/5 text-gray-500 border-white/10" };
+  if (new Date(date).toDateString() === new Date().toDateString())
+    return { label: "Hoy", cls: "bg-gold-400/20 text-gold-400 border-gold-400/30" };
+  return { label: "Próximo", cls: "bg-blood-500/20 text-blood-500 border-blood-500/30" };
+}
+
+function EventCard({ e, kind }: { e: (typeof events)[number]; kind: EventKind }) {
+  const badge = statusBadge(e.status, e.date);
+  const href = kind === "evento" ? `/eventos/${e.slug}` : `/encuentros/${e.slug}`;
+  return (
+    <Link
+      href={href}
+      className={`block border rounded-xl p-5 transition-all ${
+        kind === "evento"
+          ? "border-blood-500/20 bg-gradient-to-br from-blood-500/5 to-transparent hover:border-blood-500/40"
+          : "border-white/10 bg-white/[0.02] hover:border-gold-400/30"
+      }`}
+    >
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 mb-1">
+            {e.format && <span className="text-xl shrink-0">{FORMAT_EMOJI[e.format]}</span>}
+            <h3 className="text-lg font-semibold text-white truncate">{e.title}</h3>
+          </div>
+          <p className="text-sm text-gold-400">
+            {e.rrule ? `${e.weekday} ${e.startTime}` : `${e.dateLabel}${e.startTime ? " · " + e.startTime : ""}`}
+          </p>
+          <p className="text-xs text-gray-500 mt-1">📍 {e.location}</p>
+        </div>
+        <div className="flex flex-col items-end gap-2">
+          <span className={`text-xs px-3 py-1 border rounded-full ${badge.cls}`}>
+            {badge.label}
+          </span>
+          {e.price && <span className="text-xs text-gold-400">{e.price}</span>}
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+export default function Eventos() {
+  const upcomingEventos = getEventsByKind("evento").filter((e) => e.status === "upcoming");
+  const pastEventos = getEventsByKind("evento").filter((e) => e.status === "past");
+  const upcomingEncuentros = getEventsByKind("encuentro").filter((e) => e.status === "upcoming");
+  const next30 = getUpcoming().slice(0, 6);
+  const { days, start, today } = buildCalendar();
   const monthLabel = start.toLocaleDateString("es-PY", { month: "long", year: "numeric" });
+
+  // Group encuentros by format for the recurring section
+  const byFormat: Record<string, typeof events> = {};
+  for (const e of upcomingEncuentros) {
+    const f = e.format || "social";
+    (byFormat[f] = byFormat[f] || []).push(e);
+  }
 
   return (
     <div className="min-h-screen py-20 px-4">
@@ -54,51 +94,26 @@ export default function Eventos() {
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-3">Eventos</h1>
           <div className="w-16 h-0.5 bg-blood-500 mx-auto mb-4" />
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ediciones de gran formato: la experiencia completa, con dresscode, preventa y
-            line-up. Próximos y pasados.
+            Calendario completo: ediciones de gran formato y encuentros regulares
+            (munches, rope jams, workshops, charlas).
           </p>
         </div>
 
-        {/* Next 30 days summary */}
+        {/* Section 1: Próximos 30 días */}
         {next30.length > 0 && (
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-white mb-4">Próximos 30 días</h2>
-            <div className="space-y-4">
-              {next30.map((e) => {
-                const badge = statusBadge(e.status, e.date);
-                return (
-                  <Link
-                    key={e.id}
-                    href={`/eventos/${e.slug}`}
-                    className="block border border-white/10 rounded-xl p-5 bg-white/[0.02] hover:border-gold-400/30 transition-all"
-                  >
-                    <div className="flex flex-wrap items-start justify-between gap-3">
-                      <div>
-                        <h3 className="text-xl font-bold text-white">{e.title}</h3>
-                        <p className="text-sm text-gray-400 mt-1">
-                          📅 {e.dateLabel} · {e.startTime}
-                        </p>
-                        <p className="text-sm text-gray-500 mt-1">
-                          📍 {e.location}
-                        </p>
-                      </div>
-                      <div className="flex flex-col items-end gap-2">
-                        <span className={`text-xs px-3 py-1 border rounded-full ${badge.cls}`}>
-                          {badge.label}
-                        </span>
-                        {e.price && <span className="text-xs text-gold-400">{e.price}</span>}
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="space-y-3">
+              {next30.map((e) => (
+                <EventCard key={e.id} e={e} kind={e.kind} />
+              ))}
             </div>
           </section>
         )}
 
-        {/* Calendar grid */}
+        {/* Section 2: Calendar grid */}
         <section className="mb-12">
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
             <h2 className="text-2xl font-bold text-white capitalize">{monthLabel}</h2>
             <div className="flex items-center gap-3 text-xs text-gray-500">
               <span className="flex items-center gap-1.5">
@@ -157,40 +172,48 @@ export default function Eventos() {
           </div>
         </section>
 
-        {/* Upcoming eventos (full) */}
+        {/* Section 3: Upcoming formales */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-4">Próximos eventos</h2>
+          <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span className="px-3 py-1 border border-blood-500/30 rounded-full text-xs uppercase tracking-widest text-blood-500">
+              🎭 Próximos eventos formales
+            </span>
+          </h2>
           {upcomingEventos.length === 0 ? (
-            <p className="text-gray-500">No hay eventos próximos publicados. Anotate al WhatsApp para enterarte primero.</p>
+            <p className="text-gray-500 text-sm">No hay eventos formales próximos. Anotate al WhatsApp para enterarte primero.</p>
           ) : (
             <div className="space-y-3">
-              {upcomingEventos.map((e) => {
-                const badge = statusBadge(e.status, e.date);
-                return (
-                  <Link
-                    key={e.id}
-                    href={`/eventos/${e.slug}`}
-                    className="block border border-blood-500/20 rounded-xl p-5 bg-gradient-to-br from-blood-500/5 to-transparent hover:border-blood-500/40 transition-all"
-                  >
-                    <div className="flex flex-wrap items-start justify-between gap-3">
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">{e.title}</h3>
-                        <p className="text-sm text-gray-400 mt-1">📅 {e.dateLabel} · {e.startTime}</p>
-                        <p className="text-sm text-gray-500 mt-1">📍 {e.location}</p>
-                        {e.description && <p className="text-sm text-gray-400 mt-2 line-clamp-2">{e.description}</p>}
-                      </div>
-                      <span className={`text-xs px-3 py-1 border rounded-full shrink-0 ${badge.cls}`}>
-                        {badge.label}
-                      </span>
-                    </div>
-                  </Link>
-                );
-              })}
+              {upcomingEventos.map((e) => (
+                <EventCard key={e.id} e={e} kind="evento" />
+              ))}
             </div>
           )}
         </section>
 
-        {/* Past eventos → /historia */}
+        {/* Section 4: Encuentros regulares by format */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span className="px-3 py-1 border border-gold-400/30 rounded-full text-xs uppercase tracking-widest text-gold-400">
+              ☕ Encuentros regulares
+            </span>
+            <span className="text-gray-500 text-sm">({upcomingEncuentros.length} formatos)</span>
+          </h2>
+          <p className="text-sm text-gray-500 mb-4">
+            Reuniones regulares de la comunidad. Sin play, sin dresscode, principiantes bienvenidos.{" "}
+            <Link href="/encuentros" className="text-gold-400 hover:text-white underline">
+              Ver página de encuentros →
+            </Link>
+          </p>
+          <div className="space-y-3">
+            {upcomingEncuentros
+              .sort((a, b) => a.date.localeCompare(b.date))
+              .map((e) => (
+                <EventCard key={e.id} e={e} kind="encuentro" />
+              ))}
+          </div>
+        </section>
+
+        {/* Section 5: Past formales → /historia */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">Eventos pasados</h2>
           <p className="text-gray-400 mb-4">
@@ -213,18 +236,19 @@ export default function Eventos() {
           </div>
         </section>
 
-        {/* Cross-link to /encuentros */}
+        {/* Cross-link to /encuentros + calendar subscribe */}
         <div className="mt-16 p-8 border border-white/5 rounded-xl bg-white/[0.02] text-center">
           <p className="text-gray-300 mb-2">¿Buscás algo más chico?</p>
           <p className="text-sm text-gray-500 mb-4">
-            Munches, rope jams, workshops y otras reuniones regulares viven en /encuentros.
+            Los encuentros regulares tienen página propia con más detalle y explicación
+            de cada formato.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href="/encuentros"
               className="inline-block border border-gold-400/40 hover:border-gold-400 text-gold-400 hover:text-gold-300 px-6 py-2.5 rounded-full text-sm uppercase tracking-widest transition-all"
             >
-              Ver encuentros →
+              Ver página de encuentros →
             </Link>
             <a
               href="/api/calendar.ics"
