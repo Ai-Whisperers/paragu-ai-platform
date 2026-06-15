@@ -46,6 +46,17 @@ export default async function ActividadDetalle({ params }: { params: Promise<{ s
           </div>
         </div>
 
+        {a.heroImage && (
+          <div className="aspect-[21/9] overflow-hidden rounded-xl border border-white/5 mb-6">
+            <img
+              src={a.heroImage}
+              alt={a.name}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        )}
+
         <div className="border border-white/5 rounded-xl p-4 bg-white/[0.02] text-sm text-gray-400 leading-relaxed mb-6">
           <p className="font-semibold text-gold-400 mb-1">Aviso</p>
           <p>

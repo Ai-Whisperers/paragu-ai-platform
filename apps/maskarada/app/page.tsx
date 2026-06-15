@@ -46,9 +46,9 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <picture>
-            <source srcSet="/images/photos/event_508619.webp" type="image/webp" />
+            <source srcSet="/images/event-2026-06-11/hero.jpg" type="image/jpeg" />
             <img
-              src="/images/photos/event_508619.jpg"
+              src="/images/event-2026-06-11/hero.jpg"
               alt=""
               className="w-full h-full object-cover"
               aria-hidden="true"

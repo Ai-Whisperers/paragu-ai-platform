@@ -13,6 +13,7 @@ export interface Guide {
   excerpt: string;
   body: string; // markdown
   relatedSlugs: string[];
+  heroImage?: string;
 }
 
 export const guides: Guide[] = [

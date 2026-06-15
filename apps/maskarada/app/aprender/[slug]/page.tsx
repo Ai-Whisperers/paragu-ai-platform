@@ -100,6 +100,17 @@ export default async function GuiaDetalle({ params }: { params: Promise<{ slug: 
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">{g.title}</h1>
         <p className="text-lg text-gray-400 leading-relaxed mb-6">{g.excerpt}</p>
 
+        {g.heroImage && (
+          <div className="aspect-[21/9] overflow-hidden rounded-xl border border-white/5 mb-8">
+            <img
+              src={g.heroImage}
+              alt={g.title}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        )}
+
         <div className="border border-white/5 rounded-xl p-4 bg-white/[0.02] text-sm text-gray-400 leading-relaxed mb-8">
           <p>
             <span className="font-semibold text-gold-400">Aviso: </span>
