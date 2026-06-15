@@ -17,6 +17,7 @@ export const content = contentJson as {
     eventPassed: boolean;
   };
   nav: Array<{ href: string; label: string; cta?: boolean }>;
+  footerNav: Array<{ href: string; label: string }>;
   footer: {
     tagline: string;
     copyright: string;

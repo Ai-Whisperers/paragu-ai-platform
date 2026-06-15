@@ -15,16 +15,19 @@
     "eventPassed": true
   },
   "nav": [
-    { "href": "/", "label": "Inicio" },
-    { "href": "/actividades", "label": "Actividades" },
+    { "href": "/eventos", "label": "Eventos" },
     { "href": "/comunidad", "label": "Comunidad" },
     { "href": "/aprender", "label": "Aprender" },
-    { "href": "/historia", "label": "Historia" },
-    { "href": "/eventos", "label": "Eventos" },
-    { "href": "/encuentros", "label": "Encuentros" },
     { "href": "/tienda", "label": "Tienda" },
-    { "href": "/tienda/carrito", "label": "🛒 Carrito" },
-    { "href": "/contacto", "label": "Contacto" }
+    { "href": "/sobre", "label": "Sobre" }
+  ],
+  "footerNav": [
+    { "href": "/historia", "label": "Historia" },
+    { "href": "/actividades", "label": "Actividades" },
+    { "href": "/reglas", "label": "Reglas" },
+    { "href": "/consentimiento", "label": "Consentimiento" },
+    { "href": "/contacto", "label": "Contacto" },
+    { "href": "/privacidad", "label": "Privacidad" }
   ],
   "footer": {
     "tagline": "Comunidad de kink y exploración consciente en Asunción, Paraguay.",

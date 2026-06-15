@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Github, MessageCircle, Sparkles, BookOpen, GitMerge, UserCheck, Rocket, Package, DollarSign, Globe2, Calendar, Tag, ExternalLink, Quote, FileQuestion, ListChecks, AlertTriangle, CheckCircle2, Clock, Search } from "lucide-react"
+import { ArrowRight, Github, MessageCircle, Sparkles, BookOpen, GitMerge, UserCheck, Rocket, Package, DollarSign, Globe2, Bot, Satellite, Cog, GraduationCap, Calendar, AlertTriangle, CheckCircle2, Clock, Quote } from "lucide-react"
 import en from "@/content/en/site.json"
 import es from "@/content/es/site.json"
 
@@ -12,7 +12,7 @@ export function generateStaticParams() {
 
 const ICON_MAP: Record<string, any> = {
   GitMerge, UserCheck, Rocket, Package, DollarSign, Globe2,
-  Globe2 as Globe, Bot, MessageCircle, Satellite, Cog, GraduationCap
+  Globe2, Bot, MessageCircle, Satellite, Cog, GraduationCap
 }
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
