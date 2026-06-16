@@ -3,6 +3,11 @@ import type { NextConfig } from "next"
 const config: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
+  images: {
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   async redirects() {
     return [
       { source: "/favicon.ico", destination: "/favicon.svg", permanent: true },

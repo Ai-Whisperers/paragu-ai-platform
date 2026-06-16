@@ -13,6 +13,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-16: fix(dra-gabriela): svg hero paths, /en/contacto bilingual, locale-aware contact links (by erebus)
+
 - 2026-06-16: fix(dra-gabriela): flag testimonials as placeholders (by erebus)
 
 - 2026-06-16: feat(dra-gabriela): inject schema.org, mobile sticky CTA, hide placeholder testimonials (by erebus)
