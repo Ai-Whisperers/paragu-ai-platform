@@ -10,6 +10,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-16: fix(dra-gabriela): complete layout overhaul — text-left default, 2-col grid sections, bilingual process content, proper FAQ 2-col layout (by erebus)
+
 - 2026-06-16: feat(dra-gabriela): doctor portrait, MeetDoctor section, BigStats strip, HomeFaq, longer hero copy (by erebus)
 
 - 2026-06-16: fix(dra-gabriela): add trust_line to root hero.json so live indicator renders (by erebus)

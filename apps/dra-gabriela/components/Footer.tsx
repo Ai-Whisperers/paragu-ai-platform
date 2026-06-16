@@ -1,9 +1,8 @@
-// Footer with graceful placeholder handling. Address, phone, WhatsApp, RUC
-// only render when set; otherwise their row is hidden. Hardcoded "San
-// Lorenzo · Paraguay" was wrong — now driven by business.address.
+// Footer with proper structure: 3-col grid on desktop, stacked on mobile.
+// Left-aligned text. Brand badge with monogram. Hours table.
 
 import Link from "next/link"
-import { Mail, MessageCircle, MapPin, Phone, Clock } from "lucide-react"
+import { Mail, MessageCircle, MapPin, Phone, Clock, type LucideIcon } from "lucide-react"
 import { whatsappLink, phoneDisplay, isPlaceholder } from "@/lib/content"
 
 export function Footer({ locale, content }: { locale: string; content: any }) {
@@ -13,24 +12,25 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
   const phone = phoneDisplay(c.business?.phone)
   const address = !isPlaceholder(c.business?.address) ? c.business.address : null
   const hasHours = c.openingHours && Object.keys(c.openingHours).length > 0
-  const legalPages = [
-    { href: locale === "es" ? `${base}/privacidad` : `${base}/privacy`, label: locale === "es" ? "Privacidad" : "Privacy" },
-    { href: locale === "es" ? `${base}/terminos` : `${base}/terms`, label: locale === "es" ? "Términos" : "Terms" },
-  ]
+  const isEs = locale === "es"
+  const localize = (href: string) => {
+    if (!href || href === "/" || href === `/${locale}`) return ""
+    return href.replace(/^\/(en|es)/, "") || "/"
+  }
 
   return (
     <footer className="bg-[#0e1717] text-[#cdd2cf] mt-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 text-left">
           {/* Brand */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--gold)] flex items-center justify-center text-white text-xs font-semibold">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--accent)] to-[var(--gold)] flex items-center justify-center text-white text-xs font-semibold">
                 DG
               </span>
               <h3 className="text-lg text-white font-medium">{c.site?.name}</h3>
             </div>
-            <p className="text-sm leading-relaxed text-[#9aa39f] max-w-md mb-4">
+            <p className="text-sm leading-relaxed text-[#9aa39f] mb-5 max-w-xs">
               {c.site?.metaDescription}
             </p>
             <ul className="space-y-2 text-sm">
@@ -50,8 +50,8 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
               )}
               {c.business?.email && !isPlaceholder(c.business.email) && (
                 <li>
-                  <a href={`mailto:${c.business.email}`} className="inline-flex items-center gap-2 hover:text-[var(--gold)] transition-colors">
-                    <Mail className="w-4 h-4" /> {c.business.email}
+                  <a href={`mailto:${c.business.email}`} className="inline-flex items-center gap-2 hover:text-[var(--gold)] transition-colors break-all">
+                    <Mail className="w-4 h-4 flex-shrink-0" /> {c.business.email}
                   </a>
                 </li>
               )}
@@ -62,78 +62,51 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
                 </li>
               )}
             </ul>
+          </div>
+
+          {/* Services + Company */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              {isEs ? "Servicios" : "Services"}
+            </h4>
+            <ul className="space-y-2 text-sm mb-6">
+              <li><Link href={`${base}/second-opinion`} className="hover:text-white transition-colors">{isEs ? "Segunda opinión" : "Second opinion"}</Link></li>
+              <li><Link href={`${base}/pricing`} className="hover:text-white transition-colors">{isEs ? "Precios" : "Pricing"}</Link></li>
+              <li><Link href={`${base}/services`} className="hover:text-white transition-colors">{isEs ? "Servicios" : "Services"}</Link></li>
+              <li><Link href={`${base}/expat`} className="hover:text-white transition-colors">Expat</Link></li>
+            </ul>
+
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4 mt-8">
+              {isEs ? "Empresa" : "Company"}
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href={`${base}/about`} className="hover:text-white transition-colors">{isEs ? "Sobre mí" : "About"}</Link></li>
+              <li><Link href={`${base}/faq`} className="hover:text-white transition-colors">FAQ</Link></li>
+              <li><Link href={`${base}/process`} className="hover:text-white transition-colors">{isEs ? "Proceso" : "Process"}</Link></li>
+              <li><Link href={`${base}/blog`} className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link href={`${base}/privacy`} className="hover:text-white transition-colors">{isEs ? "Privacidad" : "Privacy"}</Link></li>
+              <li><Link href={`${base}/terms`} className="hover:text-white transition-colors">{isEs ? "Términos" : "Terms"}</Link></li>
+            </ul>
+          </div>
+
+          {/* Hours */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              <Clock className="w-3.5 h-3.5 inline mr-1.5 text-[var(--gold)]" />
+              {isEs ? "Horarios" : "Hours"}
+            </h4>
             {hasHours && (
-              <div className="mt-5 pt-5 border-t border-white/10">
-                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[var(--gold)] mb-2">
-                  <Clock className="w-3.5 h-3.5" /> {locale === "es" ? "Horarios" : "Hours"}
-                </div>
-                <ul className="text-xs space-y-1 text-[#9aa39f] font-mono">
-                  {Object.entries(c.openingHours).map(([day, hours]) => (
-                    <li key={day} className="flex justify-between gap-3 max-w-[16rem]">
-                      <span className="uppercase tracking-wide">{day}</span>
-                      <span>{String(hours)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="text-sm space-y-1.5 text-[#9aa39f] font-mono">
+                {Object.entries(c.openingHours).filter(([k]) => /^(mon|tue|wed|thu|fri|sat|sun)/i.test(k)).map(([day, h]) => (
+                  <li key={day} className="flex justify-between gap-3 max-w-[14rem]">
+                    <span className="uppercase tracking-wider text-xs">{day.slice(0, 3)}</span>
+                    <span>{String(h)}</span>
+                  </li>
+                ))}
+              </ul>
             )}
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              {locale === "es" ? "Servicios" : "Services"}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              {[
-                { es: "/es/segunda-opinion", en: "/en/second-opinion", label: locale === "es" ? "Segunda opinión" : "Second opinion" },
-                { es: "/es/precios", en: "/en/pricing", label: locale === "es" ? "Precios" : "Pricing" },
-                { es: "/es/servicios", en: "/en/services", label: locale === "es" ? "Servicios" : "Services" },
-                { es: "/es/expat", en: "/en/expat", label: "Expat" },
-              ].map((l) => (
-                <li key={l.es}>
-                  <Link href={locale === "es" ? l.es : l.en} className="hover:text-white transition-colors">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company + legal */}
-          <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              {locale === "es" ? "Empresa" : "Company"}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href={locale === "es" ? `${base}/nosotros` : `${base}/about`} className="hover:text-white transition-colors">
-                  {locale === "es" ? "Sobre mí" : "About"}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}/faq`} className="hover:text-white transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}/process`} className="hover:text-white transition-colors">
-                  {locale === "es" ? "Proceso" : "Process"}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${base}/blog`} className="hover:text-white transition-colors">
-                  Blog
-                </Link>
-              </li>
-              {legalPages.map((p) => (
-                <li key={p.href}>
-                  <Link href={p.href} className="hover:text-white transition-colors">{p.label}</Link>
-                </li>
-              ))}
-            </ul>
             {c.business?.ruc && !isPlaceholder(c.business.ruc) && (
-              <p className="text-xs text-[#7a827e] mt-4">RUC: {c.business.ruc}</p>
+              <p className="text-xs text-[#7a827e] mt-6">RUC: {c.business.ruc}</p>
             )}
             {c.business?.mspbs && !isPlaceholder(c.business.mspbs) && (
               <p className="text-xs text-[#7a827e]">MSPBS: {c.business.mspbs}</p>
@@ -142,8 +115,8 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
         </div>
 
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-[#7a827e]">
-          <p>© {new Date().getFullYear()} {c.site?.name}. {locale === "es" ? "Todos los derechos reservados." : "All rights reserved."}</p>
-          <p>{locale === "es" ? "Asunción, Paraguay" : "Asunción, Paraguay"}</p>
+          <p>© {new Date().getFullYear()} {c.site?.name}. {isEs ? "Todos los derechos reservados." : "All rights reserved."}</p>
+          <p>Asunción, Paraguay</p>
         </div>
       </div>
     </footer>
