@@ -13,5 +13,7 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-15: fix(fleet): add security-headers@file to all 36 Paragu-ai client sites (by AI Whisperers)
+
 - _Awaiting next deploy_
 
