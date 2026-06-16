@@ -1,55 +1,87 @@
+// /en/blog + /es/blog — bilingual blog index with planned topics.
+
 import { notFound } from "next/navigation"
+import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react"
 import Link from "next/link"
-import { getContent, isLocale } from "@/lib/content"
+import en from "@/content/en/blog.json"
+import es from "@/content/es/blog.json"
+import { PageHero } from "@/components/PageHero"
+
+const LOCALES = ["en", "es"] as const
+const CONTENT: Record<string, any> = { en, es }
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "es" }]
+  return LOCALES.map((l) => ({ locale: l }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  const c = getContent(locale)
-  return { title: c.blog?.title || "Blog", description: c.blog?.subtitle }
+  const data = CONTENT[locale as keyof typeof CONTENT]
+  return { title: data?.title || (locale === "es" ? "Blog" : "Blog") }
 }
 
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  if (!isLocale(locale)) notFound()
-  const c = getContent(locale)
-  const blog = c.blog
+  if (!LOCALES.includes(locale as any)) notFound()
+  const c = CONTENT[locale] || en
+  const topics: string[] = c.plannedTopics || []
   const isEs = locale === "es"
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl md:text-5xl mb-4">{blog?.title || "Blog"}</h1>
-      {blog?.subtitle && <p className="text-lg text-[var(--fg-muted)] mb-12">{blog.subtitle}</p>}
+    <>
+      <PageHero
+        eyebrow="Blog"
+        title={c.title || (isEs ? "Blog educativo" : "Educational blog")}
+        subtitle={c.subtitle}
+        align="center"
+        variant="default"
+      />
 
-      <div className="card p-8 mb-10">
-        <span className="eyebrow">{isEs ? "Estado" : "Status"}</span>
-        <p className="text-[var(--fg-muted)] text-sm">{blog?.status}</p>
-      </div>
+      <section className="section">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Status banner */}
+          {c.status && (
+            <div className="card-accent card p-5 mb-10 flex items-start gap-3">
+              <div className="w-9 h-9 rounded-xl bg-[var(--gold-soft)] flex items-center justify-center flex-shrink-0">
+                <BookOpen className="w-4 h-4 text-[var(--gold-2)]" />
+              </div>
+              <div>
+                <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider mb-1">{isEs ? "Estado" : "Status"}</div>
+                <p className="text-sm text-[var(--fg-muted)]">{c.status}</p>
+              </div>
+            </div>
+          )}
 
-      {blog?.plannedTopics && blog.plannedTopics.length > 0 && (
-        <div>
-          <h2 className="text-2xl mb-6">{isEs ? "Temas planificados" : "Planned topics"}</h2>
-          <ul className="space-y-3">
-            {blog.plannedTopics.map((topic: string, i: number) => (
-              <li key={i} className="card p-5 flex items-center justify-between group">
-                <span>{topic}</span>
-                <span className="text-xs text-[var(--fg-subtle)] uppercase whitespace-nowrap ml-4">
-                  {isEs ? "Próximamente" : "Coming soon"}
-                </span>
-              </li>
-            ))}
-          </ul>
+          {/* Topics */}
+          {topics.length > 0 && (
+            <div>
+              <h2 className="text-2xl mb-5">{isEs ? "Próximos temas" : "Upcoming topics"}</h2>
+              <div className="space-y-3">
+                {topics.map((topic: string, i: number) => (
+                  <div key={i} className="card p-5 flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-9 h-9 rounded-lg bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
+                        <Clock className="w-4 h-4 text-[var(--accent)]" />
+                      </div>
+                      <span className="font-medium truncate">{topic}</span>
+                    </div>
+                    <span className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider whitespace-nowrap flex-shrink-0">
+                      {isEs ? "Próximamente" : "Coming soon"}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="mt-12 text-center">
+            <Link href={`/${locale}/contact`} className="btn btn-primary">
+              {isEs ? "Sugerir un tema" : "Suggest a topic"}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
-      )}
-
-      <div className="mt-16 text-center">
-        <Link href={`/${locale === "es" ? "es/contacto" : "en/contact"}`} className="btn btn-primary">
-          {isEs ? "Sugerir un tema" : "Suggest a topic"}
-        </Link>
-      </div>
-    </div>
+      </section>
+    </>
   )
 }

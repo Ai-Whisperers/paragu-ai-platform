@@ -1,12 +1,10 @@
-// Service detail page renderer. Reads content/{locale}/services/categories/{slug}.json
-// and renders a single, focused service page. Slug map translates English slugs
-// (cosmetic-dentistry) to their Spanish content files (estetica-dental).
+// Service detail page renderer — premium layout with hero, highlights, items, CTA.
 
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react"
+import { ArrowRight, MessageCircle, CheckCircle2, Clock, Sparkles } from "lucide-react"
 import { getContent, whatsappLink, type Locale } from "@/lib/content"
-import { CtaBanner } from "@/components/sections/CtaBanner"
+import { PageHero } from "@/components/PageHero"
 
 import enSegunda from "@/content/en/services/categories/second-opinion.json"
 import enPlanning from "@/content/en/services/categories/treatment-planning.json"
@@ -39,23 +37,9 @@ const SERVICES_BY_LOCALE: Record<Locale, Record<string, ServiceData>> = {
   },
 }
 
-const SLUG_ALIAS: Record<string, Record<Locale, string>> = {
-  "second-opinion": { en: "second-opinion", es: "segunda-opinion" },
-  "segunda-opinion": { en: "second-opinion", es: "segunda-opinion" },
-  "treatment-planning": { en: "treatment-planning", es: "planificacion-tratamiento" },
-  "planificacion-tratamiento": { en: "treatment-planning", es: "planificacion-tratamiento" },
-  "general-dentistry": { en: "general-dentistry", es: "odontologia-general" },
-  "odontologia-general": { en: "general-dentistry", es: "odontologia-general" },
-  "cosmetic-dentistry": { en: "cosmetic-dentistry", es: "estetica-dental" },
-  "estetica-dental": { en: "cosmetic-dentistry", es: "estetica-dental" },
-  "oral-rehabilitation": { en: "oral-rehabilitation", es: "rehabilitacion-oral" },
-  "rehabilitacion-oral": { en: "oral-rehabilitation", es: "rehabilitacion-oral" },
-}
-
 export const dynamic = "force-static"
 
 export function generateStaticParams() {
-  // All slugs x both locales
   return [
     { locale: "en", slug: "second-opinion" },
     { locale: "en", slug: "treatment-planning" },
@@ -74,10 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params
   const data = SERVICES_BY_LOCALE[locale as Locale]?.[slug]
   if (!data) return {}
-  return {
-    title: data.title,
-    description: data.description,
-  }
+  return { title: data.title, description: data.description }
 }
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -91,71 +72,114 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const base = `/${locale}`
   const isEs = locale === "es"
 
+  const highlights: string[] = data.highlights || []
+  const items: any[] = data.items || []
+
   return (
     <>
-      <section className="section bg-gradient-to-br from-[var(--accent-soft)] via-[var(--bg)] to-[var(--bg)]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Link href={`${base}/servicios`} className="text-sm text-[var(--accent)] inline-flex items-center gap-1 mb-6 hover:underline">
-            ← {isEs ? "Todos los servicios" : "All services"}
+      <PageHero
+        eyebrow={isEs ? "Servicio" : "Service"}
+        title={data.title}
+        subtitle={data.description}
+        align="center"
+      >
+        {wa ? (
+          <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <MessageCircle className="w-4 h-4" />
+            {data.cta || (isEs ? "Coordinar" : "Get in touch")}
+          </a>
+        ) : (
+          <Link href={`/${locale}/contact`} className="btn btn-primary">
+            <MessageCircle className="w-4 h-4" />
+            {isEs ? "Coordinar consulta" : "Get in touch"}
           </Link>
-          <span className="eyebrow">{isEs ? "Servicio" : "Service"}</span>
-          <h1 className="text-3xl md:text-5xl mb-6">
-            <span className="gradient-text">{data.title}</span>
-          </h1>
-          {data.description && <p className="text-lg text-[var(--fg-muted)] leading-relaxed">{data.description}</p>}
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            {wa ? (
-              <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                <MessageCircle className="w-4 h-4" /> {data.cta || (isEs ? "Coordinar" : "Get in touch")}
-              </a>
-            ) : (
-              <Link href={`${base}/contacto`} className="btn btn-primary">
-                <MessageCircle className="w-4 h-4" /> {isEs ? "Coordinar" : "Get in touch"}
+        )}
+        <Link href={`${base}/pricing`} className="btn btn-outline">
+          {isEs ? "Ver precios" : "See pricing"} <ArrowRight className="w-4 h-4" />
+        </Link>
+      </PageHero>
+
+      {/* Highlights */}
+      {highlights.length > 0 && (
+        <section className="section">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <span className="eyebrow inline-flex">
+                <Sparkles className="w-3 h-3" />
+                {isEs ? "Qué incluye" : "What's included"}
+              </span>
+              <h2>{isEs ? "Todo lo que necesitás" : "Everything you need"}</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {highlights.map((h, i) => (
+                <div key={i} className="card-accent card p-5 flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-[var(--accent)]" />
+                  </div>
+                  <p className="text-[var(--fg)] leading-relaxed pt-1.5">{h}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Detail items (if any) */}
+      {items.length > 0 && (
+        <section className="section bg-[var(--surface-muted)]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2>{isEs ? "Detalle" : "Details"}</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {items.map((it: any, i: number) => (
+                <div key={i} className="card p-5">
+                  <h3 className="font-medium mb-1.5">{it.name || it.title}</h3>
+                  {it.description && <p className="text-sm text-[var(--fg-muted)] leading-relaxed mb-2">{it.description}</p>}
+                  {it.duration && (
+                    <span className="text-xs text-[var(--fg-subtle)] flex items-center gap-1">
+                      <Clock className="w-3 h-3" /> {it.duration}
+                    </span>
+                  )}
+                  {it.priceGs && (
+                    <p className="text-base font-mono text-[var(--accent)] mt-3">Gs {Number(it.priceGs).toLocaleString("es-PY")}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* In-text CTA */}
+      <section className="section-sm">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="card-accent card p-8 md:p-10">
+            <h2 className="text-2xl md:text-3xl mb-3">{isEs ? "¿Listo para empezar?" : "Ready to begin?"}</h2>
+            <p className="text-[var(--fg-muted)] mb-6 max-w-lg mx-auto">
+              {isEs
+                ? "Coordiná tu consulta por WhatsApp. Respuesta en menos de 24 horas."
+                : "Book your consultation via WhatsApp. Response within 24 hours."}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              {wa ? (
+                <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                  <MessageCircle className="w-4 h-4" />
+                  {isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
+                </a>
+              ) : (
+                <Link href={`/${locale}/contact`} className="btn btn-primary">
+                  <MessageCircle className="w-4 h-4" />
+                  {isEs ? "Ver datos de contacto" : "See contact details"}
+                </Link>
+              )}
+              <Link href={`${base}/pricing`} className="btn btn-outline">
+                {isEs ? "Ver precios completos" : "See all pricing"}
               </Link>
-            )}
-            <Link href={`${base}/precios`} className="btn btn-outline">
-              {isEs ? "Ver precios" : "See pricing"} <ArrowRight className="w-4 h-4" />
-            </Link>
+            </div>
           </div>
         </div>
       </section>
-
-      {data.highlights && data.highlights.length > 0 && (
-        <section className="section">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl mb-8 text-center">{isEs ? "Qué incluye" : "What's included"}</h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {data.highlights.map((h: string, i: number) => (
-                <li key={i} className="card p-5 flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[var(--gold)] flex-shrink-0 mt-0.5" />
-                  <span className="text-[var(--fg)] leading-relaxed">{h}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
-
-      {data.items && data.items.length > 0 && (
-        <section className="section bg-[var(--surface-muted)]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl mb-8 text-center">{isEs ? "Detalle" : "Details"}</h2>
-            <ul className="space-y-3">
-              {data.items.map((it: any, i: number) => (
-                <li key={i} className="card p-5">
-                  <h3 className="font-medium mb-1">{it.name || it.title}</h3>
-                  {it.description && <p className="text-sm text-[var(--fg-muted)]">{it.description}</p>}
-                  {it.priceGs && (
-                    <p className="text-sm font-mono text-[var(--accent)] mt-2">Gs {Number(it.priceGs).toLocaleString("es-PY")}</p>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
-
-      <CtaBanner c={c} locale={locale} />
     </>
   )
 }

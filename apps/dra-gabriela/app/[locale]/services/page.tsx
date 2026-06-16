@@ -1,52 +1,109 @@
-// /en/services index page
+// /en/services + /es/services — bilingual services index with PageHero.
+
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import { ArrowRight, Sparkles, type LucideIcon } from "lucide-react"
 import en from "@/content/en/services/index.json"
 import es from "@/content/es/services/index.json"
-import { ArrowRight } from "lucide-react"
+import { PageHero } from "@/components/PageHero"
 
 const LOCALES = ["en", "es"] as const
 const CONTENT: Record<string, any> = { en, es }
 
-export function generateStaticParams() {
-  return LOCALES.map(l => ({ locale: l }))
+const SLUG_TO_ROUTE: Record<string, { es: string; en: string }> = {
+  "segunda-opinion": { es: "/es/second-opinion", en: "/en/second-opinion" },
+  "second-opinion": { es: "/es/second-opinion", en: "/en/second-opinion" },
+  "planificacion-tratamiento": { es: "/es/services/treatment-planning", en: "/en/services/treatment-planning" },
+  "treatment-planning": { es: "/es/services/treatment-planning", en: "/en/services/treatment-planning" },
+  "odontologia-general": { es: "/es/services/general-dentistry", en: "/en/services/general-dentistry" },
+  "general-dentistry": { es: "/es/services/general-dentistry", en: "/en/services/general-dentistry" },
+  "estetica-dental": { es: "/es/services/cosmetic-dentistry", en: "/en/services/cosmetic-dentistry" },
+  "cosmetic-dentistry": { es: "/es/services/cosmetic-dentistry", en: "/en/services/cosmetic-dentistry" },
+  "rehabilitacion-oral": { es: "/es/services/oral-rehabilitation", en: "/en/services/oral-rehabilitation" },
+  "oral-rehabilitation": { es: "/es/services/oral-rehabilitation", en: "/en/services/oral-rehabilitation" },
 }
 
-export const metadata = { title: "Services" }
+export function generateStaticParams() {
+  return LOCALES.map((l) => ({ locale: l }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const data = CONTENT[locale as keyof typeof CONTENT]
+  return { title: data?.title || (locale === "es" ? "Servicios" : "Services") }
+}
 
 export default async function Services({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   if (!LOCALES.includes(locale as any)) notFound()
   const c = CONTENT[locale] || en
-  const base = `/${locale}`
+  const isEs = locale === "es"
+  const tabs: any[] = c.tabs || []
+  const bundles: any[] = c.bundles || []
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl sm:text-6xl font-bold mb-3 text-center">{c.title || "Services"}</h1>
-      {c.subtitle && <p className="text-xl text-gray-600 mb-12 text-center">{c.subtitle}</p>}
+    <>
+      <PageHero
+        eyebrow={isEs ? "Servicios" : "Services"}
+        title={c.title || (isEs ? "Servicios" : "Services")}
+        subtitle={c.subtitle}
+        align="center"
+        variant="default"
+      />
 
-      {c.bundles && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {c.bundles.map((b: any) => (
-            <Link key={b.id} href={b.link || "#"} className="p-6 bg-white border border-gray-200 rounded-xl hover:border-[var(--accent)] transition-colors">
-              <h3 className="text-xl font-bold mb-2">{b.name}</h3>
-              <p className="text-sm text-gray-700 mb-3">{b.description}</p>
-              {b.priceGs && <p className="text-2xl font-bold text-[var(--accent)]">Gs {b.priceGs.toLocaleString()}</p>}
-            </Link>
-          ))}
-        </div>
+      {/* Bundles */}
+      {bundles.length > 0 && (
+        <section className="section-sm">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-2 mb-5">
+              <Sparkles className="w-5 h-5 text-[var(--gold)]" />
+              <h2 className="text-xl">{isEs ? "Paquetes" : "Bundles"}</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {bundles.map((b: any) => (
+                <Link key={b.id} href={b.link || "#"} className="card-accent card p-6 group block">
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <h3 className="text-lg font-medium group-hover:text-[var(--accent)] transition-colors">{b.name}</h3>
+                    {b.priceGs && (
+                      <span className="text-base font-mono text-[var(--accent)] whitespace-nowrap font-medium">
+                        Gs {Number(b.priceGs).toLocaleString("es-PY")}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-[var(--fg-muted)] leading-relaxed mb-3">{b.description}</p>
+                  <span className="text-sm font-medium text-[var(--gold)] flex items-center gap-1 group-hover:gap-2 transition-all">
+                    {isEs ? "Conocer" : "Learn more"} <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
-      {c.tabs && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {c.tabs.map((t: any) => (
-            <Link key={t.id} href={`${base}/services#${t.id}`} className="p-4 bg-gray-50 border border-gray-200 rounded-lg hover:bg-white transition-colors flex items-center justify-between">
-              <span className="font-medium">{t.label}</span>
-              <ArrowRight className="w-4 h-4 text-[var(--accent)]" />
-            </Link>
-          ))}
-        </div>
+      {/* All services tabs */}
+      {tabs.length > 0 && (
+        <section className={bundles.length > 0 ? "section-sm bg-[var(--surface-muted)]" : "section"}>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-xl mb-5">{isEs ? "Todos los servicios" : "All services"}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {tabs.map((t: any) => {
+                const route = SLUG_TO_ROUTE[t.id]
+                const href = route ? (locale === "es" ? route.es : route.en) : `/${locale}/services#${t.id}`
+                return (
+                  <Link key={t.id} href={href} className="card-accent card p-5 group block">
+                    <h3 className="text-base font-medium mb-1 group-hover:text-[var(--accent)] transition-colors">{t.label}</h3>
+                    <p className="text-xs text-[var(--fg-subtle)] mb-3">{t.id?.replace(/-/g, " ")}</p>
+                    <span className="text-sm font-medium text-[var(--accent)] flex items-center gap-1 group-hover:gap-2 transition-all">
+                      {isEs ? "Ver detalle" : "View details"} <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        </section>
       )}
-    </div>
+    </>
   )
 }
