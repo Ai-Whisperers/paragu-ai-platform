@@ -3,6 +3,11 @@ import type { NextConfig } from "next"
 const config: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
+  async redirects() {
+    return [
+      { source: "/favicon.ico", destination: "/favicon.svg", permanent: true },
+    ]
+  },
   async headers() {
     return [
       {

@@ -39,7 +39,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Reasons c={c} locale={locale} />
       <Services c={c} locale={locale} />
       <Testimonials c={c} locale={locale} />
-      <Process c={c} />
+      <Process c={c} locale={locale} />
       <CtaBanner c={c} locale={locale} />
     </>
   )
