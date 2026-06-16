@@ -5,21 +5,23 @@ import { BookOpen, Clock, Calendar } from "lucide-react"
 
 type Lang = "es" | "en"
 
-export async function generateMetadata({ params }: { params: { lang: Lang } }) {
+export async function generateMetadata({ params }: { params: Promise<{ lang: Lang }> }) {
+  const { lang } = await params
   const posts = getAllPosts()
   return {
-    title: params.lang === "en" ? "Blog | Magnolia Hair Salon" : "Blog | Magnolia Peluquería",
-    description: params.lang === "en"
+    title: lang === "en" ? "Blog | Magnolia Hair Salon" : "Blog | Magnolia Peluquería",
+    description: lang === "en"
       ? "Hair care tips, trends, and professional advice from Magnolia."
       : "Tips de cuidado capilar, tendencias y consejos profesionales de Magnolia.",
     openGraph: { images: [posts[0]?.image ?? ""] },
   } as Metadata
 }
 
-export default function BlogPage({ params }: { params: { lang: Lang } }) {
+export default async function BlogPage({ params }: { params: Promise<{ lang: Lang }> }) {
+  const { lang } = await params
   const posts = getAllPosts()
   const [featured, ...rest] = posts
-  const labels = params.lang === "en"
+  const labels = lang === "en"
     ? { title: "Blog", subtitle: "Hair tips, trends & professional advice", read: "Read", time: "min" }
     : { title: "Blog", subtitle: "Tips de cabello, tendencias y consejos profesionales", read: "Leer", time: "min" }
 
@@ -40,7 +42,7 @@ export default function BlogPage({ params }: { params: { lang: Lang } }) {
         {/* Featured post */}
         {featured && (
           <ScrollReveal direction="up">
-            <a href={`/${params.lang}/blog/${featured.slug}`} className="block bg-card rounded-2xl border border-border overflow-hidden mb-10 hover:shadow-md transition-shadow group">
+            <a href={`/${lang}/blog/${featured.slug}`} className="block bg-card rounded-2xl border border-border overflow-hidden mb-10 hover:shadow-md transition-shadow group">
               <div className="grid md:grid-cols-2">
                 <div className="aspect-video md:aspect-auto">
                   <img src={featured.image} alt={featured.title} className="w-full h-full object-cover" />
@@ -63,7 +65,7 @@ export default function BlogPage({ params }: { params: { lang: Lang } }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {rest.map((post, i) => (
             <ScrollReveal key={post.slug} delay={i * 60} direction="up">
-              <a href={`/${params.lang}/blog/${post.slug}`} className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+              <a href={`/${lang}/blog/${post.slug}`} className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
                 <div className="aspect-video">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                 </div>

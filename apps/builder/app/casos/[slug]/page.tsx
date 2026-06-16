@@ -64,8 +64,9 @@ export async function generateStaticParams() {
   return CASOS.map((c) => ({ slug: c.slug }))
 }
 
-export default function CasoPage({ params }: { params: { slug: string } }) {
-  const caso = CASOS.find((c) => c.slug === params.slug)
+export default async function CasoPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const caso = CASOS.find((c) => c.slug === slug)
   if (!caso) notFound()
 
   return (
