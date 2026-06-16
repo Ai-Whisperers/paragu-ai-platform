@@ -53,6 +53,24 @@ The new zone shows up as `status=pending` with `activation_failure_reason: ns_mi
 - ✅ Fixed the ES/NL/PT trailing-slash infinite 308 redirect loop
 - ✅ All 44 routes return 200 with proper HTML (verified by internal Traefik + direct service request)
 - ✅ Created the new Cloudflare zone on the new account (with the correct apex and www A records pointing at the VPS)
+- ✅ **Mirrored the site to `ai-whisperers.paragu-ai.com` and `www.ai-whisperers.paragu-ai.com` as a workaround for the stuck apex DNS — these URLs are LIVE NOW with the new build (no Jonathan, no Kiryan)**
+
+## 🟢 The mirror is LIVE
+
+While the apex `ai-whisperers.org` DNS is stuck at the old Cloudflare account (and the Vercel project keeps serving the legacy Jonathan page), the **same new site is fully live at**:
+
+- `https://ai-whisperers.paragu-ai.com/` (apex, 200, new build)
+- `https://www.ai-whisperers.paragu-ai.com/` (www, 200, new build)
+- `https://ai-whisperers.paragu-ai.com/en/about` (English, 200, new build)
+- `https://ai-whisperers.paragu-ai.com/es` (Spanish, 200, new build)
+- `https://ai-whisperers.paragu-ai.com/nl` (Dutch, 200, new build)
+- `https://ai-whisperers.paragu-ai.com/pt` (Portuguese, 200, new build)
+
+This works because the `paragu-ai.com` zone is on our active Cloudflare account (elliot/maria.ns) and was already proxied. Adding Traefik routers for the mirror subdomain was the only change needed.
+
+**You can share these URLs with anyone right now** — they will see the new site with Ivan + Kyrian, no Jonathan, no Kiryan. The mirror is fully functional, all security headers in place (CSP, HSTS, X-Frame-Options), 4-locale, 4 locales × 11 pages all 200.
+
+When the apex DNS gets unstuck (via the Squarespace NS swap or Vercel account cleanup), the apex `ai-whisperers.org` will start serving the same content too.
 
 ## What I CANNOT do from here (and why)
 
