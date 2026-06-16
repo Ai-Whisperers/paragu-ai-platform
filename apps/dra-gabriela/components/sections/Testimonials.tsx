@@ -6,8 +6,8 @@ import { Quote, Star } from "lucide-react"
 
 export function Testimonials({ c, locale }: { c: any; locale: string }) {
   const items: any[] = c.testimonials?.items || []
-  // Filter out unverified / placeholder testimonials
-  const real = items.filter((t) => t.verified === true)
+  // Only show testimonials that are real (verified AND not flagged as placeholder)
+  const real = items.filter((t) => t.verified === true && t.placeholder !== true)
   if (real.length === 0) return null
   const display = real.slice(0, 3)
   const isEs = locale === "es"

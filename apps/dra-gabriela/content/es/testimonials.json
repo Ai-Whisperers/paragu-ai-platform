@@ -12,7 +12,8 @@
     "stars": 5,
     "quote": "Me explicó todo sin apuro.",
     "source": "Google Reviews",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "2",
@@ -27,7 +28,8 @@
     "stars": 5,
     "quote": "Habla inglés y da opciones claras.",
     "source": "Google Reviews",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "3",
@@ -42,7 +44,8 @@
     "stars": 5,
     "quote": "Me ahorró una corona innecesaria.",
     "source": "Referido",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "4",
@@ -57,7 +60,8 @@
     "stars": 5,
     "quote": "Comunicación clara, sin presión.",
     "source": "Google Reviews",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "5",
@@ -73,7 +77,8 @@
     "stars": 5,
     "quote": "Plan por escrito primero, siempre.",
     "source": "Referido",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "6",
@@ -88,7 +93,8 @@
     "stars": 5,
     "quote": "Plan realista después de fracasos.",
     "source": "Referido",
-    "verified": false
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "7",
@@ -103,7 +109,8 @@
     "stars": 5,
     "quote": "Atención en inglés y clara.",
     "source": "Reserva directa",
-    "verified": false
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "8",
@@ -118,7 +125,8 @@
     "stars": 5,
     "quote": "Por fin una visita dental cómoda.",
     "source": "Instagram",
-    "verified": false
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "9",
@@ -133,6 +141,7 @@
     "stars": 5,
     "quote": "Ella salva lo que se puede salvar.",
     "source": "Referido por amigo",
-    "verified": false
+    "verified": false,
+    "placeholder": true
   }
 ]

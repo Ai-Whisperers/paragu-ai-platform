@@ -12,7 +12,8 @@
     "stars": 5,
     "quote": "Calm, clear explanation and a real plan.",
     "source": "Google Reviews",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "2",
@@ -27,7 +28,8 @@
     "stars": 5,
     "quote": "English-speaking and straightforward.",
     "source": "Google Reviews",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "3",
@@ -42,7 +44,8 @@
     "stars": 5,
     "quote": "Saved me an unnecessary crown.",
     "source": "Referral",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "4",
@@ -57,7 +60,8 @@
     "stars": 5,
     "quote": "Clear communication, no pressure.",
     "source": "Google Reviews",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "5",
@@ -73,7 +77,8 @@
     "stars": 5,
     "quote": "Written plan first, always.",
     "source": "Referral",
-    "verified": true
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "6",
@@ -88,7 +93,8 @@
     "stars": 5,
     "quote": "Realistic plan after failed work.",
     "source": "Referral",
-    "verified": false
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "7",
@@ -103,7 +109,8 @@
     "stars": 5,
     "quote": "English, clear, and thorough.",
     "source": "Direct booking",
-    "verified": false
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "8",
@@ -118,7 +125,8 @@
     "stars": 5,
     "quote": "Finally a comfortable dental visit.",
     "source": "Instagram",
-    "verified": false
+    "verified": false,
+    "placeholder": true
   },
   {
     "id": "9",
@@ -133,6 +141,7 @@
     "stars": 5,
     "quote": "She saved what could be saved.",
     "source": "Friend referral",
-    "verified": false
+    "verified": false,
+    "placeholder": true
   }
 ]
