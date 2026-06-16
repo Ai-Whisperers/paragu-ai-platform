@@ -13,6 +13,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-16: style(dra-gabriela): complete visual overhaul — premium design system, hero with abstract visual, polished sections (by erebus)
+
 - 2026-06-16: fix(dra-gabriela): filosofia direct import, favicon, nav locale fix (by erebus)
 
 - 2026-06-16: fix(fleet): 2 more Next 16 async params + magnolia es/blog (by AI Whisperers)

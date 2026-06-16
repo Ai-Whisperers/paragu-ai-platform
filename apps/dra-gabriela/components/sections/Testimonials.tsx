@@ -1,12 +1,15 @@
 // Section: Testimonials — real patient quotes
 // Quote cards with gold accent. Empty data = hidden section.
+// Also hidden if all items are placeholders (no `verified: true`).
 
 import { Quote, Star } from "lucide-react"
 
 export function Testimonials({ c, locale }: { c: any; locale: string }) {
   const items: any[] = c.testimonials?.items || []
-  if (items.length === 0) return null
-  const display = items.slice(0, 3)
+  // Filter out unverified / placeholder testimonials
+  const real = items.filter((t) => t.verified === true)
+  if (real.length === 0) return null
+  const display = real.slice(0, 3)
   const isEs = locale === "es"
   return (
     <section className="section bg-[var(--surface)]">

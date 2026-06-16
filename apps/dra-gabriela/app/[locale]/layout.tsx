@@ -3,6 +3,8 @@ import { getContent, isLocale } from "@/lib/content"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { CookieConsent } from "@/components/CookieConsent"
+import { SchemaOrg } from "@/components/SchemaOrg"
+import { MobileStickyCta } from "@/components/MobileStickyCta"
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }]
@@ -20,10 +22,14 @@ export default async function LocaleLayout({
   const content = getContent(locale)
   return (
     <>
+      <head>
+        <SchemaOrg locale={locale} />
+      </head>
       <Navbar locale={locale} content={content} />
-      <main className="min-h-screen">{children}</main>
+      <main className="min-h-screen pb-20 md:pb-0">{children}</main>
       <Footer locale={locale} content={content} />
       <CookieConsent locale={locale} />
+      <MobileStickyCta content={content} />
     </>
   )
 }
