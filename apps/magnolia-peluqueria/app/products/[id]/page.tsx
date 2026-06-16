@@ -1,7 +1,8 @@
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
+export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
   // In production, fetch product data from Supabase
   const product = {
-    id: parseInt(params.id),
+    id: parseInt(id),
     name: 'Professional Hair Dryer',
     price: 89.99,
     description: 'Professional-grade hair dryer with advanced ionic technology for faster drying and reduced frizz. Features multiple heat and speed settings, cool shot button, and lightweight design for comfortable use.',

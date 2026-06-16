@@ -4,26 +4,31 @@ import { CheckCircle2, Gift, Star, Crown } from "lucide-react"
 import Link from "next/link"
 
 interface SuccessParams {
-  params: { lang: string }
-  searchParams: { session_id?: string; gift_card?: string; booking?: string; service?: string; date?: string; time?: string; name?: string }
+  params: Promise<{ lang: string }>
+  searchParams: Promise<{ session_id?: string; gift_card?: string; booking?: string; service?: string; date?: string; time?: string; name?: string }>
 }
 
 export default function ReservationSuccessPage({ params, searchParams }: SuccessParams) {
-  const { session_id, gift_card, booking, service, date, time, name } = searchParams
-  const lang = params.lang || "es"
+  const [lang, setLang] = useState<string>('es')
+  const [q, setQ] = useState<{ session_id?: string; gift_card?: string; booking?: string; service?: string; date?: string; time?: string; name?: string }>({})
   const [sessionInfo, setSessionInfo] = useState<{ paid: boolean; amount?: number; email?: string } | null>(null)
 
   useEffect(() => {
-    if (session_id || gift_card) {
-      fetch(`/api/gift-card?session_id=${session_id}`)
-        .then(r => r.json())
-        .then(d => { if (!d.error) setSessionInfo(d) })
-        .catch(() => {})
-    }
-  }, [session_id])
+    Promise.all([params, searchParams]).then(([p, sp]) => {
+      setLang(p.lang || 'es')
+      setQ(sp)
+      if (sp.session_id || sp.gift_card) {
+        fetch(`/api/gift-card?session_id=${sp.session_id || ''}`)
+          .then(r => r.json())
+          .then(d => { if (!d.error) setSessionInfo(d) })
+          .catch(() => {})
+      }
+    })
+  }, [])
 
-  const isGiftCard = gift_card === "true" && session_id
-  const isBooking = booking === "confirmed"
+  const isGiftCard = q.gift_card === "true" && q.session_id
+  const isBooking = q.booking === "confirmed"
+  const { session_id, service, date, time, name } = q
 
   return (
     <main className="min-h-screen bg-background pt-24 pb-16">

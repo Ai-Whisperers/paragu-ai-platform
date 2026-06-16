@@ -2,7 +2,7 @@
 set -e
 
 echo "→ Installing deps..."
-pnpm install --frozen-lockfile
+pnpm install --no-frozen-lockfile
 
 echo "→ Building app (local — resolves @ai-whisperers file: deps)..."
 pnpm build
