@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Dra. Gabriella — retrato ilustrado">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf9f6"/>
+      <stop offset="1" stop-color="#efede8"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e6efef"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <!-- Soft background accent -->
+  <circle cx="400" cy="320" r="240" fill="#c9a84c" fill-opacity="0.08"/>
+  <!-- Body / white coat -->
+  <path d="M 180 1000 L 180 720 C 180 660, 250 620, 400 620 C 550 620, 620 660, 620 720 L 620 1000 Z" fill="url(#coat)" stroke="#e7e2d8" stroke-width="1"/>
+  <!-- Coat lapel -->
+  <path d="M 400 620 L 320 760 L 400 720 L 480 760 Z" fill="#ffffff" stroke="#e7e2d8" stroke-width="1"/>
+  <!-- Stethoscope / lapel detail -->
+  <line x1="360" y1="760" x2="400" y2="820" stroke="#0f4c4c" stroke-width="3" stroke-linecap="round"/>
+  <line x1="440" y1="760" x2="400" y2="820" stroke="#0f4c4c" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="400" cy="830" r="10" fill="#0f4c4c"/>
+  <!-- Neck -->
+  <rect x="370" y="540" width="60" height="100" fill="#d4a574" rx="8"/>
+  <!-- Head (silhouette, abstract portrait) -->
+  <ellipse cx="400" cy="380" rx="130" ry="160" fill="#d4a574"/>
+  <!-- Hair -->
+  <path d="M 270 360 C 270 240, 530 240, 530 360 C 530 320, 480 280, 400 280 C 320 280, 270 320, 270 360 Z" fill="#3d2817"/>
+  <!-- Subtle face features (abstract) -->
+  <ellipse cx="365" cy="380" rx="6" ry="4" fill="#3d2817"/>
+  <ellipse cx="435" cy="380" rx="6" ry="4" fill="#3d2817"/>
+  <path d="M 380 440 Q 400 450, 420 440" stroke="#3d2817" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Name badge -->
+  <rect x="320" y="900" width="160" height="50" fill="#ffffff" stroke="#0f4c4c" stroke-width="1.5" rx="6"/>
+  <line x1="340" y1="920" x2="460" y2="920" stroke="#0f4c4c" stroke-width="1"/>
+  <line x1="340" y1="935" x2="420" y2="935" stroke="#9a8c7e" stroke-width="0.8"/>
+  <!-- Bottom signature line -->
+  <text x="400" y="985" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#0f4c4c">Dra. Gabriella González Pane</text>
+</svg>

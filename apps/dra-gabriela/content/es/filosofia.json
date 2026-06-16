@@ -1,0 +1,28 @@
+{
+  "title": "Filosofía",
+  "subtitle": "Planificar primero, tratar después. 20 años de odontología conservadora.",
+  "sections": [
+    {
+      "heading": "Declaración de principios",
+      "body": "Después de 20 años de práctica, te puedo decir algo: el mejor cuidado dental empieza con el diagnóstico correcto, no con el procedimiento más caro. Así es como trabajo. No es un slogan — es la forma en que evalúo cada caso que llega a mi consulta. Antes de proponer cualquier tratamiento, necesito entender qué está pasando. Muchas veces lo que el paciente cree que necesita no es lo que realmente necesita."
+    },
+    {
+      "heading": "Los 5 principios que guían mi trabajo",
+      "items": [
+        "Criterio clínico primero: Las decisiones se basan en evidencia y en lo que veo en tu boca, no en lo que el seguro cubre o en cuánto puedo facturar. Si no es necesario, no lo propongo.",
+        "Conservación sobre intervención: Un diente propio salvado siempre vale más que uno artificial. Si puedo restaurar, restauro. Si puedo reconstruir en vez de extraer, reconstruyo.",
+        "No overtreatment: No voy a proponerte un tratamiento que no necesitás solo porque puedo hacerlo. He visto demasiados casos donde el overtreatment causó más problemas que el problema original.",
+        "Planificación como servicio: Antes de cualquier procedimiento mayor, te entrego un plan escrito. Qué vas a necesitar, en qué orden, cuánto va a costar, y cuáles son tus opciones. Sin sorpresas.",
+        "Derivación cuando corresponde: No soy todóloga. Si tu caso requiere un especialista — endodoncista, implantólogo, cirujano — te derivo. Prefiero que te traten bien que insistir en resolver todo yo."
+      ]
+    },
+    {
+      "heading": "Materiales",
+      "body": "Trabajo con resina alemana y materiales de laboratorio premium. La durabilidad de una restauración depende tanto de la técnica como del material. No comprometo calidad por volumen."
+    },
+    {
+      "heading": "Idiomas",
+      "body": "La consulta completa puede ser en español o inglés. Atiendo pacientes extranjeros de forma regular y entiendo la importancia de una comunicación clara y sin barreras."
+    }
+  ]
+}

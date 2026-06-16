@@ -1,0 +1,34 @@
+{
+  "title": "Terms and Conditions",
+  "subtitle": "Terms governing the relationship between patient and practice.",
+  "sections": [
+    {
+      "heading": "Scope of services",
+      "body": "I offer the following dental services:",
+      "items": [
+        "Second dental opinion",
+        "Treatment planning",
+        "General dentistry (restorations, prophylaxis, endodontics, extractions)",
+        "Cosmetic dentistry (whitening, veneers, smile design)",
+        "Oral rehabilitation (crowns, bridges)",
+        "Complex cases (referral to specialists as needed)"
+      ]
+    },
+    {
+      "heading": "Appointments",
+      "body": "Appointments are coordinated via WhatsApp, email, or web form. The appointment is confirmed once the patient responds. Initial consultation lasts approximately 45-60 minutes. Cancellations with less than 24 hours notice may be subject to a cancellation fee."
+    },
+    {
+      "heading": "Quotes and payments",
+      "body": "Consultation and standard procedure prices are published. Detailed quotes are provided in writing before any irreversible procedure. Accepted payment methods: cash, bank transfer, Pagopar, and credit/debit card (Bancard POS). We do not have direct insurance agreements. We issue a legal invoice with RUC for reimbursement purposes."
+    },
+    {
+      "heading": "Patient responsibilities",
+      "body": "The patient agrees to: provide accurate health information; disclose medications, allergies, and pre-existing conditions; follow post-treatment instructions; notify the practice of any complications following a procedure."
+    },
+    {
+      "heading": "Modifications",
+      "body": "These terms may be updated periodically. The current version is published on this page."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "_comment": "JSON-LD LocalBusiness payload. Build should inject this into <head> when site.json.schema.localBusiness is true.",
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Dra. Gabriella González Pane",
+  "description": "Odontología conservadora y planificación primero en Paraguay. Precios públicos, segunda opinión escrita, consultas en inglés y español.",
+  "url": "https://dra-gabriela.com.py",
+  "telephone": "PENDIENTE",
+  "email": "hola@dra-gp.com.py",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Asunción",
+    "addressRegion": "Central",
+    "addressCountry": "PY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -25.2836,
+    "longitude": -57.4831
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00" }
+  ],
+  "availableLanguage": ["es", "en"],
+  "medicalSpecialty": "Dentistry"
+}

@@ -14,7 +14,7 @@
       "id": "1",
       "title": "Odontología con criterio. Sin apuro.",
       "subtitle": "Evaluación honesta, plan escrito y explicación clara antes de cualquier procedimiento.",
-      "image": "/images/hero/dra-gp-hero-1.jpg",
+      "image": "/images/hero/dra-gp-hero-1.svg",
       "cta": "Pedir plan sin compromiso",
       "badge": "Español · English",
       "trust_line": "20+ años · enfoque conservador"
@@ -23,7 +23,7 @@
       "id": "2",
       "title": "Planificamos antes de actuar",
       "subtitle": "No vendemos procedimientos. Diagnosticamos primero y mostramos todas las opciones, con precio y plazo.",
-      "image": "/images/hero/dra-gp-hero-2.jpg",
+      "image": "/images/hero/dra-gp-hero-2.svg",
       "cta": "Ver servicios",
       "badge": "Plan de tratamiento escrito"
     },
@@ -31,7 +31,7 @@
       "id": "3",
       "title": "Segundas opiniones honestas",
       "subtitle": "¿Otro odontólogo te indicó un procedimiento? Revisamos tu caso sin conflicto de interés.",
-      "image": "/images/hero/dra-gp-hero-3.jpg",
+      "image": "/images/hero/dra-gp-hero-3.svg",
       "cta": "Solicitar segunda opinión",
       "badge": "Plan escrito sin compromiso"
     }

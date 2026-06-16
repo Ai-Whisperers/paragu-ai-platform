@@ -1,0 +1,34 @@
+{
+  "title": "Términos y Condiciones",
+  "subtitle": "Términos que rigen la relación entre paciente y consultorio.",
+  "sections": [
+    {
+      "heading": "Alcance de los servicios",
+      "body": "Ofrezco los siguientes servicios odontológicos:",
+      "items": [
+        "Segunda opinión dental",
+        "Planificación de tratamiento",
+        "Odontología general (restauraciones, profilaxis, endodoncias, exodoncias)",
+        "Odontología estética (blanqueamiento, carillas, diseño de sonrisa)",
+        "Rehabilitación oral (coronas, puentes)",
+        "Casos complejos (derivación a especialistas según necesidad)"
+      ]
+    },
+    {
+      "heading": "Agendamiento",
+      "body": "Las consultas se coordinan por WhatsApp, email o formulario web. Se confirma el turno una vez recibida la respuesta del paciente. La primera consulta tiene una duración estimada de 45-60 minutos. Los turnos cancelados con menos de 24 horas de anticipación pueden estar sujetos a cargo por cancelación."
+    },
+    {
+      "heading": "Presupuestos y pagos",
+      "body": "Los precios de consulta y procedimientos estándar están publicados. Los presupuestos detallados se entregan por escrito antes de cualquier procedimiento irreversible. Se acepta: efectivo, transferencia bancaria, Pagopar y tarjeta de crédito/débito (Bancard POS). No trabajamos con convenio directo de seguros. Emitimos factura legal con RUC para trámites de reembolso."
+    },
+    {
+      "heading": "Responsabilidades del paciente",
+      "body": "El paciente se compromete a: proporcionar información veraz sobre su estado de salud; informar sobre medicamentos, alergias y condiciones preexistentes; seguir las indicaciones post-tratamiento; notificar al consultorio ante cualquier complicación luego de un procedimiento."
+    },
+    {
+      "heading": "Modificaciones",
+      "body": "Estos términos pueden actualizarse periódicamente. La versión vigente está publicada en esta página."
+    }
+  ]
+}

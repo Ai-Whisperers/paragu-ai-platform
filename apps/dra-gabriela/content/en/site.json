@@ -32,7 +32,7 @@
     "beforeAfterSlider": false,
     "blog": true,
     "whatsappLink": true,
-    "cookieConsent": false,
+    "cookieConsent": true,
     "promoBanner": false,
     "loyaltyProgram": false,
     "giftCards": false,
@@ -46,19 +46,54 @@
   },
   "navigation": {
     "main": [
-      { "label": "Home", "href": "/en" },
-      { "label": "Philosophy", "href": "/en/philosophy" },
-      { "label": "Services", "href": "/en/services" },
-      { "label": "Pricing", "href": "/en/pricing" },
-      { "label": "Contact", "href": "/en/contact" }
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Philosophy",
+        "href": "/philosophy"
+      },
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Pricing",
+        "href": "/pricing"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
     ],
     "more": [
-      { "label": "Second Opinion", "href": "/en/second-opinion" },
-      { "label": "About", "href": "/en/about" },
-      { "label": "Expat", "href": "/en/expat" },
-      { "label": "Contact", "href": "/en/contact", "feature": "map" },
-      { "label": "Blog", "href": "/en/blog", "feature": "blog" },
-      { "label": "FAQ", "href": "/en/faq" }
+      {
+        "label": "Second Opinion",
+        "href": "/second-opinion"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Expat",
+        "href": "/expat"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact",
+        "feature": "map"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog",
+        "feature": "blog"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq"
+      }
     ]
   },
   "openingHours": {
@@ -73,8 +108,17 @@
   "trust": {
     "license": "MSPBS registration: pending",
     "biosecurity": true,
-    "paymentMethods": ["Cash", "Transfer", "Pagopar", "Bancard POS"],
-    "amenities": ["WiFi", "Parking guidance (TBD)", "AC"]
+    "paymentMethods": [
+      "Cash",
+      "Transfer",
+      "Pagopar",
+      "Bancard POS"
+    ],
+    "amenities": [
+      "WiFi",
+      "Parking guidance (TBD)",
+      "AC"
+    ]
   },
   "ctaDefaults": {
     "primary": "Plan sin compromiso",

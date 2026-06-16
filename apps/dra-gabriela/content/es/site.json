@@ -32,7 +32,7 @@
     "beforeAfterSlider": false,
     "blog": true,
     "whatsappLink": true,
-    "cookieConsent": false,
+    "cookieConsent": true,
     "promoBanner": false,
     "loyaltyProgram": false,
     "giftCards": false,
@@ -46,19 +46,54 @@
   },
   "navigation": {
     "main": [
-      { "label": "Inicio", "href": "/es" },
-      { "label": "Filosofía", "href": "/es/filosofia" },
-      { "label": "Servicios", "href": "/es/servicios" },
-      { "label": "Precios", "href": "/es/precios" },
-      { "label": "Contacto", "href": "/es/contacto" }
+      {
+        "label": "Inicio",
+        "href": "/"
+      },
+      {
+        "label": "Filosofía",
+        "href": "/filosofia"
+      },
+      {
+        "label": "Servicios",
+        "href": "/servicios"
+      },
+      {
+        "label": "Precios",
+        "href": "/precios"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto"
+      }
     ],
     "more": [
-      { "label": "Segunda Opinión", "href": "/es/segunda-opinion" },
-      { "label": "Nosotros", "href": "/es/nosotros" },
-      { "label": "Expat", "href": "/es/expat" },
-      { "label": "Contacto", "href": "/es/contacto", "feature": "map" },
-      { "label": "Blog", "href": "/es/blog", "feature": "blog" },
-      { "label": "FAQ", "href": "/es/faq" }
+      {
+        "label": "Segunda Opinión",
+        "href": "/segunda-opinion"
+      },
+      {
+        "label": "Nosotros",
+        "href": "/nosotros"
+      },
+      {
+        "label": "Expat",
+        "href": "/expat"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto",
+        "feature": "map"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog",
+        "feature": "blog"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq"
+      }
     ]
   },
   "openingHours": {
@@ -73,8 +108,17 @@
   "trust": {
     "license": "Inscripción MSPBS: pendiente",
     "biosecurity": true,
-    "paymentMethods": ["Efectivo", "Transferencia", "Pagopar", "Bancard POS"],
-    "amenities": ["WiFi", "Estacionamiento (guía TBD)", "Aire acondicionado"]
+    "paymentMethods": [
+      "Efectivo",
+      "Transferencia",
+      "Pagopar",
+      "Bancard POS"
+    ],
+    "amenities": [
+      "WiFi",
+      "Estacionamiento (guía TBD)",
+      "Aire acondicionado"
+    ]
   },
   "ctaDefaults": {
     "primary": "Pedir plan sin compromiso",

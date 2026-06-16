@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Dra. Gabriella — Odontología conservadora en Asunción">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f4c4c"/>
+      <stop offset="1" stop-color="#0a3a3a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#c9a84c" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#c9a84c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <!-- Left: text block -->
+  <g font-family="Georgia, serif" fill="#ffffff">
+    <text x="80" y="120" font-size="22" font-weight="400" letter-spacing="6" fill="#c9a84c">DRA · GABRIELLA · GONZÁLEZ PANE</text>
+    <text x="80" y="240" font-size="76" font-weight="400" letter-spacing="-2">Odontología</text>
+    <text x="80" y="320" font-size="76" font-weight="400" letter-spacing="-2">con criterio.</text>
+    <text x="80" y="400" font-size="76" font-weight="400" letter-spacing="-2" fill="#c9a84c">Sin apuro.</text>
+  </g>
+  <line x1="80" y1="450" x2="240" y2="450" stroke="#c9a84c" stroke-width="2"/>
+  <text x="80" y="500" font-family="Inter, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Segunda opinión · planificación · precios públicos</text>
+  <text x="80" y="540" font-family="Inter, sans-serif" font-size="24" fill="#ffffff" fill-opacity="0.85">Asunción, Paraguay · English spoken</text>
+  <text x="80" y="600" font-family="Inter, sans-serif" font-size="16" fill="#ffffff" fill-opacity="0.5" letter-spacing="3">DRA-GABRIELA.COM.PY</text>
+  <!-- Right: abstract tooth mark -->
+  <g transform="translate(870 100)" fill="#ffffff" fill-opacity="0.06" stroke="#c9a84c" stroke-opacity="0.5" stroke-width="3">
+    <path d="M160 0 C 80 0, 40 80, 70 180 L 110 420 C 125 500, 150 530, 180 530 C 210 530, 235 500, 250 420 L 290 180 C 320 80, 280 0, 200 0 Z"/>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+{
+  "title": "Philosophy",
+  "subtitle": "Plan first, treat second. 20 years of conservative dentistry.",
+  "sections": [
+    {
+      "heading": "Opening statement",
+      "body": "After 20 years in practice, here's what I can tell you: the best dental care starts with the right diagnosis, not the most expensive procedure. That's how I work. It's not a slogan — it's how I evaluate every case that comes in. Before proposing any treatment, I need to understand what's really happening. Often what the patient thinks they need isn't what they actually need."
+    },
+    {
+      "heading": "The 5 principles that guide my work",
+      "items": [
+        "Clinical judgment first: Decisions are based on evidence and what I see in your mouth, not on what insurance covers or how much I can bill. If it's not necessary, I won't propose it.",
+        "Conservation over intervention: A saved natural tooth is always worth more than an artificial one. If I can restore, I restore. If I can rebuild instead of extract, I rebuild.",
+        "No overtreatment: I won't propose a treatment you don't need just because I can do it. I've seen too many cases where overtreatment caused more problems than the original issue.",
+        "Planning as a service: Before any major procedure, I deliver a written plan: what you'll need, in what order, how much it will cost, and what your options are. No surprises.",
+        "Referral when appropriate: I'm not a one-stop shop. If your case needs a specialist — endodontist, implantologist, surgeon — I refer you. I'd rather you get excellent treatment than insist on doing everything myself."
+      ]
+    },
+    {
+      "heading": "Materials",
+      "body": "I work with German composite resin and premium laboratory materials. The durability of a restoration depends as much on technique as on material. I don't compromise quality for volume."
+    },
+    {
+      "heading": "Languages",
+      "body": "Full consultations are available in Spanish or English. I regularly treat international patients and understand the importance of clear, barrier-free communication."
+    }
+  ]
+}

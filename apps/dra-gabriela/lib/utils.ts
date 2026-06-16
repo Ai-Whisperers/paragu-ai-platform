@@ -1,3 +1,7 @@
+// Backwards-compatible utility exports. The merged-content loader lives in
+// ./content.ts — this file stays for `import { cn } from "@/lib/utils"` style
+// imports that the rest of the app uses.
+
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -5,18 +9,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-import en from "@/content/en/site.json"
-import es from "@/content/es/site.json"
-
-const CONTENT = { en, es }
-
-export type SiteContent = typeof en
-
-export function getContent(locale: string): SiteContent {
-  return CONTENT[locale as keyof typeof CONTENT] || en
-}
-
-export function getLocaleFromPath(path: string): string {
-  const match = path.match(/^\/(en|es)\b/)
-  return match ? match[1] : "en"
-}
+export {
+  LOCALES,
+  getContent,
+  isLocale,
+  isPlaceholder,
+  whatsappLink,
+  phoneDisplay,
+  truncate,
+} from "./content"
+export type { Locale, SiteContent } from "./content"

@@ -1,0 +1,22 @@
+{
+  "_comment": "JSON-LD FAQPage payload. Build should inject this when site.json.schema.faqPage is true.",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta la consulta?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La consulta inicial cuesta entre Gs 300.000 y 450.000 según la complejidad. Incluye revisión, diagnóstico y un presupuesto claro. Sin sorpresas." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajan con seguros?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Somos consultorio privado, sin contrato directo con aseguradoras. Emitimos factura legal con RUC para reembolso. La mayoría de los seguros lo permite." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hablan inglés?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Atendemos pacientes extranjeros de forma regular y la consulta completa puede ser en inglés." }
+    }
+  ]
+}

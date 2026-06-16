@@ -3,24 +3,164 @@
 @tailwind utilities;
 
 :root {
-  --bg: #ffffff;
-  --fg: #1a1a1a;
-  --fg-muted: #6b6b6b;
-  --accent: #2a6f97;
-  --accent-2: #014f86;
-  --border: #e5e5e5;
+  /* Brand tokens — single source of truth, mirrored in lib/brand.ts */
+  --bg: #fbf9f6;
+  --fg: #1c1c1c;
+  --fg-muted: #6b5e52;
+  --fg-subtle: #9a8c7e;
+  --accent: #0f4c4c;
+  --accent-2: #0a3a3a;
+  --accent-soft: #e6efef;
+  --gold: #c9a84c;
+  --gold-2: #b08f38;
+  --surface: #ffffff;
+  --surface-muted: #efede8;
+  --border: #e7e2d8;
+  --success: #2d7a5f;
+  --error: #c0392b;
+
+  --font-heading: "DM Serif Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
-body { -webkit-font-smoothing: antialiased; }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--fg);
+}
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Section spacing utility — keeps rhythm consistent across pages */
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .section { padding-top: 6rem; padding-bottom: 6rem; }
+}
+
+/* Card — soft warm shadow, brand-aware */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 12px 32px rgba(15,76,76,0.10);
+}
+
+/* Button system */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 160ms ease, color 160ms ease, transform 100ms ease, box-shadow 160ms ease;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--accent-2);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(15,76,76,0.25);
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--accent);
+}
+.btn-gold:hover {
+  background: var(--gold-2);
+  text-decoration: none;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+  background: var(--accent-soft);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--fg);
+}
+.btn-ghost:hover { background: var(--surface-muted); text-decoration: none; }
+
+/* "Coming soon" affordance for placeholder data */
+.coming-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill, 9999px);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px dashed var(--accent);
+}
+
+/* Section eyebrow */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+/* Smooth focus ring — accessible */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

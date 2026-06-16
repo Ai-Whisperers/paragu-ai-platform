@@ -1,0 +1,45 @@
+{
+  "title": "Política de Privacidad",
+  "subtitle": "Cómo recolectamos, usamos y protegemos tus datos personales.",
+  "sections": [
+    {
+      "heading": "Responsable del tratamiento de datos",
+      "body": "Dra. Gabriella González Pane (\"yo\", \"mi\", \"consultorio\") se compromete a proteger la privacidad de tus datos personales. Esta política explica qué datos recolecto, cómo los uso, y cómo los protejo, en cumplimiento con la Ley N° 7.593/2025 de Protección de Datos Personales de Paraguay.",
+      "items": [
+        "RUC: Pendiente de registro",
+        "Dirección: Luque, Paraguay",
+        "Email: hola@dra-gp.com.py"
+      ]
+    },
+    {
+      "heading": "Datos personales que recolecto",
+      "body": "Recolecto solo los datos necesarios para brindarte atención dental.",
+      "items": [
+        "Datos de identificación (nombre completo, cédula de identidad)",
+        "Datos de contacto (teléfono, email, dirección)",
+        "Datos de salud dental (historial clínico, radiografías, fotografías)",
+        "Datos de facturación (RUC, dirección de facturación)",
+        "Datos de comunicación (mensajes de WhatsApp, emails)"
+      ]
+    },
+    {
+      "heading": "Finalidad del tratamiento",
+      "body": "Uso tus datos para:",
+      "items": [
+        "Brindarte atención odontológica y seguimiento clínico",
+        "Comunicarme con vos sobre turnos, tratamientos y resultados",
+        "Cumplir con obligaciones legales y fiscales",
+        "Facturar servicios emitir comprobantes",
+        "Mejorar la calidad de atención (encuestas anónimas)"
+      ]
+    },
+    {
+      "heading": "Base legal",
+      "body": "El tratamiento se basa en: tu consentimiento explícito al agendar una consulta (Art. 8 Ley 7.593/2025); la ejecución de un contrato de servicios odontológicos; y obligaciones legales aplicables al ejercicio profesional de la odontología."
+    },
+    {
+      "heading": "Almacenamiento y seguridad",
+      "body": "Tus datos se almacenan de forma segura durante el tiempo necesario para cumplir con las obligaciones legales y fiscales (mínimo 5 años desde la última atención, según normativa sanitaria paraguaya). Implemento medidas técnicas y organizativas para proteger tus datos contra acceso no autorizado."
+    }
+  ]
+}
