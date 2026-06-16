@@ -67,6 +67,46 @@ export const events: CommunityEvent[] = [
     tags: ["edición", "ticketed", "+18"],
   },
 
+  // ─── Past editions (archive) ──────────────────────────────────────────
+  {
+    id: "evt-2026-06-11",
+    kind: "evento",
+    title: "Simón Dice",
+    slug: "2026-06-11-simondice",
+    date: "2026-06-11T19:00:00-04:00",
+    endDate: "2026-06-12T01:00:00-04:00",
+    dateLabel: "Jueves 11 de junio, 2026",
+    weekday: "Jueves",
+    startTime: "19:00",
+    duration: "Hasta 01:00",
+    location: "Eligio Ayala 1073, Asunción",
+    address: "Eligio Ayala 1073, Asunción",
+    description:
+      "La edición \"Simón Dice\" consolidó a maškaráda como un espacio de referencia para el kink y el BDSM en Paraguay. Más de 180 asistentes, dresscode estricto (dark, fetish, masquerade), y un juego de identidad: las máscaras como permiso para explorar versiones menos exhibidas del self.",
+    body: `La edición "Simón Dice" consolidó a maškaráda como un espacio de referencia para el kink y el BDSM en Paraguay. Con más de 180 asistentes y un dresscode estricto (dark, fetish, masquerade), la noche se construyó alrededor de un juego de identidad: las máscaras, además de proteger a los participantes, operaron como un permiso para explorar versiones menos exhibidas del self.
+
+La atmósfera musical —EBM, dark techno, industrial— corrió por cuenta del DJ residente y se extendió durante las seis horas de evento. El equipo de Moñai Ropes mantuvo abierta la Zona Cuerdas con demostraciones de shibari y práctica supervisada. Hubo performances de body painting en vivo, dos cuadros de role play, y una instalación de luz roja con decenas de metros de tela.
+
+El aftercare se extendió hasta bien entrada la madrugada: agua, comida, mantas, conversación. La próxima edición está en preparación; las personas que quieran ser notificadas pueden escribirle al equipo por WhatsApp.`,
+    attendees: 180,
+    price: "Entrada anticipada / en puerta",
+    dresscode: "Dark, fetish, masquerade. Máscaras obligatorias.",
+    status: "past",
+    heroImage: "/images/event-2026-06-11/hero.jpg",
+    photos: [
+      "/images/event-2026-06-11/hero.jpg",
+      "/images/event-2026-06-11/atmosphere-01.jpg",
+      "/images/event-2026-06-11/atmosphere-02.jpg",
+      "/images/event-2026-06-11/atmosphere-03.jpg",
+      "/images/event-2026-06-11/atmosphere-04.jpg",
+      "/images/event-2026-06-11/atmosphere-05.jpg",
+      "/images/event-2026-06-11/crowd-02.jpg",
+      "/images/event-2026-06-11/performance-01.jpg",
+      "/images/event-2026-06-11/performance-02.jpg",
+    ],
+    tags: ["edición", "pasado", "máscaras", "shibari", "+18"],
+  },
+
   // ─── Recurring encuentros (munches, jams, workshops) ─────────────────
   {
     id: "enc-munch-asuncion",
