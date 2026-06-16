@@ -2,9 +2,11 @@ import { notFound } from "next/navigation"
 import { getContent, isLocale } from "@/lib/content"
 import { Hero } from "@/components/sections/Hero"
 import { Stats } from "@/components/sections/Stats"
+import { FeaturedService } from "@/components/sections/FeaturedService"
 import { Reasons } from "@/components/sections/Reasons"
 import { Services } from "@/components/sections/Services"
 import { Testimonials } from "@/components/sections/Testimonials"
+import { CredentialsStrip } from "@/components/sections/CredentialsStrip"
 import { Process } from "@/components/sections/Process"
 import { CtaBanner } from "@/components/sections/CtaBanner"
 
@@ -31,14 +33,47 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const { locale } = await params
   if (!isLocale(locale)) notFound()
   const c = getContent(locale)
+  const isEs = locale === "es"
 
   return (
     <>
       <Hero c={c} locale={locale} />
       <Stats c={c} />
       <Reasons c={c} locale={locale} />
+
+      {/* Featured second opinion with image */}
+      <FeaturedService
+        locale={locale}
+        content={c}
+        variant="light"
+        eyebrow={isEs ? "Servicio destacado" : "Featured service"}
+        title={isEs ? "Segunda opinión escrita, sin compromiso" : "Written second opinion, no obligation"}
+        body={isEs
+          ? "¿Otro odontólogo te indicó un procedimiento? Revisamos tu caso con acceso a todos los documentos, sin conflicto de interés. Te entregamos un plan escrito en 2–3 días."
+          : "Another dentist recommended a procedure? We review your case with access to all the documents, no conflict of interest. You get a written plan within 2–3 days."}
+        bullets={isEs
+          ? [
+            "Revisión clínica + radiográfica completa",
+            "Informe escrito con opciones y precios",
+            "Comparamos costos y materiales con honestidad",
+            "Si no necesitás tratamiento, te lo decimos",
+          ]
+          : [
+            "Full clinical + radiographic review",
+            "Written report with options and pricing",
+            "We compare costs and materials honestly",
+            "If you don't need treatment, we'll say so",
+          ]}
+        imageSrc="/images/services/second-opinion.svg"
+        imageAlt="Second opinion review"
+        ctaLabel={isEs ? "Pedir segunda opinión" : "Request a second opinion"}
+        ctaHref={`/${locale}/second-opinion`}
+        ctaSecondaryLabel={isEs ? "Ver precios" : "See pricing"}
+        ctaSecondaryHref={`/${locale}/pricing`}
+      />
+
       <Services c={c} locale={locale} />
-      <Testimonials c={c} locale={locale} />
+      <CredentialsStrip c={c} locale={locale} />
       <Process c={c} locale={locale} />
       <CtaBanner c={c} locale={locale} />
     </>

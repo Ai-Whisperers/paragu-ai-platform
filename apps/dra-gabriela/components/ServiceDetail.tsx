@@ -3,6 +3,7 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowRight, MessageCircle, CheckCircle2, Clock, Sparkles } from "lucide-react"
+import Image from "next/image"
 import { getContent, whatsappLink, type Locale } from "@/lib/content"
 import { PageHero } from "@/components/PageHero"
 
@@ -100,29 +101,79 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const highlights: string[] = data.highlights || []
   const items: any[] = data.items || []
 
+  // Pick image by slug
+  const slugToImage: Record<string, string> = {
+    "second-opinion": "/images/services/second-opinion.svg",
+    "treatment-planning": "/images/services/treatment-planning.svg",
+    "general-dentistry": "/images/services/general-dentistry.svg",
+    "cosmetic-dentistry": "/images/services/cosmetic-dentistry.svg",
+    "oral-rehabilitation": "/images/services/oral-rehabilitation.svg",
+    "segunda-opinion": "/images/services/second-opinion.svg",
+    "planificacion-tratamiento": "/images/services/treatment-planning.svg",
+    "odontologia-general": "/images/services/general-dentistry.svg",
+    "estetica-dental": "/images/services/cosmetic-dentistry.svg",
+    "rehabilitacion-oral": "/images/services/oral-rehabilitation.svg",
+  }
+  const heroImage = slugToImage[slug]
+
   return (
     <>
-      <PageHero
-        eyebrow={isEs ? "Servicio" : "Service"}
-        title={data.title}
-        subtitle={data.description}
-        align="center"
-      >
-        {wa ? (
-          <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-            <MessageCircle className="w-4 h-4" />
-            {data.cta || (isEs ? "Coordinar" : "Get in touch")}
-          </a>
-        ) : (
-          <Link href={`/${locale}/contact`} className="btn btn-primary">
-            <MessageCircle className="w-4 h-4" />
-            {isEs ? "Coordinar consulta" : "Get in touch"}
-          </Link>
-        )}
-        <Link href={`${base}/pricing`} className="btn btn-outline">
-          {isEs ? "Ver precios" : "See pricing"} <ArrowRight className="w-4 h-4" />
-        </Link>
-      </PageHero>
+      {/* Custom hero with image */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[var(--accent-soft)] via-[var(--bg)] to-[var(--bg)]">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-[0.05]" style={{ background: "radial-gradient(circle, var(--accent) 0%, transparent 70%)" }} />
+          <div className="absolute inset-0 dot-pattern" />
+        </div>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+            <div className="lg:col-span-3">
+              <span className="eyebrow inline-flex">
+                <Sparkles className="w-3 h-3" />
+                {isEs ? "Servicio" : "Service"}
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-5 leading-[1.05]">
+                <span className="gradient-text">{data.title}</span>
+              </h1>
+              {data.description && (
+                <p className="text-lg md:text-xl text-[var(--fg-muted)] max-w-2xl mb-7 leading-relaxed">
+                  {data.description}
+                </p>
+              )}
+              <div className="flex flex-col sm:flex-row gap-3">
+                {wa ? (
+                  <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                    <MessageCircle className="w-4 h-4" />
+                    {data.cta || (isEs ? "Coordinar" : "Get in touch")}
+                  </a>
+                ) : (
+                  <Link href={`/${locale}/contact`} className="btn btn-primary">
+                    <MessageCircle className="w-4 h-4" />
+                    {isEs ? "Coordinar consulta" : "Get in touch"}
+                  </Link>
+                )}
+                <Link href={`${base}/pricing`} className="btn btn-outline">
+                  {isEs ? "Ver precios" : "See pricing"} <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+            {heroImage && (
+              <div className="lg:col-span-2 relative">
+                <div className="relative aspect-[3/2] rounded-[var(--radius-2xl)] overflow-hidden shadow-xl border border-[var(--border)]">
+                  <Image
+                    src={heroImage}
+                    alt={data.title}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full border-2 border-[var(--gold)] opacity-30 -z-10" />
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* Highlights */}
       {highlights.length > 0 && (

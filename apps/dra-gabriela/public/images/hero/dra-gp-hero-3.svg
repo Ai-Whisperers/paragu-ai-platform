@@ -1,41 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Segundas opiniones honestas">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Calm second opinion review">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0a3a3a"/>
-      <stop offset="1" stop-color="#0f4c4c"/>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf9f6"/>
+      <stop offset="0.5" stop-color="#f2eee5"/>
+      <stop offset="1" stop-color="#e6e0d4"/>
     </linearGradient>
-    <radialGradient id="spot" cx="0.7" cy="0.3" r="0.6">
-      <stop offset="0" stop-color="#c9a84c" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#c9a84c" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a89c80"/>
+      <stop offset="1" stop-color="#8a7c5c"/>
+    </linearGradient>
   </defs>
-  <rect width="1600" height="900" fill="url(#bg)"/>
-  <rect width="1600" height="900" fill="url(#spot)"/>
-  <!-- Two overlapping documents (second opinion visual) -->
-  <g transform="translate(900 200)">
-    <rect x="40" y="40" width="380" height="500" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" rx="12"/>
-    <rect x="0" y="0" width="380" height="500" fill="#ffffff" fill-opacity="0.92" stroke="#e7e2d8" stroke-width="1" rx="12"/>
-    <g transform="translate(40 60)">
-      <rect x="0" y="0" width="160" height="10" fill="#0f4c4c" rx="3"/>
-      <rect x="0" y="40" width="300" height="4" fill="#6b5e52" rx="2"/>
-      <rect x="0" y="60" width="280" height="4" fill="#6b5e52" rx="2"/>
-      <rect x="0" y="80" width="240" height="4" fill="#6b5e52" rx="2"/>
-      <rect x="0" y="120" width="300" height="80" fill="#fbf9f6" rx="6"/>
-      <rect x="20" y="140" width="100" height="4" fill="#0f4c4c" rx="2"/>
-      <rect x="20" y="160" width="240" height="3" fill="#9a8c7e" rx="2"/>
-      <rect x="0" y="220" width="300" height="80" fill="#e6efef" rx="6"/>
-      <rect x="20" y="240" width="100" height="4" fill="#0f4c4c" rx="2"/>
-      <rect x="20" y="260" width="220" height="3" fill="#6b5e52" rx="2"/>
-      <rect x="0" y="320" width="120" height="32" fill="#c9a84c" rx="4"/>
+  <rect width="800" height="1000" fill="url(#bg3)"/>
+  <!-- Soft window light -->
+  <ellipse cx="700" cy="200" rx="400" ry="300" fill="#fff" opacity="0.4"/>
+  <!-- Desk surface -->
+  <rect y="700" width="800" height="300" fill="url(#desk)"/>
+  <line x1="0" y1="700" x2="800" y2="700" stroke="#5a4830" stroke-width="1"/>
+  <!-- X-ray / scan image on light box (left) -->
+  <g transform="translate(60 220)">
+    <rect x="0" y="0" width="280" height="380" fill="#0a0a0a" rx="4" stroke="#1a1a1a" stroke-width="2"/>
+    <rect x="10" y="10" width="260" height="360" fill="#0e1a1a"/>
+    <!-- Panoramic dental x-ray shape -->
+    <g transform="translate(140 200)" stroke="#f0f0f0" stroke-width="1" fill="none" opacity="0.85">
+      <path d="M -110 -10 Q -110 60, -80 90 Q -50 110, -20 100 L 0 80 L 20 100 Q 50 110, 80 90 Q 110 60, 110 -10 L 100 -20 L 80 -10 L 60 -20 L 40 -10 L 20 -20 L 0 -10 L -20 -20 L -40 -10 L -60 -20 L -80 -10 L -100 -20 Z"/>
+      <!-- Teeth indicators -->
+      <g fill="#f0f0f0" opacity="0.7">
+        <ellipse cx="-90" cy="20" rx="6" ry="8"/>
+        <ellipse cx="-70" cy="35" rx="5" ry="7"/>
+        <ellipse cx="-50" cy="40" rx="5" ry="7"/>
+        <ellipse cx="-30" cy="38" rx="5" ry="7"/>
+        <ellipse cx="-10" cy="35" rx="5" ry="7"/>
+        <ellipse cx="10" cy="35" rx="5" ry="7"/>
+        <ellipse cx="30" cy="38" rx="5" ry="7"/>
+        <ellipse cx="50" cy="40" rx="5" ry="7"/>
+        <ellipse cx="70" cy="35" rx="5" ry="7"/>
+        <ellipse cx="90" cy="20" rx="6" ry="8"/>
+      </g>
     </g>
+    <text x="20" y="40" font-family="Inter, sans-serif" font-size="10" fill="#c9a84c" letter-spacing="2">PANORÁMICA · 2026</text>
+    <text x="20" y="350" font-family="Inter, sans-serif" font-size="9" fill="#f0f0f0" opacity="0.5">DRA · GABRIELLA · SEGUNDA OPINIÓN</text>
   </g>
-  <!-- Text -->
-  <g font-family="Georgia, serif" fill="#ffffff">
-    <text x="120" y="280" font-size="78" font-weight="400" letter-spacing="-2">Segundas</text>
-    <text x="120" y="370" font-size="78" font-weight="400" letter-spacing="-2">opiniones</text>
-    <text x="120" y="460" font-size="78" font-weight="400" letter-spacing="-2" fill="#c9a84c">honestas.</text>
+  <!-- Magnifying glass over x-ray -->
+  <g transform="translate(280 380)">
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#c9a84c" stroke-width="4"/>
+    <line x1="42" y1="42" x2="80" y2="80" stroke="#c9a84c" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="58" fill="none" stroke="#fff" stroke-width="1" opacity="0.3"/>
   </g>
-  <line x1="120" y1="540" x2="280" y2="540" stroke="#c9a84c" stroke-width="2"/>
-  <text x="120" y="600" font-family="Inter, sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.85">Sin conflicto de interés · plan escrito</text>
-  <text x="120" y="640" font-family="Inter, sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.85">Revisamos tu caso en 2–3 días</text>
+  <!-- Notebook + coffee on desk -->
+  <g transform="translate(420 720)">
+    <rect x="0" y="-20" width="280" height="100" fill="#0f4c4c" rx="4" filter="drop-shadow(0 8px 16px rgba(0,0,0,0.2))"/>
+    <rect x="20" y="-4" width="240" height="3" fill="#c9a84c" opacity="0.6"/>
+    <rect x="20" y="6" width="240" height="3" fill="#c9a84c" opacity="0.4"/>
+    <rect x="20" y="16" width="180" height="3" fill="#c9a84c" opacity="0.4"/>
+    <text x="140" y="58" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#c9a84c" letter-spacing="3" font-style="italic">written plan</text>
+  </g>
+  <!-- Coffee cup -->
+  <g transform="translate(660 750)">
+    <ellipse cx="0" cy="0" rx="40" ry="10" fill="#0a0a0a" opacity="0.2"/>
+    <ellipse cx="0" cy="-20" rx="40" ry="10" fill="#fbf9f6"/>
+    <path d="M -40 -20 L -36 40 Q -36 50, -26 50 L 26 50 Q 36 50, 36 40 L 40 -20 Z" fill="#fbf9f6" stroke="#d4cfc4" stroke-width="1"/>
+    <ellipse cx="0" cy="-20" rx="40" ry="8" fill="#3a2818"/>
+    <!-- Steam -->
+    <path d="M -10 -40 Q -8 -50, -10 -60 Q -12 -70, -10 -80" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M 0 -40 Q 2 -50, 0 -60 Q -2 -70, 0 -80" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <path d="M 10 -40 Q 12 -50, 10 -60 Q 8 -70, 10 -80" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+  </g>
 </svg>

@@ -1,42 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Dra. Gabriella — odontología conservadora">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Modern dental clinic interior">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8e4dc"/>
+      <stop offset="1" stop-color="#d4cfc4"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5f1ea"/>
+      <stop offset="1" stop-color="#e6e0d4"/>
+    </linearGradient>
+    <linearGradient id="chair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf9f6"/>
+      <stop offset="1" stop-color="#e8e2d6"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0f4c4c"/>
       <stop offset="1" stop-color="#0a3a3a"/>
     </linearGradient>
-    <radialGradient id="glow1" cx="0.25" cy="0.3" r="0.5">
-      <stop offset="0" stop-color="#c9a84c" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#c9a84c" stop-opacity="0"/>
+    <radialGradient id="lamp" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glow2" cx="0.85" cy="0.85" r="0.6">
-      <stop offset="0" stop-color="#0f4c4c" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#0f4c4c" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grain" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-      <circle cx="20" cy="30" r="0.7" fill="#ffffff" fill-opacity="0.05"/>
-      <circle cx="80" cy="120" r="0.5" fill="#ffffff" fill-opacity="0.04"/>
-      <circle cx="160" cy="40" r="0.6" fill="#ffffff" fill-opacity="0.05"/>
-      <circle cx="120" cy="180" r="0.4" fill="#ffffff" fill-opacity="0.03"/>
-    </pattern>
   </defs>
-  <rect width="1600" height="900" fill="url(#bg)"/>
-  <rect width="1600" height="900" fill="url(#glow1)"/>
-  <rect width="1600" height="900" fill="url(#glow2)"/>
-  <rect width="1600" height="900" fill="url(#grain)"/>
-  <!-- Soft abstract tooth shape -->
-  <g transform="translate(1100 200)" fill="#ffffff" fill-opacity="0.06" stroke="#c9a84c" stroke-opacity="0.4" stroke-width="2">
-    <path d="M120 0 C 60 0, 30 60, 50 130 L 80 320 C 90 380, 110 400, 130 400 C 150 400, 170 380, 180 320 L 210 130 C 230 60, 200 0, 140 0 Z"/>
+  <!-- Floor -->
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect y="700" width="800" height="300" fill="#c8c2b5"/>
+  <line x1="0" y1="700" x2="800" y2="700" stroke="#b8b0a0" stroke-width="2"/>
+  <!-- Wall panel with art -->
+  <rect x="0" y="0" width="800" height="700" fill="url(#wall)"/>
+  <!-- Framed picture on wall -->
+  <rect x="80" y="80" width="180" height="220" fill="#0f4c4c" rx="6" stroke="#c9a84c" stroke-width="3"/>
+  <rect x="100" y="100" width="140" height="180" fill="#1a6a6a"/>
+  <text x="170" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#c9a84c" fill-opacity="0.7" font-style="italic">D</text>
+  <!-- Window with light -->
+  <rect x="540" y="60" width="200" height="320" fill="#f0e8d4" rx="4"/>
+  <rect x="540" y="60" width="200" height="320" fill="url(#lamp)" opacity="0.6" rx="4"/>
+  <line x1="640" y1="60" x2="640" y2="380" stroke="#c9a84c" stroke-width="2"/>
+  <line x1="540" y1="220" x2="740" y2="220" stroke="#c9a84c" stroke-width="2"/>
+  <!-- Plant in corner -->
+  <ellipse cx="100" cy="640" rx="60" ry="20" fill="#8a8470"/>
+  <path d="M 100 640 Q 70 540, 80 460 Q 100 400, 130 380 Q 110 460, 130 540 Q 110 600, 100 640" fill="#4a6850"/>
+  <path d="M 100 640 Q 130 540, 120 460 Q 140 400, 110 380 Q 130 460, 110 540 Q 130 600, 100 640" fill="#3a5840"/>
+  <path d="M 100 640 Q 60 560, 50 480 Q 70 440, 100 420 Q 80 500, 80 580 Q 90 610, 100 640" fill="#506850"/>
+  <!-- Dental chair (right side) -->
+  <g transform="translate(360 320)">
+    <!-- Base -->
+    <ellipse cx="120" cy="500" rx="120" ry="14" fill="#a8a090" opacity="0.5"/>
+    <rect x="100" y="380" width="40" height="120" fill="#5a5040" rx="4"/>
+    <ellipse cx="120" cy="500" rx="50" ry="8" fill="#3a3020"/>
+    <!-- Chair body -->
+    <path d="M 40 380 L 40 280 Q 40 200, 90 180 L 160 180 Q 200 180, 200 220 L 200 280 L 200 380 Z" fill="url(#chair)" stroke="#c8c0b0" stroke-width="2"/>
+    <!-- Headrest -->
+    <ellipse cx="170" cy="160" rx="50" ry="30" fill="url(#chair)" stroke="#c8c0b0" stroke-width="2"/>
+    <ellipse cx="170" cy="160" rx="40" ry="22" fill="#e6dccc"/>
+    <!-- Accent stripe -->
+    <rect x="40" y="240" width="160" height="6" fill="url(#accent)"/>
+    <!-- Armrest -->
+    <rect x="0" y="260" width="40" height="120" fill="#d4c8b0" rx="6"/>
+    <rect x="200" y="260" width="40" height="120" fill="#d4c8b0" rx="6"/>
   </g>
-  <g transform="translate(220 600)" fill="#c9a84c" fill-opacity="0.2">
-    <circle cx="0" cy="0" r="120"/>
-    <circle cx="160" cy="40" r="60"/>
-  </g>
-  <!-- Wordmark -->
-  <g font-family="Georgia, serif" fill="#ffffff">
-    <text x="120" y="440" font-size="92" font-weight="400" letter-spacing="-2">Odontología</text>
-    <text x="120" y="540" font-size="92" font-weight="400" letter-spacing="-2">con criterio.</text>
-  </g>
-  <text x="120" y="610" font-family="Inter, sans-serif" font-size="24" fill="#c9a84c" letter-spacing="6">DRA · GABRIELLA · GONZÁLEZ PANE</text>
-  <line x1="120" y1="660" x2="280" y2="660" stroke="#c9a84c" stroke-width="2"/>
-  <text x="120" y="710" font-family="Inter, sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.7">Asunción · Paraguay · 20+ años</text>
+  <!-- Overhead lamp -->
+  <line x1="430" y1="0" x2="430" y2="200" stroke="#5a5040" stroke-width="6"/>
+  <circle cx="430" cy="220" r="40" fill="#0f4c4c"/>
+  <ellipse cx="430" cy="240" rx="60" ry="20" fill="url(#lamp)"/>
+  <ellipse cx="430" cy="280" rx="120" ry="40" fill="url(#lamp)" opacity="0.4"/>
+  <!-- Side cabinet -->
+  <rect x="660" y="540" width="120" height="180" fill="url(#chair)" stroke="#c8c0b0" stroke-width="2" rx="4"/>
+  <rect x="660" y="600" width="120" height="2" fill="#a89c80"/>
+  <line x1="720" y1="540" x2="720" y2="720" stroke="#a89c80" stroke-width="2"/>
+  <circle cx="700" cy="620" r="3" fill="#c9a84c"/>
+  <circle cx="740" cy="620" r="3" fill="#c9a84c"/>
+  <!-- Brass brand plate -->
+  <rect x="660" y="700" width="120" height="40" fill="#0f4c4c" rx="2"/>
+  <text x="720" y="724" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#c9a84c" letter-spacing="2">DRA · GABRIELLA</text>
 </svg>
