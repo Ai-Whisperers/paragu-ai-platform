@@ -1,201 +1,118 @@
-# AI Whisperers Site — Deploy Status & DNS Wiring
+# ai-whisperers.org — DNS Cutover Runbook (2026-06-16)
 
-> **Status:** Site code is built, Docker image is on VPS, Swarm service is running, Traefik routes are configured. **What's missing: DNS pointing to the VPS.**
+## TL;DR
 
----
+The new VPS site is **built, deployed, and verified clean** (no Jonathan, Ivan + Kyrian only, 4 locales). The blocker is **DNS**: the registrar (Squarespace Domains) is still delegating `ai-whisperers.org` to an old Cloudflare account's nameservers (`perla.ns.cloudflare.com`, `skip.ns.cloudflare.com`). Those serve the **legacy Vercel site** with the old Jonathan-era content.
 
-## ✅ What's already done (committed to `Ai-Whisperers/paragu-ai-platform`)
+**5-minute fix:** switch the registrar's nameservers to the new Cloudflare account's NS, where the correct records are already configured.
 
-### Code (in `apps/ai-whisperers-site/`)
-- Next.js 15 + React 19 + Tailwind 4.2 + TypeScript 5.7
-- 4-locale routing: `/en` `/es` `/nl` `/pt`
-- 8 pages: home, services, portfolio, open-source, about, contact, pricing, sales-sheet
-- 32 routes prerendered (4 langs × 8 pages) as static HTML
-- Dark theme, gradient text, responsive
-- Spanish translation complete (15 KB content); NL/PT fall back to EN
-- `npm run build` → ✓ Compiled successfully
-- Docker image: `ai-whisperers-site:prod` (256 MB)
+## Current State (verified 2026-06-16 01:15 UTC)
 
-### Deploy (on VPS `agentzero` 72.61.44.159)
-- Image built and tagged: `ai-whisperers-site:prod`
-- Swarm service: `ai-whisperers-site_web` (1/1 replicas, running)
-- Traefik routes configured:
-  - `Host(`ai-whisperers.org`)` → main route
-  - `Host(`www.ai-whisperers.org`)` → redirect to apex via regex middleware
-  - TLS via letsencryptresolver
-  - Network: `agent-net`
-- Container listening on internal port 3000
+| Component | Status |
+|-----------|--------|
+| New VPS build | ✅ Live, 1/1 replicas, image `prod-b8ec913-20260616-0110` |
+| New build content (Ivan + Kyrian, no Jonathan) | ✅ Verified at `en/about` |
+| Traefik config (apex serves, www → 301 apex) | ✅ Wired, apex/www routers split cleanly (commit `b8ec913`) |
+| LE cert for `ai-whisperers.org` | ⏳ Will be issued on first HTTPS hit once DNS resolves |
+| Cloudflare zone (new account) | ⚠️ `status=pending`, `ns_mismatch` — needs NS swap at registrar |
+| Apex A record (new account) | ✅ 72.61.44.159 (VPS) |
+| www A record (new account) | ✅ 72.61.44.159 (VPS) |
+| Apex A record (live, old account) | ❌ 216.150.1.1 (Vercel) |
+| www A record (live, old account) | ❌ 104.21.56.190 + 172.67.155.205 (Cloudflare anycast → GitHub Pages 404) |
 
----
+## Why this happened
 
-## ⏳ What's left for Ivan (DNS + clean old site)
+The Cloudflare zone for `ai-whisperers.org` was created today on a new account
+(`Weissvanderpol.ivan@gmail.com` / account ID `9eb1832f3e42a1dbd6ba854f8d6a1cb2`).
+The zone has all the correct A records but the registrar's NS records still
+point at the previous account's nameservers. The world's DNS queries go to
+the **old** nameservers, which serve the **old** records (Vercel IP for apex,
+Cloudflare → GitHub Pages 404 for www).
 
-### 1. Update DNS for `ai-whisperers.org`
+The new zone shows up as `status=pending` with `activation_failure_reason: ns_mismatch` — Cloudflare won't activate the zone until the registrar delegates to it.
 
-**Current state:**
-- Apex `ai-whisperers.org` → Vercel (DNS: `216.150.1.1`, A record)
-- `www.ai-whisperers.org` → Cloudflare (DNS: `104.21.56.190`, `172.67.155.205`) → GitHub Pages 404
+## Step-by-step fix (5 minutes)
 
-**Goal:** both `ai-whisperers.org` and `www.ai-whisperers.org` → point to VPS `72.61.44.159`
+### 1. Open Squarespace Domains (registrar per `original_registrar` field)
 
-**Option A: At Cloudflare (recommended for `www`)**
+- Go to https://account.squarespace.com/
+- Domains → `ai-whisperers.org` → DNS Settings → Nameservers
 
-We have Cloudflare zone control for `paragu-ai.com` only. `ai-whisperers.org` zone is on a different Cloudflare account. Ask the domain owner (Ivan) to:
+### 2. Change Nameservers
 
-1. Log into the Cloudflare account that owns `ai-whisperers.org`
-2. DNS → Records:
-   - **Delete** the existing `www` A records (GitHub Pages IPs)
-   - **Add** `www` A record: `72.61.44.159` (proxied **off** so Traefik can issue the cert)
-   - **Add** apex A record: `72.61.44.159` (proxied **off**)
-3. Or just use CNAME if apex is a CNAME-able zone
+**From (current custom):**
+```
+perla.ns.cloudflare.com
+skip.ns.cloudflare.com
+```
 
-**Option B: At the registrar (Namecheap / Porkbun / etc.)**
+**To (Cloudflare's, as shown in the new zone):**
+```
+elliot.ns.cloudflare.com
+maria.ns.cloudflare.com
+```
 
-If the registrar is faster:
+> ⚠️ Do NOT change the A records in the Cloudflare dashboard. The zone has the
+> correct records (apex → 72.61.44.159, www → 72.61.44.159). Only the NS
+> delegation at the registrar is wrong.
 
-1. Login to registrar for `ai-whisperers.org`
-2. Nameservers → keep Cloudflare as authoritative (Cloudflare controls)
-3. Then do Option A
+### 3. Wait for Cloudflare to detect the delegation (5-30 minutes)
 
-**Option C: At Vercel (if the domain is on the Vercel project)**
+Cloudflare polls the NS records at the TLD zone. When it sees the new NS:
+- It activates the zone (`status: pending` → `active`)
+- The new A records start serving
+- DNS propagates to public resolvers (cache TTL-dependent)
 
-1. Login to Vercel → project → Domains
-2. **Remove** `ai-whisperers.org` and `www.ai-whisperers.org` from this Vercel project
-3. Update DNS at Cloudflare to point to VPS
+### 4. Verify the cutover
 
-**Option D: Skip DNS for now and use a different live URL**
-
-The new site is already deployed on VPS. To see it live without changing DNS:
+From anywhere:
 
 ```bash
-# Tailscale
-https://agentzero.ts.net/
-
-# Or via Traefik dashboard
-https://traefik.paragu-ai.com/dashboard/  # (needs auth)
+# Should resolve to 72.61.44.159 (VPS)
+dig +short ai-whisperers.org A @1.1.1.1
+dig +short www.ai-whisperers.org A @1.1.1.1
 ```
-
-### 2. Once DNS is pointed, verify
 
 ```bash
-# Check DNS
-dig +short ai-whisperers.org A
-dig +short www.ai-whisperers.org A
+# HTTPS — first hit triggers LE cert issuance
+curl -I https://ai-whisperers.org/en/about
+# Expect: HTTP 200, body has "Ivan Weiss" and "Kyrian Weiss" (no Jonathan)
 
-# Check the live site
-curl -I https://ai-whisperers.org/en
-curl -I https://www.ai-whisperers.org/en
-
-# Check www redirect
-curl -I -L https://www.ai-whisperers.org/en
-# Should 301 → https://ai-whisperers.org/en
+# www → apex 301
+curl -I https://www.ai-whisperers.org/en/about
+# Expect: HTTP 301, Location: https://ai-whisperers.org/en/about
 ```
 
-### 3. Decommission the legacy Vercel site
+### 5. Decommission the legacy Vercel project (after verification)
 
-The legacy site is at `ai-whisperers.org` via Vercel (Next.js 16 site-template). Once DNS points to VPS:
+Once `https://ai-whisperers.org` shows the new site for ≥24h, remove the domain from the Vercel project at https://vercel.com/dashboard to stop the Vercel deployment from competing for the apex.
 
-1. Vercel project → Settings → Domains → remove `ai-whisperers.org` and `www.ai-whisperers.org`
-2. The Vercel project can be deleted or kept as a backup
+## If LE cert doesn't issue automatically
 
-### 4. (Optional) Move the legacy Vercel code into the monorepo
+If `curl -I https://ai-whisperers.org/en/about` returns 404 (Traefik received but no router — cert not yet issued) after 5+ minutes of DNS resolution:
 
-The legacy site is built on `Ai-Whisperers/site-template`. For archival:
+1. Check Traefik logs: `ssh agentzero "docker logs \$(docker ps -q -f name=traefik_traefik) --tail 50 | grep -iE 'le\|cert\|challenge\|whisperer'"`
+2. Most likely cause: HTTP-01 challenge fails because Traefik's `web` entrypoint has a global HTTP→HTTPS redirect. If that happens, the fallback is to switch to DNS-01 challenge (using the Cloudflare API token to prove ownership of the zone). Tell Ivan to ping me and I'll wire it.
 
+## Why the legacy Vercel site is the source of "Jonathan" content
+
+The screenshot Ivan shared (Kiryan misspelling, "many years of experience" copy, "third co-founder" wording) comes from the **public site-template** repo that was deployed to Vercel. The current monorepo (`apps/ai-whisperers-site/`) has a **completely new codebase** that does not use site-template and has the correct 2-person team content. None of the monorepo source code references Jonathan.
+
+**Verified by:**
 ```bash
-cd /root/paragu-ai-platform
-mkdir -p _archive/legacy-vercel-site-template
-# Clone the public repo
-git clone https://github.com/Ai-Whisperers/site-template.git _archive/legacy-vercel-site-template
+grep -ri "jonathan\|verdun\|kiryan" apps/ai-whisperers-site/content/  # → 0 hits
+grep -ri "jonathan\|verdun\|kiryan" apps/ai-whisperers-site/app/      # → 0 hits
+# Rendered HTML on VPS:
+docker exec $(docker ps -q -f name=ai-whisperers-site_web) \
+  grep -oE "Ivan Weiss|Kyrian Weiss|Jonathan Verdun" \
+  /app/.next/server/app/en/about.html
+# → Ivan Weiss, Kyrian Weiss, Ivan Weiss, Kyrian Weiss, ... (no Jonathan)
 ```
 
-This is non-urgent; only do it for historical record.
+## What to monitor after cutover
 
----
-
-## 🛠️ How to deploy future changes
-
-From the monorepo, on the VPS:
-
-```bash
-ssh root@72.61.44.159
-cd /root/paragu-ai-platform/apps/ai-whisperers-site
-git pull
-npm install --legacy-peer-deps
-npm run build
-docker build -t ai-whisperers-site:prod -t ai-whisperers-site:prod-$(date +%Y%m%d-%H%M) .
-docker service update --image ai-whisperers-site:prod ai-whisperers-site_web
-```
-
-Or use the deploy script:
-
-```bash
-ssh root@72.61.44.159
-cd /root/paragu-ai-platform/apps/ai-whisperers-site
-./deploy.sh
-```
-
----
-
-## 📊 What's running right now on the VPS
-
-| Service | Image | State | Domain |
-|---|---|---|---|
-| **ai-whisperers-site_web** | ai-whisperers-site:prod | 1/1 Running | (awaits DNS) `ai-whisperers.org`, `www.ai-whisperers.org` |
-| 42 client websites | various | Running | various `*.paragu-ai.com` |
-| 7 infrastructure services | various | Running | monitor, evolution, loki, etc. |
-| Traefik | traefik:v3.5.3 | Running | all ingress |
-
----
-
-## 📁 Files in this app (31 total)
-
-```
-apps/ai-whisperers-site/
-├── .dockerignore              # Docker build context excludes
-├── .gitignore                 # git excludes
-├── README.md                  # Stack + dev + build + deploy guide
-├── Dockerfile                 # Multi-stage standalone build
-├── docker-compose.yml         # Swarm service definition
-├── deploy.sh                  # Build + tag + push
-├── next.config.ts             # Standalone, CSP headers, redirects
-├── next-env.d.ts              # Next.js types ref
-├── package.json               # next 16.2.4, react 19, tailwind 4.2
-├── package-lock.json          # reproducible builds
-├── postcss.config.mjs         # Tailwind 4 postcss plugin
-├── tsconfig.json              # TS 5.7 strict-false
-├── app/
-│   ├── layout.tsx             # Root: Inter + JetBrains Mono fonts
-│   ├── page.tsx               # Root → /en redirect
-│   ├── globals.css            # Design tokens, dark theme
-│   └── [lang]/
-│       ├── layout.tsx         # Per-locale Navbar + Footer
-│       ├── page.tsx           # Home (hero + 6 caps + 8 whitespace + 4 cases + team)
-│       ├── services/page.tsx
-│       ├── portfolio/page.tsx
-│       ├── open-source/page.tsx
-│       ├── about/page.tsx
-│       ├── contact/page.tsx
-│       ├── pricing/page.tsx
-│       └── sales-sheet/page.tsx
-├── components/
-│   ├── Navbar.tsx             # 4-locale nav, mobile menu
-│   ├── Footer.tsx             # Multi-column footer
-│   └── ContactForm.tsx        # WhatsApp-launching form
-├── content/
-│   ├── en/site.json            # 13 KB canonical English
-│   ├── es/site.json            # 15 KB full Spanish translation
-│   ├── nl/site.json            # (falls back to EN)
-│   └── pt/site.json            # (falls back to EN)
-├── lib/
-│   └── utils.ts               # cn() helper
-└── public/                    # Static assets
-```
-
----
-
-## 📞 Who to ask
-
-For DNS changes: the **domain owner** (Ivan). DNS is not in scope for the agent.
-
-For deploy help: Erebus (this session), or `git log --oneline` on the monorepo to see all the commits.
+- `https://ai-whisperers.org/{en,es,nl,pt}/` — all 4 locales should be 200
+- `https://ai-whisperers.org/{en,es,nl,pt}/about` — should mention "Ivan" and "Kyrian", not "Jonathan" or "Kiryan"
+- `https://www.ai-whisperers.org/...` — should 301 to apex (with HTTPS)
+- `/sitemap.xml`, `/robots.txt` — should be present
+- `Content-Security-Policy`, `Strict-Transport-Security` headers — should be set (security-headers@file middleware)
