@@ -4,17 +4,20 @@
 import Link from "next/link"
 import { ArrowRight, Sparkles } from "lucide-react"
 
+// Map service tab IDs (from services/index.json) to the actual page route.
+// Routes use Spanish slugs (existing pattern); English pages live under
+// /en/<english-slug> via the dynamic [slug] route we're adding in Phase 2.7.
 const SERVICE_ROUTE: Record<string, { es: string; en: string }> = {
   "segunda-opinion": { es: "/es/segunda-opinion", en: "/en/second-opinion" },
   "second-opinion": { es: "/es/segunda-opinion", en: "/en/second-opinion" },
-  "planificacion-tratamiento": { es: "/es/servicios/planificacion-tratamiento", en: "/en/services/treatment-planning" },
-  "treatment-planning": { es: "/es/servicios/planificacion-tratamiento", en: "/en/services/treatment-planning" },
+  "planificacion-tratamiento": { es: "/es/segunda-opinion", en: "/en/second-opinion" },
+  "treatment-planning": { es: "/es/segunda-opinion", en: "/en/second-opinion" },
   "odontologia-general": { es: "/es/servicios#general", en: "/en/services#general" },
   "general-dentistry": { es: "/es/servicios#general", en: "/en/services#general" },
   "estetica-dental": { es: "/es/servicios#estetica", en: "/en/services#estetica" },
-  "cosmetic-dentistry": { es: "/es/servicios#estetica", en: "/en/services#cosmetic-dentistry" },
+  "cosmetic-dentistry": { es: "/es/servicios#estetica", en: "/en/services#estetica" },
   "rehabilitacion-oral": { es: "/es/servicios#rehabilitacion", en: "/en/services#rehabilitacion" },
-  "oral-rehabilitation": { es: "/es/servicios#rehabilitacion", en: "/en/services#oral-rehabilitation" },
+  "oral-rehabilitation": { es: "/es/servicios#rehabilitacion", en: "/en/services#rehabilitacion" },
 }
 
 export function Services({ c, locale }: { c: any; locale: string }) {

@@ -20,6 +20,8 @@ import esRehab from "@/content/es/services/categories/rehabilitacion-oral.json"
 
 type ServiceData = any
 
+// Map of all known slugs (any language) to their content.
+// Each locale gets the same 5 content files but keyed by their language slug.
 const SERVICES_BY_LOCALE: Record<Locale, Record<string, ServiceData>> = {
   en: {
     "second-opinion": enSegunda,
@@ -27,6 +29,12 @@ const SERVICES_BY_LOCALE: Record<Locale, Record<string, ServiceData>> = {
     "general-dentistry": enGeneral,
     "cosmetic-dentistry": enCosmetic,
     "oral-rehabilitation": enRehab,
+    // Spanish slugs work too (canonical URLs)
+    "segunda-opinion": enSegunda,
+    "planificacion-tratamiento": enPlanning,
+    "odontologia-general": enGeneral,
+    "estetica-dental": enCosmetic,
+    "rehabilitacion-oral": enRehab,
   },
   es: {
     "segunda-opinion": esSegunda,
@@ -34,6 +42,12 @@ const SERVICES_BY_LOCALE: Record<Locale, Record<string, ServiceData>> = {
     "odontologia-general": esGeneral,
     "estetica-dental": esCosmetic,
     "rehabilitacion-oral": esRehab,
+    // English slugs work too (cross-locale access)
+    "second-opinion": esSegunda,
+    "treatment-planning": esPlanning,
+    "general-dentistry": esGeneral,
+    "cosmetic-dentistry": esCosmetic,
+    "oral-rehabilitation": esRehab,
   },
 }
 
@@ -51,6 +65,17 @@ export function generateStaticParams() {
     { locale: "es", slug: "odontologia-general" },
     { locale: "es", slug: "estetica-dental" },
     { locale: "es", slug: "rehabilitacion-oral" },
+    // Cross-locale (slug from any language works)
+    { locale: "en", slug: "segunda-opinion" },
+    { locale: "en", slug: "planificacion-tratamiento" },
+    { locale: "en", slug: "odontologia-general" },
+    { locale: "en", slug: "estetica-dental" },
+    { locale: "en", slug: "rehabilitacion-oral" },
+    { locale: "es", slug: "second-opinion" },
+    { locale: "es", slug: "treatment-planning" },
+    { locale: "es", slug: "general-dentistry" },
+    { locale: "es", slug: "cosmetic-dentistry" },
+    { locale: "es", slug: "oral-rehabilitation" },
   ]
 }
 
