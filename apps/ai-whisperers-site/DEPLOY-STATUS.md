@@ -144,6 +144,19 @@ docker exec $(docker ps -q -f name=ai-whisperers-site_web) \
 # → Ivan Weiss, Kyrian Weiss, Ivan Weiss, Kyrian Weiss, ... (no Jonathan)
 ```
 
+## Monitoring (already configured)
+
+A cron job is running every 5 minutes (job ID `67cc60c181e8`, name `ai-whisperers.org cutover monitor`):
+
+- Polls `https://ai-whisperers.org/en/about`
+- Detects state: `legacy` (still Jonathan/Kiryan) → `new-site-live` (Ivan/Kyrian, 0 Jonathan/Kiryan)
+- Sends a Telegram alert the moment the state flips to `new-site-live`
+- Logs to `/var/log/ai-whisperers-cutover-monitor.log`
+
+The monitor scripts are at `apps/ai-whisperers-site/scripts/`:
+- `ai-whisperers-cutover-monitor.sh` — the poll-and-classify script
+- `ai-whisperers-cutover-alert.sh` — wrapper for Telegram notification
+
 ## What to monitor after cutover
 
 - `https://ai-whisperers.org/{en,es,nl,pt}/` — all 4 locales should be 200
