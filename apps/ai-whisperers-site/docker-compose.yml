@@ -6,14 +6,14 @@ services:
       labels:
         - "traefik.enable=true"
         - "traefik.docker.network=agent-net"
-        # Apex (non-www) — serves content
+        # Apex (canonical) — ai-whisperers.org
         - "traefik.http.routers.ai-whisperers.rule=Host(`ai-whisperers.org`)"
         - "traefik.http.routers.ai-whisperers.entrypoints=websecure"
         - "traefik.http.routers.ai-whisperers.tls=true"
         - "traefik.http.routers.ai-whisperers.tls.certresolver=letsencryptresolver"
         - "traefik.http.routers.ai-whisperers.middlewares=security-headers@file"
         - "traefik.http.services.ai-whisperers.loadbalancer.server.port=3000"
-        # www — 301 redirect to apex (canonical)
+        # www.ai-whisperers.org — 301 redirect to apex
         - "traefik.http.routers.ai-whisperers-www.rule=Host(`www.ai-whisperers.org`)"
         - "traefik.http.routers.ai-whisperers-www.entrypoints=websecure"
         - "traefik.http.routers.ai-whisperers-www.tls=true"
@@ -21,6 +21,14 @@ services:
         - "traefik.http.routers.ai-whisperers-www.middlewares=ai-whisperers-www-redirect@docker,security-headers@file"
         - "traefik.http.middlewares.ai-whisperers-www-redirect.redirectregex.regex=^https?://www\\.(.*)"
         - "traefik.http.middlewares.ai-whisperers-www-redirect.redirectregex.replacement=https://$${1}"
+        # Mirror on paragu-ai.com subdomain — works while the apex DNS is stuck at the
+        # old Cloudflare account (no Squarespace access for NS swap). CF proxies
+        # ai-whisperers.paragu-ai.com → our VPS via Traefik.
+        - "traefik.http.routers.ai-whisperers-mirror.rule=Host(`ai-whisperers.paragu-ai.com`) || Host(`www.ai-whisperers.paragu-ai.com`)"
+        - "traefik.http.routers.ai-whisperers-mirror.entrypoints=websecure"
+        - "traefik.http.routers.ai-whisperers-mirror.tls=true"
+        - "traefik.http.routers.ai-whisperers-mirror.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.ai-whisperers-mirror.middlewares=security-headers@file"
     networks:
       - agent-net
 networks:
