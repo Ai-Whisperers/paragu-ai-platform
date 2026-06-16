@@ -1,5 +1,5 @@
 // Section: BigStats — wide teal strip with 2-col layout (heading + 4 stats).
-// More structured than the previous centered list.
+// Locale-aware stat labels.
 
 interface BigStat {
   value: string
@@ -7,7 +7,13 @@ interface BigStat {
   sub: string
 }
 
-const STATS: BigStat[] = [
+const STATS_EN: BigStat[] = [
+  { value: "20+", label: "Years in practice", sub: "Since 2005" },
+  { value: "130+", label: "Patients per month", sub: "Current average" },
+  { value: "100%", label: "Written plan", sub: "Before any step" },
+  { value: "2-3", label: "Days for second opinion", sub: "Written report" },
+]
+const STATS_ES: BigStat[] = [
   { value: "20+", label: "Años en práctica", sub: "Desde 2005" },
   { value: "130+", label: "Pacientes al mes", sub: "Promedio actual" },
   { value: "100%", label: "Plan escrito", sub: "Antes de cualquier paso" },
@@ -16,6 +22,7 @@ const STATS: BigStat[] = [
 
 export function BigStats({ locale }: { locale: string }) {
   const isEs = locale === "es"
+  const STATS = isEs ? STATS_ES : STATS_EN
   return (
     <section className="relative overflow-hidden bg-[var(--accent)] text-white">
       <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-15" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)" }} />
