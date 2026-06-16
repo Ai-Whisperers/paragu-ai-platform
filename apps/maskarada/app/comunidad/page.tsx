@@ -59,6 +59,34 @@ export default function Comunidad() {
           </Link>
         </div>
 
+        {/* Conversación + recursos */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+          <Link
+            href="/foro"
+            className="block border border-white/5 rounded-xl p-6 bg-white/[0.02] hover:border-gold-400/30 transition-all"
+          >
+            <div className="text-3xl mb-3">💬</div>
+            <h2 className="text-lg font-semibold text-white mb-1">Foro</h2>
+            <p className="text-sm text-gray-400">Conversación de la comunidad por categoría. Para principiantes, encuentros, seguridad.</p>
+          </Link>
+          <Link
+            href="/cine"
+            className="block border border-white/5 rounded-xl p-6 bg-white/[0.02] hover:border-gold-400/30 transition-all"
+          >
+            <div className="text-3xl mb-3">🎬</div>
+            <h2 className="text-lg font-semibold text-white mb-1">Cine</h2>
+            <p className="text-sm text-gray-400">Películas, cortos y series curados con temas de deseo, sensualidad y kink.</p>
+          </Link>
+          <Link
+            href="/musica"
+            className="block border border-white/5 rounded-xl p-6 bg-white/[0.02] hover:border-gold-400/30 transition-all"
+          >
+            <div className="text-3xl mb-3">🎵</div>
+            <h2 className="text-lg font-semibold text-white mb-1">Música y podcasts</h2>
+            <p className="text-sm text-gray-400">DJ sets, mixtapes, podcasts. Lo que suena en los eventos y en el viaje.</p>
+          </Link>
+        </div>
+
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-4">El equipo</h2>
           <p className="text-sm text-gray-400 mb-6">Las personas que organizan cada edición, mantienen la atmósfera y velan por el cumplimiento de las reglas.</p>
