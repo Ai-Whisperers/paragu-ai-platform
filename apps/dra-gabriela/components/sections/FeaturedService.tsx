@@ -76,7 +76,7 @@ export function FeaturedService({
           </div>
 
           {/* Content */}
-          <div className={reverse ? "lg:order-1" : ""}>
+          <div className={reverse ? "lg:order-1 text-left" : "text-left"}>
             <span
               className={`eyebrow inline-flex ${
                 variant === "teal" ? "!border-white/20 !bg-white/10 !text-[var(--gold)]" : ""

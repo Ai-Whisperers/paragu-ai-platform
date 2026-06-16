@@ -53,7 +53,7 @@ export function MeetDoctor({ locale }: MeetDoctorProps) {
           </div>
 
           {/* Content */}
-          <div>
+          <div className="text-left">
             <span className="eyebrow inline-flex">
               {isEs ? "Conocé a la doctora" : "Meet the doctor"}
             </span>

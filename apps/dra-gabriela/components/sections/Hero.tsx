@@ -32,7 +32,7 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left content */}
-          <div className="relative z-10">
+          <div className="relative z-10 text-left">
             {h.badge && (
               <span className="eyebrow inline-flex animate-fade-in">
                 <Sparkles className="w-3 h-3" />

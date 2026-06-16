@@ -1,39 +1,41 @@
 {
+  "title": "Your journey",
+  "subtitle": "Four steps from first message to a written plan. No surprises.",
   "steps": [
     {
       "order": 1,
-      "title": "Contacto sin compromiso",
-      "subtitle": "Escribinos por WhatsApp o formulario. Te respondemos en menos de 24 horas.",
+      "title": "No-obligation contact",
+      "subtitle": "Message us on WhatsApp or via the form. We respond in under 24 hours.",
       "icon": "message",
       "duration": "24h",
       "actions": ["WhatsApp", "Web form", "Phone"]
     },
     {
       "order": 2,
-      "title": "Consulta de evaluación",
-      "subtitle": "Examen clínico, radiografías digitales y explicación de hallazgos. Sin presión.",
+      "title": "Evaluation visit",
+      "subtitle": "Clinical exam, digital x-rays, and a clear explanation of findings. No pressure.",
       "icon": "calendar",
       "duration": "45–60 min",
-      "actions": ["Bring ID", "Bring prior studies if available"]
+      "actions": ["Bring ID", "Bring prior studies if you have them"]
     },
     {
       "order": 3,
-      "title": "Plan por escrito",
-      "subtitle": "Recibís un plan detallado: opciones, precios, plazos y riesgos. Lo decidís vos.",
-      "icon": "file-text",
-      "duration": "1–3 días",
-      "actions": ["PDF", "Transparent pricing"]
+      "title": "Written plan",
+      "subtitle": "You receive a detailed plan: options, prices, timelines, and risks. You decide.",
+      "icon": "fileText",
+      "duration": "1–3 days",
+      "actions": ["Downloadable PDF", "Transparent pricing"]
     },
     {
       "order": 4,
-      "title": "Tratamiento con seguimiento",
-      "subtitle": "Ejecutamos el plan acordado. Controlamos cada fase y te actualizamos en cada paso.",
-      "icon": "heart",
+      "title": "Treatment with follow-up",
+      "subtitle": "We execute the agreed plan. We control every phase and update you at every step.",
+      "icon": "activity",
       "duration": "Varies",
-      "actions": ["Progress callbacks", "WhatsApp channel"]
+      "actions": ["Phase tracking", "Post-op check"]
     }
   ],
-  "what_to_bring": ["DNI", "Obra social / private insurance card", "Prior radiographs or records"],
-  "cancellation_policy": "24h notice appreciated",
-  "guarantee": "Written plan before any treatment begins"
+  "what_to_bring": ["ID", "Insurance card (for reimbursement)", "List of medications", "Previous x-rays if available"],
+  "cancellation_policy": "Cancellations within 24 hours may incur a small fee.",
+  "guarantee": "Written plan delivered before any irreversible procedure."
 }

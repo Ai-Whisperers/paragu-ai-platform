@@ -1,6 +1,5 @@
-// Section: BigStats — a wide teal-strip with 3 huge numbers.
-// Distinct from the 4-column icon Stats, designed to dominate the page
-// rhythm with visual weight.
+// Section: BigStats — wide teal strip with 2-col layout (heading + 4 stats).
+// More structured than the previous centered list.
 
 interface BigStat {
   value: string
@@ -19,32 +18,41 @@ export function BigStats({ locale }: { locale: string }) {
   const isEs = locale === "es"
   return (
     <section className="relative overflow-hidden bg-[var(--accent)] text-white">
-      {/* Decorative glows */}
       <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-15" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)" }} />
       <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full opacity-10" style={{ background: "radial-gradient(circle, white 0%, transparent 60%)" }} />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-        <div className="text-center mb-10">
-          <span className="text-xs uppercase tracking-widest text-[var(--gold)] font-semibold">
-            {isEs ? "En números" : "By the numbers"}
-          </span>
-          <h2 className="text-3xl md:text-4xl text-white mt-2">
-            {isEs ? "Veinte años en práctica" : "Twenty years in practice"}
-          </h2>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6">
-          {STATS.map((s, i) => (
-            <div key={i} className="text-center">
-              <div
-                className="text-5xl md:text-6xl lg:text-7xl font-medium leading-none mb-3"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                {s.value}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-10 lg:gap-16 items-center">
+          {/* Left: heading */}
+          <div>
+            <span className="text-xs uppercase tracking-widest text-[var(--gold)] font-semibold">
+              {isEs ? "En números" : "By the numbers"}
+            </span>
+            <h2 className="text-3xl md:text-4xl text-white mt-2">
+              {isEs ? "Veinte años en práctica" : "Twenty years in practice"}
+            </h2>
+            <p className="text-white/70 mt-3 leading-relaxed">
+              {isEs
+                ? "Una práctica conservadora que se construye sobre la confianza a largo plazo, no sobre el volumen."
+                : "A conservative practice built on long-term trust, not on volume."}
+            </p>
+          </div>
+
+          {/* Right: 4 stat cards in 2x2 grid */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            {STATS.map((s, i) => (
+              <div key={i} className="card bg-white/10 backdrop-blur-sm border-white/20 p-5 text-center">
+                <div
+                  className="text-4xl md:text-5xl font-medium leading-none mb-2"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  {s.value}
+                </div>
+                <div className="text-sm font-medium text-white/90 mb-1">{s.label}</div>
+                <div className="text-[10px] text-white/60 uppercase tracking-wider">{s.sub}</div>
               </div>
-              <div className="text-base font-medium mb-1">{s.label}</div>
-              <div className="text-xs text-white/60 uppercase tracking-wider">{s.sub}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

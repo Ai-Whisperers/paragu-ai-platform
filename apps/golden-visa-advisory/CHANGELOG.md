@@ -13,6 +13,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-16: feat(dra-gabriela): doctor portrait, MeetDoctor section, BigStats strip, HomeFaq, longer hero copy (by erebus)
+
 - 2026-06-16: fix(dra-gabriela): add trust_line to root hero.json so live indicator renders (by erebus)
 
 - 2026-06-16: fix(dra-gabriela): complete visual overhaul — slim home to 4 sections, painterly SVGs, animations, social proof band, broken CTA fix (by erebus)

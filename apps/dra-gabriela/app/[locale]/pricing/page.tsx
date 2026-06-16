@@ -1,8 +1,9 @@
-// Pricing page — visual hierarchy with category cards, badge, currency, and CTA.
+// /en/pricing + /es/precios — bilingual pricing with grouped categories.
+// Uses 2-col grid layout to avoid the "flat list of 11 H2s" problem.
 
 import { notFound } from "next/navigation"
-import { MessageCircle, Clock, CheckCircle2, Sparkles, Tag } from "lucide-react"
 import Link from "next/link"
+import { MessageCircle, Clock, CheckCircle2, Sparkles, Tag } from "lucide-react"
 import en from "@/content/en/pricing.json"
 import es from "@/content/es/precios.json"
 import { getContent, whatsappLink } from "@/lib/content"
@@ -65,6 +66,12 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
   const c2 = getContent(locale)
   const wa = whatsappLink(c2.business?.whatsapp, c2.business?.whatsappMessage)
 
+  // Filter to only categories that have items
+  const visible = categoryOrder.filter((k) => {
+    const items = p[k]
+    return items && Array.isArray(items) && items.length > 0 && titles[k]
+  })
+
   return (
     <>
       <PageHero
@@ -77,7 +84,7 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
 
       {/* Currency / disclaimer note */}
       {p.usd_approx && (
-        <div className="bg-[var(--surface)] border-y border-[var(--border-light)]">
+        <div className="bg-[var(--surface)] border-b border-[var(--border-light)]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-center text-sm text-[var(--fg-muted)]">
             {isEs ? "Referencia" : "Reference"}: <span className="font-mono text-[var(--accent)]">{p.usd_approx}</span>
             {p.disclaimer && <span className="block text-xs text-[var(--fg-subtle)] mt-1 italic">{p.disclaimer}</span>}
@@ -85,77 +92,76 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
         </div>
       )}
 
-      {/* Categories */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
-        {categoryOrder.map((key) => {
-          const items = p[key]
-          if (!items || !Array.isArray(items) || items.length === 0) return null
-          const meta = titles[key]
-          if (!meta) return null
-          const Icon = meta.icon
-          return (
-            <section key={key}>
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-[var(--accent)]" />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {visible.map((key) => {
+            const items = p[key]
+            const meta = titles[key]
+            const Icon = meta.icon
+            return (
+              <div key={key} className="card-accent card p-6 md:p-7 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-[var(--accent)]" />
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-medium" style={{ fontFamily: "var(--font-heading)" }}>
+                      {meta.title}
+                    </h2>
+                    <p className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider mt-0.5">{meta.subtitle}</p>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="text-2xl">{meta.title}</h2>
-                  <p className="text-sm text-[var(--fg-subtle)]">{meta.subtitle}</p>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {items.map((it: any, i: number) => (
-                  <div key={i} className="card p-4 flex flex-wrap items-baseline justify-between gap-3">
-                    <div className="flex-1 min-w-[200px]">
-                      <h3 className="font-medium text-[var(--fg)]">{it.name}</h3>
-                      {it.duration && (
-                        <p className="text-xs text-[var(--fg-subtle)] mt-1 flex items-center gap-1">
-                          <Clock className="w-3 h-3" /> {it.duration}
-                        </p>
-                      )}
-                      {it.note && <p className="text-xs text-[var(--fg-muted)] mt-1">{it.note}</p>}
-                    </div>
-                    <div className="text-right">
+                <ul className="space-y-2.5 border-t border-[var(--border-light)] pt-4">
+                  {items.map((it: any, i: number) => (
+                    <li key={i} className="flex flex-wrap items-baseline justify-between gap-2 py-1.5">
+                      <div className="flex-1 min-w-[200px]">
+                        <div className="text-sm font-medium text-[var(--fg)]">{it.name}</div>
+                        {it.duration && (
+                          <div className="text-xs text-[var(--fg-subtle)] mt-0.5 flex items-center gap-1">
+                            <Clock className="w-3 h-3" /> {it.duration}
+                          </div>
+                        )}
+                        {it.note && <div className="text-xs text-[var(--fg-muted)] mt-0.5">{it.note}</div>}
+                      </div>
                       {it.price ? (
-                        <div className="text-lg font-medium text-[var(--accent)]">
+                        <div className="text-base font-mono text-[var(--accent)] font-medium whitespace-nowrap">
                           Gs {Number(it.price).toLocaleString("es-PY")}
                         </div>
                       ) : it.priceText ? (
-                        <div className="text-sm text-[var(--fg-muted)]">{it.priceText}</div>
+                        <div className="text-xs text-[var(--fg-muted)] whitespace-nowrap">{it.priceText}</div>
                       ) : null}
-                    </div>
-                  </div>
-                ))}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </section>
-          )
-        })}
+            )
+          })}
+        </div>
 
         {/* Corporate note */}
         {p.corporate_note && (
-          <section className="card-accent card p-6 md:p-8">
+          <div className="mt-12 card-accent card p-6 md:p-8">
             <span className="eyebrow inline-flex">{isEs ? "Empresas" : "Corporate"}</span>
-            <h2 className="text-xl mb-2">{isEs ? "Convenios corporativos" : "Corporate agreements"}</h2>
+            <h2 className="text-xl mb-2 mt-2">{isEs ? "Convenios corporativos" : "Corporate agreements"}</h2>
             <p className="text-[var(--fg-muted)] leading-relaxed">{p.corporate_note}</p>
-          </section>
+          </div>
         )}
 
         {/* Payment options */}
         {p.payment && Array.isArray(p.payment) && p.payment.length > 0 && (
-          <section>
-            <h2 className="text-2xl mb-5">{isEs ? "Opciones de pago" : "Payment options"}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="mt-8">
+            <h2 className="text-xl mb-4">{isEs ? "Opciones de pago" : "Payment options"}</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {p.payment.map((opt: string, i: number) => (
-                <div key={i} className="card p-4 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
+                <div key={i} className="card p-3 flex items-center gap-2.5 text-sm">
+                  <div className="w-8 h-8 rounded-lg bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
                     <Tag className="w-4 h-4 text-[var(--accent)]" />
                   </div>
-                  <span className="text-sm">{opt}</span>
+                  <span>{opt}</span>
                 </div>
               ))}
             </div>
-          </section>
+          </div>
         )}
       </div>
 
@@ -171,19 +177,17 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
                 ? "Los precios publicados son referenciales. Costo final confirmado en consulta antes de cualquier procedimiento."
                 : "Published prices are reference values. Final cost confirmed at consultation before any procedure."}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              {wa ? (
-                <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                  <MessageCircle className="w-4 h-4" />
-                  {isEs ? "Pedir presupuesto" : "Request a quote"}
-                </a>
-              ) : (
-                <Link href={`/${locale}/contact`} className="btn btn-primary">
-                  <MessageCircle className="w-4 h-4" />
-                  {isEs ? "Ver datos de contacto" : "See contact details"}
-                </Link>
-              )}
-            </div>
+            {wa ? (
+              <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                <MessageCircle className="w-4 h-4" />
+                {isEs ? "Pedir presupuesto" : "Request a quote"}
+              </a>
+            ) : (
+              <Link href={`/${locale}/contact`} className="btn btn-primary">
+                <MessageCircle className="w-4 h-4" />
+                {isEs ? "Ver datos de contacto" : "See contact details"}
+              </Link>
+            )}
           </div>
         </div>
       </section>
