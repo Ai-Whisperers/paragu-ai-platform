@@ -7,10 +7,6 @@ const config: NextConfig = {
     return [
       // apex + www → default lang
       { source: "/", destination: "/en", permanent: false },
-      // legacy root-redirect
-      { source: "/es", destination: "/es/", permanent: true },
-      { source: "/nl", destination: "/nl/", permanent: true },
-      { source: "/pt", destination: "/pt/", permanent: true },
     ]
   },
   async headers() {
