@@ -2,6 +2,7 @@
 
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, MessageCircle, GraduationCap, Globe, Award, Languages, type LucideIcon } from "lucide-react"
 import en from "@/content/en/about.json"
 import es from "@/content/es/nosotros.json"
@@ -49,13 +50,14 @@ export default async function About({ params }: { params: Promise<{ locale: stri
             {/* Portrait card */}
             <div className="md:col-span-1">
               <div className="card overflow-hidden">
-                <div className="aspect-[3/4] bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] relative">
-                  <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(circle at 30% 30%, var(--gold) 0%, transparent 50%)" }} />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-7xl font-heading text-white/30" style={{ fontFamily: "var(--font-heading)" }}>DG</div>
-                  </div>
-                  <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full border border-white/10" />
-                  <div className="absolute -bottom-8 -left-8 w-24 h-24 rounded-full border border-white/10" />
+                <div className="aspect-[3/4] relative">
+                  <Image
+                    src="/images/team/dra-gp-portrait.svg"
+                    alt="Dra. Gabriella González Pane"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-5 border-t border-[var(--border)]">
                   <h3 className="font-medium mb-0.5" style={{ fontFamily: "var(--font-heading)" }}>Dra. Gabriella González Pane</h3>

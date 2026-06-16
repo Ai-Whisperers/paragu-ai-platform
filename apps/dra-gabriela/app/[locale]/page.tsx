@@ -1,10 +1,12 @@
 import { notFound } from "next/navigation"
 import { getContent, isLocale } from "@/lib/content"
 import { Hero } from "@/components/sections/Hero"
-import { Stats } from "@/components/sections/Stats"
+import { BigStats } from "@/components/sections/BigStats"
 import { FeaturedService } from "@/components/sections/FeaturedService"
 import { SocialProof } from "@/components/sections/SocialProof"
+import { MeetDoctor } from "@/components/sections/MeetDoctor"
 import { Process } from "@/components/sections/Process"
+import { HomeFaq } from "@/components/sections/HomeFaq"
 import { CtaBanner } from "@/components/sections/CtaBanner"
 
 export function generateStaticParams() {
@@ -36,7 +38,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <>
       <Hero c={c} locale={locale} />
       <SocialProof c={c} locale={locale} />
-      <Stats c={c} locale={locale} />
+      <MeetDoctor locale={locale} />
+      <BigStats locale={locale} />
 
       {/* Featured second opinion — the lead-conversion page */}
       <FeaturedService
@@ -70,6 +73,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       />
 
       <Process c={c} locale={locale} />
+      <HomeFaq c={c} locale={locale} />
       <CtaBanner c={c} locale={locale} />
     </>
   )
