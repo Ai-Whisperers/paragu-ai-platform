@@ -34,22 +34,22 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
           {/* Left content */}
           <div className="relative z-10">
             {h.badge && (
-              <span className="eyebrow inline-flex">
+              <span className="eyebrow inline-flex animate-fade-in">
                 <Sparkles className="w-3 h-3" />
                 {h.badge}
               </span>
             )}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tight mb-6 leading-[1.05] animate-fade-in-up">
               <span className="gradient-text">{h.title}</span>
             </h1>
             {h.subtitle && (
-              <p className="text-lg md:text-xl text-[var(--fg-muted)] max-w-xl mb-10 leading-relaxed">
+              <p className="text-lg md:text-xl text-[var(--fg-muted)] max-w-xl mb-10 leading-relaxed animate-fade-in-up-delay">
                 {h.subtitle}
               </p>
             )}
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-10">
+            <div className="flex flex-col sm:flex-row gap-3 mb-10 animate-fade-in-up-delay-2">
               {wa ? (
                 <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary text-base px-8 py-4">
                   <MessageCircle className="w-5 h-5" />

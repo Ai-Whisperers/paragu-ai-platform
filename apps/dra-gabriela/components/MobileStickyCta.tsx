@@ -13,11 +13,12 @@ export function MobileStickyCta({ content }: { content: any }) {
   const base = `/${locale}`
 
   if (!wa && !phone) {
-    // No real data yet — show only a "Contact" link to /contacto
+    // No real data yet — show a single "View contact details" link to /contact
+    // Falls back to /pricing for expats who might want a price quote
     return (
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[var(--surface)]/95 backdrop-blur-lg border-t border-[var(--border)] shadow-[0_-4px_20px_rgba(15,76,76,0.08)]">
         <div className="max-w-md mx-auto px-4 py-3">
-          <Link href={`/${locale}/contact`} className="btn btn-primary w-full justify-center">
+          <Link href={`${base}/contact`} className="btn btn-primary w-full justify-center">
             <MessageCircle className="w-4 h-4" />
             {locale === "es" ? "Coordinar consulta" : "Book a consultation"}
           </Link>
@@ -26,38 +27,33 @@ export function MobileStickyCta({ content }: { content: any }) {
     )
   }
 
+  // Build a safe contact link that always lands somewhere meaningful
+  const fallbackContactHref = `${base}/contact`
+  const safeWa = wa || fallbackContactHref
+  const safeCall = phone
+    ? `tel:${phone.replace(/\D/g, "")}`
+    : fallbackContactHref
+  const isEs = locale === "es"
+
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[var(--surface)]/95 backdrop-blur-lg border-t border-[var(--border)] shadow-[0_-4px_20px_rgba(15,76,76,0.08)]">
       <div className="max-w-md mx-auto px-4 py-3 grid grid-cols-2 gap-2">
-        {wa ? (
-          <a
-            href={wa}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary !py-2.5 !text-sm justify-center"
-          >
-            <MessageCircle className="w-4 h-4" />
-            WhatsApp
-          </a>
-        ) : (
-          <Link href={`/${locale}/contact`} className="btn btn-primary !py-2.5 !text-sm justify-center">
-            <MessageCircle className="w-4 h-4" />
-            {locale === "es" ? "Contacto" : "Contact"}
-          </Link>
-        )}
-        {phone ? (
-          <a
-            href={`tel:${phone.replace(/\D/g, "")}`}
-            className="btn btn-outline !py-2.5 !text-sm justify-center"
-          >
-            <Phone className="w-4 h-4" />
-            {locale === "es" ? "Llamar" : "Call"}
-          </a>
-        ) : (
-          <Link href={`/${locale}/contact`} className="btn btn-outline !py-2.5 !text-sm justify-center">
-            {locale === "es" ? "Más opciones" : "More"}
-          </Link>
-        )}
+        <a
+          href={safeWa}
+          target={wa ? "_blank" : undefined}
+          rel={wa ? "noopener noreferrer" : undefined}
+          className="btn btn-primary !py-2.5 !text-sm justify-center"
+        >
+          <MessageCircle className="w-4 h-4" />
+          {wa ? "WhatsApp" : (isEs ? "Contacto" : "Contact")}
+        </a>
+        <a
+          href={safeCall}
+          className="btn btn-outline !py-2.5 !text-sm justify-center"
+        >
+          <Phone className="w-4 h-4" />
+          {phone ? (isEs ? "Llamar" : "Call") : (isEs ? "Datos" : "Info")}
+        </a>
       </div>
     </div>
   )

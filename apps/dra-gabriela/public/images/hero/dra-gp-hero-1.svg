@@ -1,75 +1,151 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Modern dental clinic interior">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Dra. Gabriella — modern dental clinic interior">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e8e4dc"/>
-      <stop offset="1" stop-color="#d4cfc4"/>
-    </linearGradient>
+    <!-- Wall and floor with warm tones -->
     <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#f5f1ea"/>
-      <stop offset="1" stop-color="#e6e0d4"/>
+      <stop offset="1" stop-color="#e8e2d6"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c8c0b0"/>
+      <stop offset="1" stop-color="#a8a090"/>
     </linearGradient>
     <linearGradient id="chair" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#fbf9f6"/>
-      <stop offset="1" stop-color="#e8e2d6"/>
+      <stop offset="1" stop-color="#e0d8c8"/>
+    </linearGradient>
+    <linearGradient id="chair-shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d4cfc4"/>
+      <stop offset="1" stop-color="#a8a090"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0f4c4c"/>
       <stop offset="1" stop-color="#0a3a3a"/>
     </linearGradient>
-    <radialGradient id="lamp" cx="0.5" cy="0.4" r="0.5">
-      <stop offset="0" stop-color="#fff" stop-opacity="0.95"/>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d4b265"/>
+      <stop offset="1" stop-color="#a88a3a"/>
+    </linearGradient>
+    <linearGradient id="window-light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff8e8"/>
+      <stop offset="1" stop-color="#f0e8d0"/>
+    </linearGradient>
+    <radialGradient id="lamp-glow" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0" stop-color="#fff8e0" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#fff8e0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="window-rays" cx="0.5" cy="0.3" r="0.7">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.6"/>
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
+    <filter id="chair-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-opacity="0.25"/>
+    </filter>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-opacity="0.18"/>
+    </filter>
   </defs>
-  <!-- Floor -->
-  <rect width="800" height="1000" fill="url(#bg)"/>
-  <rect y="700" width="800" height="300" fill="#c8c2b5"/>
-  <line x1="0" y1="700" x2="800" y2="700" stroke="#b8b0a0" stroke-width="2"/>
-  <!-- Wall panel with art -->
-  <rect x="0" y="0" width="800" height="700" fill="url(#wall)"/>
-  <!-- Framed picture on wall -->
-  <rect x="80" y="80" width="180" height="220" fill="#0f4c4c" rx="6" stroke="#c9a84c" stroke-width="3"/>
-  <rect x="100" y="100" width="140" height="180" fill="#1a6a6a"/>
-  <text x="170" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#c9a84c" fill-opacity="0.7" font-style="italic">D</text>
-  <!-- Window with light -->
-  <rect x="540" y="60" width="200" height="320" fill="#f0e8d4" rx="4"/>
-  <rect x="540" y="60" width="200" height="320" fill="url(#lamp)" opacity="0.6" rx="4"/>
-  <line x1="640" y1="60" x2="640" y2="380" stroke="#c9a84c" stroke-width="2"/>
-  <line x1="540" y1="220" x2="740" y2="220" stroke="#c9a84c" stroke-width="2"/>
-  <!-- Plant in corner -->
-  <ellipse cx="100" cy="640" rx="60" ry="20" fill="#8a8470"/>
-  <path d="M 100 640 Q 70 540, 80 460 Q 100 400, 130 380 Q 110 460, 130 540 Q 110 600, 100 640" fill="#4a6850"/>
-  <path d="M 100 640 Q 130 540, 120 460 Q 140 400, 110 380 Q 130 460, 110 540 Q 130 600, 100 640" fill="#3a5840"/>
-  <path d="M 100 640 Q 60 560, 50 480 Q 70 440, 100 420 Q 80 500, 80 580 Q 90 610, 100 640" fill="#506850"/>
-  <!-- Dental chair (right side) -->
-  <g transform="translate(360 320)">
-    <!-- Base -->
-    <ellipse cx="120" cy="500" rx="120" ry="14" fill="#a8a090" opacity="0.5"/>
-    <rect x="100" y="380" width="40" height="120" fill="#5a5040" rx="4"/>
-    <ellipse cx="120" cy="500" rx="50" ry="8" fill="#3a3020"/>
-    <!-- Chair body -->
-    <path d="M 40 380 L 40 280 Q 40 200, 90 180 L 160 180 Q 200 180, 200 220 L 200 280 L 200 380 Z" fill="url(#chair)" stroke="#c8c0b0" stroke-width="2"/>
-    <!-- Headrest -->
-    <ellipse cx="170" cy="160" rx="50" ry="30" fill="url(#chair)" stroke="#c8c0b0" stroke-width="2"/>
-    <ellipse cx="170" cy="160" rx="40" ry="22" fill="#e6dccc"/>
-    <!-- Accent stripe -->
-    <rect x="40" y="240" width="160" height="6" fill="url(#accent)"/>
-    <!-- Armrest -->
-    <rect x="0" y="260" width="40" height="120" fill="#d4c8b0" rx="6"/>
-    <rect x="200" y="260" width="40" height="120" fill="#d4c8b0" rx="6"/>
+  <!-- Wall (upper 70%) -->
+  <rect width="1600" height="700" fill="url(#wall)"/>
+  <!-- Floor (lower 30%) -->
+  <rect y="700" width="1600" height="200" fill="url(#floor)"/>
+  <!-- Wall/floor seam with subtle shadow -->
+  <rect y="700" width="1600" height="3" fill="#8a8470" opacity="0.4"/>
+  <!-- Subtle wall texture (long horizontal strokes) -->
+  <g stroke="#d4cfc4" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="150" x2="1600" y2="155"/>
+    <line x1="0" y1="350" x2="1600" y2="355"/>
+    <line x1="0" y1="550" x2="1600" y2="555"/>
   </g>
-  <!-- Overhead lamp -->
-  <line x1="430" y1="0" x2="430" y2="200" stroke="#5a5040" stroke-width="6"/>
-  <circle cx="430" cy="220" r="40" fill="#0f4c4c"/>
-  <ellipse cx="430" cy="240" rx="60" ry="20" fill="url(#lamp)"/>
-  <ellipse cx="430" cy="280" rx="120" ry="40" fill="url(#lamp)" opacity="0.4"/>
-  <!-- Side cabinet -->
-  <rect x="660" y="540" width="120" height="180" fill="url(#chair)" stroke="#c8c0b0" stroke-width="2" rx="4"/>
-  <rect x="660" y="600" width="120" height="2" fill="#a89c80"/>
-  <line x1="720" y1="540" x2="720" y2="720" stroke="#a89c80" stroke-width="2"/>
-  <circle cx="700" cy="620" r="3" fill="#c9a84c"/>
-  <circle cx="740" cy="620" r="3" fill="#c9a84c"/>
-  <!-- Brass brand plate -->
-  <rect x="660" y="700" width="120" height="40" fill="#0f4c4c" rx="2"/>
-  <text x="720" y="724" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#c9a84c" letter-spacing="2">DRA · GABRIELLA</text>
+  <!-- Window with light streaming in -->
+  <g filter="url(#soft-shadow)">
+    <rect x="1180" y="100" width="280" height="380" fill="url(#window-light)" rx="6"/>
+    <rect x="1180" y="100" width="280" height="380" fill="url(#window-rays)" rx="6"/>
+    <line x1="1320" y1="100" x2="1320" y2="480" stroke="#c9a84c" stroke-width="3"/>
+    <line x1="1180" y1="290" x2="1460" y2="290" stroke="#c9a84c" stroke-width="3"/>
+    <!-- Window frame -->
+    <rect x="1180" y="100" width="280" height="380" fill="none" stroke="#5a5040" stroke-width="6" rx="6"/>
+  </g>
+  <!-- Light beams from window -->
+  <g opacity="0.15">
+    <polygon points="1180,480 1460,480 1500,700 1140,700" fill="#fff8e0"/>
+  </g>
+  <!-- Framed artwork on left wall -->
+  <g transform="translate(180 100)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="240" height="300" fill="#0f4c4c" rx="6"/>
+    <rect x="6" y="6" width="228" height="288" fill="#0a3a3a" rx="4"/>
+    <!-- Decorative D monogram -->
+    <text x="120" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="120" fill="#c9a84c" font-style="italic" opacity="0.7">D</text>
+    <!-- Frame trim -->
+    <rect x="0" y="0" width="240" height="300" fill="none" stroke="#c9a84c" stroke-width="4" rx="6"/>
+  </g>
+  <!-- Plant in left corner -->
+  <g transform="translate(120 600)">
+    <!-- Pot -->
+    <path d="M -50 0 L -40 100 L 40 100 L 50 0 Z" fill="#8a7c5c"/>
+    <ellipse cx="0" cy="0" rx="50" ry="6" fill="#5a4830"/>
+    <!-- Leaves -->
+    <ellipse cx="-25" cy="-30" rx="35" ry="12" fill="#4a6850" transform="rotate(-30 -25 -30)"/>
+    <ellipse cx="20" cy="-50" rx="40" ry="14" fill="#3a5840" transform="rotate(20 20 -50)"/>
+    <ellipse cx="0" cy="-90" rx="38" ry="13" fill="#506850" transform="rotate(-10 0 -90)"/>
+    <ellipse cx="-20" cy="-130" rx="32" ry="11" fill="#4a6850" transform="rotate(-40 -20 -130)"/>
+    <ellipse cx="15" cy="-150" rx="30" ry="10" fill="#3a5840" transform="rotate(15 15 -150)"/>
+    <!-- Highlights -->
+    <ellipse cx="-20" cy="-40" rx="20" ry="3" fill="#5a7858" opacity="0.6" transform="rotate(-30 -20 -40)"/>
+  </g>
+  <!-- Dental chair (centerpiece) -->
+  <g transform="translate(800 380)" filter="url(#chair-shadow)">
+    <!-- Base shadow on floor -->
+    <ellipse cx="0" cy="380" rx="180" ry="14" fill="#000" opacity="0.2"/>
+    <!-- Hydraulic base -->
+    <rect x="-30" y="240" width="60" height="140" fill="#3a3020" rx="6"/>
+    <ellipse cx="0" cy="380" rx="60" ry="10" fill="#1a1208"/>
+    <!-- Chair back -->
+    <path d="M -120 240
+             C -130 180, -120 80, -60 40
+             L 80 40
+             C 130 60, 140 180, 130 240
+             Z" fill="url(#chair-shadow)"/>
+    <!-- Chair seat -->
+    <path d="M -130 240 L 130 240 L 140 280 L -140 280 Z" fill="url(#chair)"/>
+    <!-- Headrest -->
+    <ellipse cx="0" cy="20" rx="70" ry="38" fill="url(#chair)"/>
+    <ellipse cx="0" cy="20" rx="60" ry="28" fill="#f5f1ea"/>
+    <!-- Accent stripe on chair -->
+    <rect x="-130" y="160" width="260" height="6" fill="url(#accent)"/>
+    <!-- Armrests -->
+    <rect x="-160" y="180" width="40" height="120" fill="#d4cfc4" rx="6"/>
+    <rect x="120" y="180" width="40" height="120" fill="#d4cfc4" rx="6"/>
+    <rect x="-160" y="180" width="40" height="6" fill="url(#accent)" opacity="0.6"/>
+    <rect x="120" y="180" width="40" height="6" fill="url(#accent)" opacity="0.6"/>
+    <!-- Brand monogram on chair -->
+    <text x="0" y="225" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#0f4c4c" font-style="italic">Dra. GP</text>
+  </g>
+  <!-- Overhead lamp (surgical light) -->
+  <g transform="translate(800 200)">
+    <line x1="0" y1="-200" x2="0" y2="0" stroke="#5a5040" stroke-width="6"/>
+    <circle cx="0" cy="20" r="50" fill="url(#accent)"/>
+    <ellipse cx="0" cy="40" rx="80" ry="22" fill="url(#lamp-glow)"/>
+    <ellipse cx="0" cy="80" rx="160" ry="40" fill="url(#lamp-glow)" opacity="0.4"/>
+  </g>
+  <!-- Side cabinet (right) -->
+  <g transform="translate(1340 540)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="160" height="220" fill="url(#chair)" rx="4"/>
+    <rect x="0" y="0" width="160" height="6" fill="url(#accent)"/>
+    <rect x="0" y="80" width="160" height="2" fill="#a89c80"/>
+    <line x1="80" y1="0" x2="80" y2="220" stroke="#a89c80" stroke-width="1"/>
+    <circle cx="55" cy="42" r="3" fill="url(#gold)"/>
+    <circle cx="105" cy="42" r="3" fill="url(#gold)"/>
+    <circle cx="55" cy="122" r="3" fill="url(#gold)"/>
+    <circle cx="105" cy="122" r="3" fill="url(#gold)"/>
+  </g>
+  <!-- Brass brand plate on cabinet -->
+  <g transform="translate(1340 720)">
+    <rect x="0" y="0" width="160" height="40" fill="url(#accent)" rx="2"/>
+    <rect x="0" y="0" width="160" height="2" fill="url(#gold)"/>
+    <text x="80" y="24" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#c9a84c" letter-spacing="3" font-style="italic">DRA · GABRIELLA</text>
+  </g>
+  <!-- Atmospheric floor reflection -->
+  <g opacity="0.1">
+    <ellipse cx="800" cy="800" rx="300" ry="20" fill="#fff"/>
+  </g>
 </svg>

@@ -3,10 +3,7 @@ import { getContent, isLocale } from "@/lib/content"
 import { Hero } from "@/components/sections/Hero"
 import { Stats } from "@/components/sections/Stats"
 import { FeaturedService } from "@/components/sections/FeaturedService"
-import { Reasons } from "@/components/sections/Reasons"
-import { Services } from "@/components/sections/Services"
-import { Testimonials } from "@/components/sections/Testimonials"
-import { CredentialsStrip } from "@/components/sections/CredentialsStrip"
+import { SocialProof } from "@/components/sections/SocialProof"
 import { Process } from "@/components/sections/Process"
 import { CtaBanner } from "@/components/sections/CtaBanner"
 
@@ -38,10 +35,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <Hero c={c} locale={locale} />
-      <Stats c={c} />
-      <Reasons c={c} locale={locale} />
+      <SocialProof c={c} locale={locale} />
+      <Stats c={c} locale={locale} />
 
-      {/* Featured second opinion with image */}
+      {/* Featured second opinion — the lead-conversion page */}
       <FeaturedService
         locale={locale}
         content={c}
@@ -72,8 +69,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         ctaSecondaryHref={`/${locale}/pricing`}
       />
 
-      <Services c={c} locale={locale} />
-      <CredentialsStrip c={c} locale={locale} />
       <Process c={c} locale={locale} />
       <CtaBanner c={c} locale={locale} />
     </>
