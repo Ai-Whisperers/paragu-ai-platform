@@ -41,7 +41,7 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
                   {isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
                 </a>
               ) : (
-                <Link href={`${base}/contacto`} className="btn btn-gold text-base px-8 py-4">
+                <Link href={`/${locale}/contact`} className="btn btn-gold text-base px-8 py-4">
                   <MessageCircle className="w-5 h-5" />
                   {isEs ? "Ver datos de contacto" : "See contact details"}
                 </Link>
@@ -51,7 +51,7 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
                   <Phone className="w-5 h-5" /> {phone}
                 </a>
               ) : (
-                <Link href={`${base}/contacto`} className="btn btn-white text-base px-8 py-4">
+                <Link href={`/${locale}/contact`} className="btn btn-white text-base px-8 py-4">
                   {isEs ? "Datos de contacto" : "Contact details"}
                   <ArrowRight className="w-5 h-5" />
                 </Link>

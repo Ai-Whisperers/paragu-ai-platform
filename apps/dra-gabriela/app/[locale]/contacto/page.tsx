@@ -1,87 +1,112 @@
-// /es/contacto page
-import { notFound } from "next/navigation"
-import { MessageCircle, Mail, MapPin, Clock } from "lucide-react"
-import es from "@/content/es/contacto.json"
+// /es/contacto and /en/contacto — bilingual contact page
+// ES reads contacto.json, EN reads contact.json.
 
-const LOCALES = ["es"] as const
-const CONTENT: Record<string, any> = { es }
+import { notFound } from "next/navigation"
+import { MessageCircle, Mail, MapPin, Clock, Send, Phone } from "lucide-react"
+import esData from "@/content/es/contacto.json"
+import enData from "@/content/en/contact.json"
+import { getContent, isPlaceholder, whatsappLink } from "@/lib/content"
 
 export function generateStaticParams() {
-  return LOCALES.map(l => ({ locale: l }))
+  return [{ locale: "en" }, { locale: "es" }]
 }
 
-export const metadata = { title: "Contacto" }
-
-export default async function Contacto({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  if (!LOCALES.includes(locale as any)) notFound()
-  const c = CONTENT[locale] || es
-  const base = `/${locale}`
+  const data = locale === "es" ? esData : enData
+  return { title: data?.title || (locale === "es" ? "Contacto" : "Contact") }
+}
+
+export default async function ContactoPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  if (locale !== "en" && locale !== "es") notFound()
+  const data = locale === "es" ? esData : enData
+  const c = getContent(locale)
+  const isEs = locale === "es"
+  const biz = c.business || {}
+  const wa = whatsappLink(biz.whatsapp, biz.whatsappMessage)
+  const phone = biz.phone && !isPlaceholder(biz.phone) ? String(biz.phone).trim() : null
+  const address = biz.address && !isPlaceholder(biz.address) ? String(biz.address).trim() : null
+  const hours = c.openingHours || null
+
+  if (!data) notFound()
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl sm:text-6xl font-bold mb-3">{c.title || "Contacto"}</h1>
-      {c.subtitle && <p className="text-xl text-gray-600 mb-12">{c.subtitle}</p>}
+      <h1 className="text-4xl md:text-5xl mb-3">{data.title || (isEs ? "Contacto" : "Contact")}</h1>
+      {data.subtitle && <p className="text-lg text-[var(--fg-muted)] mb-12">{data.subtitle}</p>}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {c.business?.phone && !String(c.business.phone).includes("PENDIENTE") && (
-          <a href={`tel:${c.business.phone}`} className="p-6 bg-white border border-gray-200 rounded-xl hover:border-[var(--accent)] transition-colors flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] flex items-center justify-center">📞</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+        {wa && (
+          <a href={wa} target="_blank" rel="noopener noreferrer" className="card p-5 flex items-center gap-4 group">
+            <div className="w-12 h-12 rounded-full bg-[var(--accent-soft)] flex items-center justify-center group-hover:bg-[var(--accent)] transition-colors">
+              <MessageCircle className="w-6 h-6 text-[var(--accent)] group-hover:text-white transition-colors" />
+            </div>
             <div>
-              <div className="text-xs text-gray-500 uppercase tracking-wider">Teléfono</div>
-              <div className="font-semibold">{c.business.phone}</div>
+              <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">WhatsApp</div>
+              <div className="font-semibold">{biz.whatsapp || "WhatsApp"}</div>
             </div>
           </a>
         )}
-        {c.business?.whatsapp && !String(c.business.whatsapp).includes("PENDIENTE") && (
-          <a href={`https://wa.me/${String(c.business.whatsapp).replace(/\D/g, "")}?text=${encodeURIComponent(c.business.whatsappMessage || "")}`} className="p-6 bg-white border border-gray-200 rounded-xl hover:border-[var(--accent)] transition-colors flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] flex items-center justify-center"><MessageCircle className="w-6 h-6" /></div>
+        {phone && (
+          <a href={`tel:${phone.replace(/\D/g, "")}`} className="card p-5 flex items-center gap-4 group">
+            <div className="w-12 h-12 rounded-full bg-[var(--accent-soft)] flex items-center justify-center group-hover:bg-[var(--accent)] transition-colors">
+              <Phone className="w-6 h-6 text-[var(--accent)] group-hover:text-white transition-colors" />
+            </div>
             <div>
-              <div className="text-xs text-gray-500 uppercase tracking-wider">WhatsApp</div>
-              <div className="font-semibold">{c.business.whatsapp}</div>
+              <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">{isEs ? "Teléfono" : "Phone"}</div>
+              <div className="font-semibold">{phone}</div>
             </div>
           </a>
         )}
-        {c.business?.email && (
-          <a href={`mailto:${c.business.email}`} className="p-6 bg-white border border-gray-200 rounded-xl hover:border-[var(--accent)] transition-colors flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] flex items-center justify-center"><Mail className="w-6 h-6" /></div>
+        {biz.email && !isPlaceholder(biz.email) && (
+          <a href={`mailto:${biz.email}`} className="card p-5 flex items-center gap-4 group">
+            <div className="w-12 h-12 rounded-full bg-[var(--accent-soft)] flex items-center justify-center group-hover:bg-[var(--accent)] transition-colors">
+              <Send className="w-6 h-6 text-[var(--accent)] group-hover:text-white transition-colors" />
+            </div>
             <div>
-              <div className="text-xs text-gray-500 uppercase tracking-wider">Email</div>
-              <div className="font-semibold">{c.business.email}</div>
+              <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">Email</div>
+              <div className="font-semibold">{biz.email}</div>
             </div>
           </a>
         )}
-        {c.business?.address && !String(c.business.address).includes("TBD") && (
-          <div className="p-6 bg-white border border-gray-200 rounded-xl flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] flex items-center justify-center"><MapPin className="w-6 h-6" /></div>
+        {address && (
+          <div className="card p-5 flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-[var(--accent-soft)] flex items-center justify-center">
+              <MapPin className="w-6 h-6 text-[var(--accent)]" />
+            </div>
             <div>
-              <div className="text-xs text-gray-500 uppercase tracking-wider">Dirección</div>
-              <div className="font-semibold">{c.business.address}</div>
-            </div>
-          </div>
-        )}
-        {c.openingHours && (
-          <div className="p-6 bg-white border border-gray-200 rounded-xl md:col-span-2">
-            <div className="flex items-center gap-3 mb-3">
-              <Clock className="w-5 h-5 text-[var(--accent)]" />
-              <h2 className="text-lg font-bold">{c.openingHours.title || "Horarios"}</h2>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
-              {Object.entries(c.openingHours).filter(([k]) => k !== 'title').map(([day, hours]) => (
-                <div key={day} className="flex justify-between">
-                  <span className="text-gray-500 uppercase text-xs">{day}</span>
-                  <span className="font-mono">{String(hours)}</span>
-                </div>
-              ))}
+              <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">{isEs ? "Dirección" : "Address"}</div>
+              <div className="font-semibold text-sm">{address}</div>
             </div>
           </div>
         )}
       </div>
-      {c.form_note && (
-        <div className="mt-12 p-8 bg-gray-50 rounded-2xl">
-          <p className="text-center text-gray-600">{c.form_note}</p>
+
+      {hours && (
+        <div className="card p-6 mb-10">
+          <div className="flex items-center gap-2 mb-4">
+            <Clock className="w-5 h-5 text-[var(--accent)]" />
+            <h2 className="text-lg">{isEs ? "Horarios" : "Hours"}</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
+            {Object.entries(hours).filter(([k]) => /^(mon|tue|wed|thu|fri|sat|sun)/i.test(k)).map(([day, h]) => (
+              <div key={day} className="flex justify-between font-mono text-[var(--fg-muted)]">
+                <span className="uppercase text-xs text-[var(--fg-subtle)]">{day.slice(0, 3)}</span>
+                <span>{String(h)}</span>
+              </div>
+            ))}
+          </div>
         </div>
       )}
+
+      {data.sections?.slice(2)?.map((s: any, i: number) => (
+        <section key={i} className="mb-8">
+          <h2 className="text-xl mb-2">{s.heading}</h2>
+          {s.body && <p className="text-[var(--fg-muted)] leading-relaxed">{s.body}</p>}
+          {s.note && <p className="text-xs text-[var(--fg-subtle)] mt-1">{s.note}</p>}
+        </section>
+      ))}
     </div>
   )
 }

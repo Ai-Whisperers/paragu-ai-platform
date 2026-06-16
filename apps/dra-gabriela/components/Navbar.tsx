@@ -77,7 +77,7 @@ export function Navbar({ locale, content }: { locale: string; content: any }) {
                 WhatsApp
               </a>
             ) : (
-              <Link href={`${base}/contacto`} className="hidden sm:inline-flex btn btn-primary !py-2 !px-4 !text-sm">
+              <Link href={`/${locale}/contact`} className="hidden sm:inline-flex btn btn-primary !py-2 !px-4 !text-sm">
                 {isEs ? "Contacto" : "Contact"}
               </Link>
             )}

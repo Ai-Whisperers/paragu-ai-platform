@@ -17,7 +17,7 @@ export function MobileStickyCta({ content }: { content: any }) {
     return (
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[var(--surface)]/95 backdrop-blur-lg border-t border-[var(--border)] shadow-[0_-4px_20px_rgba(15,76,76,0.08)]">
         <div className="max-w-md mx-auto px-4 py-3">
-          <Link href={`${base}/contacto`} className="btn btn-primary w-full justify-center">
+          <Link href={`/${locale}/contact`} className="btn btn-primary w-full justify-center">
             <MessageCircle className="w-4 h-4" />
             {locale === "es" ? "Coordinar consulta" : "Book a consultation"}
           </Link>
@@ -40,7 +40,7 @@ export function MobileStickyCta({ content }: { content: any }) {
             WhatsApp
           </a>
         ) : (
-          <Link href={`${base}/contacto`} className="btn btn-primary !py-2.5 !text-sm justify-center">
+          <Link href={`/${locale}/contact`} className="btn btn-primary !py-2.5 !text-sm justify-center">
             <MessageCircle className="w-4 h-4" />
             {locale === "es" ? "Contacto" : "Contact"}
           </Link>
@@ -54,7 +54,7 @@ export function MobileStickyCta({ content }: { content: any }) {
             {locale === "es" ? "Llamar" : "Call"}
           </a>
         ) : (
-          <Link href={`${base}/contacto`} className="btn btn-outline !py-2.5 !text-sm justify-center">
+          <Link href={`/${locale}/contact`} className="btn btn-outline !py-2.5 !text-sm justify-center">
             {locale === "es" ? "Más opciones" : "More"}
           </Link>
         )}

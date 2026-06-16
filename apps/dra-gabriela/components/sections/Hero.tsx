@@ -52,7 +52,7 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
                   {h.cta_primary || "Pedir plan sin compromiso"}
                 </a>
               ) : (
-                <Link href={`${base}/contacto`} className="btn btn-primary text-base px-8 py-4">
+                <Link href={`/${locale}/contact`} className="btn btn-primary text-base px-8 py-4">
                   <MessageCircle className="w-5 h-5" />
                   {h.cta_primary || "Coordinar consulta"}
                 </Link>
