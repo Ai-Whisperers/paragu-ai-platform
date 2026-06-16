@@ -2,23 +2,34 @@
 
 ## TL;DR
 
-The new VPS site is **built, deployed, and verified clean** (no Jonathan, Ivan + Kyrian only, 4 locales). The blocker is **DNS**: the registrar (Squarespace Domains) is still delegating `ai-whisperers.org` to an old Cloudflare account's nameservers (`perla.ns.cloudflare.com`, `skip.ns.cloudflare.com`). Those serve the **legacy Vercel site** with the old Jonathan-era content.
+The new VPS site is **built, deployed, and verified clean** (no Jonathan, Ivan + Kyrian only, 4 locales, 44 routes all 200). The blocker is **DNS** at the **registrar** (Squarespace Domains), NOT Cloudflare.
+
+**The Cloudflare dashboard shows the correct A records (apex + www → 72.61.44.159), but the world is still hitting the old account's nameservers** (perla.ns / skip.ns.cloudflare.com) which serve the legacy Vercel site with the Jonathan-era content.
 
 **5-minute fix:** switch the registrar's nameservers to the new Cloudflare account's NS, where the correct records are already configured.
 
-## Current State (verified 2026-06-16 01:15 UTC)
+## Current State (verified 2026-06-16 04:25 UTC)
 
 | Component | Status |
 |-----------|--------|
-| New VPS build | ✅ Live, 1/1 replicas, image `prod-b8ec913-20260616-0110` |
-| New build content (Ivan + Kyrian, no Jonathan) | ✅ Verified at `en/about` |
-| Traefik config (apex serves, www → 301 apex) | ✅ Wired, apex/www routers split cleanly (commit `b8ec913`) |
-| LE cert for `ai-whisperers.org` | ⏳ Will be issued on first HTTPS hit once DNS resolves |
+| New VPS build (image `prod-fffd015-20260616-0122`) | ✅ Live, 1/1 replicas |
+| New build content (Ivan + Kyrian, no Jonathan) | ✅ Verified at `en/about`, all 44 routes 200 |
+| Traefik config (apex serves, www → 301 apex) | ✅ Wired (commit `b8ec913`) |
+| ES/NL/PT trailing-slash redirect loop | ✅ Fixed (commit `fffd015`) |
+| LE cert for `ai-whisperers.org` | ⏳ Will issue on first HTTPS hit once DNS resolves |
 | Cloudflare zone (new account) | ⚠️ `status=pending`, `ns_mismatch` — needs NS swap at registrar |
-| Apex A record (new account) | ✅ 72.61.44.159 (VPS) |
-| www A record (new account) | ✅ 72.61.44.159 (VPS) |
-| Apex A record (live, old account) | ❌ 216.150.1.1 (Vercel) |
-| www A record (live, old account) | ❌ 104.21.56.190 + 172.67.155.205 (Cloudflare anycast → GitHub Pages 404) |
+| Apex A record (new account) | ✅ 72.61.44.159 (VPS) — already in dashboard |
+| www A record (new account) | ✅ 72.61.44.159 (VPS) — already in dashboard |
+| Apex A record (live, what the world sees) | ❌ 216.150.1.1 (Vercel, the old account) |
+| www A record (live, what the world sees) | ❌ 104.21.56.190 + 172.67.155.205 (Cloudflare anycast → GitHub Pages 404, the old account) |
+| Public NS (what the world queries) | ❌ `perla.ns.cloudflare.com`, `skip.ns.cloudflare.com` (old account) |
+| Should-be NS (new account, where the right records are) | `elliot.ns.cloudflare.com`, `maria.ns.cloudflare.com` |
+
+## The "Your traffic is almost ready to proxy" line you saw
+
+The Cloudflare dashboard shows "Your traffic is almost ready to proxy" because the **zone is in `pending` status, waiting for the registrar's NS records to be updated to match the new account's NS**. Cloudflare is polling the .org TLD zone and seeing `perla/skip` instead of `elliot/maria`, so it won't activate the new zone.
+
+The records you see in the dashboard (apex + www → 72.61.44.159) are correct and will start being served the moment the registrar delegation updates.
 
 ## Why this happened
 
@@ -30,6 +41,30 @@ the **old** nameservers, which serve the **old** records (Vercel IP for apex,
 Cloudflare → GitHub Pages 404 for www).
 
 The new zone shows up as `status=pending` with `activation_failure_reason: ns_mismatch` — Cloudflare won't activate the zone until the registrar delegates to it.
+
+## What I've already done (and verified) from here
+
+- ✅ Built the new site (`apps/ai-whisperers-site/`), 4-locale, 8 pages, 32 routes SSG
+- ✅ Verified the new build has ZERO references to Jonathan/Verdun/Kiryan across all 4 locales × 11 pages
+- ✅ Pushed 4 commits to `Ai-Whisperers/paragu-ai-platform`
+- ✅ Rebuilt the Docker image on the VPS (currently `prod-fffd015-20260616-0122`)
+- ✅ Deployed the Swarm service (1/1 replicas, no errors)
+- ✅ Fixed the apex/www Traefik router trap (was serving www content for the apex rule; now apex serves and www 301s to apex)
+- ✅ Fixed the ES/NL/PT trailing-slash infinite 308 redirect loop
+- ✅ All 44 routes return 200 with proper HTML (verified by internal Traefik + direct service request)
+- ✅ Created the new Cloudflare zone on the new account (with the correct apex and www A records pointing at the VPS)
+
+## What I CANNOT do from here (and why)
+
+The world is querying `perla.ns.cloudflare.com` / `skip.ns.cloudflare.com`. Those nameservers belong to a different Cloudflare account that I have no credentials for. The records they serve (Vercel IP for apex, GitHub Pages 404 for www) are only editable from that old account.
+
+| Step | Why I can't do it |
+|---|---|
+| Update NS at the registrar (Squarespace Domains) | No Squarespace login / API token |
+| Edit records on the OLD Cloudflare account (perla/skip) | No credentials for that account |
+| Decommission the Vercel deployment serving the legacy site | Vercel API token in `~/.hermes/.env` is invalid (403) |
+| Force Cloudflare to re-check the NS delegation | No such API endpoint for pending zones; Cloudflare polls the .org TLD every few minutes automatically |
+| Update the OLD nameservers to point at the VPS | Same as above — need creds for the old account |
 
 ## Step-by-step fix (5 minutes)
 
