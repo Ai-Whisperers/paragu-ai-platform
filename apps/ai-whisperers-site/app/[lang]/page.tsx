@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Github, MessageCircle, Sparkles, BookOpen, GitMerge, UserCheck, Rocket, Package, DollarSign, Globe2, Bot, Satellite, Cog, GraduationCap, Calendar, AlertTriangle, CheckCircle2, Clock, Quote } from "lucide-react"
+import { ArrowRight, Github, MessageCircle, Sparkles, BookOpen, GitMerge, UserCheck, Rocket, Package, DollarSign, Globe2, Bot, Satellite, Cog, GraduationCap, Calendar, AlertTriangle, CheckCircle2, Clock, Quote, GitBranch } from "lucide-react"
 import en from "@/content/en/site.json"
 import es from "@/content/es/site.json"
 
@@ -301,9 +301,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </article>
             ))}
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-8 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href={`${base}/changelog`} className="inline-flex items-center gap-2 text-accent hover:text-accent-2 font-medium">
               Full changelog <ArrowRight className="w-4 h-4" />
+            </Link>
+            <span className="text-fg-muted/40">·</span>
+            <Link href={`${base}/decisions`} className="inline-flex items-center gap-2 text-fg-muted hover:text-fg font-medium">
+              <GitBranch className="w-3 h-3" /> Read our decision log
             </Link>
           </div>
         </div>

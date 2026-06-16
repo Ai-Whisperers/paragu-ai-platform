@@ -288,6 +288,48 @@
         "bio": "n8n expert, AI integration specialist, technical architecture lead. Co-founder of AI Whisperers. Drives the systems side of the engineering studio.",
         "email": "kyrianweiss.vdp@gmail.com"
       }
+    ],
+    "bots": [
+      {
+        "name": "Erebus",
+        "role": "AI Workforce Lead",
+        "purpose": "Builds, fixes, and ships. The orchestrator for autonomous work."
+      },
+      {
+        "name": "explorer-bot",
+        "role": "Market Research",
+        "purpose": "Competitor analysis, market intel, prospect enrichment."
+      },
+      {
+        "name": "closer-bot",
+        "role": "Sales",
+        "purpose": "WhatsApp ghostwriting, proposal drafting, negotiation."
+      },
+      {
+        "name": "copy-bot",
+        "role": "SEO + Content",
+        "purpose": "Multi-locale content generation, CRO, blog writing."
+      },
+      {
+        "name": "architect-bot",
+        "role": "System Design",
+        "purpose": "Architecture blueprints, tech selection, scalability reviews."
+      },
+      {
+        "name": "client-success-bot",
+        "role": "Follow-up",
+        "purpose": "Monthly check-ins, NPS tracking, retention."
+      },
+      {
+        "name": "delivery-bot",
+        "role": "Project Tracking",
+        "purpose": "Sprint planning, milestone tracking, status reports."
+      },
+      {
+        "name": "ops-bot",
+        "role": "Operations",
+        "purpose": "Deploys, monitors, alerts, fixes."
+      }
     ]
   },
   "pricing": {

@@ -1,0 +1,16 @@
+{
+  "title": "Registro público de decisões",
+  "subtitle": "Cada decisão significativa de engenharia, negócio ou produto — com o raciocínio, alternativas rejeitadas, e o que faríamos diferente.",
+  "items": [
+    {
+      "id": "stack-nextjs-16-over-15",
+      "date": "2026-06-15",
+      "title": "Por que Next.js 16 (e não 15 ou 14) para ai-whisperers.org",
+      "decision": "Next.js 16.2.4 com Turbopack + App Router.",
+      "reasoning": "Mesma justificativa da versão em inglês — a forma async `params: Promise<{...}>` é a escolha técnica correta para um site 4-locale com Swarm deployable.",
+      "alternatives": {
+        "considered": ["Astro 5", "SvelteKit", "Remix", "Next.js 14"]
+      }
+    }
+  ]
+}

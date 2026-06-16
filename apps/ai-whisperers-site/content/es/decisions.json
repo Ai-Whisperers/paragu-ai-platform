@@ -1,0 +1,79 @@
+{
+  "title": "Registro público de decisiones",
+  "subtitle": "Cada decisión significativa de ingeniería, negocio o producto que tomamos — con el razonamiento, las alternativas que rechazamos, y qué haríamos diferente. Actualizado cuando pasa algo interesante.",
+  "cta": {
+    "title": "¿Quieres profundizar?",
+    "body": "Cada decisión enlaza a su material fuente: PRs, auditorías, commits de GitHub, conversaciones con clientes. Construir en público significa que los recibos también son públicos."
+  },
+  "intro": {
+    "title": "Por qué existe esto",
+    "body": "La mayoría de las agencias te muestran el caso de estudio pulido DESPUÉS del trabajo. Nosotros te mostramos el medio desordenado — los trade-offs, los callejones sin salida, los momentos en que nos equivocamos. Los registros públicos de decisiones son la forma de mayor confianza de credibilidad para compradores técnicos. También son un forcing function para mejor pensamiento: escribir 'por qué elegimos X' te obliga a realmente elegir y defender."
+  },
+  "items": [
+    {
+      "id": "stack-nextjs-16-over-15",
+      "date": "2026-06-15",
+      "title": "Por qué Next.js 16 (y no 15 o 14) para ai-whisperers.org",
+      "decision": "Usamos Next.js 16.2.4 con Turbopack + App Router.",
+      "reasoning": "Necesitábamos SSG 4-idiomas con TTFB sub-milisegundo, content-driven (no CMS), y desplegable en Docker Swarm. El API async `params: Promise<{...}>` de Next 16 es el tradeoff correcto: fuerza el manejo async correcto y desbloquea streaming SSR más adelante. Next 15 tiene la misma forma pero todavía en desarrollo. Volver a 14 habría significado perder 2 años de mejoras de perf.",
+      "alternatives": {
+        "considered": ["Astro 5", "SvelteKit", "Remix", "Next.js 14 (Pages Router)", "Vite puro + React Router"],
+        "rejected": "Astro es genial para sitios de contenido pero nuestras páginas dinámicas de pricing y casos de estudio habrían necesitado islas cliente de todas formas. SvelteKit es más rápido pero el equipo tiene 5 años de memoria muscular de React. Remix es solo React 18. Vite + RRR es 3x más código para mantener. Pages Router está muerto."
+      },
+      "what_went_wrong": "El primer deploy tenía 4 páginas usando la forma sync antigua `params: { lang: string }`. Daban 500 en el prerender. Tomó un sweep manual a través de las 22 apps del monorepo para encontrarlas todas.",
+      "what_we_learned": "Un grep one-liner ahorró horas: `grep -rE 'params\\s*:\\s*\\{\\s*[\\w]+\\s*:\\s*string' apps/*/app/`. Debería haber corrido eso antes del primer build."
+    },
+    {
+      "id": "docker-swarm-no-k8s",
+      "date": "2026-06-15",
+      "title": "Por qué Docker Swarm (y no Kubernetes) para la flota Paragu-ai",
+      "decision": "Todos los 42+ sitios cliente corren en un solo VPS con Docker Swarm, Traefik v3.5, y proxy orange-cloud de CF al frente.",
+      "reasoning": "Tenemos 1 ingeniero (yo) corriendo 42 sitios cliente. K8s significaría un cluster, upgrades del control plane, RBAC, ingress controllers, cert-manager, backups de etcd — eso son 3-5 días/mes de yak-shaving. Swarm tiene el mismo modelo declarativo con un binario, un `docker stack deploy`, cero gestión de cluster. La desventaja es que no auto-escala, pero no lo necesitamos — toda la flota peakea en ~30% CPU.",
+      "alternatives": {
+        "considered": ["K3s", "Nomad", "docker-compose plano", "Vercel/Netlify por sitio", "Cloudflare Pages por sitio"],
+        "rejected": "K3s todavía necesita mantenimiento de cluster. Nomad tiene una comunidad más chica. docker-compose no puede hacer deploys zero-downtime. Vercel/Netlify significarían 42 facturas separadas y 42 pipelines de build separados. CF Pages requiere el sistema de build de CF Workers, menos flexible."
+      },
+      "what_went_wrong": "Los primeros 12 sitios que desplegué tenían una config estática de Traefik en /opt/traefik/dynamic/ que tomaba precedencia sobre los labels de Swarm — causó 502s por 6 horas antes de que lo notara. Ahora tengo una regla: labels en .Spec.Labels (service-level), NUNCA archivos dynamic estáticos a menos que documente por qué.",
+      "what_we_learned": "Escribir el failure mode en el script de deploy mismo. La skill `paragu-ai-platform-maintenance` captura el flujo exacto + la trampa de static-dynamic. El yo-futuro (o cualquier otro) no puede repetir el error."
+    },
+    {
+      "id": "transparent-pricing",
+      "date": "2026-06-15",
+      "title": "Por qué publicamos precios (cuando el 95% de las agencias paraguayas no)",
+      "decision": "Los 28 servicios con precios de referencia, low/high del mercado, y prueba interna — en un Google Sheet público + en el sitio de la empresa.",
+      "reasoning": "Cuando empecé AI Whisperers, la objeción #1 de los compradores era '¿cuánto cuesta?'. La queja #1 después de contratarnos era 'no tenía idea de que iba a costar eso'. Ambas vienen de la misma raíz: precios ocultos. Publicar las tarifas de antemano filtra a clientes que no pueden pagarnos (bien — no es el fit correcto) y genera confianza en los que sí pueden (bien — ROI a largo plazo). El riesgo es que los competidores nos bajen el precio. El contra-riesgo es parecer cualquier otra agencia opaca de Paraguay.",
+      "alternatives": {
+        "considered": ["Solo cotización (default de la industria)", "Solo tiers (\"Starter/Pro/Enterprise\")", "Solo por hora con discovery call"],
+        "rejected": "Solo cotización significa una llamada de 30 min para cada prospect, incluso los que no pueden pagarnos. Solo tiers es lo peor — es difícil de comparar y nos deja ocultar las tarifas reales. Solo por hora es técnicamente transparente pero psicológicamente peor: una cotización de $5K parece 50 horas × $100, lo cual es intimidante."
+      },
+      "what_went_wrong": "La página de precios inicial tenía calificadores 'desde' por todas partes, lo cual es el mismo problema que no tener precios. La página actual muestra: (1) el precio de referencia real, (2) low/high del mercado para contexto, (3) qué incluye, (4) qué cambia el precio arriba o abajo. Transparencia total.",
+      "what_we_learned": "La opacidad de precios es una postura defensiva de agencias que compiten en carisma, no en competencia. Si tu trabajo es suficientemente bueno, publicar el precio es un *punto de venta*, no un riesgo."
+    },
+    {
+      "id": "no-cms-content-as-code",
+      "date": "2026-06-15",
+      "title": "Por qué el contenido vive en JSON files en el repo (y no en Sanity / Contentful / Strapi)",
+      "decision": "Todo el copy del sitio está en `content/{en,es,nl,pt}/site.json` + JSON files por sección. Sin CMS. Git es la fuente de verdad.",
+      "reasoning": "Para un sitio 4-idiomas, 44 páginas, con 28 items de servicio, el overhead de un CMS no se paga solo. Git nos da: (1) contenido versionado, (2) PR review en cambios de copy, (3) Claude/Cursor puede editar JSON en segundos, (4) sin vendor lock-in, (5) sin pipeline de deploy separado. La desventaja es que usuarios no técnicos no pueden editar — pero somos 2 personas, ambos técnicos, y el cliente no necesita editar copy (lo aprueba antes del deploy).",
+      "alternatives": {
+        "considered": ["Sanity", "Contentful", "Strapi (self-hosted)", "Decap CMS (git-backed)", "Markdown files en el repo"],
+        "rejected": "Sanity/Contentful cuestan $200+/mes y agregan una API separada para debuggear. Strapi es solo más config YAML para mantener. Decap CMS es bueno pero agrega un runtime. Markdown funcionaría pero JSON es más estructurado para nuestro caso de uso (tablas de precios, testimonios, etc)."
+      },
+      "what_went_wrong": "La primera versión tenía JSON anidado 6 niveles de profundidad que era una pesadilla de grepear. El esquema v2 aplana los arrays y usa keys consistentes. Ahora cualquier edición de copy es un PR de 5 segundos.",
+      "what_we_learned": "Para equipos de 2 personas, el CMS es una capa que existe para resolver problemas que no tenés. Agregalo cuando tengas un equipo de contenido que no sea ingeniería. Hasta entonces, JSON + Git es más rápido, gratis, y revisable."
+    },
+    {
+      "id": "ai-whisperers-site-full-rebuild",
+      "date": "2026-06-15",
+      "title": "Por qué reconstruimos ai-whisperers.org desde cero (y no iteramos sobre el build de Vercel)",
+      "decision": "Construimos una app fresca de Next.js 16 + Turbopack, desplegamos en nuestro propio VPS, matamos el deploy de Vercel. Mismo DNS, backend diferente.",
+      "reasoning": "El build viejo de Vercel era el tagline 'Machines for the math. Humans for the magic.' — circa 2025. Para 2026 ya habíamos pasado del pitch de AI-training al pitch de AI-engineering. El tagline viejo nos estaba haciendo daño en las llamadas de ventas. Iterar sobre el build de Vercel habría significado: editar componentes React, pegarle a la API de Vercel para redeploy, lidear con edge functions de Vercel-only, etc. Empezar fresco en nuestro propio VPS nos dio: control total, sin facturación por función, security headers, Traefik middlewares, rebuild content-driven. Tomó 4 días end-to-end.",
+      "alternatives": {
+        "considered": ["Iterar sobre el build de Vercel", "Astro en Vercel", "Sitio estático Hugo"],
+        "rejected": "Iterar en Vercel mantenía la arquitectura equivocada. Astro habría significado reescribir cada componente interactivo. Hugo habría significado no SSG con contenido per-locale. Next fresco en VPS ganó en todos los ejes."
+      },
+      "what_went_wrong": "El cutover de DNS (Squarespace NS flip) sigue pendiente — el build viejo de Vercel todavía está sirviendo tráfico público. Estamos listos, solo esperando una tarea de 5 min en el browser. Hasta entonces, todo este ciclo de audit-y-fix es invisible al público.",
+      "what_we_learned": "El build es la parte fácil. La delegación de DNS es la fricción. La próxima vez, hacer la migración de DNS PRIMERO, incluso antes de que el build esté listo."
+    }
+  ]
+}

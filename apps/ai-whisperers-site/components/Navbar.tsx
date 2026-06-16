@@ -22,6 +22,7 @@ export function Navbar({ lang, content }: { lang: string; content: any }) {
     { href: `${base}/pricing`, label: "Pricing" },
     { href: `${base}/faq`, label: "FAQ" },
     { href: `${base}/changelog`, label: "Changelog" },
+    { href: `${base}/decisions`, label: "Decisions" },
     { href: `${base}/about`, label: "About" },
   ]
   return (

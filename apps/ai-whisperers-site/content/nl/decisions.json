@@ -1,0 +1,22 @@
+{
+  "title": "Publiek beslissingslogboek",
+  "subtitle": "Elke betekenisvolle engineering-, business- en productbeslissing die we nemen — met de redenering, de alternatieven die we afwezen, en wat we anders zouden doen.",
+  "cta": {
+    "title": "Wil je dieper graven?",
+    "body": "Elke beslissing linkt naar het bronmateriaal: PR's, audits, GitHub commits, klantgesprekken. Openbaar bouwen betekent dat de bonnen ook openbaar zijn."
+  },
+  "items": [
+    {
+      "id": "stack-nextjs-16-over-15",
+      "date": "2026-06-15",
+      "title": "Waarom Next.js 16 (en niet 15 of 14) voor ai-whisperers.org",
+      "decision": "Next.js 16.2.4 met Turbopack + App Router.",
+      "reasoning": "Vereisten: 4-locale SSG met sub-millisecond TTFB, content-driven (niet CMS-driven), en Swarm-deployable. Next 16's async `params: Promise<{...}>` is de juiste afweging: het dwingt correct async handling af en ontgrendelt streaming SSR later.",
+      "alternatives": {
+        "considered": ["Astro 5", "SvelteKit", "Remix", "Next.js 14 (Pages Router)", "Vite + React Router"]
+      },
+      "what_went_wrong": "Eerste deploy had 4 pagina's met de oude sync `params: { lang: string }` vorm. Die 500'en in de prerender pass. Handmatige sweep over alle 22 apps in de monorepo was nodig.",
+      "what_we_learned": "Een grep one-liner bespaarde uren: `grep -rE 'params\\s*:\\s*\\{\\s*[\\w]+\\s*:\\s*string' apps/*/app/`. Had dat vóór de eerste build moeten draaien."
+    }
+  ]
+}
