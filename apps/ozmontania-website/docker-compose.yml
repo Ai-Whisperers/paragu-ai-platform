@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.ozmontania-website.rule=Host(`ozmontania-website.paragu-ai.com`)"
         - "traefik.http.routers.ozmontania-website.tls=true"
         - "traefik.http.routers.ozmontania-website.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.ozmontania-website.middlewares=security-headers@file"
         - "traefik.http.services.ozmontania-website.loadbalancer.server.port=3000"
     networks:
       - agent-net

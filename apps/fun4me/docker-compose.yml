@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.fun4me.rule=Host(`fun4me.paragu-ai.com`)"
         - "traefik.http.routers.fun4me.tls=true"
         - "traefik.http.routers.fun4me.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.fun4me.middlewares=security-headers@file"
         - "traefik.http.services.fun4me.loadbalancer.server.port=3000"
     networks:
       - agent-net

@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.shine-nails.rule=Host(`shine-nails.paragu-ai.com`)"
         - "traefik.http.routers.shine-nails.tls=true"
         - "traefik.http.routers.shine-nails.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.shine-nails.middlewares=security-headers@file"
         - "traefik.http.services.shine-nails.loadbalancer.server.port=3000"
     networks:
       - agent-net

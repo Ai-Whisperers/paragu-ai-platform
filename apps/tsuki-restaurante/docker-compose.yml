@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.tsuki-restaurante.rule=Host(`tsuki-restaurante.paragu-ai.com`)"
         - "traefik.http.routers.tsuki-restaurante.tls=true"
         - "traefik.http.routers.tsuki-restaurante.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.tsuki-restaurante.middlewares=security-headers@file"
         - "traefik.http.services.tsuki-restaurante.loadbalancer.server.port=3000"
     networks:
       - agent-net

@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.golden-visa-advisory.rule=Host(`golden-visa-advisory.paragu-ai.com`)"
         - "traefik.http.routers.golden-visa-advisory.tls=true"
         - "traefik.http.routers.golden-visa-advisory.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.golden-visa-advisory.middlewares=security-headers@file"
         - "traefik.http.services.golden-visa-advisory.loadbalancer.server.port=3000"
     networks:
       - agent-net

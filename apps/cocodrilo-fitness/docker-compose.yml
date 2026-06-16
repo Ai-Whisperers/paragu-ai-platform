@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.cocodrilo-fitness.rule=Host(`cocodrilo-fitness.paragu-ai.com`)"
         - "traefik.http.routers.cocodrilo-fitness.tls=true"
         - "traefik.http.routers.cocodrilo-fitness.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.cocodrilo-fitness.middlewares=security-headers@file"
         - "traefik.http.services.cocodrilo-fitness.loadbalancer.server.port=3000"
     networks:
       - agent-net

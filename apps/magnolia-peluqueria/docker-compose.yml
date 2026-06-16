@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.magnolia-peluqueria.rule=Host(`magnolia-peluqueria.paragu-ai.com`)"
         - "traefik.http.routers.magnolia-peluqueria.tls=true"
         - "traefik.http.routers.magnolia-peluqueria.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.magnolia-peluqueria.middlewares=security-headers@file"
         - "traefik.http.services.magnolia-peluqueria.loadbalancer.server.port=3000"
     networks:
       - agent-net

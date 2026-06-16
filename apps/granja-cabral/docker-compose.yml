@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.granja-cabral.rule=Host(`granja-cabral.paragu-ai.com`)"
         - "traefik.http.routers.granja-cabral.tls=true"
         - "traefik.http.routers.granja-cabral.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.granja-cabral.middlewares=security-headers@file"
         - "traefik.http.services.granja-cabral.loadbalancer.server.port=3000"
     networks:
       - agent-net

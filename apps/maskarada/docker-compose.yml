@@ -18,6 +18,7 @@ services:
         - "traefik.http.routers.maskarada.rule=Host(`maskarada.paragu-ai.com`)"
         - "traefik.http.routers.maskarada.tls=true"
         - "traefik.http.routers.maskarada.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.maskarada.middlewares=security-headers@file"
         - "traefik.http.services.maskarada.loadbalancer.server.port=3000"
     networks:
       - agent-net

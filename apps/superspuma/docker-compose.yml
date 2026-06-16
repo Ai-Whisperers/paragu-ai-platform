@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.superspuma.rule=Host(`superspuma.paragu-ai.com`)"
         - "traefik.http.routers.superspuma.tls=true"
         - "traefik.http.routers.superspuma.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.superspuma.middlewares=security-headers@file"
         - "traefik.http.services.superspuma.loadbalancer.server.port=3000"
     networks:
       - agent-net

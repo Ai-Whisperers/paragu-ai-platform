@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.nudo.rule=Host(`nudo.paragu-ai.com`)"
         - "traefik.http.routers.nudo.tls=true"
         - "traefik.http.routers.nudo.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.nudo.middlewares=security-headers@file"
         - "traefik.http.services.nudo.loadbalancer.server.port=3000"
     networks:
       - agent-net

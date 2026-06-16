@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.escribania-paraguay.rule=Host(`escribania-paraguay.paragu-ai.com`)"
         - "traefik.http.routers.escribania-paraguay.tls=true"
         - "traefik.http.routers.escribania-paraguay.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.escribania-paraguay.middlewares=security-headers@file"
         - "traefik.http.services.escribania-paraguay.loadbalancer.server.port=3000"
     networks:
       - agent-net

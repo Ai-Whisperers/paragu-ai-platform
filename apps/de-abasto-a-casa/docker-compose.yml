@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.de-abasto-a-casa.rule=Host(`de-abasto-a-casa.paragu-ai.com`)"
         - "traefik.http.routers.de-abasto-a-casa.tls=true"
         - "traefik.http.routers.de-abasto-a-casa.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.de-abasto-a-casa.middlewares=security-headers@file"
         - "traefik.http.services.de-abasto-a-casa.loadbalancer.server.port=3000"
     networks:
       - agent-net

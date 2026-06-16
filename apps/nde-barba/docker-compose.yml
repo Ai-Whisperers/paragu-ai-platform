@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.nde-barba.rule=Host(`nde-barba.paragu-ai.com`)"
         - "traefik.http.routers.nde-barba.tls=true"
         - "traefik.http.routers.nde-barba.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.nde-barba.middlewares=security-headers@file"
         - "traefik.http.services.nde-barba.loadbalancer.server.port=3000"
     networks:
       - agent-net

@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.meal-prep.rule=Host(`meal-prep.paragu-ai.com`)"
         - "traefik.http.routers.meal-prep.tls=true"
         - "traefik.http.routers.meal-prep.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.meal-prep.middlewares=security-headers@file"
         - "traefik.http.services.meal-prep.loadbalancer.server.port=80"
     networks:
       - agent-net

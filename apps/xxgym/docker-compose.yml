@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.xxgym.rule=Host(`xxgym.paragu-ai.com`)"
         - "traefik.http.routers.xxgym.tls=true"
         - "traefik.http.routers.xxgym.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.xxgym.middlewares=security-headers@file"
         - "traefik.http.services.xxgym.loadbalancer.server.port=3000"
     networks:
       - agent-net

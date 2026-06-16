@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.villamayor-asociados.rule=Host(`villamayor.paragu-ai.com`)"
         - "traefik.http.routers.villamayor-asociados.tls=true"
         - "traefik.http.routers.villamayor-asociados.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.villamayor-asociados.middlewares=security-headers@file"
         - "traefik.http.services.villamayor-asociados.loadbalancer.server.port=3000"
     networks:
       - agent-net

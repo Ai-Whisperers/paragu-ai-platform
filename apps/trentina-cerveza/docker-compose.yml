@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.trentina-cerveza.rule=Host(`trentina-cerveza.paragu-ai.com`)"
         - "traefik.http.routers.trentina-cerveza.tls=true"
         - "traefik.http.routers.trentina-cerveza.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.trentina-cerveza.middlewares=security-headers@file"
         - "traefik.http.services.trentina-cerveza.loadbalancer.server.port=3000"
     networks:
       - agent-net

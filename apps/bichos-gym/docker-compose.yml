@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.bichos-gym.rule=Host(`bichos-gym.paragu-ai.com`)"
         - "traefik.http.routers.bichos-gym.tls=true"
         - "traefik.http.routers.bichos-gym.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.bichos-gym.middlewares=security-headers@file"
         - "traefik.http.services.bichos-gym.loadbalancer.server.port=3000"
     networks:
       - agent-net

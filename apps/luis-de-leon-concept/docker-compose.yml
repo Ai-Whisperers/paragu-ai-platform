@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.luis-de-leon-concept.rule=Host(`luis-de-leon-concept.paragu-ai.com`)"
         - "traefik.http.routers.luis-de-leon-concept.tls=true"
         - "traefik.http.routers.luis-de-leon-concept.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.luis-de-leon-concept.middlewares=security-headers@file"
         - "traefik.http.services.luis-de-leon-concept.loadbalancer.server.port=3000"
     networks:
       - agent-net

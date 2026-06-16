@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.stroopwafel-huis.rule=Host(`stroopwafel-huis.paragu-ai.com`)"
         - "traefik.http.routers.stroopwafel-huis.tls=true"
         - "traefik.http.routers.stroopwafel-huis.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.stroopwafel-huis.middlewares=security-headers@file"
         - "traefik.http.services.stroopwafel-huis.loadbalancer.server.port=3000"
     networks:
       - agent-net

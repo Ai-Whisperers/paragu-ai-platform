@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.3md-website.rule=Host(`3md-website.paragu-ai.com`)"
         - "traefik.http.routers.3md-website.tls=true"
         - "traefik.http.routers.3md-website.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.3md-website.middlewares=security-headers@file"
         - "traefik.http.services.3md-website.loadbalancer.server.port=3000"
     networks:
       - agent-net

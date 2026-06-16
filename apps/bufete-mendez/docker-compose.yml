@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.bufete-mendez.rule=Host(`bufete-mendez.paragu-ai.com`)"
         - "traefik.http.routers.bufete-mendez.tls=true"
         - "traefik.http.routers.bufete-mendez.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.bufete-mendez.middlewares=security-headers@file"
         - "traefik.http.services.bufete-mendez.loadbalancer.server.port=3000"
     networks:
       - agent-net

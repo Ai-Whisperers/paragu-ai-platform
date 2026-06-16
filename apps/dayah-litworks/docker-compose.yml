@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.dayah-litworks.rule=Host(`dayah-litworks.paragu-ai.com`)"
         - "traefik.http.routers.dayah-litworks.tls=true"
         - "traefik.http.routers.dayah-litworks.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.dayah-litworks.middlewares=security-headers@file"
         - "traefik.http.services.dayah-litworks.loadbalancer.server.port=3000"
     networks:
       - agent-net

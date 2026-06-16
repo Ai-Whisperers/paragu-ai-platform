@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.pitchy-website.rule=Host(`pitchy-website.paragu-ai.com`)"
         - "traefik.http.routers.pitchy-website.tls=true"
         - "traefik.http.routers.pitchy-website.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.pitchy-website.middlewares=security-headers@file"
         - "traefik.http.services.pitchy-website.loadbalancer.server.port=3000"
     networks:
       - agent-net

@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.estudio-medieval.rule=Host(`estudio-medieval.paragu-ai.com`)"
         - "traefik.http.routers.estudio-medieval.tls=true"
         - "traefik.http.routers.estudio-medieval.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.estudio-medieval.middlewares=security-headers@file"
         - "traefik.http.services.estudio-medieval.loadbalancer.server.port=3000"
     networks:
       - agent-net

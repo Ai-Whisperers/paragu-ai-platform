@@ -10,6 +10,7 @@ services:
         - "traefik.http.routers.dra-gabriela.rule=Host(`dra-gabriela.com.py`) || Host(`www.dra-gabriela.com.py`) || Host(`dragabriela.paragu-ai.com`)"
         - "traefik.http.routers.dra-gabriela.tls=true"
         - "traefik.http.routers.dra-gabriela.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.dra-gabriela.middlewares=security-headers@file"
         - "traefik.http.services.dra-gabriela.loadbalancer.server.port=3000"
     networks:
       - agent-net
