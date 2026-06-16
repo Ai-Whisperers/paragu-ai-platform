@@ -11,7 +11,7 @@ services:
         - "traefik.http.routers.fun4me-store.tls=true"
         - "traefik.http.routers.fun4me-store.tls.certresolver=letsencryptresolver"
         - "traefik.http.routers.fun4me-store.middlewares=security-headers@file"
-        - "traefik.http.services.fun4me-store.loadbalancer.server.port=80"
+        - "traefik.http.services.fun4me-store.loadbalancer.server.port=3000"
     networks:
       - agent-net
 networks:

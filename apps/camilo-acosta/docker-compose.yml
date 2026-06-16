@@ -11,7 +11,7 @@ services:
         - "traefik.http.routers.camilo-acosta.tls=true"
         - "traefik.http.routers.camilo-acosta.tls.certresolver=letsencryptresolver"
         - "traefik.http.routers.camilo-acosta.middlewares=security-headers@file"
-        - "traefik.http.services.camilo-acosta.loadbalancer.server.port=80"
+        - "traefik.http.services.camilo-acosta.loadbalancer.server.port=3000"
     networks:
       - agent-net
 networks:
