@@ -20,16 +20,16 @@ const SERVICE_ROUTE: Record<string, { es: string; en: string }> = {
 }
 
 const SERVICE_IMAGE: Record<string, string> = {
-  "segunda-opinion": "/images/services/second-opinion.svg",
-  "second-opinion": "/images/services/second-opinion.svg",
-  "planificacion-tratamiento": "/images/services/treatment-planning.svg",
-  "treatment-planning": "/images/services/treatment-planning.svg",
+  "segunda-opinion": "/images/services/second-opinion.png",
+  "second-opinion": "/images/services/second-opinion.png",
+  "planificacion-tratamiento": "/images/services/treatment-planning.png",
+  "treatment-planning": "/images/services/treatment-planning.png",
   "odontologia-general": "/images/services/general-dentistry.svg",
   "general-dentistry": "/images/services/general-dentistry.svg",
-  "estetica-dental": "/images/services/cosmetic-dentistry.svg",
-  "cosmetic-dentistry": "/images/services/cosmetic-dentistry.svg",
-  "rehabilitacion-oral": "/images/services/oral-rehabilitation.svg",
-  "oral-rehabilitation": "/images/services/oral-rehabilitation.svg",
+  "estetica-dental": "/images/services/cosmetic-dentistry.png",
+  "cosmetic-dentistry": "/images/services/cosmetic-dentistry.png",
+  "rehabilitacion-oral": "/images/services/oral-rehabilitation.png",
+  "oral-rehabilitation": "/images/services/oral-rehabilitation.png",
 }
 
 const SERVICE_COLOR: Record<string, string> = {

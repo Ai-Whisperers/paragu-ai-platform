@@ -103,16 +103,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
   // Pick image by slug
   const slugToImage: Record<string, string> = {
-    "second-opinion": "/images/services/second-opinion.svg",
-    "treatment-planning": "/images/services/treatment-planning.svg",
+    "second-opinion": "/images/services/second-opinion.png",
+    "treatment-planning": "/images/services/treatment-planning.png",
     "general-dentistry": "/images/services/general-dentistry.svg",
-    "cosmetic-dentistry": "/images/services/cosmetic-dentistry.svg",
-    "oral-rehabilitation": "/images/services/oral-rehabilitation.svg",
-    "segunda-opinion": "/images/services/second-opinion.svg",
-    "planificacion-tratamiento": "/images/services/treatment-planning.svg",
+    "cosmetic-dentistry": "/images/services/cosmetic-dentistry.png",
+    "oral-rehabilitation": "/images/services/oral-rehabilitation.png",
+    "segunda-opinion": "/images/services/second-opinion.png",
+    "planificacion-tratamiento": "/images/services/treatment-planning.png",
     "odontologia-general": "/images/services/general-dentistry.svg",
-    "estetica-dental": "/images/services/cosmetic-dentistry.svg",
-    "rehabilitacion-oral": "/images/services/oral-rehabilitation.svg",
+    "estetica-dental": "/images/services/cosmetic-dentistry.png",
+    "rehabilitacion-oral": "/images/services/oral-rehabilitation.png",
   }
   const heroImage = slugToImage[slug]
 

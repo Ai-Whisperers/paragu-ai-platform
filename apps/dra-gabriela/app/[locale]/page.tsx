@@ -64,7 +64,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             "We compare costs and materials honestly",
             "If you don't need treatment, we'll say so",
           ]}
-        imageSrc="/images/services/second-opinion.svg"
+        imageSrc="/images/services/second-opinion.png"
         imageAlt="Second opinion review"
         ctaLabel={isEs ? "Pedir segunda opinión" : "Request a second opinion"}
         ctaHref={`/${locale}/second-opinion`}
