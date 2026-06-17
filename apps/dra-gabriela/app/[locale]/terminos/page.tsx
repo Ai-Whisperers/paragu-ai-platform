@@ -1,10 +1,15 @@
-// /es/terminos is a legacy Spanish slug — canonical is /es/terms.
-import { redirect } from "next/navigation"
+// Cross-locale slug alias: /[locale]/terminos → /[locale]/terms
+import { notFound, redirect } from "next/navigation"
+
+const LOCALES = ["en", "es"] as const
 
 export function generateStaticParams() {
-  return [{ locale: "es" }]
+  return LOCALES.map((l) => ({ locale: l }))
 }
 
-export default function RedirectToTerms() {
-  redirect("/es/terms")
+export default function TerminosRedirect({ params }: { params: Promise<{ locale: string }> }) {
+  return params.then(({ locale }) => {
+    if (locale !== "en" && locale !== "es") notFound()
+    redirect(`/${locale}/terms`)
+  })
 }

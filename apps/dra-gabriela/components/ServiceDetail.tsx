@@ -5,6 +5,7 @@ import Link from "next/link"
 import { ArrowRight, MessageCircle, CheckCircle2, Clock, Sparkles } from "lucide-react"
 import Image from "next/image"
 import { getContent, whatsappLink, type Locale } from "@/lib/content"
+import { buildMetadata } from "@/lib/seo"
 import { PageHero } from "@/components/PageHero"
 
 import enSegunda from "@/content/en/services/categories/second-opinion.json"
@@ -84,7 +85,30 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params
   const data = SERVICES_BY_LOCALE[locale as Locale]?.[slug]
   if (!data) return {}
-  return { title: data.title, description: data.description }
+  // Build the canonical EN slug from whatever slug was passed in
+  // (e.g. "segunda-opinion" → "second-opinion")
+  const reverseSlugMap: Record<string, string> = {
+    "segunda-opinion": "second-opinion",
+    "second-opinion": "second-opinion",
+    "planificacion-tratamiento": "treatment-planning",
+    "treatment-planning": "treatment-planning",
+    "odontologia-general": "general-dentistry",
+    "general-dentistry": "general-dentistry",
+    "estetica-dental": "cosmetic-dentistry",
+    "cosmetic-dentistry": "cosmetic-dentistry",
+    "rehabilitacion-oral": "oral-rehabilitation",
+    "oral-rehabilitation": "oral-rehabilitation",
+  }
+  const canonicalSlug = reverseSlugMap[slug] ?? slug
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: `services/${canonicalSlug}`,
+    title: data.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Servicio" : "Service"),
+    description: data.description || (isEs
+      ? "Servicios dentales conservadores con planificación detallada en Asunción."
+      : "Conservative dental services with detailed planning in Asunción."),
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {

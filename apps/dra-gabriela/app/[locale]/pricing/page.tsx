@@ -2,6 +2,7 @@
 // Uses 2-col grid layout to avoid the "flat list of 11 H2s" problem.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { MessageCircle, Clock, CheckCircle2, Sparkles, Tag } from "lucide-react"
 import en from "@/content/en/pricing.json"
@@ -49,7 +50,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = CONTENT[locale as keyof typeof CONTENT]
-  return { title: data?.title || (locale === "es" ? "Precios" : "Pricing") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "pricing",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Precios" : "Pricing"),
+    description: isEs ? "Precios públicos de servicios dentales en Asunción. Consulta desde Gs 300.000, segunda opinión, planificación y tratamientos." : "Published dental service pricing in Asunción. Consultation from Gs 300,000, second opinion, treatment planning and procedures.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function Pricing({ params }: { params: Promise<{ locale: string }> }) {

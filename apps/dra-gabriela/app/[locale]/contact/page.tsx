@@ -1,6 +1,7 @@
 // /en/contact + /es/contacto — contact page using PageHero + PageSection.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import { MessageCircle, Send, MapPin, Clock, Phone, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { getContent, isLocale, isPlaceholder, whatsappLink } from "@/lib/content"
@@ -14,7 +15,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const c = getContent(locale)
-  return { title: c.contact?.title || (locale === "es" ? "Contacto" : "Contact") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "contact",
+    title: c.contact?.title ? `${c.contact.title} · Dra. Gabriella` : (isEs ? "Contacto" : "Contact"),
+    description: isEs ? "Coordiná tu consulta con la Dra. Gabriella González Pane. WhatsApp, horarios y dirección de la clínica en Asunción." : "Book a consultation with Dra. Gabriella González Pane. WhatsApp, hours, and clinic address in Asunción.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {

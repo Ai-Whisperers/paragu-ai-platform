@@ -3,6 +3,7 @@
 // Big text. Breathing room. Proper visual hierarchy.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import Link from "next/link"
 import {
   Calendar, AlertTriangle, Award, MessageCircle, CalendarCheck,
@@ -32,7 +33,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = CONTENT[locale as keyof typeof CONTENT]
-  return { title: data?.title || (locale === "es" ? "Proceso" : "Process") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "process",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "El proceso" : "The process"),
+    description: isEs ? "Cómo es el proceso en la práctica de la Dra. Gabriella González Pane: contacto, evaluación, plan escrito, tratamiento con seguimiento." : "How the process works at Dra. Gabriella González Pane's practice: contact, evaluation, written plan, treatment with follow-up.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function ProcessPage({ params }: { params: Promise<{ locale: string }> }) {

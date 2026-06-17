@@ -6,6 +6,7 @@ import en from "@/content/en/faqs.json"
 import es from "@/content/es/faqs.json"
 import { PageHero } from "@/components/PageHero"
 import { PageSection } from "@/components/PageSection"
+import { buildMetadata } from "@/lib/seo"
 
 const LOCALES = ["en", "es"] as const
 const CONTENT: Record<string, any> = { en, es }
@@ -17,7 +18,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = CONTENT[locale as keyof typeof CONTENT]
-  return { title: data?.title || "FAQ" }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "faq",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Preguntas frecuentes" : "Frequently asked questions"),
+    description: isEs
+      ? "Preguntas frecuentes sobre la práctica dental conservadora de la Dra. Gabriella González Pane en Asunción."
+      : "Frequently asked questions about Dra. Gabriella González Pane's conservative dental practice in Asunción.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function FAQ({ params }: { params: Promise<{ locale: string }> }) {

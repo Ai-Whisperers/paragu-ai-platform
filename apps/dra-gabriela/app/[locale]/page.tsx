@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import { getContent, isLocale } from "@/lib/content"
+import { buildMetadata } from "@/lib/seo"
 import { Hero } from "@/components/sections/Hero"
 import { BigStats } from "@/components/sections/BigStats"
 import { FeaturedService } from "@/components/sections/FeaturedService"
@@ -16,16 +17,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const c = getContent(locale)
-  return {
-    title: c.site?.name,
-    description: c.site?.metaDescription,
-    alternates: {
-      languages: {
-        en: "/en",
-        es: "/es",
-      },
-    },
-  }
+  return buildMetadata({
+    slug: "",
+    title: c.site?.name ?? "Dra. Gabriella González Pane",
+    description: c.site?.metaDescription ?? "Conservative, planning-first dentistry in Asunción.",
+    locale: locale === "es" ? "es" : "en",
+  })
 }
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {

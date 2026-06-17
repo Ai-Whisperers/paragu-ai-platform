@@ -1,6 +1,7 @@
 // /en/expat + /es/expat — bilingual expat landing.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import { MessageCircle, Globe, Languages, FileText, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import en from "@/content/en/expat.json"
@@ -19,7 +20,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = CONTENT[locale as keyof typeof CONTENT]
-  return { title: data?.title || (locale === "es" ? "Expatriados" : "Expat care") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "expat",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Atención dental para expatriados" : "Dental care for expats"),
+    description: isEs ? "Atención dental bilingüe en Asunción para expatriados. La Dra. Gabriella González Pane consulta en inglés y español." : "Bilingual dental care in Asunción for expats. Dra. Gabriella González Pane sees patients in English and Spanish.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function ExpatPage({ params }: { params: Promise<{ locale: string }> }) {

@@ -11,6 +11,7 @@ import es from "@/content/es/nosotros.json"
 import { PageHero } from "@/components/PageHero"
 import { PageSection } from "@/components/PageSection"
 import { getContent, whatsappLink } from "@/lib/content"
+import { buildMetadata } from "@/lib/seo"
 
 const LOCALES = ["en", "es"] as const
 const CONTENT: Record<string, any> = { en, es }
@@ -26,7 +27,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = CONTENT[locale as keyof typeof CONTENT]
-  return { title: data?.title || (locale === "es" ? "Sobre mí" : "About") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "about",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Sobre mí" : "About"),
+    description: data?.subtitle || (isEs
+      ? "Sobre la Dra. Gabriella González Pane, odontóloga conservadora bilingüe en Asunción. Veinte años de práctica, planificación primero."
+      : "About Dra. Gabriella González Pane, bilingual conservative dentist in Asunción. Twenty years of practice, planning first."),
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function About({ params }: { params: Promise<{ locale: string }> }) {

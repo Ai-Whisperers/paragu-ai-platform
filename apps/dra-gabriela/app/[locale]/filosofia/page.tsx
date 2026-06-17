@@ -1,6 +1,7 @@
 // /es/filosofia + /en/philosophy — bilingual philosophy page.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import { Quote, type LucideIcon } from "lucide-react"
 import esData from "@/content/es/filosofia.json"
 import enData from "@/content/en/philosophy.json"
@@ -14,7 +15,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = locale === "es" ? esData : enData
-  return { title: data?.title || (locale === "es" ? "Filosofía" : "Philosophy") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "philosophy",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Filosofía" : "Philosophy"),
+    description: isEs ? "La filosofía de práctica dental conservadora de la Dra. Gabriella González Pane: planificar primero, actuar con criterio." : "The conservative dental practice philosophy of Dra. Gabriella González Pane: plan first, act with judgment.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {

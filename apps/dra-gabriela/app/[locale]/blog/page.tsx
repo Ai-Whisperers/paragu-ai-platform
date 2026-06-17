@@ -1,6 +1,7 @@
 // /en/blog + /es/blog — bilingual blog index with planned topics.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react"
 import Link from "next/link"
 import en from "@/content/en/blog.json"
@@ -18,7 +19,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = CONTENT[locale as keyof typeof CONTENT]
-  return { title: data?.title || (locale === "es" ? "Blog" : "Blog") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "blog",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Blog" : "Blog"),
+    description: isEs ? "Artículos sobre odontología conservadora, planificación dental y casos de la práctica de la Dra. Gabriella en Asunción." : "Articles on conservative dentistry, treatment planning, and cases from Dra. Gabriella's practice in Asunción.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {

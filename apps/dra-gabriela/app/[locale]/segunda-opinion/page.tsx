@@ -1,10 +1,15 @@
-// /es/segunda-opinion is a legacy Spanish slug — canonical is /es/second-opinion.
-import { redirect } from "next/navigation"
+// Cross-locale slug alias: /[locale]/segunda-opinion → /[locale]/second-opinion
+import { notFound, redirect } from "next/navigation"
+
+const LOCALES = ["en", "es"] as const
 
 export function generateStaticParams() {
-  return [{ locale: "es" }]
+  return LOCALES.map((l) => ({ locale: l }))
 }
 
-export default function SegundaOpinionRedirect() {
-  redirect("/es/second-opinion")
+export default function SegundaOpinionRedirect({ params }: { params: Promise<{ locale: string }> }) {
+  return params.then(({ locale }) => {
+    if (locale !== "en" && locale !== "es") notFound()
+    redirect(`/${locale}/second-opinion`)
+  })
 }

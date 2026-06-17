@@ -1,6 +1,7 @@
 // /en/terms + /es/terminos — bilingual terms of service.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import { FileText } from "lucide-react"
 import esData from "@/content/es/terminos.json"
 import enData from "@/content/en/terminos.json"
@@ -14,7 +15,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = locale === "es" ? esData : enData
-  return { title: data?.title || (locale === "es" ? "Términos" : "Terms") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "terms",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Términos y condiciones" : "Terms and conditions"),
+    description: isEs ? "Términos y condiciones de la práctica dental de la Dra. Gabriella González Pane en Asunción." : "Terms and conditions of Dra. Gabriella González Pane's dental practice in Asunción.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {

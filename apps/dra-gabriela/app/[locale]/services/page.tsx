@@ -1,6 +1,7 @@
 // /en/services + /es/services — bilingual services index.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { ArrowRight, Sparkles } from "lucide-react"
 import en from "@/content/en/services/index.json"
@@ -31,7 +32,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = CONTENT[locale as keyof typeof CONTENT]
-  return { title: data?.title || (locale === "es" ? "Servicios" : "Services") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "services",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Servicios" : "Services"),
+    description: isEs ? "Servicios dentales conservadores en Asunción: segunda opinión, planificación, odontología general, estética, rehabilitación." : "Conservative dental services in Asunción: second opinion, treatment planning, general dentistry, cosmetic, oral rehabilitation.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function Services({ params }: { params: Promise<{ locale: string }> }) {

@@ -1,6 +1,7 @@
 // /en/privacy + /es/privacidad — bilingual privacy policy.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import { Shield } from "lucide-react"
 import esData from "@/content/es/privacidad.json"
 import enData from "@/content/en/privacidad.json"
@@ -14,7 +15,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = locale === "es" ? esData : enData
-  return { title: data?.title || (locale === "es" ? "Privacidad" : "Privacy") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "privacy",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Política de privacidad" : "Privacy policy"),
+    description: isEs ? "Política de privacidad de la práctica dental de la Dra. Gabriella González Pane. Cómo manejamos tus datos personales." : "Privacy policy for Dra. Gabriella González Pane's dental practice. How we handle your personal data.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {

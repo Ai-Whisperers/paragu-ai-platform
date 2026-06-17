@@ -1,0 +1,135 @@
+// lib/seo.ts — SEO helpers: canonical, hreflang, OG tags.
+//
+// Every page's `generateMetadata` should call `buildMetadata({ ... })` to get
+// a consistent metadata object with:
+//   - title + description
+//   - canonical URL (always the English version of the page)
+//   - hreflang alternates (en, es, x-default) for every supported page
+//   - OpenGraph + Twitter cards
+//   - og:image pointing to /og/og-image.png (1200x630, single site-wide image)
+//
+// Slug mapping: the canonical URL is the EN slug (lower friction for
+// international SEO). Both slugs are reachable cross-locale via the
+// slugToBilingual() alias, so hreflang only needs to point to the
+// canonical (EN) URL.
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://dragabriela.paragu-ai.com"
+
+// Canonical EN slug → ES slug. Same slug = omit the ES side.
+const EN_TO_ES: Record<string, string> = {
+  "about": "nosotros",
+  "philosophy": "filosofia",
+  "services": "servicios",
+  "pricing": "precios",
+  "contact": "contacto",
+  "faq": "faq",
+  "second-opinion": "segunda-opinion",
+  "privacy": "privacidad",
+  "terms": "terminos",
+  "expat": "expat",
+  "blog": "blog",
+  "process": "process",
+  "services/second-opinion": "servicios/segunda-opinion",
+  "services/treatment-planning": "servicios/planificacion-tratamiento",
+  "services/cosmetic-dentistry": "servicios/estetica-dental",
+  "services/oral-rehabilitation": "servicios/rehabilitacion-oral",
+  "services/general-dentistry": "servicios/odontologia-general",
+}
+
+/** Strip the leading locale from a path. /en/about -> about, /es -> "" */
+function stripLocale(path: string): string {
+  return path.replace(/^\/(en|es)\b/, "").replace(/^\/+/, "")
+}
+
+/** Add a locale prefix to a slug. "about" + "en" -> "en/about" */
+function withLocale(slug: string, locale: "en" | "es"): string {
+  return slug ? `/${locale}/${slug}` : `/${locale}`
+}
+
+/**
+ * Given the canonical EN slug (or any path under [locale]), build the EN
+ * and ES alternates. Both pages always exist (slug aliases make the
+ * cross-locale routes work).
+ */
+function getAlternates(slug: string) {
+  const enUrl = `${SITE_URL}${withLocale(slug, "en")}`
+  const esSlug = EN_TO_ES[slug] ?? slug // fall back to same slug
+  const esUrl = `${SITE_URL}${withLocale(esSlug, "es")}`
+  return {
+    canonical: enUrl,
+    languages: {
+      en: enUrl,
+      es: esUrl,
+      "x-default": enUrl, // English is the default language
+    },
+  }
+}
+
+interface BuildMetadataInput {
+  /** Canonical EN slug (no leading locale). "" for the home page. */
+  slug: string
+  title: string
+  description: string
+  /** Locale of the current page (used to pick the right OG locale). */
+  locale: "en" | "es"
+  /** Optional: override the OG image. Default = /og/og-image.png */
+  ogImage?: string
+  /** Optional: og:type. Default = "website" */
+  ogType?: "website" | "article"
+  /** Article-specific (when ogType=article) */
+  publishedTime?: string
+  modifiedTime?: string
+  author?: string
+}
+
+export function buildMetadata({
+  slug,
+  title,
+  description,
+  locale,
+  ogImage = "/og/og-image.png",
+  ogType = "website",
+  publishedTime,
+  modifiedTime,
+  author,
+}: BuildMetadataInput) {
+  const alts = getAlternates(slug)
+  const ogLocale = locale === "es" ? "es_PY" : "en_US"
+  return {
+    title,
+    description,
+    alternates: alts,
+    openGraph: {
+      type: ogType,
+      locale: ogLocale,
+      url: locale === "es"
+        ? (EN_TO_ES[slug] ? `${SITE_URL}/${locale}/${EN_TO_ES[slug]}` : `${SITE_URL}/${locale}${slug ? "/" + slug : ""}`)
+        : alts.canonical,
+      siteName: "Dra. Gabriella González Pane",
+      title,
+      description,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      ...(publishedTime && { publishedTime }),
+      ...(modifiedTime && { modifiedTime }),
+      ...(author && { authors: [author] }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
+  }
+}
+
+/** Get the absolute URL of a given path. */
+export function absoluteUrl(path: string): string {
+  if (path.startsWith("http")) return path
+  return `${SITE_URL}${path.startsWith("/") ? path : "/" + path}`
+}
+
+/** Build the canonical + hreflang set for a given slug. Exposed for sitemap.ts. */
+export function buildAlternates(slug: string) {
+  return getAlternates(slug)
+}

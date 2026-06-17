@@ -1,6 +1,7 @@
 // /en/second-opinion + /es/second-opinion — featured service with gradient hero.
 
 import { notFound } from "next/navigation"
+import { buildMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { ArrowRight, MessageCircle, CheckCircle2, FileText, Shield, Sparkles, Clock } from "lucide-react"
 import en from "@/content/en/second-opinion.json"
@@ -19,7 +20,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = CONTENT[locale as keyof typeof CONTENT]
-  return { title: data?.title || (locale === "es" ? "Segunda opinión" : "Second opinion") }
+  const isEs = locale === "es"
+  return buildMetadata({
+    slug: "second-opinion",
+    title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Segunda opinión dental" : "Dental second opinion"),
+    description: isEs ? "Servicio de segunda opinión dental escrita en Asunción. Revisamos tu caso sin conflicto de interés, plan escrito en 2-3 días." : "Written dental second opinion service in Asunción. We review your case with no conflict of interest, written plan in 2-3 days.",
+    locale: isEs ? "es" : "en",
+  })
 }
 
 export default async function SecondOpinionPage({ params }: { params: Promise<{ locale: string }> }) {
