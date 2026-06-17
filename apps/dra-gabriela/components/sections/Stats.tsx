@@ -14,7 +14,7 @@ export function Stats({ c, locale }: { c: any; locale: string }) {
 
   return (
     <section className="bg-[var(--surface)] border-y border-[var(--border-light)]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-16">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-16">
         <div className="text-center mb-10">
           <span className="eyebrow inline-flex">{isEs ? "En números" : "By the numbers"}</span>
           <h2 className="text-2xl md:text-3xl">

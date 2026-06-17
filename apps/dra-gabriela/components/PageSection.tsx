@@ -31,8 +31,8 @@ const PY: Record<string, string> = {
 
 const CONTAINER: Record<string, string> = {
   narrow: "max-w-3xl",
-  wide: "max-w-7xl",
-  split: "max-w-7xl",
+  wide: "max-w-[1600px]",
+  split: "max-w-[1600px]",
 }
 
 export function PageSection({

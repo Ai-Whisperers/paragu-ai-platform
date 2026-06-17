@@ -62,7 +62,7 @@ export function PageHero({
         </div>
       )}
 
-      <div className={cn("relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8")}>
+      <div className={cn("relative w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8")}>
         <div className={cn(isCenter ? "text-center" : "text-left", "max-w-4xl", isCenter && "mx-auto")}>
           {eyebrow && (
             <span
@@ -86,7 +86,7 @@ export function PageHero({
           {subtitle && (
             <p
               className={cn(
-                "text-lg md:text-xl leading-relaxed",
+                "lead",
                 isGradient ? "text-white/85" : "text-[var(--fg-muted)]"
               )}
             >

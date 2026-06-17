@@ -17,7 +17,7 @@ export function Reasons({ c, locale }: { c: any; locale: string }) {
 
   return (
     <section className="section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="eyebrow">{c.reasons?.eyebrow || (locale === "es" ? "Por qué elegirnos" : "Why us")}</span>

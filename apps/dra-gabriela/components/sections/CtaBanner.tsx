@@ -13,7 +13,7 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
 
   return (
     <section className="section-sm bg-[var(--surface)]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[var(--radius-2xl)] bg-gradient-to-br from-[var(--accent)] via-[var(--accent-2)] to-[var(--accent)] text-white p-10 md:p-16 shadow-xl">
           {/* Decorative glow */}
           <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full opacity-20" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)" }} />

@@ -96,11 +96,23 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
 h2 { font-size: clamp(2rem, 4vw, 3.25rem); }
-h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
-h4 { font-size: 1.125rem; }
+h3 { font-size: clamp(1.4rem, 2.4vw, 1.875rem); }
+h4 { font-size: 1.25rem; }
 
-p { margin: 0 0 1em; }
+/* Body text — minimum 16px for accessibility and presence */
+p { margin: 0 0 1em; font-size: clamp(1rem, 1.1vw, 1.125rem); line-height: 1.7; }
 p:last-child { margin-bottom: 0; }
+
+/* Lead text — for hero subtitle and section intros */
+.lead {
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.65;
+  color: var(--fg-muted);
+}
+
+/* Small text — minimum 14px so it doesn't disappear */
+.text-sm { font-size: 0.9375rem; line-height: 1.5; }
+.text-xs { font-size: 0.8125rem; line-height: 1.4; }
 
 a { color: var(--accent); text-decoration: none; transition: color 160ms ease; }
 a:hover { color: var(--accent-2); }

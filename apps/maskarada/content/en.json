@@ -1,0 +1,49 @@
+{
+  "site": {
+    "name": "Club maškaráda",
+    "tagline": "The night where desire wears a mask",
+    "description": "BDSM, kink and conscious exploration community in Asunción, Paraguay. Events, resources, marketplace and guides for the community.",
+    "domain": "https://maskarada.paragu-ai.com",
+    "whatsappNumber": "595981200255",
+    "instagramHandle": "maskarada.py",
+    "instagramUrl": "https://www.instagram.com/maskarada.py/",
+    "address": "Eligio Ayala 1073, Asunción",
+    "addressMaps": "https://maps.google.com/?q=Eligio+Ayala+1073+Asunción+Paraguay",
+    "eventDate": "2026-06-11T19:00:00-04:00",
+    "eventDateLabel": "June 11, 2026",
+    "eventDateLong": "Thursday June 11, 2026 — 7:00 pm",
+    "eventPassed": true
+  },
+  "nav": [
+    { "href": "/eventos", "label": "Events" },
+    { "href": "/comunidad", "label": "Community" },
+    { "href": "/aprender", "label": "Learn" },
+    { "href": "/tienda", "label": "Shop" },
+    { "href": "/sobre", "label": "About" }
+  ],
+  "footerNav": [
+    { "href": "/historia", "label": "History" },
+    { "href": "/actividades", "label": "Activities" },
+    { "href": "/reglas", "label": "Rules" },
+    { "href": "/consentimiento", "label": "Consent" },
+    { "href": "/contacto", "label": "Contact" },
+    { "href": "/privacidad", "label": "Privacy" }
+  ],
+  "footer": {
+    "tagline": "Kink and conscious exploration community in Asunción, Paraguay.",
+    "copyright": "© 2026 Club maškaráda. All rights reserved.",
+    "disclaimer": "+18 • Private events • Asunción, Paraguay",
+    "contentDisclaimer": "Educational content on this site is community-researched. It is not professional advice. Reach out to the community team for personal guidance."
+  },
+  "ageGate": {
+    "enabled": true,
+    "title": "+18 — Confirm your age",
+    "body": "The content of maškaráda is for people 18 and over. Events, resources and community follow the principles of SSC (Safe, Sane, Consensual) and RACK (Risk-Aware Consensual Kink).",
+    "rememberDays": 30
+  },
+  "hero": {
+    "title": "maškaráda",
+    "subtitle": "club · community",
+    "tagline": "The night where desire wears a mask"
+  }
+}

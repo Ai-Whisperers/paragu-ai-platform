@@ -60,7 +60,7 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
                     <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[var(--accent-soft)] flex items-center justify-center text-[var(--accent)] font-medium text-sm" style={{ fontFamily: "var(--font-heading)" }}>
                       {String(i + 1).padStart(2, "0")}
                     </div>
-                    <span className="font-medium text-base md:text-lg pt-1 text-left">{it.q || it.question}</span>
+                    <span className="font-medium text-lg md:text-xl pt-1 text-left">{it.q || it.question}</span>
                   </div>
                   <ChevronDown className="w-5 h-5 text-[var(--fg-subtle)] group-open:rotate-180 transition-transform flex-shrink-0 mt-2" />
                 </summary>

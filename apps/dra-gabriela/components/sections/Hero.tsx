@@ -29,7 +29,7 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
         <div className="absolute inset-0 dot-pattern" />
       </div>
 
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32">
+      <div className="relative w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left content */}
           <div className="relative z-10 text-left">
@@ -43,7 +43,7 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
               <span className="gradient-text">{h.title}</span>
             </h1>
             {h.subtitle && (
-              <p className="text-lg md:text-xl text-[var(--fg-muted)] max-w-xl mb-10 leading-relaxed animate-fade-in-up-delay">
+              <p className="lead max-w-2xl mb-10 animate-fade-in-up-delay">
                 {h.subtitle}
               </p>
             )}

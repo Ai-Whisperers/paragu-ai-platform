@@ -93,7 +93,7 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
         </div>
       )}
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {visible.map((key) => {
             const items = p[key]

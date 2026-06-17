@@ -22,7 +22,7 @@ export function MeetDoctor({ locale }: MeetDoctorProps) {
 
   return (
     <section className="section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Portrait */}
           <div className="relative">

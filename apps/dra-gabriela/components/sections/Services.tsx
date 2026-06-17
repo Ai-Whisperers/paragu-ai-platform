@@ -54,7 +54,7 @@ export function Services({ c, locale }: { c: any; locale: string }) {
 
   return (
     <section className="section bg-[var(--surface-muted)]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="eyebrow">{isEs ? "Servicios" : "Services"}</span>
           <h2 className="mb-3">{s.title || (isEs ? "Servicios" : "Services")}</h2>
