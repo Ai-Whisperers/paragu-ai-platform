@@ -143,7 +143,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   return (
     <>
       {/* Custom hero with image */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[var(--accent-soft)] via-[var(--bg)] to-[var(--bg)]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-accent-soft via-bg to-bg">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-[0.05]" style={{ background: "radial-gradient(circle, var(--accent) 0%, transparent 70%)" }} />
           <div className="absolute inset-0 dot-pattern" />
@@ -159,7 +159,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 <span className="gradient-text">{data.title}</span>
               </h1>
               {data.description && (
-                <p className="text-lg md:text-xl text-[var(--fg-muted)] max-w-2xl mb-7 leading-relaxed">
+                <p className="text-lg md:text-xl text-fg-muted max-w-2xl mb-7 leading-relaxed">
                   {data.description}
                 </p>
               )}
@@ -182,7 +182,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </div>
             {heroImage && (
               <div className="lg:col-span-2 relative">
-                <div className="relative aspect-[3/2] rounded-[var(--radius-2xl)] overflow-hidden shadow-xl border border-[var(--border)]">
+                <div className="relative aspect-[3/2] rounded-2xl overflow-hidden shadow-xl border border-border">
                   <Image
                     src={heroImage}
                     alt={data.title}
@@ -192,7 +192,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     className="object-cover"
                   />
                 </div>
-                <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full border-2 border-[var(--gold)] opacity-30 -z-10" />
+                <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full border-2 border-gold opacity-30 -z-10" />
               </div>
             )}
           </div>
@@ -213,10 +213,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {highlights.map((h, i) => (
                 <div key={i} className="card-accent card p-5 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-[var(--accent)]" />
+                  <div className="w-10 h-10 rounded-xl bg-accent-soft flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-accent" />
                   </div>
-                  <p className="text-[var(--fg)] leading-relaxed pt-1.5">{h}</p>
+                  <p className="text-fg leading-relaxed pt-1.5">{h}</p>
                 </div>
               ))}
             </div>
@@ -226,7 +226,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Detail items (if any) */}
       {items.length > 0 && (
-        <section className="section bg-[var(--surface-muted)]">
+        <section className="section bg-surface-muted">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <h2>{isEs ? "Detalle" : "Details"}</h2>
@@ -235,14 +235,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               {items.map((it: any, i: number) => (
                 <div key={i} className="card p-5">
                   <h3 className="font-medium mb-1.5">{it.name || it.title}</h3>
-                  {it.description && <p className="text-sm text-[var(--fg-muted)] leading-relaxed mb-2">{it.description}</p>}
+                  {it.description && <p className="text-sm text-fg-muted leading-relaxed mb-2">{it.description}</p>}
                   {it.duration && (
-                    <span className="text-xs text-[var(--fg-subtle)] flex items-center gap-1">
+                    <span className="text-xs text-fg-subtle flex items-center gap-1">
                       <Clock className="w-3 h-3" /> {it.duration}
                     </span>
                   )}
                   {it.priceGs && (
-                    <p className="text-base font-mono text-[var(--accent)] mt-3">Gs {Number(it.priceGs).toLocaleString("es-PY")}</p>
+                    <p className="text-base font-mono text-accent mt-3">Gs {Number(it.priceGs).toLocaleString("es-PY")}</p>
                   )}
                 </div>
               ))}
@@ -256,7 +256,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="card-accent card p-8 md:p-10">
             <h2 className="text-2xl md:text-3xl mb-3">{isEs ? "¿Listo para empezar?" : "Ready to begin?"}</h2>
-            <p className="text-[var(--fg-muted)] mb-6 max-w-lg mx-auto">
+            <p className="text-fg-muted mb-6 max-w-lg mx-auto">
               {isEs
                 ? "Coordiná tu consulta por WhatsApp. Respuesta en menos de 24 horas."
                 : "Book your consultation via WhatsApp. Response within 24 hours."}

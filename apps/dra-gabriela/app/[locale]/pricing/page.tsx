@@ -92,11 +92,39 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
 
       {/* Currency / disclaimer note */}
       {p.usd_approx && (
-        <div className="bg-[var(--surface)] border-b border-[var(--border-light)]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-center text-sm text-[var(--fg-muted)]">
-            {isEs ? "Referencia" : "Reference"}: <span className="font-mono text-[var(--accent)]">{p.usd_approx}</span>
-            {p.disclaimer && <span className="block text-xs text-[var(--fg-subtle)] mt-1 italic">{p.disclaimer}</span>}
+        <div className="bg-surface border-b border-border-light">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-center text-sm text-fg-muted">
+            {isEs ? "Referencia" : "Reference"}: <span className="font-mono text-accent">{p.usd_approx}</span>
+            {p.disclaimer && <span className="block text-xs text-fg-subtle mt-1 italic">{p.disclaimer}</span>}
           </div>
+        </div>
+      )}
+
+      {/* Sticky jump-nav for the 11 categories */}
+      {visible.length > 4 && (
+        <div className="sticky top-16 md:top-20 z-30 bg-surface/85 backdrop-blur-md border-b border-border-light">
+          <nav
+            aria-label={isEs ? "Categorías" : "Pricing categories"}
+            className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-3"
+          >
+            <ul className="flex gap-2 overflow-x-auto scrollbar-thin">
+              {visible.map((key) => {
+                const meta = titles[key]
+                const Icon = meta.icon
+                return (
+                  <li key={key} className="flex-shrink-0">
+                    <a
+                      href={`#cat-${key}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full text-fg-muted hover:text-fg hover:bg-surface-muted transition-colors"
+                    >
+                      <Icon className="w-3.5 h-3.5" />
+                      {meta.title}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </nav>
         </div>
       )}
 
@@ -107,36 +135,36 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
             const meta = titles[key]
             const Icon = meta.icon
             return (
-              <div key={key} className="card-accent card p-6 md:p-7 hover:shadow-lg transition-shadow">
+              <div key={key} id={`cat-${key}`} className="card-accent card p-6 md:p-7 hover:shadow-lg transition-shadow scroll-mt-32">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-[var(--accent)]" />
+                  <div className="w-11 h-11 rounded-xl bg-accent-soft flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <h2 className="text-xl font-medium" style={{ fontFamily: "var(--font-heading)" }}>
                       {meta.title}
                     </h2>
-                    <p className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider mt-0.5">{meta.subtitle}</p>
+                    <p className="text-xs text-fg-subtle uppercase tracking-wider mt-0.5">{meta.subtitle}</p>
                   </div>
                 </div>
-                <ul className="space-y-2.5 border-t border-[var(--border-light)] pt-4">
+                <ul className="space-y-2.5 border-t border-border-light pt-4">
                   {items.map((it: any, i: number) => (
                     <li key={i} className="flex flex-wrap items-baseline justify-between gap-2 py-1.5">
                       <div className="flex-1 min-w-[200px]">
-                        <div className="text-sm font-medium text-[var(--fg)]">{it.name}</div>
+                        <div className="text-sm font-medium text-fg">{it.name}</div>
                         {it.duration && (
-                          <div className="text-xs text-[var(--fg-subtle)] mt-0.5 flex items-center gap-1">
+                          <div className="text-xs text-fg-subtle mt-0.5 flex items-center gap-1">
                             <Clock className="w-3 h-3" /> {it.duration}
                           </div>
                         )}
-                        {it.note && <div className="text-xs text-[var(--fg-muted)] mt-0.5">{it.note}</div>}
+                        {it.note && <div className="text-xs text-fg-muted mt-0.5">{it.note}</div>}
                       </div>
                       {it.price ? (
-                        <div className="text-base font-mono text-[var(--accent)] font-medium whitespace-nowrap">
+                        <div className="text-base font-mono text-accent font-medium whitespace-nowrap">
                           Gs {Number(it.price).toLocaleString("es-PY")}
                         </div>
                       ) : it.priceText ? (
-                        <div className="text-xs text-[var(--fg-muted)] whitespace-nowrap">{it.priceText}</div>
+                        <div className="text-xs text-fg-muted whitespace-nowrap">{it.priceText}</div>
                       ) : null}
                     </li>
                   ))}
@@ -151,7 +179,7 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
           <div className="mt-12 card-accent card p-6 md:p-8">
             <span className="eyebrow inline-flex">{isEs ? "Empresas" : "Corporate"}</span>
             <h2 className="text-xl mb-2 mt-2">{isEs ? "Convenios corporativos" : "Corporate agreements"}</h2>
-            <p className="text-[var(--fg-muted)] leading-relaxed">{p.corporate_note}</p>
+            <p className="text-fg-muted leading-relaxed">{p.corporate_note}</p>
           </div>
         )}
 
@@ -162,8 +190,8 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {p.payment.map((opt: string, i: number) => (
                 <div key={i} className="card p-3 flex items-center gap-2.5 text-sm">
-                  <div className="w-8 h-8 rounded-lg bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
-                    <Tag className="w-4 h-4 text-[var(--accent)]" />
+                  <div className="w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center flex-shrink-0">
+                    <Tag className="w-4 h-4 text-accent" />
                   </div>
                   <span>{opt}</span>
                 </div>
@@ -174,13 +202,13 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
       </div>
 
       {/* CTA */}
-      <section className="section-sm bg-[var(--surface)]">
+      <section className="section-sm bg-surface">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="card-accent card p-8 md:p-10">
             <h2 className="text-2xl md:text-3xl mb-3">
               {isEs ? "¿Listo para coordinar tu consulta?" : "Ready to schedule?"}
             </h2>
-            <p className="text-[var(--fg-muted)] mb-6 max-w-lg mx-auto">
+            <p className="text-fg-muted mb-6 max-w-lg mx-auto">
               {isEs
                 ? "Los precios publicados son referenciales. Costo final confirmado en consulta antes de cualquier procedimiento."
                 : "Published prices are reference values. Final cost confirmed at consultation before any procedure."}

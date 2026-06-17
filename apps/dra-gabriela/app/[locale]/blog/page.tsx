@@ -50,12 +50,12 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
         {/* Status banner */}
         {c.status && (
           <div className="card-accent card p-5 md:p-6 mb-10 flex items-start gap-4">
-            <div className="w-11 h-11 rounded-xl bg-[var(--gold-soft)] flex items-center justify-center flex-shrink-0">
-              <BookOpen className="w-5 h-5 text-[var(--gold-2)]" />
+            <div className="w-11 h-11 rounded-xl bg-gold-soft flex items-center justify-center flex-shrink-0">
+              <BookOpen className="w-5 h-5 text-gold-2" />
             </div>
             <div>
-              <div className="text-xs uppercase tracking-wider text-[var(--fg-subtle)] font-semibold mb-1">{isEs ? "Estado" : "Status"}</div>
-              <p className="text-base text-[var(--fg-muted)]">{c.status}</p>
+              <div className="text-xs uppercase tracking-wider text-fg-subtle font-semibold mb-1">{isEs ? "Estado" : "Status"}</div>
+              <p className="text-base text-fg-muted">{c.status}</p>
             </div>
           </div>
         )}
@@ -67,11 +67,11 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {topics.map((topic: string, i: number) => (
                 <div key={i} className="card p-5 flex items-center gap-3 hover:shadow-md hover:-translate-y-0.5 transition-all">
-                  <div className="w-10 h-10 rounded-lg bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-[var(--accent)]" />
+                  <div className="w-10 h-10 rounded-lg bg-accent-soft flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-accent" />
                   </div>
                   <span className="font-medium text-left flex-1">{topic}</span>
-                  <span className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider whitespace-nowrap flex-shrink-0">
+                  <span className="text-xs text-fg-subtle uppercase tracking-wider whitespace-nowrap flex-shrink-0">
                     {isEs ? "Próximamente" : "Coming soon"}
                   </span>
                 </div>

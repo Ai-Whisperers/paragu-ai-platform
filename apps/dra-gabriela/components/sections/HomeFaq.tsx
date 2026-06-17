@@ -13,7 +13,7 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
   const base = `/${locale}`
 
   return (
-    <section className="section bg-[var(--surface)]">
+    <section className="section bg-surface">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-10 lg:gap-20 items-start">
           {/* Left column: heading + intro */}
@@ -25,7 +25,7 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
             <h2 className="text-4xl md:text-5xl mb-5 text-left leading-tight">
               {isEs ? "Preguntas frecuentes" : "Frequently asked questions"}
             </h2>
-            <p className="text-[var(--fg-muted)] text-lg leading-relaxed mb-6 text-left">
+            <p className="text-fg-muted text-lg leading-relaxed mb-6 text-left">
               {isEs
                 ? "Las preguntas que más recibimos. Si no encontrás la tuya, escribime por WhatsApp y respondo en menos de 24 horas."
                 : "The questions we get most. If yours isn't here, message me on WhatsApp and I'll respond within 24 hours."}
@@ -40,7 +40,7 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
               </Link>
               <Link
                 href={`${base}/contact`}
-                className="text-sm text-[var(--accent)] hover:text-[var(--accent-2)] inline-flex items-center gap-2"
+                className="text-sm text-accent hover:text-accent-2 inline-flex items-center gap-2"
               >
                 <MessageCircle className="w-4 h-4" />
                 {isEs ? "O escribime directo" : "Or message me directly"}
@@ -53,19 +53,19 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
             {items.map((it: any, i: number) => (
               <details
                 key={i}
-                className="group bg-[var(--surface)] border-2 border-[var(--border)] rounded-xl overflow-hidden hover:border-[var(--accent)] hover:shadow-lg transition-all duration-200"
+                className="group bg-surface border-2 border-border rounded-xl overflow-hidden hover:border-accent hover:shadow-lg focus-within:border-accent focus-within:shadow-lg focus-within:ring-2 focus-within:ring-accent focus-within:ring-offset-2 transition-all duration-200"
               >
-                <summary className="cursor-pointer p-5 md:p-6 list-none flex items-start justify-between gap-4 hover:bg-[var(--surface-muted)] transition-colors">
+                <summary className="cursor-pointer p-5 md:p-6 list-none flex items-start justify-between gap-4 hover:bg-surface-muted focus-visible:bg-surface-muted transition-colors">
                   <div className="flex items-start gap-4 flex-1">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[var(--accent-soft)] flex items-center justify-center text-[var(--accent)] font-medium text-sm" style={{ fontFamily: "var(--font-heading)" }}>
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center text-accent font-medium text-sm" style={{ fontFamily: "var(--font-heading)" }}>
                       {String(i + 1).padStart(2, "0")}
                     </div>
                     <span className="font-medium text-lg md:text-xl pt-1 text-left">{it.q || it.question}</span>
                   </div>
-                  <ChevronDown className="w-5 h-5 text-[var(--fg-subtle)] group-open:rotate-180 transition-transform flex-shrink-0 mt-2" />
+                  <ChevronDown className="w-5 h-5 text-fg-subtle group-open:rotate-180 transition-transform flex-shrink-0 mt-2" />
                 </summary>
                 <div className="px-5 md:px-6 pb-5 md:pb-6 pl-16 md:pl-[5.5rem]">
-                  <p className="text-[var(--fg-muted)] leading-relaxed border-t border-[var(--border-light)] pt-4 text-left">
+                  <p className="text-fg-muted leading-relaxed border-t border-border-light pt-4 text-left">
                     {it.a || it.answer}
                   </p>
                 </div>

@@ -70,11 +70,11 @@ export default async function ExpatPage({ params }: { params: Promise<{ locale: 
             const Icon = it.icon
             return (
               <div key={i} className="card p-5 flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-[var(--accent)]" />
+                <div className="w-11 h-11 rounded-xl bg-accent-soft flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-[var(--fg-subtle)] font-semibold">{it.label}</div>
+                  <div className="text-xs uppercase tracking-wider text-fg-subtle font-semibold">{it.label}</div>
                   <div className="font-medium text-sm">{it.sub}</div>
                 </div>
               </div>
@@ -90,12 +90,12 @@ export default async function ExpatPage({ params }: { params: Promise<{ locale: 
             {(c.sections || []).map((s: any, i: number) => (
               <div key={i} className="mb-10 last:mb-0">
                 <h2 className="text-2xl mb-3">{s.heading || s.title}</h2>
-                {s.body && <p className="text-[var(--fg-muted)] leading-relaxed text-base md:text-lg">{s.body}</p>}
+                {s.body && <p className="text-fg-muted leading-relaxed text-base md:text-lg">{s.body}</p>}
                 {s.items && (
                   <ul className="space-y-2.5 mt-3">
                     {s.items.map((it: string, j: number) => (
-                      <li key={j} className="flex items-start gap-3 text-[var(--fg-muted)] leading-relaxed">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] mt-2.5 flex-shrink-0" />
+                      <li key={j} className="flex items-start gap-3 text-fg-muted leading-relaxed">
+                        <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 flex-shrink-0" />
                         <span>{it}</span>
                       </li>
                     ))}
@@ -113,7 +113,7 @@ export default async function ExpatPage({ params }: { params: Promise<{ locale: 
           <h2 className="text-2xl md:text-3xl mb-3">
             {isEs ? "¿Listo para coordinar?" : "Ready to coordinate?"}
           </h2>
-          <p className="text-[var(--fg-muted)] mb-6 max-w-lg mx-auto">
+          <p className="text-fg-muted mb-6 max-w-lg mx-auto">
             {isEs
               ? "Atención en inglés. Respuesta en menos de 24 horas."
               : "Care in English. Response within 24 hours."}

@@ -72,9 +72,9 @@ export default async function About({ params }: { params: Promise<{ locale: stri
                   className="object-cover"
                 />
               </div>
-              <div className="p-5 border-t border-[var(--border)]">
+              <div className="p-5 border-t border-border">
                 <h3 className="font-medium mb-0.5" style={{ fontFamily: "var(--font-heading)" }}>Dra. Gabriella González Pane</h3>
-                <p className="text-xs text-[var(--fg-subtle)]">{isEs ? "Odontóloga · Cirujana dentista" : "Dental surgeon"}</p>
+                <p className="text-xs text-fg-subtle">{isEs ? "Odontóloga · Cirujana dentista" : "Dental surgeon"}</p>
               </div>
             </div>
           </div>
@@ -84,18 +84,18 @@ export default async function About({ params }: { params: Promise<{ locale: stri
             {(c.sections || []).map((s: any, i: number) => (
               <div key={i} className="mb-10 last:mb-0">
                 <h2 className="text-2xl md:text-3xl mb-3">{s.heading}</h2>
-                {s.body && <p className="text-base md:text-lg text-[var(--fg-muted)] leading-relaxed mb-4">{s.body}</p>}
+                {s.body && <p className="text-base md:text-lg text-fg-muted leading-relaxed mb-4">{s.body}</p>}
                 {s.items && (
                   <ul className="space-y-2.5">
                     {s.items.map((it: string, j: number) => {
                       const iconKey = s.icon_keys?.[j] || s.iconKey
                       const Icon = iconKey && ICONS[iconKey] ? ICONS[iconKey] : null
                       return (
-                        <li key={j} className="flex items-start gap-3 text-[var(--fg-muted)] leading-relaxed">
+                        <li key={j} className="flex items-start gap-3 text-fg-muted leading-relaxed">
                           {Icon ? (
-                            <Icon className="w-4 h-4 text-[var(--gold)] mt-1.5 flex-shrink-0" />
+                            <Icon className="w-4 h-4 text-gold mt-1.5 flex-shrink-0" />
                           ) : (
-                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] mt-2.5 flex-shrink-0" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 flex-shrink-0" />
                           )}
                           <span>{it}</span>
                         </li>
@@ -115,7 +115,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
           <h2 className="text-2xl md:text-3xl mb-3">
             {c.cta?.title || (isEs ? "¿Hablamos?" : "Let's talk?")}
           </h2>
-          <p className="text-[var(--fg-muted)] mb-6 max-w-lg mx-auto">
+          <p className="text-fg-muted mb-6 max-w-lg mx-auto">
             {c.cta?.body || (isEs
               ? "Coordiná tu consulta por WhatsApp."
               : "Book your consultation via WhatsApp.")}

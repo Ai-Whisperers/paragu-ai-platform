@@ -25,7 +25,7 @@ export function BigStats({ locale }: { locale: string }) {
   const isEs = locale === "es"
   const STATS = isEs ? STATS_ES : STATS_EN
   return (
-    <section className="relative overflow-hidden bg-[var(--bg)]">
+    <section className="relative overflow-hidden bg-bg">
       {/* Decorative glows — subtle on light */}
       <div className="absolute -top-40 -right-40 w-[28rem] h-[28rem] rounded-full opacity-[0.05]" style={{ background: "radial-gradient(circle, var(--accent) 0%, transparent 60%)" }} />
       <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full opacity-[0.04]" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)" }} />
@@ -40,7 +40,7 @@ export function BigStats({ locale }: { locale: string }) {
             <h2 className="text-4xl md:text-5xl mt-4 mb-5 leading-tight">
               {isEs ? "Veinte años en práctica" : "Twenty years in practice"}
             </h2>
-            <p className="text-lg text-[var(--fg-muted)] leading-relaxed">
+            <p className="text-lg text-fg-muted leading-relaxed">
               {isEs
                 ? "Una práctica conservadora que se construye sobre la confianza a largo plazo, no sobre el volumen."
                 : "A conservative practice built on long-term trust, not on volume."}
@@ -55,13 +55,13 @@ export function BigStats({ locale }: { locale: string }) {
                 className="card-accent card p-6 md:p-7 text-left hover:shadow-lg transition-shadow"
               >
                 <div
-                  className="text-5xl md:text-6xl lg:text-7xl font-medium leading-none mb-3 text-[var(--accent)]"
+                  className="text-5xl md:text-6xl lg:text-7xl font-medium leading-none mb-3 text-accent"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {s.value}
                 </div>
-                <div className="text-base md:text-lg font-medium text-[var(--fg)] mb-1">{s.label}</div>
-                <div className="text-[11px] text-[var(--fg-subtle)] uppercase tracking-wider font-semibold">{s.sub}</div>
+                <div className="text-base md:text-lg font-medium text-fg mb-1">{s.label}</div>
+                <div className="text-[11px] text-fg-subtle uppercase tracking-wider font-semibold">{s.sub}</div>
               </div>
             ))}
           </div>

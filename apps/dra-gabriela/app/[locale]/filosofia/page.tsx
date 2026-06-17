@@ -49,11 +49,11 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       {first && (
         <PageSection layout="narrow" py="md">
           <div className="card-accent card p-8 md:p-10 relative">
-            <Quote className="w-10 h-10 text-[var(--gold)] absolute -top-3 -left-3 bg-[var(--bg)] p-2 rounded-lg" />
-            <p className="text-xl md:text-2xl text-[var(--fg)] leading-relaxed mb-4 italic font-medium">
+            <Quote className="w-10 h-10 text-gold absolute -top-3 -left-3 bg-bg p-2 rounded-lg" />
+            <p className="text-xl md:text-2xl text-fg leading-relaxed mb-4 italic font-medium">
               {first.body}
             </p>
-            <p className="text-sm text-[var(--fg-muted)]">— {data.title?.split(" ").slice(0, 2).join(" ") || "Dra. Gabriella"}</p>
+            <p className="text-sm text-fg-muted">— {data.title?.split(" ").slice(0, 2).join(" ") || "Dra. Gabriella"}</p>
           </div>
         </PageSection>
       )}
@@ -75,7 +75,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                       {title}
                     </h3>
                     {rest.length > 0 && (
-                      <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
+                      <p className="text-sm text-fg-muted leading-relaxed">
                         {rest.join(":").trim()}
                       </p>
                     )}
@@ -94,7 +94,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             {other.map((s: any, i: number) => (
               <div key={i}>
                 <h2 className="text-2xl md:text-3xl mb-3">{s.heading}</h2>
-                {s.body && <p className="text-[var(--fg-muted)] leading-relaxed text-base md:text-lg">{s.body}</p>}
+                {s.body && <p className="text-fg-muted leading-relaxed text-base md:text-lg">{s.body}</p>}
               </div>
             ))}
           </div>

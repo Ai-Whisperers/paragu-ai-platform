@@ -33,16 +33,16 @@ const SERVICE_IMAGE: Record<string, string> = {
 }
 
 const SERVICE_COLOR: Record<string, string> = {
-  "segunda-opinion": "from-[var(--accent)] to-[var(--accent-2)]",
-  "second-opinion": "from-[var(--accent)] to-[var(--accent-2)]",
-  "planificacion-tratamiento": "from-[var(--accent-soft)] to-[#fbf9f6]",
-  "treatment-planning": "from-[var(--accent-soft)] to-[#fbf9f6]",
+  "segunda-opinion": "from-accent to-accent-2",
+  "second-opinion": "from-accent to-accent-2",
+  "planificacion-tratamiento": "from-accent-soft to-[#fbf9f6]",
+  "treatment-planning": "from-accent-soft to-[#fbf9f6]",
   "odontologia-general": "from-[#1a6a6a] to-[#0a3a3a]",
   "general-dentistry": "from-[#1a6a6a] to-[#0a3a3a]",
   "estetica-dental": "from-[#fbf9f6] to-[#e6e0d4]",
   "cosmetic-dentistry": "from-[#fbf9f6] to-[#e6e0d4]",
-  "rehabilitacion-oral": "from-[var(--accent)] to-[#1a6a6a]",
-  "oral-rehabilitation": "from-[var(--accent)] to-[#1a6a6a]",
+  "rehabilitacion-oral": "from-accent to-[#1a6a6a]",
+  "oral-rehabilitation": "from-accent to-[#1a6a6a]",
 }
 
 export function Services({ c, locale }: { c: any; locale: string }) {
@@ -53,12 +53,12 @@ export function Services({ c, locale }: { c: any; locale: string }) {
   const isEs = locale === "es"
 
   return (
-    <section className="section bg-[var(--surface-muted)]">
+    <section className="section bg-surface-muted">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="eyebrow">{isEs ? "Servicios" : "Services"}</span>
           <h2 className="mb-3">{s.title || (isEs ? "Servicios" : "Services")}</h2>
-          {s.subtitle && <p className="text-[var(--fg-muted)] text-lg">{s.subtitle}</p>}
+          {s.subtitle && <p className="text-fg-muted text-lg">{s.subtitle}</p>}
         </div>
 
         {/* Service tabs as image cards */}
@@ -68,7 +68,7 @@ export function Services({ c, locale }: { c: any; locale: string }) {
               const route = SERVICE_ROUTE[t.id]
               const href = route ? (locale === "es" ? route.es : route.en) : `/${locale}/services#${t.id}`
               const img = SERVICE_IMAGE[t.id]
-              const color = SERVICE_COLOR[t.id] || "from-[var(--accent-soft)] to-[#fbf9f6]"
+              const color = SERVICE_COLOR[t.id] || "from-accent-soft to-[#fbf9f6]"
               return (
                 <Link key={t.id} href={href} className="card overflow-hidden group block">
                   {/* Image area */}
@@ -83,14 +83,14 @@ export function Services({ c, locale }: { c: any; locale: string }) {
                       />
                     )}
                     {/* Gold accent corner */}
-                    <div className="absolute top-3 right-3 w-10 h-10 rounded-full border-2 border-[var(--gold)] opacity-40" />
+                    <div className="absolute top-3 right-3 w-10 h-10 rounded-full border-2 border-gold opacity-40" />
                   </div>
                   {/* Content */}
                   <div className="p-5">
-                    <h3 className="text-lg font-medium mb-2 group-hover:text-[var(--accent)] transition-colors" style={{ fontFamily: "var(--font-heading)" }}>
+                    <h3 className="text-lg font-medium mb-2 group-hover:text-accent transition-colors" style={{ fontFamily: "var(--font-heading)" }}>
                       {t.label}
                     </h3>
-                    <div className="flex items-center gap-1 text-sm font-medium text-[var(--gold)] group-hover:gap-2 transition-all">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gold group-hover:gap-2 transition-all">
                       {isEs ? "Ver detalle" : "View details"} <ArrowRight className="w-3.5 h-3.5" />
                     </div>
                   </div>
@@ -104,7 +104,7 @@ export function Services({ c, locale }: { c: any; locale: string }) {
         {bundles.length > 0 && (
           <div className="card p-6 md:p-8">
             <div className="flex items-center gap-2 mb-6">
-              <Sparkles className="w-5 h-5 text-[var(--gold)]" />
+              <Sparkles className="w-5 h-5 text-gold" />
               <h3 className="text-xl font-heading" style={{ fontFamily: "var(--font-heading)" }}>
                 {isEs ? "Paquetes" : "Bundles"}
               </h3>
@@ -117,15 +117,15 @@ export function Services({ c, locale }: { c: any; locale: string }) {
                 return (
                   <Link key={b.id} href={slug || "#"} className="card p-5 group block">
                     <div className="flex items-start justify-between gap-3 mb-2">
-                      <h4 className="text-base font-semibold group-hover:text-[var(--accent)] transition-colors">{b.name}</h4>
+                      <h4 className="text-base font-semibold group-hover:text-accent transition-colors">{b.name}</h4>
                       {b.priceGs && (
-                        <span className="text-sm font-mono text-[var(--accent)] whitespace-nowrap font-medium">
+                        <span className="text-sm font-mono text-accent whitespace-nowrap font-medium">
                           Gs {Number(b.priceGs).toLocaleString("es-PY")}
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-[var(--fg-muted)] leading-relaxed mb-3">{b.description}</p>
-                    <span className="text-sm font-medium text-[var(--gold)] flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <p className="text-sm text-fg-muted leading-relaxed mb-3">{b.description}</p>
+                    <span className="text-sm font-medium text-gold flex items-center gap-1 group-hover:gap-2 transition-all">
                       {isEs ? "Conocer" : "Learn more"} <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </Link>

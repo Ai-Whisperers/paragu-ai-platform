@@ -40,8 +40,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         variant="default"
         align="center"
       >
-        <div className="inline-flex items-center gap-2 text-sm text-[var(--fg-muted)] px-3 py-1.5 rounded-full border border-[var(--border)]">
-          <Shield className="w-4 h-4 text-[var(--gold)]" />
+        <div className="inline-flex items-center gap-2 text-sm text-fg-muted px-3 py-1.5 rounded-full border border-border">
+          <Shield className="w-4 h-4 text-gold" />
           {isEs ? "Cumple Ley 7.593/2025 de Paraguay" : "Compliant with Paraguay Law 7.593/2025"}
         </div>
       </PageHero>
@@ -51,12 +51,12 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           {data.sections?.map((s: any, i: number) => (
             <div key={i} className="text-left">
               <h2 className="text-xl md:text-2xl mb-3">{s.heading}</h2>
-              {s.body && <p className="text-[var(--fg-muted)] leading-relaxed text-base md:text-lg mb-3">{s.body}</p>}
+              {s.body && <p className="text-fg-muted leading-relaxed text-base md:text-lg mb-3">{s.body}</p>}
               {s.items && (
                 <ul className="space-y-2">
                   {s.items.map((item: string, j: number) => (
-                    <li key={j} className="flex items-start gap-3 text-[var(--fg-muted)] leading-relaxed text-base">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] mt-3 flex-shrink-0" />
+                    <li key={j} className="flex items-start gap-3 text-fg-muted leading-relaxed text-base">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-3 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}

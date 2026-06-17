@@ -19,8 +19,8 @@ interface PageHeroProps {
 }
 
 const VARIANT_BG: Record<string, string> = {
-  default: "bg-gradient-to-br from-[var(--accent-soft)] via-[var(--bg)] to-[var(--bg)]",
-  gradient: "bg-gradient-to-br from-[var(--accent)] via-[var(--accent-2)] to-[var(--accent)] text-white",
+  default: "bg-gradient-to-br from-accent-soft via-bg to-bg",
+  gradient: "bg-gradient-to-br from-accent via-[var(--accent-2)] to-accent text-white",
   compact: "bg-[var(--surface)] border-b border-[var(--border-light)]",
 }
 

@@ -81,7 +81,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 href={card.href}
                 className={
                   isPrimary
-                    ? "card p-6 flex items-center gap-4 hover:shadow-2xl hover:-translate-y-0.5 transition-all border-2 border-[var(--accent)]/30 hover:border-[var(--accent)]"
+                    ? "card p-6 flex items-center gap-4 hover:shadow-2xl hover:-translate-y-0.5 transition-all border-2 border-accent/30 hover:border-[var(--accent)]"
                     : "card p-6 flex items-center gap-4 hover:shadow-lg hover:-translate-y-0.5 transition-all"
                 }
               >
@@ -95,11 +95,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   <Icon className={isPrimary ? "w-7 h-7 text-white" : "w-7 h-7 text-[var(--accent)]"} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-xs uppercase tracking-wider text-[var(--fg-subtle)] font-semibold mb-0.5">{card.label}</div>
+                  <div className="text-xs uppercase tracking-wider text-fg-subtle font-semibold mb-0.5">{card.label}</div>
                   <div className="font-medium text-base break-all">{card.value}</div>
-                  {card.sub && <div className="text-xs text-[var(--fg-muted)] mt-0.5">{card.sub}</div>}
+                  {card.sub && <div className="text-xs text-fg-muted mt-0.5">{card.sub}</div>}
                 </div>
-                {card.key !== "address" && <ArrowRight className="w-4 h-4 text-[var(--fg-subtle)] flex-shrink-0" />}
+                {card.key !== "address" && <ArrowRight className="w-4 h-4 text-fg-subtle flex-shrink-0" />}
               </a>
             )
           })}
@@ -111,16 +111,16 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         <PageSection layout="wide" py="md">
           <div className="card p-6 md:p-8">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center">
-                <Clock className="w-5 h-5 text-[var(--accent)]" />
+              <div className="w-10 h-10 rounded-xl bg-accent-soft flex items-center justify-center">
+                <Clock className="w-5 h-5 text-accent" />
               </div>
               <h2 className="text-xl">{isEs ? "Horarios" : "Hours"}</h2>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {Object.entries(hours).filter(([k]) => /^(mon|tue|wed|thu|fri|sat|sun)/i.test(k)).map(([day, h]) => (
                 <div key={day} className="card-flat p-3 flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-wider text-[var(--fg-subtle)]">{day.slice(0, 3)}</span>
-                  <span className="text-sm font-mono text-[var(--fg)]">{String(h)}</span>
+                  <span className="text-xs uppercase tracking-wider text-fg-subtle">{day.slice(0, 3)}</span>
+                  <span className="text-sm font-mono text-fg">{String(h)}</span>
                 </div>
               ))}
             </div>
@@ -132,8 +132,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       {data.sections?.slice(2)?.map((s: any, i: number) => (
         <PageSection key={i} layout="narrow" py="md">
           <h2 className="text-xl mb-2">{s.heading}</h2>
-          {s.body && <p className="text-[var(--fg-muted)] leading-relaxed">{s.body}</p>}
-          {s.note && <p className="text-xs text-[var(--fg-subtle)] mt-2 italic">{s.note}</p>}
+          {s.body && <p className="text-fg-muted leading-relaxed">{s.body}</p>}
+          {s.note && <p className="text-xs text-fg-subtle mt-2 italic">{s.note}</p>}
         </PageSection>
       ))}
 
@@ -143,7 +143,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <h2 className="text-2xl md:text-3xl mb-3">
             {isEs ? "Coordiná tu consulta" : "Schedule a consultation"}
           </h2>
-          <p className="text-[var(--fg-muted)] mb-6">
+          <p className="text-fg-muted mb-6">
             {isEs
               ? "Respondemos mensajes en menos de 24 horas hábiles."
               : "We respond to messages within 24 business hours."}

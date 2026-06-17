@@ -46,7 +46,7 @@ export function FeaturedService({
   return (
     <section
       className={`relative overflow-hidden ${
-        variant === "teal" ? "bg-gradient-to-br from-[var(--accent)] via-[var(--accent-2)] to-[var(--accent)] text-white" : ""
+        variant === "teal" ? "bg-gradient-to-br from-accent via-[var(--accent-2)] to-accent text-white" : ""
       }`}
     >
       {/* Decorative blob */}
@@ -61,7 +61,7 @@ export function FeaturedService({
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${reverse ? "lg:flex-row-reverse" : ""}`}>
           {/* Image */}
           <div className={`relative ${reverse ? "lg:order-2" : ""}`}>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-2 border-[var(--border)]">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-2 border-border">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
@@ -69,12 +69,12 @@ export function FeaturedService({
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--accent)]/30 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-accent/30 via-transparent to-transparent" />
             </div>
             {/* Decorative gold ring — top right */}
-            <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full border-2 border-[var(--gold)] opacity-30 -z-10" />
+            <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full border-2 border-gold opacity-30 -z-10" />
             {/* Decorative accent ring — bottom left */}
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full border-2 border-[var(--accent)] opacity-20 -z-10" />
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full border-2 border-accent opacity-20 -z-10" />
           </div>
 
           {/* Content — left-aligned, big text */}

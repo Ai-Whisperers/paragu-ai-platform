@@ -29,14 +29,14 @@ export function Reasons({ c, locale }: { c: any; locale: string }) {
             const Icon = ICONS[r.icon] || FileText
             return (
               <Link key={i} href={target} className="card p-6 md:p-7 group block">
-                <div className="w-11 h-11 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center mb-5 group-hover:bg-[var(--accent)] transition-all duration-300">
-                  <Icon className="w-5 h-5 text-[var(--accent)] group-hover:text-white transition-colors duration-300" />
+                <div className="w-11 h-11 rounded-xl bg-accent-soft flex items-center justify-center mb-5 group-hover:bg-accent transition-all duration-300">
+                  <Icon className="w-5 h-5 text-accent group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-lg font-heading mb-2.5 group-hover:text-[var(--accent)] transition-colors" style={{ fontFamily: "var(--font-heading)" }}>
+                <h3 className="text-lg font-heading mb-2.5 group-hover:text-accent transition-colors" style={{ fontFamily: "var(--font-heading)" }}>
                   {r.title}
                 </h3>
-                <p className="text-sm text-[var(--fg-muted)] leading-relaxed mb-5">{r.desc}</p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--accent)] group-hover:gap-2.5 transition-all">
+                <p className="text-sm text-fg-muted leading-relaxed mb-5">{r.desc}</p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-accent group-hover:gap-2.5 transition-all">
                   {locale === "es" ? "Saber más" : "Learn more"} <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </Link>

@@ -39,7 +39,7 @@ export function CookieConsent({ locale }: { locale: string }) {
     >
       <div className="flex items-start gap-3 mb-3">
         <span className="text-2xl leading-none" aria-hidden>🍪</span>
-        <div className="flex-1 text-sm text-[var(--fg-muted)] leading-relaxed">
+        <div className="flex-1 text-sm text-fg-muted leading-relaxed">
           {locale === "es" ? (
             <>
               Usamos cookies solo si aceptás, para entender qué páginas funcionan.{" "}
@@ -58,7 +58,7 @@ export function CookieConsent({ locale }: { locale: string }) {
         </div>
         <button
           onClick={() => decide("rejected")}
-          className="p-1 -mt-1 -mr-1 text-[var(--fg-subtle)] hover:text-[var(--fg)]"
+          className="p-1 -mt-1 -mr-1 text-fg-subtle hover:text-fg"
           aria-label="Close"
         >
           <X className="w-4 h-4" />

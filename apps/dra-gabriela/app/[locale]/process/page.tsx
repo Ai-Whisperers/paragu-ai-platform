@@ -78,7 +78,7 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
         variant="default"
       />
 
-      <section className="section bg-[var(--surface)]">
+      <section className="section bg-surface">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           {steps.length > 0 && (
             <div className="space-y-8">
@@ -88,18 +88,18 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
                 return (
                   <div
                     key={i}
-                    className="group relative bg-[var(--surface)] border-2 border-[var(--border)] rounded-2xl overflow-hidden hover:border-[var(--accent)] hover:shadow-2xl transition-all duration-300"
+                    className="group relative bg-surface border-2 border-border rounded-2xl overflow-hidden hover:border-accent hover:shadow-2xl transition-all duration-300"
                   >
                     {/* Step number band — top */}
-                    <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[var(--accent)] via-[var(--gold)] to-[var(--accent)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-accent via-gold to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                     <div className="grid grid-cols-1 md:grid-cols-[100px_1fr_120px] gap-0">
                       {/* Left: Big number column */}
-                      <div className="bg-[var(--accent)] text-white p-5 flex flex-col items-center md:items-start justify-center">
+                      <div className="bg-accent text-white p-5 flex flex-col items-center md:items-start justify-center">
                         <div className="text-5xl font-medium leading-none mb-1" style={{ fontFamily: "var(--font-heading)" }}>
                           {s.order || i + 1}
                         </div>
-                        <div className="text-[10px] uppercase tracking-widest text-[var(--gold)] font-semibold text-center md:text-left mt-0.5">
+                        <div className="text-[10px] uppercase tracking-widest text-gold font-semibold text-center md:text-left mt-0.5">
                           {isEs ? `Paso ${s.order || i + 1}` : `Step ${s.order || i + 1}`}
                         </div>
                         {s.duration && (
@@ -110,11 +110,11 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
                       </div>
 
                       {/* Middle: Title + body + actions */}
-                      <div className="p-5 border-t md:border-t-0 md:border-l border-[var(--border)]">
+                      <div className="p-5 border-t md:border-t-0 md:border-l border-border">
                         <h3 className="text-lg md:text-xl font-medium mb-1.5" style={{ fontFamily: "var(--font-heading)" }}>
                           {s.title}
                         </h3>
-                        <p className="text-sm text-[var(--fg-muted)] leading-relaxed mb-3">
+                        <p className="text-sm text-fg-muted leading-relaxed mb-3">
                           {s.body}
                         </p>
                         {s.actions && s.actions.length > 0 && (
@@ -122,7 +122,7 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
                             {s.actions.map((a: string, k: number) => (
                               <li
                                 key={k}
-                                className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] font-medium border border-[var(--accent)]/20"
+                                className="text-[11px] px-2 py-0.5 rounded-full bg-accent-soft text-accent font-medium border border-accent/20"
                               >
                                 {a}
                               </li>
@@ -132,9 +132,9 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
                       </div>
 
                       {/* Right: Icon */}
-                      <div className="hidden md:flex items-center justify-center p-4 bg-[var(--surface-muted)]">
-                        <div className="w-12 h-12 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center group-hover:bg-[var(--gold)] transition-colors duration-500">
-                          <Icon className="w-6 h-6 text-[var(--accent)] group-hover:text-white transition-colors" />
+                      <div className="hidden md:flex items-center justify-center p-4 bg-surface-muted">
+                        <div className="w-12 h-12 rounded-xl bg-accent-soft flex items-center justify-center group-hover:bg-gold transition-colors duration-500">
+                          <Icon className="w-6 h-6 text-accent group-hover:text-white transition-colors" />
                         </div>
                       </div>
                     </div>
@@ -148,16 +148,16 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16">
             {whatToBring && whatToBring.length > 0 && (
               <div className="card p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="w-12 h-12 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center mb-4">
-                  <Calendar className="w-6 h-6 text-[var(--accent)]" />
+                <div className="w-12 h-12 rounded-xl bg-accent-soft flex items-center justify-center mb-4">
+                  <Calendar className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-[var(--fg-subtle)] text-xs">
+                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-fg-subtle text-xs">
                   {isEs ? "Qué traer" : "What to bring"}
                 </h3>
-                <ul className="space-y-2 text-sm text-[var(--fg-muted)]">
+                <ul className="space-y-2 text-sm text-fg-muted">
                   {whatToBring.map((w: string, i: number) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] mt-2 flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0" />
                       <span>{w}</span>
                     </li>
                   ))}
@@ -166,24 +166,24 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
             )}
             {cancellation && (
               <div className="card p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="w-12 h-12 rounded-xl bg-[var(--gold-soft)] flex items-center justify-center mb-4">
-                  <AlertTriangle className="w-6 h-6 text-[var(--gold-2)]" />
+                <div className="w-12 h-12 rounded-xl bg-gold-soft flex items-center justify-center mb-4">
+                  <AlertTriangle className="w-6 h-6 text-gold-2" />
                 </div>
-                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-[var(--fg-subtle)] text-xs">
+                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-fg-subtle text-xs">
                   {isEs ? "Cancelación" : "Cancellation"}
                 </h3>
-                <p className="text-sm text-[var(--fg-muted)] leading-relaxed">{cancellation}</p>
+                <p className="text-sm text-fg-muted leading-relaxed">{cancellation}</p>
               </div>
             )}
             {guarantee && (
               <div className="card p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="w-12 h-12 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center mb-4">
-                  <Award className="w-6 h-6 text-[var(--accent)]" />
+                <div className="w-12 h-12 rounded-xl bg-accent-soft flex items-center justify-center mb-4">
+                  <Award className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-[var(--fg-subtle)] text-xs">
+                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-fg-subtle text-xs">
                   {isEs ? "Garantía" : "Guarantee"}
                 </h3>
-                <p className="text-sm text-[var(--fg-muted)] leading-relaxed">{guarantee}</p>
+                <p className="text-sm text-fg-muted leading-relaxed">{guarantee}</p>
               </div>
             )}
           </div>
@@ -191,12 +191,12 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
       </section>
 
       {/* Bottom CTA */}
-      <section className="section-sm bg-[var(--surface-muted)]">
+      <section className="section-sm bg-surface-muted">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl mb-4">
             {isEs ? "¿Listo para empezar?" : "Ready to begin?"}
           </h2>
-          <p className="text-[var(--fg-muted)] mb-6">
+          <p className="text-fg-muted mb-6">
             {isEs
               ? "Coordiná tu primera consulta por WhatsApp — sin compromiso."
               : "Schedule your first consultation via WhatsApp — no obligation."}

@@ -26,12 +26,12 @@ export function Process({ c, locale }: { c: any; locale: string }) {
         <div className="text-center max-w-xl mx-auto mb-14">
           <span className="eyebrow">{c.process?.eyebrow || (isEs ? "Cómo trabajamos" : "Our process")}</span>
           <h2>{c.process?.title || (isEs ? "El proceso" : "Your journey")}</h2>
-          {c.process?.subtitle && <p className="text-[var(--fg-muted)] text-lg mt-3">{c.process.subtitle}</p>}
+          {c.process?.subtitle && <p className="text-fg-muted text-lg mt-3">{c.process.subtitle}</p>}
         </div>
 
         <div className="relative">
           {/* Connecting line */}
-          <div className="absolute left-[1.375rem] top-0 bottom-0 w-px bg-[var(--border)] hidden md:block" />
+          <div className="absolute left-[1.375rem] top-0 bottom-0 w-px bg-border hidden md:block" />
 
           <ol className="space-y-8 md:space-y-0">
             {steps.map((raw: any, i: number) => {
@@ -59,7 +59,7 @@ export function Process({ c, locale }: { c: any; locale: string }) {
                             {s.title}
                           </h3>
                           {s.duration && (
-                            <span className="text-xs text-[var(--fg-subtle)] flex items-center gap-1 mt-0.5">
+                            <span className="text-xs text-fg-subtle flex items-center gap-1 mt-0.5">
                               <Clock className="w-3 h-3" /> {s.duration}
                             </span>
                           )}
@@ -67,11 +67,11 @@ export function Process({ c, locale }: { c: any; locale: string }) {
                       </div>
 
                       <div className="md:ml-0">
-                        <p className="text-sm text-[var(--fg-muted)] leading-relaxed">{s.subtitle}</p>
+                        <p className="text-sm text-fg-muted leading-relaxed">{s.subtitle}</p>
                         {s.actions && s.actions.length > 0 && (
                           <ul className="flex flex-wrap gap-2 mt-3">
                             {s.actions.map((a: string, k: number) => (
-                              <li key={k} className="text-xs px-2.5 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] font-medium">
+                              <li key={k} className="text-xs px-2.5 py-1 rounded-full bg-accent-soft text-accent font-medium">
                                 {a}
                               </li>
                             ))}
@@ -82,8 +82,8 @@ export function Process({ c, locale }: { c: any; locale: string }) {
                   </div>
 
                   {/* Icon */}
-                  <div className="hidden md:flex md:items-center md:justify-center md:w-12 md:h-12 md:rounded-xl md:bg-[var(--accent-soft)] md:flex-shrink-0">
-                    <Icon className="w-5 h-5 text-[var(--gold)]" />
+                  <div className="hidden md:flex md:items-center md:justify-center md:w-12 md:h-12 md:rounded-xl md:bg-accent-soft md:flex-shrink-0">
+                    <Icon className="w-5 h-5 text-gold" />
                   </div>
                 </li>
               )

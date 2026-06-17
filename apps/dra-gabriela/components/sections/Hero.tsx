@@ -16,7 +16,7 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
   const isEs = locale === "es"
 
   return (
-    <section className="relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-to-br from-[var(--accent-soft)] via-[var(--bg)] to-[var(--bg)]">
+    <section className="relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-to-br from-accent-soft via-bg to-bg">
       {/* Decorative background shapes */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Accent blob top-right */}
@@ -73,35 +73,35 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
             {/* Trust bar */}
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pb-2">
               {h.trust_line && (
-                <span className="flex items-center gap-2.5 text-sm text-[var(--fg-muted)]">
+                <span className="flex items-center gap-2.5 text-sm text-fg-muted">
                   <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--success)] opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--success)]"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success"></span>
                   </span>
                   {h.trust_line}
                 </span>
               )}
               {h.office_hours_short && (
-                <span className="flex items-center gap-2 text-sm text-[var(--fg-muted)]">
-                  <Clock className="w-4 h-4 text-[var(--gold)]" />
+                <span className="flex items-center gap-2 text-sm text-fg-muted">
+                  <Clock className="w-4 h-4 text-gold" />
                   {h.office_hours_short}
                 </span>
               )}
             </div>
 
             {/* Mini social proof bar */}
-            <div className="mt-8 pt-6 border-t border-[var(--border)] grid grid-cols-3 gap-4 max-w-md">
+            <div className="mt-8 pt-6 border-t border-border grid grid-cols-3 gap-4 max-w-md">
               <div>
-                <div className="text-2xl font-medium text-[var(--accent)]" style={{ fontFamily: "var(--font-heading)" }}>20+</div>
-                <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">{isEs ? "Años" : "Years"}</div>
+                <div className="text-2xl font-medium text-accent" style={{ fontFamily: "var(--font-heading)" }}>20+</div>
+                <div className="text-xs text-fg-subtle uppercase tracking-wider">{isEs ? "Años" : "Years"}</div>
               </div>
               <div>
-                <div className="text-2xl font-medium text-[var(--accent)]" style={{ fontFamily: "var(--font-heading)" }}>ES+EN</div>
-                <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">{isEs ? "Idiomas" : "Languages"}</div>
+                <div className="text-2xl font-medium text-accent" style={{ fontFamily: "var(--font-heading)" }}>ES+EN</div>
+                <div className="text-xs text-fg-subtle uppercase tracking-wider">{isEs ? "Idiomas" : "Languages"}</div>
               </div>
               <div>
-                <div className="text-2xl font-medium text-[var(--accent)]" style={{ fontFamily: "var(--font-heading)" }}>100%</div>
-                <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">{isEs ? "Plan escrito" : "Written plan"}</div>
+                <div className="text-2xl font-medium text-accent" style={{ fontFamily: "var(--font-heading)" }}>100%</div>
+                <div className="text-xs text-fg-subtle uppercase tracking-wider">{isEs ? "Plan escrito" : "Written plan"}</div>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
           <div className="relative hidden lg:block">
             {heroImage ? (
               <div className="relative">
-                <div className="relative aspect-[4/5] rounded-[var(--radius-2xl)] overflow-hidden shadow-2xl border border-[var(--border)]">
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-border">
                   <Image
                     src={heroImage}
                     alt={slide?.title || "Dra. Gabriella"}
@@ -119,28 +119,28 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--accent)]/30 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-accent/30 via-transparent to-transparent" />
                   {slide?.badge && (
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="card backdrop-blur-sm bg-white/95 px-5 py-3 border-0 shadow-lg flex items-center gap-2">
-                        <Sparkles className="w-4 h-4 text-[var(--gold)]" />
-                        <span className="text-sm font-medium text-[var(--fg)]">{slide.badge}</span>
+                        <Sparkles className="w-4 h-4 text-gold" />
+                        <span className="text-sm font-medium text-fg">{slide.badge}</span>
                       </div>
                     </div>
                   )}
                 </div>
                 {/* Decorative gold ring */}
-                <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full border-2 border-[var(--gold)] opacity-30 -z-10" />
-                <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full border-2 border-[var(--accent)] opacity-20 -z-10" />
+                <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full border-2 border-gold opacity-30 -z-10" />
+                <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full border-2 border-accent opacity-20 -z-10" />
               </div>
             ) : (
-              <div className="aspect-[4/5] rounded-[var(--radius-2xl)] bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] relative overflow-hidden shadow-2xl border border-[var(--accent)]/20">
+              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-accent to-accent-2 relative overflow-hidden shadow-2xl border border-accent/20">
                 <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: "radial-gradient(circle at 30% 40%, var(--gold) 0%, transparent 50%), radial-gradient(circle at 70% 60%, white 0%, transparent 40%)" }} />
                 <div className="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-white/5" />
                 <div className="absolute inset-0 flex items-center justify-center p-16">
                   <div className="text-center">
                     <div className="text-8xl font-heading text-white/20" style={{ fontFamily: "var(--font-heading)" }}>DG</div>
-                    <div className="mt-4 w-20 h-0.5 bg-[var(--gold)]/40 mx-auto" />
+                    <div className="mt-4 w-20 h-0.5 bg-gold/40 mx-auto" />
                     <p className="text-white/50 text-xs tracking-widest uppercase mt-4" style={{ fontFamily: "var(--font-body)" }}>Odontología con criterio</p>
                   </div>
                 </div>
@@ -151,9 +151,9 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
       </div>
 
       {/* Subtle scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-[var(--fg-subtle)] text-xs uppercase tracking-widest pointer-events-none">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-fg-subtle text-xs uppercase tracking-widest pointer-events-none">
         <span>{isEs ? "Conocé más" : "Learn more"}</span>
-        <span className="w-px h-6 bg-[var(--border)]" />
+        <span className="w-px h-6 bg-border" />
       </div>
     </section>
   )

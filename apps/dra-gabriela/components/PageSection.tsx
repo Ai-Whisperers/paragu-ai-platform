@@ -19,7 +19,7 @@ const BG: Record<string, string> = {
   default: "",
   muted: "bg-[var(--surface-muted)]",
   accent: "bg-[var(--accent)] text-white",
-  gradient: "bg-gradient-to-br from-[var(--accent)] via-[var(--accent-2)] to-[var(--accent)] text-white",
+  gradient: "bg-gradient-to-br from-accent via-[var(--accent-2)] to-accent text-white",
 }
 
 const PY: Record<string, string> = {

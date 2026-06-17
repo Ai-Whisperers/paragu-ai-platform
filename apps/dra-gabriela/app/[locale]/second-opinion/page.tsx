@@ -74,10 +74,10 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
             const Icon = it.icon
             return (
               <div key={i} className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center mb-3">
-                  <Icon className="w-6 h-6 text-[var(--accent)]" />
+                <div className="w-12 h-12 rounded-xl bg-accent-soft flex items-center justify-center mb-3">
+                  <Icon className="w-6 h-6 text-accent" />
                 </div>
-                <span className="text-sm text-[var(--fg-muted)]">{it.label}</span>
+                <span className="text-sm text-fg-muted">{it.label}</span>
               </div>
             )
           })}
@@ -91,7 +91,7 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
             {(c.sections || []).slice(0, Math.ceil((c.sections || []).length / 2)).map((s: any, i: number) => (
               <div key={i} className="mb-8 last:mb-0">
                 <h2 className="text-2xl mb-3">{s.heading || s.title}</h2>
-                {s.body && <p className="text-[var(--fg-muted)] leading-relaxed">{s.body}</p>}
+                {s.body && <p className="text-fg-muted leading-relaxed">{s.body}</p>}
               </div>
             ))}
           </div>
@@ -99,12 +99,12 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
             {(c.sections || []).slice(Math.ceil((c.sections || []).length / 2)).map((s: any, i: number) => (
               <div key={i} className="mb-8 last:mb-0">
                 <h2 className="text-2xl mb-3">{s.heading || s.title}</h2>
-                {s.body && <p className="text-[var(--fg-muted)] leading-relaxed">{s.body}</p>}
+                {s.body && <p className="text-fg-muted leading-relaxed">{s.body}</p>}
                 {s.items && (
                   <ul className="space-y-2.5 mt-3">
                     {s.items.map((it: string, j: number) => (
-                      <li key={j} className="flex items-start gap-3 text-[var(--fg-muted)] leading-relaxed">
-                        <CheckCircle2 className="w-4 h-4 text-[var(--gold)] mt-1 flex-shrink-0" />
+                      <li key={j} className="flex items-start gap-3 text-fg-muted leading-relaxed">
+                        <CheckCircle2 className="w-4 h-4 text-gold mt-1 flex-shrink-0" />
                         <span>{it}</span>
                       </li>
                     ))}
@@ -119,13 +119,13 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
       {/* CTA */}
       <PageSection layout="narrow" py="md" bg="muted">
         <div className="text-center">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--gold-soft)] mb-3">
-            <Sparkles className="w-6 h-6 text-[var(--gold-2)]" />
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gold-soft mb-3">
+            <Sparkles className="w-6 h-6 text-gold-2" />
           </div>
           <h2 className="text-2xl md:text-3xl mb-3">
             {c.cta_primary || (isEs ? "Pedí tu segunda opinión" : "Request your second opinion")}
           </h2>
-          <p className="text-[var(--fg-muted)] mb-6 max-w-lg mx-auto">
+          <p className="text-fg-muted mb-6 max-w-lg mx-auto">
             {isEs
               ? "Reviso tu caso en 2–3 días hábiles. Plan escrito, opciones claras, sin compromiso."
               : "Review within 2–3 business days. Written plan, clear options, no obligation."}

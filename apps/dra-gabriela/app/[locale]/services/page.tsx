@@ -63,7 +63,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
       {bundles.length > 0 && (
         <PageSection layout="wide" py="md">
           <div className="flex items-center gap-2 mb-5">
-            <Sparkles className="w-5 h-5 text-[var(--gold)]" />
+            <Sparkles className="w-5 h-5 text-gold" />
             <h2 className="text-xl">{isEs ? "Paquetes" : "Bundles"}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -74,15 +74,15 @@ export default async function Services({ params }: { params: Promise<{ locale: s
               return (
                 <Link key={b.id} href={slug || "#"} className="card-accent card p-6 group block hover:shadow-lg hover:-translate-y-0.5 transition-all">
                   <div className="flex items-start justify-between gap-3 mb-2">
-                    <h3 className="text-lg font-medium group-hover:text-[var(--accent)] transition-colors">{b.name}</h3>
+                    <h3 className="text-lg font-medium group-hover:text-accent transition-colors">{b.name}</h3>
                     {b.priceGs && (
-                      <span className="text-base font-mono text-[var(--accent)] whitespace-nowrap font-medium">
+                      <span className="text-base font-mono text-accent whitespace-nowrap font-medium">
                         Gs {Number(b.priceGs).toLocaleString("es-PY")}
                       </span>
                     )}
                   </div>
-                  <p className="text-sm text-[var(--fg-muted)] leading-relaxed mb-3">{b.description}</p>
-                  <span className="text-sm font-medium text-[var(--gold)] flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <p className="text-sm text-fg-muted leading-relaxed mb-3">{b.description}</p>
+                  <span className="text-sm font-medium text-gold flex items-center gap-1 group-hover:gap-2 transition-all">
                     {isEs ? "Conocer" : "Learn more"} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>
@@ -102,9 +102,9 @@ export default async function Services({ params }: { params: Promise<{ locale: s
               const href = route ? (locale === "es" ? route.es : route.en) : `/${locale}/services#${t.id}`
               return (
                 <Link key={t.id} href={href} className="card-accent card p-5 group block hover:shadow-md hover:-translate-y-0.5 transition-all">
-                  <h3 className="text-base font-medium mb-1 group-hover:text-[var(--accent)] transition-colors">{t.label}</h3>
-                  <p className="text-xs text-[var(--fg-subtle)] mb-3">{t.id?.replace(/-/g, " ")}</p>
-                  <span className="text-sm font-medium text-[var(--accent)] flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <h3 className="text-base font-medium mb-1 group-hover:text-accent transition-colors">{t.label}</h3>
+                  <p className="text-xs text-fg-subtle mb-3">{t.id?.replace(/-/g, " ")}</p>
+                  <span className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
                     {isEs ? "Ver detalle" : "View details"} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>

@@ -32,21 +32,21 @@ export async function renderContentPage({ locale, contentKey, fallbackTitle, sho
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {data.title && (
         <div className="mb-12">
-          {Icon && <Icon className="w-6 h-6 text-[var(--gold)] mb-3" />}
+          {Icon && <Icon className="w-6 h-6 text-gold mb-3" />}
           <h1 className="text-4xl md:text-5xl mb-3">{data.title}</h1>
-          {data.subtitle && <p className="text-lg text-[var(--fg-muted)]">{data.subtitle}</p>}
+          {data.subtitle && <p className="text-lg text-fg-muted">{data.subtitle}</p>}
         </div>
       )}
 
       {data.sections?.map((section: any, i: number) => (
         <section key={i} className="mb-10 last:mb-0">
           <h2 className="text-2xl mb-4">{section.heading}</h2>
-          {section.body && <p className="text-[var(--fg-muted)] leading-relaxed mb-4">{section.body}</p>}
+          {section.body && <p className="text-fg-muted leading-relaxed mb-4">{section.body}</p>}
           {section.items?.length > 0 && (
             <ul className="space-y-2">
               {section.items.map((item: string, j: number) => (
-                <li key={j} className="flex items-start gap-3 text-[var(--fg-muted)]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] mt-2 flex-shrink-0" />
+                <li key={j} className="flex items-start gap-3 text-fg-muted">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -58,9 +58,9 @@ export async function renderContentPage({ locale, contentKey, fallbackTitle, sho
                 <div key={j} className="card p-4 flex items-center justify-between">
                   <span className="font-medium">{m.type}</span>
                   {!isPlaceholder(m.value) ? (
-                    <span className="text-sm text-[var(--fg-muted)]">{m.value}</span>
+                    <span className="text-sm text-fg-muted">{m.value}</span>
                   ) : (
-                    <span className="text-xs text-[var(--fg-subtle)] coming-soon">
+                    <span className="text-xs text-fg-subtle coming-soon">
                       {isEs ? "Disponible pronto" : "Coming soon"}
                     </span>
                   )}
@@ -71,18 +71,18 @@ export async function renderContentPage({ locale, contentKey, fallbackTitle, sho
           {section.hours && (
             <div className="card p-5">
               <div className="flex items-center gap-2 mb-3">
-                <Clock className="w-4 h-4 text-[var(--accent)]" />
+                <Clock className="w-4 h-4 text-accent" />
                 <span className="font-medium">{isEs ? "Horarios" : "Hours"}</span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
                 {Object.entries(section.hours).map(([day, hours]) => (
-                  <div key={day} className="flex justify-between font-mono text-[var(--fg-muted)]">
+                  <div key={day} className="flex justify-between font-mono text-fg-muted">
                     <span className="uppercase text-xs">{day}</span>
                     <span>{String(hours)}</span>
                   </div>
                 ))}
               </div>
-              {section.note && <p className="text-xs text-[var(--fg-subtle)] mt-2">{section.note}</p>}
+              {section.note && <p className="text-xs text-fg-subtle mt-2">{section.note}</p>}
             </div>
           )}
         </section>
@@ -96,12 +96,12 @@ export async function renderContentPage({ locale, contentKey, fallbackTitle, sho
               {group.name && <h2 className="text-xl mb-4">{group.name}</h2>}
               <div className="space-y-3">
                 {group.items?.map((item: any, j: number) => (
-                  <details key={j} className="card p-5 group open:border-[var(--accent)]">
+                  <details key={j} className="card p-5 group open:border-accent">
                     <summary className="cursor-pointer font-medium list-none flex items-center justify-between">
                       <span>{item.q || item.question}</span>
-                      <span className="text-[var(--fg-subtle)] group-open:rotate-180 transition-transform">▼</span>
+                      <span className="text-fg-subtle group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p className="mt-3 text-sm text-[var(--fg-muted)] leading-relaxed">{item.a || item.answer}</p>
+                    <p className="mt-3 text-sm text-fg-muted leading-relaxed">{item.a || item.answer}</p>
                   </details>
                 ))}
               </div>

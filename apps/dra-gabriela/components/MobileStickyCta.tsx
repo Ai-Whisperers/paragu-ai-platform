@@ -16,7 +16,7 @@ export function MobileStickyCta({ content }: { content: any }) {
     // No real data yet — show a single "View contact details" link to /contact
     // Falls back to /pricing for expats who might want a price quote
     return (
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[var(--surface)]/95 backdrop-blur-lg border-t border-[var(--border)] shadow-[0_-4px_20px_rgba(15,76,76,0.08)]">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-lg border-t border-border shadow-[0_-4px_20px_rgba(15,76,76,0.08)]">
         <div className="max-w-md mx-auto px-4 py-3">
           <Link href={`${base}/contact`} className="btn btn-primary w-full justify-center">
             <MessageCircle className="w-4 h-4" />
@@ -36,7 +36,7 @@ export function MobileStickyCta({ content }: { content: any }) {
   const isEs = locale === "es"
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[var(--surface)]/95 backdrop-blur-lg border-t border-[var(--border)] shadow-[0_-4px_20px_rgba(15,76,76,0.08)]">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-lg border-t border-border shadow-[0_-4px_20px_rgba(15,76,76,0.08)]">
       <div className="max-w-md mx-auto px-4 py-3 grid grid-cols-2 gap-2">
         <a
           href={safeWa}

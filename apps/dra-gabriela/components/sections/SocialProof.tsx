@@ -14,7 +14,7 @@ const BADGES = [
 export function SocialProof({ c, locale }: { c: any; locale: string }) {
   const isEs = locale === "es"
   return (
-    <section className="relative overflow-hidden bg-[var(--surface-muted)]">
+    <section className="relative overflow-hidden bg-surface-muted">
       {/* Decorative glows */}
       <div className="absolute -top-40 -right-40 w-[28rem] h-[28rem] rounded-full opacity-[0.05]" style={{ background: "radial-gradient(circle, var(--accent) 0%, transparent 60%)" }} />
       <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full opacity-[0.05]" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)" }} />
@@ -29,7 +29,7 @@ export function SocialProof({ c, locale }: { c: any; locale: string }) {
             <h2 className="text-4xl md:text-5xl mt-4 mb-5 leading-tight">
               {isEs ? "Respaldo profesional" : "Professional credentials"}
             </h2>
-            <p className="text-lg text-[var(--fg-muted)] leading-relaxed">
+            <p className="text-lg text-fg-muted leading-relaxed">
               {isEs
                 ? "Inscripta en el Ministerio de Salud Pública de Paraguay. Atención coordinada por WhatsApp con respuesta en menos de 24 horas hábiles."
                 : "Registered with Paraguay's Ministry of Health. WhatsApp coordination with response within 24 business hours."}
@@ -40,16 +40,16 @@ export function SocialProof({ c, locale }: { c: any; locale: string }) {
           <div className="space-y-4">
             {/* Featured Google reviews badge — bigger */}
             <div className="card p-6 flex items-center gap-5 hover:shadow-lg">
-              <div className="w-16 h-16 rounded-2xl bg-[var(--gold)] flex items-center justify-center flex-shrink-0 shadow-lg">
+              <div className="w-16 h-16 rounded-2xl bg-gold flex items-center justify-center flex-shrink-0 shadow-lg">
                 <Star className="w-8 h-8 text-white fill-white" />
               </div>
               <div className="flex-1">
-                <div className="text-3xl font-medium text-[var(--accent)] mb-1" style={{ fontFamily: "var(--font-heading)" }}>4.9 ★ Google</div>
-                <div className="text-sm text-[var(--fg-muted)]">{isEs ? "Reseñas verificadas" : "Verified reviews"}</div>
+                <div className="text-3xl font-medium text-accent mb-1" style={{ fontFamily: "var(--font-heading)" }}>4.9 ★ Google</div>
+                <div className="text-sm text-fg-muted">{isEs ? "Reseñas verificadas" : "Verified reviews"}</div>
               </div>
               <div className="hidden sm:flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-[var(--gold)] fill-[var(--gold)]" />
+                  <Star key={i} className="w-5 h-5 text-gold fill-gold" />
                 ))}
               </div>
             </div>
@@ -61,14 +61,14 @@ export function SocialProof({ c, locale }: { c: any; locale: string }) {
                 return (
                   <div
                     key={i}
-                    className="card p-4 flex items-center gap-3 hover:border-[var(--accent)] hover:shadow-md transition-all"
+                    className="card p-4 flex items-center gap-3 hover:border-accent hover:shadow-md transition-all"
                   >
-                    <div className="w-11 h-11 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-[var(--accent)]" />
+                    <div className="w-11 h-11 rounded-xl bg-accent-soft flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <div className="text-sm font-semibold text-[var(--fg)]">{b.label}</div>
-                      <div className="text-xs text-[var(--fg-muted)]">{b.sub}</div>
+                      <div className="text-sm font-semibold text-fg">{b.label}</div>
+                      <div className="text-xs text-fg-muted">{b.sub}</div>
                     </div>
                   </div>
                 )

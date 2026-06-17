@@ -25,7 +25,7 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--accent)] to-[var(--gold)] flex items-center justify-center text-white text-xs font-semibold">
+              <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-gold flex items-center justify-center text-white text-xs font-semibold">
                 DG
               </span>
               <h3 className="text-lg text-white font-medium">{c.site?.name}</h3>
@@ -36,21 +36,21 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
             <ul className="space-y-2 text-sm">
               {wa && (
                 <li>
-                  <a href={wa} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-[var(--gold)] transition-colors">
+                  <a href={wa} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-gold transition-colors">
                     <MessageCircle className="w-4 h-4" /> WhatsApp
                   </a>
                 </li>
               )}
               {phone && (
                 <li>
-                  <a href={`tel:${phone.replace(/\D/g, "")}`} className="inline-flex items-center gap-2 hover:text-[var(--gold)] transition-colors">
+                  <a href={`tel:${phone.replace(/\D/g, "")}`} className="inline-flex items-center gap-2 hover:text-gold transition-colors">
                     <Phone className="w-4 h-4" /> {phone}
                   </a>
                 </li>
               )}
               {c.business?.email && !isPlaceholder(c.business.email) && (
                 <li>
-                  <a href={`mailto:${c.business.email}`} className="inline-flex items-center gap-2 hover:text-[var(--gold)] transition-colors break-all">
+                  <a href={`mailto:${c.business.email}`} className="inline-flex items-center gap-2 hover:text-gold transition-colors break-all">
                     <Mail className="w-4 h-4 flex-shrink-0" /> {c.business.email}
                   </a>
                 </li>
@@ -92,7 +92,7 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
           {/* Hours */}
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              <Clock className="w-3.5 h-3.5 inline mr-1.5 text-[var(--gold)]" />
+              <Clock className="w-3.5 h-3.5 inline mr-1.5 text-gold" />
               {isEs ? "Horarios" : "Hours"}
             </h4>
             {hasHours && (
