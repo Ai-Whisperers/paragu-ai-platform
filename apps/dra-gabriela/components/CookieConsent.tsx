@@ -2,6 +2,8 @@
 // Cookie consent banner — minimal, localStorage-based. No third-party tracker
 // is loaded until the user opts in. We default-deny and store the user's choice
 // in a single localStorage key so it survives page reloads.
+//
+// Users can re-open the consent prompt from the footer link "Cookie settings".
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
@@ -19,6 +21,12 @@ export function CookieConsent({ locale }: { locale: string }) {
     } catch {
       // private mode or storage disabled — fail silent, don't show banner
     }
+    // Listen for the "re-open" event from the footer
+    function onReopen() {
+      setShow(true)
+    }
+    window.addEventListener("dra-gp:reopen-cookie-consent", onReopen)
+    return () => window.removeEventListener("dra-gp:reopen-cookie-consent", onReopen)
   }, [])
 
   function decide(value: "accepted" | "rejected") {

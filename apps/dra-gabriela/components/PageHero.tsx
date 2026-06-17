@@ -21,7 +21,7 @@ interface PageHeroProps {
 const VARIANT_BG: Record<string, string> = {
   default: "bg-gradient-to-br from-accent-soft via-bg to-bg",
   gradient: "bg-gradient-to-br from-accent via-[var(--accent-2)] to-accent text-white",
-  compact: "bg-[var(--surface)] border-b border-[var(--border-light)]",
+  compact: "bg-surface border-b border-border-light",
 }
 
 export function PageHero({
@@ -68,7 +68,7 @@ export function PageHero({
             <span
               className={cn(
                 "eyebrow inline-flex",
-                isGradient && "!border-white/20 !bg-white/10 !text-[var(--gold)]"
+                isGradient && "!border-white/20 !bg-white/10 !text-gold"
               )}
             >
               <Icon className="w-3 h-3" />
@@ -87,7 +87,7 @@ export function PageHero({
             <p
               className={cn(
                 "lead",
-                isGradient ? "text-white/85" : "text-[var(--fg-muted)]"
+                isGradient ? "text-white/85" : "text-fg-muted"
               )}
             >
               {subtitle}

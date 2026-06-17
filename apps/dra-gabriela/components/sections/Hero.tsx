@@ -39,7 +39,7 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
                 {h.badge}
               </span>
             )}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tight mb-6 leading-[1.05] animate-fade-in-up">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight mb-6 leading-[1.05] animate-fade-in-up">
               <span className="gradient-text">{h.title}</span>
             </h1>
             {h.subtitle && (

@@ -2,7 +2,7 @@
 
 import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/seo"
-import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react"
+import { Calendar, Clock, ArrowRight, BookOpen, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import en from "@/content/en/blog.json"
 import es from "@/content/es/blog.json"
@@ -28,10 +28,23 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   })
 }
 
+function formatDate(date: string, locale: string): string {
+  try {
+    return new Date(date).toLocaleDateString(locale === "es" ? "es-PY" : "en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
+  } catch {
+    return date
+  }
+}
+
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   if (!LOCALES.includes(locale as any)) notFound()
   const c = CONTENT[locale] || en
+  const posts: any[] = c.posts || []
   const topics: string[] = c.plannedTopics || []
   const isEs = locale === "es"
   const base = `/${locale}`
@@ -56,6 +69,52 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
             <div>
               <div className="text-xs uppercase tracking-wider text-fg-subtle font-semibold mb-1">{isEs ? "Estado" : "Status"}</div>
               <p className="text-base text-fg-muted">{c.status}</p>
+            </div>
+          </div>
+        )}
+
+        {/* Published posts */}
+        {posts.length > 0 && (
+          <div className="mb-14">
+            <h2 className="text-2xl md:text-3xl mb-6 text-left">
+              {isEs ? "Artículos publicados" : "Published articles"}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {posts.map((post: any) => (
+                <article
+                  key={post.slug}
+                  className="card-accent card p-6 md:p-7 flex flex-col hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                >
+                  <div className="flex items-center gap-2 mb-3 text-xs text-fg-subtle">
+                    <Calendar className="w-3.5 h-3.5" />
+                    <span>{formatDate(post.date, locale)}</span>
+                    {post.readMinutes && (
+                      <>
+                        <span className="mx-1">·</span>
+                        <Clock className="w-3.5 h-3.5" />
+                        <span>{post.readMinutes} {isEs ? "min" : "min read"}</span>
+                      </>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-medium mb-2 text-left" style={{ fontFamily: "var(--font-heading)" }}>
+                    {post.title}
+                  </h3>
+                  <p className="text-fg-muted text-sm leading-relaxed mb-4 flex-1 text-left">
+                    {post.excerpt}
+                  </p>
+                  {post.category && (
+                    <div className="mb-3">
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-accent-soft text-accent">
+                        {post.category}
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-xs text-fg-subtle">
+                    {isEs ? "Próximamente: artículo completo" : "Coming soon: full article"}
+                    <ArrowUpRight className="w-3 h-3 inline ml-1" />
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         )}

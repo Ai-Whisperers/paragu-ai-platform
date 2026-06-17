@@ -1,13 +1,42 @@
 {
   "title": "Blog",
   "subtitle": "Educational content on conservative dentistry, second opinions, pricing, and dental health in Paraguay.",
-  "status": "Editorial calendar planned. First post pending.",
+  "status": "New posts every two weeks. First issue below.",
+  "posts": [
+    {
+      "slug": "how-to-know-if-a-treatment-plan-is-honest",
+      "title": "How to know if a treatment plan is honest",
+      "excerpt": "Five concrete questions to ask your dentist before agreeing to treatment. Red flags, green flags, and what \"comprehensive plan\" actually means in writing.",
+      "date": "2026-06-15",
+      "readMinutes": 5,
+      "category": "Treatment planning",
+      "tags": ["second opinion", "treatment plan", "pricing"]
+    },
+    {
+      "slug": "dental-prices-paraguay-reference-ranges",
+      "title": "Dental prices in Paraguay: reference ranges and red flags",
+      "excerpt": "What a fair price looks like for consultation, second opinion, fillings, crowns, and implants. Reference values for Asunción 2026, with notes on what to watch for.",
+      "date": "2026-06-29",
+      "readMinutes": 7,
+      "category": "Pricing",
+      "tags": ["pricing", "asuncion", "comparison"]
+    },
+    {
+      "slug": "second-opinion-when-why-what-to-bring",
+      "title": "Second opinions: when, why, and what to bring",
+      "excerpt": "When a second opinion is worth it (and when it isn't), how to ask for one without offending your current dentist, and what to bring to the appointment.",
+      "date": "2026-07-13",
+      "readMinutes": 6,
+      "category": "Second opinion",
+      "tags": ["second opinion", "preparation"]
+    }
+  ],
   "plannedTopics": [
-    "How to know if a treatment plan is honest",
-    "Second opinions: when, why, and what to bring",
-    "Dental prices in Paraguay: reference ranges and red flags",
     "Root canal vs extraction: how specialists decide",
     "What to expect at a first dental consultation in Asunción",
-    "English-speaking dental care in Paraguay: what expats should know"
+    "English-speaking dental care in Paraguay: what expats should know",
+    "Crown vs large filling: when to choose which",
+    "Gum disease: early signs most people miss",
+    "Whitening: what works, what doesn't, and what damages enamel"
   ]
 }

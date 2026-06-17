@@ -15,6 +15,7 @@ const dmSerif = DM_Serif_Display({
 })
 
 export const metadata = {
+  metadataBase: new URL("https://dragabriela.paragu-ai.com"),
   title: {
     default: "Dra. Gabriella González Pane — Odontología conservadora y planificación primero en Asunción",
     template: "%s · Dra. Gabriella",

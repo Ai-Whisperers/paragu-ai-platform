@@ -81,7 +81,7 @@ export function FeaturedService({
           <div className={reverse ? "lg:order-1 text-left" : "text-left"}>
             <span
               className={`eyebrow inline-flex ${
-                variant === "teal" ? "!border-white/20 !bg-white/10 !text-[var(--gold)]" : ""
+                variant === "teal" ? "!border-white/20 !bg-white/10 !text-gold" : ""
               }`}
             >
               <Sparkles className="w-3 h-3" />
@@ -90,7 +90,7 @@ export function FeaturedService({
             <h2 className={`text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.05] ${variant === "teal" ? "!text-white" : ""}`}>
               {variant === "teal" ? <span className="text-white">{title}</span> : title}
             </h2>
-            <p className={`text-lg md:text-xl leading-relaxed mb-8 max-w-xl ${variant === "teal" ? "text-white/85" : "text-[var(--fg-muted)]"}`}>
+            <p className={`text-lg md:text-xl leading-relaxed mb-8 max-w-xl ${variant === "teal" ? "text-white/85" : "text-fg-muted"}`}>
               {body}
             </p>
 
@@ -100,18 +100,18 @@ export function FeaturedService({
                 <li key={i} className="flex items-start gap-3">
                   <div
                     className={`flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center ${
-                      variant === "teal" ? "bg-[var(--gold)]" : "bg-[var(--accent-soft)]"
+                      variant === "teal" ? "bg-gold" : "bg-accent-soft"
                     }`}
                   >
                     <CheckCircle2
                       className={`w-4 h-4 ${
-                        variant === "teal" ? "text-white" : "text-[var(--accent)]"
+                        variant === "teal" ? "text-white" : "text-accent"
                       }`}
                     />
                   </div>
                   <span
                     className={`leading-relaxed text-base pt-0.5 ${
-                      variant === "teal" ? "text-white/90" : "text-[var(--fg-muted)]"
+                      variant === "teal" ? "text-white/90" : "text-fg-muted"
                     }`}
                   >
                     {b}

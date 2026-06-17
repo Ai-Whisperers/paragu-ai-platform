@@ -1,8 +1,12 @@
+"use client"
 // Footer with proper structure: 3-col grid on desktop, stacked on mobile.
 // Left-aligned text. Brand badge with monogram. Hours table.
+//
+// "use client" because the Cookie settings button dispatches a window event
+// that the CookieConsent component listens to (see components/CookieConsent.tsx).
 
 import Link from "next/link"
-import { Mail, MessageCircle, MapPin, Phone, Clock, type LucideIcon } from "lucide-react"
+import { Mail, MessageCircle, MapPin, Phone, Clock, AtSign, type LucideIcon } from "lucide-react"
 import { whatsappLink, phoneDisplay, isPlaceholder } from "@/lib/content"
 
 export function Footer({ locale, content }: { locale: string; content: any }) {
@@ -61,6 +65,18 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
                   <span>{address}</span>
                 </li>
               )}
+              {c.business?.instagram && !isPlaceholder(c.business.instagram) && (
+                <li>
+                  <a
+                    href={c.business.instagramUrl || `https://instagram.com/${c.business.instagram.replace(/^@/, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 hover:text-gold transition-colors"
+                  >
+                    <AtSign className="w-4 h-4" /> {c.business.instagram}
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
 
@@ -86,6 +102,19 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
               <li><Link href={`${base}/blog`} className="hover:text-white transition-colors">Blog</Link></li>
               <li><Link href={`${base}/privacy`} className="hover:text-white transition-colors">{isEs ? "Privacidad" : "Privacy"}</Link></li>
               <li><Link href={`${base}/terms`} className="hover:text-white transition-colors">{isEs ? "Términos" : "Terms"}</Link></li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (typeof window !== "undefined") {
+                      window.dispatchEvent(new CustomEvent("dra-gp:reopen-cookie-consent"))
+                    }
+                  }}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  {isEs ? "Preferencias de cookies" : "Cookie settings"}
+                </button>
+              </li>
             </ul>
           </div>
 

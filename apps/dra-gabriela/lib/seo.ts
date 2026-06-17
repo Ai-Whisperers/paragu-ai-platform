@@ -6,7 +6,8 @@
 //   - canonical URL (always the English version of the page)
 //   - hreflang alternates (en, es, x-default) for every supported page
 //   - OpenGraph + Twitter cards
-//   - og:image pointing to /og/og-image.png (1200x630, single site-wide image)
+//   - og:image — auto-resolved to /og/og-{slug}.png based on the slug
+//     (fallback to /og/og-home.png for the home page)
 //
 // Slug mapping: the canonical URL is the EN slug (lower friction for
 // international SEO). Both slugs are reachable cross-locale via the
@@ -87,7 +88,7 @@ export function buildMetadata({
   title,
   description,
   locale,
-  ogImage = "/og/og-image.png",
+  ogImage,
   ogType = "website",
   publishedTime,
   modifiedTime,
@@ -95,6 +96,9 @@ export function buildMetadata({
 }: BuildMetadataInput) {
   const alts = getAlternates(slug)
   const ogLocale = locale === "es" ? "es_PY" : "en_US"
+  // Per-page OG image: derive from slug if not explicitly provided.
+  // Falls back to the generic /og/og-image.png for the home page.
+  const resolvedOgImage = ogImage ?? (slug ? `/og/og-${slug.replace(/\//g, "-")}.png` : "/og/og-home.png")
   return {
     title,
     description,
@@ -108,7 +112,7 @@ export function buildMetadata({
       siteName: "Dra. Gabriella González Pane",
       title,
       description,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      images: [{ url: resolvedOgImage, width: 1200, height: 630, alt: title }],
       ...(publishedTime && { publishedTime }),
       ...(modifiedTime && { modifiedTime }),
       ...(author && { authors: [author] }),
@@ -117,7 +121,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      images: [resolvedOgImage],
     },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
   }

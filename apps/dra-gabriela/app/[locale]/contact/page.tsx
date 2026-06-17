@@ -37,13 +37,73 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const hours = c.openingHours || null
   const base = `/${locale}`
 
-  // Cards data
-  const contactCards = [
-    { key: "whatsapp", icon: MessageCircle, label: "WhatsApp", value: biz.whatsapp || "WhatsApp", sub: isEs ? "Respuesta en menos de 24h" : "Response within 24h", href: wa || `${base}/contact`, primary: true, exists: !!wa },
-    { key: "phone", icon: Phone, label: isEs ? "Teléfono" : "Phone", value: phone || "—", sub: isEs ? "Llamadas y WhatsApp" : "Calls and WhatsApp", href: phone ? `tel:${phone.replace(/\D/g, "")}` : "#", primary: false, exists: !!phone },
-    { key: "email", icon: Send, label: "Email", value: biz.email || "—", sub: isEs ? "Para facturas y derivaciones" : "For invoices and referrals", href: biz.email && !isPlaceholder(biz.email) ? `mailto:${biz.email}` : "#", primary: false, exists: !!(biz.email && !isPlaceholder(biz.email)) },
-    { key: "address", icon: MapPin, label: isEs ? "Dirección" : "Address", value: address || isEs ? "Por confirmar" : "TBD", sub: isEs ? "Acceso y estacionamiento" : "Access and parking", href: "#", primary: false, exists: !!address },
-  ].filter((c) => c.exists)
+  // Cards data — only show cards that have real data (not PENDING/TBD).
+  // While the business info is still placeholder, we still show a
+  // contact card pointing to the contact form (a graceful fallback).
+  const contactCards: Array<{
+    key: string
+    icon: any
+    label: string
+    value: string
+    sub: string
+    href: string
+    primary?: boolean
+  }> = []
+  if (wa) {
+    contactCards.push({
+      key: "whatsapp",
+      icon: MessageCircle,
+      label: "WhatsApp",
+      value: isEs ? "Coordinar por WhatsApp" : "Message on WhatsApp",
+      sub: isEs ? "Respuesta en menos de 24h" : "Response within 24h",
+      href: wa,
+      primary: true,
+    })
+  }
+  if (phone) {
+    contactCards.push({
+      key: "phone",
+      icon: Phone,
+      label: isEs ? "Teléfono" : "Phone",
+      value: phone,
+      sub: isEs ? "Llamadas y WhatsApp" : "Calls and WhatsApp",
+      href: `tel:${phone.replace(/\D/g, "")}`,
+    })
+  }
+  if (biz.email && !isPlaceholder(biz.email)) {
+    contactCards.push({
+      key: "email",
+      icon: Send,
+      label: "Email",
+      value: biz.email,
+      sub: isEs ? "Para facturas y derivaciones" : "For invoices and referrals",
+      href: `mailto:${biz.email}`,
+    })
+  }
+  if (address) {
+    contactCards.push({
+      key: "address",
+      icon: MapPin,
+      label: isEs ? "Dirección" : "Address",
+      value: address,
+      sub: isEs ? "Acceso y estacionamiento" : "Access and parking",
+      href: "#",
+    })
+  }
+  // Fallback: if no cards have real data, show the contact form as a card
+  if (contactCards.length === 0) {
+    contactCards.push({
+      key: "form",
+      icon: MessageCircle,
+      label: isEs ? "Formulario de contacto" : "Contact form",
+      value: isEs ? "Envianos un mensaje" : "Send us a message",
+      sub: isEs
+        ? "Te respondemos por email en menos de 24 horas hábiles."
+        : "We'll reply by email within 24 business hours.",
+      href: `${base}/contact#form`,
+      primary: true,
+    })
+  }
 
   return (
     <>
@@ -56,11 +116,22 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         variant="default"
         align="center"
       >
-        {wa && (
+        {wa ? (
           <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
             <MessageCircle className="w-4 h-4" />
             {isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
           </a>
+        ) : biz.email && !isPlaceholder(biz.email) ? (
+          <a href={`mailto:${biz.email}?subject=${encodeURIComponent(
+            isEs ? "Consulta — Dra. Gabriella" : "Consultation — Dra. Gabriella"
+          )}`} className="btn btn-primary">
+            <Send className="w-4 h-4" />
+            {isEs ? "Escribime por email" : "Email me"}
+          </a>
+        ) : (
+          <Link href={`${base}/contact`} className="btn btn-primary">
+            {isEs ? "Ver datos de contacto" : "See contact details"}
+          </Link>
         )}
         {phone && (
           <a href={`tel:${phone.replace(/\D/g, "")}`} className="btn btn-outline">
@@ -81,18 +152,18 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 href={card.href}
                 className={
                   isPrimary
-                    ? "card p-6 flex items-center gap-4 hover:shadow-2xl hover:-translate-y-0.5 transition-all border-2 border-accent/30 hover:border-[var(--accent)]"
+                    ? "card p-6 flex items-center gap-4 hover:shadow-2xl hover:-translate-y-0.5 transition-all border-2 border-accent/30 hover:border-accent"
                     : "card p-6 flex items-center gap-4 hover:shadow-lg hover:-translate-y-0.5 transition-all"
                 }
               >
                 <div
                   className={
                     isPrimary
-                      ? "w-14 h-14 rounded-2xl bg-[var(--accent)] flex items-center justify-center flex-shrink-0"
-                      : "w-14 h-14 rounded-2xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0"
+                      ? "w-14 h-14 rounded-2xl bg-accent flex items-center justify-center flex-shrink-0"
+                      : "w-14 h-14 rounded-2xl bg-accent-soft flex items-center justify-center flex-shrink-0"
                   }
                 >
-                  <Icon className={isPrimary ? "w-7 h-7 text-white" : "w-7 h-7 text-[var(--accent)]"} />
+                  <Icon className={isPrimary ? "w-7 h-7 text-white" : "w-7 h-7 text-accent"} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="text-xs uppercase tracking-wider text-fg-subtle font-semibold mb-0.5">{card.label}</div>
@@ -152,6 +223,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               <MessageCircle className="w-4 h-4" />
               {isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
+            </a>
+          ) : biz.email && !isPlaceholder(biz.email) ? (
+            <a href={`mailto:${biz.email}?subject=${encodeURIComponent(
+              isEs ? "Consulta — Dra. Gabriella" : "Consultation — Dra. Gabriella"
+            )}`} className="btn btn-primary">
+              <Send className="w-4 h-4" />
+              {isEs ? "Escribime por email" : "Email me"}
             </a>
           ) : (
             <Link href={`${base}/contact`} className="btn btn-primary">
