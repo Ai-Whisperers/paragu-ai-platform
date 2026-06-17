@@ -14,7 +14,7 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
 
   return (
     <section className="section bg-[var(--surface)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-10 lg:gap-20 items-start">
           {/* Left column: heading + intro */}
           <div className="lg:sticky lg:top-24">

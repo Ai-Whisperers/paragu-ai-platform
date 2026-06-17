@@ -72,7 +72,7 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
       />
 
       <section className="section bg-[var(--surface)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           {steps.length > 0 && (
             <div className="space-y-8">
               {steps.map((raw: any, i: number) => {

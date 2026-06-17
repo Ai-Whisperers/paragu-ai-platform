@@ -9,6 +9,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-17: fix(dra-gabriela): widen containers to max-w-[1600px], bump body text sizes, compact process cards, larger FAQ questions (by erebus)
+
 - 2026-06-17: fix(dra-gabriela): unified layout system — PageSection + PageHero across all pages, 2-col grids everywhere (by erebus)
 
 - 2026-06-16: fix(dra-gabriela): process as 3-col cards with big numbers, larger BigStats/SocialProof/FeaturedService, proper FAQ cards (by erebus)
