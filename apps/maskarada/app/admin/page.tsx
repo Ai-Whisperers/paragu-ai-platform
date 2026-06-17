@@ -196,6 +196,7 @@ export default function Admin() {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-2xl font-bold text-white">🎭 Admin maškaráda</h1>
+          <a href="/admin/testimonios" className="text-xs text-gray-400 hover:text-gold-400 transition-colors">🪶 Testimonios</a>
           <button
             onClick={logout}
             className="text-sm text-gray-400 hover:text-white transition-colors"
