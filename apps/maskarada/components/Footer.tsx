@@ -49,6 +49,18 @@ export default function Footer({ locale }: { locale: Locale }) {
                   {item.label}
                 </Link>
               ))}
+              <Link href={linkHref("/aliados")} className="hover:text-white transition-colors">
+                {locale === "en" ? "Allies" : "Aliados"}
+              </Link>
+              <Link href={linkHref("/colaborar")} className="hover:text-white transition-colors">
+                {locale === "en" ? "Collaborate" : "Colaborar"}
+              </Link>
+              <Link href={linkHref("/ritmo")} className="hover:text-white transition-colors">
+                Ritmo
+              </Link>
+              <Link href={linkHref("/testimonios")} className="hover:text-white transition-colors">
+                {locale === "en" ? "Testimonials" : "Testimonios"}
+              </Link>
             </div>
             <div className="mt-6 pt-4 border-t border-white/5">
               <LocaleSwitcher current={locale} />
