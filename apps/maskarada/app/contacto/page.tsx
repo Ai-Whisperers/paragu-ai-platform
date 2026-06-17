@@ -101,7 +101,7 @@ export default function Contacto() {
               </a>
 
               <a
-                href="mailto:maskarada@paragu-ai.com"
+                href="mailto:weissvanderpol.ivan@gmail.com"
                 className="flex flex-col items-center gap-3 p-5 border border-white/10 rounded-xl bg-white/[0.02] hover:border-gold-400/40 hover:bg-white/[0.04] transition-all group"
               >
                 <span className="text-3xl text-gold-400 group-hover:scale-110 transition-transform">
@@ -110,7 +110,7 @@ export default function Contacto() {
                 <div className="text-center">
                   <h3 className="text-sm font-medium text-white">Email</h3>
                   <p className="text-xs text-gray-400 truncate max-w-[130px]">
-                    maskarada@paragu-ai.com
+                    weissvanderpol.ivan@gmail.com
                   </p>
                   <p className="text-xs text-gray-500 mt-1">Sponsorship y colab.</p>
                 </div>

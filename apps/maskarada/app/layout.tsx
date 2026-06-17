@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import HtmlLangSyncer from "@/components/HtmlLangSyncer";
+import CookieBanner from "@/components/CookieBanner";
 import { getContent, type Locale } from "@/lib/content";
 
 const inter = Inter({
@@ -33,6 +34,12 @@ async function resolveLocale(): Promise<Locale> {
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await resolveLocale();
   const c = getContent(locale);
+  // Derive a generic OG description that doesn't reference a specific past event.
+  // The June 11 edition is in /historia. The next maskarada is in /eventos.
+  const esDesc =
+    "Comunidad de BDSM, kink y exploración consciente en Asunción, Paraguay. Ediciones, munches, talleres y marketplace de la comunidad. Próximo: 19 de septiembre, 2026.";
+  const enDesc =
+    "BDSM, kink and conscious-exploration community in Asunción, Paraguay. Editions, munches, workshops and community marketplace. Next: September 19, 2026.";
   return {
     metadataBase: new URL("https://maskarada.paragu-ai.com"),
     title: {
@@ -52,18 +59,14 @@ export async function generateMetadata(): Promise<Metadata> {
       locale: locale === "en" ? "en_US" : "es_PY",
       url: "https://maskarada.paragu-ai.com",
       title: `Club maškaráda — ${c.hero.tagline}`,
-      description: locale === "en"
-        ? "BDSM/kink party in Asunción, Paraguay. June 11. Tickets available."
-        : "BDSM/kink party en Asunción, Paraguay. 11 de junio. Entradas disponibles.",
+      description: locale === "en" ? enDesc : esDesc,
       siteName: "Club maškaráda",
       images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Club maškaráda" }],
     },
     twitter: {
       card: "summary_large_image",
       title: `Club maškaráda — ${c.hero.tagline}`,
-      description: locale === "en"
-        ? "BDSM/kink party in Asunción, Paraguay. June 11. Tickets available."
-        : "BDSM/kink party en Asunción, Paraguay. 11 de junio. Entradas disponibles.",
+      description: locale === "en" ? enDesc : esDesc,
       images: ["/og-image.jpg"],
     },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
@@ -101,6 +104,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <main className="relative z-10 pt-16 min-h-screen">{children}</main>
         <Footer locale={locale} />
         <WhatsAppFloat locale={locale} />
+        <CookieBanner />
       </body>
     </html>
   );

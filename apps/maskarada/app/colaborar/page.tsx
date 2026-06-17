@@ -87,15 +87,15 @@ export default async function Colaborar() {
         <div className="grid grid-cols-3 gap-3 mb-12">
           <div className="border border-white/5 rounded-xl p-4 bg-white/[0.02] text-center">
             <p className="text-2xl font-bold text-gold-400">{total}</p>
-            <p className="text-xs text-gray-500 uppercase tracking-widest">Cosas en la lista</p>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">Ideas abiertas</p>
           </div>
           <div className="border border-white/5 rounded-xl p-4 bg-white/[0.02] text-center">
             <p className="text-2xl font-bold text-blue-400">{claimed}</p>
-            <p className="text-xs text-gray-500 uppercase tracking-widest">Reclamadas / en curso</p>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">En conversación</p>
           </div>
           <div className="border border-white/5 rounded-xl p-4 bg-white/[0.02] text-center">
             <p className="text-2xl font-bold text-green-400">{done}</p>
-            <p className="text-xs text-gray-500 uppercase tracking-widest">✓ Cubiertas</p>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">Lanzadas</p>
           </div>
         </div>
 

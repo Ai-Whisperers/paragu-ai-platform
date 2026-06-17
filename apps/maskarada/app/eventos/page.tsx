@@ -75,7 +75,16 @@ export default function Eventos() {
   const upcomingEventos = getEventsByKind("evento").filter((e) => e.status === "upcoming");
   const pastEventos = getEventsByKind("evento").filter((e) => e.status === "past");
   const upcomingEncuentros = getEventsByKind("encuentro").filter((e) => e.status === "upcoming");
-  const next30 = getUpcoming().slice(0, 6);
+  // Actually filter to 30 days, not just take the first 6.
+  const now = new Date();
+  const in30 = new Date(now);
+  in30.setDate(in30.getDate() + 30);
+  const next30 = getUpcoming()
+    .filter((e) => {
+      const d = new Date(e.date);
+      return d >= now && d <= in30;
+    })
+    .slice(0, 8);
   const { days, start, today } = buildCalendar();
   const monthLabel = start.toLocaleDateString("es-PY", { month: "long", year: "numeric" });
 

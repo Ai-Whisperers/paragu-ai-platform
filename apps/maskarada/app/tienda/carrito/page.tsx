@@ -56,15 +56,7 @@ export default function Carrito() {
   const total = items.reduce((s, it) => s + it.unitPrice * it.quantity, 0);
   const count = items.reduce((s, it) => s + it.quantity, 0);
 
-  if (!mounted) {
-    return (
-      <div className="min-h-screen py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center text-gray-500">Cargando carrito…</div>
-      </div>
-    );
-  }
-
-  if (items.length === 0) {
+  if (!mounted || items.length === 0) {
     return (
       <div className="min-h-screen py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
