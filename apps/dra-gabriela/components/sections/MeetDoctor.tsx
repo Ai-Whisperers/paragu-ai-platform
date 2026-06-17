@@ -28,7 +28,7 @@ export function MeetDoctor({ locale }: MeetDoctorProps) {
           <div className="relative">
             <div className="relative aspect-[3/4] max-w-md mx-auto rounded-[var(--radius-2xl)] overflow-hidden shadow-2xl border border-[var(--border)]">
               <Image
-                src="/images/team/dra-gp-portrait.svg"
+                src="/images/team/dra-gp-portrait-v2.svg"
                 alt={isEs ? "Dra. Gabriella González Pane" : "Dra. Gabriella González Pane"}
                 fill
                 priority

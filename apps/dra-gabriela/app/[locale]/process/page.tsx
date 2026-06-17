@@ -86,36 +86,36 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
                     {/* Step number band — top */}
                     <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[var(--accent)] via-[var(--gold)] to-[var(--accent)] opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                    <div className="grid grid-cols-1 md:grid-cols-[140px_1fr_180px] gap-0">
+                    <div className="grid grid-cols-1 md:grid-cols-[100px_1fr_120px] gap-0">
                       {/* Left: Big number column */}
-                      <div className="bg-[var(--accent)] text-white p-6 md:p-7 flex flex-col items-center md:items-start justify-center">
-                        <div className="text-6xl md:text-7xl font-medium leading-none mb-2" style={{ fontFamily: "var(--font-heading)" }}>
+                      <div className="bg-[var(--accent)] text-white p-5 flex flex-col items-center md:items-start justify-center">
+                        <div className="text-5xl font-medium leading-none mb-1" style={{ fontFamily: "var(--font-heading)" }}>
                           {s.order || i + 1}
                         </div>
-                        <div className="text-xs uppercase tracking-widest text-[var(--gold)] font-semibold text-center md:text-left">
+                        <div className="text-[10px] uppercase tracking-widest text-[var(--gold)] font-semibold text-center md:text-left mt-0.5">
                           {isEs ? `Paso ${s.order || i + 1}` : `Step ${s.order || i + 1}`}
                         </div>
                         {s.duration && (
-                          <div className="mt-2 text-xs text-white/70 flex items-center gap-1">
-                            <Clock className="w-3 h-3" /> {s.duration}
+                          <div className="mt-1.5 text-[10px] text-white/70 flex items-center gap-1">
+                            <Clock className="w-2.5 h-2.5" /> {s.duration}
                           </div>
                         )}
                       </div>
 
                       {/* Middle: Title + body + actions */}
-                      <div className="p-6 md:p-7 border-t md:border-t-0 md:border-l border-[var(--border)]">
-                        <h3 className="text-xl md:text-2xl font-medium mb-2" style={{ fontFamily: "var(--font-heading)" }}>
+                      <div className="p-5 border-t md:border-t-0 md:border-l border-[var(--border)]">
+                        <h3 className="text-lg md:text-xl font-medium mb-1.5" style={{ fontFamily: "var(--font-heading)" }}>
                           {s.title}
                         </h3>
-                        <p className="text-base text-[var(--fg-muted)] leading-relaxed mb-4">
+                        <p className="text-sm text-[var(--fg-muted)] leading-relaxed mb-3">
                           {s.body}
                         </p>
                         {s.actions && s.actions.length > 0 && (
-                          <ul className="flex flex-wrap gap-2">
+                          <ul className="flex flex-wrap gap-1.5">
                             {s.actions.map((a: string, k: number) => (
                               <li
                                 key={k}
-                                className="text-xs px-2.5 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] font-medium border border-[var(--accent)]/20"
+                                className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] font-medium border border-[var(--accent)]/20"
                               >
                                 {a}
                               </li>
@@ -124,10 +124,10 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
                         )}
                       </div>
 
-                      {/* Right: Big icon */}
-                      <div className="hidden md:flex items-center justify-center p-6 bg-[var(--surface-muted)]">
-                        <div className="w-16 h-16 rounded-2xl bg-[var(--accent-soft)] flex items-center justify-center group-hover:bg-[var(--gold)] transition-colors duration-500">
-                          <Icon className="w-8 h-8 text-[var(--accent)] group-hover:text-white transition-colors" />
+                      {/* Right: Icon */}
+                      <div className="hidden md:flex items-center justify-center p-4 bg-[var(--surface-muted)]">
+                        <div className="w-12 h-12 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center group-hover:bg-[var(--gold)] transition-colors duration-500">
+                          <Icon className="w-6 h-6 text-[var(--accent)] group-hover:text-white transition-colors" />
                         </div>
                       </div>
                     </div>
