@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { forumThreads, getCategory, getThread } from "@/lib/forum";
+import { heroFor } from "@/lib/hero";
 
 export async function generateStaticParams() {
   return forumThreads.map((t) => ({ slug: t.slug }));
@@ -53,7 +54,17 @@ export default async function HiloDetalle({ params }: { params: Promise<{ slug: 
           {t.featured && <span className="text-xs px-2 py-0.5 bg-blood-500/20 text-blood-500 rounded-full">★ Destacado</span>}
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">{t.title}</h1>
+        $1
+
+        <div className="aspect-[21/9] overflow-hidden rounded-xl border border-white/5 mb-8 relative">
+          <img
+            src={heroFor(t.slug)}
+            alt={t.title}
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent pointer-events-none" />
+        </div>
 
         <div className="flex items-center gap-3 text-sm text-gray-500 mb-6">
           <span>por <strong className="text-gray-300">{t.author}</strong></span>

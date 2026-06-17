@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { getContent, type Locale } from "@/lib/content";
 import { useCartCount } from "@/lib/cart";
+import Search from "./Search";
 
 const COPY = {
   es: { more: "Más páginas", cart: "Carrito", menu: "Menú", close: "Cerrar" },
@@ -56,6 +57,7 @@ export default function Navbar({ locale }: { locale: Locale }) {
         </div>
 
         <div className="flex items-center gap-2">
+          <Search />
           <Link
             href={linkHref("/tienda/carrito")}
             className="relative p-2 text-gray-400 hover:text-gold-400 transition-colors"

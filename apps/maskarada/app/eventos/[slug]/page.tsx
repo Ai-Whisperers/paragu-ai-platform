@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { events, getEventBySlug } from "@/lib/events-v2";
 import { content } from "@/lib/content";
+import { heroFor } from "@/lib/hero";
 
 export async function generateStaticParams() {
   return events
@@ -42,7 +43,17 @@ export default async function EventoDetalle({ params }: { params: Promise<{ slug
           )}
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-3">{e.title}</h1>
+        $1
+
+        <div className="aspect-[21/9] overflow-hidden rounded-xl border border-white/5 mb-8 relative">
+          <img
+            src={heroFor(e.slug)}
+            alt={e.title}
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent pointer-events-none" />
+        </div>
         <p className="text-gold-400 text-lg mb-2">
           📅 {e.dateLabel} · {e.startTime}
           {e.duration && <span className="text-gray-500"> · {e.duration}</span>}

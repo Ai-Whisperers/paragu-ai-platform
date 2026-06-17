@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { guides, getGuide } from "@/lib/guides";
+import { heroFor } from "@/lib/hero";
 
 export async function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -100,16 +101,15 @@ export default async function GuiaDetalle({ params }: { params: Promise<{ slug: 
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">{g.title}</h1>
         <p className="text-lg text-gray-400 leading-relaxed mb-6">{g.excerpt}</p>
 
-        {g.heroImage && (
-          <div className="aspect-[21/9] overflow-hidden rounded-xl border border-white/5 mb-8">
-            <img
-              src={g.heroImage}
-              alt={g.title}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-        )}
+        <div className="aspect-[21/9] overflow-hidden rounded-xl border border-white/5 mb-8 relative">
+          <img
+            src={g.heroImage || heroFor(g.slug)}
+            alt={g.title}
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent pointer-events-none" />
+        </div>
 
         <div className="border border-white/5 rounded-xl p-4 bg-white/[0.02] text-sm text-gray-400 leading-relaxed mb-8">
           <p>

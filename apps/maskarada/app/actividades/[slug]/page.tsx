@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { activities, getActivity } from "@/lib/activities";
 import { content } from "@/lib/content";
+import { heroFor } from "@/lib/hero";
 
 export async function generateStaticParams() {
   return activities.map((a) => ({ slug: a.slug }));
@@ -43,6 +44,16 @@ export default async function ActividadDetalle({ params }: { params: Promise<{ s
           <div>
             <h1 className="text-3xl md:text-4xl font-bold text-white">{a.name}</h1>
             <p className="text-gold-400 text-sm mt-1">{a.tagline}</p>
+
+        <div className="aspect-[21/9] overflow-hidden rounded-xl border border-white/5 mb-8 relative">
+          <img
+            src={heroFor(a.slug)}
+            alt={a.name}
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent pointer-events-none" />
+        </div>
           </div>
         </div>
 
