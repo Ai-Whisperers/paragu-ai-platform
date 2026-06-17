@@ -42,8 +42,8 @@
     "coords": { "lat": -25.2836, "lng": -57.4831 }
   },
   "cta": {
-    "primary": "Plan sin compromiso",
-    "secondary": "Solicitar segunda opinión",
+    "primary": "Get a no-obligation plan",
+    "secondary": "Request a second opinion",
     "whatsapp": true
   }
 }

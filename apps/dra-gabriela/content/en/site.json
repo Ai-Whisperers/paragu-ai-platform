@@ -121,8 +121,8 @@
     ]
   },
   "ctaDefaults": {
-    "primary": "Plan sin compromiso",
-    "secondary": "Pedir segunda opinión",
+    "primary": "Get a no-obligation plan",
+    "secondary": "Request a second opinion",
     "whatsapp": true
   },
   "schema": {

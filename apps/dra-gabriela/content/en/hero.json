@@ -1,13 +1,13 @@
 {
   "title": "Honest dentistry. Written plans. No surprises.",
   "subtitle": "Twenty years of conservative dental care in Asunción. Second opinions, treatment planning, transparent pricing, and care in English and Spanish — all by appointment.",
-  "cta_primary": "Plan sin compromiso",
-  "cta_secondary": "Segunda opinión escrita",
+  "cta_primary": "Get a no-obligation plan",
+  "cta_secondary": "Written second opinion",
   "contact_phone": "PENDING",
   "office_hours_short": "Mon–Fri 9–18 | Sat 8–12",
   "top_bar": {
     "phone": "PENDING",
-    "hours": "Lu–Vi 9:00–18:00 · Sá 8:00–12:00"
+    "hours": "Mon–Fri 9:00–18:00 · Sat 8:00–12:00"
   },
   "slides": [
     {
@@ -15,7 +15,7 @@
       "title": "Dentistry with judgment. Not with rush.",
       "subtitle": "An honest evaluation, a written plan, and a clear explanation before any procedure.",
       "image": "/images/real/clinic-1.webp",
-      "cta": "Plan sin compromiso",
+      "cta": "Get a no-obligation plan",
       "badge": "Spanish · English",
       "trust_line": "20+ years · conservative-first"
     },
