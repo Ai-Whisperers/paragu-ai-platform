@@ -10,6 +10,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-16: fix(dra-gabriela): process as 3-col cards with big numbers, larger BigStats/SocialProof/FeaturedService, proper FAQ cards (by erebus)
+
 - 2026-06-16: fix(dra-gabriela): locale-aware BigStats labels (by erebus)
 
 - 2026-06-16: fix(dra-gabriela): body text-align default, 3-col footer with hours (by erebus)

@@ -1,10 +1,11 @@
 // /es/filosofia + /en/philosophy — bilingual philosophy page.
 
 import { notFound } from "next/navigation"
-import { Quote } from "lucide-react"
+import { Quote, type LucideIcon } from "lucide-react"
 import esData from "@/content/es/filosofia.json"
 import enData from "@/content/en/philosophy.json"
 import { PageHero } from "@/components/PageHero"
+import { PageSection } from "@/components/PageSection"
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }]
@@ -25,6 +26,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   const first = data.sections?.[0]
   const principles = data.sections?.[1]
+  const other = data.sections?.slice(2) || []
 
   return (
     <>
@@ -32,59 +34,65 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         eyebrow={isEs ? "Filosofía" : "Philosophy"}
         title={data.title}
         subtitle={data.subtitle}
-        align="center"
         variant="default"
+        align="center"
       />
 
-      <section className="section">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          {/* Quote / opening */}
-          {first && (
-            <div className="card-accent card p-8 relative">
-              <Quote className="w-8 h-8 text-[var(--gold)] absolute -top-3 -left-3 bg-[var(--bg)] p-1.5 rounded-lg" />
-              <p className="text-lg text-[var(--fg)] leading-relaxed mb-3 italic">
-                {first.body}
-              </p>
-              <p className="text-sm text-[var(--fg-subtle)]">— {data.title?.split(" ").slice(0, 2).join(" ") || (isEs ? "Dra. Gabriella" : "Dra. Gabriella")}</p>
-            </div>
-          )}
+      {/* Quote / opening — centered narrow */}
+      {first && (
+        <PageSection layout="narrow" py="md">
+          <div className="card-accent card p-8 md:p-10 relative">
+            <Quote className="w-10 h-10 text-[var(--gold)] absolute -top-3 -left-3 bg-[var(--bg)] p-2 rounded-lg" />
+            <p className="text-xl md:text-2xl text-[var(--fg)] leading-relaxed mb-4 italic font-medium">
+              {first.body}
+            </p>
+            <p className="text-sm text-[var(--fg-muted)]">— {data.title?.split(" ").slice(0, 2).join(" ") || "Dra. Gabriella"}</p>
+          </div>
+        </PageSection>
+      )}
 
-          {/* Principles */}
-          {principles && (
-            <div>
-              <h2 className="text-2xl mb-6 text-center">{principles.heading}</h2>
-              <div className="space-y-3">
-                {(principles.items || []).map((item: string, i: number) => {
-                  const [title, ...rest] = item.split(":")
-                  return (
-                    <div key={i} className="card p-5 flex items-start gap-4">
-                      <div className="step-number w-10 h-10 text-sm flex-shrink-0">{i + 1}</div>
-                      <div>
-                        <h3 className="font-medium mb-1" style={{ fontFamily: "var(--font-heading)" }}>
-                          {title}
-                        </h3>
-                        {rest.length > 0 && (
-                          <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
-                            {rest.join(":").trim()}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  )
-                })}
+      {/* Principles — 2-col grid */}
+      {principles && principles.items && (
+        <PageSection layout="wide" py="lg" bg="muted">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl">{principles.heading}</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {(principles.items || []).map((item: string, i: number) => {
+              const [title, ...rest] = item.split(":")
+              return (
+                <div key={i} className="card p-6 flex items-start gap-4 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                  <div className="step-number w-12 h-12 text-lg flex-shrink-0">{i + 1}</div>
+                  <div>
+                    <h3 className="font-medium text-lg mb-1.5" style={{ fontFamily: "var(--font-heading)" }}>
+                      {title}
+                    </h3>
+                    {rest.length > 0 && (
+                      <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
+                        {rest.join(":").trim()}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </PageSection>
+      )}
+
+      {/* Other sections */}
+      {other.length > 0 && (
+        <PageSection layout="narrow" py="lg">
+          <div className="space-y-10">
+            {other.map((s: any, i: number) => (
+              <div key={i}>
+                <h2 className="text-2xl md:text-3xl mb-3">{s.heading}</h2>
+                {s.body && <p className="text-[var(--fg-muted)] leading-relaxed text-base md:text-lg">{s.body}</p>}
               </div>
-            </div>
-          )}
-
-          {/* Other sections (materials, languages) */}
-          {data.sections?.slice(2).map((s: any, i: number) => (
-            <div key={i}>
-              <h2 className="text-2xl mb-3">{s.heading}</h2>
-              {s.body && <p className="text-[var(--fg-muted)] leading-relaxed">{s.body}</p>}
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </PageSection>
+      )}
     </>
   )
 }

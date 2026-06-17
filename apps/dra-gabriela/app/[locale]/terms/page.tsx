@@ -1,10 +1,11 @@
-// /en/terms + /es/terminos — bilingual terms of service with PageHero.
+// /en/terms + /es/terminos — bilingual terms of service.
 
 import { notFound } from "next/navigation"
 import { FileText } from "lucide-react"
 import esData from "@/content/es/terminos.json"
 import enData from "@/content/en/terminos.json"
 import { PageHero } from "@/components/PageHero"
+import { PageSection } from "@/components/PageSection"
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }]
@@ -29,26 +30,26 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         eyebrow={isEs ? "Legal" : "Legal"}
         title={data.title}
         subtitle={data.subtitle}
-        align="center"
         variant="default"
+        align="center"
       >
-        <div className="inline-flex items-center gap-2 text-sm text-[var(--fg-muted)]">
+        <div className="inline-flex items-center gap-2 text-sm text-[var(--fg-muted)] px-3 py-1.5 rounded-full border border-[var(--border)]">
           <FileText className="w-4 h-4 text-[var(--gold)]" />
           {isEs ? "Vigente desde junio 2026" : "Effective June 2026"}
         </div>
       </PageHero>
 
-      <section className="section">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <PageSection layout="narrow" py="lg">
+        <div className="space-y-10">
           {data.sections?.map((s: any, i: number) => (
-            <div key={i}>
-              <h2 className="text-xl mb-3">{s.heading}</h2>
-              {s.body && <p className="text-[var(--fg-muted)] leading-relaxed mb-3">{s.body}</p>}
+            <div key={i} className="text-left">
+              <h2 className="text-xl md:text-2xl mb-3">{s.heading}</h2>
+              {s.body && <p className="text-[var(--fg-muted)] leading-relaxed text-base md:text-lg mb-3">{s.body}</p>}
               {s.items && (
                 <ul className="space-y-2">
                   {s.items.map((item: string, j: number) => (
-                    <li key={j} className="flex items-start gap-3 text-[var(--fg-muted)] leading-relaxed">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] mt-2.5 flex-shrink-0" />
+                    <li key={j} className="flex items-start gap-3 text-[var(--fg-muted)] leading-relaxed text-base">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] mt-3 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -57,7 +58,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             </div>
           ))}
         </div>
-      </section>
+      </PageSection>
     </>
   )
 }

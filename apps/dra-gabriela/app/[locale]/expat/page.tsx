@@ -1,11 +1,12 @@
-// /en/expat + /es/expat — bilingual expat landing page.
+// /en/expat + /es/expat — bilingual expat landing.
 
 import { notFound } from "next/navigation"
-import { MessageCircle, Globe, Languages, CheckCircle2, FileText, Sparkles } from "lucide-react"
+import { MessageCircle, Globe, Languages, FileText, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import en from "@/content/en/expat.json"
 import es from "@/content/es/expat.json"
 import { PageHero } from "@/components/PageHero"
+import { PageSection } from "@/components/PageSection"
 import { getContent, whatsappLink } from "@/lib/content"
 
 const LOCALES = ["en", "es"] as const
@@ -18,7 +19,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const data = CONTENT[locale as keyof typeof CONTENT]
-  return { title: data?.title || (locale === "es" ? "Atención a expatriados" : "Expat care") }
+  return { title: data?.title || (locale === "es" ? "Expatriados" : "Expat care") }
 }
 
 export default async function ExpatPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -28,6 +29,7 @@ export default async function ExpatPage({ params }: { params: Promise<{ locale: 
   const isEs = locale === "es"
   const c2 = getContent(locale)
   const wa = whatsappLink(c2.business?.whatsapp, c2.business?.whatsappMessage)
+  const base = `/${locale}`
 
   return (
     <>
@@ -35,8 +37,8 @@ export default async function ExpatPage({ params }: { params: Promise<{ locale: 
         eyebrow={isEs ? "Pacientes internacionales" : "International patients"}
         title={c.title || (isEs ? "Atención dental en Asunción" : "Dental care in Asunción")}
         subtitle={c.subtitle}
-        align="center"
         variant="default"
+        align="center"
       >
         {wa ? (
           <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
@@ -45,55 +47,48 @@ export default async function ExpatPage({ params }: { params: Promise<{ locale: 
           </a>
         ) : (
           <Link href={`/${locale}/contact`} className="btn btn-primary">
-            {isEs ? "Ver contacto" : "See contact"}
+            {isEs ? "Ver contacto" : "See contact"} <ArrowRight className="w-4 h-4" />
           </Link>
         )}
       </PageHero>
 
-      <section className="section">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Trust badges row */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
-            <div className="card p-5 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
-                <Languages className="w-5 h-5 text-[var(--accent)]" />
+      {/* Trust badges row */}
+      <PageSection layout="wide" py="md" bg="muted">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            { icon: Languages, label: "English", sub: isEs ? "Atención 100% en inglés" : "Full English care" },
+            { icon: FileText, label: isEs ? "Factura" : "Invoice", sub: isEs ? "RUC para reembolso" : "RUC for reimbursement" },
+            { icon: Globe, label: isEs ? "Idiomas" : "Languages", sub: "ES · EN" },
+          ].map((it, i) => {
+            const Icon = it.icon
+            return (
+              <div key={i} className="card p-5 flex items-center gap-3">
+                <div className="w-11 h-11 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-[var(--accent)]" />
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-[var(--fg-subtle)] font-semibold">{it.label}</div>
+                  <div className="font-medium text-sm">{it.sub}</div>
+                </div>
               </div>
-              <div>
-                <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">English</div>
-                <div className="font-medium text-sm">{isEs ? "Atención 100% en inglés" : "Full English care"}</div>
-              </div>
-            </div>
-            <div className="card p-5 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
-                <FileText className="w-5 h-5 text-[var(--accent)]" />
-              </div>
-              <div>
-                <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">{isEs ? "Factura" : "Invoice"}</div>
-                <div className="font-medium text-sm">{isEs ? "RUC para reembolso" : "RUC for reimbursement"}</div>
-              </div>
-            </div>
-            <div className="card p-5 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center flex-shrink-0">
-                <Globe className="w-5 h-5 text-[var(--accent)]" />
-              </div>
-              <div>
-                <div className="text-xs text-[var(--fg-subtle)] uppercase tracking-wider">{isEs ? "Idiomas" : "Languages"}</div>
-                <div className="font-medium text-sm">ES · EN</div>
-              </div>
-            </div>
-          </div>
+            )
+          })}
+        </div>
+      </PageSection>
 
-          {/* Sections */}
-          <div className="space-y-10">
+      {/* Sections */}
+      <PageSection layout="wide" py="lg">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+          <div className="text-left">
             {(c.sections || []).map((s: any, i: number) => (
-              <div key={i}>
+              <div key={i} className="mb-10 last:mb-0">
                 <h2 className="text-2xl mb-3">{s.heading || s.title}</h2>
-                {s.body && <p className="text-[var(--fg-muted)] leading-relaxed mb-3">{s.body}</p>}
+                {s.body && <p className="text-[var(--fg-muted)] leading-relaxed text-base md:text-lg">{s.body}</p>}
                 {s.items && (
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-2.5 mt-3">
                     {s.items.map((it: string, j: number) => (
                       <li key={j} className="flex items-start gap-3 text-[var(--fg-muted)] leading-relaxed">
-                        <CheckCircle2 className="w-4 h-4 text-[var(--gold)] mt-1 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] mt-2.5 flex-shrink-0" />
                         <span>{it}</span>
                       </li>
                     ))}
@@ -103,7 +98,31 @@ export default async function ExpatPage({ params }: { params: Promise<{ locale: 
             ))}
           </div>
         </div>
-      </section>
+      </PageSection>
+
+      {/* CTA */}
+      <PageSection layout="narrow" py="md" bg="muted">
+        <div className="text-center">
+          <h2 className="text-2xl md:text-3xl mb-3">
+            {isEs ? "¿Listo para coordinar?" : "Ready to coordinate?"}
+          </h2>
+          <p className="text-[var(--fg-muted)] mb-6 max-w-lg mx-auto">
+            {isEs
+              ? "Atención en inglés. Respuesta en menos de 24 horas."
+              : "Care in English. Response within 24 hours."}
+          </p>
+          {wa ? (
+            <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              <MessageCircle className="w-4 h-4" />
+              {isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
+            </a>
+          ) : (
+            <Link href={`/${locale}/contact`} className="btn btn-primary">
+              {isEs ? "Ver contacto" : "See contact"}
+            </Link>
+          )}
+        </div>
+      </PageSection>
     </>
   )
 }

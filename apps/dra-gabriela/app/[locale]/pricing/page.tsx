@@ -8,6 +8,7 @@ import en from "@/content/en/pricing.json"
 import es from "@/content/es/precios.json"
 import { getContent, whatsappLink } from "@/lib/content"
 import { PageHero } from "@/components/PageHero"
+import { PageSection } from "@/components/PageSection"
 
 const LOCALES = ["en", "es"] as const
 const CONTENT: Record<string, any> = { en, es }

@@ -1,2 +1,2 @@
-// Alias: /en/philosophy → same content as /en/filosofia
+// /en/philosophy — alias of /es/filosofia route.
 export { default, generateMetadata, generateStaticParams } from "../filosofia/page"

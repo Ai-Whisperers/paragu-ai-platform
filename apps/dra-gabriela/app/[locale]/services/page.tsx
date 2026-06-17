@@ -1,11 +1,12 @@
-// /en/services + /es/services — bilingual services index with PageHero.
+// /en/services + /es/services — bilingual services index.
 
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import { ArrowRight, Sparkles, type LucideIcon } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 import en from "@/content/en/services/index.json"
 import es from "@/content/es/services/index.json"
 import { PageHero } from "@/components/PageHero"
+import { PageSection } from "@/components/PageSection"
 
 const LOCALES = ["en", "es"] as const
 const CONTENT: Record<string, any> = { en, es }
@@ -47,21 +48,24 @@ export default async function Services({ params }: { params: Promise<{ locale: s
         eyebrow={isEs ? "Servicios" : "Services"}
         title={c.title || (isEs ? "Servicios" : "Services")}
         subtitle={c.subtitle}
-        align="center"
         variant="default"
+        align="center"
       />
 
       {/* Bundles */}
       {bundles.length > 0 && (
-        <section className="section-sm">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-2 mb-5">
-              <Sparkles className="w-5 h-5 text-[var(--gold)]" />
-              <h2 className="text-xl">{isEs ? "Paquetes" : "Bundles"}</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {bundles.map((b: any) => (
-                <Link key={b.id} href={b.link || "#"} className="card-accent card p-6 group block">
+        <PageSection layout="wide" py="md">
+          <div className="flex items-center gap-2 mb-5">
+            <Sparkles className="w-5 h-5 text-[var(--gold)]" />
+            <h2 className="text-xl">{isEs ? "Paquetes" : "Bundles"}</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {bundles.map((b: any) => {
+              const slug = locale === "es"
+                ? b.link?.replace(/^\/en/, "/es")?.replace("/es/services/", "/es/servicios/")
+                : b.link?.replace(/^\/es/, "/en")
+              return (
+                <Link key={b.id} href={slug || "#"} className="card-accent card p-6 group block hover:shadow-lg hover:-translate-y-0.5 transition-all">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="text-lg font-medium group-hover:text-[var(--accent)] transition-colors">{b.name}</h3>
                     {b.priceGs && (
@@ -75,34 +79,32 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                     {isEs ? "Conocer" : "Learn more"} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>
-              ))}
-            </div>
+              )
+            })}
           </div>
-        </section>
+        </PageSection>
       )}
 
       {/* All services tabs */}
       {tabs.length > 0 && (
-        <section className={bundles.length > 0 ? "section-sm bg-[var(--surface-muted)]" : "section"}>
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-xl mb-5">{isEs ? "Todos los servicios" : "All services"}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {tabs.map((t: any) => {
-                const route = SLUG_TO_ROUTE[t.id]
-                const href = route ? (locale === "es" ? route.es : route.en) : `/${locale}/services#${t.id}`
-                return (
-                  <Link key={t.id} href={href} className="card-accent card p-5 group block">
-                    <h3 className="text-base font-medium mb-1 group-hover:text-[var(--accent)] transition-colors">{t.label}</h3>
-                    <p className="text-xs text-[var(--fg-subtle)] mb-3">{t.id?.replace(/-/g, " ")}</p>
-                    <span className="text-sm font-medium text-[var(--accent)] flex items-center gap-1 group-hover:gap-2 transition-all">
-                      {isEs ? "Ver detalle" : "View details"} <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </Link>
-                )
-              })}
-            </div>
+        <PageSection layout="wide" py="md" bg="muted">
+          <h2 className="text-xl mb-5">{isEs ? "Todos los servicios" : "All services"}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {tabs.map((t: any) => {
+              const route = SLUG_TO_ROUTE[t.id]
+              const href = route ? (locale === "es" ? route.es : route.en) : `/${locale}/services#${t.id}`
+              return (
+                <Link key={t.id} href={href} className="card-accent card p-5 group block hover:shadow-md hover:-translate-y-0.5 transition-all">
+                  <h3 className="text-base font-medium mb-1 group-hover:text-[var(--accent)] transition-colors">{t.label}</h3>
+                  <p className="text-xs text-[var(--fg-subtle)] mb-3">{t.id?.replace(/-/g, " ")}</p>
+                  <span className="text-sm font-medium text-[var(--accent)] flex items-center gap-1 group-hover:gap-2 transition-all">
+                    {isEs ? "Ver detalle" : "View details"} <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              )
+            })}
           </div>
-        </section>
+        </PageSection>
       )}
     </>
   )

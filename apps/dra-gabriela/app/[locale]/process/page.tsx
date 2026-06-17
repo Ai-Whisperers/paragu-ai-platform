@@ -11,7 +11,8 @@ import {
 import en from "@/content/en/process.json"
 import es from "@/content/es/process.json"
 import { PageHero } from "@/components/PageHero"
-import { whatsappLink } from "@/lib/content"
+import { PageSection } from "@/components/PageSection"
+import { getContent, whatsappLink } from "@/lib/content"
 
 const LOCALES = ["en", "es"] as const
 const CONTENT: Record<string, any> = { en, es }
@@ -71,7 +72,7 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
       />
 
       <section className="section bg-[var(--surface)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           {steps.length > 0 && (
             <div className="space-y-8">
               {steps.map((raw: any, i: number) => {
