@@ -1,9 +1,9 @@
-// Section: FeaturedService — a large, photo-backed service highlight.
-// Used in the home page between the standard sections. Has 2 variants: light/teal.
+// Section: FeaturedService — large 2-col layout with image + content.
+// Big text, proper icon size, breathing room.
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react"
+import { ArrowRight, MessageCircle, CheckCircle2, Sparkles } from "lucide-react"
 import { whatsappLink } from "@/lib/content"
 
 interface FeaturedServiceProps {
@@ -57,11 +57,11 @@ export function FeaturedService({
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full opacity-20 pointer-events-none" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)" }} />
       )}
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${reverse ? "lg:flex-row-reverse" : ""}`}>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${reverse ? "lg:flex-row-reverse" : ""}`}>
           {/* Image */}
           <div className={`relative ${reverse ? "lg:order-2" : ""}`}>
-            <div className="relative aspect-[3/2] rounded-[var(--radius-2xl)] overflow-hidden shadow-2xl border border-[var(--border)]">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-2 border-[var(--border)]">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
@@ -69,53 +69,73 @@ export function FeaturedService({
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              {/* Decorative gold corner accent */}
-              <div className="absolute -top-3 -right-3 w-24 h-24 rounded-full border-2 border-[var(--gold)] opacity-30" />
-              <div className="absolute -bottom-3 -left-3 w-16 h-16 rounded-full border-2 border-[var(--gold)] opacity-30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--accent)]/30 via-transparent to-transparent" />
             </div>
+            {/* Decorative gold ring — top right */}
+            <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full border-2 border-[var(--gold)] opacity-30 -z-10" />
+            {/* Decorative accent ring — bottom left */}
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full border-2 border-[var(--accent)] opacity-20 -z-10" />
           </div>
 
-          {/* Content */}
+          {/* Content — left-aligned, big text */}
           <div className={reverse ? "lg:order-1 text-left" : "text-left"}>
             <span
               className={`eyebrow inline-flex ${
                 variant === "teal" ? "!border-white/20 !bg-white/10 !text-[var(--gold)]" : ""
               }`}
             >
+              <Sparkles className="w-3 h-3" />
               {eyebrow}
             </span>
-            <h2 className={`text-3xl md:text-5xl mb-5 ${variant === "teal" ? "!text-white" : ""}`}>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.05] ${variant === "teal" ? "!text-white" : ""}`}>
               {variant === "teal" ? <span className="text-white">{title}</span> : title}
             </h2>
-            <p className={`text-lg mb-7 leading-relaxed ${variant === "teal" ? "text-white/85" : "text-[var(--fg-muted)]"}`}>
+            <p className={`text-lg md:text-xl leading-relaxed mb-8 max-w-xl ${variant === "teal" ? "text-white/85" : "text-[var(--fg-muted)]"}`}>
               {body}
             </p>
-            <ul className="space-y-2.5 mb-8">
+
+            {/* Bullets with BIG icons */}
+            <ul className="space-y-4 mb-8">
               {bullets.map((b, i) => (
-                <li
-                  key={i}
-                  className={`flex items-start gap-3 ${variant === "teal" ? "text-white/90" : "text-[var(--fg-muted)]"}`}
-                >
-                  <CheckCircle2 className={`w-5 h-5 flex-shrink-0 mt-0.5 ${variant === "teal" ? "text-[var(--gold)]" : "text-[var(--accent)]"}`} />
-                  <span className="leading-relaxed">{b}</span>
+                <li key={i} className="flex items-start gap-3">
+                  <div
+                    className={`flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center ${
+                      variant === "teal" ? "bg-[var(--gold)]" : "bg-[var(--accent-soft)]"
+                    }`}
+                  >
+                    <CheckCircle2
+                      className={`w-4 h-4 ${
+                        variant === "teal" ? "text-white" : "text-[var(--accent)]"
+                      }`}
+                    />
+                  </div>
+                  <span
+                    className={`leading-relaxed text-base pt-0.5 ${
+                      variant === "teal" ? "text-white/90" : "text-[var(--fg-muted)]"
+                    }`}
+                  >
+                    {b}
+                  </span>
                 </li>
               ))}
             </ul>
+
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3">
               {ctaHref === "whatsapp" && wa ? (
-                <a href={wa} target="_blank" rel="noopener noreferrer" className={`btn ${variant === "teal" ? "btn-gold" : "btn-primary"}`}>
-                  <MessageCircle className="w-4 h-4" />
+                <a href={wa} target="_blank" rel="noopener noreferrer" className={`btn ${variant === "teal" ? "btn-gold" : "btn-primary"} text-base px-8 py-4`}>
+                  <MessageCircle className="w-5 h-5" />
                   {ctaLabel}
                 </a>
               ) : (
-                <Link href={ctaHref} className={`btn ${variant === "teal" ? "btn-gold" : "btn-primary"}`}>
-                  {ctaLabel} <ArrowRight className="w-4 h-4" />
+                <Link href={ctaHref} className={`btn ${variant === "teal" ? "btn-gold" : "btn-primary"} text-base px-8 py-4`}>
+                  {ctaLabel} <ArrowRight className="w-5 h-5" />
                 </Link>
               )}
               {ctaSecondaryLabel && ctaSecondaryHref && (
                 <Link
                   href={ctaSecondaryHref}
-                  className={`btn ${variant === "teal" ? "btn-white" : "btn-outline"}`}
+                  className={`btn ${variant === "teal" ? "btn-white" : "btn-outline"} text-base px-8 py-4`}
                 >
                   {ctaSecondaryLabel}
                 </Link>

@@ -1,10 +1,17 @@
-// /en/process + /es/process — bilingual patient journey with timeline.
+// Section: Process — proper 2-col layout with sticky numbered rail.
+// Each step is a 2-col card: number+icon on left, content on right.
+// Big text. Breathing room. Proper visual hierarchy.
 
 import { notFound } from "next/navigation"
-import { Calendar, AlertTriangle, Award, MessageCircle, CalendarCheck, FileText, Activity, Clock, CheckCircle2, type LucideIcon } from "lucide-react"
+import Link from "next/link"
+import {
+  Calendar, AlertTriangle, Award, MessageCircle, CalendarCheck,
+  FileText, Activity, Clock, CheckCircle2, ArrowRight, type LucideIcon
+} from "lucide-react"
 import en from "@/content/en/process.json"
 import es from "@/content/es/process.json"
 import { PageHero } from "@/components/PageHero"
+import { whatsappLink } from "@/lib/content"
 
 const LOCALES = ["en", "es"] as const
 const CONTENT: Record<string, any> = { en, es }
@@ -46,6 +53,11 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
     actions: s.actions || s.acciones || [],
   })
 
+  // CTA for bottom
+  const c2 = (await import("@/lib/content")).getContent(locale)
+  const wa = whatsappLink(c2?.business?.whatsapp, c2?.business?.whatsappMessage)
+  const base = `/${locale}`
+
   return (
     <>
       <PageHero
@@ -58,129 +70,140 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
         variant="default"
       />
 
-      <section className="section">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Timeline — 2-column: numbers left, content right */}
+      <section className="section bg-[var(--surface)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {steps.length > 0 && (
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
-              {/* Left rail: vertical numbered list */}
-              <div className="hidden lg:block">
-                <div className="sticky top-24">
-                  <div className="text-xs uppercase tracking-widest text-[var(--fg-subtle)] font-semibold mb-4">
-                    {isEs ? "Pasos" : "Steps"}
-                  </div>
-                  <ol className="space-y-3">
-                    {steps.map((raw: any, i: number) => {
-                      const s = norm(raw)
-                      const Icon = ICONS[s.icon] || CheckCircle2
-                      return (
-                        <li key={i} className="flex items-center gap-3 group cursor-default">
-                          <span className="flex-shrink-0 w-9 h-9 rounded-xl bg-[var(--accent-soft)] text-[var(--accent)] font-medium flex items-center justify-center text-sm group-hover:bg-[var(--accent)] group-hover:text-white transition-colors">
-                            {s.order || i + 1}
-                          </span>
-                          <span className="text-sm font-medium text-[var(--fg)] leading-tight">{s.title}</span>
-                          <Icon className="w-3.5 h-3.5 text-[var(--gold)] ml-auto" />
-                        </li>
-                      )
-                    })}
-                  </ol>
-                </div>
-              </div>
+            <div className="space-y-8">
+              {steps.map((raw: any, i: number) => {
+                const s = norm(raw)
+                const Icon = ICONS[s.icon] || CheckCircle2
+                return (
+                  <div
+                    key={i}
+                    className="group relative bg-[var(--surface)] border-2 border-[var(--border)] rounded-2xl overflow-hidden hover:border-[var(--accent)] hover:shadow-2xl transition-all duration-300"
+                  >
+                    {/* Step number band — top */}
+                    <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[var(--accent)] via-[var(--gold)] to-[var(--accent)] opacity-0 group-hover:opacity-100 transition-opacity" />
 
-              {/* Right: step details */}
-              <div className="relative">
-                {/* Connecting line on mobile */}
-                <div className="absolute left-[1.375rem] top-4 bottom-4 w-px bg-[var(--border)] lg:hidden" />
-
-                <ol className="space-y-6">
-                  {steps.map((raw: any, i: number) => {
-                    const s = norm(raw)
-                    const Icon = ICONS[s.icon] || CheckCircle2
-                    return (
-                      <li key={i} className="relative flex items-start gap-5 group">
-                        {/* Mobile number */}
-                        <div className="lg:hidden step-number relative z-10 flex-shrink-0 bg-[var(--surface)] border-4 border-[var(--bg)]">
+                    <div className="grid grid-cols-1 md:grid-cols-[140px_1fr_200px] gap-0">
+                      {/* Left: Big number column */}
+                      <div className="bg-[var(--accent)] text-white p-6 md:p-8 flex flex-col items-center md:items-start justify-center">
+                        <div className="text-7xl md:text-8xl font-medium leading-none mb-2" style={{ fontFamily: "var(--font-heading)" }}>
                           {s.order || i + 1}
                         </div>
-                        <div className="card-accent card p-6 flex-1 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
-                          <div className="flex flex-wrap items-baseline gap-3 mb-2">
-                            <h3 className="text-xl font-medium" style={{ fontFamily: "var(--font-heading)" }}>
-                              {s.title}
-                            </h3>
-                            <span className="text-xs text-[var(--fg-subtle)] flex items-center gap-1">
-                              <Clock className="w-3 h-3" /> {s.duration}
-                            </span>
+                        <div className="text-xs uppercase tracking-widest text-[var(--gold)] font-semibold text-center md:text-left">
+                          {isEs ? `Paso ${s.order || i + 1}` : `Step ${s.order || i + 1}`}
+                        </div>
+                        {s.duration && (
+                          <div className="mt-3 text-xs text-white/70 flex items-center gap-1">
+                            <Clock className="w-3 h-3" /> {s.duration}
                           </div>
-                          <p className="text-sm text-[var(--fg-muted)] leading-relaxed mb-3">{s.body}</p>
-                          {s.actions && s.actions.length > 0 && (
-                            <ul className="flex flex-wrap gap-2">
-                              {s.actions.map((a: string, k: number) => (
-                                <li key={k} className="text-xs px-2.5 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] font-medium">
-                                  {a}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
+                        )}
+                      </div>
+
+                      {/* Middle: Title + body + actions */}
+                      <div className="p-6 md:p-8 border-t md:border-t-0 md:border-l border-[var(--border)]">
+                        <h3 className="text-2xl md:text-3xl font-medium mb-3" style={{ fontFamily: "var(--font-heading)" }}>
+                          {s.title}
+                        </h3>
+                        <p className="text-base text-[var(--fg-muted)] leading-relaxed mb-5">
+                          {s.body}
+                        </p>
+                        {s.actions && s.actions.length > 0 && (
+                          <ul className="flex flex-wrap gap-2">
+                            {s.actions.map((a: string, k: number) => (
+                              <li
+                                key={k}
+                                className="text-xs px-3 py-1.5 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] font-medium border border-[var(--accent)]/20"
+                              >
+                                {a}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+
+                      {/* Right: Big icon */}
+                      <div className="hidden md:flex items-center justify-center p-6 bg-[var(--surface-muted)]">
+                        <div className="w-20 h-20 rounded-2xl bg-[var(--accent-soft)] flex items-center justify-center group-hover:bg-[var(--gold)] transition-colors duration-500">
+                          <Icon className="w-10 h-10 text-[var(--accent)] group-hover:text-white transition-colors" />
                         </div>
-                        {/* Desktop icon indicator */}
-                        <div className="hidden lg:flex w-12 h-12 rounded-xl bg-[var(--accent-soft)] items-center justify-center flex-shrink-0 group-hover:bg-[var(--gold)] transition-colors duration-300">
-                          <Icon className="w-5 h-5 text-[var(--gold)] group-hover:text-white transition-colors" />
-                        </div>
-                      </li>
-                    )
-                  })}
-                </ol>
-              </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           )}
 
-          {/* Info cards row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16">
-            {whatToBring && (
-              <div className="card p-5 hover:-translate-y-0.5 transition-transform">
-                <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center mb-3">
-                  <Calendar className="w-5 h-5 text-[var(--accent)]" />
+          {/* Info cards — 3-col */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16">
+            {whatToBring && whatToBring.length > 0 && (
+              <div className="card p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center mb-4">
+                  <Calendar className="w-6 h-6 text-[var(--accent)]" />
                 </div>
-                <h3 className="font-medium mb-2 text-sm uppercase tracking-wider text-[var(--fg-subtle)]">
+                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-[var(--fg-subtle)] text-xs">
                   {isEs ? "Qué traer" : "What to bring"}
                 </h3>
-                {Array.isArray(whatToBring) ? (
-                  <ul className="space-y-1.5 text-sm text-[var(--fg-muted)]">
-                    {whatToBring.map((w: string, i: number) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="w-1 h-1 rounded-full bg-[var(--gold)] mt-2 flex-shrink-0" />
-                        <span>{w}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-sm text-[var(--fg-muted)]">{whatToBring}</p>
-                )}
+                <ul className="space-y-2 text-sm text-[var(--fg-muted)]">
+                  {whatToBring.map((w: string, i: number) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] mt-2 flex-shrink-0" />
+                      <span>{w}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
             {cancellation && (
-              <div className="card p-5 hover:-translate-y-0.5 transition-transform">
-                <div className="w-10 h-10 rounded-xl bg-[var(--gold-soft)] flex items-center justify-center mb-3">
-                  <AlertTriangle className="w-5 h-5 text-[var(--gold-2)]" />
+              <div className="card p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-[var(--gold-soft)] flex items-center justify-center mb-4">
+                  <AlertTriangle className="w-6 h-6 text-[var(--gold-2)]" />
                 </div>
-                <h3 className="font-medium mb-2 text-sm uppercase tracking-wider text-[var(--fg-subtle)]">
+                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-[var(--fg-subtle)] text-xs">
                   {isEs ? "Cancelación" : "Cancellation"}
                 </h3>
                 <p className="text-sm text-[var(--fg-muted)] leading-relaxed">{cancellation}</p>
               </div>
             )}
             {guarantee && (
-              <div className="card p-5 hover:-translate-y-0.5 transition-transform">
-                <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center mb-3">
-                  <Award className="w-5 h-5 text-[var(--accent)]" />
+              <div className="card p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center mb-4">
+                  <Award className="w-6 h-6 text-[var(--accent)]" />
                 </div>
-                <h3 className="font-medium mb-2 text-sm uppercase tracking-wider text-[var(--fg-subtle)]">
+                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-[var(--fg-subtle)] text-xs">
                   {isEs ? "Garantía" : "Guarantee"}
                 </h3>
                 <p className="text-sm text-[var(--fg-muted)] leading-relaxed">{guarantee}</p>
               </div>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="section-sm bg-[var(--surface-muted)]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl mb-4">
+            {isEs ? "¿Listo para empezar?" : "Ready to begin?"}
+          </h2>
+          <p className="text-[var(--fg-muted)] mb-6">
+            {isEs
+              ? "Coordiná tu primera consulta por WhatsApp — sin compromiso."
+              : "Schedule your first consultation via WhatsApp — no obligation."}
+          </p>
+          {wa ? (
+            <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              <MessageCircle className="w-4 h-4" />
+              {isEs ? "Coordinar por WhatsApp" : "Book via WhatsApp"}
+            </a>
+          ) : (
+            <Link href={`${base}/contact`} className="btn btn-primary">
+              {isEs ? "Ver contacto" : "See contact"}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          )}
         </div>
       </section>
     </>

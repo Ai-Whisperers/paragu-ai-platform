@@ -10,6 +10,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-16: fix(dra-gabriela): locale-aware BigStats labels (by erebus)
+
 - 2026-06-16: fix(dra-gabriela): body text-align default, 3-col footer with hours (by erebus)
 
 - 2026-06-16: fix(dra-gabriela): complete layout overhaul — text-left default, 2-col grid sections, bilingual process content, proper FAQ 2-col layout (by erebus)
