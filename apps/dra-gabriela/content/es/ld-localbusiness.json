@@ -12,7 +12,8 @@
     "@type": "PostalAddress",
     "addressLocality": "Asunción",
     "addressRegion": "Central",
-    "addressCountry": "PY"
+    "addressCountry": "PY",
+    "streetAddress": "Odontología 3, Asunción"
   },
   "geo": {
     "@type": "GeoCoordinates",
@@ -20,9 +21,28 @@
     "longitude": -57.4831
   },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00" }
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "12:00"
+    }
   ],
-  "availableLanguage": ["es", "en"],
+  "availableLanguage": [
+    "es",
+    "en"
+  ],
   "medicalSpecialty": "Dentistry"
 }

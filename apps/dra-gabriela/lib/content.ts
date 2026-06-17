@@ -101,7 +101,10 @@ export function isPlaceholder(value: unknown): boolean {
     upper.includes("PENDIENTE | TBD") ||
     upper.includes("PENDING | TBD") ||
     upper.includes("PENDIENTE | NOT") ||
-    upper.includes("PENDING | NOT")
+    upper.includes("PENDING | NOT") ||
+    upper === "PENDING" ||
+    upper === "PENDIENTE" ||
+    upper === "TBD"
   )
 }
 
