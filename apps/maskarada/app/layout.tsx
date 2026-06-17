@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import HtmlLangSyncer from "@/components/HtmlLangSyncer";
-import { content as esContent, getContent, type Locale } from "@/lib/content";
+import { getContent, type Locale } from "@/lib/content";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,17 +20,18 @@ const inter = Inter({
  *  2. cookie mk_locale (set by the switcher or the locale API)
  *  3. fallback to "es"
  */
-function resolveLocale(): Locale {
-  const h = headers();
+async function resolveLocale(): Promise<Locale> {
+  const h = await headers();
+  const c = (await cookies()).get("mk_locale")?.value;
+  if (c === "en" || c === "es") return c;
+  // fall back to URL — x-pathname is set by the proxy (formerly middleware)
   const path = h.get("x-pathname") ?? h.get("x-invoke-path") ?? h.get("next-url") ?? "";
   if (path.startsWith("/en")) return "en";
-  const c = cookies().get("mk_locale")?.value;
-  if (c === "en" || c === "es") return c;
   return "es";
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = resolveLocale();
+  const locale = await resolveLocale();
   const c = getContent(locale);
   return {
     metadataBase: new URL("https://maskarada.paragu-ai.com"),
@@ -83,8 +84,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const locale = resolveLocale();
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await resolveLocale();
   return (
     <html lang={locale} className={inter.variable}>
       <head>
@@ -104,6 +105,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-
-// silence the unused-import warning if tree-shaking drops it
-void esContent;
