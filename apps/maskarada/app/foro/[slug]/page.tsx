@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { forumThreads, getCategory, getThread } from "@/lib/forum";
 import { heroFor } from "@/lib/hero";
+import { JsonLd, article, breadcrumb } from "@/lib/jsonld";
 
 export async function generateStaticParams() {
   return forumThreads.map((t) => ({ slug: t.slug }));
@@ -36,6 +37,23 @@ export default async function HiloDetalle({ params }: { params: Promise<{ slug: 
 
   return (
     <div className="min-h-screen py-20 px-4">
+      <JsonLd
+        data={[
+          article({
+            slug: t.slug,
+            title: t.title,
+            description: t.body.slice(0, 200),
+            image: `https://maskarada.paragu-ai.com${heroFor(t.slug)}`,
+            authorName: t.author,
+            path: `/foro/${t.slug}`,
+          }),
+          breadcrumb([
+            { name: "Foro", path: "/foro" },
+            ...(cat ? [{ name: cat.title, path: `/foro#${cat.slug}` }] : []),
+            { name: t.title, path: `/foro/${t.slug}` },
+          ]),
+        ]}
+      />
       <div className="max-w-3xl mx-auto">
         <Link href="/foro" className="text-xs uppercase tracking-widest text-gray-500 hover:text-gold-400 mb-6 inline-block">
           ← Volver al foro

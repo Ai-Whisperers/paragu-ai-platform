@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { forumCategories, forumThreads, featuredThreads, getCategory } from "@/lib/forum";
 import { content } from "@/lib/content";
+import { JsonLd, breadcrumb } from "@/lib/jsonld";
 
 export const metadata = {
   title: "Foro — Club maškaráda",
@@ -43,6 +44,7 @@ export default function Foro() {
 
   return (
     <div className="min-h-screen py-20 px-4">
+      <JsonLd data={[breadcrumb([{ name: "Foro", path: "/foro" }])]} />
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <div className="text-5xl mb-4">💬</div>
