@@ -116,6 +116,49 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   })
 }
 
+// Build Service + OfferCatalog JSON-LD for each service detail page
+function buildServiceSchema(data: any, slug: string, locale: string) {
+  const items: any[] = data.items || []
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    name: data.title,
+    description: data.description,
+    procedureType: "Dental",
+    bodyLocation: "Mouth",
+    medicalSpecialty: "Dentistry",
+    availableAtOrFrom: {
+      "@type": "Place",
+      name: "Dra. Gabriella González Pane — Dental Practice",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Asunción",
+        addressCountry: "PY",
+      },
+    },
+    provider: {
+      "@type": "Dentist",
+      name: "Dra. Gabriella González Pane",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Asunción",
+        addressCountry: "PY",
+      },
+    },
+    offers: items
+      .filter((it) => it.priceGs)
+      .map((it) => ({
+        "@type": "Offer",
+        name: it.name,
+        description: it.description,
+        price: String(it.priceGs),
+        priceCurrency: "PYG",
+        availability: "https://schema.org/InStock",
+        url: `https://dragabriela.paragu-ai.com/${locale}/services/${slug}`,
+      })),
+  }
+}
+
 const SLUG_TO_IMAGE: Record<string, string> = {
   "second-opinion": "/images/services/second-opinion.png",
   "treatment-planning": "/images/services/treatment-planning.png",
@@ -145,9 +188,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const items: any[] = data.items || []
   const process: string[] = data.process || []
   const faqs: any[] = data.faqs || []
+  const serviceSchema = buildServiceSchema(data, slug, locale)
+  const serviceUrl = `https://dragabriela.paragu-ai.com/${locale}/services/${slug}`
 
   return (
     <>
+      {/* Service + OfferCatalog JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="bg-surface border-b border-border-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -324,14 +375,39 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </section>
       )}
 
-      {/* Other services */}
+      {/* Other services + Share */}
       <section className="py-12 md:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <Link href={`${base}/services`} className="inline-flex items-center gap-2 text-accent hover:text-accent-2 transition-colors text-sm font-medium">
               <ArrowRight className="w-4 h-4 rotate-180" />
               {isEs ? "Ver todos los servicios" : "See all services"}
             </Link>
+            <div className="flex items-center gap-2">
+              <span className="text-xs uppercase tracking-wider text-fg-subtle font-semibold">
+                {isEs ? "Compartir" : "Share"}:
+              </span>
+              <a
+                href={`https://wa.me/?text=${encodeURIComponent(data.title + " — " + serviceUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-accent-soft text-accent hover:bg-accent hover:text-white transition-colors"
+                aria-label={isEs ? "Compartir por WhatsApp" : "Share on WhatsApp"}
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                WhatsApp
+              </a>
+              <a
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(data.title)}&url=${encodeURIComponent(serviceUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-accent-soft text-accent hover:bg-accent hover:text-white transition-colors"
+                aria-label={isEs ? "Compartir en Twitter" : "Share on Twitter"}
+              >
+                <ArrowRight className="w-3.5 h-3.5" />
+                Twitter
+              </a>
+            </div>
           </div>
         </div>
       </section>

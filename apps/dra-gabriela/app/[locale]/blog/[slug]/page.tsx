@@ -30,11 +30,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const c = CONTENT[locale]
   const post = c?.posts?.find((p: any) => p.slug === slug)
   if (!post) return {}
+  // Per-post OG image: derive from slug. Falls back to generic /og/og-blog.png.
+  // Create the actual file at /public/og/og-blog-{slug}.png to override.
+  const ogImage = `/og/og-blog-${slug}.png`
   return buildMetadata({
     slug: `blog/${slug}`,
     title: post.title,
     description: post.excerpt,
     locale: locale === "es" ? "es" : "en",
+    ogImage,
   })
 }
 

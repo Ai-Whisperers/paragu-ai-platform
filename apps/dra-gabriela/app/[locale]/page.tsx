@@ -11,6 +11,7 @@ import { Process } from "@/components/sections/Process"
 import { HomeFaq } from "@/components/sections/HomeFaq"
 import { CtaBanner } from "@/components/sections/CtaBanner"
 import { BlogPreview } from "@/components/sections/BlogPreview"
+import { Newsletter } from "@/components/Newsletter"
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }]
@@ -75,6 +76,14 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Process c={c} locale={locale} />
       <HomeFaq c={c} locale={locale} />
       <BlogPreview locale={locale} />
+
+      {/* Newsletter signup — between blog and CTA */}
+      <section className="bg-bg">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <Newsletter locale={locale} />
+        </div>
+      </section>
+
       <CtaBanner c={c} locale={locale} />
     </>
   )
