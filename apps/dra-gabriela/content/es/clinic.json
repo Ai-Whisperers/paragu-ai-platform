@@ -1,0 +1,80 @@
+{
+  "title": "Clínica, esterilización y equipamiento",
+  "subtitle": "Cómo funciona la clínica, qué protocolos seguimos, y qué equipamiento usamos.",
+  "sections": [
+    {
+      "heading": "La clínica",
+      "body": "La práctica está ubicada en un edificio médico moderno en el centro de Asunción, con fácil acceso y estacionamiento cerca. Tenemos dos consultorios, un área de radiografía digital y una sala de esterilización. El espacio es limpio, bien iluminado y diseñado para ser acogedor — no frío-clínico.",
+      "items": [
+        "Ubicada en el centro de Asunción con estacionamiento a menos de 100m",
+        "Dos consultorios modernos con luces LED montadas en el techo",
+        "Sala de espera cómoda con aire acondicionado y Wi-Fi",
+        "Accesible para pacientes con limitaciones de movilidad (planta baja)",
+        "Baño con características de accesibilidad"
+      ]
+    },
+    {
+      "heading": "Protocolo de esterilización",
+      "body": "El control de infecciones no es negociable. Cada instrumento se esteriliza entre pacientes. Seguimos las pautas de la CDC y la ADA para el control de infecciones dentales.",
+      "items": [
+        "Todos los instrumentos se esterilizan en autoclave a 134°C por 18 minutos (esterilizador Clase B)",
+        "Test de indicador biológico semanal para verificar la eficacia de la esterilización",
+        "Artículos de un solo uso (agujas, puntas de succión, guantes, máscaras) para cada paciente",
+        "Higiene de manos con gel alcohólico antes y después de cada paciente",
+        "Superficies desinfectadas con desinfectante de grado hospitalario entre pacientes",
+        "Líneas de agua purgadas y testeadas trimestralmente",
+        "Equipo de protección personal (EPP) para el personal en todo momento"
+      ]
+    },
+    {
+      "heading": "Equipamiento que usamos",
+      "body": "El equipamiento moderno no es un lujo — afecta la precisión diagnóstica, la calidad del tratamiento y la comodidad del paciente. Esto es lo que tenemos:",
+      "items": [
+        "Sistema de radiografía digital (menor radiación que la película, imágenes instantáneas)",
+        "Cámara intraoral (para que veas lo que vemos en tu boca)",
+        "Autoclave Clase B (el estándar más alto para esterilización dental)",
+        "Lámpara de polimerización LED (calibrada mensualmente)",
+        "Motor de endodoncia con control de torque (para conductos predecibles)",
+        "Lupas de magnificación (4.5x) para trabajo detallado",
+        "Localizador de ápice (medición electrónica de longitud del conducto)",
+        "Materiales de composite alemán premium (Voco, Ivoclar)"
+      ]
+    },
+    {
+      "heading": "Materiales que usamos",
+      "body": "Los materiales importan. Los materiales baratos fallan más rápido, se ven peor, y a veces contienen compuestos que yo no querría en mi propia boca. Esto es con lo que trabajo:",
+      "items": [
+        "Composite: hecho en Alemania (Voco, Ivoclar) — nivel premium, no el más barato",
+        "Coronas: zirconia de un laboratorio premium (no PFM, no económica)",
+        "Componentes de implante: Straumann o Neodent (ambos bien documentados)",
+        "Limas de endodoncia: NiTi tratadas con calor, de un solo uso cuando es posible",
+        "Fresas: diamante y carburo de fabricantes establecidos",
+        "Anestésicos: articaína y mepivacaína (modernos, bien tolerados)"
+      ]
+    },
+    {
+      "heading": "Lo que no hacemos (y por qué)",
+      "body": "Ser honestos sobre lo que no hacemos es parte de ser honestos sobre lo que hacemos.",
+      "items": [
+        "Colocación quirúrgica de implantes — derivado a un especialista maxilofacial con quien trabajo",
+        "Ortodoncia compleja — derivado a un ortodoncista especialista",
+        "Casos pediátricos complejos (menores de 10) — derivado a un odontopediatra",
+        "Anestesia general / sedación — derivado a un entorno hospitalario",
+        "Cirugía oral de grado hospitalario — derivado al hospital"
+      ]
+    },
+    {
+      "heading": "Comodidad del paciente",
+      "body": "La ansiedad dental es real. Trabajamos para hacer la experiencia lo más cómoda posible.",
+      "items": [
+        "Explicamos cada paso antes de que pase — sin sorpresas",
+        "Pausamos cuando nos lo pidas — vos controlás el ritmo",
+        "Anestésico tópico antes de las inyecciones (gel adormecedor)",
+        "Auriculares y música disponibles",
+        "Manta si te resfriás con el aire acondicionado",
+        "Pausas durante procedimientos largos",
+        "Si estás ansioso/a, podemos discutir opciones (ansiolíticos, turnos más largos, etc.)"
+      ]
+    }
+  ]
+}

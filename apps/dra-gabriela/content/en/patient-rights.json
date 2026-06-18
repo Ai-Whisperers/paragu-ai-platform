@@ -1,0 +1,48 @@
+{
+  "title": "Patient rights",
+  "subtitle": "Your rights as a patient in Paraguay, in plain language.",
+  "intro": "Paraguay has a Patients' Rights Law (Ley 2332/2003 and its regulations) that establishes minimum standards for healthcare. As a patient at this practice, you have the following rights.",
+  "rights": [
+    {
+      "title": "Right to clear information",
+      "body": "You have the right to receive complete, accurate, and understandable information about: your diagnosis, the proposed treatment, the alternatives, the risks, the costs, and the prognosis. This information should be given in a language you understand (Spanish or English at this practice)."
+    },
+    {
+      "title": "Right to a written plan",
+      "body": "Before any non-emergency treatment, you have the right to a written plan that documents the proposed procedures, prices, timeline, and alternatives. You can take this plan to another dentist for a second opinion."
+    },
+    {
+      "title": "Right to refuse treatment",
+      "body": "You have the right to refuse any proposed treatment, even if your dentist recommends it. You are not obligated to accept any procedure. We will not pressure you to accept treatment you do not want."
+    },
+    {
+      "title": "Right to a second opinion",
+      "body": "You have the right to seek a second opinion before any non-emergency procedure. We provide written second opinions for this reason. No dentist should object to you seeking one — and we won't."
+    },
+    {
+      "title": "Right to privacy and confidentiality",
+      "body": "Your clinical records, x-rays, treatment plans, and any other personal information are confidential. We do not share them with anyone (including family members or insurance companies) without your written consent."
+    },
+    {
+      "title": "Right to access your records",
+      "body": "You have the right to request a copy of your clinical records, x-rays, and treatment plans at any time. We provide them in digital format at no charge."
+    },
+    {
+      "title": "Right to know the costs",
+      "body": "You have the right to know the cost of any procedure before it is performed. We publish reference prices on this site. The final cost is confirmed before any irreversible step. No surprise bills."
+    },
+    {
+      "title": "Right to dignified treatment",
+      "body": "You have the right to be treated with respect, regardless of age, gender, race, religion, sexual orientation, disability, or ability to pay. We will not discriminate."
+    },
+    {
+      "title": "Right to file a complaint",
+      "body": "If you are not satisfied with any aspect of your care, you have the right to file a formal complaint. We will investigate and respond within 30 days. If the complaint is not resolved to your satisfaction, you may escalate to the Superintendencia de Salud."
+    },
+    {
+      "title": "Right to emergency care",
+      "body": "If you have a dental emergency (severe pain, bleeding, infection, trauma), you have the right to be seen as soon as reasonably possible. Contact us by WhatsApp for urgent cases. For life-threatening emergencies, go to the hospital."
+    }
+  ],
+  "contact": "If you have questions about your rights or want to file a complaint, write to hola@dra-gp.com.py with the subject 'Derechos del paciente' or 'Patient rights'."
+}

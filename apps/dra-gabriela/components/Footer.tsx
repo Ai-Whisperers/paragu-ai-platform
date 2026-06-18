@@ -100,6 +100,11 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
               <li><Link href={`${base}/faq`} className="hover:text-white transition-colors">FAQ</Link></li>
               <li><Link href={`${base}/process`} className="hover:text-white transition-colors">{isEs ? "Proceso" : "Process"}</Link></li>
               <li><Link href={`${base}/blog`} className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link href={`${base}/reviews`} className="hover:text-white transition-colors">{isEs ? "Reseñas" : "Reviews"}</Link></li>
+              <li><Link href={`${base}/clinic`} className="hover:text-white transition-colors">{isEs ? "La clínica" : "The clinic"}</Link></li>
+              <li><Link href={`${base}/first-visit`} className="hover:text-white transition-colors">{isEs ? "Primera visita" : "First visit"}</Link></li>
+              <li><Link href={`${base}/insurance`} className="hover:text-white transition-colors">{isEs ? "Seguro y pago" : "Insurance & payment"}</Link></li>
+              <li><Link href={`${base}/patient-rights`} className="hover:text-white transition-colors">{isEs ? "Derechos del paciente" : "Patient rights"}</Link></li>
               <li><Link href={`${base}/privacy`} className="hover:text-white transition-colors">{isEs ? "Privacidad" : "Privacy"}</Link></li>
               <li><Link href={`${base}/terms`} className="hover:text-white transition-colors">{isEs ? "Términos" : "Terms"}</Link></li>
               <li>

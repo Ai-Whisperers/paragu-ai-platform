@@ -17,13 +17,15 @@ const TOP_LEVEL_SLUGS = [
   { slug: 'pricing', priority: 0.9, freq: 'monthly' as const },
   { slug: 'contact', priority: 0.8, freq: 'monthly' as const },
   { slug: 'faq', priority: 0.7, freq: 'monthly' as const },
-  { slug: 'second-opinion', priority: 0.95, freq: 'monthly' as const }, // high priority = lead conversion
+  { slug: 'second-opinion', priority: 0.95, freq: 'monthly' as const },
   { slug: 'expat', priority: 0.7, freq: 'monthly' as const },
   { slug: 'blog', priority: 0.7, freq: 'weekly' as const },
   { slug: 'process', priority: 0.6, freq: 'monthly' as const },
   { slug: 'reviews', priority: 0.8, freq: 'weekly' as const },
   { slug: 'first-visit', priority: 0.7, freq: 'monthly' as const },
   { slug: 'insurance', priority: 0.7, freq: 'monthly' as const },
+  { slug: 'clinic', priority: 0.6, freq: 'monthly' as const },
+  { slug: 'patient-rights', priority: 0.5, freq: 'yearly' as const },
   { slug: 'privacy', priority: 0.3, freq: 'yearly' as const },
   { slug: 'terms', priority: 0.3, freq: 'yearly' as const },
 ]

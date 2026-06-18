@@ -1,0 +1,48 @@
+{
+  "title": "Derechos del paciente",
+  "subtitle": "Tus derechos como paciente en Paraguay, en lenguaje claro.",
+  "intro": "Paraguay tiene una Ley de Derechos del Paciente (Ley 2332/2003 y sus reglamentos) que establece estándares mínimos para la atención médica. Como paciente de esta práctica, tenés los siguientes derechos.",
+  "rights": [
+    {
+      "title": "Derecho a información clara",
+      "body": "Tenés derecho a recibir información completa, precisa y comprensible sobre: tu diagnóstico, el tratamiento propuesto, las alternativas, los riesgos, los costos y el pronóstico. Esta información se da en un idioma que entendés (español o inglés en esta práctica)."
+    },
+    {
+      "title": "Derecho a un plan escrito",
+      "body": "Antes de cualquier tratamiento que no sea de emergencia, tenés derecho a un plan escrito que documente los procedimientos propuestos, precios, plazos y alternativas. Podés llevar este plan a otro odontólogo para una segunda opinión."
+    },
+    {
+      "title": "Derecho a rechazar tratamiento",
+      "body": "Tenés derecho a rechazar cualquier tratamiento propuesto, incluso si tu odontólogo lo recomienda. No estás obligado a aceptar ningún procedimiento. No te presionaremos para aceptar un tratamiento que no querés."
+    },
+    {
+      "title": "Derecho a segunda opinión",
+      "body": "Tenés derecho a buscar una segunda opinión antes de cualquier procedimiento que no sea de emergencia. Por eso ofrecemos segundas opiniones escritas. Ningún odontólogo debería objetar que busques una — y nosotros no lo objetamos."
+    },
+    {
+      "title": "Derecho a privacidad y confidencialidad",
+      "body": "Tus registros clínicos, radiografías, planes de tratamiento y cualquier otra información personal son confidenciales. No los compartimos con nadie (incluyendo familiares o aseguradoras) sin tu consentimiento por escrito."
+    },
+    {
+      "title": "Derecho a acceder a tus registros",
+      "body": "Tenés derecho a solicitar una copia de tus registros clínicos, radiografías y planes de tratamiento en cualquier momento. Los entregamos en formato digital sin cargo."
+    },
+    {
+      "title": "Derecho a conocer los costos",
+      "body": "Tenés derecho a saber el costo de cualquier procedimiento antes de que se realice. Publicamos precios de referencia en este sitio. El costo final se confirma antes de cualquier paso irreversible. Sin facturas sorpresa."
+    },
+    {
+      "title": "Derecho a tratamiento digno",
+      "body": "Tenés derecho a ser tratado con respeto, sin importar edad, género, raza, religión, orientación sexual, discapacidad o capacidad de pago. No discriminamos."
+    },
+    {
+      "title": "Derecho a presentar una queja",
+      "body": "Si no estás conforme con algún aspecto de tu atención, tenés derecho a presentar una queja formal. Investigaremos y responderemos en 30 días. Si la queja no se resuelve a tu satisfacción, podés escalar a la Superintendencia de Salud."
+    },
+    {
+      "title": "Derecho a atención de emergencia",
+      "body": "Si tenés una emergencia dental (dolor intenso, sangrado, infección, trauma), tenés derecho a ser atendido lo antes posible. Contactanos por WhatsApp para casos urgentes. Para emergencias que pongan en riesgo tu vida, andá al hospital."
+    }
+  ],
+  "contact": "Si tenés preguntas sobre tus derechos o querés presentar una queja, escribinos a hola@dra-gp.com.py con el asunto 'Derechos del paciente'."
+}

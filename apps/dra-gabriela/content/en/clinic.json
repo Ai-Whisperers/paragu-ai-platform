@@ -1,0 +1,80 @@
+{
+  "title": "Clinic, sterilization, and equipment",
+  "subtitle": "How the clinic works, what protocols we follow, and what equipment we use.",
+  "sections": [
+    {
+      "heading": "The clinic",
+      "body": "The practice is located in a modern medical building in central Asunción, with easy access and parking nearby. We have two treatment rooms, a digital x-ray area, and a sterilization room. The space is clean, well-lit, and designed to be welcoming — not clinical-cold.",
+      "items": [
+        "Centrally located in Asunción with parking within 100m",
+        "Two modern treatment rooms with ceiling-mounted LED lights",
+        "Comfortable waiting area with air conditioning and Wi-Fi",
+        "Accessible for patients with mobility limitations (ground floor)",
+        "Bathroom with accessibility features"
+      ]
+    },
+    {
+      "heading": "Sterilization protocol",
+      "body": "Infection control is non-negotiable. Every instrument is sterilized between patients. We follow CDC and ADA guidelines for dental infection control.",
+      "items": [
+        "All instruments autoclaved at 134°C for 18 minutes (Class B sterilizer)",
+        "Biological indicator test weekly to verify sterilization efficacy",
+        "Single-use items (needles, suction tips, gloves, masks) for every patient",
+        "Hand hygiene with alcohol gel before and after each patient",
+        "Surfaces disinfected with hospital-grade disinfectant between patients",
+        "Water lines flushed and tested quarterly",
+        "Personal protective equipment (PPE) for staff at all times"
+      ]
+    },
+    {
+      "heading": "Equipment we use",
+      "body": "Modern equipment isn't a luxury — it affects diagnostic accuracy, treatment quality, and patient comfort. Here's what we have:",
+      "items": [
+        "Digital x-ray system (lower radiation than film, instant images)",
+        "Intraoral camera (so you can see what we see in your mouth)",
+        "Class B autoclave (the highest standard for dental sterilization)",
+        "Composite curing light (LED, calibrated monthly)",
+        "Endodontic motor with torque control (for predictable root canals)",
+        "Magnification loupes (4.5x) for detailed work",
+        "Apex locator (electronic root canal length measurement)",
+        "Premium German composite materials (Voco, Ivoclar)"
+      ]
+    },
+    {
+      "heading": "Materials we use",
+      "body": "Materials matter. Cheap materials fail faster, look worse, and sometimes contain compounds I wouldn't want in my own mouth. Here's what I work with:",
+      "items": [
+        "Composite: German-made (Voco, Ivoclar) — premium tier, not the cheapest",
+        "Crowns: zirconia from a premium lab (not PFM, not economy)",
+        "Implant components: Straumann or Neodent (both well-documented)",
+        "Endodontic files: heat-treated NiTi, single-use when possible",
+        "Burs: diamond and carbide from established manufacturers",
+        "Anesthetics: articaine and mepivacaine (modern, well-tolerated)"
+      ]
+    },
+    {
+      "heading": "What we don't have (and why)",
+      "body": "Being honest about what we don't do is part of being honest about what we do.",
+      "items": [
+        "Surgical implant placement — referred to a maxillofacial specialist I work with",
+        "Complex orthodontics — referred to a specialist orthodontist",
+        "Complex pediatric cases (under 10) — referred to a pediatric dentist",
+        "General anesthesia / sedation — referred to a hospital setting",
+        "Hospital-grade oral surgery — referred to the hospital"
+      ]
+    },
+    {
+      "heading": "Patient comfort",
+      "body": "Dental anxiety is real. We work to make the experience as comfortable as possible.",
+      "items": [
+        "Explain every step before it happens — no surprises",
+        "Pause whenever you ask — you control the pace",
+        "Topical anesthetic before injections (numbing gel)",
+        "Headphones and music available",
+        "Blanket if you get cold in the AC",
+        "Take breaks during long procedures",
+        "If you're anxious, we can discuss options (anxiolytics, longer appointments, etc.)"
+      ]
+    }
+  ]
+}
