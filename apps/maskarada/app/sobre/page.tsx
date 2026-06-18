@@ -35,6 +35,18 @@ const teamCards = [
     role: "Supervisión & Cuidado",
     bio: "Persona entrenada que vela por el cumplimiento de las normas SSC/RACK y el bienestar de todos los participantes.",
   },
+  {
+    icon: "⛓️",
+    name: "Moñai Ropes",
+    role: "Shibari & Ropes",
+    bio: "Equipo de cuerdas shobari: Zona Cuerdas, demostraciones, práctica supervisada. Cuerdas artesanalmente hechas en Asunción.",
+  },
+  {
+    icon: "🎨",
+    name: "Artistas del cuerpo",
+    role: "Performances",
+    bio: "Body painting en vivo, performances eróticas y cuadros que transforman el espacio en cada edición.",
+  },
 ];
 
 export default function Sobre() {
