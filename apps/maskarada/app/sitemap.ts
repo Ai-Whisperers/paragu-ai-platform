@@ -3,6 +3,8 @@ import { guides } from "@/lib/guides";
 import { activities } from "@/lib/activities";
 import { events } from "@/lib/events-v2";
 import { events as historyEvents } from "@/lib/events";
+import { forumThreads } from "@/lib/forum";
+import { TEAM } from "@/lib/staff";
 
 const BASE = "https://maskarada.paragu-ai.com";
 const TODAY = new Date().toISOString();
@@ -68,6 +70,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .map((e) => makeEntry(`${BASE}/encuentros/${e.slug}`, 0.5));
   const historyEntries: MetadataRoute.Sitemap = historyEvents.map((e) => makeEntry(`${BASE}/historia/${e.slug}`, 0.5));
   const galeriaEntries: MetadataRoute.Sitemap = historyEvents.map((e) => makeEntry(`${BASE}/galeria/${e.slug}`, 0.4));
+  const forumEntries: MetadataRoute.Sitemap = forumThreads.map((t) =>
+    makeEntry(`${BASE}/foro/${t.slug}`, 0.4),
+  );
+  const staffEntries: MetadataRoute.Sitemap = TEAM.map((m) =>
+    makeEntry(`${BASE}/staff/${m.slug}`, 0.4),
+  );
 
   return [
     ...staticEntries,
@@ -77,5 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...encuentroEntries,
     ...historyEntries,
     ...galeriaEntries,
+    ...forumEntries,
+    ...staffEntries,
   ];
 }
