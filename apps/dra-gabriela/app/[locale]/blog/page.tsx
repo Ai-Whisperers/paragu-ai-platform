@@ -85,34 +85,39 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
                   key={post.slug}
                   className="card-accent card p-6 md:p-7 flex flex-col hover:shadow-lg hover:-translate-y-0.5 transition-all"
                 >
-                  <div className="flex items-center gap-2 mb-3 text-xs text-fg-subtle">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{formatDate(post.date, locale)}</span>
-                    {post.readMinutes && (
-                      <>
-                        <span className="mx-1">·</span>
-                        <Clock className="w-3.5 h-3.5" />
-                        <span>{post.readMinutes} {isEs ? "min" : "min read"}</span>
-                      </>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-medium mb-2 text-left" style={{ fontFamily: "var(--font-heading)" }}>
-                    {post.title}
-                  </h3>
-                  <p className="text-fg-muted text-sm leading-relaxed mb-4 flex-1 text-left">
-                    {post.excerpt}
-                  </p>
-                  {post.category && (
-                    <div className="mb-3">
-                      <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-accent-soft text-accent">
-                        {post.category}
-                      </span>
+                  <Link
+                    href={`${base}/blog/${post.slug}`}
+                    className="flex flex-col flex-1 group"
+                  >
+                    <div className="flex items-center gap-2 mb-3 text-xs text-fg-subtle">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>{formatDate(post.date, locale)}</span>
+                      {post.readMinutes && (
+                        <>
+                          <span className="mx-1" aria-hidden="true">·</span>
+                          <Clock className="w-3.5 h-3.5" />
+                          <span>{post.readMinutes} {isEs ? "min" : "min read"}</span>
+                        </>
+                      )}
                     </div>
-                  )}
-                  <div className="text-xs text-fg-subtle">
-                    {isEs ? "Próximamente: artículo completo" : "Coming soon: full article"}
-                    <ArrowUpRight className="w-3 h-3 inline ml-1" />
-                  </div>
+                    <h3 className="text-xl font-medium mb-2 text-left group-hover:text-accent transition-colors" style={{ fontFamily: "var(--font-heading)" }}>
+                      {post.title}
+                    </h3>
+                    <p className="text-fg-muted text-sm leading-relaxed mb-4 flex-1 text-left">
+                      {post.excerpt}
+                    </p>
+                    {post.category && (
+                      <div className="mb-3">
+                        <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-accent-soft text-accent">
+                          {post.category}
+                        </span>
+                      </div>
+                    )}
+                    <div className="text-xs text-accent font-medium group-hover:text-accent-2 transition-colors">
+                      {isEs ? "Leer artículo" : "Read article"}
+                      <ArrowUpRight className="w-3 h-3 inline ml-1" />
+                    </div>
+                  </Link>
                 </article>
               ))}
             </div>

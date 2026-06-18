@@ -1,42 +1,127 @@
 {
   "title": "Blog",
-  "subtitle": "Contenido educativo sobre odontología conservadora, segunda opinión, precios y salud dental en Paraguay.",
-  "status": "Posts nuevos cada dos semanas. Primer artículo abajo.",
+  "subtitle": "Contenido educativo sobre odontología conservadora, segundas opiniones, precios y salud dental en Paraguay.",
+  "status": "Publicamos artículos nuevos cada dos semanas. El primero está abajo.",
   "posts": [
     {
       "slug": "como-saber-si-un-plan-de-tratamiento-es-honesto",
       "title": "Cómo saber si un plan de tratamiento es honesto",
-      "excerpt": "Cinco preguntas concretas para hacerle a tu odontólogo antes de aceptar un tratamiento. Señales de alerta, señales positivas, y qué significa \"plan integral\" realmente por escrito.",
+      "excerpt": "Cinco preguntas concretas para hacerle a tu odontólogo antes de aceptar un tratamiento. Banderas rojas, banderas verdes, y qué significa realmente \"plan integral\" por escrito.",
       "date": "2026-06-15",
       "readMinutes": 5,
       "category": "Planificación",
-      "tags": ["segunda opinión", "plan de tratamiento", "precios"]
+      "tags": ["segunda opinión", "plan de tratamiento", "precios"],
+      "content": [
+        { "type": "p", "text": "La mayoría de los pacientes en Asunción no saben cómo es un plan de tratamiento justo hasta que pasan por uno malo. El odontólogo habla con autoridad, muestra una radiografía, nombra varios procedimientos y te da un número. Vos asentís, firmás, y esperás que esté bien. Este artículo te da cinco preguntas que dan vuelta esa conversación." },
+        { "type": "h2", "text": "1. \"¿Puedo verlo por escrito antes de decidir?\"" },
+        { "type": "p", "text": "Una práctica honesta siempre te da un plan escrito. No un resumen verbal. No un dibujo en una servilleta. Un documento con: cada procedimiento nombrado, el costo de cada uno, la secuencia, los plazos y las alternativas. Si tu odontólogo se pone a la defensiva cuando pedís esto, es una bandera roja." },
+        { "type": "h2", "text": "2. \"¿Qué pasa si no hago nada por seis meses?\"" },
+        { "type": "p", "text": "La pregunta más importante que podés hacer. Un odontólogo conservador real te va a decir honestamente: \"Esto va a progresar lento\", o \"Probablemente va a empeorar\", o \"En realidad, esto puede esperar\". Una clínica de alto volumen te va a decir que todo es urgente y tiene que hacerse la semana que viene. La urgencia es una herramienta de venta, no un hecho clínico, la mayoría de las veces." },
+        { "type": "h2", "text": "3. \"¿Cuáles son las alternativas, incluyendo las más baratas?\"" },
+        { "type": "p", "text": "Si cada opción que te presentan es la más cara, el odontólogo está vendiendo, no diagnosticando. Una segunda opinión real muchas veces revela que una restauración grande (más barata, más conservadora) es igual de buena que la corona (más cara, más invasiva) para muchos dientes. Preguntá explícitamente: \"¿Cuál es la opción más conservadora que igual funcione?\"" },
+        { "type": "h2", "text": "4. \"¿Qué materiales vas a usar, y por qué esos?\"" },
+        { "type": "p", "text": "Un odontólogo que se preocupa por el resultado especifica los materiales. Compuesto alemán vs compuesto genérico, zirconia vs porcelana sobre metal, laboratorio premium vs laboratorio barato. Si tu odontólogo no puede o no quiere nombrar los materiales, la respuesta probablemente es \"los más baratos que consigo\". Es una respuesta real, solo que no es la que querés para tu boca." },
+        { "type": "h2", "text": "5. \"¿Qué harías si fuera tu propio diente?\"" },
+        { "type": "p", "text": "La pregunta más desarmante en odontología. Bracea la lógica financiera y va directo al juicio clínico. Si la respuesta es \"haría lo mismo\", perfecto. Si la respuesta es \"haría X, pero solo porque Y\", aprendés lo que el odontólogo realmente piensa vs lo que recomendó. A veces son muy diferentes." },
+        { "type": "h2", "text": "Qué significa realmente \"plan integral\"" },
+        { "type": "p", "text": "Cuando una clínica dice \"necesitás un plan integral\", muchas veces quiere decir \"queremos hacer mucho trabajo\". Un plan integral real tiene: alcance (qué entra / qué no), secuencia (qué va primero), prioridad (qué es urgente vs qué puede esperar), alternativas en cada paso, y costo total con opciones de pago. Cualquier cosa menos que eso es un discurso de venta, no un plan." },
+        { "type": "callout", "text": "Si tu odontólogo no puede o no quiere responder estas cinco preguntas con claridad, pedí una segunda opinión antes de aceptar nada irreversible. Las coronas, los implantes y las extracciones no se regeneran. Una segunda opinión sale menos que el arrepentimiento." }
+      ]
     },
     {
-      "slug": "precios-dentales-paraguay-rangos-de-referencia",
-      "title": "Precios dentales en Paraguay: rangos de referencia y señales de alerta",
-      "excerpt": "Cómo se ve un precio justo para consulta, segunda opinión, restauraciones, coronas e implantes. Valores de referencia para Asunción 2026, con notas sobre qué vigilar.",
+      "slug": "precios-dentales-paraguay-valores-de-referencia",
+      "title": "Precios dentales en Paraguay: valores de referencia y banderas rojas",
+      "excerpt": "Cómo es un precio justo para consulta, segunda opinión, empastes, coronas e implantes. Valores de referencia para Asunción 2026, con notas sobre qué vigilar.",
       "date": "2026-06-29",
       "readMinutes": 7,
       "category": "Precios",
-      "tags": ["precios", "asunción", "comparación"]
+      "tags": ["precios", "asuncion", "comparación"],
+      "content": [
+        { "type": "p", "text": "Los precios en Paraguay son sobre todo opacos. La mayoría de las clínicas no publican sus precios. Esa asimetría beneficia al vendedor, no al paciente. Acá tenés un rango de referencia para procedimientos comunes en Asunción en 2026, más las banderas rojas que sugieren que te están cobrando de más." },
+        { "type": "h2", "text": "Precios de referencia (Asunción, 2026)" },
+        { "type": "p", "text": "Estos son rangos de referencia para prácticas establecidas que usan materiales de calidad. No son el piso absoluto: hay opciones legítimas más baratas, sobre todo para procedimientos simples. Pero cualquier cosa dramáticamente por debajo de estos números es sospechosa." },
+        { "type": "ul", "items": [
+          "Consulta inicial: Gs 250.000 - 450.000",
+          "Limpieza profesional (profilaxis): Gs 200.000 - 350.000",
+          "Empaste de composite (una superficie): Gs 300.000 - 500.000",
+          "Conducto (un canal): Gs 600.000 - 1.000.000",
+          "Corona de zirconia: Gs 1.500.000 - 2.200.000",
+          "Extracción simple: Gs 200.000 - 400.000",
+          "Extracción de cordal (quirúrgica): Gs 800.000 - 1.500.000",
+          "Colocación de implante (sin corona): Gs 1.800.000 - 3.000.000",
+          "Corona sobre implante: Gs 1.200.000 - 1.800.000",
+          "Blanqueamiento en consultorio: Gs 600.000 - 900.000",
+          "Carilla de porcelana: Gs 1.200.000 - 1.800.000 por diente"
+        ]},
+        { "type": "h2", "text": "Banderas rojas" },
+        { "type": "p", "text": "Un precio bastante por encima de estos rangos no es automáticamente una estafa: las prácticas premium con formación de especialista cobran más. Pero estas señales sugieren que el precio está inflado:" },
+        { "type": "ul", "items": [
+          "\"No publicamos precios\" — se niega a dar un número antes de la visita",
+          "\"El precio depende de lo que encontremos\" — encuadre vago para comprometerte",
+          "Presión para comprometerse el mismo día del diagnóstico",
+          "Planes grandes propuestos en una primera visita sin ofrecer segunda opinión",
+          "\"Paquetes\" agrupados que incluyen procedimientos que no pediste"
+        ]},
+        { "type": "h2", "text": "Banderas verdes" },
+        { "type": "ul", "items": [
+          "Precios de referencia publicados en la web o en la clínica",
+          "Plan escrito con cada ítem con precio por separado",
+          "Disposición para explicar los materiales y el laboratorio",
+          "Discusión de alternativas a diferentes niveles de precio",
+          "Sin presión para empezar inmediatamente"
+        ]},
+        { "type": "h2", "text": "Lo que \"barato\" suele significar" },
+        { "type": "p", "text": "Si un precio está muy por debajo de estos rangos, una de tres cosas está pasando: los materiales son económicos (y no van a durar tanto), el odontólogo es junior (y el trabajo puede necesitar rehacerse), o la clínica está usando loss-leader para traerte con upsell. Nada de eso es bueno para vos. La odontología barata sale cara a la larga." },
+        { "type": "callout", "text": "Si un precio parece demasiado bueno para ser verdad, preguntá qué materiales se usan y qué laboratorio fabrica la prótesis. Si la respuesta es vaga, andate." }
+      ]
     },
     {
       "slug": "segunda-opinion-cuando-por-que-que-traer",
-      "title": "Segundas opiniones: cuándo, por qué y qué traer",
+      "title": "Segunda opinión: cuándo, por qué y qué traer",
       "excerpt": "Cuándo vale la pena una segunda opinión (y cuándo no), cómo pedirla sin ofender a tu odontólogo actual, y qué llevar a la cita.",
       "date": "2026-07-13",
       "readMinutes": 6,
       "category": "Segunda opinión",
-      "tags": ["segunda opinión", "preparación"]
+      "tags": ["segunda opinión", "preparación"],
+      "content": [
+        { "type": "p", "text": "Una segunda opinión es una de las cosas con más apalancamiento que podés hacer en odontología. Sale menos que cualquier procedimiento mayor y puede salvarte de decisiones irreversibles. Pero no toda situación la necesita. Acá te cuento cuándo pedirla, cuándo no molestarte, y cómo hacerla bien." },
+        { "type": "h2", "text": "Cuándo pedir una segunda opinión" },
+        { "type": "ul", "items": [
+          "El plan de tratamiento involucra más de 3 procedimientos",
+          "El costo total supera los Gs 2.000.000",
+          "El plan incluye extracciones, implantes o coronas completas",
+          "Sentís apuro o presión para empezar",
+          "El diagnóstico se hizo sin radiografías que te podás llevar",
+          "Te dijeron que el trabajo de un odontólogo anterior está \"todo mal\" y hay que reemplazarlo"
+        ]},
+        { "type": "h2", "text": "Cuándo no vale la pena" },
+        { "type": "ul", "items": [
+          "Empaste simple en una caries chica",
+          "Limpieza de rutina sin trabajo adicional propuesto",
+          "Tratamiento de emergencia por dolor (tratá el dolor, pedí segunda opinión después si sale un plan grande)"
+        ]},
+        { "type": "h2", "text": "Cómo pedirla sin ofender a tu odontólogo" },
+        { "type": "p", "text": "La mayoría de los odontólogos no se ofenden. Los que sí, son los que hay que mirar con cuidado. Usá un lenguaje como: \"Esta es una inversión importante, y quiero asegurarme de entender todas mis opciones. ¿Te parecería bien que pida una segunda opinión antes de decidir?\". Cualquier odontólogo que se oponga fuerte a esto está señalando algo. Un odontólogo ético y seguro o va a dar la bienvenida a la segunda opinión o te va a ofrecer derivarte a un especialista él mismo." },
+        { "type": "h2", "text": "Qué llevar" },
+        { "type": "ul", "items": [
+          "Todas las radiografías (archivos digitales o películas impresas)",
+          "El plan de tratamiento / presupuesto original, por escrito",
+          "Cualquier nota clínica que el odontólogo anterior pueda compartir",
+          "Tu lista de preguntas, por escrito (te vas a olvidar si no)",
+          "Un resumen de lo que se dijo verbalmente durante la consulta"
+        ]},
+        { "type": "h2", "text": "Qué esperar de una buena segunda opinión" },
+        { "type": "p", "text": "Una segunda opinión real lleva tiempo. Esperá 45-60 minutos para una revisión inicial. El odontólogo debería: revisar tus registros, hacer un examen clínico, preguntar sobre tus prioridades y preocupaciones, y después entregar un informe escrito. El informe debería: confirmar o cuestionar el diagnóstico original, listar las opciones (incluyendo la conservadora), y dar un presupuesto separado por cualquier trabajo que harían diferente. Si la segunda opinión vuelve en 10 minutos y un apretón de manos, no recibiste una." },
+        { "type": "callout", "text": "Una segunda opinión no es deslealtad a tu odontólogo actual. Es cómo operan los profesionales en todos los campos, desde medicina hasta derecho y arquitectura. Un odontólogo que se niega a aceptar esa realidad es el que tiene que preocuparte." }
+      ]
     }
   ],
   "plannedTopics": [
-    "Endodoncia vs extracción: cómo deciden los especialistas",
-    "Qué esperar de una primera consulta dental en Asunción",
-    "Atención dental en inglés en Paraguay: qué deben saber los expats",
-    "Corona vs restauración grande: cuándo elegir cada una",
-    "Enfermedad periodontal: señales tempranas que la gente ignora",
+    "Conducto vs extracción: cómo deciden los especialistas",
+    "Qué esperar en una primera consulta odontológica en Asunción",
+    "Odontología en inglés en Paraguay: lo que los expatriados deben saber",
+    "Corona vs empaste grande: cuándo elegir cada uno",
+    "Enfermedad de encías: señales tempranas que la mayoría pasa por alto",
     "Blanqueamiento: qué funciona, qué no, y qué daña el esmalte"
   ]
 }

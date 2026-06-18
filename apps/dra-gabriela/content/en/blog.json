@@ -10,7 +10,23 @@
       "date": "2026-06-15",
       "readMinutes": 5,
       "category": "Treatment planning",
-      "tags": ["second opinion", "treatment plan", "pricing"]
+      "tags": ["second opinion", "treatment plan", "pricing"],
+      "content": [
+        { "type": "p", "text": "Most patients in Asunción don't know what a fair treatment plan looks like until they've been through a bad one. The dentist speaks with authority, shows you an x-ray, names several procedures, and gives you a number. You nod, sign, and hope it's right. This article gives you five questions that turn that conversation around." },
+        { "type": "h2", "text": "1. \"Can I see this in writing before I decide?\"" },
+        { "type": "p", "text": "An honest practice always gives you a written plan. Not a verbal summary. Not a sketch on a napkin. A document with: each procedure named, the cost of each, the sequence, the timeline, and the alternatives. If your dentist gets defensive when you ask for this, that's a red flag." },
+        { "type": "h2", "text": "2. \"What happens if I do nothing for six months?\"" },
+        { "type": "p", "text": "This is the most important question you can ask. A real conservative dentist will tell you honestly: \"This will progress slowly,\" or \"It will likely get worse,\" or \"Actually, this can wait.\" A high-volume clinic will tell you everything is urgent and needs to be done next week. Urgency is a sales tool, not a clinical fact, most of the time." },
+        { "type": "h2", "text": "3. \"What are the alternatives, including the cheaper ones?\"" },
+        { "type": "p", "text": "If every option presented to you is the most expensive one, the dentist is selling, not diagnosing. A real second opinion will often reveal that a large restoration (cheaper, more conservative) is just as good as the crown (more expensive, more invasive) for many teeth. Ask explicitly: \"What's the most conservative option that would still work?\"" },
+        { "type": "h2", "text": "4. \"What materials will you use, and why those?\"" },
+        { "type": "p", "text": "A dentist who cares about the result will specify materials. German composite vs generic composite, zirconia vs porcelain-fused-to-metal, premium lab work vs budget lab work. If your dentist can't or won't name the materials, the answer is probably \"the cheapest ones I have access to.\" That's a real answer — just not the one you want for your mouth." },
+        { "type": "h2", "text": "5. \"What would you do if this were your own tooth?\"" },
+        { "type": "p", "text": "The single most disarming question in dentistry. It bypasses the financial logic and gets to the clinical judgment. If the answer is \"I'd do the same thing,\" great. If the answer is \"I'd do X, but only because Y,\" you learn what the dentist actually thinks vs what they recommended. Sometimes those are very different." },
+        { "type": "h2", "text": "What \"comprehensive plan\" actually means" },
+        { "type": "p", "text": "When a clinic says \"you need a comprehensive plan,\" they often mean \"we want to do a lot of work.\" A real comprehensive plan has: scope (what's in / out), sequencing (what comes first), priority (what's urgent vs what can wait), alternatives at each step, and total cost with payment options. Anything less is a sales pitch, not a plan." },
+        { "type": "callout", "text": "If your dentist can't or won't answer these five questions clearly, get a second opinion before agreeing to anything irreversible. Crowns, implants, and extractions don't grow back. A second opinion costs less than regret." }
+      ]
     },
     {
       "slug": "dental-prices-paraguay-reference-ranges",
@@ -19,7 +35,45 @@
       "date": "2026-06-29",
       "readMinutes": 7,
       "category": "Pricing",
-      "tags": ["pricing", "asuncion", "comparison"]
+      "tags": ["pricing", "asuncion", "comparison"],
+      "content": [
+        { "type": "p", "text": "Pricing in Paraguay is mostly opaque. Most clinics won't publish their prices. That asymmetry benefits the seller, not the patient. Here's a reference range for common procedures in Asunción in 2026, plus the red flags that suggest you're being overcharged." },
+        { "type": "h2", "text": "Reference prices (Asunción, 2026)" },
+        { "type": "p", "text": "These are reference ranges for established practices using quality materials. They are not the absolute floor — there are legitimate budget options, especially for simple procedures. But anything dramatically below these numbers is suspicious." },
+        { "type": "ul", "items": [
+          "Initial consultation: Gs 250.000 - 450.000",
+          "Professional cleaning (prophylaxis): Gs 200.000 - 350.000",
+          "Composite filling (single surface): Gs 300.000 - 500.000",
+          "Root canal (single canal): Gs 600.000 - 1.000.000",
+          "Zirconia crown: Gs 1.500.000 - 2.200.000",
+          "Simple extraction: Gs 200.000 - 400.000",
+          "Wisdom tooth extraction (surgical): Gs 800.000 - 1.500.000",
+          "Implant placement (excluding crown): Gs 1.800.000 - 3.000.000",
+          "Implant crown: Gs 1.200.000 - 1.800.000",
+          "Teeth whitening (in-office): Gs 600.000 - 900.000",
+          "Porcelain veneer: Gs 1.200.000 - 1.800.000 per tooth"
+        ]},
+        { "type": "h2", "text": "Red flags" },
+        { "type": "p", "text": "A price significantly above these ranges isn't automatically a scam — premium practices with specialist training do charge more. But these signals suggest the price is inflated:" },
+        { "type": "ul", "items": [
+          "\"We don't publish prices\" — refuses to give you a number before the visit",
+          "\"The price depends on what we find\" — vague framing to lock you in",
+          "Pressure to commit the same day as the diagnosis",
+          "Large treatment plans proposed on a first visit with no second-opinion option offered",
+          "Bundled \"packages\" that include procedures you didn't ask about"
+        ]},
+        { "type": "h2", "text": "Green flags" },
+        { "type": "ul", "items": [
+          "Published reference prices on the website or in the clinic",
+          "Written plan with each item priced separately",
+          "Willingness to explain the materials and the lab",
+          "Discussion of alternatives at different price points",
+          "No pressure to start immediately"
+        ]},
+        { "type": "h2", "text": "What \"cheap\" usually means" },
+        { "type": "p", "text": "If a price is dramatically below these ranges, one of three things is happening: the materials are budget (and won't last as long), the dentist is junior (and the work may need redoing), or the clinic is running a loss-leader to bring you in for upsell. None of those is good for you. Cheap dentistry is expensive in the long run." },
+        { "type": "callout", "text": "If a price seems too good to be true, ask which materials are used and which lab fabricates the prosthetic. If the answer is vague, walk away." }
+      ]
     },
     {
       "slug": "second-opinion-when-why-what-to-bring",
@@ -28,7 +82,38 @@
       "date": "2026-07-13",
       "readMinutes": 6,
       "category": "Second opinion",
-      "tags": ["second opinion", "preparation"]
+      "tags": ["second opinion", "preparation"],
+      "content": [
+        { "type": "p", "text": "A second opinion is one of the highest-leverage things you can do in dentistry. It costs less than any major procedure and can save you from irreversible decisions. But not every situation needs one. Here's when to get one, when not to bother, and how to do it well." },
+        { "type": "h2", "text": "When to get a second opinion" },
+        { "type": "ul", "items": [
+          "The treatment plan involves more than 3 procedures",
+          "Total cost is over Gs 2.000.000",
+          "The plan includes extractions, implants, or full crowns",
+          "You feel rushed or pressured to start",
+          "The diagnosis was made without x-rays you can take with you",
+          "You were told a previous dentist's work is \"all wrong\" and needs replacing"
+        ]},
+        { "type": "h2", "text": "When not to bother" },
+        { "type": "ul", "items": [
+          "Simple filling on a small cavity",
+          "Routine cleaning with no proposed additional work",
+          "Emergency treatment for pain (treat the pain, get the second opinion later if a big plan comes out of it)"
+        ]},
+        { "type": "h2", "text": "How to ask without offending your dentist" },
+        { "type": "p", "text": "Most dentists don't get offended. The ones who do are the ones to be cautious of. Use language like: \"This is a significant investment, and I want to make sure I understand all my options. Would you be comfortable with me getting a second opinion before I decide?\" Any dentist who pushes back hard on this is signaling something. A confident, ethical dentist will either welcome the second opinion or offer to refer you to a specialist themselves." },
+        { "type": "h2", "text": "What to bring" },
+        { "type": "ul", "items": [
+          "All x-rays (digital files or printed films)",
+          "The original treatment plan / quote, in writing",
+          "Any clinical notes the previous dentist can share",
+          "Your list of questions, written down (you'll forget them otherwise)",
+          "A summary of what was said verbally during the consultation"
+        ]},
+        { "type": "h2", "text": "What to expect from a good second opinion" },
+        { "type": "p", "text": "A real second opinion takes time. Expect 45-60 minutes for an initial review. The dentist should: review your records, do a clinical exam, ask about your priorities and concerns, and then deliver a written report. The report should: confirm or question the original diagnosis, list the options (including the conservative one), and give a separate quote for any work they'd do differently. If the second opinion comes back in 10 minutes and a handshake, you didn't get one." },
+        { "type": "callout", "text": "A second opinion isn't disloyal to your current dentist. It's how professionals in every field operate, from medicine to law to architecture. A dentist who refuses to engage with that reality is the one to worry about." }
+      ]
     }
   ],
   "plannedTopics": [
