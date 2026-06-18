@@ -8,5 +8,56 @@
     "Proactive specialist coordination",
     "Conservative options first",
     "Function and esthetics together"
+  ],
+  "items": [
+    {
+      "name": "Complex case evaluation",
+      "description": "Full-mouth assessment with diagnostic records, written treatment plan with phases, timeline, and reference costs. Includes specialist coordination if needed.",
+      "duration": "90-120 min",
+      "priceGs": 900000
+    },
+    {
+      "name": "Single zirconia crown",
+      "description": "Premium zirconia crown for strength and natural appearance. Includes preparation, lab work, and fitting.",
+      "duration": "2-3 visits",
+      "priceGs": 1800000
+    },
+    {
+      "name": "Bridge (per unit)",
+      "description": "Fixed bridge to replace one or more missing teeth. Pricing varies with span and materials.",
+      "duration": "2-4 visits",
+      "priceGs": 1800000
+    },
+    {
+      "name": "Implant crown (restoration only)",
+      "description": "Placement of the final crown on an existing implant. The surgical placement is done by a specialist I coordinate with.",
+      "duration": "2-3 visits",
+      "priceGs": 1500000
+    }
+  ],
+  "process": [
+    "Comprehensive clinical exam and diagnostic records",
+    "Specialist consultation if needed (implants, surgery, perio)",
+    "Phased treatment plan with options at each stage",
+    "Treatment execution with progress reviews",
+    "Long-term follow-up and maintenance"
+  ],
+  "faqs": [
+    {
+      "q": "Will I need to see a specialist?",
+      "a": "Possibly. If your case needs implants, surgery, or complex periodontal work, I refer to a specialist and coordinate the entire process. You don't have to manage it alone."
+    },
+    {
+      "q": "How long does full rehabilitation take?",
+      "a": "It depends on the case. Simple cases take a few months. Complex cases with implants or surgery can take 6-12 months. The plan includes a realistic timeline."
+    },
+    {
+      "q": "What if I've been told I need everything extracted?",
+      "a": "Bring the recommendation. I'll review the case with no conflict of interest. If extraction is genuinely the right call, I'll tell you. If something can be saved, I'll show you."
+    },
+    {
+      "q": "Do you do implants?",
+      "a": "I restore implants (place the crown on top). Surgical placement is done by a maxillofacial specialist I work with. This separation keeps the surgical quality high."
+    }
   ]
 }

@@ -17,9 +17,9 @@ interface PageSectionProps {
 
 const BG: Record<string, string> = {
   default: "",
-  muted: "bg-[var(--surface-muted)]",
-  accent: "bg-[var(--accent)] text-white",
-  gradient: "bg-gradient-to-br from-accent via-[var(--accent-2)] to-accent text-white",
+  muted: "bg-surface-muted",
+  accent: "bg-accent text-white",
+  gradient: "bg-gradient-to-br from-accent via-accent-2 to-accent text-white",
 }
 
 const PY: Record<string, string> = {

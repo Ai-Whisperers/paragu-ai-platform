@@ -16,7 +16,7 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
   const isEs = locale === "es"
 
   return (
-    <section className="relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-to-br from-accent-soft via-bg to-bg">
+    <section className="relative overflow-hidden min-h-[600px] lg:min-h-[680px] flex items-center bg-gradient-to-br from-accent-soft via-bg to-bg">
       {/* Decorative background shapes */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Accent blob top-right */}

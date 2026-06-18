@@ -8,5 +8,50 @@
     "Options with pros and cons",
     "Clear timeline and sequence",
     "Review or update plan at any stage"
+  ],
+  "items": [
+    {
+      "name": "Initial consultation + written plan",
+      "description": "Clinical exam, diagnostic discussion, and a written treatment plan with options, timeline, and reference prices.",
+      "duration": "60-90 min",
+      "priceGs": 600000
+    },
+    {
+      "name": "Complex multi-phase planning",
+      "description": "Comprehensive plan for full-mouth rehabilitation, implants, or extensive restorative work. Includes phased timeline and specialist referrals if needed.",
+      "duration": "90-120 min",
+      "priceGs": 900000
+    },
+    {
+      "name": "Plan update / second revision",
+      "description": "If your situation has changed or you want a different approach, I update the plan with new options. Existing patients only.",
+      "duration": "30-45 min",
+      "priceGs": 250000
+    }
+  ],
+  "process": [
+    "Comprehensive clinical exam and records review",
+    "Diagnostic tests if needed (x-rays, photos, models)",
+    "I draft a written plan with options and costs",
+    "We review together — you ask questions, I clarify",
+    "You decide when to start, in which phase, and how"
+  ],
+  "faqs": [
+    {
+      "q": "Do I have to commit to the plan?",
+      "a": "No. The plan is yours to consider. You decide when — or whether — to start treatment. There's no obligation."
+    },
+    {
+      "q": "Can the plan change?",
+      "a": "Yes. If something unexpected comes up during treatment, I discuss it with you before continuing. The plan is a starting point, not a contract."
+    },
+    {
+      "q": "Is the written plan included in the consultation?",
+      "a": "Yes. The initial consultation fee includes the exam, the diagnosis discussion, and the written plan with options."
+    },
+    {
+      "q": "Can I share the plan with another dentist?",
+      "a": "Absolutely. The plan is yours. Many patients share it with their regular dentist or use it to get a second opinion from a specialist."
+    }
   ]
 }

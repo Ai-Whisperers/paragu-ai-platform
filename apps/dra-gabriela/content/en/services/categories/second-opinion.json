@@ -8,5 +8,50 @@
     "Alternative proposal if warranted",
     "I don't repeat unnecessary procedures",
     "I compare costs and available options"
+  ],
+  "items": [
+    {
+      "name": "Initial review",
+      "description": "Bring your studies and I'll review the diagnosis with no conflict of interest. I'll tell you what makes sense and what should be questioned.",
+      "duration": "45-60 min",
+      "priceGs": 450000
+    },
+    {
+      "name": "Second opinion + treatment plan",
+      "description": "Review plus a written treatment plan with options, timeline, and reference prices so you can decide without pressure.",
+      "duration": "60-90 min",
+      "priceGs": 600000
+    },
+    {
+      "name": "Written second opinion (no visit)",
+      "description": "For patients outside Asunción. I review your records remotely and deliver a written second opinion report within 5 business days.",
+      "duration": "Async (5 business days)",
+      "priceGs": 350000
+    }
+  ],
+  "process": [
+    "You bring prior studies: x-rays, treatment plans, clinical notes",
+    "Clinical exam and discussion of your case",
+    "I document findings in a written report",
+    "We review options together, with costs and timelines",
+    "You decide with full information"
+  ],
+  "faqs": [
+    {
+      "q": "What should I bring?",
+      "a": "X-rays (recent if possible), the original treatment plan or quote, any clinical notes, and your questions. The more information, the more precise the opinion."
+    },
+    {
+      "q": "Will you tell me if the other dentist was wrong?",
+      "a": "If something doesn't add up, I tell you clearly. I won't defend a treatment plan just because another dentist proposed it — and I won't invent problems where there are none."
+    },
+    {
+      "q": "Is the written opinion accepted by other dentists?",
+      "a": "Yes. The report is structured as a clinical document with findings, options, and recommendations. Patients share it with their regular dentist or use it to coordinate with a specialist."
+    },
+    {
+      "q": "Can I get a second opinion without visiting?",
+      "a": "Yes. For patients outside Asunción, I offer a remote written opinion based on records you send. Same documentation, same thoroughness, delivered as a PDF."
+    }
   ]
 }

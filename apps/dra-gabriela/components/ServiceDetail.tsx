@@ -1,12 +1,23 @@
-// Service detail page renderer — premium layout with hero, highlights, items, CTA.
+// Service detail page renderer — full layout with hero, highlights, items,
+// process, FAQs, and CTA. Premium feel, mobile-first.
+//
+// Each service has 5 content blocks:
+//  1. Hero (title + description + image)
+//  2. Highlights (4-card grid)
+//  3. Items (procedures with prices + durations)
+//  4. Process (numbered steps)
+//  5. FAQs (accordion)
+//  6. CTA (gradient banner)
 
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import { ArrowRight, MessageCircle, CheckCircle2, Clock, Sparkles } from "lucide-react"
+import { ArrowRight, MessageCircle, CheckCircle2, Clock, Sparkles, FileText, HelpCircle } from "lucide-react"
 import Image from "next/image"
 import { getContent, whatsappLink, type Locale } from "@/lib/content"
 import { buildMetadata } from "@/lib/seo"
 import { PageHero } from "@/components/PageHero"
+import { ContactButtons } from "@/components/ContactButton"
+import { ServiceFaq } from "@/components/ServiceFaq"
 
 import enSegunda from "@/content/en/services/categories/second-opinion.json"
 import enPlanning from "@/content/en/services/categories/treatment-planning.json"
@@ -22,8 +33,6 @@ import esRehab from "@/content/es/services/categories/rehabilitacion-oral.json"
 
 type ServiceData = any
 
-// Map of all known slugs (any language) to their content.
-// Each locale gets the same 5 content files but keyed by their language slug.
 const SERVICES_BY_LOCALE: Record<Locale, Record<string, ServiceData>> = {
   en: {
     "second-opinion": enSegunda,
@@ -31,7 +40,6 @@ const SERVICES_BY_LOCALE: Record<Locale, Record<string, ServiceData>> = {
     "general-dentistry": enGeneral,
     "cosmetic-dentistry": enCosmetic,
     "oral-rehabilitation": enRehab,
-    // Spanish slugs work too (canonical URLs)
     "segunda-opinion": enSegunda,
     "planificacion-tratamiento": enPlanning,
     "odontologia-general": enGeneral,
@@ -44,7 +52,6 @@ const SERVICES_BY_LOCALE: Record<Locale, Record<string, ServiceData>> = {
     "odontologia-general": esGeneral,
     "estetica-dental": esCosmetic,
     "rehabilitacion-oral": esRehab,
-    // English slugs work too (cross-locale access)
     "second-opinion": esSegunda,
     "treatment-planning": esPlanning,
     "general-dentistry": esGeneral,
@@ -67,7 +74,6 @@ export function generateStaticParams() {
     { locale: "es", slug: "odontologia-general" },
     { locale: "es", slug: "estetica-dental" },
     { locale: "es", slug: "rehabilitacion-oral" },
-    // Cross-locale (slug from any language works)
     { locale: "en", slug: "segunda-opinion" },
     { locale: "en", slug: "planificacion-tratamiento" },
     { locale: "en", slug: "odontologia-general" },
@@ -81,25 +87,24 @@ export function generateStaticParams() {
   ]
 }
 
+const SLUG_TO_CANONICAL: Record<string, string> = {
+  "segunda-opinion": "second-opinion",
+  "second-opinion": "second-opinion",
+  "planificacion-tratamiento": "treatment-planning",
+  "treatment-planning": "treatment-planning",
+  "odontologia-general": "general-dentistry",
+  "general-dentistry": "general-dentistry",
+  "estetica-dental": "cosmetic-dentistry",
+  "cosmetic-dentistry": "cosmetic-dentistry",
+  "rehabilitacion-oral": "oral-rehabilitation",
+  "oral-rehabilitation": "oral-rehabilitation",
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params
   const data = SERVICES_BY_LOCALE[locale as Locale]?.[slug]
   if (!data) return {}
-  // Build the canonical EN slug from whatever slug was passed in
-  // (e.g. "segunda-opinion" → "second-opinion")
-  const reverseSlugMap: Record<string, string> = {
-    "segunda-opinion": "second-opinion",
-    "second-opinion": "second-opinion",
-    "planificacion-tratamiento": "treatment-planning",
-    "treatment-planning": "treatment-planning",
-    "odontologia-general": "general-dentistry",
-    "general-dentistry": "general-dentistry",
-    "estetica-dental": "cosmetic-dentistry",
-    "cosmetic-dentistry": "cosmetic-dentistry",
-    "rehabilitacion-oral": "oral-rehabilitation",
-    "oral-rehabilitation": "oral-rehabilitation",
-  }
-  const canonicalSlug = reverseSlugMap[slug] ?? slug
+  const canonicalSlug = SLUG_TO_CANONICAL[slug] ?? slug
   const isEs = locale === "es"
   return buildMetadata({
     slug: `services/${canonicalSlug}`,
@@ -111,6 +116,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   })
 }
 
+const SLUG_TO_IMAGE: Record<string, string> = {
+  "second-opinion": "/images/services/second-opinion.png",
+  "treatment-planning": "/images/services/treatment-planning.png",
+  "general-dentistry": "/images/services/general-dentistry.svg",
+  "cosmetic-dentistry": "/images/services/cosmetic-dentistry.png",
+  "oral-rehabilitation": "/images/services/oral-rehabilitation.png",
+  "segunda-opinion": "/images/services/second-opinion.png",
+  "planificacion-tratamiento": "/images/services/treatment-planning.png",
+  "odontologia-general": "/images/services/general-dentistry.svg",
+  "estetica-dental": "/images/services/cosmetic-dentistry.png",
+  "rehabilitacion-oral": "/images/services/oral-rehabilitation.png",
+}
+
 export default async function ServiceDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params
   if (locale !== "en" && locale !== "es") notFound()
@@ -118,44 +136,53 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   if (!data) notFound()
 
   const c = getContent(locale)
-  const wa = whatsappLink(c.business?.whatsapp, c.business?.whatsappMessage)
   const base = `/${locale}`
   const isEs = locale === "es"
+  const canonicalSlug = SLUG_TO_CANONICAL[slug] ?? slug
+  const heroImage = SLUG_TO_IMAGE[slug]
 
   const highlights: string[] = data.highlights || []
   const items: any[] = data.items || []
-
-  // Pick image by slug
-  const slugToImage: Record<string, string> = {
-    "second-opinion": "/images/services/second-opinion.png",
-    "treatment-planning": "/images/services/treatment-planning.png",
-    "general-dentistry": "/images/services/general-dentistry.svg",
-    "cosmetic-dentistry": "/images/services/cosmetic-dentistry.png",
-    "oral-rehabilitation": "/images/services/oral-rehabilitation.png",
-    "segunda-opinion": "/images/services/second-opinion.png",
-    "planificacion-tratamiento": "/images/services/treatment-planning.png",
-    "odontologia-general": "/images/services/general-dentistry.svg",
-    "estetica-dental": "/images/services/cosmetic-dentistry.png",
-    "rehabilitacion-oral": "/images/services/oral-rehabilitation.png",
-  }
-  const heroImage = slugToImage[slug]
+  const process: string[] = data.process || []
+  const faqs: any[] = data.faqs || []
 
   return (
     <>
-      {/* Custom hero with image */}
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="bg-surface border-b border-border-light">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex items-center gap-1.5 text-xs text-fg-subtle">
+            <li>
+              <Link href={base} className="hover:text-accent transition-colors">
+                {isEs ? "Inicio" : "Home"}
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <Link href={`${base}/services`} className="hover:text-accent transition-colors">
+                {isEs ? "Servicios" : "Services"}
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li className="text-fg font-medium" aria-current="page">{data.title}</li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-accent-soft via-bg to-bg">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-[0.05]" style={{ background: "radial-gradient(circle, var(--accent) 0%, transparent 70%)" }} />
           <div className="absolute inset-0 dot-pattern" />
         </div>
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
             <div className="lg:col-span-3">
               <span className="eyebrow inline-flex">
                 <Sparkles className="w-3 h-3" />
                 {isEs ? "Servicio" : "Service"}
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-5 leading-[1.05]">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tight mb-4 leading-[1.05]">
                 <span className="gradient-text">{data.title}</span>
               </h1>
               {data.description && (
@@ -163,22 +190,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                   {data.description}
                 </p>
               )}
-              <div className="flex flex-col sm:flex-row gap-3">
-                {wa ? (
-                  <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                    <MessageCircle className="w-4 h-4" />
-                    {data.cta || (isEs ? "Coordinar" : "Get in touch")}
-                  </a>
-                ) : (
-                  <Link href={`/${locale}/contact`} className="btn btn-primary">
-                    <MessageCircle className="w-4 h-4" />
-                    {isEs ? "Coordinar consulta" : "Get in touch"}
-                  </Link>
-                )}
-                <Link href={`${base}/pricing`} className="btn btn-outline">
-                  {isEs ? "Ver precios" : "See pricing"} <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
+              <ContactButtons
+                business={c.business}
+                locale={locale}
+                variant="primary"
+                primaryLabel={data.cta || (isEs ? "Coordinar" : "Get in touch")}
+                secondaryLabel={isEs ? "Ver precios" : "See pricing"}
+              />
             </div>
             {heroImage && (
               <div className="lg:col-span-2 relative">
@@ -201,14 +219,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Highlights */}
       {highlights.length > 0 && (
-        <section className="section">
+        <section className="py-16 md:py-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
+            <div className="mb-10">
               <span className="eyebrow inline-flex">
                 <Sparkles className="w-3 h-3" />
                 {isEs ? "Qué incluye" : "What's included"}
               </span>
-              <h2>{isEs ? "Todo lo que necesitás" : "Everything you need"}</h2>
+              <h2 className="text-3xl md:text-4xl text-left">{isEs ? "Todo lo que necesitás" : "Everything you need"}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {highlights.map((h, i) => (
@@ -224,35 +242,101 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </section>
       )}
 
-      {/* Detail items (if any) */}
+      {/* Items / Procedures with prices */}
       {items.length > 0 && (
-        <section className="section bg-surface-muted">
+        <section className="py-16 md:py-20 bg-surface-muted">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <h2>{isEs ? "Detalle" : "Details"}</h2>
+            <div className="mb-10">
+              <span className="eyebrow inline-flex">
+                <FileText className="w-3 h-3" />
+                {isEs ? "Procedimientos" : "Procedures"}
+              </span>
+              <h2 className="text-3xl md:text-4xl text-left">{isEs ? "Qué incluye cada opción" : "What's in each option"}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {items.map((it: any, i: number) => (
-                <div key={i} className="card p-5">
-                  <h3 className="font-medium mb-1.5">{it.name || it.title}</h3>
-                  {it.description && <p className="text-sm text-fg-muted leading-relaxed mb-2">{it.description}</p>}
-                  {it.duration && (
-                    <span className="text-xs text-fg-subtle flex items-center gap-1">
-                      <Clock className="w-3 h-3" /> {it.duration}
-                    </span>
-                  )}
-                  {it.priceGs && (
-                    <p className="text-base font-mono text-accent mt-3">Gs {Number(it.priceGs).toLocaleString("es-PY")}</p>
-                  )}
+                <div key={i} className="card p-5 md:p-6">
+                  <h3 className="text-lg font-medium mb-2 text-left" style={{ fontFamily: "var(--font-heading)" }}>{it.name}</h3>
+                  {it.description && <p className="text-sm text-fg-muted leading-relaxed mb-3 text-left">{it.description}</p>}
+                  <div className="flex flex-wrap items-center gap-3 text-xs text-fg-subtle">
+                    {it.duration && (
+                      <span className="flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5" /> {it.duration}
+                      </span>
+                    )}
+                    {it.priceGs && (
+                      <span className="text-base font-mono text-accent font-medium">
+                        Gs {Number(it.priceGs).toLocaleString("es-PY")}
+                      </span>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
+            <p className="text-xs text-fg-subtle mt-6 text-left">
+              {isEs
+                ? "Precios de referencia. El costo final se confirma en la consulta antes de cualquier procedimiento."
+                : "Reference prices. Final cost is confirmed during the visit before any procedure."}
+            </p>
           </div>
         </section>
       )}
 
+      {/* Process */}
+      {process.length > 0 && (
+        <section className="py-16 md:py-20">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-10">
+              <span className="eyebrow inline-flex">
+                <ArrowRight className="w-3 h-3" />
+                {isEs ? "Cómo trabajamos" : "How we work"}
+              </span>
+              <h2 className="text-3xl md:text-4xl text-left">{isEs ? "El proceso" : "The process"}</h2>
+            </div>
+            <ol className="space-y-4">
+              {process.map((step: string, i: number) => (
+                <li key={i} className="flex items-start gap-4 md:gap-5">
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent text-white flex items-center justify-center font-medium text-lg md:text-xl" style={{ fontFamily: "var(--font-heading)" }}>
+                    {i + 1}
+                  </div>
+                  <p className="text-base md:text-lg text-fg leading-relaxed pt-1.5 md:pt-2.5 text-left">{step}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
+
+      {/* FAQs */}
+      {faqs.length > 0 && (
+        <section className="py-16 md:py-20 bg-surface-muted">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-10">
+              <span className="eyebrow inline-flex">
+                <HelpCircle className="w-3 h-3" />
+                {isEs ? "Preguntas frecuentes" : "Frequently asked questions"}
+              </span>
+              <h2 className="text-3xl md:text-4xl text-left">{isEs ? "Sobre este servicio" : "About this service"}</h2>
+            </div>
+            <ServiceFaq items={faqs} />
+          </div>
+        </section>
+      )}
+
+      {/* Other services */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <Link href={`${base}/services`} className="inline-flex items-center gap-2 text-accent hover:text-accent-2 transition-colors text-sm font-medium">
+              <ArrowRight className="w-4 h-4 rotate-180" />
+              {isEs ? "Ver todos los servicios" : "See all services"}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* In-text CTA */}
-      <section className="section-sm">
+      <section className="py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="card-accent card p-8 md:p-10">
             <h2 className="text-2xl md:text-3xl mb-3">{isEs ? "¿Listo para empezar?" : "Ready to begin?"}</h2>
@@ -261,22 +345,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 ? "Coordiná tu consulta por WhatsApp. Respuesta en menos de 24 horas."
                 : "Book your consultation via WhatsApp. Response within 24 hours."}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              {wa ? (
-                <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                  <MessageCircle className="w-4 h-4" />
-                  {isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
-                </a>
-              ) : (
-                <Link href={`/${locale}/contact`} className="btn btn-primary">
-                  <MessageCircle className="w-4 h-4" />
-                  {isEs ? "Ver datos de contacto" : "See contact details"}
-                </Link>
-              )}
-              <Link href={`${base}/pricing`} className="btn btn-outline">
-                {isEs ? "Ver precios completos" : "See all pricing"}
-              </Link>
-            </div>
+            <ContactButtons
+              business={c.business}
+              locale={locale}
+              variant="primary"
+              primaryLabel={isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
+              secondaryLabel={isEs ? "Ver precios" : "See pricing"}
+            />
           </div>
         </div>
       </section>

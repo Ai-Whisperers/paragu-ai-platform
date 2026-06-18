@@ -25,8 +25,8 @@ export default async function LocaleLayout({
       <head>
         <SchemaOrg locale={locale} />
       </head>
-      <Navbar locale={locale} />
-      <main lang={locale} className="min-h-screen pb-20 md:pb-0">{children}</main>
+      <Navbar locale={locale} business={content.business} />
+      <main lang={locale} className="pb-20 md:pb-0">{children}</main>
       <Footer locale={locale} content={content} />
       <CookieConsent locale={locale} />
       <MobileStickyCta content={content} />

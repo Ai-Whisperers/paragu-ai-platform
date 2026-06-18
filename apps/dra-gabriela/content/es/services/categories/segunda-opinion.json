@@ -8,5 +8,50 @@
     "Propuesta alternativa si corresponde",
     "No repito procedimientos innecesarios",
     "Comparo costos y opciones disponibles"
+  ],
+  "items": [
+    {
+      "name": "Revisión inicial",
+      "description": "Traé tus estudios y reviso el diagnóstico sin conflicto de interés. Te digo qué tiene sentido y qué se puede cuestionar.",
+      "duration": "45-60 min",
+      "priceGs": 450000
+    },
+    {
+      "name": "Segunda opinión + plan de tratamiento",
+      "description": "Revisión más un plan de tratamiento escrito con opciones, plazos y precios de referencia para que decidas sin presión.",
+      "duration": "60-90 min",
+      "priceGs": 600000
+    },
+    {
+      "name": "Segunda opinión escrita (sin visita)",
+      "description": "Para pacientes fuera de Asunción. Reviso tus registros a distancia y entrego un informe escrito en 5 días hábiles.",
+      "duration": "Asíncrono (5 días hábiles)",
+      "priceGs": 350000
+    }
+  ],
+  "process": [
+    "Traés estudios previos: radiografías, planes de tratamiento, notas clínicas",
+    "Examen clínico y discusión de tu caso",
+    "Documento los hallazgos en un informe escrito",
+    "Revisamos opciones juntos, con costos y plazos",
+    "Decidís con toda la información"
+  ],
+  "faqs": [
+    {
+      "q": "¿Qué tengo que traer?",
+      "a": "Radiografías (recientes si es posible), el plan o presupuesto original, notas clínicas y tus preguntas. Cuanta más información, más precisa será la opinión."
+    },
+    {
+      "q": "¿Me vas a decir si el otro dentista se equivocó?",
+      "a": "Si algo no cuadra, te lo digo con claridad. No defiendo un plan solo porque lo propuso otro profesional, y tampoco invento problemas donde no los hay."
+    },
+    {
+      "q": "¿La opinión escrita es aceptada por otros odontólogos?",
+      "a": "Sí. El informe está estructurado como un documento clínico con hallazgos, opciones y recomendaciones. Los pacientes lo comparten con su odontólogo o lo usan para coordinar con un especialista."
+    },
+    {
+      "q": "¿Puedo pedir una segunda opinión sin ir a la consulta?",
+      "a": "Sí. Para pacientes fuera de Asunción ofrezco una opinión escrita remota basada en los registros que envíes. Misma documentación, misma profundidad, entregada como PDF."
+    }
   ]
 }

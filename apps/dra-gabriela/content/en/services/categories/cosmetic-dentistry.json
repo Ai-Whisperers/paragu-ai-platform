@@ -8,5 +8,56 @@
     "Minimally invasive options first",
     "Subtle, natural-looking results",
     "Honest suitability assessment"
+  ],
+  "items": [
+    {
+      "name": "In-office whitening",
+      "description": "Professional whitening with controlled concentration. Best for patients with healthy teeth who want a moderate shade change.",
+      "duration": "60-90 min",
+      "priceGs": 700000
+    },
+    {
+      "name": "Direct composite veneers",
+      "description": "Chair-side veneers in composite, minimally invasive and reversible. Good for shape corrections and small chips.",
+      "duration": "60-90 min per tooth",
+      "priceGs": 600000
+    },
+    {
+      "name": "Porcelain veneers",
+      "description": "Lab-fabricated veneers for the most natural and durable esthetic result. Requires healthy underlying teeth and gums.",
+      "duration": "2-3 visits",
+      "priceGs": 1500000
+    },
+    {
+      "name": "Esthetic consultation",
+      "description": "Discussion of what you'd like to change, with an honest assessment of what's realistic and what isn't.",
+      "duration": "45-60 min",
+      "priceGs": 300000
+    }
+  ],
+  "process": [
+    "Discussion of what you'd like to change",
+    "Exam and health check (no esthetics on unhealthy teeth)",
+    "Digital preview or wax-up when possible",
+    "Treatment in one or more visits",
+    "Maintenance and follow-up"
+  ],
+  "faqs": [
+    {
+      "q": "Are veneers permanent?",
+      "a": "Porcelain veneers require irreversible tooth preparation. Composite veneers can be removed. I'll explain the trade-offs so you choose with full information."
+    },
+    {
+      "q": "Will my teeth look fake?",
+      "a": "No. I work with conservative shape and shade choices. The goal is to make your teeth look like the best version of themselves, not like they belong to someone else."
+    },
+    {
+      "q": "Can I whiten my teeth at home?",
+      "a": "I can make you custom trays and provide professional gel for home use. It's slower than in-office but gives more control over the final shade."
+    },
+    {
+      "q": "What if my teeth aren't suitable?",
+      "a": "If I think a treatment won't give you a result you'd be happy with, I tell you before starting. Sometimes the best cosmetic result requires fixing the foundation first."
+    }
   ]
 }

@@ -1,12 +1,63 @@
 {
   "id": "rehabilitacion-oral",
   "title": "Rehabilitación oral / casos complejos",
-  "description": "Coronas, prótesis y reconstrucción en bocas muy restauradas. Coordinamos con especialistas cuando el caso lo necesita, priorizando lo conservador y funcional.",
-  "cta": "Evaluar caso complejo",
+  "description": "Coronas, prótesis y bocas muy restauradas. Coordinamos con especialistas cuando hace falta, priorizando opciones conservadoras y funcionales.",
+  "cta": "Pedir evaluación de caso complejo",
   "highlights": [
-    "Visión integral de la boca",
-    "Coordinación activa con especialistas",
+    "Perspectiva de toda la boca",
+    "Coordinación proactiva con especialistas",
     "Opciones conservadoras primero",
-    "Función y estética alineadas"
+    "Función y estética juntas"
+  ],
+  "items": [
+    {
+      "name": "Evaluación de caso complejo",
+      "description": "Evaluación completa con registros diagnósticos, plan escrito con fases, plazos y precios de referencia. Incluye coordinación con especialistas si hace falta.",
+      "duration": "90-120 min",
+      "priceGs": 900000
+    },
+    {
+      "name": "Corona unitaria de zirconia",
+      "description": "Corona premium de zirconia por resistencia y apariencia natural. Incluye preparación, laboratorio y colocación.",
+      "duration": "2-3 visitas",
+      "priceGs": 1800000
+    },
+    {
+      "name": "Puente (por unidad)",
+      "description": "Puente fijo para reemplazar uno o más dientes perdidos. El precio varía según el tramo y los materiales.",
+      "duration": "2-4 visitas",
+      "priceGs": 1800000
+    },
+    {
+      "name": "Corona sobre implante (restauración)",
+      "description": "Colocación de la corona final sobre un implante existente. La colocación quirúrgica la hace un especialista con quien coordino.",
+      "duration": "2-3 visitas",
+      "priceGs": 1500000
+    }
+  ],
+  "process": [
+    "Examen clínico completo y registros diagnósticos",
+    "Consulta con especialistas si hace falta (implantes, cirugía, periodoncia)",
+    "Plan de tratamiento por fases con opciones en cada etapa",
+    "Ejecución del tratamiento con revisiones de progreso",
+    "Seguimiento y mantenimiento a largo plazo"
+  ],
+  "faqs": [
+    {
+      "q": "¿Voy a necesitar un especialista?",
+      "a": "Probablemente. Si tu caso necesita implantes, cirugía o periodoncia compleja, derivo a un especialista y coordino todo el proceso. No tenés que gestionarlo solo."
+    },
+    {
+      "q": "¿Cuánto tarda una rehabilitación completa?",
+      "a": "Depende del caso. Los casos simples llevan algunos meses. Los casos complejos con implantes o cirugía pueden llevar 6-12 meses. El plan incluye un plazo realista."
+    },
+    {
+      "q": "¿Qué hago si me dijeron que hay que extraer todo?",
+      "a": "Traé la recomendación. Reviso el caso sin conflicto de interés. Si la extracción es realmente lo correcto, te lo digo. Si se puede salvar algo, te lo muestro."
+    },
+    {
+      "q": "¿Hacés implantes?",
+      "a": "Restauro implantes (coloco la corona encima). La colocación quirúrgica la hace un especialista maxilofacial con quien trabajo. Esta separación mantiene alta la calidad quirúrgica."
+    }
   ]
 }

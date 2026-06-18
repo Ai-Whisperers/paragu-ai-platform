@@ -1,12 +1,63 @@
 {
   "id": "estetica-dental",
   "title": "Estética dental",
-  "description": "Carillas, aclaramiento y cambios de forma y color — solo cuando la pieza está sana y el resultado es natural, no exagerado.",
-  "cta": "Consultar opciones estéticas",
+  "description": "Carillas, blanqueamiento y cambios estéticos refinados — solo cuando el diente está suficientemente sano y el resultado es realista, no exagerado.",
+  "cta": "Consultar por opciones estéticas",
   "highlights": [
-    "Revisión de salud dental previa",
-    "Opción mínimamente invasiva primero",
-    "Resultado natural",
-    "Indicación honesta de factibilidad"
+    "Revisión de salud antes de la estética",
+    "Opciones mínimamente invasivas primero",
+    "Resultados sutiles y naturales",
+    "Evaluación honesta de la viabilidad"
+  ],
+  "items": [
+    {
+      "name": "Blanqueamiento en consultorio",
+      "description": "Blanqueamiento profesional con concentración controlada. Ideal para pacientes con dientes sanos que buscan un cambio de tono moderado.",
+      "duration": "60-90 min",
+      "priceGs": 700000
+    },
+    {
+      "name": "Carillas directas de composite",
+      "description": "Carillas hechas en consultorio con composite, mínimamente invasivas y reversibles. Buenas para correcciones de forma y pequeños desprendimientos.",
+      "duration": "60-90 min por diente",
+      "priceGs": 600000
+    },
+    {
+      "name": "Carillas de porcelana",
+      "description": "Carillas fabricadas en laboratorio para el resultado estético más natural y durable. Requiere dientes y encías sanos.",
+      "duration": "2-3 visitas",
+      "priceGs": 1500000
+    },
+    {
+      "name": "Consulta estética",
+      "description": "Conversamos sobre lo que te gustaría cambiar, con una evaluación honesta de qué es realista y qué no.",
+      "duration": "45-60 min",
+      "priceGs": 300000
+    }
+  ],
+  "process": [
+    "Conversamos sobre lo que querés cambiar",
+    "Examen y revisión de salud (sin estética sobre dientes enfermos)",
+    "Previsualización digital o encerado cuando es posible",
+    "Tratamiento en una o varias visitas",
+    "Mantenimiento y seguimiento"
+  ],
+  "faqs": [
+    {
+      "q": "¿Las carillas son permanentes?",
+      "a": "Las carillas de porcelana requieren preparación irreversible del diente. Las de composite se pueden retirar. Te explico los compromisos para que elijas con toda la información."
+    },
+    {
+      "q": "¿Mis dientes van a verse falsos?",
+      "a": "No. Trabajo con formas y tonos conservadores. La meta es que tus dientes se vean como la mejor versión de sí mismos, no como si fueran de otra persona."
+    },
+    {
+      "q": "¿Puedo blanquearme los dientes en casa?",
+      "a": "Puedo fabricarte férulas personalizadas y darte gel profesional para uso domiciliario. Es más lento que en consultorio pero da más control sobre el tono final."
+    },
+    {
+      "q": "¿Qué pasa si mis dientes no son aptos?",
+      "a": "Si creo que un tratamiento no te va a dar un resultado con el que quedes conforme, te lo digo antes de empezar. A veces el mejor resultado estético requiere arreglar la base primero."
+    }
   ]
 }

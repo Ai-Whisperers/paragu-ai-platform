@@ -1,12 +1,63 @@
 {
   "id": "odontologia-general",
   "title": "Odontología general y conservadora",
-  "description": "Prevención primero, luego tratamiento dirigido. Limpiezas, endodoncia selectiva, restauraciones y seguimiento con materiales duraderos.",
-  "cta": "Pedir turno de control",
+  "description": "Prevención primero, después cuidado específico. Limpiezas, endodoncias selectivas, restauraciones y seguimiento con materiales duraderos y plazos realistas.",
+  "cta": "Sacar turno para revisión",
   "highlights": [
-    "Enfoque preventivo primero",
-    "Endodoncia solo cuando justifica",
+    "Enfoque preventivo",
+    "Endodoncia solo cuando se justifica",
     "Materiales duraderos",
-    "Seguimiento clínico incluido"
+    "Seguimiento incluido cuando hace falta"
+  ],
+  "items": [
+    {
+      "name": "Revisión integral",
+      "description": "Examen completo, radiografías si hace falta, evaluación de encías y un resumen escrito de hallazgos con recomendaciones.",
+      "duration": "45-60 min",
+      "priceGs": 300000
+    },
+    {
+      "name": "Limpieza profesional (profilaxis)",
+      "description": "Remoción de placa y sarro, pulido, aplicación de flúor y guía de cuidados en casa según tu situación.",
+      "duration": "30-45 min",
+      "priceGs": 250000
+    },
+    {
+      "name": "Restauración en composite (empaste)",
+      "description": "Compuesto alemán de alto grado, estratificado para apariencia natural y durabilidad. Opciones de una y varias superficies.",
+      "duration": "30-60 min",
+      "priceGs": 350000
+    },
+    {
+      "name": "Tratamiento de conducto (un canal)",
+      "description": "Tratamiento endodóntico para dientes infectados o dañados, realizado con magnificación y técnicas modernas.",
+      "duration": "60-90 min",
+      "priceGs": 800000
+    }
+  ],
+  "process": [
+    "Examen inicial y discusión de preocupaciones",
+    "Radiografías diagnósticas si hace falta",
+    "Plan de tratamiento con opciones y costos",
+    "Tratamiento en visitas programadas",
+    "Seguimiento para asegurar estabilidad y comodidad"
+  ],
+  "faqs": [
+    {
+      "q": "¿Atendés niños?",
+      "a": "A partir de 10-12 años. Para niños más chicos o casos que requieren manejo de conducta, derivo a un odontopediatra de confianza."
+    },
+    {
+      "q": "¿Qué hago si solo necesito una limpieza?",
+      "a": "Perfecto. La visita de limpieza es corta y enfocada. También hago una revisión rápida para detectar algo que requiera seguimiento."
+    },
+    {
+      "q": "¿Haces conductos?",
+      "a": "Sí, para los casos que puedo resolver bien. Para endodoncias muy complejas, derivo a un especialista de confianza y coordino el proceso."
+    },
+    {
+      "q": "¿Qué materiales usás?",
+      "a": "Compuesto alemán de alto grado para restauraciones, trabajo de laboratorio premium para prótesis. Evito materiales baratos porque no duran."
+    }
   ]
 }

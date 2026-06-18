@@ -8,5 +8,56 @@
     "Endodontics only when justified",
     "Long-lasting materials",
     "Follow-up included where needed"
+  ],
+  "items": [
+    {
+      "name": "Comprehensive checkup",
+      "description": "Full oral exam, x-rays as needed, gum health assessment, and a written summary of findings with recommendations.",
+      "duration": "45-60 min",
+      "priceGs": 300000
+    },
+    {
+      "name": "Professional cleaning (prophylaxis)",
+      "description": "Plaque and tartar removal, polishing, fluoride application, and home-care guidance tailored to your situation.",
+      "duration": "30-45 min",
+      "priceGs": 250000
+    },
+    {
+      "name": "Composite restoration (filling)",
+      "description": "High-grade German composite, layered for natural appearance and durability. Single-surface and multi-surface options.",
+      "duration": "30-60 min",
+      "priceGs": 350000
+    },
+    {
+      "name": "Root canal treatment (single canal)",
+      "description": "Endodontic treatment for infected or damaged teeth, performed with magnification and modern techniques.",
+      "duration": "60-90 min",
+      "priceGs": 800000
+    }
+  ],
+  "process": [
+    "Initial exam and discussion of concerns",
+    "Diagnostic x-rays if needed",
+    "Treatment plan with options and costs",
+    "Treatment in scheduled visits",
+    "Follow-up to ensure stability and comfort"
+  ],
+  "faqs": [
+    {
+      "q": "Do you see children?",
+      "a": "From around age 10-12. For younger children or cases that need specific behavior management, I refer to a trusted pediatric dentist."
+    },
+    {
+      "q": "What if I just need a cleaning?",
+      "a": "Great. A cleaning visit is short and focused. I'll also do a quick check for anything that needs follow-up."
+    },
+    {
+      "q": "Do you do root canals?",
+      "a": "Yes, for cases I can treat well. For very complex endodontics, I refer to a trusted specialist and coordinate the process."
+    },
+    {
+      "q": "What materials do you use?",
+      "a": "High-grade German composite for restorations, premium laboratory work for prosthetics. I avoid cheap materials because they don't last."
+    }
   ]
 }
