@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { activities } from "@/lib/activities";
+import { listActivitiesI18n } from "@/lib/activities-i18n";
 import { content } from "@/lib/content";
+import { cookies } from "next/headers";
 
 export const metadata = {
   title: "Actividades — Club maškaráda",
@@ -9,6 +10,10 @@ export const metadata = {
 };
 
 const RISK_LABEL = { low: "Riesgo bajo", medium: "Riesgo medio", high: "Riesgo alto" };
+
+const RISK_LABEL_EN = { low: "Low risk", medium: "Medium risk", high: "High risk" };
+const CONSENT_LABEL_EN = { low: "Simple consent", medium: "Moderate", high: "Advanced" };
+
 const RISK_COLOR = {
   low: "border-green-500/30 text-green-400",
   medium: "border-yellow-500/30 text-yellow-400",
@@ -16,7 +21,9 @@ const RISK_COLOR = {
 };
 const CONSENT_LABEL = { low: "Consentimiento simple", medium: "Moderado", high: "Avanzado" };
 
-export default function Actividades() {
+export default async function Actividades() {
+  const locale: "es" | "en" = (await cookies()).get("mk_locale")?.value === "en" ? "en" : "es";
+  const activities = listActivitiesI18n(locale);
   return (
     <div className="min-h-screen py-20 px-4">
       <div className="max-w-5xl mx-auto">

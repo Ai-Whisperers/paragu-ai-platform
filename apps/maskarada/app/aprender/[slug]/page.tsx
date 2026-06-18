@@ -1,15 +1,18 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { guides, getGuide } from "@/lib/guides";
+import { listGuidesI18n } from "@/lib/guides-i18n";
+import { getGuideI18n } from "@/lib/guides-i18n";
 import { heroFor } from "@/lib/hero";
+import { cookies } from "next/headers";
 
 export async function generateStaticParams() {
-  return guides.map((g) => ({ slug: g.slug }));
+  return listGuidesI18n("es").map((g) => ({ slug: g.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const g = getGuide(slug);
+  const locale: "es" | "en" = (await cookies()).get("mk_locale")?.value === "en" ? "en" : "es";
+  const g = getGuideI18n(slug, locale);
   if (!g) return {};
   return {
     title: `${g.title} — Club maškaráda`,
@@ -77,11 +80,12 @@ const CATEGORY_LABEL: Record<string, string> = {
 
 export default async function GuiaDetalle({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const g = getGuide(slug);
+  const locale: "es" | "en" = (await cookies()).get("mk_locale")?.value === "en" ? "en" : "es";
+  const g = getGuideI18n(slug, locale);
   if (!g) notFound();
 
   const related = g.relatedSlugs
-    .map((s) => guides.find((x) => x.slug === s))
+    .map((s) => listGuidesI18n(locale).find((x) => x.slug === s))
     .filter((x): x is NonNullable<typeof x> => Boolean(x));
 
   return (

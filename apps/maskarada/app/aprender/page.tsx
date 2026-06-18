@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { guides } from "@/lib/guides";
 import { content } from "@/lib/content";
+import { cookies } from "next/headers";
+import { listGuidesI18n } from "@/lib/guides-i18n";
 
 export const metadata = {
   title: "Aprender — Club maškaráda",
@@ -16,6 +17,16 @@ const CATEGORY_LABEL: Record<string, string> = {
   glossary: "Glosario",
 };
 
+
+const CATEGORY_LABEL_EN: Record<string, string> = {
+  foundations: "Foundations",
+  safety: "Safety",
+  communication: "Communication",
+  logistics: "Logistics",
+  glossary: "Glossary",
+};
+
+
 const CATEGORY_COLOR: Record<string, string> = {
   foundations: "border-gold-400/30 text-gold-400",
   safety: "border-blood-500/30 text-blood-500",
@@ -24,7 +35,9 @@ const CATEGORY_COLOR: Record<string, string> = {
   glossary: "border-white/20 text-gray-400",
 };
 
-export default function Aprender() {
+export default async function Aprender() {
+  const locale: "es" | "en" = (await cookies()).get("mk_locale")?.value === "en" ? "en" : "es";
+  const guides = listGuidesI18n(locale);
   const byCategory = guides.reduce<Record<string, typeof guides>>((acc, g) => {
     (acc[g.category] = acc[g.category] || []).push(g);
     return acc;

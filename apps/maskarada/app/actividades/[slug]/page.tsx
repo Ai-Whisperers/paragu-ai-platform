@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { activities, getActivity } from "@/lib/activities";
+import { getActivityI18n } from "@/lib/activities-i18n";
 import { content } from "@/lib/content";
 import { heroFor } from "@/lib/hero";
+import { cookies } from "next/headers";
 
 export async function generateStaticParams() {
   return activities.map((a) => ({ slug: a.slug }));
@@ -10,7 +12,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const a = getActivity(slug);
+  const locale: "es" | "en" = (await cookies()).get("mk_locale")?.value === "en" ? "en" : "es";
+  const a = getActivityI18n(slug, locale);
   if (!a) return {};
   return {
     title: `${a.name} — Club maškaráda`,
@@ -29,7 +32,8 @@ const RISK_DESC = {
 
 export default async function ActividadDetalle({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const a = getActivity(slug);
+  const locale: "es" | "en" = (await cookies()).get("mk_locale")?.value === "en" ? "en" : "es";
+  const a = getActivityI18n(slug, locale);
   if (!a) notFound();
 
   return (
@@ -143,7 +147,7 @@ export default async function ActividadDetalle({ params }: { params: Promise<{ s
             <h2 className="text-lg font-semibold text-white mb-3">Actividades relacionadas</h2>
             <div className="flex flex-wrap gap-2">
               {a.relatedActivities.map((slug) => {
-                const r = getActivity(slug);
+                const r = getActivityI18n(slug, locale);
                 if (!r) return null;
                 return (
                   <Link
