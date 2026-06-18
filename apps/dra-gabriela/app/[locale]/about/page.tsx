@@ -70,6 +70,8 @@ export default async function About({ params }: { params: Promise<{ locale: stri
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-5 border-t border-border">
@@ -137,6 +139,63 @@ export default async function About({ params }: { params: Promise<{ locale: stri
           </div>
         </div>
       </PageSection>
+
+      {/* Credentials block — teal accent */}
+      <section className="bg-accent text-white relative overflow-hidden">
+        <div className="absolute inset-0 dot-pattern opacity-10 pointer-events-none" />
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="text-xs uppercase tracking-wider text-gold font-semibold">
+              {isEs ? "Credenciales" : "Credentials"}
+            </span>
+            <h2 className="text-3xl md:text-4xl text-white mt-3">
+              {isEs ? "Formación continua, transparencia total" : "Continuous training, total transparency"}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+              <div className="text-gold font-medium text-sm mb-2" style={{ fontFamily: "var(--font-heading)" }}>
+                {isEs ? "Formación" : "Training"}
+              </div>
+              <div className="text-white font-medium mb-1.5">
+                {isEs ? "Universidad Autónoma del Paraguay" : "Universidad Autónoma del Paraguay"}
+              </div>
+              <div className="text-sm text-white/70 leading-relaxed">
+                {isEs ? "Cirujana dentista, ~2005. Posgrados en endodoncia, rehabilitación oral y estética." : "Dental surgeon, ~2005. Postgrad training in endodontics, oral rehabilitation, aesthetics."}
+              </div>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+              <div className="text-gold font-medium text-sm mb-2" style={{ fontFamily: "var(--font-heading)" }}>
+                {isEs ? "Membresías" : "Memberships"}
+              </div>
+              <ul className="space-y-1.5 text-white/90 text-sm">
+                <li className="flex items-start gap-2 text-left">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0" />
+                  <span>{isEs ? "Asociación de Odontólogos del Paraguay" : "Dental Association of Paraguay"}</span>
+                </li>
+                <li className="flex items-start gap-2 text-left">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0" />
+                  <span>{isEs ? "Sociedad Paraguaya de Endodoncia" : "Paraguayan Endodontic Society"}</span>
+                </li>
+                <li className="flex items-start gap-2 text-left">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0" />
+                  <span>{isEs ? "IADR (International Association for Dental Research)" : "IADR (International Association for Dental Research)"}</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+              <div className="text-gold font-medium text-sm mb-2" style={{ fontFamily: "var(--font-heading)" }}>
+                {isEs ? "Capacitación continua" : "Continuing education"}
+              </div>
+              <div className="text-sm text-white/90 leading-relaxed">
+                {isEs
+                  ? "Asistí a más de 30 congresos y cursos de actualización en los últimos 10 años, en Paraguay, Brasil, Argentina y Estados Unidos. La odontología cambia rápido — mantenerse al día es parte del trabajo."
+                  : "I've attended 30+ conferences and update courses in the last 10 years, in Paraguay, Brazil, Argentina, and the US. Dentistry changes fast — staying current is part of the job."}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

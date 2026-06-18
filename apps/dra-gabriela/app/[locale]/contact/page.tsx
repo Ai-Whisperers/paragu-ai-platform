@@ -2,7 +2,7 @@
 
 import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/seo"
-import { MessageCircle, Send, MapPin, Clock, Phone, ArrowRight } from "lucide-react"
+import { MessageCircle, Send, MapPin, Clock, Phone, ArrowRight, FileText } from "lucide-react"
 import Link from "next/link"
 import { getContent, isLocale, isPlaceholder, whatsappLink } from "@/lib/content"
 import { PageHero } from "@/components/PageHero"
@@ -258,6 +258,59 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               {isEs ? "Ver datos de contacto" : "See contact details"}
             </Link>
           )}
+        </div>
+      </PageSection>
+
+      {/* What to bring + Cancellation policy */}
+      <PageSection layout="wide" py="md">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+          <div className="card-accent card p-6 md:p-7">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-accent-soft flex items-center justify-center">
+                <FileText className="w-5 h-5 text-accent" />
+              </div>
+              <h2 className="text-xl">{isEs ? "Qué traer" : "What to bring"}</h2>
+            </div>
+            <ul className="space-y-2.5 text-fg-muted text-sm">
+              <li className="flex items-start gap-2 text-left">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                <span>{isEs ? "Radiografías previas (si tenés, de los últimos 2 años)" : "Previous x-rays (if you have them, within 2 years)"}</span>
+              </li>
+              <li className="flex items-start gap-2 text-left">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                <span>{isEs ? "Lista de medicamentos actuales" : "List of current medications"}</span>
+              </li>
+              <li className="flex items-start gap-2 text-left">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                <span>{isEs ? "Tu pregunta principal en 2-3 oraciones" : "Your main question in 2-3 sentences"}</span>
+              </li>
+              <li className="flex items-start gap-2 text-left">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                <span>{isEs ? "Presupuestos o planes de otras clínicas (si tenés)" : "Quotes or plans from other clinics (if you have them)"}</span>
+              </li>
+            </ul>
+            <Link href={`${base}/first-visit`} className="text-accent text-sm font-medium mt-4 inline-flex items-center gap-1 hover:gap-2 transition-all">
+              {isEs ? "Ver más detalles" : "See more details"} <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+          <div className="card-accent card p-6 md:p-7">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-accent-soft flex items-center justify-center">
+                <Clock className="w-5 h-5 text-accent" />
+              </div>
+              <h2 className="text-xl">{isEs ? "Política de cancelación" : "Cancellation policy"}</h2>
+            </div>
+            <p className="text-fg-muted text-sm leading-relaxed mb-3 text-left">
+              {isEs
+                ? "Si necesitás cancelar o reprogramar, avisame con al menos 24 horas de anticipación por WhatsApp. Sin penalidad, sin cargo."
+                : "If you need to cancel or reschedule, let me know at least 24 hours in advance via WhatsApp. No penalty, no charge."}
+            </p>
+            <p className="text-fg-muted text-sm leading-relaxed text-left">
+              {isEs
+                ? "Si te ausentás sin aviso, no hay penalidad, pero te pido que reserves el siguiente turno con un pequeño anticipo para confirmar. Si estás enfermo/a o tenés una emergencia, lo entendemos."
+                : "If you miss without notice, there's no penalty, but I ask that you book the next appointment with a small deposit to confirm. If you're sick or have an emergency, we understand."}
+            </p>
+          </div>
         </div>
       </PageSection>
     </>

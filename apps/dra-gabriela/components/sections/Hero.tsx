@@ -118,6 +118,7 @@ export function Hero({ c, locale }: { c: any; locale: string }) {
                     priority
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent/30 via-transparent to-transparent" />
                   {slide?.badge && (

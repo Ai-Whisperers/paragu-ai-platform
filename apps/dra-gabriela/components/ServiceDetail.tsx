@@ -208,6 +208,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     priority
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
+                    decoding="async"
                   />
                 </div>
                 <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full border-2 border-gold opacity-30 -z-10" />

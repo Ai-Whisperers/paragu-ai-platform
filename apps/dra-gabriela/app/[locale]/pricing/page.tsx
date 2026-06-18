@@ -201,6 +201,40 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
         )}
       </div>
 
+      {/* How pricing works — teal accent block */}
+      <section className="bg-accent text-white relative overflow-hidden">
+        <div className="absolute inset-0 dot-pattern opacity-10 pointer-events-none" />
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 items-start">
+            <div>
+              <span className="text-xs uppercase tracking-wider text-gold font-semibold">
+                {isEs ? "Cómo funcionan los precios" : "How pricing works"}
+              </span>
+              <h2 className="text-3xl md:text-4xl text-white mt-3 leading-tight">
+                {isEs ? "Precios públicos, sin sorpresas" : "Published prices, no surprises"}
+              </h2>
+            </div>
+            <div className="space-y-4 text-white/90 leading-relaxed">
+              <p>
+                {isEs
+                  ? "Publicamos precios de referencia para que sepas qué esperar antes de la consulta. El costo final depende de tu caso específico, pero nunca te cobramos de más por un procedimiento que no necesitás."
+                  : "We publish reference prices so you know what to expect before the visit. The final cost depends on your specific case, but we never charge extra for a procedure you don't need."}
+              </p>
+              <p>
+                {isEs
+                  ? "Si después del diagnóstico necesitás algo distinto a lo que esperabas, te lo digo antes de continuar. Sin presión para aceptar. Sin sorpresas al final."
+                  : "If after the diagnosis you need something different from what you expected, I'll tell you before continuing. No pressure to accept. No end-of-treatment surprises."}
+              </p>
+              <p className="text-sm text-white/70 pt-2 border-t border-white/10">
+                {isEs
+                  ? "Cada consulta incluye examen + diagnóstico + plan escrito con opciones y precios. No se inicia ningún tratamiento sin tu aprobación."
+                  : "Every consultation includes exam + diagnosis + written plan with options and prices. No treatment starts without your approval."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-sm bg-surface">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
