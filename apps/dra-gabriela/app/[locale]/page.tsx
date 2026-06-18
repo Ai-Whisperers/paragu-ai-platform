@@ -3,6 +3,7 @@ import { getContent, isLocale } from "@/lib/content"
 import { buildMetadata } from "@/lib/seo"
 import { Hero } from "@/components/sections/Hero"
 import { BigStats } from "@/components/sections/BigStats"
+import { WhyDifferent } from "@/components/sections/WhyDifferent"
 import { FeaturedService } from "@/components/sections/FeaturedService"
 import { SocialProof } from "@/components/sections/SocialProof"
 import { MeetDoctor } from "@/components/sections/MeetDoctor"
@@ -37,6 +38,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <SocialProof c={c} locale={locale} />
       <MeetDoctor locale={locale} />
       <BigStats locale={locale} />
+      <WhyDifferent locale={locale} />
 
       {/* Featured second opinion — the lead-conversion page */}
       <FeaturedService
