@@ -10,6 +10,39 @@
 
 import { z } from "zod"
 
+// Simple in-memory rate limiter.
+// Key = email address, Value = array of submission timestamps in the last hour.
+// This is per-server-instance — for a multi-instance deploy, swap to Redis/Upstash.
+// Limit: max 3 submissions per email per hour, max 1 submission per email per 30s.
+const RATE_LIMIT_MAP: Map<string, number[]> = new Map()
+const RATE_LIMIT_MAX = 3
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000 // 1 hour
+const RATE_LIMIT_MIN_INTERVAL_MS = 30 * 1000 // 30 seconds
+
+function checkRateLimit(email: string): { allowed: boolean; reason?: string } {
+  const now = Date.now()
+  const submissions = RATE_LIMIT_MAP.get(email) || []
+  // Drop entries outside the window
+  const recent = submissions.filter((t) => now - t < RATE_LIMIT_WINDOW_MS)
+  // Check minimum interval
+  if (recent.length > 0 && now - recent[recent.length - 1] < RATE_LIMIT_MIN_INTERVAL_MS) {
+    return {
+      allowed: false,
+      reason: "Please wait a moment before submitting again.",
+    }
+  }
+  // Check max submissions
+  if (recent.length >= RATE_LIMIT_MAX) {
+    return {
+      allowed: false,
+      reason: "Too many submissions. Please try again later or contact us directly.",
+    }
+  }
+  // Record this submission
+  RATE_LIMIT_MAP.set(email, [...recent, now])
+  return { allowed: true }
+}
+
 const ContactSchema = z.object({
   name: z.string().min(2, "Name too short").max(100),
   email: z.string().email().max(200),
@@ -38,6 +71,18 @@ export async function submitContactForm(input: ContactFormInput): Promise<Contac
   }
 
   const data = parsed.data
+
+  // Rate limit by email
+  const limit = checkRateLimit(data.email)
+  if (!limit.allowed) {
+    return {
+      ok: false,
+      message: data.locale === "es"
+        ? limit.reason || "Demasiados envíos. Probá más tarde."
+        : limit.reason || "Too many submissions. Please try again later.",
+    }
+  }
+
   const supabaseUrl = process.env.SUPABASE_URL
   const supabaseKey = process.env.SUPABASE_SERVICE_KEY
   const notifyEmail = process.env.CONTACT_NOTIFY_EMAIL || "hola@dra-gp.com.py"

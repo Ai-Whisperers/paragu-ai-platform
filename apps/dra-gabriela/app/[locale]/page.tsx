@@ -10,6 +10,7 @@ import { MeetDoctor } from "@/components/sections/MeetDoctor"
 import { Process } from "@/components/sections/Process"
 import { HomeFaq } from "@/components/sections/HomeFaq"
 import { CtaBanner } from "@/components/sections/CtaBanner"
+import { BlogPreview } from "@/components/sections/BlogPreview"
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }]
@@ -73,6 +74,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       <Process c={c} locale={locale} />
       <HomeFaq c={c} locale={locale} />
+      <BlogPreview locale={locale} />
       <CtaBanner c={c} locale={locale} />
     </>
   )

@@ -25,6 +25,7 @@ const NAV_ITEMS_EN = [
   { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
+  { href: "/reviews", label: "Reviews" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ] as const
@@ -35,6 +36,7 @@ const NAV_ITEMS_ES = [
   { href: "/precios", label: "Precios" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/blog", label: "Blog" },
+  { href: "/reviews", label: "Reseñas" },
   { href: "/preguntas", label: "Preguntas" },
   { href: "/contacto", label: "Contacto" },
 ] as const

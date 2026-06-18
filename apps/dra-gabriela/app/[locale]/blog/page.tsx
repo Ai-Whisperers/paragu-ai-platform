@@ -2,12 +2,13 @@
 
 import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/seo"
-import { Calendar, Clock, ArrowRight, BookOpen, ArrowUpRight } from "lucide-react"
+import { Calendar, Clock, ArrowRight, BookOpen, ArrowUpRight, Mail } from "lucide-react"
 import Link from "next/link"
 import en from "@/content/en/blog.json"
 import es from "@/content/es/blog.json"
 import { PageHero } from "@/components/PageHero"
 import { PageSection } from "@/components/PageSection"
+import { Newsletter } from "@/components/Newsletter"
 
 const LOCALES = ["en", "es"] as const
 const CONTENT: Record<string, any> = { en, es }
@@ -149,6 +150,13 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
             {isEs ? "Sugerir un tema" : "Suggest a topic"}
             <ArrowRight className="w-4 h-4" />
           </Link>
+        </div>
+      </PageSection>
+
+      {/* Newsletter signup */}
+      <PageSection layout="wide" py="md" bg="muted">
+        <div className="max-w-2xl mx-auto">
+          <Newsletter locale={locale} />
         </div>
       </PageSection>
     </>

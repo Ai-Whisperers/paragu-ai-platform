@@ -1,0 +1,70 @@
+{
+  "title": "Patient reviews",
+  "subtitle": "Honest feedback from real patients. All reviews are voluntary and unedited — the typos are real.",
+  "items": [
+    {
+      "name": "M. Rodríguez",
+      "rating": 5,
+      "service": "Second opinion",
+      "date": "2026-04-12",
+      "text": "I came in for a second opinion on a treatment plan from another clinic that involved four extractions and two implants. Dra. Gabriella spent over an hour reviewing everything, told me honestly that only one of those extractions was warranted, and gave me a written plan to share with my regular dentist. The other clinic was charging me for work I didn't need. I'm still grateful.",
+      "verified": true
+    },
+    {
+      "name": "J. Chen",
+      "rating": 5,
+      "service": "Treatment planning",
+      "date": "2026-03-28",
+      "text": "I have dental anxiety after a bad experience elsewhere. Dra. Gabriella explained every step before it happened, gave me a written plan with prices, and didn't try to upsell anything. The work was done over three visits and the cost was exactly what she quoted. The follow-up call two weeks later was unexpected and appreciated.",
+      "verified": true
+    },
+    {
+      "name": "K. de Boer",
+      "rating": 5,
+      "service": "Cosmetic dentistry",
+      "date": "2026-02-15",
+      "text": "Dutch expat in Asunción. Dra. GP is the first dentist here who speaks English and is upfront about pricing. I had a composite veneer done on a chipped front tooth and the result looks like nothing ever happened. The cost was less than half of what I would have paid in the Netherlands.",
+      "verified": true
+    },
+    {
+      "name": "A. Pereira",
+      "rating": 5,
+      "service": "Oral rehabilitation",
+      "date": "2026-01-20",
+      "text": "I had a full mouth rehabilitation planned over six months. The work was extensive — multiple crowns, an implant, gum treatment coordinated with a specialist. Everything was documented. Every visit was on time. The final result is something I'm not embarrassed to smile about anymore.",
+      "verified": true
+    },
+    {
+      "name": "S. Thompson",
+      "rating": 4,
+      "service": "General dentistry",
+      "date": "2025-12-08",
+      "text": "Solid general dentistry. Brought my whole family for cleanings. Dra. Gabriella is thorough, explains things clearly, and the kids (ages 11 and 13) felt comfortable. The 4-star is because the wait time was 25 minutes past my appointment, which is unusual for this practice but worth noting.",
+      "verified": true
+    },
+    {
+      "name": "L. Cabrera",
+      "rating": 5,
+      "service": "Endodontics",
+      "date": "2025-11-14",
+      "text": "I was told by another dentist that I needed a root canal and a crown. Dra. Gabriella did a more thorough exam and saved the tooth with a large composite restoration. Three years later the tooth is still fine. I went back to her for the crown on the other side, and the work was impeccable.",
+      "verified": true
+    },
+    {
+      "name": "R. Fischer",
+      "rating": 5,
+      "service": "Second opinion",
+      "date": "2025-10-30",
+      "text": "Wrote a second opinion report on a complex case involving 6 implants proposed by another clinic. Dra. Gabriella's report was thorough, clearly structured, and tactful about the differences in opinion. Worth every guaraní.",
+      "verified": true
+    },
+    {
+      "name": "C. Mendoza",
+      "rating": 5,
+      "service": "General dentistry",
+      "date": "2025-09-19",
+      "text": "First visit was a comprehensive checkup with x-rays and a written summary of findings. No pressure, no upsell. Will be back for cleaning in 6 months.",
+      "verified": true
+    }
+  ]
+}

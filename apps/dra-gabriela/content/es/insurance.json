@@ -1,0 +1,30 @@
+{
+  "title": "Seguro, pago y reembolso",
+  "subtitle": "Precios transparentes, varios métodos de pago, y qué podemos y qué no con el seguro.",
+  "items": [
+    {
+      "q": "¿Aceptan seguro?",
+      "a": "Esta es una práctica privada, no una clínica contratada. No facturamos al seguro directamente. Lo que sí proveemos: recibos detallados con códigos de procedimientos, registros clínicos completos, e informes escritos — todo lo que necesitás para presentar un reclamo de reembolso a tu aseguradora. Tenemos pacientes que logran reembolso con aseguradoras internacionales (BUPA, Cigna, GeoBlue) y planes corporativos locales. Con gusto te ayudamos a entender qué necesita tu aseguradora."
+    },
+    {
+      "q": "¿Qué métodos de pago aceptan?",
+      "a": "Efectivo, transferencia bancaria, Pagopar, y Bancard POS (débito y crédito). Las principales tarjetas internacionales se aceptan a través de Bancard. También podemos emitir facturas para empresas que pagan atención dental de sus empleados."
+    },
+    {
+      "q": "¿Hay financiamiento disponible?",
+      "a": "Para casos de más de Gs 1.000.000, hay planes de pago disponibles a través de Pagopar o Bancard. El paciente absorbe el costo de financiamiento, que suele ser 5-10% dependiendo de la cantidad de cuotas. No cobramos interés nosotros — el costo de financiamiento es el cargo del procesador externo."
+    },
+    {
+      "q": "¿Hacen planes corporativos?",
+      "a": "Sí. Trabajamos con empresas que incluyen atención dental en los beneficios de sus empleados. La estructura del plan varía — algunas empresas pagan una mensualidad fija, otras pagan por procedimiento con descuento. Servicios independientes como segundas opiniones y planificación de tratamiento compleja no están incluidos en cuotas corporativas — se cobran por separado, como para cualquier otro paciente."
+    },
+    {
+      "q": "¿Qué pasa si necesito cancelar?",
+      "a": "Avisanos al menos 24 horas antes de tu turno. Sin penalidad, sin cargo. Te guardamos el lugar pero preferimos dárselo a otra persona antes que cobrarte por una visita perdida."
+    },
+    {
+      "q": "¿Ofrecen garantía de devolución?",
+      "a": "En el servicio de segunda opinión escrita: si el informe no aborda todas tus preguntas, lo rehacemos sin cargo. En otros servicios, no ofrecemos garantía de devolución porque el trabajo es irreversible — pero sí respaldamos nuestro trabajo: si una restauración falla dentro del primer año por una razón clínica, la reemplazamos sin cargo."
+    }
+  ]
+}

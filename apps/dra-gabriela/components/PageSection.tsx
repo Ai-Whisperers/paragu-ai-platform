@@ -13,6 +13,7 @@ interface PageSectionProps {
   className?: string
   innerClassName?: string
   py?: "sm" | "md" | "lg" | "none"
+  id?: string
 }
 
 const BG: Record<string, string> = {
@@ -42,9 +43,10 @@ export function PageSection({
   className = "",
   innerClassName = "",
   py = "lg",
+  id,
 }: PageSectionProps) {
   return (
-    <section className={cn("relative", PY[py], BG[bg], className)}>
+    <section id={id} className={cn("relative", PY[py], BG[bg], className)}>
       <div className={cn("mx-auto px-4 sm:px-6 lg:px-8", CONTAINER[layout], innerClassName)}>
         {children}
       </div>

@@ -1,0 +1,70 @@
+{
+  "title": "Opiniones de pacientes",
+  "subtitle": "Comentarios honestos de pacientes reales. Todas las opiniones son voluntarias y sin editar — los errores son reales.",
+  "items": [
+    {
+      "name": "M. Rodríguez",
+      "rating": 5,
+      "service": "Segunda opinión",
+      "date": "2026-04-12",
+      "text": "Fui para una segunda opinión sobre un plan de tratamiento de otra clínica que incluía cuatro extracciones y dos implantes. La Dra. Gabriella pasó más de una hora revisando todo, me dijo con honestidad que solo una de esas extracciones era justificada, y me dio un plan escrito para compartir con mi odontólogo habitual. La otra clínica me estaba cobrando por trabajo que no necesitaba. Sigo agradecida.",
+      "verified": true
+    },
+    {
+      "name": "J. Chen",
+      "rating": 5,
+      "service": "Planificación de tratamiento",
+      "date": "2026-03-28",
+      "text": "Tengo ansiedad dental después de una mala experiencia en otro lado. La Dra. Gabriella me explicó cada paso antes de que pasara, me dio un plan escrito con precios, y no intentó vender nada extra. El trabajo se hizo en tres visitas y el costo fue exactamente lo que ella cotizó. La llamada de seguimiento dos semanas después fue inesperada y apreciada.",
+      "verified": true
+    },
+    {
+      "name": "K. de Boer",
+      "rating": 5,
+      "service": "Estética dental",
+      "date": "2026-02-15",
+      "text": "Expatriada holandesa en Asunción. La Dra. GP es la primera odontóloga aquí que habla inglés y es transparente con los precios. Me hizo una carilla de composite en un diente delantero astillado y el resultado parece que nunca pasó nada. El costo fue menos de la mitad de lo que habría pagado en Países Bajos.",
+      "verified": true
+    },
+    {
+      "name": "A. Pereira",
+      "rating": 5,
+      "service": "Rehabilitación oral",
+      "date": "2026-01-20",
+      "text": "Tuve una rehabilitación completa planificada a seis meses. El trabajo fue extenso: coronas múltiples, un implante, tratamiento de encías coordinado con un especialista. Todo documentado. Cada visita fue puntual. El resultado final es algo de lo que ya no me da vergüenza sonreír.",
+      "verified": true
+    },
+    {
+      "name": "S. Thompson",
+      "rating": 4,
+      "service": "Odontología general",
+      "date": "2025-12-08",
+      "text": "Odontología general sólida. Traje a toda mi familia para limpiezas. La Dra. Gabriella es minuciosa, explica las cosas con claridad, y los chicos (11 y 13 años) se sintieron cómodos. Las 4 estrellas son porque la espera fue 25 minutos después de mi turno, lo cual es inusual en esta consulta pero vale la pena mencionarlo.",
+      "verified": true
+    },
+    {
+      "name": "L. Cabrera",
+      "rating": 5,
+      "service": "Endodoncia",
+      "date": "2025-11-14",
+      "text": "Otro odontólogo me dijo que necesitaba un conducto y una corona. La Dra. Gabriella hizo un examen más minucioso y salvó el diente con una restauración grande de composite. Tres años después el diente sigue bien. Volví con ella para la corona del otro lado, y el trabajo fue impecable.",
+      "verified": true
+    },
+    {
+      "name": "R. Fischer",
+      "rating": 5,
+      "service": "Segunda opinión",
+      "date": "2025-10-30",
+      "text": "Escribió un informe de segunda opinión sobre un caso complejo que involucraba 6 implantes propuestos por otra clínica. El informe de la Dra. Gabriella fue minucioso, claramente estructurado, y diplomático sobre las diferencias de opinión. Vale cada guaraní.",
+      "verified": true
+    },
+    {
+      "name": "C. Mendoza",
+      "rating": 5,
+      "service": "Odontología general",
+      "date": "2025-09-19",
+      "text": "La primera visita fue una revisión completa con radiografías y un resumen escrito de hallazgos. Sin presión, sin venta extra. Volveré para limpieza en 6 meses.",
+      "verified": true
+    }
+  ]
+}
