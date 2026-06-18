@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { ClientJsonLd } from "@/components/ClientJsonLd";
+import { faqPage } from "@/lib/jsonld";
 
 const faqs = [
   { id: "q1", q: "¿Qué es maškaráda?", a: "Un evento BDSM/kink en Asunción, Paraguay. Una noche de máscaras, juego erótico, música, performances y liberación del deseo en un espacio seguro y consensuado." },
@@ -21,7 +23,6 @@ const faqs = [
 export default function FAQ() {
   const [open, setOpen] = useState<string | null>(null);
   const [q, setQ] = useState("");
-
   const filtered = useMemo(() => {
     const s = q.trim().toLowerCase();
     if (!s) return faqs;
@@ -30,6 +31,7 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen py-24 px-4">
+      <ClientJsonLd data={faqPage(faqs.map((f) => ({ question: f.q, answer: f.a })))} />
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Preguntas Frecuentes</h1>

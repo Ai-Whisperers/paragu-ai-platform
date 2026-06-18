@@ -8,6 +8,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import HtmlLangSyncer from "@/components/HtmlLangSyncer";
 import CookieBanner from "@/components/CookieBanner";
 import { getContent, type Locale } from "@/lib/content";
+import { JsonLd, organization, website } from "@/lib/jsonld";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -72,6 +73,8 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     icons: {
       icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/icon.svg", type: "image/svg+xml" },
         { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
         { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       ],
@@ -98,6 +101,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body className="antialiased">
         <HtmlLangSyncer locale={locale} />
+        <JsonLd data={[organization(), website()]} />
         <div className="fixed inset-0 mask-gradient opacity-80 pointer-events-none z-0" />
         <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,0,0,0.08),transparent_60%)] pointer-events-none z-0" />
         <Navbar locale={locale} />

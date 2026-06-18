@@ -4,6 +4,7 @@ import { listGuidesI18n } from "@/lib/guides-i18n";
 import { getGuideI18n } from "@/lib/guides-i18n";
 import { heroFor } from "@/lib/hero";
 import { cookies } from "next/headers";
+import { JsonLd, article, breadcrumb } from "@/lib/jsonld";
 
 export async function generateStaticParams() {
   return listGuidesI18n("es").map((g) => ({ slug: g.slug }));
@@ -90,6 +91,22 @@ export default async function GuiaDetalle({ params }: { params: Promise<{ slug: 
 
   return (
     <div className="min-h-screen py-20 px-4">
+      <JsonLd
+        data={[
+          article({
+            slug: g.slug,
+            title: g.title,
+            description: g.excerpt,
+            image: `https://maskarada.paragu-ai.com${g.heroImage || heroFor(g.slug)}`,
+            inLanguage: locale,
+            path: `/aprender/${g.slug}`,
+          }),
+          breadcrumb([
+            { name: "Aprender", path: "/aprender" },
+            { name: g.title, path: `/aprender/${g.slug}` },
+          ]),
+        ]}
+      />
       <div className="max-w-3xl mx-auto">
         <Link href="/aprender" className="text-xs uppercase tracking-widest text-gray-500 hover:text-gold-400 mb-6 inline-block">
           ← Volver a Aprender

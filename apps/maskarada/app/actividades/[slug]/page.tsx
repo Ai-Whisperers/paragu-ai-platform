@@ -5,6 +5,7 @@ import { getActivityI18n } from "@/lib/activities-i18n";
 import { content } from "@/lib/content";
 import { heroFor } from "@/lib/hero";
 import { cookies } from "next/headers";
+import { JsonLd, article, breadcrumb } from "@/lib/jsonld";
 
 export async function generateStaticParams() {
   return activities.map((a) => ({ slug: a.slug }));
@@ -38,6 +39,22 @@ export default async function ActividadDetalle({ params }: { params: Promise<{ s
 
   return (
     <div className="min-h-screen py-20 px-4">
+      <JsonLd
+        data={[
+          article({
+            slug: a.slug,
+            title: a.name,
+            description: a.shortDesc,
+            image: `https://maskarada.paragu-ai.com${a.heroImage || heroFor(a.slug)}`,
+            inLanguage: locale,
+            path: `/actividades/${a.slug}`,
+          }),
+          breadcrumb([
+            { name: "Actividades", path: "/actividades" },
+            { name: a.name, path: `/actividades/${a.slug}` },
+          ]),
+        ]}
+      />
       <div className="max-w-3xl mx-auto">
         <Link href="/actividades" className="text-xs uppercase tracking-widest text-gray-500 hover:text-gold-400 mb-6 inline-block">
           ← Todas las actividades

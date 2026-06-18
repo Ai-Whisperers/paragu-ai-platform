@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { events, getEventBySlug } from "@/lib/events-v2";
 import { content } from "@/lib/content";
 import { heroFor } from "@/lib/hero";
+import { JsonLd, event as eventSchema, breadcrumb } from "@/lib/jsonld";
 
 export async function generateStaticParams() {
   return events
@@ -27,6 +28,24 @@ export default async function EventoDetalle({ params }: { params: Promise<{ slug
 
   return (
     <div className="min-h-screen py-20 px-4">
+      <JsonLd
+        data={[
+          eventSchema({
+            slug: e.slug,
+            name: e.title,
+            description: e.description,
+            startDate: e.date,
+            endDate: e.endDate,
+            location: e.location,
+            image: `https://maskarada.paragu-ai.com${heroFor(e.slug)}`,
+            price: e.price,
+          }),
+          breadcrumb([
+            { name: "Eventos", path: "/eventos" },
+            { name: e.title, path: `/eventos/${e.slug}` },
+          ]),
+        ]}
+      />
       <div className="max-w-3xl mx-auto">
         <Link href="/eventos" className="text-xs uppercase tracking-widest text-gray-500 hover:text-gold-400 mb-6 inline-block">
           ← Calendario de eventos

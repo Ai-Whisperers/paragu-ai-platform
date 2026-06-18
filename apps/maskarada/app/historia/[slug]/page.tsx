@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { events, getEvent } from "@/lib/events";
 import { content } from "@/lib/content";
+import { JsonLd, event as eventSchema, breadcrumb } from "@/lib/jsonld";
 
 export async function generateStaticParams() {
   return events.map((e) => ({ slug: e.slug }));
@@ -24,6 +25,23 @@ export default async function EventoDetalle({ params }: { params: Promise<{ slug
 
   return (
     <div className="min-h-screen py-20 px-4">
+      <JsonLd
+        data={[
+          eventSchema({
+            slug: e.slug,
+            name: e.editionName,
+            description: e.theme,
+            startDate: e.date,
+            location: e.location,
+            image: `https://maskarada.paragu-ai.com${e.photos[0] || "/og-image.jpg"}`,
+            url: `https://maskarada.paragu-ai.com/historia/${e.slug}`,
+          }),
+          breadcrumb([
+            { name: "Historia", path: "/historia" },
+            { name: e.editionName, path: `/historia/${e.slug}` },
+          ]),
+        ]}
+      />
       <div className="max-w-4xl mx-auto">
         <Link href="/historia" className="text-xs uppercase tracking-widest text-gray-500 hover:text-gold-400 mb-6 inline-block">
           ← Volver a Historia
