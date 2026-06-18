@@ -7,6 +7,7 @@ import Link from "next/link"
 import { getContent, isLocale, isPlaceholder, whatsappLink } from "@/lib/content"
 import { PageHero } from "@/components/PageHero"
 import { PageSection } from "@/components/PageSection"
+import { ContactForm } from "@/components/ContactForm"
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }]
@@ -174,6 +175,27 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </a>
             )
           })}
+        </div>
+      </PageSection>
+
+      {/* Contact form — always shown, primary fallback when WA/phone aren't set */}
+      <PageSection layout="wide" py="md" bg="muted">
+        <div id="form" className="max-w-3xl mx-auto scroll-mt-24">
+          <div className="text-center mb-8">
+            <span className="eyebrow inline-flex">
+              <Send className="w-3 h-3" />
+              {isEs ? "Formulario" : "Form"}
+            </span>
+            <h2 className="text-2xl md:text-3xl mb-2">
+              {isEs ? "Envianos un mensaje" : "Send us a message"}
+            </h2>
+            <p className="text-fg-muted max-w-lg mx-auto">
+              {isEs
+                ? "Te respondemos por email en menos de 24 horas hábiles."
+                : "We'll reply by email within 24 business hours."}
+            </p>
+          </div>
+          <ContactForm locale={locale} />
         </div>
       </PageSection>
 

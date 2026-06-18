@@ -1,0 +1,28 @@
+{
+  "name": "Dra. Gabriella González Pane",
+  "short_name": "Dra. Gabriella",
+  "description": "Conservative, planning-first dentistry in Asunción. Bilingual (Spanish + English).",
+  "start_url": "/en",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fbf9f6",
+  "theme_color": "#0f4c4c",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "medical", "lifestyle"]
+}
