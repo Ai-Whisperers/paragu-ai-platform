@@ -28,6 +28,7 @@ scripts/*                  -> shared deploy/build helpers
 | apps/builder | generated client output (paragu-ai-builder) |
 | apps/camilo-acosta | camilo-acosta.paragu-ai.com |
 | apps/de-abasto-a-casa | de-abasto-a-casa.paragu-ai.com |
+| apps/dra-gabriela | dragabriela.paragu-ai.com (dra-gabriela.com.py pending DNS) — content source: [`Ai-Whisperers/dentist`](https://github.com/Ai-Whisperers/dentist) |
 | apps/escribania-paraguay | escribania-paraguay.paragu-ai.com |
 | apps/estudio-medieval | estudio-medieval.paragu-ai.com |
 | apps/fun4me | fun4me.paragu-ai.com |
