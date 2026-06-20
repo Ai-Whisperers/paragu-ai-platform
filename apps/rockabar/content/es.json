@@ -1,0 +1,320 @@
+{
+  "site": {
+    "name": "Rocka Bar — Rock & Burgers en Capiatá",
+    "shortName": "Rocka Bar",
+    "description": "Hamburguesas, pizzas y tragos con onda rock en Capiatá. Abre de martes a sábado desde las 19:00.",
+    "url": "https://rockabar.paragu-ai.com",
+    "phone": "+595 976 309917",
+    "whatsapp": "595976309917",
+    "email": "",
+    "address": "San Roque González de Santacruz, Capiatá 110242, Paraguay",
+    "addressShort": "Capiatá, Paraguay",
+    "hours": "Mar–Jue 19:00–00:00 · Vie–Sáb 19:00–02:00 · Dom y Lun cerrado",
+    "rating": "5.0",
+    "reviewCount": "11",
+    "instagram": "",
+    "facebook": "",
+    "ogImage": "/images/og.jpg"
+  },
+  "navigation": [
+    { "href": "/", "label": "Inicio" },
+    { "href": "/carta", "label": "Carta" },
+    { "href": "/galeria", "label": "Galería" },
+    { "href": "/nosotros", "label": "Nosotros" },
+    { "href": "/contacto", "label": "Contacto" }
+  ],
+  "home": {
+    "seo": {
+      "title": "Rocka Bar — Hamburguesas, pizzas y tragos con onda rock en Capiatá",
+      "description": "Rocka Bar en Capiatá: hamburguesas 90gr, pizzas artesanales, cervezas y tragos. ⭐ 5.0 en Google. Martes a sábado desde las 19:00."
+    },
+    "hero": {
+      "eyebrow": "Capiatá · Paraguay",
+      "headline": "Rock, Burgers & Tragos",
+      "subheadline": "Hamburguesas a la parrilla de 90 gramos, pizzas de molde y los mejores tragos del barrio. Buena música, mejor compañía.",
+      "ctaPrimaryText": "Ver la Carta",
+      "ctaPrimaryHref": "/carta",
+      "ctaSecondaryText": "Reservá por WhatsApp",
+      "ctaSecondaryHref": "https://wa.me/595976309917?text=Hola%20Rocka%20Bar!%20Quiero%20reservar%20una%20mesa",
+      "bgImage": "/images/hero-bg.jpg"
+    },
+    "features": {
+      "title": "Por qué Rocka Bar",
+      "subtitle": "Materia prima real, ambiente rockero y la mejor atención de Capiatá",
+      "items": [
+        {
+          "icon": "flame",
+          "title": "Carne 90gr a la parrilla",
+          "description": "Cada hamburguesa se cocina al punto sobre plancha. Pan, vegetales frescos y nuestras salsas de la casa."
+        },
+        {
+          "icon": "pizza",
+          "title": "Pizzas de molde",
+          "description": "Masa de fermentación lenta, muzzarella generosa y combinaciones de autor. Pepperoni, bacon, cuatro quesos, palmito y más."
+        },
+        {
+          "icon": "beer",
+          "title": "Cervezas bien frías",
+          "description": "Munich, Pilsen, Corona, Heineken, Amstel, Bud 66. Por vaso, por botella o por litro."
+        },
+        {
+          "icon": "martini",
+          "title": "Tragos de autor",
+          "description": "Rockabar, Daiquiri, Caipi, Tequila Sunrise, Esperma de Ogro y más. Promo ₲ 20.000."
+        }
+      ]
+    },
+    "menuSection": {
+      "title": "Lo que vas a encontrar",
+      "description": "Una carta corta, honesta y muy rica.",
+      "categories": [
+        { "id": "hamburguesas", "name": "Hamburguesas", "priceRange": "₲ 22.000 – 27.000" },
+        { "id": "pizzas", "name": "Pizzas", "priceRange": "₲ 40.000 – 50.000" },
+        { "id": "cervezas", "name": "Cervezas", "priceRange": "₲ 9.000 – 25.000" },
+        { "id": "tragos", "name": "Tragos", "priceRange": "₲ 20.000 (promo)" }
+      ]
+    },
+    "hours": {
+      "title": "Horarios",
+      "subtitle": "Te esperamos con la barra lista",
+      "items": [
+        { "day": "Lunes", "hours": "Cerrado" },
+        { "day": "Martes", "hours": "19:00 – 00:00" },
+        { "day": "Miércoles", "hours": "19:00 – 00:00" },
+        { "day": "Jueves", "hours": "19:00 – 00:00" },
+        { "day": "Viernes", "hours": "19:00 – 02:00" },
+        { "day": "Sábado", "hours": "19:30 – 02:00" },
+        { "day": "Domingo", "hours": "Cerrado" }
+      ]
+    },
+    "cta": {
+      "title": "¿Salimos esta noche?",
+      "subtitle": "Reservá tu mesa por WhatsApp o vení directo. La primera birra la invitamos nosotros.",
+      "buttonText": "Escribinos al WhatsApp",
+      "buttonHref": "https://wa.me/595976309917"
+    },
+    "weeklySpecial": {
+      "title": "Promo de la semana",
+      "subtitle": "Todos los tragos a precio único",
+      "badge": "PROMO",
+      "item": {
+        "name": "Cualquier trago de la carta",
+        "description": "Rockabar, Daiquiri, Caipi, Tequila Sunrise, RonCan'roll, Esperma de Ogro y más. Promo válida martes a sábado hasta las 23:00.",
+        "price": "₲ 20.000"
+      },
+      "ctaText": "Pedir por WhatsApp",
+      "ctaHref": "https://wa.me/595976309917?text=Hola!%20Quiero%20aprovechar%20la%20promo%20de%20tragos",
+      "validDays": "Mar–Sáb hasta las 23:00"
+    }
+  },
+  "menu": {
+    "seo": {
+      "title": "Carta — Rocka Bar",
+      "description": "Carta completa de Rocka Bar: hamburguesas, pizzas, cervezas y tragos con precios en guaraníes."
+    },
+    "intro": {
+      "title": "Nuestra Carta",
+      "subtitle": "Precios en guaraníes · Pedí por WhatsApp al 0976 309 917"
+    },
+    "categories": [
+      {
+        "id": "hamburguesas",
+        "name": "Hamburguesas",
+        "icon": "flame",
+        "items": [
+          {
+            "name": "Classic",
+            "description": "Carne 90gr, pan, tomate, lechuga, cheddar, cebolla morada.",
+            "price": "₲ 22.000"
+          },
+          {
+            "name": "Bacon",
+            "description": "Carne 90gr, panceta, tomate, cheddar, cebolla.",
+            "price": "₲ 22.000"
+          },
+          {
+            "name": "Extra Cheese",
+            "description": "Carne 90gr, muzzarella, cheddar, lechuga, tomate, cebolla morada, salsa de la casa.",
+            "price": "₲ 25.000"
+          },
+          {
+            "name": "Completa",
+            "description": "Carne 90gr, tomate, lechuga, cheddar, cebolla morada, jamón, huevo, salsa de la casa.",
+            "price": "₲ 27.000"
+          },
+          {
+            "name": "Papas fritas",
+            "description": "Papas crocantes. Opción con cheddar y panceta.",
+            "price": "₲ 5.000"
+          }
+        ]
+      },
+      {
+        "id": "pizzas",
+        "name": "Pizzas",
+        "icon": "pizza",
+        "items": [
+          {
+            "name": "Pepperoni",
+            "description": "Salami picante, mozzarella, salsa de tomate, orégano.",
+            "price": "₲ 45.000"
+          },
+          {
+            "name": "Bacon (Tocineta)",
+            "description": "Tocino crujiente, mozzarella, orégano.",
+            "price": "₲ 45.000"
+          },
+          {
+            "name": "Napolitana",
+            "description": "Tomate natural, ajo, orégano, mozzarella.",
+            "price": "₲ 40.000"
+          },
+          {
+            "name": "Margarita",
+            "description": "Albahaca fresca, mozzarella, salsa de tomate, orégano.",
+            "price": "₲ 40.000"
+          },
+          {
+            "name": "Cuatro Quesos",
+            "description": "Mozzarella, parmesano, queso azul, provolone.",
+            "price": "₲ 50.000"
+          },
+          {
+            "name": "Jamón",
+            "description": "Jamón, mozzarella, orégano, aceitunas.",
+            "price": "₲ 40.000"
+          },
+          {
+            "name": "Palmito",
+            "description": "Palmitos, ajo salteado, aceitunas.",
+            "price": "₲ 45.000"
+          },
+          {
+            "name": "Ajo con Cebolla",
+            "description": "Cebolla morada y blanca, ajo salteado, aceitunas, orégano.",
+            "price": "₲ 40.000"
+          },
+          {
+            "name": "Pollo con Catupiry",
+            "description": "Pechuga de pollo desmenuzada y sazonada, queso catupiry.",
+            "price": "₲ 50.000"
+          }
+        ]
+      },
+      {
+        "id": "cervezas",
+        "name": "Cervezas",
+        "icon": "beer",
+        "items": [
+          { "name": "Munich Ultra 275ml", "description": "Botella individual.", "price": "₲ 9.000" },
+          { "name": "Munich Ultra 600ml", "description": "Botella grande.", "price": "₲ 15.000" },
+          { "name": "Coronita", "description": "Cerveza mexicana, botella 210ml.", "price": "₲ 14.000" },
+          { "name": "Munich Original 600ml", "description": "Botella grande.", "price": "₲ 10.000" },
+          { "name": "Bud 66", "description": "Cerveza premium, botella.", "price": "₲ 18.000" },
+          { "name": "Amstel 650ml", "description": "Cerveza holandesa.", "price": "₲ 20.000" },
+          { "name": "Heineken 650ml", "description": "Cerveza premium importada.", "price": "₲ 25.000" },
+          { "name": "Munich 1Lt", "description": "Litro bien frío.", "price": "₲ 15.000" },
+          { "name": "Pilsen 1Lt", "description": "Litro bien frío.", "price": "₲ 15.000" }
+        ]
+      },
+      {
+        "id": "tragos",
+        "name": "Tragos",
+        "icon": "martini",
+        "items": [
+          { "name": "Rockabar", "description": "El trago de la casa.", "price": "₲ 20.000 (promo)" },
+          { "name": "Daiquiri", "description": "Ron, limón y azúcar.", "price": "₲ 20.000 (promo)" },
+          { "name": "Durazno, Piña y Frutilla", "description": "Cóctel de frutas.", "price": "₲ 20.000 (promo)" },
+          { "name": "RonCan'roll", "description": "Ron con cola.", "price": "₲ 20.000 (promo)" },
+          { "name": "Esperma de Ogro", "description": "Cóctel especial de la casa.", "price": "₲ 20.000 (promo)" },
+          { "name": "Caipi", "description": "Caipirinha / Caipiroska.", "price": "₲ 20.000 (promo)" },
+          { "name": "Tequila Sunrise", "description": "Tequila, naranja y granadina.", "price": "₲ 20.000 (promo)" }
+        ],
+        "notes": [
+          "Promo ₲ 20.000 válida de martes a sábado hasta las 23:00.",
+          "Consultá por tragos fuera de promo en barra."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "seo": {
+      "title": "Sobre Rocka Bar — Capiatá",
+      "description": "Rocka Bar es un bar con onda rock en Capiatá, Paraguay. Hamburguesas, pizzas y tragos en un ambiente para compartir."
+    },
+    "hero": {
+      "eyebrow": "Sobre nosotros",
+      "title": "Un bar con onda, en el centro de Capiatá"
+    },
+    "story": "Rocka Bar nació con una idea simple: armar un lugar en Capiatá donde la música suene fuerte, las hamburguesas sean de verdad y los tragos no te dejen pensando en el precio. Carne 90 gramos a la parrilla, pizzas de molde con combinaciones honestas, y una barra que conoce a sus clientes por el nombre.\n\nEstamos en San Roque González de Santacruz, a pocas cuadras del centro. Abrimos las puertas de martes a sábado desde las 19:00 —cuando el barrio empieza a pedir una mesa y una birra— y nos quedamos hasta que el último grupo se vaya.",
+    "values": {
+      "title": "Lo que nos importa",
+      "items": [
+        { "icon": "flame", "title": "Producto real", "description": "Carne fresca, pan del día, vegetales cortados al momento. Nada de congelados disfrazados." },
+        { "icon": "users", "title": "Compartir", "description": "Mesas grandes, buena música, ambiente para venir con amigos o en pareja." },
+        { "icon": "heart", "title": "Atención de barra", "description": "Bartenders que recomiendan, cocineros que salen a preguntar cómo estuvo la hamburguesa." },
+        { "icon": "music", "title": "Rock del bueno", "description": "Playlist curada: clásico, stoner, algo de punk y la mejor selección de rock nacional." }
+      ]
+    }
+  },
+  "gallery": {
+    "seo": {
+      "title": "Galería — Rocka Bar",
+      "description": "Mirá cómo es Rocka Bar: el ambiente, las hamburguesas, las pizzas y los tragos."
+    },
+    "hero": {
+      "eyebrow": "Galería",
+      "title": "El bar, la barra y los platos"
+    },
+    "images": [
+      { "src": "/images/gallery-01.jpg", "alt": "Hamburguesa Classic con papas", "title": "La Classic" },
+      { "src": "/images/gallery-02.jpg", "alt": "Pizza Pepperoni recién salida del horno", "title": "Pepperoni" },
+      { "src": "/images/gallery-03.jpg", "alt": "Tragos en la barra", "title": "La barra" },
+      { "src": "/images/gallery-04.jpg", "alt": "Ambiente Rocka Bar de noche", "title": "De noche" },
+      { "src": "/images/gallery-05.jpg", "alt": "Pizza Cuatro Quesos", "title": "Cuatro Quesos" },
+      { "src": "/images/gallery-06.jpg", "alt": "Hamburguesa Bacon con queso", "title": "Bacon" }
+    ]
+  },
+  "contact": {
+    "seo": {
+      "title": "Contacto y ubicación — Rocka Bar",
+      "description": "Cómo llegar a Rocka Bar en Capiatá. WhatsApp, horarios y dirección."
+    },
+    "hero": {
+      "eyebrow": "Contacto",
+      "title": "Escribinos o vení directo"
+    },
+    "info": {
+      "address": "San Roque González de Santacruz, Capiatá 110242, Paraguay",
+      "phone": "+595 976 309917",
+      "whatsapp": "595976309917",
+      "hours": [
+        { "day": "Lunes", "hours": "Cerrado" },
+        { "day": "Martes", "hours": "19:00 – 00:00" },
+        { "day": "Miércoles", "hours": "19:00 – 00:00" },
+        { "day": "Jueves", "hours": "19:00 – 00:00" },
+        { "day": "Viernes", "hours": "19:00 – 02:00" },
+        { "day": "Sábado", "hours": "19:30 – 02:00" },
+        { "day": "Domingo", "hours": "Cerrado" }
+      ],
+      "mapsUrl": "https://www.google.com/maps/place/Rockabarpy/@-25.366936,-57.476783,17z"
+    },
+    "cta": {
+      "title": "Reservá tu mesa",
+      "subtitle": "Te respondemos por WhatsApp. Sin compromiso.",
+      "buttonText": "Abrir WhatsApp",
+      "buttonHref": "https://wa.me/595976309917?text=Hola%20Rocka%20Bar!%20Quiero%20reservar%20una%20mesa"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Rocka Bar · Capiatá, Paraguay",
+    "poweredBy": "Sitio creado por",
+    "poweredByUrl": "https://paragu-ai.com",
+    "links": [
+      { "href": "/carta", "label": "Carta" },
+      { "href": "/galeria", "label": "Galería" },
+      { "href": "/nosotros", "label": "Nosotros" },
+      { "href": "/contacto", "label": "Contacto" }
+    ]
+  }
+}

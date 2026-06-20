@@ -1,0 +1,19 @@
+services:
+  web:
+    image: rockabar:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.rockabar.entrypoints=websecure"
+        - "traefik.http.routers.rockabar.rule=Host(`rockabar.paragu-ai.com`)"
+        - "traefik.http.routers.rockabar.tls=true"
+        - "traefik.http.routers.rockabar.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.rockabar.middlewares=security-headers@file"
+        - "traefik.http.services.rockabar.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true
