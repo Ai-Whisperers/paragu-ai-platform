@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/qr"],
+      disallow: ["/api/"],
     },
-    sitemap: "https://tsuki.paragu-ai.com/sitemap.xml",
+    sitemap: "https://rockabar.paragu-ai.com/sitemap.xml",
   };
 }

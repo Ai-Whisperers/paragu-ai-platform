@@ -22,13 +22,13 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-28 pb-16 bg-[var(--color-background)] relative overflow-hidden">
+      <section className="pt-28 md:pt-36 pb-10 md:pb-16 bg-[var(--color-background)] relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
-        <div className="container-page text-center">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold mb-4 block">
+        <div className="container-page text-left md:text-center max-w-2xl md:mx-auto">
+          <span className="inline-block text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold mb-3 md:mb-4 font-semibold">
             {a.hero.eyebrow}
           </span>
-          <h1 className="text-4xl md:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-text)] mb-4">
+          <h1 className="text-[var(--text-fluid-h2)] font-[var(--font-heading)] font-bold text-[var(--color-text)] mb-3 md:mb-4 leading-tight">
             {a.hero.title}
           </h1>
         </div>
@@ -37,7 +37,7 @@ export default function AboutPage() {
       {/* Story */}
       <section className="section-padding bg-[var(--color-surface)]">
         <div className="container-page max-w-3xl">
-          <div className="space-y-6 text-[var(--color-text-light)] leading-relaxed text-lg">
+          <div className="space-y-5 md:space-y-6 text-[var(--color-text-light)] leading-relaxed text-base md:text-lg text-left">
             {storyParagraphs.map((p: string, i: number) => (
               <p key={i}>{p}</p>
             ))}
@@ -48,27 +48,27 @@ export default function AboutPage() {
       {/* Values */}
       <section className="section-padding bg-[var(--color-background)]">
         <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="text-xs uppercase tracking-[0.3em] text-gold mb-4 block">
+          <div className="text-left md:text-center mb-10 md:mb-12 max-w-2xl md:mx-auto">
+            <span className="inline-block text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold mb-3 md:mb-4 font-semibold">
               Cultura Rocka
             </span>
-            <h2 className="text-3xl md:text-5xl font-[var(--font-heading)] font-bold text-[var(--color-text)]">
+            <h2 className="text-[var(--text-fluid-h2)] font-[var(--font-heading)] font-bold text-[var(--color-text)] leading-tight">
               {a.values.title}
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 max-w-5xl mx-auto">
             {a.values.items.map((v: { icon: string; title: string; description: string }) => (
               <div
                 key={v.title}
-                className="rock-card p-6 text-center"
+                className="rock-card p-5 md:p-6 text-left"
               >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gold/10 flex items-center justify-center text-gold">
+                <div className="w-12 h-12 mx-auto md:mx-0 mb-4 rounded-full bg-gold/10 flex items-center justify-center text-gold">
                   {iconMap[v.icon] || <Heart size={22} />}
                 </div>
-                <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
+                <h3 className="text-base md:text-lg font-semibold text-[var(--color-text)] mb-2">
                   {v.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-muted)]">
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
                   {v.description}
                 </p>
               </div>

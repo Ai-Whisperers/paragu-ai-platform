@@ -24,6 +24,8 @@ const siteData = content.site;
 export const metadata: Metadata = {
   title: "Rocka Bar — Hamburguesas, pizzas y tragos con onda rock en Capiatá",
   description: "Rocka Bar en Capiatá: hamburguesas 90gr a la parrilla, pizzas de molde, cervezas y tragos. ⭐ 5.0 en Google. Martes a sábado desde las 19:00.",
+  viewport: "width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5",
+  themeColor: "#0A0A0A",
   keywords: [
     "Rocka Bar",
     "bar Capiatá",
@@ -132,6 +134,10 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${bebas.variable}`}>
       <head>
+        <meta name="theme-color" content="#0A0A0A" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="format-detection" content="telephone=no" />
         <meta property="og:image" content="https://rockabar.paragu-ai.com/og/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -140,7 +146,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://rockabar.paragu-ai.com/og/og-image.png" />
         <meta name="robots" content="index, follow, max-image-preview:large" />   </head>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col bg-[var(--color-background)] text-[var(--color-text)]">
         <Analytics />
         <TrackCtas />
 

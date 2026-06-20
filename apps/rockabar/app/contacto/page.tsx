@@ -13,22 +13,24 @@ export default function ContactPage() {
   const ct = c.contact;
   return (
     <>
-      <section className="pt-28 pb-12 bg-[var(--color-background)] relative overflow-hidden">
+      <section className="pt-28 md:pt-36 pb-10 md:pb-12 bg-[var(--color-background)] relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
-        <div className="container-page text-center">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold mb-4 block">
+        <div className="container-page text-left md:text-center max-w-2xl md:mx-auto">
+          <span className="inline-block text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold mb-3 md:mb-4 font-semibold">
             {ct.hero.eyebrow}
           </span>
-          <h1 className="text-4xl md:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-text)] mb-4">
+          <h1 className="text-[var(--text-fluid-h2)] font-[var(--font-heading)] font-bold text-[var(--color-text)] mb-4 leading-tight">
             {ct.hero.title}
           </h1>
-          <p className="text-[var(--color-text-muted)]">{ct.hero.subtitle}</p>
+          <p className="lead max-w-lg md:mx-auto">
+            {ct.hero.subtitle}
+          </p>
         </div>
       </section>
 
       <section className="section-padding bg-[var(--color-surface)]">
         <div className="container-page">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto mb-10 md:mb-12">
             {/* Address */}
             <div className="rock-card p-6">
               <div className="w-12 h-12 mb-4 rounded-full bg-gold/10 flex items-center justify-center text-gold">
@@ -71,7 +73,7 @@ export default function ContactPage() {
           </div>
 
           {/* Hours */}
-          <div className="max-w-2xl mx-auto rock-card p-6">
+          <div className="max-w-2xl mx-auto rock-card p-5 md:p-6">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold">
                 <Clock size={20} />
@@ -119,7 +121,7 @@ export default function ContactPage() {
               href={ct.cta.buttonHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-primary)] text-white font-semibold rounded-lg hover:bg-[var(--color-primary-light)] transition-all text-lg"
+              className="tap inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-[var(--color-primary)] text-white font-bold rounded-lg hover:bg-[var(--color-primary-light)] active:scale-[0.98] transition-all text-base shadow-lg shadow-[var(--color-primary)]/30"
             >
               {ct.cta.buttonText}
             </a>

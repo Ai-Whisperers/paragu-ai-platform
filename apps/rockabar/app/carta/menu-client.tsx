@@ -59,8 +59,8 @@ export default function MenuPageClient({
   return (
     <div className="section-padding bg-[var(--color-background)]">
       <div className="container-page">
-        {/* Category Nav (desktop) */}
-        <div className="hidden md:flex flex-wrap gap-2 mb-12 justify-center">
+        {/* Category Nav (desktop) — sticky pills */}
+        <div className="hidden md:flex flex-wrap gap-2 mb-12 justify-center sticky top-20 z-30 py-3 bg-[var(--color-background)]/85 backdrop-blur-md rounded-xl">
           {categories.map((cat) => (
             <button
               key={cat.id}
@@ -70,9 +70,9 @@ export default function MenuPageClient({
                   .getElementById(cat.id)
                   ?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+              className={`tap px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
                 activeCat === cat.id
-                  ? "bg-gold text-[var(--color-background)]"
+                  ? "bg-gold text-[var(--color-primary-dark)] shadow-md shadow-[var(--color-accent)]/20"
                   : "bg-[var(--color-surface-alt)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] border border-[var(--color-border)]"
               }`}
             >
@@ -87,25 +87,26 @@ export default function MenuPageClient({
         </div>
 
         {/* Category sections */}
-        <div className="space-y-12 max-w-3xl mx-auto">
+        <div className="space-y-10 md:space-y-14 max-w-3xl mx-auto">
           {categories.map((cat) => (
             <section
               key={cat.id}
               id={cat.id}
-              className="scroll-mt-24"
+              className="scroll-mt-nav"
             >
               {/* Mobile accordion header */}
               <button
-                className="md:hidden w-full flex items-center justify-between p-4 rounded-xl bg-[var(--color-surface-alt)] border border-[var(--color-border)] mb-4"
+                className="md:hidden tap w-full flex items-center justify-between p-4 rounded-xl bg-[var(--color-surface-alt)] border border-[var(--color-border)] mb-3 active:bg-[var(--color-surface-light)]"
                 onClick={() => setOpenCat(openCat === cat.id ? null : cat.id)}
+                aria-expanded={openCat === cat.id || openCat === null}
               >
-                <span className="flex items-center gap-2 font-semibold text-[var(--color-text)]">
-                  {catIcons[cat.id]}
+                <span className="flex items-center gap-2.5 font-semibold text-[var(--color-text)] text-base">
+                  <span className="text-gold">{catIcons[cat.id]}</span>
                   {cat.name}
                 </span>
                 <ChevronDown
-                  size={18}
-                  className={`transition-transform ${
+                  size={20}
+                  className={`transition-transform duration-200 ${
                     openCat === cat.id ? "rotate-180" : ""
                   } text-[var(--color-text-muted)]`}
                 />
@@ -114,7 +115,7 @@ export default function MenuPageClient({
               {/* Desktop heading */}
               <div className="hidden md:flex items-center gap-3 mb-6">
                 <span className="text-gold">{catIcons[cat.id]}</span>
-                <h2 className="text-2xl font-[var(--font-heading)] font-bold text-[var(--color-text)]">
+                <h2 className="text-2xl md:text-3xl font-[var(--font-heading)] font-bold text-[var(--color-text)] tracking-wide">
                   {cat.name}
                 </h2>
                 <div className="flex-1 h-px bg-gradient-to-r from-gold/40 to-transparent ml-4" />
@@ -168,21 +169,21 @@ export default function MenuPageClient({
                     {cat.items?.map((item) => (
                       <div
                         key={item.name}
-                        className="flex justify-between items-start gap-4 p-4 rounded-lg bg-[var(--color-surface-alt)]/30 hover:bg-[var(--color-surface-alt)]/60 transition-colors border border-transparent hover:border-[var(--color-border)]"
+                        className="p-4 md:p-4 rounded-lg bg-[var(--color-surface-alt)]/30 hover:bg-[var(--color-surface-alt)]/60 transition-colors border border-transparent hover:border-[var(--color-border)]"
                       >
-                        <div>
-                          <h3 className="text-base font-medium text-[var(--color-text)]">
+                        <div className="flex items-start justify-between gap-3">
+                          <h3 className="text-base font-semibold text-[var(--color-text)] leading-tight">
                             {item.name}
                           </h3>
-                          {item.description && (
-                            <p className="text-xs text-[var(--color-text-muted)] mt-1">
-                              {item.description}
-                            </p>
-                          )}
+                          <span className="text-sm md:text-base font-bold text-gold whitespace-nowrap shrink-0 mt-0.5">
+                            {item.price}
+                          </span>
                         </div>
-                        <span className="text-sm font-semibold text-gold whitespace-nowrap shrink-0">
-                          {item.price}
-                        </span>
+                        {item.description && (
+                          <p className="text-xs md:text-sm text-[var(--color-text-muted)] mt-1.5 leading-relaxed">
+                            {item.description}
+                          </p>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -207,12 +208,15 @@ export default function MenuPageClient({
         </div>
 
         {/* Footer CTA */}
-        <div className="text-center mt-16">
+        <div className="mt-12 md:mt-16 text-center px-4 md:px-0">
+          <p className="text-[var(--color-text-muted)] mb-5 text-sm md:text-base">
+            ¿Listo para pedir?
+          </p>
           <a
-            href={`https://wa.me/${whatsapp}`}
+            href={`https://wa.me/${whatsapp}?text=Hola!%20Quiero%20hacer%20un%20pedido`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--color-primary)] text-white font-semibold rounded-lg hover:bg-[var(--color-primary-light)] transition-all"
+            className="tap inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-[var(--color-primary)] hover:bg-[var(--color-primary-light)] active:scale-[0.98] text-white font-bold rounded-lg transition-all text-base shadow-lg shadow-[var(--color-primary)]/30"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />

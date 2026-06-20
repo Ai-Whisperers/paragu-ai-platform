@@ -53,27 +53,37 @@ export default function Header() {
         </nav>
 
         <button
-          className="md:hidden text-[var(--color-text)] p-2"
+          className="md:hidden text-[var(--color-text)] p-2 tap rounded-lg hover:bg-[var(--color-surface-alt)]"
           onClick={() => setOpen(!open)}
           aria-label="Menú"
+          aria-expanded={open}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden bg-[var(--color-surface)] border-t border-[var(--color-border)]">
-          <div className="container-page py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-[var(--color-background)]/98 backdrop-blur-md border-t border-[var(--color-border)] pb-safe">
+          <div className="container-page py-4 flex flex-col gap-1">
             {nav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="text-sm uppercase tracking-widest text-[var(--color-text-light)] hover:text-gold"
+                className="tap px-3 py-3 text-base uppercase tracking-widest text-[var(--color-text-light)] hover:text-gold hover:bg-[var(--color-surface-alt)] rounded-lg transition-colors"
               >
                 {item.label}
               </a>
             ))}
+            <a
+              href={`https://wa.me/${(content.site as any)?.whatsapp || "595976309917"}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="tap mt-2 px-3 py-3 bg-gold text-[var(--color-primary-dark)] font-bold rounded-lg text-center tracking-wide"
+            >
+              Reservá por WhatsApp
+            </a>
           </div>
         </div>
       )}

@@ -54,29 +54,31 @@ export default function HomePage() {
       {/* Hours section */}
       <section className="section-padding bg-[var(--color-surface)]">
         <div className="container-page">
-          <div className="text-center mb-10">
-            <span className="text-xs uppercase tracking-[0.3em] text-gold mb-4 block">
+          <div className="text-left md:text-center mb-8 md:mb-10 max-w-2xl md:mx-auto">
+            <span className="inline-block text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold mb-3 md:mb-4 font-semibold">
               Horarios
             </span>
-            <h2 className="text-3xl md:text-5xl font-[var(--font-heading)] font-bold text-[var(--color-text)]">
+            <h2 className="text-[var(--text-fluid-h2)] font-[var(--font-heading)] font-bold text-[var(--color-text)] leading-tight">
               {h.hours.title}
             </h2>
-            <p className="text-[var(--color-text-muted)] mt-3">{h.hours.subtitle}</p>
+            <p className="text-[var(--color-text-muted)] mt-3 text-sm md:text-base">
+              {h.hours.subtitle}
+            </p>
           </div>
-          <div className="max-w-md mx-auto rock-card p-6">
+          <div className="max-w-md mx-auto rock-card p-5 md:p-6">
             {h.hours.items.map((s: { day: string; hours: string }) => (
               <div
                 key={s.day}
-                className="flex justify-between items-center gap-8 py-3 border-b border-[var(--color-border)] last:border-0"
+                className="flex justify-between items-center gap-3 sm:gap-8 py-2.5 md:py-3 border-b border-[var(--color-border)] last:border-0"
               >
-                <span className="font-semibold text-[var(--color-text)] uppercase tracking-wide">
+                <span className="font-semibold text-[var(--color-text)] uppercase tracking-wide text-sm">
                   {s.day}
                 </span>
                 <span
                   className={
                     s.hours === "Cerrado"
-                      ? "text-[var(--color-text-muted)] italic"
-                      : "text-[var(--color-accent)] font-mono"
+                      ? "text-[var(--color-text-muted)] italic text-sm"
+                      : "text-[var(--color-accent)] font-mono text-sm"
                   }
                 >
                   {s.hours}

@@ -19,19 +19,36 @@
   --font-body: "Inter", system-ui, sans-serif;
   --font-heading: "Bebas Neue", Impact, sans-serif;
   --font-menu: "Inter", system-ui, sans-serif;
+
+  /* Type scale for tight mobile reading */
+  --text-fluid-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-fluid-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --text-fluid-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-fluid-h1: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  --text-fluid-h2: clamp(2rem, 1.4rem + 2.5vw, 3.5rem);
 }
 
 @layer components {
   .container-page {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-page {
+      padding: 0 1.5rem;
+    }
   }
   .section-padding {
-    padding: 5rem 0;
+    padding: 3.5rem 0;
+  }
+  @media (min-width: 768px) {
+    .section-padding {
+      padding: 5rem 0;
+    }
   }
   .section-padding-sm {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
   .gradient-primary {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
@@ -59,6 +76,41 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 24px -8px rgba(245, 158, 11, 0.25);
   }
+
+  /* Editorial type rules — text-left is default, no recipe-blog center stacking */
+  .lead {
+    font-size: var(--text-fluid-lg);
+    line-height: 1.6;
+    color: var(--color-text-light);
+  }
+  p {
+    font-size: var(--text-fluid-base);
+    line-height: 1.65;
+  }
+
+  /* Tap targets sized for thumbs */
+  .tap {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* iOS safe area for the floating WhatsApp button */
+@layer utilities {
+  .pb-safe {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+  .mb-safe {
+    margin-bottom: max(0rem, env(safe-area-inset-bottom));
+  }
+  .pt-safe {
+    padding-top: max(0rem, env(safe-area-inset-top));
+  }
+  .scroll-mt-nav {
+    scroll-margin-top: 5rem;
+  }
 }
 
 /* Scrollbar */
@@ -76,10 +128,27 @@
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-body);
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
+  /* Smooth font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Better tap feedback */
+  -webkit-tap-highlight-color: rgba(245, 158, 11, 0.15);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

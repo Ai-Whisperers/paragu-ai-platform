@@ -1,3 +1,5 @@
+import { Flame, Pizza, Beer, Martini, Music, Users, Heart } from "lucide-react";
+
 interface FeatureItem {
   icon: string;
   title: string;
@@ -8,63 +10,53 @@ interface FeaturesProps {
   title: string;
   subtitle?: string;
   items: FeatureItem[];
+  align?: "left" | "center";
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  utensilsCrossed: (
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
-      <path d="M7 2v20" />
-      <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
-    </svg>
-  ),
-  fish: (
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6.5 12c.94-3.5 3.89-6.5 5.5-6.5s4.56 3 5.5 6.5c-.94 3.5-3.89 6.5-5.5 6.5s-4.56-3-5.5-6.5Z" />
-      <path d="M2 12c1.67-3.5 4.56-6 6.5-6" />
-      <path d="M22 12c-1.67-3.5-4.56-6-6.5-6" />
-      <path d="M10 12h4" />
-      <circle cx="12" cy="12" r="1" />
-    </svg>
-  ),
-  flame: (
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
-    </svg>
-  ),
-  chefHat: (
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z" />
-      <line x1="6" x2="18" y1="17" y2="17" />
-    </svg>
-  ),
+  flame: <Flame size={26} />,
+  pizza: <Pizza size={26} />,
+  beer: <Beer size={26} />,
+  martini: <Martini size={26} />,
+  music: <Music size={26} />,
+  users: <Users size={26} />,
+  heart: <Heart size={26} />,
 };
 
-export default function FeaturesSection({ title, subtitle, items }: FeaturesProps) {
+export default function FeaturesSection({
+  title,
+  subtitle,
+  items,
+  align = "left",
+}: FeaturesProps) {
+  const headingAlign = align === "center" ? "text-center" : "text-left md:text-left";
+  const headerWrap = align === "center" ? "mx-auto text-center" : "max-w-2xl";
+
   return (
     <section className="section-padding bg-[var(--color-surface)]">
       <div className="container-page">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-text)] mb-4">
+        <div className={headerWrap + " mb-10 md:mb-14"}>
+          <span className="inline-block text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold mb-3 md:mb-4 font-semibold">
+            Por qué elegirnos
+          </span>
+          <h2 className="text-[var(--text-fluid-h2)] font-[var(--font-heading)] font-bold text-[var(--color-text)] mb-3 leading-tight">
             {title}
           </h2>
           {subtitle && (
-            <p className="text-[var(--color-text-muted)] max-w-xl mx-auto">
-              {subtitle}
-            </p>
+            <p className="lead max-w-xl">{subtitle}</p>
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {items.map((item) => (
             <div
               key={item.title}
-              className="p-6 rounded-xl bg-[var(--color-surface-alt)] border border-[var(--color-border)] hover:border-gold/30 transition-all group"
+              className="rock-card p-5 md:p-6 text-left"
             >
-              <div className="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center text-gold mb-4 group-hover:bg-gold/20 transition-colors">
-                {iconMap[item.icon] || null}
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gold/10 flex items-center justify-center text-gold mb-4 group-hover:bg-gold/20 transition-colors">
+                {iconMap[item.icon] || <Heart size={26} />}
               </div>
-              <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
+              <h3 className="text-base md:text-lg font-bold text-[var(--color-text)] mb-2 tracking-wide">
                 {item.title}
               </h3>
               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
