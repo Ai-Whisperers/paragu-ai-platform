@@ -1,0 +1,70 @@
+# ── Nexa Paraguay — standalone runtime image ──
+# Build context: apps/nexa-paraguay/  (must be passed by the deploy script)
+# Assumes `pnpm build` has already produced `.next/standalone/` at the monorepo
+# root with outputFileTracingRoot = apps/nexa-paraguay, so the entrypoint is
+# apps/nexa-paraguay/server.js.
+#
+# Build:
+#   pnpm --filter nexa-paraguay build
+#   docker build -f apps/nexa-paraguay/Dockerfile.standalone \
+#     -t nexa-paraguay:prod ./apps/nexa-paraguay
+# Run:
+#   docker service update --image nexa-paraguay:prod-<ts> nexa-paraguay_web
+
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+# Non-root user
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
+
+# Standalone bundle — entrypoint is apps/nexa-paraguay/server.js
+COPY --chown=nextjs:nodejs .next/standalone/ ./
+COPY --chown=nextjs:nodejs .next/static ./apps/nexa-paraguay/.next/static
+
+# Static + localized content (only the image subdirs the app actually loads:
+# blog, brand, flags, hero — see public/_archive-images/README.md)
+COPY --chown=nextjs:nodejs public/images/blog   ./apps/nexa-paraguay/public/images/blog
+COPY --chown=nextjs:nodejs public/images/brand  ./apps/nexa-paraguay/public/images/brand
+COPY --chown=nextjs:nodejs public/images/flags  ./apps/nexa-paraguay/public/images/flags
+COPY --chown=nextjs:nodejs public/images/hero   ./apps/nexa-paraguay/public/images/hero
+COPY --chown=nextjs:nodejs public/images/og-default.svg ./apps/nexa-paraguay/public/images/og-default.svg
+COPY --chown=nextjs:nodejs public/favicon.ico  ./apps/nexa-paraguay/public/favicon.ico
+COPY --chown=nextjs:nodejs public/favicon.svg  ./apps/nexa-paraguay/public/favicon.svg
+COPY --chown=nextjs:nodejs public/icon-192.png ./apps/nexa-paraguay/public/icon-192.png
+COPY --chown=nextjs:nodejs public/icon-512.png ./apps/nexa-paraguay/public/icon-512.png
+COPY --chown=nextjs:nodejs public/robots.txt   ./apps/nexa-paraguay/public/robots.txt
+COPY --chown=nextjs:nodejs public/schema       ./apps/nexa-paraguay/public/schema
+COPY --chown=nextjs:nodejs public/testimonios  ./apps/nexa-paraguay/public/testimonios
+COPY --chown=nextjs:nodejs public/assets       ./apps/nexa-paraguay/public/assets
+COPY --chown=nextjs:nodejs content ./apps/nexa-paraguay/content
+
+# Site config + page data JSONs (read at runtime by the app)
+COPY --chown=nextjs:nodejs site.json   ./apps/nexa-paraguay/site.json
+COPY --chown=nextjs:nodejs images.json ./apps/nexa-paraguay/images.json
+COPY --chown=nextjs:nodejs tokens.json ./apps/nexa-paraguay/tokens.json
+
+# Localized page data
+COPY --chown=nextjs:nodejs nexa-pages ./apps/nexa-paraguay/nexa-pages
+
+# Form submissions + lead capture (mounted as a Swarm volume in production;
+# created here so the image runs cleanly in dev)
+RUN mkdir -p /app/.leads /app/data/submissions && \
+    chown -R nextjs:nodejs /app/.leads /app/data/submissions
+
+USER nextjs
+
+EXPOSE 3000
+
+# /api/health is the standard liveness probe
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:3000/api/health || exit 1
+
+# Workdir at the app subdir so server.js resolves relative paths correctly
+WORKDIR /app/apps/nexa-paraguay
+CMD ["node", "server.js"]

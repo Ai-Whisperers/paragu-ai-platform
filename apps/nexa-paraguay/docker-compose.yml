@@ -1,0 +1,109 @@
+# ── Nexa Paraguay — Swarm stack (production) ──
+# This compose file is the source of truth for the nexa-paraguay stack.
+# It runs 2 replicas behind Traefik on the agent-net overlay network.
+# It serves 3 domains:
+#   - nexaparaguay.com (canonical, apex + www)
+#   - nexa.paragu-ai.com
+#   - nexa-paraguay.paragu-ai.com
+#   - nexa-preview.paragu-ai.com (preview alias, shares the same service)
+#
+# Deploy:
+#   pnpm --filter nexa-paraguay build
+#   ./deploy.sh
+#   # OR: docker stack deploy -c docker-compose.yml nexa-paraguay --with-registry-auth
+
+services:
+  web:
+    image: nexa-paraguay:prod
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        order: start-first
+        delay: 10s
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        order: stop-first
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 60s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL:-https://nexaparaguay.com}
+      - NEXT_PUBLIC_GA4_ID=${NEXT_PUBLIC_GA4_ID:-G-XE49GLEP34}
+      - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+    volumes:
+      # Form submissions + lead capture — persisted across deploys
+      - nexa-leads:/app/.leads
+      - nexa-submissions:/app/data/submissions
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=agent-net"
+      # Canonical apex (nexaparaguay.com) — security headers
+      - "traefik.http.routers.nexa-paraguay-apex.entrypoints=websecure"
+      - "traefik.http.routers.nexa-paraguay-apex.rule=Host(`nexaparaguay.com`)"
+      - "traefik.http.routers.nexa-paraguay-apex.tls=true"
+      - "traefik.http.routers.nexa-paraguay-apex.tls.certresolver=letsencryptresolver"
+      - "traefik.http.routers.nexa-paraguay-apex.middlewares=nexa-compress@docker,security-headers@file"
+      - "traefik.http.routers.nexa-paraguay-apex.service=nexa-paraguay"
+      # www → apex 301
+      - "traefik.http.routers.nexa-paraguay-www.entrypoints=websecure"
+      - "traefik.http.routers.nexa-paraguay-www.rule=Host(`www.nexaparaguay.com`)"
+      - "traefik.http.routers.nexa-paraguay-www.tls=true"
+      - "traefik.http.routers.nexa-paraguay-www.tls.certresolver=letsencryptresolver"
+      - "traefik.http.routers.nexa-paraguay-www.middlewares=nexa-www-redirect@docker,nexa-compress@docker,security-headers@file"
+      - "traefik.http.routers.nexa-paraguay-www.service=nexa-paraguay"
+      # Short alias 1 (paragu-ai subdomain)
+      - "traefik.http.routers.nexa-paraguay-short.entrypoints=websecure"
+      - "traefik.http.routers.nexa-paraguay-short.rule=Host(`nexa.paragu-ai.com`)"
+      - "traefik.http.routers.nexa-paraguay-short.tls=true"
+      - "traefik.http.routers.nexa-paraguay-short.tls.certresolver=letsencryptresolver"
+      - "traefik.http.routers.nexa-paraguay-short.middlewares=nexa-compress@docker,security-headers@file"
+      - "traefik.http.routers.nexa-paraguay-short.service=nexa-paraguay"
+      # Long alias (paragu-ai subdomain)
+      - "traefik.http.routers.nexa-paraguay-long.entrypoints=websecure"
+      - "traefik.http.routers.nexa-paraguay-long.rule=Host(`nexa-paraguay.paragu-ai.com`)"
+      - "traefik.http.routers.nexa-paraguay-long.tls=true"
+      - "traefik.http.routers.nexa-paraguay-long.tls.certresolver=letsencryptresolver"
+      - "traefik.http.routers.nexa-paraguay-long.middlewares=nexa-compress@docker,security-headers@file"
+      - "traefik.http.routers.nexa-paraguay-long.service=nexa-paraguay"
+      # Preview alias
+      - "traefik.http.routers.nexa-paraguay-preview.entrypoints=websecure"
+      - "traefik.http.routers.nexa-paraguay-preview.rule=Host(`nexa-preview.paragu-ai.com`)"
+      - "traefik.http.routers.nexa-paraguay-preview.tls=true"
+      - "traefik.http.routers.nexa-paraguay-preview.tls.certresolver=letsencryptresolver"
+      - "traefik.http.routers.nexa-paraguay-preview.middlewares=nexa-compress@docker,security-headers@file"
+      - "traefik.http.routers.nexa-paraguay-preview.service=nexa-paraguay"
+      # Service definition
+      - "traefik.http.services.nexa-paraguay.loadbalancer.server.port=3000"
+      - "traefik.http.services.nexa-paraguay.loadbalancer.healthcheck.path=/api/health"
+      - "traefik.http.services.nexa-paraguay.loadbalancer.healthcheck.interval=30s"
+    networks:
+      - agent-net
+
+volumes:
+  nexa-leads:
+  nexa-submissions:
+
+networks:
+  agent-net:
+    external: true

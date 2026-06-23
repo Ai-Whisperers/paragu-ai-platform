@@ -1,0 +1,13 @@
+{
+  "targetKeyword": "agendar consulta Paraguay",
+  "sections": [
+    {
+      "id": "booking-form",
+      "content": "bookingForm"
+    },
+    {
+      "id": "highlights",
+      "content": "bookingForm.features"
+    }
+  ]
+}
