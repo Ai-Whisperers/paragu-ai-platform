@@ -98,7 +98,7 @@ Measurement ID G-XE49GLEP34 exists as env var placeholder but no gtag script loa
 ### D5. WhatsApp number 🔴
 Current value: 595000000000 (placeholder). Real number needed: 595982515138 (from improvement plan).
 
-### D6. Email hola@nexaparaguay.com 🔴
+### D6. Email paraguaynexa@gmail.com 🔴
 Referenced in 8 places. Needs verified inbox. MX records + DKIM/SPF for DNS cutover.
 
 ### D7. Social profile URLs 🟡

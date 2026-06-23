@@ -92,7 +92,7 @@ The site currently shows these numbers (not from your questionnaire):
 ### Section 6: Contact & Social
 
 - WhatsApp: **+595 982 515 138**
-- Email: **hola@nexaparaguay.com**
+- Email: **paraguaynexa@gmail.com**
 - Address: **Asunción, Villa Morra**
 - Hours: **Mon-Fri 09:00-18:00, Sat 10:00-14:00 (UTC-3)**
 - Instagram: **@nexaparaguay**

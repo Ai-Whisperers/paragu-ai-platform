@@ -52,7 +52,7 @@ export function generateLocalBusinessSchema(locale = 'es') {
     description: text.description,
     url: "https://nexa.paragu-ai.com",
     telephone: text.telephone,
-    email: "hola@nexaparaguay.com",
+    email: "paraguaynexa@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Av. Santa Teresa 2456",
@@ -101,7 +101,7 @@ export function generateOrganizationSchema() {
     url: "https://nexa.paragu-ai.com",
     logo: "https://nexa.paragu-ai.com/images/brand/logo.svg",
     description: "Asesoría profesional para radicación, banca y constitución de sociedad en Paraguay para ciudadanos europeos.",
-    email: "hola@nexaparaguay.com",
+    email: "paraguaynexa@gmail.com",
     telephone: "+595 21 123 4567",
     address: {
       "@type": "PostalAddress",

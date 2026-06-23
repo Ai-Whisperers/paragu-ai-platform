@@ -38,7 +38,7 @@ CRM_PORTAL_ID                  = <hubspot-portal-id>
 CRM_ENDPOINT                   = <hubspot-form-guid>
 MAILCHIMP_API_KEY              = <mailchimp-api-key>
 MAILCHIMP_LIST_ID              = <mailchimp-audience-id>
-EMAIL_FROM_ADDRESS             = hola@nexaparaguay.com
+EMAIL_FROM_ADDRESS             = paraguaynexa@gmail.com
 EMAIL_FROM_NAME                = Nexa Paraguay
 ```
 

@@ -99,5 +99,5 @@ From `site.json`:
 - Default locale: en
 - Locales: nl, en, de, es
 - Features: testimonials (true), blog (true), whatsappFloat (true), heroImages (true), processImages (true)
-- Contact: WhatsApp +595982515138, email hola@nexaparaguay.com
+- Contact: WhatsApp +595982515138, email paraguaynexa@gmail.com
 - Social: linkedin.com/company/nexa-paraguay, instagram.com/nexaparaguay

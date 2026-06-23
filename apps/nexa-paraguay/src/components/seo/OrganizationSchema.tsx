@@ -12,7 +12,7 @@ function loadSiteConfig() {
 export function OrganizationSchema() {
   const siteConfig = loadSiteConfig()
   const phone = siteConfig?.contact?.whatsapp || '595982515138'
-  const email = siteConfig?.contact?.email || 'hola@nexaparaguay.com'
+  const email = siteConfig?.contact?.email || 'paraguaynexa@gmail.com'
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',

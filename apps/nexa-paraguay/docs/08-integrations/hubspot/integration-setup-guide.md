@@ -194,7 +194,7 @@ Account email: _________________
 
 --- CONTACT — please confirm ---
 WhatsApp:  +595 982 515 138  (correct? Y/N)
-Email:     hola@nexaparaguay.com  (correct? Y/N)
+Email:     paraguaynexa@gmail.com  (correct? Y/N)
 Address:   Asunción, Villa Morra  (correct? Y/N)
 
 --- PHOTOS (for site launch) ---

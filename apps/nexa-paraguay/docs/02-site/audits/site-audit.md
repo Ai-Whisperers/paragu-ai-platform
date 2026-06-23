@@ -165,7 +165,7 @@ All now consistent with the main process narrative.
 |-------|-------|--------|
 | Phone | +595 982 515 138 | 🟡 Confirmed with WhatsApp number |
 | WhatsApp | 595982515138 | 🟡 **Same number for phone and WhatsApp** — fine but verify |
-| Email | hola@nexaparaguay.com | ✅ |
+| Email | paraguaynexa@gmail.com | ✅ |
 | Address | Asunción, Villa Morra | 🟡 Not verified with client |
 | Hours | Mon-Fri 09:00-18:00, Sat 10:00-14:00 | 🟡 Not verified with client |
 | Calendly | calendly.com/nexaparaguay/consulta | ✅ Wired |

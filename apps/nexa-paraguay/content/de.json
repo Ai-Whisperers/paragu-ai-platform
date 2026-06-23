@@ -175,7 +175,7 @@
       ],
       "provider": "calendly",
       "fallbackWhatsapp": "595982515138",
-      "fallbackEmail": "hola@nexaparaguay.com",
+      "fallbackEmail": "paraguaynexa@gmail.com",
       "embedType": "inline",
       "embedStyle": {
         "minWidth": "320px",
@@ -189,7 +189,7 @@
       "neighborhood": "Villa Morra",
       "city": "Asunción, Paraguay",
       "phone": "+595 21 123 456",
-      "email": "hola@nexaparaguay.com",
+      "email": "paraguaynexa@gmail.com",
       "whatsapp": "+595 982 515 138",
       "hours": {
         "Mo–Fr": "09:00 – 18:00 (UTC-3)",
@@ -243,10 +243,6 @@
         "href": "/faq"
       },
       {
-        "label": "Blog",
-        "href": "/blog"
-      },
-      {
         "label": "Kontakt",
         "href": "/contacto"
       }
@@ -257,7 +253,7 @@
   "footer": {
     "businessName": "Nexa Paraguay",
     "city": "Asunción",
-    "email": "hola@nexaparaguay.com",
+    "email": "paraguaynexa@gmail.com",
     "whatsapp": "595982515138",
     "instagram": "https://instagram.com/nexaparaguay",
     "facebook": "https://facebook.com/nexaparaguay",
@@ -403,46 +399,22 @@
       "title": "Was uns auszeichnet",
       "pillars": [
         {
-          "icon": "Users",
-          "title": "Multidisziplinäres Team",
-          "description": "Anwälte, Buchhalter, Notare und Finanzberater arbeiten koordiniert zusammen.",
-          "badge": "Unser Unterschied"
-        },
-        {
-          "icon": "Shield",
-          "title": "Beziehungskapital",
-          "description": "Institutioneller Zugang, der über Jahre mit Banken, Notaren und Behörden aufgebaut wurde.",
-          "badge": "Unser Unterschied"
-        },
-        {
-          "icon": "Clock",
-          "title": "Zeit als Wert",
-          "description": "Wir komprimieren an einem Tag, was sonst mehrere Reisen erfordert.",
-          "badge": "Unser Unterschied"
-        },
-        {
           "icon": "Package",
-          "title": "Ein einziges Programm",
-          "description": "Aufenthalt, Gesellschaft und Bankkonto integriert.",
-          "badge": "Warum man uns wählt"
+          "title": "Wir helfen mit allem, was Sie brauchen",
+          "description": "Aufenthalt, Firmengründung und Bankkonto — alles integriert.",
+          "image": "@src:trust.certificate"
         },
         {
           "icon": "Plane",
-          "title": "Eine einzige Reise",
-          "description": "Persönliche Abwicklung an einem koordinierten Tag.",
-          "badge": "Warum man uns wählt"
+          "title": "Wir begleiten Sie im Prozess",
+          "description": "Persönliche Abwicklung, koordiniert in einem Besuch.",
+          "image": "@src:trust.meeting"
         },
         {
-          "icon": "Users",
-          "title": "Ein einziges Team",
-          "description": "Anwälte, Buchhalter, Notare, Finanzberater.",
-          "badge": "Warum man uns wählt"
-        },
-        {
-          "icon": "Shield",
-          "title": "Transparenter Preis",
-          "description": "Alles inklusive. Keine versteckten Kosten.",
-          "badge": "Warum man uns wählt"
+          "icon": "Heart",
+          "title": "Enge, fortlaufende Begleitung",
+          "description": "Verfügbar, wann immer Sie uns brauchen.",
+          "image": "@src:trust.team"
         }
       ]
     },
@@ -516,7 +488,7 @@
       },
       "members": [
         {
-          "name": "Sonia Wehrli",
+          "name": "Sonia Weiss van der Pol",
           "role": {
             "es": "Fundadora y Guía Legal",
             "en": "Founder & Legal Guide",
@@ -534,70 +506,21 @@
           "imageUrl": "@src:team.sonia"
         },
         {
-          "name": "Marcelo González",
+          "name": "Luana Weiss van der Pol",
           "role": {
-            "es": "Director de Operaciones (Paraguay)",
-            "en": "Operations Director (Paraguay)",
-            "nl": "Operationeel Directeur (Paraguay)",
-            "de": "Betriebsleiter (Paraguay)"
+            "es": "Atención al Cliente",
+            "en": "Client Care",
+            "nl": "Klantenzorg",
+            "de": "Kundenbetreuung"
           },
           "languages": [
             "ES",
-            "EN"
-          ],
-          "icon": "Briefcase",
-          "memberImage": "@src:team.operations",
-          "imageUrl": "@src:team.operations"
-        },
-        {
-          "name": "Erik de Vries",
-          "role": {
-            "es": "Director Comercial (Europa)",
-            "en": "European Commercial Director",
-            "nl": "Europese Commerciële Directeur",
-            "de": "Europäischer Handelsdirektor"
-          },
-          "languages": [
-            "NL",
             "EN",
-            "DE",
-            "ES"
+            "NL"
           ],
-          "icon": "Globe",
-          "memberImage": "@src:team.europe",
-          "imageUrl": "@src:team.europe"
-        },
-        {
-          "name": "Equipo Legal Nexa",
-          "role": {
-            "es": "Abogados Matriculados",
-            "en": "Licensed Legal Team",
-            "nl": "Gelicentieerd Juridisch Team",
-            "de": "Zugelassenes Rechtsteam"
-          },
-          "languages": [
-            "ES",
-            "EN"
-          ],
-          "icon": "Scale",
-          "memberImage": "@src:team.legal",
-          "imageUrl": "@src:team.legal"
-        },
-        {
-          "name": "Equipo Contable Nexa",
-          "role": {
-            "es": "Contadores Públicos Matriculados",
-            "en": "Licensed Accounting Team",
-            "nl": "Gelicentieerd Boekhoudteam",
-            "de": "Zugelassenes Buchhaltungsteam"
-          },
-          "languages": [
-            "ES",
-            "EN"
-          ],
-          "icon": "Calculator",
-          "memberImage": "@src:team.accounting",
-          "imageUrl": "@src:team.accounting"
+          "icon": "Heart",
+          "memberImage": "@src:team.luana",
+          "imageUrl": "@src:team.luana"
         }
       ]
     },
@@ -1092,23 +1015,7 @@
     "team": {
       "eyebrow": "Equipo",
       "title": "Personas reales con nombres y experiencia",
-      "members": [
-        {
-          "name": "Fundador",
-          "role": "Director",
-          "bio": "Más de 15 años entre banca corporativa europea y emprendimientos en Sudamérica."
-        },
-        {
-          "name": "Abogado senior",
-          "role": "Área legal",
-          "bio": "Especialista en inmigración y derecho societario paraguayo."
-        },
-        {
-          "name": "Contador",
-          "role": "Área fiscal",
-          "bio": "CPA con clientes internacionales. Experto en IRE territorial."
-        }
-      ]
+      "members": []
     },
     "story": {
       "title": "De Holanda a Paraguay: la historia de Sonia",
@@ -1911,8 +1818,8 @@
         },
         {
           "number": 3,
-          "title": "El Día Operativo",
-          "description": "Con tus documentos en mano, viajas a Paraguay. Te acompañamos en todas las citas presenciales — migración, antecedentes policiales e identificación — consolidando todo el proceso legal en un solo día eficiente.",
+          "title": "Ihr Tag in Paraguay",
+          "description": "Reisen Sie mit Ihren Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen — die meisten können an einem Tag erledigt werden, aber manchmal dauert es länger. Wir bestätigen die Zeiten im Voraus.",
           "detailParagraph": "Tu día operativo comienza temprano con nuestro equipo. Te recogemos y acompañamos a cada cita: Migraciones para la solicitud de residencia, Departamento de Identificaciones para la cédula, y policía para antecedentes. Todo está pre-coordinado para que no esperes en filas. Almorzamos juntos y cerramos el día con un café en tu futuro barrio.",
           "timeline": "Semana 6",
           "icon": "CalendarCheck",
@@ -2058,27 +1965,21 @@
       "items": [
         {
           "icon": "Package",
-          "title": "Ein Programm",
-          "description": "Aufenthaltsgenehmigung, Gesellschaft und Bankkonto integriert.",
+          "title": "Wir helfen mit allem, was Sie brauchen",
+          "description": "Aufenthalt, Firmengründung und Bankkonto — alles integriert.",
           "image": "@src:trust.certificate"
         },
         {
-          "icon": "Shield",
-          "title": "Transparenter Preis",
-          "description": "Alles inklusive. Keine versteckten Kosten.",
-          "image": "@src:trust.registry"
-        },
-        {
           "icon": "Plane",
-          "title": "Eine Reise",
-          "description": "Alle persönlichen Erledigungen an einem koordinierten Tag.",
-          "image": "@src:trust.migraciones"
+          "title": "Wir begleiten Sie im Prozess",
+          "description": "Persönliche Abwicklung, koordiniert in einem Besuch.",
+          "image": "@src:trust.meeting"
         },
         {
-          "icon": "Users",
-          "title": "Persönliche Begleitung",
-          "description": "Wir begleiten Sie während des gesamten Prozesses, bis zu einem Jahr nach Ihrer Ankunft.",
-          "image": "@src:trust.cedula"
+          "icon": "Heart",
+          "title": "Enge, fortlaufende Begleitung",
+          "description": "Verfügbar, wann immer Sie uns brauchen.",
+          "image": "@src:trust.team"
         }
       ],
       "title": "Alles, was Sie für Ihren Umzug brauchen"
@@ -2148,8 +2049,8 @@
         },
         {
           "number": 3,
-          "title": "De Operationele Dag",
-          "description": "Met je documenten in de hand reis je naar Paraguay. We begeleiden je bij alle persoonlijke afspraken — migratie, politiegegevens en identificatie — in één efficiënte dag.",
+          "title": "Ihr Tag in Paraguay",
+          "description": "Reisen Sie mit Ihren Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen — die meisten können an einem Tag erledigt werden, aber manchmal dauert es länger. Wir bestätigen die Zeiten im Voraus.",
           "icon": "CalendarCheck",
           "image": {
             "$img": "process.arrival"
@@ -2533,7 +2434,7 @@
         },
         {
           "q": "¿Cómo ejerzo mis derechos?",
-          "a": "Escriba a hola@nexaparaguay.com y responderemos en un plazo máximo de 30 días (acceso, rectificación, supresión, portabilidad)."
+          "a": "Escriba a paraguaynexa@gmail.com y responderemos en un plazo máximo de 30 días (acceso, rectificación, supresión, portabilidad)."
         }
       ]
     }
@@ -2555,8 +2456,8 @@
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Entorno económico",
-          "description": "Crecimiento PBI 4,2% en 2023. IRE 10%. Inflación 2,1%. Sistema territorial — la renta extranjera no tributa localmente.",
+          "title": "Wirtschaftliches Umfeld",
+          "description": "10% Körperschaftssteuer (IRE). Territoriales System — ausländische Einkünfte werden lokal nicht besteuert. Eine der niedrigsten Steuerlasten der Region.",
           "bullets": [
             "Impuesto corporativo 10%",
             "Sistema territorial",
@@ -2566,7 +2467,7 @@
         },
         {
           "icon": "Building2",
-          "title": "Oportunidades de inversión",
+          "title": "Investitionsmöglichkeiten",
           "description": "Sin control de cambios. IED abierta a todos los sectores. Propiedades en zonas premium de Asunción +30% en 5 años.",
           "bullets": [
             "Inmobiliario en expansión",
@@ -2577,18 +2478,18 @@
         },
         {
           "icon": "Heart",
-          "title": "Calidad de vida",
+          "title": "Lebensqualität",
           "description": "30–50% menos costo de vida que Berlín o Madrid. USD 4.000/mes cubre familia, escuela privada y ayuda doméstica.",
           "bullets": [
-            "Costo de vida favorable",
-            "Comunidad internacional",
-            "Seguridad personal"
+            "Erschwingliche Lebenshaltungskosten",
+            "Unterstützung auf Spanisch, Englisch und Niederländisch",
+            "Ruhiger Lebensstil"
           ],
           "imageUrl": "@src:whyParaguay.lifestyle"
         },
         {
           "icon": "Landmark",
-          "title": "Estabilidad fiscal",
+          "title": "Steuerliche Stabilität",
           "description": "IRE 10% desde 2020 (Ley 6380). Sistema territorial estable entre ciclos políticos. Tratados de doble imposición con España, Chile, Taiwán.",
           "bullets": [
             "IRE 10% desde 2020",
@@ -2599,18 +2500,18 @@
         },
         {
           "icon": "LineChart",
-          "title": "Trayectoria de crecimiento",
-          "description": "PBI creciendo 4–5% anual 2021–2024. Sector construcción +12% anual. Inversión en infraestructura activa.",
+          "title": "Wachsende Wirtschaft",
+          "description": "Anhaltendes BIP-Wachstum in den letzten Jahren, mit dem Bausektor als treibende Kraft.",
           "bullets": [
-            "Construcción +12% anual",
-            "PBI 4–5% anual",
-            "Inversión en infraestructura"
+            "Paraguay BIP 2024: +4,2%",
+            "Paraguay BIP 2025: +6,0% (BCP-Prognose)",
+            "Bau 2025: +5,3% (Forbes Paraguay)"
           ],
           "imageUrl": "@src:whyParaguay.growth"
         },
         {
           "icon": "Wheat",
-          "title": "Potencia agroindustrial",
+          "title": "Agroindustrie",
           "description": "4.º exportador mundial de soja. Gran exportador de carne. ~100.000 hectáreas transadas por año.",
           "bullets": [
             "4.º exportador de soja",
@@ -2620,36 +2521,10 @@
           "imageUrl": "@src:whyParaguay.agribusiness"
         },
         {
-          "icon": "Users",
-          "title": "Comunidad internacional",
-          "description": "Comunidades alemana, española, italiana y holandesa establecidas. +5.000 europeos radicados en la última década.",
-          "bullets": [
-            "Comunidades europea +5.000",
-            "Colegios internacionales",
-            "Red de negocios activa"
-          ],
-          "imageUrl": "@src:whyParaguay.community"
-        },
-        {
-          "icon": "TreePine",
-          "title": "Naturaleza y espacio verde",
-          "description": "25M hectáreas de Chaco. 5 parques nacionales a menos de 200 km de Asunción. Baja densidad fuera de la capital.",
-          "bullets": [
-            "5 parques nacionales",
-            "25M hectáreas de Chaco",
-            "Baja densidad poblacional"
-          ],
-          "imageUrl": "@src:whyParaguay.nature"
-        },
-        {
           "icon": "Coffee",
-          "title": "Cultura y vida diaria",
-          "description": "Cultura bilingüe español + guaraní. Tasa de homicidio muy inferior a Buenos Aires o São Paulo.",
-          "bullets": [
-            "Bilingüe español + guaraní",
-            "Baja tasa de criminalidad",
-            "Vida cotidiana tranquila"
-          ],
+          "title": "Zweisprachige spanische + guaranische Kultur",
+          "description": "Zweisprachige spanische + guaranische Kultur. Die Kriminalitätsrate ist im Vergleich zu anderen regionalen Hauptstädten niedrig — wie in jeder Stadt werden normale Vorsichtsmaßnahmen empfohlen.",
+          "bullets": [],
           "imageUrl": "@src:whyParaguay.culture"
         }
       ]
@@ -2660,27 +2535,21 @@
       "items": [
         {
           "icon": "Package",
-          "title": "Un solo programa",
-          "description": "Residencia, sociedad y cuenta bancaria integrados.",
+          "title": "Wir helfen mit allem, was Sie brauchen",
+          "description": "Aufenthalt, Firmengründung und Bankkonto — alles integriert.",
           "image": "@src:trust.certificate"
         },
         {
           "icon": "Plane",
-          "title": "Un solo viaje",
-          "description": "Tramitación presencial en una jornada coordinada.",
-          "image": "@src:trust.migraciones"
+          "title": "Wir begleiten Sie im Prozess",
+          "description": "Persönliche Abwicklung, koordiniert in einem Besuch.",
+          "image": "@src:trust.meeting"
         },
         {
-          "icon": "Users",
-          "title": "Un solo equipo",
-          "description": "Abogados, contadores, escribanos, asesores financieros.",
-          "image": "@src:trust.cedula"
-        },
-        {
-          "icon": "Shield",
-          "title": "Precio transparente",
-          "description": "Todo incluido. Sin cargos ocultos.",
-          "image": "@src:trust.registry"
+          "icon": "Heart",
+          "title": "Enge, fortlaufende Begleitung",
+          "description": "Verfügbar, wann immer Sie uns brauchen.",
+          "image": "@src:trust.team"
         }
       ]
     },
@@ -2760,8 +2629,8 @@
         },
         {
           "number": 3,
-          "title": "El Día Operativo",
-          "description": "Con tus documentos en mano, viajas a Paraguay. Te acompañamos en todas las citas presenciales — migración, antecedentes policiales e identificación — consolidando todo el proceso legal en un solo día eficiente.",
+          "title": "Ihr Tag in Paraguay",
+          "description": "Reisen Sie mit Ihren Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen — die meisten können an einem Tag erledigt werden, aber manchmal dauert es länger. Wir bestätigen die Zeiten im Voraus.",
           "icon": "CalendarCheck",
           "image": {
             "$img": "process.arrival"
@@ -2866,11 +2735,6 @@
           "slug": "faq-12"
         },
         {
-          "q": "Kann ich nur die Residenz mieten?",
-          "a": "Umfassende Programme nach Design. Kontaktieren Sie uns für Ihren speziellen Fall.",
-          "slug": "faq-13"
-        },
-        {
           "q": "Was passiert nach dem ersten Jahr (Investor)?",
           "a": "Kontinuitätsvorschlag, der an Ihre aktuellen Bedürfnisse angepasst ist.",
           "slug": "faq-14"
@@ -2896,8 +2760,8 @@
           "slug": "faq-18"
         },
         {
-          "q": "Ist Paraguay für Europäer sicher?",
-          "a": "Paraguay gilt als eines der sichersten Länder Südamerikas für Ausländer. Asunción hat im Vergleich zu anderen regionalen Hauptstädten eine niedrige Gewaltkriminalitätsrate. Die Expat-Gemeinschaften in Villa Morra, Carmelitas und San Bernardino sind sehr aktiv und sicher.",
+          "q": "Ist Paraguay sicher für Europäer?",
+          "a": "Paraguay ist im Allgemeinen sicher für Ausländer — die Gewaltkriminalitätsrate in Asunción ist im Vergleich zu anderen regionalen Hauptstädten niedrig, und die Expat-Gemeinschaften in Villa Morra, Carmelitas und San Bernardino sind aktiv und gut etabliert. Wie in jedem Land empfehlen wir normale Vorsichtsmaßnahmen: in weniger bekannten Gegenden aufmerksam sein, offizielle Transport-Apps nutzen und mit der lokalen Gemeinschaft in Kontakt bleiben.",
           "slug": "faq-19"
         },
         {
@@ -2947,7 +2811,7 @@
         },
         {
           "q": "Gibt es eine holländische Expat-Community in Paraguay?",
-          "a": "Ja, die niederländische Gemeinde in Paraguay ist eine der größten und organisiertesten in Südamerika. Proyecto Paraguay hat mehr als 600 Familien geholfen. Es gibt aktive Gruppen in Asunción, San Bernardino (See) und Encarnación.",
+          "a": "Ja, Paraguay hat eine der größten und am besten organisierten niederländischen Expat-Gemeinschaften Südamerikas, mit aktiven Gruppen in Asunción, San Bernardino und Encarnación. Unsere Gründerin Sonia begleitet auch niederländische Familien über Proyecto Paraguay, eine Initiative mit über zehn Jahren Erfahrung. Wir verbinden Sie ab dem ersten Tag mit der lokalen Gemeinschaft.",
           "slug": "faq-29"
         },
         {
@@ -3002,7 +2866,7 @@
         },
         {
           "q": "Was passiert, wenn mein Aufenthaltsantrag abgelehnt wird?",
-          "a": "[Tatsächliche Daten ausstehend — fragen Sie Sonia] Wohnanträge werden selten abgelehnt, wenn die Unterlagen in Ordnung sind. Im Falle eines Problems arbeiten wir mit Ihnen zusammen, um die Anforderungen zu beheben und erneut einzureichen.",
+          "a": "Wohnanträge werden selten abgelehnt, wenn die Unterlagen in Ordnung sind. Im Falle eines Problems arbeiten wir mit Ihnen zusammen, um die Anforderungen zu beheben und erneut einzureichen.",
           "slug": "faq-40"
         }
       ]

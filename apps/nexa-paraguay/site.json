@@ -59,10 +59,11 @@
   },
   "features": {
     "testimonials": true,
-    "blog": true,
+    "blog": false,
     "whatsappFloat": true,
     "heroImages": true,
-    "processImages": true
+    "processImages": true,
+    "_blogNote": "Blog is parked until content is ready. To re-enable: set true + add nav item back."
   },
   "images": {
     "manifest": "/images.json",
@@ -70,7 +71,7 @@
   },
   "contact": {
     "whatsapp": "595982515138",
-    "email": "hola@nexaparaguay.com"
+    "email": "paraguaynexa@gmail.com"
   },
   "bookingUrl": "https://wa.me/595982515138?text=Quiero%20agendar%20una%20consulta%20gratuita",
   "social": {
@@ -102,5 +103,9 @@
     ]
   },
   "path": "",
-  "publicUrl": "https://nexa.paragu-ai.com"
+  "publicUrl": "https://nexa.paragu-ai.com",
+  "pendingDomains": [
+    "nexaparaguay.com.py"
+  ],
+  "pendingDomainsNote": "nexaparaguay.com.py purchased but DNS not yet connected. Switch domain → nexaparaguay.com.py and add Traefik labels when ready."
 }

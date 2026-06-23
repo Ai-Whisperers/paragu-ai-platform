@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-23: feat(nexa-paraguay): migrate Nexa Paraguay website into the platform monorepo (by Erebus)
+
 ### Changed
 - **Repo split.** Website code migrated out of the private
   `Ai-Whisperers/nexa-paraguay` repo into this platform app. The private

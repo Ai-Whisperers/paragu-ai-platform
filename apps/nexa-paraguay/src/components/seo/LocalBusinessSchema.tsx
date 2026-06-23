@@ -12,7 +12,7 @@ function loadSiteConfig() {
 export function LocalBusinessSchema({ locale = 'es' }: { locale?: string }) {
   const siteConfig = loadSiteConfig()
   const phone = siteConfig?.contact?.whatsapp || '595982515138'
-  const email = siteConfig?.contact?.email || 'hola@nexaparaguay.com'
+  const email = siteConfig?.contact?.email || 'paraguaynexa@gmail.com'
   const localeText = {
     es: { name: 'Nexa Paraguay', description: 'Asesoría profesional para radicación, banca y constitución de sociedad en Paraguay para ciudadanos europeos.', telephone: `+595 ${phone.slice(3,6)} ${phone.slice(6,9)}${phone.slice(9)}`, email },
     en: { name: 'Nexa Paraguay', description: 'Professional advisory for residency, banking and company incorporation in Paraguay for European citizens.', telephone: `+595 ${phone.slice(3,6)} ${phone.slice(6,9)}${phone.slice(9)}`, email },

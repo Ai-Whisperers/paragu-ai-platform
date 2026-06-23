@@ -14,7 +14,7 @@
 > - 📌 **CHOICE** — we cannot decide for you, but the default will ship if unanswered
 > - ✅ **CONFIRM-ONLY** — we already built it; just tick the box to lock it in
 >
-> **How to return it.** Fill the checkboxes and blanks inline, or paste the Answer Template at the bottom into an email to `hola@nexaparaguay.com`. Any field left blank = ship our default (flagged below).
+> **How to return it.** Fill the checkboxes and blanks inline, or paste the Answer Template at the bottom into an email to `paraguaynexa@gmail.com`. Any field left blank = ship our default (flagged below).
 >
 > **Current build status.** Staging green at `https://staging.nexaparaguay.com`. `is_demo: true` — all team portraits, testimonials, and stock imagery are AI placeholders by design. **18 blockers** tracked against production flip (see `LAUNCH.md` + `PRE-LAUNCH-INVENTORY.md`).
 >
@@ -657,11 +657,11 @@ Backing store for leads, KYC, analytics events.
 - [ ] **7-email nurture sequence** (days 0, 3, 7, 12, 18, 25, 35) defined in `email-nurture.json` — [ ] Approved as-is / [ ] Changes per email: `___`
 - [ ] **Welcome email** auto-send on lead capture: [ ] Enable / [ ] Disable
 - [ ] **From name:** "Nexa Paraguay" ✅ / [ ] Change: `___`
-- [ ] **From address:** `hola@nexaparaguay.com` ✅ / [ ] Change: `___`
+- [ ] **From address:** `paraguaynexa@gmail.com` ✅ / [ ] Change: `___`
 
 ### 11.4 Calendly (booking) 🔴
 Hardcoded: `https://calendly.com/nexaparaguay/consulta` — currently **404s**.
-- [ ] **Create Calendly account** under team email (recommend `hola@nexaparaguay.com`)
+- [ ] **Create Calendly account** under team email (recommend `paraguaynexa@gmail.com`)
 - [ ] **Event type name:** "Consulta gratuita" / other: `___`
 - [ ] **Event URL slug:** `consulta` ✅ (matches hardcoded URL) / [ ] Different: `___` (we update config)
 - [ ] **Duration:** 30 min ✅ / [ ] Other: `___`
@@ -697,7 +697,7 @@ Required for auto-replies, lead notifications, Mailchimp-triggered emails.
 - [ ] **Provider choice:** [ ] Resend (recommended, EU region sa-east-1 already verified in paragu-ai.com) [ ] Postmark [ ] SendGrid [ ] AWS SES
 - [ ] **API key:** `___`
 - [ ] **From domain verified** (`nexaparaguay.com`): [ ] Yes / [ ] Pending DNS
-- [ ] **Reply-To:** `hola@nexaparaguay.com` ✅ / [ ] Other
+- [ ] **Reply-To:** `paraguaynexa@gmail.com` ✅ / [ ] Other
 
 ---
 
@@ -845,7 +845,7 @@ See `DNS.md` for record templates. Lock each:
 ### 15.3 Email hosting 🔴
 - [ ] **Provider:** [ ] Google Workspace (€6/user/mo) [ ] Zoho Mail (free ≤5 users, then €1/user/mo) [ ] Fastmail [ ] Microsoft 365
 - [ ] **Mailboxes to create:**
-  - [ ] `hola@nexaparaguay.com` (primary inbox)
+  - [ ] `paraguaynexa@gmail.com` (primary inbox)
   - [ ] `contacto@nexaparaguay.com` (alias)
   - [ ] `legal@nexaparaguay.com` (privacy / data requests)
   - [ ] `compliance@nexaparaguay.com` (SEPRELAD)
@@ -1019,7 +1019,7 @@ List any concerns, edge cases, or questions unanswered by this document:
 
 ## 20. Answer template
 
-Copy everything below into an email to `hola@nexaparaguay.com` (or replace with wherever responses should go). Any 🔴 left blank = launch blocked.
+Copy everything below into an email to `paraguaynexa@gmail.com` (or replace with wherever responses should go). Any 🔴 left blank = launch blocked.
 
 ```
 === NEXA PARAGUAY — CLIENT QUESTIONNAIRE ANSWERS ===
