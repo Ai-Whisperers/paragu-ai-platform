@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-23: fix(nexa-paraguay): apply Luana's 2026-06-23 feedback pass (by Erebus)
+
 - 2026-06-23: feat(nexa-paraguay): migrate Nexa Paraguay website into the platform monorepo (by Erebus)
 
 ### Changed
@@ -93,3 +95,12 @@ The pre-monorepo history lives in the git log of the old private repo
 |---|---|---|
 | `nexa-paraguay:prod-20260615-1107` | 2026-06-15 | Last deploy from the standalone private repo (image still running in Swarm) |
 | `nexa-paraguay:prod` | 2026-06-23+ | New CI image, will deploy on first push after this monorepo split |
+
+
+## [2026-06-23] — Deploy trigger
+
+CI workflow `central.yml` repaired (commit `770d7da`). The content changes
+in the previous commit (`67b8c02`) were never deployed because the
+"Emit changed apps" step had a workflow validation bug. This entry is
+a marker so the next push triggers a real build/deploy of the content
+changes.
