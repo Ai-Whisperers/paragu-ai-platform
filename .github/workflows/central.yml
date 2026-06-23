@@ -134,9 +134,23 @@ jobs:
           [ "${{ steps.diff.outputs['apps/shine-nails'] }}"               = "true" ] && CHANGED="$CHANGED,shine-nails"
           [ "${{ steps.diff.outputs['apps/trentina-cerveza'] }}"            = "true" ] && CHANGED="$CHANGED,trentina-cerveza"
           [ "${{ steps.diff.outputs['apps/trentina-site'] }}"              = "true" ] && CHANGED="$CHANGED,trentina-site"
-          # Strip leading comma
+          # Strip leading comma and convert to a JSON array
           CHANGED="${CHANGED#,}"
-          echo "apps=$CHANGED" >> "$GITHUB_OUTPUT"
+          if [ -z "$CHANGED" ]; then
+            APPS_JSON="[]"
+          else
+            APPS_JSON="["
+            IFS=','
+            for a in $CHANGED; do
+              if [ -n "$a" ]; then
+                if [ "$APPS_JSON" != "[" ]; then APPS_JSON="$APPS_JSON,"; fi
+                APPS_JSON="$APPS_JSON\"$a\""
+              fi
+            done
+            unset IFS
+            APPS_JSON="$APPS_JSON]"
+          fi
+          echo "apps=$APPS_JSON" >> "$GITHUB_OUTPUT"
 
   lint:
     runs-on: ubuntu-latest
