@@ -169,6 +169,8 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --no-frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: pnpm -r --filter "./apps/${{ matrix.app }}" run lint
 
   typecheck:
@@ -188,6 +190,8 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --no-frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: pnpm -r --filter "./apps/${{ matrix.app }}" run typecheck || echo 'typecheck script not defined'
 
   build:
@@ -207,6 +211,8 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --no-frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build app
         run: pnpm --filter "./apps/${{ matrix.app }}" build
       - name: Upload build artifact
