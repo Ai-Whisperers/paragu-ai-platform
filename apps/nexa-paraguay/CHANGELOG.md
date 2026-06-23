@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-23: chore(nexa): force deploy (job output wiring fix in place) (by Erebus)
+
 - 2026-06-23: chore(nexa): trigger deploy (JSON output fix now in place) (by Erebus)
 
 - 2026-06-23: chore(nexa): bump CHANGELOG to trigger CI deploy (by Erebus)
