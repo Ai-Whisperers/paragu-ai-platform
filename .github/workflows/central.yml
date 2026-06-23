@@ -18,7 +18,7 @@ jobs:
   detect-apps:
     runs-on: ubuntu-latest
     outputs:
-      apps: ${{ steps.diff.outputs.apps }}
+      apps: ${{ steps.emit.outputs.apps }}
     steps:
       - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v3
