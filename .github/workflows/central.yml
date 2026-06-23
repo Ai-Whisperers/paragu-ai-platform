@@ -94,15 +94,53 @@ jobs:
             apps/xxgym:
               - 'apps/xxgym/**'
       - name: Emit changed apps
+        id: emit
         run: |
-          APPS=""
-          for app in 3md-website arnos-barber-shop bichos-gym bufete-mendez camilo-acosta cronos-academy cuidadoamiga de-abasto-a-casa escribania-paraguay estudio-medieval fun4me fun4me-store golden-visa-advisory granja-cabral hidrobaby-spa jota-ink-tattoo luis-de-leon-concept magnolia-peluqueria mantraspa meal-prep nexa-paraguay nde-barba nudo ozmontania-website pitchy-website portas-barber reina-de-copas scott-tatuajes tsuki-restaurante villamayor-asociados xxgym; do
-            VAL="${{ steps.diff.outputs[app] }}"
-            if [ "$VAL" = "true" ]; then
-              if [ -z "$APPS" ]; then APPS="$app"; else APPS="$APPS,$app"; fi
-            fi
+          # dorny/paths-filter exposes one output per filter key (app name).
+          # We hardcode the list of apps here and read each output by name.
+          APPS_LIST="3md-website arnos-barber-shop bichos-gym bufete-mendez camilo-acosta cronos-academy cuidadoamiga de-abasto-a-casa escribania-paraguay estudio-medieval fun4me fun4me-store golden-visa-advisory granja-cabral hidrobaby-spa jota-ink-tattoo luis-de-leon-concept magnolia-peluqueria mantraspa meal-prep nexa-paraguay nde-barba nudo ozmontania-website pitchy-website portas-barber reina-de-copas scott-tatuajes tsuki-restaurante villamayor-asociados xxgym"
+          CHANGED=""
+          for app in $APPS_LIST; do
+            # steps.diff.outputs.<app> is templated by GitHub Actions
+            # (the variable name `app` in the expression refers to the matrix/job context,
+            # not the shell loop variable — so we list every key explicitly)
+            case "$app" in
+              3md-website)             [ "${{ steps.diff.outputs['3md-website'] }}"             = "true" ] && CHANGED="$CHANGED,$app" ;;
+              arnos-barber-shop)       [ "${{ steps.diff.outputs['arnos-barber-shop'] }}"       = "true" ] && CHANGED="$CHANGED,$app" ;;
+              bichos-gym)               [ "${{ steps.diff.outputs['bichos-gym'] }}"               = "true" ] && CHANGED="$CHANGED,$app" ;;
+              bufete-mendez)            [ "${{ steps.diff.outputs['bufete-mendez'] }}"            = "true" ] && CHANGED="$CHANGED,$app" ;;
+              camilo-acosta)            [ "${{ steps.diff.outputs['camilo-acosta'] }}"            = "true" ] && CHANGED="$CHANGED,$app" ;;
+              cronos-academy)           [ "${{ steps.diff.outputs['cronos-academy'] }}"           = "true" ] && CHANGED="$CHANGED,$app" ;;
+              cuidadoamiga)             [ "${{ steps.diff.outputs['cuidadoamiga'] }}"             = "true" ] && CHANGED="$CHANGED,$app" ;;
+              de-abasto-a-casa)         [ "${{ steps.diff.outputs['de-abasto-a-casa'] }}"         = "true" ] && CHANGED="$CHANGED,$app" ;;
+              escribania-paraguay)      [ "${{ steps.diff.outputs['escribania-paraguay'] }}"      = "true" ] && CHANGED="$CHANGED,$app" ;;
+              estudio-medieval)        [ "${{ steps.diff.outputs['estudio-medieval'] }}"        = "true" ] && CHANGED="$CHANGED,$app" ;;
+              fun4me)                  [ "${{ steps.diff.outputs['fun4me'] }}"                  = "true" ] && CHANGED="$CHANGED,$app" ;;
+              fun4me-store)            [ "${{ steps.diff.outputs['fun4me-store'] }}"            = "true" ] && CHANGED="$CHANGED,$app" ;;
+              golden-visa-advisory)     [ "${{ steps.diff.outputs['golden-visa-advisory'] }}"     = "true" ] && CHANGED="$CHANGED,$app" ;;
+              granja-cabral)            [ "${{ steps.diff.outputs['granja-cabral'] }}"            = "true" ] && CHANGED="$CHANGED,$app" ;;
+              hidrobaby-spa)            [ "${{ steps.diff.outputs['hidrobaby-spa'] }}"            = "true" ] && CHANGED="$CHANGED,$app" ;;
+              jota-ink-tattoo)          [ "${{ steps.diff.outputs['jota-ink-tattoo'] }}"          = "true" ] && CHANGED="$CHANGED,$app" ;;
+              luis-de-leon-concept)     [ "${{ steps.diff.outputs['luis-de-leon-concept'] }}"     = "true" ] && CHANGED="$CHANGED,$app" ;;
+              magnolia-peluqueria)      [ "${{ steps.diff.outputs['magnolia-peluqueria'] }}"      = "true" ] && CHANGED="$CHANGED,$app" ;;
+              mantraspa)                [ "${{ steps.diff.outputs['mantraspa'] }}"                = "true" ] && CHANGED="$CHANGED,$app" ;;
+              meal-prep)                [ "${{ steps.diff.outputs['meal-prep'] }}"                = "true" ] && CHANGED="$CHANGED,$app" ;;
+              nexa-paraguay)            [ "${{ steps.diff.outputs['nexa-paraguay'] }}"            = "true" ] && CHANGED="$CHANGED,$app" ;;
+              nde-barba)                [ "${{ steps.diff.outputs['nde-barba'] }}"                = "true" ] && CHANGED="$CHANGED,$app" ;;
+              nudo)                     [ "${{ steps.diff.outputs['nudo'] }}"                     = "true" ] && CHANGED="$CHANGED,$app" ;;
+              ozmontania-website)       [ "${{ steps.diff.outputs['ozmontania-website'] }}"       = "true" ] && CHANGED="$CHANGED,$app" ;;
+              pitchy-website)           [ "${{ steps.diff.outputs['pitchy-website'] }}"           = "true" ] && CHANGED="$CHANGED,$app" ;;
+              portas-barber)            [ "${{ steps.diff.outputs['portas-barber'] }}"            = "true" ] && CHANGED="$CHANGED,$app" ;;
+              reina-de-copas)           [ "${{ steps.diff.outputs['reina-de-copas'] }}"           = "true" ] && CHANGED="$CHANGED,$app" ;;
+              scott-tatuajes)           [ "${{ steps.diff.outputs['scott-tatuajes'] }}"           = "true" ] && CHANGED="$CHANGED,$app" ;;
+              tsuki-restaurante)        [ "${{ steps.diff.outputs['tsuki-restaurante'] }}"        = "true" ] && CHANGED="$CHANGED,$app" ;;
+              villamayor-asociados)     [ "${{ steps.diff.outputs['villamayor-asociados'] }}"     = "true" ] && CHANGED="$CHANGED,$app" ;;
+              xxgym)                    [ "${{ steps.diff.outputs['xxgym'] }}"                    = "true" ] && CHANGED="$CHANGED,$app" ;;
+            esac
           done
-          echo "apps=$APPS" >> "$GITHUB_OUTPUT"
+          # Strip leading comma
+          CHANGED="${CHANGED#,}"
+          echo "apps=$CHANGED" >> "$GITHUB_OUTPUT"
 
   lint:
     runs-on: ubuntu-latest
