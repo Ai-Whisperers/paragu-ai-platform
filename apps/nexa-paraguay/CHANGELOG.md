@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-23: chore(nexa): trigger deploy (NODE_AUTH_TOKEN via GITHUB_TOKEN) (by Erebus)
+
 - 2026-06-23: chore(nexa): trigger deploy (pnpm --no-frozen-lockfile) (by Erebus)
 
 - 2026-06-23: chore(nexa): trigger deploy (pnpm version now pinned) (by Erebus)
