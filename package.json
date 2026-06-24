@@ -33,7 +33,8 @@
         "react-dom",
         "typescript"
       ]
-    }
+    },
+    "onlyBuiltDependencies": []
   },
   "devDependencies": {
     "typescript": "5.9.3",
