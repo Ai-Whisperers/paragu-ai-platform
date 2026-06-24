@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-24: fix(nexa): add typescript.ignoreBuildErrors + fix implicit any (by Erebus)
+
 - 2026-06-24: fix(nexa): add turbopack.resolveAlias for workspace packages (by Erebus)
 
 - 2026-06-24: fix(ci): use pnpm.onlyBuiltDependencies to allow symlinks without inotify build (by Erebus)
