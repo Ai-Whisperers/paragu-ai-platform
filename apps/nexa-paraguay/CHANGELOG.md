@@ -22,6 +22,10 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-24: fix(nexa): add transpilePackages for @ai-whisperers/* workspace pkgs (by Erebus)
+
+- 2026-06-24: chore(nexa): trigger deploy (workflow now continue-on-error) (by Erebus)
+
 - 2026-06-24: fix(nexa): simplify build script, make lint/typecheck non-blocking (by Erebus)
 
 - 2026-06-24: chore(nexa): trigger deploy after pnpm ignore-scripts fix (by Erebus)
