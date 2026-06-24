@@ -169,6 +169,13 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
+      - name: Build workspace packages
+        # The @ai-whisperers/* workspace packages have a 'build' script that
+        # compiles their TypeScript to dist/. Apps import the dist files via
+        # package.json 'main'/'exports'. If dist/ is missing or stale,
+        # the app build fails with 'Module not found'.
+        run: pnpm -r --filter './packages/@ai-whisperers/*' build
+
       - name: pnpm install
         # All @ai-whisperers/* deps are now workspace:* refs resolved through
         # packages/@ai-whisperers/*. No GitHub Packages auth needed.
@@ -194,6 +201,13 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
+      - name: Build workspace packages
+        # The @ai-whisperers/* workspace packages have a 'build' script that
+        # compiles their TypeScript to dist/. Apps import the dist files via
+        # package.json 'main'/'exports'. If dist/ is missing or stale,
+        # the app build fails with 'Module not found'.
+        run: pnpm -r --filter './packages/@ai-whisperers/*' build
+
       - name: pnpm install
         # All @ai-whisperers/* deps are now workspace:* refs resolved through
         # packages/@ai-whisperers/*. No GitHub Packages auth needed.
@@ -219,6 +233,13 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
+      - name: Build workspace packages
+        # The @ai-whisperers/* workspace packages have a 'build' script that
+        # compiles their TypeScript to dist/. Apps import the dist files via
+        # package.json 'main'/'exports'. If dist/ is missing or stale,
+        # the app build fails with 'Module not found'.
+        run: pnpm -r --filter './packages/@ai-whisperers/*' build
+
       - name: pnpm install
         # All @ai-whisperers/* deps are now workspace:* refs resolved through
         # packages/@ai-whisperers/*. No GitHub Packages auth needed.
