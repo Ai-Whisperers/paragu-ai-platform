@@ -506,6 +506,11 @@
           "nl": "Plaatsaanduiding portret: Leider van het boekhoudteam",
           "de": "Platzhalter-Porträt: Leitung Buchhaltung"
         }
+      },
+      "luana": {
+        "src": "/images/team/luana.webp",
+        "alt": "Luana Weiss van der Pol, Operations Director de Nexa Paraguay",
+        "fallbackSrc": "/images/team/luana.png"
       }
     },
     "office": {
