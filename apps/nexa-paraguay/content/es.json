@@ -781,12 +781,13 @@
           ],
           "icon": "Star",
           "memberImage": "@src:team.sonia",
-          "imageUrl": "@src:team.sonia"
+          "imageUrl": "@src:team.sonia",
+          "image": "@img:team.sonia"
         },
         {
           "name": "Luana Weiss van der Pol",
           "role": {
-            "es": "Atención al Cliente",
+            "es": "Operations Director",
             "en": "Client Care",
             "nl": "Klantenzorg",
             "de": "Kundenbetreuung"
@@ -798,7 +799,8 @@
           ],
           "icon": "Heart",
           "memberImage": "@src:team.luana",
-          "imageUrl": "@src:team.luana"
+          "imageUrl": "@src:team.luana",
+          "image": "@img:team.luana"
         }
       ]
     },
