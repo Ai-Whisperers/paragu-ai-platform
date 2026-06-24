@@ -9,6 +9,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-24: fix(ci): drop --ignore-scripts to allow pnpm workspace symlinks (by Erebus)
+
 - 2026-06-24: fix(nexa): simplify build script, make lint/typecheck non-blocking (by Erebus)
 
 - 2026-06-24: fix(monorepo): migrate all @ai-whisperers/* deps to workspace refs (by Erebus)
