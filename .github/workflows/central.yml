@@ -169,7 +169,8 @@ jobs:
           node-version: 20
           cache: pnpm
       - name: pnpm install
-        # Packages are now public on GitHub Packages — no token needed
+        # All @ai-whisperers/* deps are now workspace:* refs resolved through
+        # packages/@ai-whisperers/*. No GitHub Packages auth needed.
         run: pnpm install --no-frozen-lockfile
       - run: pnpm -r --filter "./apps/${{ matrix.app }}" run lint
 
@@ -190,7 +191,8 @@ jobs:
           node-version: 20
           cache: pnpm
       - name: pnpm install
-        # Packages are now public on GitHub Packages — no token needed
+        # All @ai-whisperers/* deps are now workspace:* refs resolved through
+        # packages/@ai-whisperers/*. No GitHub Packages auth needed.
         run: pnpm install --no-frozen-lockfile
       - run: pnpm -r --filter "./apps/${{ matrix.app }}" run typecheck || echo 'typecheck script not defined'
 
@@ -211,7 +213,8 @@ jobs:
           node-version: 20
           cache: pnpm
       - name: pnpm install
-        # Packages are now public on GitHub Packages — no token needed
+        # All @ai-whisperers/* deps are now workspace:* refs resolved through
+        # packages/@ai-whisperers/*. No GitHub Packages auth needed.
         run: pnpm install --no-frozen-lockfile
       - name: Build app
         run: pnpm --filter "./apps/${{ matrix.app }}" build

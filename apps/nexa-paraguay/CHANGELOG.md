@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-24: fix(nexa-paraguay): bundle all @ai-whisperers/* deps as local tarballs (by Erebus)
+
 - 2026-06-24: chore(nexa): trigger deploy (@ai-whisperers/content now public) (by Erebus)
 
 - 2026-06-24: chore(nexa): trigger deploy (packages now public) (by Erebus)

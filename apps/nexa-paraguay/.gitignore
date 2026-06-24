@@ -34,8 +34,5 @@ screenshots/
 npm-debug.log*
 pnpm-debug.log*
 
-# Local tgz packages — the active ones are tracked in git for reproducible
-# builds (pnpm install reads them as file: deps). The _unused/ subdirectory
-# holds historical tarballs that are intentionally not tracked.
-.packages/*.tgz
-!.packages/ai-whisperers-*.tgz
+# Local tgz packages are no longer used — all @ai-whisperers/* deps are
+# workspace:* references resolved through packages/@ai-whisperers/*.
