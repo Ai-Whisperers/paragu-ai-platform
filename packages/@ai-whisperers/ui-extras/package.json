@@ -15,8 +15,8 @@
     "framer-motion": "^11.0.0"
   },
   "peerDependencies": {
-    "@ai-whisperers/commerce": "^0.1.0",
-    "@ai-whisperers/ui": "^0.1.0"
+    "@ai-whisperers/commerce": "workspace:*",
+    "@ai-whisperers/ui": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
