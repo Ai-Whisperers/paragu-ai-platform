@@ -10,6 +10,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-06-17: feat(dra-gabriela): first AI-generated clinic image (WebP, 71KB) replaces SVG placeholder (by erebus)
+
 - 2026-06-17: style(dra-gabriela): full clinic SVG, consultation scene, v2 portrait, compressed process cards, centered hero (by erebus)
 
 - 2026-06-17: fix(dra-gabriela): widen remaining sections to max-w-[1600px] (by erebus)
