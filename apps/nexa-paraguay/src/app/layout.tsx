@@ -1,7 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import ExitPopupWrapper from '../components/ExitPopupWrapper'
+// ExitPopup disabled 2026-06-24 per Luana: 'el pop up ese qeu te pide el mail para recibir notificaciones del news letter tmb desactiva'
+// import ExitPopupWrapper from '../components/ExitPopupWrapper'
 import { CookieBanner } from '../components/CookieBanner'
 import { CookieConsent } from '../components/ui/CookieConsent'
 import WhatsAppButton from '../../components/WhatsAppButton'
@@ -73,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className='font-inter bg-background text-text'>
         <CookieBanner />
-        <ExitPopupWrapper />
+        {/* <ExitPopupWrapper /> - disabled per Luana */}
         {children}
         <WhatsAppButton phone="595982515138" />
         <CookieConsent />
