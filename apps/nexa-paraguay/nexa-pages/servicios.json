@@ -20,7 +20,7 @@
       "content": "servicesPage.trust"
     },
     {
-      "id": "services-detail",
+      "id": "service-detail",
       "variant": "grouped-cards",
       "content": "servicesPage.services"
     },

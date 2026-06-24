@@ -47,7 +47,7 @@ export function GallerySection({ pageContent, data, images }: SectionComponentPr
             const src = typeof photo === 'string' ? photo : resolveImage?.(images, photo.src || photo.imageUrl || '') || photo.src || photo.imageUrl || ''
             return (
               <div key={i} className="rounded-lg overflow-hidden shadow-md">
-                {src && <img src={src} alt={photo.alt || photo.caption || ''} className="w-full h-[220px] object-cover block" />}
+                {src && <img src={src} alt={photo.alt || photo.caption || ''} width={600} height={220} loading="lazy" className="w-full h-[220px] object-cover block" />}
                 {photo.caption && <p className="p-3 bg-white text-text-muted text-xs m-0">{photo.caption}</p>}
               </div>
             )
@@ -73,7 +73,7 @@ export function TestimonialsSection({ pageContent, images }: SectionComponentPro
             return (
               <div key={i} className="p-8 border border-border rounded-2xl text-left">
                 <div className="mb-3 text-accent">{'★'.repeat(item.rating || 5)}{'☆'.repeat(5 - (item.rating || 5))}</div>
-                {img && <img src={img} alt={item.name} className="w-[60px] h-[60px] object-cover rounded-full mb-3 float-right" />}
+                {img && <img src={img} alt={item.name} width={60} height={60} loading="lazy" className="w-[60px] h-[60px] object-cover rounded-full mb-3 float-right" />}
                 <p className="italic text-primary leading-relaxed text-sm mb-4">"{item.quote}"</p>
                 <div className="font-bold text-primary text-sm">{item.name || item.author}</div>
                 <div className="text-sm text-text-muted">{item.role}</div>

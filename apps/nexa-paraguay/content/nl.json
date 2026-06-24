@@ -1167,8 +1167,8 @@
           "a": "Sommige banken staan remote account opening toe onder bepaalde voorwaarden. Wij beheren het hele proces en kunnen uw rekening operationeel hebben op de dag van uw aankomst als documenten in orde zijn."
         },
         {
-          "q": "Welke documenten hebben een apostille nodig?",
-          "a": "Documenten die over het algemeen een apostille nodig hebben zijn: geboorteakte, huwelijksakte (indien van toepassing), bewijs van goed gedrag, professioneel diploma (indien van toepassing) en geboorte-/doopakte voor minderjarigen."
+          "q": "Welke documenten moeten worden geapostilleerd en wie regelt dat?",
+          "a": "Documenten die meestal apostille nodig hebben: geboorteakte, huwelijksakte (indien van toepassing), bewijs van goed gedrag, diploma (indien van toepassing) en geboorteaktes van minderjarige kinderen. De klant is zelf verantwoordelijk voor het verkrijgen van de apostille in het land van herkomst (via het Ministerie van Buitenlandse Zaken of de bevoegde autoriteit). Nexa Paraguay verricht geen apostillering — die stap gebeurt in het land van herkomst. De gecertificeerde Spaanse vertaling kan wel via ons netwerk van beëdigde vertalers worden geregeld zodra de documenten zijn geapostilleerd."
         },
         {
           "q": "Wat is het verschil tussen permanente verblijfsvergunning en burgerschap?",
@@ -1659,11 +1659,6 @@
               "title": "Paraguayaans Identiteitsbewijs (Cédula)",
               "description": "Volledige ondersteuning bij het verkrijgen van je lokale identiteitskaart.",
               "icon": "CreditCard"
-            },
-            {
-              "title": "Apostille & Vertaling",
-              "description": "Wij verzorgen de gecertificeerde vertaling en juridische verificatie van alle benodigde buitenlandse documenten.",
-              "icon": "Globe"
             }
           ]
         },
@@ -2558,18 +2553,6 @@
                 "Migratiecoördinatie"
               ],
               "icon": "🆔"
-            },
-            {
-              "title": "Apostille & Vertaling",
-              "shortDescription": "Gecertificeerde vertaling en wettelijke verificatie van alle buitenlandse documenten.",
-              "fullDescription": "Gecertificeerde openbare vertaling en apostille van alle buitenlandse documenten nodig voor je migratie- en bankproces.",
-              "benefits": [
-                "Gecertificeerde vertalers",
-                "Apostillebeheer",
-                "Migratieklare documenten",
-                "Volledige juridische validatie"
-              ],
-              "icon": "📄"
             }
           ]
         },
@@ -2910,8 +2893,8 @@
       "whatsapp": ""
     },
     "hero": {
-      "headline": "Waarom Paraguay",
-      "subheadline": "Een reële kans — eerlijk uitgelegd."
+      "headline": "Waarom Paraguay: 6 redenen om het als je nieuwe thuis te kiezen",
+      "subheadline": "Een reële kans, eerlijk uitgelegd. Groei, fiscale stabiliteit, levenskwaliteit en een duidelijk migratieproces voor Europese burgers."
     },
     "pillars": {
       "eyebrow": "Waarom Paraguay",
@@ -3105,8 +3088,8 @@
       ]
     },
     "seo": {
-      "title": "Cómo funciona — Nexa Paraguay",
-      "description": "Nuestro proceso de 5 pasos: selecciona servicios, procesamiento paralelo, día operativo, cédula y activación financiera, instalación.",
+      "title": "Waarom Paraguay voor Europeanen: 6 duidelijke redenen — Nexa Paraguay",
+      "description": "Waarom Paraguay de ideale bestemming is voor Europeanen die op zoek zijn naar verblijfsvergunning, gunstige belasting en levenskwaliteit. Echte data, eerlijke context.",
       "targetKeyword": "por qué mudarse a Paraguay"
     }
   },

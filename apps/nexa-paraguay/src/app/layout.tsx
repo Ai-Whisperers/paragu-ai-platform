@@ -45,7 +45,13 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
-  verification: { google: 'YOUR_GSC_VERIFICATION_CODE' },
+  // Google Search Console verification code.
+  // Set NEXT_PUBLIC_GSC_VERIFICATION in your env (or .env.local) to the actual code
+  // from https://search.google.com/search-console (Settings → Ownership verification).
+  // Leave unset (empty string) to omit the meta tag.
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || '',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

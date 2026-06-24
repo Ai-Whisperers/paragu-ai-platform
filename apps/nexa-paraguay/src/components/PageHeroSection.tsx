@@ -16,7 +16,12 @@ function resolveImage(images: any, ref: string): string {
 }
 
 export function PageHeroSection({ pageContent, data, images }: any) {
-  const d = data || pageContent || {}
+  // The renderer passes data={sectionData} where sectionData is the resolved
+  // content for this section. For the home page hero, sectionData = content.home,
+  // so the headline lives at data.hero.headline (or at data.headline when the
+  // section data IS the hero object directly). We try both shapes.
+  const inner = (data && data.hero) || data || pageContent || {}
+  const d = inner && (inner.hero || inner) ? (inner.hero || inner) : inner
   const headline = d.headline || d.title
   if (!headline) return null
 
@@ -47,6 +52,8 @@ export function PageHeroSection({ pageContent, data, images }: any) {
         <img
           src={bgImage}
           alt=""
+          width={1920}
+          height={1080}
           className="absolute inset-0 w-full h-full object-cover opacity-30"
           style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}
         />

@@ -91,6 +91,9 @@ export function TeamSection({ pageContent, data, images, locale = 'es' }: any) {
                         <img
                           src={img}
                           alt={m.name}
+                          width={80}
+                          height={80}
+                          loading="lazy"
                           className="w-20 h-20 object-cover rounded-full ring-2 ring-border/50 group-hover:ring-accent/40 transition-all duration-300 group-hover:scale-105"
                         />
                       ) : (

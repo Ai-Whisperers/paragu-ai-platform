@@ -10,39 +10,6 @@
     "de",
     "es"
   ],
-  "navigation": [
-    {
-      "_note": "Deprecated shape: this site.json.navigation uses {label, path}. The Header component reads from content/{locale}.json → navigation.navItems. Kept for backwards compat with docs/audit reports."
-    },
-    {
-      "label": "Inicio",
-      "path": "/"
-    },
-    {
-      "label": "Servicios",
-      "path": "/servicios"
-    },
-    {
-      "label": "Por qué Paraguay",
-      "path": "/por-que-paraguay"
-    },
-    {
-      "label": "Sobre Nexa",
-      "path": "/sobre"
-    },
-    {
-      "label": "FAQ",
-      "path": "/faq"
-    },
-    {
-      "label": "Blog",
-      "path": "/blog"
-    },
-    {
-      "label": "Contacto",
-      "path": "/contacto"
-    }
-  ],
   "integrations": {
     "hubspot": {
       "_note": "Set real HUBSPOT_PORTAL_ID and HUBSPOT_FORM_GUID via env vars. Until then, /api/contact falls back to console.log."

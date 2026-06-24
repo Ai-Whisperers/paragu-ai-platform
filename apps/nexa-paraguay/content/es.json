@@ -519,13 +519,13 @@
   },
   "whyCountryPage": {
     "seo": {
-      "title": "Cómo funciona — Nexa Paraguay",
-      "description": "Nuestro proceso de 5 pasos: selecciona servicios, procesamiento paralelo, día operativo, cédula y activación financiera, instalación.",
+      "title": "Por qué Paraguay para europeos: 6 razones claras — Nexa Paraguay",
+      "description": "Por qué Paraguay es el destino ideal para europeos que buscan residencia, fiscalidad favorable y calidad de vida. Datos reales, contexto honesto.",
       "targetKeyword": "por qué mudarse a Paraguay"
     },
     "hero": {
-      "headline": "El Camino Ideal hacia la Residencia",
-      "subheadline": "Una colaboración optimizada entre tu país de origen y tu nuevo hogar en Paraguay."
+      "headline": "Por qué Paraguay: 6 razones para elegirlo como tu nuevo hogar",
+      "subheadline": "Una oportunidad real, explicada con honestidad. Crecimiento, estabilidad fiscal, calidad de vida y un proceso migratorio claro para ciudadanos europeos."
     },
     "pillars": {
       "eyebrow": "Por qué Paraguay",
@@ -1165,8 +1165,8 @@
           "a": "Algunos bancos permiten la apertura de cuentas de forma remota con ciertos requisitos. Nosotros gestionamos todo el proceso y podemos tener tu cuenta operativa el mismo día de tu llegada si los documentos están en orden."
         },
         {
-          "q": "¿Qué documentos necesita apostilla?",
-          "a": "Los documentos que generalmente requieren apostilla son: partida de nacimiento, certificado de matrimonio (si aplica), certificado de antecedentes penales, título profesional (si aplica) y partida de bautismo/certificado de nacimiento para menores."
+          "q": "¿Qué documentos necesitan apostilla y quién los tramita?",
+          "a": "Los documentos que generalmente requieren apostilla son: partida de nacimiento, certificado de matrimonio (si aplica), certificado de antecedentes penales, título profesional (si aplica) y partida de nacimiento de hijos menores. El cliente es responsable de gestionar la apostilla en su país de origen (en el Ministerio de Relaciones Exteriores o autoridad competente). Nexa Paraguay no realiza el apostillado — esa gestión se hace en el país de origen del cliente. La traducción certificada al español, en cambio, sí puede coordinarse con nuestra red de traductores públicos una vez que los documentos están apostillados."
         },
         {
           "q": "¿Cuál es la diferencia entre residencia permanente y ciudadanía?",
@@ -2704,18 +2704,6 @@
                 "Coordinación con Migraciones"
               ],
               "icon": "🆔"
-            },
-            {
-              "title": "Apostilla y Traducción",
-              "shortDescription": "Gestionamos la traducción certificada y la verificación legal de documentos.",
-              "fullDescription": "Traducción pública certificada y apostillado de todos los documentos extranjeros necesarios para tu proceso migratorio y bancario.",
-              "benefits": [
-                "Traductores certificados",
-                "Gestión de apostillas",
-                "Documentos listos para Migraciones",
-                "Validación legal completa"
-              ],
-              "icon": "📄"
             }
           ]
         },

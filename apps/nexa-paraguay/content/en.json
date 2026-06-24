@@ -524,13 +524,13 @@
   },
   "whyCountryPage": {
     "seo": {
-      "title": "Cómo funciona — Nexa Paraguay",
-      "description": "Nuestro proceso de 5 pasos: selecciona servicios, procesamiento paralelo, día operativo, cédula y activación financiera, instalación.",
+      "title": "Why Paraguay for Europeans: 6 clear reasons — Nexa Paraguay",
+      "description": "Why Paraguay is the ideal destination for Europeans looking for residency, favorable taxation, and quality of life. Real data, honest context.",
       "targetKeyword": "por qué mudarse a Paraguay"
     },
     "hero": {
-      "headline": "El Camino Ideal hacia la Residencia",
-      "subheadline": "Una colaboración optimizada entre tu país de origen y tu nuevo hogar en Paraguay."
+      "headline": "Why Paraguay: 6 reasons to choose it as your new home",
+      "subheadline": "A real opportunity, explained with honesty. Growth, tax stability, quality of life, and a clear migration process for European citizens."
     },
     "pillars": {
       "eyebrow": "Por qué Paraguay",
@@ -1120,8 +1120,8 @@
           "a": "Algunos bancos permiten la apertura de cuentas de forma remota con ciertos requisitos. Nosotros gestionamos todo el proceso y podemos tener tu cuenta operativa el mismo día de tu llegada si los documentos están en orden."
         },
         {
-          "q": "¿Qué documentos necesita apostilla?",
-          "a": "Los documentos que generalmente requieren apostilla son: partida de nacimiento, certificado de matrimonio (si aplica), certificado de antecedentes penales, título profesional (si aplica) y partida de bautismo/certificado de nacimiento para menores."
+          "q": "What documents need an apostille, and who handles it?",
+          "a": "Documents that typically require an apostille include: birth certificate, marriage certificate (if applicable), criminal record certificate, professional degree (if applicable), and birth certificates of minor children. The client is responsible for obtaining the apostille in their country of origin (through the Ministry of Foreign Affairs or the relevant authority). Nexa Paraguay does not perform the apostille — that step is done in the client's home country. The certified Spanish translation, however, can be coordinated through our network of sworn translators once the documents have been apostilled."
         },
         {
           "q": "¿Cuál es la diferencia entre residencia permanente y ciudadanía?",
@@ -2584,18 +2584,6 @@
                 "Coordinación con Migraciones"
               ],
               "icon": "🆔"
-            },
-            {
-              "title": "Apostilla y Traducción",
-              "shortDescription": "Gestionamos la traducción certificada y la verificación legal de documentos.",
-              "fullDescription": "Traducción pública certificada y apostillado de todos los documentos extranjeros necesarios para tu proceso migratorio y bancario.",
-              "benefits": [
-                "Traductores certificados",
-                "Gestión de apostillas",
-                "Documentos listos para Migraciones",
-                "Validación legal completa"
-              ],
-              "icon": "📄"
             }
           ]
         },

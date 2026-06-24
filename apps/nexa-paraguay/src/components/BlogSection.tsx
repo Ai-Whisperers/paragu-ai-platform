@@ -94,6 +94,9 @@ export function BlogSection({ data, pageContent, locale }: any) {
                       <img
                         src={imgSrc}
                         alt={post.title}
+                        width={600}
+                        height={400}
+                        loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
                         style={{ transitionDuration: '400ms' }}
                       />

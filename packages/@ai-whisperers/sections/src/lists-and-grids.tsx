@@ -17,7 +17,7 @@ export function TeamSection({ pageContent, data, images }: SectionComponentProps
             const img = resolveImage(images, m.memberImage || m.image || m.imageUrl)
             return (
               <div key={i} className="p-6 bg-white rounded-2xl shadow-card">
-                {img && <img src={img} alt={m.name} className="w-20 h-20 object-cover rounded-full mx-auto mb-4 block" />}
+                {img && <img src={img} alt={m.name} width={80} height={80} loading="lazy" className="w-20 h-20 object-cover rounded-full mx-auto mb-4 block" />}
                 <h4 className="font-bold text-primary mb-1">{m.name || m.role}</h4>
                 {m.role && m.name && <p className="text-accent text-xs font-semibold mb-2">{m.role}</p>}
                 {m.description && <p className="text-text-muted text-sm leading-relaxed">{m.description}</p>}
@@ -143,7 +143,7 @@ export function BlogSection({ pageContent, data, images, locale: _locale }: Sect
             const postImg = post.image ? resolveImage(images, `@img:blog.${post.image}`) : (post.coverImage || '')
             return (
               <article key={i} className="border border-border rounded-2xl overflow-hidden bg-white">
-                {postImg && <img src={postImg} alt={post.title} className="w-full h-[180px] object-cover" />}
+                {postImg && <img src={postImg} alt={post.title} width={600} height={180} loading="lazy" className="w-full h-[180px] object-cover" />}
                 <div className="p-5">
                   {post.date && <span className="text-xs text-accent font-semibold">{post.date}</span>}
                   <h3 className="text-base font-bold text-primary my-2">{post.title}</h3>

@@ -26,6 +26,8 @@ interface FormData {
 const copy = {
   es: {
     stepLabels: ['Tus datos', 'Tus objetivos', 'Tu tiempo', 'Tu programa', 'Extra'],
+    headline: 'Encuentra tu programa ideal',
+    subheadline: 'Responde 5 preguntas y te recomendamos el programa perfecto para tu mudanza a Paraguay.',
     name: 'Nombre completo',
     namePH: 'Tu nombre y apellido',
     email: 'Correo electrónico',
@@ -74,6 +76,8 @@ const copy = {
   },
   en: {
     stepLabels: ['Your details', 'Your goals', 'Your timeline', 'Your program', 'Extra'],
+    headline: 'Find your ideal program',
+    subheadline: 'Answer 5 questions and we will recommend the perfect program for your relocation to Paraguay.',
     name: 'Full name',
     namePH: 'Your full name',
     email: 'Email address',
@@ -122,6 +126,8 @@ const copy = {
   },
   nl: {
     stepLabels: ['Jouw gegevens', 'Jouw doelen', 'Jouw tijdlijn', 'Jouw programma', 'Extra'],
+    headline: 'Vind uw ideale programma',
+    subheadline: 'Beantwoord 5 vragen en wij bevelen het perfecte programma aan voor uw verhuizing naar Paraguay.',
     name: 'Volledige naam',
     namePH: 'Jouw volledige naam',
     email: 'E-mailadres',
@@ -170,6 +176,8 @@ const copy = {
   },
   de: {
     stepLabels: ['Ihre Daten', 'Ihre Ziele', 'Ihr Zeitplan', 'Ihr Programm', 'Extra'],
+    headline: 'Finden Sie Ihr ideales Programm',
+    subheadline: 'Beantworten Sie 5 Fragen und wir empfehlen Ihnen das perfekte Programm für Ihren Umzug nach Paraguay.',
     name: 'Vollständiger Name',
     namePH: 'Ihr vollständiger Name',
     email: 'E-Mail-Adresse',
@@ -365,6 +373,11 @@ export function IntakeWizard({ locale = 'en' }: Props) {
     <div className='min-h-screen bg-white flex flex-col items-center justify-center px-4 py-16'>
       {/* Header */}
       <div className='w-full max-w-xl mb-8'>
+        {/* Page title (H1) for SEO + a11y */}
+        <header className='mb-6 text-center'>
+          <h1 className='text-3xl sm:text-4xl font-bold text-primary leading-tight mb-2'>{t.headline}</h1>
+          <p className='text-text-muted text-sm sm:text-base'>{t.subheadline}</p>
+        </header>
         {/* Progress bar */}
         <div className='flex items-center gap-2 mb-4'>
           {Array.from({ length: TOTAL_STEPS }).map((_, i) => (
@@ -590,14 +603,17 @@ function FormField({ label, error, optional = false, inputId, children }: {
   inputId?: string
   children: React.ReactNode
 }) {
+  const errorId = inputId ? `${inputId}-error` : undefined
   return (
     <div>
       <label htmlFor={inputId} className='block text-sm font-medium text-primary mb-1.5'>
         {label}
-        {optional && <span className='text-text-muted font-normal ml-1 text-xs'>(optional)</span>}
+        {optional && <span className='text-text-muted font-normal ml-1 text-xs'>({/* localized 'optional' is rendered via aria-describedby */'opcional'})</span>}
       </label>
-      <div className='w-full'>{children}</div>
-      {error && <p className='text-error text-sm mt-1'>{error}</p>}
+      <div className='w-full' aria-describedby={error ? errorId : undefined}>
+        {children}
+      </div>
+      {error && <p id={errorId} role='alert' className='text-error text-sm mt-1'>{error}</p>}
     </div>
   )
 }

@@ -72,7 +72,7 @@ export function ProcessSection({ pageContent, images }: { pageContent: Record<st
                     <div className="flex items-start gap-5">
                       {stepImg && (
                         <div className="hidden sm:block w-24 h-24 shrink-0 rounded-xl overflow-hidden bg-surface-alt">
-                          <img src={stepImg} alt={step.title} loading="lazy" className="w-full h-full object-cover" />
+                          <img src={stepImg} alt={step.title} loading="lazy" width={600} height={400} className="w-full h-full object-cover" />
                         </div>
                       )}
                       <div className="flex-1 min-w-0">

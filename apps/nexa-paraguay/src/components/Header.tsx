@@ -47,7 +47,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
     <header style={{ background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 1px 3px rgba(0,0,0,0.04)', position: 'sticky', top: 0, zIndex: 100 }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0.75rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Link href={`/${currentLocale}`} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <img src="/images/brand/logo.svg" alt="Nexa Paraguay" style={{ height: '36px', width: 'auto' }} />
+          <img src="/images/brand/logo.svg" alt="Nexa Paraguay" width={200} height={56} style={{ height: '36px', width: 'auto' }} />
         </Link>
         <button onClick={() => setOpen(!open)} style={{ display: 'none', background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', padding: '0.25rem', color: '#1B2A4A' }}>
           {open ? '✕' : '☰'}
@@ -78,7 +78,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
             >
               {LOCALE_FLAGS[currentLocale] ? (
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-                  <img src={LOCALE_FLAGS[currentLocale].flag} alt={currentLocale} style={{ width: '18px', height: '12px', borderRadius: '2px', objectFit: 'cover' }} />
+                  <img src={LOCALE_FLAGS[currentLocale].flag} alt={currentLocale} width={18} height={12} style={{ width: '18px', height: '12px', borderRadius: '2px', objectFit: 'cover' }} />
                   {LOCALE_FLAGS[currentLocale].label}
                 </span>
               ) : '🌐 NL'}
@@ -92,7 +92,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
                     onClick={() => { setLangOpen(false); switchLocale(code); }}
                     style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', width: '100%', padding: '0.5rem 0.75rem', textAlign: 'left', background: code === currentLocale ? '#F5F5F0' : 'transparent', border: 'none', cursor: 'pointer', fontSize: '0.85rem', color: '#333', fontWeight: code === currentLocale ? 700 : 400 }}
                   >
-                    <img src={flag} alt={code} style={{ width: '18px', height: '12px', borderRadius: '2px', objectFit: 'cover' }} />
+                    <img src={flag} alt={code} width={18} height={12} style={{ width: '18px', height: '12px', borderRadius: '2px', objectFit: 'cover' }} />
                     {label}
                   </button>
                 ))}

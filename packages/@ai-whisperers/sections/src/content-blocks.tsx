@@ -18,7 +18,7 @@ export function TrustSection({ pageContent, images }: SectionComponentProps) {
             return (
               <div key={i} className="p-6 bg-surface-alt rounded-lg text-center shadow-sm hover:shadow-md transition-shadow">
                 {img ? (
-                  <img src={img} alt={item.title} loading="lazy" className="w-full h-[140px] object-cover mb-4 block rounded-lg" />
+                  <img src={img} alt={item.title} loading="lazy" width={400} height={140} className="w-full h-[140px] object-cover mb-4 block rounded-lg" />
                 ) : (
                   <div className="w-12 h-12 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-accent text-lg font-bold">{item.title?.[0] || '✦'}</div>
                 )}
@@ -52,7 +52,7 @@ export function ServicesSection({ pageContent, data, images }: SectionComponentP
                 const itemImg = resolveImage(images, item.image)
                 return (
                   <div key={j} className="p-6 bg-surface-alt rounded-lg border-l-[3px] border-accent shadow-sm hover:shadow-md transition-shadow">
-                    {itemImg && <img src={itemImg} alt={item.title} loading="lazy" className="w-full h-[140px] object-cover rounded-sm mb-3" />}
+                    {itemImg && <img src={itemImg} alt={item.title} loading="lazy" width={400} height={140} className="w-full h-[140px] object-cover rounded-sm mb-3" />}
                     <h4 className="font-bold text-primary mb-1">{item.title}</h4>
                     <p className="text-text-muted text-sm leading-relaxed mb-2">{item.description}</p>
                     {item.benefits && <ul className="list-none p-0 mt-2">
@@ -91,7 +91,7 @@ export function ProcessSection({ pageContent, images }: SectionComponentProps) {
                 <div className="absolute -left-[33px] top-4 w-9 h-9 bg-primary rounded-full border-[3px] border-accent flex items-center justify-center text-white text-xs font-bold"
                   style={{ boxShadow: '0 0 0 4px rgba(201,169,110,0.15)' }}
                 >{step.number}</div>
-                {stepImg && <img src={stepImg} alt={step.title} loading="lazy" className="w-[180px] h-[120px] object-cover rounded-lg mb-3 shadow-md" />}
+                {stepImg && <img src={stepImg} alt={step.title} loading="lazy" width={180} height={120} className="w-[180px] h-[120px] object-cover rounded-lg mb-3 shadow-md" />}
                 <h3 className="font-bold font-playfair text-primary mb-1 text-lg">{step.title}</h3>
                 <p className="text-text-muted text-sm leading-relaxed mb-1">{step.description}</p>
                 {step.duration && <span className="inline-block text-xs text-accent font-semibold px-3 py-1 bg-accent/10 rounded-full mt-1">{step.duration}</span>}
@@ -124,7 +124,7 @@ export function ServiceDetailSection({ pageContent, data, images }: SectionCompo
                 const img = resolveImage(images, item.image)
                 return (
                   <div key={j} className="p-6 bg-surface-alt rounded-lg border-l-[3px] border-accent" style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
-                    {img && <img src={img} alt={item.title} loading="lazy" className="w-full h-[140px] object-cover rounded-sm mb-3" />}
+                    {img && <img src={img} alt={item.title} loading="lazy" width={400} height={140} className="w-full h-[140px] object-cover rounded-sm mb-3" />}
                     <h4 className="font-bold text-primary mb-1">{item.title}</h4>
                     <p className="text-text-muted text-sm leading-relaxed mb-2">{item.description}</p>
                     {item.benefits && <ul className="list-none p-0 mt-2">
@@ -163,7 +163,7 @@ export function PillarsSection({ pageContent, data, images }: SectionComponentPr
             return (
               <div key={i} className="p-6 rounded-lg text-left backdrop-blur-[10px]"
                 style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(201,169,110,0.12)', boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }}>
-                {img && <img src={img} alt={p.title} loading="lazy" className="w-full h-[180px] object-cover rounded-sm mb-3" />}
+                {img && <img src={img} alt={p.title} loading="lazy" width={600} height={180} className="w-full h-[180px] object-cover rounded-sm mb-3" />}
                 <h3 className="font-bold text-accent mb-2 text-lg">{p.title}</h3>
                 <p className="text-sm text-white/80 leading-relaxed">{p.description}</p>
                 {p.bullets && <ul className="mt-3 pl-4 text-xs text-white/65">
@@ -196,7 +196,7 @@ export function ProgramsSection({ pageContent, images }: SectionComponentProps) 
                 style={{ border: tier.highlighted ? '2px solid #C9A96E' : undefined }}
               >
                 {tier.badge && <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-accent text-primary rounded-full text-xs font-bold">{tier.badge}</span>}
-                {tierImg && <img src={tierImg} alt={tier.name} className="w-full h-[140px] object-cover rounded-sm mb-4" />}
+                {tierImg && <img src={tierImg} alt={tier.name} width={400} height={140} className="w-full h-[140px] object-cover rounded-sm mb-4" />}
                 <h3 className="text-xl font-bold mb-2">{tier.name}</h3>
                 <p className="text-sm opacity-80 mb-3">{tier.description}</p>
                 <div className="text-2xl font-extrabold mb-1">{tier.price}</div>
@@ -347,7 +347,7 @@ export function WhyCountrySection({ pageContent, images }: SectionComponentProps
               <div key={i} className="p-6 rounded-lg text-left backdrop-blur-[10px]"
                 style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(201,169,110,0.12)', boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }}
               >
-                {img && <img src={img} alt={p.title} loading="lazy" className="w-full h-[160px] object-cover rounded-sm mb-3" />}
+                {img && <img src={img} alt={p.title} loading="lazy" width={600} height={160} className="w-full h-[160px] object-cover rounded-sm mb-3" />}
                 <h3 className="font-bold text-accent mb-2 text-lg">{p.title}</h3>
                 <p className="text-sm text-white/85 leading-relaxed">{p.description}</p>
                 {p.bullets && <ul className="mt-3 pl-4 text-xs text-white/65">
