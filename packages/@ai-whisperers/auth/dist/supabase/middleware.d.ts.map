@@ -1,0 +1,1 @@
+{"version":3,"file":"middleware.d.ts","sourceRoot":"","sources":["../../src/supabase/middleware.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,WAAW,EAAE,YAAY,EAAE,MAAM,aAAa,CAAA;AAG5D,wBAAsB,aAAa,CAAC,OAAO,EAAE,WAAW,kCAqBvD;AAED,wBAAsB,UAAU,CAAC,GAAG,EAAE,WAAW,kCAEhD"}

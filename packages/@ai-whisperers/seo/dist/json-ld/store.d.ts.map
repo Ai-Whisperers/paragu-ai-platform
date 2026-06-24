@@ -1,0 +1,1 @@
+{"version":3,"file":"store.d.ts","sourceRoot":"","sources":["../../src/json-ld/store.tsx"],"names":[],"mappings":"AASO,wBAAgB,aAAa,CAAC,EAAE,WAAW,EAAE,EAAE;IAAE,WAAW,EAAE,MAAM,CAAA;CAAE,oBAYE;AAmBxE,wBAAgB,gBAAgB,CAAC,EAAE,KAAK,EAAE,EAAE;IAAE,KAAK,EAAE;QAAE,IAAI,EAAE,MAAM,CAAC;QAAC,GAAG,EAAE,MAAM,CAAA;KAAE,EAAE,CAAA;CAAE,QAUnF"}
