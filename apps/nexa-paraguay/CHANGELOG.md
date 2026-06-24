@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-24: chore(nexa): trigger deploy (packages now public) (by Erebus)
+
 - 2026-06-24: chore(nexa): trigger deploy (NODE_AUTH_TOKEN classic PAT set) (by Erebus)
 
 - 2026-06-24: chore(nexa): trigger deploy (NODE_AUTH_TOKEN secret added) (by Erebus)
