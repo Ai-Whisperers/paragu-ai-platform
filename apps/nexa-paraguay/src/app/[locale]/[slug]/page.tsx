@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     alternates: {
       canonical: `/${locale}/${slug}`,
-      languages: Object.fromEntries(LOCALES.map(l => [l, `/${l}/${slug}`])),
+      languages: Object.fromEntries(LOCALES.map((l: string) => [l, `/${l}/${slug}`])),
     },
   }
 }
