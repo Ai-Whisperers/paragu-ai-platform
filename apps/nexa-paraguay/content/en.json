@@ -1770,10 +1770,6 @@
         "title": "Recursos",
         "links": [
           {
-            "label": "Blog",
-            "href": "/blog"
-          },
-          {
             "label": "Glosario",
             "href": "/glosario"
           },
@@ -2995,44 +2991,7 @@
       "eyebrow": "",
       "tagline": "",
       "whatsapp": ""
-    },
-    "steps": [
-      {
-        "title": "Seleccioná tus Servicios",
-        "description": "Elegí los servicios que necesitás — desde residencia hasta banca y propiedades.",
-        "detailParagraph": "Agendá una consulta gratuita con nuestro equipo para evaluar tu caso. Definimos juntos el programa ideal según tu perfil, objetivos y presupuesto. Te explicamos cada paso del proceso y los tiempos estimados.",
-        "duration": "Día 1",
-        "icon": "consultation"
-      },
-      {
-        "title": "Procesamiento Paralelo",
-        "description": "Mientras preparamos tu documentación, avanzamos con trámites simultáneos.",
-        "detailParagraph": "Coordinamos la recopilación y preparación de toda la documentación necesaria: apostillas, traducciones certificadas, certificados. Mientras tanto, iniciamos los trámites preliminares que no requieren tu presencia física.",
-        "duration": "Semanas 1-6",
-        "icon": "documents"
-      },
-      {
-        "title": "El Día Operativo",
-        "description": "Una jornada presencial coordinada donde realizamos todos los trámites clave.",
-        "detailParagraph": "Te acompañamos personalmente durante todo el día operativo: visita a Migraciones para inicio del trámite de residencia, apertura de cuenta bancaria, registro ante la SET y otros trámites según tu programa. Todo en una sola jornada.",
-        "duration": "Semana 7",
-        "icon": "arrival"
-      },
-      {
-        "title": "Cédula y Activación Financiera",
-        "description": "Obtené tu cédula paraguaya y activá todos tus servicios financieros.",
-        "detailParagraph": "Una vez aprobada tu residencia, te acompañamos a obtener tu cédula de identidad paraguaya. Activamos tu cuenta bancaria, tarjetas y servicios digitales. Si elegiste el programa Business, registramos tu sociedad.",
-        "duration": "Semanas 8-10",
-        "icon": "banking"
-      },
-      {
-        "title": "Instalación y Estilo de Vida",
-        "description": "Todo listo para que empieces tu nueva vida en Paraguay con tranquilidad.",
-        "detailParagraph": "Te brindamos orientación continua sobre tu nueva vida en Paraguay: opciones de vivienda, escuelas internacionales, sistema de salud, transporte y comunidad de expatriados. Seguimos disponibles para consultas posteriores.",
-        "duration": "Semana 12+",
-        "icon": "completion"
-      }
-    ]
+    }
   },
   "feedbackPage": {
     "seo": {

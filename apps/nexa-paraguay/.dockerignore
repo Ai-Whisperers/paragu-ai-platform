@@ -8,10 +8,11 @@ node_modules
 .npm
 .pnpm-store
 
-# Build artifacts that get rebuilt inside the image
-.next
-out
-dist
+# NOTE: .next is NOT excluded — the Dockerfile needs the standalone
+# output (apps/nexa-paraguay/.next/standalone/) and static/ at runtime.
+# The Dockerfile copies only the subdirs it needs (server.js, .next/static,
+# public/images, content, etc.), not the full .next tree, so image
+# size stays reasonable. (See Dockerfile.standalone for details.)
 
 # Test artifacts + dev tooling
 coverage
