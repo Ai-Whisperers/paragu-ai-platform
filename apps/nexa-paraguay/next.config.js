@@ -16,6 +16,28 @@ const nextConfig = {
   output: "standalone",
   poweredByHeader: false,
   serverExternalPackages: ['@supabase/supabase-js', 'pg'],
+  transpilePackages: [
+    "@ai-whisperers/admin",
+    "@ai-whisperers/auth",
+    "@ai-whisperers/catalog",
+    "@ai-whisperers/checkout",
+    "@ai-whisperers/client-kit",
+    "@ai-whisperers/commerce",
+    "@ai-whisperers/content",
+    "@ai-whisperers/hooks",
+    "@ai-whisperers/product",
+    "@ai-whisperers/seo",
+    "@ai-whisperers/sections",
+    "@ai-whisperers/theme",
+    "@ai-whisperers/ui",
+    "@ai-whisperers/ui-extras",
+    "@ai-whisperers/whatsapp",
+    "@ai-whisperers/loyalty",
+    "@ai-whisperers/payments",
+    "@ai-whisperers/api-helpers",
+    "@ai-whisperers/analytics",
+    "@ai-whisperers/i18n",
+  ],
   experimental: {
     webpackBuildWorker: false,
   },
@@ -26,7 +48,7 @@ const nextConfig = {
       { source: '/fonts/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] },
       { source: '/favicon.ico', headers: [{ key: 'Cache-Control', value: 'public, max-age=86400' }] },
     ]
-  },
+  }
 }
 
 module.exports = nextConfig
