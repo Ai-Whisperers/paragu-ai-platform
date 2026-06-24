@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-24: fix(ci): commit workspace package dist/ files, drop build step (by Erebus)
+
 - 2026-06-24: chore(nexa): trigger deploy (CI now builds workspace pkgs first) (by Erebus)
 
 - 2026-06-24: fix(nexa): add transpilePackages for @ai-whisperers/* workspace pkgs (by Erebus)

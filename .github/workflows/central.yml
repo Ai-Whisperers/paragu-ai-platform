@@ -174,7 +174,7 @@ jobs:
         # packages/@ai-whisperers/*. No GitHub Packages auth needed.
         # --ignore-scripts skips native build steps (inotify etc.) that
         # fail on Node 20's gyp and aren't needed for our use case.
-        run: pnpm install --no-frozen-lockfile --ignore-scripts
+        run: pnpm install --no-frozen-lockfile
       - run: pnpm -r --filter "./apps/${{ matrix.app }}" run lint || echo "lint warnings - non-blocking"
 
   typecheck:
@@ -199,7 +199,7 @@ jobs:
         # packages/@ai-whisperers/*. No GitHub Packages auth needed.
         # --ignore-scripts skips native build steps (inotify etc.) that
         # fail on Node 20's gyp and aren't needed for our use case.
-        run: pnpm install --no-frozen-lockfile --ignore-scripts
+        run: pnpm install --no-frozen-lockfile
       - run: pnpm -r --filter "./apps/${{ matrix.app }}" run typecheck || echo "typecheck warnings - non-blocking"
 
   build:
@@ -224,7 +224,7 @@ jobs:
         # packages/@ai-whisperers/*. No GitHub Packages auth needed.
         # --ignore-scripts skips native build steps (inotify etc.) that
         # fail on Node 20's gyp and aren't needed for our use case.
-        run: pnpm install --no-frozen-lockfile --ignore-scripts
+        run: pnpm install --no-frozen-lockfile
       - name: Build app
         run: pnpm --filter "./apps/${{ matrix.app }}" build
       - name: Upload build artifact
