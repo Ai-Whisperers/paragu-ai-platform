@@ -27,13 +27,23 @@ RUN addgroup --system --gid 1001 nodejs && \
 COPY --chown=nextjs:nodejs .next/standalone/ ./
 COPY --chown=nextjs:nodejs .next/static ./apps/nexa-paraguay/.next/static
 
-# Static + localized content (only the image subdirs the app actually loads:
-# blog, brand, flags, hero — see public/_archive-images/README.md)
-COPY --chown=nextjs:nodejs public/images/blog   ./apps/nexa-paraguay/public/images/blog
-COPY --chown=nextjs:nodejs public/images/brand  ./apps/nexa-paraguay/public/images/brand
-COPY --chown=nextjs:nodejs public/images/flags  ./apps/nexa-paraguay/public/images/flags
-COPY --chown=nextjs:nodejs public/images/hero   ./apps/nexa-paraguay/public/images/hero
-COPY --chown=nextjs:nodejs public/images/og-default.svg ./apps/nexa-paraguay/public/images/og-default.svg
+# Static + localized content (image subdirs the app actually loads).
+# README in public/_archive-images/ lists which dirs are intentional staging
+# placeholders. We ship the production categories: blog, brand, flags, hero,
+# office, process, programs, team, testimonials, trust, why-paraguay.
+# (ads, email, press, social are marketing-only and not needed at runtime.)
+COPY --chown=nextjs:nodejs public/images/blog             ./apps/nexa-paraguay/public/images/blog
+COPY --chown=nextjs:nodejs public/images/brand            ./apps/nexa-paraguay/public/images/brand
+COPY --chown=nextjs:nodejs public/images/flags            ./apps/nexa-paraguay/public/images/flags
+COPY --chown=nextjs:nodejs public/images/hero             ./apps/nexa-paraguay/public/images/hero
+COPY --chown=nextjs:nodejs public/images/office           ./apps/nexa-paraguay/public/images/office
+COPY --chown=nextjs:nodejs public/images/process          ./apps/nexa-paraguay/public/images/process
+COPY --chown=nextjs:nodejs public/images/programs         ./apps/nexa-paraguay/public/images/programs
+COPY --chown=nextjs:nodejs public/images/team             ./apps/nexa-paraguay/public/images/team
+COPY --chown=nextjs:nodejs public/images/testimonials     ./apps/nexa-paraguay/public/images/testimonials
+COPY --chown=nextjs:nodejs public/images/trust            ./apps/nexa-paraguay/public/images/trust
+COPY --chown=nextjs:nodejs public/images/why-paraguay     ./apps/nexa-paraguay/public/images/why-paraguay
+COPY --chown=nextjs:nodejs public/images/og-default.svg    ./apps/nexa-paraguay/public/images/og-default.svg
 COPY --chown=nextjs:nodejs public/favicon.ico  ./apps/nexa-paraguay/public/favicon.ico
 COPY --chown=nextjs:nodejs public/favicon.svg  ./apps/nexa-paraguay/public/favicon.svg
 COPY --chown=nextjs:nodejs public/icon-192.png ./apps/nexa-paraguay/public/icon-192.png
