@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-25: chore: trigger CI (by Erebus)
+
 - 2026-06-25: chore: trigger CI deploy (by Erebus)
 
 - 2026-06-25: fix(ci): build @ai-whisperers/sections before app builds (by Erebus)
@@ -169,3 +171,6 @@ changes.
 
 ## 2026-06-25 16:30
 - Debug CI .next/ issue
+
+## 2026-06-25 17:00
+- Test CI workflow fix
