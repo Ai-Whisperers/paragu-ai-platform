@@ -1,8 +1,8 @@
 {
   "vertical": "relocacion",
   "country": "Paraguay",
-  "domain": "nexaparaguay.com",
-  "stagingDomain": "staging.nexaparaguay.com",
+  "domain": "nexaparaguay.com.py",
+  "stagingDomain": "staging.nexaparaguay.com.py",
   "defaultLocale": "nl",
   "locales": [
     "nl",
@@ -74,5 +74,13 @@
   "pendingDomains": [
     "nexaparaguay.com.py"
   ],
-  "pendingDomainsNote": "nexaparaguay.com.py purchased but DNS not yet connected. Switch domain → nexaparaguay.com.py and add Traefik labels when ready."
+  "pendingDomainsNote": "nexaparaguay.com.py purchased but DNS not yet connected. Switch domain \u2192 nexaparaguay.com.py and add Traefik labels when ready.",
+  "alternateDomains": [
+    "nexaparaguay.com.py",
+    "www.nexaparaguay.com.py",
+    "nexa.paragu-ai.com",
+    "nexa-preview.paragu-ai.com",
+    "nexa-paraguay.paragu-ai.com"
+  ],
+  "canonicalDomain": "nexaparaguay.com.py"
 }
