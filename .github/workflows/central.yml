@@ -234,13 +234,21 @@ jobs:
         run: pnpm --filter "./apps/${{ matrix.app }}" build
       - name: Verify build output exists
         run: |
-          test -d apps/${{ matrix.app }}/.next && echo "✓ .next/ exists" || echo "✗ .next/ MISSING"
+          test -d apps/${{ matrix.app }}/.next && echo "✓ .next/ exists" || (echo "✗ .next/ MISSING" && exit 1)
+      - name: Copy .next to upload location
+        # actions/upload-artifact@v4 respects .gitignore and skips files
+        # matching ignore patterns. .next/ is gitignored, so we copy it
+        # to a non-gitignored location before upload.
+        run: |
+          mkdir -p /tmp/build-artifacts/${{ matrix.app }}
+          cp -r apps/${{ matrix.app }}/.next /tmp/build-artifacts/${{ matrix.app }}/
+          echo "Copied $(du -sh /tmp/build-artifacts/${{ matrix.app }}/.next | cut -f1)"
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-${{ matrix.app }}
-          path: apps/${{ matrix.app }}/.next
-          if-no-files-found: warn
+          path: /tmp/build-artifacts/${{ matrix.app }}/.next
+          if-no-files-found: error
 
   docker:
     if: github.ref == 'refs/heads/main'
@@ -256,8 +264,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-${{ matrix.app }}
-          path: apps/${{ matrix.app }}/.next
+          path: /tmp/build-artifacts/${{ matrix.app }}/.next
           if-no-files-found: error
+      - name: Restore .next to app directory
+        run: |
+          mkdir -p apps/${{ matrix.app }}
+          cp -r /tmp/build-artifacts/${{ matrix.app }}/.next apps/${{ matrix.app }}/
+          echo "Restored .next/ to apps/${{ matrix.app }}/.next"
+          ls apps/${{ matrix.app }}/.next | head -5
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Log in to GHCR
