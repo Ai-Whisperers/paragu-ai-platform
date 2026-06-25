@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-25: chore: trigger CI (by Erebus)
+
 - 2026-06-25: chore: trigger CI deploy with .next/** glob (by Erebus)
 
 - 2026-06-25: chore: trigger CI (by Erebus)
@@ -179,3 +181,6 @@ changes.
 
 ## 2026-06-25 17:15
 - Final CI workflow test
+
+## 2026-06-25 17:30
+- CI fix: copy .next out of gitignore
