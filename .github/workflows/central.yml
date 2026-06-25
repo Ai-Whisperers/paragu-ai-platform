@@ -287,9 +287,9 @@ jobs:
           file: apps/${{ matrix.app }}/Dockerfile.standalone
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/${{ matrix.app }}:${{ github.sha }}
-            ghcr.io/${{ github.repository }}/${{ matrix.app }}:latest
-            ghcr.io/${{ github.repository }}/${{ matrix.app }}:standalone-${{ github.sha }}
+            ghcr.io/ai-whisperers/paragu-ai-platform/${{ matrix.app }}:${{ github.sha }}
+            ghcr.io/ai-whisperers/paragu-ai-platform/${{ matrix.app }}:latest
+            ghcr.io/ai-whisperers/paragu-ai-platform/${{ matrix.app }}:standalone-${{ github.sha }}
 
   deploy:
     if: github.ref == 'refs/heads/main'
