@@ -30,6 +30,8 @@ summary. Sections are chronological, newest first. **Use
 
 - 2026-06-25: chore: trigger CI (by Erebus)
 
+- 2026-06-25: chore: trigger CI (by Erebus)
+
 - 2026-06-25: chore: trigger CI deploy with .next/** glob (by Erebus)
 
 - 2026-06-25: chore: trigger CI (by Erebus)
@@ -199,3 +201,6 @@ changes.
 
 ## 2026-06-25 18:15
 - CI tarball fix
+
+## 2026-06-25 18:30
+- Fresh CI trigger after tar fix
