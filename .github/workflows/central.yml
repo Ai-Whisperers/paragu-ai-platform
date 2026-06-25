@@ -240,9 +240,10 @@ jobs:
         # matching ignore patterns. .next/ is gitignored, so we copy it
         # to a non-gitignored location before upload.
         run: |
-          mkdir -p /tmp/build-artifacts/${{ matrix.app }}
-          cp -r apps/${{ matrix.app }}/.next /tmp/build-artifacts/${{ matrix.app }}/
+          mkdir -p /tmp/build-artifacts/${{ matrix.app }}/.next
+          cp -r apps/${{ matrix.app }}/.next/. /tmp/build-artifacts/${{ matrix.app }}/.next/
           echo "Copied $(du -sh /tmp/build-artifacts/${{ matrix.app }}/.next | cut -f1)"
+          ls /tmp/build-artifacts/${{ matrix.app }}/.next | head
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
