@@ -235,11 +235,20 @@ jobs:
       - name: Verify build output exists
         run: |
           test -d apps/${{ matrix.app }}/.next && echo "✓ .next/ exists" || (echo "✗ .next/ MISSING" && exit 1)
+      - name: Tar .next (bypass gitignore filter)
+        # actions/upload-artifact@v4 respects .gitignore and silently skips
+        # gitignored files. Since apps/<app>/.next is gitignored, we tar
+        # it first (tar doesn't care about gitignore), then upload the tarball.
+        run: |
+          mkdir -p /tmp/build-artifacts/${{ matrix.app }}
+          tar -czf /tmp/build-artifacts/${{ matrix.app }}.tar.gz -C apps/${{ matrix.app }} .next
+          echo "Tarball: $(du -sh /tmp/build-artifacts/${{ matrix.app }}.tar.gz | cut -f1)"
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-${{ matrix.app }}
-          path: apps/${{ matrix.app }}/.next
+          path: /tmp/build-artifacts/${{ matrix.app }}.tar.gz
+          if-no-files-found: error
 
   docker:
     if: github.ref == 'refs/heads/main'
@@ -255,12 +264,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-${{ matrix.app }}
-          path: /tmp/build-artifacts/${{ matrix.app }}/.next
+          path: /tmp/build-artifacts/
           if-no-files-found: error
-      - name: Restore .next to app directory
+      - name: Extract .next from tarball
         run: |
           mkdir -p apps/${{ matrix.app }}
-          cp -r /tmp/build-artifacts/${{ matrix.app }}/.next apps/${{ matrix.app }}/
+          tar -xzf /tmp/build-artifacts/${{ matrix.app }}.tar.gz -C apps/${{ matrix.app }}/
           echo "Restored .next/ to apps/${{ matrix.app }}/.next"
           ls apps/${{ matrix.app }}/.next | head -5
       - name: Set up Docker Buildx
