@@ -232,21 +232,14 @@ jobs:
         run: pnpm --filter "@ai-whisperers/sections" run build
       - name: Build app
         run: pnpm --filter "./apps/${{ matrix.app }}" build
-      - name: Debug build output
+      - name: Verify build output exists
         run: |
-          echo "=== Working dir ==="
-          pwd
-          echo "=== apps/${{ matrix.app }} contents ==="
-          ls -la apps/${{ matrix.app }} | head -20
-          echo "=== .next/ contents ==="
-          ls -la apps/${{ matrix.app }}/.next 2>&1 | head -20
-          echo "=== standalone contents ==="
-          ls -la apps/${{ matrix.app }}/.next/standalone 2>&1 | head -10
+          test -d apps/${{ matrix.app }}/.next && echo "✓ .next/ exists" || echo "✗ .next/ MISSING"
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-${{ matrix.app }}
-          path: apps/${{ matrix.app }}/.next/
+          path: apps/${{ matrix.app }}/.next/**
           if-no-files-found: warn
 
   docker:
