@@ -154,3 +154,6 @@ in the previous commit (`67b8c02`) were never deployed because the
 "Emit changed apps" step had a workflow validation bug. This entry is
 a marker so the next push triggers a real build/deploy of the content
 changes.
+
+## 2026-06-25
+- Trigger CI deploy after sections package cleanup
