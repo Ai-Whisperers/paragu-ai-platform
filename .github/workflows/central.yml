@@ -225,6 +225,11 @@ jobs:
         # --ignore-scripts skips native build steps (inotify etc.) that
         # fail on Node 20's gyp and aren't needed for our use case.
         run: pnpm install --no-frozen-lockfile
+      - name: Build workspace packages
+        # @ai-whisperers/* workspace packages need to be compiled before
+        # any app can import them. The sections package's dist/ is required
+        # for the @ai-whisperers/sections import in SectionsRenderer.
+        run: pnpm --filter "@ai-whisperers/sections" run build
       - name: Build app
         run: pnpm --filter "./apps/${{ matrix.app }}" build
       - name: Upload build artifact

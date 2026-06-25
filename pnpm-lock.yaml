@@ -92,6 +92,43 @@ importers:
         specifier: ^4.1.7
         version: 4.1.8(@types/node@20.19.0)(jsdom@29.1.1(@noble/hashes@1.8.0))(vite@5.4.21(@types/node@20.19.0)(lightningcss@1.32.0))
 
+  apps/ai-whisperers-site:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      lucide-react:
+        specifier: 0.510.0
+        version: 0.510.0(react@18.3.1)
+      next:
+        specifier: 16.2.6
+        version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
+      tailwind-merge:
+        specifier: 3.5.0
+        version: 3.5.0
+    devDependencies:
+      '@tailwindcss/postcss':
+        specifier: ^4.2.0
+        version: 4.3.0
+      '@types/node':
+        specifier: 20.19.0
+        version: 20.19.0
+      '@types/react':
+        specifier: 18.3.12
+        version: 18.3.12
+      tailwindcss:
+        specifier: ^4.2.0
+        version: 4.3.0
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+
   apps/arnos-barber-shop:
     dependencies:
       '@ai-whisperers/i18n-paraguay':
@@ -216,10 +253,10 @@ importers:
         version: 10.5.0(postcss@8.5.15)
       eslint:
         specifier: ^9
-        version: 9.39.4(jiti@2.7.0)
+        version: 9.39.4(jiti@1.21.7)
       eslint-config-next:
         specifier: 16.2.4
-        version: 16.2.4(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3)
+        version: 16.2.4(@typescript-eslint/parser@8.61.0(eslint@9.39.4(jiti@1.21.7))(typescript@5.9.3))(eslint@9.39.4(jiti@1.21.7))(typescript@5.9.3)
       jsdom:
         specifier: ^29.1.1
         version: 29.1.1(@noble/hashes@1.8.0)
@@ -239,26 +276,26 @@ importers:
   apps/camilo-acosta:
     dependencies:
       '@ai-whisperers/content':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/content
       '@ai-whisperers/i18n-paraguay':
         specifier: workspace:*
         version: link:../../packages/i18n
       '@ai-whisperers/seo':
-        specifier: ^0.2.3
-        version: 0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/seo
       '@ai-whisperers/theme':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/theme
       '@ai-whisperers/ui':
-        specifier: ^0.4.1
-        version: 0.4.1(lucide-react@0.460.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui
       '@ai-whisperers/ui-extras':
-        specifier: ^1.0.0
-        version: 1.0.0(lucide-react@0.460.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui-extras
       '@ai-whisperers/whatsapp':
-        specifier: ^0.3.0
-        version: 0.3.0(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/whatsapp
       autoprefixer:
         specifier: ^10.4.20
         version: 10.5.0(postcss@8.5.15)
@@ -338,10 +375,10 @@ importers:
         version: 10.5.0(postcss@8.5.15)
       eslint:
         specifier: ^9
-        version: 9.39.4(jiti@1.21.7)
+        version: 9.39.4(jiti@2.7.0)
       eslint-config-next:
         specifier: 16.2.4
-        version: 16.2.4(@typescript-eslint/parser@8.61.0(eslint@9.39.4(jiti@1.21.7))(typescript@5.9.3))(eslint@9.39.4(jiti@1.21.7))(typescript@5.9.3)
+        version: 16.2.4(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3)
       jsdom:
         specifier: ^29.1.1
         version: 29.1.1(@noble/hashes@1.8.0)
@@ -711,6 +748,52 @@ importers:
         specifier: ^4.1.7
         version: 4.1.8(@types/node@20.19.0)(jsdom@29.1.1(@noble/hashes@1.8.0))(vite@5.4.21(@types/node@20.19.0)(lightningcss@1.32.0))
 
+  apps/dra-gabriela:
+    dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      lucide-react:
+        specifier: ^1.14.0
+        version: 1.17.0(react@18.3.1)
+      next:
+        specifier: 16.2.6
+        version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
+      tailwind-merge:
+        specifier: ^3.5.0
+        version: 3.5.0
+    devDependencies:
+      '@tailwindcss/postcss':
+        specifier: ^4.2.0
+        version: 4.3.0
+      '@types/node':
+        specifier: 20.19.0
+        version: 20.19.0
+      '@types/react':
+        specifier: 18.3.12
+        version: 18.3.12
+      '@types/react-dom':
+        specifier: 18.3.1
+        version: 18.3.1
+      eslint:
+        specifier: ^9
+        version: 9.39.4(jiti@2.7.0)
+      eslint-config-next:
+        specifier: 16.2.4
+        version: 16.2.4(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3)
+      tailwindcss:
+        specifier: ^4.2.0
+        version: 4.3.0
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+
   apps/escribania-paraguay:
     dependencies:
       '@ai-whisperers/i18n-paraguay':
@@ -894,29 +977,29 @@ importers:
   apps/fun4me-store:
     dependencies:
       '@ai-whisperers/admin':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/admin
       '@ai-whisperers/auth':
-        specifier: ^0.2.2
-        version: 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/auth
       '@ai-whisperers/commerce':
-        specifier: ^0.2.1
-        version: 0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/commerce
       '@ai-whisperers/i18n-paraguay':
         specifier: workspace:*
         version: link:../../packages/i18n
       '@ai-whisperers/seo':
-        specifier: ^0.2.3
-        version: 0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/seo
       '@ai-whisperers/theme':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/theme
       '@ai-whisperers/ui':
-        specifier: ^0.4.1
-        version: 0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui
       '@ai-whisperers/whatsapp':
-        specifier: ^0.3.0
-        version: 0.3.0(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/whatsapp
       '@base-ui/react':
         specifier: ^1.3.0
         version: 1.5.0(@types/react@18.3.12)(date-fns@4.4.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1039,29 +1122,29 @@ importers:
   apps/golden-visa-advisory:
     dependencies:
       '@ai-whisperers/admin':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/admin
       '@ai-whisperers/auth':
-        specifier: ^0.2.2
-        version: 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/auth
       '@ai-whisperers/commerce':
-        specifier: ^0.2.1
-        version: 0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/commerce
       '@ai-whisperers/i18n-paraguay':
         specifier: workspace:*
         version: link:../../packages/i18n
       '@ai-whisperers/seo':
-        specifier: ^0.2.3
-        version: 0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/seo
       '@ai-whisperers/theme':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/theme
       '@ai-whisperers/ui':
-        specifier: ^0.4.1
-        version: 0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui
       '@ai-whisperers/whatsapp':
-        specifier: ^0.3.0
-        version: 0.3.0(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/whatsapp
       next:
         specifier: 16.2.6
         version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1103,50 +1186,50 @@ importers:
   apps/granja-cabral:
     dependencies:
       '@ai-whisperers/admin':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/admin
       '@ai-whisperers/api-helpers':
-        specifier: ^0.1.0
-        version: 0.1.0(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/api-helpers
       '@ai-whisperers/auth':
-        specifier: ^0.2.2
-        version: 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/auth
       '@ai-whisperers/catalog':
-        specifier: ^0.1.0
-        version: 0.1.0(@ai-whisperers/commerce@0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui-extras@1.0.0(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/catalog
       '@ai-whisperers/checkout':
-        specifier: ^0.1.0
-        version: 0.1.0(@ai-whisperers/commerce@0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/checkout
       '@ai-whisperers/client-kit':
         specifier: workspace:*
         version: link:../../packages/@ai-whisperers/client-kit
       '@ai-whisperers/commerce':
-        specifier: ^0.2.1
-        version: 0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/commerce
       '@ai-whisperers/i18n-paraguay':
         specifier: workspace:*
         version: link:../../packages/i18n
       '@ai-whisperers/payments':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/payments
       '@ai-whisperers/product':
-        specifier: ^0.1.0
-        version: 0.1.0(@ai-whisperers/commerce@0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/product
       '@ai-whisperers/seo':
-        specifier: ^0.2.3
-        version: 0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/seo
       '@ai-whisperers/theme':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/theme
       '@ai-whisperers/ui':
-        specifier: ^0.4.1
-        version: 0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui
       '@ai-whisperers/ui-extras':
-        specifier: ^1.0.0
-        version: 1.0.0(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui-extras
       '@ai-whisperers/whatsapp':
-        specifier: ^0.3.0
-        version: 0.3.0(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/whatsapp
       lucide-react:
         specifier: ^1.14.0
         version: 1.17.0(react@18.3.1)
@@ -1371,32 +1454,32 @@ importers:
   apps/magnolia-peluqueria:
     dependencies:
       '@ai-whisperers/admin':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/admin
       '@ai-whisperers/auth':
-        specifier: ^0.2.2
-        version: 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/auth
       '@ai-whisperers/commerce':
-        specifier: ^0.2.1
-        version: 0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/commerce
       '@ai-whisperers/i18n':
-        specifier: ^0.2.2
-        version: 0.2.2(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/i18n/i18n
       '@ai-whisperers/sections':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/sections
       '@ai-whisperers/seo':
-        specifier: ^0.2.3
-        version: 0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/seo
       '@ai-whisperers/theme':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/theme
       '@ai-whisperers/ui':
-        specifier: ^0.4.1
-        version: 0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui
       '@ai-whisperers/whatsapp':
-        specifier: ^0.3.0
-        version: 0.3.0(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/whatsapp
       '@alloc/quick-lru':
         specifier: ^5.2.0
         version: 5.2.0
@@ -1628,32 +1711,147 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
+  apps/nexa-paraguay:
+    dependencies:
+      '@ai-whisperers/admin':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/admin
+      '@ai-whisperers/auth':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/auth
+      '@ai-whisperers/client-kit':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/client-kit
+      '@ai-whisperers/content':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/content
+      '@ai-whisperers/i18n':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/i18n/i18n
+      '@ai-whisperers/sections':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/sections
+      '@ai-whisperers/seo':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/seo
+      '@ai-whisperers/theme':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/theme
+      '@ai-whisperers/ui':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui
+      '@ai-whisperers/ui-extras':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui-extras
+      '@ai-whisperers/whatsapp':
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/whatsapp
+      '@supabase/supabase-js':
+        specifier: ^2.105.4
+        version: 2.108.1
+      '@vercel/analytics':
+        specifier: ^2.0.1
+        version: 2.0.1(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@vercel/speed-insights':
+        specifier: ^2.0.0
+        version: 2.0.0(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      next:
+        specifier: 16.2.6
+        version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      pg:
+        specifier: ^8.20.0
+        version: 8.21.0
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
+      web-vitals:
+        specifier: ^5.2.0
+        version: 5.3.0
+    devDependencies:
+      '@tailwindcss/postcss':
+        specifier: ^4
+        version: 4.3.0
+      '@testing-library/jest-dom':
+        specifier: ^6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: ^16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/node':
+        specifier: 20.19.0
+        version: 20.19.0
+      '@types/pg':
+        specifier: ^8.11.10
+        version: 8.20.0
+      '@types/react':
+        specifier: 18.3.12
+        version: 18.3.12
+      '@types/react-dom':
+        specifier: 18.3.1
+        version: 18.3.1
+      '@vitejs/plugin-react':
+        specifier: ^6.0.2
+        version: 6.0.2(vite@5.4.21(@types/node@20.19.0)(lightningcss@1.32.0))
+      eslint:
+        specifier: ^9
+        version: 9.39.4(jiti@2.7.0)
+      eslint-config-next:
+        specifier: 16.2.4
+        version: 16.2.4(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3)
+      jsdom:
+        specifier: ^29.1.1
+        version: 29.1.1(@noble/hashes@1.8.0)
+      playwright:
+        specifier: ^1.61.0
+        version: 1.61.1
+      png-to-ico:
+        specifier: ^2.1.8
+        version: 2.1.8
+      prettier:
+        specifier: ^3.4.2
+        version: 3.8.4
+      sharp:
+        specifier: ^0.34.1
+        version: 0.34.5
+      tailwindcss:
+        specifier: ^4
+        version: 4.3.0
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^4.1.7
+        version: 4.1.8(@types/node@20.19.0)(jsdom@29.1.1(@noble/hashes@1.8.0))(vite@5.4.21(@types/node@20.19.0)(lightningcss@1.32.0))
+
   apps/nudo:
     dependencies:
       '@ai-whisperers/admin':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/admin
       '@ai-whisperers/auth':
-        specifier: ^0.2.2
-        version: 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/auth
       '@ai-whisperers/commerce':
-        specifier: ^0.2.1
-        version: 0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/commerce
       '@ai-whisperers/i18n':
-        specifier: ^0.2.2
-        version: 0.2.2(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/i18n/i18n
       '@ai-whisperers/seo':
-        specifier: ^0.2.3
-        version: 0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/seo
       '@ai-whisperers/theme':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/theme
       '@ai-whisperers/ui':
-        specifier: ^0.4.1
-        version: 0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui
       '@ai-whisperers/whatsapp':
-        specifier: ^0.3.0
-        version: 0.3.0(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/whatsapp
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -1762,29 +1960,29 @@ importers:
   apps/pitchy-website:
     dependencies:
       '@ai-whisperers/admin':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/admin
       '@ai-whisperers/auth':
-        specifier: ^0.2.2
-        version: 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/auth
       '@ai-whisperers/commerce':
-        specifier: ^0.2.1
-        version: 0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/commerce
       '@ai-whisperers/i18n-paraguay':
         specifier: workspace:*
         version: link:../../packages/i18n
       '@ai-whisperers/seo':
-        specifier: ^0.2.3
-        version: 0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/seo
       '@ai-whisperers/theme':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/theme
       '@ai-whisperers/ui':
-        specifier: ^0.4.1
-        version: 0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui
       '@ai-whisperers/whatsapp':
-        specifier: ^0.3.0
-        version: 0.3.0(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/whatsapp
       '@radix-ui/react-dialog':
         specifier: '*'
         version: 1.1.16(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1921,6 +2119,46 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
+  apps/rockabar:
+    dependencies:
+      lucide-react:
+        specifier: ^0.510.0
+        version: 0.510.0(react@18.3.1)
+      next:
+        specifier: 16.2.6
+        version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      qrcode:
+        specifier: ^1.5.4
+        version: 1.5.4
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@tailwindcss/postcss':
+        specifier: ^4.2.4
+        version: 4.3.0
+      '@types/node':
+        specifier: 20.19.0
+        version: 20.19.0
+      '@types/qrcode':
+        specifier: ^1.5.6
+        version: 1.5.6
+      '@types/react':
+        specifier: 18.3.12
+        version: 18.3.12
+      '@types/react-dom':
+        specifier: 18.3.1
+        version: 18.3.1
+      tailwindcss:
+        specifier: ^4.2.4
+        version: 4.3.0
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+
   apps/scott-tatuajes:
     dependencies:
       '@ai-whisperers/i18n-paraguay':
@@ -1989,62 +2227,62 @@ importers:
   apps/site-template:
     dependencies:
       '@ai-whisperers/admin':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/admin
       '@ai-whisperers/analytics':
-        specifier: ^0.2.1
-        version: 0.2.1(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/analytics
       '@ai-whisperers/api-helpers':
-        specifier: ^0.2.0
-        version: 0.2.0(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/api-helpers
       '@ai-whisperers/auth':
-        specifier: ^0.2.2
-        version: 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/auth
       '@ai-whisperers/catalog':
-        specifier: ^2.0.0
-        version: 2.0.0(@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui-extras@1.0.0(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/catalog
       '@ai-whisperers/checkout':
-        specifier: ^0.2.0
-        version: 0.2.0(@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/checkout
       '@ai-whisperers/client-kit':
         specifier: workspace:*
         version: link:../../packages/@ai-whisperers/client-kit
       '@ai-whisperers/commerce':
-        specifier: ^0.2.1
-        version: 0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/commerce
       '@ai-whisperers/content':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/content
       '@ai-whisperers/hooks':
-        specifier: ^0.2.1
-        version: 0.2.1(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/hooks
       '@ai-whisperers/loyalty':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/loyalty
       '@ai-whisperers/payments':
-        specifier: ^0.2.1
-        version: 0.2.1
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/payments
       '@ai-whisperers/product':
-        specifier: ^0.2.0
-        version: 0.2.0(@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/product
       '@ai-whisperers/sections':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/sections
       '@ai-whisperers/seo':
-        specifier: ^0.2.3
-        version: 0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/seo
       '@ai-whisperers/theme':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/theme
       '@ai-whisperers/ui':
-        specifier: ^0.4.1
-        version: 0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui
       '@ai-whisperers/ui-extras':
-        specifier: ^1.0.0
-        version: 1.0.0(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/ui-extras
       '@ai-whisperers/whatsapp':
-        specifier: ^0.3.0
-        version: 0.3.0(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/@ai-whisperers/whatsapp
       '@alloc/quick-lru':
         specifier: ^5.2.0
         version: 5.2.0
@@ -2453,8 +2691,8 @@ importers:
   packages/@ai-whisperers/admin:
     dependencies:
       '@ai-whisperers/auth':
-        specifier: ^0.2.0
-        version: 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../auth
       '@types/react':
         specifier: 18.3.12
         version: 18.3.12
@@ -2524,14 +2762,14 @@ importers:
   packages/@ai-whisperers/catalog:
     dependencies:
       '@ai-whisperers/commerce':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../commerce
       '@ai-whisperers/ui':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../ui
       '@ai-whisperers/ui-extras':
-        specifier: ^0.1.0
-        version: 0.1.0(@ai-whisperers/commerce@0.1.0)(@ai-whisperers/ui@0.1.0)(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../ui-extras
       next:
         specifier: 16.2.6
         version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2555,11 +2793,11 @@ importers:
   packages/@ai-whisperers/checkout:
     dependencies:
       '@ai-whisperers/commerce':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../commerce
       '@ai-whisperers/ui':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../ui
       next:
         specifier: 16.2.6
         version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2690,11 +2928,11 @@ importers:
   packages/@ai-whisperers/product:
     dependencies:
       '@ai-whisperers/commerce':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../commerce
       '@ai-whisperers/ui':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../ui
       next:
         specifier: 16.2.6
         version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2716,37 +2954,6 @@ importers:
         version: 5.9.3
 
   packages/@ai-whisperers/sections:
-    dependencies:
-      clsx:
-        specifier: ^2.1.0
-        version: 2.1.1
-      lucide-react:
-        specifier: ^0.400.0
-        version: 0.400.0(react@18.3.1)
-      next:
-        specifier: 16.2.6
-        version: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: 18.3.1
-        version: 18.3.1(react@18.3.1)
-      tailwind-merge:
-        specifier: ^2.5.0
-        version: 2.6.1
-    devDependencies:
-      '@types/react':
-        specifier: 18.3.12
-        version: 18.3.12
-      '@types/react-dom':
-        specifier: 18.3.1
-        version: 18.3.1
-      typescript:
-        specifier: 5.9.3
-        version: 5.9.3
-
-  packages/@ai-whisperers/sections/sections:
     dependencies:
       clsx:
         specifier: ^2.1.0
@@ -2879,11 +3086,11 @@ importers:
   packages/@ai-whisperers/ui-extras:
     dependencies:
       '@ai-whisperers/commerce':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../commerce
       '@ai-whisperers/ui':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../ui
       framer-motion:
         specifier: ^11.0.0
         version: 11.18.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2940,62 +3147,62 @@ importers:
   packages/site-template:
     dependencies:
       '@ai-whisperers/admin':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/admin
       '@ai-whisperers/analytics':
-        specifier: ^0.2.1
-        version: 0.2.1(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/analytics
       '@ai-whisperers/api-helpers':
-        specifier: ^0.2.0
-        version: 0.2.0(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/api-helpers
       '@ai-whisperers/auth':
-        specifier: ^0.2.2
-        version: 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/auth
       '@ai-whisperers/catalog':
-        specifier: ^2.0.0
-        version: 2.0.0(@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui-extras@1.0.0(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/catalog
       '@ai-whisperers/checkout':
-        specifier: ^0.2.0
-        version: 0.2.0(@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/checkout
       '@ai-whisperers/client-kit':
         specifier: workspace:*
         version: link:../@ai-whisperers/client-kit
       '@ai-whisperers/commerce':
-        specifier: ^0.2.1
-        version: 0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/commerce
       '@ai-whisperers/content':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../@ai-whisperers/content
       '@ai-whisperers/hooks':
-        specifier: ^0.2.1
-        version: 0.2.1(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/hooks
       '@ai-whisperers/loyalty':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: workspace:*
+        version: link:../@ai-whisperers/loyalty
       '@ai-whisperers/payments':
-        specifier: ^0.2.1
-        version: 0.2.1
+        specifier: workspace:*
+        version: link:../@ai-whisperers/payments
       '@ai-whisperers/product':
-        specifier: ^0.2.0
-        version: 0.2.0(@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/product
       '@ai-whisperers/sections':
-        specifier: ^0.3.1
-        version: 0.3.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/sections
       '@ai-whisperers/seo':
-        specifier: ^0.2.3
-        version: 0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/seo
       '@ai-whisperers/theme':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: workspace:*
+        version: link:../@ai-whisperers/theme
       '@ai-whisperers/ui':
-        specifier: ^0.4.1
-        version: 0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/ui
       '@ai-whisperers/ui-extras':
-        specifier: ^1.0.0
-        version: 1.0.0(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/ui-extras
       '@ai-whisperers/whatsapp':
-        specifier: ^0.3.0
-        version: 0.3.0(react@18.3.1)
+        specifier: workspace:*
+        version: link:../@ai-whisperers/whatsapp
       '@alloc/quick-lru':
         specifier: ^5.2.0
         version: 5.2.0
@@ -3086,150 +3293,6 @@ packages:
 
   '@adobe/css-tools@4.5.0':
     resolution: {integrity: sha512-6OzddxPio9UiWTCemp4N8cYLV2ZN1ncRnV1cVGtve7dhPOtRkleRyx32GQCYSwDYgaHU3USMm84tNsvKzRCa1Q==}
-
-  '@ai-whisperers/admin@0.3.1':
-    resolution: {integrity: sha512-p5QmCgJaWdVGUbW51OcEpUOwNF+GG4qBKxkQucFM1CQQx1dPT7sD+6phQTlCpns6CFrDyVcIZS9VjN+6HSQi1w==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/admin/0.3.1/0618e798fb455c27aa43d141d18f56adad3eecc8}
-    peerDependencies:
-      lucide-react: ^0.510.0
-      next: 16.2.6
-      react: 18.3.1
-      react-dom: 18.3.1
-
-  '@ai-whisperers/analytics@0.2.1':
-    resolution: {integrity: sha512-aiJ6bzdRnA9S/tX1aVrWwIWTBpZknyb32UEKjwCaAJl/UBr0QQCH61UK6YbIrOKEOmlUCZVyt3zr0LFMamWEFQ==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/analytics/0.2.1/03b50ae43e74c460ef71cd2121a015cf24f3395b}
-    peerDependencies:
-      next: 16.2.6
-      react: 18.3.1
-      react-dom: 18.3.1
-
-  '@ai-whisperers/api-helpers@0.1.0':
-    resolution: {integrity: sha512-f07PrwTARRG2wmowpJTrhk/+pYDG5wOiyrf4PFdv4fUlW8n98gIqDHKLozx5nw42dD9MYoVjJ+CjR/ef0tFMGg==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/api-helpers/0.1.0/a3c991542e4b6c596ce5ee9d7db136def4489a97}
-
-  '@ai-whisperers/api-helpers@0.2.0':
-    resolution: {integrity: sha512-vyRTB01fZVKQhId4J3AmkIi0NFjviwEm56jeth6lPF5lojDe5TexoHZjZNynrSZg7xUUheN5MO4n7VKCwMUIkQ==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/api-helpers/0.2.0/ea6c749b2c18e60b150340059e86e29904b4b73c}
-
-  '@ai-whisperers/auth@0.2.2':
-    resolution: {integrity: sha512-c2l9cyX/l0W16GuoRjJ22bKbxSTBCIfMcrHH/roiBSiYUbJtC9xdxSeJdxSuW8OHWsCsOee/rkuIhRVX6SujMg==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/auth/0.2.2/1ad05b5290603e01831f72bbfd1b66231e482a67}
-    peerDependencies:
-      next: 16.2.6
-      react: 18.3.1
-      react-dom: 18.3.1
-
-  '@ai-whisperers/catalog@0.1.0':
-    resolution: {integrity: sha512-Bj4oq1MO6fPOnOCnd1xYiwo82tgIXl3/4xilrEN85RSatgqWNX1RYpGwSkYoU/ZXDXVIRopWgoFZKAw6MNfoKA==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/catalog/0.1.0/d1d9361af9d4d0bccfac39778fcee4080032cf7a}
-    peerDependencies:
-      '@ai-whisperers/commerce': ^0.1.0
-      '@ai-whisperers/ui': ^0.1.0
-      '@ai-whisperers/ui-extras': ^0.1.0
-
-  '@ai-whisperers/catalog@2.0.0':
-    resolution: {integrity: sha512-UM1/cRVgvwCFUyloPugQKl+lgxY7oxHyDBq9QzwN/0pbjJIRvoyx51btHlI5ZW+lzQaHyh5d2gQ7q5HPNgeQmw==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/catalog/2.0.0/04b4c8f24e3fce8630baea2dba90df6582bb145b}
-    peerDependencies:
-      '@ai-whisperers/commerce': ^0.2.1
-      '@ai-whisperers/ui': ^0.4.1
-      '@ai-whisperers/ui-extras': ^0.3.0
-
-  '@ai-whisperers/checkout@0.1.0':
-    resolution: {integrity: sha512-ztz2NmvzZixGKHBpA2rszRCxPdqFNHOOB6YVvnUVSd9eVWmp8mVRrQky+2AD8ATY0Xgp2NZyANL2QBK7d5xShQ==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/checkout/0.1.0/81275098347b757629488022e8d15581a6df67c0}
-    peerDependencies:
-      '@ai-whisperers/commerce': ^0.1.0
-      '@ai-whisperers/ui': ^0.1.0
-
-  '@ai-whisperers/checkout@0.2.0':
-    resolution: {integrity: sha512-e8udMaer8Z9bLOnVUGRrS+tdF8O5RMGYVXWSmISTpKLf1rQuUP7VfAzr2EC9qfDe58F28074JDHuOmFfq9JX0A==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/checkout/0.2.0/4fedb7c2ec2205bfdbfbdd18a45625414dbf5c11}
-    peerDependencies:
-      '@ai-whisperers/commerce': ^0.2.1
-      '@ai-whisperers/ui': ^0.4.1
-
-  '@ai-whisperers/commerce@0.1.0':
-    resolution: {integrity: sha512-geyROQlAxLF55czfcqmcTkmq5FOv5TilElq7PKRxi1LkR1HMu97LUvuAn70ytnr2dwS05VYgROyXGf/tr39KIw==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/commerce/0.1.0/399a2dfa6b2f8a66e39c8f7a67a8b17e8d71f837}
-
-  '@ai-whisperers/commerce@0.2.1':
-    resolution: {integrity: sha512-burF3F1aL/FOGoJ5LFsNq5q043nS8d80v7B6QW1sZ28+1lTmXlXVnN8FaRWLBu6bP8FF20bUt/o3Fv+BpAAMLg==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/commerce/0.2.1/c7d10c8139e0295c7b81cf95bc5c24bf3a52821b}
-    peerDependencies:
-      lucide-react: ^0.510.0
-      next: 16.2.6
-      react: 18.3.1
-      react-dom: 18.3.1
-
-  '@ai-whisperers/content@0.3.0':
-    resolution: {integrity: sha512-VTTdVeT7BAXUIcXnAqkr+3l8FN0Xkqr6QN+vVw9ZSBCUfv7DjDlJ/AzRU/5vvlX9H5sTZuNtQ9fBplYZLavTpg==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/content/0.3.0/d865e23ede6ca6b936a3a8a69f082f6e00db3c8e}
-
-  '@ai-whisperers/hooks@0.2.1':
-    resolution: {integrity: sha512-yOYEDq5BjzOJy1GONfGml/qkBFuwoG7DS42h0hu2jjp9wuO7Ymj4nODJznhdMBioDJJjB06dkSOwmaGH4D2iIw==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/hooks/0.2.1/19c876f9d6d3d285effabec04e4d958abef10a54}
-    peerDependencies:
-      react: 18.3.1
-
-  '@ai-whisperers/i18n@0.2.2':
-    resolution: {integrity: sha512-DO5tscTu8nKwyOf42H86gEr2cfn8O7Q+vtcrcsv0QNigc6PCMiLhS24PPcRCBRe58m3ky8lrXvK7DKdcPFeyow==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/i18n/0.2.2/9d6b9c882eaffe4ad4826d2ef8b06fd5efc1ea0c}
-    peerDependencies:
-      react: 18.3.1
-
-  '@ai-whisperers/loyalty@0.2.0':
-    resolution: {integrity: sha512-x38JHHpeYSfmstFkoBgNhZeyKNv5tg8AnqpHpb3DxCxkIK95qWt9l49Kl+LWfpwi7avgDYDxgMhw1YOyKSp2kA==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/loyalty/0.2.0/1af79ea0bdea3e97ccbcb0a9b36895f0f8fbc4ea}
-
-  '@ai-whisperers/payments@0.1.0':
-    resolution: {integrity: sha512-I7mdmY625dKh+jUPEuB58J5+Bjs0K4W/2nR7S8pYBHU1dvvriDIsR2mk5qp3SqrRoIlUvUPruDBN2ShKkUjm5w==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/payments/0.1.0/31114f55b38c941d7277f1ca60b43dc939be89ab}
-
-  '@ai-whisperers/payments@0.2.1':
-    resolution: {integrity: sha512-tyqrNwUR7+ZjoagN0w7OjQ08dfSalj9tFvKHbyb3FC4qON4xFYtA3VtuOGQzUGqrcGDl0JLqSIIYXMEpmTsjcA==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/payments/0.2.1/9680afb0aa20a1c39a7a116ee3aa2573ef2332c2}
-
-  '@ai-whisperers/product@0.1.0':
-    resolution: {integrity: sha512-fhHS1Vrjkhn1C25VDTmaOJ36HK9t2fV1HCkiecwqSL06h9XSbndZX3Nq0xz/7sdVR5WQHKNiH5+TRyhLXJRMow==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/product/0.1.0/0ffb617d2c777361b4b8b4389a385fb769fcd5e8}
-    peerDependencies:
-      '@ai-whisperers/commerce': ^0.1.0
-      '@ai-whisperers/ui': ^0.1.0
-
-  '@ai-whisperers/product@0.2.0':
-    resolution: {integrity: sha512-zVK5VimP5ZEGLQuA7kABwl6sdJcVzvBvX63kfMJmIoXOAw/2ePJ8EZhV82qUc23v9QJSLOzCpmxWeMEhfLFXyQ==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/product/0.2.0/213a7094ad14702f68df419b8aa9700010340fb0}
-    peerDependencies:
-      '@ai-whisperers/commerce': ^0.2.1
-      '@ai-whisperers/ui': ^0.4.1
-
-  '@ai-whisperers/sections@0.3.1':
-    resolution: {integrity: sha512-Be9CBtLWZV5seSPLgp3ybisf01/gbwDnrVkJ/b2grnP9wTd1d0GjqFnOp4f+v1aHwbDzq/3nO6fcZdZOQ36tSA==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/sections/0.3.1/816c3e9905ce22393d3d47223e8f668842a85d66}
-    peerDependencies:
-      lucide-react: ^0.501.0
-      react: 18.3.1
-      react-dom: 18.3.1
-
-  '@ai-whisperers/seo@0.2.3':
-    resolution: {integrity: sha512-LMsZ4RXS9vTLj3PYfUHE7u3cgIXXeCtImyUSiniF6hONOOF2ooPp0MI8Ojn+WRThJ3sF6l5RrEbq82q4bpaeuQ==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/seo/0.2.3/b89613e3f8167e8812c41d6fe1798b6ad3717203}
-    peerDependencies:
-      next: 16.2.6
-      react: 18.3.1
-      react-dom: 18.3.1
-
-  '@ai-whisperers/theme@0.3.0':
-    resolution: {integrity: sha512-5p9RLP6KXgFQgkrdgcgig6PjNEGdud1At+HrYmKzWd7LNxnQsu+8buYmcquFkbg4hdCqhMxfPnWeoeWnMGJZIA==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/theme/0.3.0/3a0238b80aba5a6ff3e42cf68e12e255419cd148}
-
-  '@ai-whisperers/ui-extras@0.1.0':
-    resolution: {integrity: sha512-D7CVNipssKSbppuPWn1aMwTUTTIOi3bIjR1FN961e4eSTWpcdwUyLGVFqK9XiNN2g0QqbQk8rBVRYpcbQ1Z02A==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/ui-extras/0.1.0/b5f47b64763ea650f8bf75843a5b018ac189fdba}
-    peerDependencies:
-      '@ai-whisperers/commerce': ^0.1.0
-      '@ai-whisperers/ui': ^0.1.0
-
-  '@ai-whisperers/ui-extras@1.0.0':
-    resolution: {integrity: sha512-kMcWIhdgOJ6TwmLN9jRQiQjsSHZHGJkrU7GZ3CS+qXJXXHUdTmI0Gr266KRy7lUGl/xhEQpdtTUT5SYt21dGNQ==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/ui-extras/1.0.0/cfb43b5a5719f9857231e45536fb3139837f2db9}
-    peerDependencies:
-      lucide-react: '>=0.400.0'
-      next: 16.2.6
-      react: 18.3.1
-
-  '@ai-whisperers/ui@0.1.0':
-    resolution: {integrity: sha512-ntDBbaTHAQ51VkVmlS47jON4prbQye+C0AHdXS48gGm0CGm2U3RhgD+4DQsPHfLtvoYjd6f1tZXVhC20CPFO+w==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/ui/0.1.0/0f82e1178e8a91caae0bcc4fc20b3198fe892508}
-
-  '@ai-whisperers/ui@0.4.1':
-    resolution: {integrity: sha512-7HdwlKwg6HKoH/xzkYbAOTquYL6kANSzRobfL0n6sHSZDPUFuImUGKaVdt4j6sutZjF7iHsztGH5+LpJ56EmIA==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/ui/0.4.1/f786b4c7b3b7e5d0982c0f3a7e147de3e838817b}
-    peerDependencies:
-      lucide-react: ^0.510.0
-      react: 18.3.1
-      react-dom: 18.3.1
-
-  '@ai-whisperers/whatsapp@0.3.0':
-    resolution: {integrity: sha512-G8H6szNu3POqFcKC/CVejn9K+JSeZzuoA0rL9ukkm8LEZqatTSkl/FH+1KQHwEQppVDlB9zDstM/xO60CKtxqA==, tarball: https://npm.pkg.github.com/download/@ai-whisperers/whatsapp/0.3.0/008cb36773963fffaf0f1ffae56b31fe6e93be74}
-    peerDependencies:
-      react: 18.3.1
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -5193,6 +5256,9 @@ packages:
 
   '@types/node@20.19.0':
     resolution: {integrity: sha512-hfrc+1tud1xcdVTABC2JiomZJEklMcXYNTVtZLAeqTVWD+qL5jkHKT+1lOtqDdGxt+mB53DTtiz673vfjU8D1Q==}
+
+  '@types/pg@8.20.0':
+    resolution: {integrity: sha512-bEPFOaMAHTEP1EzpvHTbmwR8UsFyHSKsRisLIHVMXnpNefSbGA1bD6CVy+qKjGSqmZqNqBDV2azOBo8TgkcVow==}
 
   '@types/prop-types@15.7.15':
     resolution: {integrity: sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==}
@@ -7940,14 +8006,33 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  playwright-core@1.61.1:
+    resolution: {integrity: sha512-h7Qlt6m4REp25qvIdvbDtVmD4LqVXfpRxhORv9L0jzETM05p4fuPJ3dKyuSXQxDSbXnmS79HAgi9589lGSpLkg==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   playwright@1.60.0:
     resolution: {integrity: sha512-hheHdokM8cdqCb0lcE3s+zT4t4W+vvjpGxsZlDnikarzx8tSzMebh3UiFtgqwFwnTnjYQcsyMF8ei2mCO/tpeA==}
     engines: {node: '>=18'}
     hasBin: true
 
+  playwright@1.61.1:
+    resolution: {integrity: sha512-DWnY5o3YbLWK4GovuAVwpqL+1VwGNdUGrRr++8j8PtQQzvAVZUIMjKQ90fY689sEJZJBbZVw1rXaOKSTitkzPQ==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  png-to-ico@2.1.8:
+    resolution: {integrity: sha512-Nf+IIn/cZ/DIZVdGveJp86NG5uNib1ZXMiDd/8x32HCTeKSvgpyg6D/6tUBn1QO/zybzoMK0/mc3QRgAyXdv9w==}
+    engines: {node: '>=8'}
+    hasBin: true
+
   pngjs@5.0.0:
     resolution: {integrity: sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==}
     engines: {node: '>=10.13.0'}
+
+  pngjs@6.0.0:
+    resolution: {integrity: sha512-TRzzuFRRmEoSW/p1KVAmiOgPco2Irlah+bGFCeNfJXxxYGwSw7YwAOAcd7X28K/m5bjBWKsC29KyoMfHbypayg==}
+    engines: {node: '>=12.13.0'}
 
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
@@ -8591,6 +8676,9 @@ packages:
   tailwind-merge@2.6.1:
     resolution: {integrity: sha512-Oo6tHdpZsGpkKG88HJ8RR1rg/RdnEkQEfMoEk2x1XRI3F1AxeU+ijRXpiVUF4UbLfcxxRGw6TbUINKYdWVsQTQ==}
 
+  tailwind-merge@3.5.0:
+    resolution: {integrity: sha512-I8K9wewnVDkL1NTGoqWmVEIlUcB9gFriAEkXkfCjX5ib8ezGxtR3xD7iZIxrfArjEsH7F1CHD4RFUtxefdqV/A==}
+
   tailwind-merge@3.6.0:
     resolution: {integrity: sha512-uxL7qAVQriqRQPAyK3pj66VqskWqoZ37PW94jwOTwNfq/z9oyu1V+eqrZqtR2+fCiXdYOZe/Modt8GtvqNzu+w==}
 
@@ -8956,6 +9044,9 @@ packages:
     resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
     engines: {node: '>= 8'}
 
+  web-vitals@5.3.0:
+    resolution: {integrity: sha512-q6LWsLatGYZp5VGBIOvbTj6JBV2nOmC8KvWztXBmwJcfFAzhwKwbOxhUH306XY3CcaZDUlSmSuNPBsCn0bFu+g==}
+
   webidl-conversions@7.0.0:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}
     engines: {node: '>=12'}
@@ -9182,379 +9273,6 @@ packages:
 snapshots:
 
   '@adobe/css-tools@4.5.0': {}
-
-  '@ai-whisperers/admin@0.3.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@ai-whisperers/auth': 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      clsx: 2.1.1
-      lucide-react: 0.510.0(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      recharts: 2.15.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      tailwind-merge: 3.6.0
-
-  '@ai-whisperers/admin@0.3.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@ai-whisperers/auth': 0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      clsx: 2.1.1
-      lucide-react: 1.17.0(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      recharts: 2.15.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      tailwind-merge: 3.6.0
-
-  '@ai-whisperers/analytics@0.2.1(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      clsx: 2.1.1
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      tailwind-merge: 3.6.0
-
-  '@ai-whisperers/api-helpers@0.1.0(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@supabase/supabase-js': 2.108.1
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@opentelemetry/api'
-      - '@playwright/test'
-      - babel-plugin-macros
-      - babel-plugin-react-compiler
-      - react
-      - react-dom
-      - sass
-
-  '@ai-whisperers/api-helpers@0.2.0(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@supabase/supabase-js': 2.108.1
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@opentelemetry/api'
-      - '@playwright/test'
-      - babel-plugin-macros
-      - babel-plugin-react-compiler
-      - react
-      - react-dom
-      - sass
-
-  '@ai-whisperers/auth@0.2.2(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@supabase/ssr': 0.10.3(@supabase/supabase-js@2.108.1)
-      '@supabase/supabase-js': 2.108.1
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@ai-whisperers/catalog@0.1.0(@ai-whisperers/commerce@0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui-extras@1.0.0(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)':
-    dependencies:
-      '@ai-whisperers/commerce': 0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@ai-whisperers/ui': 0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
-      '@ai-whisperers/ui-extras': 1.0.0(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@opentelemetry/api'
-      - '@playwright/test'
-      - babel-plugin-macros
-      - babel-plugin-react-compiler
-      - sass
-
-  '@ai-whisperers/catalog@2.0.0(@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui-extras@1.0.0(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)':
-    dependencies:
-      '@ai-whisperers/commerce': 0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@ai-whisperers/ui': 0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
-      '@ai-whisperers/ui-extras': 1.0.0(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@opentelemetry/api'
-      - '@playwright/test'
-      - babel-plugin-macros
-      - babel-plugin-react-compiler
-      - sass
-
-  '@ai-whisperers/checkout@0.1.0(@ai-whisperers/commerce@0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)':
-    dependencies:
-      '@ai-whisperers/commerce': 0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@ai-whisperers/ui': 0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@opentelemetry/api'
-      - '@playwright/test'
-      - babel-plugin-macros
-      - babel-plugin-react-compiler
-      - sass
-
-  '@ai-whisperers/checkout@0.2.0(@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)':
-    dependencies:
-      '@ai-whisperers/commerce': 0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@ai-whisperers/ui': 0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@opentelemetry/api'
-      - '@playwright/test'
-      - babel-plugin-macros
-      - babel-plugin-react-compiler
-      - sass
-
-  '@ai-whisperers/commerce@0.1.0':
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      lucide-react: 0.510.0(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      sonner: 2.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-
-  '@ai-whisperers/commerce@0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      lucide-react: 1.17.0(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      sonner: 2.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-
-  '@ai-whisperers/content@0.3.0': {}
-
-  '@ai-whisperers/hooks@0.2.1(react@18.3.1)':
-    dependencies:
-      react: 18.3.1
-
-  '@ai-whisperers/i18n@0.2.2(react@18.3.1)':
-    dependencies:
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      react: 18.3.1
-
-  '@ai-whisperers/loyalty@0.2.0': {}
-
-  '@ai-whisperers/payments@0.1.0': {}
-
-  '@ai-whisperers/payments@0.2.1': {}
-
-  '@ai-whisperers/product@0.1.0(@ai-whisperers/commerce@0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)':
-    dependencies:
-      '@ai-whisperers/commerce': 0.2.1(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@ai-whisperers/ui': 0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@opentelemetry/api'
-      - '@playwright/test'
-      - babel-plugin-macros
-      - babel-plugin-react-compiler
-      - sass
-
-  '@ai-whisperers/product@0.2.0(@ai-whisperers/commerce@0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(@playwright/test@1.60.0)':
-    dependencies:
-      '@ai-whisperers/commerce': 0.2.1(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@ai-whisperers/ui': 0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@opentelemetry/api'
-      - '@playwright/test'
-      - babel-plugin-macros
-      - babel-plugin-react-compiler
-      - sass
-
-  '@ai-whisperers/sections@0.3.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      lucide-react: 0.510.0(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@ai-whisperers/seo@0.2.3(next@16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@ai-whisperers/theme@0.3.0':
-    dependencies:
-      tailwindcss: 4.3.0
-
-  '@ai-whisperers/ui-extras@0.1.0(@ai-whisperers/commerce@0.1.0)(@ai-whisperers/ui@0.1.0)(@playwright/test@1.60.0)':
-    dependencies:
-      '@ai-whisperers/commerce': 0.1.0
-      '@ai-whisperers/ui': 0.1.0
-      framer-motion: 11.18.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@emotion/is-prop-valid'
-      - '@opentelemetry/api'
-      - '@playwright/test'
-      - babel-plugin-macros
-      - babel-plugin-react-compiler
-      - sass
-
-  '@ai-whisperers/ui-extras@1.0.0(lucide-react@0.460.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      lucide-react: 0.460.0(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-
-  '@ai-whisperers/ui-extras@1.0.0(lucide-react@0.510.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      lucide-react: 0.510.0(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-
-  '@ai-whisperers/ui-extras@1.0.0(lucide-react@1.17.0(react@18.3.1))(next@16.2.6(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      lucide-react: 1.17.0(react@18.3.1)
-      next: 16.2.6(@babel/core@7.29.7)(@playwright/test@1.60.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-
-  '@ai-whisperers/ui@0.1.0':
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@ai-whisperers/ui@0.4.1(lucide-react@0.460.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)':
-    dependencies:
-      '@radix-ui/react-accordion': 1.2.13(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-checkbox': 1.3.4(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-dialog': 1.1.16(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-dropdown-menu': 2.1.17(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-label': 2.1.9(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-popover': 1.1.16(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-scroll-area': 1.2.11(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-select': 2.3.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-slot': 1.2.5(@types/react@18.3.12)(react@18.3.1)
-      '@radix-ui/react-tabs': 1.1.14(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-tooltip': 1.2.9(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      class-variance-authority: 0.7.1
-      clsx: 2.1.1
-      lucide-react: 0.460.0(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      recharts: 3.8.1(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)
-      tailwind-merge: 3.6.0
-    transitivePeerDependencies:
-      - react-is
-      - redux
-
-  '@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)':
-    dependencies:
-      '@radix-ui/react-accordion': 1.2.13(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-checkbox': 1.3.4(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-dialog': 1.1.16(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-dropdown-menu': 2.1.17(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-label': 2.1.9(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-popover': 1.1.16(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-scroll-area': 1.2.11(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-select': 2.3.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-slot': 1.2.5(@types/react@18.3.12)(react@18.3.1)
-      '@radix-ui/react-tabs': 1.1.14(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-tooltip': 1.2.9(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      class-variance-authority: 0.7.1
-      clsx: 2.1.1
-      lucide-react: 0.510.0(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      recharts: 3.8.1(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)
-      tailwind-merge: 3.6.0
-    transitivePeerDependencies:
-      - react-is
-      - redux
-
-  '@ai-whisperers/ui@0.4.1(lucide-react@0.510.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)':
-    dependencies:
-      '@radix-ui/react-accordion': 1.2.13(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-checkbox': 1.3.4(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-dialog': 1.1.16(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-dropdown-menu': 2.1.17(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-label': 2.1.9(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-popover': 1.1.16(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-scroll-area': 1.2.11(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-select': 2.3.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-slot': 1.2.5(@types/react@18.3.12)(react@18.3.1)
-      '@radix-ui/react-tabs': 1.1.14(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-tooltip': 1.2.9(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      class-variance-authority: 0.7.1
-      clsx: 2.1.1
-      lucide-react: 0.510.0(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      recharts: 3.8.1(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)
-      tailwind-merge: 3.6.0
-    transitivePeerDependencies:
-      - react-is
-      - redux
-
-  '@ai-whisperers/ui@0.4.1(lucide-react@1.17.0(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)':
-    dependencies:
-      '@radix-ui/react-accordion': 1.2.13(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-checkbox': 1.3.4(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-dialog': 1.1.16(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-dropdown-menu': 2.1.17(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-label': 2.1.9(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-popover': 1.1.16(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-scroll-area': 1.2.11(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-select': 2.3.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-slot': 1.2.5(@types/react@18.3.12)(react@18.3.1)
-      '@radix-ui/react-tabs': 1.1.14(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-tooltip': 1.2.9(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      class-variance-authority: 0.7.1
-      clsx: 2.1.1
-      lucide-react: 1.17.0(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      recharts: 3.8.1(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(redux@5.0.1)
-      tailwind-merge: 3.6.0
-    transitivePeerDependencies:
-      - react-is
-      - redux
-
-  '@ai-whisperers/whatsapp@0.3.0(react@18.3.1)':
-    dependencies:
-      '@types/react': 18.3.12
-      '@types/react-dom': 18.3.1
-      react: 18.3.1
 
   '@alloc/quick-lru@5.2.0': {}
 
@@ -11292,6 +11010,12 @@ snapshots:
   '@types/node@20.19.0':
     dependencies:
       undici-types: 6.21.0
+
+  '@types/pg@8.20.0':
+    dependencies:
+      '@types/node': 20.19.0
+      pg-protocol: 1.14.0
+      pg-types: 2.2.0
 
   '@types/prop-types@15.7.15': {}
 
@@ -14528,13 +14252,29 @@ snapshots:
 
   playwright-core@1.60.0: {}
 
+  playwright-core@1.61.1: {}
+
   playwright@1.60.0:
     dependencies:
       playwright-core: 1.60.0
     optionalDependencies:
       fsevents: 2.3.2
 
+  playwright@1.61.1:
+    dependencies:
+      playwright-core: 1.61.1
+    optionalDependencies:
+      fsevents: 2.3.2
+
+  png-to-ico@2.1.8:
+    dependencies:
+      '@types/node': 20.19.0
+      minimist: 1.2.8
+      pngjs: 6.0.0
+
   pngjs@5.0.0: {}
+
+  pngjs@6.0.0: {}
 
   possible-typed-array-names@1.1.0: {}
 
@@ -15045,7 +14785,7 @@ snapshots:
       prompts: 2.4.2
       recast: 0.23.11
       stringify-object: 5.0.0
-      tailwind-merge: 3.6.0
+      tailwind-merge: 3.5.0
       ts-morph: 26.0.0
       tsconfig-paths: 4.2.0
       validate-npm-package-name: 7.0.2
@@ -15301,6 +15041,8 @@ snapshots:
   symbol-tree@3.2.4: {}
 
   tailwind-merge@2.6.1: {}
+
+  tailwind-merge@3.5.0: {}
 
   tailwind-merge@3.6.0: {}
 
@@ -15727,6 +15469,8 @@ snapshots:
       xml-name-validator: 5.0.0
 
   web-streams-polyfill@3.3.3: {}
+
+  web-vitals@5.3.0: {}
 
   webidl-conversions@7.0.0: {}
 
