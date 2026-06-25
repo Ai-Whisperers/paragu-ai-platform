@@ -22,6 +22,10 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-25: fix(nexa): commit missing program and team images (by Erebus)
+
+- 2026-06-25: chore: trigger CI (by Erebus)
+
 - 2026-06-25: chore: trigger CI (by Erebus)
 
 - 2026-06-25: chore: trigger CI (by Erebus)
@@ -209,3 +213,6 @@ changes.
 
 ## 2026-06-25 18:45
 - GHCR lowercase fix
+
+## 2026-06-25 17:35
+- Trigger CI for deploy fix verification
