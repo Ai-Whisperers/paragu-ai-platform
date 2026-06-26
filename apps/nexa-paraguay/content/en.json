@@ -171,8 +171,8 @@
       "eyebrow": "HOW IT WORKS",
       "title": "A clear process, step by step",
       "totalDuration": "8–12 weeks total",
-      "ctaLabel": "Start my journey",
-      "ctaHref": "/intake",
+      "ctaLabel": "Start my process",
+      "ctaHref": "/contacto",
       "steps": [
         {
           "number": 1,
@@ -186,14 +186,14 @@
           "title": "Parallel processing",
           "description": "While you gather your documents at home, we begin work on the ground in Paraguay. We coordinate the legal preparation that would otherwise take months.",
           "image": "@src:process.documents",
-          "duration": "Weeks 2–5"
+          "duration": "Weeks 1-5"
         },
         {
           "number": 3,
-          "title": "Your day in Paraguay",
+          "title": "Week 6",
           "description": "Travel to Paraguay with your documents ready. We accompany you to the in-person appointments and ensure every signature, copy, and seal is in place.",
           "image": "@src:process.arrival",
-          "duration": "Week 6"
+          "duration": "You fly to Paraguay with your documents ready. We accompany you to the in-person appointments — all done in a single day."
         },
         {
           "number": 4,
@@ -207,7 +207,7 @@
           "title": "Settling in and lifestyle",
           "description": "With your legal and financial base in place, we help you settle in. From finding a home to setting up utilities to discovering your favorite bakery in Villa Morra.",
           "image": "@src:process.completion",
-          "duration": "Weeks 11–12"
+          "duration": "Weeks 10-12"
         }
       ]
     },
@@ -318,12 +318,28 @@
       "ctaHref": "/en/agenda"
     },
     "feedback": {
-      "eyebrow": "YOUR OPINION",
-      "title": "Share your experience",
-      "subtitle": "Considering relocating to Paraguay? Tell us what you'd like to know.",
-      "placeholder": "Write your comment or question...",
-      "buttonText": "Send",
-      "successMessage": "Thanks for your message! We'll be in touch soon."
+      "eyebrow": "What they say",
+      "title": "Real cases, real words",
+      "subtitle": "What our clients share after settling in Paraguay.",
+      "testimonials": [
+        {
+          "name": "M. — Alemania",
+          "role": "Inversor en agricultura",
+          "quote": "En 10 semanas tenía residencia, sociedad y cuenta bancaria. Un solo interlocutor."
+        },
+        {
+          "name": "J. — Países Bajos",
+          "role": "Fundador SaaS",
+          "quote": "El tour inmobiliario fue clave. Encontré la propiedad correcta sin perder meses."
+        },
+        {
+          "name": "S. — España",
+          "role": "Consultor independiente",
+          "quote": "Transparencia total de costos. Cero sorpresas."
+        }
+      ],
+      "ctaText": "See all testimonials",
+      "ctaHref": "/testimonios"
     },
     "programs": {
       "eyebrow": "PROGRAMS",
@@ -450,88 +466,71 @@
       "subheadline": "Economic growth, tax stability, quality of life and a clear immigration process. Concrete data, not promises."
     },
     "pillars": {
-      "eyebrow": "WHY PARAGUAY",
-      "title": "A real opportunity for the European investor",
-      "honestNote": "Paraguay's honest note",
+      "eyebrow": "Why Paraguay",
+      "title": "Why Paraguay is a real option",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Economic environment",
-          "description": "Sustained growth, controlled inflation, 10% corporate tax rate, territorial tax system that protects income earned abroad.",
-          "image": "@src:whyCountry.economic",
-          "bullets": [
-            "Territorial tax system",
-            "Open economy",
-            "10% corporate tax"
+          "title": "Stable, growing economy",
+          "description": "Paraguay has grown for 15 years at rates the old continent no longer sees. 2024 GDP +4.2%, 2025 projection +6.0%. Inflation under control. Open economy with trade agreements with Brazil, Argentina, Chile, EU, EFTA, Mercosur.",
+          "items": [
+            "GDP 2024: +4.2%",
+            "GDP 2025 (proj.): +6.0%",
+            "Inflation under 5%"
           ]
         },
         {
-          "icon": "Briefcase",
-          "title": "Investment opportunities",
-          "description": "No exchange controls. FDI open to all sectors. Properties in premium areas still below regional averages. Real estate in expansion.",
-          "image": "@src:whyCountry.investment",
-          "bullets": [
-            "Real estate in expansion",
-            "FDI without restrictions",
-            "Diversified economy"
+          "icon": "Landmark",
+          "title": "Territorial tax system",
+          "description": "Income generated outside Paraguay does NOT pay local tax. IRE 10% flat since 2020. No currency controls. One of the lowest tax burdens in the region.",
+          "items": [
+            "IRE 10% flat since 2020",
+            "Foreign income exempt",
+            "Treaties with Spain, Chile, Taiwan"
+          ]
+        },
+        {
+          "icon": "Home",
+          "title": "Real estate in expansion",
+          "description": "Properties in premium Asunción zones +30% in 5 years. Active real estate market for residents and foreigners. Rental income in USD with stable contracts.",
+          "items": [
+            "Premium Asunción +30% / 5y",
+            "Rental income in USD",
+            "No restrictions for residents"
           ]
         },
         {
           "icon": "Sun",
-          "title": "Quality of life",
-          "description": "30–50% lower cost of living than Berlin or Madrid. USD 4,000/month covers a family, school, and groceries. Sub-tropical climate, with a vibrant international community.",
-          "image": "@src:whyCountry.lifestyle",
-          "bullets": [
-            "Lower cost of living",
-            "International community",
-            "Sub-tropical climate"
+          "title": "Subtropical quality of life",
+          "description": "Cost of living 30-50% lower than in Europe. USD 4,000/month covers family, private school and domestic help. Asunción combines Latin hospitality with modern infrastructure.",
+          "items": [
+            "USD 4,000/mo family of four",
+            "Strong hospitality",
+            "Warm climate year-round"
           ]
         },
         {
-          "icon": "Shield",
-          "title": "Fiscal stability",
-          "description": "IRE 10% since 2020 (Law 6380). Stable territorial system across political cycles. Double taxation treaties with key economies. Tax rates are visible and predictable.",
-          "image": "@src:whyCountry.tax",
-          "bullets": [
-            "10% corporate tax",
-            "Stable territorial system",
-            "Double taxation treaties"
+          "icon": "Sprout",
+          "title": "Agroindustrial powerhouse",
+          "description": "4th largest soybean exporter in the world. Major beef exporter. ~100,000 hectares transacted per year. Real opportunities for European investors with agricultural experience.",
+          "items": [
+            "4th world soybean exporter",
+            "~100,000 ha/year",
+            "Integrated value chain"
           ]
         },
         {
-          "icon": "BarChart",
-          "title": "Economy in growth",
-          "description": "Paraguay's GDP grew +4.2% in 2024, with a BCP projection of +6.0% for 2025. Construction grew +5.3% (Forbes Paraguay). One of the fastest-growing economies in the region.",
-          "image": "@src:whyCountry.economy",
-          "bullets": [
-            "Paraguay GDP 2024: +4.2%",
-            "Paraguay GDP 2025: +6.0% (BCP projection)",
-            "Construction 2025: +5.3%"
-          ]
-        },
-        {
-          "icon": "Wheat",
-          "title": "Agro-industrial powerhouse",
-          "description": "4th largest soybean exporter in the world. Major beef exporter. ~100,000 hectares transacted per year in agricultural land. The country's economic backbone is real, productive, and growing.",
-          "image": "@src:whyCountry.agro",
-          "bullets": [
-            "4th soybean exporter globally",
-            "Major beef exporter",
-            "~100,000 ha transacted/year"
-          ]
-        },
-        {
-          "icon": "Globe",
-          "title": "Bilingual Spanish + Guaraní culture",
-          "description": "Bilingual Spanish + Guaraní culture. Crime rates are low compared to other regional capitals — but as in any city, we recommend normal precautions. Paraguay is a country of warm, welcoming people.",
-          "image": "@src:whyCountry.culture",
-          "bullets": [
-            "Bilingual country",
-            "Welcoming culture",
-            "Low crime rates"
+          "icon": "Users",
+          "title": "Active European community",
+          "description": "Mennonite communities with German culture in the Chaco. Brazilians, Argentines, Europeans. Spanish is learned quickly. Our clients connect with an active expat community.",
+          "items": [
+            "German-speaking Mennonites in Chaco",
+            "Brazilian/Argentine community",
+            "Active expat scene in Asunción"
           ]
         }
-      ]
+      ],
+      "subtitle": "Six concrete reasons, with data. Not promises."
     },
     "trust": {
       "eyebrow": "WHY NEXA",

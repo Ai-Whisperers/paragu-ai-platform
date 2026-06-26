@@ -168,7 +168,7 @@
       "ctaHref": "/es/proceso"
     },
     "process": {
-      "ctaHref": "/nl/contacto",
+      "ctaHref": "/contacto",
       "ctaLabel": "Iniciá mi proceso",
       "eyebrow": "Cómo funciona",
       "steps": [
@@ -179,25 +179,28 @@
           "icon": "ClipboardCheck",
           "image": {
             "$img": "process.consultation"
-          }
+          },
+          "duration": "Semana 1"
         },
         {
           "number": 2,
-          "title": "Procesamiento Paralelo",
+          "title": "Tramitación paralela",
           "description": "Mientras preparás tus documentos en casa, nosotros comenzamos el trabajo en el terreno. Preparamos todas las gestiones locales.",
           "icon": "Layers",
           "image": {
             "$img": "process.documents"
-          }
+          },
+          "duration": "Semanas 1-5"
         },
         {
           "number": 3,
           "title": "Tu Día en Paraguay",
-          "description": "Viajás a Paraguay con tus documentos listos. Te acompañamos en las citas presenciales — la mayoría pueden resolverse en un día, pero a veces el proceso toma más. Te confirmamos los tiempos con anticipación.",
+          "description": "Viajás a Paraguay con tus documentos listos. Te acompañamos en las citas presenciales — todas se resuelven en una sola jornada.",
           "icon": "CalendarCheck",
           "image": {
             "$img": "process.arrival"
-          }
+          },
+          "duration": "Semana 6"
         },
         {
           "number": 4,
@@ -206,7 +209,8 @@
           "icon": "Building",
           "image": {
             "$img": "process.banking"
-          }
+          },
+          "duration": "Semanas 7-9"
         },
         {
           "number": 5,
@@ -215,7 +219,8 @@
           "icon": "Home",
           "image": {
             "$img": "process.completion"
-          }
+          },
+          "duration": "Semanas 10-12"
         }
       ],
       "title": "Un proceso claro, paso a paso",
@@ -328,13 +333,28 @@
       "ctaHref": "/es/agenda"
     },
     "feedback": {
-      "eyebrow": "TU OPINIÓN",
-      "title": "Compartí tu experiencia",
-      "subtitle": "¿Estás considerando mudarte a Paraguay? Contanos qué te gustaría saber.",
-      "placeholder": "Escribí tu comentario o pregunta...",
-      "buttonText": "Enviar",
-      "ctaText": "Ver comentarios →",
-      "ctaHref": "/feedback"
+      "eyebrow": "Lo que dicen",
+      "title": "Casos reales, palabras reales",
+      "subtitle": "Lo que comparten nuestros clientes después de instalarse en Paraguay.",
+      "testimonials": [
+        {
+          "name": "M. — Alemania",
+          "role": "Inversor en agricultura",
+          "quote": "En 10 semanas tenía residencia, sociedad y cuenta bancaria. Un solo interlocutor."
+        },
+        {
+          "name": "J. — Países Bajos",
+          "role": "Fundador SaaS",
+          "quote": "El tour inmobiliario fue clave. Encontré la propiedad correcta sin perder meses."
+        },
+        {
+          "name": "S. — España",
+          "role": "Consultor independiente",
+          "quote": "Transparencia total de costos. Cero sorpresas."
+        }
+      ],
+      "ctaText": "Ver todos los testimonios",
+      "ctaHref": "/testimonios"
     },
     "programs": {
       "eyebrow": {
@@ -591,87 +611,70 @@
     },
     "pillars": {
       "eyebrow": "Por qué Paraguay",
-      "title": "Una oportunidad real para el inversor europeo",
-      "honestNote": "La oportunidad es real, pero el proceso no es sencillo sin guía adecuada. Existimos para resolver exactamente eso.",
+      "title": "Por qué Paraguay es una opción real",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Entorno económico",
-          "description": "IRE 10%. Sistema territorial — la renta extranjera no tributa localmente. Una de las cargas impositivas más bajas de la región.",
-          "bullets": [
-            "Impuesto corporativo 10%",
-            "Sistema territorial",
-            "Economía abierta"
-          ],
-          "imageUrl": "@src:whyParaguay.economic"
+          "title": "Economía estable y en crecimiento",
+          "description": "Paraguay lleva 15 años creciendo a tasas que el viejo continente ya no ve. PIB 2024 +4,2%, proyección 2025 +6,0%. Inflación controlada bajo 5%. Economía abierta con tratados comerciales con Brasil, Argentina, Chile, UE, EFTA, Mercosur.",
+          "items": [
+            "PIB Paraguay 2024: +4,2%",
+            "PIB Paraguay 2025 (proy.): +6,0%",
+            "Inflación controlada bajo 5%"
+          ]
         },
         {
           "icon": "Landmark",
-          "title": "Estabilidad fiscal",
-          "description": "IRE 10% desde 2020 (Ley 6380). Sistema territorial estable entre ciclos políticos. Tratados de doble imposición con España, Chile, Taiwán.",
-          "bullets": [
-            "IRE 10% desde 2020",
-            "Sistema territorial",
-            "Tratados de doble imposición"
-          ],
-          "imageUrl": "@src:whyParaguay.tax"
+          "title": "Sistema fiscal territorial",
+          "description": "Renta generada fuera de Paraguay NO tributa localmente. IRE 10% flat desde 2020 (Ley 6380). Sin control de cambios. Una de las cargas impositivas más bajas de la región.",
+          "items": [
+            "IRE 10% flat desde 2020",
+            "Renta extranjera exenta",
+            "Tratados con España, Chile, Taiwán"
+          ]
         },
         {
-          "icon": "LineChart",
-          "title": "Economía en crecimiento",
-          "description": "Crecimiento sostenido del PBI en los últimos años, con el sector de la construcción liderando la expansión.",
-          "bullets": [
-            "PBI Paraguay 2024: +4,2%",
-            "PBI Paraguay 2025: +6,0% (proyección BCP)",
-            "Construcción 2025: +5,3% (Forbes Paraguay)"
-          ],
-          "imageUrl": "@src:whyParaguay.growth"
+          "icon": "Home",
+          "title": "Bienes raíces en expansión",
+          "description": "Propiedades en zonas premium de Asunción +30% en 5 años. Mercado inmobiliario activo para residentes y extranjeros. Renta en USD con contratos estables.",
+          "items": [
+            "Asunción zona premium +30% / 5 años",
+            "Renta en USD",
+            "Sin restricciones para residentes"
+          ]
         },
         {
-          "icon": "Building2",
-          "title": "Oportunidades de inversión",
-          "description": "Sin control de cambios. IED abierta a todos los sectores. Propiedades en zonas premium de Asunción +30% en 5 años.",
-          "bullets": [
-            "Inmobiliario en expansión",
-            "Agroindustria líder",
-            "Ecosistema emprendedor joven"
-          ],
-          "imageUrl": "@src:whyParaguay.investment"
+          "icon": "Sun",
+          "title": "Calidad de vida subtropical",
+          "description": "Costo de vida 30-50% menor que en Europa. USD 4.000/mes cubre familia, escuela privada y ayuda doméstica. Asunción combina hospitalidad latinoamericana con infraestructura moderna.",
+          "items": [
+            "USD 4.000/mes cubre familia tipo",
+            "Hospitalidad arraigada",
+            "Clima cálido todo el año"
+          ]
         },
         {
-          "icon": "Heart",
-          "title": "Calidad de vida",
-          "description": "30–50% menos costo de vida que Berlín o Madrid. USD 4.000/mes cubre familia, escuela privada y ayuda doméstica.",
-          "bullets": [
-            "Costo de vida accesible",
-            "Asistencia en español, inglés y neerlandés",
-            "Estilo de vida tranquilo"
-          ],
-          "imageUrl": "@src:whyParaguay.lifestyle"
-        },
-        {
-          "icon": "Wheat",
+          "icon": "Sprout",
           "title": "Potencia agroindustrial",
-          "description": "4.º exportador mundial de soja. Gran exportador de carne. ~100.000 hectáreas transadas por año.",
-          "bullets": [
-            "4.º exportador de soja",
+          "description": "4.º exportador mundial de soja. Gran exportador de carne. ~100.000 hectáreas transadas por año. Oportunidades reales para inversores europeos con experiencia agrícola.",
+          "items": [
+            "4.º exportador mundial de soja",
             "~100.000 ha transadas/año",
             "Cadena de valor integrada"
-          ],
-          "imageUrl": "@src:whyParaguay.agribusiness"
+          ]
         },
         {
-          "icon": "Coffee",
-          "title": "Cultura y calidad de vida",
-          "description": "Asunción combina la hospitalidad latinoamericana con una comunidad menonita de habla alemana. Costo de vida bajo, criminalidad controlada, ambiente cálido.",
-          "bullets": [
-            "Tasa de criminalidad baja comparada con capitales regionales",
-            "Hospitalidad con extranjeros muy arraigada",
-            "Comunidades menonitas con cultura alemana"
-          ],
-          "imageUrl": "@src:whyParaguay.culture"
+          "icon": "Users",
+          "title": "Comunidad europea activa",
+          "description": "Comunidades menonitas con cultura alemana en Chaco. Brasileños, argentinos, europeos. El español se aprende rápido. Nuestros clientes se conectan con una comunidad activa de expatriados.",
+          "items": [
+            "Menonitas de habla alemana en Chaco",
+            "Comunidad brasileña y argentina",
+            "Expat activa en Asunción"
+          ]
         }
-      ]
+      ],
+      "subtitle": "Seis razones concretas, con datos. No promesas."
     },
     "trust": {
       "eyebrow": "Por qué Nexa Paraguay",

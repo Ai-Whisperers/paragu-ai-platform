@@ -1858,8 +1858,8 @@
       "eyebrow": "SO FUNKTIONIERT ES",
       "title": "Ein klarer Prozess, Schritt für Schritt",
       "totalDuration": "8–12 Wochen gesamt",
-      "ctaLabel": "Meine Reise starten",
-      "ctaHref": "/intake",
+      "ctaLabel": "Meinen Prozess starten",
+      "ctaHref": "/contacto",
       "steps": [
         {
           "number": 1,
@@ -1873,14 +1873,14 @@
           "title": "Parallele Bearbeitung",
           "description": "Während Sie Ihre Dokumente zu Hause sammeln, beginnen wir die Arbeit vor Ort in Paraguay. Wir koordinieren die rechtliche Vorbereitung, die sonst Monate dauern würde.",
           "image": "@src:process.documents",
-          "duration": "Wochen 2–5"
+          "duration": "Wochen 1-5"
         },
         {
           "number": 3,
-          "title": "Ihr Tag in Paraguay",
+          "title": "Woche 6",
           "description": "Reisen Sie mit fertigen Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen und stellen sicher, dass jede Unterschrift, Kopie und Siegel an ihrem Platz ist.",
           "image": "@src:process.arrival",
-          "duration": "Woche 6"
+          "duration": "Sie fliegen mit Ihren Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen — alles an einem Tag."
         },
         {
           "number": 4,
@@ -2005,12 +2005,28 @@
       "ctaHref": "/de/agenda"
     },
     "feedback": {
-      "eyebrow": "IHRE MEINUNG",
-      "title": "Teilen Sie Ihre Erfahrung",
-      "subtitle": "Erwägen Sie einen Umzug nach Paraguay? Sagen Sie uns, was Sie wissen möchten.",
-      "placeholder": "Schreiben Sie Ihren Kommentar oder Ihre Frage...",
-      "buttonText": "Senden",
-      "successMessage": "Vielen Dank für Ihre Nachricht! Wir melden uns bald bei Ihnen."
+      "eyebrow": "Was sie sagen",
+      "title": "Echte Fälle, echte Worte",
+      "subtitle": "Was unsere Kunden teilen, nachdem sie sich in Paraguay niedergelassen haben.",
+      "testimonials": [
+        {
+          "name": "M. — Alemania",
+          "role": "Inversor en agricultura",
+          "quote": "En 10 semanas tenía residencia, sociedad y cuenta bancaria. Un solo interlocutor."
+        },
+        {
+          "name": "J. — Países Bajos",
+          "role": "Fundador SaaS",
+          "quote": "El tour inmobiliario fue clave. Encontré la propiedad correcta sin perder meses."
+        },
+        {
+          "name": "S. — España",
+          "role": "Consultor independiente",
+          "quote": "Transparencia total de costos. Cero sorpresas."
+        }
+      ],
+      "ctaText": "Alle Erfahrungsberichte ansehen",
+      "ctaHref": "/testimonios"
     },
     "programs": {
       "eyebrow": "PROGRAMME",
@@ -2247,88 +2263,71 @@
       "subheadline": "Wirtschaftswachstum, steuerliche Stabilität, Lebensqualität und ein klarer Einwanderungsprozess. Konkrete Daten, keine Versprechen."
     },
     "pillars": {
-      "eyebrow": "WARUM PARAGUAY",
-      "title": "Eine echte Chance für europäische Investoren",
-      "honestNote": "Paraguays ehrliche Notiz",
+      "eyebrow": "Warum Paraguay",
+      "title": "Warum Paraguay eine echte Option ist",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Wirtschaftliches Umfeld",
-          "description": "Stetiges Wachstum, kontrollierte Inflation, 10% Unternehmenssteuersatz, territoriales Steuersystem, das Einkünfte aus dem Ausland schützt.",
-          "image": "@src:whyCountry.economic",
-          "bullets": [
-            "Territoriales Steuersystem",
-            "Offene Wirtschaft",
-            "10% Unternehmenssteuer"
+          "title": "Stabile, wachsende Wirtschaft",
+          "description": "Paraguay wächst seit 15 Jahren mit Raten, die der alte Kontinent nicht mehr sieht. BIP 2024 +4,2%, Projektion 2025 +6,0%. Inflation unter Kontrolle. Offene Wirtschaft mit Handelsabkommen mit Brasilien, Argentinien, Chile, EU, EFTA, Mercosur.",
+          "items": [
+            "BIP 2024: +4,2%",
+            "BIP 2025 (Prog.): +6,0%",
+            "Inflation unter 5%"
           ]
         },
         {
-          "icon": "Briefcase",
-          "title": "Investitionsmöglichkeiten",
-          "description": "Keine Devisenkontrollen. FDI offen für alle Sektoren. Immobilien in Premium-Lagen noch unter regionalen Durchschnitten. Immobilienmarkt im Wachstum.",
-          "image": "@src:whyCountry.investment",
-          "bullets": [
-            "Immobilienmarkt im Wachstum",
-            "FDI ohne Einschränkungen",
-            "Diversifizierte Wirtschaft"
+          "icon": "Landmark",
+          "title": "Territoriales Steuersystem",
+          "description": "Einkommen, das außerhalb Paraguays erzielt wird, zahlt KEINE lokale Steuer. IRE 10% fest seit 2020. Keine Devisenkontrollen. Eine der niedrigsten Steuerlasten der Region.",
+          "items": [
+            "IRE 10% fest seit 2020",
+            "Ausländisches Einkommen befreit",
+            "Abkommen mit Spanien, Chile, Taiwan"
+          ]
+        },
+        {
+          "icon": "Home",
+          "title": "Immobilien im Aufschwung",
+          "description": "Immobilien in Asunción-Premium-Zonen +30% in 5 Jahren. Aktiver Immobilienmarkt für Einwohner und Ausländer. Mieteinnahmen in USD mit stabilen Verträgen.",
+          "items": [
+            "Premium Asunción +30% / 5J",
+            "Mieteinnahmen in USD",
+            "Keine Beschränkungen für Einwohner"
           ]
         },
         {
           "icon": "Sun",
-          "title": "Lebensqualität",
-          "description": "30–50% niedrigere Lebenshaltungskosten als Berlin oder Madrid. USD 4.000/Monat decken eine Familie, Schule und Lebensmittel. Subtropisches Klima, mit einer lebendigen internationalen Gemeinschaft.",
-          "image": "@src:whyCountry.lifestyle",
-          "bullets": [
-            "Niedrigere Lebenshaltungskosten",
-            "Internationale Gemeinschaft",
-            "Subtropisches Klima"
+          "title": "Subtropische Lebensqualität",
+          "description": "Lebenshaltungskosten 30-50% niedriger als in Europa. USD 4.000/Monat deckt Familie, Privatschule und Haushaltshilfe. Asunción verbindet lateinamerikanische Gastfreundschaft mit moderner Infrastruktur.",
+          "items": [
+            "USD 4.000/Monat Familie",
+            "Starke Gastfreundschaft",
+            "Warmes Klima das ganze Jahr"
           ]
         },
         {
-          "icon": "Shield",
-          "title": "Steuerliche Stabilität",
-          "description": "IRE 10% seit 2020 (Gesetz 6380). Stables territoriales System über politische Zyklen hinweg. Doppelbesteuerungsabkommen mit Schlüsselvolkswirtschaften. Steuersätze sind sichtbar und vorhersehbar.",
-          "image": "@src:whyCountry.tax",
-          "bullets": [
-            "10% Unternehmenssteuer",
-            "Stabiles territoriales System",
-            "Doppelbesteuerungsabkommen"
-          ]
-        },
-        {
-          "icon": "BarChart",
-          "title": "Wachstumswirtschaft",
-          "description": "Paraguays BIP wuchs 2024 um +4,2%, mit einer BCP-Projektion von +6,0% für 2025. Das Baugewerbe wuchs um +5,3% (Forbes Paraguay). Eine der am schnellsten wachsenden Volkswirtschaften der Region.",
-          "image": "@src:whyCountry.economy",
-          "bullets": [
-            "Paraguay BIP 2024: +4,2%",
-            "Paraguay BIP 2025: +6,0% (BCP-Projektion)",
-            "Baugewerbe 2025: +5,3%"
-          ]
-        },
-        {
-          "icon": "Wheat",
-          "title": "Agroindustrielle Kraft",
-          "description": "4. größter Sojaexporteur der Welt. Großer Rindfleischexporteur. ~100.000 Hektar werden jährlich mit Agrarland gehandelt. Das wirtschaftliche Rückgrat des Landes ist real, produktiv und wachsend.",
-          "image": "@src:whyCountry.agro",
-          "bullets": [
+          "icon": "Sprout",
+          "title": "Agroindustrielle Großmacht",
+          "description": "4. größter Sojaexporteur der Welt. Großer Fleischexporteur. ~100.000 Hektar pro Jahr gehandelt. Echte Chancen für europäische Investoren mit landwirtschaftlicher Erfahrung.",
+          "items": [
             "4. Sojaexporteur weltweit",
-            "Großer Rindfleischexporteur",
-            "~100.000 ha gehandelt/Jahr"
+            "~100.000 ha/Jahr",
+            "Integrierte Wertschöpfungskette"
           ]
         },
         {
-          "icon": "Globe",
-          "title": "Zweisprachige spanische + guaraní Kultur",
-          "description": "Zweisprachige spanische + guaraní Kultur. Die Kriminalitätsraten sind im Vergleich zu anderen regionalen Hauptstädten niedrig — aber wie in jeder Stadt empfehlen wir normale Vorsichtsmaßnahmen. Paraguay ist ein Land mit warmen, einladenden Menschen.",
-          "image": "@src:whyCountry.culture",
-          "bullets": [
-            "Zweisprachiges Land",
-            "Einladende Kultur",
-            "Niedrige Kriminalitätsraten"
+          "icon": "Users",
+          "title": "Aktive europäische Gemeinschaft",
+          "description": "Mennonitengemeinschaften mit deutscher Kultur im Chaco. Brasilianer, Argentinier, Europäer. Spanisch ist schnell gelernt. Unsere Kunden vernetzen sich mit einer aktiven Expat-Gemeinschaft.",
+          "items": [
+            "Deutschsprachige Mennoniten im Chaco",
+            "Brasilianische/argentinische Gemeinschaft",
+            "Aktive Expat-Szene in Asunción"
           ]
         }
-      ]
+      ],
+      "subtitle": "Sechs konkrete Gründe, mit Daten. Keine Versprechen."
     },
     "trust": {
       "eyebrow": "WARUM NEXA",

@@ -1470,8 +1470,8 @@
       "eyebrow": "HOE HET WERKT",
       "title": "Een helder proces, stap voor stap",
       "totalDuration": "8–12 weken totaal",
-      "ctaLabel": "Start mijn traject",
-      "ctaHref": "/intake",
+      "ctaLabel": "Start mijn proces",
+      "ctaHref": "/contacto",
       "steps": [
         {
           "number": 1,
@@ -1485,14 +1485,14 @@
           "title": "Parallelle verwerking",
           "description": "Terwijl u uw documenten thuis verzamelt, beginnen wij het werk ter plaatse in Paraguay. Wij coördineren de juridische voorbereiding die anders maanden zou duren.",
           "image": "@src:process.documents",
-          "duration": "Weken 2–5"
+          "duration": "Weken 1-5"
         },
         {
           "number": 3,
-          "title": "Uw dag in Paraguay",
+          "title": "Week 6",
           "description": "Reis naar Paraguay met uw documenten klaar. Wij begeleiden u naar de persoonlijke afspraken en zorgen dat elke handtekening, kopie en zegel op zijn plaats is.",
           "image": "@src:process.arrival",
-          "duration": "Week 6"
+          "duration": "U vliegt naar Paraguay met uw documenten klaar. Wij begeleiden u bij de persoonlijke afspraken — alles op één dag."
         },
         {
           "number": 4,
@@ -1506,7 +1506,7 @@
           "title": "Installatie en levensstijl",
           "description": "Met uw juridische en financiële basis op orde helpen wij u bij de installatie. Van het vinden van een woning tot het aansluiten van nutsvoorzieningen tot het ontdekken van uw favoriete bakkerij in Villa Morra.",
           "image": "@src:process.completion",
-          "duration": "Weken 11–12"
+          "duration": "Weken 10-12"
         }
       ]
     },
@@ -1617,12 +1617,28 @@
       "ctaHref": "/nl/agenda"
     },
     "feedback": {
-      "eyebrow": "UW MENING",
-      "title": "Deel uw ervaring",
-      "subtitle": "Overweegt u een verhuizing naar Paraguay? Vertel ons wat u graag zou willen weten.",
-      "placeholder": "Schrijf uw opmerking of vraag...",
-      "buttonText": "Versturen",
-      "successMessage": "Bedankt voor uw bericht! We nemen snel contact op."
+      "eyebrow": "Wat ze zeggen",
+      "title": "Echte gevallen, echte woorden",
+      "subtitle": "Wat onze klanten delen nadat ze zich in Paraguay hebben gevestigd.",
+      "testimonials": [
+        {
+          "name": "M. — Duitsland",
+          "role": "Investeerder landbouw",
+          "quote": "In 10 weken had ik verblijfsvergunning, vennootschap en bankrekening. Eén aanspreekpunt."
+        },
+        {
+          "name": "J. — Nederland",
+          "role": "SaaS-oprichter",
+          "quote": "De vastgoedtour was cruciaal. Ik vond het juiste pand zonder maanden te verspillen."
+        },
+        {
+          "name": "S. — Spanje",
+          "role": "Onafhankelijk consultant",
+          "quote": "Totale kostentransparantie. Geen verrassingen."
+        }
+      ],
+      "ctaText": "Bekijk alle getuigenissen",
+      "ctaHref": "/testimonios"
     },
     "programs": {
       "eyebrow": "PROGRAMMA'S",
@@ -2736,88 +2752,71 @@
       "subheadline": "Economische groei, fiscale stabiliteit, levenskwaliteit en een duidelijk migratieproces. Concrete gegevens, geen beloftes."
     },
     "pillars": {
-      "eyebrow": "WAAROM PARAGUAY",
-      "title": "Een reële kans voor de Europese investeerder",
-      "honestNote": "Paraguay's eerlijke noot",
+      "eyebrow": "Waarom Paraguay",
+      "title": "Waarom Paraguay een echte optie is",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Economisch klimaat",
-          "description": "Stabiele groei, gecontroleerde inflatie, 10% vennootschapsbelasting, territoriaal belastingstelsel dat inkomen uit het buitenland beschermt.",
-          "image": "@src:whyCountry.economic",
-          "bullets": [
-            "Territoriaal belastingstelsel",
-            "Open economie",
-            "10% vennootschapsbelasting"
+          "title": "Stabiele, groeiende economie",
+          "description": "Paraguay groeit al 15 jaar op tarieven die het oude continent niet meer ziet. BBP 2024 +4,2%, projectie 2025 +6,0%. Inflatie onder controle. Open economie met handelsakkoorden met Brazilië, Argentinië, Chili, EU, EFTA, Mercosur.",
+          "items": [
+            "BBP 2024: +4,2%",
+            "BBP 2025 (prog.): +6,0%",
+            "Inflatie onder 5%"
           ]
         },
         {
-          "icon": "Briefcase",
-          "title": "Investeringsmogelijkheden",
-          "description": "Geen wisselcontroles. FDI open voor alle sectoren. Vastgoed in premiumgebieden nog onder regionale gemiddelden. Vastgoedmarkt in expansie.",
-          "image": "@src:whyCountry.investment",
-          "bullets": [
-            "Vastgoedmarkt in expansie",
-            "FDI zonder beperkingen",
-            "Gediversifieerde economie"
+          "icon": "Landmark",
+          "title": "Territoriaal belastingstelsel",
+          "description": "Inkomen gegenereerd buiten Paraguay betaalt GEEN lokale belasting. IRE 10% vast sinds 2020. Geen wisselcontroles. Een van de laagste belastingdrukken in de regio.",
+          "items": [
+            "IRE 10% vast sinds 2020",
+            "Buitenlands inkomen vrijgesteld",
+            "Verdragen met Spanje, Chili, Taiwan"
+          ]
+        },
+        {
+          "icon": "Home",
+          "title": "Vastgoed in expansie",
+          "description": "Vastgoed in premium Asunción-zones +30% in 5 jaar. Actieve vastgoedmarkt voor ingezetenen en buitenlanders. Huurinkomsten in USD met stabiele contracten.",
+          "items": [
+            "Premium Asunción +30% / 5j",
+            "Huurinkomsten in USD",
+            "Geen beperkingen voor ingezetenen"
           ]
         },
         {
           "icon": "Sun",
-          "title": "Levenskwaliteit",
-          "description": "30–50% lagere kosten van levensonderhoud dan Berlijn of Madrid. USD 4.000/maand dekt een gezin, school en boodschappen. Subtropisch klimaat, met een levendige internationale gemeenschap.",
-          "image": "@src:whyCountry.lifestyle",
-          "bullets": [
-            "Lagere kosten van levensonderhoud",
-            "Internationale gemeenschap",
-            "Subtropisch klimaat"
+          "title": "Subtropische levenskwaliteit",
+          "description": "Kosten van levensonderhoud 30-50% lager dan in Europa. USD 4.000/maand dekt gezin, privaat onderwijs en huishoudelijke hulp. Asunción combineert Latijns-Amerikaanse gastvrijheid met moderne infrastructuur.",
+          "items": [
+            "USD 4.000/mnd voor gezin",
+            "Sterke gastvrijheid",
+            "Warm klimaat het hele jaar"
           ]
         },
         {
-          "icon": "Shield",
-          "title": "Fiscale stabiliteit",
-          "description": "IRE 10% sinds 2020 (Wet 6380). Stabiel territoriaal systeem over politieke cycli heen. Dubbelbelastingverdragen met belangrijke economieën. Belastingtarieven zijn zichtbaar en voorspelbaar.",
-          "image": "@src:whyCountry.tax",
-          "bullets": [
-            "10% vennootschapsbelasting",
-            "Stabiel territoriaal systeem",
-            "Dubbelbelastingverdragen"
+          "icon": "Sprout",
+          "title": "Agro-industriële grootmacht",
+          "description": "4e grootste sojaboer ter wereld. Grote vleesexporteur. ~100.000 hectare getransacteerd per jaar. Echte kansen voor Europese investeerders met landbouwervaring.",
+          "items": [
+            "4e sojaboer ter wereld",
+            "~100.000 ha/jaar",
+            "Geïntegreerde waardeketen"
           ]
         },
         {
-          "icon": "BarChart",
-          "title": "Groeiende economie",
-          "description": "Het BBP van Paraguay groeide in 2024 met +4,2%, met een BCP-projectie van +6,0% voor 2025. De bouwsector groeide +5,3% (Forbes Paraguay). Een van de snelst groeiende economieën in de regio.",
-          "image": "@src:whyCountry.economy",
-          "bullets": [
-            "Paraguay BBP 2024: +4,2%",
-            "Paraguay BBP 2025: +6,0% (BCP-projectie)",
-            "Bouw 2025: +5,3%"
-          ]
-        },
-        {
-          "icon": "Wheat",
-          "title": "Agro-industriële krachtpatser",
-          "description": "4e grootste soja-exporteur ter wereld. Grote rundvleesexporteur. ~100.000 hectare verhandeld per jaar in landbouwgrond. De economische ruggengraat van het land is echt, productief en groeiend.",
-          "image": "@src:whyCountry.agro",
-          "bullets": [
-            "4e soja-exporteur wereldwijd",
-            "Grote rundvleesexporteur",
-            "~100.000 ha verhandeld/jaar"
-          ]
-        },
-        {
-          "icon": "Globe",
-          "title": "Tweetalige Spaanse + Guaraní cultuur",
-          "description": "Tweetalige Spaanse + Guaraní cultuur. Misdaadcijfers zijn laag in vergelijking met andere regionale hoofdsteden — maar zoals in elke stad raden we normale voorzorgsmaatregelen aan. Paraguay is een land met warme, gastvrije mensen.",
-          "image": "@src:whyCountry.culture",
-          "bullets": [
-            "Tweetalig land",
-            "Gastvrije cultuur",
-            "Lage misdaadcijfers"
+          "icon": "Users",
+          "title": "Actieve Europese gemeenschap",
+          "description": "Mennonietengemeenschappen met Duitse cultuur in de Chaco. Brazilianen, Argentijnen, Europeanen. Spaans is snel te leren. Onze klanten maken contact met een actieve expat-gemeenschap.",
+          "items": [
+            "Duitstalige mennonieten in Chaco",
+            "Braziliaanse/Argentijnse gemeenschap",
+            "Actieve expat-scene in Asunción"
           ]
         }
-      ]
+      ],
+      "subtitle": "Zes concrete redenen, met data. Geen beloftes."
     },
     "trust": {
       "eyebrow": "WAAROM NEXA",

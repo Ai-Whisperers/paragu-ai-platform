@@ -29,7 +29,7 @@ interface ProcessContent {
   steps?: ProcessStep[]
 }
 
-export function ProcessSection({ pageContent, images }: { pageContent: Record<string, any>; images?: Record<string, any> }) {
+export function ProcessSection({ pageContent, images, locale = 'es' }: { pageContent: Record<string, any>; images?: Record<string, any>; locale?: string }) {
   // Handle both data shapes: pageContent can be the process data directly,
   // or wrapped in { process: {...} }
   const c: ProcessContent = pageContent?.steps ? pageContent : (pageContent?.process || {})
@@ -73,8 +73,8 @@ export function ProcessSection({ pageContent, images }: { pageContent: Record<st
                   <div className="bg-white rounded-xl p-6 md:p-7 shadow-sm border border-border/60 hover:shadow-md transition-shadow">
                     <div className="flex items-start gap-5">
                       {stepImg && (
-                        <div className="hidden sm:block w-24 h-24 shrink-0 rounded-xl overflow-hidden bg-surface-alt">
-                          <img src={stepImg} alt={step.title} loading="lazy" width={600} height={400} className="w-full h-full object-cover" />
+                        <div className="hidden sm:block w-32 h-32 shrink-0 rounded-xl overflow-hidden bg-surface-alt ring-1 ring-border/40">
+                          <img src={stepImg} alt={step.title} loading="lazy" width={600} height={400} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
                         </div>
                       )}
                       <div className="flex-1 min-w-0">
@@ -97,7 +97,14 @@ export function ProcessSection({ pageContent, images }: { pageContent: Record<st
         {c.ctaLabel && c.ctaHref && (
           <div className="text-center mt-12">
             <a
-              href={c.ctaHref}
+              href={(() => {
+                // Resolve ctaHref relative to current locale
+                if (c.ctaHref.startsWith('http') || c.ctaHref.startsWith('mailto:') || c.ctaHref.startsWith('tel:')) return c.ctaHref
+                const path = c.ctaHref.startsWith('/') ? c.ctaHref : `/${c.ctaHref}`
+                const parts = path.split('/').filter(Boolean)
+                if (parts.length > 0 && ['es','en','nl','de'].includes(parts[0])) return path
+                return `/${locale}${path}`
+              })()}
               className="inline-block px-8 py-3.5 bg-accent text-primary rounded-full font-bold text-base shadow-lg hover:opacity-90 transition-opacity no-underline"
             >
               {c.ctaLabel}
