@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-26: feat(nexa): deep polish on 4 sections - process, feedback, services, why-paraguay (by Erebus)
+
 - 2026-06-26: feat(nexa): contact + testimonials fully rendered (by Erebus)
 
 - 2026-06-26: fix(nexa): CtaBanner handle both data shapes for direct section content (by Erebus)

@@ -316,44 +316,166 @@ export function ProcessSection({ pageContent, images }: SectionComponentProps) {
 }
 
 export function ServiceDetailSection({ pageContent, data, images }: SectionComponentProps) {
-  const d = data || pageContent || {}
-  const groups = d.groups || []
+  // Handle multiple data shapes:
+  // 1. pageContent is { groups: [...], finalCta: {...} } directly
+  // 2. pageContent is { services: { groups: [...], ... } } - nested
+  // 3. data passed separately
+  const container = data || pageContent || {}
+  const servicesWrapper = container.services || {}
+  const d = {
+    eyebrow: container.eyebrow || servicesWrapper.eyebrow,
+    title: container.title || servicesWrapper.title,
+    groups: container.groups || servicesWrapper.groups || [],
+    finalCta: container.finalCta || servicesWrapper.finalCta || container.cta || servicesWrapper.cta || null,
+  }
+  const groups = d.groups
+  const cta = d.finalCta
   if (!groups.length) return null
   return (
-    <section className="py-20">
-      <div className="max-w-[1000px] mx-auto text-center px-4">
-        {d.eyebrow && <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{d.eyebrow}</p>}
-        {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-8">{d.title}</h2>}
-        {groups.map((group: any, i: number) => (
-          <div key={i} className="mb-12">
-            {i > 0 && <div className="w-[60px] h-[2px] bg-accent mx-auto mb-10" />}
-            <h3 className="text-lg font-bold text-primary mb-1">{group.title}</h3>
-            {group.subtitle && <p className="text-text-muted text-sm mb-4">{group.subtitle}</p>}
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4 text-left">
-              {group.items.map((item: any, j: number) => {
-                const img = resolveImage(images, item.image)
-                return (
-                  <div key={j} className="group relative p-6 bg-white rounded-xl border border-border/50 hover:border-accent/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                    {/* Top accent gradient on hover */}
-                    <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
-                    {img && <img src={img} alt={item.title} loading="lazy" width={400} height={160} className="w-full aspect-[16/10] object-cover rounded-lg mb-4 transition-transform duration-500 group-hover:scale-105" />}
-                    <h4 className="font-bold text-primary text-base mb-2 group-hover:text-accent transition-colors duration-300">{item.title}</h4>
-                    <p className="text-text-muted text-sm leading-relaxed mb-3">{item.description}</p>
-                    {item.benefits && <ul className="space-y-1.5 mt-3">
-                      {item.benefits.map((b: string, k: number) => (
-                        <li key={k} className="text-xs text-text-muted flex gap-2 items-start leading-relaxed">
-                          <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" strokeWidth={2.5} />
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>}
-                    {item.ctaText && <a href={item.ctaHref} className="inline-flex items-center gap-1 mt-4 text-accent font-bold text-xs no-underline border-b-2 border-accent hover:gap-2 transition-all duration-200">{item.ctaText} <span>→</span></a>}
-                  </div>
-                )
-              })}
+    <section className="py-20 md:py-28">
+      <div className="max-w-[1100px] mx-auto text-center px-4">
+        {d.eyebrow && <p className="text-xs text-text-muted uppercase tracking-[3px] mb-3">{d.eyebrow}</p>}
+        {d.title && <h2 className="text-[clamp(1.5rem,3vw,2.2rem)] font-playfair font-bold text-primary mb-4 leading-tight">{d.title}</h2>}
+        <div className="w-[60px] h-[3px] bg-accent mx-auto mb-10" />
+
+        {groups.map((group: any, gi: number) => {
+          const groupNum = String(gi + 1).padStart(2, '0')
+          const total = String(groups.length).padStart(2, '0')
+          const accent = group.accentColor || '#C9A96E'
+          return (
+            <div key={gi} className="mb-16 last:mb-0">
+              {/* Group header */}
+              <div className="mb-8">
+                <div className="inline-flex items-center gap-3 mb-3">
+                  <span
+                    className="inline-block px-3 py-1 text-xs font-bold rounded-full"
+                    style={{ background: accent + '15', color: accent }}
+                  >
+                    {groupNum} / {total}
+                  </span>
+                </div>
+                <h3 className="font-playfair text-2xl md:text-3xl font-bold text-primary mb-2 leading-tight">
+                  {group.title}
+                </h3>
+                {group.subtitle && (
+                  <p className="text-text-muted max-w-2xl mx-auto leading-relaxed">
+                    {group.subtitle}
+                  </p>
+                )}
+              </div>
+
+              {/* Items grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-left">
+                {group.items.map((item: any, j: number) => {
+                  const img = resolveImage(images, item.image)
+                  const itemNum = `${groupNum}.${String(j + 1).padStart(2, '0')}`
+                  return (
+                    <div
+                      key={j}
+                      className="group relative p-6 bg-white rounded-2xl border border-border/50 hover:border-accent/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
+                    >
+                      {/* Top accent gradient on hover */}
+                      <div
+                        className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"
+                        style={{ backgroundImage: `linear-gradient(to right, transparent, ${accent}, transparent)` }}
+                      />
+
+                      {/* Item number badge */}
+                      <div
+                        className="absolute top-4 right-4 text-[10px] font-bold tracking-wider px-2 py-0.5 rounded-full"
+                        style={{ background: accent + '15', color: accent }}
+                      >
+                        {itemNum}
+                      </div>
+
+                      {/* Image */}
+                      {img && (
+                        <div className="overflow-hidden rounded-lg mb-4 -mx-2">
+                          <img
+                            src={img}
+                            alt={item.title}
+                            loading="lazy"
+                            width={400}
+                            height={160}
+                            className="w-full aspect-[16/10] object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                      )}
+
+                      {/* Title + description */}
+                      <h4 className="font-bold text-primary text-base mb-2 group-hover:text-accent transition-colors duration-300">
+                        {item.title}
+                      </h4>
+                      <p className="text-text-muted text-sm leading-relaxed mb-4">
+                        {item.description}
+                      </p>
+
+                      {/* Benefits */}
+                      {item.benefits && item.benefits.length > 0 && (
+                        <ul className="space-y-1.5 mt-2 flex-grow">
+                          {item.benefits.map((b: string, k: number) => (
+                            <li key={k} className="text-xs text-text-muted flex gap-2 items-start leading-relaxed">
+                              <Check className="w-4 h-4 shrink-0 mt-0.5" strokeWidth={2.5} style={{ color: accent }} />
+                              <span>{b}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {/* Item CTA */}
+                      {item.ctaText && item.ctaHref && (
+                        <a
+                          href={item.ctaHref}
+                          className="inline-flex items-center gap-1 mt-4 text-xs font-bold no-underline border-b-2 hover:gap-2 transition-all duration-200"
+                          style={{ color: accent, borderColor: accent }}
+                        >
+                          {item.ctaText} <span>→</span>
+                        </a>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )
+        })}
+
+        {/* Final CTA at the bottom */}
+        {cta && (cta.title || cta.ctaText) && (
+          <div className="mt-16 pt-12 border-t border-border/40">
+            {cta.eyebrow && (
+              <p className="text-xs text-text-muted uppercase tracking-[3px] mb-3">{cta.eyebrow}</p>
+            )}
+            {cta.title && (
+              <h3 className="font-playfair text-2xl md:text-3xl font-bold text-primary mb-3 leading-tight">
+                {cta.title}
+              </h3>
+            )}
+            {cta.subtitle && (
+              <p className="text-text-muted max-w-2xl mx-auto leading-relaxed mb-8">
+                {cta.subtitle}
+              </p>
+            )}
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {cta.ctaText && cta.ctaHref && (
+                <a
+                  href={cta.ctaHref}
+                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-primary rounded-full font-bold text-base shadow-lg hover:opacity-90 hover:shadow-xl hover:scale-[1.03] transition-all duration-200 no-underline"
+                >
+                  {cta.ctaText} <span>→</span>
+                </a>
+              )}
+              {cta.secondaryCtaText && cta.secondaryCtaHref && (
+                <a
+                  href={cta.secondaryCtaHref}
+                  className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-primary text-primary rounded-full font-semibold text-base hover:bg-primary hover:text-white transition-all duration-200 no-underline"
+                >
+                  {cta.secondaryCtaText}
+                </a>
+              )}
             </div>
           </div>
-        ))}
+        )}
       </div>
     </section>
   )

@@ -2906,134 +2906,139 @@
       ]
     },
     "finalCta": {
-      "title": "¿Listo para empezar?",
-      "subtitle": "Reserva una consulta gratuita de 30 minutos para discutir tus necesidades.",
-      "buttonText": "Agendar consulta gratuita",
-      "buttonHref": "/contacto"
+      "eyebrow": "¿Listo para empezar?",
+      "title": "Elegí tus servicios, agendá una consulta",
+      "subtitle": "30 minutos con Sonia o Luana. Sin compromiso. Sin presión.",
+      "ctaText": "Agendar consulta gratuita",
+      "ctaHref": "/contacto",
+      "secondaryCtaText": "Ver el proceso",
+      "secondaryCtaHref": "/proceso"
     },
     "groups": [
       {
-        "id": "residency-legal",
         "title": "Residencia y Documentos Legales",
         "subtitle": "Los primeros pasos esenciales para tu vida en Paraguay.",
+        "accentColor": "#1B2A4A",
         "items": [
           {
             "title": "Residencia Permanente",
-            "description": "Gestión profesional de tu solicitud de permiso de residencia.",
-            "fullDescription": "Gestionamos toda tu solicitud de residencia, desde la recopilación de documentos hasta la presentación y el seguimiento. Nuestro equipo se asegura de que todos los trámites cumplan con los requisitos migratorios paraguayos.",
+            "description": "Tramitación completa de tu residencia ante Migraciones Paraguayas.",
+            "image": "@src:office.teamHuddle",
             "benefits": [
-              "Lista de verificación completa",
-              "Presentación ante Migraciones",
-              "Seguimiento de la solicitud",
-              "Coordinación con representante legal",
-              "Apoyo hasta la aprobación final"
+              "Análisis de elegibilidad (antes de empezar)",
+              "Recopilación y verificación de documentos en tu país",
+              "Traducciones oficiales y apostillas",
+              "Reserva de citas en Migraciones",
+              "Acompañamiento presencial a entrevistas",
+              "Seguimiento hasta aprobación de la residencia"
             ],
-            "icon": "FileText"
+            "ctaText": "Ver detalles",
+            "ctaHref": "/contacto?servicio=residencia"
           },
           {
             "title": "Cédula de Identidad Paraguaya",
-            "description": "Asistencia completa para obtener tu documento de identificación local.",
-            "fullDescription": "Te guiamos en cada paso para obtener tu cédula de identidad paraguaya. Desde agendar tu cita hasta acompañarte el día de la gestión.",
+            "description": "Obtención de tu documento nacional de identidad.",
+            "image": "@src:office.signing",
             "benefits": [
-              "Agendamiento de citas",
-              "Preparación de documentos",
-              "Acompañamiento presencial",
-              "Coordinación de trámite exprés",
-              "Seguimiento de entrega"
+              "Tramitación ante el Departamento de Identificaciones",
+              "Verificación de huellas dactilares",
+              "Acompañamiento presencial el día del enrolamiento",
+              "Seguimiento hasta entrega del documento"
             ],
-            "icon": "CreditCard"
+            "ctaText": "Ver detalles",
+            "ctaHref": "/contacto?servicio=cedula"
           },
           {
             "title": "Apostilla y Traducción",
-            "description": "Gestionamos la traducción certificada y la verificación legal de todos los documentos extranjeros necesarios.",
-            "fullDescription": "Coordinamos la traducción certificada de tus documentos extranjeros al español y gestionamos el proceso de apostilla. Incluye actas de nacimiento, matrimonio, antecedentes penales, títulos académicos y más.",
+            "description": "Documentos paraguayos legalizados para uso internacional y viceversa.",
+            "image": "@src:office.meetingRoom",
             "benefits": [
-              "Traducción certificada",
-              "Verificación de apostilla",
-              "Coordinación con traductores",
-              "Autenticación de documentos",
-              "Juego completo listo para presentar"
+              "Apostilla de La Haya para documentos paraguayos",
+              "Traducciones certificadas español-inglés-neerlandés-alemán",
+              "Legalización en el Ministerio de Relaciones Exteriores",
+              "Coordinación completa con traductores públicos"
             ],
-            "icon": "Globe"
+            "ctaText": "Ver detalles",
+            "ctaHref": "/contacto?servicio=apostilla"
           }
         ]
       },
       {
-        "id": "banking-tax",
         "title": "Banca y Configuración Fiscal",
         "subtitle": "Estableciendo tu huella financiera en el país.",
+        "accentColor": "#2C3E6B",
         "items": [
           {
             "title": "Apertura de Cuenta Bancaria",
-            "description": "Orientación y apoyo para abrir cuentas bancarias locales con éxito.",
-            "fullDescription": "Preparamos tu perfil financiero, seleccionamos el banco adecuado, coordinamos citas y te acompañamos en la apertura de cuenta. Nuestras relaciones institucionales agilizan este proceso.",
+            "description": "Cuenta personal y/o empresarial en bancos paraguayos top-tier.",
+            "image": "@src:office.reception",
             "benefits": [
-              "Preparación de perfil financiero",
-              "Selección del banco ideal",
-              "Coordinación de citas",
-              "Acompañamiento presencial",
-              "Configuración de banca digital"
+              "Selección del banco según tu perfil (Itaú, Continental, GNB, etc.)",
+              "Coordinación con el banco para cita",
+              "Acompañamiento presencial a sucursal",
+              "Activación de tarjeta de débito y banca online"
             ],
-            "icon": "Building"
+            "ctaText": "Ver detalles",
+            "ctaHref": "/contacto?servicio=banca"
           },
           {
             "title": "Registro Tributario (RUC)",
-            "description": "Configuración de tu RUC para uso personal o empresarial.",
-            "fullDescription": "Gestionamos tu registro ante la SET para obtener tu RUC. Este número es esencial para actividades comerciales, compra de propiedades y operaciones bancarias en Paraguay.",
+            "description": "Inscripción en la SET como persona física o empresa.",
+            "image": "@src:office.exterior",
             "benefits": [
-              "Preparación de documentos",
-              "Presentación ante SET",
-              "Configuración de domicilio fiscal",
-              "Obtención de certificado digital",
-              "Asesoría de cumplimiento"
+              "Inscripción en el régimen correcto (persona física o IRP)",
+              "Configuración de obligaciones tributarias mensuales",
+              "Asesoría fiscal inicial (3 meses incluidos)",
+              "Coordinación con contador local de confianza"
             ],
-            "icon": "Calculator"
+            "ctaText": "Ver detalles",
+            "ctaHref": "/contacto?servicio=ruc"
           }
         ]
       },
       {
-        "id": "real-estate",
         "title": "Bienes Raíces Residenciales",
-        "subtitle": "Encontrar el lugar ideal para llamar hogar, ya sea por un mes o toda la vida.",
+        "subtitle": "Encontrar el lugar ideal para vivir, ya sea por un mes o toda la vida.",
+        "accentColor": "#8B7355",
         "items": [
           {
             "title": "Alquiler de Apartamentos y Casas",
-            "description": "Ayuda para navegar el mercado local y encontrar alquileres de alta calidad.",
-            "fullDescription": "Te ayudamos a encontrar propiedades de calidad que se ajusten a tu estilo de vida y presupuesto, ya sea un apartamento amoblado por temporada o una casa familiar.",
+            "description": "Búsqueda y negociación de propiedades en Asunción y área metropolitana.",
+            "image": "@src:office.meetingRoom",
             "benefits": [
-              "Búsqueda personalizada",
-              "Asesoría de barrios",
-              "Coordinación de visitas",
-              "Revisión y negociación de contratos",
-              "Apoyo en mudanza y servicios"
+              "Búsqueda según tu presupuesto y estilo de vida",
+              "Visitas coordinadas a 5-10 propiedades",
+              "Revisión del contrato en español antes de firmar",
+              "Negociación con propietario y coordinación de mudanza"
             ],
-            "icon": "Home"
+            "ctaText": "Ver detalles",
+            "ctaHref": "/contacto?servicio=alquiler"
           },
           {
             "title": "Compra de Propiedades",
-            "description": "Asistencia experta para encontrar y comprar propiedades residenciales.",
-            "fullDescription": "Brindamos asistencia experta en todo el proceso de compra, desde la identificación de oportunidades hasta el cierre. Incluye verificación de títulos y coordinación notarial.",
+            "description": "Asesoría completa para compra de propiedades residenciales o comerciales.",
+            "image": "@src:office.signing",
             "benefits": [
-              "Identificación de oportunidades",
-              "Visitas y debida diligencia",
-              "Verificación de títulos",
-              "Negociación de precios",
-              "Coordinación notarial y registro"
+              "Búsqueda de propiedades en zonas estratégicas",
+              "Verificación legal completa (título, deuda, ARP)",
+              "Coordinación con escribano público",
+              "Acompañamiento a la firma y registro en ARP"
             ],
-            "icon": "Search"
+            "ctaText": "Ver detalles",
+            "ctaHref": "/contacto?servicio=compra"
           },
           {
-            "title": "Debida Diligencia",
-            "description": "Verificamos títulos y situación legal de cualquier propiedad para garantizar tu inversión.",
-            "fullDescription": "Realizamos una debida diligencia completa en cualquier propiedad. Incluye verificación de títulos, búsqueda de gravámenes, estado fiscal y cumplimiento normativo.",
+            "title": "Verificación Legal de Propiedad",
+            "description": "Verificación legal de cualquier propiedad antes de comprar (antes llamada 'debida diligencia').",
+            "image": "@src:office.teamHuddle",
             "benefits": [
-              "Verificación de escrituras",
-              "Búsqueda de gravámenes",
-              "Confirmación de situación fiscal",
-              "Verificación de zonificación",
-              "Informe completo de debida diligencia"
+              "Revisión de título en Registro Público",
+              "Verificación de deudas municipales e impuestos",
+              "Informe escrito detallado con hallazgos",
+              "Recomendaciones para mitigar riesgos detectados"
             ],
-            "icon": "Shield"
+            "ctaText": "Ver detalles",
+            "ctaHref": "/contacto?servicio=verificacion"
           }
         ]
       }

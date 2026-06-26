@@ -22,7 +22,7 @@
     {
       "id": "service-detail",
       "variant": "grouped-cards",
-      "content": "servicesPage.services"
+      "content": "servicesPage"
     },
     {
       "id": "cta-banner",
