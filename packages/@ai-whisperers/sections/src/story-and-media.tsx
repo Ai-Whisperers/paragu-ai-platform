@@ -58,8 +58,13 @@ export function GallerySection({ pageContent, data, images }: SectionComponentPr
   )
 }
 
-export function TestimonialsSection({ pageContent, images }: SectionComponentProps) {
-  const c = pageContent.testimonials || {}
+export function TestimonialsSection({ pageContent, data, images }: SectionComponentProps) {
+  // Handle both data shapes: pageContent can be { testimonials: {...} } or the data directly
+  const c = pageContent.testimonials
+    || (pageContent.items ? pageContent : null)
+    || data?.testimonials
+    || (data?.items ? data : null)
+    || {}
   if (!c.items?.length) return null
   return (
     <section className="py-20">

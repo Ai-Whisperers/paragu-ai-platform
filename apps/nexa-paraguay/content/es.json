@@ -1501,33 +1501,18 @@
     "contact": {
       "title": "Datos de contacto",
       "subtitle": "Múltiples canales para llegar a nosotros",
-      "items": [
-        {
-          "icon": "MessageCircle",
-          "title": "WhatsApp — respuesta rápida",
-          "primary": "595982515138",
-          "link": "https://wa.me/595982515138",
-          "detail": "Lunes a Viernes 9-18h ART"
-        },
-        {
-          "icon": "Mail",
-          "title": "Email",
-          "primary": "paraguaynexa@gmail.com",
-          "link": "mailto:paraguaynexa@gmail.com",
-          "detail": "Respondemos en menos de 24h hábiles"
-        },
-        {
-          "icon": "MapPin",
-          "title": "Oficina",
-          "primary": "Asunción, Paraguay",
-          "detail": "Atención presencial con cita previa"
-        },
-        {
-          "icon": "Clock",
-          "title": "Idiomas",
-          "primary": "ES · EN · NL · DE",
-          "detail": "Hablamos tu idioma, no al revés"
-        }
+      "whatsapp": "595982515138",
+      "email": "paraguaynexa@gmail.com",
+      "phone": "+595 21 327 9485",
+      "address": "Asunción, Paraguay",
+      "hours": {
+        "es": "Lunes a Viernes 9-18h",
+        "en": "Monday to Friday 9-18h",
+        "nl": "Maandag tot vrijdag 9-18h",
+        "de": "Montag bis Freitag 9-18h"
+      },
+      "languages": [
+        "ES · EN · NL · DE"
       ]
     }
   },

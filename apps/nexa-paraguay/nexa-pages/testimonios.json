@@ -21,7 +21,7 @@
       "content": "testimoniosPage.trust"
     },
     {
-      "id": "feedback",
+      "id": "testimonials",
       "variant": "cards",
       "content": "testimoniosPage.testimonials"
     },

@@ -69,34 +69,16 @@
     },
     "contact": {
       "title": "Kontaktdaten",
-      "subtitle": "Mehrere Kanäle",
-      "items": [
-        {
-          "icon": "MessageCircle",
-          "title": "WhatsApp — schnelle Antwort",
-          "primary": "595982515138",
-          "link": "https://wa.me/595982515138",
-          "detail": "Montag bis Freitag 9-18h ART"
-        },
-        {
-          "icon": "Mail",
-          "title": "E-Mail",
-          "primary": "paraguaynexa@gmail.com",
-          "link": "mailto:paraguaynexa@gmail.com",
-          "detail": "Wir antworten innerhalb von 24 Arbeitsstunden"
-        },
-        {
-          "icon": "MapPin",
-          "title": "Büro",
-          "primary": "Asunción, Paraguay",
-          "detail": "Persönlich nach Vereinbarung"
-        },
-        {
-          "icon": "Clock",
-          "title": "Sprachen",
-          "primary": "ES · EN · NL · DE",
-          "detail": "Wir sprechen Ihre Sprache"
-        }
+      "subtitle": "Mehrere Kanäle, um uns zu erreichen",
+      "whatsapp": "595982515138",
+      "email": "paraguaynexa@gmail.com",
+      "phone": "+595 21 327 9485",
+      "address": "Asunción, Paraguay",
+      "hours": {
+        "de": "Montag bis Freitag 9-18h ART"
+      },
+      "languages": [
+        "ES · EN · NL · DE"
       ]
     }
   },

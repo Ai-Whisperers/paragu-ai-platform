@@ -812,34 +812,16 @@
     },
     "contact": {
       "title": "Contactgegevens",
-      "subtitle": "Meerdere kanalen",
-      "items": [
-        {
-          "icon": "MessageCircle",
-          "title": "WhatsApp — snel antwoord",
-          "primary": "595982515138",
-          "link": "https://wa.me/595982515138",
-          "detail": "Maandag tot vrijdag 9-18h ART"
-        },
-        {
-          "icon": "Mail",
-          "title": "E-mail",
-          "primary": "paraguaynexa@gmail.com",
-          "link": "mailto:paraguaynexa@gmail.com",
-          "detail": "We reageren binnen 24 werkuren"
-        },
-        {
-          "icon": "MapPin",
-          "title": "Kantoor",
-          "primary": "Asunción, Paraguay",
-          "detail": "Persoonlijk met afspraak"
-        },
-        {
-          "icon": "Clock",
-          "title": "Talen",
-          "primary": "ES · EN · NL · DE",
-          "detail": "We spreken jouw taal"
-        }
+      "subtitle": "Meerdere kanalen om ons te bereiken",
+      "whatsapp": "595982515138",
+      "email": "paraguaynexa@gmail.com",
+      "phone": "+595 21 327 9485",
+      "address": "Asunción, Paraguay",
+      "hours": {
+        "nl": "Maandag tot vrijdag 9-18h ART"
+      },
+      "languages": [
+        "ES · EN · NL · DE"
       ]
     }
   },

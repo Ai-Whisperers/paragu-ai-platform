@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-26: fix(nexa): CtaBanner handle both data shapes for direct section content (by Erebus)
+
 - 2026-06-26: feat(nexa): visual polish - remove watermarks, add hero eyebrow/CTA, fix trust section (by Erebus)
 
 - 2026-06-25: feat(nexa): complete site overhaul - all pages with proper structure (by Erebus)

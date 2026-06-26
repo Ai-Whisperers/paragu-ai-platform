@@ -5,7 +5,8 @@ import { resolveClientLocale } from '@/lib/resolve-client-locale'
 
 export function ContactDetailsSection({ pageContent, data, locale }: any) {
   const d = data || pageContent || {}
-  if (!d.whatsapp && !d.email) return null
+  // Handle both flat fields (whatsapp, email) and items array
+  if (!d.items?.length && !d.whatsapp && !d.email) return null
 
   const lang = resolveClientLocale(locale)
   const hoursKeys: Record<string, string[]> = {
