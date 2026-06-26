@@ -208,20 +208,32 @@
     },
     "services": {
       "eyebrow": "Nuestros Servicios",
+      "title": "Todo lo que necesitás para radicarte, operar y vivir en Paraguay",
+      "subtitle": "Residencia, banca, impuestos y bienes raíces — tramitados personalmente por un equipo que ya hizo el proceso.",
       "groups": [
         {
           "id": "residency-legal",
           "title": "Residencia y Documentos Legales",
-          "subtitle": "Los primeros pasos esenciales para tu vida en Paraguay.",
+          "subtitle": "Tu base legal en Paraguay",
           "items": [
             {
               "title": "Residencia Permanente",
-              "description": "Gestión profesional de tu solicitud de residencia.",
-              "icon": "FileText"
+              "description": "Gestionamos tu radicación ante Migraciones. Vos solo firmás.",
+              "benefits": [
+                "Tramitación presencial en Migraciones",
+                "Seguimiento personalizado hasta la aprobación",
+                "Asesoría sobre requisitos según tu nacionalidad"
+              ],
+              "icon": "FileCheck"
             },
             {
               "title": "Cédula de Identidad Paraguaya",
-              "description": "Asistencia completa para obtener tu cédula local.",
+              "description": "Te acompañamos a sacar tu cédula. Salís con el documento, no con promesas.",
+              "benefits": [
+                "Acompañamiento a la oficina de Identificaciones",
+                "Verificación de documentación previa",
+                "Entrega confirmada en 4-8 semanas"
+              ],
               "icon": "CreditCard"
             }
           ]
@@ -229,16 +241,26 @@
         {
           "id": "banking-tax",
           "title": "Banca e Impuestos",
-          "subtitle": "Estableciendo tu huella financiera en el país.",
+          "subtitle": "Tu huella financiera en Paraguay",
           "items": [
             {
               "title": "Apertura de Cuenta Bancaria",
-              "description": "Orientación para abrir cuentas bancarias locales.",
-              "icon": "Building"
+              "description": "Te abrimos la cuenta en bancos locales. Sin vueltas, sin respuestas en inglés.",
+              "benefits": [
+                "Selección del banco según tu perfil",
+                "Acompañamiento a la sucursal",
+                "Activación de tarjeta y banca online"
+              ],
+              "icon": "Landmark"
             },
             {
               "title": "Registro Tributario (RUC)",
-              "description": "Configuración de tu RUC para uso personal o empresarial.",
+              "description": "Te inscribimos en la SET. Tu RUC personal o empresarial listo para operar.",
+              "benefits": [
+                "Inscripción como persona física o S.A.",
+                "Configuración del régimen impositivo",
+                "Asesoría sobre obligaciones mensuales"
+              ],
               "icon": "Calculator"
             }
           ]
@@ -246,27 +268,43 @@
         {
           "id": "real-estate",
           "title": "Bienes Raíces",
-          "subtitle": "Encontrar el lugar ideal para vivir, ya sea por un mes o toda la vida.",
+          "subtitle": "Encontrá el lugar donde vas a vivir",
           "items": [
             {
               "title": "Alquiler de Departamentos y Casas",
-              "description": "Ayuda para encontrar alquileres de calidad en el mercado local.",
-              "icon": "Home"
+              "description": "Buscamos propiedades en Asunción y el área metropolitana según tu presupuesto.",
+              "benefits": [
+                "Búsqueda en zonas seguras y bien conectadas",
+                "Negociación con propietarios",
+                "Revisión del contrato en español"
+              ],
+              "icon": "House"
             },
             {
               "title": "Compra de Propiedades",
-              "description": "Asistencia experta para encontrar y comprar propiedades.",
-              "icon": "Search"
+              "description": "Te acompañamos en la compra, desde la búsqueda hasta la firma en la escribanía.",
+              "benefits": [
+                "Asesoría sobre barrios según tu estilo de vida",
+                "Verificación legal de la propiedad",
+                "Coordinación con escribano y registro"
+              ],
+              "icon": "KeyRound"
             },
             {
               "title": "Debida Diligencia",
-              "description": "Verificamos títulos y situación legal de cualquier propiedad.",
+              "description": "Verificamos títulos, deudas e historial legal de cualquier propiedad antes de comprar.",
+              "benefits": [
+                "Revisión de títulos en el Registro Público",
+                "Verificación de deudas municipales e impositivas",
+                "Informe escrito con hallazgos"
+              ],
               "icon": "Shield"
             }
           ]
         }
       ],
-      "title": "Soluciones profesionales para cada paso de tu mudanza"
+      "ctaText": "Agendar consulta gratuita",
+      "ctaHref": "/es/agenda"
     },
     "feedback": {
       "eyebrow": "TU OPINIÓN",

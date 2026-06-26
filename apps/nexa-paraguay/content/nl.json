@@ -1434,112 +1434,104 @@
       "buttonHref": "/contacto"
     },
     "services": {
-      "eyebrow": "ONZE DIENSTEN",
-      "title": "Kies de ondersteuning die u nodig heeft",
+      "eyebrow": "Onze Diensten",
+      "title": "Alles wat je nodig hebt om je te vestigen, te opereren en te leven in Paraguay",
+      "subtitle": "Verblijf, bankieren, belastingen en onroerend goed — persoonlijk afgehandeld door een team dat het proces heeft doorlopen.",
       "groups": [
         {
-          "title": "Verblijf & Juridische Documenten",
-          "description": "De eerste essentiële stappen voor uw leven in Paraguay. Wij regelen elk document vanaf nul.",
+          "id": "residency-legal",
+          "title": "Verblijfsvergunning en Juridische Documenten",
+          "subtitle": "Je juridische basis in Paraguay",
           "items": [
             {
-              "title": "Permanent verblijf",
-              "shortDescription": "Professionele afhandeling van uw verblijfsvergunningsaanvraag.",
-              "fullDescription": "Wij coördineren het hele proces met de Paraguayaanse Immigratiedienst: aanvraag, documentindiening, opvolging en levering van de beslissing. Inclusief identiteitskaart na goedkeuring.",
+              "title": "Permanent Verblijf",
+              "description": "Wij regelen je verblijfsaanvraag bij Migraciones. Jij tekent alleen.",
               "benefits": [
-                "Begeleiding bij elk bezoek",
-                "Documentvertaling",
-                "Apostille-beheer",
-                "Dossieropvolging"
+                "Persoonlijke indiening bij Migraciones",
+                "Persoonlijke opvolging tot goedkeuring",
+                "Advies over vereisten per nationaliteit"
               ],
-              "icon": "🪪"
+              "icon": "FileCheck"
             },
             {
-              "title": "Paraguayaans identiteitsbewijs",
-              "shortDescription": "Volledige assistentie bij het verkrijgen van uw lokale identiteitsdocument.",
-              "fullDescription": "Wij begeleiden u bij het verkrijgen van uw Paraguayaanse identiteitskaart bij de afdeling Identificaties. Wij beheren afspraken, documentatie en ophaling.",
+              "title": "Paraguayaanse Identiteitskaart",
+              "description": "Wij begeleiden je bij het halen van je identiteitskaart. Je vertrekt met het document, niet met beloftes.",
               "benefits": [
-                "Afsprakenbeheer",
-                "Begeleiding ter plaatse",
-                "Volledige documentatie",
-                "Coördinatie met Immigratie"
+                "Begeleiding naar het Identificaciones-kantoor",
+                "Documentatiecontrole vooraf",
+                "Bevestigde levering binnen 4-8 weken"
               ],
-              "icon": "🆔"
+              "icon": "CreditCard"
             }
           ]
         },
         {
-          "title": "Bankieren & Belasting",
-          "description": "Vestig uw financiële voetafdruk in Paraguay met deskundige begeleiding.",
+          "id": "banking-tax",
+          "title": "Bankieren en Belastingen",
+          "subtitle": "Je financiële voetafdruk in Paraguay",
           "items": [
             {
-              "title": "Bankrekening openen",
-              "shortDescription": "Begeleiding en ondersteuning om succesvol lokale bankrekeningen te openen.",
-              "fullDescription": "Wij begeleiden u bij de selectie en opening van bankrekeningen. Wij coördineren afspraken, bereiden de vereiste documentatie voor en vergemakkelijken de communicatie met de banken.",
+              "title": "Bankrekening Openen",
+              "description": "Wij openen je rekening bij lokale banken. Geen gedoe, geen antwoorden in het Spaans.",
               "benefits": [
-                "Kies de juiste bank",
-                "Documentatie voorbereid",
-                "Begeleiding ter plaatse",
-                "Online en fysiek bankieren"
+                "Bankselectie op basis van je profiel",
+                "Begeleiding naar het filiaal",
+                "Activering van kaart en online bankieren"
               ],
-              "icon": "🏦"
+              "icon": "Landmark"
             },
             {
               "title": "Belastingregistratie (RUC)",
-              "shortDescription": "Instelling van uw RUC voor persoonlijk of zakelijk gebruik.",
-              "fullDescription": "Wij regelen uw inschrijving in het Unieke Belastingplichtigenregister bij de Belastingdienst (SET). Dit nummer is essentieel voor elke economische activiteit in Paraguay.",
+              "description": "Wij schrijven je in bij de SET. Je persoonlijke of zakelijke RUC klaar om te opereren.",
               "benefits": [
-                "Documentvoorbereiding",
-                "Indiening bij SET",
-                "Fiscaal adres instellen",
-                "Digitaal certificaat"
+                "Inschrijving als natuurlijk persoon of S.A.",
+                "Configuratie van belastingregime",
+                "Advies over maandelijkse verplichtingen"
               ],
-              "icon": "📊"
+              "icon": "Calculator"
             }
           ]
         },
         {
-          "title": "Woonvastgoed",
-          "description": "Vind de ideale plek om te wonen, of het nu voor een maand of een leven is.",
+          "id": "real-estate",
+          "title": "Onroerend Goed",
+          "subtitle": "Vind waar je gaat wonen",
           "items": [
             {
-              "title": "Appartement- en huurwoning",
-              "shortDescription": "Hulp bij het navigeren op de lokale markt om kwaliteitshuurwoningen te vinden.",
-              "fullDescription": "Wij helpen u kwaliteitshuurwoningen te vinden: contractbeoordeling, coördinatie van bezichtigingen en verhuisondersteuning.",
+              "title": "Appartementen en Huizen Huren",
+              "description": "Wij zoeken eigendommen in Asunción en de metropool binnen je budget.",
               "benefits": [
-                "Gepersonaliseerde zoektocht",
-                "Contractbeoordeling",
-                "Bezichtigingcoördinatie",
-                "Verhuisondersteuning"
+                "Zoeken in veilige, goed verbonden wijken",
+                "Onderhandeling met eigenaren",
+                "Contractbeoordeling in het Spaans"
               ],
-              "icon": "🏠"
+              "icon": "House"
             },
             {
-              "title": "Vastgoedaankoop",
-              "shortDescription": "Deskundige assistentie bij het vinden en kopen van woonvastgoed.",
-              "fullDescription": "Wij begeleiden u door het hele aankoopproces: vastgoedzoektocht, onderhandeling, due diligence en notariële coördinatie.",
+              "title": "Eigendommen Kopen",
+              "description": "Wij begeleiden je bij de aankoop, van zoeken tot tekenen bij de notaris.",
               "benefits": [
-                "Vastgoedzoektocht",
-                "Onderhandeling",
-                "Titelverificatie",
-                "Notariële coördinatie"
+                "Advies over wijken naar levensstijl",
+                "Juridische verificatie van het eigendom",
+                "Coördinatie met notaris en register"
               ],
-              "icon": "🔑"
+              "icon": "KeyRound"
             },
             {
-              "title": "Due diligence",
-              "shortDescription": "Wij verifiëren titels en juridische status van elk vastgoed om uw investering te beschermen.",
-              "fullDescription": "Wij voeren een grondige beoordeling uit van de juridische situatie van het vastgoed, inclusief titelverificatie, pandrechtenonderzoek en bestemmingsplancontrole.",
+              "title": "Due Diligence",
+              "description": "Wij verifiëren titels, schulden en juridische geschiedenis van elk eigendom vóór aankoop.",
               "benefits": [
-                "Titelverificatie",
-                "Pandrechtenonderzoek",
-                "Bestemmingsplancontrole",
-                "Juridisch statusrapport"
+                "Titelbeoordeling bij het Openbaar Register",
+                "Verificatie van gemeentelijke en belastingschulden",
+                "Schriftelijk rapport met bevindingen"
               ],
-              "icon": "📋"
+              "icon": "Shield"
             }
           ]
         }
-      ]
+      ],
+      "ctaText": "Gratis consult boeken",
+      "ctaHref": "/nl/agenda"
     },
     "feedback": {
       "eyebrow": "UW MENING",

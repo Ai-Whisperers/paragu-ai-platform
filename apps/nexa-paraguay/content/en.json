@@ -197,112 +197,104 @@
       "buttonHref": "/contacto"
     },
     "services": {
-      "eyebrow": "OUR SERVICES",
-      "title": "Choose the support you need",
+      "eyebrow": "Our Services",
+      "title": "Everything you need to relocate, operate, and live in Paraguay",
+      "subtitle": "Residency, banking, taxes, and real estate — handled personally by a team that has done the process.",
       "groups": [
         {
+          "id": "residency-legal",
           "title": "Residency and Legal Documents",
-          "description": "The first essential steps for your life in Paraguay. We handle every document from scratch.",
+          "subtitle": "Your legal foundation in Paraguay",
           "items": [
             {
-              "title": "Permanent residency",
-              "shortDescription": "Professional handling of your residency permit application.",
-              "fullDescription": "We coordinate the entire process with Paraguay Immigration: application, document submission, follow-up, and resolution delivery. Includes the ID card once approved.",
+              "title": "Permanent Residency",
+              "description": "We handle your residency filing at Migraciones. You just sign.",
               "benefits": [
-                "Accompaniment at every visit",
-                "Document translation",
-                "Apostille management",
-                "Case follow-up"
+                "In-person filing at Migraciones",
+                "Personal follow-up until approval",
+                "Advisory on requirements by nationality"
               ],
-              "icon": "🪪"
+              "icon": "FileCheck"
             },
             {
-              "title": "Paraguayan ID card",
-              "shortDescription": "Complete assistance to obtain your local identification document.",
-              "fullDescription": "We accompany you through the process of obtaining your Paraguayan ID at the Department of Identifications. We manage appointments, documentation, and pickup.",
+              "title": "Paraguayan ID Card (Cédula)",
+              "description": "We accompany you to get your ID. You walk out with the document, not with promises.",
               "benefits": [
-                "Appointment management",
-                "On-site accompaniment",
-                "Complete documentation",
-                "Coordination with Immigration"
+                "Accompaniment to Identificaciones office",
+                "Documentation verification in advance",
+                "Confirmed delivery in 4-8 weeks"
               ],
-              "icon": "🆔"
+              "icon": "CreditCard"
             }
           ]
         },
         {
-          "title": "Banking and Tax Setup",
-          "description": "Establish your financial footprint in Paraguay with expert guidance.",
+          "id": "banking-tax",
+          "title": "Banking and Taxes",
+          "subtitle": "Your financial footprint in Paraguay",
           "items": [
             {
-              "title": "Bank account opening",
-              "shortDescription": "Guidance and support to open local bank accounts successfully.",
-              "fullDescription": "We guide you through the selection and opening of bank accounts. We coordinate appointments, prepare required documentation, and facilitate communication with the banks.",
+              "title": "Bank Account Opening",
+              "description": "We open your account at local banks. No runaround, no English-only answers.",
               "benefits": [
-                "Choose the right bank",
-                "Documentation prepared",
-                "On-site accompaniment",
-                "Online and physical banking"
+                "Bank selection based on your profile",
+                "Branch accompaniment",
+                "Card and online banking activation"
               ],
-              "icon": "🏦"
+              "icon": "Landmark"
             },
             {
-              "title": "Tax registration (RUC)",
-              "shortDescription": "Setting up your RUC for personal or business use.",
-              "fullDescription": "We handle your registration in the Unique Taxpayer Registry at the Tax Authority (SET). This number is essential for any economic activity in Paraguay.",
+              "title": "Tax Registration (RUC)",
+              "description": "We register you at SET. Your personal or business RUC ready to operate.",
               "benefits": [
-                "Document preparation",
-                "Filing with SET",
-                "Fiscal address setup",
-                "Digital certificate"
+                "Registration as individual or S.A.",
+                "Tax regime configuration",
+                "Advisory on monthly obligations"
               ],
-              "icon": "📊"
+              "icon": "Calculator"
             }
           ]
         },
         {
-          "title": "Residential Real Estate",
-          "description": "Find the ideal place to live, whether for a month or a lifetime.",
+          "id": "real-estate",
+          "title": "Real Estate",
+          "subtitle": "Find where you'll live",
           "items": [
             {
-              "title": "Apartment and house rental",
-              "shortDescription": "Help navigating the local market to find quality rentals.",
-              "fullDescription": "We help you find quality properties for rent: contract review, coordination of visits, and move-in support.",
+              "title": "Apartment and House Rentals",
+              "description": "We search properties in Asunción and the metro area within your budget.",
               "benefits": [
-                "Personalized search",
-                "Contract review",
-                "Visit coordination",
-                "Move-in support"
+                "Search in safe, well-connected areas",
+                "Negotiation with property owners",
+                "Contract review in Spanish"
               ],
-              "icon": "🏠"
+              "icon": "House"
             },
             {
-              "title": "Property purchase",
-              "shortDescription": "Expert assistance in finding and buying residential properties.",
-              "fullDescription": "We accompany you through the entire purchase process: property search, negotiation, due diligence, and notarial coordination.",
+              "title": "Property Purchases",
+              "description": "We guide you through the purchase, from search to deed signing.",
               "benefits": [
-                "Property search",
-                "Negotiation",
-                "Title verification",
-                "Notarial coordination"
+                "Advisory on neighborhoods by lifestyle",
+                "Legal verification of the property",
+                "Coordination with notary and registry"
               ],
-              "icon": "🔑"
+              "icon": "KeyRound"
             },
             {
-              "title": "Due diligence",
-              "shortDescription": "We verify titles and legal status of any property to protect your investment.",
-              "fullDescription": "We perform a thorough review of the property's legal situation, including title verification, lien searches, and zoning compliance.",
+              "title": "Due Diligence",
+              "description": "We verify titles, debts, and legal history of any property before purchase.",
               "benefits": [
-                "Title verification",
-                "Lien search",
-                "Zoning check",
-                "Legal status report"
+                "Title review at Public Registry",
+                "Municipal and tax debt verification",
+                "Written report with findings"
               ],
-              "icon": "📋"
+              "icon": "Shield"
             }
           ]
         }
-      ]
+      ],
+      "ctaText": "Book a free consultation",
+      "ctaHref": "/en/agenda"
     },
     "feedback": {
       "eyebrow": "YOUR OPINION",

@@ -1791,112 +1791,104 @@
       "buttonHref": "/contacto"
     },
     "services": {
-      "eyebrow": "UNSERE DIENSTLEISTUNGEN",
-      "title": "Wählen Sie die Unterstützung, die Sie brauchen",
+      "eyebrow": "Unsere Dienstleistungen",
+      "title": "Alles, was Sie brauchen, um sich niederzulassen, zu arbeiten und in Paraguay zu leben",
+      "subtitle": "Aufenthalt, Bankwesen, Steuern und Immobilien — persönlich betreut von einem Team, das den Prozess durchlaufen hat.",
       "groups": [
         {
-          "title": "Aufenthalt und rechtliche Dokumente",
-          "description": "Die ersten wesentlichen Schritte für Ihr Leben in Paraguay. Wir kümmern uns um jedes Dokument von Anfang an.",
+          "id": "residency-legal",
+          "title": "Aufenthalt und Rechtliche Dokumente",
+          "subtitle": "Ihre rechtliche Grundlage in Paraguay",
           "items": [
             {
               "title": "Daueraufenthalt",
-              "shortDescription": "Professionelle Bearbeitung Ihres Aufenthaltstitel-Antrags.",
-              "fullDescription": "Wir koordinieren den gesamten Prozess mit der paraguayischen Einwanderungsbehörde: Antrag, Einreichung der Dokumente, Nachverfolgung und Zustellung des Bescheids. Inklusive Personalausweis nach Genehmigung.",
+              "description": "Wir bearbeiten Ihren Antrag bei Migraciones. Sie unterschreiben nur.",
               "benefits": [
-                "Begleitung bei jedem Besuch",
-                "Dokumentenübersetzung",
-                "Apostille-Management",
-                "Fallverfolgung"
+                "Persönliche Antragstellung bei Migraciones",
+                "Persönliche Betreuung bis zur Genehmigung",
+                "Beratung zu Anforderungen nach Nationalität"
               ],
-              "icon": "🪪"
+              "icon": "FileCheck"
             },
             {
-              "title": "Paraguayischer Personalausweis",
-              "shortDescription": "Umfassende Unterstützung zur Erlangung Ihres lokalen Ausweises.",
-              "fullDescription": "Wir begleiten Sie beim Erhalt Ihres paraguayischen Personalausweises. Wir verwalten Termine, Dokumentation und Abholung.",
+              "title": "Paraguayischer Ausweis",
+              "description": "Wir begleiten Sie zum Ausweis. Sie gehen mit dem Dokument, nicht mit Versprechen.",
               "benefits": [
-                "Terminverwaltung",
-                "Vor-Ort-Begleitung",
-                "Vollständige Dokumentation",
-                "Koordination mit der Einwanderungsbehörde"
+                "Begleitung zum Identificaciones-Büro",
+                "Dokumentenprüfung im Voraus",
+                "Bestätigte Lieferung in 4-8 Wochen"
               ],
-              "icon": "🆔"
+              "icon": "CreditCard"
             }
           ]
         },
         {
+          "id": "banking-tax",
           "title": "Bankwesen und Steuern",
-          "description": "Etablieren Sie Ihren finanziellen Fußabdruck in Paraguay mit fachkundiger Beratung.",
+          "subtitle": "Ihr finanzieller Fußabdruck in Paraguay",
           "items": [
             {
-              "title": "Bankkontoeröffnung",
-              "shortDescription": "Beratung und Unterstützung zur erfolgreichen Eröffnung lokaler Bankkonten.",
-              "fullDescription": "Wir führen Sie durch die Auswahl und Eröffnung von Bankkonten. Wir koordinieren Termine, bereiten die erforderlichen Unterlagen vor und erleichtern die Kommunikation mit den Banken.",
+              "title": "Bankkonto-Eröffnung",
+              "description": "Wir eröffnen Ihr Konto bei lokalen Banken. Keine Umwege, keine spanischen Antworten.",
               "benefits": [
-                "Wahl der richtigen Bank",
-                "Dokumente vorbereitet",
-                "Vor-Ort-Begleitung",
-                "Online- und Filialbanking"
+                "Bankenauswahl nach Ihrem Profil",
+                "Filialbegleitung",
+                "Karten- und Online-Banking-Aktivierung"
               ],
-              "icon": "🏦"
+              "icon": "Landmark"
             },
             {
               "title": "Steuerregistrierung (RUC)",
-              "shortDescription": "Einrichtung Ihres RUC für persönliche oder geschäftliche Nutzung.",
-              "fullDescription": "Wir kümmern uns um Ihre Registrierung im Einheitlichen Steuerregister bei der Steuerbehörde (SET). Diese Nummer ist für jede wirtschaftliche Tätigkeit in Paraguay unerlässlich.",
+              "description": "Wir melden Sie bei SET an. Ihre persönliche oder geschäftliche RUC ist betriebsbereit.",
               "benefits": [
-                "Dokumentenvorbereitung",
-                "Anmeldung bei SET",
-                "Einrichtung der Steueradresse",
-                "Digitales Zertifikat"
+                "Anmeldung als Privatperson oder S.A.",
+                "Steuerregime-Konfiguration",
+                "Beratung zu monatlichen Verpflichtungen"
               ],
-              "icon": "📊"
+              "icon": "Calculator"
             }
           ]
         },
         {
-          "title": "Wohnimmobilien",
-          "description": "Finden Sie den idealen Ort zum Leben, ob für einen Monat oder ein Leben lang.",
+          "id": "real-estate",
+          "title": "Immobilien",
+          "subtitle": "Finden Sie Ihren Wohnort",
           "items": [
             {
               "title": "Wohnungs- und Hausmiete",
-              "shortDescription": "Hilfe bei der Navigation auf dem lokalen Markt, um qualitativ hochwertige Mietobjekte zu finden.",
-              "fullDescription": "Wir helfen Ihnen, qualitativ hochwertige Mietimmobilien zu finden: Vertragsprüfung, Besichtigungskoordination und Einzugsunterstützung.",
+              "description": "Wir suchen Immobilien in Asunción und im Großraum innerhalb Ihres Budgets.",
               "benefits": [
-                "Personalisierte Suche",
-                "Vertragsprüfung",
-                "Besichtigungskoordination",
-                "Einzugsunterstützung"
+                "Suche in sicheren, gut angebundenen Vierteln",
+                "Verhandlung mit Eigentümern",
+                "Vertragsprüfung auf Spanisch"
               ],
-              "icon": "🏠"
+              "icon": "House"
             },
             {
               "title": "Immobilienkauf",
-              "shortDescription": "Fachkundige Unterstützung beim Finden und Kaufen von Wohnimmobilien.",
-              "fullDescription": "Wir begleiten Sie durch den gesamten Kaufprozess: Immobiliensuche, Verhandlung, Due Diligence und notarielle Koordination.",
+              "description": "Wir begleiten Sie beim Kauf, von der Suche bis zur Unterzeichnung beim Notar.",
               "benefits": [
-                "Immobiliensuche",
-                "Verhandlung",
-                "Titelprüfung",
-                "Notarielle Koordination"
+                "Beratung zu Vierteln nach Lebensstil",
+                "Rechtliche Überprüfung der Immobilie",
+                "Koordination mit Notar und Register"
               ],
-              "icon": "🔑"
+              "icon": "KeyRound"
             },
             {
               "title": "Due Diligence",
-              "shortDescription": "Wir prüfen Titel und Rechtsstatus jeder Immobilie, um Ihre Investition zu schützen.",
-              "fullDescription": "Wir führen eine gründliche Prüfung der rechtlichen Situation der Immobilie durch, einschließlich Titelprüfung, Pfandrechtssuche und Zonierungskonformität.",
+              "description": "Wir überprüfen Titel, Schulden und rechtliche Vorgeschichte jeder Immobilie vor dem Kauf.",
               "benefits": [
-                "Titelprüfung",
-                "Pfandrechtssuche",
-                "Zonierungsprüfung",
-                "Rechtsstatusbericht"
+                "Titelprüfung im öffentlichen Register",
+                "Gemeindliche und steuerliche Schuldenprüfung",
+                "Schriftlicher Bericht mit Ergebnissen"
               ],
-              "icon": "📋"
+              "icon": "Shield"
             }
           ]
         }
-      ]
+      ],
+      "ctaText": "Kostenlose Beratung buchen",
+      "ctaHref": "/de/agenda"
     },
     "feedback": {
       "eyebrow": "IHRE MEINUNG",

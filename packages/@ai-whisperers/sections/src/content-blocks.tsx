@@ -5,35 +5,40 @@ import { SectionComponentProps } from './types'
 import { resolveImage } from './resolve-content'
 
 import {
-  FileText,
-  Stamp,
-  FileCheck,
-  ClipboardCheck,
-  CreditCard,
-  UserCheck,
+  Award,
   BadgeCheck,
-  TrendingUp,
-  Building2,
-  Briefcase,
   Banknote,
-  Landmark,
-  Globe,
-  Package,
-  Plane,
-  Heart,
-  Shield,
-  ShieldCheck,
-  Users,
-  UserPlus,
-  MapPin,
-  Clock,
+  Briefcase,
+  Building,
+  Building2,
+  Calculator,
   Calendar,
   Check,
-  Award,
-  Star,
-  Phone,
+  ClipboardCheck,
+  Clock,
+  CreditCard,
+  FileCheck,
+  FileText,
+  Globe,
+  Heart,
+  House,
+  KeyRound,
+  Landmark,
   Mail,
+  MapPin,
   MessageCircle,
+  Package,
+  Phone,
+  Plane,
+  Search,
+  Shield,
+  ShieldCheck,
+  Stamp,
+  Star,
+  TrendingUp,
+  UserCheck,
+  UserPlus,
+  Users,
 } from 'lucide-react'
 export function TrustSection({ pageContent, images }: SectionComponentProps) {
   const c = pageContent.trust || {}
@@ -122,44 +127,158 @@ export function TrustSection({ pageContent, images }: SectionComponentProps) {
 
 export function ServicesSection({ pageContent, data, images }: SectionComponentProps) {
   const d = data || pageContent || {}
-  const groups = d.services?.groups || d.groups || []
+  const services = d.services || {}
+  const eyebrow = services.eyebrow || d.eyebrow
+  const title = services.title || d.title
+  const subtitle = services.subtitle || d.subtitle
+  const groups = services.groups || d.groups || []
+  const ctaText = services.ctaText || d.ctaText
+  const ctaHref = services.ctaHref || d.ctaHref
+
   if (!groups.length) return null
+
+  // Map icon names → Lucide components (with safe fallback)
+  const ICONS: Record<string, any> = {
+    FileText, Stamp, FileCheck, ClipboardCheck,
+    CreditCard, UserCheck, BadgeCheck,
+    Building, Building2, Briefcase, Banknote, Landmark, Calculator,
+    Home: House, House,
+    Search, Shield, ShieldCheck,
+    KeyRound, Package, Plane, Heart,
+    Users, UserPlus, MapPin, Clock, Calendar,
+    Check, Award, Star, Globe, TrendingUp,
+    Phone, Mail, MessageCircle,
+  }
+  const getIcon = (name?: string) => {
+    if (!name) return ShieldCheck
+    return ICONS[name] || ICONS[name.charAt(0).toUpperCase() + name.slice(1)] || ShieldCheck
+  }
+
+  // Group icons (bigger, more prominent)
+  const GROUP_ICONS: Record<string, any> = {
+    residency: Stamp,
+    banking: Landmark,
+    realestate: House,
+    real_estate: House,
+    property: House,
+  }
+
   return (
-    <section className="py-20">
-      <div className="max-w-6xl mx-auto text-center px-4">
-        <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{d.eyebrow}</p>
-        <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold text-primary mb-8">{d.title}</h2>
-        {groups.map((group: any, i: number) => (
-          <div key={i} className="mb-12">
-            {i > 0 && <div className="w-[60px] h-[2px] bg-accent mx-auto mb-10" />}
-            <h3 className="text-lg font-playfair font-bold text-primary mb-1">{group.title}</h3>
-            <p className="text-text-muted text-sm mb-4">{group.subtitle}</p>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4 text-left">
-              {group.items.map((item: any, j: number) => {
-                const itemImg = resolveImage(images, item.image)
-                return (
-                  <div key={j} className="p-6 bg-surface-alt rounded-lg border-l-[3px] border-accent shadow-sm hover:shadow-md transition-shadow">
-                    {itemImg && <img src={itemImg} alt={item.title} loading="lazy" width={400} height={140} className="w-full h-[140px] object-cover rounded-sm mb-3" />}
-                    <h4 className="font-bold text-primary mb-1">{item.title}</h4>
-                    <p className="text-text-muted text-sm leading-relaxed mb-2">{item.description}</p>
-                    {item.benefits && <ul className="list-none p-0 mt-2">
-                      {item.benefits.map((b: string, k: number) => (
-                        <li key={k} className="text-xs text-text-muted py-0.5 flex gap-2 items-baseline">
-                          <span className="text-accent font-bold">✓</span> {b}
-                        </li>
-                      ))}
-                    </ul>}
-                    {item.ctaText && <a href={item.ctaHref} className="inline-block mt-3 text-accent font-bold text-xs no-underline border-b-2 border-accent">{item.ctaText}</a>}
+    <section className="py-20 md:py-24">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          {eyebrow && (
+            <p className="text-xs text-text-muted uppercase tracking-[3px] mb-3">{eyebrow}</p>
+          )}
+          {title && (
+            <h2 className="text-[clamp(1.5rem,2.8vw,2.25rem)] font-playfair font-bold text-primary mb-4 leading-tight max-w-3xl mx-auto">
+              {title}
+            </h2>
+          )}
+          <div className="w-[60px] h-[3px] bg-accent mx-auto mb-6" />
+          {subtitle && (
+            <p className="text-text-muted max-w-2xl mx-auto leading-relaxed">{subtitle}</p>
+          )}
+        </div>
+
+        {/* Service groups */}
+        <div className="space-y-16">
+          {groups.map((group: any, gi: number) => {
+            const GroupIcon = GROUP_ICONS[group.id] || Stamp
+            return (
+              <div key={gi} className="relative">
+                {/* Group header */}
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center gap-3 mb-3">
+                    <span className="text-xs text-text-muted font-mono uppercase tracking-wider">
+                      {String(gi + 1).padStart(2, '0')} / {String(groups.length).padStart(2, '0')}
+                    </span>
+                    <span className="w-8 h-[1px] bg-accent/40" />
+                    <span className="text-xs text-accent font-semibold uppercase tracking-wider">
+                      {group.title}
+                    </span>
                   </div>
-                )
-              })}
-            </div>
+                  {group.subtitle && (
+                    <p className="text-text-muted text-base max-w-xl mx-auto">{group.subtitle}</p>
+                  )}
+                </div>
+
+                {/* Items grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {group.items.map((item: any, i: number) => {
+                    const IconComp = getIcon(item.icon)
+                    return (
+                      <div
+                        key={i}
+                        className="group relative bg-surface-alt rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent/30"
+                      >
+                        {/* Icon + title */}
+                        <div className="flex items-start gap-3 mb-3">
+                          <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-primary/8 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-accent transition-all duration-300">
+                            <IconComp className="w-5 h-5" strokeWidth={2} />
+                          </div>
+                          <h3 className="font-bold text-primary text-base leading-tight pt-2">
+                            {item.title}
+                          </h3>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-text-muted text-sm leading-relaxed mb-4">
+                          {item.description}
+                        </p>
+
+                        {/* Benefits */}
+                        {item.benefits && item.benefits.length > 0 && (
+                          <ul className="space-y-2 pt-3 border-t border-border/40">
+                            {item.benefits.map((b: string, j: number) => (
+                              <li key={j} className="flex items-start gap-2 text-xs text-text-muted leading-relaxed">
+                                <Check className="w-3.5 h-3.5 text-accent flex-shrink-0 mt-0.5" strokeWidth={3} />
+                                <span>{b}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+
+                        {/* Per-item CTA */}
+                        {item.ctaText && (
+                          <a
+                            href={item.ctaHref}
+                            className="inline-flex items-center gap-1 mt-4 text-accent font-semibold text-xs hover:gap-2 transition-all"
+                          >
+                            {item.ctaText}
+                            <span>→</span>
+                          </a>
+                        )}
+
+                        {/* Accent gradient on hover */}
+                        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent/0 via-accent to-accent/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-t-xl" />
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Bottom CTA */}
+        {ctaText && ctaHref && (
+          <div className="text-center mt-16 pt-12 border-t border-border/30">
+            <a
+              href={ctaHref}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              {ctaText}
+              <span className="text-lg">→</span>
+            </a>
           </div>
-        ))}
+        )}
       </div>
     </section>
   )
 }
+
 
 export function ProcessSection({ pageContent, images }: SectionComponentProps) {
   const c = pageContent.process || {}
