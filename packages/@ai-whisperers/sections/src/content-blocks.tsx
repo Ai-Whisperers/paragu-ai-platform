@@ -4,26 +4,91 @@ import React from 'react'
 import { SectionComponentProps } from './types'
 import { resolveImage } from './resolve-content'
 
+import {
+  FileText, Stamp, FileCheck, ClipboardCheck,
+  CreditCard, UserCheck, BadgeCheck,
+  Building2, Briefcase, Banknote, Landmark,
+  Package, Plane, Heart, Shield, ShieldCheck,
+  Users, UserPlus, MapPin, Clock, Calendar,
+  Check, Award, Star, Globe,
+  Phone, Mail, MessageCircle,
+} from 'lucide-react'
+
 export function TrustSection({ pageContent, images }: SectionComponentProps) {
   const c = pageContent.trust || {}
   if (!c.items?.length) return null
+
+  // Map common icon names to Lucide components.
+  // Falls back to a meaningful default if not specified.
+  const ICONS: Record<string, any> = {
+    FileText, Stamp, FileCheck, ClipboardCheck,
+    CreditCard, UserCheck, BadgeCheck,
+    Building2, Briefcase, Banknote, Landmark,
+    Package, Plane, Heart, Shield, ShieldCheck,
+    Users, UserPlus, MapPin, Clock, Calendar,
+    Check, Award, Star, Globe,
+    Phone, Mail, MessageCircle,
+  }
+  const getIcon = (name?: string) => {
+    if (!name) return ShieldCheck
+    return ICONS[name] || ICONS[name.charAt(0).toUpperCase() + name.slice(1)] || ShieldCheck
+  }
+
   return (
-    <section className="py-20">
-      <div className="max-w-6xl mx-auto text-center px-4">
-        <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{c.eyebrow}</p>
-        <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold text-primary mb-8">{c.title}</h2>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6">
+    <section className="py-20 md:py-24">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <p className="text-xs text-text-muted uppercase tracking-[3px] mb-3">{c.eyebrow}</p>
+          <h2 className="text-[clamp(1.5rem,2.8vw,2.25rem)] font-playfair font-bold text-primary mb-4 leading-tight">
+            {c.title}
+          </h2>
+          {c.subtitle && (
+            <p className="text-text-muted max-w-2xl mx-auto leading-relaxed">{c.subtitle}</p>
+          )}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {c.items.map((item: any, i: number) => {
             const img = resolveImage(images, item.image)
+            const IconComp = getIcon(item.icon)
+            const num = String(i + 1).padStart(2, '0')
             return (
-              <div key={i} className="p-6 bg-surface-alt rounded-lg text-center shadow-sm hover:shadow-md transition-shadow">
+              <div
+                key={i}
+                className="group relative bg-surface-alt rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-primary/20"
+              >
                 {img ? (
-                  <img src={img} alt={item.title} loading="lazy" width={400} height={140} className="w-full h-[140px] object-cover mb-4 block rounded-lg" />
+                  <div className="relative aspect-[16/10] overflow-hidden bg-primary/5">
+                    <img
+                      src={img}
+                      alt={item.title}
+                      loading="lazy"
+                      width={400}
+                      height={250}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute top-3 left-3 w-9 h-9 rounded-full bg-primary text-accent font-bold text-sm flex items-center justify-center shadow-md">
+                      {num}
+                    </div>
+                  </div>
                 ) : (
-                  <div className="w-12 h-12 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-accent text-lg font-bold">{item.title?.[0] || '✦'}</div>
+                  <div className="relative aspect-[16/10] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
+                    <IconComp className="w-16 h-16 text-accent/90" strokeWidth={1.5} />
+                    <div className="absolute top-3 left-3 w-9 h-9 rounded-full bg-accent text-primary font-bold text-sm flex items-center justify-center shadow-md">
+                      {num}
+                    </div>
+                  </div>
                 )}
-                <h3 className="font-bold text-primary mb-2 text-base">{item.title}</h3>
-                <p className="text-text-muted leading-relaxed text-[0.95rem]">{item.description}</p>
+
+                <div className="p-6 text-center">
+                  <h3 className="font-bold text-primary mb-3 text-lg leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-text-muted leading-relaxed text-[0.95rem]">
+                    {item.description}
+                  </p>
+                </div>
+
+                <div className="h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
               </div>
             )
           })}
@@ -32,6 +97,7 @@ export function TrustSection({ pageContent, images }: SectionComponentProps) {
     </section>
   )
 }
+
 
 export function ServicesSection({ pageContent, data, images }: SectionComponentProps) {
   const d = data || pageContent || {}

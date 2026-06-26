@@ -1675,27 +1675,28 @@
     },
     "trust": {
       "eyebrow": "WARUM NEXA",
-      "title": "Alles, was Sie für Ihren Umzug brauchen",
+      "title": "Aufenthaltserlaubnis, Bankkonto und Firma — an einem Tag erledigt",
       "items": [
         {
-          "icon": "Package",
-          "title": "Wir helfen mit allem, was Sie brauchen",
-          "description": "Aufenthalt, Firmengründung und Bankkonto — in einem einzigen Prozess integriert.",
-          "image": "@src:trust.certificate"
+          "icon": "Stamp",
+          "title": "Aufenthaltserlaubnis persönlich beantragt",
+          "description": "Wir begleiten Sie durch Migraciones und das Einwanderungsbüro. Sie gehen nicht allein.",
+          "image": "@src:trust.migraciones"
         },
         {
-          "icon": "Plane",
-          "title": "Wir begleiten Sie im Prozess",
-          "description": "Persönliche Termine an einem koordinierten Tag.",
-          "image": "@src:trust.meeting"
+          "icon": "CreditCard",
+          "title": "Paraguayischer Ausweis in der Hand",
+          "description": "Wir übergeben Ihnen Ihren paraguayischen Ausweis. Sie verlassen den Prozess mit dem Dokument, nicht mit Versprechen.",
+          "image": "@src:trust.migraciones"
         },
         {
-          "icon": "Heart",
-          "title": "Enge, fortlaufende Begleitung",
-          "description": "Wir sind verfügbar, wann immer Sie uns brauchen.",
-          "image": "@src:trust.team"
+          "icon": "Landmark",
+          "title": "Firma und Bankkonto integriert",
+          "description": "Wir gründen Ihre S.A. und eröffnen Ihr Bankkonto — alles an einem einzigen Arbeitstag verkettet.",
+          "image": "@src:trust.registry"
         }
-      ]
+      ],
+      "subtitle": "Keine Auslagerung. Keine Unterauftragsvergabe. Wir erledigen Ihre Unterlagen persönlich in Asunción."
     },
     "whyCountry": {
       "eyebrow": "WARUM PARAGUAY",

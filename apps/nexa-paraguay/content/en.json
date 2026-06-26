@@ -81,27 +81,28 @@
     },
     "trust": {
       "eyebrow": "WHY NEXA",
-      "title": "Everything you need for your relocation",
+      "title": "Residency, bank account and company — handled in one day",
       "items": [
         {
-          "icon": "Package",
-          "title": "We help with what you need",
-          "description": "Residency, company formation, and banking — integrated into a single journey.",
-          "image": "@src:trust.certificate"
+          "icon": "Stamp",
+          "title": "Residency filed in person",
+          "description": "We accompany you through Migraciones and the residency office. You don't go alone.",
+          "image": "@src:trust.migraciones"
         },
         {
-          "icon": "Plane",
-          "title": "We guide you through the process",
-          "description": "On-site appointments in a single coordinated day.",
-          "image": "@src:trust.meeting"
+          "icon": "CreditCard",
+          "title": "Paraguayan ID card in hand",
+          "description": "We deliver your Paraguayan cédula. You walk out with the document, not with promises.",
+          "image": "@src:trust.cedula"
         },
         {
-          "icon": "Heart",
-          "title": "Close, ongoing support",
-          "description": "We are available whenever you need us.",
-          "image": "@src:trust.team"
+          "icon": "Landmark",
+          "title": "Company and bank account integrated",
+          "description": "We incorporate your S.A. and open your bank account — all chained in a single working day.",
+          "image": "@src:trust.registry"
         }
-      ]
+      ],
+      "subtitle": "No outsourcing. No subcontracting. We handle your paperwork in person in Asunción."
     },
     "whyCountry": {
       "eyebrow": "WHY PARAGUAY",

@@ -81,27 +81,28 @@
     },
     "trust": {
       "eyebrow": "POR QUÉ NEXA",
-      "title": "Todo lo que necesitás para tu mudanza",
+      "title": "Residencia, cuenta y empresa — tramitadas en una jornada",
       "items": [
         {
-          "icon": "Package",
-          "title": "Te ayudamos con lo que necesites",
-          "description": "Residencia, sociedad y cuenta bancaria integrados.",
-          "image": "@src:trust.certificate"
+          "icon": "Stamp",
+          "title": "Residencia tramitada en persona",
+          "description": "Acompañamos todo el proceso en Migraciones y la oficina de radicaciones. Vos no volvés solo.",
+          "image": "@src:trust.migraciones"
         },
         {
-          "icon": "Plane",
-          "title": "Te acompañamos en el proceso",
-          "description": "Tramitación presencial en una jornada coordinada.",
-          "image": "@src:trust.meeting"
+          "icon": "CreditCard",
+          "title": "Cédula paraguaya en mano",
+          "description": "Te entregamos tu cédula de identidad paraguaya. Salís del proceso con documento, no con promesas.",
+          "image": "@src:trust.cedula"
         },
         {
-          "icon": "Heart",
-          "title": "Acompañamiento de cerca",
-          "description": "Estamos disponibles para lo que necesiten.",
-          "image": "@src:trust.team"
+          "icon": "Landmark",
+          "title": "Empresa y cuenta bancaria integradas",
+          "description": "Constituimos tu sociedad anónima y abrimos la cuenta bancaria — todo encadenado en una sola jornada.",
+          "image": "@src:trust.registry"
         }
-      ]
+      ],
+      "subtitle": "No tercerizamos. No subcontratamos. Tramitamos personalmente en Asunción con vos."
     },
     "whyCountry": {
       "eyebrow": "Por qué Paraguay",

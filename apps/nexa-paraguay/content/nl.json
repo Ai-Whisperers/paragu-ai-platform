@@ -1318,27 +1318,28 @@
     },
     "trust": {
       "eyebrow": "WAAROM NEXA",
-      "title": "Alles wat je nodig hebt voor je verhuizing",
+      "title": "Verblijfsvergunning, bankrekening en bedrijf — in één dag geregeld",
       "items": [
         {
-          "icon": "Package",
-          "title": "We helpen met wat je nodig hebt",
-          "description": "Verblijf, bedrijfsoprichting en bankieren — geïntegreerd in één traject.",
-          "image": "@src:trust.certificate"
+          "icon": "Stamp",
+          "title": "Verblijfsvergunning persoonlijk aangevraagd",
+          "description": "Wij begeleiden je bij Migraciones en het verblijfsbureau. Je gaat niet alleen.",
+          "image": "@src:trust.migraciones"
         },
         {
-          "icon": "Plane",
-          "title": "We begeleiden je in het proces",
-          "description": "Persoonlijke afspraken op één gecoördineerde dag.",
-          "image": "@src:trust.meeting"
+          "icon": "CreditCard",
+          "title": "Paraguayaanse identiteitskaart in handen",
+          "description": "Wij bezorgen je Paraguayaanse cédula. Je verlaat het proces met het document, niet met beloftes.",
+          "image": "@src:trust.cedula"
         },
         {
-          "icon": "Heart",
-          "title": "Nauwe, doorlopende begeleiding",
-          "description": "Wij zijn beschikbaar wanneer u ons nodig heeft.",
-          "image": "@src:trust.team"
+          "icon": "Landmark",
+          "title": "Bedrijf en bankrekening geïntegreerd",
+          "description": "Wij richten je S.A. op en openen je bankrekening — allemaal in één werkdag aan elkaar gekoppeld.",
+          "image": "@src:trust.registry"
         }
-      ]
+      ],
+      "subtitle": "Geen uitbesteding. Geen onderaanneming. Wij regelen uw papierwerk persoonlijk in Asunción."
     },
     "whyCountry": {
       "eyebrow": "WAAROM PARAGUAY",
