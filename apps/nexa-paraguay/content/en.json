@@ -661,7 +661,12 @@
     },
     "hero": {
       "headline": "Experience turned into service",
-      "subheadline": "We are Sonia and Luana Weiss van der Pol. Dutch women living in Paraguay for 7+ years. We founded Nexa after processing each step of the migration process ourselves."
+      "subheadline": "We are Sonia and Luana Weiss van der Pol. Dutch women living in Paraguay for 7+ years. We founded Nexa after processing each step of the migration process ourselves.",
+      "eyebrow": "About Nexa Paraguay",
+      "ctaText": "Book a free consultation",
+      "ctaHref": "/contacto",
+      "secondaryCtaText": "See our process",
+      "secondaryCtaHref": "/proceso"
     },
     "team": {
       "title": "Our team",
@@ -756,7 +761,7 @@
     },
     "story": {
       "title": "Sonia's story",
-      "eyebrow": "HOW IT STARTED",
+      "eyebrow": "Why we exist",
       "paragraphs": [
         "Sonia is Paraguayan. She lived 7 years in the Netherlands, where she initially worked in the cleaning industry. She always knew she would return to Paraguay — her plan was to stay long enough to gain experience and then go back home with structure and clarity.",
         "What was hardest about coming back was reinventing herself culturally. The paperwork was complicated, but the hardest part was rebuilding her life in a country that was both hers and foreign at the same time. That experience is what makes her understand European clients who arrive for the first time: they don't need just a lawyer, they need someone who has lived through the same thing.",
@@ -768,6 +773,30 @@
         "So far I have helped 10 people — all Dutch — find their way in Paraguay. Some came for residency, others for business, others for the lifestyle. The common thread: they all wanted a path, not just a service.",
         "What they value most is the almost-family support. My greatest pride is having helped families with children settle here in a way that feels safe, structured, and accompanied — not just a transaction.",
         "The residency process takes 3 to 4 months in normal cases. During that time, we don't disappear: we coordinate, we respond, we resolve. Our clients don't feel alone at any point of the process."
+      ],
+      "highlights": [
+        {
+          "value": "14",
+          "suffix": " months",
+          "label": "Sonia's process (2017)",
+          "note": "no guidance, no contacts"
+        },
+        {
+          "value": "USD 11,000",
+          "label": "Sonia paid",
+          "note": "to 3 professionals who didn't talk to each other"
+        },
+        {
+          "value": "10",
+          "suffix": " weeks",
+          "label": "Luana's process",
+          "note": "with Sonia's experience"
+        },
+        {
+          "value": "6x",
+          "label": "Faster",
+          "note": "same process, different preparation"
+        }
       ]
     },
     "whyNexa": {

@@ -14,10 +14,20 @@ export function StorySection({ pageContent, data }: any) {
       {/* Main story */}
       <section className="py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4">
+          {d.eyebrow && (
+            <AnimatedSection animation="fade-up" className="text-center mb-3">
+              <p className="text-xs text-accent uppercase tracking-[3px] font-semibold">{d.eyebrow}</p>
+            </AnimatedSection>
+          )}
           {d.title && (
-            <AnimatedSection animation="fade-up" className="text-center mb-12">
+            <AnimatedSection animation="fade-up" className="text-center mb-6">
               <h2 className="text-[clamp(1.5rem_3vw_2.2rem)] font-bold text-primary mb-4">{d.title}</h2>
               <div className="w-12 h-0.5 bg-accent mx-auto" />
+            </AnimatedSection>
+          )}
+          {d.subtitle && (
+            <AnimatedSection animation="fade-up" className="text-center mb-12">
+              <p className="text-text-muted max-w-2xl mx-auto leading-relaxed">{d.subtitle}</p>
             </AnimatedSection>
           )}
 
@@ -32,6 +42,32 @@ export function StorySection({ pageContent, data }: any) {
               </AnimatedSection>
             ))}
           </div>
+
+          {/* Story highlights — visual stat callouts */}
+          {d.highlights && d.highlights.length > 0 && (
+            <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {d.highlights.map((h: any, i: number) => (
+                <AnimatedSection
+                  key={i}
+                  animation="fade-up"
+                  delay={i * 80}
+                  className="text-center p-5 bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl border border-accent/20"
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-primary leading-none mb-1 tabular-nums">
+                    {h.value}{h.suffix || ''}
+                  </div>
+                  <div className="text-xs font-semibold text-primary mb-1.5">
+                    {h.label}
+                  </div>
+                  {h.note && (
+                    <div className="text-[11px] text-text-muted leading-tight">
+                      {h.note}
+                    </div>
+                  )}
+                </AnimatedSection>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

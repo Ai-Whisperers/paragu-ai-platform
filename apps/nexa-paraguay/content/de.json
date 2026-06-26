@@ -251,7 +251,12 @@
     },
     "hero": {
       "headline": "Erfahrung in Dienst umgewandelt",
-      "subheadline": "Wir sind Sonia und Luana Weiss van der Pol. Niederländerinnen, die seit 7+ Jahren in Paraguay leben. Wir haben Nexa gegründet, nachdem wir jeden Schritt des Migrationsprozesses selbst durchlaufen haben."
+      "subheadline": "Wir sind Sonia und Luana Weiss van der Pol. Niederländerinnen, die seit 7+ Jahren in Paraguay leben. Wir haben Nexa gegründet, nachdem wir jeden Schritt des Migrationsprozesses selbst durchlaufen haben.",
+      "eyebrow": "Über Nexa Paraguay",
+      "ctaText": "Kostenlose Beratung buchen",
+      "ctaHref": "/contacto",
+      "secondaryCtaText": "Unseren Prozess ansehen",
+      "secondaryCtaHref": "/proceso"
     },
     "team": {
       "title": "Unser Team",
@@ -346,7 +351,7 @@
     },
     "story": {
       "title": "Sonias Geschichte",
-      "eyebrow": "WIE ES BEGANN",
+      "eyebrow": "Warum wir existieren",
       "paragraphs": [
         "Sonia ist Paraguayerin. Sie lebte 7 Jahre in den Niederlanden, wo sie zunächst in der Reinigungsbranche arbeitete. Sie wusste immer, dass sie nach Paraguay zurückkehren würde — ihr Plan war, lange genug zu bleiben, um Erfahrung zu sammeln, und dann mit Struktur und Klarheit nach Hause zurückzukehren.",
         "Am schwierigsten an der Rückkehr war es, sich kulturell neu zu erfinden. Die Bürokratie war kompliziert, aber das Schwierigste war, ihr Leben in einem Land wieder aufzubauen, das gleichzeitig ihres und fremd war. Diese Erfahrung ist es, die sie europäische Kunden verstehen lässt, die zum ersten Mal ankommen: Sie brauchen nicht nur einen Anwalt, sie brauchen jemanden, der dasselbe durchlebt hat.",
@@ -358,6 +363,30 @@
         "Bis jetzt habe ich 10 Menschen geholfen — alles Holländer — ihren Weg in Paraguay zu finden. Manche kamen für den Aufenthalt, andere fürs Geschäft, wieder andere für den Lebensstil. Der gemeinsame Nenner: Sie alle wollten einen Weg, nicht nur eine Dienstleistung.",
         "Was sie am meisten schätzen, ist die fast familiäre Unterstützung. Mein größter Stolz ist es, Familien mit Kindern geholfen zu haben, sich hier niederzulassen auf eine Art, die sich sicher, strukturiert und begleitet anfühlt — nicht nur eine Transaktion.",
         "Der Aufenthaltsprozess dauert in normalen Fällen 3 bis 4 Monate. Während dieser Zeit verschwinden wir nicht: wir koordinieren, antworten, lösen. Unsere Kunden fühlen sich zu keinem Zeitpunkt allein im Prozess."
+      ],
+      "highlights": [
+        {
+          "value": "14",
+          "suffix": " Monate",
+          "label": "Sonias Prozess (2017)",
+          "note": "ohne Anleitung, ohne Kontakte"
+        },
+        {
+          "value": "USD 11.000",
+          "label": "Sonia zahlte",
+          "note": "an 3 Fachleute, die nicht miteinander sprachen"
+        },
+        {
+          "value": "10",
+          "suffix": " Wochen",
+          "label": "Luanas Prozess",
+          "note": "mit Sonias Erfahrung"
+        },
+        {
+          "value": "6x",
+          "label": "Schneller",
+          "note": "gleicher Prozess, andere Vorbereitung"
+        }
       ]
     },
     "whyNexa": {

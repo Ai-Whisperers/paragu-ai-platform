@@ -110,12 +110,24 @@ export function TrustSection({ pageContent, data, images }: SectionComponentProp
                 )}
 
                 <div className="p-6 text-center">
-                  <h3 className="font-bold text-primary mb-3 text-lg leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="text-text-muted leading-relaxed text-[0.95rem]">
-                    {item.description}
-                  </p>
+                  {/* Big stat number (when data has value+label) */}
+                  {item.value && (
+                    <div className="text-5xl font-bold text-accent mb-2 leading-none tabular-nums">
+                      {item.value}
+                    </div>
+                  )}
+                  {/* Standard title/description */}
+                  {item.title && !item.value && (
+                    <h3 className="font-bold text-primary mb-3 text-lg leading-snug">
+                      {item.title}
+                    </h3>
+                  )}
+                  {/* Label/description */}
+                  {(item.label || item.description) && (
+                    <p className={`leading-relaxed text-[0.95rem] ${item.value ? 'text-text-muted font-medium' : 'text-text-muted'}`}>
+                      {item.label || item.description}
+                    </p>
+                  )}
                 </div>
 
                 <div className="h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
@@ -500,21 +512,46 @@ export function PillarsSection({ pageContent, data, images }: SectionComponentPr
   return (
     <section className="py-20 bg-primary text-white">
       <div className="max-w-6xl mx-auto text-center px-4">
-        {eyebrow && <p className="text-xs text-accent uppercase tracking-[2px] mb-2">{d.eyebrow}</p>}
-        {title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold mb-3">{d.title}</h2>}
+        {eyebrow && <p className="text-xs text-accent uppercase tracking-[2px] mb-2">{eyebrow}</p>}
+        {title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold mb-3">{title}</h2>}
         <div className="w-[60px] h-[3px] bg-accent mx-auto mb-8" />
         {honestNote && <p className="text-sm text-white/80 italic max-w-[600px] mx-auto mb-8">{d.honestNote}</p>}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {pillars.map((p: any, i: number) => {
             const img = resolveImage(images, p.imageUrl || p.image)
+            // Try to resolve icon name to a Lucide component
+            const ICON_MAP: Record<string, any> = {
+              Award, BadgeCheck, Banknote, Briefcase, BriefcaseBusiness, Building, Building2,
+              Calculator, Calendar, ClipboardCheck, Clock, CreditCard, FileCheck, FileText,
+              Globe, Heart, Home: House, House, KeyRound, Landmark, Mail, MapPin,
+              MessageCircle, Package, Phone, Plane, Search, Shield, ShieldCheck, Sprout,
+              Stamp, Star, Sun, TrendingUp, UserCheck, UserPlus, Users,
+            }
+            const IconComp = p.icon ? ICON_MAP[p.icon] || ICON_MAP[p.icon.charAt(0).toUpperCase() + p.icon.slice(1)] || null : null
             return (
-              <div key={i} className="p-6 rounded-lg text-left backdrop-blur-[10px]"
-                style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(201,169,110,0.12)', boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }}>
-                {img && <img src={img} alt={p.title} loading="lazy" width={600} height={180} className="w-full h-[180px] object-cover rounded-sm mb-3" />}
-                <h3 className="font-bold text-accent mb-2 text-lg">{p.title}</h3>
+              <div key={i} className="group relative p-6 rounded-2xl text-left backdrop-blur-[10px] bg-white/[0.04] hover:bg-white/[0.08] border border-accent/15 hover:border-accent/40 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(201,169,110,0.15)] transition-all duration-300 overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
+                {/* Numbered badge */}
+                <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-accent/20 text-accent font-bold text-xs flex items-center justify-center">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                {/* Icon or image */}
+                {IconComp ? (
+                  <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center mb-4">
+                    <IconComp className="w-6 h-6 text-accent" strokeWidth={1.8} />
+                  </div>
+                ) : img ? (
+                  <img src={img} alt={p.title} loading="lazy" width={600} height={180} className="w-full h-[140px] object-cover rounded-lg mb-4 transition-transform duration-500 group-hover:scale-105" />
+                ) : null}
+                <h3 className="font-bold text-accent mb-2 text-base leading-tight">{p.title}</h3>
                 <p className="text-sm text-white/80 leading-relaxed">{p.description}</p>
-                {p.bullets && <ul className="mt-3 pl-4 text-xs text-white/65">
-                  {p.bullets.map((b: string, j: number) => <li key={j} className="mb-1">{b}</li>)}
+                {p.bullets && <ul className="mt-3 space-y-1">
+                  {p.bullets.map((b: string, j: number) => (
+                    <li key={j} className="text-xs text-white/70 flex gap-1.5 items-start leading-snug">
+                      <span className="text-accent shrink-0 mt-0.5">✓</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
                 </ul>}
               </div>
             )

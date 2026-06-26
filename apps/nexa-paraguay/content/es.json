@@ -823,7 +823,12 @@
     "hero": {
       "headline": "Experiencia Convertida en Servicio",
       "subheadline": "Somos Sonia y Luana Weiss van der Pol. Holandesas viviendo en Paraguay hace 7+ años. Fundamos Nexa después de haber tramitado nosotras mismas cada paso del proceso migratorio.",
-      "image": "@src:team.group"
+      "image": "@src:team.group",
+      "eyebrow": "Sobre Nexa Paraguay",
+      "ctaText": "Agendar consulta gratuita",
+      "ctaHref": "/contacto",
+      "secondaryCtaText": "Ver nuestro proceso",
+      "secondaryCtaHref": "/proceso"
     },
     "team": {
       "eyebrow": "Equipo fundador",
@@ -930,6 +935,30 @@
         "Sonia llegó a Paraguay en 2017. Sin hablar español, sin contactos, sin red de apoyo. Tramitó su propia residencia, su propia empresa, su propia cuenta bancaria. Tardó 14 meses y pagó USD 11.000 a tres profesionales distintos que no se hablaban entre sí.",
         "Luana llegó dos años después. Ya con la experiencia de Sonia, su proceso tomó 10 semanas. Mismo país, mismo proceso, resultado 6x más rápido. La diferencia fue tener a alguien que ya conocía cada paso, cada oficina, cada profesional necesario.",
         "Esa diferencia es lo que ofrecemos. No somos una gestoría más. Somos dos personas que hicieron exactamente el proceso que vas a hacer, y ahora lo hacen por vos. Mismo idioma (holandés, inglés, español, alemán). Mismo continente de origen (Europa). Misma experiencia migratoria personal."
+      ],
+      "highlights": [
+        {
+          "value": "14",
+          "suffix": " meses",
+          "label": "Proceso de Sonia (2017)",
+          "note": "sin guía, sin contactos"
+        },
+        {
+          "value": "USD 11.000",
+          "label": "Pagó Sonia",
+          "note": "a 3 profesionales que no se hablaban"
+        },
+        {
+          "value": "10",
+          "suffix": " semanas",
+          "label": "Proceso de Luana",
+          "note": "con la experiencia de Sonia"
+        },
+        {
+          "value": "6x",
+          "label": "Más rápido",
+          "note": "mismo proceso, distinta preparación"
+        }
       ]
     },
     "whyNexa": {

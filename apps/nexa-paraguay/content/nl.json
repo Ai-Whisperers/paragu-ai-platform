@@ -14,7 +14,12 @@
     },
     "hero": {
       "headline": "Ervaring omgezet in dienst",
-      "subheadline": "Wij zijn Sonia en Luana Weiss van der Pol. Nederlandse vrouwen die al 7+ jaar in Paraguay wonen. We hebben Nexa opgericht nadat we elke stap van het migratieproces zelf hadden doorlopen."
+      "subheadline": "Wij zijn Sonia en Luana Weiss van der Pol. Nederlandse vrouwen die al 7+ jaar in Paraguay wonen. We hebben Nexa opgericht nadat we elke stap van het migratieproces zelf hadden doorlopen.",
+      "eyebrow": "Over Nexa Paraguay",
+      "ctaText": "Boek een gratis consult",
+      "ctaHref": "/contacto",
+      "secondaryCtaText": "Bekijk ons proces",
+      "secondaryCtaHref": "/proceso"
     },
     "team": {
       "title": "Ons team",
@@ -109,7 +114,7 @@
     },
     "story": {
       "title": "Het verhaal van Sonia",
-      "eyebrow": "HOE HET BEGON",
+      "eyebrow": "Waarom we bestaan",
       "paragraphs": [
         "Sonia is Paraguayse. Ze woonde 7 jaar in Nederland, waar ze aanvankelijk werkte in de schoonmaaksector. Ze wist altijd dat ze zou terugkeren naar Paraguay — haar plan was om lang genoeg te blijven om ervaring op te doen en dan met structuur en duidelijkheid naar huis terug te keren.",
         "Het moeilijkste aan de terugkeer was zichzelf cultureel heruitvinden. Het papierwerk was ingewikkeld, maar het moeilijkste was haar leven opnieuw opbouwen in een land dat tegelijkertijd van haar en vreemd was. Die ervaring is wat haar doet begrijpen wat Europese klanten doormaken die voor het eerst aankomen: ze hebben niet alleen een advocaat nodig, ze hebben iemand nodig die hetzelfde heeft meegemaakt.",
@@ -121,6 +126,30 @@
         "Tot nu toe heb ik 10 mensen geholpen — allemaal Nederlands — hun weg in Paraguay te vinden. Sommigen kwamen voor het verblijf, anderen voor het bedrijf, weer anderen voor de levensstijl. De gemene deler: ze wilden allemaal een pad, niet alleen een dienst.",
         "Wat ze het meest waarderen is de bijna-familiaire ondersteuning. Mijn grootste trots is het helpen van gezinnen met kinderen om zich hier te vestigen op een manier die veilig, gestructureerd en begeleid voelt — niet alleen een transactie.",
         "Het verblijfsproces duurt in normale gevallen 3 tot 4 maanden. Gedurende die tijd verdwijnen we niet: we coördineren, we reageren, we lossen op. Onze klanten voelen zich op geen enkel moment alleen in het proces."
+      ],
+      "highlights": [
+        {
+          "value": "14",
+          "suffix": " maanden",
+          "label": "Sonia's proces (2017)",
+          "note": "geen begeleiding, geen contacten"
+        },
+        {
+          "value": "USD 11.000",
+          "label": "Sonia betaalde",
+          "note": "aan 3 professionals die niet met elkaar spraken"
+        },
+        {
+          "value": "10",
+          "suffix": " weken",
+          "label": "Luana's proces",
+          "note": "met Sonia's ervaring"
+        },
+        {
+          "value": "6x",
+          "label": "Sneller",
+          "note": "zelfde proces, andere voorbereiding"
+        }
       ]
     },
     "whyNexa": {

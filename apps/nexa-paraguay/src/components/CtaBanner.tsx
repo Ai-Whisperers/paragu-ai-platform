@@ -37,14 +37,22 @@ export function CtaBanner({ pageContent, data }: any) {
           </AnimatedSection>
         )}
 
-        {c.buttonText && (
-          <AnimatedSection animation="fade-up" delay={250}>
+        {(c.buttonText || c.ctaText) && (
+          <AnimatedSection animation="fade-up" delay={250} className="flex flex-wrap items-center justify-center gap-4">
             <a
               href={c.buttonHref || c.ctaHref || '#'}
-              className="inline-block px-8 py-3.5 bg-accent text-primary rounded-full font-bold text-base shadow-lg hover:opacity-90 hover:shadow-xl hover:scale-[1.04] hover:-translate-y-0.5 transition-all duration-200 no-underline"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-primary rounded-full font-bold text-base shadow-lg hover:opacity-90 hover:shadow-xl hover:scale-[1.04] hover:-translate-y-0.5 transition-all duration-200 no-underline"
             >
-              {c.buttonText || c.ctaText}
+              {c.buttonText || c.ctaText} <span>→</span>
             </a>
+            {(c.secondaryButtonText || c.secondaryCtaText) && (
+              <a
+                href={c.secondaryButtonHref || c.secondaryCtaHref || '#'}
+                className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-white/40 text-white rounded-full font-semibold text-base hover:bg-white/10 hover:border-white transition-all duration-200 no-underline"
+              >
+                {c.secondaryButtonText || c.secondaryCtaText}
+              </a>
+            )}
           </AnimatedSection>
         )}
       </div>
