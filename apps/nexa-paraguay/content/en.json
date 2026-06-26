@@ -105,44 +105,46 @@
       "subtitle": "No outsourcing. No subcontracting. We handle your paperwork in person in Asunción."
     },
     "whyCountry": {
-      "eyebrow": "WHY PARAGUAY",
-      "title": "A real opportunity for the European investor",
-      "honestNote": "The opportunity is real, but the process isn't simple without proper guidance. There are honest drawbacks — bureaucracy, language, distance from family — and we'll walk you through them too.",
+      "eyebrow": "Why Paraguay",
+      "title": "Three reasons Europeans are moving to the Southern Cone",
+      "subtitle": "Hard numbers, not promises. Paraguay has been growing at rates the old continent no longer sees.",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Economic environment",
-          "description": "Sustained growth, controlled inflation, 10% corporate tax rate, territorial tax system that protects income earned abroad.",
-          "image": "@src:whyCountry.economic",
+          "title": "Sustained growth",
+          "description": "GDP growing 4-5% annually since 2009. Single-digit inflation since 2020. Paraguay's economy doesn't stop.",
           "bullets": [
-            "Territorial tax system",
-            "Open economy",
-            "10% corporate tax"
-          ]
+            "GDP +4.7% in 2024",
+            "Inflation 3.5% annual",
+            "Unemployment under 6%"
+          ],
+          "imageUrl": "@src:whyParaguay.growth"
         },
         {
-          "icon": "Sun",
-          "title": "Quality of life",
-          "description": "Warm climate, growing international community, meaningful purchasing power.",
-          "image": "@src:whyCountry.lifestyle",
+          "icon": "Landmark",
+          "title": "Territorial tax system",
+          "description": "IRP only taxes income earned inside Paraguay. Foreign-source income is not taxed. Simple.",
           "bullets": [
-            "Favorable cost of living",
-            "International community",
-            "Personal safety"
-          ]
+            "10% IRP (personal income)",
+            "10% ISC (corporate income)",
+            "Zero tax on foreign income"
+          ],
+          "imageUrl": "@src:whyParaguay.tax"
         },
         {
-          "icon": "Shield",
-          "title": "Fiscal stability",
-          "description": "Territorial tax regime with transparent rules and a predictable environment.",
-          "image": "@src:whyCountry.tax",
+          "icon": "Globe",
+          "title": "Active European community",
+          "description": "Over 30,000 Europeans live in Paraguay. Brazilian, Argentine, German and Mennonite communities with decades of presence.",
           "bullets": [
-            "Territorial system",
-            "Stable regulation",
-            "No tax on foreign-source income"
-          ]
+            "30,000+ European residents",
+            "Direct flights from Europe",
+            "50-70% lower costs"
+          ],
+          "imageUrl": "@src:whyParaguay.community"
         }
-      ]
+      ],
+      "ctaText": "See the full process",
+      "ctaHref": "/en/proceso"
     },
     "process": {
       "eyebrow": "HOW IT WORKS",

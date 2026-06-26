@@ -5,15 +5,36 @@ import { SectionComponentProps } from './types'
 import { resolveImage } from './resolve-content'
 
 import {
-  FileText, Stamp, FileCheck, ClipboardCheck,
-  CreditCard, UserCheck, BadgeCheck,
-  Building2, Briefcase, Banknote, Landmark,
-  Package, Plane, Heart, Shield, ShieldCheck,
-  Users, UserPlus, MapPin, Clock, Calendar,
-  Check, Award, Star, Globe,
-  Phone, Mail, MessageCircle,
+  FileText,
+  Stamp,
+  FileCheck,
+  ClipboardCheck,
+  CreditCard,
+  UserCheck,
+  BadgeCheck,
+  TrendingUp,
+  Building2,
+  Briefcase,
+  Banknote,
+  Landmark,
+  Globe,
+  Package,
+  Plane,
+  Heart,
+  Shield,
+  ShieldCheck,
+  Users,
+  UserPlus,
+  MapPin,
+  Clock,
+  Calendar,
+  Check,
+  Award,
+  Star,
+  Phone,
+  Mail,
+  MessageCircle,
 } from 'lucide-react'
-
 export function TrustSection({ pageContent, images }: SectionComponentProps) {
   const c = pageContent.trust || {}
   if (!c.items?.length) return null
@@ -399,31 +420,121 @@ export function RequirementsSection({ pageContent }: SectionComponentProps) {
 export function WhyCountrySection({ pageContent, images }: SectionComponentProps) {
   const c = pageContent.whyCountry || {}
   if (!c.pillars?.length) return null
+
+  // Map icon names → Lucide components (with safe fallback)
+  const ICONS: Record<string, any> = {
+    TrendingUp, Landmark, Globe, Shield, ShieldCheck,
+    Users, UserPlus, MapPin, Calendar, Clock,
+    Briefcase, Building2, Banknote, Award, Star,
+    Check, BadgeCheck, CreditCard, Heart, Package,
+    Plane, FileText, Stamp, FileCheck, MessageCircle,
+  }
+  const getIcon = (name?: string) => {
+    if (!name) return ShieldCheck
+    return ICONS[name] || ICONS[name.charAt(0).toUpperCase() + name.slice(1)] || ShieldCheck
+  }
+
   return (
-    <section className="py-20 bg-primary text-white">
-      <div className="max-w-6xl mx-auto text-center px-4">
-        <p className="text-xs text-accent uppercase tracking-[2px] mb-2">{c.eyebrow}</p>
-        <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold mb-3">{c.title}</h2>
-        <div className="w-[60px] h-[3px] bg-accent mx-auto mb-8" />
-        {c.honestNote && <p className="text-sm opacity-80 italic max-w-[600px] mx-auto mb-8">{c.honestNote}</p>}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
+    <section className="py-20 md:py-28 bg-primary text-white relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle at 25% 25%, white 1px, transparent 1px), radial-gradient(circle at 75% 75%, white 1px, transparent 1px)',
+          backgroundSize: '60px 60px, 80px 80px',
+        }}
+      />
+
+      <div className="max-w-6xl mx-auto px-4 relative">
+        <div className="text-center mb-14">
+          <p className="text-xs text-accent uppercase tracking-[3px] mb-3">{c.eyebrow}</p>
+          <h2 className="text-[clamp(1.6rem,3vw,2.5rem)] font-playfair font-bold mb-4 leading-tight max-w-3xl mx-auto">
+            {c.title}
+          </h2>
+          <div className="w-[60px] h-[3px] bg-accent mx-auto mb-6" />
+          {c.subtitle && (
+            <p className="text-base opacity-90 max-w-2xl mx-auto leading-relaxed">
+              {c.subtitle}
+            </p>
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {c.pillars.map((p: any, i: number) => {
             const img = resolveImage(images, p.imageUrl)
+            const IconComp = getIcon(p.icon)
+            const num = String(i + 1).padStart(2, '0')
             return (
-              <div key={i} className="p-6 rounded-lg text-left backdrop-blur-[10px]"
-                style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(201,169,110,0.12)', boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }}
+              <div
+                key={i}
+                className="group relative rounded-xl text-left overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl backdrop-blur-[10px]"
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  border: '1px solid rgba(201,169,110,0.20)',
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.20)',
+                }}
               >
-                {img && <img src={img} alt={p.title} loading="lazy" width={600} height={160} className="w-full h-[160px] object-cover rounded-sm mb-3" />}
-                <h3 className="font-bold text-accent mb-2 text-lg">{p.title}</h3>
-                <p className="text-sm text-white/85 leading-relaxed">{p.description}</p>
-                {p.bullets && <ul className="mt-3 pl-4 text-xs text-white/65">
-                  {p.bullets.map((b: string, j: number) => <li key={j} className="mb-1">{b.replace('{{taxRate}}', c.taxRate || '10%')}</li>)}
-                </ul>}
+                {/* Image */}
+                {img && (
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <img
+                      src={img}
+                      alt={p.title}
+                      loading="lazy"
+                      width={600}
+                      height={375}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                    {/* Icon overlay */}
+                    <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-accent/95 backdrop-blur flex items-center justify-center shadow-md">
+                      <IconComp className="w-5 h-5 text-primary" strokeWidth={2.5} />
+                    </div>
+                    {/* Number badge */}
+                    <div className="absolute top-3 left-3 w-10 h-10 rounded-full bg-white/95 text-primary font-bold text-sm flex items-center justify-center shadow-md">
+                      {num}
+                    </div>
+                  </div>
+                )}
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="font-bold text-accent mb-3 text-xl">{p.title}</h3>
+                  <p className="text-sm text-white/90 leading-relaxed mb-4">{p.description}</p>
+                  {p.bullets && (
+                    <ul className="space-y-2 pt-3 border-t border-accent/15">
+                      {p.bullets.map((b: string, j: number) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-white/80">
+                          <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                          <span className="leading-snug">{b.replace('{{taxRate}}', c.taxRate || '10%')}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+
+                {/* Accent gradient on hover */}
+                <div className="h-1 bg-gradient-to-r from-accent/0 via-accent to-accent/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
               </div>
             )
           })}
         </div>
+
+        {/* CTA */}
+        {c.ctaText && c.ctaHref && (
+          <div className="text-center mt-12">
+            <a
+              href={c.ctaHref}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent/90 text-primary font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg"
+            >
+              {c.ctaText}
+              <span className="text-lg">→</span>
+            </a>
+          </div>
+        )}
       </div>
     </section>
   )
 }
+

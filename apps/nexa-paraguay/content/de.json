@@ -1699,44 +1699,46 @@
       "subtitle": "Keine Auslagerung. Keine Unterauftragsvergabe. Wir erledigen Ihre Unterlagen persönlich in Asunción."
     },
     "whyCountry": {
-      "eyebrow": "WARUM PARAGUAY",
-      "title": "Eine echte Chance für europäische Investoren",
-      "honestNote": "Die Chance ist real, aber der Prozess ist ohne die richtige Begleitung nicht einfach. Es gibt ehrliche Nachteile — Bürokratie, Sprache, Distanz zur Familie — und auch die sprechen wir mit Ihnen durch.",
+      "eyebrow": "Warum Paraguay",
+      "title": "Drei Gründe, warum Europa in den Südkegel zieht",
+      "subtitle": "Harte Zahlen, keine Versprechen. Paraguay wächst seit 15 Jahren um Raten, die der alte Kontinent nicht mehr sieht.",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Wirtschaftliches Umfeld",
-          "description": "Stetiges Wachstum, kontrollierte Inflation, 10% Unternehmenssteuersatz, territoriales Steuersystem, das Einkünfte aus dem Ausland schützt.",
-          "image": "@src:whyCountry.economic",
+          "title": "Anhaltendes Wachstum",
+          "description": "BIP wächst seit 2009 um 4-5% jährlich. Inflation einstellig seit 2020. Die paraguayische Wirtschaft hört nicht auf.",
           "bullets": [
-            "Territoriales Steuersystem",
-            "Offene Wirtschaft",
-            "10% Unternehmenssteuer"
-          ]
+            "BIP +4,7% in 2024",
+            "Inflation 3,5% jährlich",
+            "Arbeitslosigkeit unter 6%"
+          ],
+          "imageUrl": "@src:whyParaguay.growth"
         },
         {
-          "icon": "Sun",
-          "title": "Lebensqualität",
-          "description": "Warmes Klima, wachsende internationale Gemeinschaft, spürbare Kaufkraft.",
-          "image": "@src:whyCountry.lifestyle",
+          "icon": "Landmark",
+          "title": "Territoriales Steuersystem",
+          "description": "IRP besteuert nur Einkommen, das in Paraguay erzielt wird. Auslandseinkünfte werden nicht besteuert. So einfach ist das.",
           "bullets": [
-            "Günstige Lebenshaltungskosten",
-            "Internationale Gemeinschaft",
-            "Persönliche Sicherheit"
-          ]
+            "10% IRP (persönliches Einkommen)",
+            "10% ISC (Firmeneinkommen)",
+            "Null Steuer auf Auslandseinkünfte"
+          ],
+          "imageUrl": "@src:whyParaguay.tax"
         },
         {
-          "icon": "Shield",
-          "title": "Steuerliche Stabilität",
-          "description": "Territoriales Steuersystem mit transparenten Regeln und vorhersehbarem Umfeld.",
-          "image": "@src:whyCountry.tax",
+          "icon": "Globe",
+          "title": "Aktive europäische Gemeinschaft",
+          "description": "Über 30.000 Europäer leben in Paraguay. Brasilianische, argentinische, deutsche und mennonitische Gemeinschaften mit jahrzehntelanger Präsenz.",
           "bullets": [
-            "Territoriales System",
-            "Stabile Regulierung",
-            "Keine Steuer auf ausländische Einkünfte"
-          ]
+            "30.000+ europäische Einwohner",
+            "Direktflüge aus Europa",
+            "50-70% niedrigere Kosten"
+          ],
+          "imageUrl": "@src:whyParaguay.community"
         }
-      ]
+      ],
+      "ctaText": "Vollständigen Prozess ansehen",
+      "ctaHref": "/de/proceso"
     },
     "process": {
       "eyebrow": "SO FUNKTIONIERT ES",

@@ -106,43 +106,45 @@
     },
     "whyCountry": {
       "eyebrow": "Por qué Paraguay",
-      "honestNote": "La oportunidad es real, pero el proceso no es simple sin la guía adecuada. Para eso estamos.",
+      "title": "Tres razones por las que Europa se muda al Cono Sur",
+      "subtitle": "Datos concretos, no promesas. Paraguay lleva 15 años creciendo a tasas que el viejo continente ya no ve.",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Entorno económico",
-          "description": "Crecimiento sostenido, inflación controlada, 10% de impuesto a la renta, sistema territorial.",
+          "title": "Crecimiento sostenido",
+          "description": "PIB creciendo al 4-5% anual desde 2009. Inflación de un dígito desde 2020. La economía paraguaya no para.",
           "bullets": [
-            "Impuesto corporativo 10%",
-            "Sistema territorial",
-            "Economía abierta"
+            "PIB +4,7% en 2024",
+            "Inflación 3,5% anual",
+            "Desempleo bajo 6%"
           ],
-          "imageUrl": "@src:whyParaguay.economic"
-        },
-        {
-          "icon": "Heart",
-          "title": "Calidad de vida",
-          "description": "Clima cálido, comunidad internacional creciente, poder adquisitivo significativo.",
-          "bullets": [
-            "Costo de vida favorable",
-            "Comunidad internacional",
-            "Seguridad personal"
-          ],
-          "imageUrl": "@src:whyParaguay.lifestyle"
+          "imageUrl": "@src:whyParaguay.growth"
         },
         {
           "icon": "Landmark",
-          "title": "Estabilidad fiscal",
-          "description": "Régimen fiscal territorial con reglas transparentes y entorno predecible.",
+          "title": "Sistema fiscal territorial",
+          "description": "El IRP grava solo lo que ganás dentro de Paraguay. Ingresos del exterior no tributan. Así de simple.",
           "bullets": [
-            "Sistema territorial",
-            "Regulación estable",
-            "Sin impuestos sobre ingresos del exterior"
+            "10% IRP (renta personal)",
+            "10% ISC (renta corporativa)",
+            "Cero impuestos sobre ingresos del exterior"
           ],
           "imageUrl": "@src:whyParaguay.tax"
+        },
+        {
+          "icon": "Globe",
+          "title": "Comunidad europea activa",
+          "description": "Más de 30.000 europeos residen en Paraguay. Comunidad brasileña, argentina, alemana y menonita con décadas de presencia.",
+          "bullets": [
+            "30.000+ europeos residentes",
+            "Aeropuerto directo desde Europa",
+            "Costos 50-70% menores"
+          ],
+          "imageUrl": "@src:whyParaguay.community"
         }
       ],
-      "title": "Una oportunidad real para el inversor europeo"
+      "ctaText": "Ver el proceso completo",
+      "ctaHref": "/es/proceso"
     },
     "process": {
       "ctaHref": "/nl/contacto",

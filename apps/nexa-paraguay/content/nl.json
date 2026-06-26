@@ -1342,44 +1342,46 @@
       "subtitle": "Geen uitbesteding. Geen onderaanneming. Wij regelen uw papierwerk persoonlijk in Asunción."
     },
     "whyCountry": {
-      "eyebrow": "WAAROM PARAGUAY",
-      "title": "Een reële kans voor de Europese investeerder",
-      "honestNote": "De kans is reëel, maar het proces is niet eenvoudig zonder de juiste begeleiding. Er zijn eerlijke nadelen — bureaucratie, taal, afstand tot familie — en die bespreken we ook met u.",
+      "eyebrow": "Waarom Paraguay",
+      "title": "Drie redenen waarom Europa naar de Zuidelijke Kegel verhuist",
+      "subtitle": "Harde cijfers, geen beloftes. Paraguay groeit al 15 jaar op percentages die het oude continent niet meer haalt.",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Economisch klimaat",
-          "description": "Stabiele groei, gecontroleerde inflatie, 10% vennootschapsbelasting, territoriaal belastingstelsel dat inkomen uit het buitenland beschermt.",
-          "image": "@src:whyCountry.economic",
+          "title": "Aanhoudende groei",
+          "description": "BBP groeit sinds 2009 met 4-5% per jaar. Inflatie van één cijfer sinds 2020. De Paraguayaanse economie stopt niet.",
           "bullets": [
-            "Territoriaal belastingstelsel",
-            "Open economie",
-            "10% vennootschapsbelasting"
-          ]
+            "BBP +4,7% in 2024",
+            "Inflatie 3,5% per jaar",
+            "Werkloosheid onder 6%"
+          ],
+          "imageUrl": "@src:whyParaguay.growth"
         },
         {
-          "icon": "Sun",
-          "title": "Levenskwaliteit",
-          "description": "Warm klimaat, groeiende internationale gemeenschap, merkbare koopkracht.",
-          "image": "@src:whyCountry.lifestyle",
+          "icon": "Landmark",
+          "title": "Territoriaal belastingstelsel",
+          "description": "IRP belast alleen inkomen verdiend binnen Paraguay. Buitenlands inkomen wordt niet belast. Zo simpel is het.",
           "bullets": [
-            "Gunstige kosten van levensonderhoud",
-            "Internationale gemeenschap",
-            "Persoonlijke veiligheid"
-          ]
+            "10% IRP (persoonlijk inkomen)",
+            "10% ISC (bedrijfsinkomen)",
+            "Nul belasting op buitenlands inkomen"
+          ],
+          "imageUrl": "@src:whyParaguay.tax"
         },
         {
-          "icon": "Shield",
-          "title": "Fiscale stabiliteit",
-          "description": "Territoriaal belastingstelsel met transparante regels en voorspelbare omgeving.",
-          "image": "@src:whyCountry.tax",
+          "icon": "Globe",
+          "title": "Actieve Europese gemeenschap",
+          "description": "Meer dan 30.000 Europeanen wonen in Paraguay. Braziliaanse, Argentijnse, Duitse en Mennonite gemeenschappen met decennia aanwezigheid.",
           "bullets": [
-            "Territoriaal systeem",
-            "Stabiele regelgeving",
-            "Geen belasting op buitenlands inkomen"
-          ]
+            "30.000+ Europese inwoners",
+            "Directe vluchten vanuit Europa",
+            "50-70% lagere kosten"
+          ],
+          "imageUrl": "@src:whyParaguay.community"
         }
-      ]
+      ],
+      "ctaText": "Bekijk het volledige proces",
+      "ctaHref": "/nl/proceso"
     },
     "process": {
       "eyebrow": "HOE HET WERKT",
