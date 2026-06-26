@@ -5,7 +5,13 @@ import { SectionComponentProps } from './types'
 
 export function FaqSection({ pageContent, data, locale }: SectionComponentProps) {
   const d = data || pageContent || {}
-  const allItems = d.items || []
+  // Handle both flat items array and categorized structure
+  let allItems: any[] = d.items || []
+  if (!allItems.length && Array.isArray(d.categories)) {
+    for (const cat of d.categories) {
+      if (Array.isArray(cat.items)) allItems.push(...cat.items)
+    }
+  }
   if (!allItems.length) return null
   const [open, setOpen] = React.useState<number | null>(null)
   const [search, setSearch] = React.useState('')

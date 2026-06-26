@@ -1,10 +1,9 @@
 {
   "id": "faq",
-  "targetKeyword": "preguntas frecuentes residencia Paraguay",
+  "targetKeyword": "preguntas frecuentes Paraguay",
   "slug": "faq",
   "titleKey": "faqPage.seo.title",
   "descriptionKey": "faqPage.seo.description",
-  "schemaType": "FAQPage",
   "sections": [
     {
       "id": "header",
@@ -18,18 +17,23 @@
     },
     {
       "id": "faq",
-      "variant": "accordion",
+      "variant": "categorized",
       "content": "faqPage.full"
     },
     {
       "id": "cta-banner",
-      "variant": "solid",
+      "variant": "default",
       "content": "faqPage.cta"
     },
     {
       "id": "footer",
       "variant": "standard",
       "content": "footer"
+    },
+    {
+      "id": "whatsapp-float",
+      "variant": "standard",
+      "content": "whatsapp"
     }
   ]
 }

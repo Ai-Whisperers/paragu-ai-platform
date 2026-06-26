@@ -354,15 +354,27 @@ export function ServiceDetailSection({ pageContent, data, images }: SectionCompo
 
 export function PillarsSection({ pageContent, data, images }: SectionComponentProps) {
   const d = data || pageContent || {}
-  const pillars = d.pillars || d.items || []
+  // Handle both data shapes: d.pillars can be an array (raw list) or
+  // an object with .pillars key (wrapper with eyebrow/title/pillars)
+  let pillars: any[] = []
+  if (Array.isArray(d.pillars)) pillars = d.pillars
+  else if (Array.isArray(d.pillars?.pillars)) pillars = d.pillars.pillars
+  else if (Array.isArray(d.items)) pillars = d.items
+  
+  // If wrapper, extract the meta fields from it for the section header
+  const wrapper = !Array.isArray(d.pillars) && d.pillars ? d.pillars : null
+  const eyebrow = d.eyebrow || wrapper?.eyebrow
+  const title = d.title || wrapper?.title
+  const honestNote = d.honestNote || wrapper?.honestNote
+  
   if (!pillars.length) return null
   return (
     <section className="py-20 bg-primary text-white">
       <div className="max-w-6xl mx-auto text-center px-4">
-        {d.eyebrow && <p className="text-xs text-accent uppercase tracking-[2px] mb-2">{d.eyebrow}</p>}
-        {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold mb-3">{d.title}</h2>}
+        {eyebrow && <p className="text-xs text-accent uppercase tracking-[2px] mb-2">{d.eyebrow}</p>}
+        {title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold mb-3">{d.title}</h2>}
         <div className="w-[60px] h-[3px] bg-accent mx-auto mb-8" />
-        {d.honestNote && <p className="text-sm text-white/80 italic max-w-[600px] mx-auto mb-8">{d.honestNote}</p>}
+        {honestNote && <p className="text-sm text-white/80 italic max-w-[600px] mx-auto mb-8">{d.honestNote}</p>}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
           {pillars.map((p: any, i: number) => {
             const img = resolveImage(images, p.imageUrl || p.image)

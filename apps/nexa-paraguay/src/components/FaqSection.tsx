@@ -85,7 +85,13 @@ function FaqItem({ item, globalIdx, open, setOpen, allItems }: {
 
 export function FaqSection({ pageContent, data, locale }: any) {
   const d = data || pageContent || {}
-  const allItems = d.items || []
+  // Handle both flat items array and categorized structure
+  let allItems: any[] = d.items || []
+  if (!allItems.length && Array.isArray(d.categories)) {
+    for (const cat of d.categories) {
+      if (Array.isArray(cat.items)) allItems.push(...cat.items)
+    }
+  }
   const [open, setOpen] = useState<number | null>(0)
   const [search, setSearch] = useState('')
 

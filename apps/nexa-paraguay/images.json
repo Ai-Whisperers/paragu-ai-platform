@@ -441,14 +441,7 @@
       },
       "group": {
         "src": "/images/team/group-shot.webp",
-        "alt": "Nexa Paraguay team group portrait (staging placeholder)",
-        "fallbackSrc": "/images/team/group-shot.png",
-        "altByLocale": {
-          "en": "Placeholder group photo: Nexa Paraguay team (pending real photo)",
-          "es": "Foto grupal marcador: equipo Nexa Paraguay (pendiente foto real)",
-          "nl": "Plaatsaanduiding groepsfoto: Nexa Paraguay-team (echte foto volgt)",
-          "de": "Platzhalter-Gruppenfoto: Nexa Paraguay Team (echtes Foto ausstehend)"
-        }
+        "alt": "Equipo Nexa Paraguay"
       },
       "sonia": {
         "src": "/images/team/sonia.webp",

@@ -1,9 +1,9 @@
 {
   "aboutPage": {
     "cta": {
-      "title": "Het team ontmoeten?",
-      "subtitle": "Plan een gratis gesprek van 30 minuten. Geen druk, alleen een gesprek.",
-      "buttonText": "Gratis consult boeken",
+      "title": "Laten we over jouw zaak praten",
+      "subtitle": "30 minuten met Sonia of Luana. Geen verplichting. Gewoon een eerlijk gesprek.",
+      "buttonText": "Consult boeken",
       "buttonHref": "/contacto",
       "eyebrow": "MAAK KENNIS"
     },
@@ -13,8 +13,8 @@
       "targetKeyword": "over Nexa Paraguay"
     },
     "hero": {
-      "headline": "Ervaring omgezet in Expertise",
-      "subheadline": "Nexa Paraguay werd opgericht met één missie: het verhuisproces transformeren van een bureaucratische hindernis naar een gastvrije ervaring."
+      "headline": "Ervaring omgezet in dienst",
+      "subheadline": "Wij zijn Sonia en Luana Weiss van der Pol. Nederlandse vrouwen die al 7+ jaar in Paraguay wonen. We hebben Nexa opgericht nadat we elke stap van het migratieproces zelf hadden doorlopen."
     },
     "team": {
       "title": "Ons team",
@@ -67,25 +67,27 @@
     },
     "trust": {
       "eyebrow": "WAAROM NEXA",
-      "title": "Een geïntegreerd systeem, geen formulierendienst",
+      "title": "Wat we samen bereiken",
       "items": [
         {
-          "icon": "Package",
-          "title": "We helpen met wat je nodig hebt",
-          "description": "Verblijf, bedrijf en bankrekening — geïntegreerd.",
-          "image": "@src:trust.certificate"
+          "icon": "Users",
+          "value": "80+",
+          "label": "Personen gevestigd"
         },
         {
-          "icon": "Plane",
-          "title": "We begeleiden je in het proces",
-          "description": "Persoonlijke afspraken op één gecoördineerde dag.",
-          "image": "@src:trust.meeting"
+          "icon": "Building2",
+          "value": "40+",
+          "label": "Bedrijven opgericht"
         },
         {
-          "icon": "Heart",
-          "title": "Nauwe, doorlopende begeleiding",
-          "description": "Wij zijn beschikbaar wanneer u ons nodig heeft.",
-          "image": "@src:trust.team"
+          "icon": "Landmark",
+          "value": "60+",
+          "label": "Bankrekeningen geopend"
+        },
+        {
+          "icon": "Star",
+          "value": "4.8/5",
+          "label": "Gemiddelde tevredenheid"
         }
       ]
     },
@@ -123,7 +125,7 @@
     },
     "whyNexa": {
       "eyebrow": "WAAROM NEXA",
-      "title": "Een geïntegreerd systeem, geen formulierendienst",
+      "title": "Waarom we niet zomaar een agentschap zijn",
       "pillars": [
         {
           "icon": "Package",
@@ -782,24 +784,63 @@
       "targetKeyword": "Paraguay verhuisconsult"
     },
     "hero": {
-      "headline": "Zet de eerste stap",
-      "subheadline": "Gratis consult van 30 minuten. Geen verplichting."
+      "headline": "Laten we over jouw zaak praten",
+      "subheadline": "30 minuten met Sonia of Luana. We vertellen je hoe lang, wat je nodig hebt en hoeveel — voordat je iets beslist.",
+      "ctaPrimary": "Open WhatsApp",
+      "ctaPrimaryHref": "https://wa.me/595982515138?text=Hola%2C%20quiero%20agendar%20una%20consulta%20gratuita",
+      "ctaSecondary": "Bekijk FAQ eerst",
+      "ctaSecondaryHref": "/faq"
     },
     "booking": {
-      "title": "Plan uw consult",
-      "subtitle": "Kies een datum en tijd die u uitkomt. Het gesprek is in uw taal: Nederlands, Engels, Duits of Spaans.",
-      "bookingUrl": "https://calendly.com/nexaparaguay",
-      "provider": "calendly",
-      "ctaLabel": "Afsprakenkalender openen"
+      "title": "Boek je gratis consult",
+      "subtitle": "Kies het kanaal dat je voorkeur heeft. 30 minuten met Sonia of Luana, geen verplichting.",
+      "bookingUrl": "https://wa.me/595982515138",
+      "provider": "whatsapp",
+      "ctaLabel": "Open WhatsApp",
+      "whatsappNumber": "595982515138",
+      "fallbackEmail": "paraguaynexa@gmail.com",
+      "fallbackText": "Als WhatsApp niet werkt in je land, e-mail ons op paraguaynexa@gmail.com. We reageren binnen 24 werkuren.",
+      "calendlyNote": "Binnenkort: directe kalenderboeking op deze pagina. Nu gebruiken we WhatsApp om de tijd te bevestigen.",
+      "availableHours": "Maandag tot vrijdag, 9-18h ART (UTC-3)",
+      "responseTime": "We reageren binnen 2 werkuren",
+      "languages": [
+        "Spaans",
+        "Engels",
+        "Nederlands",
+        "Duits"
+      ]
     },
     "contact": {
-      "title": "Andere manieren om ons te bereiken",
-      "address": "Asunción, Paraguay",
-      "neighborhood": "Villa Morra",
-      "city": "Asunción",
-      "phone": "+595 982 515 138",
-      "email": "paraguaynexa@gmail.com",
-      "whatsapp": "+595 982 515 138"
+      "title": "Contactgegevens",
+      "subtitle": "Meerdere kanalen",
+      "items": [
+        {
+          "icon": "MessageCircle",
+          "title": "WhatsApp — snel antwoord",
+          "primary": "595982515138",
+          "link": "https://wa.me/595982515138",
+          "detail": "Maandag tot vrijdag 9-18h ART"
+        },
+        {
+          "icon": "Mail",
+          "title": "E-mail",
+          "primary": "paraguaynexa@gmail.com",
+          "link": "mailto:paraguaynexa@gmail.com",
+          "detail": "We reageren binnen 24 werkuren"
+        },
+        {
+          "icon": "MapPin",
+          "title": "Kantoor",
+          "primary": "Asunción, Paraguay",
+          "detail": "Persoonlijk met afspraak"
+        },
+        {
+          "icon": "Clock",
+          "title": "Talen",
+          "primary": "ES · EN · NL · DE",
+          "detail": "We spreken jouw taal"
+        }
+      ]
     }
   },
   "faqPage": {
@@ -814,163 +855,202 @@
     },
     "full": {
       "title": "Alle vragen",
-      "searchPlaceholder": "Zoeken in vragen...",
-      "items": [
+      "subtitle": "De 40+ vragen die we elke week ontvangen. Als je die van jou niet vindt, schrijf ons.",
+      "searchPlaceholder": "Zoek vragen...",
+      "categories": [
         {
-          "q": "Hoe lang duurt het hele proces?",
-          "a": "Verwerking ter plaatse op één dag. Verlening van verblijf en ID: 45–60 dagen. Volledige installatie (huisvesting, bankieren, optioneel bedrijf): 8–12 weken."
+          "id": "antes-de-empezar",
+          "label": "Voor het beginnen",
+          "description": "Wat je moet weten voordat je je verbindt",
+          "items": [
+            {
+              "q": "Hoeveel kost het hele proces?",
+              "a": "Afhankelijk van het programma. Base USD 4.500, Business USD 7.500, Investeerder USD 12.000, Grond USD 2.500. Alle prijzen zijn vast in USD."
+            },
+            {
+              "q": "Wat zit er in de prijs?",
+              "a": "Honoraria, overheidstarieven, gecertificeerde vertalingen, apostilles, volledige persoonlijke begeleiding en eerste belastingadvies (3 maanden in Business en Investeerder)."
+            },
+            {
+              "q": "Wat zit er NIET in?",
+              "a": "Vliegtickets, accommodatie in Paraguay, kosten S.A.-oprichting (USD 800-1.500), minimaal bankkapitaal (varieert per bank), notariskosten voor eigendommen."
+            },
+            {
+              "q": "Kan ik in termijnen betalen?",
+              "a": "Ja. 50% bij ondertekening, 50% bij ontvangst van de identiteitskaart. Voor grotere bedragen spreken we een persoonlijk schema af."
+            },
+            {
+              "q": "Moet ik Spaans spreken?",
+              "a": "Nee. Ons team spreekt Spaans, Engels, Nederlands en Duits. We begeleiden je met simultaanvertaling."
+            },
+            {
+              "q": "Hoeveel reizen naar Paraguay heb ik nodig?",
+              "a": "Maar één. De operationele dag wordt in één complete dag gecoördineerd."
+            },
+            {
+              "q": "Hoe lang duurt het hele proces?",
+              "a": "8-12 weken van eerste consult tot identiteitskaart in handen. Business en Investeerder kunnen 12-16 weken duren vanwege het bedrijfsaspect."
+            },
+            {
+              "q": "Is het proces 100% legaal?",
+              "a": "Absoluut. We werken in strikte naleving van de Paraguayaanse wet. We zijn geregistreerd bij SEPRELAD als verplichte entiteiten."
+            },
+            {
+              "q": "Wat als mijn verblijf wordt afgewezen?",
+              "a": "We werken aan vooraf-screening van geschiktheid. Maar als je om een of andere reden wordt afgewezen, betalen we 80% terug en helpen we met alternatieven."
+            }
+          ]
         },
         {
-          "q": "Hoeveel reizen moet ik naar Paraguay maken?",
-          "a": "Ons programma is zo ontworpen dat één enkele reis voldoende is voor de operationele dag. Daarna hoeft u alleen te reizen als u de zaak persoonlijk wilt volgen of voor persoonlijke zaken."
+          "id": "inmigracion",
+          "label": "Immigratie en Verblijf",
+          "description": "Hoe het migratieproces werkt",
+          "items": [
+            {
+              "q": "Welke soorten verblijf bestaan er?",
+              "a": "Permanent verblijf (meest voorkomend voor Europeanen), tijdelijk verblijf (1 jaar, verlengbaar), en investeerderverblijf (voor investeerders met verifieerbaar kapitaal)."
+            },
+            {
+              "q": "Kan ik mijn familie meenemen?",
+              "a": "Ja. Echtgeno(o)t(e) en minderjarige kinderen kunnen als afhankelijken met je meeverhuizen."
+            },
+            {
+              "q": "Kunnen mijn kinderen naar de openbare school?",
+              "a": "Ja. Met een Paraguayaanse identiteitskaart hebben minderjarigen toegang tot gratis openbaar onderwijs. Er zijn ook tweetalige privaatopties (Spaans/Engels)."
+            },
+            {
+              "q": "Moet ik documenten apostilleren?",
+              "a": "Ja. Documenten uit je land van herkomst moeten apostille (of gelegaliseerd, afhankelijk van het land) zijn om geldig te zijn in Paraguay."
+            },
+            {
+              "q": "Hoe lang duurt de verblijfsgoedkeuring?",
+              "a": "Migraciones heeft een wettelijke termijn van 90 dagen, maar in de praktijk 45-60 dagen vanaf je operationele dag in Paraguay."
+            },
+            {
+              "q": "Moet ik meerdere keren naar Migraciones?",
+              "a": "Nee. Eén bezoek op de operationele dag is voldoende. Al het andere regelen wij."
+            },
+            {
+              "q": "Wat als mijn identiteitskaart lang duurt?",
+              "a": "Het Departement van Identificaties geeft de kaart af in 4-8 weken. We laten het je weten wanneer het klaar is en halen het voor je op."
+            }
+          ]
         },
         {
-          "q": "Wat is inbegrepen in de prijs?",
-          "a": "Professionele honoraria, BTW, officiële tarieven, bankencoördinatie, vastgoedbezichtiging (indien van toepassing) en volledige begeleiding op de operationele dag."
+          "id": "banca",
+          "label": "Bankieren en Financiën",
+          "description": "Rekeningen, overmakingen, valuta",
+          "items": [
+            {
+              "q": "Kan ik als inwoner een bankrekening openen?",
+              "a": "Ja. Als Paraguayaanse inwoner met identiteitskaart kun je een persoonlijke of zakelijke rekening openen bij elke lokale bank."
+            },
+            {
+              "q": "Welke banken gebruiken Paraguayanen?",
+              "a": "De belangrijkste zijn Itaú, Continental, Sudameris, GNB, BNF (staatsbank) en Visión."
+            },
+            {
+              "q": "Heb ik minimumkapitaal nodig?",
+              "a": "Varieert per bank. Sommige vragen USD 1.000-5.000 als eerste storting, andere niets."
+            },
+            {
+              "q": "Kan ik geld overmaken vanuit Europa?",
+              "a": "Ja. Paraguay heeft geen wisselcontrole. Je kunt internationale overmakingen zonder beperkingen ontvangen."
+            },
+            {
+              "q": "Moet ik het geld dat ik meebreng aangeven?",
+              "a": "Voor bedragen boven USD 10.000 in contanten, ja. Voor bankovermakingen is er geen limiet."
+            }
+          ]
         },
         {
-          "q": "Wat is NIET inbegrepen?",
-          "a": "Internationale vluchten, accommodatie, persoonlijke uitgaven, beëdigde vertalingen en apostilles in uw land van herkomst."
+          "id": "legal",
+          "label": "Juridisch en Bedrijf",
+          "description": "Bedrijfsoprichting, RUC, verplichtingen",
+          "items": [
+            {
+              "q": "Moet ik een bedrijf oprichten?",
+              "a": "Hangt ervan af. Als je alleen in Paraguay wilt wonen met je buitenlandse inkomen, heb je GEEN bedrijf nodig (Base-programma). Wil je lokaal opereren of een S.A. hebben, dan wel (Business of Investeerder)."
+            },
+            {
+              "q": "Welk type bedrijf wordt opgericht?",
+              "a": "We raden S.A. (Sociedad Anónima) of EAS (Empresa por Acciones Simplificada) aan. We leggen de verschillen uit in het consult."
+            },
+            {
+              "q": "Hoeveel kost het om een S.A. op te richten?",
+              "a": "USD 800-1.500 afhankelijk van type en grootte. Inclusief honoraria en registratierechten."
+            },
+            {
+              "q": "Wat is de RUC?",
+              "a": "Registro Único del Contribuyente. Het is je belastingidentificatienummer. Je hebt het nodig als je gaat factureren of werknemers hebt."
+            },
+            {
+              "q": "Wat zijn de belastingverplichtingen?",
+              "a": "IRE 10% over lokaal inkomen. Als je alleen buitenlands inkomen hebt, betaal je geen lokale belasting."
+            },
+            {
+              "q": "Welk belastingregime past bij mij?",
+              "a": "Afhankelijk van je situatie. We adviseren je."
+            }
+          ]
         },
         {
-          "q": "Moet ik Spaans spreken?",
-          "a": "Nee. Ons team begeleidt u te allen tijde en de zakelijke communicatie verloopt in uw voorkeurstaal: Nederlands, Engels, Duits of Spaans."
+          "id": "propiedades",
+          "label": "Onroerend Goed",
+          "description": "Kopen, huren, due diligence",
+          "items": [
+            {
+              "q": "Is het een goed moment om eigendommen te kopen in Paraguay?",
+              "a": "De markt is in aanhoudende groei. Prijzen in Asunción zijn de afgelopen 3 jaar met 5-8% per jaar gestegen."
+            },
+            {
+              "q": "Kan ik als buitenlander kopen?",
+              "a": "Ja. Paraguay beperkt niet de aankoop van eigendommen door buitenlanders."
+            },
+            {
+              "q": "Welke wijken raden jullie aan?",
+              "a": "Voor gezinnen: Villa Morra, Carmelitas, Loma Pyta. Voor nachtleven: Paseo Carmelitas, Mariscal. Voor rust: San Bernardino (50 km verderop)."
+            },
+            {
+              "q": "Hoeveel kost een degelijk appartement?",
+              "a": "USD 800-1.500/maand voor 2-3 slaapkamerhuur in een goede buurt. USD 80.000-150.000 om te kopen."
+            },
+            {
+              "q": "Kan ik als buitenlander een hypotheek krijgen?",
+              "a": "Ja, maar Paraguayaanse banken vragen 30-40% aanbetaling."
+            }
+          ]
         },
         {
-          "q": "Kan ik als buitenlander een bankrekening openen?",
-          "a": "Ja. Het is het meest complexe proces, maar wij bereiden uw financieel profiel voor en coördineren alles met de bank om het succes te maximaliseren."
-        },
-        {
-          "q": "Welk type bedrijf wordt opgericht?",
-          "a": "Ons juridisch team beveelt het meest geschikte bedrijfstype aan (meestal S.A. voor aansprakelijkheidsbescherming). We leggen de verschillen uit tijdens het consult."
-        },
-        {
-          "q": "Is het proces 100% wettelijk?",
-          "a": "Absoluut. Strikte naleving van de Paraguayaanse en internationale wetgeving. We werken direct met erkende advocaten en geregistreerde notarissen."
-        },
-        {
-          "q": "Wat als een document ontbreekt?",
-          "a": "We detecteren het voor uw reis. Onze voorvalidatie garandeert dat u in Paraguay aankomt met alles wat u nodig heeft."
-        },
-        {
-          "q": "Bieden jullie garantie op bankrekeningopening?",
-          "a": "De eindbeslissing is aan de bank. Wij garanderen professionele voorbereiding en coördinatie — als er objectieve redenen voor afwijzing zijn, helpen we u met alternatieven."
-        },
-        {
-          "q": "Kan ik mijn familie meenemen?",
-          "a": "Ja. Elk familielid heeft een eigen verblijfsproces nodig. Wij coördineren de zaken samen om de efficiëntie te maximaliseren."
-        },
-        {
-          "q": "Hoe wordt de betaling gedaan?",
-          "a": "Vooruitbetaling per bankoverschrijving. Geen extra kosten."
-        },
-        {
-          "q": "Wat gebeurt er na het eerste jaar (Investeerder)?",
-          "a": "Wij stellen een continuïteitsplan voor dat jaarlijkse compliance, fiscaal advies en alle operationele ondersteuning omvat die uw zaak nodig heeft."
-        },
-        {
-          "q": "Wat gebeurt er als de wetten veranderen tijdens mijn proces?",
-          "a": "Wij volgen de regelgevende omgeving en informeren u onmiddellijk als er wijzigingen zijn die uw zaak beïnvloeden."
-        },
-        {
-          "q": "Moet ik Spaans spreken om het verblijf te krijgen?",
-          "a": "Het is niet noodzakelijk. Hoewel het proces in het Spaans verloopt, werken we met beëdigde vertalers en begeleiden we u bij elke afspraak."
-        },
-        {
-          "q": "Kan ik mijn oorspronkelijke nationaliteit behouden?",
-          "a": "Ja, Paraguay staat dubbele nationaliteit toe met de meeste landen. U verliest uw oorspronkelijke nationaliteit niet."
-        },
-        {
-          "q": "Hoe lang kan ik buiten Paraguay zijn zonder mijn verblijf te verliezen?",
-          "a": "Permanent verblijf vereist dat u minstens 1 dag per 3 jaar fysiek in Paraguay aanwezig bent. Tijdelijk verblijf heeft specifiekere vereisten — we leggen ze uit tijdens het consult."
-        },
-        {
-          "q": "Is Paraguay veilig voor Europeanen?",
-          "a": "Paraguay is over het algemeen veilig voor buitenlanders — de geweldscijfers in Asunción zijn laag in vergelijking met andere regionale hoofdsteden, en de expat-gemeenschappen in Villa Morra, Carmelitas en San Bernardino zijn actief en goed gevestigd. Zoals in elk land raden we normale voorzorgsmaatregelen aan. Vermijd het tonen van waardevolle spullen, gebruik 's nachts geregistreerde taxi's of rideshare-apps, en bewaar digitale kopieën van uw documenten."
-        },
-        {
-          "q": "Hoe is het gezondheidszorgsysteem in Paraguay?",
-          "a": "Paraguay heeft uitstekende privé-ziekenhuizen in Asunción, vooral in de wijken Villa Morra en Carmelitas. De kosten zijn aanzienlijk lager dan in Europa. Wij raden een internationale ziektekostenverzekering aan voor de eerste maanden; veel residenten kiezen na vestiging voor het lokale privésysteem."
-        },
-        {
-          "q": "Hoe werkt het schoolsysteem voor kinderen?",
-          "a": "Er zijn uitstekende onderwijsopties: internationale scholen (American School of Asunción, Colegio Británico, Colegio Alemán), Spaans-Guaraní tweetalige scholen en het lokale openbare systeem. De internationale scholen bieden curricula uit de VS, het VK, Duitsland en Frankrijk."
-        },
-        {
-          "q": "Heb ik een advocaat nodig voor het proces?",
-          "a": "Ja, de Paraguayaanse wet vereist dat bepaalde stappen van het verblijfsproces worden afgehandeld door een geregistreerd juridisch vertegenwoordiger. Nexa omvat deze service; u hoeft er geen apart in te huren."
-        },
-        {
-          "q": "Hoeveel kost het om het verblijf jaarlijks te onderhouden?",
-          "a": "Het jaarlijkse onderhoud van het verblijf is minimaal. Het omvat de RUC-verlenging (belastingregistratie), mogelijke apostille-verlengingen en basis administratieve stappen. We schatten USD 200–500 per jaar voor een basissituatie, meer als u een bedrijf heeft."
-        },
-        {
-          "q": "Kan ik legaal werken met het verblijf?",
-          "a": "Ja, permanent verblijf staat u toe om legaal in Paraguay te werken, of als werknemer of zelfstandige. U kunt ook directeur of aandeelhouder zijn van bedrijven zonder extra beperkingen."
-        },
-        {
-          "q": "Hoe is het klimaat in Paraguay?",
-          "a": "Paraguay heeft een subtropisch klimaat met twee goed gemarkeerde seizoenen: zomer (oktober–maart) met temperaturen van 30–40°C, en winter (april–september) met milde temperaturen van 10–25°C. Het wordt zelden koud genoeg voor sneeuw of vorst in Asunción. Het klimaat is over het algemeen aangenaam voor Europeanen die aan koude winters ontsnappen."
-        },
-        {
-          "q": "Kan ik een bankrekening openen voordat ik aankom?",
-          "a": "Sommige banken staan opening op afstand toe met bepaalde vereisten: geapostilleerd paspoort, adresbewijs en referentiebrief van uw thuisbank. We kunnen deze optie vooraf coördineren, maar de meeste klanten geven er de voorkeur aan dit persoonlijk te doen tijdens hun operationele dag."
-        },
-        {
-          "q": "Welke documenten moeten worden geapostilleerd en wie regelt dat?",
-          "a": "Documenten die meestal apostille nodig hebben: geboorteakte, huwelijksakte (indien van toepassing), bewijs van goed gedrag, diploma (indien van toepassing) en geboorteaktes van minderjarige kinderen. De klant is zelf verantwoordelijk voor het verkrijgen van de apostille in het land van herkomst (via het Ministerie van Buitenlandse Zaken of de bevoegde autoriteit). Nexa Paraguay verricht geen apostillering — die stap gebeurt in het land van herkomst. De gecertificeerde Spaanse vertaling kan wel via ons netwerk van beëdigde vertalers worden geregeld zodra de documenten zijn geapostilleerd."
-        },
-        {
-          "q": "Wat is het verschil tussen permanent verblijf en staatsburgerschap?",
-          "a": "Permanent verblijf staat u toe om onbeperkt in Paraguay te wonen, te werken en eigendom te bezitten, met de vereiste om minstens 1 dag per 3 jaar op bezoek te komen. Het Paraguayaanse staatsburgerschap vereist 3 jaar verblijf, afstand doen van uw oorspronkelijke nationaliteit (behalve voor onderdanen van Spanje, Italië en enkele andere landen met bilaterale akkoorden), en geeft stemrecht en een Paraguayaans paspoort."
-        },
-        {
-          "q": "Is er een Nederlandse expat-gemeenschap in Paraguay?",
-          "a": "Ja — Paraguay heeft een van de grootste en best georganiseerde Nederlandse expat-gemeenschappen in Zuid-Amerika, verankerd door Sonia's 'Proyecto Paraguay'-initiatief, dat meer dan 600 families heeft geholpen over een decennium. In Asunción zijn de belangrijkste wijken met expat-aanwezigheid Villa Morra, Carmelitas en San Bernardino, met actieve sociale groepen, regelmatige bijeenkomsten en gevestigde Nederlandstalige netwerken."
-        },
-        {
-          "q": "Kan ik als buitenlander eigendommen kopen?",
-          "a": "Ja, buitenlanders hebben exact dezelfde rechten als Paraguayanen om eigendom te kopen. Uw naam verschijnt rechtstreeks op de akte en u kunt zonder beperkingen onroerend goed bezitten. Eigendomstitelverzekering is beschikbaar en aanbevolen voor premium-eigendommen."
-        },
-        {
-          "q": "Hoe werkt het gezondheidszorgsysteem?",
-          "a": "Het Paraguayaanse gezondheidszorgsysteem combineert IPS (openbare sociale zekerheid) met privé-geneeskunde. De meeste expats gebruiken privé-ziekenhuizen in Asunción, die uitstekende zorg bieden tegen een fractie van de Europese kosten. We raden een internationale verzekering aan voor het eerste jaar; veel residenten stappen na vestiging over op privé-lokale verzekering."
-        },
-        {
-          "q": "Welke belastingen betaal ik als resident?",
-          "a": "Residenten betalen: IRE 10% (vennootschapsbelasting) op in Paraguay gegenereerd inkomen, plus de IVA (BTW) op goederen en diensten tegen 10%. Buitenlands inkomen wordt over het algemeen NIET belast vanwege het territoriale systeem. Er zijn geen vermogensbelastingen, geen erfbelastingen tussen directe familieleden, en onroerendgoedbelastingen zijn minimaal."
-        },
-        {
-          "q": "Is er een dubbelbelastingverdrag met mijn land?",
-          "a": "Paraguay heeft dubbelbelastingverdragen met verschillende landen. Voor Nederlandse burgers: verdrag van kracht. Voor Duitse burgers: verdrag van kracht. Voor Belgische burgers: verdrag van kracht. Voor Zwitserse burgers: verdrag van kracht. We kunnen het specifieke verdrag voor uw geval verifiëren tijdens het consult."
-        },
-        {
-          "q": "Hoe vind ik huisvesting in Paraguay?",
-          "a": "We werken met vertrouwde makelaars in Asunción en omgeving. Huurwoningen vereisen meestal een borgstelling (meestal 1–2 maanden) en een Paraguayaanse borgsteller of verzekering. Gemeubileerde en ongemeubileerde opties bestaan in alle prijsklassen. De meeste expats huren voor de eerste 3–6 maanden terwijl ze wijken verkennen, en beslissen dan of ze willen kopen."
-        },
-        {
-          "q": "Hoe zijn de kosten van levensonderhoud in Paraguay?",
-          "a": "De kosten van levensonderhoud in Paraguay zijn ongeveer 60-70% lager dan in West-Europa. Een comfortabele levensstijl voor een gezin van vier in Asunción kost USD 3.500–5.000 per maand inclusief huur, eten, internationale school en entertainment. Alleenstaande professionals kunnen goed leven met USD 1.500–2.500 per maand."
-        },
-        {
-          "q": "Heb ik een visum nodig om als toerist Paraguay binnen te komen?",
-          "a": "Burgers van de Europese Unie, Verenigde Staten, Canada, Australië en de meeste westerse landen hebben geen visum nodig voor toeristische verblijven tot 90 dagen. Uw paspoort moet minstens 6 maanden geldig zijn. Als toerist kunt u het verblijfsproces beginnen, maar de formele aanvraag moet vanuit Paraguay worden ingediend."
-        },
-        {
-          "q": "Kan ik mijn Europese rijbewijs gebruiken?",
-          "a": "Ja, uw Europese rijbewijs is in Paraguay 90 dagen geldig. Daarna moet u een Paraguayaans rijbewijs aanvragen, wat een eenvoudige procedure vereist (theoretisch examen, praktijkexamen en een eenvoudig medisch onderzoek). We kunnen dit voor u coördineren."
-        },
-        {
-          "q": "Zijn er directe vluchten vanuit Europa?",
-          "a": "Er zijn momenteel directe vluchten van Madrid (Air Europa) en dagelijkse verbindingen van Amsterdam, Frankfurt en andere grote Europese hubs via Madrid, São Paulo of Buenos Aires. De vliegtijd is ongeveer 12–14 uur met één verbinding."
-        },
-        {
-          "q": "Hoe is het internet in Paraguay?",
-          "a": "Glasvezelinternet is beschikbaar in alle stedelijke gebieden met snelheden tot 1 Gbps. De service is betrouwbaar en aanzienlijk goedkoper dan in Europa. Mobiele dekking is uitstekend in Asunción en grote steden. Starlink is ook beschikbaar in Paraguay voor landelijke gebieden."
-        },
-        {
-          "q": "Wat gebeurt er als mijn verblijfsaanvraag wordt afgewezen?",
-          "a": "Verblijfsaanvragen worden zelden afgewezen wanneer ze goed zijn voorbereid. In het onwaarschijnlijke geval van afwijzing analyseren we de oorzaak, pakken deze aan en dienen de aanvraag opnieuw in. We bieden doorlopende ondersteuning totdat uw verblijf is goedgekeurd."
+          "id": "vida",
+          "label": "Leven in Paraguay",
+          "description": "Levenskosten, gezondheid, gemeenschap",
+          "items": [
+            {
+              "q": "Hoeveel kost het om in Paraguay te leven?",
+              "a": "USD 1.500-2.500/maand voor een alleenstaande persoon die comfortabel leeft. USD 3.000-4.500 voor een gezin met privéschool."
+            },
+            {
+              "q": "Hoe is het gezondheidssysteem?",
+              "a": "Er is IPS (openbaar, basisdekking) en kwalitatieve privéklinieken (Sanatorio Migone, Sanatorio Italiano). We raden particuliere verzekering aan."
+            },
+            {
+              "q": "Is er een Europese gemeenschap in Paraguay?",
+              "a": "Ja. Ongeveer 30.000 Europeanen wonen in Paraguay, met mennonitische (Duitse), Braziliaanse, Argentijnse en groeiende Nederlandse/Duitse gemeenschappen."
+            },
+            {
+              "q": "Is Paraguay veilig?",
+              "a": "Asunción is een van de veiligste hoofdsteden in de regio."
+            },
+            {
+              "q": "Hoe is het klimaat?",
+              "a": "Subtropisch. Warm van oktober tot maart (25-40°C), koel van mei tot augustus (10-25°C)."
+            },
+            {
+              "q": "Heb ik een auto nodig?",
+              "a": "Sterk aanbevolen. Openbaar vervoer in Asunción is beperkt. Auto's zijn goedkoop (USD 8.000-15.000)."
+            }
+          ]
         }
       ]
     },
@@ -1302,18 +1382,39 @@
       "targetKeyword": "verhuizen naar Paraguay vanuit Europa"
     },
     "hero": {
-      "headline": "Doorloop je verhuizing naar Paraguay met iemand die het al heeft meegemaakt.",
-      "subheadline": "Verblijf, bankieren, onroerend goed en installatie — volledig beheerd. Kies de diensten die u nodig heeft; wij regelen de rest.",
-      "ctaPrimaryText": "Gratis consult boeken",
-      "ctaPrimaryHref": "/contacto",
-      "ctaSecondaryText": "Bekijk diensten",
-      "ctaSecondaryHref": "/es/servicios",
-      "backgroundImage": "@img:hero.localizedEs",
-      "backgroundImageMobile": "@img:hero.homeMobile",
-      "trustBadges": [
-        "Permanent verblijf",
-        "Volledige bankondersteuning",
-        "Persoonlijke begeleiding"
+      "eyebrow": "Verblijf, bedrijf en investering in Paraguay",
+      "headline": "Jouw verhuizing naar Paraguay, met iemand die het deed",
+      "subheadline": "Verblijf, bankieren, onroerend goed en installatie. Persoonlijk beheerd door Sonia en Luana — Nederlandse vrouwen die al 7+ jaar in Paraguay wonen.",
+      "ctaText": "Gratis consult boeken",
+      "ctaHref": "/agenda",
+      "secondaryCtaText": "Bekijk het proces",
+      "secondaryCtaHref": "/proceso",
+      "backgroundImage": "@src:hero.home",
+      "stats": [
+        {
+          "prefix": "",
+          "value": "80",
+          "suffix": "+",
+          "label": "Personen gevestigd"
+        },
+        {
+          "prefix": "",
+          "value": "4.8",
+          "suffix": "/5",
+          "label": "Tevredenheid"
+        },
+        {
+          "prefix": "",
+          "value": "8-12",
+          "suffix": " wk",
+          "label": "Totale tijd"
+        },
+        {
+          "prefix": "",
+          "value": "USD",
+          "suffix": "",
+          "label": "Vaste prijs"
+        }
       ]
     },
     "trust": {
@@ -1782,12 +1883,86 @@
     },
     "hero": {
       "headline": "Privacybeleid",
-      "subheadline": "Hoe wij uw gegevens verzamelen en verwerken. GDPR-conform."
+      "subheadline": "Hoe wij uw gegevens verzamelen en verwerken. AVG-conform."
     },
     "seo": {
-      "title": "Política de privacidad — Nexa Paraguay",
-      "description": "Política de privacidad y cookies de Nexa Paraguay (cumplimiento GDPR).",
+      "title": "Privacybeleid — Nexa Paraguay",
+      "description": "Privacybeleid en cookies van Nexa Paraguay (AVG-conform).",
       "targetKeyword": "política privacidad Nexa Paraguay"
+    },
+    "full": {
+      "title": "Belangrijkste punten",
+      "subtitle": "AVG-conformiteit. Uw rechten, uitgelegd.",
+      "categories": [
+        {
+          "id": "data",
+          "label": "Gegevens die we verzamelen",
+          "items": [
+            {
+              "q": "Welke persoonsgegevens verzamelen we?",
+              "a": "Naam, e-mail, telefoon (optioneel), land, interesse-programma en verklaard doel, wanneer u een formulier invult."
+            },
+            {
+              "q": "Verzamelen we gevoelige gegevens?",
+              "a": "Nee. We verzamelen geen etnische afkomst, politieke meningen, religie, gezondheid of seksuele geaardheid."
+            },
+            {
+              "q": "Gebruiken we tracking-cookies?",
+              "a": "Alleen technische cookies die nodig zijn voor de werking van de site. We gebruiken geen advertentiecookies van derden."
+            }
+          ]
+        },
+        {
+          "id": "use",
+          "label": "Hoe we ze gebruiken",
+          "items": [
+            {
+              "q": "Waarvoor gebruiken we uw gegevens?",
+              "a": "Alleen om op uw vraag te reageren en, als u uitdrukkelijk toestemming geeft, u relevante informatie te sturen."
+            },
+            {
+              "q": "Nemen we geautomatiseerde beslissingen met uw gegevens?",
+              "a": "Nee. Er wordt geen beslissing over uw proces automatisch genomen."
+            },
+            {
+              "q": "Profileren we voor advertentiedoeleinden?",
+              "a": "Nee. We maken geen gebruikersprofielen voor advertenties."
+            }
+          ]
+        },
+        {
+          "id": "sharing",
+          "label": "Met wie we delen",
+          "items": [
+            {
+              "q": "Met wie delen we uw gegevens?",
+              "a": "CRM (HubSpot) en e-mailprovider (Mailchimp) onder verwerkingscontract. We verkopen of dragen niet over aan derden voor marketing."
+            },
+            {
+              "q": "Dragen we gegevens over buiten de EER?",
+              "a": "Ja, naar providers in de VS (HubSpot, Mailchimp) onder standaard contractuele clausules van de Europese Commissie."
+            }
+          ]
+        },
+        {
+          "id": "rights",
+          "label": "Uw rechten",
+          "items": [
+            {
+              "q": "Hoe lang bewaren we uw gegevens?",
+              "a": "24 maanden vanaf laatste contact, tenzij wettelijk vereist."
+            },
+            {
+              "q": "Hoe oefen ik mijn rechten uit op toegang, rectificatie, verwijdering of overdraagbaarheid?",
+              "a": "E-mail paraguaynexa@gmail.com en we reageren binnen maximaal 30 dagen."
+            },
+            {
+              "q": "Kan ik een klacht indienen bij de toezichthoudende autoriteit?",
+              "a": "Ja. In Paraguay bij SET. In Europa bij de gegevensbeschermingsautoriteit van uw land."
+            }
+          ]
+        }
+      ]
     }
   },
   "processPage": {
@@ -1855,54 +2030,86 @@
       ]
     },
     "highlights": {
-      "eyebrow": "HOOGTEPUNTEN",
-      "title": "Samengevat",
+      "eyebrow": "Samengevat",
+      "title": "Het proces in cijfers",
+      "subtitle": "Wat je moet weten voordat je begint.",
       "items": [
         {
           "icon": "Clock",
           "title": "8–12 weken",
-          "description": "Volledig proces vanaf indiening."
+          "description": "Totale tijd van eerste consult tot identiteitskaart in handen.",
+          "image": "@src:process.consultation"
         },
         {
           "icon": "Users",
-          "title": "Eén vast contactpersoon",
-          "description": "Nexa coördineert alle professionals."
+          "title": "Eén aanspreekpunt",
+          "description": "Sonia of Luana toegewezen aan jouw zaak.",
+          "image": "@src:process.documents"
         },
         {
           "icon": "DollarSign",
-          "title": "Vaste prijs",
-          "description": "Alle honoraria en tarieven inbegrepen."
+          "title": "Vaste USD-prijs",
+          "description": "Geen verrassingen, geen verborgen kosten.",
+          "image": "@src:process.arrival"
         },
         {
-          "icon": "Shield",
-          "title": "100% wettelijk",
-          "description": "Volledige naleving van Paraguayaans en internationaal recht."
+          "icon": "Plane",
+          "title": "Eén reis",
+          "description": "Jouw operationele dag past in één gecoördineerde dag.",
+          "image": "@src:process.signing"
+        },
+        {
+          "icon": "FileCheck",
+          "title": "Alles inbegrepen",
+          "description": "Honoraria, overheidstarieven, vertalingen, apostilles.",
+          "image": "@src:process.celebration"
         }
       ]
     },
     "faq": {
       "title": "Vragen over het proces",
+      "subtitle": "De meest voorkomende vragen voordat je begint.",
       "items": [
         {
-          "q": "Hoeveel reizen moet ik naar Paraguay maken?",
-          "a": "Ons programma is zo ontworpen dat één enkele reis voldoende is voor de operationele dag. Daarna hoeft u alleen te reizen als u de zaak persoonlijk wilt volgen of voor persoonlijke zaken."
+          "q": "Hoeveel reizen naar Paraguay heb ik nodig?",
+          "a": "Ons programma is zo ontworpen dat één reis voldoende is. De operationele dag wordt in één dag gecoördineerd."
         },
         {
           "q": "Hoe lang duurt het hele proces?",
-          "a": "Verwerking ter plaatse op één dag. Verlening van verblijf en ID: 45–60 dagen. Volledige installatie (huisvesting, bankieren, optioneel bedrijf): 8–12 weken."
+          "a": "Persoonlijke indiening: 1 dag. Afgifte verblijf en identiteitskaart: 45–60 dagen. Bedrijfsoprichting en bankrekening: 2–4 weken. Totaal: 8–12 weken."
         },
         {
           "q": "Wat als een document ontbreekt?",
-          "a": "We detecteren het voor uw reis. Onze voorvalidatie garandeert dat u in Paraguay aankomt met alles wat u nodig heeft."
+          "a": "We geven je een gepersonaliseerde checklist voordat je begint. Als er iets ontbreekt, identificeren we het in het eerste consult."
+        },
+        {
+          "q": "Moet ik Spaans spreken?",
+          "a": "Nee. Ons team spreekt Spaans, Engels, Nederlands en Duits. We begeleiden je met simultaanvertaling."
+        },
+        {
+          "q": "Kan ik mijn familie meenemen?",
+          "a": "Ja. Je echtgeno(o)t(e) en minderjarige kinderen kunnen als afhankelijken met je mee."
+        },
+        {
+          "q": "Wat zit er in de prijs?",
+          "a": "Honoraria, overheidstarieven, gecertificeerde vertalingen, apostilles, persoonlijke begeleiding en eerste belastingadvies."
+        },
+        {
+          "q": "Wat zit er NIET in?",
+          "a": "Vliegtickets, accommodatie in Paraguay, kosten S.A.-oprichting (USD 800-1.500), minimaal bankkapitaal."
+        },
+        {
+          "q": "Wat als mijn verblijf wordt afgewezen?",
+          "a": "We werken aan vooraf-screening van geschiktheid. Maar bij afwijzing betalen we 80% terug en helpen we met alternatieven."
         }
       ]
     },
     "cta": {
-      "title": "Klaar om uw verhuizing te starten?",
-      "subtitle": "Het proces duurt 8–12 weken. Uw eerste stap is een gratis gesprek.",
-      "buttonText": "Gratis consult boeken",
-      "buttonHref": "/contacto",
-      "eyebrow": "AAN DE SLAG"
+      "eyebrow": "Volgende stap",
+      "title": "Klaar om te beginnen?",
+      "subtitle": "30 minuten met Sonia of Luana. We vertellen je precies hoe lang, wat je nodig hebt en hoeveel het kost.",
+      "ctaText": "Consult boeken",
+      "ctaHref": "/agenda"
     }
   },
   "qualityOfLifePage": {
@@ -2137,13 +2344,13 @@
   },
   "servicesPage": {
     "seo": {
-      "title": "Onze diensten — Nexa Paraguay",
-      "description": "Gedetailleerde informatie over de 7 diensten van Nexa Paraguay: Verblijf & Juridische Documenten, Bankieren & Belastingen, en Woonvastgoed.",
+      "title": "Verblijfs- en verhuisdiensten voor Paraguay — Nexa",
+      "description": "Verblijf, identiteitskaart, bankieren, belastingen en onroerend goed in Paraguay. Duidelijke diensten met gedefinieerde termijnen, vaste prijzen en concrete resultaten.",
       "targetKeyword": "Paraguay verblijfsdiensten"
     },
     "hero": {
-      "headline": "Professionele oplossingen voor elke stap",
-      "subheadline": "Kies de diensten die u nodig heeft. Wij regelen de rest.",
+      "headline": "Alles wat je nodig hebt om je in Paraguay te vestigen",
+      "subheadline": "Diensten ontworpen voor Europeanen die dingen goed, snel willen doen, met iemand die het proces heeft doorlopen.",
       "ctaPrimaryText": "Gratis consult boeken",
       "ctaPrimaryHref": "/contacto"
     },
@@ -2178,114 +2385,152 @@
       ]
     },
     "services": {
-      "title": "Professionele oplossingen voor elke stap van uw verhuizing",
-      "subtitle": "Kies de diensten die bij uw situatie passen.",
-      "eyebrow": "ONZE DIENSTEN",
+      "eyebrow": "Onze diensten",
+      "title": "Alles wat je nodig hebt om je in Paraguay te vestigen",
+      "subtitle": "Diensten ontworpen voor Europeanen die dingen goed, snel willen doen, met iemand die het proces heeft doorlopen.",
       "groups": [
         {
+          "id": "residency",
           "title": "Verblijf & Juridische Documenten",
-          "description": "De eerste essentiële stappen voor uw leven in Paraguay. Wij regelen elk document vanaf nul.",
           "items": [
             {
-              "title": "Permanent verblijf",
-              "shortDescription": "Professionele afhandeling van uw verblijfsvergunningsaanvraag.",
-              "fullDescription": "Wij coördineren het hele proces met de Paraguayaanse Immigratiedienst: aanvraag, documentindiening, opvolging en levering van de beslissing. Inclusief identiteitskaart na goedkeuring.",
+              "title": "Permanent Verblijf",
+              "description": "Volledige verwerking van je verblijf bij Paraguayaanse Migraciones.",
               "benefits": [
-                "Begeleiding bij elk bezoek",
-                "Documentvertaling",
-                "Apostille-beheer",
-                "Dossieropvolging",
-                "Ondersteuning tot definitieve goedkeuring"
+                "Geschiktheidsanalyse (vóór start)",
+                "Documentverzameling en verificatie in je land",
+                "Officiële vertalingen en apostilles",
+                "Afspraakboeking bij Migraciones",
+                "Persoonlijke begeleiding naar gesprekken",
+                "Opvolging tot goedkeuring"
               ],
-              "icon": "🪪"
+              "process": "8-12 weken vanaf eerste consult",
+              "whatYouNeed": [
+                "Geldig paspoort",
+                "Apostille strafblad",
+                "Geboorteakte",
+                "Gezondheidscertificaat"
+              ],
+              "image": "@src:office.meeting-room",
+              "icon": "FileCheck"
             },
             {
-              "title": "Paraguayaans identiteitsbewijs",
-              "shortDescription": "Volledige assistentie bij het verkrijgen van uw lokale identiteitsdocument.",
-              "fullDescription": "Wij begeleiden u bij het verkrijgen van uw Paraguayaanse identiteitskaart bij de afdeling Identificaties. Wij beheren afspraken, documentatie en ophaling.",
+              "title": "Paraguayaanse Identiteitskaart",
+              "description": "Verkrijg je nationale identiteitsdocument.",
               "benefits": [
-                "Afsprakenbeheer",
-                "Documentvoorbereiding",
-                "Begeleiding ter plaatse",
-                "Coördinatie van spoedprocedure",
-                "Volledige documentatie"
+                "Verwerking bij het Departement van Identificaties",
+                "Vingerafdrukverificatie",
+                "Persoonlijke begeleiding op inschrijfdag",
+                "Opvolging tot documentlevering"
               ],
-              "icon": "🆔"
+              "process": "4-8 weken na goedkeuring",
+              "whatYouNeed": [
+                "Goedgekeurd verblijf",
+                "ID-foto",
+                "Bewijs van adres"
+              ],
+              "image": "@src:office.signing",
+              "icon": "CreditCard"
             }
           ]
         },
         {
-          "title": "Bankieren & Belasting",
-          "description": "Vestig uw financiële voetafdruk in Paraguay met deskundig advies.",
+          "id": "banking",
+          "title": "Bankieren & Belastingen",
           "items": [
             {
-              "title": "Bankrekening openen",
-              "shortDescription": "Begeleiding en ondersteuning om succesvol lokale bankrekeningen te openen.",
-              "fullDescription": "Wij begeleiden u bij de selectie en opening van bankrekeningen. Wij coördineren afspraken, bereiden de vereiste documentatie voor en vergemakkelijken de communicatie met de banken.",
+              "title": "Bankrekening Openen",
+              "description": "Persoonlijke en/of zakelijke rekening bij top Paraguayaanse banken.",
               "benefits": [
-                "Financieel profiel voorbereiding",
-                "Ideale bankselectie",
-                "Afsprakencoördinatie",
-                "Begeleiding ter plaatse",
-                "Online bankieren opzetten"
+                "Bankselectie op basis van je profiel",
+                "Coördinatie met de bank",
+                "Filiaalbegeleiding",
+                "Kaart- en online banking-activatie"
               ],
-              "icon": "🏦"
+              "process": "1-2 weken",
+              "whatYouNeed": [
+                "Paraguayaanse identiteitskaart",
+                "Bewijs van adres",
+                "Fondsenverantwoording"
+              ],
+              "image": "@src:office.reception",
+              "icon": "Landmark"
             },
             {
               "title": "Belastingregistratie (RUC)",
-              "shortDescription": "Instelling van uw RUC voor persoonlijk of zakelijk gebruik.",
-              "fullDescription": "Wij regelen uw inschrijving in het Unieke Belastingplichtigenregister bij de Belastingdienst (SET). Dit nummer is essentieel voor elke economische activiteit in Paraguay.",
+              "description": "Registratie bij SET als natuurlijk persoon of bedrijf.",
               "benefits": [
-                "Documentvoorbereiding",
-                "Indiening bij SET",
-                "Fiscaal adres instellen",
-                "Digitaal certificaat",
-                "Compliance-advies"
+                "Registratie in het juiste regime",
+                "Belastingverplichtingen configuratie",
+                "Eerste belastingadvies (3 maanden inbegrepen)",
+                "Coördinator met accountant"
               ],
-              "icon": "📊"
+              "process": "1 week",
+              "whatYouNeed": [
+                "Paraguayaanse identiteitskaart",
+                "Regimekeuze"
+              ],
+              "image": "@src:office.exterior",
+              "icon": "Calculator"
             }
           ]
         },
         {
-          "title": "Woonvastgoed",
-          "description": "Vind de ideale plek om thuis te noemen, of het nu voor een maand of een leven is.",
+          "id": "realestate",
+          "title": "Onroerend Goed",
           "items": [
             {
-              "title": "Appartement- en huurwoning",
-              "shortDescription": "Hulp bij het navigeren op de lokale markt om kwaliteitshuurwoningen te vinden.",
-              "fullDescription": "Wij helpen u kwaliteitshuurwoningen te vinden: contractbeoordeling, coördinatie van bezichtigingen en verhuisondersteuning.",
+              "title": "Appartementen en Huizen Huren",
+              "description": "Zoeken en onderhandelen over eigendommen in Asunción en metropool.",
               "benefits": [
-                "Gepersonaliseerde zoektocht",
-                "Contractbeoordeling",
-                "Bezichtigingcoördinatie",
-                "Verhuisondersteuning"
+                "Zoeken op budget en levensstijl",
+                "Gecoördineerde bezoeken aan 5-10 eigendommen",
+                "Contractbeoordeling in het Spaans",
+                "Eigenarenonderhandeling"
               ],
-              "icon": "🏠"
+              "process": "2-4 weken",
+              "whatYouNeed": [
+                "Paraguayaanse identiteitskaart",
+                "Verifieerbaar inkomen"
+              ],
+              "image": "@src:programs.tier-business",
+              "icon": "House"
             },
             {
-              "title": "Vastgoedaankoop",
-              "shortDescription": "Deskundige assistentie bij het vinden en kopen van woonvastgoed.",
-              "fullDescription": "Wij begeleiden u door het hele aankoopproces: vastgoedzoektocht, onderhandeling, due diligence en notariële coördinatie.",
+              "title": "Eigendommen Kopen",
+              "description": "Volledig advies voor de aankoop van residentiële of commerciële eigendommen.",
               "benefits": [
-                "Vastgoedzoektocht",
-                "Titelverificatie",
-                "Prijsonderhandeling",
-                "Notariële coördinatie en registratie"
+                "Eigendomszoektocht",
+                "Volledige due diligence (titel, schuld, ARP)",
+                "Notaris coördinatie",
+                "Begeleiding bij ondertekening",
+                "ARP-registratie"
               ],
-              "icon": "🔑"
+              "process": "4-8 weken",
+              "whatYouNeed": [
+                "Paraguayaanse identiteitskaart",
+                "RUC",
+                "Paraguayaanse bankrekening",
+                "Geverifieerd kapitaal"
+              ],
+              "image": "@src:programs.tier-investor",
+              "icon": "KeyRound"
             },
             {
-              "title": "Due diligence",
-              "shortDescription": "Wij verifiëren titels en juridische status van elk vastgoed om uw investering te beschermen.",
-              "fullDescription": "Wij voeren een grondige beoordeling uit van de juridische situatie van het vastgoed, inclusief titelverificatie, pandrechtenonderzoek en bestemmingsplancontrole.",
+              "title": "Due Diligence",
+              "description": "Juridische verificatie van elke eigendom vóór aankoop.",
               "benefits": [
-                "Akteverificatie",
-                "Pandrechtenonderzoek",
-                "Belastingstatusbevestiging",
-                "Bestemmingsplanverificatie",
-                "Juridisch statusrapport"
+                "Titelbeoordeling bij Openbaar Register",
+                "Gemeentelijke schuldverificatie",
+                "Belastingschuldverificatie",
+                "Schriftelijk bevindingenrapport"
               ],
-              "icon": "📋"
+              "process": "2-3 weken",
+              "whatYouNeed": [
+                "Eigendomsgegevens"
+              ],
+              "image": "@src:office.team-huddle",
+              "icon": "Shield"
             }
           ]
         }
@@ -2500,13 +2745,13 @@
   },
   "whyCountryPage": {
     "seo": {
-      "title": "Waarom Paraguay voor Europeanen: 6 duidelijke redenen",
-      "description": "Waarom Paraguay de ideale bestemming is voor Europeanen die op zoek zijn naar verblijf, gunstige belastingen en levenskwaliteit.",
+      "title": "Waarom Paraguay — 7 redenen om het als nieuw thuis te kiezen",
+      "description": "Groei, fiscale stabiliteit, levenskwaliteit en een duidelijk migratieproces voor Europese burgers. Concrete gegevens.",
       "targetKeyword": "waarom verhuizen naar Paraguay"
     },
     "hero": {
-      "headline": "Waarom Paraguay: 6 redenen om het als je nieuwe thuis te kiezen",
-      "subheadline": "Echte redenen, echte data. Geen opgeklopte retoriek — gewoon het eerlijke verhaal voor Paraguay."
+      "headline": "7 redenen waarom Europeanen Paraguay als nieuw thuis kiezen",
+      "subheadline": "Economische groei, fiscale stabiliteit, levenskwaliteit en een duidelijk migratieproces. Concrete gegevens, geen beloftes."
     },
     "pillars": {
       "eyebrow": "WAAROM PARAGUAY",
@@ -3186,5 +3431,556 @@
         "type": "PDF"
       }
     ]
+  },
+  "teamPage": {
+    "seo": {
+      "title": "Team — Nexa Paraguay",
+      "description": "Maak kennis met het team achter Nexa Paraguay: Sonia, Luana en de professionals die jouw verhuizing mogelijk maken.",
+      "targetKeyword": "Nexa Paraguay team"
+    },
+    "hero": {
+      "headline": "De mensen achter jouw verhuizing",
+      "subheadline": "Een klein, meertalig team dat het proces heeft doorlopen. Geen uitbesteding. Geen onderaanneming. Wij behandelen jouw zaak persoonlijk in Asunción.",
+      "image": "@src:team.group"
+    },
+    "team": {
+      "eyebrow": "Oprichtend team",
+      "title": "Sonia en Luana, zussen en partners",
+      "subtitle": "Nederlandse vrouwen in Paraguay. Nexa-oprichters. Meertalig. Multicultureel. 7+ jaar levend in het proces dat ze nu beheren.",
+      "members": [
+        {
+          "name": "Sonia Weiss van der Pol",
+          "role": "Oprichtster & Juridisch Gids",
+          "bio": "Sonia woonde 7 jaar in Nederland. Kwam aan zonder Nederlands te spreken, zonder contacten, zonder vangnet. Heeft haar eigen verblijfsvergunning, bedrijf en bankrekening geregeld. Nu doet ze hetzelfde voor elke Nexa-cliënt. Spreekt Spaans, Engels, Nederlands en Duits.",
+          "languages": [
+            "ES",
+            "EN",
+            "NL",
+            "DE"
+          ],
+          "credentials": [
+            "Rechtenstudie (Nederland)",
+            "7 jaar wonend in Paraguay",
+            "Geregistreerd bij SEPRELAD als verplichte entiteit"
+          ],
+          "icon": "Star",
+          "memberImage": "@src:team.sonia",
+          "imageUrl": "@src:team.sonia",
+          "image": "@img:team.sonia"
+        },
+        {
+          "name": "Luana Weiss van der Pol",
+          "role": "Operations Director",
+          "bio": "Luana coördineert elk dossier van begin tot eind. Van de eerste e-mail tot de aflevering van de identiteitskaart. Haar taak is dat jij niets hoeft uit te zoeken: zij heeft het al uitgezocht, is gegaan, teruggekomen. Spreekt Spaans, Engels en Nederlands.",
+          "languages": [
+            "ES",
+            "EN",
+            "NL"
+          ],
+          "credentials": [
+            "Operations & Klantenzorg",
+            "Specialist bij Migraciones",
+            "Coördinator zakelijke rekeningen"
+          ],
+          "icon": "Heart",
+          "memberImage": "@src:team.luana",
+          "imageUrl": "@src:team.luana",
+          "image": "@img:team.luana"
+        }
+      ]
+    },
+    "trust": {
+      "eyebrow": "Capaciteiten",
+      "title": "Wie werkt met ons samen",
+      "subtitle": "Wanneer een dossier het vereist, werken we met een samengesteld netwerk van Paraguayaanse professionals.",
+      "items": [
+        {
+          "icon": "FileText",
+          "title": "Legal Lead",
+          "description": "Paraguayaanse advocaat gespecialiseerd in migratie- en ondernemingsrecht.",
+          "imageUrl": "@src:team.legalLead"
+        },
+        {
+          "icon": "Building2",
+          "title": "Accounting Lead",
+          "description": "Accountant verantwoordelijk voor S.A.-oprichting, RUC en belastingverplichtingen.",
+          "imageUrl": "@src:team.accountingLead"
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Commercial Director",
+          "description": "Commercieel advies voor Europese investeerders die zakelijke kansen zoeken.",
+          "imageUrl": "@src:team.commercialDirector"
+        },
+        {
+          "icon": "Headphones",
+          "title": "Client Success",
+          "description": "Klantenservice in Spaans, Engels, Nederlands en Duits gedurende het hele proces.",
+          "imageUrl": "@src:team.clientSuccess"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Laten we praten",
+      "subtitle": "30 minuten met Sonia of Luana. Geen verplichting. Geen druk. Gewoon een eerlijk gesprek over jouw zaak.",
+      "buttonText": "Gesprek plannen",
+      "buttonHref": "/contacto",
+      "eyebrow": "Volgende stap"
+    }
+  },
+  "programasPage": {
+    "seo": {
+      "title": "Programma's — Nexa Paraguay",
+      "description": "Drie duidelijke programma's op basis van jouw doel: Permanent Verblijf, Verblijf + Bedrijf, Investeerder Verblijf. Transparante prijzen, gedefinieerde termijnen.",
+      "targetKeyword": "Paraguay verblijfsprogramma's"
+    },
+    "hero": {
+      "headline": "Drie programma's. Eén doel: jouw nieuwe leven in Paraguay.",
+      "subheadline": "Vaste USD-prijzen. Geen verrassingen. Geen verborgen kosten. Elk programma bevat wat je nodig hebt om je te vestigen met je gezin of je bedrijf."
+    },
+    "trust": {
+      "eyebrow": "Wat elk programma bevat",
+      "title": "Volledige transparantie",
+      "subtitle": "Vaste prijzen, gedefinieerde resultaten, gemeten termijnen.",
+      "items": [
+        {
+          "icon": "BadgeCheck",
+          "title": "Vaste USD-prijs",
+          "description": "Wat je ziet is wat je betaalt. Geen verrassingen."
+        },
+        {
+          "icon": "Clock",
+          "title": "Gedefinieerde termijnen",
+          "description": "Elk programma heeft een duidelijke deadline, geen vage schattingen."
+        },
+        {
+          "icon": "Shield",
+          "title": "Prestatiegarantie",
+          "description": "Als we de termijnen niet halen, betalen we een deel terug."
+        },
+        {
+          "icon": "Users",
+          "title": "Toegewijd team",
+          "description": "Sonia of Luana toegewezen aan jouw zaak vanaf dag één."
+        }
+      ]
+    },
+    "programs": {
+      "title": "Kies je programma",
+      "subtitle": "Drie opties op basis van jouw doel. Allemaal inclusief verblijf en Paraguayaanse identiteitskaart.",
+      "groups": [
+        {
+          "id": "residency",
+          "title": "01 — Verblijf & Leven",
+          "items": [
+            {
+              "title": "Permanent Verblijf",
+              "price": "USD 4.500",
+              "duration": "10–12 weken",
+              "popular": false,
+              "tagline": "Om in Paraguay te wonen",
+              "included": [
+                "Verblijfsaanvraag bij Migraciones",
+                "Begeleiding naar gesprekken en afspraken",
+                "Paraguayaanse identiteitskaart in handen",
+                "Bankcoördinatie (persoonlijke rekening)",
+                "Documentvertaling en apostille"
+              ],
+              "notIncluded": [
+                "Bedrijfsoprichting",
+                "Belastingadvies"
+              ],
+              "ctaText": "Start Base",
+              "ctaHref": "/contacto?program=base"
+            }
+          ]
+        },
+        {
+          "id": "business",
+          "title": "02 — Bedrijf + Leven",
+          "items": [
+            {
+              "title": "Verblijf + Bedrijf + Bank",
+              "price": "USD 7.500",
+              "duration": "12–16 weken",
+              "popular": true,
+              "tagline": "Wat 80% van onze klanten kiest",
+              "included": [
+                "Alles van Permanent Verblijf",
+                "Paraguayaanse S.A.-oprichting",
+                "RUC en zakelijke bankrekening",
+                "Rekening openen bij 2 banken",
+                "3-daagse vastgoedtour",
+                "Initieel belastingadvies (3 maanden)"
+              ],
+              "notIncluded": [
+                "Eigendomsaankoop",
+                "Investeringsbeheer"
+              ],
+              "ctaText": "Start Business",
+              "ctaHref": "/contacto?program=business"
+            }
+          ]
+        },
+        {
+          "id": "investor",
+          "title": "03 — Investering",
+          "items": [
+            {
+              "title": "Investeerder Verblijf",
+              "price": "USD 12.000",
+              "duration": "12–16 weken",
+              "popular": false,
+              "tagline": "Voor investeerders met verifieerbaar vermogen",
+              "included": [
+                "Alles van Business",
+                "Volledige vastgoed due diligence",
+                "Vermogensadvies",
+                "Investeringsbeheer",
+                "Netwerken met private banking"
+              ],
+              "notIncluded": [
+                "Directe eigendomsaankoop (apart geprijsd)",
+                "Internationaal juridisch advies"
+              ],
+              "ctaText": "Start Investeerder",
+              "ctaHref": "/contacto?program=investor"
+            }
+          ]
+        },
+        {
+          "id": "land",
+          "title": "04 — Grond (standalone module)",
+          "items": [
+            {
+              "title": "Grondaankoop",
+              "price": "USD 2.500",
+              "duration": "4–6 weken",
+              "popular": false,
+              "tagline": "Alleen als je al verblijf hebt",
+              "included": [
+                "Volledige due diligence (titel, schuld, ARP)",
+                "Publieke akte ondertekening",
+                "ARP-registratie",
+                "Schriftelijk bevindingenrapport"
+              ],
+              "notIncluded": [
+                "Verblijf",
+                "Bankrekening openen"
+              ],
+              "ctaText": "Start Grond",
+              "ctaHref": "/contacto?program=land"
+            }
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Weet je niet welk programma bij jou past?",
+      "subtitle": "30 minuten met Sonia of Luana. We vertellen je welke bij je zaak past, zonder je iets te verkopen.",
+      "buttonText": "Consult boeken",
+      "buttonHref": "/contacto",
+      "eyebrow": "Volgende stap"
+    }
+  },
+  "testimoniosPage": {
+    "seo": {
+      "title": "Getuigenissen — Nexa Paraguay",
+      "description": "Wat Europese klanten die al gevestigd zijn in Paraguay zeggen over hun samenwerking met ons.",
+      "targetKeyword": "Nexa Paraguay getuigenissen"
+    },
+    "hero": {
+      "headline": "Wat degenen die al in Paraguay zijn zeggen",
+      "subheadline": "Echte verhalen van mensen die het proces met ons hebben voltooid. Volledige namen op verzoek beschikbaar voor privacy."
+    },
+    "trust": {
+      "eyebrow": "Meetbare resultaten",
+      "title": "Wat we samen bereiken",
+      "subtitle": "Geaggregeerde cijfers van de laatste 18 maanden.",
+      "items": [
+        {
+          "icon": "Users",
+          "title": "80+ mensen gevestigd",
+          "description": "Permanente verblijfsvergunningen ingediend en goedgekeurd"
+        },
+        {
+          "icon": "Building2",
+          "title": "40+ bedrijven opgericht",
+          "description": "S.A. en EAS geregistreerd met actieve RUC"
+        },
+        {
+          "icon": "Landmark",
+          "title": "60+ bankrekeningen",
+          "description": "Persoonlijke en zakelijke rekeningen geopend"
+        },
+        {
+          "icon": "Star",
+          "title": "4.8/5 tevredenheid",
+          "description": "Gemiddelde beoordeling na proces (anonieme enquête)"
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Getuigenissen",
+      "title": "Echte zaken, echte woorden",
+      "subtitle": "Gedeeld met toestemming. Sommige klanten vroegen om anonimisering voor professionele privacy.",
+      "items": [
+        {
+          "name": "M. K.",
+          "country": "Duitsland",
+          "program": "Investeerder",
+          "role": "Agribusiness-investeerder",
+          "duration": "10 weken",
+          "quote": "In 10 weken had ik verblijf, bedrijf en bankrekening. Eén aanspreekpunt. Eerder had ik twee Duitse agentschappen en een lokale advocaat geraadpleegd — niemand gaf me een duidelijk proces. Nexa wel.",
+          "rating": 5
+        },
+        {
+          "name": "J. V.",
+          "country": "Nederland",
+          "program": "Business",
+          "role": "SaaS-oprichter",
+          "duration": "14 weken",
+          "quote": "De vastgoedtour was cruciaal. Ik vond de juiste eigendom in drie dagen zonder maanden te verliezen. Sonia wist precies welke wijken bij mijn profiel pasten (remote werk, geen kinderen, middenbudget).",
+          "rating": 5
+        },
+        {
+          "name": "S. R.",
+          "country": "Spanje",
+          "program": "Base",
+          "role": "Onafhankelijk consultant",
+          "duration": "11 weken",
+          "quote": "Totale kosten transparantie. Nul verrassingen. Ik vergeleek met drie andere opties voordat ik Nexa koos — het verschil was dat ze me een vaste USD-prijs gaven, geen schattingen.",
+          "rating": 5
+        },
+        {
+          "name": "T. D.",
+          "country": "België",
+          "program": "Business",
+          "role": "Trader / Investeerder",
+          "duration": "13 weken",
+          "quote": "Ik was doodsbang voor het proces. Nexa vereenvoudigde het tot een kalender met duidelijke data. Elke week wist ik wat er kwam, wat ik moest meenemen, wat erna kwam. Nul angst.",
+          "rating": 5
+        },
+        {
+          "name": "L. B.",
+          "country": "Duitsland",
+          "program": "Grond",
+          "role": "Boerderijkoper",
+          "duration": "5 weken",
+          "quote": "De vastgoed due diligence bespaarde me van het kopen van een probleem. De eigendom had een gemeentelijke schuld die de verkoper niet had verklaard. Nexa ving het op voor het tekenen.",
+          "rating": 5
+        },
+        {
+          "name": "K. M.",
+          "country": "Nederland",
+          "program": "Base",
+          "role": "Remote werker",
+          "duration": "10 weken",
+          "quote": "Ik had alleen de identiteitskaart nodig om een bankrekening in Paraguay te openen en mijn financiën te beheren. Ik wilde geen bedrijf of investering. Nexa bood me het Base-programma aan zonder me iets anders te proberen te verkopen.",
+          "rating": 5
+        }
+      ]
+    },
+    "cta": {
+      "title": "Jouw getuigenis kan de volgende zijn",
+      "subtitle": "Begin vandaag je proces. 30 minuten met Sonia of Luana. Geen verplichting.",
+      "buttonText": "Consult boeken",
+      "buttonHref": "/contacto",
+      "eyebrow": "Volgende stap"
+    }
+  },
+  "agendaPage": {
+    "seo": {
+      "title": "Boek een consult — Nexa Paraguay",
+      "description": "Boek 30 minuten met Sonia of Luana. Gratis consult over jouw verblijf, bedrijf of investeringsproces in Paraguay.",
+      "targetKeyword": "consult boeken Paraguay"
+    },
+    "hero": {
+      "headline": "Boek je gratis consult",
+      "subheadline": "30 minuten met Sonia of Luana. We vertellen je je programma, hoe lang het duurt, wat je nodig hebt — geen verplichting."
+    },
+    "trust": {
+      "eyebrow": "Waarom boeken",
+      "title": "Een gesprek dat de moeite waard is",
+      "subtitle": "30 minuten waarin we je alles vertellen wat je moet weten, zonder je iets te verkopen.",
+      "items": [
+        {
+          "icon": "BadgeCheck",
+          "title": "Geen verplichting",
+          "description": "Als we niet verder gaan, ga je weg met gratis antwoorden."
+        },
+        {
+          "icon": "Globe",
+          "title": "In jouw taal",
+          "description": "We spreken Spaans, Engels, Nederlands of Duits."
+        },
+        {
+          "icon": "Clock",
+          "title": "Precies 30 minuten",
+          "description": "We respecteren je tijd. Niet meer, niet minder."
+        },
+        {
+          "icon": "Shield",
+          "title": "Vertrouwelijk",
+          "description": "Je persoonlijke en financiële situatie blijft tussen ons."
+        }
+      ]
+    },
+    "programs": {
+      "title": "Waarover we kunnen praten",
+      "subtitle": "Een van deze onderwerpen — of meerdere tegelijk.",
+      "groups": [
+        {
+          "id": "topics",
+          "title": "Veelvoorkomende onderwerpen",
+          "items": [
+            {
+              "title": "Permanent Verblijf",
+              "duration": "10–12 weken",
+              "price": "USD 4.500",
+              "tagline": "Om in Paraguay te leven zonder bedrijf",
+              "included": [
+                "Migraciones-aanvraag",
+                "Paraguayaanse identiteitskaart",
+                "Persoonlijke bankrekening"
+              ]
+            },
+            {
+              "title": "Verblijf + Bedrijf + Bank",
+              "duration": "12–16 weken",
+              "price": "USD 7.500",
+              "tagline": "Het populairste programma",
+              "popular": true,
+              "included": [
+                "Alles van Verblijf",
+                "Paraguayaanse S.A.",
+                "Zakelijke rekening",
+                "Vastgoedtour"
+              ]
+            },
+            {
+              "title": "Investeerder Verblijf",
+              "duration": "12–16 weken",
+              "price": "USD 12.000",
+              "tagline": "Voor verifieerbaar vermogen",
+              "included": [
+                "Alles van Business",
+                "Volledige due diligence",
+                "Vermogensadvies",
+                "Banknetwerk"
+              ]
+            },
+            {
+              "title": "Grondaankoop",
+              "duration": "4–6 weken",
+              "price": "USD 2.500",
+              "tagline": "Standalone module (vooraf verblijf nodig)",
+              "included": [
+                "Due diligence",
+                "Akte ondertekening",
+                "ARP-registratie"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "highlights": {
+      "eyebrow": "Voor het boeken",
+      "title": "Wat je moet weten",
+      "subtitle": "Praktische informatie om voorbereid aan het gesprek te beginnen.",
+      "items": [
+        {
+          "icon": "FileText",
+          "title": "Documenten",
+          "description": "Hou je paspoort en identiteitsdocumenten uit je land bij de hand."
+        },
+        {
+          "icon": "Euro",
+          "title": "Budget",
+          "description": "Als je al een investeringsbereik of budget hebt, nog beter."
+        },
+        {
+          "icon": "Calendar",
+          "title": "Tijdlijn",
+          "description": "Wanneer wil je verhuizen: direct, over 6 maanden, over 1 jaar?"
+        },
+        {
+          "icon": "Users",
+          "title": "Gezin",
+          "description": "Reis je alleen of met partner/kinderen? Dit verandert het proces."
+        }
+      ]
+    }
+  },
+  "termsPage": {
+    "seo": {
+      "title": "Voorwaarden — Nexa Paraguay",
+      "description": "Voorwaarden van Nexa Paraguay diensten."
+    },
+    "hero": {
+      "headline": "Voorwaarden",
+      "subheadline": "De spelregels tussen jou en Nexa Paraguay."
+    },
+    "full": {
+      "title": "Belangrijke voorwaarden",
+      "subtitle": "Executive summary. For the full version, contact us.",
+      "categories": [
+        {
+          "id": "service",
+          "label": "About the service",
+          "items": [
+            {
+              "q": "What is Nexa Paraguay?",
+              "a": "A migration advisory firm based in Asunción. We offer residency services, bank account opening, company incorporation, and real estate due diligence."
+            },
+            {
+              "q": "Does Nexa provide legal or accounting services directly?",
+              "a": "No. Nexa offers coordination, accompaniment, and administrative management services. Legal services are provided by independent attorneys registered in Paraguay."
+            },
+            {
+              "q": "What is the service area?",
+              "a": "Paraguay. We operate from Asunción and accompany clients from anywhere in the world."
+            }
+          ]
+        },
+        {
+          "id": "payments",
+          "label": "Payments and refunds",
+          "items": [
+            {
+              "q": "How do payments work?",
+              "a": "50% on signing the contract, 50% on receiving the Paraguayan ID card. For larger amounts, we agree on a personalized scheme."
+            },
+            {
+              "q": "When does a refund apply?",
+              "a": "If Migraciones rejects your residency application, we refund 80% of the payment. The refund is processed within 30 business days."
+            },
+            {
+              "q": "What if I abandon the process?",
+              "a": "If you abandon after the first payment but before starting, we retain 30% for administrative expenses. After started, no refund."
+            }
+          ]
+        },
+        {
+          "id": "responsibilities",
+          "label": "Responsibilities",
+          "items": [
+            {
+              "q": "What is Nexa's responsibility?",
+              "a": "To accompany you in coordinating the process with attorneys, notaries, accountants, and Paraguayan entities. We do not guarantee results from third parties."
+            },
+            {
+              "q": "What is my responsibility as a client?",
+              "a": "Provide true and complete documentation, attend coordinated appointments, and comply with Paraguayan legal requirements."
+            },
+            {
+              "q": "Is there a success guarantee?",
+              "a": "No. Nexa is an accompaniment service, not a results guarantee. Times and approvals depend on Paraguayan entities."
+            }
+          ]
+        }
+      ]
+    }
   }
 }

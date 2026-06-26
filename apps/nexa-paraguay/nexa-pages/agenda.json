@@ -1,13 +1,54 @@
 {
+  "id": "agenda",
   "targetKeyword": "agendar consulta Paraguay",
+  "slug": "agenda",
+  "titleKey": "agendaPage.seo.title",
+  "descriptionKey": "agendaPage.seo.description",
   "sections": [
     {
-      "id": "booking-form",
-      "content": "bookingForm"
+      "id": "header",
+      "variant": "standard",
+      "content": "navigation"
+    },
+    {
+      "id": "hero",
+      "variant": "minimal",
+      "content": "agendaPage.hero"
+    },
+    {
+      "id": "trust",
+      "variant": "credentials",
+      "content": "agendaPage.trust"
+    },
+    {
+      "id": "programs",
+      "variant": "pricing-table",
+      "content": "agendaPage.programs"
     },
     {
       "id": "highlights",
-      "content": "bookingForm.features"
+      "variant": "pillars",
+      "content": "agendaPage.highlights"
+    },
+    {
+      "id": "booking-form",
+      "variant": "default",
+      "content": "bookingForm"
+    },
+    {
+      "id": "compliance",
+      "variant": "default",
+      "content": "complianceDisclaimer"
+    },
+    {
+      "id": "footer",
+      "variant": "standard",
+      "content": "footer"
+    },
+    {
+      "id": "whatsapp-float",
+      "variant": "standard",
+      "content": "whatsapp"
     }
   ]
 }

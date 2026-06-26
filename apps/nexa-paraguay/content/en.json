@@ -65,18 +65,39 @@
       "targetKeyword": "relocate to Paraguay from Europe"
     },
     "hero": {
-      "headline": "Relocate to Paraguay with a team that has done it before.",
-      "subheadline": "Residency, banking, real estate, and settling in — managed end-to-end. Choose the services you need; we handle the rest.",
-      "ctaPrimaryText": "Book a free consultation",
-      "ctaPrimaryHref": "/contacto",
-      "ctaSecondaryText": "See services",
-      "ctaSecondaryHref": "/es/servicios",
-      "backgroundImage": "@img:hero.localizedEs",
-      "backgroundImageMobile": "@img:hero.homeMobile",
-      "trustBadges": [
-        "Permanent residency",
-        "Full banking support",
-        "Close personal guidance"
+      "eyebrow": "Residency, business and investment in Paraguay",
+      "headline": "Your relocation to Paraguay, with someone who did it",
+      "subheadline": "Residency, banking, real estate and installation. Personally managed by Sonia and Luana — Dutch women living in Paraguay for 7+ years.",
+      "ctaText": "Book free consultation",
+      "ctaHref": "/agenda",
+      "secondaryCtaText": "See the process",
+      "secondaryCtaHref": "/proceso",
+      "backgroundImage": "@src:hero.home",
+      "stats": [
+        {
+          "prefix": "",
+          "value": "80",
+          "suffix": "+",
+          "label": "People resettled"
+        },
+        {
+          "prefix": "",
+          "value": "4.8",
+          "suffix": "/5",
+          "label": "Satisfaction"
+        },
+        {
+          "prefix": "",
+          "value": "8-12",
+          "suffix": " wks",
+          "label": "Total time"
+        },
+        {
+          "prefix": "",
+          "value": "USD",
+          "suffix": "",
+          "label": "Fixed price"
+        }
       ]
     },
     "trust": {
@@ -420,13 +441,13 @@
   },
   "whyCountryPage": {
     "seo": {
-      "title": "Why Paraguay for Europeans: 6 clear reasons",
-      "description": "Why Paraguay is the ideal destination for Europeans looking for residency, favorable taxes, and quality of life.",
+      "title": "Why Paraguay — 7 reasons to choose it as your new home",
+      "description": "Growth, tax stability, quality of life, and a clear immigration process for European citizens. Concrete data.",
       "targetKeyword": "why move to Paraguay"
     },
     "hero": {
-      "headline": "Why Paraguay: 6 reasons to choose it as your new home",
-      "subheadline": "Real reasons, real data. Not bullish rhetoric — just the honest case for Paraguay."
+      "headline": "7 reasons Europeans choose Paraguay as their new home",
+      "subheadline": "Economic growth, tax stability, quality of life and a clear immigration process. Concrete data, not promises."
     },
     "pillars": {
       "eyebrow": "WHY PARAGUAY",
@@ -628,9 +649,9 @@
   },
   "aboutPage": {
     "cta": {
-      "title": "Want to meet the team?",
-      "subtitle": "Schedule a free 30-minute call. No pressure, just a conversation.",
-      "buttonText": "Book a free consultation",
+      "title": "Let's talk about your case",
+      "subtitle": "30 minutes with Sonia or Luana. No commitment. Just an honest conversation.",
+      "buttonText": "Book consultation",
       "buttonHref": "/contacto",
       "eyebrow": "GET TO KNOW US"
     },
@@ -640,8 +661,8 @@
       "targetKeyword": "about Nexa Paraguay"
     },
     "hero": {
-      "headline": "Experience Turned into Expertise",
-      "subheadline": "Nexa Paraguay was founded with a single mission: to transform the relocation process from a bureaucratic obstacle into a welcoming experience."
+      "headline": "Experience turned into service",
+      "subheadline": "We are Sonia and Luana Weiss van der Pol. Dutch women living in Paraguay for 7+ years. We founded Nexa after processing each step of the migration process ourselves."
     },
     "team": {
       "title": "Our team",
@@ -694,25 +715,27 @@
     },
     "trust": {
       "eyebrow": "WHY NEXA",
-      "title": "An integrated system, not a paperwork service",
+      "title": "What we achieve together",
       "items": [
         {
-          "icon": "Package",
-          "title": "We help with what you need",
-          "description": "Residency, company, and bank account — integrated.",
-          "image": "@src:trust.certificate"
+          "icon": "Users",
+          "value": "80+",
+          "label": "People resettled"
         },
         {
-          "icon": "Plane",
-          "title": "We guide you through the process",
-          "description": "On-site appointments in a single coordinated day.",
-          "image": "@src:trust.meeting"
+          "icon": "Building2",
+          "value": "40+",
+          "label": "Companies incorporated"
         },
         {
-          "icon": "Heart",
-          "title": "Close, ongoing support",
-          "description": "We are available whenever you need us.",
-          "image": "@src:trust.team"
+          "icon": "Landmark",
+          "value": "60+",
+          "label": "Bank accounts opened"
+        },
+        {
+          "icon": "Star",
+          "value": "4.8/5",
+          "label": "Average satisfaction"
         }
       ]
     },
@@ -750,7 +773,7 @@
     },
     "whyNexa": {
       "eyebrow": "WHY NEXA",
-      "title": "An integrated system, not a paperwork service",
+      "title": "Why we're not just another agency",
       "pillars": [
         {
           "icon": "Package",
@@ -877,163 +900,202 @@
     },
     "full": {
       "title": "All questions",
-      "searchPlaceholder": "Search in questions...",
-      "items": [
+      "subtitle": "The 40+ questions we receive every week. If you don't find yours, write to us.",
+      "searchPlaceholder": "Search questions...",
+      "categories": [
         {
-          "q": "How long does the whole process take?",
-          "a": "On-site processing in one day. Residency and ID issuance: 45–60 days. Full settling-in (housing, banking, optional company): 8–12 weeks."
+          "id": "antes-de-empezar",
+          "label": "Before starting",
+          "description": "What you need to know before committing",
+          "items": [
+            {
+              "q": "How much does the entire process cost?",
+              "a": "Depends on the program. Base USD 4,500, Business USD 7,500, Investor USD 12,000, Land USD 2,500. All prices are fixed in USD."
+            },
+            {
+              "q": "What's included in the price?",
+              "a": "Professional fees, government rates, certified translations, apostilles, complete in-person accompaniment, and initial tax advisory (3 months in Business and Investor)."
+            },
+            {
+              "q": "What's NOT included?",
+              "a": "Airfare, accommodation in Paraguay, S.A. incorporation cost (USD 800-1,500), minimum bank capital (varies by bank), notary fees for properties."
+            },
+            {
+              "q": "Can I pay in installments?",
+              "a": "Yes. 50% on signing, 50% on receiving the ID card. For larger amounts, we agree on a personalized scheme."
+            },
+            {
+              "q": "Do I need to speak Spanish?",
+              "a": "No. Our team speaks Spanish, English, Dutch, and German. We accompany you with simultaneous translation to each appointment."
+            },
+            {
+              "q": "How many trips do I need to make to Paraguay?",
+              "a": "Just one. The operational day is coordinated in a complete day."
+            },
+            {
+              "q": "How long does the entire process take?",
+              "a": "8-12 weeks from initial consultation to ID card in hand. Business and Investor can take 12-16 weeks due to the company aspect."
+            },
+            {
+              "q": "Is the process 100% legal?",
+              "a": "Absolutely. We work in strict compliance with Paraguayan law. We are registered with SEPRELAD as obligated subjects."
+            },
+            {
+              "q": "What happens if my residency is rejected?",
+              "a": "We work on eligibility pre-screening before starting. But if for some reason you were rejected, we refund 80% of the payment and help you understand alternatives."
+            }
+          ]
         },
         {
-          "q": "How many trips do I need to make to Paraguay?",
-          "a": "Our program is designed so that a single trip is sufficient for the operational day. After that, you only need to travel if you want to oversee the case in person or for personal matters."
+          "id": "inmigracion",
+          "label": "Immigration and Residency",
+          "description": "How the immigration process works",
+          "items": [
+            {
+              "q": "What types of residency exist?",
+              "a": "Permanent residency (most common for Europeans), temporary residency (1 year, renewable), and investment residency (for investors with verifiable capital)."
+            },
+            {
+              "q": "Can I bring my family?",
+              "a": "Yes. Spouse and minor children can settle with you as dependents in your main application."
+            },
+            {
+              "q": "Can my children attend public school?",
+              "a": "Yes. With a Paraguayan ID, minors access free public education. There are also private bilingual options (Spanish/English)."
+            },
+            {
+              "q": "Do I need to apostille documents?",
+              "a": "Yes. Documents from your home country must be apostilled (or legalized depending on country) to be valid in Paraguay."
+            },
+            {
+              "q": "How long does residency approval take?",
+              "a": "Migraciones has a legal deadline of 90 days, but in practice takes 45-60 days from your operational day in Paraguay."
+            },
+            {
+              "q": "Do I need to visit Migraciones multiple times?",
+              "a": "No. A single visit on the operational day is sufficient for the residency and ID interviews. Everything else we handle."
+            },
+            {
+              "q": "What if my ID card takes a long time?",
+              "a": "The Department of Identifications issues the ID in 4-8 weeks. We notify you when it is ready and pick it up for you."
+            }
+          ]
         },
         {
-          "q": "What does the price include?",
-          "a": "Professional fees, VAT, official rates, banking coordination, property tour (when applicable), and full accompaniment during the operational day."
+          "id": "banca",
+          "label": "Banking and Finance",
+          "description": "Accounts, transfers, currency",
+          "items": [
+            {
+              "q": "Can I open a bank account as a resident?",
+              "a": "Yes. As a Paraguayan resident with ID, you can open a personal or business account at any local bank."
+            },
+            {
+              "q": "Which banks do Paraguayans use?",
+              "a": "The main ones are Itaú, Continental, Sudameris, GNB, BNF (state-owned), and Visión. Each has slightly different requirements."
+            },
+            {
+              "q": "Do I need minimum capital?",
+              "a": "Varies by bank. Some require USD 1,000-5,000 as initial deposit, others require nothing."
+            },
+            {
+              "q": "Can I transfer money from Europe?",
+              "a": "Yes. Paraguay has no exchange controls. You can receive international transfers without restrictions."
+            },
+            {
+              "q": "Do I need to declare the money I bring?",
+              "a": "For amounts over USD 10,000 in cash, yes. For bank transfers, there is no limit."
+            }
+          ]
         },
         {
-          "q": "What is NOT included?",
-          "a": "International flights, accommodation, personal expenses, certified translations and apostilles in your country of origin."
+          "id": "legal",
+          "label": "Legal and Company",
+          "description": "Company incorporation, RUC, obligations",
+          "items": [
+            {
+              "q": "Do I need to incorporate a company?",
+              "a": "Depends. If you only want to live in Paraguay with your foreign income, you do NOT need a company (Base program). If you want to operate locally or have an S.A., yes (Business or Investor)."
+            },
+            {
+              "q": "What type of company is incorporated?",
+              "a": "We recommend S.A. (Sociedad Anónima) or EAS (Empresa por Acciones Simplificada). We explain the differences in the consultation."
+            },
+            {
+              "q": "How much does it cost to incorporate an S.A.?",
+              "a": "USD 800-1,500 depending on type and size. Includes notary fees and registration rates."
+            },
+            {
+              "q": "What is the RUC?",
+              "a": "Single Taxpayer Registry. It is your tax identification number. You need it if you will invoice or have employees."
+            },
+            {
+              "q": "What are the tax obligations?",
+              "a": "IRE 10% on local income. If you only have foreign income, you do not pay local tax. We explain everything in the consultation."
+            },
+            {
+              "q": "Which tax regime suits me?",
+              "a": "Depends on your situation. Individual, S.A., EAS, or monotributo have different advantages. We advise you."
+            }
+          ]
         },
         {
-          "q": "Do I need to speak Spanish?",
-          "a": "No. Our team accompanies you at all times and commercial communication is in your preferred language: Dutch, English, German, or Spanish."
+          "id": "propiedades",
+          "label": "Real Estate",
+          "description": "Buying, renting, due diligence",
+          "items": [
+            {
+              "q": "Is it a good time to buy properties in Paraguay?",
+              "a": "The market is in sustained growth. Prices in Asunción have risen 5-8% annually in the last 3 years."
+            },
+            {
+              "q": "Can I buy as a foreigner?",
+              "a": "Yes. Paraguay does not restrict property purchases by foreigners. With ID or RUC, the process is the same as for locals."
+            },
+            {
+              "q": "What areas do you recommend?",
+              "a": "Depends on your style. For families: Villa Morra, Carmelitas, Loma Pyta. For nightlife: Paseo Carmelitas, Mariscal. For tranquility: San Bernardino (50 km away)."
+            },
+            {
+              "q": "How much does a decent apartment cost?",
+              "a": "USD 800-1,500/month for 2-3 bedroom rental in a good area. USD 80,000-150,000 to buy."
+            },
+            {
+              "q": "Can I get a mortgage as a foreigner?",
+              "a": "Yes, but Paraguayan banks require 30-40% down payment. Some accept mortgages from 60% of the value."
+            }
+          ]
         },
         {
-          "q": "Can I open a bank account as a foreigner?",
-          "a": "Yes. It is the most complex process, but we prepare your financial profile and coordinate everything with the bank to maximize success."
-        },
-        {
-          "q": "What type of company is formed?",
-          "a": "Our legal team recommends the most convenient corporate type (generally S.A. for liability protection). We explain the differences during the consultation."
-        },
-        {
-          "q": "Is the process 100% legal?",
-          "a": "Absolutely. Strict adherence to Paraguayan and international law. We work directly with licensed attorneys and registered notaries."
-        },
-        {
-          "q": "What if a document is missing?",
-          "a": "We detect it before your trip. Our pre-validation guarantees that you arrive in Paraguay with everything you need."
-        },
-        {
-          "q": "Do you offer a bank account opening guarantee?",
-          "a": "The final decision is the bank's. We guarantee professional preparation and coordination — if there are objective reasons for rejection, we help you with alternatives."
-        },
-        {
-          "q": "Can I bring my family?",
-          "a": "Yes. Each family member requires their own residency process. We coordinate cases together to maximize efficiency."
-        },
-        {
-          "q": "How is payment made?",
-          "a": "Pre-payment by bank transfer. No additional charges."
-        },
-        {
-          "q": "What happens after the first year (Investor)?",
-          "a": "We propose a continuity plan that includes annual compliance, tax advisory, and any operational support your case needs."
-        },
-        {
-          "q": "What happens if laws change during my process?",
-          "a": "We monitor the regulatory environment and inform you immediately if there are changes that affect your case."
-        },
-        {
-          "q": "Do I need to speak Spanish to obtain residency?",
-          "a": "It is not necessary. Although the process is conducted in Spanish, we work with sworn translators and accompany you to every appointment."
-        },
-        {
-          "q": "Can I keep my original citizenship?",
-          "a": "Yes, Paraguay allows dual citizenship with most countries. You will not lose your original nationality."
-        },
-        {
-          "q": "How long can I be outside Paraguay without losing my residency?",
-          "a": "Permanent residency requires you to be physically in Paraguay at least 1 day every 3 years. Temporary residency has more specific requirements — we explain them during the consultation."
-        },
-        {
-          "q": "Is Paraguay safe for Europeans?",
-          "a": "Paraguay is generally safe for foreigners — violent crime rates in Asunción are low compared to other regional capitals, and the expat communities in Villa Morra, Carmelitas, and San Bernardino are active and well established. As in any country, we recommend taking normal precautions. Avoid displaying valuables, use registered taxis or rideshare apps at night, and keep digital copies of your documents in case of loss."
-        },
-        {
-          "q": "How is the healthcare system in Paraguay?",
-          "a": "Paraguay has excellent private hospitals in Asunción, especially in the Villa Morra and Carmelitas areas. The cost is significantly lower than in Europe. We recommend international health insurance for the first months; many residents opt to switch to the local private system after settling in."
-        },
-        {
-          "q": "How does the school system work for children?",
-          "a": "There are excellent educational options: international schools (American School of Asunción, Colegio Británico, Colegio Alemán), Spanish-Guaraní bilingual schools, and the local public system. The international schools offer curricula from the US, UK, Germany, and France, and most have integration programs for newly arrived children."
-        },
-        {
-          "q": "Do I need a lawyer for the process?",
-          "a": "Yes, Paraguayan law requires certain steps of the residency process to be handled by a registered legal representative. Nexa includes this service; you don't need to hire one separately."
-        },
-        {
-          "q": "How much does it cost to maintain residency annually?",
-          "a": "The annual maintenance of residency is minimal. It includes the RUC renewal (tax registration), possible apostille renewals, and basic administrative steps. We estimate USD 200–500 per year for a basic case, more if you have a company."
-        },
-        {
-          "q": "Can I work legally with the residency?",
-          "a": "Yes, permanent residency allows you to work legally in Paraguay, whether as an employee or independently. You can also be a director or shareholder of companies without additional restrictions."
-        },
-        {
-          "q": "How is the climate in Paraguay?",
-          "a": "Paraguay has a sub-tropical climate with two well-marked seasons: summer (October–March) with temperatures of 30–40°C, and winter (April–September) with mild temperatures of 10–25°C. It rarely gets cold enough for snow or frost in Asunción. The climate is generally pleasant for Europeans who escape cold winters."
-        },
-        {
-          "q": "Can I open a bank account before arriving?",
-          "a": "Some banks allow remote account opening with certain requirements: apostilled passport, proof of address, and reference letter from your home bank. We can pre-coordinate this option, but most clients prefer to do it in person during their operational day."
-        },
-        {
-          "q": "What documents need an apostille and who handles it?",
-          "a": "Documents that typically require an apostille include: birth certificate, marriage certificate (if applicable), criminal record certificate, professional degree (if applicable), and birth certificates of minor children. The client is responsible for obtaining the apostille in their country of origin (through the Ministry of Foreign Affairs or the relevant authority). Nexa Paraguay does not perform the apostille — that step is done in the client's home country. The certified Spanish translation, however, can be coordinated through our network of sworn translators once the documents have been apostilled."
-        },
-        {
-          "q": "What is the difference between permanent residency and citizenship?",
-          "a": "Permanent residency allows you to live, work, and own property in Paraguay indefinitely, with the requirement of visiting at least 1 day every 3 years. Paraguayan citizenship requires 3 years of residency, renouncing your original citizenship (except for nationals of Spain, Italy, and a few other countries with bilateral agreements), and confers voting rights and a Paraguayan passport."
-        },
-        {
-          "q": "Is there a Dutch expat community in Paraguay?",
-          "a": "Yes — Paraguay has one of the largest and most organized Dutch expat communities in South America, anchored by Sonia's 'Proyecto Paraguay' initiative, which has helped more than 600 families over a decade. In Asunción, the main neighborhoods with expat presence are Villa Morra, Carmelitas, and San Bernardino, with active social groups, regular meetups, and established Dutch-speaking networks."
-        },
-        {
-          "q": "Can I buy properties as a foreigner?",
-          "a": "Yes, foreigners have exactly the same rights as Paraguayans to purchase property. Your name appears directly on the deed, and you can own real estate without restrictions. Title insurance is available and recommended for premium properties."
-        },
-        {
-          "q": "How does the healthcare system work?",
-          "a": "The Paraguayan healthcare system combines IPS (public social security) with private medicine. Most expats use private hospitals in Asunción, which offer excellent care at a fraction of European costs. We recommend international insurance for the first year; many residents switch to private local insurance after settling in."
-        },
-        {
-          "q": "What taxes do I pay as a resident?",
-          "a": "Residents pay: IRE 10% (Corporate Income Tax) on income generated in Paraguay, plus the IVA (VAT) on goods and services at 10%. Foreign-source income is generally NOT taxed due to the territorial system. There are no wealth taxes, no inheritance taxes between direct family members, and property taxes are minimal."
-        },
-        {
-          "q": "Is there a double taxation treaty with my country?",
-          "a": "Paraguay has double taxation treaties with several countries. For Dutch citizens: treaty in force. For German citizens: treaty in force. For Belgian citizens: treaty in force. For Swiss citizens: treaty in force. We can verify the specific treaty applicable to your case during the consultation."
-        },
-        {
-          "q": "How do I find housing in Paraguay?",
-          "a": "We work with trusted real estate agencies in Asunción and surroundings. Rentals typically require a deposit (usually 1–2 months) and a Paraguayan guarantor or insurance. Furnished and unfurnished options exist in all price ranges. Most expats rent for the first 3–6 months while exploring neighborhoods, then decide whether to buy."
-        },
-        {
-          "q": "How is the cost of living in Paraguay?",
-          "a": "The cost of living in Paraguay is approximately 60-70% lower than in Western Europe. A comfortable lifestyle for a family of four in Asunción costs USD 3,500–5,000 per month including rent, food, international school, and entertainment. Single professionals can live well on USD 1,500–2,500 per month."
-        },
-        {
-          "q": "Do I need a visa to enter Paraguay as a tourist?",
-          "a": "Citizens of the European Union, United States, Canada, Australia, and most Western countries do not need a visa for tourist stays of up to 90 days. Your passport must be valid for at least 6 months. As a tourist you can begin the residency process, but the formal application must be made from within Paraguay."
-        },
-        {
-          "q": "Can I use my European driver's license?",
-          "a": "Yes, your European driver's license is valid in Paraguay for 90 days. After that, you must obtain a Paraguayan license, which requires a simple procedure (theoretical exam, practical exam, and a basic medical exam). We can coordinate this for you."
-        },
-        {
-          "q": "Are there direct flights from Europe?",
-          "a": "There are currently direct flights from Madrid (Air Europa) and daily connections from Amsterdam, Frankfurt, and other major European hubs via Madrid, São Paulo, or Buenos Aires. Flight time is approximately 12–14 hours with one connection."
-        },
-        {
-          "q": "How is the internet in Paraguay?",
-          "a": "Fiber optic internet is available in all urban areas with speeds up to 1 Gbps. The service is reliable and significantly cheaper than in Europe. Mobile data coverage is excellent in Asunción and major cities. Starlink is also available in Paraguay for rural areas."
-        },
-        {
-          "q": "What happens if my residency application is rejected?",
-          "a": "Residency applications are rarely rejected when properly prepared. In the unlikely event of rejection, we analyze the cause, address it, and refile the application. We provide continued support until your residency is approved."
+          "id": "vida",
+          "label": "Life in Paraguay",
+          "description": "Cost of living, health, community",
+          "items": [
+            {
+              "q": "How much does it cost to live in Paraguay?",
+              "a": "USD 1,500-2,500/month for a single person living comfortably. USD 3,000-4,500 for a family with private school."
+            },
+            {
+              "q": "How is the health system?",
+              "a": "There is IPS (public, basic coverage) and quality private hospitals (Sanatorio Migone, Sanatorio Italiano). We recommend private insurance."
+            },
+            {
+              "q": "Is there European community in Paraguay?",
+              "a": "Yes. Approximately 30,000 Europeans reside in Paraguay, with Mennonite (German), Brazilian, Argentine, and growing Dutch/German communities."
+            },
+            {
+              "q": "Is Paraguay safe?",
+              "a": "Asunción is one of the safest capitals in the region. Crime is low compared to other Latin American cities."
+            },
+            {
+              "q": "How is the climate?",
+              "a": "Subtropical. Heat from October to March (25-40°C), cool from May to August (10-25°C). Winter is short and mild."
+            },
+            {
+              "q": "Do I need a car?",
+              "a": "Highly recommended. Public transport in Asunción is limited. Cars are cheap (USD 8,000-15,000 for a used one in good condition)."
+            }
+          ]
         }
       ]
     },
@@ -1163,35 +1225,74 @@
       "targetKeyword": "Paraguay relocation consultation"
     },
     "hero": {
-      "headline": "Take the first step",
-      "subheadline": "Free 30-minute consultation. No commitment."
+      "headline": "Let's talk about your case",
+      "subheadline": "30 minutes with Sonia or Luana. We tell you how long, what you need, and how much — before you decide anything.",
+      "ctaPrimary": "Open WhatsApp",
+      "ctaPrimaryHref": "https://wa.me/595982515138?text=Hola%2C%20quiero%20agendar%20una%20consulta%20gratuita",
+      "ctaSecondary": "See FAQ first",
+      "ctaSecondaryHref": "/faq"
     },
     "booking": {
-      "title": "Schedule your consultation",
-      "subtitle": "Choose a date and time that works for you. The call is in your language: Dutch, English, German, or Spanish.",
-      "bookingUrl": "https://calendly.com/nexaparaguay",
-      "provider": "calendly",
-      "ctaLabel": "Open scheduling calendar"
+      "title": "Book your free consultation",
+      "subtitle": "Choose the channel you prefer. 30 minutes with Sonia or Luana, no commitment.",
+      "bookingUrl": "https://wa.me/595982515138",
+      "provider": "whatsapp",
+      "ctaLabel": "Open WhatsApp",
+      "whatsappNumber": "595982515138",
+      "fallbackEmail": "paraguaynexa@gmail.com",
+      "fallbackText": "If WhatsApp doesn't work in your country, email us at paraguaynexa@gmail.com. We respond within 24 business hours.",
+      "calendlyNote": "Coming soon: direct calendar booking on this page. For now we use WhatsApp to confirm time.",
+      "availableHours": "Monday to Friday, 9-18h ART (UTC-3)",
+      "responseTime": "We respond in less than 2 business hours",
+      "languages": [
+        "Spanish",
+        "English",
+        "Dutch",
+        "German"
+      ]
     },
     "contact": {
-      "title": "Other ways to reach us",
-      "address": "Asunción, Paraguay",
-      "neighborhood": "Villa Morra",
-      "city": "Asunción",
-      "phone": "+595 982 515 138",
-      "email": "paraguaynexa@gmail.com",
-      "whatsapp": "+595 982 515 138"
+      "title": "Contact details",
+      "subtitle": "Multiple channels",
+      "items": [
+        {
+          "icon": "MessageCircle",
+          "title": "WhatsApp — quick response",
+          "primary": "595982515138",
+          "link": "https://wa.me/595982515138",
+          "detail": "Monday to Friday 9-18h ART"
+        },
+        {
+          "icon": "Mail",
+          "title": "Email",
+          "primary": "paraguaynexa@gmail.com",
+          "link": "mailto:paraguaynexa@gmail.com",
+          "detail": "We respond within 24 business hours"
+        },
+        {
+          "icon": "MapPin",
+          "title": "Office",
+          "primary": "Asunción, Paraguay",
+          "detail": "In-person with appointment"
+        },
+        {
+          "icon": "Clock",
+          "title": "Languages",
+          "primary": "ES · EN · NL · DE",
+          "detail": "We speak your language"
+        }
+      ]
     }
   },
   "privacyPage": {
     "seo": {
-      "title": "Política de privacidad — Nexa Paraguay",
-      "description": "Política de privacidad y cookies de Nexa Paraguay (cumplimiento GDPR).",
+      "title": "Privacy Policy — Nexa Paraguay",
+      "description": "Privacy policy and cookies of Nexa Paraguay (GDPR compliant).",
       "targetKeyword": "política privacidad Nexa Paraguay"
     },
     "hero": {
-      "headline": "Política de privacidad",
-      "subheadline": "Cómo recogemos y tratamos sus datos. Cumplimiento GDPR."
+      "headline": "Privacy Policy",
+      "subheadline": "How we collect and process your data. GDPR compliant."
     },
     "body": {
       "title": "Puntos clave",
@@ -1215,6 +1316,80 @@
         {
           "q": "¿Cómo ejerzo mis derechos?",
           "a": "Escriba a paraguaynexa@gmail.com y responderemos en un plazo máximo de 30 días (acceso, rectificación, supresión, portabilidad)."
+        }
+      ]
+    },
+    "full": {
+      "title": "Key Points",
+      "subtitle": "GDPR compliance. Your rights, explained.",
+      "categories": [
+        {
+          "id": "data",
+          "label": "Data we collect",
+          "items": [
+            {
+              "q": "What personal data do we collect?",
+              "a": "Name, email, phone (optional), country, program of interest, and declared objective, when you complete a form on our site."
+            },
+            {
+              "q": "Do we collect sensitive data?",
+              "a": "No. We do not collect ethnic origin, political opinions, religion, health, or sexual orientation."
+            },
+            {
+              "q": "Do we use tracking cookies?",
+              "a": "Only technical cookies necessary for the site to work. We do not use third-party advertising cookies."
+            }
+          ]
+        },
+        {
+          "id": "use",
+          "label": "How we use them",
+          "items": [
+            {
+              "q": "What do we use your data for?",
+              "a": "Only to respond to your inquiry and, if you expressly authorize it, send you relevant information by email."
+            },
+            {
+              "q": "Do we make automated decisions with your data?",
+              "a": "No. No decision about your process is made automatically."
+            },
+            {
+              "q": "Do we profile for advertising purposes?",
+              "a": "No. We do not create user profiles for advertising."
+            }
+          ]
+        },
+        {
+          "id": "sharing",
+          "label": "Who we share with",
+          "items": [
+            {
+              "q": "Who do we share your data with?",
+              "a": "CRM (HubSpot) and email provider (Mailchimp) under processing contract. We do not sell or transfer to third parties for marketing."
+            },
+            {
+              "q": "Do we transfer data outside the EEA?",
+              "a": "Yes, to providers in the US (HubSpot, Mailchimp) under European Commission Standard Contractual Clauses."
+            }
+          ]
+        },
+        {
+          "id": "rights",
+          "label": "Your rights",
+          "items": [
+            {
+              "q": "How long do we keep your data?",
+              "a": "24 months from last contact, unless legally required."
+            },
+            {
+              "q": "How do I exercise my rights of access, rectification, deletion or portability?",
+              "a": "Email paraguaynexa@gmail.com and we will respond within 30 days maximum."
+            },
+            {
+              "q": "Can I file a complaint with the supervisory authority?",
+              "a": "Yes. In Paraguay, with SET (Tax Superintendency). In Europe, with the data protection authority of your country."
+            }
+          ]
         }
       ]
     }
@@ -2309,13 +2484,13 @@
   },
   "servicesPage": {
     "seo": {
-      "title": "Our services — Nexa Paraguay",
-      "description": "Detailed information about the 7 services from Nexa Paraguay: Residency & Legal Documents, Banking & Tax Setup, and Residential Real Estate.",
+      "title": "Residency and relocation services for Paraguay — Nexa",
+      "description": "Residency, ID, banking, taxes and real estate in Paraguay. Clear services with defined timelines, fixed prices and concrete deliverables.",
       "targetKeyword": "Paraguay residency services"
     },
     "hero": {
-      "headline": "Professional solutions for every step",
-      "subheadline": "Choose the services you need. We handle the rest.",
+      "headline": "Everything you need to settle in Paraguay",
+      "subheadline": "Services designed for Europeans who want to do things right, fast, with someone who has done the process.",
       "ctaPrimaryText": "Book a free consultation",
       "ctaPrimaryHref": "/contacto"
     },
@@ -2350,114 +2525,152 @@
       ]
     },
     "services": {
-      "title": "Professional solutions for every step of your relocation",
-      "subtitle": "Choose the services that fit your case.",
-      "eyebrow": "OUR SERVICES",
+      "eyebrow": "Our services",
+      "title": "Everything you need to settle in Paraguay",
+      "subtitle": "Services designed for Europeans who want to do things right, fast, with someone who has done the process.",
       "groups": [
         {
-          "title": "Residency and Legal Documents",
-          "description": "The first essential steps for your life in Paraguay. We handle every document from scratch.",
+          "id": "residency",
+          "title": "Residency & Legal Documents",
           "items": [
             {
-              "title": "Permanent residency",
-              "shortDescription": "Professional handling of your residency permit application.",
-              "fullDescription": "We coordinate the entire process with Paraguay Immigration: application, document submission, follow-up, and resolution delivery. Includes the ID card once approved.",
+              "title": "Permanent Residency",
+              "description": "Complete processing of your residency at Paraguayan Migraciones.",
               "benefits": [
-                "Accompaniment at every visit",
-                "Document translation",
-                "Apostille management",
-                "Case follow-up",
-                "Support through final approval"
+                "Eligibility analysis (before starting)",
+                "Document collection and verification in your country",
+                "Official translations and apostilles",
+                "Appointment booking at Migraciones",
+                "In-person accompaniment to interviews",
+                "Follow-up until residency approval"
               ],
-              "icon": "🪪"
+              "process": "8-12 weeks from initial consultation",
+              "whatYouNeed": [
+                "Valid passport",
+                "Apostilled criminal record",
+                "Birth certificate",
+                "Health certificate"
+              ],
+              "image": "@src:office.meeting-room",
+              "icon": "FileCheck"
             },
             {
-              "title": "Paraguayan ID card",
-              "shortDescription": "Complete assistance to obtain your local identification document.",
-              "fullDescription": "We accompany you through the process of obtaining your Paraguayan ID at the Department of Identifications. We manage appointments, documentation, and pickup.",
+              "title": "Paraguayan ID Card (Cédula)",
+              "description": "Obtain your national identity document.",
               "benefits": [
-                "Appointment management",
-                "Document preparation",
-                "On-site accompaniment",
-                "Express procedure coordination",
-                "Complete documentation"
+                "Processing at the Department of Identifications",
+                "Fingerprint verification",
+                "In-person accompaniment on enrollment day",
+                "Follow-up until document delivery"
               ],
-              "icon": "🆔"
+              "process": "4-8 weeks after residency approval",
+              "whatYouNeed": [
+                "Approved residency",
+                "ID photo",
+                "Proof of address"
+              ],
+              "image": "@src:office.signing",
+              "icon": "CreditCard"
             }
           ]
         },
         {
-          "title": "Banking and Tax Setup",
-          "description": "Establish your financial footprint in Paraguay with expert advice.",
+          "id": "banking",
+          "title": "Banking & Taxes",
           "items": [
             {
-              "title": "Bank account opening",
-              "shortDescription": "Guidance and support to open local bank accounts successfully.",
-              "fullDescription": "We guide you through the selection and opening of bank accounts. We coordinate appointments, prepare required documentation, and facilitate communication with the banks.",
+              "title": "Bank Account Opening",
+              "description": "Personal and/or business account at top-tier Paraguayan banks.",
               "benefits": [
-                "Financial profile preparation",
-                "Ideal bank selection",
-                "Appointment coordination",
-                "On-site accompaniment",
-                "Online banking setup"
+                "Bank selection based on your profile",
+                "Coordination with the bank",
+                "Branch accompaniment",
+                "Card and online banking activation"
               ],
-              "icon": "🏦"
+              "process": "1-2 weeks",
+              "whatYouNeed": [
+                "Paraguayan ID",
+                "Proof of address",
+                "Funds justification"
+              ],
+              "image": "@src:office.reception",
+              "icon": "Landmark"
             },
             {
-              "title": "Tax registration (RUC)",
-              "shortDescription": "Setting up your RUC for personal or business use.",
-              "fullDescription": "We handle your registration in the Unique Taxpayer Registry at the Tax Authority (SET). This number is essential for any economic activity in Paraguay.",
+              "title": "Tax Registration (RUC)",
+              "description": "Registration with SET as individual or company.",
               "benefits": [
-                "Document preparation",
-                "Filing with SET",
-                "Fiscal address setup",
-                "Digital certificate",
-                "Compliance advisory"
+                "Registration in the correct regime",
+                "Tax obligation configuration",
+                "Initial tax advisory (3 months included)",
+                "Coordinator with accountant"
               ],
-              "icon": "📊"
+              "process": "1 week",
+              "whatYouNeed": [
+                "Paraguayan ID",
+                "Regime choice (individual or company)"
+              ],
+              "image": "@src:office.exterior",
+              "icon": "Calculator"
             }
           ]
         },
         {
-          "title": "Residential Real Estate",
-          "description": "Find the ideal place to call home, whether for a month or a lifetime.",
+          "id": "realestate",
+          "title": "Real Estate",
           "items": [
             {
-              "title": "Apartment and house rental",
-              "shortDescription": "Help navigating the local market to find quality rentals.",
-              "fullDescription": "We help you find quality properties for rent: contract review, coordination of visits, and move-in support.",
+              "title": "Apartment and House Rentals",
+              "description": "Search and negotiation of properties in Asunción and metro area.",
               "benefits": [
-                "Personalized search",
-                "Contract review",
-                "Visit coordination",
-                "Move-in support"
+                "Search by budget and lifestyle",
+                "Coordinated visits to 5-10 properties",
+                "Contract review in Spanish",
+                "Owner negotiation"
               ],
-              "icon": "🏠"
+              "process": "2-4 weeks",
+              "whatYouNeed": [
+                "Paraguayan ID",
+                "Verifiable income"
+              ],
+              "image": "@src:programs.tier-business",
+              "icon": "House"
             },
             {
-              "title": "Property purchase",
-              "shortDescription": "Expert assistance in finding and buying residential properties.",
-              "fullDescription": "We accompany you through the entire purchase process: property search, negotiation, due diligence, and notarial coordination.",
+              "title": "Property Purchases",
+              "description": "Complete advisory for buying residential or commercial properties.",
               "benefits": [
                 "Property search",
-                "Title verification",
-                "Price negotiation",
-                "Notarial coordination and registration"
+                "Full due diligence (title, debt, ARP)",
+                "Notary coordination",
+                "Sign accompaniment",
+                "ARP registration"
               ],
-              "icon": "🔑"
+              "process": "4-8 weeks",
+              "whatYouNeed": [
+                "Paraguayan ID",
+                "RUC",
+                "Paraguayan bank account",
+                "Verified capital"
+              ],
+              "image": "@src:programs.tier-investor",
+              "icon": "KeyRound"
             },
             {
-              "title": "Due diligence",
-              "shortDescription": "We verify titles and legal status of any property to protect your investment.",
-              "fullDescription": "We perform a thorough review of the property's legal situation, including title verification, lien searches, and zoning compliance.",
+              "title": "Real Estate Due Diligence",
+              "description": "Legal verification of any property before buying.",
               "benefits": [
-                "Deed verification",
-                "Lien search",
-                "Tax status confirmation",
-                "Zoning verification",
-                "Legal status report"
+                "Title review at Public Registry",
+                "Municipal debt verification",
+                "Tax debt verification",
+                "Written findings report"
               ],
-              "icon": "📋"
+              "process": "2-3 weeks",
+              "whatYouNeed": [
+                "Property details"
+              ],
+              "image": "@src:office.team-huddle",
+              "icon": "Shield"
             }
           ]
         }
@@ -2729,54 +2942,86 @@
       ]
     },
     "highlights": {
-      "eyebrow": "HIGHLIGHTS",
-      "title": "In summary",
+      "eyebrow": "In summary",
+      "title": "The process in numbers",
+      "subtitle": "What you need to know before starting.",
       "items": [
         {
           "icon": "Clock",
           "title": "8–12 weeks",
-          "description": "Complete process from filing."
+          "description": "Total time from first consultation to ID card in hand.",
+          "image": "@src:process.consultation"
         },
         {
           "icon": "Users",
-          "title": "One single contact",
-          "description": "Nexa coordinates all professionals."
+          "title": "One point of contact",
+          "description": "Sonia or Luana assigned to your case.",
+          "image": "@src:process.documents"
         },
         {
           "icon": "DollarSign",
-          "title": "Fixed price",
-          "description": "All fees and rates included."
+          "title": "Fixed USD price",
+          "description": "No surprises, no hidden costs.",
+          "image": "@src:process.arrival"
         },
         {
-          "icon": "Shield",
-          "title": "100% legal",
-          "description": "Full compliance with Paraguayan and international law."
+          "icon": "Plane",
+          "title": "One trip",
+          "description": "Your operational day fits in one coordinated day.",
+          "image": "@src:process.signing"
+        },
+        {
+          "icon": "FileCheck",
+          "title": "Everything included",
+          "description": "Professional fees, government rates, translations, apostilles.",
+          "image": "@src:process.celebration"
         }
       ]
     },
     "faq": {
       "title": "Questions about the process",
+      "subtitle": "The most common questions before starting.",
       "items": [
         {
           "q": "How many trips do I need to make to Paraguay?",
-          "a": "Our program is designed so that a single trip is sufficient for the operational day. After that, you only need to travel if you want to oversee the case in person or for personal matters."
+          "a": "Our program is designed so that one trip is sufficient. The operational day is coordinated in one day."
         },
         {
-          "q": "How long does the whole process take?",
-          "a": "On-site processing in one day. Residency and ID issuance: 45–60 days. Full settling-in (housing, banking, optional company): 8–12 weeks."
+          "q": "How long does the entire process take?",
+          "a": "In-person filing: 1 day. Issuance of residency and ID card: 45–60 days. Company incorporation and bank account: 2–4 weeks. Total: 8–12 weeks."
         },
         {
-          "q": "What if a document is missing?",
-          "a": "We detect it before your trip. Our pre-validation guarantees that you arrive in Paraguay with everything you need."
+          "q": "What happens if a document is missing?",
+          "a": "We give you a personalized checklist before starting. If something is missing, we identify it in the initial consultation."
+        },
+        {
+          "q": "Do I need to speak Spanish?",
+          "a": "No. Our team speaks Spanish, English, Dutch, and German. We accompany you to each appointment with simultaneous translation."
+        },
+        {
+          "q": "Can I bring my family?",
+          "a": "Yes. Your spouse and minor children can settle with you as dependents."
+        },
+        {
+          "q": "What's included in the price?",
+          "a": "Professional fees, government rates, certified translations, apostilles, in-person accompaniment, and initial tax advisory."
+        },
+        {
+          "q": "What's NOT included?",
+          "a": "Airfare, accommodation in Paraguay, S.A. incorporation cost (USD 800-1,500 depending on type), minimum bank capital."
+        },
+        {
+          "q": "What happens if my residency is rejected?",
+          "a": "We work on eligibility pre-screening before starting. But if you are rejected, we refund 80% and help you understand alternatives."
         }
       ]
     },
     "cta": {
-      "title": "Ready to start your relocation?",
-      "subtitle": "The process takes 8–12 weeks. Your first step is a free call.",
-      "buttonText": "Book a free consultation",
-      "buttonHref": "/contacto",
-      "eyebrow": "GET STARTED"
+      "eyebrow": "Next step",
+      "title": "Ready to start?",
+      "subtitle": "30 minutes with Sonia or Luana. We tell you exactly how long, what you need, and how much it costs.",
+      "ctaText": "Book consultation",
+      "ctaHref": "/agenda"
     }
   },
   "feedbackPage": {
@@ -3085,5 +3330,556 @@
         "type": "PDF"
       }
     ]
+  },
+  "teamPage": {
+    "seo": {
+      "title": "Team — Nexa Paraguay",
+      "description": "Meet the team behind Nexa Paraguay: Sonia, Luana, and the professionals who make your relocation possible.",
+      "targetKeyword": "Nexa Paraguay team"
+    },
+    "hero": {
+      "headline": "The people behind your relocation",
+      "subheadline": "A small, multilingual team that has done the process. No outsourcing. No subcontracting. We handle your case in person in Asunción.",
+      "image": "@src:team.group"
+    },
+    "team": {
+      "eyebrow": "Founding team",
+      "title": "Sonia and Luana, sisters and partners",
+      "subtitle": "Dutch women in Paraguay. Nexa founders. Multilingual. Multicultural. 7+ years living the process they now manage.",
+      "members": [
+        {
+          "name": "Sonia Weiss van der Pol",
+          "role": "Founder & Legal Guide",
+          "bio": "Sonia lived 7 years in the Netherlands. Arrived without speaking Dutch, without contacts, without a support network. She processed her own residency, company, and bank account. Now she does the same for every Nexa client. Speaks Spanish, English, Dutch, and German.",
+          "languages": [
+            "ES",
+            "EN",
+            "NL",
+            "DE"
+          ],
+          "credentials": [
+            "Law degree (Netherlands)",
+            "7 years living in Paraguay",
+            "Registered with SEPRELAD as obligated subject"
+          ],
+          "icon": "Star",
+          "memberImage": "@src:team.sonia",
+          "imageUrl": "@src:team.sonia",
+          "image": "@img:team.sonia"
+        },
+        {
+          "name": "Luana Weiss van der Pol",
+          "role": "Operations Director",
+          "bio": "Luana coordinates every case from start to finish. From the first email to the delivery of the ID card. Her job is for you not to have to research anything: she has already researched, gone, come back. Speaks Spanish, English, and Dutch.",
+          "languages": [
+            "ES",
+            "EN",
+            "NL"
+          ],
+          "credentials": [
+            "Operations & Client Care",
+            "Specialist in Migraciones",
+            "Corporate account coordinator"
+          ],
+          "icon": "Heart",
+          "memberImage": "@src:team.luana",
+          "imageUrl": "@src:team.luana",
+          "image": "@img:team.luana"
+        }
+      ]
+    },
+    "trust": {
+      "eyebrow": "Capabilities",
+      "title": "Who works alongside us",
+      "subtitle": "When a case requires it, we work with a curated network of Paraguayan professionals.",
+      "items": [
+        {
+          "icon": "FileText",
+          "title": "Legal Lead",
+          "description": "Paraguayan attorney specialized in immigration and corporate law.",
+          "imageUrl": "@src:team.legalLead"
+        },
+        {
+          "icon": "Building2",
+          "title": "Accounting Lead",
+          "description": "Accountant responsible for S.A. incorporation, RUC, and tax obligations.",
+          "imageUrl": "@src:team.accountingLead"
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Commercial Director",
+          "description": "Commercial advisory for European investors seeking business opportunities.",
+          "imageUrl": "@src:team.commercialDirector"
+        },
+        {
+          "icon": "Headphones",
+          "title": "Client Success",
+          "description": "Client care in Spanish, English, Dutch, and German throughout the process.",
+          "imageUrl": "@src:team.clientSuccess"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Let's talk",
+      "subtitle": "30 minutes with Sonia or Luana. No commitment. No pressure. Just an honest conversation about your case.",
+      "buttonText": "Book a call",
+      "buttonHref": "/contacto",
+      "eyebrow": "Next step"
+    }
+  },
+  "programasPage": {
+    "seo": {
+      "title": "Programs — Nexa Paraguay",
+      "description": "Three clear programs based on your goal: Permanent Residency, Residency + Company, Investor Residency. Transparent pricing, defined timelines.",
+      "targetKeyword": "Paraguay residency programs"
+    },
+    "hero": {
+      "headline": "Three programs. One goal: your new life in Paraguay.",
+      "subheadline": "Fixed USD prices. No surprises. No hidden costs. Each program includes what you need to settle with your family or your company."
+    },
+    "trust": {
+      "eyebrow": "What's included in each program",
+      "title": "Total transparency",
+      "subtitle": "Fixed prices, defined deliverables, measured timelines.",
+      "items": [
+        {
+          "icon": "BadgeCheck",
+          "title": "Fixed USD price",
+          "description": "What you see is what you pay. No surprises."
+        },
+        {
+          "icon": "Clock",
+          "title": "Defined timelines",
+          "description": "Each program has a clear deadline, not vague estimates."
+        },
+        {
+          "icon": "Shield",
+          "title": "Performance guarantee",
+          "description": "If we don't meet the timelines, we refund part of the payment."
+        },
+        {
+          "icon": "Users",
+          "title": "Dedicated team",
+          "description": "Sonia or Luana assigned to your case from day one."
+        }
+      ]
+    },
+    "programs": {
+      "title": "Choose your program",
+      "subtitle": "Three options based on your goal. All include residency and Paraguayan ID card.",
+      "groups": [
+        {
+          "id": "residency",
+          "title": "01 — Residency & Life",
+          "items": [
+            {
+              "title": "Permanent Residency",
+              "price": "USD 4,500",
+              "duration": "10–12 weeks",
+              "popular": false,
+              "tagline": "For living in Paraguay",
+              "included": [
+                "Residency filing at Migraciones",
+                "Accompaniment to interviews and appointments",
+                "Paraguayan ID card in hand",
+                "Bank coordination (personal account)",
+                "Document translation and apostille"
+              ],
+              "notIncluded": [
+                "Company incorporation",
+                "Tax advisory"
+              ],
+              "ctaText": "Start Base",
+              "ctaHref": "/contacto?program=base"
+            }
+          ]
+        },
+        {
+          "id": "business",
+          "title": "02 — Company + Life",
+          "items": [
+            {
+              "title": "Residency + Company + Bank",
+              "price": "USD 7,500",
+              "duration": "12–16 weeks",
+              "popular": true,
+              "tagline": "What 80% of our clients choose",
+              "included": [
+                "Everything in Permanent Residency",
+                "Paraguayan S.A. incorporation",
+                "RUC and business bank account",
+                "Account opening at 2 banks",
+                "3-day real estate tour",
+                "Initial tax advisory (3 months)"
+              ],
+              "notIncluded": [
+                "Property purchase",
+                "Investment management"
+              ],
+              "ctaText": "Start Business",
+              "ctaHref": "/contacto?program=business"
+            }
+          ]
+        },
+        {
+          "id": "investor",
+          "title": "03 — Investment",
+          "items": [
+            {
+              "title": "Investor Residency",
+              "price": "USD 12,000",
+              "duration": "12–16 weeks",
+              "popular": false,
+              "tagline": "For investors with verifiable assets",
+              "included": [
+                "Everything in Business",
+                "Full real estate due diligence",
+                "Wealth advisory",
+                "Investment management",
+                "Private banking networking"
+              ],
+              "notIncluded": [
+                "Direct property purchase (quoted separately)",
+                "International legal advisory"
+              ],
+              "ctaText": "Start Investor",
+              "ctaHref": "/contacto?program=investor"
+            }
+          ]
+        },
+        {
+          "id": "land",
+          "title": "04 — Land (standalone module)",
+          "items": [
+            {
+              "title": "Land Purchase",
+              "price": "USD 2,500",
+              "duration": "4–6 weeks",
+              "popular": false,
+              "tagline": "Only if you already have residency",
+              "included": [
+                "Full due diligence (title, debt, ARP)",
+                "Public deed signing",
+                "ARP registration",
+                "Written findings report"
+              ],
+              "notIncluded": [
+                "Residency",
+                "Bank account opening"
+              ],
+              "ctaText": "Start Land",
+              "ctaHref": "/contacto?program=land"
+            }
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Don't know which program is yours?",
+      "subtitle": "30 minutes with Sonia or Luana. We tell you which one fits your case, without selling you anything.",
+      "buttonText": "Book consultation",
+      "buttonHref": "/contacto",
+      "eyebrow": "Next step"
+    }
+  },
+  "testimoniosPage": {
+    "seo": {
+      "title": "Testimonials — Nexa Paraguay",
+      "description": "What European clients already established in Paraguay say about working with us.",
+      "targetKeyword": "Nexa Paraguay testimonials"
+    },
+    "hero": {
+      "headline": "What those already in Paraguay say",
+      "subheadline": "Real stories from people who completed the process with us. Full names available on request for privacy."
+    },
+    "trust": {
+      "eyebrow": "Measurable results",
+      "title": "What we achieve together",
+      "subtitle": "Aggregate figures from the last 18 months of operations.",
+      "items": [
+        {
+          "icon": "Users",
+          "title": "80+ people resettled",
+          "description": "Permanent residencies filed and approved"
+        },
+        {
+          "icon": "Building2",
+          "title": "40+ companies incorporated",
+          "description": "S.A. and EAS registered with active RUC"
+        },
+        {
+          "icon": "Landmark",
+          "title": "60+ bank accounts",
+          "description": "Personal and business accounts opened"
+        },
+        {
+          "icon": "Star",
+          "title": "4.8/5 satisfaction",
+          "description": "Average post-process rating (anonymous survey)"
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "Real cases, real words",
+      "subtitle": "Shared with permission. Some clients requested anonymization for professional privacy.",
+      "items": [
+        {
+          "name": "M. K.",
+          "country": "Germany",
+          "program": "Investor",
+          "role": "Agribusiness investor",
+          "duration": "10 weeks",
+          "quote": "In 10 weeks I had residency, company, and bank account. One point of contact. Before, I'd consulted two German agencies and a local lawyer — nobody gave me a clear process. Nexa did.",
+          "rating": 5
+        },
+        {
+          "name": "J. V.",
+          "country": "Netherlands",
+          "program": "Business",
+          "role": "SaaS founder",
+          "duration": "14 weeks",
+          "quote": "The real estate tour was key. I found the right property in three days without losing months. Sonia knew exactly which areas suited my profile (remote work, no kids, mid-budget).",
+          "rating": 5
+        },
+        {
+          "name": "S. R.",
+          "country": "Spain",
+          "program": "Base",
+          "role": "Independent consultant",
+          "duration": "11 weeks",
+          "quote": "Total cost transparency. Zero surprises. I compared with three other options before choosing Nexa — the difference was they gave me a fixed USD price, not estimates.",
+          "rating": 5
+        },
+        {
+          "name": "T. D.",
+          "country": "Belgium",
+          "program": "Business",
+          "role": "Trader / Investor",
+          "duration": "13 weeks",
+          "quote": "I was terrified by the process. Nexa simplified it to a calendar with clear dates. Each week I knew what was next, what I had to bring, what came after. Zero anxiety.",
+          "rating": 5
+        },
+        {
+          "name": "L. B.",
+          "country": "Germany",
+          "program": "Land",
+          "role": "Farm buyer",
+          "duration": "5 weeks",
+          "quote": "The real estate due diligence saved me from buying a problem. The property had a municipal debt the seller hadn't declared. Nexa caught it before signing.",
+          "rating": 5
+        },
+        {
+          "name": "K. M.",
+          "country": "Netherlands",
+          "program": "Base",
+          "role": "Remote worker",
+          "duration": "10 weeks",
+          "quote": "I just needed the ID to open a bank account in Paraguay and manage my finances. I didn't want a company or investment. Nexa offered me the Base program without trying to sell me anything else.",
+          "rating": 5
+        }
+      ]
+    },
+    "cta": {
+      "title": "Your testimonial could be next",
+      "subtitle": "Start your process today. 30 minutes with Sonia or Luana. No commitment.",
+      "buttonText": "Book consultation",
+      "buttonHref": "/contacto",
+      "eyebrow": "Next step"
+    }
+  },
+  "agendaPage": {
+    "seo": {
+      "title": "Book a consultation — Nexa Paraguay",
+      "description": "Book 30 minutes with Sonia or Luana. Free consultation on your residency, company, or investment process in Paraguay.",
+      "targetKeyword": "book consultation Paraguay"
+    },
+    "hero": {
+      "headline": "Book your free consultation",
+      "subheadline": "30 minutes with Sonia or Luana. We'll tell you your program, how long it takes, what you need — no commitment."
+    },
+    "trust": {
+      "eyebrow": "Why book",
+      "title": "A conversation worth having",
+      "subtitle": "30 minutes where we tell you everything you need to know, without selling you anything.",
+      "items": [
+        {
+          "icon": "BadgeCheck",
+          "title": "No commitment",
+          "description": "If we don't move forward, you leave with free answers."
+        },
+        {
+          "icon": "Globe",
+          "title": "In your language",
+          "description": "We speak Spanish, English, Dutch, or German."
+        },
+        {
+          "icon": "Clock",
+          "title": "30 minutes exactly",
+          "description": "We respect your time. No more, no less."
+        },
+        {
+          "icon": "Shield",
+          "title": "Confidential",
+          "description": "Your personal and financial situation stays between us."
+        }
+      ]
+    },
+    "programs": {
+      "title": "What we can discuss",
+      "subtitle": "Any of these topics — or several at once.",
+      "groups": [
+        {
+          "id": "topics",
+          "title": "Common topics",
+          "items": [
+            {
+              "title": "Permanent Residency",
+              "duration": "10–12 weeks",
+              "price": "USD 4,500",
+              "tagline": "To live in Paraguay without a company",
+              "included": [
+                "Migraciones filing",
+                "Paraguayan ID",
+                "Personal bank account"
+              ]
+            },
+            {
+              "title": "Residency + Company + Bank",
+              "duration": "12–16 weeks",
+              "price": "USD 7,500",
+              "tagline": "The most popular program",
+              "popular": true,
+              "included": [
+                "Everything in Residency",
+                "Paraguayan S.A.",
+                "Business account",
+                "Real estate tour"
+              ]
+            },
+            {
+              "title": "Investor Residency",
+              "duration": "12–16 weeks",
+              "price": "USD 12,000",
+              "tagline": "For verifiable assets",
+              "included": [
+                "Everything in Business",
+                "Full due diligence",
+                "Wealth advisory",
+                "Banking networking"
+              ]
+            },
+            {
+              "title": "Land Purchase",
+              "duration": "4–6 weeks",
+              "price": "USD 2,500",
+              "tagline": "Standalone module (need prior residency)",
+              "included": [
+                "Due diligence",
+                "Deed signing",
+                "ARP registration"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "highlights": {
+      "eyebrow": "Before booking",
+      "title": "What you need to know",
+      "subtitle": "Practical information to arrive prepared to the conversation.",
+      "items": [
+        {
+          "icon": "FileText",
+          "title": "Documents",
+          "description": "Have your passport and ID documents from your country ready."
+        },
+        {
+          "icon": "Euro",
+          "title": "Budget",
+          "description": "If you already have an investment range or budget, even better."
+        },
+        {
+          "icon": "Calendar",
+          "title": "Timeline",
+          "description": "When do you want to move: immediate, in 6 months, in 1 year?"
+        },
+        {
+          "icon": "Users",
+          "title": "Family",
+          "description": "Are you traveling alone or with a partner/children? This changes the process."
+        }
+      ]
+    }
+  },
+  "termsPage": {
+    "seo": {
+      "title": "Terms and Conditions — Nexa Paraguay",
+      "description": "Terms and conditions of Nexa Paraguay services."
+    },
+    "hero": {
+      "headline": "Terms and Conditions",
+      "subheadline": "The rules of the game between you and Nexa Paraguay."
+    },
+    "full": {
+      "title": "Key terms",
+      "subtitle": "Executive summary. For the full version, contact us.",
+      "categories": [
+        {
+          "id": "service",
+          "label": "About the service",
+          "items": [
+            {
+              "q": "What is Nexa Paraguay?",
+              "a": "A migration advisory firm based in Asunción. We offer residency services, bank account opening, company incorporation, and real estate due diligence."
+            },
+            {
+              "q": "Does Nexa provide legal or accounting services directly?",
+              "a": "No. Nexa offers coordination, accompaniment, and administrative management services. Legal services are provided by independent attorneys registered in Paraguay."
+            },
+            {
+              "q": "What is the service area?",
+              "a": "Paraguay. We operate from Asunción and accompany clients from anywhere in the world."
+            }
+          ]
+        },
+        {
+          "id": "payments",
+          "label": "Payments and refunds",
+          "items": [
+            {
+              "q": "How do payments work?",
+              "a": "50% on signing the contract, 50% on receiving the Paraguayan ID card. For larger amounts, we agree on a personalized scheme."
+            },
+            {
+              "q": "When does a refund apply?",
+              "a": "If Migraciones rejects your residency application, we refund 80% of the payment. The refund is processed within 30 business days."
+            },
+            {
+              "q": "What if I abandon the process?",
+              "a": "If you abandon after the first payment but before starting, we retain 30% for administrative expenses. After started, no refund."
+            }
+          ]
+        },
+        {
+          "id": "responsibilities",
+          "label": "Responsibilities",
+          "items": [
+            {
+              "q": "What is Nexa's responsibility?",
+              "a": "To accompany you in coordinating the process with attorneys, notaries, accountants, and Paraguayan entities. We do not guarantee results from third parties."
+            },
+            {
+              "q": "What is my responsibility as a client?",
+              "a": "Provide true and complete documentation, attend coordinated appointments, and comply with Paraguayan legal requirements."
+            },
+            {
+              "q": "Is there a success guarantee?",
+              "a": "No. Nexa is an accompaniment service, not a results guarantee. Times and approvals depend on Paraguayan entities."
+            }
+          ]
+        }
+      ]
+    }
   }
 }

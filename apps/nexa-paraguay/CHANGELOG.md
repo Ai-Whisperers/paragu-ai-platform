@@ -22,6 +22,16 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-25: feat(nexa): redesign Nuestros Servicios section (by Erebus)
+
+- 2026-06-25: feat(nexa): redesign Por qué Paraguay section (by Erebus)
+
+- 2026-06-25: feat(nexa): redesign POR QUÉ NEXA trust section (by Erebus)
+
+- 2026-06-25: feat(nexa): add nexaparaguay.com.py as canonical domain (by Erebus)
+
+- 2026-06-25: chore: trigger CI deploy (by Erebus)
+
 - 2026-06-25: fix(nexa): commit missing program and team images (by Erebus)
 
 - 2026-06-25: chore: trigger CI (by Erebus)

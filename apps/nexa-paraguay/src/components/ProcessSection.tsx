@@ -30,7 +30,9 @@ interface ProcessContent {
 }
 
 export function ProcessSection({ pageContent, images }: { pageContent: Record<string, any>; images?: Record<string, any> }) {
-  const c: ProcessContent = pageContent?.process || {}
+  // Handle both data shapes: pageContent can be the process data directly,
+  // or wrapped in { process: {...} }
+  const c: ProcessContent = pageContent?.steps ? pageContent : (pageContent?.process || {})
   if (!c.steps?.length) return null
 
   return (
