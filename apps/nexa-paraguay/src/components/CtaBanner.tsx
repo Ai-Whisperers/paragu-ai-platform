@@ -2,8 +2,14 @@
 
 import { AnimatedSection } from './ui/AnimatedSection'
 
-export function CtaBanner({ pageContent }: any) {
-  const c = pageContent?.finalCta || pageContent?.cta || {}
+export function CtaBanner({ pageContent, data }: any) {
+  // Handle both data shapes: pageContent can be the CTA object directly,
+  // or wrapped in { finalCta: {...} } or { cta: {...} }
+  const c = pageContent?.finalCta || pageContent?.cta
+    || (pageContent?.title ? pageContent : null)
+    || data?.finalCta || data?.cta
+    || (data?.title ? data : null)
+    || {}
   if (!c.title) return null
 
   return (
