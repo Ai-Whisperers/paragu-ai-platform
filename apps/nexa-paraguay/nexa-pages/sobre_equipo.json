@@ -21,7 +21,7 @@
       "content": "teamPage.team"
     },
     {
-      "id": "trust",
+      "id": "trust-signals",
       "variant": "credentials",
       "content": "teamPage.trust"
     },

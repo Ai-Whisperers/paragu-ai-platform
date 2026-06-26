@@ -74,6 +74,14 @@ export function PageHeroSection({ pageContent, data, images }: any) {
       />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4">
+        {/* Animated eyebrow */}
+        {d.eyebrow && (
+          <AnimatedSection animation="fade-up" className="mb-3">
+            <p className="text-xs md:text-sm uppercase tracking-[3px] font-semibold text-accent">
+              {d.eyebrow}
+            </p>
+          </AnimatedSection>
+        )}
         {/* Animated headline */}
         <AnimatedSection animation="fade-up" className="mb-2">
           <h1 className="text-[clamp(2rem_4vw_3rem)] font-bold leading-tight">
@@ -92,10 +100,10 @@ export function PageHeroSection({ pageContent, data, images }: any) {
 
         {/* Optional animated stats row */}
         {d.stats && d.stats.length > 0 && (
-          <AnimatedSection animation="fade-up" delay={250} className="flex flex-wrap justify-center gap-8 mt-10">
+          <AnimatedSection animation="fade-up" delay={250} className="flex flex-wrap justify-center items-stretch gap-0 mt-12 max-w-4xl mx-auto">
             {d.stats.map((stat: any, i: number) => (
-              <div key={i} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">
+              <div key={i} className={`text-center px-6 py-3 ${i > 0 ? 'border-l border-white/15' : ''} flex-1 min-w-[140px]`}>
+                <div className="text-3xl md:text-4xl font-extrabold text-accent mb-1 leading-none">
                   {stat.prefix || ''}
                   {stat.value && !isNaN(Number(stat.value)) ? (
                     <AnimatedCounter target={Number(stat.value)} duration={1800} />
@@ -104,21 +112,31 @@ export function PageHeroSection({ pageContent, data, images }: any) {
                   )}
                   {stat.suffix || ''}
                 </div>
-                <div className="text-xs text-white/60 uppercase tracking-wider">{stat.label}</div>
+                <div className="text-[10px] md:text-xs text-white/70 uppercase tracking-[2px] font-semibold mt-2">{stat.label}</div>
               </div>
             ))}
           </AnimatedSection>
         )}
 
-        {/* CTA button with hover animation */}
-        {d.ctaText && (
-          <AnimatedSection animation="fade-up" delay={300}>
-            <a
-              href={d.ctaHref || '#'}
-              className="inline-block mt-8 px-8 py-3.5 bg-accent text-primary rounded-full font-bold text-base shadow-lg hover:opacity-90 hover:shadow-xl hover:scale-[1.03] transition-all duration-200 no-underline"
-            >
-              {d.ctaText}
-            </a>
+        {/* CTA buttons */}
+        {(d.ctaText || d.secondaryCtaText) && (
+          <AnimatedSection animation="fade-up" delay={300} className="flex flex-wrap justify-center gap-4 mt-8">
+            {d.ctaText && (
+              <a
+                href={d.ctaHref || '#'}
+                className="inline-block px-8 py-3.5 bg-accent text-primary rounded-full font-bold text-base shadow-lg hover:opacity-90 hover:shadow-xl hover:scale-[1.03] transition-all duration-200 no-underline"
+              >
+                {d.ctaText}
+              </a>
+            )}
+            {d.secondaryCtaText && (
+              <a
+                href={d.secondaryCtaHref || '#'}
+                className="inline-block px-8 py-3.5 border-2 border-white/40 text-white rounded-full font-semibold text-base hover:bg-white/10 hover:border-white transition-all duration-200 no-underline"
+              >
+                {d.secondaryCtaText}
+              </a>
+            )}
           </AnimatedSection>
         )}
       </div>

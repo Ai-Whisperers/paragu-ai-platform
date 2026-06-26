@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-25: feat(nexa): complete site overhaul - all pages with proper structure (by Erebus)
+
 - 2026-06-25: feat(nexa): redesign Nuestros Servicios section (by Erebus)
 
 - 2026-06-25: feat(nexa): redesign Por qué Paraguay section (by Erebus)

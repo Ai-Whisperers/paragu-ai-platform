@@ -40,8 +40,9 @@ import {
   UserPlus,
   Users,
 } from 'lucide-react'
-export function TrustSection({ pageContent, images }: SectionComponentProps) {
-  const c = pageContent.trust || {}
+export function TrustSection({ pageContent, data, images }: SectionComponentProps) {
+  // Handle both data shapes: pageContent can be { trust: {...} } or the data directly
+  const c = pageContent.trust || (pageContent.items ? pageContent : {}) || data || {}
   if (!c.items?.length) return null
 
   // Map common icon names to Lucide components.

@@ -28,7 +28,7 @@
     {
       "id": "highlights",
       "variant": "pillars",
-      "content": "aboutPage.differentiators"
+      "content": "aboutPage.whyNexa"
     },
     {
       "id": "team",
@@ -41,9 +41,9 @@
       "content": "aboutPage.trust"
     },
     {
-      "id": "cta",
+      "id": "cta-banner",
       "variant": "default",
-      "content": "aboutPage"
+      "content": "aboutPage.cta"
     },
     {
       "id": "compliance",
