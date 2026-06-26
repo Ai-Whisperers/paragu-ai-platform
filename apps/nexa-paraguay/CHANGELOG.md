@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-26: fix(sobre): fix TeamSection grid, TrustSection value/label, hero eyebrow+CTA, story highlights, team bios (by Erebus)
+
 - 2026-06-26: feat(nexa): full services detail upgrade - subtitles, images, item CTAs, final CTA (by Erebus)
 
 - 2026-06-26: feat(nexa): deep polish on 4 sections - process, feedback, services, why-paraguay (by Erebus)

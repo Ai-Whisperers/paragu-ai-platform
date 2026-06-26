@@ -2373,6 +2373,42 @@
     "hero": {
       "headline": "Find your ideal program",
       "subheadline": "Answer a few quick questions and we'll recommend the right program for you."
+    },
+    "wizard": {
+      "title": "Find your program",
+      "subtitle": "Answer 5 quick questions. We recommend the ideal program.",
+      "steps": [
+        {
+          "question": "What is your main goal?",
+          "options": [
+            {
+              "value": "residency",
+              "label": "Get residency"
+            },
+            {
+              "value": "company",
+              "label": "Incorporate company"
+            },
+            {
+              "value": "both",
+              "label": "Both"
+            }
+          ]
+        },
+        {
+          "question": "Do you have a Paraguayan ID?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        }
+      ]
     }
   },
   "beneluxPage": {
@@ -2471,26 +2507,30 @@
       "headline": "Prensa y Medios",
       "subheadline": "Comunicados oficiales, notas de prensa y material para periodistas."
     },
-    "pressReleases": [
-      {
-        "title": "Nexa Paraguay anuncia nuevo programa de residencia para inversores",
-        "date": "15 de abril, 2026",
-        "summary": "El programa integra residencia permanente, apertura de empresa y cuenta bancaria en un solo proceso coordinado.",
-        "link": "#"
-      },
-      {
-        "title": "Nexa Paraguay abre oficina de atención en neerlandés en Asunción",
-        "date": "2 de marzo, 2026",
-        "summary": "Con el objetivo de atender la creciente demanda de ciudadanos de los Países Bajos, Bélgica y Alemania.",
-        "link": "#"
-      },
-      {
-        "title": "Alianza estratégica con despachos notariales de Asunción",
-        "date": "10 de enero, 2026",
-        "summary": "La alianza permitirá agilizar los procesos de compra de propiedades y debida diligencia para clientes internacionales.",
-        "link": "#"
-      }
-    ]
+    "pressReleases": {
+      "title": "Press releases",
+      "subtitle": "Official press releases from Nexa Paraguay.",
+      "items": [
+        {
+          "title": "Nexa Paraguay anuncia nuevo programa de residencia para inversores",
+          "date": "15 de abril, 2026",
+          "summary": "El programa integra residencia permanente, apertura de empresa y cuenta bancaria en un solo proceso coordinado.",
+          "link": "#"
+        },
+        {
+          "title": "Nexa Paraguay abre oficina de atención en neerlandés en Asunción",
+          "date": "2 de marzo, 2026",
+          "summary": "Con el objetivo de atender la creciente demanda de ciudadanos de los Países Bajos, Bélgica y Alemania.",
+          "link": "#"
+        },
+        {
+          "title": "Alianza estratégica con despachos notariales de Asunción",
+          "date": "10 de enero, 2026",
+          "summary": "La alianza permitirá agilizar los procesos de compra de propiedades y debida diligencia para clientes internacionales.",
+          "link": "#"
+        }
+      ]
+    }
   },
   "servicesPage": {
     "seo": {
@@ -2742,7 +2782,8 @@
             "ctaText": "See details",
             "ctaHref": "/contacto?servicio=apostilla"
           }
-        ]
+        ],
+        "id": "residency-legal"
       },
       {
         "title": "Banking and Tax Setup",
@@ -2775,7 +2816,8 @@
             "ctaText": "See details",
             "ctaHref": "/contacto?servicio=ruc"
           }
-        ]
+        ],
+        "id": "banking-tax"
       },
       {
         "title": "Residential Real Estate",
@@ -2821,7 +2863,8 @@
             "ctaText": "See details",
             "ctaHref": "/contacto?servicio=verificacion"
           }
-        ]
+        ],
+        "id": "real-estate"
       }
     ],
     "programs": {
@@ -3332,36 +3375,40 @@
       "headline": "Guías gratuitas para tu mudanza",
       "subheadline": "Descargá recursos prácticos preparados por Sonia. Sin spam, sin compromiso."
     },
-    "guides": [
-      {
-        "title": "Checklist de documentos",
-        "description": "Todos los documentos que necesitás para tu residencia. Con estado de apóstilla y traducción.",
-        "download_url": "#",
-        "lang": "ES/NL/EN/DE",
-        "type": "PDF"
-      },
-      {
-        "title": "10 cosas que nadie te dice",
-        "description": "Lo que realmente significa mudarse a Paraguay. Tips que solo alguien que lo vivió puede contarte.",
-        "download_url": "#",
-        "lang": "ES/EN",
-        "type": "PDF"
-      },
-      {
-        "title": "Guía de colegios internacionales",
-        "description": "Comparativa completa de 8 colegios: currículum, idioma, costos y ubicación.",
-        "download_url": "#",
-        "lang": "ES/EN",
-        "type": "PDF"
-      },
-      {
-        "title": "Primeros 30 días en Paraguay",
-        "description": "Plan día por día desde que llegás al aeropuerto hasta que tenés todo funcionando.",
-        "download_url": "#",
-        "lang": "ES/EN",
-        "type": "PDF"
-      }
-    ]
+    "guides": {
+      "title": "Free guides",
+      "subtitle": "Download practical resources prepared by Sonia.",
+      "items": [
+        {
+          "title": "Checklist de documentos",
+          "description": "Todos los documentos que necesitás para tu residencia. Con estado de apóstilla y traducción.",
+          "download_url": "#",
+          "lang": "ES/NL/EN/DE",
+          "type": "PDF"
+        },
+        {
+          "title": "10 cosas que nadie te dice",
+          "description": "Lo que realmente significa mudarse a Paraguay. Tips que solo alguien que lo vivió puede contarte.",
+          "download_url": "#",
+          "lang": "ES/EN",
+          "type": "PDF"
+        },
+        {
+          "title": "Guía de colegios internacionales",
+          "description": "Comparativa completa de 8 colegios: currículum, idioma, costos y ubicación.",
+          "download_url": "#",
+          "lang": "ES/EN",
+          "type": "PDF"
+        },
+        {
+          "title": "Primeros 30 días en Paraguay",
+          "description": "Plan día por día desde que llegás al aeropuerto hasta que tenés todo funcionando.",
+          "download_url": "#",
+          "lang": "ES/EN",
+          "type": "PDF"
+        }
+      ]
+    }
   },
   "teamPage": {
     "seo": {
@@ -3912,6 +3959,186 @@
           ]
         }
       ]
+    }
+  },
+  "dutchLanding": {
+    "hero": {
+      "eyebrow": "For Dutch clients",
+      "headline": "Dutch considering Paraguay?",
+      "subheadline": "Sonia and Luana are Dutch. 7 years living the process. We accompany Dutch clients in their move with fiscal context, box 3 and emigratieheffing.",
+      "ctaPrimaryText": "Book consultation in Dutch",
+      "ctaPrimaryHref": "/contacto",
+      "backgroundImage": "@src:hero.localizedNl"
+    },
+    "seo": {
+      "title": "Moving Holland-Paraguay — Nexa Paraguay",
+      "description": "Professional accompaniment for Dutch relocating to Paraguay.",
+      "targetKeyword": "emigreren naar Paraguay"
+    },
+    "whySonia": {
+      "eyebrow": "Why Sonia",
+      "title": "She is Dutch. And she already did the process.",
+      "paragraphs": [
+        "Sonia lived 7 years in Holland. She processed her own residency, her own company, her own bank account. Now she does the same for each Nexa client."
+      ]
+    },
+    "taxComparison": {
+      "eyebrow": "Tax comparison",
+      "title": "Paraguay vs Holland: the fiscal impact",
+      "columns": [
+        "Concept",
+        "Paraguay",
+        "Holland"
+      ],
+      "items": [
+        {
+          "Concepto": "Max Income Tax",
+          "Paraguay": "10%",
+          "Países Bajos": "49.5%"
+        },
+        {
+          "Concepto": "Capital Gains",
+          "Paraguay": "0%",
+          "Países Bajos": "25%"
+        },
+        {
+          "Concepto": "VAT",
+          "Paraguay": "10%",
+          "Países Bajos": "21%"
+        },
+        {
+          "Concepto": "Inheritance",
+          "Paraguay": "0%",
+          "Países Bajos": "10-40%"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "Your move step by step",
+      "totalDuration": "Total duration: 8-12 weeks.",
+      "ctaLabel": "Start my process",
+      "ctaHref": "/contacto",
+      "steps": []
+    },
+    "targetClients": {
+      "eyebrow": "For whom",
+      "title": "Ideal for",
+      "groups": [
+        {
+          "id": "investors",
+          "title": "Investors",
+          "items": []
+        },
+        {
+          "id": "remote",
+          "title": "Remote workers",
+          "items": []
+        }
+      ]
+    },
+    "costs": {
+      "eyebrow": "Costs",
+      "title": "Initial investment",
+      "subtitle": "Our programs fixed in USD.",
+      "items": []
+    },
+    "cta": {
+      "eyebrow": "Next step",
+      "title": "Let's talk in Dutch",
+      "subtitle": "30 minutes with Sonia. No commitment.",
+      "buttonText": "Book",
+      "buttonHref": "/contacto"
+    }
+  },
+  "deutschlandPage": {
+    "hero": {
+      "eyebrow": "For German clients",
+      "headline": "German considering Paraguay?",
+      "subheadline": "Sonia and Luana speak German. 7 years living the process. We accompany you in your move with full fiscal context.",
+      "ctaPrimaryText": "Book consultation in German",
+      "ctaPrimaryHref": "/contacto",
+      "backgroundImage": "@src:hero.localizedDe"
+    },
+    "seo": {
+      "title": "Moving Germany-Paraguay — Nexa Paraguay",
+      "description": "Professional accompaniment for Germans relocating to Paraguay.",
+      "targetKeyword": "Auswanderung Paraguay"
+    },
+    "whySonia": {
+      "eyebrow": "Why Sonia",
+      "title": "Sonia speaks German.",
+      "paragraphs": [
+        "Sonia lived 7 years in Holland. She processed her own residency. She speaks German, Dutch, English and Spanish."
+      ]
+    },
+    "taxComparison": {
+      "eyebrow": "Tax comparison",
+      "title": "Paraguay vs Germany: the fiscal impact",
+      "columns": [
+        "Concept",
+        "Paraguay",
+        "Germany"
+      ],
+      "items": [
+        {
+          "Concepto": "Max Income Tax",
+          "Paraguay": "10%",
+          "Alemania": "45%"
+        },
+        {
+          "Concepto": "Capital Gains",
+          "Paraguay": "0%",
+          "Alemania": "26.4%"
+        },
+        {
+          "Concepto": "VAT",
+          "Paraguay": "10%",
+          "Alemania": "19%"
+        },
+        {
+          "Concepto": "Inheritance",
+          "Paraguay": "0%",
+          "Alemania": "7-50%"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "Your move step by step",
+      "totalDuration": "Total duration: 8-12 weeks.",
+      "ctaLabel": "Start my process",
+      "ctaHref": "/contacto",
+      "steps": []
+    },
+    "targetClients": {
+      "eyebrow": "For whom",
+      "title": "Ideal for",
+      "groups": [
+        {
+          "id": "investors",
+          "title": "Investors",
+          "items": []
+        },
+        {
+          "id": "remote",
+          "title": "Remote workers",
+          "items": []
+        }
+      ]
+    },
+    "costs": {
+      "eyebrow": "Costs",
+      "title": "Initial investment",
+      "subtitle": "Our programs fixed in USD.",
+      "items": []
+    },
+    "cta": {
+      "eyebrow": "Next step",
+      "title": "Let's talk in German",
+      "subtitle": "30 minutos con Sonia. Sin compromiso.",
+      "buttonText": "Book",
+      "buttonHref": "/contacto"
     }
   }
 }

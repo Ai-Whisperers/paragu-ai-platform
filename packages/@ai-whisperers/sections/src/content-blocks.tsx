@@ -354,8 +354,15 @@ export function ServiceDetailSection({ pageContent, data, images }: SectionCompo
           const groupNum = String(gi + 1).padStart(2, '0')
           const total = String(groups.length).padStart(2, '0')
           const accent = group.accentColor || '#C9A96E'
+          // Generate stable ID from group.id or title (for anchor links)
+          const groupId = group.id || (group.title || `group-${gi}`)
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[̀-ͯ]/g, '')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-|-$/g, '')
           return (
-            <div key={gi} className="mb-16 last:mb-0">
+            <div key={gi} id={groupId} className="mb-16 last:mb-0 scroll-mt-24">
               {/* Group header */}
               <div className="mb-8">
                 <div className="inline-flex items-center gap-3 mb-3">

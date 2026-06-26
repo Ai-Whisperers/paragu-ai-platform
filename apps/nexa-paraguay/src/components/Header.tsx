@@ -23,13 +23,14 @@ const LOCALES = ['es', 'en', 'nl', 'de']
 export function Header({ navigation, locale }: { navigation: any; locale?: string }) {
   const [open, setOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   const navItems: NavItem[] = navigation?.navItems || []
   const pathname = usePathname()
   const router = useRouter()
   const pathLocale = pathname?.split('/').filter(Boolean)?.[0]
   const currentLocale = (locale && LOCALES.includes(locale))
     ? locale
-    : (pathLocale && LOCALES.includes(pathLocale) ? pathLocale : 'en')
+    : (pathLocale && LOCALES.includes(pathLocale) ? pathLocale : 'es')
 
   function switchLocale(newLocale: string) {
     // Get current path without locale prefix
@@ -38,7 +39,9 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
     if (parts.length > 0 && LOCALES.includes(parts[0])) {
       cleanPath = '/' + parts.slice(1).join('/') || '/'
     }
-    const newPath = '/' + newLocale + cleanPath
+    // Preserve hash fragment for anchor links (e.g. /servicios#residency-legal)
+    const hash = typeof window !== 'undefined' ? window.location.hash : ''
+    const newPath = '/' + newLocale + cleanPath + hash
     trackLanguageSwitch(currentLocale, newLocale)
     router.push(newPath)
   }
@@ -52,23 +55,80 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
         <button onClick={() => setOpen(!open)} style={{ display: 'none', background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', padding: '0.25rem', color: '#1B2A4A' }}>
           {open ? '✕' : '☰'}
         </button>
-        <nav style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-          {navItems.map((item, i) => (
-            <div key={i} style={{ position: 'relative' }}>
-              {(() => {
-                let href = item.href || '#'
-                // Strip existing multiclient prefix (/s/en/nexa-paraguay/)
-                href = href.replace(/^\/s\/[^/]+\/[^/]+/, '')
-                // Prepend locale prefix for internal links
-                if (!href.startsWith('http') && !href.startsWith('/' + currentLocale)) {
-                  href = '/' + currentLocale + href
-                }
-                return <a href={href} style={{ color: '#333', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', padding: '0.25rem 0', borderBottom: item.children ? '1px dashed #ccc' : 'none' }}>
-                  {item.label}
-                </a>
-              })()}
-            </div>
-          ))}
+        <nav className="hidden md:flex gap-6 items-center">
+          {navItems.map((item, i) => {
+            let href = item.href || '#'
+            href = href.replace(/^\/s\/[^/]+\/[^/]+/, '')
+            if (!href.startsWith('http') && !href.startsWith('/' + currentLocale)) {
+              href = '/' + currentLocale + href
+            }
+            const isActive = pathname === href || pathname === href + '/' || (item.children && item.children.some((c: any) => pathname === c.href))
+            const hasChildren = !!item.children
+
+            if (hasChildren) {
+              return (
+                <div
+                  key={i}
+                  className="relative"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <a
+                    href={href}
+                    className="text-[0.9rem] font-medium transition-colors py-2 inline-flex items-center gap-1.5"
+                    style={{
+                      color: isActive ? '#C9A96E' : '#333',
+                      borderBottom: '1px dashed #ccc',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {item.label}
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </a>
+                  {servicesOpen && (
+                    <div
+                      className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-lg border border-border/40 py-2 min-w-[280px] z-50"
+                      style={{ boxShadow: '0 8px 24px rgba(0,0,0,0.12)' }}
+                    >
+                      {item.children.map((child: any, j: number) => {
+                        let childHref = child.href || '#'
+                        childHref = childHref.replace(/^\/s\/[^/]+\/[^/]+/, '')
+                        if (!childHref.startsWith('http') && !childHref.startsWith('/' + currentLocale)) {
+                          childHref = '/' + currentLocale + childHref
+                        }
+                        return (
+                          <a
+                            key={j}
+                            href={childHref}
+                            className="block px-4 py-2.5 text-sm text-text hover:bg-surface-alt hover:text-accent transition-colors no-underline"
+                          >
+                            {child.label}
+                          </a>
+                        )
+                      })}
+                    </div>
+                  )}
+                </div>
+              )
+            }
+
+            return (
+              <a
+                key={i}
+                href={href}
+                className="text-[0.9rem] font-medium transition-colors py-2"
+                style={{
+                  color: isActive ? '#C9A96E' : '#333',
+                  borderBottom: isActive ? '2px solid #C9A96E' : '2px solid transparent',
+                  textDecoration: 'none',
+                }}
+              >
+                {item.label}
+              </a>
+            )
+          })}
           {/* Language Switcher Dropdown */}
           <div style={{ position: 'relative' }}>
             <button

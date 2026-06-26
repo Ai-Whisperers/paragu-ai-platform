@@ -42,12 +42,17 @@ export function IntakeWizardSection({ pageContent, data }: SectionComponentProps
         <p className="text-sm text-text-muted mb-6">{d.subtitle}</p>
         <h3 className="text-xl font-bold text-primary mb-6">{steps[currentStep].question}</h3>
         <div className="flex flex-col gap-3">
-          {(steps[currentStep].options || []).map((opt: string, i: number) => (
-            <button key={i} onClick={() => handleSelect(opt)}
-              className="w-full p-4 bg-white rounded-lg border border-border cursor-pointer font-semibold text-primary text-sm hover:border-accent transition-colors">
-              {opt}
-            </button>
-          ))}
+          {(steps[currentStep].options || []).map((opt: any, i: number) => {
+            // Handle both shapes: string OR { value, label }
+            const optValue = typeof opt === 'string' ? opt : (opt?.value || '')
+            const optLabel = typeof opt === 'string' ? opt : (opt?.label || optValue)
+            return (
+              <button key={i} onClick={() => handleSelect(optValue)}
+                className="w-full p-4 bg-white rounded-lg border border-border cursor-pointer font-semibold text-primary text-sm hover:border-accent transition-colors">
+                {optLabel}
+              </button>
+            )
+          })}
         </div>
         <p className="mt-4 text-xs text-text-muted italic">{d.disclaimer || ''}</p>
       </div>

@@ -929,6 +929,42 @@
     "hero": {
       "headline": "Finden Sie Ihr ideales Programm",
       "subheadline": "Beantworten Sie ein paar schnelle Fragen und wir empfehlen Ihnen das richtige Programm."
+    },
+    "wizard": {
+      "title": "Finden Sie Ihr Programm",
+      "subtitle": "Beantworten Sie 5 schnelle Fragen. Wir empfehlen das ideale Programm.",
+      "steps": [
+        {
+          "question": "Was ist Ihr Hauptziel?",
+          "options": [
+            {
+              "value": "residency",
+              "label": "Aufenthalt erhalten"
+            },
+            {
+              "value": "company",
+              "label": "Firma gründen"
+            },
+            {
+              "value": "both",
+              "label": "Beides"
+            }
+          ]
+        },
+        {
+          "question": "Haben Sie einen paraguayischen Ausweis?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ja"
+            },
+            {
+              "value": "no",
+              "label": "Nein"
+            }
+          ]
+        }
+      ]
     }
   },
   "servicesPage": {
@@ -1181,7 +1217,8 @@
             "ctaText": "Details ansehen",
             "ctaHref": "/contacto?servicio=apostilla"
           }
-        ]
+        ],
+        "id": "residency-legal"
       },
       {
         "title": "Banking und Steuerkonfiguration",
@@ -1214,7 +1251,8 @@
             "ctaText": "Details ansehen",
             "ctaHref": "/contacto?servicio=ruc"
           }
-        ]
+        ],
+        "id": "banking-tax"
       },
       {
         "title": "Wohnimmobilien",
@@ -1260,7 +1298,8 @@
             "ctaText": "Details ansehen",
             "ctaHref": "/contacto?servicio=verificacion"
           }
-        ]
+        ],
+        "id": "real-estate"
       }
     ],
     "programs": {
@@ -2838,26 +2877,30 @@
       "headline": "Prensa y Medios",
       "subheadline": "Comunicados oficiales, notas de prensa y material para periodistas."
     },
-    "pressReleases": [
-      {
-        "title": "Nexa Paraguay anuncia nuevo programa de residencia para inversores",
-        "date": "15 de abril, 2026",
-        "summary": "El programa integra residencia permanente, apertura de empresa y cuenta bancaria en un solo proceso coordinado.",
-        "link": "#"
-      },
-      {
-        "title": "Nexa Paraguay abre oficina de atención en neerlandés en Asunción",
-        "date": "2 de marzo, 2026",
-        "summary": "Con el objetivo de atender la creciente demanda de ciudadanos de los Países Bajos, Bélgica y Alemania.",
-        "link": "#"
-      },
-      {
-        "title": "Alianza estratégica con despachos notariales de Asunción",
-        "date": "10 de enero, 2026",
-        "summary": "La alianza permitirá agilizar los procesos de compra de propiedades y debida diligencia para clientes internacionales.",
-        "link": "#"
-      }
-    ]
+    "pressReleases": {
+      "title": "Pressemitteilungen",
+      "subtitle": "Offizielle Pressemitteilungen von Nexa Paraguay.",
+      "items": [
+        {
+          "title": "Nexa Paraguay anuncia nuevo programa de residencia para inversores",
+          "date": "15 de abril, 2026",
+          "summary": "El programa integra residencia permanente, apertura de empresa y cuenta bancaria en un solo proceso coordinado.",
+          "link": "#"
+        },
+        {
+          "title": "Nexa Paraguay abre oficina de atención en neerlandés en Asunción",
+          "date": "2 de marzo, 2026",
+          "summary": "Con el objetivo de atender la creciente demanda de ciudadanos de los Países Bajos, Bélgica y Alemania.",
+          "link": "#"
+        },
+        {
+          "title": "Alianza estratégica con despachos notariales de Asunción",
+          "date": "10 de enero, 2026",
+          "summary": "La alianza permitirá agilizar los procesos de compra de propiedades y debida diligencia para clientes internacionales.",
+          "link": "#"
+        }
+      ]
+    }
   },
   "whatsapp": {
     "buttonText": "WhatsApp",
@@ -3357,36 +3400,40 @@
       "headline": "Kostenlose Ratgeber für Ihren Umzug",
       "subheadline": "Laden Sie praktische Ressourcen herunter, erstellt von Sonia. Kein Spam, keine Verpflichtung."
     },
-    "guides": [
-      {
-        "title": "Dokumenten-Checkliste",
-        "description": "Alle Dokumente, die Sie für den Aufenthalt benötigen. Mit Apostille- und Übersetzungsstatus.",
-        "download_url": "#",
-        "lang": "ES/NL/EN/DE",
-        "type": "PDF"
-      },
-      {
-        "title": "10 Dinge, die Ihnen niemand sagt",
-        "description": "Was ein Umzug nach Paraguay wirklich bedeutet. Tipps, die nur jemand mit Erfahrung teilen kann.",
-        "download_url": "#",
-        "lang": "ES/EN",
-        "type": "PDF"
-      },
-      {
-        "title": "Internationale Schulen Ratgeber",
-        "description": "Vollständiger Vergleich von 8 Schulen: Lehrplan, Sprache, Kosten und Standort.",
-        "download_url": "#",
-        "lang": "ES/EN",
-        "type": "PDF"
-      },
-      {
-        "title": "Erste 30 Tage in Paraguay",
-        "description": "Tag-für-Tag-Plan von der Ankunft am Flughafen bis alles läuft.",
-        "download_url": "#",
-        "lang": "ES/EN",
-        "type": "PDF"
-      }
-    ]
+    "guides": {
+      "title": "Kostenlose Anleitungen",
+      "subtitle": "Laden Sie praktische Ressourcen von Sonia herunter.",
+      "items": [
+        {
+          "title": "Dokumenten-Checkliste",
+          "description": "Alle Dokumente, die Sie für den Aufenthalt benötigen. Mit Apostille- und Übersetzungsstatus.",
+          "download_url": "#",
+          "lang": "ES/NL/EN/DE",
+          "type": "PDF"
+        },
+        {
+          "title": "10 Dinge, die Ihnen niemand sagt",
+          "description": "Was ein Umzug nach Paraguay wirklich bedeutet. Tipps, die nur jemand mit Erfahrung teilen kann.",
+          "download_url": "#",
+          "lang": "ES/EN",
+          "type": "PDF"
+        },
+        {
+          "title": "Internationale Schulen Ratgeber",
+          "description": "Vollständiger Vergleich von 8 Schulen: Lehrplan, Sprache, Kosten und Standort.",
+          "download_url": "#",
+          "lang": "ES/EN",
+          "type": "PDF"
+        },
+        {
+          "title": "Erste 30 Tage in Paraguay",
+          "description": "Tag-für-Tag-Plan von der Ankunft am Flughafen bis alles läuft.",
+          "download_url": "#",
+          "lang": "ES/EN",
+          "type": "PDF"
+        }
+      ]
+    }
   },
   "deutschlandPage": {
     "seo": {
@@ -4006,6 +4053,96 @@
           ]
         }
       ]
+    }
+  },
+  "dutchLanding": {
+    "hero": {
+      "eyebrow": "Für niederländische Kunden",
+      "headline": "Niederländer erwägen Paraguay?",
+      "subheadline": "Sonia und Luana sind Niederländerinnen. 7 Jahre im Prozess gelebt. Wir begleiten Niederländer beim Umzug mit Steuerkontext, box 3 und emigratieheffing.",
+      "ctaPrimaryText": "Beratung auf Niederländisch vereinbaren",
+      "ctaPrimaryHref": "/contacto",
+      "backgroundImage": "@src:hero.localizedNl"
+    },
+    "seo": {
+      "title": "Umzug Niederlande-Paraguay — Nexa Paraguay",
+      "description": "Professionelle Begleitung für Niederländer, die nach Paraguay ziehen.",
+      "targetKeyword": "emigreren naar Paraguay"
+    },
+    "whySonia": {
+      "eyebrow": "Warum Sonia",
+      "title": "Sie ist Niederländerin. Und hat den Prozess schon gemacht.",
+      "paragraphs": [
+        "Sonia lebte 7 Jahre in den Niederlanden. Sie hat ihre eigene Aufenthaltserlaubnis, ihre eigene Firma, ihr eigenes Bankkonto abgewickelt. Jetzt macht sie das Gleiche für jeden Nexa-Kunden."
+      ]
+    },
+    "taxComparison": {
+      "eyebrow": "Steuervergleich",
+      "title": "Paraguay vs Niederlande: steuerliche Auswirkungen",
+      "columns": [
+        "Konzept",
+        "Paraguay",
+        "Niederlande"
+      ],
+      "items": [
+        {
+          "Concepto": "Max Einkommensteuer",
+          "Paraguay": "10%",
+          "Países Bajos": "49.5%"
+        },
+        {
+          "Concepto": "Kapitalerträge",
+          "Paraguay": "0%",
+          "Países Bajos": "25%"
+        },
+        {
+          "Concepto": "MwSt",
+          "Paraguay": "10%",
+          "Países Bajos": "21%"
+        },
+        {
+          "Concepto": "Erbschaft",
+          "Paraguay": "0%",
+          "Países Bajos": "10-40%"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "So funktioniert es",
+      "title": "Ihr Umzug Schritt für Schritt",
+      "totalDuration": "Gesamtdauer: 8-12 Wochen.",
+      "ctaLabel": "Meinen Prozess starten",
+      "ctaHref": "/contacto",
+      "steps": []
+    },
+    "targetClients": {
+      "eyebrow": "Für wen",
+      "title": "Ideal für",
+      "groups": [
+        {
+          "id": "investors",
+          "title": "Investoren",
+          "items": []
+        },
+        {
+          "id": "remote",
+          "title": "Remote-Arbeiter",
+          "items": []
+        }
+      ]
+    },
+    "costs": {
+      "eyebrow": "Kosten",
+      "title": "Anfängliche Investition",
+      "subtitle": "Unsere Programme fest in USD.",
+      "items": []
+    },
+    "cta": {
+      "eyebrow": "Nächster Schritt",
+      "title": "Lassen Sie uns auf Niederländisch sprechen",
+      "subtitle": "30 Minuten mit Sonia. Keine Verpflichtung.",
+      "buttonText": "Vereinbaren",
+      "buttonHref": "/contacto"
     }
   }
 }
