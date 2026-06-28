@@ -1,6 +1,7 @@
 {
-  "title": "Your journey",
-  "subtitle": "Four steps from first message to a written plan. No surprises.",
+  "fraseGuia": "Antes de tocar, hay que entender.",
+  "title": "Tu recorrido",
+  "subtitle": "Cuatro pasos del primer mensaje al plan escrito. Sin sorpresas.",
   "steps": [
     {
       "order": 1,

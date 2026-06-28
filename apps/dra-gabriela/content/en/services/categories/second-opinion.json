@@ -1,7 +1,8 @@
 {
   "id": "second-opinion",
-  "title": "Second opinion",
-  "description": "I review your diagnosis or treatment plan from scratch, with access to any documents you have. At the end I explain what makes sense, what can be improved, and what should not be done.",
+  "title": "Second opinion with clinical judgment",
+  "fraseGuia": "A photo isn't enough to diagnose. Why do they send you quotes by WhatsApp?",
+  "description": "I review your diagnosis or treatment plan from scratch, with access to the documents you have. At the end I explain what makes sense, what can be improved, and what isn't worth doing. No conflict of interest.",
   "cta": "Request a second opinion",
   "highlights": [
     "Review with no conflict of interest",

@@ -1,7 +1,8 @@
 {
-  "title": "Blog",
-  "subtitle": "Educational content on conservative dentistry, second opinions, pricing, and dental health in Paraguay.",
-  "status": "New posts every two weeks. First issue below.",
+  "title": "Blog — Think before touching",
+  "subtitle": "Flagship series and educational content on dentistry based on clinical judgment: second opinions, planning, conservation, responsible aesthetics, and real cases.",
+  "fraseGuia": "Before touching, think.",
+  "status": "We publish new articles every two weeks. The flagship series is Think before touching.",
   "posts": [
     {
       "slug": "how-to-know-if-a-treatment-plan-is-honest",

@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-26: feat(nexa): comprehensive site upgrade - all 26 pages live, i18n fixes, navigation, anchors (by Erebus)
+
 - 2026-06-26: fix(sobre): fix TeamSection grid, TrustSection value/label, hero eyebrow+CTA, story highlights, team bios (by Erebus)
 
 - 2026-06-26: feat(nexa): full services detail upgrade - subtitles, images, item CTAs, final CTA (by Erebus)

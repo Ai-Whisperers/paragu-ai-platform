@@ -1,8 +1,9 @@
 {
   "id": "treatment-planning",
-  "title": "Treatment planning",
-  "description": "A written plan first: options, sequence, timeline, and reference costs so you can decide without pressure. If anything unexpected comes up, I discuss it with you before continuing.",
-  "cta": "Request a plan without commitment",
+  "title": "Diagnosis & treatment planning",
+  "fraseGuia": "Diagnosis is also a treatment.",
+  "description": "A written plan first: options, sequence, timelines, and reference pricing so you can decide without pressure. If something unexpected comes up during treatment, we discuss it before continuing. The Diagnostic & Planning Consultation is the entry point.",
+  "cta": "Request a no-obligation plan",
   "highlights": [
     "Written plan, not verbal promises",
     "Options with pros and cons",

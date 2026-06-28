@@ -1,8 +1,8 @@
 {
-  "title": "Honest dentistry. Written plans. No surprises.",
-  "subtitle": "Twenty years of conservative dental care in Asunción. Second opinions, treatment planning, transparent pricing, and care in English and Spanish — all by appointment.",
-  "cta_primary": "Get a no-obligation plan",
-  "cta_secondary": "Written second opinion",
+  "title": "Dentistry doesn't start with a drill. It starts by thinking.",
+  "subtitle": "Twenty years of practice based on clinical judgment. Diagnosis before treatment, written second opinions, transparent pricing. Care in English and Spanish, by appointment.",
+  "cta_primary": "Book Diagnostic Consultation",
+  "cta_secondary": "Request a written second opinion",
   "contact_phone": "PENDING",
   "office_hours_short": "Mon–Fri 9–18 | Sat 8–12",
   "top_bar": {
@@ -12,29 +12,29 @@
   "slides": [
     {
       "id": "1",
-      "title": "Dentistry with judgment. Not with rush.",
-      "subtitle": "An honest evaluation, a written plan, and a clear explanation before any procedure.",
+      "title": "Dentistry doesn't start with a drill. It starts by thinking.",
+      "subtitle": "Diagnosis before any procedure. A written plan. A clear explanation. You decide with information, not fear.",
       "image": "/images/real/clinic-1.webp",
-      "cta": "Get a no-obligation plan",
+      "cta": "Book Diagnostic Consultation",
       "badge": "Spanish · English",
-      "trust_line": "20+ years · conservative-first"
+      "trust_line": "20+ years · clinical judgment"
     },
     {
       "id": "2",
-      "title": "We plan before we act",
-      "subtitle": "We don't sell procedures. We diagnose first and show you every option, with price and timeline.",
+      "title": "Never underestimate a small spot",
+      "subtitle": "A small lesion can hide something larger. Before touching, you must interpret: pain, history, radiograph, location, judgment. Thinking is also part of treatment.",
       "image": "/images/hero/dra-gp-hero-2.png",
       "cta": "View services",
-      "badge": "Written treatment plan"
+      "badge": "Clinical symbol of the practice"
     },
     {
       "id": "3",
-      "title": "Honest second opinions",
-      "subtitle": "Another dentist says you need a procedure? We review your case with no conflict of interest.",
+      "title": "Second opinion with clinical judgment",
+      "subtitle": "Someone told you that you need an important treatment. Before accepting, we review your case with no conflict of interest. A photo isn't enough to diagnose.",
       "image": "/images/hero/dra-gp-hero-3.png",
       "cta": "Request second opinion",
-      "badge": "No-obligation written plan"
+      "badge": "Written opinion · no obligation"
     }
   ],
-  "trust_line": "20+ years · conservative-first · English spoken"
+  "trust_line": "20+ years · clinical judgment · English · Spanish"
 }

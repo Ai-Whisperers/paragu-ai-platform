@@ -1,19 +1,20 @@
 {
   "site": {
-    "name": "Dra. Gabriella González Pane",
+    "name": "Dr. Gabriella González Pane — Dentistry based on clinical judgment",
     "slug": "dra-gabriela-en",
     "url": "https://dra-gabriela.com.py",
     "locale": "en-PY",
-    "metaDescription": "Conservative, planning-first dentistry in Asunción. English-speaking dentist. Second opinions, treatment plans, and transparent pricing."
+    "tagline": "Dentistry doesn't start with a drill. It starts by thinking.",
+    "metaDescription": "Conservative dentistry based on clinical judgment in Paraguay. Diagnosis before treatment, written second opinions, transparent pricing, care in English and Spanish. Dentistry doesn't start with a drill: it starts by thinking."
   },
   "business": {
-    "phone": "PENDING  | TBD",
+    "phone": "PENDING | TBD",
     "whatsapp": "PENDING",
-    "whatsappMessage": "Hi Dra. GP, I'd like to book a consultation.",
+    "whatsappMessage": "Hi Dr. Gabriella, I found your site and I'd like to understand my case before deciding on treatment. Do you have availability for a Diagnostic & Planning Consultation?",
     "email": "hola@dra-gp.com.py",
     "instagram": "@dragabriellagp",
     "instagramUrl": "https://instagram.com/dragabriellagp",
-    "address": "TBD — Luque preferred (pending lease). Current practice at Odontología 3, Asunción.",
+    "address": "TBD — Luque preferred (pending lease). Independent practice aligned to the Professional DNA.",
     "coordinates": {
       "lat": -25.2836,
       "lng": -57.4831
@@ -21,7 +22,21 @@
     "currency": "PYG",
     "ruc": "PENDING | Not registered yet",
     "mspbs": "PENDING",
-    "name": "Dra. Gabriella González Pane"
+    "name": "Dr. Gabriella González Pane"
+  },
+  "adn": {
+    "fraseGuia": "Dentistry doesn't start with a drill. It starts by thinking.",
+    "categoria": "Dentistry based on clinical judgment",
+    "simbolo": "Never underestimate a small spot",
+    "pilares": [
+      {"id": "pensar", "titulo": "Think before touching", "descripcion": "Diagnosis, conversation and planning before any procedure."},
+      {"id": "conservar", "titulo": "Preserve before replacing", "descripcion": "Respect for tooth structure. Every intervention has a biological cost that must be explained."},
+      {"id": "explicar", "titulo": "Explain before selling", "descripcion": "The patient must understand their case. Educate without infantilizing, speak clearly without emptying."},
+      {"id": "personas", "titulo": "See people before teeth", "descripcion": "The mouth belongs to someone. Deep humanity without sentimentality."},
+      {"id": "derivar", "titulo": "Refer when appropriate", "descripcion": "A confident professional doesn't need to do everything. Rehabilitation requires integrating specialties."}
+    ],
+    "puertaEntrada": "Diagnostic & Planning Consultation",
+    "manifiestoPublico": "I'm Dr. Gabriella González Pane. For years I worked seeing thousands of patients and learned something that guides how I practice today: dentistry doesn't start with a drill; it starts by thinking. Before talking about crowns, veneers or restorations, I want to understand what's happening in your mouth, what options exist, and what decision makes the most sense for you. My job isn't to sell you a treatment. It's to help you understand your case so you can decide with confidence."
   },
   "features": {
     "bookingForm": true,
@@ -48,88 +63,24 @@
   },
   "navigation": {
     "main": [
-      {
-        "label": "Home",
-        "href": "/"
-      },
-      {
-        "label": "Philosophy",
-        "href": "/philosophy"
-      },
-      {
-        "label": "Services",
-        "href": "/services"
-      },
-      {
-        "label": "Pricing",
-        "href": "/pricing"
-      },
-      {
-        "label": "Contact",
-        "href": "/contact"
-      }
+      {"label": "Home", "href": "/"},
+      {"label": "Philosophy", "href": "/philosophy"},
+      {"label": "Services", "href": "/services"},
+      {"label": "Pricing", "href": "/pricing"},
+      {"label": "Contact", "href": "/contact"}
     ],
     "more": [
-      {
-        "label": "Second Opinion",
-        "href": "/second-opinion"
-      },
-      {
-        "label": "About",
-        "href": "/about"
-      },
-      {
-        "label": "Expat",
-        "href": "/expat"
-      },
-      {
-        "label": "Contact",
-        "href": "/contact",
-        "feature": "map"
-      },
-      {
-        "label": "Blog",
-        "href": "/blog",
-        "feature": "blog"
-      },
-      {
-        "label": "FAQ",
-        "href": "/faq"
-      }
+      {"label": "Second Opinion", "href": "/second-opinion"},
+      {"label": "About", "href": "/about"},
+      {"label": "Expat", "href": "/expat"},
+      {"label": "Contact", "href": "/contact", "feature": "map"},
+      {"label": "Blog", "href": "/blog", "feature": "blog"},
+      {"label": "FAQ", "href": "/faq"}
     ]
   },
-  "openingHours": {
-    "mon": "09:00-18:00",
-    "tue": "09:00-18:00",
-    "wed": "09:00-18:00",
-    "thu": "09:00-18:00",
-    "fri": "09:00-18:00",
-    "sat": "08:00-12:00",
-    "sun": "Closed"
-  },
-  "trust": {
-    "license": "MSPBS registration: pending",
-    "biosecurity": true,
-    "paymentMethods": [
-      "Cash",
-      "Transfer",
-      "Pagopar",
-      "Bancard POS"
-    ],
-    "amenities": [
-      "WiFi",
-      "Parking guidance (TBD)",
-      "AC"
-    ]
-  },
-  "ctaDefaults": {
-    "primary": "Get a no-obligation plan",
-    "secondary": "Request a second opinion",
-    "whatsapp": true
-  },
-  "schema": {
-    "localBusiness": true,
-    "faqPage": true,
-    "reviewSchema": true
+  "disclaimers": {
+    "consultaNoPromete": "The Diagnostic & Planning Consultation does NOT promise: a definitive diagnosis without the necessary studies, a closed quote by WhatsApp, a perfect aesthetic solution, or immediate treatment without planning.",
+    "fotoNoAlcanza": "A photo is not enough to diagnose with seriousness. I can orient you, but to tell you what's best I need to evaluate you clinically.",
+    "noCompitePorPrecio": "My approach doesn't compete on price. It competes on judgment. If you're looking for the lowest price, there are other options. If you're looking to understand your case, you're in the right place."
   }
 }

@@ -1,28 +1,80 @@
 {
-  "title": "Philosophy",
-  "subtitle": "Plan first, treat second. 20 years of conservative dentistry.",
+  "title": "Philosophy — Dentistry doesn't start with a drill. It starts by thinking.",
+  "subtitle": "Why this practice exists and why it's different.",
+  "fraseGuia": "Dentistry doesn't start with a drill. It starts by thinking.",
   "sections": [
     {
-      "heading": "Opening statement",
-      "body": "After 20 years in practice, here's what I can tell you: the best dental care starts with the right diagnosis, not the most expensive procedure. That's how I work. It's not a slogan — it's how I evaluate every case that comes in. Before proposing any treatment, I need to understand what's really happening. Often what the patient thinks they need isn't what they actually need."
+      "heading": "Why this practice exists",
+      "body": "This practice exists to exercise dentistry based on clinical judgment, not to run faster. The difference between a procedure and a clinical decision is what almost never gets seen: why this path was chosen and not another. My job is to show that reasoning, not only the result."
     },
     {
-      "heading": "The 5 principles that guide my work",
+      "heading": "The market problem",
+      "body": "The dental market is full of similar messages: before-and-afters, quick tips, promotions, veneers, whitening, aesthetics, technology, perfect smiles. That content can generate attention, but it doesn't build deep differentiation. If I enter competing with the same language, I lose my biggest asset: my way of thinking. The problem isn't using social media. The problem is using it to sound like everyone else."
+    },
+    {
+      "heading": "The own category",
+      "body": "It's not cosmetic dentistry. It's not plain oral rehabilitation either. The strategic category is dentistry based on clinical judgment. The center of communication is not the treatment — it's the decision that justifies it. The promise isn't a perfect smile: it's thinking your case through seriously before proposing a treatment."
+    },
+    {
+      "heading": "The 5 non-negotiable pillars",
       "items": [
-        "Clinical judgment first: Decisions are based on evidence and what I see in your mouth, not on what insurance covers or how much I can bill. If it's not necessary, I won't propose it.",
-        "Conservation over intervention: A saved natural tooth is always worth more than an artificial one. If I can restore, I restore. If I can rebuild instead of extract, I rebuild.",
-        "No overtreatment: I won't propose a treatment you don't need just because I can do it. I've seen too many cases where overtreatment caused more problems than the original issue.",
-        "Planning as a service: Before any major procedure, I deliver a written plan: what you'll need, in what order, how much it will cost, and what your options are. No surprises.",
-        "Referral when appropriate: I'm not a one-stop shop. If your case needs a specialist — endodontist, implantologist, surgeon — I refer you. I'd rather you get excellent treatment than insist on doing everything myself."
+        {"titulo": "Think before touching", "descripcion": "Diagnosis, conversation, clinical reading, planning, and judgment before any intervention. The brand shouldn't rush to show procedures. It should show how it decides whether a procedure makes sense."},
+        {"titulo": "Preserve before replacing", "descripcion": "Respect for tooth structure. A crown, a veneer or a rehabilitation are not trophies. They're decisions with biological cost. I ask: is it worth intervening?"},
+        {"titulo": "Explain before selling", "descripcion": "The patient must understand. It's an ethical obligation and a differentiation strategy. Educate without infantilizing, speak clearly without emptying."},
+        {"titulo": "See people before teeth", "descripcion": "The mouth belongs to someone with fear, budget, history, expectations, frustrations, and limits. Deep humanity without sentimentality."},
+        {"titulo": "Refer when appropriate", "descripcion": "A confident professional doesn't need to do everything. Rehabilitation requires integrating specialties. Knowing when to call the endodontist, surgeon, periodontist or orthodontist is also judgment."}
       ]
     },
     {
-      "heading": "Materials",
-      "body": "I work with German composite resin and premium laboratory materials. The durability of a restoration depends as much on technique as on material. I don't compromise quality for volume."
+      "heading": "How I think about a case (mental map)",
+      "body": "When a patient says \"I want to replace this crown\", I don't look only at the crown. I look at the substrate, the neighboring tooth, age, function, occlusion, endodontic history, the risk of touching a vital tooth, and the real expectation. When I see a broken molar, I don't only ask how to restore it. I ask whether it's vital, restorable, where the margin ends, how it will be isolated, what happens to adjacent teeth, and what the prognosis is. Treatment comes from a map, not an impulse."
     },
     {
-      "heading": "Languages",
-      "body": "Full consultations are available in Spanish or English. I regularly treat international patients and understand the importance of clear, barrier-free communication."
+      "heading": "The symbol: never underestimate a small spot",
+      "body": "A small-appearing lesion can hide much greater destruction. It's not about opening everything out of fear; it's about interpreting the finding in the patient's context. This sentence shows exactly my value: not looking at the obvious, but understanding what could be happening underneath.",
+      "variantes": [
+        "Never underestimate a small spot.",
+        "What a photo doesn't tell you.",
+        "The cavity that looked small.",
+        "Why pain isn't always visible on the radiograph."
+      ]
+    },
+    {
+      "heading": "Aesthetics with biology: beauty without massacre",
+      "body": "Dental aesthetics should not stand above biology. Not every patient who asks for veneers needs veneers. Not every healthy tooth should be drilled to follow a trend. I'm not against aesthetics; I'm against aesthetics without judgment. A pretty smile doesn't justify any biological cost."
+    },
+    {
+      "heading": "The patient is not a bag of money",
+      "body": "I want to charge fairly for my work, but I don't want to look at the patient as an economic object. The patient is a person. The work has value. The fee sustains a serious practice. Humanity and fees don't contradict each other. What I reject is fraud, overtreatment and aggressive selling."
+    },
+    {
+      "heading": "The ideal patient",
+      "body": "People who want to understand. Complex cases or those with doubts. Patients seeking a second opinion. People who value explanation, judgment and trust. Patients who want to improve without feeling they're being sold a fantasy. Not necessarily wealthy patients. Patients who value the process and are willing to listen.",
+      "noIdeal": "Those only looking for the lowest price. Those who want a specific procedure without hearing alternatives. Those who demand unreal perfection without accepting biological limits. Those who want a quick answer to a case that needs planning. The brand shouldn't despise this patient, but it shouldn't build itself to attract them either."
+    },
+    {
+      "heading": "Internal manifesto",
+      "body": "I'm not going to compete to be the cheapest dentist. I'm not going to compete to look the most luxurious either. I'm going to build a practice based on something harder to copy: judgment. I'm not going to sell treatments I can't sustain with my professional conscience. I'm not going to promise no-prep veneers if the case doesn't allow it. I'm not going to touch healthy teeth to follow a trend. I'm not going to use fear as a sales strategy. I'm going to charge for my work because my work has value. But I'm not going to look at the patient as a bag of money. The patient is a person. Diagnosis is a responsibility. Explanation is part of treatment."
+    },
+    {
+      "heading": "The non-negotiable identity",
+      "items": [
+        "If a strategy brings many patients but forces me to sound like an empty influencer, it doesn't work.",
+        "If a publication promises something that cannot clinically be sustained, it doesn't work.",
+        "If a campaign attracts patients who only look for price and don't value diagnosis, it's not the main path.",
+        "I don't hide my intensity. I translate it.",
+        "I don't hide my depth. I turn it into understandable messages.",
+        "I don't fake empty simplicity. I make the complex simple without making it shallow."
+      ]
+    },
+    {
+      "heading": "The close",
+      "body": "I don't want patients to choose me because I promise a perfect smile. I want them to choose me because they trust how I think. That is the center of the brand: think before touching."
     }
-  ]
+  ],
+  "cta": {
+    "primary": "Book Diagnostic Consultation",
+    "secondary": "Request a written second opinion"
+  },
+  "schedule_link": "/en/contact"
 }

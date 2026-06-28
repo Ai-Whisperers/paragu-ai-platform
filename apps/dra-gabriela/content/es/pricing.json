@@ -1,10 +1,14 @@
 {
+  "title": "Precios y Consulta de Diagnóstico",
+  "subtitle": "Precios publicados, transparentes, en guaraníes. Sin sorpresas.",
+  "fraseGuia": "Mi enfoque no es competir por precio. Compite por criterio.",
+  "disclaimer": "Una buena decisión clínica puede evitar muchos problemas futuros. Los precios publicados pueden variar según la complejidad del caso. El valor real está en salir con claridad: qué tengo, qué opciones hay, qué conviene hacer primero y qué puede esperar. Por eso la Consulta de Diagnóstico y Planificación es la puerta de entrada, no un descuento.",
   "precios": {
     "moneda": "Gs",
     "usd_aprox": "Gs 7,800 = USD 1",
     "descargo": "Precios referenciales. Costo final confirmado en consulta antes de cualquier procedimiento. No incluye laboratorio excepto donde se indica.",
     "cta_whatsapp": true,
-    "cta_whatsapp_text": "Pedir presupuesto por WhatsApp",
+    "cta_whatsapp_text": "Agendar Consulta de Diagnóstico",
     "consulta": [
       {
         "nombre": "Consulta estándar",

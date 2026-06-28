@@ -1,0 +1,62 @@
+{
+  "title": "Servicios",
+  "subtitle": "Cuatro áreas de práctica, una filosofía: pensar antes de tocar.",
+  "fraseGuia": "Antes de cualquier tratamiento, evaluamos tu caso, te explicamos opciones y te entregamos un plan escrito por etapas.",
+  "intro": "No vendemos procedimientos. Diagnosticamos primero y mostramos todas las opciones, con precio y plazo. La Consulta de Diagnóstico y Planificación es la puerta de entrada para entender tu caso antes de decidir.",
+  "puertaEntrada": {
+    "nombre": "Consulta de Diagnóstico y Planificación",
+    "descripcion": "Escucha del motivo de consulta, evaluación clínica, lectura de antecedentes y estudios, explicación de hallazgos, opciones por etapas, prioridades y próximos pasos.",
+    "noPromete": "No promete diagnóstico definitivo sin estudios, presupuesto cerrado por WhatsApp, solución estética perfecta, ni tratamiento inmediato sin planificación."
+  },
+  "services": [
+    {
+      "slug": "treatment-planning",
+      "nombre": "Diagnóstico y Planificación",
+      "descripcionCorta": "Pensar tu caso antes de actuar.",
+      "descripcion": "El servicio insignia. Antes de cualquier tratamiento, evaluamos clínicamente, leemos antecedentes y estudios, explicamos hallazgos y entregamos un plan escrito con prioridades. Por etapas, con tiempos, con costos.",
+      "paraQuien": "Cualquier persona que tenga que tomar una decisión importante sobre su boca.",
+      "incluye": ["Escucha del motivo de consulta", "Evaluación clínica", "Lectura de radiografías y antecedentes", "Explicación de hallazgos", "Opciones de tratamiento por etapas", "Prioridades y próximos pasos"],
+      "noIncluye": ["Diagnóstico definitivo sin estudios necesarios", "Presupuesto cerrado sin evaluación", "Tratamiento inmediato sin planificación"]
+    },
+    {
+      "slug": "second-opinion",
+      "nombre": "Segunda Opinión con Criterio Clínico",
+      "descripcionCorta": "Una foto no alcanza para diagnosticar.",
+      "descripcion": "Si otra persona te dijo que necesitás un tratamiento importante, revisamos tu caso de forma independiente, sin conflicto de interés. Opinión escrita con opciones y plan priorizado.",
+      "paraQuien": "Pacientes que recibieron un diagnóstico o presupuesto alto y quieren entender si es necesario.",
+      "incluye": ["Revisión del caso", "Evaluación clínica", "Opinión escrita", "Opciones de tratamiento"],
+      "noIncluye": ["Confirmar lo que dijo el otro doctor", "Hacer el tratamiento sin que vos decidas"]
+    },
+    {
+      "slug": "oral-rehabilitation",
+      "nombre": "Rehabilitación Oral Integral",
+      "descripcionCorta": "Rehabilitar no es poner coronas.",
+      "descripcion": "Devolver función, estabilidad, estética y confianza dentro de una boca que tiene historia. Integra diagnóstico, periodoncia, endodoncia, oclusión y estética cuando corresponde.",
+      "paraQuien": "Bocas con tratamientos previos, piezas ausentes, desgaste, dolor oclusal, o necesidad de restauración amplia.",
+      "incluye": ["Diagnóstico completo", "Planificación interdisciplinaria", "Coordinación con especialistas", "Rehabilitación por etapas"],
+      "noIncluye": ["Poner coronas sin diagnóstico previo", "Decidir sin escuchar al paciente"]
+    },
+    {
+      "slug": "cosmetic-dentistry",
+      "nombre": "Estética Dental Responsable",
+      "descripcionCorta": "Belleza sin masacre.",
+      "descripcion": "Carillas, restauraciones estéticas y diseño de sonrisa con criterio biológico. La estética no está por encima de la biología. Si un diente está sano, no se talla para seguir una moda.",
+      "paraQuien": "Pacientes que quieren mejorar su sonrisa respetando la salud de sus dientes.",
+      "incluye": ["Evaluación estética con criterio biológico", "Alternativas conservadoras", "Carillas con desgaste solo cuando están indicadas", "Diseño de sonrisa realista"],
+      "noIncluye": ["Carillas en dientes sanos por moda", "Sonrisa perfecta garantizada", "Tratamientos sin explicar"]
+    },
+    {
+      "slug": "general-dentistry",
+      "nombre": "Operatoria Dental Conservadora",
+      "descripcionCorta": "Nunca subestimes un puntito.",
+      "descripcion": "Restauraciones, endodoncia, profilaxis y operatoria con criterio. Una lesión pequeña puede esconder algo más grande. Antes de tocar, hay que interpretar.",
+      "paraQuien": "Pacientes que necesitan atención clínica con criterio conservador.",
+      "incluye": ["Diagnóstico con lectura clínica completa", "Restauraciones con materiales de primera", "Endodoncia conservadora", "Profilaxis con lectura completa"],
+      "noIncluye": ["Tratar sin diagnóstico", "Restaurar sin evaluar el contexto"]
+    }
+  ],
+  "cta": {
+    "primary": "Agendar Consulta de Diagnóstico",
+    "secondary": "Ver precios públicos"
+  }
+}

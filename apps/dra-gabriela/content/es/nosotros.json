@@ -1,51 +1,52 @@
 {
-  "title": "Sobre la Dra. Gabriella González Pane",
-  "subtitle": "Veinte años de odontología conservadora, planes escritos y segundas opiniones honestas — en español e inglés.",
+  "title": "Sobre la Dra. Gabriela González Pane",
+  "subtitle": "Veinte años de odontología basada en criterio clínico, planes escritos y segundas opiniones honestas — en español e inglés.",
+  "fraseGuia": "La odontología no empieza con una fresa. Empieza pensando.",
   "sections": [
     {
       "heading": "Trayectoria",
-      "body": "La Dra. Gabriella González Pane se graduó alrededor de 2005 en la Universidad Autónoma del Paraguay. Desde entonces su práctica se basa en una regla: evaluar antes de actuar. En más de dos décadas ha atendido miles de pacientes, con foco en operatoria dental, endodoncia, estética y revisiones de segunda opinión. La atención en inglés para pacientes extranjeros es parte de su trabajo habitual."
+      "body": "La Dra. Gabriela González Pane se graduó alrededor de 2005 en la Universidad Autónoma del Paraguay. Desde entonces su práctica se basa en una regla: pensar antes de tocar. En más de dos décadas ha atendido miles de pacientes, con foco en operatoria dental, rehabilitación oral, estética y revisiones de segunda opinión. La atención en inglés para pacientes extranjeros es parte de su trabajo habitual."
     },
     {
-      "heading": "Filosofía clínica",
+      "heading": "Los 5 pilares no negociables",
       "items": [
-        "Enfoque conservador: preservar la estructura sana del diente siempre que sea posible.",
-        "Sin sobretratamiento: te dice cuándo no hace falta trabajo.",
-        "Precios transparentes: lista pública y presupuesto escrito.",
-        "Derivación honesta: si hace falta un especialista, lo coordina.",
-        "Materiales premium: resina alemana y laboratorio de primera.",
-        "Planificación escrita: revisión detallada antes de cualquier paso irreversible."
+        "Pensar antes de tocar — diagnóstico, conversación y planificación antes de cualquier procedimiento.",
+        "Conservar antes que reemplazar — cada estructura dentaria conservada es preferible a cada estructura perdida.",
+        "Explicar antes de vender — el paciente debe entender. Educar sin infantilizar.",
+        "Ver personas antes que dientes — la boca pertenece a alguien con miedo, presupuesto e historia.",
+        "Derivar cuando corresponde — una profesional segura no necesita hacerlo todo."
       ]
     },
     {
       "heading": "Experiencia",
       "bullets": [
-        "~20 años en odontología general y conservadora.",
+        "~20 años en operatoria dental, estética dental y rehabilitación oral.",
+        "13+ años en Odontología 3 (Asunción, Mcal. Estigarribia 1414).",
         "~130 pacientes por mes en su práctica actual.",
-        "Casos complejos: restauraciones, endodoncia, estética.",
-        "Inglés fluido: base de pacientes internacionales.",
-        "42 restauraciones en mayo de 2026."
+        "42 restauraciones en mayo de 2026.",
+        "Inglés fluido: base de pacientes internacionales."
       ]
     },
     {
       "heading": "Credenciales",
       "bullets": [
         "DDS — Universidad Autónoma del Paraguay (~2005).",
-        "Inscripción MSPBS: pendiente (habilitación independiente).",
+        "MSPBS: habilitación propia en proceso (práctica independiente).",
         "RUC: pendiente.",
-        "Práctica actual: Odontología 3, Asunción."
+        "Práctica actual: 13+ años en Odontología 3; construyendo práctica independiente alineada al ADN Profesional."
       ]
     },
     {
       "heading": "Fuera del consultorio",
-      "body": "Vive en Luque y está construyendo un espacio orientado a pacientes que priorizan claridad sobre presión. Su objetivo es un consultorio tranquilo, transparente, donde familias locales y expats puedan obtener evaluación honesta, planes escritos y tratamiento confiable sin apuros ni sobretratamiento."
+      "body": "Vive en Luque. Le gustan los scrubs de colores. Hace años que usa IA para analizar sus casos y sus finanzas. Está construyendo un espacio donde la consulta particular con criterio clínico tenga lugar en Paraguay — para los pacientes que ya se cansaron de que les vendan procedimientos sin explicarles el porqué."
     }
   ],
+  "manifiestoCorto": "No quiero que me elijan porque prometo una sonrisa perfecta. Quiero que me elijan porque confían en cómo pienso.",
   "cta": {
-    "primary": "Pedir plan sin compromiso",
-    "secondary": "Solicitar segunda opinión",
+    "primary": "Agendar Consulta de Diagnóstico",
+    "secondary": "Solicitar segunda opinión escrita",
     "whatsapp": true
   },
-  "trust_badges": ["Materiales alemanes", "Bioseguridad", "Factura legal", "Planes escritos"],
+  "trust_badges": ["Criterio clínico", "Plan escrito", "Segunda opinión honesta", "Español · English"],
   "schedule_link": "/es/contacto"
 }

@@ -1,7 +1,8 @@
 {
   "id": "planificacion-tratamiento",
-  "title": "Planificación del tratamiento",
-  "description": "Un plan escrito primero: opciones, secuencia, plazos y precios de referencia para que decidas sin presión. Si surge algo inesperado durante el tratamiento, lo conversamos antes de seguir.",
+  "title": "Diagnóstico y planificación",
+  "fraseGuia": "El diagnóstico también es un tratamiento.",
+  "description": "Un plan escrito primero: opciones, secuencia, plazos y precios de referencia para que decidas sin presión. Si surge algo inesperado durante el tratamiento, lo conversamos antes de seguir. La Consulta de Diagnóstico y Planificación es la puerta de entrada.",
   "cta": "Pedir un plan sin compromiso",
   "highlights": [
     "Plan escrito, no promesas verbales",

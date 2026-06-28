@@ -1,0 +1,62 @@
+{
+  "title": "Services",
+  "subtitle": "Four areas of practice, one philosophy: think before touching.",
+  "fraseGuia": "Before any treatment, we evaluate your case, explain the options, and give you a written plan in stages.",
+  "intro": "We don't sell procedures. We diagnose first and show you all the options, with price and timeline. The Diagnostic & Planning Consultation is the entry point for understanding your case before deciding.",
+  "puertaEntrada": {
+    "nombre": "Diagnostic & Planning Consultation",
+    "descripcion": "Listening to your reason for consultation, clinical evaluation, reading records and studies, explanation of findings, options by stages, priorities, and next steps.",
+    "noPromete": "It does not promise a definitive diagnosis without necessary studies, a closed quote by WhatsApp, a perfect aesthetic solution, or immediate treatment without planning."
+  },
+  "services": [
+    {
+      "slug": "treatment-planning",
+      "nombre": "Diagnosis & Treatment Planning",
+      "descripcionCorta": "Think your case through before acting.",
+      "descripcion": "The flagship service. Before any treatment, we evaluate clinically, read records and studies, explain findings and deliver a written plan with priorities. In stages, with timelines, with costs.",
+      "paraQuien": "Anyone who has to make an important decision about their mouth.",
+      "incluye": ["Listening to your reason for consultation", "Clinical evaluation", "Reading radiographs and history", "Explanation of findings", "Treatment options by stages", "Priorities and next steps"],
+      "noIncluye": ["Definitive diagnosis without necessary studies", "Closed quote without evaluation", "Immediate treatment without planning"]
+    },
+    {
+      "slug": "second-opinion",
+      "nombre": "Second Opinion with Clinical Judgment",
+      "descripcionCorta": "A photo isn't enough to diagnose.",
+      "descripcion": "If someone else told you that you need an important treatment, we review your case independently, with no conflict of interest. Written opinion with options and prioritized plan.",
+      "paraQuien": "Patients who received a diagnosis or high quote and want to understand if it's necessary.",
+      "incluye": ["Case review", "Clinical evaluation", "Written opinion", "Treatment options"],
+      "noIncluye": ["Confirming what the other doctor said", "Doing the treatment without you deciding"]
+    },
+    {
+      "slug": "oral-rehabilitation",
+      "nombre": "Comprehensive Oral Rehabilitation",
+      "descripcionCorta": "Rehabilitation isn't placing crowns.",
+      "descripcion": "Restoring function, stability, aesthetics and confidence inside a mouth that has history. Integrates diagnosis, periodontics, endodontics, occlusion and aesthetics when appropriate.",
+      "paraQuien": "Mouths with prior treatments, missing teeth, wear, occlusal pain, or need for wide restoration.",
+      "incluye": ["Complete diagnosis", "Interdisciplinary planning", "Coordination with specialists", "Rehabilitation by stages"],
+      "noIncluye": ["Placing crowns without prior diagnosis", "Deciding without listening to the patient"]
+    },
+    {
+      "slug": "cosmetic-dentistry",
+      "nombre": "Responsible Cosmetic Dentistry",
+      "descripcionCorta": "Beauty without massacre.",
+      "descripcion": "Veneers, aesthetic restorations and smile design with biological judgment. Aesthetics should not stand above biology. If a tooth is healthy, it doesn't get drilled to follow a trend.",
+      "paraQuien": "Patients who want to improve their smile while respecting the health of their teeth.",
+      "incluye": ["Aesthetic evaluation with biological judgment", "Conservative alternatives", "Veneers with prep only when indicated", "Realistic smile design"],
+      "noIncluye": ["Veneers on healthy teeth for trend", "Guaranteed perfect smile", "Treatments without explanation"]
+    },
+    {
+      "slug": "general-dentistry",
+      "nombre": "Conservative Restorative Dentistry",
+      "descripcionCorta": "Never underestimate a small spot.",
+      "descripcion": "Restorations, endodontics, prophylaxis and restorative work with judgment. A small lesion can hide something larger. Before touching, you must interpret.",
+      "paraQuien": "Patients who need clinical care with conservative judgment.",
+      "incluye": ["Diagnosis with complete clinical reading", "Restorations with first-line materials", "Conservative endodontics", "Prophylaxis with complete reading"],
+      "noIncluye": ["Treating without diagnosis", "Restoring without evaluating context"]
+    }
+  ],
+  "cta": {
+    "primary": "Book Diagnostic Consultation",
+    "secondary": "View public pricing"
+  }
+}

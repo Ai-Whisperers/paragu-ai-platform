@@ -1,0 +1,61 @@
+{
+  "title": "Sobre la Dra. Gabriela González Pane",
+  "subtitle": "Veinte años de odontología conservadora, planes escritos y segundas opiniones honestas — en español e inglés.",
+  "fraseGuia": "La odontología no empieza con una fresa. Empieza pensando.",
+  "sections": [
+    {
+      "heading": "Quién es",
+      "body": "Soy la Dra. Gabriela González Pane. Odontóloga especialista en Rehabilitación Oral, Estética y Operatoria Dental. Hace más de veinte años que ejerzo la odontología, y más de trece atendí pacientes en Odontología 3 en Asunción, donde aprendí a ver miles de bocas y a reconocer patrones que solo se ven con tiempo. Hoy estoy construyendo una práctica independiente donde pueda ejercer como pienso: pensar antes de tocar, conservar antes que reemplazar, explicar antes de vender."
+    },
+    {
+      "heading": "Frase guía",
+      "body": "La odontología no empieza con una fresa. Empieza pensando. Esa frase resume todo: cada tratamiento empieza en la observación, en la historia clínica, en el diagnóstico, en la lectura de los tejidos, en la comprensión del paciente y en el análisis de las consecuencias futuras."
+    },
+    {
+      "heading": "Los 5 pilares no negociables",
+      "items": [
+        "Pensar antes de tocar — diagnóstico, conversación y planificación antes de cualquier procedimiento.",
+        "Conservar antes que reemplazar — cada estructura dentaria conservada es preferible a cada estructura perdida.",
+        "Explicar antes de vender — el paciente debe entender. Educar sin infantilizar.",
+        "Ver personas antes que dientes — la boca pertenece a alguien con miedo, presupuesto e historia.",
+        "Derivar cuando corresponde — una profesional segura no necesita hacerlo todo."
+      ]
+    },
+    {
+      "heading": "Cómo pienso un caso",
+      "body": "Cuando un paciente me dice \"quiero cambiar esta corona\", no miro solo la corona. Miro el sustrato, la pieza vecina, la edad, la función, la oclusión, la historia endodóntica, el riesgo de tocar un diente vital y la expectativa real. Si veo un molar roto, no pregunto solo cómo restaurarlo. Pregunto si es vital, si es restaurable, dónde termina el margen, cómo se aislará, qué pasa con las piezas adyacentes y qué pronóstico tiene. El tratamiento nace de un mapa, no de un impulso."
+    },
+    {
+      "heading": "El símbolo: nunca subestimes un puntito",
+      "body": "Una lesión aparentemente pequeña puede esconder una destrucción mucho mayor. No se trata de abrir todo por miedo, sino de interpretar el hallazgo dentro del contexto del paciente. Esta frase muestra mi valor: no mirar lo evidente, sino entender lo que podría estar ocurriendo debajo."
+    },
+    {
+      "heading": "Lo que la marca nunca dice",
+      "body": "No vendo carillas sin tallar, sonrisa perfecta garantizada, precio imperdible, tratamiento sin riesgo ni \"cambia tu vida en una cita\". Lo que sí ofrezco: \"antes de decidir, entendamos tu caso\". \"No siempre el tratamiento más visible es el más indicado\". \"Una buena decisión clínica puede evitar muchos problemas futuros\"."
+    },
+    {
+      "heading": "Fuera del sillón",
+      "body": "Vivo en Luque. Me gustan los scrubs de colores. Hace años que uso IA para analizar mis casos y mis finanzas. Estoy construyendo un espacio donde la consulta particular con criterio clínico tenga lugar en Paraguay — para los pacientes que ya se cansaron de que les vendan procedimientos sin explicarles el porqué."
+    },
+    {
+      "heading": "Formación y ejercicio",
+      "bullets": [
+        "Odontóloga — Universidad Autónoma del Paraguay (~2005).",
+        "~20 años en operatoria dental, estética dental y rehabilitación oral.",
+        "Más de 13 años en Odontología 3 (Asunción, Mcal. Estigarribia 1414).",
+        "Volumen: ~130 pacientes/mes en O3, 42 restauraciones solo en mayo 2026.",
+        "Inglés operativo para atención de pacientes extranjeros.",
+        "MSPBS: habilitación propia en proceso (práctica independiente).",
+        "RUC: pendiente."
+      ]
+    }
+  ],
+  "manifiestoCorto": "No quiero que me elijan porque prometo una sonrisa perfecta. Quiero que me elijan porque confían en cómo pienso. Ese es el centro de la marca: pensar antes de tocar.",
+  "cta": {
+    "primary": "Agendar Consulta de Diagnóstico",
+    "secondary": "Solicitar segunda opinión escrita",
+    "whatsapp": true
+  },
+  "trust_badges": ["Criterio clínico", "Plan escrito", "Segunda opinión honesta", "Español · English"],
+  "schedule_link": "/es/contacto"
+}

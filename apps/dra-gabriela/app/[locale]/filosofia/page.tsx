@@ -65,8 +65,29 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             <h2 className="text-3xl md:text-4xl">{principles.heading}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {(principles.items || []).map((item: string, i: number) => {
-              const [title, ...rest] = item.split(":")
+            {(principles.items || []).map((item: string | { titulo?: string; title?: string; descripcion?: string; description?: string; texto?: string }, i: number) => {
+              // Support both legacy string format ("Title: description") and the structured
+              // { titulo, descripcion } shape used by the ADN-aligned content.
+              if (typeof item === "string") {
+                const [title, ...rest] = item.split(":")
+                return (
+                  <div key={i} className="card p-6 flex items-start gap-4 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                    <div className="step-number w-12 h-12 text-lg flex-shrink-0">{i + 1}</div>
+                    <div>
+                      <h3 className="font-medium text-lg mb-1.5" style={{ fontFamily: "var(--font-heading)" }}>
+                        {title}
+                      </h3>
+                      {rest.length > 0 && (
+                        <p className="text-sm text-fg-muted leading-relaxed">
+                          {rest.join(":").trim()}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                )
+              }
+              const title = item.titulo || item.title || ""
+              const desc = item.descripcion || item.description || item.texto || ""
               return (
                 <div key={i} className="card p-6 flex items-start gap-4 hover:shadow-lg hover:-translate-y-0.5 transition-all">
                   <div className="step-number w-12 h-12 text-lg flex-shrink-0">{i + 1}</div>
@@ -74,9 +95,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                     <h3 className="font-medium text-lg mb-1.5" style={{ fontFamily: "var(--font-heading)" }}>
                       {title}
                     </h3>
-                    {rest.length > 0 && (
+                    {desc && (
                       <p className="text-sm text-fg-muted leading-relaxed">
-                        {rest.join(":").trim()}
+                        {desc}
                       </p>
                     )}
                   </div>

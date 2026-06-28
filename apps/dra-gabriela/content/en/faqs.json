@@ -1,120 +1,87 @@
 {
   "title": "Frequently asked questions",
+  "fraseGuia": "Before deciding, let's understand your case.",
   "groups": [
     {
-      "name": "General",
+      "name": "About the consultation",
       "items": [
         {
-          "q": "How much is a consultation?",
-          "a": "The initial visit costs Gs 300,000–450,000 depending on complexity. It includes review, diagnosis, and a clear quote. No surprises."
+          "q": "How much does the consultation cost?",
+          "a": "The standard consultation costs between Gs 300,000 and 450,000 depending on complexity. It includes review, diagnosis, and a clear plan. No surprises."
         },
         {
-          "q": "Do you accept insurance?",
-          "a": "We operate as a private practice and do not have direct contracts with insurers. We issue legal invoices with RUC so you can claim reimbursement on your own. Most plans allow this."
+          "q": "Can you quote by photo?",
+          "a": "I can orient you, but a photo isn't enough to indicate a treatment with seriousness. I need to evaluate clinically, the radiograph when needed, the gums, the bite, the history, and the expectations. To tell you what's best, I need to see you."
         },
         {
-          "q": "Do you speak English?",
-          "a": "Yes. I regularly treat international patients and the full visit can be in English if you prefer."
+          "q": "Why do I need a prior consultation?",
+          "a": "Because the right treatment depends on the diagnosis. I prefer that you understand your case before making a decision. The Diagnostic & Planning Consultation is where we think your case through together."
         },
         {
-          "q": "How long is an appointment?",
-          "a": "First visit: 45–60 minutes. Checkups: 20–30 minutes. For specific procedures I tell you exactly how long before we start."
-        },
-        {
-          "q": "What should I bring to my first appointment?",
-          "a": "Bring previous X-rays or studies if you have them, your insurance or coverage card (for reimbursement even if we’re not direct), a list of current medications, and any questions in writing so you don’t forget."
-        },
-        {
-          "q": "Are you taking new patients?",
-          "a": "Yes. Write me on WhatsApp and we’ll coordinate availability."
-        },
-        {
-          "q": "What if I don’t need treatment?",
-          "a": "If you don’t need treatment, I’ll tell you. I don’t invent problems just to charge for something unnecessary. My job is honest evaluation."
-        },
-        {
-          "q": "Is there parking nearby?",
-          "a": "Parking details are confirmed at booking. I provide practical arrival instructions so you know where to leave the car before the visit."
-        }
-      ]
-    },
-    {
-      "name": "Treatments",
-      "items": [
-        {
-          "q": "Do you do root canals?",
-          "a": "Yes, I do endodontics. If a case is very complex, I’ll tell you and refer you to a trusted endodontist. I don’t do work beyond what I can do well."
-        },
-        {
-          "q": "Do you do extractions?",
-          "a": "I do simple extractions. For wisdom teeth or surgical cases, I work with trusted maxillofacial surgeons and coordinate the full process."
-        },
-        {
-          "q": "Do you do crowns or bridges?",
-          "a": "Yes. I use zirconia for crowns because it’s the most resistant and biocompatible option. I explain the choices and you decide with full information."
-        },
-        {
-          "q": "Do you treat children?",
-          "a": "From around 10–12 years onward. For younger children or cases requiring specific behavior management, I refer to a trusted pediatric dentist. I won’t start if the child isn’t comfortable."
-        },
-        {
-          "q": "Do you do aesthetic dentistry?",
-          "a": "Yes — direct composite veneers, porcelain veneers, and in-office whitening. My philosophy is to preserve as much natural structure as possible. I don’t repeat work just for appearance."
-        },
-        {
-          "q": "What dental emergencies do you handle?",
-          "a": "For strong pain, bleeding, or a broken tooth, WhatsApp me immediately. For severe cases — fever with swelling or trauma — I’ll tell you if the hospital emergency room is safer."
-        }
-      ]
-    },
-    {
-      "name": "Second opinion",
-      "items": [
-        {
-          "q": "Do you do second opinions?",
-          "a": "Yes, this is one of my main services. Bring your studies and I’ll give you an honest, written opinion on what you really need before any irreversible step."
-        },
-        {
-          "q": "What does a written second opinion include?",
-          "a": "Case review, clinical exam, written report with findings and options. It doesn’t repeat the original treatment automatically — it tells you whether it makes sense."
+          "q": "How long is a consultation?",
+          "a": "First visit: 45–60 minutes. Follow-ups: 20–30 minutes. For specific procedures I tell you the exact time before we start."
         },
         {
           "q": "What should I bring?",
-          "a": "X-rays, previous estimates, and any existing clinical records. The more information, the more precise the opinion."
+          "a": "Previous radiographs or studies, insurance card or coverage (for reimbursement), medication list, and questions written down so you don't forget."
+        },
+        {
+          "q": "Are you accepting new patients?",
+          "a": "Yes. Write to me on WhatsApp and we coordinate."
+        },
+        {
+          "q": "What if I don't need treatment?",
+          "a": "If you don't need treatment, I'll tell you. I don't invent problems to charge more. My job is to evaluate honestly."
+        },
+        {
+          "q": "Is there parking?",
+          "a": "I'll send you access directions and where to park when we confirm the appointment."
         }
       ]
     },
     {
-      "name": "Pricing and payment",
+      "name": "About treatments",
       "items": [
         {
-          "q": "How can I pay?",
-          "a": "Cash, bank transfer, Pagopar, or Bancard POS. For larger treatments, payment plans are available. Every case is documented with a legal invoice."
+          "q": "Do you do veneers?",
+          "a": "Yes, when indicated. But first I evaluate whether they're really needed or whether a more conservative alternative exists. Aesthetics should not stand above biology."
         },
         {
-          "q": "Are the published prices final?",
-          "a": "They’re reference prices. The final cost is confirmed during the visit before any procedure begins."
+          "q": "Can treatment be done in stages?",
+          "a": "Yes. In many cases it's the most realistic and responsible approach. The important thing is to order priorities: what to do first, what can wait, and what isn't worth doing."
         },
         {
-          "q": "Is financing available?",
-          "a": "For cases over Gs 1M, installments are available through Pagopar or Bancard. The patient absorbs the financing fee."
+          "q": "Do you see complex cases?",
+          "a": "Yes, especially. Cases where many variables must be integrated are the ones I enjoy most. Rehabilitation isn't placing crowns: it's restoring function, stability, aesthetics and confidence inside a mouth that has history."
+        },
+        {
+          "q": "Do you do root canals?",
+          "a": "Yes. If the case is very complex, I refer to a trusted endodontist. I don't do what I can't do well."
+        },
+        {
+          "q": "Do you do extractions?",
+          "a": "Simple extractions, yes. For wisdom teeth or surgical cases I work with trusted maxillofacial surgeons and coordinate everything."
+        },
+        {
+          "q": "Do you do crowns or bridges?",
+          "a": "Yes. I use zirconia because it's the most resistant and biocompatible. I explain the options and you decide with full information."
+        },
+        {
+          "q": "Do you see children?",
+          "a": "From age 10–12. For younger children or specific behavioral needs I refer to a trusted pediatric dentist. I don't start if the child isn't comfortable."
         }
       ]
     },
     {
-      "name": "Appointments",
+      "name": "Insurance and payment",
       "items": [
         {
-          "q": "How do I cancel or reschedule?",
-          "a": "Message me on WhatsApp at least 24 hours in advance. No penalty — just notice so I can offer the slot to someone else."
+          "q": "Do you take insurance?",
+          "a": "My current focus is private care, with time for diagnosis, explanation, and planning. We issue detailed receipts with procedure codes for reimbursement with international insurers (BUPA, Cigna, GeoBlue) and local corporate plans."
         },
         {
-          "q": "Is there a waiting list?",
-          "a": "Not currently. I usually have availability within one to two weeks."
-        },
-        {
-          "q": "What happens if I’m late?",
-          "a": "Call or WhatsApp as soon as you can. If I can reschedule within the same day, I will; otherwise we’ll find the next available slot."
+          "q": "What payment methods do you accept?",
+          "a": "Cash, bank transfer, and cards. For high-value cases we offer financing plans through Pagopar or Bancard. We discuss this at the consultation."
         }
       ]
     }

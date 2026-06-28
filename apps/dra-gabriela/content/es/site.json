@@ -1,19 +1,20 @@
 {
   "site": {
-    "name": "Dra. Gabriella González Pane",
+    "name": "Dra. Gabriela González Pane — Odontología basada en criterio clínico",
     "slug": "dra-gabriela",
     "url": "https://dra-gabriela.com.py",
     "locale": "es-PY",
-    "metaDescription": "Odontología conservadora y planificación primero en Paraguay. Precios públicos, segunda opinión escrita, consultas en inglés y español."
+    "tagline": "La odontología no empieza con una fresa. Empieza pensando.",
+    "metaDescription": "Odontología conservadora con criterio clínico en Paraguay. Diagnóstico antes de tratamiento, segunda opinión escrita, precios públicos, consulta en español e inglés. La odontología no empieza con una fresa: empieza pensando."
   },
   "business": {
     "phone": "PENDIENTE | TBD",
     "whatsapp": "PENDIENTE",
-    "whatsappMessage": "Hola Dra. GP, quiero coordinar una consulta para plan sin compromiso.",
+    "whatsappMessage": "Hola Dra. Gabriela, vi su sitio web y me gustaría entender mi caso antes de decidir un tratamiento. ¿Tiene disponibilidad para una Consulta de Diagnóstico y Planificación?",
     "email": "hola@dra-gp.com.py",
     "instagram": "@dragabriellagp",
     "instagramUrl": "https://instagram.com/dragabriellagp",
-    "address": "TBD — Preferencia Luque (pendiente alquiler). Actualmente en Odontología 3, Asunción.",
+    "address": "TBD — Preferencia Luque (pendiente alquiler). Práctica independiente alineada al ADN Profesional.",
     "coordinates": {
       "lat": -25.2836,
       "lng": -57.4831
@@ -21,7 +22,21 @@
     "currency": "Gs",
     "ruc": "PENDIENTE",
     "mspbs": "PENDIENTE",
-    "name": "Dra. Gabriella González Pane"
+    "name": "Dra. Gabriela González Pane"
+  },
+  "adn": {
+    "fraseGuia": "La odontología no empieza con una fresa. Empieza pensando.",
+    "categoria": "Odontología basada en criterio clínico",
+    "simbolo": "Nunca subestimes un puntito",
+    "pilares": [
+      {"id": "pensar", "titulo": "Pensar antes de tocar", "descripcion": "Diagnóstico, conversación y planificación antes de cualquier procedimiento."},
+      {"id": "conservar", "titulo": "Conservar antes que reemplazar", "descripcion": "Respeto por la estructura dentaria. Cada intervención tiene un costo biológico que hay que explicar."},
+      {"id": "explicar", "titulo": "Explicar antes de vender", "descripcion": "El paciente debe entender su caso. Educar sin infantilizar, hablar claro sin vaciar."},
+      {"id": "personas", "titulo": "Ver personas antes que dientes", "descripcion": "La boca pertenece a alguien. Humanidad profunda sin sentimentalismo."},
+      {"id": "derivar", "titulo": "Derivar cuando corresponde", "descripcion": "Una profesional segura no necesita hacerlo todo. Rehabilitar implica integrar especialidades."}
+    ],
+    "puertaEntrada": "Consulta de Diagnóstico y Planificación",
+    "manifiestoPublico": "Soy la Dra. Gabriela González Pane. Durante años trabajé viendo miles de pacientes y aprendí algo que hoy guía mi forma de ejercer: la odontología no empieza con una fresa, empieza pensando. Antes de hablar de coronas, carillas o restauraciones, quiero entender qué ocurre en tu boca, qué opciones existen y qué decisión tiene más sentido para vos. Mi trabajo no es venderte un tratamiento. Es ayudarte a comprender tu caso para que puedas decidir con confianza."
   },
   "features": {
     "bookingForm": true,
@@ -48,88 +63,24 @@
   },
   "navigation": {
     "main": [
-      {
-        "label": "Inicio",
-        "href": "/"
-      },
-      {
-        "label": "Filosofía",
-        "href": "/filosofia"
-      },
-      {
-        "label": "Servicios",
-        "href": "/servicios"
-      },
-      {
-        "label": "Precios",
-        "href": "/precios"
-      },
-      {
-        "label": "Contacto",
-        "href": "/contacto"
-      }
+      {"label": "Inicio", "href": "/"},
+      {"label": "Filosofía", "href": "/filosofia"},
+      {"label": "Servicios", "href": "/servicios"},
+      {"label": "Precios", "href": "/precios"},
+      {"label": "Contacto", "href": "/contacto"}
     ],
     "more": [
-      {
-        "label": "Segunda Opinión",
-        "href": "/segunda-opinion"
-      },
-      {
-        "label": "Nosotros",
-        "href": "/nosotros"
-      },
-      {
-        "label": "Expat",
-        "href": "/expat"
-      },
-      {
-        "label": "Contacto",
-        "href": "/contacto",
-        "feature": "map"
-      },
-      {
-        "label": "Blog",
-        "href": "/blog",
-        "feature": "blog"
-      },
-      {
-        "label": "FAQ",
-        "href": "/faq"
-      }
+      {"label": "Segunda Opinión", "href": "/segunda-opinion"},
+      {"label": "Nosotros", "href": "/nosotros"},
+      {"label": "Expats", "href": "/expat"},
+      {"label": "Contacto", "href": "/contacto", "feature": "map"},
+      {"label": "Blog", "href": "/blog", "feature": "blog"},
+      {"label": "Preguntas", "href": "/preguntas"}
     ]
   },
-  "openingHours": {
-    "mon": "09:00-18:00",
-    "tue": "09:00-18:00",
-    "wed": "09:00-18:00",
-    "thu": "09:00-18:00",
-    "fri": "09:00-18:00",
-    "sat": "08:00-12:00",
-    "sun": "Cerrado"
-  },
-  "trust": {
-    "license": "Inscripción MSPBS: pendiente",
-    "biosecurity": true,
-    "paymentMethods": [
-      "Efectivo",
-      "Transferencia",
-      "Pagopar",
-      "Bancard POS"
-    ],
-    "amenities": [
-      "WiFi",
-      "Estacionamiento (guía TBD)",
-      "Aire acondicionado"
-    ]
-  },
-  "ctaDefaults": {
-    "primary": "Pedir plan sin compromiso",
-    "secondary": "Solicitar segunda opinión",
-    "whatsapp": true
-  },
-  "schema": {
-    "localBusiness": true,
-    "faqPage": true,
-    "reviewSchema": true
+  "disclaimers": {
+    "consultaNoPromete": "La Consulta de Diagnóstico y Planificación NO promete: diagnóstico definitivo sin los estudios necesarios, presupuesto cerrado por WhatsApp, solución estética perfecta, ni tratamiento inmediato sin planificación.",
+    "fotoNoAlcanza": "Una foto no alcanza para diagnosticar con seriedad. Puedo orientarte, pero para decirte qué conviene hacer necesito evaluarte clínicamente.",
+    "noCompitePorPrecio": "Mi enfoque no es competir por precio. Compite por criterio. Si buscás precio bajo, hay otras opciones; si buscás entender tu caso, estás en el lugar correcto."
   }
 }

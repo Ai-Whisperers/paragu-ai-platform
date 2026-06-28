@@ -1,20 +1,21 @@
 {
   "title": "Preguntas frecuentes",
+  "fraseGuia": "Antes de decidir, entendamos tu caso.",
   "groups": [
     {
-      "name": "General",
+      "name": "Sobre la consulta",
       "items": [
         {
           "q": "¿Cuánto cuesta la consulta?",
-          "a": "La consulta inicial cuesta entre Gs 300,000 y 450,000 según la complejidad. Incluye revisión, diagnóstico y un presupuesto claro. No hay sorpresas."
+          "a": "La Consulta estándar cuesta entre Gs 300,000 y 450,000 según la complejidad. Incluye revisión, diagnóstico y un plan claro. No hay sorpresas."
         },
         {
-          "q": "¿Trabajan con seguros?",
-          "a": "Somos consultorio privado, no tenemos contrato directo con aseguradoras. Emitimos factura legal con RUC para que reclames el reembolso por tu cuenta. La mayoría de los seguros lo permite."
+          "q": "¿Me podés pasar presupuesto por foto?",
+          "a": "Puedo orientarte, pero una foto no alcanza para indicar un tratamiento con seriedad. Necesito evaluar clínica, radiografía cuando corresponda, encía, mordida, historia y expectativas. Para decirte qué conviene hacer necesito verte."
         },
         {
-          "q": "¿Hablan inglés?",
-          "a": "Sí. Atiendo pacientes extranjeros de forma regular y la consulta completa puede ser en inglés si lo preferís."
+          "q": "¿Por qué necesito una consulta previa?",
+          "a": "Porque el tratamiento correcto depende del diagnóstico. Prefiero que entiendas tu caso antes de tomar una decisión. La Consulta de Diagnóstico y Planificación es donde pensamos tu caso juntos."
         },
         {
           "q": "¿Cuánto dura una consulta?",
@@ -39,8 +40,20 @@
       ]
     },
     {
-      "name": "Tratamientos",
+      "name": "Sobre tratamientos",
       "items": [
+        {
+          "q": "¿Hacés carillas?",
+          "a": "Sí, cuando están indicadas. Pero primero evalúo si realmente son necesarias o si existe una alternativa más conservadora. La estética no debería estar por encima de la biología."
+        },
+        {
+          "q": "¿Puedo hacer el tratamiento por etapas?",
+          "a": "Sí. En muchos casos es lo más realista y responsable. Lo importante es ordenar prioridades: qué hacer primero, qué puede esperar y qué no conviene hacer."
+        },
+        {
+          "q": "¿Atendés casos complejos?",
+          "a": "Sí, especialmente. Los casos donde hay que integrar variables son los que más disfruto. Rehabilitar no es poner coronas: es devolver función, estabilidad, estética y confianza dentro de una boca que tiene historia."
+        },
         {
           "q": "¿Hacen endodoncia?",
           "a": "Sí. Si el caso es muy complejo, lo derivo a un endodontista de confianza. No hago lo que no puedo hacer bien."
@@ -56,65 +69,19 @@
         {
           "q": "¿Atienden niños?",
           "a": "Desde 10–12 años. Para niños más pequeños o con necesidades de conducta específicas derivo a un odontopediatra de confianza. No empiezo si el niño no está cómodo."
-        },
-        {
-          "q": "¿Hacen estética dental?",
-          "a": "Carillas directas, carillas de porcelana y blanqueamiento. Mi filosofía es conservar lo máximo posible. No hago trabajo innecesario solo por estética."
-        },
-        {
-          "q": "¿Atienden urgencias?",
-          "a": "Por dolor fuerte, sangrado o algo roto, escribime por WhatsApp inmediatamente. Para casos graves —inflamación con fiebre o trauma— te indico si conviene ir a una guardia."
         }
       ]
     },
     {
-      "name": "Segunda opinión",
+      "name": "Sobre seguros y pagos",
       "items": [
         {
-          "q": "¿Hacen segunda opinión?",
-          "a": "Sí, es uno de mis servicios principales. Traé los estudios y te doy una opinión honesta por escrito antes de cualquier paso irreversible."
+          "q": "¿Trabajás con seguros?",
+          "a": "Mi enfoque actual es la atención particular, con tiempo para diagnóstico, explicación y planificación. Entregamos recibos detallados con códigos de procedimientos para reembolso con aseguradoras internacionales (BUPA, Cigna, GeoBlue) y planes corporativos locales."
         },
         {
-          "q": "¿Qué incluye la segunda opinión escrita?",
-          "a": "Revisión del caso, examen clínico, informe escrito con hallazgos y opciones. No repite automáticamente el tratamiento original — te dice si tiene sentido."
-        },
-        {
-          "q": "¿Qué debo traer?",
-          "a": "Radiografías, presupuestos previos y registros clínicos. Cuanta más información, más precisa es la opinión."
-        }
-      ]
-    },
-    {
-      "name": "Precios y pago",
-      "items": [
-        {
-          "q": "¿Cómo puedo pagar?",
-          "a": "Efectivo, transferencia, Pagopar o Bancard POS. En casos grandes se pueden coordinar cuotas. Todo con factura legal."
-        },
-        {
-          "q": "¿Los precios publicados son finales?",
-          "a": "Son precios de referencia. El costo final se confirma en la consulta antes de empezar cualquier procedimiento."
-        },
-        {
-          "q": "¿Hay financiación?",
-          "a": "Para casos mayores a Gs 1M hay cuotas por Pagopar o Bancard. El costo de la financiación lo absorbe el paciente."
-        }
-      ]
-    },
-    {
-      "name": "Turnos",
-      "items": [
-        {
-          "q": "¿Cómo cancelo o reprogramo?",
-          "a": "Avísame por WhatsApp con al menos 24 horas de anticipación. No hay multa, solo solicito aviso para darle el turno a otra persona."
-        },
-        {
-          "q": "¿Hay lista de espera?",
-          "a": "No. Normalmente tengo disponibilidad dentro de la primera o segunda semana."
-        },
-        {
-          "q": "¿Qué pasa si llego tarde?",
-          "a": "Llamame o escribime por WhatsApp en cuanto puedas. Si puedo reubicarte el mismo día, lo hago; si no, coordinamos el próximo turno disponible."
+          "q": "¿Qué métodos de pago aceptan?",
+          "a": "Efectivo, transferencia bancaria, y tarjetas. Para casos de alto valor, ofrecemos planes de financiamiento a través de Pagopar o Bancard. Lo conversamos en la consulta."
         }
       ]
     }
