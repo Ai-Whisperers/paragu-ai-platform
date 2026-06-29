@@ -1,33 +1,38 @@
 {
   "site": {
-    "name": "Dra. Gabriela González Pane — Odontología basada en criterio clínico",
+    "name": "Ometz Dental — Dra. Gabriella González Pane",
     "slug": "dra-gabriela",
-    "url": "https://dra-gabriela.com.py",
+    "url": "https://ometzdental.com.py",
     "locale": "es-PY",
-    "tagline": "La odontología no empieza con una fresa. Empieza pensando.",
-    "metaDescription": "Odontología conservadora con criterio clínico en Paraguay. Diagnóstico antes de tratamiento, segunda opinión escrita, precios públicos, consulta en español e inglés. La odontología no empieza con una fresa: empieza pensando."
+    "tagline": "Te escucho.",
+    "metaDescription": "Ometz Dental — Rehabilitación oral, segunda opinión escrita y odontología con criterio clínico en Barrio Mburucuyá, Asunción. Te escucho antes de tocar. 20+ años de experiencia. Atención en español e inglés, con cita previa. Dra. Gabriella González Pane, RUC 1375421-1, Reg. MSPBS 3618."
   },
   "business": {
-    "phone": "PENDIENTE | TBD",
-    "whatsapp": "PENDIENTE",
+    "phone": "PENDIENTE | TBD (chip WhatsApp Business se compra esta semana)",
+    "whatsapp": "PENDIENTE (chip WhatsApp Business dedicado, esta semana)",
     "whatsappMessage": "Hola Dra. Gabriela, vi su sitio web y me gustaría entender mi caso antes de decidir un tratamiento. ¿Tiene disponibilidad para una Consulta de Diagnóstico y Planificación?",
-    "email": "hola@dra-gp.com.py",
-    "instagram": "@dragabriellagp",
-    "instagramUrl": "https://instagram.com/dragabriellagp",
-    "address": "TBD — Preferencia Luque (pendiente alquiler). Práctica independiente alineada al ADN Profesional.",
+    "email": "doctora.gabi@ometsdental.com.py",
+    "instagram": "",
+    "instagramUrl": "",
+    "address": "Barrio Mburucuyá, Asunción, Paraguay (calle exacta: pendiente confirmar)",
     "coordinates": {
-      "lat": -25.2836,
-      "lng": -57.4831
+      "lat": -25.2965,
+      "lng": -57.6055
     },
     "currency": "Gs",
-    "ruc": "PENDIENTE",
-    "mspbs": "PENDIENTE",
-    "name": "Dra. Gabriela González Pane"
+    "ruc": "1375421-1",
+    "mspbs": "3618",
+    "name": "Dra. Gabriella González Pane",
+    "horario": "Lunes a viernes, 14:30 - 19:00, con cita previa",
+    "dias": "Lun a Vie (agendado, no estar colgada en el consultorio)",
+    "apertura": "Mitad de julio 2026 (soft launch)",
+    "lenguajes": "Español, Inglés"
   },
   "adn": {
-    "fraseGuia": "La odontología no empieza con una fresa. Empieza pensando.",
-    "categoria": "Odontología basada en criterio clínico",
-    "simbolo": "Nunca subestimes un puntito",
+    "fraseGuia": "Te escucho.",
+    "categoria": "Odontología con criterio clínico",
+    "simbolo": "Ometz — אומץ (coraje en hebreo)",
+    "marcaComercial": "Ometz Dental",
     "pilares": [
       {"id": "pensar", "titulo": "Pensar antes de tocar", "descripcion": "Diagnóstico, conversación y planificación antes de cualquier procedimiento."},
       {"id": "conservar", "titulo": "Conservar antes que reemplazar", "descripcion": "Respeto por la estructura dentaria. Cada intervención tiene un costo biológico que hay que explicar."},

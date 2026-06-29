@@ -1,61 +1,74 @@
 {
-  "title": "About Dr. Gabriella González Pane",
-  "subtitle": "Twenty years of conservative dentistry, written plans, and honest second opinions — in Spanish and English.",
-  "fraseGuia": "Dentistry doesn't start with a drill. It starts by thinking.",
+  "title": "About Dr. Gabriella González Pane — Ometz Dental",
+  "subtitle": "Twenty years of oral rehabilitation, operative and aesthetic dentistry. Written plans, honest second opinions, and clinical judgment. In Spanish and English, in Barrio Mburucuyá, Asunción.",
+  "fraseGuia": "I listen.",
   "sections": [
     {
       "heading": "Who she is",
-      "body": "I'm Dr. Gabriella González Pane. Dentist specializing in Oral Rehabilitation, Aesthetics and Restorative Dentistry. I've practiced for over twenty years, and spent thirteen of them seeing patients at Odontología 3 in Asunción, where I learned to read thousands of mouths and recognize patterns that only show up with time. Today I'm building an independent practice where I can work the way I think: think before touching, preserve before replacing, explain before selling."
+      "body": "I'm Dr. Gabriella González Pane. Dentist with three specialties: Oral Rehabilitation, Aesthetic Dentistry, and Operative Dentistry. I've practiced for over twenty years, and spent thirteen of them seeing patients in Asunción at high volume, where I learned to read thousands of mouths and recognize patterns that only show up with time. Today I'm opening Ometz Dental in Barrio Mburucuyá, Asunción, where I can work the way I think: think before touching, preserve before replacing, explain before selling. I listen before anything else."
     },
     {
-      "heading": "Guiding phrase",
-      "body": "Dentistry doesn't start with a drill. It starts by thinking. That sentence summarizes everything: every treatment begins with observation, clinical history, diagnosis, reading the tissues, understanding the patient and analyzing future consequences."
+      "heading": "Practice phrase",
+      "body": "I listen. That's the foundation. Before any treatment, before planning, before talking about crowns or restorations — I listen. Your clinical history matters more than your x-ray. The first consultation is to understand what you're going through, not to sell you a treatment."
+    },
+    {
+      "heading": "The 3 specialties",
+      "items": [
+        "Oral Rehabilitation — rebuilding mouths with history: accumulated treatment, failed procedures, complex cases. A plan, not patches.",
+        "Aesthetic Dentistry — bleaching, aesthetic restorations, with judgment (no veneers for 18-year-olds unless clinically indicated).",
+        "Operative Dentistry — caries restorations, composite resin, glass ionomer, ceromer. Material depends on the case."
+      ]
     },
     {
       "heading": "The 5 non-negotiable pillars",
       "items": [
-        "Think before touching — diagnosis, conversation and planning before any procedure.",
-        "Preserve before replacing — every preserved tooth structure is preferable to every lost one.",
-        "Explain before selling — the patient must understand. Educate without infantilizing.",
-        "See people before teeth — the mouth belongs to someone with fear, budget and history.",
-        "Refer when appropriate — a confident professional doesn't need to do everything."
+        "I listen — the first consultation is to understand your story, not to sell you something.",
+        "I think before I touch — diagnosis, conversation, planning before any intervention.",
+        "I preserve before I replace — if a tooth can be restored, it is restored. If a crown is well made, it stays.",
+        "I explain before I sell — you decide with information, not fear.",
+        "I refer when appropriate — endodontics, orthodontics, surgery, implants: I refer to trusted colleagues."
       ]
     },
     {
       "heading": "How she thinks about a case",
-      "body": "When a patient says \"I want to replace this crown\", I don't look only at the crown. I look at the substrate, the neighboring tooth, the age, the function, the occlusion, the endodontic history, the risk of touching a vital tooth, and the real expectation. When I see a broken molar, I don't ask only how to restore it. I ask whether it's vital, whether it's restorable, where the margin ends, how it will be isolated, what happens to adjacent teeth, and what the prognosis is. Treatment comes from a map, not an impulse."
+      "body": "When a patient says 'I want to replace this crown', I don't look only at the crown. I look at the substrate, the neighboring tooth, the age, the function, the occlusion, the endodontic history, the risk of touching a vital tooth, and the real expectation. When I see a broken molar, I don't ask only how to restore it. I ask whether it's vital, whether it's restorable, where the margin ends, how it will be isolated, what happens to adjacent teeth, and what the prognosis is. Treatment comes from a map, not an impulse."
     },
     {
-      "heading": "The symbol: never underestimate a small spot",
-      "body": "A small-appearing lesion can hide much greater destruction. It's not about opening everything out of fear; it's about interpreting the finding in the patient's context. This sentence shows my value: not looking at the obvious, but understanding what could be happening underneath."
+      "heading": "The symbol: Ometz (אומץ — courage in Hebrew)",
+      "body": "Ometz means 'courage' in Hebrew. Courage to think before touching, to preserve before replacing, to explain before selling. And courage for patients who return to the chair after treatments that failed them: the courage to start again with judgment."
     },
     {
       "heading": "What the brand never says",
-      "body": "I don't sell \"no-prep veneers\", guaranteed perfect smiles, unbeatable prices, risk-free treatment, or \"change your life in one appointment\". What I do offer: \"before deciding, let's understand your case\". \"Not always the most visible treatment is the most indicated\". \"A good clinical decision can prevent many future problems\"."
+      "body": "I don't sell no-prep veneers, guaranteed perfect smiles, unbeatable prices, risk-free treatment, or 'change your life in one appointment'. If you're 18 and want veneers, I won't do them. I'll explain why. What I do offer: 'before deciding, let's understand your case'. 'Not always the most visible treatment is the most indicated'. 'A good clinical decision can prevent many future problems'."
     },
     {
       "heading": "Outside the chair",
-      "body": "I live in Luque. I wear colorful scrubs. I've been using AI for years to analyze my cases and finances. I'm building a space where private care with clinical judgment has a place in Paraguay — for patients who are tired of having procedures sold to them without the why being explained."
+      "body": "I'm 45. I spent 13 years at Odontología 3, and now I'm starting on my own. My scrubs are colorful. I have a lot of energy and my head is overwhelmed with 3000 ideas at the same time. I live in Luque. I speak English. I like books. I don't like community management. I'm opening Ometz Dental for patients who are tired of having procedures sold to them without the why being explained."
     },
     {
       "heading": "Training and practice",
       "bullets": [
-        "DDS — Universidad Autónoma del Paraguay (~2005).",
-        "~20 years in restorative dentistry, aesthetics, and oral rehabilitation.",
-        "13+ years at Odontología 3 (Asunción, Mcal. Estigarribia 1414).",
+        "DDS — Universidad Autónoma del Paraguay.",
+        "20+ years in operative dentistry, aesthetic dentistry, and oral rehabilitation.",
+        "13 years at Odontología 3 (Asunción).",
         "Volume: ~130 patients/month, 42 restorations in May 2026 alone.",
-        "Operational English for international patients.",
-        "MSPBS: independent registration in progress.",
-        "RUC: pending."
+        "Three real specialties: oral rehabilitation, aesthetics, operative.",
+        "Operational English for international patients (expats, medical tourism).",
+        "Dental coaching: teaches recently graduated dentists (differentiated service, doesn't exist in Paraguay yet).",
+        "MSPBS: Reg. 3618 (active).",
+        "RUC: 1375421-1.",
+        "Ometz Dental opening: mid-July 2026 (soft launch).",
+        "Care: Monday to Friday, 2:30pm to 7:00pm, by appointment.",
+        "Address: Barrio Mburucuyá, Asunción (exact street: to confirm before opening)."
       ]
     }
   ],
-  "manifiestoCorto": "I don't want patients to choose me because I promise a perfect smile. I want them to choose me because they trust how I think. That is the center of the brand: think before touching.",
+  "manifiestoCorto": "I don't want you to choose me because I promise a perfect smile. I want you to choose me because you trust how I think. I listen.",
   "cta": {
-    "primary": "Book Diagnostic Consultation",
+    "primary": "Message me on WhatsApp",
     "secondary": "Request a written second opinion",
     "whatsapp": true
   },
-  "trust_badges": ["Clinical judgment", "Written plan", "Honest second opinion", "English · Spanish"],
+  "trust_badges": ["I listen", "Clinical judgment", "Written plan", "Spanish · English", "20+ years"],
   "schedule_link": "/en/contact"
 }

@@ -42,28 +42,59 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <BigStats locale={locale} />
       <WhyDifferent locale={locale} />
 
-      {/* Featured second opinion — the lead-conversion page */}
+      {/* Featured oral rehabilitation — the lead-conversion page */}
       <FeaturedService
         locale={locale}
         content={c}
         variant="light"
         eyebrow={isEs ? "Servicio destacado" : "Featured service"}
+        title={isEs ? "Rehabilitación oral — cuando la boca necesita un plan, no parches" : "Oral rehabilitation — when the mouth needs a plan, not patches"}
+        body={isEs
+          ? "No es 'arreglar un diente'. Es mirar la boca completa, entender qué pasó, y armar un plan que tenga sentido clínico, funcional y económico. Para pacientes con operatoria acumulada, tratamientos que fallaron, o casos que requieren criterio clínico real. Lo que más me gusta hacer: planificar, explicar, decidir."
+          : "It's not 'fixing a tooth.' It's looking at the whole mouth, understanding what happened, and building a plan that makes clinical, functional, and economic sense. For patients with accumulated treatment, failed procedures, or cases that require real clinical judgment. What I love most: planning, explaining, deciding."}
+        bullets={isEs
+          ? [
+            "Rehabilitación oral integral",
+            "Tres especialidades: rehabilitación oral, estética, operatoria",
+            "Plan escrito por etapas, con tiempos y costos",
+            "Coordinación con especialistas cuando corresponde (endodoncia, ortodoncia, cirugía, implantes)",
+          ]
+          : [
+            "Comprehensive oral rehabilitation",
+            "Three specialties: oral rehabilitation, aesthetics, operative",
+            "Written plan in stages, with timelines and costs",
+            "Coordination with specialists when needed (endodontics, orthodontics, surgery, implants)",
+          ]}
+        imageSrc="/images/services/oral-rehabilitation.png"
+        imageAlt="Oral rehabilitation planning"
+        ctaLabel={isEs ? "Ver rehabilitación oral" : "See oral rehabilitation"}
+        ctaHref={`/${locale}/services/oral-rehabilitation`}
+        ctaSecondaryLabel={isEs ? "Pedir segunda opinión" : "Request second opinion"}
+        ctaSecondaryHref={`/${locale}/second-opinion`}
+      />
+
+      {/* Second featured service — second opinion */}
+      <FeaturedService
+        locale={locale}
+        content={c}
+        variant="teal"
+        eyebrow={isEs ? "Servicio destacado #2" : "Featured service #2"}
         title={isEs ? "Segunda opinión escrita, sin compromiso" : "Written second opinion, no obligation"}
         body={isEs
-          ? "¿Otro odontólogo te indicó un procedimiento? Revisamos tu caso con acceso a todos los documentos, sin conflicto de interés. Te entregamos un plan escrito en 2–3 días."
-          : "Another dentist recommended a procedure? We review your case with access to all the documents, no conflict of interest. You get a written plan within 2–3 days."}
+          ? "¿Otro odontólogo te indicó un procedimiento? Revisamos tu caso con acceso a todos los documentos, sin conflicto de interés. Te entregamos un plan escrito en 2–3 días. Si no necesitás tratamiento, te lo decimos. Nunca hablo mal de otro colega: yo no conozco el contexto completo."
+          : "Another dentist recommended a procedure? We review your case with access to all the documents, no conflict of interest. You get a written plan within 2–3 days. If you don't need treatment, we'll say so. I never speak ill of a colleague: I don't know the full context."}
         bullets={isEs
           ? [
             "Revisión clínica + radiográfica completa",
             "Informe escrito con opciones y precios",
             "Comparamos costos y materiales con honestidad",
-            "Si no necesitás tratamiento, te lo decimos",
+            "Confidencialidad absoluta",
           ]
           : [
             "Full clinical + radiographic review",
             "Written report with options and pricing",
             "We compare costs and materials honestly",
-            "If you don't need treatment, we'll say so",
+            "Absolute confidentiality",
           ]}
         imageSrc="/images/services/second-opinion.png"
         imageAlt="Second opinion review"

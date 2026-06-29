@@ -1,6 +1,6 @@
 {
   "title": "Contact and appointments",
-  "subtitle": "WhatsApp coordination. Before I tell you what treatment you need, I prefer to evaluate you properly.",
+  "subtitle": "WhatsApp coordination. I listen before scheduling the appointment.",
   "disclaimer": "A photo isn't enough to quote with seriousness. The Diagnostic & Planning Consultation is the space where I think your case through with you, not where I sell you a procedure.",
   "sections": [
     {
@@ -10,40 +10,40 @@
     {
       "heading": "Contact methods",
       "methods": [
-        { "type": "WhatsApp", "label": "WhatsApp", "value": "PENDING", "primary": true },
-        { "type": "Email", "label": "Email", "value": "hola@dra-gp.com.py", "primary": false },
+        { "type": "WhatsApp", "label": "WhatsApp", "value": "PENDING (dedicated line, this week)", "primary": true },
+        { "type": "Email", "label": "Email", "value": "doctora.gabi@ometsdental.com.py", "primary": false },
         { "type": "Phone", "label": "Phone", "value": "PENDING", "primary": false }
       ]
     },
     {
       "heading": "Hours",
       "hours": {
-        "mon": "09:00-18:00",
-        "tue": "09:00-18:00",
-        "wed": "09:00-18:00",
-        "thu": "09:00-18:00",
-        "fri": "09:00-18:00",
-        "sat": "08:00-12:00",
+        "mon": "2:30pm-7:00pm",
+        "tue": "2:30pm-7:00pm",
+        "wed": "2:30pm-7:00pm",
+        "thu": "2:30pm-7:00pm",
+        "fri": "2:30pm-7:00pm",
+        "sat": "Closed",
         "sun": "Closed"
       },
-      "note": "Saturday morning availability confirmed."
+      "note": "By appointment. I don't sit in the clinic all day: we schedule what works for you."
     },
     {
       "heading": "Location and access",
-      "body": "Current practice address: Odontología 3, Asunción. Preferred future location: Luque, pending lease confirmation. Access and parking guidance updated at booking."
+      "body": "Ometz Dental — Barrio Mburucuyá, Asunción, Paraguay. Exact street: to confirm before the formal opening (mid-July 2026). Access and parking guidance updated at booking."
     },
     {
       "heading": "Availability",
-      "body": "New patients accepted. First appointments usually available within one to two weeks."
+      "body": "New patients accepted. Soft launch: mid-July 2026. First appointments usually available within one to two weeks."
     }
   ],
   "map": {
     "embed": true,
-    "query": "Odontología 3, Asunción, Paraguay",
-    "coords": { "lat": -25.2836, "lng": -57.4831 }
+    "query": "Barrio Mburucuyá, Asunción, Paraguay",
+    "coords": { "lat": -25.2965, "lng": -57.6055 }
   },
   "cta": {
-    "primary": "Get a no-obligation plan",
+    "primary": "Message me on WhatsApp",
     "secondary": "Request a second opinion",
     "whatsapp": true
   }

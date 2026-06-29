@@ -1,6 +1,6 @@
 {
   "title": "Contacto y turnos",
-  "subtitle": "Coordinación por WhatsApp. Antes de decirte qué tratamiento necesitás, prefiero evaluarte bien.",
+  "subtitle": "Coordinación por WhatsApp. Te escucho antes de coordinar el turno.",
   "disclaimer": "Una foto no alcanza para presupuestar con seriedad. La Consulta de Diagnóstico y Planificación es el espacio donde pienso tu caso con vos, no donde te vendo un procedimiento.",
   "sections": [
     {
@@ -10,31 +10,31 @@
     {
       "heading": "Medios de contacto",
       "methods": [
-        { "type": "WhatsApp", "label": "WhatsApp", "value": "PENDIENTE", "primary": true },
-        { "type": "Email", "label": "Email", "value": "hola@dra-gp.com.py", "primary": false },
+        { "type": "WhatsApp", "label": "WhatsApp", "value": "PENDIENTE (chip dedicado, esta semana)", "primary": true },
+        { "type": "Email", "label": "Email", "value": "doctora.gabi@ometsdental.com.py", "primary": false },
         { "type": "Phone", "label": "Teléfono", "value": "PENDIENTE", "primary": false }
       ]
     },
     {
       "heading": "Horarios",
       "hours": {
-        "mon": "09:00-18:00",
-        "tue": "09:00-18:00",
-        "wed": "09:00-18:00",
-        "thu": "09:00-18:00",
-        "fri": "09:00-18:00",
-        "sat": "08:00-12:00",
+        "mon": "14:30-19:00",
+        "tue": "14:30-19:00",
+        "wed": "14:30-19:00",
+        "thu": "14:30-19:00",
+        "fri": "14:30-19:00",
+        "sat": "Cerrado",
         "sun": "Cerrado"
       },
-      "note": "Disponibilidad de sábados confirmada."
+      "note": "Atención con cita previa. No estoy en el consultorio todo el día: agendamos el horario que te funcione."
     },
     {
       "heading": "Ubicación y acceso",
-      "body": "Dirección actual: Odontología 3, Asunción. Ubicación preferida a futuro: Luque, pendiente confirmación de alquiler. Instrucciones de acceso y estacionamiento se envían al confirmar el turno."
+      "body": "Ometz Dental — Barrio Mburucuyá, Asunción, Paraguay. Calle exacta: confirmar antes de la apertura formal (mitad de julio 2026). Instrucciones de acceso y estacionamiento se envían al confirmar el turno."
     },
     {
       "heading": "Disponibilidad",
-      "body": "Se aceptan pacientes nuevos. Primera cita normalmente dentro de la primera o segunda semana."
+      "body": "Se aceptan pacientes nuevos. Apertura soft launch: mitad de julio 2026. Primera cita normalmente dentro de la primera o segunda semana."
     }
   ],
   "map": {

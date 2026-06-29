@@ -1,39 +1,47 @@
 {
   "id": "rehabilitacion-oral",
-  "title": "Rehabilitación oral integral",
+  "title": "Rehabilitación oral integral — servicio estrella",
   "fraseGuia": "Rehabilitar no es poner coronas. Es devolver función, estabilidad, estética y confianza dentro de una boca que tiene historia.",
-  "description": "Coronas, prótesis y bocas muy restauradas. Coordinamos con especialistas cuando hace falta, priorizando opciones conservadoras y funcionales.",
+  "description": "El servicio que más me gusta hacer: planificar. Para bocas con operatoria acumulada, tratamientos que fallaron, casos complejos. Coordinamos con especialistas cuando hace falta (endodoncia, ortodoncia, cirugía, implantes), priorizando opciones conservadoras y funcionales. Te escucho antes de planificar.",
   "cta": "Pedir evaluación de caso complejo",
   "highlights": [
     "Perspectiva de toda la boca",
+    "Plan escrito por etapas con tiempos y costos",
     "Coordinación proactiva con especialistas",
     "Opciones conservadoras primero",
-    "Función y estética juntas"
+    "Función y estética juntas",
+    "Tres especialidades: rehabilitación oral, estética, operatoria"
   ],
   "items": [
     {
-      "name": "Evaluación de caso complejo",
-      "description": "Evaluación completa con registros diagnósticos, plan escrito con fases, plazos y precios de referencia. Incluye coordinación con especialistas si hace falta.",
-      "duration": "90-120 min",
-      "priceGs": 900000
+      "name": "Planificación de tratamiento",
+      "description": "Diagnóstico por imágenes, propuesta de opciones, presupuesto escrito. Plan sin compromiso. La puerta de entrada antes de cualquier procedimiento.",
+      "duration": "1–3 días",
+      "priceGs": 600000
+    },
+    {
+      "name": "Planificación compleja (rehabilitación integral)",
+      "description": "Sesión de 60-90 min para casos de boca completa o interdisciplinarios. Plan escrito con fases, plazos y precios de referencia. Incluye coordinación con especialistas si hace falta.",
+      "duration": "60-90 min",
+      "priceGs": 800000
     },
     {
       "name": "Corona unitaria de zirconia",
       "description": "Corona premium de zirconia por resistencia y apariencia natural. Incluye preparación, laboratorio y colocación.",
       "duration": "2-3 visitas",
-      "priceGs": 1800000
+      "priceGs": 3500000
+    },
+    {
+      "name": "Corona sobre implante (PSI - restauración)",
+      "description": "Colocación de la corona final sobre un implante existente. La parte quirúrgica la hace un especialista con quien coordino. Esta separación mantiene alta la calidad quirúrgica.",
+      "duration": "2-3 visitas",
+      "priceGs": 4000000
     },
     {
       "name": "Puente (por unidad)",
       "description": "Puente fijo para reemplazar uno o más dientes perdidos. El precio varía según el tramo y los materiales.",
       "duration": "2-4 visitas",
-      "priceGs": 1800000
-    },
-    {
-      "name": "Corona sobre implante (restauración)",
-      "description": "Colocación de la corona final sobre un implante existente. La colocación quirúrgica la hace un especialista con quien coordino.",
-      "duration": "2-3 visitas",
-      "priceGs": 1500000
+      "priceGs": 1200000
     }
   ],
   "process": [

@@ -1,40 +1,40 @@
 {
-  "title": "Dentistry doesn't start with a drill. It starts by thinking.",
-  "subtitle": "Twenty years of practice based on clinical judgment. Diagnosis before treatment, written second opinions, transparent pricing. Care in English and Spanish, by appointment.",
-  "cta_primary": "Book Diagnostic Consultation",
+  "title": "I listen.",
+  "subtitle": "Oral rehabilitation, written second opinions, and dentistry with clinical judgment in Barrio Mburucuyá, Asunción. Before I touch, I think. Before I plan, I listen.",
+  "cta_primary": "Message me on WhatsApp",
   "cta_secondary": "Request a written second opinion",
-  "contact_phone": "PENDING",
-  "office_hours_short": "Mon–Fri 9–18 | Sat 8–12",
+  "contact_phone": "PENDING (dedicated WhatsApp Business line, this week)",
+  "office_hours_short": "Mon–Fri 2:30pm–7:00pm",
   "top_bar": {
     "phone": "PENDING",
-    "hours": "Mon–Fri 9:00–18:00 · Sat 8:00–12:00"
+    "hours": "Mon–Fri 2:30–7:00pm · by appointment"
   },
   "slides": [
     {
       "id": "1",
-      "title": "Dentistry doesn't start with a drill. It starts by thinking.",
-      "subtitle": "Diagnosis before any procedure. A written plan. A clear explanation. You decide with information, not fear.",
+      "title": "I listen.",
+      "subtitle": "Ometz Dental is the practice of Dr. Gabriella González Pane. Twenty years of experience in oral rehabilitation, aesthetics, and operative dentistry. Diagnosis before any procedure. A written plan. A clear explanation. You decide with information, not fear.",
       "image": "/images/real/clinic-1.webp",
       "cta": "Book Diagnostic Consultation",
       "badge": "Spanish · English",
-      "trust_line": "20+ years · clinical judgment"
+      "trust_line": "Ometz Dental · I listen · Asunción"
     },
     {
       "id": "2",
-      "title": "Never underestimate a small spot",
-      "subtitle": "A small lesion can hide something larger. Before touching, you must interpret: pain, history, radiograph, location, judgment. Thinking is also part of treatment.",
+      "title": "Oral rehabilitation — when the mouth needs a plan, not patches",
+      "subtitle": "It's not 'fixing a tooth.' It's looking at the whole mouth, understanding what happened, and building a plan that makes clinical, functional, and economic sense. For patients with accumulated treatment, failed procedures, complex cases.",
       "image": "/images/hero/dra-gp-hero-2.png",
-      "cta": "View services",
-      "badge": "Clinical symbol of the practice"
+      "cta": "See oral rehabilitation",
+      "badge": "Featured service"
     },
     {
       "id": "3",
-      "title": "Second opinion with clinical judgment",
-      "subtitle": "Someone told you that you need an important treatment. Before accepting, we review your case with no conflict of interest. A photo isn't enough to diagnose.",
+      "title": "Written second opinion, no obligation",
+      "subtitle": "Another dentist recommended an important treatment. Before accepting, we review your case with no conflict of interest. If you don't need treatment, we'll say so.",
       "image": "/images/hero/dra-gp-hero-3.png",
-      "cta": "Request second opinion",
-      "badge": "Written opinion · no obligation"
+      "cta": "Request a second opinion",
+      "badge": "Written report · no obligation"
     }
   ],
-  "trust_line": "20+ years · clinical judgment · English · Spanish"
+  "trust_line": "Ometz Dental · I listen · clinical judgment · Spanish · English"
 }

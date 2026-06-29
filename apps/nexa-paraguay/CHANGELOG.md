@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-06-28: feat(dra-gabriela): rebrand content to ADN Profesional (by Erebus)
+
 - 2026-06-26: feat(nexa): comprehensive site upgrade - all 26 pages live, i18n fixes, navigation, anchors (by Erebus)
 
 - 2026-06-26: fix(sobre): fix TeamSection grid, TrustSection value/label, hero eyebrow+CTA, story highlights, team bios (by Erebus)

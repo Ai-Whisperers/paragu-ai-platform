@@ -1,33 +1,38 @@
 {
   "site": {
-    "name": "Dr. Gabriella González Pane — Dentistry based on clinical judgment",
+    "name": "Ometz Dental — Dr. Gabriella González Pane",
     "slug": "dra-gabriela-en",
-    "url": "https://dra-gabriela.com.py",
+    "url": "https://ometzdental.com.py",
     "locale": "en-PY",
-    "tagline": "Dentistry doesn't start with a drill. It starts by thinking.",
-    "metaDescription": "Conservative dentistry based on clinical judgment in Paraguay. Diagnosis before treatment, written second opinions, transparent pricing, care in English and Spanish. Dentistry doesn't start with a drill: it starts by thinking."
+    "tagline": "I listen.",
+    "metaDescription": "Ometz Dental — Oral rehabilitation, written second opinions, and dentistry with clinical judgment in Barrio Mburucuyá, Asunción. I listen before I touch. 20+ years of experience. Care in English and Spanish, by appointment. Dr. Gabriella González Pane."
   },
   "business": {
-    "phone": "PENDING | TBD",
-    "whatsapp": "PENDING",
+    "phone": "PENDING | TBD (WhatsApp Business SIM card to be purchased this week)",
+    "whatsapp": "PENDING (dedicated WhatsApp Business line, this week)",
     "whatsappMessage": "Hi Dr. Gabriella, I found your site and I'd like to understand my case before deciding on treatment. Do you have availability for a Diagnostic & Planning Consultation?",
-    "email": "hola@dra-gp.com.py",
-    "instagram": "@dragabriellagp",
-    "instagramUrl": "https://instagram.com/dragabriellagp",
-    "address": "TBD — Luque preferred (pending lease). Independent practice aligned to the Professional DNA.",
+    "email": "doctora.gabi@ometsdental.com.py",
+    "instagram": "",
+    "instagramUrl": "",
+    "address": "Barrio Mburucuyá, Asunción, Paraguay (exact street: pending confirmation)",
     "coordinates": {
-      "lat": -25.2836,
-      "lng": -57.4831
+      "lat": -25.2965,
+      "lng": -57.6055
     },
     "currency": "PYG",
-    "ruc": "PENDING | Not registered yet",
-    "mspbs": "PENDING",
-    "name": "Dr. Gabriella González Pane"
+    "ruc": "1375421-1",
+    "mspbs": "3618",
+    "name": "Dr. Gabriella González Pane",
+    "horario": "Monday to Friday, 2:30pm - 7:00pm, by appointment",
+    "dias": "Mon to Fri (scheduled, not sitting in the office all day)",
+    "apertura": "Mid-July 2026 (soft launch)",
+    "lenguajes": "Spanish, English"
   },
   "adn": {
-    "fraseGuia": "Dentistry doesn't start with a drill. It starts by thinking.",
-    "categoria": "Dentistry based on clinical judgment",
-    "simbolo": "Never underestimate a small spot",
+    "fraseGuia": "I listen.",
+    "categoria": "Dentistry with clinical judgment",
+    "simbolo": "Ometz — אומץ (courage in Hebrew)",
+    "marcaComercial": "Ometz Dental",
     "pilares": [
       {"id": "pensar", "titulo": "Think before touching", "descripcion": "Diagnosis, conversation and planning before any procedure."},
       {"id": "conservar", "titulo": "Preserve before replacing", "descripcion": "Respect for tooth structure. Every intervention has a biological cost that must be explained."},

@@ -1,40 +1,40 @@
 {
-  "title": "La odontología no empieza con una fresa. Empieza pensando.",
-  "subtitle": "Veinte años de práctica con criterio clínico. Diagnóstico antes de tratamiento, segunda opinión escrita, precios públicos. Atención en español e inglés, con cita previa.",
-  "cta_primary": "Agendar Consulta de Diagnóstico",
-  "cta_secondary": "Solicitar segunda opinión escrita",
-  "contact_phone": "PENDIENTE",
-  "office_hours_short": "Lu–Vi 9–18 | Sá 8–12",
+  "title": "Te escucho.",
+  "subtitle": "Rehabilitación oral, segunda opinión escrita y odontología con criterio clínico en Barrio Mburucuyá, Asunción. Antes de tocar, pienso. Antes de planificar, te escucho.",
+  "cta_primary": "Escribime por WhatsApp",
+  "cta_secondary": "Pedir segunda opinión escrita",
+  "contact_phone": "PENDIENTE (chip WhatsApp Business dedicado, esta semana)",
+  "office_hours_short": "Lu–Vi 14:30–19:00",
   "top_bar": {
     "phone": "PENDIENTE",
-    "hours": "Lu–Vi 9:00–18:00 · Sá 8:00–12:00"
+    "hours": "Lu–Vi 14:30–19:00 · con cita previa"
   },
   "slides": [
     {
       "id": "1",
-      "title": "La odontología no empieza con una fresa. Empieza pensando.",
-      "subtitle": "Diagnóstico antes de cualquier procedimiento. Plan escrito. Explicación clara. Vos decidís con información, no con miedo.",
+      "title": "Te escucho.",
+      "subtitle": "Ometz Dental es el consultorio de la Dra. Gabriella González Pane. Veinte años de experiencia en rehabilitación oral, estética y operatoria dental. Diagnóstico antes de cualquier procedimiento. Plan escrito. Explicación clara. Vos decidís con información, no con miedo.",
       "image": "/images/real/clinic-1.webp",
       "cta": "Agendar Consulta de Diagnóstico",
       "badge": "Español · English",
-      "trust_line": "20+ años · odontología con criterio"
+      "trust_line": "Ometz Dental · Te escucho · Asunción"
     },
     {
       "id": "2",
-      "title": "Nunca subestimes un puntito",
-      "subtitle": "Una lesión pequeña puede esconder algo más grande. Antes de tocar, hay que interpretar: dolor, historia, radiografía, ubicación, criterio. Pensar también es parte del tratamiento.",
+      "title": "Rehabilitación oral — cuando la boca necesita un plan, no parches",
+      "subtitle": "No es 'arreglar un diente'. Es mirar la boca completa, entender qué pasó, y armar un plan que tenga sentido clínico, funcional y económico. Para pacientes con operatoria acumulada, tratamientos que fallaron, casos complejos.",
       "image": "/images/hero/dra-gp-hero-2.png",
-      "cta": "Ver servicios",
-      "badge": "Símbolo clínico de la marca"
+      "cta": "Ver rehabilitación oral",
+      "badge": "Servicio destacado"
     },
     {
       "id": "3",
-      "title": "Segunda opinión con criterio clínico",
-      "subtitle": "Otra persona te dijo que necesitás un tratamiento importante. Antes de aceptar, revisamos tu caso sin conflicto de interés. Una foto no alcanza para diagnosticar.",
+      "title": "Segunda opinión escrita, sin compromiso",
+      "subtitle": "Otra persona te dijo que necesitás un tratamiento importante. Antes de aceptar, revisamos tu caso sin conflicto de interés. Si no necesitás tratamiento, te lo decimos.",
       "image": "/images/hero/dra-gp-hero-3.png",
       "cta": "Solicitar segunda opinión",
       "badge": "Opinión escrita · sin compromiso"
     }
   ],
-  "trust_line": "20+ años · criterio clínico · Español · English"
+  "trust_line": "Ometz Dental · Te escucho · criterio clínico · Español · English"
 }

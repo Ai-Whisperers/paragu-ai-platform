@@ -1,17 +1,19 @@
 {
   "title": "Servicios",
-  "subtitle": "Cada servicio empieza por una evaluación honesta, no por una venta.",
+  "subtitle": "El servicio estrella es rehabilitación oral. La segunda opinión es el diferenciador. El resto de la odontología con criterio.",
   "tabs": [
+    { "id": "rehabilitacion-oral", "label": "Rehabilitación Oral ⭐" },
     { "id": "segunda-opinion", "label": "Segunda Opinión" },
     { "id": "planificacion-tratamiento", "label": "Planificación" },
     { "id": "odontologia-general", "label": "Odontología General" },
-    { "id": "estetica-dental", "label": "Estética Dental" },
-    { "id": "rehabilitacion-oral", "label": "Rehabilitación Oral" }
+    { "id": "estetica-dental", "label": "Estética Dental" }
   ],
+  "featured": "rehabilitacion-oral",
+  "destacados": ["rehabilitacion-oral", "segunda-opinion"],
   "bundles": [
     {
       "id": "1",
-      "name": "Evaluación inicial",
+      "name": "Consulta inicial",
       "description": "Revisión clínica, preguntas y plan escrito en una visita.",
       "priceGs": 300000,
       "link": "/es/services/second-opinion"
@@ -19,9 +21,16 @@
     {
       "id": "2",
       "name": "Plan escrito de tratamiento",
-      "description": "Opciones de tratamiento documentadas, con plazos y precios de referencia.",
+      "description": "Opciones de tratamiento documentadas, con plazos y precios de referencia. Plan sin compromiso.",
       "priceGs": 600000,
       "link": "/es/services/treatment-planning"
+    },
+    {
+      "id": "3",
+      "name": "Planificación compleja (rehabilitación integral)",
+      "description": "Para casos de boca completa. Plan escrito con fases, plazos y coordinación con especialistas.",
+      "priceGs": 800000,
+      "link": "/es/services/oral-rehabilitation"
     }
   ]
 }

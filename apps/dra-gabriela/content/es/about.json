@@ -1,61 +1,74 @@
 {
-  "title": "Sobre la Dra. Gabriela González Pane",
-  "subtitle": "Veinte años de odontología conservadora, planes escritos y segundas opiniones honestas — en español e inglés.",
-  "fraseGuia": "La odontología no empieza con una fresa. Empieza pensando.",
+  "title": "Sobre la Dra. Gabriella González Pane — Ometz Dental",
+  "subtitle": "Veinte años de rehabilitación oral, operatoria y estética dental. Planes escritos, segunda opinión honesta, y criterio clínico. En español e inglés, en Barrio Mburucuyá, Asunción.",
+  "fraseGuia": "Te escucho.",
   "sections": [
     {
       "heading": "Quién es",
-      "body": "Soy la Dra. Gabriela González Pane. Odontóloga especialista en Rehabilitación Oral, Estética y Operatoria Dental. Hace más de veinte años que ejerzo la odontología, y más de trece atendí pacientes en Odontología 3 en Asunción, donde aprendí a ver miles de bocas y a reconocer patrones que solo se ven con tiempo. Hoy estoy construyendo una práctica independiente donde pueda ejercer como pienso: pensar antes de tocar, conservar antes que reemplazar, explicar antes de vender."
+      "body": "Soy la Dra. Gabriella González Pane. Odontóloga con tres especialidades: Rehabilitación Oral, Estética Dental y Operatoria Dental. Hace más de veinte años que ejerzo la odontología, y más de trece atendí pacientes en Asunción con un volumen alto, donde aprendí a ver miles de bocas y a reconocer patrones que solo se ven con tiempo. Hoy abro Ometz Dental en Barrio Mburucuyá, Asunción, donde puedo ejercer como pienso: pensar antes de tocar, conservar antes que reemplazar, explicar antes de vender. Te escucho antes que cualquier otra cosa."
     },
     {
-      "heading": "Frase guía",
-      "body": "La odontología no empieza con una fresa. Empieza pensando. Esa frase resume todo: cada tratamiento empieza en la observación, en la historia clínica, en el diagnóstico, en la lectura de los tejidos, en la comprensión del paciente y en el análisis de las consecuencias futuras."
+      "heading": "Frase del consultorio",
+      "body": "Te escucho. Esa es la base de todo. Antes de cualquier tratamiento, antes de planificar, antes de hablar de coronas o restauraciones, te escucho. Tu historia clínica importa más que tu radiografía. La primera consulta es para entender qué te pasa, no para venderte un tratamiento."
+    },
+    {
+      "heading": "Las 3 especialidades",
+      "items": [
+        "Rehabilitación Oral — reconstruir bocas con historia: operatoria acumulada, tratamientos que fallaron, casos complejos. Un plan, no parches.",
+        "Estética Dental — blanqueamiento, restauraciones estéticas, con criterio (no carillas a los 18 sin que correspondan).",
+        "Operatoria Dental — restauraciones de caries, resina compuesta, ionómero, cerómero. Material según el caso."
+      ]
     },
     {
       "heading": "Los 5 pilares no negociables",
       "items": [
-        "Pensar antes de tocar — diagnóstico, conversación y planificación antes de cualquier procedimiento.",
-        "Conservar antes que reemplazar — cada estructura dentaria conservada es preferible a cada estructura perdida.",
-        "Explicar antes de vender — el paciente debe entender. Educar sin infantilizar.",
-        "Ver personas antes que dientes — la boca pertenece a alguien con miedo, presupuesto e historia.",
-        "Derivar cuando corresponde — una profesional segura no necesita hacerlo todo."
+        "Te escucho — la primera consulta es para entender tu historia, no para venderte algo.",
+        "Pienso antes de tocar — diagnóstico, conversación, planificación antes de cualquier intervención.",
+        "Conservo antes de reemplazar — si un diente se puede restaurar, se restaura. Si una corona está bien hecha, se deja.",
+        "Explico antes de vender — vos decidís con información, no con miedo.",
+        "Derivo cuando corresponde — endodoncia, ortodoncia, cirugía, implantes: derivo a colegas de confianza."
       ]
     },
     {
       "heading": "Cómo pienso un caso",
-      "body": "Cuando un paciente me dice \"quiero cambiar esta corona\", no miro solo la corona. Miro el sustrato, la pieza vecina, la edad, la función, la oclusión, la historia endodóntica, el riesgo de tocar un diente vital y la expectativa real. Si veo un molar roto, no pregunto solo cómo restaurarlo. Pregunto si es vital, si es restaurable, dónde termina el margen, cómo se aislará, qué pasa con las piezas adyacentes y qué pronóstico tiene. El tratamiento nace de un mapa, no de un impulso."
+      "body": "Cuando un paciente me dice 'quiero cambiar esta corona', no miro solo la corona. Miro el sustrato, la pieza vecina, la edad, la función, la oclusión, la historia endodóntica, el riesgo de tocar un diente vital y la expectativa real. Si veo un molar roto, no pregunto solo cómo restaurarlo. Pregunto si es vital, si es restaurable, dónde termina el margen, cómo se aislará, qué pasa con las piezas adyacentes y qué pronóstico tiene. El tratamiento nace de un mapa, no de un impulso."
     },
     {
-      "heading": "El símbolo: nunca subestimes un puntito",
-      "body": "Una lesión aparentemente pequeña puede esconder una destrucción mucho mayor. No se trata de abrir todo por miedo, sino de interpretar el hallazgo dentro del contexto del paciente. Esta frase muestra mi valor: no mirar lo evidente, sino entender lo que podría estar ocurriendo debajo."
+      "heading": "El símbolo: Ometz (אומץ — coraje en hebreo)",
+      "body": "Ometz significa 'coraje' en hebreo. Coraje para pensar antes de tocar, para conservar antes de reemplazar, para explicar antes de vender. Y coraje para los pacientes que vuelven a la silla después de tratamientos que les fallaron: el coraje de empezar de nuevo con criterio."
     },
     {
       "heading": "Lo que la marca nunca dice",
-      "body": "No vendo carillas sin tallar, sonrisa perfecta garantizada, precio imperdible, tratamiento sin riesgo ni \"cambia tu vida en una cita\". Lo que sí ofrezco: \"antes de decidir, entendamos tu caso\". \"No siempre el tratamiento más visible es el más indicado\". \"Una buena decisión clínica puede evitar muchos problemas futuros\"."
+      "body": "No vendo carillas sin tallar, sonrisa perfecta garantizada, precio imperdible, tratamiento sin riesgo ni 'cambia tu vida en una cita'. Si tenés 18 años y querés carillas, no te las hago. Te explico por qué. Lo que sí ofrezco: 'antes de decidir, entendamos tu caso'. 'No siempre el tratamiento más visible es el más indicado'. 'Una buena decisión clínica puede evitar muchos problemas futuros'."
     },
     {
       "heading": "Fuera del sillón",
-      "body": "Vivo en Luque. Me gustan los scrubs de colores. Hace años que uso IA para analizar mis casos y mis finanzas. Estoy construyendo un espacio donde la consulta particular con criterio clínico tenga lugar en Paraguay — para los pacientes que ya se cansaron de que les vendan procedimientos sin explicarles el porqué."
+      "body": "Tengo 45 años, llevo 13 en Odontología 3 y ahora arranco sola. Mis scrubs son de colores. Tengo muchísima energía y se me agota la cabeza con 3000 ideas a la vez. Vivo en Luque. Hablo inglés. Me gustan los libros. No me gusta el community manager. Voy a abrir Ometz Dental para los pacientes que ya se cansaron de que les vendan procedimientos sin explicarles el porqué."
     },
     {
       "heading": "Formación y ejercicio",
       "bullets": [
-        "Odontóloga — Universidad Autónoma del Paraguay (~2005).",
-        "~20 años en operatoria dental, estética dental y rehabilitación oral.",
-        "Más de 13 años en Odontología 3 (Asunción, Mcal. Estigarribia 1414).",
-        "Volumen: ~130 pacientes/mes en O3, 42 restauraciones solo en mayo 2026.",
-        "Inglés operativo para atención de pacientes extranjeros.",
-        "MSPBS: habilitación propia en proceso (práctica independiente).",
-        "RUC: pendiente."
+        "Odontóloga — Universidad Autónoma del Paraguay.",
+        "20+ años en operatoria dental, estética dental y rehabilitación oral.",
+        "13 años en Odontología 3 (Asunción).",
+        "Volumen: ~130 pacientes/mes, 42 restauraciones solo en mayo 2026.",
+        "Tres especialidades reales: rehabilitación oral, estética, operatoria.",
+        "Inglés operativo para atención de pacientes extranjeros (expats, medical tourism).",
+        "Coaching odontológico: enseña a dentistas recién recibidos (servicio diferenciado, no existe en Paraguay).",
+        "MSPBS: Reg. 3618 (habilitación vigente).",
+        "RUC: 1375421-1.",
+        "Apertura Ometz Dental: mitad de julio 2026 (soft launch).",
+        "Atención: lunes a viernes, 14:30 a 19:00, con cita previa.",
+        "Dirección: Barrio Mburucuyá, Asunción (calle exacta: confirmar antes de apertura)."
       ]
     }
   ],
-  "manifiestoCorto": "No quiero que me elijan porque prometo una sonrisa perfecta. Quiero que me elijan porque confían en cómo pienso. Ese es el centro de la marca: pensar antes de tocar.",
+  "manifiestoCorto": "No quiero que me elijan porque prometo una sonrisa perfecta. Quiero que me elijan porque confían en cómo pienso. Te escucho.",
   "cta": {
-    "primary": "Agendar Consulta de Diagnóstico",
-    "secondary": "Solicitar segunda opinión escrita",
+    "primary": "Escribime por WhatsApp",
+    "secondary": "Pedir segunda opinión escrita",
     "whatsapp": true
   },
-  "trust_badges": ["Criterio clínico", "Plan escrito", "Segunda opinión honesta", "Español · English"],
+  "trust_badges": ["Te escucho", "Criterio clínico", "Plan escrito", "Español · English", "20+ años"],
   "schedule_link": "/es/contacto"
 }
