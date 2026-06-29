@@ -50,8 +50,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         eyebrow={isEs ? "Servicio destacado" : "Featured service"}
         title={isEs ? "Rehabilitación oral — cuando la boca necesita un plan, no parches" : "Oral rehabilitation — when the mouth needs a plan, not patches"}
         body={isEs
-          ? "No es 'arreglar un diente'. Es mirar la boca completa, entender qué pasó, y armar un plan que tenga sentido clínico, funcional y económico. Para pacientes con operatoria acumulada, tratamientos que fallaron, o casos que requieren criterio clínico real. Lo que más me gusta hacer: planificar, explicar, decidir."
-          : "It's not 'fixing a tooth.' It's looking at the whole mouth, understanding what happened, and building a plan that makes clinical, functional, and economic sense. For patients with accumulated treatment, failed procedures, or cases that require real clinical judgment. What I love most: planning, explaining, deciding."}
+          ? "No es 'arreglar un diente'. Es sentarnos, mirarte la boca, mirar la panorámica juntos, y armar un plan que tenga sentido clínico, funcional y económico. Para pacientes con operatoria acumulada, tratamientos que fallaron, o casos que requieren criterio clínico real. Lo que más me gusta hacer: planificar, explicar, decidir. Te escucho."
+          : "It's not 'fixing a tooth.' It's sitting down, looking at your mouth, looking at the panoramic x-ray together, and building a plan that makes clinical, functional, and economic sense. For patients with accumulated treatment, failed procedures, or cases that require real clinical judgment. What I love most: planning, explaining, deciding. I listen."}
         bullets={isEs
           ? [
             "Rehabilitación oral integral",

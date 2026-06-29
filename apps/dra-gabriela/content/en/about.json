@@ -1,15 +1,25 @@
 {
-  "title": "About Dr. Gabriella González Pane — Ometz Dental",
+  "title": "About Dr. Gaby — Ometz Dental",
   "subtitle": "Twenty years of oral rehabilitation, operative and aesthetic dentistry. Written plans, honest second opinions, and clinical judgment. In Spanish and English, in Barrio Mburucuyá, Asunción.",
   "fraseGuia": "I listen.",
   "sections": [
     {
       "heading": "Who she is",
-      "body": "I'm Dr. Gabriella González Pane. Dentist with three specialties: Oral Rehabilitation, Aesthetic Dentistry, and Operative Dentistry. I've practiced for over twenty years, and spent thirteen of them seeing patients in Asunción at high volume, where I learned to read thousands of mouths and recognize patterns that only show up with time. Today I'm opening Ometz Dental in Barrio Mburucuyá, Asunción, where I can work the way I think: think before touching, preserve before replacing, explain before selling. I listen before anything else."
+      "body": "I'm Dr. Gaby. I've been a dentist for two decades. It's not about grabbing the drill — it's about sitting down, listening to you, and building a treatment plan together that makes sense, that you understand, and that fits your needs. Oral rehabilitation, aesthetics, operative. I listen."
     },
     {
       "heading": "Practice phrase",
-      "body": "I listen. That's the foundation. Before any treatment, before planning, before talking about crowns or restorations — I listen. Your clinical history matters more than your x-ray. The first consultation is to understand what you're going through, not to sell you a treatment."
+      "body": "I listen. That's the foundation of everything."
+    },
+    {
+      "heading": "How I work",
+      "items": [
+        "I listen — the first consultation is to sit down and understand your case, not to sell you something.",
+        "I think before I touch — diagnosis, conversation, planning before any intervention.",
+        "I preserve before I replace — if a tooth can be restored, it is restored. If a crown is well made, it stays.",
+        "I explain until you understand — you decide with information, not fear.",
+        "I refer when appropriate — endodontics, orthodontics, surgery, implants: I refer to trusted colleagues."
+      ]
     },
     {
       "heading": "The 3 specialties",
@@ -20,17 +30,7 @@
       ]
     },
     {
-      "heading": "The 5 non-negotiable pillars",
-      "items": [
-        "I listen — the first consultation is to understand your story, not to sell you something.",
-        "I think before I touch — diagnosis, conversation, planning before any intervention.",
-        "I preserve before I replace — if a tooth can be restored, it is restored. If a crown is well made, it stays.",
-        "I explain before I sell — you decide with information, not fear.",
-        "I refer when appropriate — endodontics, orthodontics, surgery, implants: I refer to trusted colleagues."
-      ]
-    },
-    {
-      "heading": "How she thinks about a case",
+      "heading": "How I think about a case",
       "body": "When a patient says 'I want to replace this crown', I don't look only at the crown. I look at the substrate, the neighboring tooth, the age, the function, the occlusion, the endodontic history, the risk of touching a vital tooth, and the real expectation. When I see a broken molar, I don't ask only how to restore it. I ask whether it's vital, whether it's restorable, where the margin ends, how it will be isolated, what happens to adjacent teeth, and what the prognosis is. Treatment comes from a map, not an impulse."
     },
     {
@@ -63,7 +63,7 @@
       ]
     }
   ],
-  "manifiestoCorto": "I don't want you to choose me because I promise a perfect smile. I want you to choose me because you trust how I think. I listen.",
+  "manifiestoCorto": "I'm Dr. Gaby. It's not about grabbing the drill — it's about sitting down, listening to you, and building a plan together that makes sense. I listen.",
   "cta": {
     "primary": "Message me on WhatsApp",
     "secondary": "Request a written second opinion",

@@ -1,15 +1,25 @@
 {
-  "title": "Sobre la Dra. Gabriella González Pane — Ometz Dental",
+  "title": "Sobre la Dra. Gaby — Ometz Dental",
   "subtitle": "Veinte años de rehabilitación oral, operatoria y estética dental. Planes escritos, segunda opinión honesta, y criterio clínico. En español e inglés, en Barrio Mburucuyá, Asunción.",
   "fraseGuia": "Te escucho.",
   "sections": [
     {
       "heading": "Quién es",
-      "body": "Soy la Dra. Gabriella González Pane. Odontóloga con tres especialidades: Rehabilitación Oral, Estética Dental y Operatoria Dental. Hace más de veinte años que ejerzo la odontología, y más de trece atendí pacientes en Asunción con un volumen alto, donde aprendí a ver miles de bocas y a reconocer patrones que solo se ven con tiempo. Hoy abro Ometz Dental en Barrio Mburucuyá, Asunción, donde puedo ejercer como pienso: pensar antes de tocar, conservar antes que reemplazar, explicar antes de vender. Te escucho antes que cualquier otra cosa."
+      "body": "Soy la Dra. Gaby. Llevo dos décadas siendo odontóloga. Lo mío no es agarrar una fresa — es sentarnos, escucharte y armar juntos un plan de tratamiento que tenga sentido, lo comprendas y sea acorde a tus necesidades. Rehabilitación oral, estética, operatoria. Te escucho."
     },
     {
       "heading": "Frase del consultorio",
-      "body": "Te escucho. Esa es la base de todo. Antes de cualquier tratamiento, antes de planificar, antes de hablar de coronas o restauraciones, te escucho. Tu historia clínica importa más que tu radiografía. La primera consulta es para entender qué te pasa, no para venderte un tratamiento."
+      "body": "Te escucho. Esa es la base de todo."
+    },
+    {
+      "heading": "Cómo trabajo",
+      "items": [
+        "Te escucho — la primera consulta es para sentarnos y entender tu caso, no para venderte algo.",
+        "Pienso antes de tocar — diagnóstico, conversación, planificación antes de cualquier intervención.",
+        "Conservo antes de reemplazar — si un diente se puede restaurar, se restaura. Si una corona está bien hecha, se deja.",
+        "Explico hasta que comprendas — vos decidís con información, no con miedo.",
+        "Derivo cuando corresponde — endodoncia, ortodoncia, cirugía, implantes: derivo a colegas de confianza."
+      ]
     },
     {
       "heading": "Las 3 especialidades",
@@ -17,16 +27,6 @@
         "Rehabilitación Oral — reconstruir bocas con historia: operatoria acumulada, tratamientos que fallaron, casos complejos. Un plan, no parches.",
         "Estética Dental — blanqueamiento, restauraciones estéticas, con criterio (no carillas a los 18 sin que correspondan).",
         "Operatoria Dental — restauraciones de caries, resina compuesta, ionómero, cerómero. Material según el caso."
-      ]
-    },
-    {
-      "heading": "Los 5 pilares no negociables",
-      "items": [
-        "Te escucho — la primera consulta es para entender tu historia, no para venderte algo.",
-        "Pienso antes de tocar — diagnóstico, conversación, planificación antes de cualquier intervención.",
-        "Conservo antes de reemplazar — si un diente se puede restaurar, se restaura. Si una corona está bien hecha, se deja.",
-        "Explico antes de vender — vos decidís con información, no con miedo.",
-        "Derivo cuando corresponde — endodoncia, ortodoncia, cirugía, implantes: derivo a colegas de confianza."
       ]
     },
     {
@@ -63,7 +63,7 @@
       ]
     }
   ],
-  "manifiestoCorto": "No quiero que me elijan porque prometo una sonrisa perfecta. Quiero que me elijan porque confían en cómo pienso. Te escucho.",
+  "manifiestoCorto": "Soy la Dra. Gaby. Lo mío no es agarrar una fresa — es sentarnos, escucharte y armar juntos un plan que tenga sentido. Te escucho.",
   "cta": {
     "primary": "Escribime por WhatsApp",
     "secondary": "Pedir segunda opinión escrita",
