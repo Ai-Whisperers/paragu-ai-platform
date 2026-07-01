@@ -27,8 +27,8 @@
 
   /* ── Ink ── */
   --color-fg: #1c1c1c;
-  --color-fg-muted: #5c4f43;
-  --color-fg-subtle: #948779;
+  --color-fg-muted: #5c4f43;     /* body text / de-emphasised */
+  --color-fg-subtle: #6b5e52;     /* meta lines: contrast ≥4.5:1 on surface */
 
   /* ── Borders ── */
   --color-border: #e3ddd2;
@@ -93,7 +93,7 @@
 
   --fg: #1c1c1c;
   --fg-muted: #5c4f43;
-  --fg-subtle: #948779;
+  --fg-subtle: #6b5e52;        /* raised from #948779 for WCAG AA contrast */
 
   --border: #e3ddd2;
   --border-light: #ede8e0;
@@ -151,6 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
   line-height: 1.1;
   color: var(--fg);
+  text-wrap: balance;
 }
 
 h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
@@ -158,7 +159,7 @@ h2 { font-size: clamp(2rem, 3.5vw, 2.75rem); }
 h3 { font-size: clamp(1.4rem, 2.2vw, 1.75rem); }
 h4 { font-size: 1.25rem; }
 
-p { margin: 0 0 1em; font-size: clamp(1rem, 1.1vw, 1.125rem); line-height: 1.7; }
+p { margin: 0 0 1em; font-size: clamp(1rem, 1.1vw, 1.125rem); line-height: 1.7; text-wrap: pretty; }
 p:last-child { margin-bottom: 0; }
 
 .lead {
@@ -185,7 +186,10 @@ a:hover { color: var(--accent-2); }
    ═══════════════════════════════════════════════ */
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+  /* Use a darker, deeper gold endpoint (#a88a3a via gold-2) so that even
+     the lighter half of the gradient clears WCAG AA on light backgrounds
+     (bg-bg cream, bg-accent-soft, bg-surface). Both endpoints: ≥4.5:1. */
+  background: linear-gradient(135deg, var(--accent) 0%, var(--gold-2) 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -205,12 +209,12 @@ a:hover { color: var(--accent-2); }
   align-items: center;
   gap: 0.5rem;
   font-size: 0.6875rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
-  border: 1px solid var(--gold-soft);
-  padding: 0.25rem 0.75rem;
+  color: var(--accent);
+  border: 1px solid var(--gold);
+  padding: 0.25rem 0.875rem;
   border-radius: 9999px;
   background: var(--gold-soft);
   margin-bottom: 1rem;
@@ -241,11 +245,20 @@ a:hover { color: var(--accent-2); }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  transition: border-color 200ms ease, box-shadow 300ms ease, transform 200ms ease;
+  transition: border-color 200ms ease, box-shadow 300ms ease, transform 250ms ease;
 }
 .card:hover {
   border-color: var(--accent);
   box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.card-hover-xl {
+  transition: border-color 200ms ease, box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1), transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover-xl:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent);
 }
 .card-flat {
   background: var(--surface);
@@ -343,10 +356,144 @@ a:hover { color: var(--accent-2); }
   margin: 0 auto 1.5rem;
 }
 
+/* ── v2 primitives ── */
 .bg-soft { background: var(--surface-muted); }
 .bg-accent-soft { background: var(--accent-soft); }
 .bg-gold-soft { background: var(--gold-soft); }
 .bg-alt { background: var(--surface-alt); }
+
+/* Gold corner ribbon (rotated 45°, top-right of card) */
+.corner-ribbon {
+  position: absolute;
+  top: 0; right: 0;
+  width: 90px; height: 90px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+.corner-ribbon span {
+  position: absolute;
+  display: block;
+  width: 130px;
+  padding: 4px 0;
+  background: var(--gold);
+  /* Contrast fix 2026-07-01: was #fff (2.29:1 FAIL on gold), now accent-2 (5.47:1 AA) */
+  color: var(--accent-2);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  top: 18px;
+  right: -36px;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 12px rgba(201,168,76,0.35);
+}
+.corner-ribbon-teal span {
+  background: var(--accent);
+  /* Contrast fix 2026-07-01: was #fff (9.7:1 OK), now gold-soft (8.38:1 AAA) — keeps high contrast, lifts the warm brand voice */
+  color: var(--gold-soft);
+  box-shadow: 0 4px 12px rgba(15,76,76,0.30);
+}
+
+/* Gold glow ring (around medallions, portraits) */
+.gold-glow-ring {
+  box-shadow:
+    0 0 0 4px var(--surface),
+    0 0 0 6px var(--gold),
+    0 12px 40px rgba(201, 168, 76, 0.25);
+}
+.accent-glow-ring {
+  box-shadow:
+    0 0 0 4px var(--surface),
+    0 0 0 6px var(--accent),
+    0 12px 40px rgba(15, 76, 76, 0.25);
+}
+
+/* Gold text shadow (for hero gradient text) */
+.text-gold-shadow {
+  text-shadow: 0 2px 14px rgba(201, 168, 76, 0.30);
+}
+
+/* Glass panel (subtle frosted) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Gold underline accent (for section headers) */
+.section-rule {
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-2) 100%);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+/* Sticky-note ribbon (top of card) */
+.sticky-ribbon {
+  position: relative;
+  background: var(--surface);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.sticky-ribbon::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* Numbered medallion with gold ring */
+.medallion {
+  display: flex; align-items: center; justify-content: center;
+  width: 96px; height: 96px;
+  border-radius: 9999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 500;
+  position: relative;
+}
+.medallion::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  border: 2px solid var(--gold);
+  opacity: 0.4;
+}
+
+/* Verified-pill (small, badge-style) */
+.verified-pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--success);
+  padding: 3px 8px;
+  border-radius: 9999px;
+  background: var(--success-soft);
+  border: 1px solid color-mix(in srgb, var(--success) 20%, transparent);
+}
+.verified-pill::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 9999px;
+  background: var(--success);
+}
+
+/* Gold corner (small wedge in top-right of a card) */
+.gold-corner {
+  position: absolute;
+  top: 0; right: 0;
+  width: 32px; height: 32px;
+  background: linear-gradient(225deg, var(--gold) 0%, transparent 50%);
+  border-top-right-radius: var(--radius-lg);
+  pointer-events: none;
+}
 
 .dot-pattern {
   background-image: radial-gradient(circle, var(--accent) 1px, transparent 1px);
@@ -419,13 +566,36 @@ a:hover { color: var(--accent-2); }
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
 }
-@keyframes fade-in-up {
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow, rgba(15,76,76,0.20)); }
+  50% { box-shadow: 0 0 0 12px transparent; }
+}
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes count-up {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes wipe-in {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 .animate-ping { animation: ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite; }
@@ -434,6 +604,20 @@ a:hover { color: var(--accent-2); }
 .animate-fade-in-up { animation: fade-in-up 600ms ease-out both; }
 .animate-fade-in-up-delay { animation: fade-in-up 600ms ease-out 100ms both; }
 .animate-fade-in-up-delay-2 { animation: fade-in-up 600ms ease-out 200ms both; }
+.animate-fade-in-up-delay-3 { animation: fade-in-up 600ms ease-out 300ms both; }
+.animate-fade-in-up-delay-4 { animation: fade-in-up 600ms ease-out 400ms both; }
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2.4s linear infinite;
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-float-slow { animation: float 6s ease-in-out infinite; }
+.animate-glow { animation: glow-pulse 2.2s ease-out infinite; }
+.animate-spin-slow { animation: spin-slow 18s linear infinite; }
+.animate-marquee { animation: marquee 40s linear infinite; }
+.animate-scale-in { animation: scale-in 500ms cubic-bezier(0.4,0,0.2,1) both; }
+.animate-wipe { transform-origin: left center; animation: wipe-in 700ms cubic-bezier(0.4,0,0.2,1) both; }
 
 /* ── Thin scrollbar for horizontal scroll containers (pricing jump-nav) ── */
 .scrollbar-thin::-webkit-scrollbar { height: 4px; }
@@ -513,7 +697,8 @@ a:hover { color: var(--accent-2); }
     --gold-soft: #2a2010;
     --fg: #f5f3ee;
     --fg-muted: #c0b8a8;
-    --fg-subtle: #8a8275;
+    /* Contrast fix 2026-07-01: was #8a8275 (3.96:1 FAIL on surface-dark), now #a39889 (5.31:1 AA) */
+    --fg-subtle: #a39889;
     --border: #1f3435;
     --border-light: #18302f;
     --success: #4ade80;
