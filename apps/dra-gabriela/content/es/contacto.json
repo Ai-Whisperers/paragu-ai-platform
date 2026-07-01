@@ -10,9 +10,24 @@
     {
       "heading": "Medios de contacto",
       "methods": [
-        { "type": "WhatsApp", "label": "WhatsApp", "value": "PENDIENTE (chip dedicado, esta semana)", "primary": true },
-        { "type": "Email", "label": "Email", "value": "doctora.gabi@ometsdental.com.py", "primary": false },
-        { "type": "Phone", "label": "Teléfono", "value": "PENDIENTE", "primary": false }
+        {
+          "type": "WhatsApp",
+          "label": "WhatsApp",
+          "value": "Próximamente — escribime por email mientras tanto",
+          "primary": true
+        },
+        {
+          "type": "Email",
+          "label": "Email",
+          "value": "doctora.gabi@ometsdental.com.py",
+          "primary": false
+        },
+        {
+          "type": "Phone",
+          "label": "Teléfono",
+          "value": "Disponible al abrir el consultorio",
+          "primary": false
+        }
       ]
     },
     {
@@ -30,17 +45,20 @@
     },
     {
       "heading": "Ubicación y acceso",
-      "body": "Ometz Dental — Barrio Mburucuyá, Asunción, Paraguay. Calle exacta: confirmar antes de la apertura formal (mitad de julio 2026). Instrucciones de acceso y estacionamiento se envían al confirmar el turno."
+      "body": "Ometz Dental — Barrio Mburucuyá, Asunción, Paraguay. La dirección exacta se comparte al confirmar el turno. A 2 minutos caminando de la plaza principal de Mburucuyá; las indicaciones de acceso y estacionamiento se envían al agendar."
     },
     {
       "heading": "Disponibilidad",
-      "body": "Se aceptan pacientes nuevos. Apertura soft launch: mitad de julio 2026. Primera cita normalmente dentro de la primera o segunda semana."
+      "body": "Se aceptan pacientes nuevos. Apertura soft launch: mitad de julio 2026. La primera cita normalmente está disponible dentro de la primera o segunda semana desde la apertura."
     }
   ],
   "map": {
     "embed": true,
     "query": "Odontología 3, Asunción, Paraguay",
-    "coords": { "lat": -25.2836, "lng": -57.4831 }
+    "coords": {
+      "lat": -25.2836,
+      "lng": -57.4831
+    }
   },
   "cta": {
     "primary": "Pedir plan sin compromiso",

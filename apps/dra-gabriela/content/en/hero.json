@@ -3,10 +3,9 @@
   "subtitle": "I'm Dr. Gaby. I've been a dentist for two decades. It's not about grabbing the drill — it's about sitting down, listening to you, and building a treatment plan together that makes sense. Oral rehabilitation, written second opinions, dentistry with clinical judgment. In Barrio Mburucuyá, Asunción.",
   "cta_primary": "Message me on WhatsApp",
   "cta_secondary": "Request a written second opinion",
-  "contact_phone": "PENDING (dedicated WhatsApp Business line, this week)",
   "office_hours_short": "Mon–Fri 2:30pm–7:00pm",
   "top_bar": {
-    "phone": "PENDING",
+    "phone": "Mon–Fri 2:30–7:00pm · by appointment",
     "hours": "Mon–Fri 2:30–7:00pm · by appointment"
   },
   "slides": [
@@ -23,7 +22,7 @@
       "id": "2",
       "title": "Oral rehabilitation — when the mouth needs a plan, not patches",
       "subtitle": "It's not 'fixing a tooth.' It's looking at the whole mouth, understanding what happened, and building a plan that makes clinical, functional, and economic sense. For patients with accumulated treatment, failed procedures, complex cases.",
-      "image": "/images/hero/dra-gp-hero-2.png",
+      "image": "/images/hero/dra-gp-hero-2.webp",
       "cta": "See oral rehabilitation",
       "badge": "Featured service"
     },
@@ -31,10 +30,10 @@
       "id": "3",
       "title": "Written second opinion, no obligation",
       "subtitle": "Another dentist recommended an important treatment. Before accepting, we review your case with no conflict of interest. If you don't need treatment, we'll say so.",
-      "image": "/images/hero/dra-gp-hero-3.png",
+      "image": "/images/hero/dra-gp-hero-3.webp",
       "cta": "Request a second opinion",
       "badge": "Written report · no obligation"
     }
   ],
-  "trust_line": "Ometz Dental · I listen · clinical judgment · Spanish · English"
+  "trust_line": "Ometz Dental · clinical judgment · written plans · Spanish · English"
 }

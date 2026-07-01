@@ -3,10 +3,9 @@
   "subtitle": "Soy la Dra. Gaby. Llevo dos décadas siendo odontóloga. Lo mío no es agarrar la fresa — es sentarnos, escucharte y armar juntos un plan de tratamiento que tenga sentido. Rehabilitación oral, segunda opinión escrita, odontología con criterio. En Barrio Mburucuyá, Asunción.",
   "cta_primary": "Escribime por WhatsApp",
   "cta_secondary": "Pedir segunda opinión escrita",
-  "contact_phone": "PENDIENTE (chip WhatsApp Business dedicado, esta semana)",
   "office_hours_short": "Lu–Vi 14:30–19:00",
   "top_bar": {
-    "phone": "PENDIENTE",
+    "phone": "Lun a Vie 14:30–19:00 · con cita",
     "hours": "Lu–Vi 14:30–19:00 · con cita previa"
   },
   "slides": [
@@ -23,7 +22,7 @@
       "id": "2",
       "title": "Rehabilitación oral — cuando la boca necesita un plan, no parches",
       "subtitle": "No es 'arreglar un diente'. Es mirar la boca completa, entender qué pasó, y armar un plan que tenga sentido clínico, funcional y económico. Para pacientes con operatoria acumulada, tratamientos que fallaron, casos complejos.",
-      "image": "/images/hero/dra-gp-hero-2.png",
+      "image": "/images/hero/dra-gp-hero-2.webp",
       "cta": "Ver rehabilitación oral",
       "badge": "Servicio destacado"
     },
@@ -31,10 +30,10 @@
       "id": "3",
       "title": "Segunda opinión escrita, sin compromiso",
       "subtitle": "Otra persona te dijo que necesitás un tratamiento importante. Antes de aceptar, revisamos tu caso sin conflicto de interés. Si no necesitás tratamiento, te lo decimos.",
-      "image": "/images/hero/dra-gp-hero-3.png",
+      "image": "/images/hero/dra-gp-hero-3.webp",
       "cta": "Solicitar segunda opinión",
       "badge": "Opinión escrita · sin compromiso"
     }
   ],
-  "trust_line": "Ometz Dental · Te escucho · criterio clínico · Español · English"
+  "trust_line": "Ometz Dental · criterio clínico · planes escritos · Español · English"
 }

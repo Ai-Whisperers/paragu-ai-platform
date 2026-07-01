@@ -1,6 +1,6 @@
 {
   "title": "Services",
-  "subtitle": "Every service starts with an honest assessment, not a sales pitch.",
+  "subtitle": "The lead service is oral rehabilitation. The second opinion is the differentiator. The rest of dentistry with clinical judgment.",
   "tabs": [
     { "id": "second-opinion", "label": "Second Opinion" },
     { "id": "treatment-planning", "label": "Planning" },
@@ -22,6 +22,13 @@
       "description": "Treatment options with documentation, timeline, and reference pricing.",
       "priceGs": 600000,
       "link": "/en/services/treatment-planning"
+    },
+    {
+      "id": "3",
+      "name": "Complex planning (full-mouth rehabilitation)",
+      "description": "For comprehensive cases. Written plan with phases, timelines, and specialist coordination.",
+      "priceGs": 800000,
+      "link": "/en/services/oral-rehabilitation"
     }
   ]
 }

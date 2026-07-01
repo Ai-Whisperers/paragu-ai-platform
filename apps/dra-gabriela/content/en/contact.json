@@ -10,9 +10,24 @@
     {
       "heading": "Contact methods",
       "methods": [
-        { "type": "WhatsApp", "label": "WhatsApp", "value": "PENDING (dedicated line, this week)", "primary": true },
-        { "type": "Email", "label": "Email", "value": "doctora.gabi@ometsdental.com.py", "primary": false },
-        { "type": "Phone", "label": "Phone", "value": "PENDING", "primary": false }
+        {
+          "type": "WhatsApp",
+          "label": "WhatsApp",
+          "value": "Coming soon — write via email in the meantime",
+          "primary": true
+        },
+        {
+          "type": "Email",
+          "label": "Email",
+          "value": "doctora.gabi@ometsdental.com.py",
+          "primary": false
+        },
+        {
+          "type": "Phone",
+          "label": "Phone",
+          "value": "Available once the practice opens",
+          "primary": false
+        }
       ]
     },
     {
@@ -30,17 +45,20 @@
     },
     {
       "heading": "Location and access",
-      "body": "Ometz Dental — Barrio Mburucuyá, Asunción, Paraguay. Exact street: to confirm before the formal opening (mid-July 2026). Access and parking guidance updated at booking."
+      "body": "Ometz Dental — Barrio Mburucuyá, Asunción, Paraguay. Exact street address will be shared when you book your appointment. We're a 2-minute walk from the main Mburucuyá plaza; access and parking guidance sent at booking."
     },
     {
       "heading": "Availability",
-      "body": "New patients accepted. Soft launch: mid-July 2026. First appointments usually available within one to two weeks."
+      "body": "New patients accepted. Soft launch: mid-July 2026. First appointments are typically available within one to two weeks of the opening."
     }
   ],
   "map": {
     "embed": true,
     "query": "Barrio Mburucuyá, Asunción, Paraguay",
-    "coords": { "lat": -25.2965, "lng": -57.6055 }
+    "coords": {
+      "lat": -25.2965,
+      "lng": -57.6055
+    }
   },
   "cta": {
     "primary": "Message me on WhatsApp",
