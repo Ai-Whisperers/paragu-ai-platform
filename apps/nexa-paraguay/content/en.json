@@ -1805,7 +1805,19 @@
   },
   "complianceDisclaimer": {
     "title": "Compliance Notice",
-    "content": "Nexa Paraguay is a registered reporting entity before SEPRELAD (Superintendencia de Prevención de Lavado de Dinero). Our services comply with all applicable Paraguayan and international regulations, including AML/KYC requirements. All client relationships are subject to due diligence, including identity verification, source of funds verification, and beneficial ownership disclosure."
+    "content": "Nexa Paraguay is a registered reporting entity before SEPRELAD (Superintendencia de Prevención de Lavado de Dinero). Our services comply with all applicable Paraguayan and international regulations, including AML/KYC requirements. All client relationships are subject to due diligence, including identity verification, source of funds verification, and beneficial ownership disclosure.",
+    "paragraphs": [
+      "Nexa Paraguay no presta asesoría legal, fiscal ni de inversión. Los programas descritos son servicios de acompañamiento para trámites migratorios y administrativos.",
+      "Nexa Paraguay está registrada como sujeto obligado ante SEPRELAD (Secretaría de Prevención de Lavado de Dinero o Bienes) y aplica procesos KYC (Know Your Customer) conforme a las resoluciones vigentes.",
+      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios."
+    ],
+    "licenseNumbers": [
+      {
+        "label": "SEPRELAD — Secretaría de Prevención de Lavado de Dinero o Bienes"
+      }
+    ],
+    "linkText": "Ver declaración AML completa",
+    "linkHref": "/privacidad#aml"
   },
   "seprealadAttestation": {
     "title": "Formulario de atestiguación SEPRELAD",

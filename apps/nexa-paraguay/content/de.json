@@ -2865,7 +2865,19 @@
   },
   "complianceDisclaimer": {
     "title": "Compliance-Hinweis",
-    "content": "Nexa Paraguay ist eine registrierte meldepflichtige Stelle bei der SEPRELAD (Superintendencia de Prevención de Lavado de Dinero). Unsere Dienstleistungen entsprechen allen geltenden paraguayischen und internationalen Vorschriften, einschließlich AML/KYC-Anforderungen. Alle Kundenbeziehungen unterliegen der Sorgfaltspflicht, einschließlich Identitätsprüfung, Überprüfung der Mittelherkunft und Offenlegung des wirtschaftlichen Eigentümers."
+    "content": "Nexa Paraguay ist eine registrierte meldepflichtige Stelle bei der SEPRELAD (Superintendencia de Prevención de Lavado de Dinero). Unsere Dienstleistungen entsprechen allen geltenden paraguayischen und internationalen Vorschriften, einschließlich AML/KYC-Anforderungen. Alle Kundenbeziehungen unterliegen der Sorgfaltspflicht, einschließlich Identitätsprüfung, Überprüfung der Mittelherkunft und Offenlegung des wirtschaftlichen Eigentümers.",
+    "paragraphs": [
+      "Nexa Paraguay no presta asesoría legal, fiscal ni de inversión. Los programas descritos son servicios de acompañamiento para trámites migratorios y administrativos.",
+      "Nexa Paraguay está registrada como sujeto obligado ante SEPRELAD (Secretaría de Prevención de Lavado de Dinero o Bienes) y aplica procesos KYC (Know Your Customer) conforme a las resoluciones vigentes.",
+      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios."
+    ],
+    "licenseNumbers": [
+      {
+        "label": "SEPRELAD — Secretaría de Prevención de Lavado de Dinero o Bienes"
+      }
+    ],
+    "linkText": "Ver declaración AML completa",
+    "linkHref": "/privacidad#aml"
   },
   "prensa": {
     "seo": {
@@ -3502,6 +3514,59 @@
       "subtitle": "Kostenloses 30-Minuten-Gespräch. Auf Deutsch, ohne Verpflichtungen.",
       "buttonText": "Gespräch vereinbaren",
       "buttonHref": "/de/contacto"
+    },
+    "taxComparison": {
+      "eyebrow": "Comparativa fiscal",
+      "title": "Paraguay vs Alemania: el impacto fiscal",
+      "columns": [
+        "Concepto",
+        "Paraguay",
+        "Alemania"
+      ],
+      "items": [
+        {
+          "Concepto": "IR Máximo",
+          "Paraguay": "10%",
+          "Alemania": "45%"
+        },
+        {
+          "Concepto": "Ganancias de Capital",
+          "Paraguay": "0%",
+          "Alemania": "26.4%"
+        },
+        {
+          "Concepto": "IVA",
+          "Paraguay": "10%",
+          "Alemania": "19%"
+        },
+        {
+          "Concepto": "Herencias",
+          "Paraguay": "0%",
+          "Alemania": "7-50%"
+        }
+      ]
+    },
+    "targetClients": {
+      "eyebrow": "Para quién",
+      "title": "Ideal para",
+      "groups": [
+        {
+          "id": "investors",
+          "title": "Inversores",
+          "items": []
+        },
+        {
+          "id": "remote",
+          "title": "Trabajadores remotos",
+          "items": []
+        }
+      ]
+    },
+    "costs": {
+      "eyebrow": "Costos",
+      "title": "Inversión inicial",
+      "subtitle": "Nuestros programas cerrados en USD.",
+      "items": []
     }
   },
   "teamPage": {
