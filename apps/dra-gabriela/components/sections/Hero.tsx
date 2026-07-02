@@ -64,21 +64,29 @@ export function Hero({ c, locale }: HeroProps) {
     return () => m.removeEventListener?.("change", onChange)
   }, [])
 
-  // Auto-rotate (skipped when paused, hidden, reduced-motion, or only 1 slide)
+  // Auto-rotate. Skip when paused, hidden, reduced-motion, or single slide.
+  // First rotation is delayed (8s) so users can actually read slide 1
+  // before it changes; subsequent rotations are the normal 6s interval.
+  const FIRST_ROTATE_MS = 8000
+  const [hasFirstRotated, setHasFirstRotated] = useState(false)
   useEffect(() => {
     if (!hasMultipleSlides || paused || reduceMotion) return
+    let id: ReturnType<typeof setTimeout> | ReturnType<typeof setInterval>
     const onVis = () => {
       if (document.hidden) return
       setActive((cur) => (cur + 1) % total)
     }
-    const id = setInterval(onVis, ROTATE_MS)
-    const onPageHide = () => clearInterval(id)
-    document.addEventListener("visibilitychange", onPageHide)
-    return () => {
-      clearInterval(id)
-      document.removeEventListener("visibilitychange", onPageHide)
+    if (!hasFirstRotated) {
+      setHasFirstRotated(true)
+      id = setTimeout(onVis, FIRST_ROTATE_MS)
+    } else {
+      id = setInterval(onVis, ROTATE_MS)
     }
-  }, [hasMultipleSlides, paused, reduceMotion, total])
+    return () => {
+      clearTimeout(id as ReturnType<typeof setTimeout>)
+      clearInterval(id as ReturnType<typeof setInterval>)
+    }
+  }, [hasMultipleSlides, paused, reduceMotion, total, hasFirstRotated])
 
   // Keyboard navigation: ← / → when region has focus
   const onKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
@@ -283,6 +291,7 @@ export function Hero({ c, locale }: HeroProps) {
                     alt={slide.title || slide.subtitle || "Dra. Gabriella"}
                     fill
                     priority={active === 0}
+                    fetchPriority={active === 0 ? "high" : "low"}
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover transition-opacity duration-500"
                     decoding="async"
@@ -351,9 +360,9 @@ export function Hero({ c, locale }: HeroProps) {
                         onClick={() => setActive(i)}
                         aria-label={`${isEs ? "Ir a la diapositiva" : "Go to slide"} ${i + 1}`}
                         aria-current={isActive ? "true" : undefined}
-                        className={`min-h-[24px] min-w-[24px] h-1.5 rounded-full transition-all duration-300 cursor-pointer p-2 ${
-                          isActive ? "w-8 bg-gold" : "w-1.5 bg-border hover:bg-gold/50"
-                        }`}
+                        className={`min-h-[24px] min-w-[24px] h-1.5 rounded-full transition-all duration-300 cursor-pointer p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
+                                                   isActive ? "w-8 bg-gold" : "w-1.5 bg-border hover:bg-gold/50"
+                                                 }`}
                       />
                     )
                   })}
