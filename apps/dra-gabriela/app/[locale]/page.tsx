@@ -1,22 +1,53 @@
 import { notFound } from "next/navigation"
+import dynamic from "next/dynamic"
 import { getContent, isLocale } from "@/lib/content"
 import { buildMetadata } from "@/lib/seo"
 import { Hero } from "@/components/sections/Hero"
 import { BilingualBand } from "@/components/sections/BilingualBand"
-import { AnxietyPersonas } from "@/components/sections/AnxietyPersonas"
-import { Testimonials } from "@/components/sections/Testimonials"
-import { VoiceDoctor } from "@/components/sections/VoiceDoctor"
-import { SedationSection } from "@/components/sections/SedationSection"
-import { BigStats } from "@/components/sections/BigStats"
-import { WhyDifferent } from "@/components/sections/WhyDifferent"
-import { FeaturedService } from "@/components/sections/FeaturedService"
-import { SocialProof } from "@/components/sections/SocialProof"
-import { MeetDoctor } from "@/components/sections/MeetDoctor"
-import { Process } from "@/components/sections/Process"
-import { HomeFaq } from "@/components/sections/HomeFaq"
-import { CtaBanner } from "@/components/sections/CtaBanner"
-import { BlogPreview } from "@/components/sections/BlogPreview"
 import { Newsletter } from "@/components/Newsletter"
+
+// Below-the-fold sections: dynamic imports keep the initial JS bundle small.
+// These load lazily on scroll (or near it via IntersectionObserver) and
+// don't block the LCP path of the Hero. Each gets a loading skeleton.
+const AnxietyPersonas = dynamic(() => import("@/components/sections/AnxietyPersonas").then(m => m.AnxietyPersonas), {
+  loading: () => <div className="section bg-bg"><div className="max-w-6xl mx-auto px-4 h-96" /></div>,
+})
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials").then(m => m.Testimonials), {
+  loading: () => <div className="section bg-surface"><div className="max-w-6xl mx-auto px-4 h-96" /></div>,
+})
+const SocialProof = dynamic(() => import("@/components/sections/SocialProof").then(m => m.SocialProof), {
+  loading: () => <div className="section bg-bg"><div className="max-w-6xl mx-auto px-4 h-64" /></div>,
+})
+const VoiceDoctor = dynamic(() => import("@/components/sections/VoiceDoctor").then(m => m.VoiceDoctor), {
+  loading: () => <div className="section bg-surface"><div className="max-w-4xl mx-auto px-4 h-64" /></div>,
+})
+const MeetDoctor = dynamic(() => import("@/components/sections/MeetDoctor").then(m => m.MeetDoctor), {
+  loading: () => <div className="section bg-bg"><div className="max-w-6xl mx-auto px-4 h-96" /></div>,
+})
+const BigStats = dynamic(() => import("@/components/sections/BigStats").then(m => m.BigStats), {
+  loading: () => <div className="section bg-surface"><div className="max-w-6xl mx-auto px-4 h-48" /></div>,
+})
+const WhyDifferent = dynamic(() => import("@/components/sections/WhyDifferent").then(m => m.WhyDifferent), {
+  loading: () => <div className="section bg-bg"><div className="max-w-6xl mx-auto px-4 h-96" /></div>,
+})
+const SedationSection = dynamic(() => import("@/components/sections/SedationSection").then(m => m.SedationSection), {
+  loading: () => <div className="section bg-surface"><div className="max-w-6xl mx-auto px-4 h-96" /></div>,
+})
+const FeaturedService = dynamic(() => import("@/components/sections/FeaturedService").then(m => m.FeaturedService), {
+  loading: () => <div className="section bg-bg"><div className="max-w-6xl mx-auto px-4 h-96" /></div>,
+})
+const Process = dynamic(() => import("@/components/sections/Process").then(m => m.Process), {
+  loading: () => <div className="section bg-surface"><div className="max-w-6xl mx-auto px-4 h-96" /></div>,
+})
+const HomeFaq = dynamic(() => import("@/components/sections/HomeFaq").then(m => m.HomeFaq), {
+  loading: () => <div className="section bg-bg"><div className="max-w-4xl mx-auto px-4 h-96" /></div>,
+})
+const BlogPreview = dynamic(() => import("@/components/sections/BlogPreview").then(m => m.BlogPreview), {
+  loading: () => <div className="section bg-surface"><div className="max-w-6xl mx-auto px-4 h-96" /></div>,
+})
+const CtaBanner = dynamic(() => import("@/components/sections/CtaBanner").then(m => m.CtaBanner), {
+  loading: () => <div className="section bg-bg"><div className="max-w-4xl mx-auto px-4 h-64" /></div>,
+})
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }]

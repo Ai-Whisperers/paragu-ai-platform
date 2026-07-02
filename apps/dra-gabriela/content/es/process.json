@@ -1,5 +1,7 @@
 {
   "fraseGuia": "Antes de tocar, hay que entender.",
+  "title": "Tu recorrido",
+  "subtitle": "Cuatro pasos del primer mensaje al plan escrito. Sin sorpresas.",
   "pasos": [
     {
       "orden": 1,
