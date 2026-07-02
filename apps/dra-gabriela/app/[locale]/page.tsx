@@ -2,6 +2,10 @@ import { notFound } from "next/navigation"
 import { getContent, isLocale } from "@/lib/content"
 import { buildMetadata } from "@/lib/seo"
 import { Hero } from "@/components/sections/Hero"
+import { BilingualBand } from "@/components/sections/BilingualBand"
+import { AnxietyPersonas } from "@/components/sections/AnxietyPersonas"
+import { VoiceDoctor } from "@/components/sections/VoiceDoctor"
+import { SedationSection } from "@/components/sections/SedationSection"
 import { BigStats } from "@/components/sections/BigStats"
 import { WhyDifferent } from "@/components/sections/WhyDifferent"
 import { FeaturedService } from "@/components/sections/FeaturedService"
@@ -37,10 +41,14 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <Hero c={c} locale={locale} />
+      <BilingualBand locale={locale} />
+      <AnxietyPersonas locale={locale} />
       <SocialProof c={c} locale={locale} />
+      <VoiceDoctor locale={locale} />
       <MeetDoctor locale={locale} />
       <BigStats locale={locale} />
       <WhyDifferent locale={locale} />
+      <SedationSection locale={locale} />
 
       {/* Featured oral rehabilitation — the lead-conversion page */}
       <FeaturedService

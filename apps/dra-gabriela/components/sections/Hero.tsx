@@ -13,9 +13,23 @@
 
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
-import { ArrowRight, MessageCircle, Clock, Sparkles, Languages, Award, BadgeCheck } from "lucide-react"
+import { ArrowRight, MessageCircle, Clock, Sparkles, Languages, Award, BadgeCheck, Hand, Heart, Shield } from "lucide-react"
 import Image from "next/image"
 import { whatsappLink } from "@/lib/content"
+
+// Anti-anxiety controls row (Insight 1 + 6) — three promises, single band
+const ANXIETY_CONTROLS = {
+  es: [
+    { icon: Hand, label: "Te escucho" },
+    { icon: Heart, label: "Vos controlás el ritmo" },
+    { icon: Shield, label: "Si necesitás parar, paramos" },
+  ],
+  en: [
+    { icon: Hand, label: "I listen" },
+    { icon: Heart, label: "You control the pace" },
+    { icon: Shield, label: "If you need to stop, we stop" },
+  ],
+} as const
 
 const ROTATE_MS = 6000
 
@@ -132,6 +146,29 @@ export function Hero({ c, locale }: HeroProps) {
               )}
             </div>
 
+            {/* Anti-anxiety controls band (Insight 1: empathy shown, named) */}
+            <div className="aa-controls mb-6 animate-fade-in" aria-label={isEs ? "Lo que prometemos" : "What we promise"}>
+              {ANXIETY_CONTROLS[isEs ? "es" : "en"].map((c, i) => {
+                const Icon = c.icon
+                return (
+                  <span key={i} className="aa-controls-item">
+                    <Icon className="w-3.5 h-3.5" aria-hidden="true" />
+                    <span>{c.label}</span>
+                  </span>
+                )
+              })}
+            </div>
+
+            {/* Bilingual promise band (Insight 4: bilingual visible, not hidden) */}
+            <div className="bilingual-band -mx-4 sm:-mx-6 lg:mx-0 mb-6 px-4 sm:px-6 lg:px-5 text-center md:text-left animate-fade-in-up">
+              <p className="text-sm font-semibold text-accent-2">
+                <Languages className="w-4 h-4 inline-block mr-1.5 -mt-0.5" aria-hidden="true" />
+                {isEs
+                  ? "Atención en español e inglés · Asunción, Paraguay"
+                  : "Care in English and Spanish · Asunción, Paraguay"}
+              </p>
+            </div>
+
             {/* Heading — solid navy with whimsical font */}
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight mb-5 leading-[1.05] animate-fade-in-up text-[#000080]"
@@ -158,8 +195,14 @@ export function Hero({ c, locale }: HeroProps) {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mb-10 animate-fade-in-up-delay-2">
               {wa ? (
-                <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary text-base px-8 py-4 group">
-                  <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <a
+                  href={wa}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp text-base group"
+                  aria-label={isEs ? "Escribirme por WhatsApp" : "Message me on WhatsApp"}
+                >
+                  <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" aria-hidden="true" />
                   {slide.cta || h.cta_primary || (isEs ? "Pedir plan sin compromiso" : "Get a no-obligation plan")}
                 </a>
               ) : (
