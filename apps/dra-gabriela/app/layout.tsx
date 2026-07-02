@@ -1,4 +1,4 @@
-import { Inter, DM_Serif_Display } from "next/font/google"
+import { Inter, DM_Serif_Display, Caveat } from "next/font/google"
 import "./globals.css"
 
 const inter = Inter({
@@ -14,11 +14,20 @@ const dmSerif = DM_Serif_Display({
   variable: "--font-heading",
 })
 
+const caveat = Caveat({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-whimsical",
+})
+
 export const metadata = {
-  metadataBase: new URL("https://dragabriela.paragu-ai.com"),
+  metadataBase: new URL("https://ometzdental.com"),
   title: {
-    default: "Dra. Gabriella González Pane — Odontología conservadora y planificación primero en Asunción",
-    template: "%s · Dra. Gabriella",
+    default: "Ometz Dental — Dra. Gabriella González Pane",
+    // No template suffix; every page's title is the full branded title,
+    // and we keep the layout metadata `default` as a clean fallback.
+    template: "%s",
   },
   description:
     "Odontología conservadora y planificación primero en Paraguay. Precios públicos, segunda opinión escrita, consultas en inglés y español.",
@@ -91,7 +100,7 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSerif.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${dmSerif.variable} ${caveat.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

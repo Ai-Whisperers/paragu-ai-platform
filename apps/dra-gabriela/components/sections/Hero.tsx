@@ -132,12 +132,13 @@ export function Hero({ c, locale }: HeroProps) {
               )}
             </div>
 
-            {/* Heading with gold shadow — animates per slide */}
+            {/* Heading — solid navy with whimsical font */}
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight mb-5 leading-[1.05] animate-fade-in-up text-gold-shadow"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight mb-5 leading-[1.05] animate-fade-in-up text-[#000080]"
               key={`h-${active}`}
+              style={{ fontFamily: "var(--font-whimsical)" }}
             >
-              <span className="gradient-text">{slide.title || h.title}</span>
+              {slide.title || h.title}
             </h1>
 
             {/* Gold accent rule */}

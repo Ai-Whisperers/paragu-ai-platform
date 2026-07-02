@@ -52,6 +52,7 @@
   --font-heading: "DM Serif Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, "Courier New", monospace;
+  --font-whimsical: var(--font-caveat), "Caveat", "Comic Sans MS", cursive;
 
   /* ── Radii ── */
   --radius-sm: 0.375rem;
