@@ -22,14 +22,23 @@ services:
         - "traefik.http.middlewares.dra-gabriela-www-redirect.redirectregex.replacement=https://ometzdental.com/$${1}"
         - "traefik.http.middlewares.dra-gabriela-www-redirect.redirectregex.permanent=true"
         # Legacy redirect — dragabriela.paragu-ai.com → ometzdental.com (301)
+        # NOTE: For now, dragabriela.paragu-ai.com serves the site directly
+        # because ometzdental.com DNS does not currently point to this VPS.
+        # Restore the legacy redirect once ometzdental.com is live.
         - "traefik.http.routers.dra-gabriela-legacy.entrypoints=websecure"
-        - "traefik.http.routers.dra-gabriela-legacy.rule=Host(`dragabriela.paragu-ai.com`) || Host(`dra-gabriela.com.py`) || Host(`www.dra-gabriela.com.py`)"
+        - "traefik.http.routers.dra-gabriela-legacy.rule=Host(`dra-gabriela.com.py`) || Host(`www.dra-gabriela.com.py`)"
         - "traefik.http.routers.dra-gabriela-legacy.tls=true"
         - "traefik.http.routers.dra-gabriela-legacy.tls.certresolver=letsencryptresolver"
         - "traefik.http.routers.dra-gabriela-legacy.middlewares=dra-gabriela-legacy-redirect@docker"
-        - "traefik.http.middlewares.dra-gabriela-legacy-redirect.redirectregex.regex=^https?://(dragabriela\\.paragu-ai\\.com|dra-gabriela\\.com\\.py|www\\.dra-gabriela\\.com\\.py)/?(.*)"
+        - "traefik.http.middlewares.dra-gabriela-legacy-redirect.redirectregex.regex=^https?://(dra-gabriela\\.com\\.py|www\\.dra-gabriela\\.com\\.py)/?(.*)"
         - "traefik.http.middlewares.dra-gabriela-legacy-redirect.redirectregex.replacement=https://ometzdental.com/$${1}"
         - "traefik.http.middlewares.dra-gabriela-legacy-redirect.redirectregex.permanent=true"
+        # Secondary router — dragabriela.paragu-ai.com serves the site directly
+        - "traefik.http.routers.dra-gabriela-pa.entrypoints=websecure"
+        - "traefik.http.routers.dra-gabriela-pa.rule=Host(`dragabriela.paragu-ai.com`)"
+        - "traefik.http.routers.dra-gabriela-pa.tls=true"
+        - "traefik.http.routers.dra-gabriela-pa.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.dra-gabriela-pa.middlewares=security-headers@file"
         - "traefik.http.services.dra-gabriela.loadbalancer.server.port=3000"
     networks:
       - agent-net
