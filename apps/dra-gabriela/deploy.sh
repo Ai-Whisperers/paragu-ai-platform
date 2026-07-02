@@ -9,7 +9,7 @@ TAG="dra-gabriela:prod-$VERSION-$DATE"
 LATEST="dra-gabriela:prod"
 
 echo "--- build: $TAG"
-npm run build
+pnpm run build 2>/dev/null || npm run build
 
 echo "--- docker: $TAG"
 docker build -t "$TAG" -t "$LATEST" .
