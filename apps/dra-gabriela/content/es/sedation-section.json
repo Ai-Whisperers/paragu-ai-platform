@@ -1,0 +1,26 @@
+{
+  "eyebrow": "Cómo trabajo",
+  "title": "Tres pasos. No al revés.",
+  "subtitle": "La mayoría de los pacientes ansiosos espera que les diga que necesitan sedación desde el primer día. No trabajo así.",
+  "steps": [
+    {
+      "number": "01",
+      "title": "Te escucho. Vos ponés el ritmo.",
+      "body": "Antes de que cualquier instrumento te toque, hablamos. Me contás qué pasó, qué te da miedo, qué necesitás. Te escucho. Vos decidís cuándo empezamos, cuándo paramos, cuándo seguimos.",
+      "kind": "empathy"
+    },
+    {
+      "number": "02",
+      "title": "Plan escrito antes de cualquier tratamiento.",
+      "body": "Después del examen + radiografías, escribo lo que veo, lo que podríamos hacer, qué cuesta cada opción y cuánto lleva. Te lo llevás a casa. Vos decidís.",
+      "kind": "plan"
+    },
+    {
+      "number": "03",
+      "title": "Sedación — sólo si la necesitás.",
+      "body": "Trabajo con óxido nitroso (gas de la risa) y sedación oral para procedimientos específicos. Pero la sedación es el tercer paso, no el primero. La hablamos sólo cuando el plan está claro y vos te sentís listo/a.",
+      "kind": "sedation"
+    }
+  ],
+  "cta_label": "Coordinar una primera conversación sin compromiso"
+}

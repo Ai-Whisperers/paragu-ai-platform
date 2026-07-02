@@ -1,0 +1,26 @@
+{
+  "eyebrow": "How I work",
+  "title": "Three steps. Not the other way around.",
+  "subtitle": "Most anxious patients expect to be told they need sedation on day one. That's not how I work.",
+  "steps": [
+    {
+      "number": "01",
+      "title": "I listen. You set the pace.",
+      "body": "Before any instrument touches you, we talk. You tell me what happened, what scares you, what you need. I listen. You decide when we start, when we pause, when we stop.",
+      "kind": "empathy"
+    },
+    {
+      "number": "02",
+      "title": "Written plan before any treatment.",
+      "body": "After exam + radiographs, I write down what I see, what we could do, what each option costs, and how long it takes. You take it home. You decide.",
+      "kind": "plan"
+    },
+    {
+      "number": "03",
+      "title": "Sedation — only if you need it.",
+      "body": "I work with nitrous oxide (laughing gas) and oral sedation for specific procedures. But sedation is the third step, not the first. We talk about it only when the plan is clear and you feel ready.",
+      "kind": "sedation"
+    }
+  ],
+  "cta_label": "Book a no-obligation first conversation"
+}

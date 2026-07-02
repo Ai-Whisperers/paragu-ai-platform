@@ -1,0 +1,28 @@
+{
+  "eyebrow": "If any of this sounds familiar",
+  "title": "You are not alone.",
+  "intro": "Most anxious patients recognize themselves in one of these three profiles. None is rare. All are welcome.",
+  "items": [
+    {
+      "id": "nervy-since-childhood",
+      "icon": "Heart",
+      "who": "You've been nervous since childhood.",
+      "fear": "Your palms sweat just thinking about the dentist. The sound, the smell, the chair — everything.",
+      "needs_to_hear": "That the first visit is 80% conversation. No instruments. We talk, you leave with a written plan, and only come back when ready."
+    },
+    {
+      "id": "postpones",
+      "icon": "Brain",
+      "who": "You know you should go — and keep postponing.",
+      "fear": "It's been 3, 5, 8 years. The longer you wait, the bigger the imagined problem becomes. The shame builds.",
+      "needs_to_hear": "That I won't make you feel bad. The first visit is review + plan, not a sermon. Many of my patients arrive exactly where you are."
+    },
+    {
+      "id": "bad-experience",
+      "icon": "Shield",
+      "who": "Something happened before and you can't forget it.",
+      "fear": "A painful extraction, a botched root canal, a dentist who didn't listen. Your body remembers even when you don't want it to.",
+      "needs_to_hear": "That you can ask me to stop at any moment, and I will. We build the visit around what feels safe for you — including bringing someone you trust."
+    }
+  ]
+}

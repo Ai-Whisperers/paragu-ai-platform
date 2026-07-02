@@ -1,0 +1,28 @@
+{
+  "eyebrow": "Si algo de esto te suena",
+  "title": "No estás solo/a.",
+  "intro": "La mayoría de mis pacientes ansiosos se reconoce en uno de estos tres perfiles. Ninguno es raro. Todos son bienvenidos.",
+  "items": [
+    {
+      "id": "nerviosa-desde-chica",
+      "icon": "Heart",
+      "who": "Estás nerviosa desde chica.",
+      "fear": "Te sudan las manos con sólo pensar en el dentista. El sonido, el olor, el sillón — todo.",
+      "needs_to_hear": "Que la primera consulta es 80% conversación. Sin instrumentos. Hablamos, te vas con un plan escrito, y volvés sólo cuando estés listo/a."
+    },
+    {
+      "id": "lo-posterga",
+      "icon": "Brain",
+      "who": "Sabés que tenés que ir — y seguís postergando.",
+      "fear": "Hace 3, 5, 8 años que no vas. Cuanto más esperás, más grande se vuelve el problema imaginado. La vergüenza crece.",
+      "needs_to_hear": "Que no te voy a hacer sentir mal. La primera consulta es revisión + plan, no un sermón. Muchos de mis pacientes llegan exactamente donde vos estás."
+    },
+    {
+      "id": "experiencia-traumatica",
+      "icon": "Shield",
+      "who": "Te pasó algo antes y no lo podés olvidar.",
+      "fear": "Una extracción dolorosa, una endodoncia mal hecha, un dentista que no escuchó. Tu cuerpo recuerda aunque vos no quieras.",
+      "needs_to_hear": "Que podés pedirme que pare en cualquier momento, y voy a parar. Armamos la visita alrededor de lo que te resulte seguro — incluso traer a alguien de tu confianza."
+    }
+  ]
+}
