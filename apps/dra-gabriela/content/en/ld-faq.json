@@ -1,14 +1,22 @@
 {
-  "_comment": "JSON-LD FAQPage payload for the homepage HomeFaq. Mirrors the 'Anxiety and comfort' group of content/{locale}/faqs.json so rich-result snippets match what's on the page.",
+  "_comment": "FAQPage JSON-LD mirrors content/en/home-faq.json for rich-result parity.",
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "I'm scared of the dentist — can we talk before anything happens?",
+      "name": "What if I'm too nervous to even call?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The first visit is mostly conversation. We talk, you tell me what scares you, what happened before. I listen. We only look at your mouth together, with radiographs, when you're ready. You're not committing to any procedure by writing me on WhatsApp."
+        "text": "Then write me on WhatsApp. No commitment, no appointment booked. I'll answer you, and we can talk at whatever pace you need. If you're not ready to come in, that's fine. We start with a message."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if it's been years since I've been to the dentist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most of my anxious patients say exactly this. You're not the only one, and I'm not going to make you feel bad about it. We start with a Diagnostic & Planning Consultation — conversation, exam, X-rays, and a written plan you understand. No lectures."
       }
     },
     {
@@ -16,7 +24,7 @@
       "name": "Do you offer sedation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — nitrous oxide (laughing gas) and oral sedation for specific procedures. But sedation is the third step, not the first. We talk about it only after you've seen the diagnosis, understand the plan, and feel ready."
+        "text": "If you need it, yes. I work with nitrous oxide (laughing gas) and oral sedation for specific procedures. But sedation isn't the first answer — control and pacing usually come first. We talk about it together when we plan your case."
       }
     },
     {
@@ -24,23 +32,15 @@
       "name": "Can I bring someone with me to the appointment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Bring whoever you need — partner, parent, friend. They can stay in the room during the consultation if that makes you more comfortable."
+        "text": "Of course. Bring your partner, your sister, your friend, whoever makes you feel safe. They'll be in the room with you during the consultation and during treatment if you want."
       }
     },
     {
       "@type": "Question",
-      "name": "What if I need to stop during a procedure?",
+      "name": "Do you speak English?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We agree a stop signal before we start (raising your hand works). When you signal, I stop immediately. We don't continue until you say so. No questions, no judgment."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "I've been postponing for years. Will you make me feel bad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Many of my patients arrive exactly where you are. The first visit is review + plan, not a sermon. My job is to look at your case today and tell you what's realistic, what's urgent, and what can wait — without judgment."
+        "text": "Yes — fluent English and Spanish. I trained and practiced in both. You'll never have to wonder if I understood your symptom, your fear, or your question."
       }
     }
   ]

@@ -1,46 +1,46 @@
 {
-  "_comment": "JSON-LD FAQPage payload for the homepage HomeFaq (ES). Mirror del grupo 'Ansiedad y comodidad' de content/es/faqs.json.",
+  "_comment": "FAQPage JSON-LD (ES) espejo de content/es/home-faq.json.",
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Tengo miedo al dentista — ¿podemos hablar antes de que pase algo?",
+      "name": "¿Qué pasa si tengo tanto miedo que ni siquiera puedo llamar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. La primera consulta es mayormente conversación. Hablamos, me contás qué te da miedo, qué te pasó antes. Te escucho. Recién después miramos tu boca juntos, con radiografías, cuando estés listo/a. No estás comprometiéndote a nada escribiéndome por WhatsApp."
+        "text": "Entonces escribime por WhatsApp. Sin compromiso, sin cita agendada. Te respondo, hablamos al ritmo que vos necesites. Si no estás listo/a para venir, está bien. Empezamos por un mensaje."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Ofrecen sedación?",
+      "name": "¿Y si hace años que no voy al dentista?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí — óxido nitroso (gas de la risa) y sedación oral para procedimientos específicos. Pero la sedación es el tercer paso, no el primero. La hablamos sólo después de que veas el diagnóstico, entiendas el plan y te sientas listo/a."
+        "text": "La mayoría de mis pacientes ansiosos me dice exactamente esto. No sos el/la único/a, y no te voy a hacer sentir mal. Empezamos con una Consulta de Diagnóstico y Planificación: conversación, examen, radiografías, y un plan escrito que entendés. Sin sermones."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Puedo traer a alguien conmigo a la consulta?",
+      "name": "¿Ofrecés sedación?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. Traé a quien necesites — pareja, madre, amigo/a. Puede quedarse en el consultorio durante la atención si eso te haga sentir más cómodo/a."
+        "text": "Si la necesitás, sí. Trabajo con óxido nitroso (gas de la risa) y sedación oral para procedimientos específicos. Pero la sedación no es la primera respuesta — el control del ritmo y las pausas suelen serlo. Lo hablamos juntos cuando armamos tu plan."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Qué pasa si necesito parar durante un procedimiento?",
+      "name": "¿Puedo traer a alguien a la cita?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Acordamos una señal de stop antes de empezar (levantar la mano funciona). Cuando me la hagas, paro inmediatamente. No seguimos hasta que vos me digas. Sin preguntas, sin juicio."
+        "text": "Por supuesto. Traé a tu pareja, tu hermana, tu amigo/a, quien sea que te haga sentir seguro/a. Van a estar en la sala con vos durante la consulta y durante el tratamiento si querés."
       }
     },
     {
       "@type": "Question",
-      "name": "Hace años que postergo. ¿Me van a hacer sentir mal?",
+      "name": "¿Hablás en inglés?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Muchos de mis pacientes llegan exactamente donde vos estás. La primera consulta es revisión + plan, no un sermón. Mi trabajo es mirar tu caso hoy y decirte qué es realista, qué es urgente y qué puede esperar — sin juicio."
+        "text": "Sí — inglés y español, fluido. Me formé y practiqué en ambos idiomas. Nunca vas a tener que dudar si entendí tu síntoma, tu miedo o tu pregunta."
       }
     }
   ]

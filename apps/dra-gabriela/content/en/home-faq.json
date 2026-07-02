@@ -1,0 +1,28 @@
+{
+  "title": "The questions you're embarrassed to ask.",
+  "lead": "The five questions anxious patients ask most. If yours isn't here, message me on WhatsApp and I'll respond within 24 hours.",
+  "items": [
+    {
+      "q": "What if I'm too nervous to even call?",
+      "a": "Then write me on WhatsApp. No commitment, no appointment booked. I'll answer you, and we can talk at whatever pace you need. If you're not ready to come in, that's fine. We start with a message."
+    },
+    {
+      "q": "What if it's been years since I've been to the dentist?",
+      "a": "Most of my anxious patients say exactly this. You're not the only one, and I'm not going to make you feel bad about it. We start with a Diagnostic & Planning Consultation — conversation, exam, X-rays, and a written plan you understand. No lectures."
+    },
+    {
+      "q": "Do you offer sedation?",
+      "a": "If you need it, yes. I work with nitrous oxide (laughing gas) and oral sedation for specific procedures. But sedation isn't the first answer — control and pacing usually come first. We talk about it together when we plan your case."
+    },
+    {
+      "q": "Can I bring someone with me to the appointment?",
+      "a": "Of course. Bring your partner, your sister, your friend, whoever makes you feel safe. They'll be in the room with you during the consultation and during treatment if you want."
+    },
+    {
+      "q": "Do you speak English?",
+      "a": "Yes — fluent English and Spanish. I trained and practiced in both. You'll never have to wonder if I understood your symptom, your fear, or your question."
+    }
+  ],
+  "cta_text": "These are the questions I hear most often. If yours isn't here, message me.",
+  "cta_link_text": "See all FAQs"
+}

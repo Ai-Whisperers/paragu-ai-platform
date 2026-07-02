@@ -1,24 +1,35 @@
-// Section: HomeFaq — 2-col layout with left intro and right accordion.
-// Each FAQ is a large clickable card with proper padding.
+// Section: HomeFaq — anxiety-targeted FAQ. Source: content/{en,es}/home-faq.json.
+// 5 hand-curated items, accordion layout (native <details>, no JS).
+// The legacy c.faqs.groups[0] path is kept as a silent fallback so older
+// locales never go blank if home-faq.json is missing.
 
 import { ChevronDown, HelpCircle, ArrowRight, MessageCircle } from "lucide-react"
 import Link from "next/link"
 
 export function HomeFaq({ c, locale }: { c: any; locale: string }) {
   const isEs = locale === "es"
-  const groups = c.faqs?.groups || []
-  // Prefer the anxiety-targeted group first (it always exists after the latest
-  // content update — "Anxiety and comfort" / "Ansiedad y comodidad"). Fall back
-  // to the first available group if the localized data hasn't been seeded yet.
-  const anxietyGroup =
-    groups.find((g: any) =>
-      isEs
-        ? /ansiedad/i.test(g?.name ?? "")
-        : /anxiety/i.test(g?.name ?? "")
-    ) ?? groups[0]
-  const items: any[] = (anxietyGroup?.items || []).slice(0, 5)
+  const hf = c.homeFaq
+
+  // Primary: dedicated home-faq.json (5 anti-anxiety items).
+  // Fallback: legacy c.faqs.groups[0].items[0:5] so nothing breaks.
+  const items: any[] =
+    (hf?.items && hf.items.length > 0
+      ? hf.items
+      : (c.faqs?.groups?.[0]?.items || []).slice(0, 5)) || []
+
   if (items.length === 0) return null
+
   const base = `/${locale}`
+  const title = hf?.title ?? (isEs
+    ? "Las preguntas que te da vergüenza hacer."
+    : "The questions you're embarrassed to ask.")
+  const lead = hf?.lead ?? (isEs
+    ? "Las preguntas que más recibimos. Si no encontrás la tuya, escribime por WhatsApp y respondo en menos de 24 horas."
+    : "The questions we get most. If yours isn't here, message me on WhatsApp and I'll respond within 24 hours.")
+  const ctaLinkText = hf?.cta_link_text ?? (isEs ? "Ver todas las preguntas" : "See all questions")
+  const ctaText = hf?.cta_text ?? (isEs
+    ? "Estas son las preguntas que más escucho. Si la tuya no está, escribime."
+    : "These are the questions I hear most often. If yours isn't here, message me.")
 
   return (
     <section className="section bg-surface">
@@ -30,22 +41,17 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
               <HelpCircle className="w-3 h-3" />
               {isEs ? "Ansiedad y comodidad" : "Anxiety and comfort"}
             </span>
-            <h2 className="text-4xl md:text-5xl mb-5 text-left leading-tight">
-              {isEs
-                ? "Las preguntas que te da vergüenza hacer."
-                : "The questions you're embarrassed to ask."}
-            </h2>
-            <p className="text-fg-muted text-lg leading-relaxed mb-6 text-left">
-              {isEs
-                ? "Las preguntas que más recibimos. Si no encontrás la tuya, escribime por WhatsApp y respondo en menos de 24 horas."
-                : "The questions we get most. If yours isn't here, message me on WhatsApp and I'll respond within 24 hours."}
+            <h2 className="text-4xl md:text-5xl mb-5 text-left leading-tight">{title}</h2>
+            <p className="text-fg-muted text-lg leading-relaxed mb-6 text-left">{lead}</p>
+            <p className="text-fg-muted text-base leading-relaxed mb-6 text-left italic">
+              {ctaText}
             </p>
             <div className="flex flex-col gap-3">
               <Link
                 href={`${base}/faq`}
                 className="btn btn-outline inline-flex justify-center sm:justify-start"
               >
-                {isEs ? "Ver todas las preguntas" : "See all questions"}
+                {ctaLinkText}
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
@@ -67,10 +73,15 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
               >
                 <summary className="cursor-pointer p-5 md:p-6 list-none flex items-start justify-between gap-4 hover:bg-surface-muted focus-visible:bg-surface-muted transition-colors">
                   <div className="flex items-start gap-4 flex-1">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center text-accent font-medium text-sm" style={{ fontFamily: "var(--font-heading)" }}>
+                    <div
+                      className="flex-shrink-0 w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center text-accent font-medium text-sm"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
                       {String(i + 1).padStart(2, "0")}
                     </div>
-                    <span className="font-medium text-lg md:text-xl pt-1 text-left">{it.q || it.question}</span>
+                    <span className="font-medium text-lg md:text-xl pt-1 text-left">
+                      {it.q || it.question}
+                    </span>
                   </div>
                   <ChevronDown className="w-5 h-5 text-fg-subtle group-open:rotate-180 transition-transform flex-shrink-0 mt-2" />
                 </summary>

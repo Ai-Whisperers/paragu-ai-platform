@@ -1,0 +1,28 @@
+{
+  "title": "Las preguntas que te da vergüenza hacer.",
+  "lead": "Las cinco preguntas que más escucho de pacientes ansiosos. Si la tuya no está, escribime por WhatsApp y respondo en menos de 24 horas.",
+  "items": [
+    {
+      "q": "¿Qué pasa si tengo tanto miedo que ni siquiera puedo llamar?",
+      "a": "Entonces escribime por WhatsApp. Sin compromiso, sin cita agendada. Te respondo, hablamos al ritmo que vos necesites. Si no estás listo/a para venir, está bien. Empezamos por un mensaje."
+    },
+    {
+      "q": "¿Y si hace años que no voy al dentista?",
+      "a": "La mayoría de mis pacientes ansiosos me dice exactamente esto. No sos el/la único/a, y no te voy a hacer sentir mal. Empezamos con una Consulta de Diagnóstico y Planificación: conversación, examen, radiografías, y un plan escrito que entendés. Sin sermones."
+    },
+    {
+      "q": "¿Ofrecés sedación?",
+      "a": "Si la necesitás, sí. Trabajo con óxido nitroso (gas de la risa) y sedación oral para procedimientos específicos. Pero la sedación no es la primera respuesta — el control del ritmo y las pausas suelen serlo. Lo hablamos juntos cuando armamos tu plan."
+    },
+    {
+      "q": "¿Puedo traer a alguien a la cita?",
+      "a": "Por supuesto. Traé a tu pareja, tu hermana, tu amigo/a, quien sea que te haga sentir seguro/a. Van a estar en la sala con vos durante la consulta y durante el tratamiento si querés."
+    },
+    {
+      "q": "¿Hablás en inglés?",
+      "a": "Sí — inglés y español, fluido. Me formé y practiqué en ambos idiomas. Nunca vas a tener que dudar si entendí tu síntoma, tu miedo o tu pregunta."
+    }
+  ],
+  "cta_text": "Estas son las preguntas que más escucho. Si la tuya no está, escribime.",
+  "cta_link_text": "Ver todas las preguntas frecuentes"
+}

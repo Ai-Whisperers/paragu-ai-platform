@@ -24,6 +24,8 @@ import enProcess from "@/content/en/process.json"
 import esProcess from "@/content/es/process.json"
 import enFaqs from "@/content/en/faqs.json"
 import esFaqs from "@/content/es/faqs.json"
+import enHomeFaq from "@/content/en/home-faq.json"
+import esHomeFaq from "@/content/es/home-faq.json"
 import enCta from "@/content/en/cta.json"
 import esCta from "@/content/es/cta.json"
 import enLdLocalBusiness from "@/content/en/ld-localbusiness.json"
@@ -49,6 +51,7 @@ const EN: any = {
   testimonials: { items: enTestimonials },
   process: enProcess,
   faqs: enFaqs,
+  homeFaq: enHomeFaq,
   cta: enCta,
   ld_localbusiness: enLdLocalBusiness,
   ld_faq: enLdFaq,
@@ -64,6 +67,7 @@ const ES: any = {
   testimonials: { items: esTestimonials },
   process: esProcess,
   faqs: esFaqs,
+  homeFaq: esHomeFaq,
   cta: esCta,
   ld_localbusiness: esLdLocalBusiness,
   ld_faq: esLdFaq,
