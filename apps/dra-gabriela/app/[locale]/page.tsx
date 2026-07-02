@@ -4,6 +4,7 @@ import { buildMetadata } from "@/lib/seo"
 import { Hero } from "@/components/sections/Hero"
 import { BilingualBand } from "@/components/sections/BilingualBand"
 import { AnxietyPersonas } from "@/components/sections/AnxietyPersonas"
+import { Testimonials } from "@/components/sections/Testimonials"
 import { VoiceDoctor } from "@/components/sections/VoiceDoctor"
 import { SedationSection } from "@/components/sections/SedationSection"
 import { BigStats } from "@/components/sections/BigStats"
@@ -43,6 +44,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Hero c={c} locale={locale} />
       <BilingualBand locale={locale} />
       <AnxietyPersonas locale={locale} />
+      <Testimonials c={c} locale={locale} />
       <SocialProof c={c} locale={locale} />
       <VoiceDoctor locale={locale} />
       <MeetDoctor locale={locale} />
