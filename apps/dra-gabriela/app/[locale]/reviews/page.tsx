@@ -99,7 +99,7 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/(?<!\\u00)@/g, "\\u0040") }} />
 
       <PageHero
         eyebrow={isEs ? "Reseñas" : "Reviews"}

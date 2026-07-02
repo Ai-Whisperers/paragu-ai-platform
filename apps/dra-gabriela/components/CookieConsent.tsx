@@ -67,15 +67,19 @@ export function CookieConsent({ locale }: { locale: string }) {
             <>
               Usamos cookies solo si aceptás, para entender qué páginas funcionan.{" "}
               <Link href={`/${locale}/privacy`} className="underline hover:text-accent">
-                Más info
+                <span className="sr-only">{isEs ? "sobre cookies y privacidad" : "about cookies and privacy"}</span>
+                {isEs ? "Más info" : "Learn more"}
               </Link>
+              .
             </>
           ) : (
             <>
               We use cookies only if you accept, to understand which pages work.{" "}
               <Link href={`/${locale}/privacy`} className="underline hover:text-accent">
+                <span className="sr-only">about cookies and privacy</span>
                 Learn more
               </Link>
+              .
             </>
           )}
         </div>

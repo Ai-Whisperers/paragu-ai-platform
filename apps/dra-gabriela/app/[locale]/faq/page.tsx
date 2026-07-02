@@ -62,7 +62,7 @@ export default async function FAQ({ params }: { params: Promise<{ locale: string
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/(?<!\\u00)@/g, "\\u0040") }}
       />
 
       <PageHero

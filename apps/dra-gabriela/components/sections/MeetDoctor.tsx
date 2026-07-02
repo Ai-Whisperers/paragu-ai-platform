@@ -100,6 +100,7 @@ export function MeetDoctor({ locale }: MeetDoctorProps) {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href={`${base}/about`} className="btn btn-primary">
+                <span className="sr-only">{isEs ? "sobre la doctora" : "about Dr. Gabriella"}</span>
                 {isEs ? "Conocé más" : "Learn more"} <ArrowRight className="w-4 h-4" />
               </Link>
               <Link href={`${base}/second-opinion`} className="btn btn-outline">

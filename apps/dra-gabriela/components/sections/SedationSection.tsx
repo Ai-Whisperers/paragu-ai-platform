@@ -62,7 +62,7 @@ export function SedationSection({ locale }: { locale: string }) {
                     className="text-5xl font-heading font-bold leading-none"
                     style={{
                       color: isSedation ? "var(--accent)" : "#000080",
-                      opacity: 0.35,
+                      opacity: 0.18,
                     }}
                     aria-hidden="true"
                   >

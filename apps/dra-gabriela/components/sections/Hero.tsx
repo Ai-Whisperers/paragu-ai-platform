@@ -351,7 +351,7 @@ export function Hero({ c, locale }: HeroProps) {
                         onClick={() => setActive(i)}
                         aria-label={`${isEs ? "Ir a la diapositiva" : "Go to slide"} ${i + 1}`}
                         aria-current={isActive ? "true" : undefined}
-                        className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                        className={`min-h-[24px] min-w-[24px] h-1.5 rounded-full transition-all duration-300 cursor-pointer p-2 ${
                           isActive ? "w-8 bg-gold" : "w-1.5 bg-border hover:bg-gold/50"
                         }`}
                       />

@@ -80,13 +80,23 @@ export function SchemaOrg({ locale }: { locale: string }) {
   }
   const cleanedFaq = clean(data.faq)
   const cleanedReviews = clean(data.reviews)
+  // Serialize with @ Unicode-escaped to evade Cloudflare's "Email Obfuscation"
+  // feature, which otherwise corrupts inline JSON-LD by replacing @schema.org
+  // and "email":"...@..." patterns inside the <script type="application/ld+json">
+  // block. Browsers and parsers (Google Rich Results) decode \u0040 back to @.
+  // JSON.stringify already escapes safely, but Cloudflare's regex still matches
+  // the post-render HTML. Wrapping in JSON.parse(JSON.stringify(...)) again is
+  // idempotent — the @ stays escaped.
   const json = JSON.stringify(
     [includeBiz ? cleanedBiz : null, cleanedFaq, cleanedReviews].filter(Boolean)
   )
+  // Belt-and-braces: replace any remaining literal "@" outside of escape sequences
+  // with the unicode escape. This is the LAST line of defense before HTML render.
+  const safeJson = json.replace(/(?<!\\u00)@/g, "\\u0040")
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: json }}
+      dangerouslySetInnerHTML={{ __html: safeJson }}
     />
   )
 }

@@ -60,13 +60,14 @@ export function Navbar({ locale, business }: NavbarProps) {
     >
       <div className="flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link href={base} className="flex items-center gap-3 group" aria-label="Home — Dra. Gabriella">
-          <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-accent-2 flex items-center justify-center text-white text-xs font-semibold tracking-wider shadow-sm group-hover:shadow-md transition-shadow">
+        <Link href={base} className="flex items-center gap-3 group">
+          <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-accent-2 flex items-center justify-center text-white text-xs font-semibold tracking-wider shadow-sm group-hover:shadow-md transition-shadow" aria-hidden="true">
             DG
           </span>
           <span className="hidden sm:inline text-sm font-medium text-fg tracking-tight">
             Dra. Gabriella
           </span>
+          <span className="sr-only">Home — Dra. Gabriella</span>
         </Link>
 
         {/* Desktop main nav */}

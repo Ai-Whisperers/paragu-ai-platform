@@ -196,7 +196,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       {/* Service + OfferCatalog JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/(?<!\\u00)@/g, "\\u0040") }}
       />
 
       {/* Breadcrumb */}
