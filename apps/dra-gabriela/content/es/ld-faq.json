@@ -1,22 +1,47 @@
 {
-  "_comment": "JSON-LD FAQPage payload. Build should inject this when site.json.schema.faqPage is true.",
+  "_comment": "JSON-LD FAQPage payload for the homepage HomeFaq (ES). Mirror del grupo 'Ansiedad y comodidad' de content/es/faqs.json.",
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Cuánto cuesta la consulta?",
-      "acceptedAnswer": { "@type": "Answer", "text": "La consulta inicial cuesta entre Gs 300.000 y 450.000 según la complejidad. Incluye revisión, diagnóstico y un presupuesto claro. Sin sorpresas." }
+      "name": "Tengo miedo al dentista — ¿podemos hablar antes de que pase algo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La primera consulta es mayormente conversación. Hablamos, me contás qué te da miedo, qué te pasó antes. Te escucho. Recién después miramos tu boca juntos, con radiografías, cuando estés listo/a. No estás comprometiéndote a nada escribiéndome por WhatsApp."
+      }
     },
     {
       "@type": "Question",
-      "name": "¿Trabajan con seguros?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Somos consultorio privado, sin contrato directo con aseguradoras. Emitimos factura legal con RUC para reembolso. La mayoría de los seguros lo permite." }
+      "name": "¿Ofrecen sedación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí — óxido nitroso (gas de la risa) y sedación oral para procedimientos específicos. Pero la sedación es el tercer paso, no el primero. La hablamos sólo después de que veas el diagnóstico, entiendas el plan y te sientas listo/a."
+      }
     },
     {
       "@type": "Question",
-      "name": "¿Hablan inglés?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Atendemos pacientes extranjeros de forma regular y la consulta completa puede ser en inglés." }
+      "name": "¿Puedo traer a alguien conmigo a la consulta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Traé a quien necesites — pareja, madre, amigo/a. Puede quedarse en el consultorio durante la atención si eso te haga sentir más cómodo/a."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si necesito parar durante un procedimiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Acordamos una señal de stop antes de empezar (levantar la mano funciona). Cuando me la hagas, paro inmediatamente. No seguimos hasta que vos me digas. Sin preguntas, sin juicio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hace años que postergo. ¿Me van a hacer sentir mal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Muchos de mis pacientes llegan exactamente donde vos estás. La primera consulta es revisión + plan, no un sermón. Mi trabajo es mirar tu caso hoy y decirte qué es realista, qué es urgente y qué puede esperar — sin juicio."
+      }
     }
   ]
 }

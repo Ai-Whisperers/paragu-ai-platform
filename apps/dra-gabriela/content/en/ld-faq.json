@@ -1,54 +1,46 @@
 {
-  "_comment": "JSON-LD FAQPage payload. Build should inject this when site.json.schema.faqPage is true.",
+  "_comment": "JSON-LD FAQPage payload for the homepage HomeFaq. Mirrors the 'Anxiety and comfort' group of content/{locale}/faqs.json so rich-result snippets match what's on the page.",
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Do you treat expats and English-speaking patients?",
+      "name": "I'm scared of the dentist — can we talk before anything happens?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Consultations, explanations, and written reports are available in English."
+        "text": "Yes. The first visit is mostly conversation. We talk, you tell me what scares you, what happened before. I listen. We only look at your mouth together, with radiographs, when you're ready. You're not committing to any procedure by writing me on WhatsApp."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you issue written treatment plans?",
+      "name": "Do you offer sedation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every new patient gets a written plan with options, timeline, and reference pricing."
+        "text": "Yes — nitrous oxide (laughing gas) and oral sedation for specific procedures. But sedation is the third step, not the first. We talk about it only after you've seen the diagnosis, understand the plan, and feel ready."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I get a second opinion?",
+      "name": "Can I bring someone with me to the appointment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — written second opinions are one of our core services."
+        "text": "Yes. Bring whoever you need — partner, parent, friend. They can stay in the room during the consultation if that makes you more comfortable."
       }
     },
     {
       "@type": "Question",
-      "name": "What payment methods are available?",
+      "name": "What if I need to stop during a procedure?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cash, bank transfer, Pagopar, and Bancard POS. Financing available on cases over Gs 1M."
+        "text": "We agree a stop signal before we start (raising your hand works). When you signal, I stop immediately. We don't continue until you say so. No questions, no judgment."
       }
     },
     {
       "@type": "Question",
-      "name": "Are prices transparent?",
+      "name": "I've been postponing for years. Will you make me feel bad?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Reference prices are published on the pricing page. Final cost is confirmed before any procedure."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you accept corporate plans?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Standalone services such as second opinions and complex planning are not included in corporate installments."
+        "text": "No. Many of my patients arrive exactly where you are. The first visit is review + plan, not a sermon. My job is to look at your case today and tell you what's realistic, what's urgent, and what can wait — without judgment."
       }
     }
   ]

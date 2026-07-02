@@ -3,6 +3,31 @@
   "fraseGuia": "Before deciding, let's understand your case.",
   "groups": [
     {
+      "name": "Anxiety and comfort",
+      "items": [
+        {
+          "q": "I'm scared of the dentist — can we talk before anything happens?",
+          "a": "Yes. The first visit is mostly conversation. We talk, you tell me what scares you, what happened before. I listen. We only look at your mouth together, with radiographs, when you're ready. You're not committing to any procedure by writing me on WhatsApp."
+        },
+        {
+          "q": "Do you offer sedation?",
+          "a": "Yes — nitrous oxide (laughing gas) and oral sedation for specific procedures. But sedation is the third step, not the first. We talk about it only after you've seen the diagnosis, understand the plan, and feel ready."
+        },
+        {
+          "q": "Can I bring someone with me to the appointment?",
+          "a": "Yes. Bring whoever you need — partner, parent, friend. They can stay in the room during the consultation if that makes you more comfortable."
+        },
+        {
+          "q": "What if I need to stop during a procedure?",
+          "a": "We agree a stop signal before we start (raising your hand works). When you signal, I stop immediately. We don't continue until you say so. No questions, no judgment."
+        },
+        {
+          "q": "I've been postponing for years. Will you make me feel bad?",
+          "a": "No. Many of my patients arrive exactly where you are. The first visit is review + plan, not a sermon. My job is to look at your case today and tell you what's realistic, what's urgent, and what can wait — without judgment."
+        }
+      ]
+    },
+    {
       "name": "About the consultation",
       "items": [
         {

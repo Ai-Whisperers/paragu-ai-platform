@@ -3,6 +3,31 @@
   "fraseGuia": "Antes de decidir, entendamos tu caso.",
   "groups": [
     {
+      "name": "Ansiedad y comodidad",
+      "items": [
+        {
+          "q": "Tengo miedo al dentista — ¿podemos hablar antes de que pase algo?",
+          "a": "Sí. La primera consulta es mayormente conversación. Hablamos, me contás qué te da miedo, qué te pasó antes. Te escucho. Recién después miramos tu boca juntos, con radiografías, cuando estés listo/a. No estás comprometiéndote a nada escribiéndome por WhatsApp."
+        },
+        {
+          "q": "¿Ofrecen sedación?",
+          "a": "Sí — óxido nitroso (gas de la risa) y sedación oral para procedimientos específicos. Pero la sedación es el tercer paso, no el primero. La hablamos sólo después de que veas el diagnóstico, entiendas el plan y te sientas listo/a."
+        },
+        {
+          "q": "¿Puedo traer a alguien conmigo a la consulta?",
+          "a": "Sí. Traé a quien necesites — pareja, madre, amigo/a. Puede quedarse en el consultorio durante la atención si eso te hace sentir más cómodo/a."
+        },
+        {
+          "q": "¿Qué pasa si necesito parar durante un procedimiento?",
+          "a": "Acordamos una señal de stop antes de empezar (levantar la mano funciona). Cuando me la hagas, paro inmediatamente. No seguimos hasta que vos me digas. Sin preguntas, sin juicio."
+        },
+        {
+          "q": "Hace años que postergo. ¿Me van a hacer sentir mal?",
+          "a": "No. Muchos de mis pacientes llegan exactamente donde vos estás. La primera consulta es revisión + plan, no un sermón. Mi trabajo es mirar tu caso hoy y decirte qué es realista, qué es urgente y qué puede esperar — sin juicio."
+        }
+      ]
+    },
+    {
       "name": "Sobre la consulta",
       "items": [
         {

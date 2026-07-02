@@ -7,8 +7,16 @@ import Link from "next/link"
 export function HomeFaq({ c, locale }: { c: any; locale: string }) {
   const isEs = locale === "es"
   const groups = c.faqs?.groups || []
-  const firstGroup = groups[0]
-  const items: any[] = (firstGroup?.items || []).slice(0, 4)
+  // Prefer the anxiety-targeted group first (it always exists after the latest
+  // content update — "Anxiety and comfort" / "Ansiedad y comodidad"). Fall back
+  // to the first available group if the localized data hasn't been seeded yet.
+  const anxietyGroup =
+    groups.find((g: any) =>
+      isEs
+        ? /ansiedad/i.test(g?.name ?? "")
+        : /anxiety/i.test(g?.name ?? "")
+    ) ?? groups[0]
+  const items: any[] = (anxietyGroup?.items || []).slice(0, 5)
   if (items.length === 0) return null
   const base = `/${locale}`
 
@@ -20,10 +28,12 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
           <div className="lg:sticky lg:top-24">
             <span className="eyebrow inline-flex">
               <HelpCircle className="w-3 h-3" />
-              FAQ
+              {isEs ? "Ansiedad y comodidad" : "Anxiety and comfort"}
             </span>
             <h2 className="text-4xl md:text-5xl mb-5 text-left leading-tight">
-              {isEs ? "Preguntas frecuentes" : "Frequently asked questions"}
+              {isEs
+                ? "Las preguntas que te da vergüenza hacer."
+                : "The questions you're embarrassed to ask."}
             </h2>
             <p className="text-fg-muted text-lg leading-relaxed mb-6 text-left">
               {isEs
