@@ -9,7 +9,11 @@ TAG="dra-gabriela:prod-$VERSION-$DATE"
 LATEST="dra-gabriela:prod"
 
 echo "--- build: $TAG"
-pnpm run build 2>/dev/null || npm run build
+# Next 16 + Turbopack + output: standalone has a known race: parallel
+# build workers sometimes write build-manifest before pages-manifest,
+# causing the next start (or the standalone server) to ENOENT on first
+# request. Forcing a single-worker build is the documented workaround.
+NEXT_BUILD_WORKERS=1 pnpm run build 2>/dev/null || NEXT_BUILD_WORKERS=1 npm run build
 
 echo "--- docker: $TAG"
 docker build -t "$TAG" -t "$LATEST" .
