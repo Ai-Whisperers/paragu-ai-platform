@@ -11,6 +11,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X, MessageCircle, ChevronDown } from "lucide-react"
 import { ContactButtons } from "@/components/ContactButton"
+import { whatsappLink } from "@/lib/content"
 
 const LANGS = [
   { code: "en", label: "EN" },
@@ -110,18 +111,25 @@ export function Navbar({ locale, business }: NavbarProps) {
             })}
           </div>
 
-          {/* Primary CTA — uses ContactButtons for graceful fallback */}
-          {business && (
-            <div className="hidden sm:block">
-              <ContactButtons
-                business={business}
-                locale={locale}
-                variant="inline"
-                primaryLabel={isEs ? "Coordinar" : "Book"}
-                className="!flex-row"
-              />
-            </div>
-          )}
+          {/* Primary WhatsApp CTA — above fold (Insight 6) */}
+          {business && (() => {
+            const waHref = whatsappLink(business?.whatsapp, business?.whatsappMessage)
+            if (!waHref) return null
+            return (
+              <a
+                href={waHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp hidden md:inline-flex text-sm"
+                aria-label={isEs ? "Escribirme por WhatsApp" : "Message me on WhatsApp"}
+              >
+                <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                <span>{isEs ? "WhatsApp" : "WhatsApp"}</span>
+              </a>
+            )
+          })()}
+
+          {/* Lang switcher — visible inactive state so it's always clickable */}
 
           {/* Mobile hamburger */}
           <button
@@ -181,16 +189,42 @@ export function Navbar({ locale, business }: NavbarProps) {
                 )
               })}
             </div>
-            {business && (
-              <div className="pt-2">
-                <ContactButtons
-                  business={business}
-                  locale={locale}
-                  variant="stack"
-                  primaryLabel={isEs ? "Coordinar consulta" : "Book a consultation"}
-                />
-              </div>
-            )}
+            {business && (() => {
+              const waHref = whatsappLink(business?.whatsapp, business?.whatsappMessage)
+              if (waHref) {
+                return (
+                  <div className="pt-2 space-y-2">
+                    <a
+                      href={waHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-whatsapp w-full justify-center"
+                      onClick={() => setOpen(false)}
+                      aria-label={isEs ? "Escribirme por WhatsApp" : "Message me on WhatsApp"}
+                    >
+                      <MessageCircle className="w-5 h-5" aria-hidden="true" />
+                      {isEs ? "Escribime por WhatsApp" : "Message me on WhatsApp"}
+                    </a>
+                    <ContactButtons
+                      business={business}
+                      locale={locale}
+                      variant="stack"
+                      primaryLabel={isEs ? "Coordinar consulta" : "Book a consultation"}
+                    />
+                  </div>
+                )
+              }
+              return (
+                <div className="pt-2">
+                  <ContactButtons
+                    business={business}
+                    locale={locale}
+                    variant="stack"
+                    primaryLabel={isEs ? "Coordinar consulta" : "Book a consultation"}
+                  />
+                </div>
+              )
+            })()}
           </div>
         </div>
       )}
