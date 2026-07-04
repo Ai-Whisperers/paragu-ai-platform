@@ -48,12 +48,12 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
         align="center"
       >
         {wa ? (
-          <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-gold text-base px-8 py-4">
+          <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary text-base px-8 py-4">
             <MessageCircle className="w-5 h-5" />
             {c.cta_primary || (isEs ? "Pedir segunda opinión" : "Request a second opinion")}
           </a>
         ) : (
-          <Link href={`/${locale}/contact`} className="btn btn-gold text-base px-8 py-4">
+          <Link href={`/${locale}/contact`} className="btn btn-primary text-base px-8 py-4">
             {isEs ? "Ver contacto" : "See contact"}
           </Link>
         )}
@@ -104,7 +104,7 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
                   <ul className="space-y-2.5 mt-3">
                     {s.items.map((it: string, j: number) => (
                       <li key={j} className="flex items-start gap-3 text-fg-muted leading-relaxed">
-                        <CheckCircle2 className="w-4 h-4 text-gold mt-1 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                         <span>{it}</span>
                       </li>
                     ))}
@@ -119,8 +119,8 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
       {/* CTA */}
       <PageSection layout="narrow" py="md" bg="muted">
         <div className="text-center">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gold-soft mb-3">
-            <Sparkles className="w-6 h-6 text-gold-2" />
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent-soft mb-3">
+            <Sparkles className="w-6 h-6 text-accent" />
           </div>
           <h2 className="text-2xl md:text-3xl mb-3">
             {c.cta_primary || (isEs ? "Pedí tu segunda opinión" : "Request your second opinion")}

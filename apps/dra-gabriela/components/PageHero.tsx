@@ -68,7 +68,7 @@ export function PageHero({
             <span
               className={cn(
                 "eyebrow inline-flex",
-                isGradient && "!border-white/20 !bg-white/10 !text-gold"
+                isGradient && "!border-white/20 !bg-white/10 !text-white"
               )}
             >
               <Icon className="w-3 h-3" />

@@ -9,7 +9,7 @@ import type { ReactNode } from "react"
 interface PageSectionProps {
   children: ReactNode
   layout?: "narrow" | "wide" | "split"
-  bg?: "default" | "muted" | "accent" | "gradient"
+  bg?: "default" | "muted" | "bg" | "accent" | "gradient"
   className?: string
   innerClassName?: string
   py?: "sm" | "md" | "lg" | "none"
@@ -19,6 +19,7 @@ interface PageSectionProps {
 const BG: Record<string, string> = {
   default: "",
   muted: "bg-surface-muted",
+  bg: "bg-bg",
   accent: "bg-accent text-white",
   gradient: "bg-gradient-to-br from-accent via-accent-2 to-accent text-white",
 }
