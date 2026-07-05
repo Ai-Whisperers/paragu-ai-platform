@@ -5,7 +5,7 @@
     {
       "order": 1,
       "title": "No-obligation contact",
-      "subtitle": "Message us on WhatsApp or via the form. We respond in under 24 hours.",
+      "subtitle": "Message me on WhatsApp or via the form. I respond in under 24 hours.",
       "icon": "message",
       "duration": "24h",
       "actions": ["WhatsApp", "Web form", "Phone"]
@@ -29,13 +29,12 @@
     {
       "order": 4,
       "title": "Treatment with follow-up",
-      "subtitle": "We execute the agreed plan. We control every phase and update you at every step.",
+      "subtitle": "I execute the agreed plan. I control every phase and update you at every step.",
       "icon": "activity",
       "duration": "Varies",
       "actions": ["Phase tracking", "Post-op check"]
     }
   ],
-  "what_to_bring": ["ID", "Insurance card (for reimbursement)", "List of medications", "Previous x-rays if available"],
   "cancellation_policy": "Cancellations within 24 hours may incur a small fee.",
   "guarantee": "Written plan delivered before any irreversible procedure."
 }

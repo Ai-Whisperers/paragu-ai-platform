@@ -1,7 +1,7 @@
 {
   "title": "Atención dental en Asunción — pacientes internacionales",
   "subtitle": "Evaluación honesta, planes escritos, precios publicados y comunicación en inglés. Odontología basada en criterio clínico.",
-  "fraseGuia": "Dentistry doesn't start with a drill. It starts by thinking.",
+  "fraseGuia": "La odontología no empieza con el torno. Empieza pensando.",
   "cta_primary": "Iniciar segunda opinión",
   "cta_secondary": "Ver precios",
   "sections": [
@@ -37,9 +37,9 @@
       ]
     }
   ],
-  "precio_nota": "Precios de referencia publicados. Presupuesto final confirmado antes de iniciar.",
-  "process_link": "/es/filosofia",
+  "pricing_note": "Precios de referencia publicados. Presupuesto final confirmado antes de iniciar.",
+  "process_link": "/es/proceso",
   "faq_link": "/es/faq",
-  "precios_link": "/es/precios",
+  "pricing_link": "/es/precios",
   "testimonials_link": "/es#testimonials"
 }

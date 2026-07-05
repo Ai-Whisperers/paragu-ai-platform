@@ -45,12 +45,12 @@
       ]
     }
   ],
-  "pricing_ref": "Gs 450,000 — Gs 600,000 with full treatment plan",
+  "pricing_ref": "Gs 450.000 — Gs 600.000 with full treatment plan",
   "scheme": {
     "type": "Service",
     "name": "Second opinion / written review"
   },
   "faq_link": "/en/faq",
-  "process_link": "/en/philosophy",
+  "process_link": "/en/process",
   "testimonials_link": "/en#testimonials"
 }

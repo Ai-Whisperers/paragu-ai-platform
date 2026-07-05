@@ -34,7 +34,7 @@ export function AnxietyPersonas({ locale }: { locale: string }) {
 
   return (
     <section
-      className="bg-bg"
+      className="tone-ocean-2"
       aria-labelledby="anxiety-personas-heading"
       role="region"
     >
@@ -44,7 +44,7 @@ export function AnxietyPersonas({ locale }: { locale: string }) {
           <h2
             id="anxiety-personas-heading"
             className="text-3xl md:text-4xl font-heading font-semibold mt-3 mb-4"
-            style={{ color: "#000080" }}
+            style={{ color: "var(--navy)" }}
           >
             {data.title}
           </h2>

@@ -35,15 +35,35 @@ export function ScrollReveal({
   as: Tag = "div",
 }: ScrollRevealProps) {
   const ref = useRef<HTMLElement | null>(null)
-  const [visible, setVisible] = useState(false)
+  // SSR/no-JS default: content visible. Client animates in only if the
+  // element enters the viewport AFTER hydration (i.e. it started below the
+  // fold). Prevents blank pages when JS is slow or fails.
+  const [mounted, setMounted] = useState(false)
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (typeof IntersectionObserver === "undefined") {
+    setMounted(true)
+
+    const reduced =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
+    if (reduced || typeof IntersectionObserver === "undefined") {
       setVisible(true)
       return
     }
+
+    // Only hide (and animate in) if the element is currently below the fold.
+    const rect = el.getBoundingClientRect()
+    const viewportH = window.innerHeight || document.documentElement.clientHeight
+    const belowFold = rect.top > viewportH * 0.9
+    if (!belowFold) {
+      setVisible(true)
+      return
+    }
+    setVisible(false)
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -62,17 +82,15 @@ export function ScrollReveal({
   }, [once])
 
   const Component = Tag as any
+  const animClass = mounted
+    ? visible
+      ? "opacity-100 translate-x-0 translate-y-0"
+      : `opacity-0 ${DIRECTION_CLASSES[direction]}`
+    : "opacity-100"
   return (
     <Component
       ref={ref as any}
-      className={
-        "transition-all duration-700 ease-out " +
-        (visible
-          ? "opacity-100 translate-x-0 translate-y-0"
-          : `opacity-0 ${DIRECTION_CLASSES[direction]}`) +
-        " " +
-        className
-      }
+      className={"transition-all duration-700 ease-out " + animClass + " " + className}
       style={delay > 0 ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}

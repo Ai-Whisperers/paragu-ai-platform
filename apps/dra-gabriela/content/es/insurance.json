@@ -13,7 +13,7 @@
     },
     {
       "q": "¿Hay financiamiento disponible?",
-      "a": "Para casos de más de Gs 1.000.000, hay planes de pago disponibles a través de Pagopar o Bancard. El paciente absorbe el costo de financiamiento, que suele ser 5-10% dependiendo de la cantidad de cuotas. No cobramos interés nosotros — el costo de financiamiento es el cargo del procesador externo."
+      "a": "Para casos de más de Gs 1.000.000, hay planes de pago disponibles a través de Pagopar o Bancard. El paciente absorbe el costo de financiamiento, que suele ser 5-10% dependiendo de la cantidad de cuotas. Yo no cobro interés — el costo de financiamiento es el cargo del procesador externo."
     },
     {
       "q": "¿Hacen planes corporativos?",
@@ -25,7 +25,7 @@
     },
     {
       "q": "¿Ofrecen garantía de devolución?",
-      "a": "En el servicio de segunda opinión escrita: si el informe no aborda todas tus preguntas, lo rehacemos sin cargo. En otros servicios, no ofrecemos garantía de devolución porque el trabajo es irreversible — pero sí respaldamos nuestro trabajo: si una restauración falla dentro del primer año por una razón clínica, la reemplazamos sin cargo."
+      "a": "En el servicio de segunda opinión escrita: si el informe no aborda todas tus preguntas, lo rehago sin cargo. En otros servicios, no ofrezco garantía de devolución porque el trabajo es irreversible — pero sí respaldo mi trabajo: si una restauración falla dentro del primer año por una razón clínica, la reemplazo sin cargo."
     }
   ]
 }

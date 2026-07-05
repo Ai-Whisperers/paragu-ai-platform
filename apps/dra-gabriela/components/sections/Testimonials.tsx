@@ -13,7 +13,7 @@ export function Testimonials({ c, locale }: { c: any; locale: string }) {
   const display = real.slice(0, 3)
   const isEs = locale === "es"
   return (
-    <section className="section bg-surface" aria-labelledby="testimonials-heading">
+    <section className="section tone-ocean-4" aria-labelledby="testimonials-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="eyebrow">{isEs ? "Historias reales" : "Real patient stories"}</span>

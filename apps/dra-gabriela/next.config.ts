@@ -3,6 +3,7 @@ import type { NextConfig } from "next"
 const config: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
+  devIndicators: false,
   images: {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",

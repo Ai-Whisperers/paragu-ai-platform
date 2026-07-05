@@ -5,7 +5,7 @@
   "sections": [
     {
       "heading": "The clinic",
-      "body": "Ometz Dental is in Barrio Mburucuyá, Asunción, Paraguay. The exact street is confirmed before the formal opening (mid-July 2026). The space is designed to be welcoming and colorful — not clinical-cold. It reflects the philosophy: think before touching.",
+      "body": "Ometz Dental is in Barrio Mburucuyá, Asunción, Paraguay. The exact street is confirmed before the formal opening. The space is designed to be welcoming and colorful — not clinical-cold. It reflects the philosophy: think before touching.",
       "items": [
         "Located in Barrio Mburucuyá, Asunción",
         "Care by appointment (Mon-Fri, 2:30pm-7:00pm)",
@@ -15,7 +15,7 @@
     },
     {
       "heading": "Sterilization protocol",
-      "body": "Infection control is non-negotiable. Every instrument is sterilized between patients. We follow CDC and ADA guidelines for dental infection control.",
+      "body": "Infection control is non-negotiable. Every instrument is sterilized between patients. I follow CDC and ADA guidelines for dental infection control.",
       "items": [
         "All instruments autoclaved at 134°C for 18 minutes (Class B sterilizer)",
         "Biological indicator test weekly to verify sterilization efficacy",
@@ -27,8 +27,8 @@
       ]
     },
     {
-      "heading": "Equipment we use",
-      "body": "Modern equipment isn't a luxury — it affects diagnostic accuracy, treatment quality, and patient comfort. Here's what we have:",
+      "heading": "Equipment I use",
+      "body": "Modern equipment isn't a luxury — it affects diagnostic accuracy, treatment quality, and patient comfort. Here's what I have:",
       "items": [
         "Digital x-ray system (lower radiation than film, instant images)",
         "Intraoral camera (so you can see what we see in your mouth)",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "heading": "Materials we use",
+      "heading": "Materials I use",
       "body": "Materials matter. Cheap materials fail faster, look worse, and sometimes contain compounds I wouldn't want in my own mouth. Here's what I work with:",
       "items": [
         "Composite: German-made (Voco, Ivoclar) — premium tier, not the cheapest",
@@ -51,8 +51,8 @@
       ]
     },
     {
-      "heading": "What we don't have (and why)",
-      "body": "Being honest about what we don't do is part of being honest about what we do.",
+      "heading": "What I don't do (and why)",
+      "body": "Being honest about what I don't do is part of being honest about what I do.",
       "items": [
         "Surgical implant placement — referred to a maxillofacial specialist I work with",
         "Complex orthodontics — referred to a specialist orthodontist",
@@ -63,7 +63,7 @@
     },
     {
       "heading": "Patient comfort",
-      "body": "Dental anxiety is real. We work to make the experience as comfortable as possible.",
+      "body": "Dental anxiety is real. I work to make the experience as comfortable as possible.",
       "items": [
         "Explain every step before it happens — no surprises",
         "Pause whenever you ask — you control the pace",

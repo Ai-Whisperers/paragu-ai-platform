@@ -66,11 +66,15 @@ function clean(obj: any): any {
   return obj
 }
 
-export function SchemaOrg({ locale }: { locale: string }) {
+/**
+ * Build the JSON-LD script content for a given locale.
+ * Call this from `generateMetadata` in app/[locale]/layout.tsx to inject
+ * structured data without rendering <head> in JSX (causes head-in-body error).
+ */
+export function getSchemaOrgJson(locale: string): string {
   const data = PAYLOADS[locale]
-  if (!data) return null
-  // Only emit the LocalBusiness if it still has required fields after cleaning
-  // (name + address OR telephone). Otherwise omit it entirely.
+  if (!data) return "[]"
+
   const cleanedBiz = clean(data.biz) as any
   let includeBiz = false
   if (cleanedBiz && typeof cleanedBiz === "object") {
@@ -80,23 +84,24 @@ export function SchemaOrg({ locale }: { locale: string }) {
   }
   const cleanedFaq = clean(data.faq)
   const cleanedReviews = clean(data.reviews)
-  // Serialize with @ Unicode-escaped to evade Cloudflare's "Email Obfuscation"
-  // feature, which otherwise corrupts inline JSON-LD by replacing @schema.org
-  // and "email":"...@..." patterns inside the <script type="application/ld+json">
-  // block. Browsers and parsers (Google Rich Results) decode \u0040 back to @.
-  // JSON.stringify already escapes safely, but Cloudflare's regex still matches
-  // the post-render HTML. Wrapping in JSON.parse(JSON.stringify(...)) again is
-  // idempotent — the @ stays escaped.
+
   const json = JSON.stringify(
     [includeBiz ? cleanedBiz : null, cleanedFaq, cleanedReviews].filter(Boolean)
   )
-  // Belt-and-braces: replace any remaining literal "@" outside of escape sequences
-  // with the unicode escape. This is the LAST line of defense before HTML render.
-  const safeJson = json.replace(/(?<!\\u00)@/g, "\\u0040")
+  return json.replace(/(?<!\u00)@/g, "\u0040")
+}
+
+/**
+ * @deprecated Use `getSchemaOrgJson()` in `generateMetadata` instead.
+ * Do NOT use in layout JSX — causes head-in-body HTML errors.
+ */
+export function SchemaOrg({ locale }: { locale: string }) {
+  const json = getSchemaOrgJson(locale)
+  if (json === "[]") return null
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: safeJson }}
+      dangerouslySetInnerHTML={{ __html: json }}
     />
   )
 }

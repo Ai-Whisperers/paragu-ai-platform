@@ -8,8 +8,8 @@
   "url": "https://dragabriela.paragu-ai.com/es",
   "logo": "https://dragabriela.paragu-ai.com/og/dra-gabriella.svg",
   "image": "https://dragabriela.paragu-ai.com/og/og-home.png",
-  "telephone": "PENDIENTE",
-  "email": "hola@dra-gp.com.py",
+  "telephone": "+595981146759",
+  "email": "doctora.gabi@ometzdental.com.py",
   "priceRange": "Gs 300.000 - Gs 5.000.000",
   "currenciesAccepted": "PYG",
   "paymentAccepted": "Efectivo, Transferencia bancaria, Pagopar, Bancard",
@@ -22,8 +22,8 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": -25.2637,
-    "longitude": -57.5759
+    "latitude": -25.2836,
+    "longitude": -57.4831
   },
   "areaServed": [
     { "@type": "City", "name": "Asunción" },
@@ -42,14 +42,8 @@
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "12:00"
+      "opens": "14:30",
+      "closes": "19:00"
     }
   ],
   "knowsLanguage": ["es", "en"],

@@ -3,8 +3,8 @@
 //
 // Env vars (optional):
 //   - SUPABASE_URL, SUPABASE_SERVICE_KEY: enable storage to contact_submissions table
-//   - RESEND_API_KEY: enable email notification to hola@dra-gp.com.py
-//   - CONTACT_NOTIFY_EMAIL: where to send notifications (default: hola@dra-gp.com.py)
+//   - RESEND_API_KEY: enable email notification to hola@ometzdental.com.py
+//   - CONTACT_NOTIFY_EMAIL: where to send notifications (default: hola@ometzdental.com.py)
 
 "use server"
 
@@ -85,7 +85,7 @@ export async function submitContactForm(input: ContactFormInput): Promise<Contac
 
   const supabaseUrl = process.env.SUPABASE_URL
   const supabaseKey = process.env.SUPABASE_SERVICE_KEY
-  const notifyEmail = process.env.CONTACT_NOTIFY_EMAIL || "hola@dra-gp.com.py"
+  const notifyEmail = process.env.CONTACT_NOTIFY_EMAIL || "hola@ometzdental.com.py"
   const resendKey = process.env.RESEND_API_KEY
 
   const errors: string[] = []

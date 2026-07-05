@@ -1,91 +1,77 @@
 {
-  "site": {
-    "name": "Ometz Dental — Dr. Gabriella González Pane",
-    "slug": "dra-gabriela-en",
-    "url": "https://ometzdental.com",
-    "locale": "en-PY",
-    "tagline": "I listen.",
-    "metaDescription": "Ometz Dental — Oral rehabilitation, written second opinions, and dentistry with clinical judgment in Barrio Mburucuyá, Asunción. I listen before I touch. 20+ years of experience. Care in English and Spanish, by appointment. Dr. Gabriella González Pane."
+  "name": "Dra. Gabriella González Pane",
+  "short_name": "Dra. Gabriella",
+  "brand_name": "Gabriella",
+  "description": "Anti-anxiety dentistry in Asunción. Oral rehabilitation, aesthetics, and operative care based on clinical judgment.",
+  "metaDescription": "Dra. Gabriella González Pane — anti-anxiety, planning-first dentistry in Asunción. Written plans, honest second opinions, care in Spanish and English.",
+  "contact": {
+    "whatsapp": "595981146759",
+    "whatsapp_display": "+595 981 146 759",
+    "whatsapp_message_default": "Hola Dra. Gabriella, tengo una consulta",
+    "whatsapp_message_anxiety": "Hola Dra. Gabriella, tengo miedo de ir al dentista",
+    "email": "doctora.gabi@ometzdental.com.py",
+    "email_display": "doctora.gabi@ometzdental.com.py",
+    "phone": "+595 981 146 759",
+    "phone_e164": "+595981146759"
   },
-  "business": {
-    "phone": "",
-    "whatsapp": "",
-    "whatsappMessage": "Hi Dr. Gabriella, I found your site and I'd like to understand my case before deciding on treatment. Do you have availability for a Diagnostic & Planning Consultation?",
-    "email": "doctora.gabi@ometsdental.com.py",
-    "instagram": "",
-    "instagramUrl": "",
-    "address": "Barrio Mburucuyá, Asunción, Paraguay",
-    "coordinates": {
-      "lat": -25.2965,
-      "lng": -57.6055
+  "address": {
+    "streetAddress": "PENDING",
+    "neighborhood": "Barrio Mburucuyá",
+    "addressLocality": "Asunción",
+    "addressRegion": "Central",
+    "postalCode": "1101",
+    "addressCountry": "PY",
+    "geo": {
+      "latitude": -25.2836,
+      "longitude": -57.4831
     },
-    "currency": "PYG",
-    "ruc": "1375421-1",
-    "mspbs": "3618",
-    "name": "Dr. Gabriella González Pane",
-    "horario": "Monday to Friday, 2:30pm - 7:00pm, by appointment",
-    "dias": "Mon to Fri (scheduled, not sitting in the office all day)",
-    "apertura": "Mid-July 2026 (soft launch)",
-    "lenguajes": "Spanish, English"
+    "google_maps_url": ""
   },
-  "adn": {
-    "fraseGuia": "I listen.",
-    "categoria": "Dentistry with clinical judgment",
-    "simbolo": "Ometz — אומץ (courage in Hebrew)",
-    "marcaComercial": "Ometz Dental",
-    "pilares": [
-      {"id": "pensar", "titulo": "Think before touching", "descripcion": "Diagnosis, conversation and planning before any procedure."},
-      {"id": "conservar", "titulo": "Preserve before replacing", "descripcion": "Respect for tooth structure. Every intervention has a biological cost that must be explained."},
-      {"id": "explicar", "titulo": "Explain before selling", "descripcion": "The patient must understand their case. Educate without infantilizing, speak clearly without emptying."},
-      {"id": "personas", "titulo": "See people before teeth", "descripcion": "The mouth belongs to someone. Deep humanity without sentimentality."},
-      {"id": "derivar", "titulo": "Refer when appropriate", "descripcion": "A confident professional doesn't need to do everything. Rehabilitation requires integrating specialties."}
-    ],
-    "puertaEntrada": "Diagnostic & Planning Consultation",
-    "manifiestoPublico": "I'm Dr. Gaby. I've been a dentist for two decades. It's not about grabbing the drill — it's about sitting down, listening to you, and building a treatment plan together that makes sense, that you understand, and that fits your needs. My work isn't to sell you a treatment. It's to help you understand your case so you can decide with confidence. I listen."
+  "hours": {
+    "monday": { "open": "14:30", "close": "19:00" },
+    "tuesday": { "open": "14:30", "close": "19:00" },
+    "wednesday": { "open": "14:30", "close": "19:00" },
+    "thursday": { "open": "14:30", "close": "19:00" },
+    "friday": { "open": "14:30", "close": "19:00" },
+    "saturday": { "closed": true },
+    "sunday": { "closed": true }
   },
-  "features": {
-    "bookingForm": true,
-    "googleMapsEmbed": true,
-    "testimonials": true,
-    "stats": true,
-    "reasons": true,
-    "ctaBanner": true,
-    "process": true,
-    "beforeAfterSlider": false,
-    "blog": true,
-    "whatsappLink": true,
-    "cookieConsent": true,
-    "promoBanner": false,
-    "loyaltyProgram": false,
-    "giftCards": false,
-    "promotions": false,
-    "referral": false,
-    "clientPortal": false,
-    "ecommerce": false,
-    "products": false,
-    "cart": false,
-    "checkout": false
+  "hours_display": {
+    "en": "Mon–Fri, 2:30pm – 7:00pm",
+    "es": "Lun a Vie, 14:30 a 19:00"
   },
-  "navigation": {
-    "main": [
-      {"label": "Home", "href": "/"},
-      {"label": "Philosophy", "href": "/philosophy"},
-      {"label": "Services", "href": "/services"},
-      {"label": "Pricing", "href": "/pricing"},
-      {"label": "Contact", "href": "/contact"}
-    ],
-    "more": [
-      {"label": "Second Opinion", "href": "/second-opinion"},
-      {"label": "About", "href": "/about"},
-      {"label": "Expat", "href": "/expat"},
-      {"label": "Contact", "href": "/contact", "feature": "map"},
-      {"label": "Blog", "href": "/blog", "feature": "blog"},
-      {"label": "FAQ", "href": "/faq"}
-    ]
+  "launch": {
+    "state": "soft-launch-pending",
+    "target": "soon",
+    "target_display": {
+      "en": "Opening soon",
+      "es": "Apertura próxima"
+    }
   },
-  "disclaimers": {
-    "consultaNoPromete": "The Diagnostic & Planning Consultation does NOT promise: a definitive diagnosis without the necessary studies, a closed quote by WhatsApp, a perfect aesthetic solution, or immediate treatment without planning.",
-    "fotoNoAlcanza": "A photo is not enough to diagnose with seriousness. I can orient you, but to tell you what's best I need to evaluate you clinically.",
-    "noCompitePorPrecio": "My approach doesn't compete on price. It competes on judgment. If you're looking for the lowest price, there are other options. If you're looking to understand your case, you're in the right place."
+  "registrations": {
+    "mspbs": {
+      "state": "in-process",
+      "display": {
+        "en": "MSPBS independent practice license — in process",
+        "es": "Habilitación MSPBS de práctica independiente — en trámite"
+      }
+    },
+    "ruc": {
+      "state": "in-process",
+      "display": {
+        "en": "RUC — in process",
+        "es": "RUC — en trámite"
+      }
+    }
+  },
+  "practice": {
+    "priceRange": "Gs 300.000 – Gs 5.000.000",
+    "priceRange_short": "Gs 300k – Gs 5M",
+    "languages": ["Spanish", "English"],
+    "languages_display": "Español · English"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/dragabriellagp",
+    "instagram_handle": "@dragabriellagp"
   }
 }

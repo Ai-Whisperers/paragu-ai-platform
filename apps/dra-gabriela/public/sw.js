@@ -6,7 +6,7 @@
 //
 // Updated 2026-06-18
 
-const CACHE_NAME = "dra-gp-v1"
+const CACHE_NAME = "dra-gp-v2"
 const PRECACHE_URLS = [
   "/en",
   "/es",

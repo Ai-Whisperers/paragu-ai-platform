@@ -1,80 +1,80 @@
 {
-  "title": "Filosofía — La odontología no empieza con una fresa. Empieza pensando.",
-  "subtitle": "Por qué existe esta práctica y por qué es diferente.",
-  "fraseGuia": "La odontología no empieza con una fresa. Empieza pensando.",
+  "title": "Filosofía — La odontología no empieza con el torno. Empieza pensando.",
+  "subtitle": "Por qué existe este consultorio y por qué es distinto.",
+  "fraseGuia": "La odontología no empieza con el torno. Empieza pensando.",
   "sections": [
     {
-      "heading": "Por qué existe esta consulta",
-      "body": "Esta consulta existe para ejercer odontología basada en criterio clínico, no para correr más rápido. La diferencia entre un procedimiento y una decisión clínica es lo que casi nunca se ve: por qué se eligió ese camino y no otro. Mi trabajo es mostrar ese razonamiento, no solo el resultado."
+      "heading": "Por qué existe este consultorio",
+      "body": "Este consultorio existe para ejercer una odontología basada en el criterio clínico, no en correr más rápido. La diferencia entre un procedimiento y una decisión clínica es lo que casi nunca se ve: por qué se eligió este camino y no otro. Mi trabajo es mostrar ese razonamiento, no solo el resultado."
     },
     {
       "heading": "El problema del mercado",
-      "body": "El mercado odontológico está lleno de mensajes similares: antes y después, tips rápidos, promociones, carillas, blanqueamiento, estética, tecnología, sonrisas perfectas. Esos contenidos pueden generar atención, pero no construyen diferenciación profunda. Si entro a competir con el mismo lenguaje, pierdo mi mayor activo: mi manera particular de pensar. El problema no es usar redes. El problema es usarlas para sonar como todos."
+      "body": "El mercado dental está lleno de mensajes parecidos: antes y después, tips rápidos, promociones, carillas, blanqueamiento, estética, tecnología, transformaciones cosméticas. Ese contenido puede generar atención, pero no construye diferenciación profunda. Si entro compitiendo con el mismo idioma, pierdo mi mayor activo: mi forma de pensar. El problema no es usar redes sociales. El problema es usarlas para sonar igual a los demás."
     },
     {
       "heading": "La categoría propia",
-      "body": "No es odontología estética. Tampoco rehabilitación oral a secas. La categoría estratégica es odontología basada en criterio clínico. El centro de la comunicación no es el tratamiento, sino la decisión que lo justifica. La promesa no es sonrisa perfecta: es pensar tu caso con seriedad antes de proponerte un tratamiento."
+      "body": "No es odontología cosmética. Tampoco es rehabilitación oral a secas. La categoría estratégica es odontología basada en criterio clínico. El centro de la comunicación no es el tratamiento — es la decisión que lo justifica. La promesa no es una transformación cosmética: es pensar tu caso en serio antes de proponer un tratamiento."
     },
     {
-      "heading": "Los 5 pilares no negociables",
+      "heading": "Los 5 pilares innegociables",
       "items": [
-        {"titulo": "Pensar antes de tocar", "descripcion": "Diagnóstico, conversación, lectura clínica, planificación y criterio antes de cualquier intervención. La marca no debe apurarse a mostrar procedimientos. Debe mostrar cómo se decide si un procedimiento tiene sentido."},
-        {"titulo": "Conservar antes que reemplazar", "descripcion": "Respeto por la estructura dentaria. Una corona, una carilla o una rehabilitación no son trofeos. Son decisiones con costo biológico. Pregunto: ¿vale la pena intervenir?"},
-        {"titulo": "Explicar antes de vender", "descripcion": "El paciente debe entender. Es obligación ética y estrategia de diferenciación. Educar sin infantilizar, hablar claro sin vaciar."},
-        {"titulo": "Ver personas antes que dientes", "descripcion": "La boca pertenece a alguien con miedo, presupuesto, historia, expectativas, frustraciones y límites. Humanidad profunda sin sentimentalismo."},
-        {"titulo": "Derivar cuando corresponde", "descripcion": "Una profesional segura no necesita hacerlo todo. Rehabilitar implica integrar especialidades. Saber cuándo llamar al endodoncista, al cirujano, al periodoncista o al ortodoncista también es criterio."}
+        {"title": "Pensar antes de tocar", "description": "Diagnóstico, conversación, lectura clínica, planificación y criterio antes de cualquier intervención. La marca no debe apurarse a mostrar procedimientos. Debe mostrar cómo decide si un procedimiento tiene sentido."},
+        {"title": "Preservar antes de reemplazar", "description": "Respeto por la estructura dentaria. Una corona, una carilla o una rehabilitación no son trofeos. Son decisiones con costo biológico. Pregunto: ¿vale la pena intervenir?"},
+        {"title": "Explicar antes de vender", "description": "El paciente tiene que entender. Es una obligación ética y una estrategia de diferenciación. Educar sin infantilizar, hablar claro sin vaciar el mensaje."},
+        {"title": "Ver personas antes que dientes", "description": "La boca es de alguien con miedo, presupuesto, historia, expectativas, frustraciones y límites. Humanidad profunda sin sentimentalismo."},
+        {"title": "Derivar cuando corresponde", "description": "Un profesional seguro no necesita hacer todo. La rehabilitación requiere integrar especialidades. Saber cuándo llamar al endodoncista, cirujano, periodoncista u ortodoncista también es criterio."}
       ]
     },
     {
       "heading": "Cómo pienso un caso (mapa mental)",
-      "body": "Cuando un paciente me dice \"quiero cambiar esta corona\", no miro solo la corona. Miro el sustrato, la pieza vecina, la edad, la función, la oclusión, la historia endodóntica, el riesgo de tocar un diente vital y la expectativa real. Si veo un molar roto, no pregunto solo cómo restaurarlo. Pregunto si es vital, si es restaurable, dónde termina el margen, cómo se aislará, qué pasa con las piezas adyacentes y qué pronóstico tiene. El tratamiento nace de un mapa, no de un impulso."
+      "body": "Cuando una paciente dice \"quiero cambiar esta corona\", no miro solo la corona. Miro el sustrato, el diente vecino, la edad, la función, la oclusión, la historia endodóntica, el riesgo de tocar un diente vital y la expectativa real. Cuando veo una muela rota, no pregunto solo cómo restaurarla. Pregunto si es vital, si es restaurable, dónde termina el margen, cómo se va a aislar, qué le pasa a los dientes vecinos y cuál es el pronóstico. El tratamiento sale de un mapa, no de un impulso."
     },
     {
-      "heading": "El símbolo: nunca subestimes un puntito",
-      "body": "Una lesión aparentemente pequeña puede esconder una destrucción mucho mayor. No se trata de abrir todo por miedo, sino de interpretar el hallazgo dentro del contexto del paciente. Esta frase muestra exactamente mi valor: no mirar lo evidente, sino entender lo que podría estar ocurriendo debajo.",
+      "heading": "El símbolo: nunca subestimes una manchita",
+      "body": "Una lesión que parece chica puede esconder una destrucción mucho mayor. No se trata de abrir todo por miedo; se trata de interpretar el hallazgo en el contexto del paciente. Esta frase muestra exactamente mi valor: no mirar lo obvio, sino entender qué podría estar pasando debajo.",
       "variantes": [
-        "Nunca subestimes un puntito.",
-        "Lo que una foto no te dice.",
-        "La caries que parecía chiquita.",
+        "Nunca subestimes una manchita.",
+        "Lo que la foto no te cuenta.",
+        "La caries que parecía chica.",
         "Por qué el dolor no siempre se ve en la radiografía."
       ]
     },
     {
       "heading": "Estética con biología: belleza sin masacre",
-      "body": "La estética dental no debe estar por encima de la biología. No todo paciente que pide carillas necesita carillas. No todo diente sano debe ser desgastado para seguir una moda. No estoy en contra de la estética; estoy en contra de la estética sin criterio. Una sonrisa linda no justifica cualquier costo biológico."
+      "body": "La estética dental no debe estar por encima de la biología. No toda paciente que pide carillas necesita carillas. No todo diente sano tiene que ser tallado para seguir una moda. No estoy en contra de la estética; estoy en contra de la estética sin criterio. Una sonrisa linda no justifica cualquier costo biológico."
     },
     {
-      "heading": "El paciente no es un saco de dinero",
-      "body": "Quiero cobrar lo justo por mi trabajo, pero no quiero mirar al paciente como un objeto económico. El paciente es una persona. El trabajo tiene valor. El cobro permite sostener una odontología seria. Humanidad y honorarios no se contradicen. Lo que se rechaza es la estafa, el sobretratamiento y la venta agresiva."
+      "heading": "El paciente no es una bolsa de dinero",
+      "body": "Quiero cobrar de forma justa por mi trabajo, pero no quiero mirar al paciente como un objeto económico. El paciente es una persona. El trabajo tiene valor. Los honorarios sostienen una práctica seria. Humanidad y honorarios no se contradicen. Lo que rechazo es el fraude, el sobretratamiento y la venta agresiva."
     },
     {
       "heading": "El paciente ideal",
-      "body": "Personas que quieren entender. Casos complejos o con dudas. Pacientes que buscan segunda opinión. Personas que valoran explicación, criterio y confianza. Pacientes que quieren mejorar sin sentir que les venden una fantasía. No necesariamente son pacientes ricos. Son pacientes que valoran el proceso y están dispuestos a escuchar.",
-      "noIdeal": "Quien solo busca precio bajo. Quien quiere un procedimiento específico sin escuchar alternativas. Quien exige perfección irreal sin aceptar límites biológicos. Quien quiere una respuesta rápida a un caso que necesita planificación. La marca no debe despreciar a este paciente, pero tampoco construirse para atraerlo."
+      "body": "Personas que quieren entender. Casos complejos o con dudas. Pacientes que buscan una segunda opinión. Personas que valoran la explicación, el criterio y la confianza. Pacientes que quieren mejorar sin sentir que les venden una fantasía. No necesariamente pacientes de alto poder adquisitivo. Pacientes que valoran el proceso y están dispuestos a escuchar.",
+      "noIdeal": "Quienes buscan solo el precio más bajo. Quienes quieren un procedimiento puntual sin escuchar alternativas. Quienes exigen una perfección irreal sin aceptar límites biológicos. Quienes quieren una respuesta rápida a un caso que necesita planificación. La marca no debe despreciar a este paciente, pero tampoco construirse para atraerlo."
     },
     {
       "heading": "Manifiesto interno",
-      "body": "No voy a competir por ser la odontóloga más barata. Tampoco voy a competir por parecer la más lujosa. Voy a construir una práctica basada en algo más difícil de copiar: criterio. No voy a vender tratamientos que no puedo sostener con mi conciencia profesional. No voy a prometer carillas sin desgaste si el caso no lo permite. No voy a tocar dientes sanos para seguir una moda. No voy a usar el miedo como estrategia de venta. Voy a cobrar mi trabajo porque mi trabajo tiene valor. Pero no voy a mirar al paciente como una bolsa de dinero. El paciente es una persona. El diagnóstico es una responsabilidad. La explicación es parte del tratamiento."
+      "body": "No voy a competir para ser la odontóloga más barata. Tampoco voy a competir para parecer la más lujosa. Voy a construir una práctica basada en algo más difícil de copiar: el criterio. No voy a vender tratamientos que no puedo sostener con mi conciencia profesional. No voy a prometer carillas sin desgaste si el caso no lo permite. No voy a tocar dientes sanos para seguir una moda. No voy a usar el miedo como estrategia de venta. Voy a cobrar por mi trabajo porque mi trabajo tiene valor. Pero no voy a mirar al paciente como una bolsa de dinero. El paciente es una persona. El diagnóstico es una responsabilidad. La explicación es parte del tratamiento."
     },
     {
-      "heading": "La identidad que no se negocia",
+      "heading": "La identidad innegociable",
       "items": [
-        "Si una estrategia trae muchos pacientes pero obliga a sonar como influencer vacía, no sirve.",
-        "Si una publicación promete algo que clínicamente no puede sostenerse, no sirve.",
-        "Si una campaña atrae pacientes que solo buscan precio y no valoran diagnóstico, no es el camino principal.",
+        "Si una estrategia trae muchos pacientes pero me obliga a sonar como una influencer vacía, no sirve.",
+        "Si una publicación promete algo que no se puede sostener clínicamente, no sirve.",
+        "Si una campaña atrae pacientes que solo buscan precio y no valoran el diagnóstico, no es el camino principal.",
         "No escondo mi intensidad. La traduzco.",
-        "No escondo mi profundidad. La convierto en mensajes comprensibles.",
-        "No finjo sencillez vacía. Hago simple lo complejo sin volverlo superficial."
+        "No escondo mi profundidad. La convierto en mensajes entendibles.",
+        "No finjo una simpleza vacía. Hago lo complejo simple sin volverlo superficial."
       ]
     },
     {
       "heading": "El cierre",
-      "body": "No quiero que me elijan porque prometo una sonrisa perfecta. Quiero que me elijan porque confían en cómo pienso. Ese es el centro de la marca: pensar antes de tocar."
+      "body": "No quiero que los pacientes me elijan por lo que prometo. Quiero que me elijan porque confían en cómo pienso. Ese es el centro de la marca: pensar antes de tocar."
     }
   ],
   "cta": {
-    "primary": "Agendar Consulta de Diagnóstico",
-    "secondary": "Solicitar segunda opinión escrita"
+    "primary": "Reservar consulta diagnóstica",
+    "secondary": "Pedir segunda opinión escrita"
   },
-  "schedule_link": "/es/contacto"
+  "schedule_link": "/es/contact"
 }

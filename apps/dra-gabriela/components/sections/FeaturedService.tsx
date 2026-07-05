@@ -9,7 +9,7 @@ import { whatsappLink } from "@/lib/content"
 interface FeaturedServiceProps {
   locale: string
   content: any
-  variant?: "light" | "teal"
+  variant?: "light" | "lime"
   bgClass?: string
   eyebrow: string
   title: string
@@ -46,14 +46,14 @@ export function FeaturedService({
   return (
     <section
       className={`relative overflow-hidden ${
-        variant === "teal" ? "bg-gradient-to-br from-accent via-[var(--accent-2)] to-accent text-white" : ""
+        variant === "lime" ? "bg-gradient-to-br from-accent via-[var(--accent-2)] to-accent text-white" : "tone-ocean-5"
       }`}
     >
       {/* Decorative blob */}
       {variant === "light" && (
         <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full opacity-[0.04] pointer-events-none" style={{ background: "radial-gradient(circle, var(--accent) 0%, transparent 70%)" }} />
       )}
-      {variant === "teal" && (
+      {variant === "lime" && (
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full opacity-20 pointer-events-none" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)" }} />
       )}
 
@@ -83,16 +83,16 @@ export function FeaturedService({
           <div className={reverse ? "lg:order-1 text-left" : "text-left"}>
             <span
               className={`eyebrow inline-flex ${
-                variant === "teal" ? "!border-white/20 !bg-white/10 !text-gold" : ""
+                variant === "lime" ? "!border-white/20 !bg-white/10 !text-gold" : ""
               }`}
             >
               <Sparkles className="w-3 h-3" />
               {eyebrow}
             </span>
-            <h2 className={`text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.05] ${variant === "teal" ? "!text-white" : ""}`}>
-              {variant === "teal" ? <span className="text-white">{title}</span> : title}
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.05] ${variant === "lime" ? "!text-white" : ""}`}>
+              {variant === "lime" ? <span className="text-white">{title}</span> : title}
             </h2>
-            <p className={`text-lg md:text-xl leading-relaxed mb-8 max-w-xl ${variant === "teal" ? "text-white/85" : "text-fg-muted"}`}>
+            <p className={`text-lg md:text-xl leading-relaxed mb-8 max-w-xl ${variant === "lime" ? "text-white/85" : "text-fg-muted"}`}>
               {body}
             </p>
 
@@ -102,18 +102,18 @@ export function FeaturedService({
                 <li key={i} className="flex items-start gap-3">
                   <div
                     className={`flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center ${
-                      variant === "teal" ? "bg-gold" : "bg-accent-soft"
+                      variant === "lime" ? "bg-gold" : "bg-accent-soft"
                     }`}
                   >
                     <CheckCircle2
                       className={`w-4 h-4 ${
-                        variant === "teal" ? "text-white" : "text-accent"
+                        variant === "lime" ? "text-white" : "text-accent"
                       }`}
                     />
                   </div>
                   <span
                     className={`leading-relaxed text-base pt-0.5 ${
-                      variant === "teal" ? "text-white/90" : "text-fg-muted"
+                      variant === "lime" ? "text-white/90" : "text-fg-muted"
                     }`}
                   >
                     {b}
@@ -125,19 +125,19 @@ export function FeaturedService({
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3">
               {ctaHref === "whatsapp" && wa ? (
-                <a href={wa} target="_blank" rel="noopener noreferrer" className={`btn ${variant === "teal" ? "btn-gold" : "btn-primary"} text-base px-8 py-4`}>
+                <a href={wa} target="_blank" rel="noopener noreferrer" className={`btn ${variant === "lime" ? "btn-gold" : "btn-primary"} text-base px-8 py-4`}>
                   <MessageCircle className="w-5 h-5" />
                   {ctaLabel}
                 </a>
               ) : (
-                <Link href={ctaHref} className={`btn ${variant === "teal" ? "btn-gold" : "btn-primary"} text-base px-8 py-4`}>
+                <Link href={ctaHref} className={`btn ${variant === "lime" ? "btn-gold" : "btn-primary"} text-base px-8 py-4`}>
                   {ctaLabel} <ArrowRight className="w-5 h-5" />
                 </Link>
               )}
               {ctaSecondaryLabel && ctaSecondaryHref && (
                 <Link
                   href={ctaSecondaryHref}
-                  className={`btn ${variant === "teal" ? "btn-white" : "btn-outline"} text-base px-8 py-4`}
+                  className={`btn ${variant === "lime" ? "btn-white" : "btn-outline"} text-base px-8 py-4`}
                 >
                   {ctaSecondaryLabel}
                 </Link>

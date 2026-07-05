@@ -82,7 +82,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                     )}
                   </div>
                   <p className="text-sm text-fg-muted leading-relaxed mb-3">{b.description}</p>
-                  <span className="text-sm font-medium text-gold flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
                     {isEs ? "Conocer" : "Learn more"} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>
@@ -135,7 +135,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
             {[
               { n: "01", t: isEs ? "Mensaje inicial" : "Initial message", d: isEs ? "Por WhatsApp o formulario. Te respondo en menos de 24h." : "Via WhatsApp or form. Response in under 24h." },
               { n: "02", t: isEs ? "Evaluación" : "Evaluation", d: isEs ? "Examen clínico + plan escrito con opciones y precios." : "Clinical exam + written plan with options and prices." },
-              { n: "03", t: isEs ? "Decisión" : "Decisión", d: isEs ? "Vos decidís cuándo — o si — empezar." : "You decide when — or if — to start." },
+              { n: "03", t: isEs ? "Decisión" : "Decision", d: isEs ? "Vos decidís cuándo — o si — empezar." : "You decide when — or if — to start." },
               { n: "04", t: isEs ? "Tratamiento" : "Treatment", d: isEs ? "Procedimiento + seguimiento. Sin sorpresas." : "Procedure + follow-up. No surprises." },
             ].map((step) => (
               <div key={step.n} className="bg-white/5 border border-white/10 rounded-xl p-5">

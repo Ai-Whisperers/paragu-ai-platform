@@ -19,7 +19,7 @@
         },
         {
           "q": "What if I need to stop during a procedure?",
-          "a": "We agree a stop signal before we start (raising your hand works). When you signal, I stop immediately. We don't continue until you say so. No questions, no judgment."
+          "a": "We agree a stop signal before we start (raising your hand works). When you signal, I stop immediately. I don't continue until you say so. No questions, no judgment."
         },
         {
           "q": "I've been postponing for years. Will you make me feel bad?",
@@ -32,7 +32,7 @@
       "items": [
         {
           "q": "How much does the consultation cost?",
-          "a": "The standard consultation costs between Gs 300,000 and 450,000 depending on complexity. It includes review, diagnosis, and a clear plan. No surprises."
+          "a": "The standard consultation costs Gs 300.000. The extended consultation (complex cases, more analysis time) costs Gs 400.000. It includes review, diagnosis, and a clear plan. No surprises."
         },
         {
           "q": "Can you quote by photo?",
@@ -102,11 +102,11 @@
       "items": [
         {
           "q": "Do you take insurance?",
-          "a": "My current focus is private care, with time for diagnosis, explanation, and planning. We issue detailed receipts with procedure codes for reimbursement with international insurers (BUPA, Cigna, GeoBlue) and local corporate plans."
+          "a": "My current focus is private care, with time for diagnosis, explanation, and planning. I issue detailed receipts with procedure codes for reimbursement with international insurers (BUPA, Cigna, GeoBlue) and local corporate plans."
         },
         {
           "q": "What payment methods do you accept?",
-          "a": "Cash, bank transfer, and cards. For high-value cases we offer financing plans through Pagopar or Bancard. We discuss this at the consultation."
+          "a": "Cash, bank transfer, and cards. For high-value cases I offer financing plans through Pagopar or Bancard. We discuss this at the consultation."
         }
       ]
     }

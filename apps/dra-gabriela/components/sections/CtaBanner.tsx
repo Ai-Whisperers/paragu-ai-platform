@@ -12,14 +12,14 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
   const hasRealContact = !!(wa || phone)
 
   return (
-    <section className="section-sm bg-surface relative">
+    <section className="section-sm tone-ocean-3 relative">
       {/* Decorative halo before card */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80rem] h-[20rem] max-w-[100vw] opacity-30 pointer-events-none" style={{ background: "radial-gradient(ellipse, var(--gold) 0%, transparent 70%)" }} aria-hidden="true" />
 
       <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent via-accent-2 to-accent text-white p-10 md:p-14 lg:p-20 shadow-2xl border-2 border-gold/30">
           {/* CORNER RIBBON (top-right) */}
-          <div className="corner-ribbon corner-ribbon-teal" aria-hidden="true">
+          <div className="corner-ribbon corner-ribbon-lime" aria-hidden="true">
             <span>{isEs ? "Escribime" : "Reach out"}</span>
           </div>
 
@@ -132,7 +132,7 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
                     className="flex items-center gap-4 p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 transition-transform duration-300 hover:translate-x-1 hover:bg-white/15"
                   >
                     <div className="w-12 h-12 rounded-xl bg-gold flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <Icon className="w-6 h-6 text-white" />
+                      <Icon className="w-6 h-6 text-accent" />
                     </div>
                     <div>
                       <div className="text-base font-bold text-white leading-tight">{p.title}</div>

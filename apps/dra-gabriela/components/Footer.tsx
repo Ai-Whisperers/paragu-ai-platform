@@ -23,19 +23,19 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
   }
 
   return (
-    <footer className="bg-[#0e1717] text-[#cdd2cf] mt-24">
+    <footer className="tone-ocean-8 text-white/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 text-left">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-gold flex items-center justify-center text-white text-xs font-semibold">
+              <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-yellow flex items-center justify-center text-navy text-xs font-semibold">
                 DG
               </span>
               <h3 className="text-lg text-white font-medium">{c.site?.name}</h3>
             </div>
-            <p className="text-sm leading-relaxed text-[#9aa39f] mb-5 max-w-xs">
-              {c.site?.metaDescription}
+            <p className="text-sm leading-relaxed text-white/65 mb-5 max-w-xs">
+              {c.site?.description ?? c.site?.metaDescription}
             </p>
             <ul className="space-y-2 text-sm">
               {wa && (
@@ -130,7 +130,7 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
               {isEs ? "Horarios" : "Hours"}
             </h4>
             {hasHours && (
-              <ul className="text-sm space-y-1.5 text-[#9aa39f] font-mono">
+              <ul className="text-sm space-y-1.5 text-white/65 font-mono">
                 {Object.entries(c.openingHours).filter(([k]) => /^(mon|tue|wed|thu|fri|sat|sun)/i.test(k)).map(([day, h]) => (
                   <li key={day} className="flex justify-between gap-3 max-w-[14rem]">
                     <span className="uppercase tracking-wider text-xs">{day.slice(0, 3)}</span>
@@ -140,15 +140,15 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
               </ul>
             )}
             {c.business?.ruc && !isPlaceholder(c.business.ruc) && (
-              <p className="text-xs text-[#7a827e] mt-6">RUC: {c.business.ruc}</p>
+              <p className="text-xs text-white/50 mt-6">RUC: {c.business.ruc}</p>
             )}
             {c.business?.mspbs && !isPlaceholder(c.business.mspbs) && (
-              <p className="text-xs text-[#7a827e]">MSPBS: {c.business.mspbs}</p>
+              <p className="text-xs text-white/50">MSPBS: {c.business.mspbs}</p>
             )}
           </div>
         </div>
 
-        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-[#7a827e]">
+        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-white/50">
           <p>© {new Date().getFullYear()} {c.site?.name}. {isEs ? "Todos los derechos reservados." : "All rights reserved."}</p>
           <p>Asunción, Paraguay</p>
         </div>
