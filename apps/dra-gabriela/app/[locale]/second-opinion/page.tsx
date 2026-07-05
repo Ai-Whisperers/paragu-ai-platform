@@ -77,7 +77,7 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
                 <div className="w-12 h-12 rounded-xl bg-accent-soft flex items-center justify-center mb-3">
                   <Icon className="w-6 h-6 text-accent" />
                 </div>
-                <span className="text-sm text-fg-muted">{it.label}</span>
+                <span className="text-sm text-accent font-medium">{it.label}</span>
               </div>
             )
           })}
