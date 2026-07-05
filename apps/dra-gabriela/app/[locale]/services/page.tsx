@@ -66,7 +66,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
             <Sparkles className="w-5 h-5 text-gold" />
             <h2 className="text-xl">{isEs ? "Paquetes" : "Bundles"}</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {bundles.map((b: any) => {
               const slug = locale === "es"
                 ? b.link?.replace(/^\/en/, "/es")?.replace("/es/services/", "/es/servicios/")
@@ -76,7 +76,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="text-lg font-medium group-hover:text-accent transition-colors">{b.name}</h3>
                     {b.priceGs && (
-                      <span className="text-base font-mono text-accent whitespace-nowrap font-medium">
+                      <span className="text-base tabular-nums text-accent whitespace-nowrap font-medium">
                         Gs {Number(b.priceGs).toLocaleString("es-PY")}
                       </span>
                     )}
@@ -102,8 +102,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
               const href = route ? (locale === "es" ? route.es : route.en) : `/${locale}/services#${t.id}`
               return (
                 <Link key={t.id} href={href} className="card-accent card p-5 group block hover:shadow-md hover:-translate-y-0.5 transition-all">
-                  <h3 className="text-base font-medium mb-1 group-hover:text-accent transition-colors">{t.label}</h3>
-                  <p className="text-xs text-fg-subtle mb-3">{t.id?.replace(/-/g, " ")}</p>
+                  <h3 className="text-base font-medium mb-3 group-hover:text-accent transition-colors">{t.label}</h3>
                   <span className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
                     {isEs ? "Ver detalle" : "View details"} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
@@ -114,8 +113,8 @@ export default async function Services({ params }: { params: Promise<{ locale: s
         </PageSection>
       )}
 
-      {/* Teal accent: our process, common to all services */}
-      <section className="bg-accent text-white relative overflow-hidden">
+      {/* Navy band: our process, common to all services */}
+      <section className="tone-ocean-7 text-white relative overflow-hidden">
         <div className="absolute inset-0 dot-pattern opacity-10 pointer-events-none" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="text-center max-w-2xl mx-auto mb-10">
@@ -125,7 +124,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
             <h2 className="text-3xl md:text-4xl text-white mt-3">
               {isEs ? "Mismo proceso, todos los servicios" : "Same process, every service"}
             </h2>
-            <p className="text-white/80 mt-3">
+            <p className="text-white/90 mt-3">
               {isEs
                 ? "Sin importar qué servicio necesitás, así es como trabajo. Lo que cambia es el alcance, no la honestidad."
                 : "No matter what service you need, this is how I work. What changes is the scope, not the honesty."}
@@ -133,7 +132,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {[
-              { n: "01", t: isEs ? "Mensaje inicial" : "Initial message", d: isEs ? "Por WhatsApp o formulario. Te respondo en menos de 24h." : "Via WhatsApp or form. Response in under 24h." },
+              { n: "01", t: isEs ? "Mensaje inicial" : "Initial message", d: isEs ? "Por formulario o email. Te respondo apenas pueda." : "Via form or email. I reply as soon as I can." },
               { n: "02", t: isEs ? "Evaluación" : "Evaluation", d: isEs ? "Examen clínico + plan escrito con opciones y precios." : "Clinical exam + written plan with options and prices." },
               { n: "03", t: isEs ? "Decisión" : "Decision", d: isEs ? "Vos decidís cuándo — o si — empezar." : "You decide when — or if — to start." },
               { n: "04", t: isEs ? "Tratamiento" : "Treatment", d: isEs ? "Procedimiento + seguimiento. Sin sorpresas." : "Procedure + follow-up. No surprises." },
@@ -141,7 +140,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
               <div key={step.n} className="bg-white/5 border border-white/10 rounded-xl p-5">
                 <div className="text-gold font-medium text-sm mb-2" style={{ fontFamily: "var(--font-heading)" }}>{step.n}</div>
                 <div className="text-white font-medium mb-1.5">{step.t}</div>
-                <div className="text-sm text-white/70 leading-relaxed">{step.d}</div>
+                <div className="text-sm text-white/85 leading-relaxed">{step.d}</div>
               </div>
             ))}
           </div>

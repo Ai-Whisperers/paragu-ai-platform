@@ -1,7 +1,7 @@
 // Section: CTA Banner — premium conversion band with corner ribbon,
 // gold halos, gradient text title, and shimmer overlay.
 
-import { MessageCircle, Clock, ArrowRight, Sparkles, Shield, Award } from "lucide-react"
+import { Clock, ArrowRight, Sparkles, Shield, Award } from "lucide-react"
 import { ContactButtons } from "@/components/ContactButton"
 import { whatsappLink, phoneDisplay } from "@/lib/content"
 
@@ -17,7 +17,7 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80rem] h-[20rem] max-w-[100vw] opacity-30 pointer-events-none" style={{ background: "radial-gradient(ellipse, var(--gold) 0%, transparent 70%)" }} aria-hidden="true" />
 
       <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent via-accent-2 to-accent text-white p-10 md:p-14 lg:p-20 shadow-2xl border-2 border-gold/30">
+        <div className="ink-light relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#023e8a] via-[#03045e] to-[#023e8a] text-white p-10 md:p-14 lg:p-20 shadow-2xl border-2 border-gold/30">
           {/* CORNER RIBBON (top-right) */}
           <div className="corner-ribbon corner-ribbon-lime" aria-hidden="true">
             <span>{isEs ? "Escribime" : "Reach out"}</span>
@@ -68,15 +68,12 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
                   : "Honest assessment, clear options, no pressure.")}
               </p>
 
-              <div className="[&_a]:!bg-gold [&_a]:!text-accent [&_a]:hover:!bg-gold/90 [&_a:first-child]:!shadow-lg">
-                <ContactButtons
-                  business={c.business}
-                  locale={locale}
-                  variant="primary"
-                  primaryLabel={isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
-                  secondaryLabel={isEs ? "Datos de contacto" : "Contact details"}
-                />
-              </div>
+              <ContactButtons
+                business={c.business}
+                locale={locale}
+                variant="primary"
+                secondaryLabel={isEs ? "Datos de contacto" : "Contact details"}
+              />
 
               {!hasRealContact && (
                 <div className="mt-5 text-sm text-white/85 flex items-center gap-2 flex-wrap">
@@ -85,20 +82,20 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
                     <>
                       <span>WhatsApp disponible al abrir el consultorio. Mientras tanto, escribime a</span>
                       <a
-                        href="mailto:doctora.gabi@ometsdental.com.py"
+                        href="mailto:doctora.gabi@ometzdental.com.py"
                         className="text-gold-soft font-medium hover:underline"
                       >
-                        doctora.gabi@ometsdental.com.py
+                        doctora.gabi@ometzdental.com.py
                       </a>
                     </>
                   ) : (
                     <>
                       <span>WhatsApp goes live when the practice opens. In the meantime, email me at</span>
                       <a
-                        href="mailto:doctora.gabi@ometsdental.com.py"
+                        href="mailto:doctora.gabi@ometzdental.com.py"
                         className="text-gold-soft font-medium hover:underline"
                       >
-                        doctora.gabi@ometsdental.com.py
+                        doctora.gabi@ometzdental.com.py
                       </a>
                     </>
                   )}
@@ -121,8 +118,8 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
                 },
                 {
                   icon: Clock,
-                  title: isEs ? "< 24h respuesta" : "< 24h reply",
-                  sub: isEs ? "WhatsApp verificado" : "WhatsApp verified",
+                  title: isEs ? "Sin apuro" : "No pressure",
+                  sub: isEs ? "Vos decidís el ritmo" : "You set the pace",
                 },
               ].map((p, i) => {
                 const Icon = p.icon

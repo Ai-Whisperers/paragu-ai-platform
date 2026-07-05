@@ -222,13 +222,22 @@ a:hover { color: var(--accent-2); }
    ═══════════════════════════════════════════════ */
 
 .gradient-text {
-  /* Navy → accent-2 gradient for hero display text. Both endpoints clear WCAG AA on
-     cream/surface backgrounds. */
-  background: linear-gradient(135deg, var(--navy) 0%, var(--accent-2) 100%);
+  /* Navy → blue gradient for hero display text. Both endpoints clear WCAG AA on
+     cream/surface backgrounds. Hardcoded stops: --accent-2 aliases navy at root
+     (gradient would collapse to solid) and goes light inside dark tone scopes. */
+  background: linear-gradient(135deg, #03045e 0%, #0353a4 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* On dark bands (tone-ocean-6/7/8) navy text disappears — flip to light endpoints. */
+.tone-ocean-6 .gradient-text, .tone-ocean-7 .gradient-text,
+.tone-ocean-8 .gradient-text, .ink-light .gradient-text {
+  background: linear-gradient(135deg, #caf0f8 0%, #90e0ef 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .gradient-text-dark {
@@ -310,7 +319,7 @@ a:hover { color: var(--accent-2); }
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--gold));
+  background: var(--accent);
 }
 
 .btn {
@@ -386,7 +395,7 @@ a:hover { color: var(--accent-2); }
 .divider {
   width: 3rem;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--gold));
+  background: var(--accent);
   border-radius: 2px;
   margin: 0 auto 1.5rem;
 }
@@ -476,7 +485,7 @@ a:hover { color: var(--accent-2); }
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--gold));
+  background: var(--accent);
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
@@ -796,7 +805,7 @@ a:hover { color: var(--accent-2); }
   position: absolute;
   top: 0; left: 0;
   width: 6px; height: 100%;
-  background: linear-gradient(180deg, var(--accent) 0%, var(--gold) 100%);
+  background: var(--accent);
   border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 }
 
@@ -1048,84 +1057,6 @@ a:hover { color: var(--accent-2); }
   .empathy-show:hover,
   .sedation-card:hover {
     transform: none !important;
-  }
-}
-
-/* Dark-mode overrides for anxiety utilities */
-@media (prefers-color-scheme: dark) {
-  .aa-controls {
-    background: var(--surface);
-    border-color: var(--border);
-  }
-  .aa-controls-item {
-    color: var(--gold);
-    border-color: var(--border);
-  }
-  .persona-card-icon {
-    background: rgba(72, 202, 228, 0.15);
-    color: var(--gold);
-  }
-  .persona-card-lead { color: var(--gold); }
-  .voice-doctor {
-    background: var(--surface);
-    border-color: var(--border);
-  }
-  .environment-card {
-    background: var(--surface-muted);
-  }
-}
-
-/* ── Dark mode: prefers-color-scheme: dark ── */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #020338;
-    --surface: #03045e;
-    --surface-muted: #02022a;
-    --surface-alt: #022050;
-    --navy: #03045e;
-    --navy-2: #020338;
-    --accent: #48cae4;
-    --accent-2: #90e0ef;
-    --accent-soft: #062a4a;
-    --yellow: #FFEF00;
-    --yellow-2: #E6D700;
-    --yellow-soft: #2a2405;
-    --pink: #FF69B4;
-    --pink-soft: #3a1a2a;
-    --gold: var(--yellow);
-    --gold-2: var(--yellow-2);
-    --gold-soft: var(--yellow-soft);
-    --fg: #caf0f8;
-    --fg-muted: #ade8f4;
-    --fg-subtle: #90e0ef;
-    --border: #0353a4;
-    --border-light: #023e8a;
-    --success: #4ade80;
-    --error: #f87171;
-  }
-  body { background: var(--bg); color: var(--fg); }
-  .card { background: var(--surface); }
-  .card-flat { background: var(--surface-muted); }
-  .text-fg { color: var(--fg); }
-  .text-fg-muted { color: var(--fg-muted); }
-  .text-fg-subtle { color: var(--fg-subtle); }
-  .border-border { border-color: var(--border); }
-  .border-border-light { border-color: var(--border-light); }
-  /* Navbar darker glass */
-  nav[aria-label="Primary"] { background: rgba(2, 4, 64, 0.8); }
-  /* Inputs */
-  input, textarea, select {
-    background: var(--surface-muted);
-    color: var(--fg);
-    border-color: var(--border);
-  }
-  /* Footer */
-  footer { background: #020338; }
-  /* Hero gradient */
-  .from-accent-soft { --tw-gradient-from: var(--accent-soft) var(--tw-gradient-from-position); }
-  /* Dot pattern brighter for visibility */
-  .dot-pattern {
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   }
 }
 

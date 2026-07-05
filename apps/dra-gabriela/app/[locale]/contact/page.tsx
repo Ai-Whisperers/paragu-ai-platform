@@ -130,9 +130,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             {isEs ? "Escribime por email" : "Email me"}
           </a>
         ) : (
-          <Link href={`${base}/contact`} className="btn btn-primary">
-            {isEs ? "Ver datos de contacto" : "See contact details"}
-          </Link>
+          <a href="#form" className="btn btn-primary">
+            {isEs ? "Envianos un mensaje" : "Send us a message"}
+          </a>
         )}
         {phone && (
           <a href={`tel:${phone.replace(/\D/g, "")}`} className="btn btn-outline">
@@ -267,9 +267,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               {isEs ? "Escribime por email" : "Email me"}
             </a>
           ) : (
-            <Link href={`${base}/contact`} className="btn btn-primary">
-              {isEs ? "Ver datos de contacto" : "See contact details"}
-            </Link>
+            <a href="#form" className="btn btn-primary">
+              {isEs ? "Envianos un mensaje" : "Send us a message"}
+            </a>
           )}
         </div>
       </PageSection>

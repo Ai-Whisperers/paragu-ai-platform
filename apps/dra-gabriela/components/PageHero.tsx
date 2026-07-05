@@ -42,7 +42,7 @@ export function PageHero({
     <section
       className={cn(
         "relative overflow-hidden",
-        isCompact ? "py-14 md:py-20" : "py-20 md:py-28",
+        isCompact ? "py-14 md:py-20" : "py-16 md:py-20",
         VARIANT_BG[variant],
         className
       )}
@@ -79,7 +79,7 @@ export function PageHero({
             <p
               className={cn(
                 "lead",
-                isGradient ? "text-white/85" : "text-fg-muted"
+                isGradient ? "!text-white/85" : "text-fg-muted"
               )}
             >
               {subtitle}

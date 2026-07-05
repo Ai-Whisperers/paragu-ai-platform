@@ -2,7 +2,7 @@
   "title": "Servicios",
   "subtitle": "El servicio estrella es rehabilitación oral. La segunda opinión es el diferenciador. El resto de la odontología con criterio.",
   "tabs": [
-    { "id": "rehabilitacion-oral", "label": "Rehabilitación Oral ⭐" },
+    { "id": "rehabilitacion-oral", "label": "Rehabilitación Oral" },
     { "id": "segunda-opinion", "label": "Segunda Opinión" },
     { "id": "planificacion-tratamiento", "label": "Planificación" },
     { "id": "odontologia-general", "label": "Odontología General" },

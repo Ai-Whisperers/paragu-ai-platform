@@ -385,9 +385,6 @@ export function Hero({ c, locale }: HeroProps) {
                     )
                   })}
                 </div>
-                <span className="ml-2 text-[10px] uppercase tracking-wider text-fg-subtle font-bold tabular-nums">
-                  {isEs ? "Hero" : "Hero"} · {active + 1} / {total}
-                </span>
               </div>
             )}
           </div>

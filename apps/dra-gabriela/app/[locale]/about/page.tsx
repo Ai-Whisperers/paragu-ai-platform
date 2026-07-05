@@ -70,8 +70,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover"
-                  loading="lazy"
-                  decoding="async"
+                  priority
                 />
               </div>
               <div className="p-5 border-t border-border">
@@ -140,8 +139,8 @@ export default async function About({ params }: { params: Promise<{ locale: stri
         </div>
       </PageSection>
 
-      {/* Credentials block — teal accent */}
-      <section className="bg-accent text-white relative overflow-hidden">
+      {/* Credentials block — navy tone */}
+      <section className="tone-ocean-7 relative overflow-hidden">
         <div className="absolute inset-0 dot-pattern opacity-10 pointer-events-none" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="text-center max-w-2xl mx-auto mb-10">
@@ -161,7 +160,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
                 {isEs ? "Universidad Autónoma del Paraguay" : "Universidad Autónoma del Paraguay"}
               </div>
               <div className="text-sm text-white/70 leading-relaxed">
-                {isEs ? "Cirujana dentista, ~2005. Posgrados en endodoncia, rehabilitación oral y estética." : "Dental surgeon, ~2005. Postgrad training in endodontics, oral rehabilitation, aesthetics."}
+                {isEs ? "Cirujana dentista con veinte años de práctica. Posgrados en endodoncia, rehabilitación oral y estética." : "Dental surgeon with twenty years of practice. Postgrad training in endodontics, oral rehabilitation, aesthetics."}
               </div>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-xl p-5">

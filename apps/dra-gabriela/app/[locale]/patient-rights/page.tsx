@@ -84,8 +84,8 @@ export default async function PatientRightsPage({ params }: { params: Promise<{ 
         </div>
       </PageSection>
 
-      {/* Teal CTA */}
-      <section className="bg-accent text-white relative overflow-hidden">
+      {/* Navy CTA */}
+      <section className="tone-ocean-7 relative overflow-hidden">
         <div className="absolute inset-0 dot-pattern opacity-10 pointer-events-none" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
           <h2 className="text-2xl md:text-3xl text-white mb-3">

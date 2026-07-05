@@ -68,7 +68,7 @@ export default async function PhilosophyPage({ params }: { params: Promise<{ loc
       />
 
       {fraseGuia && (
-        <section className="bg-accent text-white">
+        <section className="tone-ocean-7">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 text-center">
             <Quote className="w-6 h-6 text-gold mx-auto mb-3 opacity-80" />
             <p className="text-xl md:text-2xl leading-relaxed italic" style={{ fontFamily: "var(--font-heading)" }}>

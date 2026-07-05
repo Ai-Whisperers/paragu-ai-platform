@@ -111,7 +111,7 @@ export default async function FAQ({ params }: { params: Promise<{ locale: string
                     <HelpCircle className="w-5 h-5 text-accent" />
                   </div>
                   <h2 className="text-2xl">{g.name}</h2>
-                  <span className="text-xs text-fg-subtle font-mono ml-2">{(g.items || []).length} {(g.items || []).length === 1 ? (isEs ? "pregunta" : "question") : (isEs ? "preguntas" : "questions")}</span>
+                  <span className="text-xs text-fg-subtle ml-2">{(g.items || []).length} {(g.items || []).length === 1 ? (isEs ? "pregunta" : "question") : (isEs ? "preguntas" : "questions")}</span>
                 </div>
               )}
               <div className="space-y-3">

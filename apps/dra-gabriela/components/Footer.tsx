@@ -32,7 +32,7 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
               <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-yellow flex items-center justify-center text-navy text-xs font-semibold">
                 DG
               </span>
-              <h3 className="text-lg text-white font-medium">{c.site?.name}</h3>
+              <h3 className="text-lg text-white font-medium">{c.site?.name || "Dra. Gabriella González Pane"}</h3>
             </div>
             <p className="text-sm leading-relaxed text-white/65 mb-5 max-w-xs">
               {c.site?.description ?? c.site?.metaDescription}
@@ -123,12 +123,15 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
             </ul>
           </div>
 
-          {/* Hours */}
+          {/* Hours — column only renders when there is something to show */}
+          {(hasHours || (c.business?.ruc && !isPlaceholder(c.business.ruc)) || (c.business?.mspbs && !isPlaceholder(c.business.mspbs))) && (
           <div>
+            {hasHours && (
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               <Clock className="w-3.5 h-3.5 inline mr-1.5 text-gold" />
               {isEs ? "Horarios" : "Hours"}
             </h4>
+            )}
             {hasHours && (
               <ul className="text-sm space-y-1.5 text-white/65 font-mono">
                 {Object.entries(c.openingHours).filter(([k]) => /^(mon|tue|wed|thu|fri|sat|sun)/i.test(k)).map(([day, h]) => (
@@ -146,10 +149,11 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
               <p className="text-xs text-white/50">MSPBS: {c.business.mspbs}</p>
             )}
           </div>
+          )}
         </div>
 
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} {c.site?.name}. {isEs ? "Todos los derechos reservados." : "All rights reserved."}</p>
+          <p>© {new Date().getFullYear()} {c.site?.name || "Dra. Gabriella González Pane"}. {isEs ? "Todos los derechos reservados." : "All rights reserved."}</p>
           <p>Asunción, Paraguay</p>
         </div>
       </div>
