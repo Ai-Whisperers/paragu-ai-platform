@@ -1,0 +1,242 @@
+{
+  "siteName": "Pierce Charm",
+  "businessName": "Pierce Charm",
+  "tagline": "Estudio de piercings & joyería alternativa",
+  "site": {
+    "title": "Pierce Charm — Piercings & Joyería Alternativa",
+    "description": "Estudio de piercings en Asunción. Realizamos piercing profesional, joyería alternativa y curaduría de piezas únicas.",
+    "url": "https://piercecharm.paragu-ai.com"
+  },
+  "theme": {
+    "color": "#63081d"
+  },
+  "metaDescription": "Pierce Charm, estudio de piercings en Asunción. Realizamos piercing profesional con joyería alternativa y estética política. Reservá tu cita por WhatsApp.",
+  "navigation": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Piercings", "href": "/piercings" },
+    { "label": "Nosotros", "href": "/nosotros" },
+    { "label": "Joyería", "href": "/galeria" },
+    { "label": "FAQ", "href": "/faq" },
+    { "label": "Contacto", "href": "/contacto" }
+  ],
+  "home": {
+    "hero": {
+      "eyebrow": "𓆩 ☆ 𓆪 Estudio alternativo · Asunción ✦",
+      "headline": "Piercings que cuentan\ntu historia",
+      "subheadline": "Estudio de piercing profesional y joyería alternativa. Trabajamos con técnica, cuidado y estética oscura. Reserva tu cita y elegí la pieza ideal para vos.",
+      "ctaPrimaryText": "Ver catálogo de piercings",
+      "ctaPrimaryHref": "/piercings",
+      "ctaSecondaryText": "Consultar por WhatsApp",
+      "ctaSecondaryHref": "https://wa.me/595981324569?text=Hola!%20Quiero%20información%20sobre%20un%20piercing"
+    },
+    "story": {
+      "eyebrow": "Sobre el estudio",
+      "title": "Donde el cuerpo se vuelve lienzo",
+      "paragraphs": [
+        "Pierce Charm es un estudio independiente dedicado al arte del piercing profesional. Desde hace años acompañamos a personas que buscan expresarse a través de joyería corporal con identidad propia, alternativa y política.",
+        "Trabajamos en un ambiente cuidado, con instrumental esterilizado en autoclave, joyería de titanio implantgrade y oro, y un proceso de asesoramiento personalizado antes, durante y después de cada perforación.",
+        "Nuestro catálogo incluye perforaciones de oreja (lóbulo, cartílago, helix, tragus, daith, rook, industrial), body piercings, microdermals y todo el catálogo de joyería alternativa que esperás."
+      ]
+    },
+    "features": {
+      "title": "Por qué elegir Pierce Charm",
+      "items": [
+        {
+          "icon": "shield",
+          "title": "Materiales implantgrade",
+          "description": "Solo usamos titanio ASTM F136, oro 14k/18k y acero quirúrgico. Piezas certificadas para uso corporal."
+        },
+        {
+          "icon": "sparkles",
+          "title": "Asesoramiento personalizado",
+          "description": "Antes de cada perforación te explicamos opciones, posicionamientos, tiempos de cicatrización y cuidados."
+        },
+        {
+          "icon": "heart",
+          "title": "Estética con identidad",
+          "description": "Joyería alternativa, política y consciente. Trabajamos con curaduría de piezas únicas."
+        },
+        {
+          "icon": "stethoscope",
+          "title": "Bioseguridad absoluta",
+          "description": "Autoclave clase B, instrumental descartable y ambiente quirúrgico. Tu seguridad es prioridad."
+        },
+        {
+          "icon": "clock",
+          "title": "Cuidado post-servicio",
+          "description": "Seguimiento de cada perforación vía WhatsApp durante todo el proceso de cicatrización."
+        },
+        {
+          "icon": "gem",
+          "title": "Joyería curada",
+          "description": "Selección de piezas de diseñadores independientes que respetan estética y calidad."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Cómo trabajamos",
+      "title": "Tu cita, paso a paso",
+      "steps": [
+        { "n": "01", "title": "Reservá", "desc": "Elegí el piercing que querés y contactanos por WhatsApp para agendar." },
+        { "n": "02", "title": "Asesoramiento", "desc": "Charlamos sobre materiales, posición, joyería y cuidados previos." },
+        { "n": "03", "title": "Estudio", "desc": "Te recibimos en nuestro estudio en Asunción, ambiente cuidado y profesional." },
+        { "n": "04", "title": "Perforación", "desc": "Técnica precisa, instrumental estéril, joyería implantgrade desde el día uno." },
+        { "n": "05", "title": "Cuidados", "desc": "Te llevamos el kit post-piercing y seguimiento vía WhatsApp hasta alta total." }
+      ]
+    },
+    "finalCta": {
+      "title": "Lista para tu próximo piercing?",
+      "description": "Reservá tu cita o pedí asesoramiento sin compromiso. Te respondemos por WhatsApp en horario del estudio.",
+      "primaryText": "WhatsApp directo",
+      "primaryHref": "https://wa.me/595981324569",
+      "secondaryText": "Ver catálogo",
+      "secondaryHref": "/piercings"
+    }
+  },
+  "piercings": {
+    "intro": "Catálogo completo de piercings que realizamos. Cada uno incluye posición en la oreja, descripción técnica y precio base. Tocá una ubicación para reservar.",
+    "title": "Catálogo de Piercings",
+    "categories": [
+      {
+        "id": "lobulo",
+        "label": "Lóbulo",
+        "items": [
+          { "id": "lobulo-simple",  "name": "Lóbulo simple",   "zone": "Lóbulo", "position": { "x": 32, "y": 82 }, "price": "Gs 80.000", "downtime": "6-8 semanas", "description": "Perforación clásica del lóbulo de la oreja con joyería implantgrade de 1.2mm.", "level": 1 },
+          { "id": "lobulo-segundo", "name": "Segundo lóbulo",  "zone": "Lóbulo", "position": { "x": 26, "y": 88 }, "price": "Gs 90.000", "downtime": "6-8 semanas", "description": "Segunda perforación en el mismo lóbulo para stacking de aros.", "level": 1 },
+          { "id": "lobulo-tercero", "name": "Tercer lóbulo",   "zone": "Lóbulo", "position": { "x": 22, "y": 92 }, "price": "Gs 95.000", "downtime": "6-8 semanas", "description": "Tercera perforación en el lóbulo para looks cargados y curaduría.", "level": 1 }
+        ]
+      },
+      {
+        "id": "cartilago",
+        "label": "Cartílago",
+        "items": [
+          { "id": "helix",          "name": "Helix",          "zone": "Cartílago", "position": { "x": 38, "y": 22 }, "price": "Gs 120.000", "downtime": "4-6 meses",  "description": "Perforación en el borde superior externo de la oreja, en el cartílago helix. La más solicitada del cartílago.", "level": 2 },
+          { "id": "flat",           "name": "Flat",           "zone": "Cartílago", "position": { "x": 35, "y": 35 }, "price": "Gs 130.000", "downtime": "6-9 meses",  "description": "Cartílago plano en la zona media superior de la oreja. Ideal para studs y dijes pequeños.", "level": 2 },
+          { "id": "forward-helix",  "name": "Forward Helix",  "zone": "Cartílago", "position": { "x": 26, "y": 30 }, "price": "Gs 120.000", "downtime": "4-6 meses",  "description": "Pequeña perforación en la parte frontal del helix, ideal para dijes delicados.", "level": 2 },
+          { "id": "tragus",         "name": "Tragus",         "zone": "Cartílago", "position": { "x": 18, "y": 55 }, "price": "Gs 140.000", "downtime": "6-9 meses",  "description": "Perforación en el tragus, la pequeña solapa de cartílago frente al canal auditivo.", "level": 2 },
+          { "id": "anti-tragus",    "name": "Anti-tragus",    "zone": "Cartílago", "position": { "x": 42, "y": 58 }, "price": "Gs 150.000", "downtime": "9-12 meses", "description": "La solapa opuesta al tragus, en la cara interna de la oreja.", "level": 3 },
+          { "id": "rook",           "name": "Rook",           "zone": "Cartílago", "position": { "x": 24, "y": 47 }, "price": "Gs 160.000", "downtime": "9-12 meses", "description": "Perforación en el pliegue vertical interno del cartílago superior, sobre el tragus.", "level": 3 },
+          { "id": "daith",          "name": "Daith",          "zone": "Cartílago", "position": { "x": 18, "y": 48 }, "price": "Gs 160.000", "downtime": "9-12 meses", "description": "Perforación en el pliegue más interno de la oreja, donde el helix se conecta al canal.", "level": 3 },
+          { "id": "conch",          "name": "Conch",          "zone": "Cartílago", "position": { "x": 22, "y": 60 }, "price": "Gs 140.000", "downtime": "6-9 meses",  "description": "Perforación en la concha, la zona cóncava central de la oreja. Ideal para anillos.", "level": 2 }
+        ]
+      },
+      {
+        "id": "industrial",
+        "label": "Industrial",
+        "items": [
+          { "id": "industrial", "name": "Industrial", "zone": "Industrial", "position": { "x": 28, "y": 25 }, "price": "Gs 250.000", "downtime": "9-12 meses", "description": "Doble perforación en helix conectadas por una barra larga. La perforación de cartílago más icónica.", "level": 3 },
+          { "id": "orbital",    "name": "Orbital",    "zone": "Industrial", "position": { "x": 30, "y": 70 }, "price": "Gs 180.000", "downtime": "6-9 meses",  "description": "Dos perforaciones conectadas por un anillo, generalmente en lóbulo o helix.", "level": 2 },
+          { "id": "snug",       "name": "Snug",       "zone": "Industrial", "position": { "x": 24, "y": 52 }, "price": "Gs 180.000", "downtime": "9-12 meses", "description": "Perforación en el cartílago vertical anti-helix, requiere anatomía específica.", "level": 3 }
+        ]
+      },
+      {
+        "id": "otros",
+        "label": "Otros",
+        "items": [
+          { "id": "septum",     "name": "Septum",            "zone": "Otros", "position": null, "price": "Gs 180.000", "downtime": "2-3 meses", "description": "Perforación del tabique nasal, popular entre estéticas alternativas. Se puede ocultar fácilmente.", "level": 2 },
+          { "id": "nostril",    "name": "Nostril",           "zone": "Otros", "position": null, "price": "Gs 130.000", "downtime": "3-4 meses", "description": "Perforación lateral de la fosa nasal con tornillo o aro.", "level": 1 },
+          { "id": "labret",     "name": "Labret",            "zone": "Otros", "position": null, "price": "Gs 160.000", "downtime": "2-4 meses", "description": "Perforación del labio inferior, centrada o lateral, con stud o aro.", "level": 2 },
+          { "id": "microdermal","name": "Microdermal (ancla)","zone": "Otros", "position": null, "price": "Gs 220.000", "downtime": "6-9 meses", "description": "Ancla subdérmica en cualquier zona del cuerpo con un solo punto de perforación visible.", "level": 3 }
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Joyería alternativa",
+    "subtitle": "Selección curada de piezas que ofrecemos: cadenas, plugs, túneles, dijes, anillos y materiales únicos.",
+    "categories": ["Cadenas", "Plugs & Túneles", "Sepultura & Góticos", "Septum & Nariz", "Captives"],
+    "items": [
+      { "name": "Septum spike cadena",      "category": "Septum & Nariz",      "description": "Septum clicker con dije colgante en cadena fina." },
+      { "name": "Plug orgánico hueso",      "category": "Plugs & Túneles",     "description": "Plug de hueso tallado a mano, ø 8-25mm." },
+      { "name": "Túnel calabera",           "category": "Plugs & Túneles",     "description": "Túnel con calavera incrustada, acero y resina negra." },
+      { "name": "Cadena oreja murciélago",  "category": "Cadenas",             "description": "Cadena helix con dije colgante de murciélago." },
+      { "name": "Stud cruz invertida",      "category": "Sepultura & Góticos", "description": "Labret stud cruz invertida, titanio PVD negro." },
+      { "name": "Captive bead negro",       "category": "Captives",            "description": "Anillo captive bead en acero PVD negro, varios calibres." },
+      { "name": "Septum clicker calavera",  "category": "Septum & Nariz",      "description": "Clicker septum con calavera central." },
+      { "name": "Dije hélix cadena",        "category": "Cadenas",             "description": "Hélix barbell con cadena colgante múltiple." },
+      { "name": "Daith aro ornamentado",    "category": "Sepultura & Góticos", "description": "Aro daith con grabados góticos en titanio PVD." },
+      { "name": "Industrial cadena larga",  "category": "Cadenas",             "description": "Industrial barbell con cadena colgante 60mm." },
+      { "name": "Plug obsidiana",           "category": "Plugs & Túneles",     "description": "Plug doble de obsidiana pulida, ø personalizado." },
+      { "name": "Piercing micro cadena",    "category": "Cadenas",             "description": "Set de cadenas conectadas para helix + lóbulo." }
+    ]
+  },
+  "nosotros": {
+    "title": "El estudio detrás del piercing",
+    "eyebrow": "Conócenos",
+    "intro": "Pierce Charm no es solo un estudio de piercings: es un espacio donde la estética oscura y la técnica profesional se encuentran para crear algo que dura toda la vida.",
+    "paragraphs": [
+      "Desde [año de fundación] recibimos personas de todas las edades, géneros y estilos que buscan un servicio profesional combinado con una mirada artística. La estética política y alternativa no es una pose: es lo que somos.",
+      "Nos formamos en estándares internacionales de bioseguridad, joyería implantgrade, y atención post-servicio. Pero por sobre todas las cosas, entendemos que un piercing es un acto de identidad — y lo tratamos como tal.",
+      "Cada perforación se realiza en ambiente privado, con instrumental esterilizado en autoclave clase B, y materiales certificados. Te acompañamos en todo el proceso: elección de la pieza, posición, cuidado durante la cicatrización y revisiones sin cargo."
+    ],
+    "values": [
+      { "title": "Bioseguridad primero",   "description": "Autoclave clase B, instrumental descartable, ambiente quirúrgico." },
+      { "title": "Materiales honestos",    "description": "Solo titanio ASTM F136, oro sólido y acero quirúrgico certificado." },
+      { "title": "Política desde el cuerpo","description": "El cuerpo es territorio político. Acompañamos identidades y decisiones." },
+      { "title": "Curaduría estética",     "description": "No vendemos todo. Vendemos lo que queremos usar nosotros." }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitás saber antes de tu cita.",
+    "items": [
+      { "q": "¿Cuánto duele un piercing?", "a": "La sensación varía según la zona: los lóbulos son los más llevaderos, mientras que cartílagos como daith, rook o industrial pueden sentirse más intensos. Usamos técnica precisa y anestesia local cuando aplica. La mayoría de personas describe el procedimiento como 'molesto pero tolerable' y dura segundos." },
+      { "q": "¿Qué materiales usan?",    "a": "Solo joyería implantgrade: titanio ASTM F136 (color natural y PVD negro), oro sólido 14k/18k, y acero quirúrgico 316L para piezas sin cambio durante la cicatrización. Todas las piezas están certificadas para uso corporal." },
+      { "q": "¿Cuánto tarda en cicatrizar?", "a": "Lóbulo: 6-8 semanas. Cartílago: 4-12 meses según la zona. Septum: 2-3 meses. Te enviamos un PDF personalizado con los cuidados específicos para tu perforación." },
+      { "q": "¿Puedo usar aretes comprados en mi piercing nuevo?", "a": "No. Los primeros 6-12 meses (según zona) tu perforación necesita joyería implantgrade de titanio u oro. Cambiar antes puede causar reacciones, migraciones o infecciones. Una vez cicatrizado totalmente, podemos ayudarte a elegir piezas compatibles." },
+      { "q": "¿Atienden a menores de edad?", "a": "Sí, recibimos personas desde los 14 años con autorización firmada de un adulto responsable (padre, madre o tutor legal) y presencia en el estudio. Para menores de 14 años, conversemos el caso particular." },
+      { "q": "¿Cómo reservo?", "a": "Por WhatsApp. Nos contás qué piercing querés, te asesoramos por chat, y agendamos día y horario. Pedimos seña de Gs 50.000 (se descuenta del total)." },
+      { "q": "¿Tienen joyería para vender sin cita?", "a": "Sí. Pasá por el estudio y nuestro showroom tiene plugs, túneles, cadenas, dijes y piezas curadas. Consultá horario en la sección Contacto." },
+      { "q": "¿Qué pasa si mi piercing se infecta?", "a": "Contactanos inmediatamente por WhatsApp. Hacemos seguimiento sin cargo y, si es necesario, te derivamos al dermatólogo con un informe. Nunca dejes un piercing sin atención si ves signos de infección." }
+    ]
+  },
+  "contacto": {
+    "title": "Hablemos por WhatsApp",
+    "subtitle": "Respondemos consultas y agendamos citas en horario del estudio.",
+    "address": "Asunción, Paraguay",
+    "neighborhood": "Barrio [barrio] — dirección exacta se envía por WhatsApp al confirmar cita",
+    "schedule": [
+      { "day": "Lunes",     "hours": "Cerrado" },
+      { "day": "Martes",    "hours": "14:00 - 20:00" },
+      { "day": "Miércoles", "hours": "14:00 - 20:00" },
+      { "day": "Jueves",    "hours": "14:00 - 20:00" },
+      { "day": "Viernes",   "hours": "14:00 - 21:00" },
+      { "day": "Sábado",    "hours": "10:00 - 18:00" },
+      { "day": "Domingo",   "hours": "Cerrado" }
+    ],
+    "whatsapp": "595981324569",
+    "whatsappDisplay": "+595 981 324 569",
+    "instagram": "@pierce.charm",
+    "email": "hola@piercecharm.com.py"
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Estudio",
+        "links": [
+          { "label": "Catálogo de piercings", "href": "/piercings" },
+          { "label": "Joyería alternativa",   "href": "/galeria" },
+          { "label": "Sobre el estudio",      "href": "/nosotros" },
+          { "label": "FAQ",                   "href": "/faq" }
+        ]
+      },
+      {
+        "title": "Atención",
+        "links": [
+          { "label": "Contacto",                "href": "/contacto" },
+          { "label": "Reservar cita",           "href": "https://wa.me/595981324569?text=Hola!%20Quiero%20reservar" },
+          { "label": "Seguimiento post-piercing", "href": "https://wa.me/595981324569" }
+        ]
+      }
+    ],
+    "social": [
+      { "label": "Instagram", "href": "https://instagram.com/pierce.charm" }
+    ],
+    "contactStrip": [
+      { "label": "Asunción, Paraguay" },
+      { "label": "Mar–Sáb · Cita previa" }
+    ],
+    "copy": "© 2026 Pierce Charm · Estudio de piercings alternativo · Asunción, Paraguay",
+    "ornament": "𓆩 ☆ 𓆪"
+  }
+}

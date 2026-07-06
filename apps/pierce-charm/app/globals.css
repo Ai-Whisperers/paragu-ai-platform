@@ -1,0 +1,327 @@
+/* ═══════════════════════════════════════════════
+   PIERCE CHARM — Gothic Alternative Theme
+   Palette (HEX):
+     - #63081d  Burgundy / blood (primary anchor)
+     - #211b54  Deep midnight indigo (secondary anchor)
+     - #520b4e  Royal purple / plum (accent)
+   Derivatives built for layers, glows, smears.
+   Estética: política alternativa — chains, bats, skulls, candles
+   Tailwind v4: @import + @theme
+   ═══════════════════════════════════════════════ */
+
+@import "tailwindcss";
+
+@theme {
+  /* ==== PRIMARY Burgundy (#63081d) ==== */
+  --color-primary: #63081d;
+  --color-primary-foreground: #f8e9eb;
+  --color-primary-deep: #3a040f;
+  --color-primary-light: #8b1a31;
+
+  /* ==== SECONDARY Midnight Indigo (#211b54) ==== */
+  --color-secondary: #211b54;
+  --color-secondary-foreground: #e8e9f5;
+  --color-secondary-deep: #0f0c2e;
+  --color-secondary-light: #3a3380;
+
+  /* ==== ACCENT Royal Purple (#520b4e) ==== */
+  --color-accent: #520b4e;
+  --color-accent-foreground: #f5e8f3;
+  --color-accent-light: #7a2673;
+  --color-accent-deep: #2e052a;
+
+  /* ==== BACKGROUNDS (dark by default, gothic mood) ==== */
+  --color-background: #0a0612;
+  --color-surface: #14091f;
+  --color-surface-light: #1f1230;
+  --color-foreground: #f1e7ee;
+
+  /* ==== TEXT ==== */
+  --color-muted: #1f1230;
+  --color-muted-foreground: #a89bb0;
+  --color-border: #3a1f3f;
+  --color-card: #1a0e25;
+  --color-card-foreground: #f1e7ee;
+  --color-ring: #8b1a31;
+
+  /* ==== Semantic (kept minimal) ==== */
+  --color-input: #2a1530;
+  --color-destructive: #c0392b;
+  --color-destructive-foreground: #fdf2f0;
+  --color-success: #2d7a5f;
+  --color-warning: #c89b3c;
+  --color-gold: #b08838;
+  --color-gold-soft: #2c2014;
+
+  /* ==== Fluid type ==== */
+  --text-fluid-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-fluid-h2: clamp(2rem, 1.4rem + 2.5vw, 3.5rem);
+  --text-fluid-h1: clamp(2.5rem, 1.7rem + 4.5vw, 5.5rem);
+  --text-fluid-display: clamp(3rem, 2rem + 5vw, 6.5rem);
+
+  /* ==== Display fonts ==== */
+  --font-display: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-script: "Tangerine", "Cinzel Decorative", cursive;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+/* ==== Base ==== */
+html, body { background-color: var(--color-background); color: var(--color-foreground); }
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-fluid-base);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(139, 26, 49, 0.2);
+}
+
+* { box-sizing: border-box; }
+
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; line-height: 1.05; }
+h1 { font-size: var(--text-fluid-h1); font-weight: 700; }
+h2 { font-size: var(--text-fluid-h2); font-weight: 700; }
+h3 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem); font-weight: 600; }
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+  font-weight: 500;
+}
+
+.script { font-family: var(--font-script); }
+
+/* ==== Background smear ==== */
+.smoke-bg {
+  background-image:
+    radial-gradient(ellipse 60% 40% at 20% 10%, rgba(98, 8, 29, 0.35), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 90%, rgba(82, 11, 78, 0.35), transparent 70%),
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(33, 27, 84, 0.4), transparent 70%);
+}
+
+.blood-wash {
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(98, 8, 29, 0.08) 40%, rgba(98, 8, 29, 0.18) 100%);
+}
+
+/* ==== Decorative section dividers ==== */
+.divider-gothic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 3rem auto;
+  max-width: 24rem;
+}
+.divider-gothic::before, .divider-gothic::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-primary-light), transparent);
+}
+.divider-gothic svg { flex: 0 0 auto; }
+
+/* ==== CTA Buttons (gothic sharp edges + chains) ==== */
+.btn-gothic {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.8rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--color-primary-light);
+  background: linear-gradient(180deg, #7a1530 0%, #4d0617 100%);
+  color: #f8e9eb;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+.btn-gothic:hover {
+  background: linear-gradient(180deg, #8b1a31 0%, #63081d 100%);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 24px rgba(176, 136, 56, 0.25);
+  transform: translateY(-1px);
+}
+.btn-gothic-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.8rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-foreground);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-gothic-outline:hover {
+  border-color: var(--color-accent-light);
+  background: rgba(82, 11, 78, 0.15);
+  color: #fff;
+}
+
+/* ==== Gothic card ==== */
+.rock-card {
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-card) 100%);
+  border: 1px solid var(--color-border);
+  position: relative;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  text-align: left;
+}
+.rock-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary-light);
+  box-shadow: 0 18px 40px rgba(98, 8, 29, 0.3), 0 0 0 1px rgba(176, 136, 56, 0.15);
+}
+.rock-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary-light), var(--color-accent-light), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.rock-card:hover::before { opacity: 1; }
+
+/* ==== Chain border sides ==== */
+.chain-side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.chain-side-left  { left: 0; }
+.chain-side-right { right: 0; }
+@media (min-width: 1024px) { .chain-side { width: 48px; } }
+
+.bat-flock {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+  animation: batGlide 14s ease-in-out infinite;
+}
+.bat-flock.b2 { animation-duration: 18s; animation-delay: -4s; }
+.bat-flock.b3 { animation-duration: 22s; animation-delay: -9s; }
+
+@keyframes batGlide {
+  0%, 100% { transform: translate(0, 0) rotate(-2deg); }
+  25%      { transform: translate(40px, -18px) rotate(2deg); }
+  50%      { transform: translate(70px, -8px) rotate(-1deg); }
+  75%      { transform: translate(30px, 14px) rotate(1deg); }
+}
+
+@keyframes flicker {
+  0%, 100%  { opacity: 0.85; filter: drop-shadow(0 0 6px rgba(176, 136, 56, 0.3)); }
+  45%       { opacity: 0.95; filter: drop-shadow(0 0 14px rgba(176, 136, 56, 0.65)); }
+  50%       { opacity: 0.6;  filter: drop-shadow(0 0 4px rgba(176, 136, 56, 0.2)); }
+  55%       { opacity: 0.95; filter: drop-shadow(0 0 14px rgba(176, 136, 56, 0.65)); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 18px rgba(176, 136, 56, 0.3), 0 0 0 1px rgba(176, 136, 56, 0.4); }
+  50%      { box-shadow: 0 0 36px rgba(176, 136, 56, 0.55), 0 0 0 1px rgba(176, 136, 56, 0.7); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-flicker    { animation: flicker 4s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+
+/* ==== Tap targets (WCAG 2.5.5) ==== */
+.tap { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
+
+/* ==== Scrollbar ==== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-surface); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+  border-radius: 4px;
+}
+::selection { background: var(--color-primary); color: #fdf2f0; }
+
+/* ==== iOS safe areas ==== */
+@layer utilities {
+  .pb-safe { padding-bottom: max(0.5rem, env(safe-area-inset-bottom)); }
+  .pt-safe { padding-top: max(0.5rem, env(safe-area-inset-top)); }
+  .safe-area-bottom { padding-bottom: env(safe-area-inset-bottom); }
+  .text-balance { text-wrap: balance; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==== Forms ==== */
+input, textarea, select {
+  background: var(--color-input);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-body);
+  width: 100%;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 2px rgba(139, 26, 49, 0.25);
+}
+
+/* ==== Piercing marker (pin-style hotspot on ear image) ==== */
+.piercing-pin {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: radial-gradient(circle, #d4af37 30%, #8b6914 70%);
+  border: 1.5px solid #fff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2), 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.piercing-pin:hover, .piercing-pin.active {
+  transform: translate(-50%, -50%) scale(1.4);
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.4), 0 0 16px rgba(212, 175, 55, 0.8);
+}
+
+/* ==== Pricing pill ==== */
+.price-tag {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  background: linear-gradient(180deg, #1a0e25, #0a0612);
+  border: 1px solid var(--color-primary-light);
+  color: var(--color-gold);
+  border-radius: 2px;
+}
