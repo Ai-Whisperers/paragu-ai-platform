@@ -100,6 +100,12 @@
   --navy: #03045e;
   --navy-2: #020340;
 
+  /* Dark-band tones for Footer + accent sections. Overridden per-theme so
+     the chrome recolors instead of staying stuck on navy. */
+  --ocean-6: #0077b6;
+  --ocean-7: #023e8a;
+  --ocean-8: #03045e;
+
   --accent: #023e8a;
   --accent-2: #03045e;
   --accent-light: #ade8f4;
@@ -1141,9 +1147,9 @@ a:hover { color: var(--accent-2); }
   --border: rgba(255,255,255,0.28);       --color-border: rgba(255,255,255,0.28);
   --border-light: rgba(255,255,255,0.16); --color-border-light: rgba(255,255,255,0.16);
 }
-.tone-ocean-6 { background: #0077b6; --bg: #0077b6; --color-bg: #0077b6; }
-.tone-ocean-7 { background: #023e8a; --bg: #023e8a; --color-bg: #023e8a; }
-.tone-ocean-8 { background: #03045e; --bg: #03045e; --color-bg: #03045e; }
+.tone-ocean-6 { background: var(--ocean-6); --bg: var(--ocean-6); --color-bg: var(--ocean-6); }
+.tone-ocean-7 { background: var(--ocean-7); --bg: var(--ocean-7); --color-bg: var(--ocean-7); }
+.tone-ocean-8 { background: var(--ocean-8); --bg: var(--ocean-8); --color-bg: var(--ocean-8); }
 
 /* On dark bands the accent var goes light-cyan, which would leave
    .btn-primary white-on-light. Switch primary CTAs to yellow-on-navy. */
@@ -1158,3 +1164,149 @@ a:hover { color: var(--accent-2); }
   background: var(--yellow-2);
   color: #03045e;
 }
+
+/* ═══════════════════════════════════════════════
+   User-selectable themes — activated by [data-theme="…"] on <html>.
+   Each theme overrides the core CSS variables consumed by both
+   Tailwind (`--color-*`) and legacy inline styles (`--*`).
+   Live selector lives at /[locale]/settings.
+   ═══════════════════════════════════════════════ */
+
+/* Base Lilac — 10-shade purple scale (Thistle → Deep Lilac) */
+html[data-theme="lilac"] {
+  --bg: #f6effb;              --color-bg: #f6effb;
+  --surface: #ffffff;         --color-surface: #ffffff;
+  --surface-muted: #dec9e9;   --color-surface-muted: #dec9e9;
+  --surface-alt: #d2b7e5;     --color-surface-alt: #d2b7e5;
+  --fg: #2a1a4a;              --color-fg: #2a1a4a;
+  --fg-muted: #6247aa;        --color-fg-muted: #6247aa;
+  --fg-subtle: #7251b5;       --color-fg-subtle: #7251b5;
+  --accent: #7251b5;          --color-accent: #7251b5;
+  --accent-2: #6247aa;        --color-accent-2: #6247aa;
+  --accent-light: #dac3e8;    --color-accent-light: #dac3e8;
+  --accent-soft: #dac3e8;     --color-accent-soft: #dac3e8;
+  --accent-glow: rgba(114, 81, 181, 0.22);
+  --navy: #6247aa;            --color-navy: #6247aa;
+  --border: #c19ee0;          --color-border: #c19ee0;
+  --border-light: #dac3e8;    --color-border-light: #dac3e8;
+  --yellow: #b185db;          --color-yellow: #b185db;
+  --yellow-2: #9163cb;        --color-yellow-2: #9163cb;
+  --yellow-soft: #dec9e9;     --color-yellow-soft: #dec9e9;
+  --ocean-6: #7251b5;         --ocean-7: #4a2d8f;         --ocean-8: #2a1a4a;
+}
+
+/* Discreet — soft rose-cream, low contrast, quiet accent */
+html[data-theme="discreet"] {
+  --bg: #fff6ff;              --color-bg: #fff6ff;
+  --surface: #ffffff;         --color-surface: #ffffff;
+  --surface-muted: #fff7d0;   --color-surface-muted: #fff7d0;
+  --surface-alt: #fff0fb;     --color-surface-alt: #fff0fb;
+  --fg: #4b3b58;              --color-fg: #4b3b58;
+  --fg-muted: #a387af;        --color-fg-muted: #a387af;
+  --fg-subtle: #a387af;       --color-fg-subtle: #a387af;
+  --accent: #b57ac8;          --color-accent: #b57ac8;
+  --accent-2: #a387af;        --color-accent-2: #a387af;
+  --accent-light: #e4a5ff;    --color-accent-light: #e4a5ff;
+  --accent-soft: #f4d5ff;     --color-accent-soft: #f4d5ff;
+  --accent-glow: rgba(228, 165, 255, 0.25);
+  --navy: #4b3b58;            --color-navy: #4b3b58;
+  --border: #e4c8ee;          --color-border: #e4c8ee;
+  --border-light: #f2e0f5;    --color-border-light: #f2e0f5;
+  --yellow: #fff7d0;          --color-yellow: #fff7d0;
+  --yellow-2: #f5e79e;        --color-yellow-2: #f5e79e;
+  --yellow-soft: #fffade;     --color-yellow-soft: #fffade;
+  --ocean-6: #8a6f96;         --ocean-7: #6b4a80;         --ocean-8: #4b3b58;
+}
+
+/* Friend — welcoming purple + teal duotone */
+html[data-theme="friend"] {
+  --bg: #fbf7fd;              --color-bg: #fbf7fd;
+  --surface: #ffffff;         --color-surface: #ffffff;
+  --surface-muted: #f2e6f7;   --color-surface-muted: #f2e6f7;
+  --surface-alt: #e4a5ff;     --color-surface-alt: #e4a5ff;
+  --fg: #2a1235;              --color-fg: #2a1235;
+  --fg-muted: #642e7f;        --color-fg-muted: #642e7f;
+  --fg-subtle: #007668;       --color-fg-subtle: #007668;
+  --accent: #642e7f;          --color-accent: #642e7f;
+  --accent-2: #007668;        --color-accent-2: #007668;
+  --accent-light: #00c9b6;    --color-accent-light: #00c9b6;
+  --accent-soft: #cff7f2;     --color-accent-soft: #cff7f2;
+  --accent-glow: rgba(0, 201, 182, 0.25);
+  --navy: #642e7f;            --color-navy: #642e7f;
+  --border: #d9b5e6;          --color-border: #d9b5e6;
+  --border-light: #edd8f5;    --color-border-light: #edd8f5;
+  --yellow: #00c9b6;          --color-yellow: #00c9b6;
+  --yellow-2: #007668;        --color-yellow-2: #007668;
+  --yellow-soft: #cff7f2;     --color-yellow-soft: #cff7f2;
+  --ocean-6: #007668;         --ocean-7: #642e7f;         --ocean-8: #2a1235;
+}
+
+/* Pin — cream field, plum ink, teal accent */
+html[data-theme="pin"] {
+  --bg: #fffade;              --color-bg: #fffade;
+  --surface: #ffffff;         --color-surface: #ffffff;
+  --surface-muted: #fff7c9;   --color-surface-muted: #fff7c9;
+  --surface-alt: #e4a5ff;     --color-surface-alt: #e4a5ff;
+  --fg: #2a0a3a;              --color-fg: #2a0a3a;
+  --fg-muted: #6c1f92;        --color-fg-muted: #6c1f92;
+  --fg-subtle: #005b50;       --color-fg-subtle: #005b50;
+  --accent: #6c1f92;          --color-accent: #6c1f92;
+  --accent-2: #005b50;        --color-accent-2: #005b50;
+  --accent-light: #e4a5ff;    --color-accent-light: #e4a5ff;
+  --accent-soft: #f4d5ff;     --color-accent-soft: #f4d5ff;
+  --accent-glow: rgba(108, 31, 146, 0.25);
+  --navy: #6c1f92;            --color-navy: #6c1f92;
+  --border: #e0c9a8;          --color-border: #e0c9a8;
+  --border-light: #f0e2b8;    --color-border-light: #f0e2b8;
+  --yellow: #fffade;          --color-yellow: #fffade;
+  --yellow-2: #f5e79e;        --color-yellow-2: #f5e79e;
+  --yellow-soft: #fffdf0;     --color-yellow-soft: #fffdf0;
+  --ocean-6: #005b50;         --ocean-7: #6c1f92;         --ocean-8: #2a0a3a;
+}
+
+/* Shades — deep purple monochrome */
+html[data-theme="shades"] {
+  --bg: #f6ecfb;              --color-bg: #f6ecfb;
+  --surface: #ffffff;         --color-surface: #ffffff;
+  --surface-muted: #e4a5ff;   --color-surface-muted: #e4a5ff;
+  --surface-alt: #b87cd3;     --color-surface-alt: #b87cd3;
+  --fg: #3f085a;              --color-fg: #3f085a;
+  --fg-muted: #663080;        --color-fg-muted: #663080;
+  --fg-subtle: #8e55a9;       --color-fg-subtle: #8e55a9;
+  --accent: #663080;          --color-accent: #663080;
+  --accent-2: #3f085a;        --color-accent-2: #3f085a;
+  --accent-light: #b87cd3;    --color-accent-light: #b87cd3;
+  --accent-soft: #e4a5ff;     --color-accent-soft: #e4a5ff;
+  --accent-glow: rgba(63, 8, 90, 0.25);
+  --navy: #3f085a;            --color-navy: #3f085a;
+  --border: #b87cd3;          --color-border: #b87cd3;
+  --border-light: #e4a5ff;    --color-border-light: #e4a5ff;
+  --yellow: #8e55a9;          --color-yellow: #8e55a9;
+  --yellow-2: #663080;        --color-yellow-2: #663080;
+  --yellow-soft: #e4a5ff;     --color-yellow-soft: #e4a5ff;
+  --ocean-6: #8e55a9;         --ocean-7: #663080;         --ocean-8: #3f085a;
+}
+
+/* Random Shades — high-contrast neon + violet */
+html[data-theme="random"] {
+  --bg: #fbeeff;              --color-bg: #fbeeff;
+  --surface: #ffffff;         --color-surface: #ffffff;
+  --surface-muted: #eaaaff;   --color-surface-muted: #eaaaff;
+  --surface-alt: #b67ad1;     --color-surface-alt: #b67ad1;
+  --fg: #440e5f;              --color-fg: #440e5f;
+  --fg-muted: #6a2894;        --color-fg-muted: #6a2894;
+  --fg-subtle: #b175cc;       --color-fg-subtle: #b175cc;
+  --accent: #440e5f;          --color-accent: #440e5f;
+  --accent-2: #6a2894;        --color-accent-2: #6a2894;
+  --accent-light: #eaaaff;    --color-accent-light: #eaaaff;
+  --accent-soft: #f6d5ff;     --color-accent-soft: #f6d5ff;
+  --accent-glow: rgba(68, 14, 95, 0.28);
+  --navy: #440e5f;            --color-navy: #440e5f;
+  --border: #b175cc;          --color-border: #b175cc;
+  --border-light: #eaaaff;    --color-border-light: #eaaaff;
+  --yellow: #eaaaff;          --color-yellow: #eaaaff;
+  --yellow-2: #b67ad1;        --color-yellow-2: #b67ad1;
+  --yellow-soft: #f6d5ff;     --color-yellow-soft: #f6d5ff;
+  --ocean-6: #b175cc;         --ocean-7: #6a2894;         --ocean-8: #440e5f;
+}
+

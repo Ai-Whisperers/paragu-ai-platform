@@ -2,10 +2,14 @@ import { Inter, DM_Serif_Display, Caveat } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 import "./themes.css"
+import { ThemeProvider } from "@/components/ThemeProvider"
+import { THEMES, THEME_STORAGE_KEY } from "@/lib/themes"
 
-// Skip static prerender for global error pages too
 export const dynamic = "force-dynamic"
 export const revalidate = 0
+
+const THEME_IDS = THEMES.map((t) => t.id)
+const NO_FLASH_SCRIPT = `(function(){try{var k=${JSON.stringify(THEME_STORAGE_KEY)};var allowed=${JSON.stringify(THEME_IDS)};var v=localStorage.getItem(k);if(v&&v!=='default'&&allowed.indexOf(v)!==-1){document.documentElement.setAttribute('data-theme',v);}}catch(e){console.warn('theme no-flash failed',e);}})();`
 
 const inter = Inter({
   subsets: ["latin"],
@@ -105,9 +109,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `(function(){try{var p=location.pathname.match(/^\\/(en|es)\\b/);var l=p?p[1]:'en';document.documentElement.lang=l;}catch(e){}})();`,
           }}
         />
+        <script dangerouslySetInnerHTML={{ __html: NO_FLASH_SCRIPT }} />
       </head>
       <body className="font-sans antialiased bg-bg text-fg">
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
         <Script id="register-sw" strategy="lazyOnload">
           {`if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js').catch(() => {}); }); }`}
         </Script>

@@ -35,6 +35,7 @@ const EN_TO_ES: Record<string, string> = {
   "services/cosmetic-dentistry": "servicios/estetica-dental",
   "services/oral-rehabilitation": "servicios/rehabilitacion-oral",
   "services/general-dentistry": "servicios/odontologia-general",
+  "settings": "ajustes",
 }
 
 /** Strip the leading locale from a path. /en/about -> about, /es -> "" */

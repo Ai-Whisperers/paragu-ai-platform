@@ -20,8 +20,8 @@ const BG: Record<string, string> = {
   default: "",
   muted: "bg-surface-muted",
   bg: "bg-bg",
-  accent: "bg-accent text-white",
-  gradient: "bg-gradient-to-br from-accent via-accent-2 to-accent text-white",
+  accent: "tone-ocean-7 text-white",
+  gradient: "ink-light bg-gradient-to-br from-[var(--ocean-7)] via-[var(--ocean-8)] to-[var(--ocean-7)] text-white",
 }
 
 const PY: Record<string, string> = {
