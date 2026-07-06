@@ -80,47 +80,33 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
             </ul>
           </div>
 
-          {/* Services + Company */}
-          <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              {isEs ? "Servicios" : "Services"}
-            </h4>
-            <ul className="space-y-2 text-sm mb-6">
-              <li><Link href={`${base}/second-opinion`} className="hover:text-white transition-colors">{isEs ? "Segunda opinión" : "Second opinion"}</Link></li>
-              <li><Link href={`${base}/pricing`} className="hover:text-white transition-colors">{isEs ? "Precios" : "Pricing"}</Link></li>
-              <li><Link href={`${base}/services`} className="hover:text-white transition-colors">{isEs ? "Servicios" : "Services"}</Link></li>
-              <li><Link href={`${base}/expat`} className="hover:text-white transition-colors">Expat</Link></li>
-            </ul>
+          {/* Services + Company (side by side on md+) */}
+          <div className="md:col-span-1">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+                  {isEs ? "Servicios" : "Services"}
+                </h4>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href={`${base}/second-opinion`} className="hover:text-white transition-colors">{isEs ? "Segunda opinión" : "Second opinion"}</Link></li>
+                  <li><Link href={`${base}/pricing`} className="hover:text-white transition-colors">{isEs ? "Precios" : "Pricing"}</Link></li>
+                  <li><Link href={`${base}/services`} className="hover:text-white transition-colors">{isEs ? "Servicios" : "Services"}</Link></li>
+                  <li><Link href={`${base}/expat`} className="hover:text-white transition-colors">Expat</Link></li>
+                </ul>
+              </div>
 
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4 mt-8">
-              {isEs ? "Empresa" : "Company"}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href={`${base}/about`} className="hover:text-white transition-colors">{isEs ? "Sobre mí" : "About"}</Link></li>
-              <li><Link href={`${base}/faq`} className="hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link href={`${base}/process`} className="hover:text-white transition-colors">{isEs ? "Proceso" : "Process"}</Link></li>
-              <li><Link href={`${base}/blog`} className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href={`${base}/reviews`} className="hover:text-white transition-colors">{isEs ? "Reseñas" : "Reviews"}</Link></li>
-              <li><Link href={`${base}/clinic`} className="hover:text-white transition-colors">{isEs ? "La clínica" : "The clinic"}</Link></li>
-              <li><Link href={`${base}/first-visit`} className="hover:text-white transition-colors">{isEs ? "Primera visita" : "First visit"}</Link></li>
-              <li><Link href={`${base}/insurance`} className="hover:text-white transition-colors">{isEs ? "Seguro y pago" : "Insurance & payment"}</Link></li>
-              <li><Link href={`${base}/patient-rights`} className="hover:text-white transition-colors">{isEs ? "Derechos del paciente" : "Patient rights"}</Link></li>
-              <li><Link href={`${base}/privacy`} className="hover:text-white transition-colors">{isEs ? "Privacidad" : "Privacy"}</Link></li>
-              <li><Link href={`${base}/terms`} className="hover:text-white transition-colors">{isEs ? "Términos" : "Terms"}</Link></li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (typeof window !== "undefined") {
-                      window.dispatchEvent(new CustomEvent("dra-gp:reopen-cookie-consent"))
-                    }
-                  }}
-                  className="hover:text-white transition-colors text-left"
-                >
-                  {isEs ? "Preferencias de cookies" : "Cookie settings"}
-                </button>
-              </li>
-            </ul>
+              <div>
+                <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+                  {isEs ? "Empresa" : "Company"}
+                </h4>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href={`${base}/about`} className="hover:text-white transition-colors">{isEs ? "Sobre mí" : "About"}</Link></li>
+                  <li><Link href={`${base}/faq`} className="hover:text-white transition-colors">FAQ</Link></li>
+                  <li><Link href={`${base}/process`} className="hover:text-white transition-colors">{isEs ? "Proceso" : "Process"}</Link></li>
+                  <li><Link href={`${base}/blog`} className="hover:text-white transition-colors">Blog</Link></li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Hours */}

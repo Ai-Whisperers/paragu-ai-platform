@@ -1,0 +1,117 @@
+/* ============================================
+   THEMES — Ometz Dental
+   4 palettes selectable via [data-theme="..."]
+   ============================================ */
+
+:root,
+[data-theme="warm-classic"] {
+  /* Warm classic — verde teal + terracota + gold (default) */
+  --color-bg: #fbf9f6;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f2efe9;
+  --color-surface-alt: #e8e4dc;
+  --color-fg: #1c1c1c;
+  --color-fg-muted: #5c4f43;
+  --color-fg-subtle: #6b5e52;
+  --color-border: #e3ddd2;
+  --color-border-light: #ede8e0;
+  --color-accent: #0f4c4c;
+  --color-accent-2: #0a3a3a;
+  --color-accent-light: #1a6a6a;
+  --color-accent-soft: #e6efef;
+  --color-gold: #c9a84c;
+  --color-gold-2: #b08f38;
+  --color-gold-soft: #f5eed6;
+  --color-success: #2d7a5f;
+  --color-success-soft: #e1f0ea;
+  --color-error: #c0392b;
+  --color-warning: #b57f18;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #075e54;
+}
+
+/* Warm colorful — la onda de Gaby: scrubs de colores, vibrante */
+[data-theme="warm-colorful"] {
+  --color-bg: #fffaf0;
+  --color-surface: #ffffff;
+  --color-surface-muted: #fdf2e0;
+  --color-surface-alt: #f8e8d4;
+  --color-fg: #2d3142;
+  --color-fg-muted: #5c5f70;
+  --color-fg-subtle: #8a8d9c;
+  --color-border: #f0d9b8;
+  --color-border-light: #f9ecd4;
+  --color-accent: #e07856;          /* warm coral */
+  --color-accent-2: #c25e3e;
+  --color-accent-light: #f4a589;
+  --color-accent-soft: #fde7dc;
+  --color-gold: #f4b860;             /* warm gold */
+  --color-gold-2: #d99b3a;
+  --color-gold-soft: #fdf0d4;
+  --color-success: #6b9080;          /* sage green */
+  --color-success-soft: #dceae3;
+  --color-error: #d65a4a;
+  --color-warning: #d99b3a;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #075e54;
+}
+
+/* Serio elegante — consultorio premium clásico */
+[data-theme="serio-elegante"] {
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f6f4f0;
+  --color-surface-alt: #e8e4dc;
+  --color-fg: #1a1a1a;
+  --color-fg-muted: #4a4a4a;
+  --color-fg-subtle: #7a7a7a;
+  --color-border: #d8d3c8;
+  --color-border-light: #ece8df;
+  --color-accent: #1b2845;          /* deep navy */
+  --color-accent-2: #0e1730;
+  --color-accent-light: #2d3f63;
+  --color-accent-soft: #e6e9f0;
+  --color-gold: #b8956a;             /* subtle champagne */
+  --color-gold-2: #8b6f47;
+  --color-gold-soft: #f1ebde;
+  --color-success: #1f5d3f;
+  --color-success-soft: #dcebe1;
+  --color-error: #8b2424;
+  --color-warning: #8b6f47;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #075e54;
+}
+
+/* Minimal white — Apple/Stripe-style minimalism */
+[data-theme="minimal-white"] {
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #fafafa;
+  --color-surface-alt: #f0f0f0;
+  --color-fg: #1a1a1a;
+  --color-fg-muted: #5a5a5a;
+  --color-fg-subtle: #8a8a8a;
+  --color-border: #e5e5e5;
+  --color-border-light: #f0f0f0;
+  --color-accent: #000000;           /* true black */
+  --color-accent-2: #1a1a1a;
+  --color-accent-light: #404040;
+  --color-accent-soft: #f5f5f5;
+  --color-gold: #6b6b6b;             /* neutral gray */
+  --color-gold-2: #4a4a4a;
+  --color-gold-soft: #f0f0f0;
+  --color-success: #1a7a3a;
+  --color-success-soft: #e0f0e5;
+  --color-error: #c0392b;
+  --color-warning: #6b6b6b;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #075e54;
+}
+
+/* Smooth theme transition */
+html {
+  transition: background-color 280ms ease, color 280ms ease;
+}
+body, section, header, footer, nav, main, .card, .btn, .panel, .badge {
+  transition: background-color 280ms ease, color 280ms ease, border-color 280ms ease;
+}
