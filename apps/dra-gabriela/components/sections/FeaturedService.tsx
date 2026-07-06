@@ -46,7 +46,7 @@ export function FeaturedService({
   return (
     <section
       className={`relative overflow-hidden ${
-        variant === "lime" ? "ink-light bg-gradient-to-br from-[var(--ocean-7)] via-[var(--ocean-8)] to-[var(--ocean-7)] text-white" : "tone-ocean-5"
+        variant === "lime" ? "ink-light bg-gradient-hero text-white" : "tone-ocean-5"
       }`}
     >
       {/* Decorative blob */}
@@ -105,11 +105,7 @@ export function FeaturedService({
                       variant === "lime" ? "bg-gold" : "bg-accent-soft"
                     }`}
                   >
-                    <CheckCircle2
-                      className={`w-4 h-4 ${
-                        variant === "lime" ? "text-[var(--ocean-8)]" : "text-accent"
-                      }`}
-                    />
+                    <CheckCircle2 className="w-4 h-4 text-accent" />
                   </div>
                   <span
                     className={`leading-relaxed text-base pt-0.5 ${

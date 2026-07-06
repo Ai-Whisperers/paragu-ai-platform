@@ -21,7 +21,7 @@ const BG: Record<string, string> = {
   muted: "bg-surface-muted",
   bg: "bg-bg",
   accent: "tone-ocean-7 text-white",
-  gradient: "ink-light bg-gradient-to-br from-[var(--ocean-7)] via-[var(--ocean-8)] to-[var(--ocean-7)] text-white",
+  gradient: "ink-light bg-gradient-hero text-white",
 }
 
 const PY: Record<string, string> = {

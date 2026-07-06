@@ -100,8 +100,14 @@
   --navy: #03045e;
   --navy-2: #020340;
 
-  /* Dark-band tones for Footer + accent sections. Overridden per-theme so
-     the chrome recolors instead of staying stuck on navy. */
+  /* Ocean tone ladder (light -> dark). Overridden per-theme so every band
+     recolors together. Light tones (1..5) drive .tone-ocean-1..5 backgrounds;
+     dark tones (6..8) drive Footer + accent bands and .bg-gradient-hero. */
+  --ocean-1: #caf0f8;
+  --ocean-2: #ade8f4;
+  --ocean-3: #90e0ef;
+  --ocean-4: #48cae4;
+  --ocean-5: #00b4d8;
   --ocean-6: #0077b6;
   --ocean-7: #023e8a;
   --ocean-8: #03045e;
@@ -228,20 +234,18 @@ a:hover { color: var(--accent-2); }
    ═══════════════════════════════════════════════ */
 
 .gradient-text {
-  /* Navy → blue gradient for hero display text. Both endpoints clear WCAG AA on
-     cream/surface backgrounds. Hardcoded stops: --accent-2 aliases navy at root
-     (gradient would collapse to solid) and goes light inside dark tone scopes. */
-  background: linear-gradient(135deg, #03045e 0%, #0353a4 100%);
+  /* Ocean-8 → ocean-6 gradient for hero display text on light surfaces. */
+  background: linear-gradient(135deg, var(--ocean-8) 0%, var(--ocean-6) 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* On dark bands (tone-ocean-6/7/8) navy text disappears — flip to light endpoints. */
+/* On dark bands (tone-ocean-6/7/8) dark text disappears — flip to light endpoints. */
 .tone-ocean-6 .gradient-text, .tone-ocean-7 .gradient-text,
 .tone-ocean-8 .gradient-text, .ink-light .gradient-text {
-  background: linear-gradient(135deg, #caf0f8 0%, #90e0ef 100%);
+  background: linear-gradient(135deg, var(--ocean-1) 0%, var(--ocean-2) 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -852,7 +856,7 @@ a:hover { color: var(--accent-2); }
   font-size: 0.9375rem;
   line-height: 1.4;
   background: var(--yellow);
-  color: #03045e;
+  color: var(--ocean-8);
   border: 1px solid transparent;
   text-decoration: none !important;
   cursor: pointer;
@@ -862,19 +866,19 @@ a:hover { color: var(--accent-2); }
 }
 .btn-whatsapp:hover {
   background: var(--yellow-2);
-  color: #03045e;
+  color: var(--ocean-8);
   box-shadow: 0 6px 20px rgba(255, 239, 0, 0.42);
   transform: translateY(-1px);
 }
 .btn-whatsapp:active { transform: translateY(1px); }
 .btn-whatsapp-ghost {
-  background: rgba(2, 62, 138, 0.10);
-  color: #023e8a;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
   box-shadow: none;
 }
 .btn-whatsapp-ghost:hover {
-  background: rgba(2, 62, 138, 0.20);
-  color: #023e8a;
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+  color: var(--accent);
   box-shadow: none;
   transform: translateY(-1px);
 }
@@ -1111,26 +1115,26 @@ a:hover { color: var(--accent-2); }
    ═══════════════════════════════════════════════ */
 
 .tone-ocean-1, .tone-ocean-2, .tone-ocean-3, .tone-ocean-4, .tone-ocean-5 {
-  color: #03045e;
-  --fg: #03045e;            --color-fg: #03045e;
-  --fg-muted: #023e8a;      --color-fg-muted: #023e8a;
-  --fg-subtle: #0353a4;     --color-fg-subtle: #0353a4;
-  --navy: #03045e;          --color-navy: #03045e;
-  --surface: #ffffff;       --color-surface: #ffffff;
-  --surface-muted: #e4f6fb; --color-surface-muted: #e4f6fb;
-  --border: #8ccbde;        --color-border: #8ccbde;
-  --border-light: #b3dfeb;  --color-border-light: #b3dfeb;
+  color: var(--ocean-8);
+  --fg: var(--ocean-8);         --color-fg: var(--ocean-8);
+  --fg-muted: var(--ocean-7);   --color-fg-muted: var(--ocean-7);
+  --fg-subtle: var(--ocean-6);  --color-fg-subtle: var(--ocean-6);
+  --navy: var(--ocean-8);       --color-navy: var(--ocean-8);
+  --surface: #ffffff;           --color-surface: #ffffff;
+  --surface-muted: var(--ocean-2); --color-surface-muted: var(--ocean-2);
+  --border: var(--ocean-4);     --color-border: var(--ocean-4);
+  --border-light: var(--ocean-3); --color-border-light: var(--ocean-3);
 }
-.tone-ocean-1 { background: #caf0f8; --bg: #caf0f8; --color-bg: #caf0f8; }
-.tone-ocean-2 { background: #ade8f4; --bg: #ade8f4; --color-bg: #ade8f4; }
-.tone-ocean-3 { background: #90e0ef; --bg: #90e0ef; --color-bg: #90e0ef; }
-.tone-ocean-4 { background: #48cae4; --bg: #48cae4; --color-bg: #48cae4; }
+.tone-ocean-1 { background: var(--ocean-1); --bg: var(--ocean-1); --color-bg: var(--ocean-1); }
+.tone-ocean-2 { background: var(--ocean-2); --bg: var(--ocean-2); --color-bg: var(--ocean-2); }
+.tone-ocean-3 { background: var(--ocean-3); --bg: var(--ocean-3); --color-bg: var(--ocean-3); }
+.tone-ocean-4 { background: var(--ocean-4); --bg: var(--ocean-4); --color-bg: var(--ocean-4); }
 .tone-ocean-5 {
-  background: #00b4d8; --bg: #00b4d8; --color-bg: #00b4d8;
-  /* darker muted ink: #023e8a is only 4.1:1 on 00b4d8 */
-  --fg-muted: #022e66;      --color-fg-muted: #022e66;
-  --fg-subtle: #023e8a;     --color-fg-subtle: #023e8a;
-  --border: #0096c7;        --color-border: #0096c7;
+  background: var(--ocean-5); --bg: var(--ocean-5); --color-bg: var(--ocean-5);
+  /* darker muted ink: on ocean-5 the default muted underperforms AA */
+  --fg-muted: var(--ocean-8);   --color-fg-muted: var(--ocean-8);
+  --fg-subtle: var(--ocean-7);  --color-fg-subtle: var(--ocean-7);
+  --border: var(--ocean-6);     --color-border: var(--ocean-6);
 }
 
 /* Dark tones: white ink + LIGHT accent (links/badges must be light on
@@ -1156,13 +1160,20 @@ a:hover { color: var(--accent-2); }
 .tone-ocean-6 .btn-primary, .tone-ocean-7 .btn-primary,
 .tone-ocean-8 .btn-primary, .ink-light .btn-primary {
   background: var(--yellow);
-  color: #03045e;
-  box-shadow: 0 2px 8px rgba(2, 3, 56, 0.35);
+  color: var(--ocean-8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 .tone-ocean-6 .btn-primary:hover, .tone-ocean-7 .btn-primary:hover,
 .tone-ocean-8 .btn-primary:hover, .ink-light .btn-primary:hover {
   background: var(--yellow-2);
-  color: #03045e;
+  color: var(--ocean-8);
+}
+
+/* Shared hero-gradient band. Consumes the dark end of the ocean ladder,
+   so it recolors automatically with every palette instead of every component
+   re-specifying var(--ocean-7)/var(--ocean-8). */
+.bg-gradient-hero {
+  background-image: linear-gradient(to bottom right, var(--ocean-7), var(--ocean-8), var(--ocean-7));
 }
 
 /* ═══════════════════════════════════════════════
@@ -1192,6 +1203,8 @@ html[data-theme="lilac"] {
   --yellow: #b185db;          --color-yellow: #b185db;
   --yellow-2: #9163cb;        --color-yellow-2: #9163cb;
   --yellow-soft: #dec9e9;     --color-yellow-soft: #dec9e9;
+  --ocean-1: #f6effb;         --ocean-2: #ecd9f5;         --ocean-3: #dac3e8;
+  --ocean-4: #c19ee0;         --ocean-5: #9c7bd0;
   --ocean-6: #7251b5;         --ocean-7: #4a2d8f;         --ocean-8: #2a1a4a;
 }
 
@@ -1215,6 +1228,8 @@ html[data-theme="discreet"] {
   --yellow: #fff7d0;          --color-yellow: #fff7d0;
   --yellow-2: #f5e79e;        --color-yellow-2: #f5e79e;
   --yellow-soft: #fffade;     --color-yellow-soft: #fffade;
+  --ocean-1: #fff6ff;         --ocean-2: #f7e8f5;         --ocean-3: #ecd4ea;
+  --ocean-4: #dcb8db;         --ocean-5: #b995b8;
   --ocean-6: #8a6f96;         --ocean-7: #6b4a80;         --ocean-8: #4b3b58;
 }
 
@@ -1238,6 +1253,8 @@ html[data-theme="friend"] {
   --yellow: #00c9b6;          --color-yellow: #00c9b6;
   --yellow-2: #007668;        --color-yellow-2: #007668;
   --yellow-soft: #cff7f2;     --color-yellow-soft: #cff7f2;
+  --ocean-1: #eaf9f6;         --ocean-2: #cff7f2;         --ocean-3: #a9ecdc;
+  --ocean-4: #57d3bd;         --ocean-5: #00c9b6;
   --ocean-6: #007668;         --ocean-7: #642e7f;         --ocean-8: #2a1235;
 }
 
@@ -1261,6 +1278,8 @@ html[data-theme="pin"] {
   --yellow: #fffade;          --color-yellow: #fffade;
   --yellow-2: #f5e79e;        --color-yellow-2: #f5e79e;
   --yellow-soft: #fffdf0;     --color-yellow-soft: #fffdf0;
+  --ocean-1: #fffade;         --ocean-2: #fff2b8;         --ocean-3: #f4e0ff;
+  --ocean-4: #b6e2d5;         --ocean-5: #4ac1a8;
   --ocean-6: #005b50;         --ocean-7: #6c1f92;         --ocean-8: #2a0a3a;
 }
 
@@ -1284,6 +1303,8 @@ html[data-theme="shades"] {
   --yellow: #8e55a9;          --color-yellow: #8e55a9;
   --yellow-2: #663080;        --color-yellow-2: #663080;
   --yellow-soft: #e4a5ff;     --color-yellow-soft: #e4a5ff;
+  --ocean-1: #f6ecfb;         --ocean-2: #ead0f5;         --ocean-3: #e4a5ff;
+  --ocean-4: #b87cd3;         --ocean-5: #a066bd;
   --ocean-6: #8e55a9;         --ocean-7: #663080;         --ocean-8: #3f085a;
 }
 
@@ -1307,6 +1328,8 @@ html[data-theme="random"] {
   --yellow: #eaaaff;          --color-yellow: #eaaaff;
   --yellow-2: #b67ad1;        --color-yellow-2: #b67ad1;
   --yellow-soft: #f6d5ff;     --color-yellow-soft: #f6d5ff;
+  --ocean-1: #fbeeff;         --ocean-2: #f6d5ff;         --ocean-3: #eaaaff;
+  --ocean-4: #d193e6;         --ocean-5: #b67ad1;
   --ocean-6: #b175cc;         --ocean-7: #6a2894;         --ocean-8: #440e5f;
 }
 

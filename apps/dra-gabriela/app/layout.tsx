@@ -1,7 +1,6 @@
 import { Inter, DM_Serif_Display, Caveat } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
-import "./themes.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { THEMES, THEME_STORAGE_KEY } from "@/lib/themes"
 
