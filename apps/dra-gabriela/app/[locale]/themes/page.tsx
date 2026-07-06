@@ -57,7 +57,7 @@ export default function ThemesPage() {
             Cada caja muestra la misma pantalla con una paleta distinta. Comparalas.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ThemeCard
               themeId="warm-classic"
               title="Warm Classic"
@@ -77,6 +77,31 @@ export default function ThemesPage() {
               themeId="minimal-white"
               title="Minimal White"
               subtitle="Negro + gris"
+            />
+            <ThemeCard
+              themeId="discreet"
+              title="Discreet"
+              subtitle="Lavanda pastel + crema"
+            />
+            <ThemeCard
+              themeId="friend"
+              title="Friend"
+              subtitle="Purple + teal vibrante"
+            />
+            <ThemeCard
+              themeId="pin"
+              title="Pin"
+              subtitle="Purple profundo + cream + teal"
+            />
+            <ThemeCard
+              themeId="shades"
+              title="Shades"
+              subtitle="Gradiente purple claro → oscuro"
+            />
+            <ThemeCard
+              themeId="random-shades"
+              title="Random Shades"
+              subtitle="Purple gradient + bright"
             />
           </div>
         </section>

@@ -108,6 +108,140 @@
   --color-whatsapp-dark: #075e54;
 }
 
+/* ============================================
+   Iván's palettes — purple base #e4a5ff
+   ============================================ */
+
+/* Discreet — purple pastel suave + crema */
+[data-theme="discreet"] {
+  --color-bg: #fff6ff;
+  --color-surface: #fff7d0;
+  --color-surface-muted: #f5e8f5;
+  --color-surface-alt: #e8d8e8;
+  --color-fg: #2a1f30;
+  --color-fg-muted: #5c4a64;
+  --color-fg-subtle: #8a7590;
+  --color-border: #e4d4e4;
+  --color-border-light: #f0e0f0;
+  --color-accent: #e4a5ff;          /* lavender */
+  --color-accent-2: #a387af;        /* dusty purple */
+  --color-accent-light: #f0c8ff;
+  --color-accent-soft: #f5e0ff;
+  --color-gold: #fff7d0;             /* cream */
+  --color-gold-2: #f0e0a0;
+  --color-gold-soft: #fffae8;
+  --color-success: #a387af;
+  --color-success-soft: #f0e0f0;
+  --color-error: #c0392b;
+  --color-warning: #a387af;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #075e54;
+}
+
+/* Friend — purple + teal vibrante */
+[data-theme="friend"] {
+  --color-bg: #fff6ff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f0e8f5;
+  --color-surface-alt: #e0d0e8;
+  --color-fg: #2a0e3f;
+  --color-fg-muted: #5c3870;
+  --color-fg-subtle: #8a6090;
+  --color-border: #d8c0e0;
+  --color-border-light: #e8d8f0;
+  --color-accent: #e4a5ff;          /* lavender */
+  --color-accent-2: #642e7f;        /* deep purple */
+  --color-accent-light: #f0c8ff;
+  --color-accent-soft: #f0e0ff;
+  --color-gold: #007668;             /* dark teal */
+  --color-gold-2: #00c9b6;          /* bright teal */
+  --color-gold-soft: #d0f5f0;
+  --color-success: #00c9b6;
+  --color-success-soft: #d0f5f0;
+  --color-error: #c0392b;
+  --color-warning: #642e7f;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #075e54;
+}
+
+/* Pin — purple profundo + cream + dark teal */
+[data-theme="pin"] {
+  --color-bg: #fffade;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f5edd0;
+  --color-surface-alt: #e8d8b0;
+  --color-fg: #2a0e3f;
+  --color-fg-muted: #5c3870;
+  --color-fg-subtle: #8a6090;
+  --color-border: #d8c0a0;
+  --color-border-light: #e8d8c0;
+  --color-accent: #e4a5ff;          /* lavender */
+  --color-accent-2: #6c1f92;        /* royal purple */
+  --color-accent-light: #f0c8ff;
+  --color-accent-soft: #f0e0ff;
+  --color-gold: #005b50;             /* dark teal */
+  --color-gold-2: #007668;
+  --color-gold-soft: #d0e8e2;
+  --color-success: #005b50;
+  --color-success-soft: #d0e8e2;
+  --color-error: #c0392b;
+  --color-warning: #6c1f92;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #075e54;
+}
+
+/* Shades — gradient purple (lavender → deep purple) */
+[data-theme="shades"] {
+  --color-bg: #fff6ff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f5e8f5;
+  --color-surface-alt: #e8d0e8;
+  --color-fg: #3f085a;
+  --color-fg-muted: #663080;
+  --color-fg-subtle: #8e55a9;
+  --color-border: #d8b8d8;
+  --color-border-light: #e8d0f0;
+  --color-accent: #e4a5ff;          /* lavender (lightest) */
+  --color-accent-2: #3f085a;        /* deepest purple */
+  --color-accent-light: #b87cd3;
+  --color-accent-soft: #f0e0ff;
+  --color-gold: #b87cd3;             /* mid purple */
+  --color-gold-2: #8e55a9;
+  --color-gold-soft: #f0e0ff;
+  --color-success: #8e55a9;
+  --color-success-soft: #f0e0ff;
+  --color-error: #c0392b;
+  --color-warning: #663080;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #075e54;
+}
+
+/* Random Shades — purple gradient + bright accent */
+[data-theme="random-shades"] {
+  --color-bg: #fff6ff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f5e0ff;
+  --color-surface-alt: #eaaaff;
+  --color-fg: #440e5f;
+  --color-fg-muted: #663080;
+  --color-fg-subtle: #b175cc;
+  --color-border: #eaaaff;
+  --color-border-light: #f5e0ff;
+  --color-accent: #e4a5ff;          /* lavender */
+  --color-accent-2: #440e5f;        /* deepest */
+  --color-accent-light: #eaaaff;    /* bright pink-purple */
+  --color-accent-soft: #f5e0ff;
+  --color-gold: #b67ad1;             /* pink-purple mid */
+  --color-gold-2: #b175cc;
+  --color-gold-soft: #f5e0ff;
+  --color-success: #eaaaff;
+  --color-success-soft: #f5e0ff;
+  --color-error: #c0392b;
+  --color-warning: #440e5f;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #075e54;
+}
+
 /* Smooth theme transition */
 html {
   transition: background-color 280ms ease, color 280ms ease;

@@ -88,7 +88,7 @@ export function getSchemaOrgJson(locale: string): string {
   const json = JSON.stringify(
     [includeBiz ? cleanedBiz : null, cleanedFaq, cleanedReviews].filter(Boolean)
   )
-  return json.replace(/(?<!\u00)@/g, "\u0040")
+  return json.replace(/@/g, "\\u0040")
 }
 
 /**

@@ -8,6 +8,11 @@ export const THEMES = [
   { id: "warm-colorful", name: "Warm Colorful", desc: "Coral + gold vibrante — onda scrubs" },
   { id: "serio-elegante", name: "Serio Elegante", desc: "Navy + champagne — premium clásico" },
   { id: "minimal-white", name: "Minimal White", desc: "Negro + gris — Apple-style" },
+  { id: "discreet", name: "Discreet", desc: "Lavanda pastel + crema" },
+  { id: "friend", name: "Friend", desc: "Purple + teal vibrante" },
+  { id: "pin", name: "Pin", desc: "Purple profundo + cream + teal" },
+  { id: "shades", name: "Shades", desc: "Gradiente purple claro → oscuro" },
+  { id: "random-shades", name: "Random Shades", desc: "Purple gradient + bright" },
 ] as const;
 
 export type ThemeId = (typeof THEMES)[number]["id"];
@@ -38,7 +43,7 @@ export function ThemeSwitcher({ variant = "floating" }: { variant?: "floating" |
 
   if (variant === "inline") {
     return (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {THEMES.map((t) => (
           <button
             key={t.id}
@@ -130,5 +135,15 @@ function getSwatchColors(id: ThemeId): Record<string, string> {
       return { bg: "#ffffff", accent: "#1b2845", gold: "#b8956a", fg: "#1a1a1a" };
     case "minimal-white":
       return { bg: "#ffffff", accent: "#000000", gold: "#6b6b6b", fg: "#1a1a1a" };
+    case "discreet":
+      return { bg: "#fff6ff", accent: "#e4a5ff", gold: "#fff7d0", fg: "#2a1f30" };
+    case "friend":
+      return { bg: "#fff6ff", accent: "#642e7f", gold: "#00c9b6", fg: "#2a0e3f" };
+    case "pin":
+      return { bg: "#fffade", accent: "#6c1f92", gold: "#005b50", fg: "#2a0e3f" };
+    case "shades":
+      return { bg: "#fff6ff", accent: "#3f085a", gold: "#b87cd3", fg: "#3f085a" };
+    case "random-shades":
+      return { bg: "#fff6ff", accent: "#440e5f", gold: "#eaaaff", fg: "#440e5f" };
   }
 }
