@@ -23,19 +23,26 @@ export function CookieConsent({ locale }: { locale: string }) {
   const isEs = locale === "es"
 
   useEffect(() => {
+    let v: Choice | null = null
     try {
-      const v = window.localStorage.getItem(STORAGE_KEY) as Choice | null
-      // Show if no decision yet
-      if (!v) setShow(true)
+      v = window.localStorage.getItem(STORAGE_KEY) as Choice | null
     } catch {
       // private mode or storage disabled — fail silent, don't show banner
+      return
     }
-    // Listen for the "re-open" event from the footer
+    // Delay banner ~1.2s post-mount so it doesn't compete with LCP or the hero copy.
+    let timer: number | undefined
+    if (!v) {
+      timer = window.setTimeout(() => setShow(true), 1200)
+    }
     function onReopen() {
       setShow(true)
     }
     window.addEventListener("dra-gp:reopen-cookie-consent", onReopen)
-    return () => window.removeEventListener("dra-gp:reopen-cookie-consent", onReopen)
+    return () => {
+      if (timer) window.clearTimeout(timer)
+      window.removeEventListener("dra-gp:reopen-cookie-consent", onReopen)
+    }
   }, [])
 
   function decide(value: Choice) {

@@ -92,6 +92,16 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
               <div key={i} className="mb-8 last:mb-0">
                 <h2 className="text-2xl mb-3">{s.heading || s.title}</h2>
                 {s.body && <p className="text-fg-muted leading-relaxed">{s.body}</p>}
+                {s.items && (
+                  <ul className="space-y-2.5 mt-3">
+                    {s.items.map((it: string, j: number) => (
+                      <li key={j} className="flex items-start gap-3 text-fg-muted leading-relaxed">
+                        <CheckCircle2 className="w-4 h-4 text-gold mt-1 flex-shrink-0" />
+                        <span>{it}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

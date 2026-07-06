@@ -130,9 +130,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             {isEs ? "Escribime por email" : "Email me"}
           </a>
         ) : (
-          <Link href={`${base}/contact`} className="btn btn-primary">
-            {isEs ? "Ver datos de contacto" : "See contact details"}
-          </Link>
+          <a href="#form" className="btn btn-primary">
+            {isEs ? "Envianos un mensaje" : "Send us a message"}
+          </a>
         )}
         {phone && (
           <a href={`tel:${phone.replace(/\D/g, "")}`} className="btn btn-outline">
@@ -140,6 +140,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           </a>
         )}
       </PageHero>
+
+      {data.disclaimer && (
+        <PageSection layout="narrow" py="sm">
+          <p className="text-sm text-fg-muted italic leading-relaxed border-l-2 border-accent/40 pl-4">
+            {data.disclaimer}
+          </p>
+        </PageSection>
+      )}
 
       {/* Contact method cards — 2-col grid */}
       <PageSection layout="wide" py="lg">
@@ -217,12 +225,17 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 </div>
               ))}
             </div>
+            {data.sections?.[2]?.note && (
+              <p className="text-xs text-fg-subtle mt-4 italic">
+                {data.sections[2].note}
+              </p>
+            )}
           </div>
         </PageSection>
       )}
 
-      {/* Sections from contacto.json */}
-      {data.sections?.slice(2)?.map((s: any, i: number) => (
+      {/* Sections from contact.json — skip [0] intro, [1] methods, [2] hours (rendered above) */}
+      {data.sections?.slice(3)?.map((s: any, i: number) => (
         <PageSection key={i} layout="narrow" py="md">
           <h2 className="text-xl mb-2">{s.heading}</h2>
           {s.body && <p className="text-fg-muted leading-relaxed">{s.body}</p>}
@@ -254,9 +267,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               {isEs ? "Escribime por email" : "Email me"}
             </a>
           ) : (
-            <Link href={`${base}/contact`} className="btn btn-primary">
-              {isEs ? "Ver datos de contacto" : "See contact details"}
-            </Link>
+            <a href="#form" className="btn btn-primary">
+              {isEs ? "Envianos un mensaje" : "Send us a message"}
+            </a>
           )}
         </div>
       </PageSection>

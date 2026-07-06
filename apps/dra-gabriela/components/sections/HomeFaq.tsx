@@ -32,7 +32,7 @@ export function HomeFaq({ c, locale }: { c: any; locale: string }) {
     : "These are the questions I hear most often. If yours isn't here, message me.")
 
   return (
-    <section className="section bg-surface">
+    <section className="section tone-ocean-1">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-10 lg:gap-20 items-start">
           {/* Left column: heading + intro */}

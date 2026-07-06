@@ -111,10 +111,12 @@ export function ContactButtons({
     })
   }
 
-  // Render
-  const PrimaryLink = primary.href.startsWith("http") || primary.href.startsWith("tel:") || primary.href.startsWith("mailto:")
-    ? (props: any) => <a {...props} />
-    : Link
+  // Render — tel:/mailto:/external hrefs must be plain <a>, not next/link
+  const isExternal = (href: string) =>
+    href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:")
+  const linkFor = (href: string) =>
+    isExternal(href) ? (props: any) => <a {...props} /> : Link
+  const PrimaryLink = linkFor(primary.href)
 
   if (variant === "primary") {
     return (
@@ -130,8 +132,9 @@ export function ContactButtons({
         </PrimaryLink>
         {secondary.slice(0, 1).map((s, i) => {
           const Icon = s.icon
+          const SecondaryLink = linkFor(s.href)
           return (
-            <Link
+            <SecondaryLink
               key={i}
               href={s.href}
               target={s.target}
@@ -140,7 +143,7 @@ export function ContactButtons({
             >
               {s.label}
               <Icon className="w-5 h-5" />
-            </Link>
+            </SecondaryLink>
           )
         })}
       </div>
@@ -177,8 +180,9 @@ export function ContactButtons({
       </PrimaryLink>
       {secondary.slice(0, 2).map((s, i) => {
         const Icon = s.icon
+        const SecondaryLink = linkFor(s.href)
         return (
-          <Link
+          <SecondaryLink
             key={i}
             href={s.href}
             target={s.target}
@@ -187,7 +191,7 @@ export function ContactButtons({
           >
             {s.label}
             <Icon className="w-4 h-4" />
-          </Link>
+          </SecondaryLink>
         )
       })}
     </div>

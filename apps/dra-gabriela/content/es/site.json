@@ -1,91 +1,77 @@
 {
-  "site": {
-    "name": "Ometz Dental — Dra. Gabriella González Pane",
-    "slug": "dra-gabriela",
-    "url": "https://ometzdental.com",
-    "locale": "es-PY",
-    "tagline": "Te escucho.",
-    "metaDescription": "Ometz Dental — Rehabilitación oral, segunda opinión escrita y odontología con criterio clínico en Barrio Mburucuyá, Asunción. Te escucho antes de tocar. 20+ años de experiencia. Atención en español e inglés, con cita previa. Dra. Gabriella González Pane, RUC 1375421-1, Reg. MSPBS 3618."
+  "name": "Dra. Gabriella González Pane",
+  "short_name": "Dra. Gabriella",
+  "brand_name": "Gabriella",
+  "description": "Odontología anti-ansiedad en Asunción. Rehabilitación oral, estética y operatoria dental basadas en criterio clínico.",
+  "metaDescription": "Dra. Gabriella González Pane — odontología anti-ansiedad y planificada en Asunción. Planes escritos, segundas opiniones honestas, atención en español e inglés.",
+  "contact": {
+    "whatsapp": "595981146759",
+    "whatsapp_display": "+595 981 146 759",
+    "whatsapp_message_default": "Hola Dra. Gabriella, tengo una consulta",
+    "whatsapp_message_anxiety": "Hola Dra. Gabriella, tengo miedo de ir al dentista",
+    "email": "doctora.gabi@ometzdental.com.py",
+    "email_display": "doctora.gabi@ometzdental.com.py",
+    "phone": "+595 981 146 759",
+    "phone_e164": "+595981146759"
   },
-  "business": {
-    "phone": "",
-    "whatsapp": "",
-    "whatsappMessage": "Hola Dra. Gabriela, vi su sitio web y me gustaría entender mi caso antes de decidir un tratamiento. ¿Tiene disponibilidad para una Consulta de Diagnóstico y Planificación?",
-    "email": "doctora.gabi@ometsdental.com.py",
-    "instagram": "",
-    "instagramUrl": "",
-    "address": "Barrio Mburucuyá, Asunción, Paraguay",
-    "coordinates": {
-      "lat": -25.2965,
-      "lng": -57.6055
+  "address": {
+    "streetAddress": "PENDIENTE",
+    "neighborhood": "Barrio Mburucuyá",
+    "addressLocality": "Asunción",
+    "addressRegion": "Central",
+    "postalCode": "1101",
+    "addressCountry": "PY",
+    "geo": {
+      "latitude": -25.2836,
+      "longitude": -57.4831
     },
-    "currency": "Gs",
-    "ruc": "1375421-1",
-    "mspbs": "3618",
-    "name": "Dra. Gabriella González Pane",
-    "horario": "Lunes a viernes, 14:30 - 19:00, con cita previa",
-    "dias": "Lun a Vie (agendado, no estar colgada en el consultorio)",
-    "apertura": "Mitad de julio 2026 (soft launch)",
-    "lenguajes": "Español, Inglés"
+    "google_maps_url": ""
   },
-  "adn": {
-    "fraseGuia": "Te escucho.",
-    "categoria": "Odontología con criterio clínico",
-    "simbolo": "Ometz — אומץ (coraje en hebreo)",
-    "marcaComercial": "Ometz Dental",
-    "pilares": [
-      {"id": "pensar", "titulo": "Pensar antes de tocar", "descripcion": "Diagnóstico, conversación y planificación antes de cualquier procedimiento."},
-      {"id": "conservar", "titulo": "Conservar antes que reemplazar", "descripcion": "Respeto por la estructura dentaria. Cada intervención tiene un costo biológico que hay que explicar."},
-      {"id": "explicar", "titulo": "Explicar antes de vender", "descripcion": "El paciente debe entender su caso. Educar sin infantilizar, hablar claro sin vaciar."},
-      {"id": "personas", "titulo": "Ver personas antes que dientes", "descripcion": "La boca pertenece a alguien. Humanidad profunda sin sentimentalismo."},
-      {"id": "derivar", "titulo": "Derivar cuando corresponde", "descripcion": "Una profesional segura no necesita hacerlo todo. Rehabilitar implica integrar especialidades."}
-    ],
-    "puertaEntrada": "Consulta de Diagnóstico y Planificación",
-    "manifiestoPublico": "Soy la Dra. Gaby. Llevo dos décadas siendo odontóloga. Lo mío no es agarrar la fresa — es sentarnos, escucharte y armar juntos un plan de tratamiento que tenga sentido, lo comprendas y sea acorde a tus necesidades. Mi trabajo no es venderte un tratamiento. Es ayudarte a comprender tu caso para que puedas decidir con confianza. Te escucho."
+  "hours": {
+    "monday": { "open": "14:30", "close": "19:00" },
+    "tuesday": { "open": "14:30", "close": "19:00" },
+    "wednesday": { "open": "14:30", "close": "19:00" },
+    "thursday": { "open": "14:30", "close": "19:00" },
+    "friday": { "open": "14:30", "close": "19:00" },
+    "saturday": { "closed": true },
+    "sunday": { "closed": true }
   },
-  "features": {
-    "bookingForm": true,
-    "googleMapsEmbed": true,
-    "testimonials": true,
-    "stats": true,
-    "reasons": true,
-    "ctaBanner": true,
-    "process": true,
-    "beforeAfterSlider": false,
-    "blog": true,
-    "whatsappLink": true,
-    "cookieConsent": true,
-    "promoBanner": false,
-    "loyaltyProgram": false,
-    "giftCards": false,
-    "promotions": false,
-    "referral": false,
-    "clientPortal": false,
-    "ecommerce": false,
-    "products": false,
-    "cart": false,
-    "checkout": false
+  "hours_display": {
+    "en": "Mon–Fri, 2:30pm – 7:00pm",
+    "es": "Lun a Vie, 14:30 a 19:00"
   },
-  "navigation": {
-    "main": [
-      {"label": "Inicio", "href": "/"},
-      {"label": "Filosofía", "href": "/filosofia"},
-      {"label": "Servicios", "href": "/servicios"},
-      {"label": "Precios", "href": "/precios"},
-      {"label": "Contacto", "href": "/contacto"}
-    ],
-    "more": [
-      {"label": "Segunda Opinión", "href": "/segunda-opinion"},
-      {"label": "Nosotros", "href": "/nosotros"},
-      {"label": "Expats", "href": "/expat"},
-      {"label": "Contacto", "href": "/contacto", "feature": "map"},
-      {"label": "Blog", "href": "/blog", "feature": "blog"},
-      {"label": "Preguntas", "href": "/preguntas"}
-    ]
+  "launch": {
+    "state": "soft-launch-pending",
+    "target": "soon",
+    "target_display": {
+      "en": "Opening soon",
+      "es": "Apertura próxima"
+    }
   },
-  "disclaimers": {
-    "consultaNoPromete": "La Consulta de Diagnóstico y Planificación NO promete: diagnóstico definitivo sin los estudios necesarios, presupuesto cerrado por WhatsApp, solución estética perfecta, ni tratamiento inmediato sin planificación.",
-    "fotoNoAlcanza": "Una foto no alcanza para diagnosticar con seriedad. Puedo orientarte, pero para decirte qué conviene hacer necesito evaluarte clínicamente.",
-    "noCompitePorPrecio": "Mi enfoque no es competir por precio. Compite por criterio. Si buscás precio bajo, hay otras opciones; si buscás entender tu caso, estás en el lugar correcto."
+  "registrations": {
+    "mspbs": {
+      "state": "in-process",
+      "display": {
+        "en": "MSPBS independent practice license — in process",
+        "es": "Habilitación MSPBS de práctica independiente — en trámite"
+      }
+    },
+    "ruc": {
+      "state": "in-process",
+      "display": {
+        "en": "RUC — in process",
+        "es": "RUC — en trámite"
+      }
+    }
+  },
+  "practice": {
+    "priceRange": "Gs 300.000 – Gs 5.000.000",
+    "priceRange_short": "Gs 300k – Gs 5M",
+    "languages": ["Español", "English"],
+    "languages_display": "Español · English"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/dragabriellagp",
+    "instagram_handle": "@dragabriellagp"
   }
 }

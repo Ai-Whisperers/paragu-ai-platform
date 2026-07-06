@@ -201,8 +201,8 @@ export default async function Pricing({ params }: { params: Promise<{ locale: st
         )}
       </div>
 
-      {/* How pricing works — teal accent block */}
-      <section className="bg-accent text-white relative overflow-hidden">
+      {/* How pricing works — navy tone block */}
+      <section className="tone-ocean-7 relative overflow-hidden">
         <div className="absolute inset-0 dot-pattern opacity-10 pointer-events-none" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 items-start">

@@ -9,13 +9,11 @@ import es from "@/content/es/voice-doctor.json"
 export function VoiceDoctor({ locale }: { locale: string }) {
   const isEs = locale === "es"
   const data = isEs ? es : en
-  const fallbackMsg = isEs
-    ? "Audio no disponible — transcripción abajo"
-    : "Audio not available — transcript below"
+  const hasAudio = Boolean(data.audio_src)
 
   return (
     <section
-      className="bg-surface-muted"
+      className="tone-ocean-1"
       aria-labelledby="voice-doctor-heading"
       role="region"
     >
@@ -28,38 +26,37 @@ export function VoiceDoctor({ locale }: { locale: string }) {
           <h2
             id="voice-doctor-heading"
             className="text-3xl md:text-4xl font-heading font-semibold mt-3"
-            style={{ color: "#000080" }}
+            style={{ color: "var(--navy)" }}
           >
             {data.title}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
-          {/* Audio player */}
-          <div className="bg-bg rounded-2xl border border-border p-6 md:p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-4">
-              <div
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-white"
-                aria-hidden="true"
-              >
-                <Mic className="w-5 h-5" />
+        <div className={hasAudio
+          ? "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start"
+          : "max-w-2xl mx-auto"}>
+          {hasAudio && (
+            <div className="bg-bg rounded-2xl border border-border p-6 md:p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-white"
+                  aria-hidden="true"
+                >
+                  <Mic className="w-5 h-5" />
+                </div>
+                <p className="text-sm font-medium">{data.audio_label}</p>
               </div>
-              <p className="text-sm font-medium">{data.audio_label}</p>
+              <audio
+                controls
+                preload="metadata"
+                className="w-full"
+                aria-label={data.audio_label}
+              >
+                <source src={data.audio_src} type="audio/mpeg" />
+              </audio>
             </div>
-            <audio
-              controls
-              preload="metadata"
-              className="w-full"
-              aria-label={data.audio_label}
-            >
-              <source src={data.audio_src} type="audio/mpeg" />
-            </audio>
-            <p className="text-xs text-fg-muted mt-3 italic">
-              {fallbackMsg}
-            </p>
-          </div>
+          )}
 
-          {/* Transcript */}
           <div>
             <div className="flex items-center gap-2 mb-3 text-fg-muted">
               <FileText className="w-4 h-4" aria-hidden="true" />

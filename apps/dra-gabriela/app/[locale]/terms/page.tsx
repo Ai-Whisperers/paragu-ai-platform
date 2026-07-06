@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/seo"
 import { FileText } from "lucide-react"
 import esData from "@/content/es/terminos.json"
-import enData from "@/content/en/terminos.json"
+import enData from "@/content/en/terms.json"
 import { PageHero } from "@/components/PageHero"
 import { PageSection } from "@/components/PageSection"
 

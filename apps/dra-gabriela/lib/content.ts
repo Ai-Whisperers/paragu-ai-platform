@@ -11,7 +11,8 @@
 import enSite from "@/content/en/site.json"
 import esSite from "@/content/es/site.json"
 import enHero from "@/content/en/hero.json"
-import esHero from "@/content/es/hero.json"
+// hero.json is bilingual-embedded ({en, es} keys) — one file serves both locales.
+const esHero = enHero
 import enStats from "@/content/en/stats.json"
 import esStats from "@/content/es/stats.json"
 import enReasons from "@/content/en/reasons.json"
@@ -34,6 +35,8 @@ import enLdFaq from "@/content/en/ld-faq.json"
 import esLdFaq from "@/content/es/ld-faq.json"
 import enLdReviews from "@/content/en/ld-reviews.json"
 import esLdReviews from "@/content/es/ld-reviews.json"
+import enContact from "@/content/en/contact.json"
+import esContacto from "@/content/es/contacto.json"
 
 export const LOCALES = ["en", "es"] as const
 export type Locale = (typeof LOCALES)[number]
@@ -56,6 +59,7 @@ const EN: any = {
   ld_localbusiness: enLdLocalBusiness,
   ld_faq: enLdFaq,
   ld_reviews: enLdReviews,
+  contact: enContact,
 }
 
 const ES: any = {
@@ -72,6 +76,7 @@ const ES: any = {
   ld_localbusiness: esLdLocalBusiness,
   ld_faq: esLdFaq,
   ld_reviews: esLdReviews,
+  contacto: esContacto,
 }
 
 const CONTENT: Record<Locale, any> = { en: EN, es: ES }

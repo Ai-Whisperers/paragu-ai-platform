@@ -11,7 +11,7 @@ export function BilingualBand({ locale }: { locale: string }) {
   const isEs = locale === "es"
   return (
     <section
-      className="bg-accent text-white"
+      className="tone-ocean-6 text-white"
       aria-labelledby="bilingual-band-heading"
       role="region"
     >

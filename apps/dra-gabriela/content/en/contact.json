@@ -1,11 +1,11 @@
 {
-  "title": "Contact and appointments",
-  "subtitle": "WhatsApp coordination. I listen before scheduling the appointment.",
-  "disclaimer": "A photo isn't enough to quote with seriousness. The Diagnostic & Planning Consultation is the space where I think your case through with you, not where I sell you a procedure.",
+  "title": "Contact & appointments",
+  "subtitle": "Coordination by WhatsApp. I listen before we schedule.",
+  "disclaimer": "A photo isn't enough to quote a plan seriously. The Diagnostic & Planning Consultation is where I think through your case with you — not where I sell you a procedure.",
   "sections": [
     {
-      "heading": "Best way to reach us",
-      "body": "WhatsApp is the fastest channel for questions, availability, and coordination. For formal invoices or referrals, email works too."
+      "heading": "Best way to reach me",
+      "body": "WhatsApp is the fastest channel for questions, availability, and scheduling. For formal invoices or referrals, email works too. If your case is complex, send me a brief note before booking — it helps me prepare."
     },
     {
       "heading": "Contact methods",
@@ -13,19 +13,19 @@
         {
           "type": "WhatsApp",
           "label": "WhatsApp",
-          "value": "Coming soon — write via email in the meantime",
+          "value": "Message me — I reply myself",
           "primary": true
         },
         {
           "type": "Email",
           "label": "Email",
-          "value": "doctora.gabi@ometsdental.com.py",
+          "value": "doctora.gabi@ometzdental.com.py",
           "primary": false
         },
         {
           "type": "Phone",
           "label": "Phone",
-          "value": "Available once the practice opens",
+          "value": "Available at practice opening",
           "primary": false
         }
       ]
@@ -33,35 +33,35 @@
     {
       "heading": "Hours",
       "hours": {
-        "mon": "2:30pm-7:00pm",
-        "tue": "2:30pm-7:00pm",
-        "wed": "2:30pm-7:00pm",
-        "thu": "2:30pm-7:00pm",
-        "fri": "2:30pm-7:00pm",
+        "mon": "14:30-19:00",
+        "tue": "14:30-19:00",
+        "wed": "14:30-19:00",
+        "thu": "14:30-19:00",
+        "fri": "14:30-19:00",
         "sat": "Closed",
         "sun": "Closed"
       },
-      "note": "By appointment. I don't sit in the clinic all day: we schedule what works for you."
+      "note": "By appointment. I'm not at the office all day — we agree on a time that works for you."
     },
     {
-      "heading": "Location and access",
-      "body": "Ometz Dental — Barrio Mburucuyá, Asunción, Paraguay. Exact street address will be shared when you book your appointment. We're a 2-minute walk from the main Mburucuyá plaza; access and parking guidance sent at booking."
+      "heading": "Location & access",
+      "body": "Ometz Dental — Mburucuyá neighborhood, Asunción, Paraguay. The exact address is shared when we confirm your appointment. Two minutes walking from Mburucuyá's main plaza; access and parking directions go out when we schedule."
     },
     {
       "heading": "Availability",
-      "body": "New patients accepted. Soft launch: mid-July 2026. First appointments are typically available within one to two weeks of the opening."
+      "body": "Accepting new patients. Soft launch coming soon. First appointments usually available within the first or second week after opening."
     }
   ],
   "map": {
     "embed": true,
-    "query": "Barrio Mburucuyá, Asunción, Paraguay",
+    "query": "Mburucuyá, Asunción, Paraguay",
     "coords": {
-      "lat": -25.2965,
-      "lng": -57.6055
+      "lat": -25.2836,
+      "lng": -57.4831
     }
   },
   "cta": {
-    "primary": "Message me on WhatsApp",
+    "primary": "Ask for a no-pressure plan",
     "secondary": "Request a second opinion",
     "whatsapp": true
   }

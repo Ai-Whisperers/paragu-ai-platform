@@ -1,11 +1,11 @@
 {
-  "title": "Sobre la Dra. Gabriela González Pane",
+  "title": "Sobre la Dra. Gabriella González Pane",
   "subtitle": "Veinte años de odontología basada en criterio clínico, planes escritos y segundas opiniones honestas — en español e inglés.",
   "fraseGuia": "La odontología no empieza con una fresa. Empieza pensando.",
   "sections": [
     {
       "heading": "Trayectoria",
-      "body": "La Dra. Gabriela González Pane se graduó alrededor de 2005 en la Universidad Autónoma del Paraguay. Desde entonces su práctica se basa en una regla: pensar antes de tocar. En más de dos décadas ha atendido miles de pacientes, con foco en operatoria dental, rehabilitación oral, estética y revisiones de segunda opinión. La atención en inglés para pacientes extranjeros es parte de su trabajo habitual."
+      "body": "La Dra. Gabriella González Pane se graduó alrededor de 2005 en la Universidad Autónoma del Paraguay. Desde entonces su práctica se basa en una regla: pensar antes de tocar. En más de dos décadas ha atendido miles de pacientes, con foco en operatoria dental, rehabilitación oral, estética y revisiones de segunda opinión. La atención en inglés para pacientes extranjeros es parte de su trabajo habitual."
     },
     {
       "heading": "Los 5 pilares no negociables",
@@ -19,21 +19,19 @@
     },
     {
       "heading": "Experiencia",
-      "bullets": [
-        "~20 años en operatoria dental, estética dental y rehabilitación oral.",
-        "13+ años en Odontología 3 (Asunción, Mcal. Estigarribia 1414).",
-        "~130 pacientes por mes en su práctica actual.",
-        "42 restauraciones en mayo de 2026.",
-        "Inglés fluido: base de pacientes internacionales."
+      "items": [
+        "Veinte años en operatoria dental, estética dental y rehabilitación oral.",
+        "Más de 13 años de trabajo clínico en Asunción.",
+        "Alrededor de 130 pacientes por mes en su práctica actual.",
+        "Inglés fluido: base establecida de pacientes internacionales."
       ]
     },
     {
       "heading": "Credenciales",
-      "bullets": [
-        "DDS — Universidad Autónoma del Paraguay (~2005).",
-        "MSPBS: habilitación propia en proceso (práctica independiente).",
-        "RUC: pendiente.",
-        "Práctica actual: 13+ años en Odontología 3; construyendo práctica independiente alineada al ADN Profesional."
+      "items": [
+        "Cirujana dentista — Universidad Autónoma del Paraguay.",
+        "Posgrados en endodoncia, rehabilitación oral y estética.",
+        "Miembro de la Asociación de Odontólogos del Paraguay."
       ]
     },
     {
@@ -41,7 +39,7 @@
       "body": "Vive en Luque. Le gustan los scrubs de colores. Hace años que usa IA para analizar sus casos y sus finanzas. Está construyendo un espacio donde la consulta particular con criterio clínico tenga lugar en Paraguay — para los pacientes que ya se cansaron de que les vendan procedimientos sin explicarles el porqué."
     }
   ],
-  "manifiestoCorto": "No quiero que me elijan porque prometo una sonrisa perfecta. Quiero que me elijan porque confían en cómo pienso.",
+  "manifiestoCorto": "No quiero que me elijan por lo que prometo. Quiero que me elijan porque confían en cómo pienso.",
   "cta": {
     "primary": "Agendar Consulta de Diagnóstico",
     "secondary": "Solicitar segunda opinión escrita",

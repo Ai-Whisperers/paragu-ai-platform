@@ -56,8 +56,6 @@
 
 ### Section blocks (home page)
 - **Hero** — full-viewport with image card, gradient text, stats.
-- **BigStats** — 5 stats grid with verified source.
-- **SocialProof** — trust badges + brief copy.
 - **MeetDoctor** — 2-col portrait + bio.
 - **Reasons** — 6-card "Why us" grid.
 - **FeaturedService** — 2-col image + bullets + dual CTA.

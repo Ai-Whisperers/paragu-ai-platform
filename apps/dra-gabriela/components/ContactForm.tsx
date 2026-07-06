@@ -51,8 +51,8 @@ export function ContactForm({ locale, defaultMessage = "", defaultSubject = "" }
       setResult({
         ok: false,
         message: isEs
-          ? "Algo salió mal. Escribinos por email a hola@dra-gp.com.py."
-          : "Something went wrong. Email us at hola@dra-gp.com.py.",
+          ? "Algo salió mal. Escribinos por email a hola@ometzdental.com.py."
+          : "Something went wrong. Email us at hola@ometzdental.com.py.",
       })
     } finally {
       setPending(false)

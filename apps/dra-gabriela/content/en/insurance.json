@@ -5,27 +5,27 @@
   "items": [
     {
       "q": "Do you accept insurance?",
-      "a": "This is a private practice, not a contracted clinic. We don't bill insurance directly. We do provide: detailed receipts with itemized procedure codes, full clinical records, and written reports — everything you need to file a reimbursement claim with your insurance company. We have patients who successfully claim reimbursement with international insurers (BUPA, Cigna, GeoBlue) and local corporate plans. We're happy to help you understand what your insurer needs."
+      "a": "This is a private practice, not a contracted clinic. I don't bill insurance directly. I do provide: detailed receipts with itemized procedure codes, full clinical records, and written reports — everything you need to file a reimbursement claim with your insurance company. I have patients who successfully claim reimbursement with international insurers (BUPA, Cigna, GeoBlue) and local corporate plans. I'm happy to help you understand what your insurer needs."
     },
     {
       "q": "What payment methods do you accept?",
-      "a": "Cash, bank transfer, Pagopar, and Bancard POS (debit and credit). All major international credit cards are accepted through Bancard. We can also issue invoices for companies that pay for employee dental care."
+      "a": "Cash, bank transfer, Pagopar, and Bancard POS (debit and credit). All major international credit cards are accepted through Bancard. I can also issue invoices for companies that pay for employee dental care."
     },
     {
       "q": "Is financing available?",
-      "a": "For cases over Gs 1.000.000, payment plans are available through Pagopar or Bancard. The patient absorbs the financing fee, which is usually 5-10% depending on the number of installments. We do not charge interest ourselves — the financing fee is the third-party processor's charge."
+      "a": "For cases over Gs 1.000.000, payment plans are available through Pagopar or Bancard. The patient absorbs the financing fee, which is usually 5-10% depending on the number of installments. I don't charge interest myself — the financing fee is the third-party processor's charge."
     },
     {
       "q": "Do you do corporate plans?",
-      "a": "Yes. We work with companies that include dental care in their employee benefits. The plan structure varies — some companies pay a fixed monthly retainer, others pay per procedure with a discount. Standalone services like second opinions and complex treatment planning are not included in corporate installments — they're charged separately, as they would be for any other patient."
+      "a": "Yes. I work with companies that include dental care in their employee benefits. The plan structure varies — some companies pay a fixed monthly retainer, others pay per procedure with a discount. Standalone services like second opinions and complex treatment planning are not included in corporate installments — they're charged separately, as they would be for any other patient."
     },
     {
       "q": "What if I need to cancel?",
-      "a": "Just let us know at least 24 hours before your appointment. No penalty, no charge. We hold the slot for you but we'd rather give it to someone else than charge you for a missed visit."
+      "a": "Just let me know at least 24 hours before your appointment. No penalty, no charge. I hold the slot for you but I'd rather give it to someone else than charge you for a missed visit."
     },
     {
       "q": "Do you offer a money-back guarantee?",
-      "a": "On the written second opinion service: if the report doesn't address all of your questions, we redo it at no charge. On other services, we don't offer a money-back guarantee because the work is irreversible — but we do stand behind our work: if a restoration fails within the first year for a clinical reason, we replace it at no charge."
+      "a": "On the written second opinion service: if the report doesn't address all of your questions, I redo it at no charge. On other services, I don't offer a money-back guarantee because the work is irreversible — but I stand behind my work: if a restoration fails within the first year for a clinical reason, I replace it at no charge."
     }
   ]
 }

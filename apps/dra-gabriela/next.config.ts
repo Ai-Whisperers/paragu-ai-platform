@@ -10,6 +10,7 @@ const config: NextConfig = {
     globalNotFound: false,
     prerenderEarlyExit: false,
   },
+  devIndicators: false,
   images: {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",

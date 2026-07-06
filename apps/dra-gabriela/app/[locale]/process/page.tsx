@@ -48,7 +48,6 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
   const c = CONTENT[locale] || en
   const isEs = locale === "es"
   const steps: any[] = c.steps || c.pasos || []
-  const whatToBring: string[] = c.what_to_bring || c.que_traer || []
   const cancellation: string = c.cancellation_policy || c.politica_cancelacion || ""
   const guarantee: string = c.guarantee || c.garantia || ""
 
@@ -146,24 +145,26 @@ export default async function ProcessPage({ params }: { params: Promise<{ locale
 
           {/* Info cards — 3-col */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16">
-            {whatToBring && whatToBring.length > 0 && (
-              <div className="card p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="w-12 h-12 rounded-xl bg-accent-soft flex items-center justify-center mb-4">
-                  <Calendar className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-fg-subtle text-xs">
-                  {isEs ? "Qué traer" : "What to bring"}
-                </h3>
-                <ul className="space-y-2 text-sm text-fg-muted">
-                  {whatToBring.map((w: string, i: number) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0" />
-                      <span>{w}</span>
-                    </li>
-                  ))}
-                </ul>
+            <Link
+              href={`${base}/first-visit`}
+              className="card p-6 hover:shadow-md hover:-translate-y-0.5 transition-all group/link block"
+            >
+              <div className="w-12 h-12 rounded-xl bg-accent-soft flex items-center justify-center mb-4">
+                <Calendar className="w-6 h-6 text-accent" />
               </div>
-            )}
+              <h3 className="text-base font-semibold mb-3 uppercase tracking-wider text-fg-subtle text-xs">
+                {isEs ? "Qué traer" : "What to bring"}
+              </h3>
+              <p className="text-sm text-fg-muted leading-relaxed mb-3">
+                {isEs
+                  ? "Guía detallada para tu primera visita: qué preparar, cómo llegar, qué esperar."
+                  : "Detailed guide for your first visit: what to prep, how to get here, what to expect."}
+              </p>
+              <span className="text-sm font-medium text-accent inline-flex items-center gap-1 group-hover/link:gap-2 transition-all">
+                {isEs ? "Ver primera visita" : "See first visit"}
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
             {cancellation && (
               <div className="card p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
                 <div className="w-12 h-12 rounded-xl bg-gold-soft flex items-center justify-center mb-4">

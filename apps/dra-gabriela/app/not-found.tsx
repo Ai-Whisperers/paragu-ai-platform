@@ -74,7 +74,7 @@ export default function NotFound() {
           </Link>
         </div>
         <p className="text-xs text-fg-subtle mt-8">
-          Lost? Email <a href="mailto:hola@dra-gp.com.py" className="text-accent hover:underline">hola@dra-gp.com.py</a> for help.
+          Lost? Email <a href="mailto:hola@ometzdental.com.py" className="text-accent hover:underline">hola@ometzdental.com.py</a> for help.
         </p>
       </div>
     </div>

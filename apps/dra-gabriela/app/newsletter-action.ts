@@ -48,7 +48,13 @@ export async function subscribeToNewsletter(email: string, locale: string): Prom
           created_at: new Date().toISOString(),
         }),
       })
-    } catch {}
+    } catch (err) {
+      console.error("[newsletter] supabase write failed", {
+        email: parsed.data,
+        locale,
+        error: err instanceof Error ? err.message : String(err),
+      })
+    }
   }
 
   // Resend
@@ -62,12 +68,18 @@ export async function subscribeToNewsletter(email: string, locale: string): Prom
         },
         body: JSON.stringify({
           from: "Dra. Gabriella Website <noreply@dragabriela.paragu-ai.com>",
-          to: ["hola@dra-gp.com.py"],
+          to: ["hola@ometzdental.com.py"],
           subject: `[Newsletter] New subscriber — ${parsed.data}`,
           html: `<p>New newsletter subscription: <b>${parsed.data}</b> (locale: ${locale})</p>`,
         }),
       })
-    } catch {}
+    } catch (err) {
+      console.error("[newsletter] resend notify failed", {
+        email: parsed.data,
+        locale,
+        error: err instanceof Error ? err.message : String(err),
+      })
+    }
   }
 
   return {

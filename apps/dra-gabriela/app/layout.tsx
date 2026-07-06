@@ -1,4 +1,5 @@
 import { Inter, DM_Serif_Display, Caveat } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import "./themes.css"
 
@@ -27,11 +28,9 @@ const caveat = Caveat({
 })
 
 export const metadata = {
-  metadataBase: new URL("https://ometzdental.com"),
+  metadataBase: new URL("https://dragabriela.paragu-ai.com"),
   title: {
-    default: "Ometz Dental — Dra. Gabriella González Pane",
-    // No template suffix; every page's title is the full branded title,
-    // and we keep the layout metadata `default` as a clean fallback.
+    default: "Dra. Gabriella González Pane — Odontología en Asunción",
     template: "%s",
   },
   description:
@@ -73,31 +72,20 @@ export const metadata = {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    apple: [
-      { url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    other: [
-      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
-    ],
   },
   manifest: "/manifest.json",
-  themeColor: "#0f4c4c",
   appleWebApp: {
     capable: true,
     title: "Dra. Gabriella",
     statusBarStyle: "default",
   },
   other: {
-    "msapplication-TileColor": "#0f4c4c",
+    "msapplication-TileColor": "#03045e",
   },
 }
 
 export const viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0f4c4c" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a3a3a" },
-  ],
+  themeColor: "#03045e",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -105,25 +93,25 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSerif.variable} ${caveat.variable}`} suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${dmSerif.variable} ${caveat.variable}`} suppressHydrationWarning>
+
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var p=location.pathname.match(/^\/(en|es)\b/);var l=p?p[1]:'en';document.documentElement.lang=l;}catch(e){}})();`,
-          }}
-        />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0f4c4c" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Dra. Gabriella" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js').catch(() => {}); }); }`,
+            __html: `(function(){try{var p=location.pathname.match(/^\\/(en|es)\\b/);var l=p?p[1]:'en';document.documentElement.lang=l;}catch(e){}})();`,
           }}
         />
       </head>
-      <body className="font-sans antialiased bg-bg text-fg">{children}</body>
+      <body className="font-sans antialiased bg-bg text-fg">
+        {children}
+        <Script id="register-sw" strategy="lazyOnload">
+          {`if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js').catch(() => {}); }); }`}
+        </Script>
+      </body>
     </html>
   )
 }

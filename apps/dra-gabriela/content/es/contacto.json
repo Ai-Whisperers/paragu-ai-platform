@@ -4,8 +4,8 @@
   "disclaimer": "Una foto no alcanza para presupuestar con seriedad. La Consulta de Diagnóstico y Planificación es el espacio donde pienso tu caso con vos, no donde te vendo un procedimiento.",
   "sections": [
     {
-      "heading": "Mejor forma de contactarnos",
-      "body": "WhatsApp es el canal más rápido para consultas, disponibilidad y coordinación. Para facturas formales o derivaciones, también respondemos por email. Si tenés un caso complejo, contame brevemente el motivo antes de pedir turno — eso me ayuda a preparar la consulta."
+      "heading": "Mejor forma de contactarme",
+      "body": "WhatsApp es el canal más rápido para consultas, disponibilidad y coordinación. Para facturas formales o derivaciones, también respondo por email. Si tenés un caso complejo, contame brevemente el motivo antes de pedir turno — eso me ayuda a preparar la consulta."
     },
     {
       "heading": "Medios de contacto",
@@ -13,13 +13,13 @@
         {
           "type": "WhatsApp",
           "label": "WhatsApp",
-          "value": "Próximamente — escribime por email mientras tanto",
+          "value": "Escribime — te respondo yo misma",
           "primary": true
         },
         {
           "type": "Email",
           "label": "Email",
-          "value": "doctora.gabi@ometsdental.com.py",
+          "value": "doctora.gabi@ometzdental.com.py",
           "primary": false
         },
         {
@@ -49,12 +49,12 @@
     },
     {
       "heading": "Disponibilidad",
-      "body": "Se aceptan pacientes nuevos. Apertura soft launch: mitad de julio 2026. La primera cita normalmente está disponible dentro de la primera o segunda semana desde la apertura."
+      "body": "Se aceptan pacientes nuevos. Apertura próxima (soft launch). La primera cita normalmente está disponible dentro de la primera o segunda semana desde la apertura."
     }
   ],
   "map": {
     "embed": true,
-    "query": "Odontología 3, Asunción, Paraguay",
+    "query": "Mburucuyá, Asunción, Paraguay",
     "coords": {
       "lat": -25.2836,
       "lng": -57.4831

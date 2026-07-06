@@ -1,7 +1,7 @@
 "use client"
 
 // Section: Hero — full-viewport premium hero with slide rotation.
-// Decorative shapes, animated open-now pill, gradient text with gold shadow,
+// Decorative shapes, animated open-now pill, gradient heading text,
 // trust strip with dividers, photo frame with corner ribbon.
 //
 // Carousel:
@@ -15,7 +15,34 @@ import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { ArrowRight, MessageCircle, Clock, Sparkles, Languages, Award, BadgeCheck, Hand, Heart, Shield } from "lucide-react"
 import Image from "next/image"
-import { whatsappLink } from "@/lib/content"
+import { whatsappLink, type Locale } from "@/lib/content"
+
+// Resolve a value that may be a plain string, a {en, es} bilingual object, or
+// missing, into a renderable string for the active locale. ALWAYS returns a
+// string — never an object — so React never sees an object as a child.
+//
+// Order of preference for object lookup: requested locale -> fallback locale ->
+// any string we can find -> empty string. Prevents the previous bug
+// (`{t(slide.title, safeLocale) || t(h.title, safeLocale)}` rendering `{en: "...", es: "..."}` as a React
+// child) from recurring.
+function t(value: unknown, locale: Locale): string {
+  if (value == null) return ""
+  if (typeof value === "string") return value
+  if (typeof value === "number" || typeof value === "boolean") return String(value)
+  if (typeof value === "object") {
+    const obj = value as Record<string, unknown>
+    const direct = obj[locale]
+    if (typeof direct === "string") return direct
+    const otherLocale = locale === "es" ? "en" : "es"
+    const other = obj[otherLocale]
+    if (typeof other === "string") return other
+    for (const k of Object.keys(obj)) {
+      const v = obj[k]
+      if (typeof v === "string") return v
+    }
+  }
+  return ""
+}
 
 // Anti-anxiety controls row (Insight 1 + 6) — three promises, single band
 const ANXIETY_CONTROLS = {
@@ -35,17 +62,20 @@ const ROTATE_MS = 6000
 
 interface HeroProps {
   c: any
-  locale: string
+  locale: Locale
 }
 
 export function Hero({ c, locale }: HeroProps) {
   const h = c.hero
   if (!h) return null
-  const base = `/${locale}`
+  // Defensive: caller (page.tsx) already gates with isLocale(), but c is any
+  // so we re-validate here before using locale as the typed Locale union.
+  const safeLocale: Locale = locale === "es" ? "es" : "en"
+  const base = `/${safeLocale}`
   const wa = whatsappLink(c.business?.whatsapp, c.business?.whatsappMessage)
   const slides: any[] = Array.isArray(h.slides) && h.slides.length > 0 ? h.slides : [{}]
   const total = slides.length
-  const isEs = locale === "es"
+  const isEs = safeLocale === "es"
   const hasMultipleSlides = total > 1
 
   // Carousel state
@@ -105,15 +135,8 @@ export function Hero({ c, locale }: HeroProps) {
 
   return (
     <section
-      className="relative overflow-hidden min-h-[680px] lg:min-h-[760px] flex items-center bg-gradient-to-br from-accent-soft via-bg to-bg"
+      className="relative overflow-hidden min-h-[680px] lg:min-h-[760px] flex items-center tone-ocean-1"
     >
-      {/* Decorative background shapes */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-[40rem] h-[40rem] rounded-full opacity-[0.07]" style={{ background: "radial-gradient(circle, var(--accent) 0%, transparent 70%)" }} />
-        <div className="absolute -bottom-40 -left-40 w-[30rem] h-[30rem] rounded-full opacity-[0.06]" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 70%)" }} />
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 rounded-full opacity-[0.04]" style={{ background: "radial-gradient(circle, var(--accent) 0%, transparent 60%)" }} />
-        <div className="absolute inset-0 dot-pattern opacity-50" />
-      </div>
 
       <div className="relative w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -149,7 +172,7 @@ export function Hero({ c, locale }: HeroProps) {
               {h.badge && (
                 <span className="eyebrow inline-flex">
                   <Sparkles className="w-3 h-3" />
-                  {h.badge}
+                  {t(h.badge, safeLocale)}
                 </span>
               )}
             </div>
@@ -177,26 +200,23 @@ export function Hero({ c, locale }: HeroProps) {
               </p>
             </div>
 
-            {/* Heading — solid navy with whimsical font */}
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight mb-5 leading-[1.05] animate-fade-in-up text-[#000080]"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight mb-5 leading-[1.05] animate-fade-in-up text-navy"
               key={`h-${active}`}
-              style={{ fontFamily: "var(--font-whimsical)" }}
             >
-              {slide.title || h.title}
+              {t(slide.title, safeLocale) || t(h.title, safeLocale)}
             </h1>
 
-            {/* Gold accent rule */}
-            <div className="w-24 h-1 bg-gradient-to-r from-gold to-gold-2 rounded-full mb-7 mx-auto md:mx-0 animate-wipe" />
+            <div className="w-24 h-1 bg-gradient-to-r from-accent to-yellow rounded-full mb-7 mx-auto md:mx-0 animate-wipe" />
 
             {slide.subtitle && (
               <p className="lead max-w-2xl mb-9 animate-fade-in-up-delay" key={`s-${active}`}>
-                {slide.subtitle}
+                {t(slide.subtitle, safeLocale)}
               </p>
             )}
             {!slide.subtitle && h.subtitle && (
               <p className="lead max-w-2xl mb-9 animate-fade-in-up-delay" key={`sf-${active}`}>
-                {h.subtitle}
+                {t(h.subtitle, safeLocale)}
               </p>
             )}
 
@@ -211,19 +231,19 @@ export function Hero({ c, locale }: HeroProps) {
                   aria-label={isEs ? "Escribirme por WhatsApp" : "Message me on WhatsApp"}
                 >
                   <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" aria-hidden="true" />
-                  {slide.cta || h.cta_primary || (isEs ? "Pedir plan sin compromiso" : "Get a no-obligation plan")}
+                  {t(slide.cta?.label, safeLocale) || t(h.cta_primary, safeLocale) || (isEs ? "Pedir plan sin compromiso" : "Get a no-obligation plan")}
                 </a>
               ) : (
                 <Link href={`/${locale}/contact`} className="btn btn-primary text-base px-8 py-4 group">
                   <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
-                  {h.cta_primary || (isEs ? "Coordinar consulta" : "Book a consultation")}
+                  {t(h.cta_primary, safeLocale) || (isEs ? "Coordinar consulta" : "Book a consultation")}
                 </Link>
               )}
               <Link
-                href={slide.ctaLink || `${base}/second-opinion`}
+                href={t(slide.ctaLink, safeLocale) || `${base}/second-opinion`}
                 className="btn btn-outline text-base px-8 py-4 group"
               >
-                {slide.ctaSecondary || h.cta_secondary || (isEs ? "Segunda opinión" : "Second opinion")}
+                {t(slide.ctaSecondary, safeLocale) || t(h.cta_secondary, safeLocale) || (isEs ? "Segunda opinión" : "Second opinion")}
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -234,14 +254,14 @@ export function Hero({ c, locale }: HeroProps) {
                 {h.trust_line && (
                   <span className="flex items-center gap-2 text-sm text-fg-muted">
                     <BadgeCheck className="w-4 h-4 text-success" />
-                    {h.trust_line}
+                    {t(h.trust_line, safeLocale)}
                   </span>
                 )}
                 {h.office_hours_short && (
                   <>
                     <span className="hidden sm:block w-px h-4 bg-border" />
                     <span className="flex items-center gap-2 text-sm text-fg-muted">
-                      <Clock className="w-4 h-4 text-gold" />
+                      <Clock className="w-4 h-4 text-accent-2" />
                       {h.office_hours_short}
                     </span>
                   </>
@@ -258,7 +278,7 @@ export function Hero({ c, locale }: HeroProps) {
                 {[
                   { v: "20+", l: isEs ? "Años" : "Years" },
                   { v: "100%", l: isEs ? "Plan escrito" : "Written plan" },
-                  { v: "MSPBS", l: isEs ? "Inscripta" : "Registered" },
+                  { v: "1:1", l: isEs ? "Atención personal" : "Personal care" },
                 ].map((s, i) => (
                   <div key={i} className="text-center md:text-left px-1">
                     <div
@@ -280,15 +300,14 @@ export function Hero({ c, locale }: HeroProps) {
           <div className="relative max-w-md mx-auto lg:max-w-none">
             {heroImage ? (
               <div className="relative">
-                {/* Outer gold ring */}
-                <div className="absolute -inset-4 rounded-3xl border-2 border-gold/30 pointer-events-none" aria-hidden="true" />
-                <div className="absolute -inset-7 rounded-3xl border-2 border-accent/15 pointer-events-none animate-spin-slow" aria-hidden="true" />
+                <div className="absolute -inset-4 rounded-3xl border-2 border-accent/40 pointer-events-none" aria-hidden="true" />
+                <div className="absolute -inset-7 rounded-3xl border-2 border-yellow/25 pointer-events-none animate-spin-slow" aria-hidden="true" />
 
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-surface">
                   {/* Render only the active slide's image. Image is `priority` only on first mount. */}
                   <Image
                     src={heroImage}
-                    alt={slide.title || slide.subtitle || "Dra. Gabriella"}
+                    alt={t(slide.title, safeLocale) || t(slide.subtitle, safeLocale) || "Dra. Gabriella"}
                     fill
                     priority={active === 0}
                     fetchPriority={active === 0 ? "high" : "low"}
@@ -302,8 +321,8 @@ export function Hero({ c, locale }: HeroProps) {
                   {slide.badge && (
                     <div className="absolute top-5 left-5">
                       <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm shadow-lg">
-                        <Sparkles className="w-3.5 h-3.5 text-gold" />
-                        <span className="text-xs font-semibold text-fg">{slide.badge}</span>
+                        <Sparkles className="w-3.5 h-3.5 text-accent-2" />
+                        <span className="text-xs font-semibold text-fg">{t(slide.badge, safeLocale)}</span>
                       </div>
                     </div>
                   )}
@@ -312,33 +331,32 @@ export function Hero({ c, locale }: HeroProps) {
                   <div className="absolute bottom-5 left-5 right-5">
                     <div className="card glass-panel p-4 flex items-center gap-3 shadow-2xl border-white/40">
                       <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                        <Award className="w-5 h-5 text-white" />
+                        <Award className="w-5 h-5 text-navy" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="text-xs font-bold text-fg truncate">
                           {isEs ? "Dra. Gabriella González Pane" : "Dr. Gabriella González Pane"}
                         </div>
                         <div className="text-[10px] text-fg-muted truncate">
-                          {isEs ? "Reg. MSPBS 3618 · UAP 2005" : "MSPBS 3618 · UAP 2005"}
+                          {isEs ? "Odontóloga · UAP 2005" : "Dentist · UAP 2005"}
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Decorative circles (float) */}
-                <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full border-2 border-gold opacity-30 -z-10 animate-float" />
-                <div className="absolute -bottom-8 -left-8 w-24 h-24 rounded-full border-2 border-accent opacity-20 -z-10 animate-float-slow" />
-                <div className="absolute top-1/2 -right-12 w-4 h-4 rounded-full bg-gold animate-float" />
+                <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full border-2 border-yellow opacity-40 -z-10 animate-float" />
+                <div className="absolute -bottom-8 -left-8 w-24 h-24 rounded-full border-2 border-accent opacity-30 -z-10 animate-float-slow" />
+                <div className="absolute top-1/2 -right-12 w-4 h-4 rounded-full bg-yellow animate-float" />
               </div>
             ) : (
               <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-accent to-accent-2 relative overflow-hidden shadow-2xl border-4 border-surface">
-                <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: "radial-gradient(circle at 30% 40%, var(--gold) 0%, transparent 50%), radial-gradient(circle at 70% 60%, white 0%, transparent 40%)" }} />
+                <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: "radial-gradient(circle at 30% 40%, var(--color-yellow) 0%, transparent 50%), radial-gradient(circle at 70% 60%, white 0%, transparent 40%)" }} />
                 <div className="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-white/5" />
                 <div className="absolute inset-0 flex items-center justify-center p-16">
                   <div className="text-center">
                     <div className="text-8xl font-heading text-white/20" style={{ fontFamily: "var(--font-heading)" }}>DG</div>
-                    <div className="mt-4 w-20 h-0.5 bg-gold/40 mx-auto" />
+                    <div className="mt-4 w-20 h-0.5 bg-yellow/50 mx-auto" />
                     <p className="text-white/50 text-xs tracking-widest uppercase mt-4" style={{ fontFamily: "var(--font-body)" }}>
                       {isEs ? "Odontología con criterio" : "Caring dentistry"}
                     </p>
@@ -360,16 +378,13 @@ export function Hero({ c, locale }: HeroProps) {
                         onClick={() => setActive(i)}
                         aria-label={`${isEs ? "Ir a la diapositiva" : "Go to slide"} ${i + 1}`}
                         aria-current={isActive ? "true" : undefined}
-                        className={`min-h-[24px] min-w-[24px] h-1.5 rounded-full transition-all duration-300 cursor-pointer p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
-                                                   isActive ? "w-8 bg-gold" : "w-1.5 bg-border hover:bg-gold/50"
+                        className={`min-h-[24px] min-w-[24px] h-1.5 rounded-full transition-all duration-300 cursor-pointer p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
+                                                   isActive ? "w-8 bg-yellow" : "w-1.5 bg-border hover:bg-yellow/50"
                                                  }`}
                       />
                     )
                   })}
                 </div>
-                <span className="ml-2 text-[10px] uppercase tracking-wider text-fg-subtle font-bold tabular-nums">
-                  {isEs ? "Hero" : "Hero"} · {active + 1} / {total}
-                </span>
               </div>
             )}
           </div>

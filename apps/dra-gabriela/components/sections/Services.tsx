@@ -35,14 +35,14 @@ const SERVICE_IMAGE: Record<string, string> = {
 const SERVICE_COLOR: Record<string, string> = {
   "segunda-opinion": "from-accent to-accent-2",
   "second-opinion": "from-accent to-accent-2",
-  "planificacion-tratamiento": "from-accent-soft to-[#fbf9f6]",
-  "treatment-planning": "from-accent-soft to-[#fbf9f6]",
-  "odontologia-general": "from-[#1a6a6a] to-[#0a3a3a]",
-  "general-dentistry": "from-[#1a6a6a] to-[#0a3a3a]",
-  "estetica-dental": "from-[#fbf9f6] to-[#e6e0d4]",
-  "cosmetic-dentistry": "from-[#fbf9f6] to-[#e6e0d4]",
-  "rehabilitacion-oral": "from-accent to-[#1a6a6a]",
-  "oral-rehabilitation": "from-accent to-[#1a6a6a]",
+  "planificacion-tratamiento": "from-accent-soft to-surface",
+  "treatment-planning": "from-accent-soft to-surface",
+  "odontologia-general": "from-accent to-accent-2",
+  "general-dentistry": "from-accent to-accent-2",
+  "estetica-dental": "from-accent-soft to-surface-muted",
+  "cosmetic-dentistry": "from-accent-soft to-surface-muted",
+  "rehabilitacion-oral": "from-accent-2 to-navy",
+  "oral-rehabilitation": "from-accent-2 to-navy",
 }
 
 export function Services({ c, locale }: { c: any; locale: string }) {
@@ -68,7 +68,7 @@ export function Services({ c, locale }: { c: any; locale: string }) {
               const route = SERVICE_ROUTE[t.id]
               const href = route ? (locale === "es" ? route.es : route.en) : `/${locale}/services#${t.id}`
               const img = SERVICE_IMAGE[t.id]
-              const color = SERVICE_COLOR[t.id] || "from-accent-soft to-[#fbf9f6]"
+              const color = SERVICE_COLOR[t.id] || "from-accent-soft to-surface"
               return (
                 <Link key={t.id} href={href} className="card overflow-hidden group block">
                   {/* Image area */}
@@ -92,7 +92,7 @@ export function Services({ c, locale }: { c: any; locale: string }) {
                     <h3 className="text-lg font-medium mb-2 group-hover:text-accent transition-colors" style={{ fontFamily: "var(--font-heading)" }}>
                       {t.label}
                     </h3>
-                    <div className="flex items-center gap-1 text-sm font-medium text-gold group-hover:gap-2 transition-all">
+                    <div className="flex items-center gap-1 text-sm font-medium text-accent group-hover:gap-2 transition-all">
                       {isEs ? "Ver detalle" : "View details"} <ArrowRight className="w-3.5 h-3.5" />
                     </div>
                   </div>
@@ -127,7 +127,7 @@ export function Services({ c, locale }: { c: any; locale: string }) {
                       )}
                     </div>
                     <p className="text-sm text-fg-muted leading-relaxed mb-3">{b.description}</p>
-                    <span className="text-sm font-medium text-gold flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <span className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
                       {isEs ? "Conocer" : "Learn more"} <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </Link>

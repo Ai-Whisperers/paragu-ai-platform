@@ -19,7 +19,7 @@ interface PageHeroProps {
 }
 
 const VARIANT_BG: Record<string, string> = {
-  default: "bg-gradient-to-br from-accent-soft via-bg to-bg",
+  default: "bg-bg",
   gradient: "bg-gradient-to-br from-accent via-[var(--accent-2)] to-accent text-white",
   compact: "bg-surface border-b border-border-light",
 }
@@ -42,19 +42,11 @@ export function PageHero({
     <section
       className={cn(
         "relative overflow-hidden",
-        isCompact ? "py-14 md:py-20" : "py-20 md:py-28",
+        isCompact ? "py-14 md:py-20" : "py-16 md:py-20",
         VARIANT_BG[variant],
         className
       )}
     >
-      {/* Decorative shapes (only on default/gradient) */}
-      {variant === "default" && (
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-[28rem] h-[28rem] rounded-full opacity-[0.05]" style={{ background: "radial-gradient(circle, var(--accent) 0%, transparent 70%)" }} />
-          <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full opacity-[0.06]" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 70%)" }} />
-          <div className="absolute inset-0 dot-pattern" />
-        </div>
-      )}
       {variant === "gradient" && (
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-40 -right-40 w-[28rem] h-[28rem] rounded-full opacity-20" style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 60%)" }} />
@@ -87,7 +79,7 @@ export function PageHero({
             <p
               className={cn(
                 "lead",
-                isGradient ? "text-white/85" : "text-fg-muted"
+                isGradient ? "!text-white/85" : "text-fg-muted"
               )}
             >
               {subtitle}

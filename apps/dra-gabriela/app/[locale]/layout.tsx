@@ -24,6 +24,27 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }]
 }
 
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const { getSchemaOrgJson } = await import('@/components/SchemaOrg')
+  return {
+    other: {
+      'script:ld+json': getSchemaOrgJson(locale),
+    },
+  }
+}
+
+export const viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#03045e' },
+    { media: '(prefers-color-scheme: dark)', color: '#020338' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -36,9 +57,6 @@ export default async function LocaleLayout({
   const content = getContent(locale)
   return (
     <>
-      <head>
-        <SchemaOrg locale={locale} />
-      </head>
       <SkipToContent locale={locale} />
       <Navbar locale={locale} business={content.business} />
       <main id="main-content" lang={locale} className="pb-20 md:pb-0">{children}</main>

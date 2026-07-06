@@ -1,8 +1,8 @@
 // /en/reviews + /es/resenas — patient reviews with star rating,
-// service tag, date, and verified badge. JSON-LD AggregateRating.
+// service tag, and date.
 
 import { notFound } from "next/navigation"
-import { Star, BadgeCheck, Quote, Filter } from "lucide-react"
+import { Star, Quote, Filter } from "lucide-react"
 import { buildMetadata } from "@/lib/seo"
 import en from "@/content/en/reviews.json"
 import es from "@/content/es/reviews.json"
@@ -63,7 +63,6 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
   const isEs = locale === "es"
   const items: any[] = c.items || []
   const avg = items.length ? (items.reduce((s, r) => s + r.rating, 0) / items.length).toFixed(1) : "5.0"
-  const verifiedCount = items.filter(r => r.verified).length
 
   // Service breakdown
   const byService: Record<string, number> = {}
@@ -71,36 +70,8 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
     byService[r.service] = (byService[r.service] || 0) + 1
   }
 
-  // JSON-LD AggregateRating
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Dra. Gabriella González Pane",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: avg,
-      reviewCount: items.length,
-      bestRating: "5",
-      worstRating: "1",
-    },
-    review: items.map((r) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: r.name },
-      datePublished: r.date,
-      reviewBody: r.text,
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: String(r.rating),
-        bestRating: "5",
-        worstRating: "1",
-      },
-    })),
-  }
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/(?<!\\u00)@/g, "\\u0040") }} />
-
       <PageHero
         eyebrow={isEs ? "Reseñas" : "Reviews"}
         title={c.title}
@@ -111,7 +82,7 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
 
       {/* Summary stats */}
       <PageSection layout="wide" py="md">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
           <div className="card p-5 text-center">
             <div className="text-4xl md:text-5xl font-medium text-accent leading-none mb-1" style={{ fontFamily: "var(--font-heading)" }}>
               {avg}
@@ -129,17 +100,6 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
             </div>
             <div className="text-xs text-fg-subtle uppercase tracking-wider font-semibold">
               {isEs ? "Reseñas" : "Reviews"}
-            </div>
-          </div>
-          <div className="card p-5 text-center">
-            <div className="text-4xl md:text-5xl font-medium text-accent leading-none mb-1" style={{ fontFamily: "var(--font-heading)" }}>
-              {verifiedCount}
-            </div>
-            <div className="text-xs text-fg-subtle uppercase tracking-wider font-semibold">
-              {isEs ? "Verificadas" : "Verified"}
-            </div>
-            <div className="text-[10px] text-fg-subtle mt-1.5">
-              {isEs ? "Pacientes reales" : "Real patients"}
             </div>
           </div>
           <div className="card p-5 text-center">
@@ -181,13 +141,6 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
 
               <Quote className="w-7 h-7 text-accent-soft -mb-2 -mt-1" aria-hidden="true" />
               <p className="text-fg-muted leading-relaxed text-left">{r.text}</p>
-
-              {r.verified && (
-                <div className="mt-4 pt-4 border-t border-border-light flex items-center gap-1.5 text-xs text-fg-subtle">
-                  <BadgeCheck className="w-3.5 h-3.5 text-success" aria-hidden="true" />
-                  {isEs ? "Reseña verificada · paciente real" : "Verified review · real patient"}
-                </div>
-              )}
             </article>
           ))}
         </div>

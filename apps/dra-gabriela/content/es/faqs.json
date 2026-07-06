@@ -32,7 +32,7 @@
       "items": [
         {
           "q": "¿Cuánto cuesta la consulta?",
-          "a": "La Consulta estándar cuesta entre Gs 300,000 y 450,000 según la complejidad. Incluye revisión, diagnóstico y un plan claro. No hay sorpresas."
+          "a": "La Consulta estándar cuesta Gs 300.000. La Consulta extendida (casos complejos, más tiempo de análisis) cuesta Gs 400.000. Incluye revisión, diagnóstico y un plan claro. No hay sorpresas."
         },
         {
           "q": "¿Me podés pasar presupuesto por foto?",
@@ -80,19 +80,19 @@
           "a": "Sí, especialmente. Los casos donde hay que integrar variables son los que más disfruto. Rehabilitar no es poner coronas: es devolver función, estabilidad, estética y confianza dentro de una boca que tiene historia."
         },
         {
-          "q": "¿Hacen endodoncia?",
+          "q": "¿Hacés endodoncia?",
           "a": "Sí. Si el caso es muy complejo, lo derivo a un endodontista de confianza. No hago lo que no puedo hacer bien."
         },
         {
-          "q": "¿Hacen extracciones?",
+          "q": "¿Hacés extracciones?",
           "a": "Extracciones simples, sí. Para muelas del juicio o casos quirúrgicos trabajo con cirujanos maxilofaciales de confianza y coordino todo."
         },
         {
-          "q": "¿Hacen coronas o puentes?",
+          "q": "¿Hacés coronas o puentes?",
           "a": "Sí. Uso zirconia porque es la más resistente y biocompatible. Te explico las opciones y vos decidís con toda la información."
         },
         {
-          "q": "¿Atienden niños?",
+          "q": "¿Atendés niños?",
           "a": "Desde 10–12 años. Para niños más pequeños o con necesidades de conducta específicas derivo a un odontopediatra de confianza. No empiezo si el niño no está cómodo."
         }
       ]
@@ -102,11 +102,11 @@
       "items": [
         {
           "q": "¿Trabajás con seguros?",
-          "a": "Mi enfoque actual es la atención particular, con tiempo para diagnóstico, explicación y planificación. Entregamos recibos detallados con códigos de procedimientos para reembolso con aseguradoras internacionales (BUPA, Cigna, GeoBlue) y planes corporativos locales."
+          "a": "Mi enfoque actual es la atención particular, con tiempo para diagnóstico, explicación y planificación. Entrego recibos detallados con códigos de procedimientos para reembolso con aseguradoras internacionales (BUPA, Cigna, GeoBlue) y planes corporativos locales."
         },
         {
-          "q": "¿Qué métodos de pago aceptan?",
-          "a": "Efectivo, transferencia bancaria, y tarjetas. Para casos de alto valor, ofrecemos planes de financiamiento a través de Pagopar o Bancard. Lo conversamos en la consulta."
+          "q": "¿Qué métodos de pago aceptás?",
+          "a": "Efectivo, transferencia bancaria y tarjetas. Para casos de alto valor, ofrezco planes de financiamiento a través de Pagopar o Bancard. Lo conversamos en la consulta."
         }
       ]
     }
