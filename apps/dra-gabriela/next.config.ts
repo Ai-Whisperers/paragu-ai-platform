@@ -3,6 +3,13 @@ import type { NextConfig } from "next"
 const config: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
+  // Disable static prerendering to avoid Next.js 16 useContext crash in
+  // auto-generated _global-error page. Pages render at request time (SSR).
+  experimental: {
+    ppr: false,
+    globalNotFound: false,
+    prerenderEarlyExit: false,
+  },
   images: {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",

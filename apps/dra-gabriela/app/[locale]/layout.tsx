@@ -3,6 +3,13 @@
 
 import { notFound } from "next/navigation"
 import { getContent, isLocale } from "@/lib/content"
+
+// Skip static prerender — pages render at request time (SSR).
+// Works around Next.js 16 + React 19 + auto-generated _global-error useContext crash.
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+// Don't pre-generate any static pages — render all on demand
+export const dynamicParams = true
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { CookieConsent } from "@/components/CookieConsent"
@@ -13,6 +20,7 @@ import { BackToTop } from "@/components/BackToTop"
 import { LiveAnnouncer } from "@/components/LiveAnnouncer"
 
 export function generateStaticParams() {
+  // Generate params but never prerender — see dynamic = "force-dynamic" above
   return [{ locale: "en" }, { locale: "es" }]
 }
 
