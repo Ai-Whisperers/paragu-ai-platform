@@ -1,14 +1,16 @@
 FROM node:20-slim AS deps
 WORKDIR /app
-COPY package.json package-lock.json* ./
-RUN npm install --legacy-peer-deps
+RUN corepack enable && corepack prepare pnpm@10 --activate
+COPY package.json pnpm-lock.yaml* .npmrc* ./
+RUN pnpm install --no-frozen-lockfile
 
 FROM node:20-slim AS builder
 WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@10 --activate
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+RUN pnpm run build
 
 FROM node:20-slim AS runner
 WORKDIR /app
@@ -20,8 +22,7 @@ RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs
 USER nextjs
 EXPOSE 3000
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone/apps/dra-gabriela ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone/apps/dra-gabriela/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/apps/dra-gabriela/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/apps/dra-gabriela/content ./content
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/content ./content
 CMD ["node", "server.js"]

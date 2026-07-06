@@ -3,6 +3,10 @@ set -euo pipefail
 cd "$(dirname "$0")"
 [ -f .env ] && { set -a; source ./.env; set +a; }
 
+# Ensure monorepo-level files are available for Docker build context
+[ -f pnpm-lock.yaml ] || cp ../../pnpm-lock.yaml ./pnpm-lock.yaml
+[ -f .npmrc ] || cp ../../.npmrc ./.npmrc
+
 VERSION=$(git rev-parse --short HEAD)
 DATE=$(date +%Y%m%d-%H%M)
 TAG="dra-gabriela:prod-$VERSION-$DATE"
@@ -27,3 +31,6 @@ else
 fi
 
 echo "--- done: $TAG"
+
+# Clean up monorepo-level files copied for Docker build
+rm -f ./pnpm-lock.yaml ./.npmrc
