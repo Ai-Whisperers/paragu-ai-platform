@@ -1,5 +1,4 @@
 {
-  "_comment": "JSON-LD Dentist payload (ES). Renders on every page; SchemaOrg strips placeholder fields when business info isn't yet configured.",
   "@context": "https://schema.org",
   "@type": "Dentist",
   "name": "Dra. Gabriella González Pane",
@@ -8,17 +7,17 @@
   "url": "https://dragabriela.paragu-ai.com/es",
   "logo": "https://dragabriela.paragu-ai.com/og/dra-gabriella.svg",
   "image": "https://dragabriela.paragu-ai.com/og/og-home.png",
-  "telephone": "+595981146759",
+  "telephone": "+595****6759",
   "email": "doctora.gabi@ometzdental.com.py",
   "priceRange": "Gs 300.000 - Gs 5.000.000",
   "currenciesAccepted": "PYG",
   "paymentAccepted": "Efectivo, Transferencia bancaria, Pagopar, Bancard",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Auditores de la Guerra del Chaco 617",
     "addressLocality": "Asunción",
     "addressRegion": "Central",
-    "addressCountry": "PY",
-    "streetAddress": "Auditores de la Guerra del Chaco 617",
+    "addressCountry": "PY"
   },
   "geo": {
     "@type": "GeoCoordinates",
