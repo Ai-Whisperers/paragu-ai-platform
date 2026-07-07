@@ -92,7 +92,10 @@
       "ctaPrimaryText": "Ver catálogo de piercings",
       "ctaPrimaryHref": "/piercings",
       "ctaSecondaryText": "Consultar por WhatsApp",
-      "ctaSecondaryHref": "https://wa.me/595981324569?text=Hola!%20Quiero%20información%20sobre%20un%20piercing"
+      "ctaSecondaryHref": "https://wa.me/595981324569?text=Hola!%20Quiero%20información%20sobre%20un%20piercing",
+      "cta_primary": null,
+      "cta_secondary_text": "Catálogo",
+      "cta_secondary_href": "/piercings"
     },
     "story": {
       "eyebrow": "Sobre el estudio",
@@ -636,7 +639,7 @@
   "nosotros": {
     "title": "El estudio detrás del piercing",
     "eyebrow": "Conócenos",
-    "intro": "Pierce Charm no es solo un estudio de piercings: es un espacio donde la estética oscura y la técnica profesional se encuentran para crear algo que dura toda la vida.",
+    "intro": "Pierce Charm es el estudio de piercing & joyería alternativa que vas a querer volver a visitar. Nacido de la convicción de que un piercing es un acto de identidad — y como tal, se hace con cuidado, escucha y responsabilidad.",
     "paragraphs": [
       "Desde [año de fundación] recibimos personas de todas las edades, géneros y estilos que buscan un servicio profesional combinado con una mirada artística. La estética política y alternativa no es una pose: es lo que somos.",
       "Nos formamos en estándares internacionales de bioseguridad, joyería implantgrade, y atención post-servicio. Pero por sobre todas las cosas, entendemos que un piercing es un acto de identidad — y lo tratamos como tal.",
@@ -758,8 +761,23 @@
       "first_person": "Soy la cara detrás de Pierce Charm. Estudio cada piercing antes de hacerlo, y no te perforo si tu anatomía no lo admite — te ofrezco una alternativa mejor.",
       "foto_url": "/images/piercer-luana.jpg",
       "foto_alt": "Foto de Luana, piercer del estudio, con piercings visibles",
-      "placeholder_tone": "Sonriente, no seria"
-    }
+      "placeholder_tone": "Sonriente, no seria",
+      "context": "Luana López es artista y performer, trabaja con cantantes y performers de la escena alternativa de Asunción. Esa sensibilidad estética es lo que trae al estudio — la convicción de que un piercing es un acto político y personal, no una decoración rápida."
+    },
+    "intro_paragraphs": [
+      {
+        "eyebrow": "𓆩 ☆ 𓆪 Por qué hacemos piercings",
+        "body": "Un piercing es un acto de identidad. No es decoración rápida — es una decisión sobre tu cuerpo, tu estética y tu historia. Por eso cada perforación se discute primero, se marca frente al espejo, y se hace con la calma que merece."
+      },
+      {
+        "eyebrow": "𓆩 ☆ 𓆪 Quiénes somos",
+        "body": "Luana, la piercer principal, es artista y performer — trabaja con cantantes y performers de Asunción, y trae esa sensibilidad estética al estudio. La estética política no es pose: es lo que somos. Joyería curada, materiales certificados, bioseguridad profesional, compromiso con cada cliente."
+      },
+      {
+        "eyebrow": "𓆩 ☆ 𓆪 Nuestro compromiso",
+        "body": "Si no podemos hacer el piercing que pediste — porque tu anatomía no lo admite — te decimos y te ofrecemos una alternativa estética. Si nos equivocamos, lo admitimos y devolvemos la plata. Si tenés un problema post-cita, respondemos. Después de la cita, no desaparecemos: hacemos seguimiento a 1 semana, 1 mes y 3 meses."
+      }
+    ]
   },
   "faq": {
     "title": "Preguntas frecuentes",

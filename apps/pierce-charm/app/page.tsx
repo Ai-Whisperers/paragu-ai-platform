@@ -64,17 +64,6 @@ export default function Home() {
             <p className="text-[var(--color-muted-foreground)] text-[1.05rem] md:text-[1.15rem] leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
               {h.hero?.subheadline}
             </p>
-            <div className="flex flex-wrap items-center gap-3 justify-center lg:justify-start">
-              <Link href={h.hero?.ctaPrimaryHref || "/piercings"} className="btn-gothic tap">
-                <Skull size={14} className="text-[var(--color-gold)]" />
-                {h.hero?.ctaPrimaryText}
-              </Link>
-              <a href={whatsappUrl(c.contacto?.whatsapp, h.hero?.ctaSecondaryText)} target="_blank" rel="noopener noreferrer" className="btn-gothic-outline tap">
-                <CrossInverted size={14} className="text-[var(--color-primary-light)]" />
-                {h.hero?.ctaSecondaryText}
-              </a>
-            </div>
-
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mt-10 text-xs">
               {["Bioseguridad certificada", "Titanio implantgrade", "Asesoramiento 1:1"].map((t) => (
                 <div key={t} className="flex items-center gap-2 text-[var(--color-muted-foreground)]">
@@ -83,6 +72,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <p className="font-[var(--font-script)] text-[var(--color-primary-light)] text-[1.2rem] mt-4 text-center lg:text-left italic">
+              ↓ explorá el catálogo abajo
+            </p>
           </div>
 
           <div className="relative">

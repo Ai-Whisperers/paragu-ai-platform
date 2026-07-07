@@ -32,6 +32,22 @@ export default function NosotrosPage() {
         </div>
       </section>
 
+      {/* Tres pillars (E13): Por qué / Quiénes somos / Compromiso */}
+      {Array.isArray(n.intro_paragraphs) && n.intro_paragraphs.length > 0 && (
+        <section className="py-12 md:py-16 px-4 md:px-6 relative">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5 md:gap-7">
+            {n.intro_paragraphs.map((p: any, i: number) => (
+              <article key={i} className="rock-card p-5 md:p-6 text-left">
+                <p className="eyebrow mb-2">{p.eyebrow}</p>
+                <p className="text-[var(--color-foreground)]/85 text-[0.95rem] leading-relaxed">
+                  {p.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="py-12 md:py-16 px-4 md:px-6 bg-[var(--color-surface)] border-y border-[var(--color-primary-light)]/40">
         <div className="max-w-4xl mx-auto text-center">
           <p className="eyebrow mb-3">{manifesto.eyebrow || '𓆩 ☆ 𓆪 Lo que defendemos'}</p>
