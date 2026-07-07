@@ -135,6 +135,16 @@
       "eyebrow": "𓆩 Catálogo 𓆪",
       "title": "Elegí tu perforación",
       "subtitle": "36+ perforaciones profesionales disponibles. Cada una con su tiempo de cicatrización y materiales específicos."
+    },
+    "banner_ticker": {
+      "enabled": true,
+      "rotation_seconds": 5,
+      "messages": [
+        "Joyería nueva para vos cada semana.",
+        "Innová tu estilo con piezas únicas.",
+        "Sólo en Asunción — curaduría alternativa.",
+        "Piercings profesionales desde el primer día."
+      ]
     }
   },
   "piercings": {
@@ -575,71 +585,83 @@
     "subtitle": "Selección curada de piezas que ofrecemos: cadenas, plugs, túneles, dijes, anillos y materiales únicos.",
     "categories": [
       "Cadenas",
-      "Plugs & Túneles",
-      "Sepultura & Góticos",
+      "Expansores",
+      "Alternative style",
       "Septum & Nariz",
       "Captives"
     ],
     "items": [
       {
         "name": "Septum spike cadena",
-        "category": "Septum & Nariz",
-        "description": "Septum clicker con dije colgante en cadena fina."
+        "category": "septum-y-nariz",
+        "description": "Septum clicker con dije colgante en cadena fina.",
+        "categoryLabel": "Septum & Nariz"
       },
       {
-        "name": "Plug orgánico hueso",
-        "category": "Plugs & Túneles",
-        "description": "Plug de hueso tallado a mano, ø 8-25mm."
+        "name": "Expansor orgánico hueso",
+        "category": "expansores",
+        "description": "Plug de hueso tallado a mano, ø 8-25mm.",
+        "categoryLabel": "Expansores"
       },
       {
-        "name": "Túnel calabera",
-        "category": "Plugs & Túneles",
-        "description": "Túnel con calavera incrustada, acero y resina negra."
+        "name": "Expansor calabera",
+        "category": "expansores",
+        "description": "Túnel con calavera incrustada, acero y resina negra.",
+        "categoryLabel": "Expansores"
       },
       {
         "name": "Cadena oreja murciélago",
-        "category": "Cadenas",
-        "description": "Cadena helix con dije colgante de murciélago."
+        "category": "cadenas",
+        "description": "Cadena helix con dije colgante de murciélago.",
+        "categoryLabel": "Cadenas"
       },
       {
         "name": "Stud cruz invertida",
-        "category": "Sepultura & Góticos",
-        "description": "Labret stud cruz invertida, titanio PVD negro."
+        "category": "alternative-style",
+        "description": "Labret stud cruz invertida, titanio PVD negro.",
+        "categoryLabel": "Alternative style"
       },
       {
         "name": "Captive bead negro",
-        "category": "Captives",
-        "description": "Anillo captive bead en acero PVD negro, varios calibres."
+        "category": "captives",
+        "description": "Anillo captive bead en acero PVD negro, varios calibres.",
+        "categoryLabel": "Captives"
       },
       {
         "name": "Septum clicker calavera",
-        "category": "Septum & Nariz",
-        "description": "Clicker septum con calavera central."
+        "category": "septum-y-nariz",
+        "description": "Clicker septum con calavera central.",
+        "categoryLabel": "Septum & Nariz"
       },
       {
         "name": "Dije hélix cadena",
-        "category": "Cadenas",
-        "description": "Hélix barbell con cadena colgante múltiple."
+        "category": "cadenas",
+        "description": "Hélix barbell con cadena colgante múltiple.",
+        "categoryLabel": "Cadenas"
       },
       {
         "name": "Daith aro ornamentado",
-        "category": "Sepultura & Góticos",
-        "description": "Aro daith con grabados góticos en titanio PVD."
+        "category": "alternative-style",
+        "description": "Aro daith con grabados góticos en titanio PVD.",
+        "categoryLabel": "Alternative style"
       },
       {
         "name": "Industrial cadena larga",
-        "category": "Cadenas",
-        "description": "Industrial barbell con cadena colgante 60mm."
+        "category": "cadenas",
+        "description": "Industrial barbell con cadena colgante 60mm.",
+        "categoryLabel": "Cadenas"
       },
       {
         "name": "Plug obsidiana",
-        "category": "Plugs & Túneles",
-        "description": "Plug doble de obsidiana pulida, ø personalizado."
+        "category": "expansores",
+        "description": "Plug doble de obsidiana pulida, ø personalizado.",
+        "categoryLabel": "Expansores"
       },
       {
         "name": "Piercing micro cadena",
-        "category": "Cadenas",
-        "description": "Set de cadenas conectadas para helix + lóbulo."
+        "category": "cadenas",
+        "description": "Set de cadenas conectadas para helix + lóbulo.",
+        "categoryLabel": "Cadenas"
       }
     ]
   },
@@ -669,7 +691,71 @@
         "title": "Curaduría estética",
         "description": "No vendemos todo. Vendemos lo que queremos usar nosotros."
       }
-    ]
+    ],
+    "manifesto": {
+      "eyebrow": "𓆩 ☆ 𓆪 Lo que defendemos",
+      "title": "Más que un estudio",
+      "intro": "Pierce Charm es un estudio que se asume como espacio seguro, profesional y abiertamente alternativo. Atendemos a cualquier persona sin importar origen, género o elección estética.",
+      "valores": [
+        {
+          "icon": "heart",
+          "label": "LGBTQ+ friendly",
+          "desc": "Cualquier persona es bienvenida — atendemos desde la empatía y el respeto."
+        },
+        {
+          "icon": "female-symbol",
+          "label": "Antipatriarcal",
+          "desc": "Trabajamos contra el sexismo y la violencia de género, dentro y fuera del estudio."
+        },
+        {
+          "icon": "leaf",
+          "label": "Sustentable",
+          "desc": "Preferimos piezas de titanio y proveedores responsables. Cero plástico en el packaging."
+        },
+        {
+          "icon": "people",
+          "label": "Comunidad",
+          "desc": "Construimos comunidad. Te seguimos después de la cita y queremos saber cómo va."
+        }
+      ]
+    },
+    "principles": {
+      "eyebrow": "𓆩 ☆ 𓆪 Nuestros principios",
+      "title": "Lo que mueve Pierce Charm",
+      "subtitle": "No somos neutro. Somos alternativa, cuidadosos, comunidad y cosas varias.",
+      "items": [
+        {
+          "icon": "shield",
+          "label": "Bioseguridad",
+          "desc": "Todos los procesos siguen la APP (Association of Professional Piercers). Esterilización tercerizada en clínica odontológica certificada."
+        },
+        {
+          "icon": "sparkles",
+          "label": "Curaduría alternativa",
+          "desc": "Sólo joyería que respetaría nuestro propio cuerpo. Titanio ASTM F136, acero quirúrgico, libres de niquel donde se pueda."
+        },
+        {
+          "icon": "heart",
+          "label": "Sexo, género, clase social no importan",
+          "desc": "Bienvenides todas las personas. No toleramos discriminación ni acoso. Espacio seguro, explícito."
+        },
+        {
+          "icon": "people",
+          "label": "Después de la cita: comunidad",
+          "desc": "Seguimiento por WhatsApp a 1 semana, 1 mes y 3 meses. Tu cicatrización es nuestro proceso también."
+        },
+        {
+          "icon": "leaf",
+          "label": "Menos plástico, más responsabilidad",
+          "desc": "Empaque sin plástico. Jóyas certificadas de proveedores responsables. Cero crueldad animal en joyería."
+        },
+        {
+          "icon": "female",
+          "label": "Antipatriarcal, sin cuestionarlo",
+          "desc": "Precios transparentes. Sin comisiones por género. Sin estereotipos en atención o decoración."
+        }
+      ]
+    }
   },
   "faq": {
     "title": "Preguntas frecuentes",
@@ -819,5 +905,175 @@
     ],
     "copy": "© 2026 Pierce Charm · Estudio de piercings alternativo · Asunción, Paraguay",
     "ornament": "𓆩 ☆ 𓆪"
+  },
+  "client_qa_notes": {
+    "cuestionario_01": {
+      "tipo_persona": "persona física",
+      "razon_social": "igual a Pierce Charm — pendiente de inscripción",
+      "whatsapp_principal": null,
+      "email_publico": null,
+      "email_facturacion": null,
+      "instagram": null,
+      "facebook": "pendiente",
+      "tiktok": "pendiente (probable)",
+      "direccion": null,
+      "ubicacion_tipo": "vitrine comercial con showroom visible, mínimo 2 ambientes",
+      "wifi": "sí",
+      "aire_acondicionado": "sí",
+      "banho_clientes": "sí",
+      "horarios": {
+        "lunes_a_viernes": "12:00 - 20:00",
+        "sabado": "09:00 - 15:00",
+        "domingo": "Cerrado",
+        "feriados_internacionales": "Cerrado",
+        "feriados_nacionales": "depende del caso"
+      },
+      "tiempo_espera_sin_cita": "30-45 minutos si está lleno, 15 minutos si está libre",
+      "consulta_previa": {
+        "cobra_consulta_aparte": true,
+        "precio": "Gs 10.000",
+        "incluye_en_seña_piercing": "si se hace dentro de 2 semanas",
+        "duracion": "10-15 minutos"
+      }
+    },
+    "servicios": {
+      "cambio_joyeria_post_cicatrizacion": "gratuito si el piercing lo hicimos nosotros",
+      "downsizing": "sí — Gs 10.000 de base",
+      "retiro_piercing_no_cicatrizado": "sí",
+      "piercings_para_eventos_privados": "sí — el piercer se traslada al evento (no maneja eventos; solo perfora)",
+      "venta_joyeria_sin_cita": "sí",
+      "paquetes_combos": "sí — tipo 2x1, descuentos en bundles",
+      "sistema_referidos": "por cupones de fidelidad — X visitas = 1 piercing gratis o descuento",
+      "base_datos_clientes": "sí — con CI + tracking de visitas"
+    },
+    "joyeria": {
+      "disenhan_propia": false,
+      "revenden": true,
+      "diseno_por_encargo": "sí — luego",
+      "marcas_exclusivas": null,
+      "colaboraciones_artistas_locales": "posible",
+      "grabados_personalizados": "no por ahora",
+      "stock_estimado": "definirlo al comprar",
+      "reposicion": "definirlo al ver demanda",
+      "por_encargo": "sí",
+      "rango_precios": "Gs 50.000 - 125.000 (dependiendo de la pieza)",
+      "materiales_trabajados": [
+        "titanio ASTM F136 (siempre primera opción)",
+        "acero quirúrgico"
+      ],
+      "colores_joyeria": [
+        "plateado",
+        "negro PVD",
+        "dorado",
+        "tornasol",
+        "rojo / rosado"
+      ]
+    },
+    "bioseguridad": {
+      "autoclave_propia": false,
+      "esterilizacion_tercerizada_clinica_odontologica": "sí — no se muestra en la web",
+      "test_de_esporas_frecuencia": "definir según clínica odontológica",
+      "instrumental_por_cliente": "sí",
+      "agujas_utilizadas": [
+        "cateter",
+        "aguja americana (needle)"
+      ],
+      "piercing_gun": "prohibido",
+      "protocolo_infecciones_documentado": false,
+      "manejo_alergias": "titanio hipoalergénico si hay alergia a acero quirúrgico",
+      "joyeria_inicial_sellada": "sí",
+      "marcas_certificadas": "titanio certificado (cuál marca: a definir)"
+    },
+    "procedimiento": {
+      "duracion_consulta": "10-15 minutos",
+      "marcacion_posicion_frente_espejo": "siempre que se pueda; sentado para zonas difíciles de la oreja",
+      "anestesia_topica": "no se usa (no funciona)",
+      "anestesia_local": "sí — en una fase posterior cuando la piercer se certifique",
+      "manejo_clientes_nerviosos": "3 respiraciones profundas, ojos cerrados, no mira mientras perfora",
+      "consentimiento_informado_firmado": "siempre — incluye edad, identificación del adulto en menores, cláusula de responsabilidad",
+      "foto_piercing_terminado": "sí, para redes sociales",
+      "seguimiento_post": "sí — WhatsApp a 1 semana, 1 mes y 3 meses (cambio de joya)",
+      "kit_post_servicio": {
+        "incluye": [
+          "solución fisiológica",
+          "jabón neutro"
+        ],
+        "disponible": true,
+        "costo": "a definir"
+      },
+      "instrucciones_post_digital": "sí — PDF/digital después de la cita",
+      "bot_whatsapp_reservas": "sí — el bot hace triage inicial, deriva a Luana solo para conversación humana",
+      "plantillas_mensajes_frecuentes": "sí — incluir imágenes/videos en algunos casos"
+    },
+    "cuidados_recomendados": {
+      "productos_recomendados": "solución fisiológica + jabón neutro",
+      "productos_no_recomendados": [
+        "alcohol",
+        "agua oxigenada",
+        "peróxido de benzoilo",
+        "cremas con perfume",
+        "cualquier crema"
+      ],
+      "instrucciones_post": {
+        "no_dormir_sobre_piercing": true,
+        "no_pileta": true,
+        "no_golpear_el_piercing": true,
+        "no_manipular_o_jugar": true
+      },
+      "manejo_infecciones_leves": "solución fisiológica + consulta de revisión",
+      "manejo_granuloma": "evaluar (puede requerir retirar piercing)",
+      "manejo_severe_infeccion": "derivar a dermatólogo"
+    },
+    "politica_edad": {
+      "lobulo_oido": "cualquier edad con consentimiento padres",
+      "face_piercings_oreja_nariz_labio_ceja_septum_nostril_septril_bridge_monroe_anti_eyebrow_daith": "14-15 años con cédula de adulto + cédula del menor",
+      "expansiones": "18+",
+      "zonas_intimas_ombligo": "a definir por menor",
+      "documento_requerido": "C.I. del adulto + C.I. del menor",
+      "verificacion_relacion": "verificación de apellido/s (a investigar)"
+    },
+    "piercer_principal": {
+      "nombre": "Luana López",
+      "formacion_actual": "Certificación de body piercing",
+      "cursos_pendientes": "Actualización (cada vez que hay; cursos de surface + dermals)",
+      "mentor_actual": "No — trabaja sola",
+      "experiencia_actual": "piercings básicos; NO surface ni sub-dermal aún"
+    },
+    "estetica": {
+      "criticas_paleta": "más vibrantes, saturación más grande, hue más llamativo",
+      "paleta_prefiere": [
+        "rojo más vibrante",
+        "azul profundo",
+        "violeta"
+      ],
+      "colores_secundarios": "grises también",
+      "decoraciones_prefiere": "cadenas, murciélagos, luna vibrante roja",
+      "estilo_deco": "piercing-friendly — no compite con tatuajes (futuro servicio)",
+      "variedad_por_pagina": "no repetir decoraciones idénticas — luna/cadenas en home, murciélagos/calaveras en otras",
+      "animaciones_murcielagos": "sí — aleteando 3 frames, flotando alrededor",
+      "laminas_parpadeando": "sí",
+      "identidad_visual": "no formal aún",
+      "typo": "solo wordmark por ahora",
+      "estilo_grafico": "behoón girando"
+    },
+    "tono_y_marca": {
+      "tono_3_palabras": "alternativo, profesional, friendly",
+      "persona_gramatical": "tercera persona",
+      "uso_vos_vs_tu": "sos en general, tú para formal",
+      "mezcla_formal_informal": "sí — confianza + accesibilidad",
+      "jerga_piercing": "mínima — reemplazar con español (downsize → bajar de joya, nesting → [investigar uso])",
+      "plantillas_mensajes_frecuentes": "sí — con imágenes/videos cuando se pueda",
+      "postura_marca": {
+        "lgbtq_friendly": true,
+        "antipatriarcal": true,
+        "ecologica": true,
+        "comunitaria": true,
+        "apertura_general": "cualquier persona es bienvenida"
+      },
+      "simbolos_marca": [
+        "calavera",
+        "cruz invertida"
+      ]
+    }
   }
 }

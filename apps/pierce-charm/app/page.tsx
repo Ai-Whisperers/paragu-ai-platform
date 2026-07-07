@@ -6,9 +6,12 @@ import content from "@/content/es.json";
 import { ChainVertical, Bat, Skull, CrossInverted, Candle, Spider, CrescentMoon, DividerOrnament } from "@/components/ornaments";
 import { EarAnatomy, type PinPosition } from "@/components/EarAnatomy";
 import { whatsappUrl } from "@/lib/site-config";
+import { BannerTicker } from "@/components/BannerTicker";
 
 const c = content as any;
 const h = c.home || {};
+const hero = h.hero || {};
+const bannerTicker = h.banner_ticker;
 const story = h.story || {};
 const features = h.features?.items || [];
 const steps = h.process?.steps || [];
@@ -28,6 +31,9 @@ export default function Home() {
 
   return (
     <div className="relative">
+      {bannerTicker?.enabled && bannerTicker?.messages?.length ? (
+        <BannerTicker messages={bannerTicker.messages} intervalSec={bannerTicker.rotation_seconds || 5} />
+      ) : null}
       <section className="relative pt-28 md:pt-32 pb-12 md:pb-20 overflow-hidden smoke-bg">
         <div className="hidden lg:block chain-side chain-side-left">
           <ChainVertical className="w-full h-full text-[var(--color-primary-light)]" />

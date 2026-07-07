@@ -8,6 +8,8 @@ import { whatsappUrl } from "@/lib/site-config";
 const c = content as any;
 const n = c.nosotros || {};
 const v = n.values || [];
+const manifesto = n.manifesto || {};
+const principles = n.principles || {};
 
 export default function NosotrosPage() {
   return (
@@ -27,6 +29,23 @@ export default function NosotrosPage() {
           <p className="text-[var(--color-muted-foreground)] font-[var(--font-script)] text-[1.5rem] leading-tight text-[var(--color-primary-light)]">
             {n.intro}
           </p>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 px-4 md:px-6 bg-[var(--color-surface)] border-y border-[var(--color-primary-light)]/40">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="eyebrow mb-3">{manifesto.eyebrow || '𓆩 ☆ 𓆪 Lo que defendemos'}</p>
+          <h2 className="text-[1.7rem] md:text-[2.4rem] mb-4">{manifesto.title || 'Más que un estudio'}</h2>
+          <p className="text-[var(--color-foreground)]/85 max-w-2xl mx-auto leading-relaxed">{manifesto.intro}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-8">
+            {(manifesto.valores || []).map((val: any, idx: number) => (
+              <div key={idx} className="rock-card p-4 md:p-5 text-left">
+                <span className="block w-8 h-8 mb-2 text-[var(--color-primary-light)] text-[1.5rem]">✦</span>
+                <p className="font-[var(--font-display)] text-[0.7rem] uppercase tracking-[0.18em] text-[var(--color-gold)] mb-1">{val.label}</p>
+                <p className="text-[var(--color-foreground)]/85 text-[0.85rem] leading-relaxed">{val.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -98,7 +117,33 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      <section className="py-14 px-4 md:px-6">
+      
+      <section className="py-12 md:py-16 px-4 md:px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="eyebrow mb-2">{principles.eyebrow || '𓆩 ☆ 𓆪 Nuestros principios'}</p>
+            <h2 className="text-[1.7rem] md:text-[2.2rem] mb-3">{principles.title || 'Lo que mueve Pierce Charm'}</h2>
+            <p className="text-[var(--color-muted-foreground)] max-w-xl mx-auto">{principles.subtitle}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {(principles.items || []).map((val: any, idx: number) => (
+              <div key={idx} className="rock-card p-5 md:p-6 group">
+                <div className="flex items-start gap-3 mb-3">
+                  <span className="block w-10 h-10 shrink-0 border border-[var(--color-primary-light)]/60 rounded-sm flex items-center justify-center text-[var(--color-primary-light)] text-[1.2rem]">
+                    ✦
+                  </span>
+                  <div className="flex-1">
+                    <h3 className="font-[var(--font-display)] text-[0.85rem] uppercase tracking-[0.18em] text-[var(--color-gold)] mb-2">{val.label}</h3>
+                  </div>
+                </div>
+                <p className="text-[var(--color-foreground)]/85 text-[0.88rem] leading-relaxed">{val.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+<section className="py-14 px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <Skull size={26} className="mx-auto text-[var(--color-primary-light)] mb-3" />
           <h2 className="text-[1.6rem] md:text-[2rem] mb-3">¿Charlamos?</h2>
