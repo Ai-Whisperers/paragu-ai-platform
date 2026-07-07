@@ -40,18 +40,17 @@ export const metadata: Metadata = {
     default: c.site?.title || "Pierce Charm",
     template: `%s | ${c.site?.title || "Pierce Charm"}`,
   },
-  description: c.site?.description || c.metaDescription,
-  keywords: [
-    "piercing Asunción",
-    "piercing Paraguay",
+  description: c.site?.seo?.open_description || c.site?.description || c.metaDescription,
+  keywords: c.site?.seo?.local_keywords || [
+    "piercing asunción",
+    "piercing paraguay",
     "joyería alternativa",
-    "estudio piercing",
+    "estudio piercing asunción",
     "helix piercing",
     "septum piercing",
     "daith rook piercing",
     "cartílago piercing",
     "PVD negro titanio",
-    "Asunción piercing studio",
     "Pierce Charm",
   ],
   openGraph: {
@@ -106,7 +105,7 @@ const jsonLd = {
   description: c.metaDescription,
   url: SITE_URL,
   telephone: `+${c.contacto?.whatsapp || ""}`,
-  priceRange: "Gs 80.000 - Gs 250.000",
+  priceRange: "Gs 50.000 - Gs 200.000",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Asunción",

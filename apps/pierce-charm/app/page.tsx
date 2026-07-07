@@ -7,6 +7,7 @@ import { ChainVertical, Bat, Skull, CrossInverted, Candle, Spider, CrescentMoon,
 import { EarAnatomy, type PinPosition } from "@/components/EarAnatomy";
 import { whatsappUrl } from "@/lib/site-config";
 import { BannerTicker } from "@/components/BannerTicker";
+import { Testimonials } from "@/components/Testimonials";
 
 const c = content as any;
 const h = c.home || {};
@@ -18,12 +19,12 @@ const steps = h.process?.steps || [];
 const finalCta = h.finalCta || {};
 
 const heroPins: PinPosition[] = [
-  { id: "helix",  name: "Helix",  price: "Gs 120.000", x: 38, y: 22 },
-  { id: "rook",   name: "Rook",   price: "Gs 160.000", x: 24, y: 47 },
-  { id: "daith",  name: "Daith",  price: "Gs 160.000", x: 18, y: 48 },
-  { id: "lobulo", name: "Lóbulo", price: "Gs 80.000",  x: 32, y: 82 },
-  { id: "tragus", name: "Tragus", price: "Gs 140.000", x: 18, y: 55 },
-  { id: "conch",  name: "Conch",  price: "Gs 140.000", x: 22, y: 60 },
+  { id: "helix",  name: "Helix",  price: "Gs 100.000", x: 38, y: 22 },
+  { id: "rook",   name: "Rook",   price: "Gs 100.000", x: 24, y: 47 },
+  { id: "daith",  name: "Daith",  price: "Gs 100.000", x: 18, y: 48 },
+  { id: "lobulo", name: "Lóbulo", price: "Gs 50.000",  x: 32, y: 82 },
+  { id: "tragus", name: "Tragus", price: "Gs 100.000", x: 18, y: 55 },
+  { id: "conch",  name: "Conch",  price: "Gs 100.000", x: 22, y: 60 },
 ];
 
 export default function Home() {
@@ -212,6 +213,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* EVENTOS TEASER */}
+      <section className="py-12 md:py-16 px-4 md:px-6 bg-[var(--color-surface)] border-y border-[var(--color-primary-light)]/30 relative">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <CrescentMoon size={48} className="text-[var(--color-gold)] shrink-0 animate-flicker" />
+            <div className="flex-1 text-center md:text-left">
+              <p className="eyebrow mb-2">𓆩 Próximos eventos 𓆪</p>
+              <h2 className="text-[1.4rem] md:text-[1.8rem] mb-2">¿Te enterás primero?</h2>
+              <p className="text-[var(--color-muted-foreground)] text-[0.95rem]">
+                Lanzamientos, noches de piercing, ferias, eventos en la mascarada y colaboraciones.
+                Sumate a la lista de WhatsApp para enterarte antes que nadie.
+              </p>
+            </div>
+            <Link
+              href="/eventos"
+              className="btn-gothic-outline tap shrink-0"
+            >
+              Ver agenda
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIOS */}
+      <Testimonials data={c.testimonios} phone={c.contacto?.whatsapp} />
+
+      {/* NEWSLETTER / NOTIFICACIONES */}
+      {c.newsletter?.enabled && (
+        <section className="py-14 md:py-20 px-4 md:px-6 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, var(--color-background), var(--color-surface))' }}>
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="eyebrow mb-3">{c.newsletter.eyebrow || '𓆩 Subscribite 𓆪'}</p>
+            <h2 className="mb-3">{c.newsletter.title || 'Querés enterarte de lo nuevo?'}</h2>
+            <p className="text-[var(--color-muted-foreground)] mb-6">
+              {c.newsletter.subtitle}
+            </p>
+            <a
+              href={whatsappUrl(c.contacto?.whatsapp, "Hola! Quiero sumarme a las notificaciones de Pierce Charm.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gothic tap inline-flex"
+            >
+              <CrossInverted size={14} className="text-[var(--color-gold)]" />
+              {c.newsletter.cta || 'Sumate por WhatsApp'}
+            </a>
+            <p className="text-[0.78rem] mt-4 text-[var(--color-muted-foreground)]">
+              Frecuencia: {c.newsletter.frequency || 'mensual'} · sin spam
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* FINAL CTA */}
       <section className="py-20 md:py-28 px-4 md:px-6 relative overflow-hidden smoke-bg">
         <div
           className="absolute inset-0 pointer-events-none"
