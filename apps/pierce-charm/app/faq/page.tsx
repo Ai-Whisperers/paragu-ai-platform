@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import content from "@/content/es.json";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, DividerOrnament } from "@/components/ornaments";
+import { whatsappUrl } from "@/lib/site-config";
 
 const c = content as any;
 const f = c.faq || {};
@@ -12,8 +13,25 @@ const items = f.items || [];
 export default function FaqPage() {
   const [open, setOpen] = useState<number | null>(0);
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((it: any) => ({
+      "@type": "Question",
+      name: it.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: it.a,
+      },
+    })),
+  };
+
   return (
     <div className="pt-24 md:pt-32 relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="hidden lg:block chain-side chain-side-left">
         <ChainVertical className="w-full h-full text-[var(--color-primary-light)]" />
       </div>
@@ -75,7 +93,7 @@ export default function FaqPage() {
           <h2 className="text-[1.6rem] md:text-[2rem] mb-3">¿No encontraste tu duda?</h2>
           <p className="text-[var(--color-muted-foreground)] mb-6">Escribinos por WhatsApp y te respondemos cualquier consulta.</p>
           <Link
-            href={`https://wa.me/${c.contacto?.whatsapp}`}
+            href={whatsappUrl(c.contacto?.whatsapp)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gothic tap"

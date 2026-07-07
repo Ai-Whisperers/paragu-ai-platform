@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import content from "@/content/es.json";
 import { EarAnatomy, type PinPosition } from "@/components/EarAnatomy";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, DividerOrnament } from "@/components/ornaments";
+import { whatsappUrl } from "@/lib/site-config";
 
 const c = content as any;
 const p = c.piercings || {};
@@ -25,10 +27,44 @@ const allItems = categories.flatMap((cat: any) =>
   cat.items.map((it: any) => ({ ...it, categoryId: cat.id, categoryLabel: cat.label }))
 );
 
-export default function PiercingsPage() {
+function PiercingsPageInner() {
   const [tab, setTab] = useState<string>("all");
   const [activePin, setActivePin] = useState<string | null>(null);
   const [highlighted, setHighlighted] = useState<string | null>(null);
+  const search = useSearchParams();
+
+  // Persist selection via ?pin=<id>
+  useEffect(() => {
+    const id = search?.get("pin");
+    if (id) {
+      const exists = allItems.some((it: any) => it.id === id);
+      if (exists) {
+        setActivePin(id);
+        setHighlighted(id);
+        // Filter to that category
+        const it = allItems.find((it: any) => it.id === id);
+        if (it) setTab(it.categoryId);
+        // Scroll to card
+        setTimeout(() => {
+          const el = document.getElementById(`p-${id}`);
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 200);
+      }
+    }
+  }, [search]);
+
+  // Update URL when a pin is selected
+  const selectPin = (id: string) => {
+    setActivePin(id);
+    setHighlighted(id);
+    if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      url.searchParams.set("pin", id);
+      window.history.replaceState({}, "", url.toString());
+      const el = document.getElementById(`p-${id}`);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
 
   const items = useMemo(
     () => (tab === "all" ? allItems : allItems.filter((it: any) => it.categoryId === tab)),
@@ -65,12 +101,7 @@ export default function PiercingsPage() {
               <EarAnatomy
                 pins={earPins}
                 activeId={activePin || (highlighted as string | null)}
-                onSelect={(id) => {
-                  setActivePin(id);
-                  setHighlighted(id);
-                  const el = document.getElementById(`p-${id}`);
-                  if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
-                }}
+                onSelect={selectPin}
               />
               <p className="text-center mt-4 text-[0.78rem] font-[var(--font-display)] uppercase tracking-[0.2em] text-[var(--color-muted-foreground)]">
                 Selecciona una zona · Lista de piercings abajo
@@ -152,7 +183,7 @@ export default function PiercingsPage() {
             Contanos qué piercing querés, lo charlamos por WhatsApp y te agendamos en el horario disponible.
           </p>
           <Link
-            href={`https://wa.me/${c.contacto?.whatsapp}?text=${encodeURIComponent("Hola! Quiero reservar la perforación: " + (focusItem?.name || ""))}`}
+            href={whatsappUrl(c.contacto?.whatsapp, "Hola! Quiero reservar la perforación: " + (focusItem?.name || ""))}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gothic tap"
@@ -212,5 +243,13 @@ function PiercingCard({
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PiercingsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen pt-24 md:pt-32 px-4 md:px-6 max-w-7xl mx-auto"><p className="text-center text-[var(--color-muted-foreground)]">Cargando catálogo...</p></div>}>
+      <PiercingsPageInner />
+    </Suspense>
   );
 }

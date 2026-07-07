@@ -5,6 +5,7 @@ import Link from "next/link";
 import content from "@/content/es.json";
 import { ChainVertical, Bat, Skull, CrossInverted, Candle, Spider, CrescentMoon, DividerOrnament } from "@/components/ornaments";
 import { EarAnatomy, type PinPosition } from "@/components/EarAnatomy";
+import { whatsappUrl } from "@/lib/site-config";
 
 const c = content as any;
 const h = c.home || {};
@@ -61,7 +62,7 @@ export default function Home() {
                 <Skull size={14} className="text-[var(--color-gold)]" />
                 {h.hero?.ctaPrimaryText}
               </Link>
-              <a href={h.hero?.ctaSecondaryHref} target="_blank" rel="noopener noreferrer" className="btn-gothic-outline tap">
+              <a href={whatsappUrl(c.contacto?.whatsapp, h.hero?.ctaSecondaryText)} target="_blank" rel="noopener noreferrer" className="btn-gothic-outline tap">
                 <CrossInverted size={14} className="text-[var(--color-primary-light)]" />
                 {h.hero?.ctaSecondaryText}
               </a>
@@ -165,10 +166,10 @@ export default function Home() {
       <section className="py-16 md:py-24 px-4 md:px-6 bg-[var(--color-surface)] relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-left md:text-center max-w-2xl md:mx-auto mb-12">
-            <p className="eyebrow mb-3">𓆩 Catálogo 𓆪</p>
-            <h2>Elegí tu perforación</h2>
+            <p className="eyebrow mb-3">{h.catalogTeaser?.eyebrow || '𓆩 Catálogo 𓆪'}</p>
+            <h2>{h.catalogTeaser?.title || 'Elegí tu perforación'}</h2>
             <p className="text-[var(--color-muted-foreground)] mt-3">
-              Más de 15 ubicaciones disponibles. Cada una con su tiempo de cicatrización y materiales específicos.
+              {h.catalogTeaser?.subtitle}
             </p>
           </div>
 
@@ -223,7 +224,7 @@ export default function Home() {
             {finalCta.description}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <a href={finalCta.primaryHref} target="_blank" rel="noopener noreferrer" className="btn-gothic tap">
+            <a href={whatsappUrl(c.contacto?.whatsapp)} target="_blank" rel="noopener noreferrer" className="btn-gothic tap">
               <CrossInverted size={14} className="text-[var(--color-gold)]" />
               {finalCta.primaryText}
             </a>

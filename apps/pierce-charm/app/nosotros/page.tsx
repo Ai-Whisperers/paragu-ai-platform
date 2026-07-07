@@ -3,6 +3,7 @@
 import Link from "next/link";
 import content from "@/content/es.json";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, Bat, DividerOrnament } from "@/components/ornaments";
+import { whatsappUrl } from "@/lib/site-config";
 
 const c = content as any;
 const n = c.nosotros || {};
@@ -82,11 +83,14 @@ export default function NosotrosPage() {
             ].map((cell, i) => (
               <div
                 key={i}
-                className="aspect-square rock-card flex items-center justify-center bg-gradient-to-br from-[var(--color-secondary-deep)] via-[var(--color-surface)] to-[var(--color-card)] relative"
+                className="aspect-square rock-card flex items-center justify-center bg-gradient-to-br from-[var(--color-secondary-deep)] via-[var(--color-surface)] to-[var(--color-card)] relative overflow-hidden"
               >
                 {cell.decor}
                 <span className="absolute bottom-2 left-2 text-[0.7rem] uppercase tracking-[0.2em] text-[var(--color-primary-light)] font-[var(--font-display)]">
                   {cell.label}
+                </span>
+                <span className="absolute top-2 right-2 px-1.5 py-0.5 bg-[var(--color-background)]/85 border border-[var(--color-primary-light)] text-[0.55rem] uppercase tracking-[0.18em] text-[var(--color-primary-light)] font-[var(--font-display)]">
+                  Foto pendiente
                 </span>
               </div>
             ))}
@@ -100,7 +104,7 @@ export default function NosotrosPage() {
           <h2 className="text-[1.6rem] md:text-[2rem] mb-3">¿Charlamos?</h2>
           <p className="text-[var(--color-muted-foreground)] mb-6">Te respondemos cualquier duda por WhatsApp. Sin compromiso.</p>
           <Link
-            href={`https://wa.me/${c.contacto?.whatsapp}`}
+            href={whatsappUrl(c.contacto?.whatsapp)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gothic tap"

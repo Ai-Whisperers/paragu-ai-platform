@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import { Cinzel, Tangerine, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { BottomNav } from "@/components/BottomNav";
+import { CookieBanner } from "@/components/CookieBanner";
 import content from "@/content/es.json";
 
 const c = content as any;
+const SITE_URL = c.site?.url || "https://piercecharm.paragu-ai.com";
+const OG_IMAGE = `${SITE_URL}/og.png`;
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -31,19 +35,60 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(c.site?.url || "https://piercecharm.paragu-ai.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: c.site?.title || "Pierce Charm",
     template: `%s | ${c.site?.title || "Pierce Charm"}`,
   },
   description: c.site?.description || c.metaDescription,
+  keywords: [
+    "piercing Asunción",
+    "piercing Paraguay",
+    "joyería alternativa",
+    "estudio piercing",
+    "helix piercing",
+    "septum piercing",
+    "daith rook piercing",
+    "cartílago piercing",
+    "PVD negro titanio",
+    "Asunción piercing studio",
+    "Pierce Charm",
+  ],
   openGraph: {
     title: c.site?.title,
     description: c.site?.description,
     locale: "es_PY",
     type: "website",
+    url: SITE_URL,
+    siteName: c.businessName,
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: c.site?.title || "Pierce Charm",
+      },
+    ],
   },
-  themeColor: "#63081d",
+  twitter: {
+    card: "summary_large_image",
+    title: c.site?.title,
+    description: c.site?.description,
+    images: [OG_IMAGE],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
 };
 
 export const viewport = {
@@ -51,7 +96,41 @@ export const viewport = {
   initialScale: 1,
   viewportFit: "cover" as const,
   maximumScale: 5,
+  themeColor: "#63081d",
 };
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  name: c.businessName,
+  description: c.metaDescription,
+  url: SITE_URL,
+  telephone: `+${c.contacto?.whatsapp || ""}`,
+  priceRange: "Gs 80.000 - Gs 250.000",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Asunción",
+    addressRegion: "Central",
+    addressCountry: "PY",
+  },
+  openingHoursSpecification: (c.contacto?.schedule || [])
+    .filter((s: any) => s.hours !== "Cerrado")
+    .map((s: any) => {
+      const parts = (s.hours || "").split(/[-–]/);
+      return {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: s.day,
+        opens: parts[0]?.trim() || "",
+        closes: parts[1]?.trim() || "",
+      };
+    }),
+  image: OG_IMAGE,
+  sameAs: [
+    `https://instagram.com/${(c.contacto?.instagram || "pierce.charm").replace("@", "")}`,
+  ],
+};
+
+const fontCss = `:root{--font-display:${cinzel.style.fontFamily},serif;--font-script:${tangerine.style.fontFamily},cursive;--font-body:${inter.style.fontFamily},system-ui,sans-serif;}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -60,52 +139,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${cinzel.variable} ${tangerine.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <style>{`
-          :root {
-            --font-display: ${cinzel.style.fontFamily}, serif;
-            --font-script:  ${tangerine.style.fontFamily}, cursive;
-            --font-body:    ${inter.style.fontFamily}, system-ui, sans-serif;
-          }
-        `}</style>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "HealthAndBeautyBusiness",
-              name: c.businessName,
-              description: c.metaDescription,
-              url: c.site?.url,
-              telephone: `+${c.contacto?.whatsapp || ""}`,
-              priceRange: "Gs 80.000 - Gs 250.000",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Asunción",
-                addressCountry: "PY",
-              },
-              openingHoursSpecification: (c.contacto?.schedule || [])
-                .filter((s: any) => s.hours !== "Cerrado")
-                .map((s: any) => ({
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: s.day,
-                  opens: (s.hours || "").split(" - ")[0]?.trim() || "",
-                  closes: (s.hours || "").split(" - ")[1]?.trim() || "",
-                })),
-              image: `${c.site?.url}/og.png`,
-            }),
-          }}
-        />
-      </head>
       <body className="antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:z-[999] focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-[var(--color-primary)] focus:text-[var(--color-foreground)] focus:rounded-sm focus:font-[var(--font-display)] focus:text-[0.78rem] focus:uppercase focus:tracking-[0.22em]"
+        >
+          Saltar al contenido principal
+        </a>
+
+        <style dangerouslySetInnerHTML={{ __html: fontCss }} />
+
+        <Script
+          id="ld-localbusiness"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         <Header content={c} />
-        <main className="min-h-screen">{children}</main>
+        <main id="main" className="min-h-screen">
+          {children}
+        </main>
         <Footer content={c} />
         <WhatsAppFloat
           phone={c.contacto?.whatsapp || "595981324569"}
           message="Hola! Quiero información sobre un piercing."
         />
         <BottomNav />
+        <CookieBanner />
       </body>
     </html>
   );

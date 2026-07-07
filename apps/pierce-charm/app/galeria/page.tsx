@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import content from "@/content/es.json";
-import { ChainVertical, CrossInverted, Skull, CrescentMoon, Bat, DividerOrnament } from "@/components/ornaments";
+import { ChainVertical, Skull, CrossInverted, CrescentMoon, Bat, DividerOrnament } from "@/components/ornaments";
+import { whatsappUrl } from "@/lib/site-config";
 
 const c = content as any;
 const g = c.gallery || {};
@@ -79,7 +80,7 @@ export default function GaleriaPage() {
           Consultá disponibilidad por WhatsApp. Trabajamos con curaduría de joyería alternativa y hacemos piezas por encargo.
         </p>
         <Link
-          href={`https://wa.me/${c.contacto?.whatsapp}?text=${encodeURIComponent("Hola! Quiero info sobre la pieza de joyería: ")}`}
+          href={whatsappUrl(c.contacto?.whatsapp, "Hola! Quiero info sobre la pieza de joyería: ")}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gothic tap"
@@ -97,7 +98,12 @@ function GalleryCard({ item, index }: { item: any; index: number }) {
 
   return (
     <div className="rock-card overflow-hidden text-left group">
-      <div className="relative aspect-square w-full bg-gradient-to-br from-[var(--color-secondary-deep)] via-[var(--color-surface)] to-[var(--color-card)] flex items-center justify-center overflow-hidden">
+      <div
+        className="relative aspect-square w-full flex items-center justify-center overflow-hidden"
+        style={{
+          background: `linear-gradient(${(variant * 60) % 360}deg, var(--color-secondary-deep), var(--color-card))`,
+        }}
+      >
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-4 right-4 text-[var(--color-primary-light)]">
             <CrossInverted size={28} />
@@ -108,6 +114,11 @@ function GalleryCard({ item, index }: { item: any; index: number }) {
         </div>
 
         <OrnamentVisual variant={variant} />
+
+        {/* Honest "real photo coming" badge */}
+        <div className="absolute bottom-3 right-3 px-2 py-1 bg-[var(--color-background)]/85 border border-[var(--color-primary-light)] text-[0.6rem] uppercase tracking-[0.18em] text-[var(--color-primary-light)] font-[var(--font-display)] backdrop-blur-sm">
+          Foto pendiente
+        </div>
 
         <span className="absolute top-2 left-2 px-2 py-0.5 bg-[var(--color-background)]/80 border border-[var(--color-primary-light)] text-[0.65rem] uppercase tracking-[0.18em] text-[var(--color-primary-light)] font-[var(--font-display)]">
           {item.category}
