@@ -1,0 +1,38 @@
+FROM node:22-alpine AS base
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@10.33.0 --activate
+
+# Install all workspace deps
+FROM base AS deps
+WORKDIR /app
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY apps/pierce-charm/package.json ./apps/pierce-charm/package.json
+RUN pnpm install --frozen-lockfile
+
+# Build
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/apps/pierce-charm/node_modules ./apps/pierce-charm/node_modules
+COPY . .
+WORKDIR /app/apps/pierce-charm
+RUN pnpm build
+
+# Production image (standalone)
+FROM node:22-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
+
+COPY --from=builder --chown=nextjs:nodejs /app/apps/pierce-charm/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/apps/pierce-charm/.next/static ./apps/pierce-charm/.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/apps/pierce-charm/public ./apps/pierce-charm/public
+
+USER nextjs
+EXPOSE 3000
+
+CMD ["node", "apps/pierce-charm/server.js"]
