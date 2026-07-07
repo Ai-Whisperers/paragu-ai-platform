@@ -32,7 +32,7 @@ export default function ContactoPage() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           <div className="space-y-5">
             <a
-              href={whatsappUrl(phone, 'Hola! Quiero reservar una cita.')}
+              href={whatsappUrl(phone, "Hola! Quiero reservar una cita en Pierce Charm.")}
               target="_blank"
               rel="noopener noreferrer"
               className="rock-card p-6 md:p-7 block no-underline text-[var(--color-foreground)] hover:shadow-[0_0_40px_rgba(176,136,56,0.25)] transition-all"
@@ -120,7 +120,7 @@ export default function ContactoPage() {
                   "No tomar alcohol 24h antes",
                   "No estés en ayunas (comé liviano)",
                   "Vení con la zona limpia, sin maquillaje",
-                  "Si tenés piercing previo, traé joyería para retiro",
+                  "Si ya tenés un piercing previo y querés usar tu propia joyería, traéla Esterilizada para hacértelo cambiar",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2.5">
                     <CrossInverted size={10} className="text-[var(--color-gold)] mt-1.5 flex-shrink-0" />

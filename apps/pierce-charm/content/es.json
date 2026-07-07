@@ -6,7 +6,37 @@
     "title": "Pierce Charm — Piercings & Joyería Alternativa",
     "description": "Estudio de piercings en Asunción. Realizamos piercing profesional, joyería alternativa y curaduría de piezas únicas.",
     "url": "https://piercecharm.paragu-ai.com",
-    "whatsappBase": "https://wa.me/595981324569"
+    "whatsappBase": "https://wa.me/595981324569",
+    "page_decor": {
+      "home": [
+        "moon",
+        "chain",
+        "gem"
+      ],
+      "piercings": [
+        "bat",
+        "skull",
+        "flame"
+      ],
+      "galeria": [
+        "crescent_moon",
+        "chain",
+        "crown"
+      ],
+      "nosotros": [
+        "chain",
+        "bat",
+        "skull"
+      ],
+      "contacto": [
+        "flame",
+        "crescent_moon"
+      ],
+      "faq": [
+        "skull",
+        "bat"
+      ]
+    }
   },
   "theme": {
     "color": "#63081d"
@@ -87,7 +117,7 @@
         },
         {
           "icon": "gem",
-          "title": "Joyería curada",
+          "title": "Joyería alternativa",
           "description": "Selección de piezas de diseñadores independientes que respetan estética y calidad."
         }
       ]
@@ -148,12 +178,13 @@
     }
   },
   "piercings": {
-    "intro": "Catálogo completo de piercings profesionales. Tocá una ubicación en la oreja para ver detalles, o navegá por categoría. Reservá por WhatsApp con el mensaje pre-armado.",
+    "intro": "Catálogo de piercings profesionales en Asunción. Tocá una zona en la oreja para ver detalles, o navegá por categoría. Reservá por WhatsApp con el mensaje pre-armado.",
     "title": "Catálogo de Piercings",
     "categories": [
       {
-        "id": "lobulo",
-        "label": "Lóbulo",
+        "id": "basicos",
+        "label": "Básicos",
+        "subtitle": "Para empezar — lóbulo, segundo, tercer",
         "items": [
           {
             "id": "lobulo-simple",
@@ -163,7 +194,7 @@
               "x": 32,
               "y": 82
             },
-            "price": "Gs 80.000",
+            "price": "Gs 50.000",
             "downtime": "6-8 semanas",
             "description": "Perforación clásica del lóbulo de la oreja con joyería implantgrade de 1.2mm.",
             "level": 1
@@ -176,7 +207,7 @@
               "x": 26,
               "y": 88
             },
-            "price": "Gs 90.000",
+            "price": "Gs 50.000",
             "downtime": "6-8 semanas",
             "description": "Segunda perforación en el mismo lóbulo para stacking de aros.",
             "level": 1
@@ -189,7 +220,7 @@
               "x": 22,
               "y": 92
             },
-            "price": "Gs 95.000",
+            "price": "Gs 50.000",
             "downtime": "6-8 semanas",
             "description": "Tercera perforación en el lóbulo para looks cargados y curaduría.",
             "level": 1
@@ -199,6 +230,7 @@
       {
         "id": "cartilago",
         "label": "Cartílago",
+        "subtitle": "Helix, tragus, daith — los básicos del cartílago. 100K.",
         "items": [
           {
             "id": "helix",
@@ -208,9 +240,9 @@
               "x": 38,
               "y": 22
             },
-            "price": "Gs 120.000",
+            "price": "Gs 100.000",
             "downtime": "4-6 meses",
-            "description": "Perforación en el borde superior externo de la oreja, en el cartílago helix. La más solicitada del cartílago.",
+            "description": "Borde superior externo de la oreja. La perforación de cartílago más solicitada.",
             "level": 2
           },
           {
@@ -221,9 +253,9 @@
               "x": 35,
               "y": 35
             },
-            "price": "Gs 130.000",
+            "price": "Gs 100.000",
             "downtime": "6-9 meses",
-            "description": "Cartílago plano en la zona media superior de la oreja. Ideal para studs y dijes pequeños.",
+            "description": "Cartílago plano medio superior. Ideal para studs y dijes pequeños.",
             "level": 2
           },
           {
@@ -234,9 +266,9 @@
               "x": 26,
               "y": 30
             },
-            "price": "Gs 120.000",
+            "price": "Gs 100.000",
             "downtime": "4-6 meses",
-            "description": "Pequeña perforación en la parte frontal del helix, ideal para dijes delicados.",
+            "description": "Pequeña perforación en la parte frontal del helix, para dijes delicados.",
             "level": 2
           },
           {
@@ -247,9 +279,9 @@
               "x": 18,
               "y": 55
             },
-            "price": "Gs 140.000",
+            "price": "Gs 100.000",
             "downtime": "6-9 meses",
-            "description": "Perforación en el tragus, la pequeña solapa de cartílago frente al canal auditivo.",
+            "description": "La pequeña solapa de cartílago frente al canal auditivo.",
             "level": 2
           },
           {
@@ -260,9 +292,9 @@
               "x": 42,
               "y": 58
             },
-            "price": "Gs 150.000",
+            "price": "Gs 100.000",
             "downtime": "9-12 meses",
-            "description": "La solapa opuesta al tragus, en la cara interna de la oreja.",
+            "description": "Solapa opuesta al tragus, en la cara interna de la oreja.",
             "level": 3
           },
           {
@@ -273,9 +305,9 @@
               "x": 24,
               "y": 47
             },
-            "price": "Gs 160.000",
+            "price": "Gs 100.000",
             "downtime": "9-12 meses",
-            "description": "Perforación en el pliegue vertical interno del cartílago superior, sobre el tragus.",
+            "description": "Pliegue vertical interno del cartílago superior, sobre el tragus.",
             "level": 3
           },
           {
@@ -286,9 +318,9 @@
               "x": 18,
               "y": 48
             },
-            "price": "Gs 160.000",
+            "price": "Gs 100.000",
             "downtime": "9-12 meses",
-            "description": "Perforación en el pliegue más interno de la oreja, donde el helix se conecta al canal.",
+            "description": "Pliegue más interno, donde el helix se conecta al canal auditivo.",
             "level": 3
           },
           {
@@ -299,39 +331,174 @@
               "x": 22,
               "y": 60
             },
-            "price": "Gs 140.000",
+            "price": "Gs 100.000",
             "downtime": "6-9 meses",
-            "description": "Perforación en la concha, la zona cóncava central de la oreja. Ideal para anillos.",
+            "description": "Zona cóncava central de la oreja. Ideal para anillos.",
+            "level": 2
+          }
+        ]
+      },
+      {
+        "id": "faciales",
+        "label": "Faciales",
+        "subtitle": "Rostro (nariz, labios, ceja). Generalmente 100K.",
+        "items": [
+          {
+            "id": "nostril",
+            "name": "Nostril",
+            "zone": "Nariz",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "3-4 meses",
+            "description": "Perforación lateral de la fosa nasal con tornillo o aro.",
+            "level": 2
+          },
+          {
+            "id": "septum",
+            "name": "Septum",
+            "zone": "Nariz",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "2-3 meses",
+            "description": "Tabique nasal. Se puede ocultar fácilmente.",
+            "level": 2
+          },
+          {
+            "id": "high-nostril",
+            "name": "High Nostril",
+            "zone": "Nariz",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "3-4 meses",
+            "description": "Nostril alto en cartílago lateral, joyería tipo L-bend.",
+            "level": 2
+          },
+          {
+            "id": "medusa",
+            "name": "Medusa",
+            "zone": "Labios",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "2-4 meses",
+            "description": "Philtrum: en el surco entre labio superior y nariz.",
+            "level": 2
+          },
+          {
+            "id": "monroe",
+            "name": "Monroe",
+            "zone": "Labios",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "2-4 meses",
+            "description": "Labio superior lateral izquierdo (estilo Marilyn Monroe).",
+            "level": 2
+          },
+          {
+            "id": "labret",
+            "name": "Labret",
+            "zone": "Labios",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "2-4 meses",
+            "description": "Labio inferior, centrada o lateral, con stud o aro.",
+            "level": 2
+          },
+          {
+            "id": "labret-bajo",
+            "name": "Labret bajo",
+            "zone": "Labios",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "2-4 meses",
+            "description": "Lateral del labio inferior.",
+            "level": 2
+          },
+          {
+            "id": "bridge",
+            "name": "Bridge",
+            "zone": "Ceja",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "6-9 meses",
+            "description": "En el puente de la nariz entre los ojos.",
+            "level": 3
+          },
+          {
+            "id": "eyebrow",
+            "name": "Eyebrow",
+            "zone": "Ceja",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "2-3 meses",
+            "description": "Horizontal en la ceja con surface bar.",
+            "level": 2
+          },
+          {
+            "id": "tongue",
+            "name": "Tongue",
+            "zone": "Boca",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "2-3 meses",
+            "description": "Centrada en la lengua con barbell recto.",
+            "level": 2
+          }
+        ]
+      },
+      {
+        "id": "body",
+        "label": "Body",
+        "subtitle": "Ombligo y zonas corporales posibles.",
+        "items": [
+          {
+            "id": "ombligo",
+            "name": "Ombligo",
+            "zone": "Body",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "6-9 meses",
+            "description": "Ombligo con curve barbell (estándar).",
+            "level": 2
+          },
+          {
+            "id": "ombligo-inverso",
+            "name": "Ombligo inverso",
+            "zone": "Body",
+            "position": null,
+            "price": "Gs 100.000",
+            "downtime": "6-9 meses",
+            "description": "Curve hacia arriba, ideal para complementar al belly existente.",
             "level": 2
           }
         ]
       },
       {
         "id": "industrial",
-        "label": "Industrial",
+        "label": "Industrial / orbital",
+        "subtitle": "Las perforaciones complejas del cartílago. 150K.",
         "items": [
           {
             "id": "industrial",
             "name": "Industrial",
-            "zone": "Industrial",
+            "zone": "Cartílago",
             "position": {
               "x": 28,
               "y": 25
             },
-            "price": "Gs 250.000",
+            "price": "Gs 150.000",
             "downtime": "9-12 meses",
-            "description": "Doble perforación en helix conectadas por una barra larga. La perforación de cartílago más icónica.",
+            "description": "Doble perforación en helix conectadas por una barra larga.",
             "level": 3
           },
           {
             "id": "orbital",
             "name": "Orbital",
-            "zone": "Industrial",
+            "zone": "Cartílago",
             "position": {
               "x": 30,
               "y": 70
             },
-            "price": "Gs 180.000",
+            "price": "Gs 100.000",
             "downtime": "6-9 meses",
             "description": "Dos perforaciones conectadas por un anillo, generalmente en lóbulo o helix.",
             "level": 2
@@ -339,240 +506,14 @@
           {
             "id": "snug",
             "name": "Snug",
-            "zone": "Industrial",
+            "zone": "Cartílago",
             "position": {
               "x": 24,
               "y": 52
             },
-            "price": "Gs 180.000",
+            "price": "Gs 150.000",
             "downtime": "9-12 meses",
-            "description": "Perforación en el cartílago vertical anti-helix, requiere anatomía específica.",
-            "level": 3
-          }
-        ]
-      },
-      {
-        "id": "otros",
-        "label": "Otros",
-        "items": [
-          {
-            "id": "septum",
-            "name": "Septum",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 180.000",
-            "downtime": "2-3 meses",
-            "description": "Perforación del tabique nasal, popular entre estéticas alternativas. Se puede ocultar fácilmente.",
-            "level": 2
-          },
-          {
-            "id": "nostril",
-            "name": "Nostril",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 130.000",
-            "downtime": "3-4 meses",
-            "description": "Perforación lateral de la fosa nasal con tornillo o aro.",
-            "level": 1
-          },
-          {
-            "id": "labret",
-            "name": "Labret",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 160.000",
-            "downtime": "2-4 meses",
-            "description": "Perforación del labio inferior, centrada o lateral, con stud o aro.",
-            "level": 2
-          },
-          {
-            "id": "microdermal",
-            "name": "Microdermal (ancla)",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 220.000",
-            "downtime": "6-9 meses",
-            "description": "Ancla subdérmica en cualquier zona del cuerpo con un solo punto de perforación visible.",
-            "level": 3
-          },
-          {
-            "id": "high-nostril",
-            "name": "High Nostril",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 150.000",
-            "downtime": "3-4 meses",
-            "description": "Nostril alto en el cartílago lateral, joyería tipo L-bend o stud curvo.",
-            "level": 2
-          },
-          {
-            "id": "septril",
-            "name": "Septril",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 200.000",
-            "downtime": "3-4 meses",
-            "description": "Combinación septum + nostril con una sola barra en L.",
-            "level": 3
-          },
-          {
-            "id": "bridge",
-            "name": "Bridge",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 160.000",
-            "downtime": "6-9 meses",
-            "description": "Perforación en el puente de la nariz entre los ojos (superficie).",
-            "level": 3
-          },
-          {
-            "id": "lowbret",
-            "name": "Lowbret",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 160.000",
-            "downtime": "2-4 meses",
-            "description": "Labret bajo el labio inferior, lado de la boca.",
-            "level": 2
-          },
-          {
-            "id": "medusa",
-            "name": "Medusa",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 170.000",
-            "downtime": "2-4 meses",
-            "description": "Philtrum: perforación en el surco entre labio superior y nariz.",
-            "level": 2
-          },
-          {
-            "id": "monroe",
-            "name": "Monroe",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 170.000",
-            "downtime": "2-4 meses",
-            "description": "Labio superior lateral izquierdo (estilo Marilyn Monroe).",
-            "level": 2
-          },
-          {
-            "id": "madonna",
-            "name": "Madonna",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 170.000",
-            "downtime": "2-4 meses",
-            "description": "Labio superior lateral derecho (estilo Madonna).",
-            "level": 2
-          },
-          {
-            "id": "snake-bites",
-            "name": "Snake Bites",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 300.000",
-            "downtime": "2-4 meses",
-            "description": "Dos labrets simétricos (uno a cada lado del labio inferior).",
-            "level": 2
-          },
-          {
-            "id": "angel-bites",
-            "name": "Angel Bites",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 300.000",
-            "downtime": "2-4 meses",
-            "description": "Dos perforaciones simétricas en el labio superior.",
-            "level": 2
-          },
-          {
-            "id": "tongue",
-            "name": "Tongue",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 160.000",
-            "downtime": "2-3 meses",
-            "description": "Perforación central de la lengua con barbell recto.",
-            "level": 2
-          },
-          {
-            "id": "smiley",
-            "name": "Smiley",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 140.000",
-            "downtime": "2-3 meses",
-            "description": "Perforación del frenillo labial superior (no visible al sonreír).",
-            "level": 2
-          },
-          {
-            "id": "frowny",
-            "name": "Frowny",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 140.000",
-            "downtime": "2-3 meses",
-            "description": "Perforación del frenillo labial inferior.",
-            "level": 2
-          },
-          {
-            "id": "eyebrow",
-            "name": "Eyebrow",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 150.000",
-            "downtime": "2-3 meses",
-            "description": "Perforación en la ceja, horizontal, con surface bar.",
-            "level": 2
-          },
-          {
-            "id": "anti-eyebrow",
-            "name": "Anti-eyebrow",
-            "zone": "Otros",
-            "position": null,
-            "price": "Gs 150.000",
-            "downtime": "2-3 meses",
-            "description": "Surface bar en el hueso bajo la ceja (lateral).",
-            "level": 2
-          },
-          {
-            "id": "belly",
-            "name": "Belly",
-            "zone": "Body",
-            "position": null,
-            "price": "Gs 130.000",
-            "downtime": "6-9 meses",
-            "description": "Ombligo con curve barbell (estándar).",
-            "level": 1
-          },
-          {
-            "id": "inverse-belly",
-            "name": "Inverse Belly",
-            "zone": "Body",
-            "position": null,
-            "price": "Gs 150.000",
-            "downtime": "6-9 meses",
-            "description": "Ombligo con barbell invertido (curva hacia arriba).",
-            "level": 2
-          },
-          {
-            "id": "nipple",
-            "name": "Nipple",
-            "zone": "Body",
-            "position": null,
-            "price": "Gs 200.000",
-            "downtime": "6-9 meses",
-            "description": "Perforación del pezón, con barbell recto implantgrade.",
-            "level": 2
-          },
-          {
-            "id": "dermal",
-            "name": "Microdermal (ancla)",
-            "zone": "Body",
-            "position": null,
-            "price": "Gs 220.000",
-            "downtime": "6-9 meses",
-            "description": "Ancla subdérmica con un solo punto de perforación visible. Cualquier zona del cuerpo.",
+            "description": "Cartílago vertical anti-helix. Requiere anatomía específica.",
             "level": 3
           }
         ]
@@ -803,31 +744,38 @@
     "schedule": [
       {
         "day": "Lunes",
-        "hours": "Cerrado"
+        "hours": "12:00 - 20:00",
+        "closed": false
       },
       {
         "day": "Martes",
-        "hours": "14:00 - 20:00"
+        "hours": "12:00 - 20:00",
+        "closed": false
       },
       {
         "day": "Miércoles",
-        "hours": "14:00 - 20:00"
+        "hours": "12:00 - 20:00",
+        "closed": false
       },
       {
         "day": "Jueves",
-        "hours": "14:00 - 20:00"
+        "hours": "12:00 - 20:00",
+        "closed": false
       },
       {
         "day": "Viernes",
-        "hours": "14:00 - 21:00"
+        "hours": "12:00 - 20:00",
+        "closed": false
       },
       {
         "day": "Sábado",
-        "hours": "10:00 - 18:00"
+        "hours": "09:00 - 15:00",
+        "closed": false
       },
       {
         "day": "Domingo",
-        "hours": "Cerrado"
+        "hours": "Cerrado",
+        "closed": true
       }
     ],
     "whatsapp": "595981324569",
@@ -1074,6 +1022,40 @@
         "calavera",
         "cruz invertida"
       ]
+    },
+    "round_2": {
+      "fecha": "2026-07-07",
+      "confirmaciones_claras": [
+        "Mayoría perforaciones a Gs 50.000 (lóbulo)",
+        "Cartílago + faciales a Gs 100.000",
+        "Industrial/Snug a Gs 150.000 (más complejas)",
+        "NO microdermal/ancla, NO surface, NO thermal, NO expansiones, NO pezones por ahora",
+        "Joyería rango Gs 50.000 - 125.000",
+        "SÍ ombligo y labret bajo",
+        "Plugs/túneles se llaman ahora \"Expansores\"",
+        "Sepultura/góticos ahora \"Alternative style\"",
+        "\"Joyería curada\" → \"Joyería alternativa\" en copy",
+        "Bot WhatsApp para triage inicial: detección → derivación a humano",
+        "Seguimiento post: 1 semana / 1 mes / 3 meses",
+        "Kit de cuidados: solución fisiológica + jabón neutro",
+        "Edad: lóbulo cualquier edad, face piercings 14-15, expansiones 18+"
+      ],
+      "politica_edad_especifica": {
+        "oreja_lobulo": "cualquier edad con padres",
+        "face_oreja_nariz_labio_ceja_septum_nostril": "14-15 con CI adulto y CI menor",
+        "body_ombligo": "18+",
+        "pezon": "NO por ahora",
+        "expansiones": "18+",
+        "microdermal_surface_thermal": "NO por ahora (sin experiencia)"
+      },
+      "decoracion_por_pagina": {
+        "home": "luna, cadenitas, colores de piercings",
+        "otras": "murciélagos, calaveras"
+      },
+      "animaciones": {
+        "murcielagos_aleteando": true,
+        "llamas_parpadeando": true
+      }
     }
   }
 }
