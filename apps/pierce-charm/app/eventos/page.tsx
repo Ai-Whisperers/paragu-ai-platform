@@ -10,6 +10,9 @@ const phone = c.contacto?.whatsapp || "595981324569";
 export const metadata: Metadata = {
   title: eventos.title || "Eventos próximos",
   description: "Lanzamientos, noches de piercing, ferias y colaboraciones. Enterate de lo que se viene en Pierce Charm.",
+  alternates: {
+    canonical: "https://piercecharm.paragu-ai.com/eventos",
+  },
 };
 
 export default function EventosPage() {

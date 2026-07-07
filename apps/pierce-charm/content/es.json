@@ -227,7 +227,10 @@
             "price": "Gs 50.000",
             "downtime": "6-8 semanas",
             "description": "Perforación clásica del lóbulo de la oreja con joyería implantgrade de 1.2mm.",
-            "level": 1
+            "level": 1,
+            "region": "oreja",
+            "visual_key": "lobulo-simple",
+            "jewelry": "stud"
           },
           {
             "id": "lobulo-segundo",
@@ -240,7 +243,10 @@
             "price": "Gs 50.000",
             "downtime": "6-8 semanas",
             "description": "Segunda perforación en el mismo lóbulo para stacking de aros.",
-            "level": 1
+            "level": 1,
+            "region": "oreja",
+            "visual_key": "lobulo-segundo",
+            "jewelry": "stud"
           },
           {
             "id": "lobulo-tercero",
@@ -253,7 +259,10 @@
             "price": "Gs 50.000",
             "downtime": "6-8 semanas",
             "description": "Tercera perforación en el lóbulo para looks cargados y curaduría.",
-            "level": 1
+            "level": 1,
+            "region": "oreja",
+            "visual_key": "lobulo-tercero",
+            "jewelry": "labret-stud"
           }
         ]
       },
@@ -273,7 +282,10 @@
             "price": "Gs 100.000",
             "downtime": "4-6 meses",
             "description": "Borde superior externo de la oreja. La perforación de cartílago más solicitada.",
-            "level": 2
+            "level": 2,
+            "region": "oreja",
+            "visual_key": "helix",
+            "jewelry": "labret-stud"
           },
           {
             "id": "flat",
@@ -286,7 +298,10 @@
             "price": "Gs 100.000",
             "downtime": "6-9 meses",
             "description": "Cartílago plano medio superior. Ideal para studs y dijes pequeños.",
-            "level": 2
+            "level": 2,
+            "region": "oreja",
+            "visual_key": "flat",
+            "jewelry": "labret-stud"
           },
           {
             "id": "forward-helix",
@@ -299,7 +314,10 @@
             "price": "Gs 100.000",
             "downtime": "4-6 meses",
             "description": "Pequeña perforación en la parte frontal del helix, para dijes delicados.",
-            "level": 2
+            "level": 2,
+            "region": "oreja",
+            "visual_key": "forward-helix",
+            "jewelry": "labret-stud"
           },
           {
             "id": "tragus",
@@ -312,7 +330,10 @@
             "price": "Gs 100.000",
             "downtime": "6-9 meses",
             "description": "La pequeña solapa de cartílago frente al canal auditivo.",
-            "level": 2
+            "level": 2,
+            "region": "oreja",
+            "visual_key": "tragus",
+            "jewelry": "labret-stud"
           },
           {
             "id": "anti-tragus",
@@ -325,7 +346,10 @@
             "price": "Gs 100.000",
             "downtime": "9-12 meses",
             "description": "Solapa opuesta al tragus, en la cara interna de la oreja.",
-            "level": 3
+            "level": 3,
+            "region": "oreja",
+            "visual_key": "anti-tragus",
+            "jewelry": "labret-stud"
           },
           {
             "id": "rook",
@@ -338,7 +362,10 @@
             "price": "Gs 100.000",
             "downtime": "9-12 meses",
             "description": "Pliegue vertical interno del cartílago superior, sobre el tragus.",
-            "level": 3
+            "level": 3,
+            "region": "oreja",
+            "visual_key": "rook",
+            "jewelry": "curved-barbell"
           },
           {
             "id": "daith",
@@ -351,7 +378,10 @@
             "price": "Gs 100.000",
             "downtime": "9-12 meses",
             "description": "Pliegue más interno, donde el helix se conecta al canal auditivo.",
-            "level": 3
+            "level": 3,
+            "region": "oreja",
+            "visual_key": "daith",
+            "jewelry": "clicker"
           },
           {
             "id": "conch",
@@ -364,7 +394,10 @@
             "price": "Gs 100.000",
             "downtime": "6-9 meses",
             "description": "Zona cóncava central de la oreja. Ideal para anillos.",
-            "level": 2
+            "level": 2,
+            "region": "oreja",
+            "visual_key": "conch",
+            "jewelry": "stud"
           }
         ]
       },
@@ -377,101 +410,171 @@
             "id": "nostril",
             "name": "Nostril",
             "zone": "Nariz",
-            "position": null,
+            "position": {
+              "x": 46,
+              "y": 50,
+              "side": "left"
+            },
             "price": "Gs 100.000",
             "downtime": "3-4 meses",
             "description": "Perforación lateral de la fosa nasal con tornillo o aro.",
-            "level": 2
+            "level": 2,
+            "region": "rostro",
+            "visual_key": "nostril",
+            "jewelry": "nostril-screw"
           },
           {
             "id": "septum",
             "name": "Septum",
             "zone": "Nariz",
-            "position": null,
+            "position": {
+              "x": 50,
+              "y": 52,
+              "side": "center"
+            },
             "price": "Gs 100.000",
             "downtime": "2-3 meses",
             "description": "Tabique nasal. Se puede ocultar fácilmente.",
-            "level": 2
+            "level": 2,
+            "region": "rostro",
+            "visual_key": "septum",
+            "jewelry": "clicker"
           },
           {
             "id": "high-nostril",
             "name": "High Nostril",
             "zone": "Nariz",
-            "position": null,
+            "position": {
+              "x": 44,
+              "y": 46,
+              "side": "left"
+            },
             "price": "Gs 100.000",
             "downtime": "3-4 meses",
             "description": "Nostril alto en cartílago lateral, joyería tipo L-bend.",
-            "level": 2
+            "level": 2,
+            "region": "rostro",
+            "visual_key": "high-nostril",
+            "jewelry": "labret-stud"
           },
           {
             "id": "medusa",
             "name": "Medusa",
             "zone": "Labios",
-            "position": null,
+            "position": {
+              "x": 50,
+              "y": 60,
+              "side": "center"
+            },
             "price": "Gs 100.000",
             "downtime": "2-4 meses",
             "description": "Philtrum: en el surco entre labio superior y nariz.",
-            "level": 2
+            "level": 2,
+            "region": "rostro",
+            "visual_key": "medusa",
+            "jewelry": "labret-stud"
           },
           {
             "id": "monroe",
             "name": "Monroe",
             "zone": "Labios",
-            "position": null,
+            "position": {
+              "x": 58,
+              "y": 64,
+              "side": "right"
+            },
             "price": "Gs 100.000",
             "downtime": "2-4 meses",
             "description": "Labio superior lateral izquierdo (estilo Marilyn Monroe).",
-            "level": 2
+            "level": 2,
+            "region": "rostro",
+            "visual_key": "monroe",
+            "jewelry": "labret-stud"
           },
           {
             "id": "labret",
             "name": "Labret",
             "zone": "Labios",
-            "position": null,
+            "position": {
+              "x": 50,
+              "y": 70,
+              "side": "center"
+            },
             "price": "Gs 100.000",
             "downtime": "2-4 meses",
             "description": "Labio inferior, centrada o lateral, con stud o aro.",
-            "level": 2
+            "level": 2,
+            "region": "rostro",
+            "visual_key": "labret",
+            "jewelry": "labret-stud"
           },
           {
             "id": "labret-bajo",
             "name": "Labret bajo",
             "zone": "Labios",
-            "position": null,
+            "position": {
+              "x": 56,
+              "y": 71,
+              "side": "right"
+            },
             "price": "Gs 100.000",
             "downtime": "2-4 meses",
             "description": "Lateral del labio inferior.",
-            "level": 2
+            "level": 2,
+            "region": "rostro",
+            "visual_key": "labret-bajo",
+            "jewelry": "labret-stud"
           },
           {
             "id": "bridge",
             "name": "Bridge",
             "zone": "Ceja",
-            "position": null,
+            "position": {
+              "x": 50,
+              "y": 36,
+              "side": "center"
+            },
             "price": "Gs 100.000",
             "downtime": "6-9 meses",
             "description": "En el puente de la nariz entre los ojos.",
-            "level": 3
+            "level": 3,
+            "region": "rostro",
+            "visual_key": "bridge",
+            "jewelry": "straight-barbell"
           },
           {
             "id": "eyebrow",
             "name": "Eyebrow",
             "zone": "Ceja",
-            "position": null,
+            "position": {
+              "x": 60,
+              "y": 32,
+              "side": "right"
+            },
             "price": "Gs 100.000",
             "downtime": "2-3 meses",
             "description": "Horizontal en la ceja con surface bar.",
-            "level": 2
+            "level": 2,
+            "region": "rostro",
+            "visual_key": "eyebrow",
+            "jewelry": "surface-bar"
           },
           {
             "id": "tongue",
             "name": "Tongue",
             "zone": "Boca",
-            "position": null,
+            "position": {
+              "x": 50,
+              "y": 78,
+              "side": "center"
+            },
             "price": "Gs 100.000",
             "downtime": "2-3 meses",
             "description": "Centrada en la lengua con barbell recto.",
-            "level": 2
+            "level": 2,
+            "region": "rostro",
+            "visual_key": "tongue",
+            "jewelry": "straight-barbell"
           }
         ]
       },
@@ -484,21 +587,35 @@
             "id": "ombligo",
             "name": "Ombligo",
             "zone": "Body",
-            "position": null,
+            "position": {
+              "x": 50,
+              "y": 70,
+              "side": "center"
+            },
             "price": "Gs 100.000",
             "downtime": "6-9 meses",
             "description": "Ombligo con curve barbell (estándar).",
-            "level": 2
+            "level": 2,
+            "region": "cuerpo",
+            "visual_key": "ombligo",
+            "jewelry": "curved-barbell"
           },
           {
             "id": "ombligo-inverso",
             "name": "Ombligo inverso",
             "zone": "Body",
-            "position": null,
+            "position": {
+              "x": 50,
+              "y": 66,
+              "side": "center"
+            },
             "price": "Gs 100.000",
             "downtime": "6-9 meses",
             "description": "Curve hacia arriba, ideal para complementar al belly existente.",
-            "level": 2
+            "level": 2,
+            "region": "cuerpo",
+            "visual_key": "ombligo-inverso",
+            "jewelry": "curved-barbell"
           }
         ]
       },
@@ -518,7 +635,10 @@
             "price": "Gs 150.000",
             "downtime": "9-12 meses",
             "description": "Doble perforación en helix conectadas por una barra larga.",
-            "level": 3
+            "level": 3,
+            "region": "oreja",
+            "visual_key": "industrial",
+            "jewelry": "straight-barbell"
           },
           {
             "id": "orbital",
@@ -531,7 +651,10 @@
             "price": "Gs 100.000",
             "downtime": "6-9 meses",
             "description": "Dos perforaciones conectadas por un anillo, generalmente en lóbulo o helix.",
-            "level": 2
+            "level": 2,
+            "region": "oreja",
+            "visual_key": "orbital",
+            "jewelry": "hoop"
           },
           {
             "id": "snug",
@@ -544,12 +667,46 @@
             "price": "Gs 150.000",
             "downtime": "9-12 meses",
             "description": "Cartílago vertical anti-helix. Requiere anatomía específica.",
-            "level": 3
+            "level": 3,
+            "region": "oreja",
+            "visual_key": "snug",
+            "jewelry": "curved-barbell"
           }
         ]
       }
     ],
-    "eyebrow": "𓆩 ☆ 𓆪 Catálogo profesional"
+    "eyebrow": "𓆩 ☆ 𓆪 Catálogo profesional",
+    "regions": [
+      {
+        "id": "oreja",
+        "label": "Oreja",
+        "subtitle": "14 ubicaciones del cartílago y lóbulo",
+        "image_filter": "ear-tones",
+        "subcategories": [
+          "basicos",
+          "cartilago",
+          "industrial"
+        ]
+      },
+      {
+        "id": "rostro",
+        "label": "Rostro",
+        "subtitle": "10 perforaciones faciales",
+        "image_filter": "face-tones",
+        "subcategories": [
+          "faciales"
+        ]
+      },
+      {
+        "id": "cuerpo",
+        "label": "Cuerpo",
+        "subtitle": "Belly button & más",
+        "image_filter": "body-tones",
+        "subcategories": [
+          "body"
+        ]
+      }
+    ]
   },
   "gallery": {
     "title": "Joyería alternativa",
@@ -566,73 +723,121 @@
         "name": "Septum spike cadena",
         "category": "septum-y-nariz",
         "description": "Septum clicker con dije colgante en cadena fina.",
-        "categoryLabel": "Septum & Nariz"
+        "categoryLabel": "Septum & Nariz",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Titanio ASTM F136",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Expansor orgánico hueso",
         "category": "expansores",
         "description": "Plug de hueso tallado a mano, ø 8-25mm.",
-        "categoryLabel": "Expansores"
+        "categoryLabel": "Expansores",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Calabera / Resina",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Expansor calabera",
         "category": "expansores",
         "description": "Túnel con calavera incrustada, acero y resina negra.",
-        "categoryLabel": "Expansores"
+        "categoryLabel": "Expansores",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Calabera / Resina",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Cadena oreja murciélago",
         "category": "cadenas",
         "description": "Cadena helix con dije colgante de murciélago.",
-        "categoryLabel": "Cadenas"
+        "categoryLabel": "Cadenas",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Acero quirúrgico",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Stud cruz invertida",
         "category": "alternative-style",
         "description": "Labret stud cruz invertida, titanio PVD negro.",
-        "categoryLabel": "Alternative style"
+        "categoryLabel": "Alternative style",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Titanio PVD negro",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Captive bead negro",
         "category": "captives",
         "description": "Anillo captive bead en acero PVD negro, varios calibres.",
-        "categoryLabel": "Captives"
+        "categoryLabel": "Captives",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Acero PVD negro",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Septum clicker calavera",
         "category": "septum-y-nariz",
         "description": "Clicker septum con calavera central.",
-        "categoryLabel": "Septum & Nariz"
+        "categoryLabel": "Septum & Nariz",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Titanio ASTM F136",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Dije hélix cadena",
         "category": "cadenas",
         "description": "Hélix barbell con cadena colgante múltiple.",
-        "categoryLabel": "Cadenas"
+        "categoryLabel": "Cadenas",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Acero quirúrgico",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Daith aro ornamentado",
         "category": "alternative-style",
         "description": "Aro daith con grabados góticos en titanio PVD.",
-        "categoryLabel": "Alternative style"
+        "categoryLabel": "Alternative style",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Titanio PVD negro",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Industrial cadena larga",
         "category": "cadenas",
         "description": "Industrial barbell con cadena colgante 60mm.",
-        "categoryLabel": "Cadenas"
+        "categoryLabel": "Cadenas",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Acero quirúrgico",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Plug obsidiana",
         "category": "expansores",
         "description": "Plug doble de obsidiana pulida, ø personalizado.",
-        "categoryLabel": "Expansores"
+        "categoryLabel": "Expansores",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Calabera / Resina",
+        "priceType": "Gs 50.000 / pieza"
       },
       {
         "name": "Piercing micro cadena",
         "category": "cadenas",
         "description": "Set de cadenas conectadas para helix + lóbulo.",
-        "categoryLabel": "Cadenas"
+        "categoryLabel": "Cadenas",
+        "tipo": "joyería",
+        "price_type": "pieza",
+        "material": "Acero quirúrgico",
+        "priceType": "Gs 50.000 / pieza"
       }
     ]
   },
@@ -1232,7 +1437,29 @@
     "eyebrow": "𓆩 Próximos eventos 𓆪",
     "title": "Lo que se viene",
     "subtitle": "Lanzamientos, noches de piercing, ferias y colaboraciones. Anotate para no perderte nada.",
-    "items": [],
+    "items": [
+      {
+        "date": "sábado 28 nov 2026",
+        "title": "Lanzamiento Pierce Charm",
+        "location": "Asunción · Dirección exacta por confirmar",
+        "description": "Noche de apertura oficial. Mini-piercings express, joyería de lanzamiento, descuentos en packs de 2 perforaciones + tatuajes lineales. Cupos limitados.",
+        "cta": "Hola! Quiero anotarme al lanzamiento del 28 de noviembre."
+      },
+      {
+        "date": "viernes 19 dic 2026",
+        "title": "Noche de Piercing & Plumas",
+        "location": "Asunción · Casa Cultural",
+        "description": "Edición especial antes de fin de año. 2x1 en lóbulo + cartílago simple. Presencia de cantantes de la escena alternativa y performers. Agendá con seña.",
+        "cta": "Hola! Quiero anotarme a la Noche de Piercing del 19 de diciembre."
+      },
+      {
+        "date": "sábado 10 ene 2026",
+        "title": "Pop-up en la Mascarada",
+        "location": "San Bernardino · Lugar a confirmar",
+        "description": "Salimos a la calle con nuestro kit completo. Pop-up con Dark Charm (ropa alternativa). Piercings express + joyería itinerante.",
+        "cta": "Hola! Quiero saber más del pop-up en la mascarada."
+      }
+    ],
     "next_steps_hint": "¿Tenés un evento para sumar? Escribinos por WhatsApp."
   },
   "newsletter": {

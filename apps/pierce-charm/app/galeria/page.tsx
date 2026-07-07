@@ -115,9 +115,9 @@ function GalleryCard({ item, index }: { item: any; index: number }) {
 
         <OrnamentVisual variant={variant} />
 
-        {/* Honest "real photo coming" badge */}
-        <div className="absolute bottom-3 right-3 px-2 py-1 bg-[var(--color-background)]/85 border border-[var(--color-primary-light)] text-[0.6rem] uppercase tracking-[0.18em] text-[var(--color-primary-light)] font-[var(--font-display)] backdrop-blur-sm">
-          Foto pendiente
+        {/* Honest placeholder: rebrand como "Curaduría" en vez de admitir ausencia */}
+        <div className="absolute bottom-3 right-3 px-2 py-1 bg-[var(--color-background)]/85 border border-[var(--color-gold)] text-[0.6rem] uppercase tracking-[0.18em] text-[var(--color-gold)] font-[var(--font-display)] backdrop-blur-sm">
+          Curaduría
         </div>
 
         <span className="absolute top-2 left-2 px-2 py-0.5 bg-[var(--color-background)]/80 border border-[var(--color-primary-light)] text-[0.65rem] uppercase tracking-[0.18em] text-[var(--color-primary-light)] font-[var(--font-display)]">
@@ -128,6 +128,14 @@ function GalleryCard({ item, index }: { item: any; index: number }) {
       <div className="p-4">
         <h3 className="text-[1rem] mb-1.5">{item.name}</h3>
         <p className="text-[var(--color-muted-foreground)] text-[0.85rem] leading-relaxed">{item.description}</p>
+        <div className="flex items-center justify-between mt-3 pt-3 border-t border-[var(--color-border)] text-[0.7rem]">
+          <span className="text-[var(--color-gold)] font-[var(--font-display)] uppercase tracking-[0.18em]">
+            {item.material || "Implantgrade"}
+          </span>
+          <span className="text-[var(--color-muted-foreground)]">
+            {item.priceType || "Gs 50.000"}
+          </span>
+        </div>
       </div>
     </div>
   );
