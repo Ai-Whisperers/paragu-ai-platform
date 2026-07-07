@@ -9,4 +9,4 @@ COPY public ./apps/pierce-charm/public
 EXPOSE 3000
 RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
 USER nextjs
-CMD ["node", "apps/pierce-charm/server.js"]</content>
+CMD ["node", "apps/pierce-charm/server.js"]
