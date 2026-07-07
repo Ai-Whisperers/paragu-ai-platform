@@ -54,9 +54,9 @@
   --color-border-light: #b3dfeb;
 
   /* ── Feedback ── */
-  --color-success: #2d7a5f;
+  --color-success: #1f5d44;     /* darkened 2026-07-06 from #2d7a5f (was 4.40:1 FAIL on success-soft) */
   --color-success-soft: #e1f0ea;
-  --color-error: #c0392b;
+  --color-error: #8b1a1a;     /* darkened 2026-07-06 from #c0392b (was 4.24:1 FAIL on error-soft) */
   --color-error-soft: #f5dedb;
   --color-warning: #b57f18;
   --color-warning-soft: #f5ecce;
@@ -145,9 +145,9 @@
   --border-light: #b3dfeb;
   --border-accent: var(--accent);
 
-  --success: #2d7a5f;
+  --success: #1f5d44;          /* darkened 2026-07-06 for WCAG AA on success-soft */
   --success-soft: #e1f0ea;
-  --error: #c0392b;
+  --error: #8b1a1a;            /* darkened 2026-07-06 for WCAG AA on error-soft */
   --error-soft: #f5dedb;
   --warning: #b57f18;
   --warning-soft: #f5ecce;
