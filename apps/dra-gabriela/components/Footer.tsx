@@ -101,6 +101,7 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
                 </h4>
                 <ul className="space-y-2 text-sm">
                   <li><Link href={`${base}/about`} className="hover:text-white transition-colors">{isEs ? "Sobre mí" : "About"}</Link></li>
+                  <li><Link href={`${base}/galeria`} className="hover:text-white transition-colors">{isEs ? "Galería" : "Gallery"}</Link></li>
                   <li><Link href={`${base}/faq`} className="hover:text-white transition-colors">FAQ</Link></li>
                   <li><Link href={`${base}/process`} className="hover:text-white transition-colors">{isEs ? "Proceso" : "Process"}</Link></li>
                   <li><Link href={`${base}/blog`} className="hover:text-white transition-colors">Blog</Link></li>
