@@ -43,10 +43,10 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
           </div>
           <div style={{ fontSize: "1rem", lineHeight: 1.8, color: "#4B5563" }}>
             <p style={{ marginBottom: "1rem" }}>
-              Este artículo es parte del blog jurídico de Villamayor & Asociados. Para obtener asesoría personalizada sobre este tema, agendá una consulta con nuestro equipo.
+              Este artículo es parte de nuestro blog jurídico de demostración. Para obtener asesoría personalizada sobre este tema, agendá una consulta con un estudio jurídico real.
             </p>
             <p style={{ marginBottom: "1rem" }}>
-              En Villamayor & Asociados contamos con amplia experiencia en {post.category.toLowerCase()}. Nuestro equipo está listo para ayudarte a resolver tus inquietudes legales con profesionalismo y dedicación.
+              Contamos con amplia experiencia en {post.category.toLowerCase()}. Nuestro equipo está listo para ayudarte a resolver tus inquietudes legales con profesionalismo y dedicación.
             </p>
           </div>
           <div style={{ marginTop: "3rem", padding: "1.5rem", borderRadius: "12px", backgroundColor: "#F8F6F2", border: "1px solid #E8E3DA", textAlign: "center" }}>

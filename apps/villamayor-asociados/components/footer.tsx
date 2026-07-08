@@ -52,7 +52,7 @@ export default function Footer() {
             <p style={{ fontSize: "0.8125rem", color: "#9CA3AF", marginBottom: "1rem", lineHeight: 1.6 }}>
               Primera consulta sin costo. Respondemos consultas por WhatsApp en el día.
             </p>
-            <a href={`https://wa.me/${s.whatsapp}?text=Hola%2C%20Villamayor%20%26%20Asociados%20-%20Quiero%20agendar%20una%20consulta`} target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${s.whatsapp}?text=Hola%2C%20Estudio%20Jur%C3%ADdico%20Demo%20-%20Quiero%20agendar%20una%20consulta`} target="_blank" rel="noopener noreferrer"
               style={{ display: "inline-block", backgroundColor: "#25D366", color: "white", padding: "0.6rem 1.5rem", borderRadius: "6px", fontWeight: 600, textDecoration: "none", fontSize: "0.8125rem" }}>
               WhatsApp
             </a>

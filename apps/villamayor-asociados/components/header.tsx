@@ -29,7 +29,7 @@ export default function Header() {
           </div>
           <div>
             <div style={{ fontWeight: 700, fontSize: "0.9375rem", color: "#1B2A4A", lineHeight: 1.2 }}>{s.shortName}</div>
-            <div style={{ fontSize: "0.625rem", color: "#C9A96E", letterSpacing: "0.08em", textTransform: "uppercase" }}>& Asociados</div>
+            <div style={{ fontSize: "0.625rem", color: "#C9A96E", letterSpacing: "0.08em", textTransform: "uppercase" }}>Jurídico Demo</div>
           </div>
         </Link>
 
