@@ -17,6 +17,7 @@ import { EarAnatomy, type PinPosition } from "@/components/EarAnatomy";
 import { whatsappUrl } from "@/lib/site-config";
 import { BannerTicker } from "@/components/BannerTicker";
 import { Testimonials } from "@/components/Testimonials";
+import { Newsletter } from "@/components/Newsletter";
 
 const c = content as any;
 const h = c.home || {};
@@ -246,15 +247,11 @@ export default function HomeInner() {
             <p className="text-[var(--color-muted-foreground)] mb-6">
               {c.newsletter.subtitle}
             </p>
-            <a
-              href={whatsappUrl(c.contacto?.whatsapp, "Hola! Quiero sumarme a las notificaciones de Pierce Charm.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gothic tap inline-flex"
-            >
-              <CrossInverted size={14} className="text-[var(--color-gold)]" />
-              {c.newsletter.cta || 'Sumate por WhatsApp'}
-            </a>
+            <Newsletter
+              phone={c.contacto?.whatsapp}
+              subtitle={c.newsletter.subtitle}
+              ctaLabel={c.newsletter.cta || 'Sumate por WhatsApp'}
+            />
             <p className="text-[0.78rem] mt-4 text-[var(--color-muted-foreground)]">
               Frecuencia: {c.newsletter.frequency || 'mensual'} · sin spam
             </p>

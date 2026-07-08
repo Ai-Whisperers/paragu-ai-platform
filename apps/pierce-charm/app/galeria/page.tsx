@@ -13,7 +13,10 @@ const cats = g.categories || [];
 
 export default function GaleriaPage() {
   const [tab, setTab] = useState<string>("all");
-  const items = tab === "all" ? allItems : allItems.filter((it: any) => it.category === tab);
+  const [material, setMaterial] = useState<string>("all");
+
+  let items = tab === "all" ? allItems : allItems.filter((it: any) => it.category === tab);
+  items = material === "all" ? items : items.filter((it: any) => it.material === material);
 
   return (
     <div className="pt-24 md:pt-32 relative">
@@ -58,10 +61,39 @@ export default function GaleriaPage() {
               }`}
             >
               {cat}
-            </button>
-          ))}
-        </div>
-      </section>
+                        </button>
+                      ))}
+                      </div>
+                    </section>
+
+                    {/* Filtro por material */}
+                    {g.filters?.material && g.filters.material.length > 1 && (
+                      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-8">
+                        <div className="flex flex-wrap gap-2 items-center justify-center">
+                          <span className="font-[var(--font-display)] text-[0.7rem] uppercase tracking-[0.18em] text-[var(--color-muted-foreground)] mr-2">
+                            Material:
+                          </span>
+                          {g.filters.material.map((m: any) => (
+                            <button
+                              key={m.id}
+                              onClick={() => setMaterial(m.id)}
+                              className={`tap px-3 py-1.5 text-[0.7rem] uppercase tracking-[0.14em] border transition-all ${
+                                material === m.id
+                                  ? "border-[var(--color-gold)] bg-[var(--color-gold)]/10 text-[var(--color-gold)]"
+                                  : "border-[var(--color-border)] text-[var(--color-muted-foreground)] hover:border-[var(--color-gold)]"
+                              }`}
+                            >
+                              {m.label}
+                            </button>
+                          ))}
+                        </div>
+                        {(tab !== "all" || material !== "all") && (
+                          <p className="text-center text-[0.78rem] text-[var(--color-muted-foreground)] mt-3">
+                            {items.length} {items.length === 1 ? "pieza" : "piezas"}
+                          </p>
+                        )}
+                      </section>
+                    )}
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">

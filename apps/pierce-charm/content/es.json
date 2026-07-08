@@ -839,7 +839,35 @@
         "material": "Acero quirúrgico",
         "priceType": "Gs 50.000 / pieza"
       }
-    ]
+    ],
+    "filters": {
+      "material": [
+        {
+          "id": "all",
+          "label": "Todos los materiales"
+        },
+        {
+          "id": "Acero PVD negro",
+          "label": "Acero PVD negro"
+        },
+        {
+          "id": "Acero quirúrgico",
+          "label": "Acero quirúrgico"
+        },
+        {
+          "id": "Calabera / Resina",
+          "label": "Calabera / Resina"
+        },
+        {
+          "id": "Titanio ASTM F136",
+          "label": "Titanio ASTM F136"
+        },
+        {
+          "id": "Titanio PVD negro",
+          "label": "Titanio PVD negro"
+        }
+      ]
+    }
   },
   "nosotros": {
     "title": "El estudio detrás del piercing",
@@ -982,7 +1010,19 @@
         "eyebrow": "𓆩 ☆ 𓆪 Nuestro compromiso",
         "body": "Si no podemos hacer el piercing que pediste — porque tu anatomía no lo admite — te decimos y te ofrecemos una alternativa estética. Si nos equivocamos, lo admitimos y devolvemos la plata. Si tenés un problema post-cita, respondemos. Después de la cita, no desaparecemos: hacemos seguimiento a 1 semana, 1 mes y 3 meses."
       }
-    ]
+    ],
+    "editorial": {
+      "eyebrow": "Una nota de Luana",
+      "title": "Donde el cuerpo se vuelve lienzo",
+      "intro": "Una nota personal — pronto.",
+      "body": "",
+      "placeholder": "Acá va un escrito de Luana sobre cómo entiende el estudio, qué representa Pierce Charm en su vida y cómo quiere tratar a las personas que entren. Espacio reservado para su voz. Mientras tanto, la promesa es simple: cada persona que entre se va a ir sabiendo que fue escuchada.",
+      "cta": {
+        "label": "Reservá tu cita",
+        "href": "/contacto"
+      },
+      "icon": "script"
+    }
   },
   "faq": {
     "title": "Preguntas frecuentes",
@@ -1019,6 +1059,31 @@
       {
         "q": "¿Qué pasa si mi piercing se infecta?",
         "a": "Contactanos inmediatamente por WhatsApp. Hacemos seguimiento sin cargo y, si es necesario, te derivamos al dermatólogo con un informe. Nunca dejes un piercing sin atención si ves signos de infección."
+      },
+      {
+        "q": "¿Por qué no usan piercing gun?",
+        "a": "El piercing gun (la pistola de perforar) está totalmente prohibido en Pierce Charm. La razón es técnica: el gun produce trauma por impacto sobre el cartílago y hueso, y no permite la limpieza adecuada entre usos. Trabajamos exclusivamente con aguja cateter + aguja americana (needle) de un solo uso. Cada cliente recibe instrumental nuevo y estéril. La diferencia no es marketing — es salud.",
+        "category": "bioseguridad"
+      },
+      {
+        "q": "¿Usan anestesia?",
+        "a": "No usamos anestesia tópica. La evidencia es clara: la mayoría de los geles y sprays tópicos no penetran lo suficiente para adormecer el tejido profundo. Una segunda ronda de información te sirve más que un gel mentolado. Para zonas especialmente sensibles (cartílago grueso, industrial, snug), está la opción de anestesia local, que se aplica cuando la Dra. Luana considera que el caso lo amerita. La consulta previa te permite discutir esto sin compromiso.",
+        "category": "bioseguridad"
+      },
+      {
+        "q": "¿Cuál es la edad mínima para cada tipo de piercing?",
+        "a": "Lóbulo de oreja: cualquier edad con consentimiento firmado del adulto responsable y presencia en el consultorio. Face piercings (nariz, septum, ceja, labio): desde 14-15 años con cédula del adulto + cédula del menor presentes. Expansiones: solo a partir de 18 años. En todos los casos, el adulto y el menor firman el consentimiento informado por separado. No hay excepciones para menores sin documentación.",
+        "category": "edad"
+      },
+      {
+        "q": "¿Qué es el downsizing y cuándo se hace?",
+        "a": "El downsizing (o cambio de barra) es el reemplazo de la joya inicial larga (que deja espacio para que la inflamación baje) por una más corta, una vez que el piercing está cicatrizado. Se hace entre las 6-12 semanas para lóbulos, y entre los 3-6 meses para cartílago. Cuesta Gs 10.000 la mano de obra (la joya se cotiza aparte). Si el piercing lo hicimos nosotros, el primer downsizing es con descuento.",
+        "category": "post-cuidados"
+      },
+      {
+        "q": "¿Qué hago si me aparece un granito (granuloma) cerca del piercing?",
+        "a": "Un granito pequeño (granuloma o piercing bump) es una reacción común del cuerpo a la cicatrización. Pasos: (1) lavá bien las manos; (2) limpiá la zona con solución fisiológica tibia; (3) NO lo aprietes ni lo revientes; (4) evitá que la joya se mueva bruscamente. Si después de 5-7 días no mejora, o si hay sangrado/secreción verde o fiebre, escribinos por WhatsApp. Evaluamos el caso y vemos si requiere retirar la joya, cambiar el material, o hacer una consulta presencial.",
+        "category": "post-cuidados"
       }
     ]
   },

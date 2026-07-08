@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { BottomNav } from "@/components/BottomNav";
 import { CookieBanner } from "@/components/CookieBanner";
+import { CartBar } from "@/components/CartBar";
 import content from "@/content/es.json";
 
 const c = content as any;
@@ -43,14 +44,26 @@ export const metadata: Metadata = {
   keywords: c.site?.seo?.local_keywords || [
     "piercing asunción",
     "piercing paraguay",
+    "piercing barato asunción",
+    "piercing de calidad asunción",
     "joyería alternativa",
     "estudio piercing asunción",
-    "helix piercing",
-    "septum piercing",
-    "daith rook piercing",
-    "cartílago piercing",
+    "septum piercing asunción",
+    "helix piercing paraguay",
+    "daith piercing asunción",
+    "industrial piercing paraguay",
+    "tragus piercing asunción",
+    "nostril piercing paraguay",
+    "tongue piercing asunción",
+    "labret piercing paraguay",
+    "eyebrow piercing asunción",
+    "ombligo piercing asunción",
+    "piercing alternativo asunción",
+    "joyería titanio asunción",
     "PVD negro titanio",
-    "Pierce Charm",
+    "titanio ASTM F136 Paraguay",
+    "Pierce Charm Asunción",
+    "piercing profesional asunción",
   ],
   openGraph: {
     title: c.site?.title,
@@ -163,6 +176,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <BottomNav />
         <CookieBanner />
+        <CartBar phone={c.contacto?.whatsapp || "595981324569"} />
       </body>
     </html>
   );

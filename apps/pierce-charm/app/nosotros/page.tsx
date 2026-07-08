@@ -159,6 +159,33 @@ export default function NosotrosPage() {
         </div>
       </section>
 
+      {/* E2 — Editorial "Donde el cuerpo se vuelve lienzo" — Luana escribe */}
+      <section className="max-w-3xl mx-auto px-4 md:px-6 py-12 md:py-16">
+        <div className="text-center mb-6">
+          <p className="eyebrow mb-2">{n.editorial?.eyebrow || "Una nota de Luana"}</p>
+          <h2 className="text-[1.6rem] md:text-[2.2rem] text-balance">
+            {n.editorial?.title || "Donde el cuerpo se vuelve lienzo"}
+          </h2>
+        </div>
+        <div className="rock-card p-6 md:p-10 text-center relative overflow-hidden">
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full border-2 border-[var(--color-gold)] bg-[var(--color-background)] flex items-center justify-center font-[var(--font-script)] text-[var(--color-gold)] text-[1.8rem] leading-none">
+            ✎
+          </div>
+          {n.editorial?.body ? (
+            <p className="font-[var(--font-script)] text-[1.5rem] md:text-[1.8rem] text-[var(--color-foreground)] leading-snug whitespace-pre-wrap italic">
+              {n.editorial.body}
+            </p>
+          ) : (
+            <p className="text-[var(--color-muted-foreground)] text-[0.95rem] md:text-base leading-relaxed italic">
+              {n.editorial?.placeholder || "Acá va un escrito de Luana."}
+            </p>
+          )}
+          <p className="font-[var(--font-script)] text-[var(--color-gold)] text-[1.3rem] mt-5 leading-none">
+            — Luana López
+          </p>
+        </div>
+      </section>
+
 <section className="py-14 px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <Skull size={26} className="mx-auto text-[var(--color-primary-light)] mb-3" />
