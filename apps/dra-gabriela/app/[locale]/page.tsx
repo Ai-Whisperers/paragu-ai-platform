@@ -4,6 +4,8 @@ import { getContent, isLocale } from "@/lib/content"
 import { buildMetadata } from "@/lib/seo"
 import { Hero } from "@/components/sections/Hero"
 import { BilingualBand } from "@/components/sections/BilingualBand"
+import { TestimonialsHonest } from "@/components/TestimonialsHonest"
+import { StatsHonest } from "@/components/StatsHonest"
 
 // Below-the-fold sections: dynamic imports keep the initial JS bundle small.
 const AnxietyPersonas = dynamic(() => import("@/components/sections/AnxietyPersonas").then(m => m.AnxietyPersonas), {
@@ -46,6 +48,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   })
 }
 
+// Helper to extract array from content section (handles both .items and array directly)
+function tList(section: any): any[] {
+  if (!section) return []
+  if (Array.isArray(section)) return section
+  if (Array.isArray(section.items)) return section.items
+  return []
+}
+
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   if (!isLocale(locale)) notFound()
@@ -55,11 +65,12 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <Hero c={c} locale={locale} />
+      <StatsHonest items={tList(c.stats)} />
       <BilingualBand locale={locale} />
       <AnxietyPersonas locale={locale} />
       <MeetDoctor locale={locale} />
       <VoiceDoctor locale={locale} />
-      <Testimonials c={c} locale={locale} />
+      <TestimonialsHonest items={tList(c.testimonials)} />
       <SedationSection locale={locale} />
 
       <FeaturedService
