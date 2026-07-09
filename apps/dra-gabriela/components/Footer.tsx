@@ -32,7 +32,7 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
               <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-yellow flex items-center justify-center text-navy text-xs font-semibold">
                 DG
               </span>
-              <h3 className="text-lg text-white font-medium">{c.site?.name || "Dra. Gabriella González Pane"}</h3>
+              <h3 className="text-lg text-white font-medium">{c.site?.name || "Ometz Dental · Dra. Gabriella González Pane"}</h3>
             </div>
             <p className="text-sm leading-relaxed text-white/65 mb-5 max-w-xs">
               {c.site?.description ?? c.site?.metaDescription}
@@ -140,7 +140,7 @@ export function Footer({ locale, content }: { locale: string; content: any }) {
         </div>
 
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} {c.site?.name || "Dra. Gabriella González Pane"}. {isEs ? "Todos los derechos reservados." : "All rights reserved."}</p>
+          <p>© {new Date().getFullYear()} {c.site?.name || "Ometz Dental · Dra. Gabriella González Pane"}. {isEs ? "Todos los derechos reservados." : "All rights reserved."}</p>
           <p>Asunción, Paraguay</p>
         </div>
       </div>

@@ -71,7 +71,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
   const next = idx < posts.length - 1 ? posts[idx + 1] : null
 
   // Build share URL
-  const url = `https://dragabriela.paragu-ai.com${base}/blog/${slug}`
+  const url = `https://ometzdental.com${base}/blog/${slug}`
   const shareText = isEs ? `${post.title} — Dra. Gabriella` : `${post.title} — Dra. Gabriella`
 
   return (

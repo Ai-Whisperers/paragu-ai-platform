@@ -11,8 +11,10 @@
     "rating": 5,
     "stars": 5,
     "date": "2026-06-12",
-    "verified": true,
-    "placeholder": false
+    "verified": false,
+    "placeholder": true,
+    "note": "Ejemplo de testimonio — testimonios reales se publicarán tras recoger reseñas",
+    "source": "Ejemplo"
   },
   {
     "id": "2",
@@ -26,8 +28,10 @@
     "rating": 5,
     "stars": 5,
     "date": "2026-06-04",
-    "verified": true,
-    "placeholder": false
+    "verified": false,
+    "placeholder": true,
+    "note": "Ejemplo de testimonio — testimonios reales se publicarán tras recoger reseñas",
+    "source": "Ejemplo"
   },
   {
     "id": "3",
@@ -41,7 +45,9 @@
     "rating": 5,
     "stars": 5,
     "date": "2026-05-28",
-    "verified": true,
-    "placeholder": false
+    "verified": false,
+    "placeholder": true,
+    "note": "Ejemplo de testimonio — testimonios reales se publicarán tras recoger reseñas",
+    "source": "Ejemplo"
   }
 ]

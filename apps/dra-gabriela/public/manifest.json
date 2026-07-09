@@ -1,9 +1,9 @@
 {
   "name": "Dra. Gabriella González Pane",
-  "short_name": "Dra. Gabriella",
+  "short_name": "Ometz Dental",
   "description": "Conservative, planning-first dentistry in Asunción. Bilingual (Spanish + English).",
-  "start_url": "/en",
-  "scope": "/",
+  "start_url": "https://ometzdental.com/",
+  "scope": "https://ometzdental.com/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#F5F0E8",

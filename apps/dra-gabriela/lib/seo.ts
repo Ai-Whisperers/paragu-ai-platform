@@ -14,7 +14,7 @@
 // slugToBilingual() alias, so hreflang only needs to point to the
 // canonical (EN) URL.
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://dragabriela.paragu-ai.com"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ometzdental.com"
 
 // Canonical EN slug → ES slug. Same slug = omit the ES side.
 const EN_TO_ES: Record<string, string> = {
@@ -110,7 +110,7 @@ export function buildMetadata({
       url: locale === "es"
         ? (EN_TO_ES[slug] ? `${SITE_URL}/${locale}/${EN_TO_ES[slug]}` : `${SITE_URL}/${locale}${slug ? "/" + slug : ""}`)
         : alts.canonical,
-      siteName: "Dra. Gabriella González Pane",
+      siteName: "Ometz Dental · Dra. Gabriella González Pane",
       title,
       description,
       images: [{ url: resolvedOgImage, width: 1200, height: 630, alt: title }],
