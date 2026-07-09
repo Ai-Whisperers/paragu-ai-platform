@@ -16,6 +16,10 @@ import Link from "next/link"
 import { ArrowRight, MessageCircle, Clock, Sparkles, Languages, Award, BadgeCheck, Hand, Heart, Shield } from "lucide-react"
 import Image from "next/image"
 import { whatsappLink, type Locale } from "@/lib/content"
+import { Countdown } from "@/components/Countdown"
+import { OmetzMark } from "@/components/OmetzMark"
+
+const LAUNCH_DATE = "2026-07-26"
 
 // Resolve a value that may be a plain string, a {en, es} bilingual object, or
 // missing, into a renderable string for the active locale. ALWAYS returns a
@@ -200,6 +204,9 @@ export function Hero({ c, locale }: HeroProps) {
               </p>
             </div>
 
+            <div className="mb-4 animate-fade-in">
+              <OmetzMark size="sm" showSubtitle={false} />
+            </div>
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight mb-5 leading-[1.05] animate-fade-in-up text-navy"
               key={`h-${active}`}
@@ -235,6 +242,11 @@ export function Hero({ c, locale }: HeroProps) {
                 </a>
               ) : (
                 <Link href={`/${locale}/contact`} className="btn btn-primary text-base px-8 py-4 group">
+              {LAUNCH_DATE && (
+                <div className="mb-4">
+                  <Countdown target={LAUNCH_DATE} locale={safeLocale} />
+                </div>
+              )}
                   <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
                   {t(h.cta_primary, safeLocale) || (isEs ? "Coordinar consulta" : "Book a consultation")}
                 </Link>

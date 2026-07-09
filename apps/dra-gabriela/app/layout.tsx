@@ -3,6 +3,9 @@ import Script from "next/script"
 import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { THEMES, THEME_STORAGE_KEY } from "@/lib/themes"
+import { StickyWhatsApp } from "@/components/StickyWhatsApp"
+import { BreadcrumbsJsonLd } from "@/components/Breadcrumbs"
+import { getContent } from "@/lib/content"
 
 export const dynamic = "force-dynamic"
 export const revalidate = 0
@@ -109,9 +112,38 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH_SCRIPT }} />
+        {/* Google Analytics 4 - placeholder ID, Iván debe reemplazar */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');`,
+              }}
+            />
+          </>
+        )}
+        {/* Meta Pixel - placeholder ID, Iván debe reemplazar */}
+        {process.env.NEXT_PUBLIC_META_PIXEL && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${process.env.NEXT_PUBLIC_META_PIXEL}');fbq('track','PageView');`,
+            }}
+          />
+        )}
       </head>
       <body className="font-sans antialiased bg-bg text-fg">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          {(() => {
+            const locale = "es" // Default; actual locale handled by client component
+            const content = getContent(locale as any)
+            const wa = content?.business?.whatsapp && content.business.whatsapp !== "PENDIENTE"
+              ? `https://wa.me/${content.business.whatsapp}?text=${encodeURIComponent(content.business.whatsappMessage || "Hola Dra. Gaby, me interesaría agendar una consulta.")}`
+              : ""
+            return wa ? <StickyWhatsApp whatsappLink={wa} tooltip={locale === "es" ? "Escribime por WhatsApp" : "Message me on WhatsApp"} /> : null
+          })()}
+        </ThemeProvider>
         <Script id="register-sw" strategy="lazyOnload">
           {`if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js').catch(() => {}); }); }`}
         </Script>
