@@ -10,7 +10,7 @@ export default function Contacto() {
   const [sent, setSent] = useState(false)
 
   const handleSend = () => {
-    const text = encodeURIComponent(`Hola, Villamayor & Asociados. Soy ${name || "(sin nombre)"}. ${msg}`)
+    const text = encodeURIComponent(`Hola, Estudio Jurídico Demo. Soy ${name || "(sin nombre)"}. ${msg}`)
     window.open(`https://wa.me/${s.whatsapp}?text=${text}`, "_blank")
     setSent(true)
   }
@@ -95,7 +95,7 @@ export default function Contacto() {
             </div>
 
             <div style={{ marginTop: "2rem", paddingTop: "2rem", borderTop: "1px solid #E8E3DA" }}>
-              <a href={`https://wa.me/${s.whatsapp}?text=Hola%2C%20Villamayor%20%26%20Asociados%20-%20Quiero%20agendar%20una%20consulta`} target="_blank" rel="noopener noreferrer"
+              <a href={`https://wa.me/${s.whatsapp}?text=Hola%2C%20Estudio%20Jur%C3%ADdico%20Demo%20-%20Quiero%20agendar%20una%20consulta`} target="_blank" rel="noopener noreferrer"
                 style={{ display: "block", backgroundColor: "#C9A96E", color: "#1B2A4A", padding: "0.85rem", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem", textAlign: "center" }}>
                 Agendar Consulta Gratis
               </a>

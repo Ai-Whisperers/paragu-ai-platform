@@ -6,7 +6,7 @@ import { promises as fs } from 'fs'
 import path from 'path'
 
 // Site URL (matches SITE_URL in lib/seo.ts)
-const SITE_URL = 'https://dragabriela.paragu-ai.com'
+const SITE_URL = 'https://ometzdental.com'
 
 // All canonical (EN) slugs that have a corresponding page
 const TOP_LEVEL_SLUGS = [

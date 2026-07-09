@@ -66,7 +66,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
               <div className="aspect-[3/4] relative">
                 <Image
                   src="/images/team/dra-gp-portrait-v2.svg"
-                  alt="Dra. Gabriella González Pane"
+                  alt="Ometz Dental · Dra. Gabriella González Pane"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover"

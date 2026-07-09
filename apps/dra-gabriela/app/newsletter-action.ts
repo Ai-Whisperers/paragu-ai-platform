@@ -67,7 +67,7 @@ export async function subscribeToNewsletter(email: string, locale: string): Prom
           Authorization: `Bearer ${resendKey}`,
         },
         body: JSON.stringify({
-          from: "Dra. Gabriella Website <noreply@dragabriela.paragu-ai.com>",
+          from: "Dra. Gabriella Website <noreply@ometzdental.com>",
           to: ["hola@ometzdental.com.py"],
           subject: `[Newsletter] New subscriber — ${parsed.data}`,
           html: `<p>New newsletter subscription: <b>${parsed.data}</b> (locale: ${locale})</p>`,

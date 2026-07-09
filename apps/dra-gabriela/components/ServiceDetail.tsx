@@ -138,7 +138,7 @@ function buildServiceSchema(data: any, slug: string, locale: string) {
     },
     provider: {
       "@type": "Dentist",
-      name: "Dra. Gabriella González Pane",
+      name: "Ometz Dental · Dra. Gabriella González Pane",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Asunción",
@@ -154,7 +154,7 @@ function buildServiceSchema(data: any, slug: string, locale: string) {
         price: String(it.priceGs),
         priceCurrency: "PYG",
         availability: "https://schema.org/InStock",
-        url: `https://dragabriela.paragu-ai.com/${locale}/services/${slug}`,
+        url: `https://ometzdental.com/${locale}/services/${slug}`,
       })),
   }
 }
@@ -189,7 +189,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const process: string[] = data.process || []
   const faqs: any[] = data.faqs || []
   const serviceSchema = buildServiceSchema(data, slug, locale)
-  const serviceUrl = `https://dragabriela.paragu-ai.com/${locale}/services/${slug}`
+  const serviceUrl = `https://ometzdental.com/${locale}/services/${slug}`
 
   return (
     <>

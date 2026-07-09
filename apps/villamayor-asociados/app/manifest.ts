@@ -2,9 +2,9 @@ import { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Villamayor & Asociados",
-    short_name: "Villamayor &",
-    description: "Sitio web de Villamayor & Asociados",
+    name: "Estudio Jurídico Demo",
+    short_name: "Estudio",
+    description: "Sitio web de Estudio Jurídico Demo",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const c = getContent(locale)
   return buildMetadata({
     slug: "",
-    title: c.site?.name ?? "Dra. Gabriella González Pane",
+    title: c.site?.name ?? "Ometz Dental · Dra. Gabriella González Pane",
     description: c.site?.metaDescription ?? "Conservative, planning-first dentistry in Asunción.",
     locale: locale === "es" ? "es" : "en",
   })

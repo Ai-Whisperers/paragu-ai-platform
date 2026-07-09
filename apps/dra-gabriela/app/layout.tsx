@@ -31,13 +31,13 @@ const caveat = Caveat({
 })
 
 export const metadata = {
-  metadataBase: new URL("https://dragabriela.paragu-ai.com"),
+  metadataBase: new URL("https://ometzdental.com"),
   title: {
-    default: "Dra. Gabriella González Pane — Odontología en Asunción",
-    template: "%s",
+    default: "Ometz Dental · אומץ · Dentista en Asunción · Te escucho",
+    template: "%s · Ometz Dental",
   },
   description:
-    "Odontología conservadora y planificación primero en Paraguay. Precios públicos, segunda opinión escrita, consultas en inglés y español.",
+    "Ometz Dental (אומץ) en Mburucuyá, Asunción. Odontología conservadora, rehabilitación oral, segunda opinión escrita. Bilingüe ES/EN. 20+ años de criterio clínico.",
   keywords: [
     "dentista Asunción",
     "dental Paraguay",
@@ -46,16 +46,16 @@ export const metadata = {
     "dental implants Paraguay",
     "odontóloga bilingüe Asunción",
   ],
-  authors: [{ name: "Dra. Gabriella González Pane" }],
-  creator: "Dra. Gabriella González Pane",
-  publisher: "Dra. Gabriella González Pane",
+  authors: [{ name: "Ometz Dental · Dra. Gabriella González Pane" }],
+  creator: "Ometz Dental · Dra. Gabriella González Pane",
+  publisher: "Ometz Dental · Dra. Gabriella González Pane",
   formatDetection: { email: false, address: false, telephone: false },
   openGraph: {
     type: "website",
     locale: "es_PY",
-    siteName: "Dra. Gabriella González Pane",
-    title: "Dra. Gabriella González Pane — Odontología conservadora en Asunción",
-    description: "Planificación primero. Bilingüe. Asunción, Paraguay.",
+    siteName: "Ometz Dental",
+    title: "Ometz Dental · Te escucho. · Dentista conservadora en Asunción",
+    description: "Ometz Dental (אומץ) · Rehabilitación oral + segunda opinión escrita en Mburucuyá, Asunción. Bilingüe. 20+ años.",
   },
   twitter: {
     card: "summary_large_image",
@@ -64,7 +64,7 @@ export const metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "/en",
+    canonical: "https://ometzdental.com/en",
     languages: {
       en: "/en",
       es: "/es",
