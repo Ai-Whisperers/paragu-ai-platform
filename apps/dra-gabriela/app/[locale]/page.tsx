@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return buildMetadata({
     slug: "",
     title: c.site?.name ?? "Ometz Dental · Dra. Gabriella González Pane",
-    description: c.site?.metaDescription ?? "Conservative, planning-first dentistry in Asunción.",
+    description: c.site?.metaDescription ?? "Ometz Dental (אומץ) · Odontología conservadora + segunda opinión escrita en Mburucuyá, Asunción. Bilingüe. 20+ años.",
     locale: locale === "es" ? "es" : "en",
   })
 }

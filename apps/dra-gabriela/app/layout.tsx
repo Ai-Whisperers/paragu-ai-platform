@@ -79,16 +79,16 @@ export const metadata = {
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    title: "Dra. Gabriella",
+    title: "Ometz Dental",
     statusBarStyle: "default",
   },
   other: {
-    "msapplication-TileColor": "#03045e",
+    "msapplication-TileColor": "#1A5F5A",
   },
 }
 
 export const viewport = {
-  themeColor: "#03045e",
+  themeColor: "#1A5F5A",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -102,7 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/manifest.json" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Dra. Gabriella" />
+        <meta name="apple-mobile-web-app-title" content="Ometz Dental" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var p=location.pathname.match(/^\\/(en|es)\\b/);var l=p?p[1]:'en';document.documentElement.lang=l;}catch(e){}})();`,
