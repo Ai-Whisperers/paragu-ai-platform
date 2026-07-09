@@ -28,17 +28,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const { getSchemaOrgJson } = await import('@/components/SchemaOrg')
-  return {
-    other: {
-      'script:ld+json': getSchemaOrgJson(locale),
-    },
-  }
+  return {}
 }
 
 export const viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#03045e' },
-    { media: '(prefers-color-scheme: dark)', color: '#020338' },
+    { media: '(prefers-color-scheme: light)', color: '#1A5F5A' },
+    { media: '(prefers-color-scheme: dark)', color: '#0F3F3B' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -55,8 +51,15 @@ export default async function LocaleLayout({
   const { locale } = await params
   if (!isLocale(locale)) notFound()
   const content = getContent(locale)
+  const { getSchemaOrgJson } = await import('@/components/SchemaOrg')
+  const schemaOrgJson = getSchemaOrgJson(locale)
+  
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: schemaOrgJson }}
+      />
       <SkipToContent locale={locale} />
       <Navbar locale={locale} business={content.business} />
       <main id="main-content" lang={locale} className="pb-20 md:pb-0">{children}</main>

@@ -205,7 +205,7 @@ export function Hero({ c, locale }: HeroProps) {
             </div>
 
             <div className="mb-4 animate-fade-in">
-              <OmetzMark size="sm" showSubtitle={false} />
+              <OmetzMark size="md" showSubtitle={true} subtitle={isEs ? "אומץ · te escucho" : "אומץ · I listen"} />
             </div>
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight mb-5 leading-[1.05] animate-fade-in-up text-navy"

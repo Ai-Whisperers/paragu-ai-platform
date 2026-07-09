@@ -37,7 +37,7 @@ export const metadata = {
   metadataBase: new URL("https://ometzdental.com"),
   title: {
     default: "Ometz Dental · אומץ · Dentista en Asunción · Te escucho",
-    template: "%s · Ometz Dental",
+    template: "%s",
   },
   description:
     "Ometz Dental (אומץ) en Mburucuyá, Asunción. Odontología conservadora, rehabilitación oral, segunda opinión escrita. Bilingüe ES/EN. 20+ años de criterio clínico.",
