@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { content as c, SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
+import { ShareButtons } from "@/components/ShareButtons";
 import { FaqAccordion } from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
@@ -232,6 +233,11 @@ export default function ClinicaPage() {
           </p>
         </div>
       </section>
-    </div>
+    
+
+      <ShareButtons
+        title="Clínica Kunu'u — testeo gratuito de VIH, PrEP y atención LGTBI+ en Asunción"
+        intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
+      /></div>
   );
 }

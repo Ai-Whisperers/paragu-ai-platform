@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { content as c, SITE_URL } from "@/lib/content";
 import Script from "next/script";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export const metadata: Metadata = {
   title: "Donar a SOMOSGAY",
@@ -118,6 +119,11 @@ export default function DonarPage() {
           </div>
         </div>
       </section>
-    </div>
+    
+
+      <ShareButtons
+        title="Doná a SOMOSGAY — apoya la salud comunitaria LGTBI+ en Paraguay"
+        intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
+      /></div>
   );
 }

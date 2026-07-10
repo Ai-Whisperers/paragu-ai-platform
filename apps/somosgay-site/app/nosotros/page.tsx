@@ -3,6 +3,7 @@ import Link from "next/link";
 import { content as c, SITE_URL } from "@/lib/content";
 import Script from "next/script";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export const metadata: Metadata = {
   title: "Sobre SOMOSGAY",
@@ -125,6 +126,11 @@ export default function NosotrosPage() {
           </p>
         </div>
       </section>
-    </div>
+    
+
+      <ShareButtons
+        title="SOMOSGAY — Asociación Civil sin fines de lucro fundada en 2005"
+        intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
+      /></div>
   );
 }

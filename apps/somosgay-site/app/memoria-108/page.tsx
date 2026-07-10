@@ -3,6 +3,7 @@ import Link from "next/link";
 import { content as c, SITE_URL } from "@/lib/content";
 import Script from "next/script";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export const metadata: Metadata = {
   title: "Memoria 108 — El trauma fundacional del movimiento LGTBI+ paraguayo",
@@ -151,6 +152,11 @@ export default function MemoriaPage() {
           </p>
         </div>
       </section>
-    </div>
+    
+
+      <ShareButtons
+        title="Memoria 108 — caso Bernardo Aranda y Carta de un Amoral"
+        intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
+      /></div>
   );
 }

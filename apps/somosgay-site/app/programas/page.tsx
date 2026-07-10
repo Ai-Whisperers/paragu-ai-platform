@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { content as c, SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export const metadata: Metadata = {
   title: "Programas",
@@ -116,6 +117,11 @@ export default function ProgramasPage() {
           ))}
         </div>
       </section>
-    </div>
+    
+
+      <ShareButtons
+        title="5 programas activos + red regional · SOMOSGAY"
+        intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
+      /></div>
   );
 }
