@@ -115,10 +115,10 @@ export default function HomeClient({ locale }: { locale: Locale }) {
             {c.home.impact.items.map((item: any, i: number) => (
               <div key={i} className="text-center p-6 bg-warm rounded-xl">
                 <div className="font-display text-4xl lg:text-5xl font-bold text-[var(--color-primary)] mb-2">
-                  {item.metric}
+                  {item.value}
                 </div>
                 <div className="text-sm text-text-light mb-1">{item.label}</div>
-                <div className="text-xs text-text-muted">{item.source}</div>
+                <div className="text-xs text-text-muted">{item.detail}</div>
               </div>
             ))}
           </div>
