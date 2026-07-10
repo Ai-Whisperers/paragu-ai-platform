@@ -5,6 +5,7 @@ import { content as c, SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 import { ShareButtons } from "@/components/ShareButtons";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { BookingForm } from "@/components/BookingForm";
 
 export const metadata: Metadata = {
   title: "Clínica Kunu'u — Salud comunitaria LGTBI+ en Asunción",
@@ -212,7 +213,19 @@ export default function ClinicaPage() {
         </div>
       </section>
 
-      {/* BOOKING */}
+      {/* BOOKING FORM */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl lg:text-4xl font-bold mb-3">O reservá por acá</h2>
+          <p className="text-text-light mb-8">
+            Si preferís no llamar, completá tus preferencias y te enviamos directo
+            a WhatsApp con el mensaje listo para enviar.
+          </p>
+          <BookingForm />
+        </div>
+      </section>
+
+      {/* BOOKING CTA */}
       <section className="py-20 bg-[var(--color-purple-deep)] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl lg:text-4xl font-bold mb-3">{c.clinica.booking.title}</h2>
