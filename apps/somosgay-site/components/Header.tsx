@@ -2,34 +2,55 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { content as c } from "@/lib/content";
+import { content as c, localeFromPath, Locale } from "@/lib/content";
+import { LangSwitcher } from "@/components/LangSwitcher";
 
 function isActive(pathname: string, href: string): boolean {
-  // Exact match for "/", prefix match for everything else.
-  // Anchors ("/memoria-108#anual") are treated as active when the path matches.
   if (!pathname) return false;
-  const [pathOnly] = pathname.split("#");
-  if (href === "/") return pathOnly === "/";
-  return pathOnly === href || pathOnly.startsWith(href + "/");
+  const [pathOnlyRaw] = pathname.split("#");
+  // Strip /gn prefix when comparing so /gn/programas matches /programas
+  const pathOnly = pathOnlyRaw.replace(/^\/gn(?=\/|$)/, "");
+  // Strip current locale prefix from href for symmetric comparison
+  const hrefStripped = href;
+  if (pathOnly === "/" && hrefStripped === "/") return true;
+  if (pathOnly === "/" || hrefStripped === "/") return false;
+  return pathOnly === hrefStripped || pathOnly.startsWith(hrefStripped + "/");
+}
+
+/**
+ * Resolve the href into the *current* locale's URL.
+ * - For locale-prefixed pages (/gn/...), the navigation paths live alongside
+ *   /gn/path-to-page.
+ * - For default locale (es), paths are unprefixed.
+ */
+function localizedHref(href: string, locale: Locale): string {
+  if (href === "/" || !href) {
+    return locale === "es" ? "/" : "/gn";
+  }
+  return locale === "es" ? href : `/gn${href}`;
 }
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const currentLocale: Locale = localeFromPath(pathname);
 
   return (
     <header className="sticky top-0 z-50 bg-[var(--color-surface)] border-b border-[var(--color-warm-deep)]">
-      {/* Rainbow strip on top */}
       <div className="rainbow-bar" aria-hidden="true" />
 
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navegación principal">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16 lg:h-20 gap-3">
           <Link
-            href="/"
-            className="flex items-center gap-3 group"
+            href={localizedHref("/", currentLocale)}
+            className="flex items-center gap-3 group scroll-smooth"
             aria-label="SOMOSGAY — ir al inicio"
-            aria-current={isActive(pathname, "/") ? "page" : undefined}
+            aria-current={pathname === "/" || pathname === "/gn" ? "page" : undefined}
+            onClick={() => {
+              if (typeof window !== "undefined" && (window.location.pathname === "/" || window.location.pathname === "/gn")) {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
           >
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
               <span className="text-white font-display font-bold text-lg">S</span>
@@ -37,19 +58,18 @@ export function Header() {
             <div className="hidden sm:block">
               <div className="font-display text-xl font-bold tracking-tight text-text">SOMOSGAY</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-text-muted">
-                Tekoporã para todes
+                {currentLocale === "gn" ? "Tekoporã opaichaguávape" : "Tekoporã para todes"}
               </div>
             </div>
           </Link>
 
-          {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-1">
             {c.navigation.map((item: any) => {
               const active = isActive(pathname, item.href);
               return (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={localizedHref(item.href, currentLocale)}
                   aria-current={active ? "page" : undefined}
                   className={[
                     "px-3 py-2 text-sm font-medium rounded-md transition-colors",
@@ -64,9 +84,10 @@ export function Header() {
                 </Link>
               );
             })}
+            <span className="mx-2 h-5 w-px bg-[var(--color-warm-deep)]" />
+            <LangSwitcher currentLocale={currentLocale} />
           </div>
 
-          {/* Mobile menu button */}
           <button
             type="button"
             className="lg:hidden p-2 rounded-md text-text-light hover:bg-warm"
@@ -85,7 +106,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {open && (
           <div id="mobile-nav" className="lg:hidden pb-4 space-y-1">
             {c.navigation.map((item: any) => {
@@ -93,7 +113,7 @@ export function Header() {
               return (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={localizedHref(item.href, currentLocale)}
                   onClick={() => setOpen(false)}
                   aria-current={active ? "page" : undefined}
                   className={[
@@ -109,6 +129,9 @@ export function Header() {
                 </Link>
               );
             })}
+            <div className="pt-2 border-t border-[var(--color-warm-deep)]">
+              <LangSwitcher currentLocale={currentLocale} />
+            </div>
           </div>
         )}
       </nav>

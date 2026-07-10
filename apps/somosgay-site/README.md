@@ -1,96 +1,116 @@
-# SOMOSGAY — Sitio web
+# SOMOSGAY site
 
-Sitio público de **SOMOSGAY** (Asociación Civil sin fines de lucro) y **Clínica Kunu'u** — la
-primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay.
-
-Live: **https://somosgay.paragu-ai.com**
+Sitio institucional bilingüe (ES + guaraní parcial) de SOMOSGAY.
+ONG LGBTQ+ en Paraguay.
 
 ## Stack
 
-- **Next.js 16.2** (App Router) + React 19
-- **Tailwind CSS v4** (`@tailwindcss/postcss`)
-- **TypeScript**
-- Fonts via `next/font/google`: **Playfair Display** (display), **Inter** (body)
-- Sin backend. Sin cookies de terceros. Sin analytics invasivo.
+- **Next.js 16** (App Router)
+- **React 19** server components por defecto
+- **TypeScript** estricto
+- **Tailwind v4** con design tokens en `content/tokens.json`
+- **Standalone output** para Docker (no se usa `@vercel/nft`)
 
-## Paleta
+## Local dev
 
-Rainbow + warm neutrals — enfoque afirmativo sin caer en rainbow-washing.
+```bash
+pnpm install  # o npm i / bun install
+pnpm dev      # http://localhost:3000
+```
 
-| Token | HEX | Uso |
-|-------|-----|-----|
-| `--color-primary` | `#7B2CBF` | Purple — CTAs principales |
-| `--color-secondary` | `#0F4C5C` | Teal — secciones sobrias |
-| `--color-accent` | `#E63946` | Red — urgencia / memorial |
-| `--color-background` | `#FFFCF7` | Off-white warm |
-| `--color-surface` | `#FFFFFF` | Tarjetas |
-| `--color-warm` | `#FFF1E6` | Fondos alternos |
+## Build
+
+```bash
+NODE_ENV=production npx next build   # genera .next/standalone
+docker buildx build -f Dockerfile.standalone -t somosgay-site:latest --load .
+```
 
 ## Estructura
 
 ```
-app/
-  layout.tsx              — root layout, fonts, metadata, JSON-LD (NGO + MedicalClinic)
-  page.tsx + HomeClient.tsx
-  clinica-kunuu/page.tsx  — flagship clinic + 8 services + schedule + booking
-  programas/page.tsx      — index de 5 programas
-  programas/[slug]/page.tsx — 4 sub-programas (tekohara, nande-rekora, karu-pora, programa-kunuu)
-  memoria-108/page.tsx    — caso Bernardo Aranda + Carta de un Amoral
-  donar/page.tsx          — 3 opciones + impact breakdown + transparencia
-  nosotros/page.tsx       — historia + liderazgo + auditoría
-  noticias/page.tsx       — placeholder (news system pendiente)
-  contacto/page.tsx       — WA + email + horarios + redes
-  privacidad/page.tsx     — política completa
-  sitemap.ts + robots.ts
-  not-found.tsx
-  globals.css
+app/                       # Rutas (por dominio, no por locale)
+├── page.tsx               # /
+├── gn/                    # Splashes localizados (poco contenido por ahora)
+├── clinica-kunuu/         # Página clínica
+├── donar/                 # Donación (con DonationForm)
+├── memoria-108/           # Evento anual
+├── eventos-ics/route.ts   # iCal feed
+├── search-index.json/     # JSON dump para SearchBar
+└── ...
 
-components/
-  Header.tsx              — sticky nav con rainbow strip top
-  Footer.tsx              — 4 columnas en purple deep
-  WhatsAppFloat.tsx       — botón WA siempre visible
-  BottomNav.tsx           — nav inferior mobile
-  CookieBanner.tsx        — banner localStorage, sin tracking
+components/                # Reusables
+├── Header.tsx             # Nav + LangSwitcher + QuickExit
+├── Footer.tsx             # Legal + SearchBar + social
+├── DonationForm.tsx       # 5 presets + monthly + tribute
+├── PrEP ...
+├── QuickExit.tsx          # Salir / Esc → google
+├── FeedbackWidget.tsx     # Bottom-right bug/typo
+├── Rsvp108.tsx            # Memoria 108 RSVP
+└── SearchBar.tsx          # Footer search (cliente, no algolia)
 
 content/
-  es.json                 — TODO el contenido (ES)
-  tokens.json             — paleta + fonts
+├── es.json                # Idioma principal (canonical)
+├── gn.json                # Partial guaraní (hero, navigation, klinika)
+├── tokens.json            # Design tokens
+├── news.ts                # Articulos /noticias
+├── equipo.ts              # Team members
+├── hitos.ts               # Histórico (timeline)
+├── testimonios.ts         # Voces comunidad
+├── aliados-directorio.ts  # Directorio de aliados
+└── search-index.ts        # Índice de búsqueda
+
+lib/
+└── content.ts             # getContent(locale) — wrapper multi-locale
+
+cron jobs:
+  2cc3681cec60  each 5min   probe-somosgay.sh → Telegram alert
+  a770de1df44b  weekly     probe-somosgay-weekly.sh → 17 routes + JSON-LD
+
+Tópicos delicados (open-core):
+  + contraseña del banco está en `.env.example` (no `.env`).
+  + datos del banco en vivo (en `transferencia/page.tsx`) están [Por confirmar].
+  + WhatsApp number tunnable vía `NEXT_PUBLIC_WHATSAPP_NUMBER`.
 ```
 
-## Decisiones de diseño OPSEC-conscious
+## Editar contenido
 
-- **Sin analytics**: ningún Google Analytics, Meta Pixel, Plausible, etc. Log de servidor mínimo (7 días).
-- **CSP estricta**: `frame-ancestors 'none'`, sin third-party scripts.
-- **HSTS preload**: cabeceras HSTS configuradas.
-- **Sin formulario backend**: contacto via WhatsApp deep-link + mailto. Cero almacenamiento en US infra.
-- **Política de privacidad clara**: explica qué NO hacemos (no rastreamos, no vendemos datos).
-- **JSON-LD dual**: NGO + MedicalClinic schema.org para SEO + descubribilidad.
+### Traducir algo nuevo al guaraní
 
-## Comandos
+1. Buscar la clave en `content/es.json`.
+2. Agregar la traducción en `content/gn.json` (mismo path).
+3. Importar `getContent` en lugar de `content` en el componente que lo usa:
+
+   ```ts
+   import { getContent } from "@/lib/content";
+   const c = getContent("es");   // o "gn"
+   ```
+
+4. Si la página no tiene variante `/gn/<slug>`, no hace falta todavía.
+   El language switcher (/gn) ya muestra un splash que apunta al ES.
+
+### Corregir un dato (ejemplo: dirección)
+
+1. Abrir `content/es.json`.
+2. Buscar `direccion` o `address`.
+3. Modificar.
+4. Rebuild.
+
+## Auditoria automatica
 
 ```bash
-# Desde la raíz del monorepo
-pnpm install
-pnpm --filter somosgay-site dev      # http://localhost:3000
-pnpm --filter somosgay-site build    # NODE_ENV=production npx next build
-pnpm --filter somosgay-site start
+./scripts/probe-somosgay.sh            # cada 5 min (cron)
+/root/.hermes/scripts/probe-somosgay-weekly.sh   # cada 7 dias
 ```
 
-## Repos relacionados
+Ambos revisan 17+ rutas y la presencia de JSON-LD en paginas clave.
 
-- **Sitio web (este):** `paragu-ai-platform/apps/somosgay-site`
-- **Repo de contexto del cliente:** [`Ai-Whisperers/somosgay-context`](https://github.com/Ai-Whisperers/somosgay-context)
-- **Sitio original (referencia, parcialmente caído):** https://www.somosgay.org/
+## Manuales de estilo en otros documentos
 
-## Fuentes de contenido
+- /Users/ivan/.claude/projects/.../skill.md → som_lgbtq_paraguay
+- /Users/ivan/.claude/projects/.../client-intake-analysis.md
 
-Todo el contenido en `es.json` está basado en investigación pública documentada en el repo
-de contexto (`somosgay-context`). Cada dato tiene fuente URL. Datos sensibles (memoria-108)
-requieren revisión humana antes de uso impreso.
+## Donde conseguir ayuda
 
-## Status
-
-- **Site:** ✅ Funciona
-- **Live domain:** somosgay.paragu-ai.com (DNS + Traefik routing pendiente)
-- **Multi-idioma:** Pendiente (ES-only al lanzamiento; EN según respuesta de Paloma Vera)
-- **Backend:** No requerido para Phase 1 (zero-data-touching, per risk assessment)
+- Ivan · Founder
+- Gaby / Paloma · Coordinación clínica
+- Equipo de comunicación de SOMOSGAY

@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { content as c } from "@/lib/content";
+import { getContent, type Locale } from "@/lib/content";
 
-export default function HomeClient() {
+export default function HomeClient({ locale }: { locale: Locale }) {
+  const c = getContent(locale);
+
   return (
     <div>
       {/* HERO */}
@@ -76,7 +78,7 @@ export default function HomeClient() {
             {c.home.programs.items.map((p: any) => (
               <Link
                 key={p.id}
-                href={p.href}
+                href={locale === "gn" ? `/gn${p.href}` : p.href}
                 className="bg-surface border border-[var(--color-warm-deep)] rounded-xl p-6 hover:shadow-lg hover:border-[var(--color-primary)] transition-all group"
               >
                 <div className="w-10 h-1 rainbow-gradient rounded-full mb-4" aria-hidden="true" />
@@ -147,13 +149,13 @@ export default function HomeClient() {
           <p className="text-lg text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">{c.home.cta.lead}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href={c.home.cta.primary_cta.href}
+              href={locale === "gn" ? `/gn${c.home.cta.primary_cta.href}` : c.home.cta.primary_cta.href}
               className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-[var(--color-purple-deep)] font-medium hover:bg-warm"
             >
               {c.home.cta.primary_cta.label}
             </Link>
             <Link
-              href={c.home.cta.secondary_cta.href}
+              href={locale === "gn" ? `/gn${c.home.cta.secondary_cta.href}` : c.home.cta.secondary_cta.href}
               className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-white/30 text-white font-medium hover:bg-white/10"
             >
               {c.home.cta.secondary_cta.label}

@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { BottomNav } from "@/components/BottomNav";
 import { CookieBanner } from "@/components/CookieBanner";
+import { FeedbackWidget } from "@/components/FeedbackWidget";
 import { QuickExit } from "@/components/QuickExit";
 import { content as c, SITE_URL } from "@/lib/content";
 // ImageResponse routes get a query-string cache-buster; mirror what Next.js generates.
@@ -268,6 +269,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <WhatsAppFloat />
         <BottomNav />
         <CookieBanner />
+        <FeedbackWidget />
       </body>
     </html>
   );

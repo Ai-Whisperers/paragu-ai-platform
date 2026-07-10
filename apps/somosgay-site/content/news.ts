@@ -12,6 +12,7 @@ export interface NewsArticle {
   heroEyebrow: string;
   paragraphs: string[];
   keyFacts?: string[];
+  tags?: string[];
   relatedLinks?: { label: string; href: string }[];
   authorRole?: string;
 }

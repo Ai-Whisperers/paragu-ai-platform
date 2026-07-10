@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { content as c } from "@/lib/content";
+import { content as c, SITE_URL } from "@/lib/content";
 import HomeInner from "./HomeClient";
-const SITE_URL = c.site?.url || "https://somosgay.paragu-ai.com";
 
 export const metadata: Metadata = {
   title: "SOMOSGAY — Tekoporã para todes",
   description: c.metaDescription,
   alternates: { canonical: `${SITE_URL}/` },
+  other: {
+    "content-language": "es-PY",
+  },
 };
 
 export default function HomePage() {
-  return <HomeInner />;
+  return <HomeInner locale="es" />;
 }

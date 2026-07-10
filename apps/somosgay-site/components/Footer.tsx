@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { content as c } from "@/lib/content";
+import { SearchBar } from "@/components/SearchBar";
 
 export function Footer() {
   return (
@@ -67,6 +68,14 @@ export function Footer() {
             ))}
           </div>
           <div className="text-xs text-white/50">{c.footer.copy}</div>
+        </div>
+
+        {/* Search */}
+        <div className="border-t border-white/20 pt-8 mt-8 max-w-md">
+          <h3 className="font-display text-sm font-bold uppercase tracking-wider mb-3 text-white/90">
+            Buscar
+          </h3>
+          <SearchBar />
         </div>
       </div>
     </footer>
