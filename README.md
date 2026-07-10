@@ -45,6 +45,7 @@ scripts/*                  -> shared deploy/build helpers
 | apps/pitchy-website | pitchy-blindex.paragu-ai.com |
 | apps/portas-barber | portas-barber.paragu-ai.com |
 | apps/reina-de-copas | reina-de-copas.paragu-ai.com |
+| apps/somosgay-site | somosgay.paragu-ai.com |
 | apps/shine-nails | shine-nails.paragu-ai.com |
 | apps/trentina-cerveza | trentina-cerveza.paragu-ai.com |
 | apps/trentina-site | trentina-site.paragu-ai.com |

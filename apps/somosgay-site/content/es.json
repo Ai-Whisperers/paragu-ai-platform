@@ -1,0 +1,539 @@
+{
+  "siteName": "SOMOSGAY",
+  "businessName": "SOMOSGAY",
+  "tagline": "Tekoporã para todes — Derechos LGBTQ+ y salud comunitaria en Paraguay",
+  "metaDescription": "SOMOSGAY — organización líder de derechos LGBTQ+ en Paraguay. Operamos Clínica Kunu'u (testeo VIH/PrEP/sífilis/Hep B, psicología, psiquiatría, reducción de daños). Independencia Nacional 1032, Asunción.",
+  "site": {
+    "title": "SOMOSGAY",
+    "description": "Tekoporã para todes — Derechos LGBTQ+ y salud comunitaria en Paraguay desde 2005",
+    "url": "https://somosgay.paragu-ai.com",
+    "whatsappBase": "595986173200",
+    "page_decor": "rainbow",
+    "seo": {
+      "open_description": "SOMOSGAY (Asunción, Paraguay) — organización LGBTQ+ fundada en 2005. Clínica Kunu'u, programas comunitarios, incidencia política. Sin fines de lucro. Financiada por amfAR, UNAIDS, Global Fund, AHF.",
+      "local_keywords": [
+        "LGBTQ+ Paraguay",
+        "SOMOSGAY Asunción",
+        "Clínica Kunu'u",
+        "testeo VIH Asunción",
+        "PrEP Paraguay",
+        "derechos LGTBI Paraguay",
+        "comunidad gay Paraguay",
+        "VIH sífilis hepatitis test",
+        "ONG diversidad Paraguay",
+        "Besatón Marcha del Orgullo Asunción"
+      ]
+    }
+  },
+  "theme": {
+    "color": "rainbow"
+  },
+  "navigation": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Programas", "href": "/programas" },
+    { "label": "Clínica Kunu'u", "href": "/clinica-kunuu" },
+    { "label": "Memoria 108", "href": "/memoria-108" },
+    { "label": "Noticias", "href": "/noticias" },
+    { "label": "Nosotros", "href": "/nosotros" },
+    { "label": "Donar", "href": "/donar", "highlight": true },
+    { "label": "Contacto", "href": "/contacto" }
+  ],
+  "home": {
+    "hero": {
+      "eyebrow": "Mávapa ha'e ñande — Somos nosotres",
+      "title": "SOMOSGAY",
+      "subtitle": "Tekoporã para todes",
+      "lead": "Organización de derechos LGBTQ+ fundada en 2005. Operamos Clínica Kunu'u — la primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay — junto con programas de prevención, incidencia y memoria histórica.",
+      "ctas": [
+        { "label": "Reservar en Clínica Kunu'u", "href": "https://wa.me/595986173200?text=Hola%20SOMOSGAY%2C%20quiero%20reservar%20un%20turno%20en%20Cl%C3%ADnica%20Kunu%27u", "style": "primary" },
+        { "label": "Donar ahora", "href": "/donar", "style": "secondary" }
+      ],
+      "founded": "Fundada en 2005 · formalizada 23 mayo 2009",
+      "location": "Independencia Nacional 1032 c/ Manduvirá · Asunción"
+    },
+    "mission": {
+      "eyebrow": "Nuestra misión",
+      "title": "Construimos Tekoporã — el buen vivir — para todes",
+      "paragraphs": [
+        "SOMOSGAY nació en 2005 y se formalizó el 23 de mayo de 2009 como una respuesta solidaria a la violencia ejercida hacia las personas LGTBI+ en Paraguay. Trabajamos en uno de los países más homofóbicos y desiguales de Latinoamérica.",
+        "Nuestro propósito: contribuir a la atención del VIH, innovar con estrategias efectivas contra la LGBTIfobia, y promover la defensa de los derechos humanos. Reivindicamos nuestra herencia guaraní que aspira al tekoporã para todes."
+      ]
+    },
+    "programs": {
+      "title": "Nuestros programas",
+      "subtitle": "5 programas activos + red regional",
+      "items": [
+        {
+          "id": "kunuu",
+          "name": "Clínica Kunu'u",
+          "tagline": "Salud comunitaria LGTBI+",
+          "description": "Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica. Reducción de daños.",
+          "href": "/clinica-kunuu",
+          "color": "purple"
+        },
+        {
+          "id": "tekohara",
+          "name": "Centro Comunitario Tekoharã",
+          "tagline": "Espacio seguro",
+          "description": "Centro comunitario donde la comunidad LGTBI+ se reúne, forma y acompaña.",
+          "href": "/programas/centro-tekohara",
+          "color": "teal"
+        },
+        {
+          "id": "nanderekora",
+          "name": "Ñande Rekorã",
+          "tagline": "Cuidado mutuo",
+          "description": "Sistema de cuidado comunitario y acompañamiento para personas LGTBI+ en situación de vulnerabilidad.",
+          "href": "/programas/nande-rekora",
+          "color": "rainbow3"
+        },
+        {
+          "id": "karupora",
+          "name": "Karu Porã",
+          "tagline": "Seguridad alimentaria",
+          "description": "Programa de alimentación para personas LGTBI+ en situación de calle o vulnerabilidad.",
+          "href": "/programas/karu-pora",
+          "color": "rainbow2"
+        },
+        {
+          "id": "programa-kunuu",
+          "name": "Programa Kunu'u",
+          "tagline": "Prevención combinada",
+          "description": "Campañas de prevención de VIH y promoción de PrEP. 'Yo amo PrEP: Yo amo más seguro'.",
+          "href": "/programas/programa-kunuu",
+          "color": "rainbow4"
+        }
+      ]
+    },
+    "impact": {
+      "title": "Impacto verificado",
+      "subtitle": "Datos públicos auditados · Cifras conservadoras",
+      "items": [
+        {
+          "metric": "1.300+",
+          "label": "Tests de VIH en 2020",
+          "source": "Informe Anual 2020"
+        },
+        {
+          "metric": "100K+",
+          "label": "Alcance en redes sociales (2020)",
+          "source": "Informe Anual 2020"
+        },
+        {
+          "metric": "20+",
+          "label": "Años de trabajo continuo desde 2005",
+          "source": "Fundación"
+        },
+        {
+          "metric": "60+",
+          "label": "Activistas en Red GayLatino (co-fundadores)",
+          "source": "Red GayLatino"
+        }
+      ],
+      "note": "Cifras verificadas con informes públicos. Para métricas detalladas de pacientes y financiamiento, ver `docs/01_organization/financials-public.md` en el repositorio de contexto."
+    },
+    "funders": {
+      "title": "Respaldados por",
+      "items": [
+        "amfAR",
+        "UNAIDS",
+        "AHF",
+        "Global Fund",
+        "ViiV Positive Action",
+        "OPS/OMS",
+        "PRONASIDA",
+        "All Out",
+        "GlobalGiving",
+        "Red GayLatino"
+      ],
+      "note": "Lista parcial de financiadores públicos. Auditor externo: Account Control & Asociados."
+    },
+    "cta": {
+      "title": "Tu apoyo importa",
+      "lead": "Cada donación se traduce en tests de VIH gratuitos, sesiones de psicología, incidencia política y memoria histórica. Somos una asociación civil sin fines de lucro — tu aporte llega directamente a la comunidad.",
+      "primary_cta": { "label": "Donar ahora", "href": "/donar" },
+      "secondary_cta": { "label": "Otras formas de apoyar", "href": "/donar#otras-formas" }
+    }
+  },
+  "clinica": {
+    "title": "Clínica Kunu'u",
+    "subtitle": "La primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay",
+    "lead": "Atención gratuita y confidencial. No se requiere orden médica. No se reporta información personal a ningún registro público.",
+    "services": [
+      {
+        "name": "Testeo de VIH",
+        "description": "Rápido, gratuito y confidencial. Resultado en 20 minutos.",
+        "category": "test"
+      },
+      {
+        "name": "PrEP (Profilaxis Pre-Exposición)",
+        "description": "Pastilla diaria que reduce el riesgo de contraer VIH en 99%. Requiere consulta previa.",
+        "category": "prevention"
+      },
+      {
+        "name": "TARV (Tratamiento Antirretroviral)",
+        "description": "Para personas ya diagnosticadas con VIH. Acceso gratuito y continuo.",
+        "category": "treatment"
+      },
+      {
+        "name": "Testeo de Sífilis",
+        "description": "Detección y derivación a tratamiento gratuito.",
+        "category": "test"
+      },
+      {
+        "name": "Testeo de Hepatitis B",
+        "description": "Detección y derivación.",
+        "category": "test"
+      },
+      {
+        "name": "Atención Psicológica",
+        "description": "Espacio confidencial con profesionales formados en diversidad sexual y de género.",
+        "category": "mental"
+      },
+      {
+        "name": "Atención Psiquiátrica",
+        "description": "Para personas que necesitan acompañamiento médico especializado.",
+        "category": "mental"
+      },
+      {
+        "name": "Reducción de daños",
+        "description": "Materiales y consejería para usuarios de sustancias.",
+        "category": "harm-reduction"
+      }
+    ],
+    "schedule": {
+      "title": "Horarios",
+      "note": "Verificar disponibilidad llamando o escribiendo antes de venir.",
+      "rows": [
+        { "day": "Lunes", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
+        { "day": "Martes", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
+        { "day": "Miércoles", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
+        { "day": "Jueves", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
+        { "day": "Viernes", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
+        { "day": "Sábado", "hours": "10:00 – 15:00", "service": "Autotest (retiro)" }
+      ]
+    },
+    "booking": {
+      "title": "Reservá tu turno",
+      "lead": "Atención por orden de llegada o reserva previa por WhatsApp.",
+      "whatsapp_cta": {
+        "label": "Reservar por WhatsApp",
+        "href": "https://wa.me/595986173200?text=Hola%20SOMOSGAY%2C%20quiero%20reservar%20un%20turno%20en%20Cl%C3%ADnica%20Kunu%27u",
+        "phone_display": "+595 986 173 200"
+      },
+      "note": "También podés venir directamente en horario de atención. Si necesitás atención fuera de horario, escribinos y vemos cómo ayudarte."
+    },
+    "opsec": {
+      "title": "Confidencialidad y seguridad",
+      "items": [
+        "No se requiere documento de identidad para el testeo de VIH.",
+        "La información personal y los resultados son estrictamente confidenciales.",
+        "SOMOSGAY no comparte datos con ningún registro público ni entidad estatal.",
+        "El equipo está capacitado en atención afirmativa LGTBI+.",
+        "El espacio es seguro y libre de discriminación."
+      ]
+    },
+    "stats": {
+      "tests_per_year_2020": "1.300+",
+      "prep_efficacy": "99%",
+      "cost_to_patient": "Gratuito"
+    }
+  },
+  "donar": {
+    "title": "Doná a SOMOSGAY",
+    "subtitle": "Cada aporte se traduce en salud, derechos y memoria para la comunidad LGTBI+ de Paraguay",
+    "intro": "SOMOSGAY es una asociación civil sin fines de lucro. Las donaciones nos permiten mantener la Clínica Kunu'u gratuita, sostener nuestros programas comunitarios y continuar la incidencia por los derechos humanos.",
+    "options": [
+      {
+        "id": "globalgiving",
+        "name": "GlobalGiving (internacional)",
+        "description": "Donar en USD, EUR, GBP desde cualquier país. Recibís recibo deducible de impuestos (US 501(c)(3)).",
+        "href": "https://www.globalgiving.org/dy/categories/health/",
+        "primary": true
+      },
+      {
+        "id": "allout",
+        "name": "All Out",
+        "description": "Donaciones internacionales con foco en incidencia LGBTQ+ global.",
+        "href": "https://allout.org/donate/",
+        "primary": false
+      },
+      {
+        "id": "transfer",
+        "name": "Transferencia bancaria (Paraguay)",
+        "description": "Para donaciones en guaraníes desde Paraguay. Escribinos a hola@somosgay.org y te pasamos los datos.",
+        "href": "mailto:hola@somosgay.org?subject=Donaci%C3%B3n%20bancaria",
+        "primary": false
+      }
+    ],
+    "impact_explanation": {
+      "title": "Qué hacemos con tu donación",
+      "items": [
+        {
+          "amount": "USD 25",
+          "impact": "1 test rápido de VIH + consejería pre y post test"
+        },
+        {
+          "amount": "USD 50",
+          "impact": "Kit completo de materiales para reducción de daños"
+        },
+        {
+          "amount": "USD 100",
+          "impact": "Una semana de atención psicológica para una persona LGTBI+"
+        },
+        {
+          "amount": "USD 250",
+          "impact": "Una jornada de testeo comunitario en territorio"
+        }
+      ],
+      "note": "Estimaciones de costo interno. Auditoría externa anual disponible en `/nosotros#auditoria`."
+    },
+    "transparency": {
+      "title": "Transparencia",
+      "items": [
+        "Informes anuales auditados disponibles públicamente.",
+        "Auditor externo: Account Control & Asociados (San Lorenzo, PY; Reg 295/2020).",
+        "Todas las opiniones de auditoría limpias.",
+        "Estados financieros publicados desde 2019."
+      ],
+      "audits_href": "/nosotros#auditoria"
+    },
+    "other_ways": {
+      "title": "Otras formas de apoyar",
+      "items": [
+        {
+          "title": "Voluntariado",
+          "description": "Si querés donar tiempo — en clínica, centro comunitario, comunicación o incidencia — escribinos.",
+          "cta": { "label": "Ser voluntaria/o", "href": "mailto:hola@somosgay.org?subject=Voluntariado" }
+        },
+        {
+          "title": "Difusión",
+          "description": "Compartí nuestro trabajo en tus redes. Ayudanos a llegar a personas que necesitan los servicios.",
+          "cta": null
+        },
+        {
+          "title": "Empresas aliadas",
+          "description": "Si tu empresa quiere sumarse como aliada institucional, escribinos para conversar sobre RSE y patrocinios.",
+          "cta": { "label": "Escribir", "href": "mailto:hola@somosgay.org?subject=Alianza%20empresarial" }
+        }
+      ]
+    }
+  },
+  "memoria108": {
+    "title": "Memoria 108",
+    "subtitle": "Septiembre — Mes de las Memorias 108",
+    "lead": "El Caso 108 es el trauma fundacional del movimiento LGTBI+ paraguayo. Cada septiembre conmemoramos los hechos de 1959.",
+    "intro": "El 1 de septiembre de 1959, Bernardo Aranda Valdez, locutor de Radio Comuneros de 25 años, fue asesinado en su casa del Barrio Obrero de Asunción. La policía usó su muerte como pretexto para 10 días de razias que torturaron a más de 108 hombres gays.",
+    "key_dates": [
+      {
+        "date": "1 de septiembre de 1959",
+        "event": "Asesinato de Bernardo Aranda Valdez"
+      },
+      {
+        "date": "2 – 12 de septiembre de 1959",
+        "event": "Razias policiales sistemáticas contra la comunidad gay"
+      },
+      {
+        "date": "11 de septiembre de 1959",
+        "event": "El País publica '108 personas de conducta moral dudosa'"
+      },
+      {
+        "date": "30 de septiembre de 1959",
+        "event": "Publicación de 'Carta de un Amoral' — 10 años antes de Stonewall"
+      }
+    ],
+    "carta": {
+      "title": "Carta de un Amoral",
+      "lead": "La respuesta pública de los 108, anónima, publicada en El País el 30 de septiembre de 1959. Es la primera manifestación pública por la libertad sexual en Paraguay — y precede a Stonewall (1969) por una década completa.",
+      "significance": "Este texto es reclamado por las organizaciones LGTBI+ paraguayas como documento fundacional del movimiento."
+    },
+    "memory_work": {
+      "title": "Trabajo de memoria",
+      "items": [
+        {
+          "year": "2010",
+          "title": "Documental '108 Cuchillo de Palo'",
+          "author": "Renate Costa (directora paraguaya)",
+          "description": "Su tío fue uno de los 108. Llevó el caso al cine internacional."
+        },
+        {
+          "year": "2013",
+          "title": "Libro '108 Ciento Ocho'",
+          "author": "Erwing Augsten Szokol",
+          "description": "Investigación histórica y jurídica definitiva del caso. Arandura, Asunción. ISBN 978-99953-2-740-8."
+        }
+      ]
+    },
+    "annual": {
+      "title": "Conmemoración anual",
+      "description": "Cada septiembre, AIREANA y SOMOSGAY co-organizan eventos conmemorativos del Mes de las Memorias 108. sumate.",
+      "next_event_date": "Septiembre 2026"
+    }
+  },
+  "nosotros": {
+    "title": "Sobre SOMOSGAY",
+    "subtitle": "Asociación Civil sin fines de lucro · Fundada 2005 · Formalizada 23 mayo 2009",
+    "paragraphs": [
+      "SOMOSGAY se origina en 2005 y se formaliza el 23 de mayo de 2009 como una respuesta solidaria hacia la violencia ejercida hacia las personas LGTBI+ en Paraguay, durante la inestable transición democrática tras una de las más largas dictaduras militares de la región.",
+      "Nuestra organización marca su compromiso con la construcción de una sociedad libre de opresiones, plenamente igualitaria, reivindicando nuestra herencia guaraní que aspira a lograr el tekoporã (buen vivir) para todes."
+    ],
+    "leadership": {
+      "title": "Liderazgo",
+      "executive_director": {
+        "name": "Paloma Vera",
+        "role": "Directora Ejecutiva",
+        "since": "2023"
+      },
+      "coordinator_kunuu": {
+        "name": "Ramón Martínez",
+        "role": "Coordinador Clínica Kunu'u"
+      },
+      "family_md_kunuu": {
+        "name": "Dr. Carlos Santa María",
+        "role": "Médico de familia, Clínica Kunu'u"
+      },
+      "co_founder": {
+        "name": "Simón Cazal",
+        "role": "Co-fundador · Director Ejecutivo 2009-2020 · Cara pública actual"
+      }
+    },
+    "network": {
+      "title": "Red regional",
+      "lead": "Somos co-fundadores y sede de la secretaría de Red GayLatino — red creada en 2015 que reúne a más de 60 activistas gay de 22+ países de Latinoamérica y el mundo."
+    },
+    "auditoria": {
+      "title": "Auditoría y transparencia",
+      "auditor": "Account Control & Asociados",
+      "auditor_location": "San Lorenzo, Paraguay",
+      "auditor_registration": "Reg 295/2020",
+      "available_reports": [
+        "Informe Anual 2020",
+        "Informe Anual 2022",
+        "Informe Auditoría 2019",
+        "Informe Auditoría 2020",
+        "Opinión sobre Estados Financieros 2023",
+        "Política para evitar la corrupción y el fraude 2024"
+      ]
+    }
+  },
+  "programas": {
+    "title": "Nuestros programas",
+    "subtitle": "5 programas activos · Red regional · Centros comunitarios",
+    "intro": "Trabajamos en cinco áreas principales que se complementan para responder a las necesidades de la comunidad LGTBI+ en Paraguay.",
+    "items": [
+      {
+        "id": "clinica-kunuu",
+        "name": "Clínica Kunu'u",
+        "tagline": "Salud comunitaria LGTBI+",
+        "href": "/clinica-kunuu",
+        "is_flagship": true
+      },
+      {
+        "id": "centro-tekohara",
+        "name": "Centro Comunitario Tekoharã",
+        "tagline": "Espacio seguro de encuentro y formación",
+        "href": "/programas/centro-tekohara"
+      },
+      {
+        "id": "nande-rekora",
+        "name": "Ñande Rekorã",
+        "tagline": "Sistema de cuidado mutuo",
+        "href": "/programas/nande-rekora"
+      },
+      {
+        "id": "karu-pora",
+        "name": "Karu Porã",
+        "tagline": "Seguridad alimentaria",
+        "href": "/programas/karu-pora"
+      },
+      {
+        "id": "programa-kunuu",
+        "name": "Programa Kunu'u",
+        "tagline": "Prevención combinada y campañas PrEP",
+        "href": "/programas/programa-kunuu"
+      }
+    ]
+  },
+  "noticias": {
+    "title": "Noticias",
+    "subtitle": "Actualizaciones, campañas, eventos y trabajo de incidencia",
+    "intro": "Notas recientes de SOMOSGAY. Para archivo histórico completo de comunicados, ver Wayback Machine.",
+    "placeholder_note": "Las noticias del sitio anterior (somosgay.org/news) no son accesibles en este momento. Esta sección se irá poblando con comunicados actuales conforme se publiquen. Para archivo histórico: https://web.archive.org/web/2024*/somosgay.org/news"
+  },
+  "contacto": {
+    "title": "Contacto",
+    "subtitle": "Estamos en Asunción, Paraguay",
+    "address": "Independencia Nacional 1032 c/ Manduvirá, Asunción, Paraguay",
+    "phone": "+595 986 173 200",
+    "email": "hola@somosgay.org",
+    "social": {
+      "instagram": "https://www.instagram.com/somosgayorg/",
+      "facebook": "https://www.facebook.com/elcentrosomosgay",
+      "twitter": "https://twitter.com/somosgay",
+      "youtube": "https://www.youtube.com/user/SOMOSGAYorg",
+      "tiktok": "https://www.tiktok.com/@somosgayorg",
+      "rss": "http://somosgay.org/noticias/rss"
+    },
+    "schedule_clinica": "Lun – Vie 13:00 – 17:00 (testeo) · Sáb 10:00 – 15:00 (autotest)",
+    "schedule_office": "Lun – Vie 09:00 – 18:00 (oficina)"
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Programas",
+        "links": [
+          { "label": "Clínica Kunu'u", "href": "/clinica-kunuu" },
+          { "label": "Tekoharã", "href": "/programas/centro-tekohara" },
+          { "label": "Ñande Rekorã", "href": "/programas/nande-rekora" },
+          { "label": "Karu Porã", "href": "/programas/karu-pora" },
+          { "label": "Programa Kunu'u", "href": "/programas/programa-kunuu" }
+        ]
+      },
+      {
+        "title": "Memoria",
+        "links": [
+          { "label": "Caso 108", "href": "/memoria-108" },
+          { "label": "Septiembre · Mes de las Memorias", "href": "/memoria-108#anual" }
+        ]
+      },
+      {
+        "title": "Sobre nosotros",
+        "links": [
+          { "label": "Historia", "href": "/nosotros" },
+          { "label": "Liderazgo", "href": "/nosotros#liderazgo" },
+          { "label": "Auditoría y transparencia", "href": "/nosotros#auditoria" },
+          { "label": "Privacidad", "href": "/privacidad" }
+        ]
+      }
+    ],
+    "social": [
+      { "label": "Instagram", "href": "https://www.instagram.com/somosgayorg/" },
+      { "label": "Facebook", "href": "https://www.facebook.com/elcentrosomosgay" },
+      { "label": "Twitter", "href": "https://twitter.com/somosgay" },
+      { "label": "YouTube", "href": "https://www.youtube.com/user/SOMOSGAYorg" },
+      { "label": "TikTok", "href": "https://www.tiktok.com/@somosgayorg" }
+    ],
+    "copy": "© SOMOSGAY · Asociación Civil sin fines de lucro · Independencia Nacional 1032, Asunción, Paraguay"
+  },
+  "client_qa_notes": {
+    "source_repo": "https://github.com/Ai-Whisperers/somosgay-context",
+    "content_verified_through": "2026-07-10",
+    "data_sources": [
+      "https://www.somosgay.org/about",
+      "https://www.somosgay.org/ (live probe 2026-07-10 — note: /news + /nanderekora currently 500)",
+      "https://es.wikipedia.org/wiki/Caso_108",
+      "https://es.wikipedia.org/wiki/Sim%C3%B3n_Cazal",
+      "ABC Color 2023-11-20 (campaña PrEP)",
+      "ABC Color 2023-12-01 (equipo Clínica Kunu'u)",
+      "ABC Color 2025-02-13 (cobertura PrEP)",
+      "https://www.hoy.com.py/tecnologia/lanzan-primera-aplicacion-gay-del-paraguay (Equis app 2014)",
+      "Informe Anual SOMOSGAY 2020 (auditado)",
+      "Opinión sobre Estados Financieros SOMOSGAY 2023 (auditado)"
+    ],
+    "verification_caveats": [
+      "5 programas activos según reportes públicos y /about — confirmar lista con cliente.",
+      "Horarios de clínica verificados en ABC Color 2025-02-13.",
+      "Coordenadas exactas del asesinato de Aranda requieren verificación humana (ver [HUMAN REVIEW REQUIRED] en memoria-108.md del repo context)."
+    ]
+  }
+}

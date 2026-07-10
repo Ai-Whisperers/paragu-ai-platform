@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#7B2CBF"/>
+  <text x="32" y="44" font-family="Playfair Display, Georgia, serif" font-size="36" font-weight="700" fill="white" text-anchor="middle">S</text>
+  <rect x="0" y="56" width="64" height="2" fill="#E40303"/>
+  <rect x="0" y="58" width="64" height="2" fill="#FF8C00"/>
+  <rect x="0" y="60" width="64" height="2" fill="#FFED00"/>
+  <rect x="0" y="62" width="64" height="2" fill="#008026"/>
+</svg>
