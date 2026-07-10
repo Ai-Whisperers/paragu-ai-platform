@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import content from "@/content/es.json";
-
-const c = content as any;
+import { content as c } from "@/lib/content";
 
 export function BottomNav() {
   const pathname = usePathname();

@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import content from "@/content/es.json";
-
-const c = content as any;
+import { content as c } from "@/lib/content";
 
 export function Header() {
   const [open, setOpen] = useState(false);

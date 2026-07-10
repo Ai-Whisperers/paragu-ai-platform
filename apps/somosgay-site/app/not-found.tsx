@@ -1,7 +1,5 @@
 import Link from "next/link";
-import content from "@/content/es.json";
-
-const c = content as any;
+import { content as c } from "@/lib/content";
 
 export default function NotFound() {
   return (

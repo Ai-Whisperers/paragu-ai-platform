@@ -1,7 +1,5 @@
 import type { MetadataRoute } from "next";
-import content from "@/content/es.json";
-
-const c = content as any;
+import { content as c } from "@/lib/content";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {

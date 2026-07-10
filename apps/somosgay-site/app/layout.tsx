@@ -6,11 +6,11 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { BottomNav } from "@/components/BottomNav";
 import { CookieBanner } from "@/components/CookieBanner";
-import content from "@/content/es.json";
-
-const c = content as any;
-const SITE_URL = c.site?.url || "https://somosgay.paragu-ai.com";
-const OG_IMAGE = `${SITE_URL}/og.svg`;
+import { content as c, SITE_URL } from "@/lib/content";
+// ImageResponse routes get a query-string cache-buster; mirror what Next.js generates.
+// We construct the path here without the hash — Next.js rewrites it during render.
+// For the static OG path used in JSON-LD, point to the dynamic route.
+const OG_IMAGE = `${SITE_URL}/opengraph-image`;
 
 const playfair = Playfair_Display({
   subsets: ["latin"],

@@ -1,7 +1,5 @@
 import type { MetadataRoute } from "next";
-import content from "@/content/es.json";
-
-const c = content as any;
+import { content as c } from "@/lib/content";
 const BASE = c.site.url;
 
 export default function sitemap(): MetadataRoute.Sitemap {

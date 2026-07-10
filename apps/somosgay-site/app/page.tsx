@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import content from "@/content/es.json";
+import { content as c } from "@/lib/content";
 import HomeInner from "./HomeClient";
-
-const c = content as any;
 const SITE_URL = c.site?.url || "https://somosgay.paragu-ai.com";
 
 export const metadata: Metadata = {

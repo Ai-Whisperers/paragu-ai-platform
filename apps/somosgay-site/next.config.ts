@@ -14,6 +14,16 @@ const config: NextConfig = {
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  async redirects() {
+    // Next.js 16 dynamic routes use /icon, /opengraph-image, /manifest.webmanifest.
+    // Older clients and PWA readers expect legacy paths — alias them.
+    return [
+      { source: "/favicon.ico", destination: "/icon", permanent: true },
+      { source: "/manifest.json", destination: "/manifest.webmanifest", permanent: true },
+      { source: "/og.svg", destination: "/opengraph-image", permanent: true },
+      { source: "/og.png", destination: "/opengraph-image", permanent: true },
+    ];
+  },
   async headers() {
     // OPSEC-conscious headers for LGBTQ+ serving site in hostile political climate
     return [

@@ -1,7 +1,5 @@
 "use client";
-import content from "@/content/es.json";
-
-const c = content as any;
+import { content as c } from "@/lib/content";
 
 export function WhatsAppFloat({
   phone = c.site.whatsappBase,

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import content from "@/content/es.json";
-
-const c = content as any;
+import { content as c } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Sobre SOMOSGAY",
