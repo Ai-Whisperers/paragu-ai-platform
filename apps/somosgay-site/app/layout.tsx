@@ -35,6 +35,14 @@ export const metadata: Metadata = {
   description: c.metaDescription,
   keywords: c.site.seo.local_keywords,
   authors: [{ name: "SOMOSGAY" }],
+  // i18n placeholder: hreflang tags emitted manually in <head>
+  // below. When /gn (Guaraní) routes are added, populate the languages map.
+  alternates: {
+    canonical: "/",
+    languages: {
+      "es-PY": "/",
+    },
+  },
   openGraph: {
     title: "SOMOSGAY — Tekoporã para todes",
     description: c.metaDescription,
