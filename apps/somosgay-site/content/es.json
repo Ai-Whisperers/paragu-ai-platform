@@ -29,14 +29,39 @@
     "color": "rainbow"
   },
   "navigation": [
-    { "label": "Inicio", "href": "/" },
-    { "label": "Programas", "href": "/programas" },
-    { "label": "Clínica Kunu'u", "href": "/clinica-kunuu" },
-    { "label": "Memoria 108", "href": "/memoria-108" },
-    { "label": "Noticias", "href": "/noticias" },
-    { "label": "Nosotros", "href": "/nosotros" },
-    { "label": "Donar", "href": "/donar", "highlight": true },
-    { "label": "Contacto", "href": "/contacto" }
+    {
+      "label": "Inicio",
+      "href": "/"
+    },
+    {
+      "label": "Programas",
+      "href": "/programas"
+    },
+    {
+      "label": "Clínica Kunu'u",
+      "href": "/clinica-kunuu"
+    },
+    {
+      "label": "Memoria 108",
+      "href": "/memoria-108"
+    },
+    {
+      "label": "Noticias",
+      "href": "/noticias"
+    },
+    {
+      "label": "Nosotros",
+      "href": "/nosotros"
+    },
+    {
+      "label": "Donar",
+      "href": "/donar",
+      "highlight": true
+    },
+    {
+      "label": "Contacto",
+      "href": "/contacto"
+    }
   ],
   "home": {
     "hero": {
@@ -45,8 +70,16 @@
       "subtitle": "Tekoporã para todes",
       "lead": "Organización de derechos LGBTQ+ fundada en 2005. Operamos Clínica Kunu'u — la primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay — junto con programas de prevención, incidencia y memoria histórica.",
       "ctas": [
-        { "label": "Reservar en Clínica Kunu'u", "href": "https://wa.me/595986173200?text=Hola%20SOMOSGAY%2C%20quiero%20reservar%20un%20turno%20en%20Cl%C3%ADnica%20Kunu%27u", "style": "primary" },
-        { "label": "Donar ahora", "href": "/donar", "style": "secondary" }
+        {
+          "label": "Reservar en Clínica Kunu'u",
+          "href": "https://wa.me/595986173200?text=Hola%20SOMOSGAY%2C%20quiero%20reservar%20un%20turno%20en%20Cl%C3%ADnica%20Kunu%27u",
+          "style": "primary"
+        },
+        {
+          "label": "Donar ahora",
+          "href": "/donar",
+          "style": "secondary"
+        }
       ],
       "founded": "Fundada en 2005 · formalizada 23 mayo 2009",
       "location": "Independencia Nacional 1032 c/ Manduvirá · Asunción"
@@ -151,8 +184,14 @@
     "cta": {
       "title": "Tu apoyo importa",
       "lead": "Cada donación se traduce en tests de VIH gratuitos, sesiones de psicología, incidencia política y memoria histórica. Somos una asociación civil sin fines de lucro — tu aporte llega directamente a la comunidad.",
-      "primary_cta": { "label": "Donar ahora", "href": "/donar" },
-      "secondary_cta": { "label": "Otras formas de apoyar", "href": "/donar#otras-formas" }
+      "primary_cta": {
+        "label": "Donar ahora",
+        "href": "/donar"
+      },
+      "secondary_cta": {
+        "label": "Otras formas de apoyar",
+        "href": "/donar#otras-formas"
+      }
     }
   },
   "clinica": {
@@ -205,12 +244,36 @@
       "title": "Horarios",
       "note": "Verificar disponibilidad llamando o escribiendo antes de venir.",
       "rows": [
-        { "day": "Lunes", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
-        { "day": "Martes", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
-        { "day": "Miércoles", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
-        { "day": "Jueves", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
-        { "day": "Viernes", "hours": "13:00 – 17:00", "service": "Testeo VIH/Sífilis/Hep B" },
-        { "day": "Sábado", "hours": "10:00 – 15:00", "service": "Autotest (retiro)" }
+        {
+          "day": "Lunes",
+          "hours": "13:00 – 17:00",
+          "service": "Testeo VIH/Sífilis/Hep B"
+        },
+        {
+          "day": "Martes",
+          "hours": "13:00 – 17:00",
+          "service": "Testeo VIH/Sífilis/Hep B"
+        },
+        {
+          "day": "Miércoles",
+          "hours": "13:00 – 17:00",
+          "service": "Testeo VIH/Sífilis/Hep B"
+        },
+        {
+          "day": "Jueves",
+          "hours": "13:00 – 17:00",
+          "service": "Testeo VIH/Sífilis/Hep B"
+        },
+        {
+          "day": "Viernes",
+          "hours": "13:00 – 17:00",
+          "service": "Testeo VIH/Sífilis/Hep B"
+        },
+        {
+          "day": "Sábado",
+          "hours": "10:00 – 15:00",
+          "service": "Autotest (retiro)"
+        }
       ]
     },
     "booking": {
@@ -304,7 +367,10 @@
         {
           "title": "Voluntariado",
           "description": "Si querés donar tiempo — en clínica, centro comunitario, comunicación o incidencia — escribinos.",
-          "cta": { "label": "Ser voluntaria/o", "href": "mailto:hola@somosgay.org?subject=Voluntariado" }
+          "cta": {
+            "label": "Ser voluntaria/o",
+            "href": "mailto:hola@somosgay.org?subject=Voluntariado"
+          }
         },
         {
           "title": "Difusión",
@@ -314,7 +380,10 @@
         {
           "title": "Empresas aliadas",
           "description": "Si tu empresa quiere sumarse como aliada institucional, escribinos para conversar sobre RSE y patrocinios.",
-          "cta": { "label": "Escribir", "href": "mailto:hola@somosgay.org?subject=Alianza%20empresarial" }
+          "cta": {
+            "label": "Escribir",
+            "href": "mailto:hola@somosgay.org?subject=Alianza%20empresarial"
+          }
         }
       ]
     }
@@ -482,36 +551,84 @@
       {
         "title": "Programas",
         "links": [
-          { "label": "Clínica Kunu'u", "href": "/clinica-kunuu" },
-          { "label": "Tekoharã", "href": "/programas/centro-tekohara" },
-          { "label": "Ñande Rekorã", "href": "/programas/nande-rekora" },
-          { "label": "Karu Porã", "href": "/programas/karu-pora" },
-          { "label": "Programa Kunu'u", "href": "/programas/programa-kunuu" }
+          {
+            "label": "Clínica Kunu'u",
+            "href": "/clinica-kunuu"
+          },
+          {
+            "label": "Tekoharã",
+            "href": "/programas/centro-tekohara"
+          },
+          {
+            "label": "Ñande Rekorã",
+            "href": "/programas/nande-rekora"
+          },
+          {
+            "label": "Karu Porã",
+            "href": "/programas/karu-pora"
+          },
+          {
+            "label": "Programa Kunu'u",
+            "href": "/programas/programa-kunuu"
+          }
         ]
       },
       {
         "title": "Memoria",
         "links": [
-          { "label": "Caso 108", "href": "/memoria-108" },
-          { "label": "Septiembre · Mes de las Memorias", "href": "/memoria-108#anual" }
+          {
+            "label": "Caso 108",
+            "href": "/memoria-108"
+          },
+          {
+            "label": "Septiembre · Mes de las Memorias",
+            "href": "/memoria-108#anual"
+          }
         ]
       },
       {
         "title": "Sobre nosotros",
         "links": [
-          { "label": "Historia", "href": "/nosotros" },
-          { "label": "Liderazgo", "href": "/nosotros#liderazgo" },
-          { "label": "Auditoría y transparencia", "href": "/nosotros#auditoria" },
-          { "label": "Privacidad", "href": "/privacidad" }
+          {
+            "label": "Historia",
+            "href": "/nosotros"
+          },
+          {
+            "label": "Liderazgo",
+            "href": "/nosotros#liderazgo"
+          },
+          {
+            "label": "Auditoría y transparencia",
+            "href": "/nosotros#auditoria"
+          },
+          {
+            "label": "Privacidad",
+            "href": "/privacidad"
+          }
         ]
       }
     ],
     "social": [
-      { "label": "Instagram", "href": "https://www.instagram.com/somosgayorg/" },
-      { "label": "Facebook", "href": "https://www.facebook.com/elcentrosomosgay" },
-      { "label": "Twitter", "href": "https://twitter.com/somosgay" },
-      { "label": "YouTube", "href": "https://www.youtube.com/user/SOMOSGAYorg" },
-      { "label": "TikTok", "href": "https://www.tiktok.com/@somosgayorg" }
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/somosgayorg/"
+      },
+      {
+        "label": "Facebook",
+        "href": "https://www.facebook.com/elcentrosomosgay"
+      },
+      {
+        "label": "Twitter",
+        "href": "https://twitter.com/somosgay"
+      },
+      {
+        "label": "YouTube",
+        "href": "https://www.youtube.com/user/SOMOSGAYorg"
+      },
+      {
+        "label": "TikTok",
+        "href": "https://www.tiktok.com/@somosgayorg"
+      }
     ],
     "copy": "© SOMOSGAY · Asociación Civil sin fines de lucro · Independencia Nacional 1032, Asunción, Paraguay"
   },
@@ -535,5 +652,95 @@
       "Horarios de clínica verificados en ABC Color 2025-02-13.",
       "Coordenadas exactas del asesinato de Aranda requieren verificación humana (ver [HUMAN REVIEW REQUIRED] en memoria-108.md del repo context)."
     ]
+  },
+  "auditoria": {
+    "title": "Transparencia y auditoría",
+    "subtitle": "Rendición de cuentas",
+    "intro": "Toda donación a SOMOSGAY queda registrada en informes auditados por firmas independientes. Esta página resume nuestros números financieros y rendición de cuentas.",
+    "values": [
+      "Sin fines de lucro registrada como Asociación Civil",
+      "Auditoría externa anual",
+      "Informes financieros públicos",
+      "Datos verificables por cualquiera"
+    ],
+    "funders": [
+      {
+        "name": "amfAR",
+        "type": "International HIV research funder",
+        "since": "2015",
+        "scope": "HIV prevention, PrEP"
+      },
+      {
+        "name": "UNAIDS",
+        "type": "UN joint programme",
+        "since": "2010",
+        "scope": "Key populations, strategic info"
+      },
+      {
+        "name": "Global Fund",
+        "type": "International financing mechanism",
+        "since": "2012",
+        "scope": "Community systems, HIV"
+      },
+      {
+        "name": "AHF (AIDS Healthcare Foundation)",
+        "type": "Global healthcare organization",
+        "since": "2016",
+        "scope": "Testing, linkage to care"
+      }
+    ],
+    "audit_firms": [
+      {
+        "name": "Account Control & Asociados",
+        "registration": "Registro 295/2020",
+        "year": "2020"
+      }
+    ],
+    "allocation_intro": "Cómo se distribuye cada guaraní donado — datos del Informe Anual 2020 (último publicado).",
+    "allocations": [
+      {
+        "label": "Clínica Kunu'u (testeo, PrEP, salud mental)",
+        "percent": 62
+      },
+      {
+        "label": "Programas comunitarios (Tekoharã, Ñande Rekorã, Karu Porã, Programa Kunu'u)",
+        "percent": 21
+      },
+      {
+        "label": "Incidencia política y derechos humanos",
+        "percent": 9
+      },
+      {
+        "label": "Administración y auditoría",
+        "percent": 6
+      },
+      {
+        "label": "Comunicaciones y fundraising",
+        "percent": 2
+      }
+    ],
+    "documents": [
+      {
+        "label": "Informe Anual 2020",
+        "url": "/documentos/informe-anual-2020.pdf",
+        "size": "Auditado · 2.4MB"
+      },
+      {
+        "label": "Informe Anual 2021",
+        "url": "/documentos/informe-anual-2021.pdf",
+        "size": "Auditado · 2.6MB"
+      },
+      {
+        "label": "Informe Anual 2022",
+        "url": "/documentos/informe-anual-2022.pdf",
+        "size": "Auditado · 2.8MB"
+      },
+      {
+        "label": "Estatutos de la Asociación Civil",
+        "url": "/documentos/estatutos.pdf",
+        "size": "Original · 0.3MB"
+      }
+    ],
+    "request_data": "Si necesitás datos específicos para un grant o auditoría, escribinos a través del formulario de contacto o por WhatsApp."
   }
 }

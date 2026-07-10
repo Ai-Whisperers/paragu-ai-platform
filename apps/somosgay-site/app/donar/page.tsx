@@ -3,6 +3,7 @@ import { content as c, SITE_URL } from "@/lib/content";
 import Script from "next/script";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 import { ShareButtons } from "@/components/ShareButtons";
+import { DonationForm } from "@/components/DonationForm";
 
 export const metadata: Metadata = {
   title: "Donar a SOMOSGAY",
@@ -35,6 +36,20 @@ export default function DonarPage() {
           <h1 className="font-display text-4xl lg:text-6xl font-bold tracking-tight mb-4">{c.donar.title}</h1>
           <p className="text-xl text-text-light mb-6">{c.donar.subtitle}</p>
           <p className="text-base text-text-light leading-relaxed max-w-2xl">{c.donar.intro}</p>
+        </div>
+      </section>
+
+      {/* DONATION FORM */}
+      <section className="py-20 bg-warm-deep">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl lg:text-4xl font-bold mb-3">
+            Hacé tu donación
+          </h2>
+          <p className="text-text-light mb-8 max-w-2xl">
+            Elegí el monto, la frecuencia y si querés dedicar la donación a alguien. Al enviar,
+            te llevamos a WhatsApp con todo pre-cargado para coordinar la transferencia.
+          </p>
+          <DonationForm />
         </div>
       </section>
 
