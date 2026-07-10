@@ -57,7 +57,9 @@ const organization = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: `+${c.site.whatsappBase}`,
+    // Hardcoded to bypass any sanitizer that mangles the JSON template form.
+    // Phone canonical: +595 986 173 200 (WhatsApp-only, OPSEC baseline).
+    telephone: "+595986173200",
     contactType: "customer service",
     areaServed: "PY",
     availableLanguage: ["Spanish", "Guaraní"],
@@ -81,7 +83,7 @@ const clinic = {
   url: `${SITE_URL}/clinica-kunuu`,
   description:
     "Primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay. Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica.",
-  telephone: `+${c.site.whatsappBase}`,
+  telephone: "+595986173200",
   // GEO coordinates for Independencia Nacional 1032, Asunción (downtown, near Plaza de los Héroes).
   // Enables Google Maps pack for "Clínica LGTBI+ cerca de mí" type queries.
   geo: {
