@@ -123,6 +123,7 @@ export default function DonarPage() {
 
       <ShareButtons
         title="Doná a SOMOSGAY — apoya la salud comunitaria LGTBI+ en Paraguay"
+        url={`${SITE_URL}/donar`}
         intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
       /></div>
   );

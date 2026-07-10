@@ -42,7 +42,10 @@ export function BookingForm() {
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
-    const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "595986173200";
+    // Phone number is baked in at build time via NEXT_PUBLIC_WHATSAPP_NUMBER
+    // (set in .env.local or CI env). Fallback to documented Paraguayan clinic line.
+    const phone =
+      process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "595986173200";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(buildWaMessage())}`;
     window.open(url, "_blank", "noopener,noreferrer");
   }

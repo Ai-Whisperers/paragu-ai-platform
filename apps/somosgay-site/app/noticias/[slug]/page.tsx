@@ -171,6 +171,7 @@ export default async function NewsArticlePage({
 
           <ShareButtons
             title={a.title}
+            url={`${SITE_URL}/noticias/${a.slug}`}
             intro="Si te pareció útil este artículo, compartilo — cada clic ayuda a que más personas conozcan el trabajo de SOMOSGAY."
           />
 

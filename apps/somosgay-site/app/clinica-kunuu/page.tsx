@@ -250,6 +250,7 @@ export default function ClinicaPage() {
 
       <ShareButtons
         title="Clínica Kunu'u — testeo gratuito de VIH, PrEP y atención LGTBI+ en Asunción"
+        url={`${SITE_URL}/clinica-kunuu`}
         intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
       /></div>
   );

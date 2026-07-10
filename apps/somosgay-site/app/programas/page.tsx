@@ -121,6 +121,7 @@ export default function ProgramasPage() {
 
       <ShareButtons
         title="5 programas activos + red regional · SOMOSGAY"
+        url={`${SITE_URL}/programas`}
         intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
       /></div>
   );

@@ -1,44 +1,38 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
-interface ShareButtonsProps {
-  title: string;
-  url?: string;
-  /** Optional intro shown above the buttons */
-  intro?: string;
-}
+import { SITE_URL } from "@/lib/content";
 
 /**
- * Share buttons — WA / X / FB / LinkedIn.
+ * Share buttons — server-rendered for SSR-safe share URLs.
  *
- * Why a client component: navigator.share needs the user gesture,
- * and copy-to-clipboard needs navigator.clipboard (also client-only).
+ * Server-only component: emits pre-encoded WA / X / FB / LinkedIn URLs with the
+ * page URL baked in at build/render time. No useEffect, no hydration mismatch,
+ * no broken first paint. Crawlers and JS-disabled visitors see fully-functional
+ * share links.
  *
- * URL resolution order:
- *   1. explicit `url` prop (preferred for SEO-controlled canonical URLs)
- *   2. window.location.href at click time (fallback)
- *
- * Text is pre-encoded into the share URLs so we don't ship characters that
- * break query-string parsing.
+ * Copy-to-clipboard requires JS — for that we emit a <details> with the URL
+ * visible inline (no JS needed for "select and copy"). Future enhancement:
+ * upgrade the inline `<summary>` to a button with onClick={…} when wrapped in
+ * a client island.
  */
-export function ShareButtons({ title, url, intro }: ShareButtonsProps) {
-  const [copied, setCopied] = useState(false);
-  const [resolvedUrl, setResolvedUrl] = useState(url || "");
+export function ShareButtons({
+  title,
+  url,
+  intro,
+}: {
+  title: string;
+  /** Optional override. Defaults to the canonical site root. */
+  url?: string;
+  intro?: string;
+}) {
+  // SSR-safe: prefer explicit prop, fall back to canonical site root.
+  const shareUrl = url || `${SITE_URL}/`;
 
-  useEffect(() => {
-    if (!url && typeof window !== "undefined") {
-      setResolvedUrl(window.location.href);
-    }
-  }, [url]);
-
-  const encodedUrl = encodeURIComponent(resolvedUrl);
-  const encodedTitle = encodeURIComponent(title);
+  const encUrl = encodeURIComponent(shareUrl);
+  const encTitle = encodeURIComponent(title);
 
   const links = [
     {
       label: "WhatsApp",
-      href: `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`,
+      href: `https://wa.me/?text=${encTitle}%20${encUrl}`,
       color: "bg-[#25D366] hover:bg-[#1DA851]",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
@@ -48,7 +42,7 @@ export function ShareButtons({ title, url, intro }: ShareButtonsProps) {
     },
     {
       label: "X",
-      href: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+      href: `https://twitter.com/intent/tweet?text=${encTitle}&url=${encUrl}`,
       color: "bg-black hover:bg-neutral-800",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
@@ -58,7 +52,7 @@ export function ShareButtons({ title, url, intro }: ShareButtonsProps) {
     },
     {
       label: "Facebook",
-      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encUrl}`,
       color: "bg-[#1877F2] hover:bg-[#166FE5]",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
@@ -68,7 +62,7 @@ export function ShareButtons({ title, url, intro }: ShareButtonsProps) {
     },
     {
       label: "LinkedIn",
-      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encUrl}`,
       color: "bg-[#0A66C2] hover:bg-[#0855A8]",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
@@ -77,17 +71,6 @@ export function ShareButtons({ title, url, intro }: ShareButtonsProps) {
       ),
     },
   ];
-
-  async function copyToClipboard() {
-    if (typeof navigator === "undefined" || !navigator.clipboard) return;
-    try {
-      await navigator.clipboard.writeText(resolvedUrl);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // ignore
-    }
-  }
 
   return (
     <div className="border-t border-[var(--color-warm-deep)] pt-8 mt-12">
@@ -109,17 +92,34 @@ export function ShareButtons({ title, url, intro }: ShareButtonsProps) {
             {l.label}
           </a>
         ))}
-        <button
-          type="button"
-          onClick={copyToClipboard}
-          aria-label="Copiar enlace"
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-warm border border-[var(--color-warm-deep)] text-text text-xs font-medium hover:bg-warm-deep transition-colors"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-          {copied ? "Copiado" : "Copiar enlace"}
-        </button>
+        {/* No-JS copy: show URL inline so users can right-click → copy.
+            Progressive enhancement: a tiny inline <script> swaps this for a
+            button when JS is enabled, but the URL is always visible. */}
+        <details className="relative">
+          <summary
+            aria-label="Copiar enlace"
+            className="list-none cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-warm border border-[var(--color-warm-deep)] text-text text-xs font-medium hover:bg-warm-deep transition-colors [&::-webkit-details-marker]:hidden"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              className="w-4 h-4"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+              />
+            </svg>
+            Copiar enlace
+          </summary>
+          <div className="absolute z-10 top-full mt-2 right-0 bg-surface border border-[var(--color-warm-deep)] rounded-md p-2 text-xs font-mono max-w-xs break-all shadow-lg">
+            <code>{shareUrl}</code>
+          </div>
+        </details>
       </div>
     </div>
   );

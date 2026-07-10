@@ -130,6 +130,7 @@ export default function NosotrosPage() {
 
       <ShareButtons
         title="SOMOSGAY — Asociación Civil sin fines de lucro fundada en 2005"
+        url={`${SITE_URL}/nosotros`}
         intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
       /></div>
   );

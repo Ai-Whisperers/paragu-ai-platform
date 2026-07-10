@@ -156,6 +156,7 @@ export default function MemoriaPage() {
 
       <ShareButtons
         title="Memoria 108 — caso Bernardo Aranda y Carta de un Amoral"
+        url={`${SITE_URL}/memoria-108`}
         intro="Si te parece útil, compartilo — cada clic ayuda a que más personas conozcan los servicios."
       /></div>
   );

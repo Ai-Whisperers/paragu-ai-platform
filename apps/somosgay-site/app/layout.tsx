@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -26,6 +27,140 @@ const inter = Inter({
   display: "swap",
 });
 
+// JSON-LD organization entity — single source of truth, referenced by all
+// child schemas (WebSite + MedicalClinic) via @id.
+const organization = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "@id": `${SITE_URL}/#organization`,
+  name: "SOMOSGAY",
+  alternateName: "Asociación Civil SOMOSGAY",
+  url: SITE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/icon`,
+    width: 32,
+    height: 32,
+  },
+  description: c.metaDescription,
+  foundingDate: "2005",
+  areaServed: { "@type": "Country", name: "Paraguay" },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Independencia Nacional 1032 c/ Manduvirá",
+    addressLocality: "Asunción",
+    addressRegion: "Capital District",
+    postalCode: "1209",
+    addressCountry: "PY",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: `+${c.site.whatsappBase}`,
+    contactType: "customer service",
+    areaServed: "PY",
+    availableLanguage: ["Spanish", "Guaraní"],
+  },
+  sameAs: [
+    "https://www.instagram.com/somosgayorg/",
+    "https://www.facebook.com/elcentrosomosgay",
+    "https://twitter.com/somosgay",
+    "https://www.youtube.com/user/SOMOSGAYorg",
+    "https://www.tiktok.com/@somosgayorg",
+  ],
+};
+
+// JSON-LD MedicalClinic entity for Clínica Kunu'u.
+const clinic = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "@id": `${SITE_URL}/clinica-kunuu/#clinic`,
+  name: "Clínica Kunu'u",
+  parentOrganization: { "@id": `${SITE_URL}/#organization` },
+  url: `${SITE_URL}/clinica-kunuu`,
+  description:
+    "Primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay. Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica.",
+  telephone: `+${c.site.whatsappBase}`,
+  // GEO coordinates for Independencia Nacional 1032, Asunción (downtown, near Plaza de los Héroes).
+  // Enables Google Maps pack for "Clínica LGTBI+ cerca de mí" type queries.
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -25.2815,
+    longitude: -57.6358,
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Independencia Nacional 1032 c/ Manduvirá",
+    addressLocality: "Asunción",
+    addressRegion: "Capital District",
+    postalCode: "1209",
+    addressCountry: "PY",
+  },
+  hasMap:
+    "https://www.google.com/maps/search/?api=1&query=Independencia+Nacional+1032,+Asuncion,+Paraguay",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "13:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "10:00",
+      closes: "15:00",
+    },
+  ],
+  priceRange: "Gratuito",
+  availableService: [
+    { "@type": "MedicalProcedure", name: "Testeo de VIH" },
+    { "@type": "MedicalProcedure", name: "Profilaxis Pre-Exposición (PrEP)" },
+    { "@type": "MedicalProcedure", name: "Tratamiento Antirretroviral (TARV)" },
+    { "@type": "MedicalProcedure", name: "Testeo de sífilis" },
+    { "@type": "MedicalProcedure", name: "Testeo de Hepatitis B" },
+  ],
+};
+
+// JSON-LD WebSite entity — enables Google sitelinks search box.
+const website = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: "SOMOSGAY",
+  alternateName: "SOMOSGAY Paraguay · Tekoporã para todes",
+  url: SITE_URL,
+  description: c.site.description,
+  inLanguage: ["es-PY", "gn"],
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+    },
+    // query-input: required schema.org syntax for SearchAction
+    "query-input": "required name=search_term_string",
+  },
+};
+
+// JSON-LD descriptors emitted as individual <script type="application/ld+json">
+// blocks at the top of <body>. Each block contains exactly ONE entity — this is
+// the schema.org best practice; Google has confirmed that top-level arrays inside
+// a single block are sometimes rejected by rich-result validators.
+//
+// Order matters for the Knowledge Graph: publisher org first, then sub-entities
+// that reference it via @id, then WebSite with SearchAction at the end.
+const jsonLdEntities = [organization, clinic, website] as const;
+
+const fontCss = `:root{--font-display:${playfair.style.fontFamily},Georgia,serif;--font-body:${inter.style.fontFamily},system-ui,sans-serif;}`;
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#7B2CBF",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -35,21 +170,22 @@ export const metadata: Metadata = {
   description: c.metaDescription,
   keywords: c.site.seo.local_keywords,
   authors: [{ name: "SOMOSGAY" }],
-  // i18n placeholder: hreflang tags emitted manually in <head>
-  // below. When /gn (Guaraní) routes are added, populate the languages map.
+  // i18n: Spanish (default) + Guaraní placeholder.
+  // Per Next.js 16 docs, languages should be absolute URLs for full hreflang emission.
   alternates: {
     canonical: "/",
     languages: {
-      "es-PY": "/",
+      "es-PY": `${SITE_URL}/`,
+      // "gn-PY": `${SITE_URL}/gn`,  // coming soon — Guaraní version of site
     },
   },
   openGraph: {
     title: "SOMOSGAY — Tekoporã para todes",
     description: c.metaDescription,
-    locale: "es_PY",
-    type: "website",
     url: SITE_URL,
     siteName: "SOMOSGAY",
+    locale: "es_PY",
+    type: "website",
     images: [
       {
         url: OG_IMAGE,
@@ -68,167 +204,30 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  viewportFit: "cover",
-  themeColor: "#7B2CBF",
-};
-
-// JSON-LD: NGO + Clinic structured data
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "NGO",
-    "@id": `${SITE_URL}/#organization`,
-    name: "SOMOSGAY",
-    alternateName: "Asociación Civil SOMOSGAY",
-    url: SITE_URL,
-    logo: `${SITE_URL}/icon`,
-    description: c.metaDescription,
-    foundingDate: "2005",
-    areaServed: { "@type": "Country", name: "Paraguay" },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Independencia Nacional 1032 c/ Manduvirá",
-      addressLocality: "Asunción",
-      addressCountry: "PY",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: `+${c.site.whatsappBase}`,
-      contactType: "customer service",
-      areaServed: "PY",
-      availableLanguage: ["Spanish", "Guaraní"],
-    },
-    sameAs: [
-      "https://www.instagram.com/somosgayorg/",
-      "https://www.facebook.com/elcentrosomosgay",
-      "https://twitter.com/somosgay",
-      "https://www.youtube.com/user/SOMOSGAYorg",
-      "https://www.tiktok.com/@somosgayorg",
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "@id": `${SITE_URL}/clinica-kunuu/#clinic`,
-    name: "Clínica Kunu'u",
-    parentOrganization: { "@id": `${SITE_URL}/#organization` },
-    url: `${SITE_URL}/clinica-kunuu`,
-    description:
-      "Primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay. Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica.",
-    telephone: `+${c.site.whatsappBase}`,
-    // GEO coordinates for Independencia Nacional 1032, Asunción (downtown, near Plaza de los Héroes).
-    // Enables Google Maps pack for "Clínica LGTBI+ cerca de mí" type queries.
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: -25.2815,
-      longitude: -57.6358,
-    },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Independencia Nacional 1032 c/ Manduvirá",
-      addressLocality: "Asunción",
-      addressRegion: "Capital District",
-      postalCode: "1209",
-      addressCountry: "PY",
-    },
-    hasMap: "https://www.google.com/maps/search/?api=1&query=Independencia+Nacional+1032,+Asuncion,+Paraguay",
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "13:00",
-        closes: "17:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "10:00",
-        closes: "15:00",
-      },
-    ],
-    priceRange: "Gratuito",
-    availableService: [
-      { "@type": "MedicalProcedure", name: "Testeo de VIH" },
-      { "@type": "MedicalProcedure", name: "Profilaxis Pre-Exposición (PrEP)" },
-      { "@type": "MedicalProcedure", name: "Tratamiento Antirretroviral (TARV)" },
-      { "@type": "MedicalProcedure", name: "Testeo de sífilis" },
-      { "@type": "MedicalProcedure", name: "Testeo de Hepatitis B" },
-    ],
-  },
-  {
-    // WebSite schema enables Google sitelinks search box
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${SITE_URL}/#website`,
-    name: "SOMOSGAY",
-    alternateName: "SOMOSGAY Paraguay · Tekoporã para todes",
-    url: SITE_URL,
-    description: c.site.description,
-    inLanguage: ["es-PY", "gn"],
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${SITE_URL}/?q={search_term_string}`,
-      },
-      // query-input: required schema.org syntax for SearchAction
-      "query-input": "required name=search_term_string",
-    },
-  },
-  {
-    // Organization is the canonical entity referenced by WebSite.publisher
-    // and used by all child schemas (NGO + MedicalClinic already reference it).
-    "@context": "https://schema.org",
-    "@type": "NGO",
-    "@id": `${SITE_URL}/#organization`,
-    name: "SOMOSGAY",
-    alternateName: "Asociación Civil SOMOSGAY",
-    url: SITE_URL,
-    logo: {
-      "@type": "ImageObject",
-      url: `${SITE_URL}/icon`,
-      width: 32,
-      height: 32,
-    },
-    description: c.metaDescription,
-    foundingDate: "2005",
-    areaServed: { "@type": "Country", name: "Paraguay" },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Independencia Nacional 1032 c/ Manduvirá",
-      addressLocality: "Asunción",
-      addressCountry: "PY",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: `+${c.site.whatsappBase}`,
-      contactType: "customer service",
-      areaServed: "PY",
-      availableLanguage: ["Spanish", "Guaraní"],
-    },
-    sameAs: [
-      "https://www.instagram.com/somosgayorg/",
-      "https://www.facebook.com/elcentrosomosgay",
-      "https://twitter.com/somosgay",
-      "https://www.youtube.com/user/SOMOSGAYorg",
-      "https://www.tiktok.com/@somosgayorg",
-    ],
-  },
-];
-
-const fontCss = `:root{--font-display:${playfair.style.fontFamily},Georgia,serif;--font-body:${inter.style.fontFamily},system-ui,sans-serif;}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        {/* JSON-LD: each entity as its own <script> block (schema.org best practice).
+            Order: publisher org, then sub-entities that reference it via @id,
+            then WebSite with SearchAction. */}
+        {jsonLdEntities.map((entity, i) => (
+          <script
+            key={`ld-${i}-${entity["@type"]}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(entity) }}
+          />
+        ))}
+      </head>
       <body className="antialiased pb-16 lg:pb-0">
         <a
           href="#main"
@@ -238,11 +237,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
 
         <style dangerouslySetInnerHTML={{ __html: fontCss }} />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
 
         <Header />
         <main id="main" className="min-h-screen">
