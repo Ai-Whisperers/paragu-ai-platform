@@ -76,6 +76,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "NGO",
+    "@id": `${SITE_URL}/#organization`,
     name: "SOMOSGAY",
     alternateName: "Asociación Civil SOMOSGAY",
     url: SITE_URL,
@@ -107,8 +108,9 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
+    "@id": `${SITE_URL}/clinica-kunuu/#clinic`,
     name: "Clínica Kunu'u",
-    parentOrganization: { "@type": "NGO", name: "SOMOSGAY" },
+    parentOrganization: { "@id": `${SITE_URL}/#organization` },
     url: `${SITE_URL}/clinica-kunuu`,
     description:
       "Primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay. Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica.",
@@ -140,6 +142,66 @@ const jsonLd = [
       { "@type": "MedicalProcedure", name: "Tratamiento Antirretroviral (TARV)" },
       { "@type": "MedicalProcedure", name: "Testeo de sífilis" },
       { "@type": "MedicalProcedure", name: "Testeo de Hepatitis B" },
+    ],
+  },
+  {
+    // WebSite schema enables Google sitelinks search box
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: "SOMOSGAY",
+    alternateName: "SOMOSGAY Paraguay · Tekoporã para todes",
+    url: SITE_URL,
+    description: c.site.description,
+    inLanguage: ["es-PY", "gn"],
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+      },
+      // query-input: required schema.org syntax for SearchAction
+      "query-input": "required name=search_term_string",
+    },
+  },
+  {
+    // Organization is the canonical entity referenced by WebSite.publisher
+    // and used by all child schemas (NGO + MedicalClinic already reference it).
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "@id": `${SITE_URL}/#organization`,
+    name: "SOMOSGAY",
+    alternateName: "Asociación Civil SOMOSGAY",
+    url: SITE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/icon`,
+      width: 32,
+      height: 32,
+    },
+    description: c.metaDescription,
+    foundingDate: "2005",
+    areaServed: { "@type": "Country", name: "Paraguay" },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Independencia Nacional 1032 c/ Manduvirá",
+      addressLocality: "Asunción",
+      addressCountry: "PY",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: `+${c.site.whatsappBase}`,
+      contactType: "customer service",
+      areaServed: "PY",
+      availableLanguage: ["Spanish", "Guaraní"],
+    },
+    sameAs: [
+      "https://www.instagram.com/somosgayorg/",
+      "https://www.facebook.com/elcentrosomosgay",
+      "https://twitter.com/somosgay",
+      "https://www.youtube.com/user/SOMOSGAYorg",
+      "https://www.tiktok.com/@somosgayorg",
     ],
   },
 ];
