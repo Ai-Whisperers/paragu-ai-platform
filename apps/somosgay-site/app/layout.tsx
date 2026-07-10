@@ -123,12 +123,22 @@ const jsonLd = [
     description:
       "Primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay. Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica.",
     telephone: `+${c.site.whatsappBase}`,
+    // GEO coordinates for Independencia Nacional 1032, Asunción (downtown, near Plaza de los Héroes).
+    // Enables Google Maps pack for "Clínica LGTBI+ cerca de mí" type queries.
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -25.2815,
+      longitude: -57.6358,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: "Independencia Nacional 1032 c/ Manduvirá",
       addressLocality: "Asunción",
+      addressRegion: "Capital District",
+      postalCode: "1209",
       addressCountry: "PY",
     },
+    hasMap: "https://www.google.com/maps/search/?api=1&query=Independencia+Nacional+1032,+Asuncion,+Paraguay",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
