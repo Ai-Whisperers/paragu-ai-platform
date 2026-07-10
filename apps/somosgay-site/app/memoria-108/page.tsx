@@ -16,6 +16,38 @@ const crumbs = [
   { label: "Inicio", href: "/" },
   { label: "Memoria 108" },
 ];
+
+// Event JSON-LD for "Mes de las Memorias 108" — recurring annual event in September.
+// Specific dates vary by year (events span ~30 days). Using Sept 1 + Sept 30 as
+// startDate/endDate for the 2026 edition. status='EventScheduled' / 'EventPostponed'
+// would be updated when the 2026 calendar is finalized.
+const eventJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "@id": `${SITE_URL}/memoria-108/#event-2026`,
+  name: "Mes de las Memorias 108 — 2026",
+  description:
+    "Conmemoración anual del trauma fundacional del movimiento LGTBI+ paraguayo: las razias de septiembre 1959 contra 108 hombres gays en Asunción. Co-organizado por AIREANA y SOMOSGAY.",
+  startDate: "2026-09-01",
+  endDate: "2026-09-30",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  location: {
+    "@type": "Place",
+    name: "Asunción, Paraguay",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Asunción",
+      addressCountry: "PY",
+    },
+  },
+  organizer: [
+    { "@type": "Organization", name: "SOMOSGAY", "@id": `${SITE_URL}/#organization` },
+    { "@type": "Organization", name: "AIREANA" },
+  ],
+  inLanguage: ["es-PY", "gn"],
+  url: `${SITE_URL}/memoria-108#anual`,
+};
 export default function MemoriaPage() {
   return (
     <div>
@@ -23,6 +55,11 @@ export default function MemoriaPage() {
         id="ld-breadcrumb-memoria-108"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
+      />
+      <Script
+        id="ld-event-memoria-2026"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
       />
             {/* HERO — somber */}
       <section className="bg-[var(--color-purple-deep)] text-white relative">
