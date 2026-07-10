@@ -1,16 +1,29 @@
 import type { Metadata } from "next";
-import { content as c } from "@/lib/content";
+import { content as c, SITE_URL } from "@/lib/content";
+import Script from "next/script";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Donar a SOMOSGAY",
   description:
     "Doná a SOMOSGAY y apoyá la salud comunitaria LGTBI+ en Paraguay. Cada aporte mantiene la Clínica Kunu'u gratuita y los programas comunitarios.",
-  alternates: { canonical: `${c.site.url}/donar` },
+  alternates: { canonical: `${SITE_URL}/donar` },
 };
 
+
+const crumbs = [
+  { label: "Inicio", href: "/" },
+  { label: "Donar" },
+];
 export default function DonarPage() {
   return (
     <div>
+      <Script
+        id="ld-breadcrumb-donar"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
+      />
+      <Breadcrumbs items={crumbs} className="mb-4 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4" />
       {/* HERO */}
       <section className="bg-warm-deep relative">
         <div className="rainbow-bar absolute top-0 inset-x-0" aria-hidden="true" />

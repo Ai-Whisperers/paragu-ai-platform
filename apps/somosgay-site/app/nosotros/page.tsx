@@ -1,20 +1,33 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { content as c } from "@/lib/content";
+import { content as c, SITE_URL } from "@/lib/content";
+import Script from "next/script";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Sobre SOMOSGAY",
   description:
     "Asociación Civil sin fines de lucro fundada en 2005. Liderazgo, auditoría y transparencia.",
-  alternates: { canonical: `${c.site.url}/nosotros` },
+  alternates: { canonical: `${SITE_URL}/nosotros` },
 };
 
+
+const crumbs = [
+  { label: "Inicio", href: "/" },
+  { label: "Sobre nosotros" },
+];
 export default function NosotrosPage() {
   return (
     <div>
-      <section className="bg-warm-deep relative">
+      <Script
+        id="ld-breadcrumb-nosotros"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
+      />
+            <section className="bg-warm-deep relative">
         <div className="rainbow-bar absolute top-0 inset-x-0" aria-hidden="true" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        
+        <Breadcrumbs items={crumbs} className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /><div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <p className="text-xs uppercase tracking-[0.22em] text-text-muted mb-3 font-medium">
             {c.nosotros.subtitle}
           </p>

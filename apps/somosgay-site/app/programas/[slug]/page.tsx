@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { content as c } from "@/lib/content";
+import Script from "next/script";
+import { content as c, SITE_URL } from "@/lib/content";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 type Params = { slug: string };
 
@@ -83,7 +85,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   return {
     title: p.name,
     description: p.description,
-    alternates: { canonical: `${c.site.url}/programas/${slug}` },
+    alternates: { canonical: `${SITE_URL}/programas/${slug}` },
   };
 }
 
@@ -92,8 +94,23 @@ export default async function ProgramaPage({ params }: { params: Promise<Params>
   const p = PROGRAMS[slug];
   if (!p) notFound();
 
+  // Build breadcrumbs inside the component so we have `p.name` in scope
+  const crumbs = [
+    { label: "Inicio", href: "/" },
+    { label: "Programas", href: "/programas" },
+    { label: p.name },
+  ];
+
   return (
     <div>
+      <Script
+        id={`ld-breadcrumb-programa-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
+      />
+
+      <Breadcrumbs items={crumbs} className="mb-6 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4" />
+
       <section className="bg-warm-deep relative">
         <div className="rainbow-bar absolute top-0 inset-x-0" aria-hidden="true" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">

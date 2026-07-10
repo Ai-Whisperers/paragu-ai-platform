@@ -1,17 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { content as c } from "@/lib/content";
+import { content as c, SITE_URL } from "@/lib/content";
+import Script from "next/script";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Política de privacidad",
   description: "Cómo manejamos tu información personal en somosgay.paragu-ai.com.",
-  alternates: { canonical: `${c.site.url}/privacidad` },
+  alternates: { canonical: `${SITE_URL}/privacidad` },
 };
 
+
+const crumbs = [
+  { label: "Inicio", href: "/" },
+  { label: "Política de privacidad" },
+];
 export default function PrivacidadPage() {
   return (
     <div className="py-16">
+      <Script
+        id="ld-breadcrumb-privacidad"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs items={crumbs} className="mb-4" />
         <h1 className="font-display text-4xl lg:text-5xl font-bold mb-6">Política de privacidad</h1>
         <p className="text-sm text-text-muted mb-8">Última actualización: 2026-07-10</p>
 

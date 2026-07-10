@@ -1,18 +1,31 @@
 import type { Metadata } from "next";
-import { content as c } from "@/lib/content";
+import { content as c, SITE_URL } from "@/lib/content";
+import Script from "next/script";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Contacto",
   description: "Cómo contactar a SOMOSGAY en Asunción, Paraguay. WhatsApp, email, redes sociales.",
-  alternates: { canonical: `${c.site.url}/contacto` },
+  alternates: { canonical: `${SITE_URL}/contacto` },
 };
 
+
+const crumbs = [
+  { label: "Inicio", href: "/" },
+  { label: "Contacto" },
+];
 export default function ContactoPage() {
   return (
     <div>
-      <section className="bg-warm-deep relative">
+      <Script
+        id="ld-breadcrumb-contacto"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
+      />
+            <section className="bg-warm-deep relative">
         <div className="rainbow-bar absolute top-0 inset-x-0" aria-hidden="true" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        
+        <Breadcrumbs items={crumbs} className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /><div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <p className="text-xs uppercase tracking-[0.22em] text-text-muted mb-3 font-medium">Estamos en Asunción</p>
           <h1 className="font-display text-4xl lg:text-6xl font-bold tracking-tight mb-4">{c.contacto.title}</h1>
           <p className="text-xl text-text-light">{c.contacto.subtitle}</p>

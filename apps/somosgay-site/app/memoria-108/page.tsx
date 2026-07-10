@@ -1,21 +1,34 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { content as c } from "@/lib/content";
+import { content as c, SITE_URL } from "@/lib/content";
+import Script from "next/script";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Memoria 108 — El trauma fundacional del movimiento LGTBI+ paraguayo",
   description:
     "Septiembre, Mes de las Memorias 108. Bernardo Aranda Valdez (1959), las razias policiales, y la Carta de un Amoral — 10 años antes de Stonewall.",
-  alternates: { canonical: `${c.site.url}/memoria-108` },
+  alternates: { canonical: `${SITE_URL}/memoria-108` },
 };
 
+
+const crumbs = [
+  { label: "Inicio", href: "/" },
+  { label: "Memoria 108" },
+];
 export default function MemoriaPage() {
   return (
     <div>
-      {/* HERO — somber */}
+      <Script
+        id="ld-breadcrumb-memoria-108"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
+      />
+            {/* HERO — somber */}
       <section className="bg-[var(--color-purple-deep)] text-white relative">
         <div className="rainbow-bar absolute top-0 inset-x-0" aria-hidden="true" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        
+        <Breadcrumbs items={crumbs} className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /><div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <p className="text-xs uppercase tracking-[0.22em] text-white/60 mb-3 font-medium">
             Septiembre · Mes de las Memorias
           </p>

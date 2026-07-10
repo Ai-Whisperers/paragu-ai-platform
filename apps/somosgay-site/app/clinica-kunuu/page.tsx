@@ -1,25 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { content as c } from "@/lib/content";
+import { content as c, SITE_URL } from "@/lib/content";
+import Script from "next/script";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Clínica Kunu'u — Salud comunitaria LGTBI+ en Asunción",
   description:
     "Primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay. Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica confidencial. Sin documento de identidad.",
-  alternates: { canonical: `${c.site.url}/clinica-kunuu` },
+  alternates: { canonical: `${SITE_URL}/clinica-kunuu` },
 };
 
 const WA_BOOKING = `https://wa.me/${c.site.whatsappBase}?text=${encodeURIComponent(
   "Hola SOMOSGAY, quiero reservar un turno en Clínica Kunu'u."
 )}`;
 
+
+const crumbs = [
+  { label: "Inicio", href: "/" },
+  { label: "Programas", href: "/programas" },
+  { label: "Clínica Kunu'u" },
+];
 export default function ClinicaPage() {
   return (
     <div>
+      <Script
+        id="ld-breadcrumb-clinica"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
+      />
+
       {/* HERO */}
       <section className="bg-warm-deep relative">
         <div className="rainbow-bar absolute top-0 inset-x-0" aria-hidden="true" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        
+        <Breadcrumbs items={crumbs} className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <p className="text-xs uppercase tracking-[0.22em] text-text-muted mb-3 font-medium">Programa</p>
           <h1 className="font-display text-4xl lg:text-6xl font-bold mb-4 tracking-tight">{c.clinica.title}</h1>
           <p className="text-xl text-text-light max-w-3xl mb-8">{c.clinica.subtitle}</p>
