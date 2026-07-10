@@ -80,48 +80,30 @@ export default function AliadosPage() {
       </section>
 
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          {LEVELS.map((lv) => (
-            <div key={lv.name}>
-              <div className="flex items-baseline gap-3 mb-4">
-                <h2 className={`font-display text-2xl lg:text-3xl font-bold border-b-4 pb-1 ${lv.color}`}>
-                  {lv.name}
-                </h2>
-                <span className="text-sm text-text-muted">{lv.note}</span>
-              </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {lv.members.map((m, i) => (
-                  <div
-                    key={i}
-                    className="bg-surface border border-[var(--color-warm-deep)] rounded-xl p-4"
-                  >
-                    <p className="text-xs text-text-muted italic">
-                      [Plaza disponible]
-                    </p>
-                    <p className="text-text mt-1">{m}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="py-16 bg-warm">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl font-bold mb-4">
-            ¿Querés que tu nombre aparezca?
-          </h2>
-          <p className="text-text-light mb-6 max-w-xl mx-auto">
-            Si donás y querés ser incluida/o en el mural, indicánoslo al enviar tu
-            donación. Si preferís mantener el anonimato, no aparecerás en esta lista.
-          </p>
-          <a
-            href="/donar"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-[var(--color-purple-deep)]"
-          >
-            Hacer una donación
-          </a>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-warm border border-[var(--color-warm-deep)] rounded-[var(--radius-lg)] p-8 text-center">
+            <div className="text-4xl mb-3" aria-hidden="true">🌈</div>
+            <h2 className="font-display text-2xl lg:text-3xl font-bold mb-3">
+              Pronto
+            </h2>
+            <p className="text-text-light leading-relaxed mb-6 max-w-xl mx-auto">
+              El mural de aliados se publica cada año junto al Informe Anual
+              auditado. Por ahora, los números verificados están en
+              <a href="/auditoria" className="text-[var(--color-primary)] underline font-medium"> /auditoria</a>;
+              queremos que esta página refleje fielmente lo que cada donante
+              aceptó publicar.
+            </p>
+            <a
+              href="/donar"
+              className="btn-primary"
+            >
+              Hacer una donación
+            </a>
+            <p className="text-xs text-text-muted mt-6 italic">
+              Si querés que tu nombre figure, indicánoslo al enviar tu donación.
+              Si preferís mantener el anonimato, no aparecerás en esta lista.
+            </p>
+          </div>
         </div>
       </section>
     </div>

@@ -81,14 +81,12 @@ export default function TestimoniosPage() {
               <blockquote className="text-text-light leading-relaxed italic mb-4 text-lg">
                 {t.body}
               </blockquote>
-              <details className="group">
-                <summary className="cursor-pointer text-xs font-medium text-[var(--color-primary)] hover:underline list-none [&::-webkit-details-marker]:hidden">
-                  Leer el extracto clave
-                </summary>
-                <p className="mt-2 text-sm font-medium text-text italic border-l-2 border-[var(--color-primary)] pl-3">
-                  {t.excerpt}
-                </p>
-              </details>
+              <p className="text-sm font-medium text-text italic border-l-2 border-[var(--color-primary)] pl-3">
+                {t.excerpt}
+              </p>
+              <p className="text-xs text-text-muted mt-3">
+                — {t.hint} · {t.scope}
+              </p>
             </article>
           ))}
 

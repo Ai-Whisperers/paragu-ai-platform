@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Script from "next/script";
 
 // Donation preset amounts in Guaraníes (primary), with USD approximate equivalents
 // converted at typical 7000 Gs = 1 USD reference. Amounts chosen because:
@@ -121,16 +122,11 @@ export function DonationForm() {
                   setCustom("");
                 }}
                 aria-pressed={active}
-                className={`rounded-xl p-3 text-left border-2 transition-all ${
-                  active
-                    ? "border-[var(--color-primary)] bg-[var(--color-primary)]/5"
-                    : "border-[var(--color-warm-deep)] bg-warm hover:border-[var(--color-primary)]"
-                }`}
+                aria-label={`Donar ${(p.gs / 1000).toLocaleString("es-PY")} mil guaraníes — ${p.label}`}
+                className="preset-card"
               >
-                <div className="font-mono font-bold text-[var(--color-primary)] text-sm">
-                  {(p.gs / 1000).toLocaleString("es-PY")}k Gs
-                </div>
-                <div className="text-xs text-text-light mt-0.5">{p.label}</div>
+                <span className="preset-card__amount">{(p.gs / 1000).toLocaleString("es-PY")}k Gs</span>
+                <span className="preset-card__label">{p.label}</span>
               </button>
             );
           })}

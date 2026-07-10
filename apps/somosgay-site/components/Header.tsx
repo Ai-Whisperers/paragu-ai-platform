@@ -43,8 +43,8 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20 gap-3">
           <Link
             href={localizedHref("/", currentLocale)}
-            className="flex items-center gap-3 group scroll-smooth"
-            aria-label="SOMOSGAY — ir al inicio"
+            className="flex items-center gap-2.5 group scroll-smooth"
+            aria-label="SOMOSGAY — inicio"
             aria-current={pathname === "/" || pathname === "/gn" ? "page" : undefined}
             onClick={() => {
               if (typeof window !== "undefined" && (window.location.pathname === "/" || window.location.pathname === "/gn")) {
@@ -52,15 +52,12 @@ export function Header() {
               }
             }}
           >
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-white font-display font-bold text-lg">S</span>
+            <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center font-display font-bold text-white text-base leading-none">
+              S
             </div>
-            <div className="hidden sm:block">
-              <div className="font-display text-xl font-bold tracking-tight text-text">SOMOSGAY</div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-text-muted">
-                {currentLocale === "gn" ? "Tekoporã opaichaguávape" : "Tekoporã para todes"}
-              </div>
-            </div>
+            <span className="font-display font-bold text-text text-lg tracking-tight">
+              SOMOSGAY
+            </span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">

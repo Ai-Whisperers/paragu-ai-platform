@@ -30,6 +30,21 @@
   --color-teal-deep: #0A2E37;
   --color-warm: #FFF1E6;
   --color-warm-deep: #FFE4D6;
+
+  /* Radius scale — three steps, not unlimited */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Type scale (clamp-based fluid) */
+  --step--1: clamp(0.83rem, 0.78rem + 0.30vw, 0.94rem);
+  --step-0: clamp(1rem, 0.91rem + 0.45vw, 1.25rem);
+  --step-1: clamp(1.20rem, 1.05rem + 0.7vw, 1.57rem);
+  --step-2: clamp(1.44rem, 1.21rem + 1.07vw, 1.95rem);
+  --step-3: clamp(1.73rem, 1.41rem + 1.5vw, 2.42rem);
+  --step-4: clamp(2.07rem, 1.61rem + 2.15vw, 3rem);
+  --step-5: clamp(2.49rem, 1.83rem + 3.1vw, 3.7rem);
+  --step-6: clamp(2.99rem, 2.07rem + 4.35vw, 4.6rem);
 }
 
 @layer base {
@@ -43,17 +58,47 @@
     background-color: var(--color-background);
     color: var(--color-text);
     font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: var(--step-4);
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: var(--step-3);
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: var(--step-2);
+    line-height: 1.25;
+  }
+  h4 {
+    font-size: var(--step-1);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display), Georgia, serif;
     font-weight: 700;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
+    color: var(--color-text);
+  }
+
+  /* Set root font size; less of the underlying h1 defaults was fighting our classes */
+  p {
+    max-width: 70ch;
   }
 
   ::selection {
     background-color: var(--color-purple);
     color: white;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
   }
 }
 
@@ -119,6 +164,184 @@
 
   .font-display { font-family: var(--font-display), Georgia, serif; }
   .font-body { font-family: var(--font-body), system-ui, sans-serif; }
+
+  /* DESIGN SYSTEM — los componentes deberían extenderse de estas clases
+     en lugar de re-aplicar 30 utilities Tailwind cada vez. */
+
+  /* Card surface that we use 50+ times across the site */
+  .card-base {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-warm-deep);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+  }
+  .card-base--tight { padding: 0.875rem; }
+  .card-base--elevated {
+    box-shadow: 0 1px 2px rgba(27, 27, 27, 0.04), 0 4px 12px rgba(27, 27, 27, 0.06);
+  }
+
+  /* Buttons — los únicos estilos para botones sólidos en el sitio */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    line-height: 1.2;
+    transition: background-color 120ms ease, transform 120ms ease;
+  }
+  .btn-primary:hover { background-color: var(--color-purple-deep); }
+  .btn-primary:active { transform: translateY(1px); }
+  .btn-primary:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  .btn-primary--lg { padding: 1rem 1.5rem; font-size: var(--step-1); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-warm-deep);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    line-height: 1.2;
+    transition: background-color 120ms ease;
+  }
+  .btn-secondary:hover { background-color: var(--color-warm); }
+  .btn-secondary:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.875rem;
+    color: var(--color-text-light);
+    border-radius: var(--radius-sm);
+    transition: background-color 120ms ease;
+  }
+  .btn-ghost:hover { background-color: var(--color-warm); color: var(--color-text); }
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: #25D366;
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: background-color 120ms ease;
+  }
+  .btn-whatsapp:hover { background-color: #1DA851; }
+
+  /* Input — semi-shored con la estética del sitio */
+  .input-base {
+    display: block;
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-warm-deep);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    transition: border-color 120ms ease;
+  }
+  .input-base:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.15);
+  }
+  .input-base::placeholder { color: var(--color-text-muted); }
+
+  /* Selector card — used in DonationForm */
+  .preset-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.125rem;
+    background-color: var(--color-warm);
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    text-align: left;
+    transition: border-color 120ms ease, background-color 120ms ease;
+    cursor: pointer;
+  }
+  .preset-card:hover { border-color: var(--color-primary); }
+  .preset-card[aria-pressed="true"] {
+    background-color: rgba(123, 44, 191, 0.06);
+    border-color: var(--color-primary);
+  }
+  .preset-card[aria-pressed="true"]::after {
+    content: "✓";
+    position: absolute;
+    top: 0.75rem;
+    right: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  .preset-card__amount {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--color-primary);
+  }
+  .preset-card__label {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    margin-top: 0.25rem;
+  }
+
+  /* Section helpers — common wrappers */
+  .section-pad { padding: 4rem 0; }
+  @media (min-width: 1024px) { .section-pad { padding: 6rem 0; } }
+
+  .container-x {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px)  { .container-x { padding-left: 1.5rem; padding-right: 1.5rem; } }
+  @media (min-width: 1024px) { .container-x { padding-left: 2rem; padding-right: 2rem; } }
+
+  .eyebrow {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+
+  .prose-body {
+    color: var(--color-text-light);
+    line-height: 1.7;
+  }
+
+  /* DECREASE the template-Tailwind overuse: shadow-md → 4 instances of hard
+     shadows only on key surfaces. Most of the previous shadow-lg uses on
+     cards have been removed. */
+  .shadow-soft {
+    box-shadow: 0 1px 2px rgba(27, 27, 27, 0.04);
+  }
 }
 
 /* Accessibility: respect prefers-reduced-motion */

@@ -94,13 +94,21 @@ export default function HomeClient({ locale }: { locale: Locale }) {
       </section>
 
       {/* IMPACT */}
-      <section className="py-20">
+      <section className="py-20 bg-warm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <p className="eyebrow mb-3">Verificado</p>
             <h2 className="font-display text-3xl lg:text-5xl font-bold tracking-tight mb-3">
               {c.home.impact.title}
             </h2>
-            <p className="text-text-light">{c.home.impact.subtitle}</p>
+            <p className="text-text-light max-w-2xl mx-auto">{c.home.impact.subtitle}</p>
+            {/* Audit-stamp row — "Account Control · Registro 295/2020" — small badge-style */}
+            <div className="mt-6 inline-flex items-center gap-2 px-3 py-1.5 bg-surface border border-[var(--color-warm-deep)] rounded-full">
+              <span aria-hidden="true" className="text-[var(--color-success)] text-base">✓</span>
+              <span className="text-xs font-medium text-text">
+                Auditado por Account Control & Asociados · Registro 295/2020
+              </span>
+            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

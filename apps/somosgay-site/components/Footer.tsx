@@ -67,7 +67,15 @@ export function Footer() {
               </a>
             ))}
           </div>
-          <div className="text-xs text-white/50">{c.footer.copy}</div>
+          <div className="flex items-center gap-4">
+            <div className="text-xs text-white/50">{c.footer.copy}</div>
+            <a
+              href="#main"
+              className="ml-auto text-xs text-white/70 hover:text-white underline underline-offset-2"
+            >
+              Volver arriba ↑
+            </a>
+          </div>
         </div>
 
         {/* Search */}
