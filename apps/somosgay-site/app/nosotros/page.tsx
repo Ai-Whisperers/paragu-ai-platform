@@ -3,6 +3,7 @@ import Link from "next/link";
 import { content as c, SITE_URL } from "@/lib/content";
 import Script from "next/script";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
+import { OrgTimeline } from "@/components/OrgTimeline";
 import { ShareButtons } from "@/components/ShareButtons";
 
 export const metadata: Metadata = {
@@ -35,6 +36,22 @@ export default function NosotrosPage() {
           <h1 className="font-display text-4xl lg:text-6xl font-bold tracking-tight mb-4">{c.nosotros.title}</h1>
         </div>
       </section>
+
+      {/* TIMELINE */}
+      <section className="py-16 bg-warm">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl lg:text-4xl font-bold mb-3">
+            21 años de historia
+          </h2>
+          <p className="text-text-light mb-10 max-w-2xl">
+            Algunos hitos verificados de SOMOSGAY en Paraguay. Datos auditados en
+            nuestros informes anuales.
+          </p>
+          <OrgTimeline />
+        </div>
+      </section>
+
+
 
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

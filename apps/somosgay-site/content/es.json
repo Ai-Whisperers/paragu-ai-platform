@@ -143,24 +143,29 @@
       "subtitle": "Datos públicos auditados · Cifras conservadoras",
       "items": [
         {
-          "metric": "1.300+",
-          "label": "Tests de VIH en 2020",
-          "source": "Informe Anual 2020"
+          "value": "1.300+",
+          "label": "Tests de VIH",
+          "detail": "Informe Anual 2020 auditado"
         },
         {
-          "metric": "100K+",
-          "label": "Alcance en redes sociales (2020)",
-          "source": "Informe Anual 2020"
+          "value": "100.000+",
+          "label": "Alcance en redes",
+          "detail": "combinado IG, FB, X, YouTube, TikTok"
         },
         {
-          "metric": "20+",
-          "label": "Años de trabajo continuo desde 2005",
-          "source": "Fundación"
+          "value": "5",
+          "label": "Programas activos",
+          "detail": "Kunu'u, Tekoharã, Ñande Rekorã, Karu Porã, Programa Kunu'u"
         },
         {
-          "metric": "60+",
-          "label": "Activistas en Red GayLatino (co-fundadores)",
-          "source": "Red GayLatino"
+          "value": "21",
+          "label": "Años en Paraguay",
+          "detail": "desde 2005"
+        },
+        {
+          "value": "108",
+          "label": "Memoria 108",
+          "detail": "septiembre 1959 — cada año homenaje"
         }
       ],
       "note": "Cifras verificadas con informes públicos. Para métricas detalladas de pacientes y financiamiento, ver `docs/01_organization/financials-public.md` en el repositorio de contexto."
@@ -742,5 +747,10 @@
       }
     ],
     "request_data": "Si necesitás datos específicos para un grant o auditoría, escribinos a través del formulario de contacto o por WhatsApp."
+  },
+  "impact_dashboard": {
+    "intro": "Visualizá el alcance verificado de SOMOSGAY, basado en nuestro Informe Anual auditado.",
+    "cta_label": "Ver informe anual completo",
+    "cta_href": "/auditoria"
   }
 }

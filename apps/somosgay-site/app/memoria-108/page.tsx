@@ -3,6 +3,7 @@ import Link from "next/link";
 import { content as c, SITE_URL } from "@/lib/content";
 import Script from "next/script";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
+import { Memoria108Countdown } from "@/components/Memoria108Countdown";
 import { ShareButtons } from "@/components/ShareButtons";
 
 export const metadata: Metadata = {
@@ -75,6 +76,12 @@ export default function MemoriaPage() {
           </h1>
           <p className="text-xl text-white/80 mb-4">{c.memoria108.subtitle}</p>
           <p className="text-lg text-white/70 leading-relaxed">{c.memoria108.lead}</p>
+        </div>
+      </section>
+
+      <section id="anual" className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Memoria108Countdown />
         </div>
       </section>
 

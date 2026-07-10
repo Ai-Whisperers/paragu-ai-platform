@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { BottomNav } from "@/components/BottomNav";
 import { CookieBanner } from "@/components/CookieBanner";
+import { QuickExit } from "@/components/QuickExit";
 import { content as c, SITE_URL } from "@/lib/content";
 // ImageResponse routes get a query-string cache-buster; mirror what Next.js generates.
 // We construct the path here without the hash — Next.js rewrites it during render.
@@ -227,6 +228,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             dangerouslySetInnerHTML={{ __html: JSON.stringify(entity) }}
           />
         ))}
+              {/*
+          Safety: ESC key → quick exit. Hits two browser behaviors:
+          1. Clears focus from the page
+          2. Replaces the current tab with a neutral page
+          Listener is registered early so it's always available.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                document.addEventListener('keydown', function(e) {
+                  if (e.key === 'Escape' || e.keyCode === 27) {
+                    window.location.replace('https://www.google.com');
+                  }
+                });
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="antialiased pb-16 lg:pb-0">
         <a
@@ -235,6 +255,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Saltar al contenido principal
         </a>
+
+        <QuickExit />
 
         <style dangerouslySetInnerHTML={{ __html: fontCss }} />
 

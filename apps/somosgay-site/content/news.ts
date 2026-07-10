@@ -145,6 +145,36 @@ export const NEWS_ARTICLES: NewsArticle[] = [
       { label: "Memoria 108 completa", href: SITE_PROGRAMS.memoria },
     ],
   },
+  {
+    slug: "guia-completa-prep-2026",
+    title: "PrEP en Paraguay: guía completa 2026",
+    dek: "Todo lo que necesitás saber sobre la Profilaxis Pre-Exposición: qué es, cómo funciona, cuánto cuesta, dónde conseguirla en Asunción, y por qué reduce el riesgo de VIH en 99%.",
+    category: "Campaña",
+    date: "2026-07-10T18:00:00Z",
+    author: "Equipo SOMOSGAY",
+    authorRole: "Programa Kunu'u",
+    heroEyebrow: "Guía · 10 julio 2026",
+    paragraphs: [
+      "PrEP (Profilaxis Pre-Exposición) es una pastilla que toma una persona VIH-negativa para reducir su riesgo de contraer VIH. La eficacia supera el 99% cuando se toma diariamente según indicación médica.",
+      "La campaña 'Yo amo PrEP: Yo amo más seguro' del Programa Kunu'u de SOMOSGAY busca desestigmatizar el acceso a PrEP en Paraguay, donde persiste la confusión entre VIH y SIDA y aún circulan mitos sobre la profilaxis.",
+      "En Paraguay, PrEP se consigue en Clínica Kunu'u (Asunción) tras una consulta inicial con profesionales formados en salud comunitaria LGTBI+. El medicamento, los controles de seguimiento y los análisis de sangre son gratuitos, sin requisito de documento de identidad ni orden médica.",
+      "El estudio PROUD (2015, UK) y el estudio iPrEx (2010, multicéntrico) son los ensayos clínicos que demostraron la eficacia de PrEP en hombres gays y otros hombres que tienen sexo con hombres, así como en mujeres trans. En 2020, OMS incluyó PrEP en sus recomendaciones como herramienta estándar de prevención combinada.",
+      "Los efectos secundarios son mínimos: algunas personas reportan náusea leve durante las primeras semanas. PrEP no protege contra otras ITS (sífilis, gonorrea, hepatitis C) — por eso se recomienda complementar con uso de preservativo y testeo regular cada 3 meses.",
+      "SOMOSGAY también entrega materiales en español y guaraní, sesiones de preguntas y respuestas, y consejería entre pares. Hay líneas de WhatsApp confidenciales para personas que viven fuera de Asunción y quieren acceder a información antes de viajar.",
+    ],
+    keyFacts: [
+      "Reduce el riesgo de VIH en 99% cuando se toma diariamente",
+      "Gratuita en Clínica Kunu'u (Asunción), sin documento de identidad",
+      "Funciona en hombres gays, mujeres trans, y otras poblaciones vulnerables",
+      "No protege contra sífilis, gonorrea ni hepatitis C",
+      "Sin patentes activos en Paraguay — disponible vía programas públicos",
+    ],
+    relatedLinks: [
+      { label: "Clínica Kunu'u", href: SITE_PROGRAMS.clinic },
+      { label: "Programa Kunu'u", href: SITE_PROGRAMS.prep },
+      { label: "Donar para sostener PrEP gratuito", href: "/donar" },
+    ],
+  },
 ];
 
 // Lookup helper
