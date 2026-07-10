@@ -10,4 +10,5 @@ export default function robots(): MetadataRoute.Robots {
       `${c.site.url}/images-sitemap.xml`,
     ],
   };
+  // RSS feed exposed at /feed.xml — see app/feed.xml/route.ts
 }
