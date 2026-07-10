@@ -1,4 +1,4 @@
-import type { NextConfig } from "next"
+import type { NextConfig } from "next";
 
 const config: NextConfig = {
   output: "standalone",
@@ -13,11 +13,6 @@ const config: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  async redirects() {
-    return [
-      { source: "/favicon.ico", destination: "/favicon.svg", permanent: true },
-    ]
   },
   async headers() {
     // OPSEC-conscious headers for LGBTQ+ serving site in hostile political climate
@@ -36,7 +31,6 @@ const config: NextConfig = {
             key: "Strict-Transport-Security",
             value: "max-age=63072000; includeSubDomains; preload",
           },
-          // CSP: only allow self-hosted assets, no third-party trackers by default
           {
             key: "Content-Security-Policy",
             value: [
@@ -53,8 +47,8 @@ const config: NextConfig = {
           },
         ],
       },
-    ]
+    ];
   },
-}
+};
 
-export default config
+export default config;

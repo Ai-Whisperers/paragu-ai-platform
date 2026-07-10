@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://somosgay.paragu-ai.com/sitemap.xml

@@ -79,7 +79,7 @@ const jsonLd = [
     name: "SOMOSGAY",
     alternateName: "Asociación Civil SOMOSGAY",
     url: SITE_URL,
-    logo: `${SITE_URL}/favicon.svg`,
+    logo: `${SITE_URL}/icon`,
     description: c.metaDescription,
     foundingDate: "2005",
     areaServed: { "@type": "Country", name: "Paraguay" },

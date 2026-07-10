@@ -1,5 +1,6 @@
 node_modules
-.next
+.next/cache
+.next/dev
 out
 build
 dist
