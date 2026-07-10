@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { content as c, SITE_URL } from "@/lib/content";
 import Script from "next/script";
+import { content as c, SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
+import { FaqAccordion } from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "Clínica Kunu'u — Salud comunitaria LGTBI+ en Asunción",
@@ -15,12 +16,59 @@ const WA_BOOKING = `https://wa.me/${c.site.whatsappBase}?text=${encodeURICompone
   "Hola SOMOSGAY, quiero reservar un turno en Clínica Kunu'u."
 )}`;
 
-
 const crumbs = [
   { label: "Inicio", href: "/" },
   { label: "Programas", href: "/programas" },
   { label: "Clínica Kunu'u" },
 ];
+
+// FAQ data — verified against published SOMOSGAY materials in somosgay-context
+const faq = [
+  {
+    q: "¿Cuánto cuesta el test de VIH en Clínica Kunu'u?",
+    a: "El test rápido de VIH es completamente gratuito. No se requiere documento de identidad ni orden médica.",
+  },
+  {
+    q: "¿Necesito turno para ir a la clínica?",
+    a: "No es necesario turno para el testeo — la atención es por orden de llegada de lunes a viernes de 13:00 a 17:00. Para atención psicológica o psiquiátrica, recomendamos reservar por WhatsApp.",
+  },
+  {
+    q: "¿Tienen que reportar mi información a algún registro?",
+    a: "No. SOMOSGAY no comparte datos personales con ningún registro público ni entidad estatal. Toda la información es estrictamente confidencial.",
+  },
+  {
+    q: "¿Qué es PrEP y cómo la consigo?",
+    a: "PrEP (Profilaxis Pre-Exposición) es una pastilla diaria que reduce el riesgo de contraer VIH en 99%. Se consigue con consulta previa en Clínica Kunu'u — el tratamiento es gratuito.",
+  },
+  {
+    q: "¿Puedo ir si no tengo documento paraguayo?",
+    a: "Sí. Para el testeo de VIH no se requiere ningún documento de identidad. La atención es anónima y confidencial.",
+  },
+  {
+    q: "¿La clínica atiende sábados?",
+    a: "Los sábados de 10:00 a 15:00 funcionan como punto de retiro de autotest. Para otros servicios, atendemos lunes a viernes de 13:00 a 17:00.",
+  },
+  {
+    q: "¿Brindan atención psicológica para personas trans?",
+    a: "Sí. Contamos con atención psicológica y psiquiátrica con profesionales formados en diversidad sexual y de género. El espacio es afirmativo y libre de discriminación.",
+  },
+  {
+    q: "¿Hacen pruebas de sífilis y hepatitis B?",
+    a: "Sí. Testeo gratuito de sífilis y Hepatitis B, con derivación a tratamiento gratuito si da positivo.",
+  },
+];
+
+// FAQPage JSON-LD — emitted in <head> via next/script for crawler ingestion
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function ClinicaPage() {
   return (
     <div>
@@ -29,12 +77,17 @@ export default function ClinicaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
       />
+      <Script
+        id="ld-faq-clinica"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
       {/* HERO */}
       <section className="bg-warm-deep relative">
         <div className="rainbow-bar absolute top-0 inset-x-0" aria-hidden="true" />
-        
-        <Breadcrumbs items={crumbs} className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <Breadcrumbs items={crumbs} className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
           <p className="text-xs uppercase tracking-[0.22em] text-text-muted mb-3 font-medium">Programa</p>
           <h1 className="font-display text-4xl lg:text-6xl font-bold mb-4 tracking-tight">{c.clinica.title}</h1>
           <p className="text-xl text-text-light max-w-3xl mb-8">{c.clinica.subtitle}</p>
@@ -124,6 +177,18 @@ export default function ClinicaPage() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ — PrEP / clinic questions */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl lg:text-4xl font-bold mb-3">Preguntas frecuentes</h2>
+          <p className="text-text-light mb-8 max-w-2xl">
+            Respuestas basadas en evidencia a las dudas más comunes sobre Clínica Kunu'u.
+            Si no encontrás lo que buscás, escribinos por WhatsApp.
+          </p>
+          <FaqAccordion items={faq} />
         </div>
       </section>
 
