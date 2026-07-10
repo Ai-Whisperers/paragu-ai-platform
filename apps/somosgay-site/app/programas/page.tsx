@@ -1,62 +1,46 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { content as c } from "@/lib/content";
+import Script from "next/script";
+import { content as c, SITE_URL } from "@/lib/content";
+import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Programas",
   description: "5 programas activos + red regional: Clínica Kunu'u, Tekoharã, Ñande Rekorã, Karu Porã, Programa Kunu'u.",
+  alternates: { canonical: `${SITE_URL}/programas` },
 };
 
-const PROGRAMS = [
+const crumbs = [
+  { label: "Inicio", href: "/" },
+  { label: "Programas" },
+];
+
+// Service JSON-LD — one Service per program + MedicalService for Clínica Kunu'u.
+// Provides Google rich results for "SOMOSGAY services" + knowledge graph links.
+const servicesJsonLd = [
+  ...c.programas.items.map((p: any) => ({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}/programas/${p.id}/#service`,
+    name: p.name,
+    serviceType: p.tagline,
+    description: p.description,
+    url: `${SITE_URL}/programas/${p.id}`,
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Country", name: "Paraguay" },
+  })),
   {
-    id: "clinica-kunuu",
+    "@context": "https://schema.org",
+    "@type": "MedicalService",
+    "@id": `${SITE_URL}/clinica-kunuu/#medical`,
     name: "Clínica Kunu'u",
-    tagline: "Salud comunitaria LGTBI+",
+    serviceType: "Salud comunitaria LGTBI+",
     description:
-      "La primera clínica comunitaria dedicada a la salud LGTBI+ en Paraguay. Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica. Reducción de daños.",
-    href: "/clinica-kunuu",
-    color: "purple" as const,
-    flagship: true,
-  },
-  {
-    id: "centro-tekohara",
-    name: "Centro Comunitario Tekoharã",
-    tagline: "Espacio seguro",
-    description:
-      "Centro comunitario donde la comunidad LGTBI+ se reúne, forma y acompaña. Punto de encuentro, formación y organización.",
-    href: "/programas/centro-tekohara",
-    color: "teal" as const,
-    flagship: false,
-  },
-  {
-    id: "nande-rekora",
-    name: "Ñande Rekorã",
-    tagline: "Cuidado mutuo",
-    description:
-      "Sistema de cuidado comunitario y acompañamiento para personas LGTBI+ en situación de vulnerabilidad.",
-    href: "/programas/nande-rekora",
-    color: "rainbow3" as const,
-    flagship: false,
-  },
-  {
-    id: "karu-pora",
-    name: "Karu Porã",
-    tagline: "Seguridad alimentaria",
-    description:
-      "Programa de alimentación para personas LGTBI+ en situación de calle o vulnerabilidad.",
-    href: "/programas/karu-pora",
-    color: "rainbow2" as const,
-    flagship: false,
-  },
-  {
-    id: "programa-kunuu",
-    name: "Programa Kunu'u",
-    tagline: "Prevención combinada",
-    description:
-      "Campañas de prevención de VIH y promoción de PrEP. Campaña emblemática: 'Yo amo PrEP: Yo amo más seguro'.",
-    href: "/programas/programa-kunuu",
-    color: "rainbow4" as const,
-    flagship: false,
+      "Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica. Reducción de daños.",
+    url: `${SITE_URL}/clinica-kunuu`,
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Country", name: "Paraguay" },
+    isAccessibleForFree: true,
   },
 ];
 
@@ -71,9 +55,21 @@ const colorToVar: Record<string, string> = {
 export default function ProgramasPage() {
   return (
     <div>
+      <Script
+        id="ld-breadcrumb-programas"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(crumbs, SITE_URL) }}
+      />
+      <Script
+        id="ld-services-somosgay"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+
       <section className="bg-warm-deep relative">
         <div className="rainbow-bar absolute top-0 inset-x-0" aria-hidden="true" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <Breadcrumbs items={crumbs} className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24">
           <p className="text-xs uppercase tracking-[0.22em] text-text-muted mb-3 font-medium">
             {c.programas.subtitle}
           </p>
@@ -86,7 +82,7 @@ export default function ProgramasPage() {
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          {PROGRAMS.map((p) => (
+          {c.programas.items.map((p: any) => (
             <Link
               key={p.id}
               href={p.href}
