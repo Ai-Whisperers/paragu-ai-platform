@@ -1,0 +1,194 @@
+{
+  "_translator_note_es": "Spanish (Paraguayan Asunción dialect + literary register). All sacred terms (Aireana, Ro'hendu, Tatucada, Tatú) preserved verbatim per OPSEC. Source: AIREANA's aireana.org.py + Wikipedia + CDE Direccionario + 19 press hits.",
+  "_translator_note_gn": "Guaraní jopará (Paraguayan Asunción dialect). See Guaraní file for partial translation of hero + landing.",
+
+  "siteName": "La Serafina",
+  "brandLine": "Espacio Cultural Feminista",
+  "orgName": "AIREANA · Grupo por los derechos de las lesbianas",
+  "tagline": "La casa más sáfica de Paraguay",
+  "metaDescription": "La Serafina — espacio cultural feminista y sede operativa de AIREANA desde 2005. Viernes culturales, Festival de Cine LesBiGayTrans (19 ediciones), Ro'hendu. Eligio Ayala 907 c/ Tacuary, Asunción.",
+
+  "site": {
+    "title": "La Serafina — Espacio Cultural Feminista",
+    "description": "La casa más sáfica de Paraguay. Sede operativa de AIREANA desde 2005. Centro cultural feminista + bar + programación sistemática.",
+    "url": "https://laserafina.paragu-ai.com",
+    "whatsappBase": "595984123381",
+    "page_decor": "violet",
+    "seo": {
+      "open_description": "La Serafina (Asunción, Paraguay) — espacio cultural feminista de AIREANA desde 2005. Viernes culturales gratuitos, Festival Internacional de Cine LesBiGayTrans (19 ediciones), Ro'hendu línea de atención. Eligio Ayala 907 c/ Tacuary.",
+      "local_keywords": [
+        "La Serafina Asunción",
+        "espacio cultural feminista Paraguay",
+        "AIREANA lesbianas Paraguay",
+        "LGBTIQ+ Asunción cultural",
+        "Festival Cine LesBiGayTrans Paraguay",
+        "Ro'hendu helpline",
+        "bar cultural Asunción",
+        "Eligio Ayala 907",
+        "Tatucada batucada Paraguay",
+        "centro cultural Asunción viernes"
+      ]
+    }
+  },
+
+  "theme": {
+    "color": "violet",
+    "accent": "#7B2CBF",
+    "accentDeep": "#3C096C",
+    "warm": "#F5F0FF",
+    "surface": "#FFFFFF",
+    "text": "#1A0033",
+    "textLight": "#4A4458",
+    "textMuted": "#7A7494"
+  },
+
+  "navigation": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Programación", "href": "/agenda" },
+    { "label": "Espacio", "href": "/espacio" },
+    { "label": "Festival de Cine", "href": "/festival" },
+    { "label": "Ro'hendu", "href": "/ro-hendu" },
+    { "label": "Historia", "href": "/historia" },
+    { "label": "Apoyar", "href": "/apoyar", "highlight": true }
+  ],
+
+  "home": {
+    "hero": {
+      "eyebrow": "Asunción, Paraguay · Desde 2005",
+      "title": "La Serafina",
+      "subtitle": "La casa más sáfica de Paraguay",
+      "lead": "Un espacio cultural feminista en el microcentro de Asunción. Sede operativa de AIREANA — el grupo por los derechos de las lesbianas que lleva 23 años tejiendo comunidad desde la cultura, el arte y la memoria.",
+      "ctas": [
+        { "label": "Ver programación", "href": "/agenda", "style": "primary" },
+        { "label": "Reservar el espacio", "href": "/espacio", "style": "secondary" }
+      ],
+      "founded": "Abierta al público desde 2005",
+      "location": "Eligio Ayala 907 c/ Tacuary, Asunción"
+    },
+
+    "mission": {
+      "eyebrow": "AIREANA — Grupo por los derechos de las lesbianas",
+      "title": "Aireamos, por favor. Cultura que se vuelve derecho humano.",
+      "paragraphs": [
+        "AIREANA es una organización feminista paraguaya fundada en 2003. Trabajamos por los derechos de las lesbianas y de todas las personas en disidencia sexual y genérica para que vivamos en libertad y sin violencia nuestras sexualidades e identidades.",
+        "La Serafina es nuestro corazón material. Un espacio para festivales, conciertos, teatro, poesía, exposiciones, conversaciones colectivas — y todo lo que entre y sea bienvenido. Los viernes a las 20:00 hs., las puertas se abren. Entrada libre y gratuita.",
+        "Donde el arte se vuelve derecho humano. Donde el guaraní se preserva exacto. Donde Safo de Lesbos todavía tiene algo que enseñarnos, veinticinco siglos después."
+      ]
+    },
+
+    "programs": {
+      "title": "Lo que hacemos",
+      "subtitle": "Cinco líneas de trabajo sostenidas. Todas convergen en La Serafina.",
+      "items": [
+        {
+          "id": "la-serafina",
+          "name": "La Serafina",
+          "tagline": "Sede + espacio cultural",
+          "description": "Programación sistemática de viernes a 20:00 hs. Alquiler para talleres, clases, ensayos, celebraciones. Bar cultural con pizzas y sándwiches a precio accesible.",
+          "href": "/espacio"
+        },
+        {
+          "id": "festival",
+          "name": "Festival de Cine LesBiGayTrans",
+          "tagline": "19 ediciones desde 2005",
+          "description": "Una semana de cine LGBTIQ+ independiente con premios del público y mejor producción paraguaya. Sede histórica en el Centro Cultural de España.",
+          "href": "/festival"
+        },
+        {
+          "id": "rohendu",
+          "name": "Ro'hendu",
+          "tagline": "Te escuchamos",
+          "description": "Línea gratuita de apoyo, asesoramiento y denuncia para personas LGBTIQ+, familiares y amistades. Lunes a viernes de 13:00 a 20:00 hs.",
+          "href": "/ro-hendu"
+        },
+        {
+          "id": "tatucada",
+          "name": "La Tatucada",
+          "tagline": "Percusión callejera",
+          "description": "Batucada que sale a la calle en fechas clave: 8 de marzo, Marcha del Orgullo, Encuentros LBT feministas. Tatú: armadillo y vulva, cuerpo y territorio.",
+          "href": "https://www.aireana.org.py/la-tatucada/"
+        },
+        {
+          "id": "aireatena",
+          "name": "Aireatena",
+          "tagline": "Podcast",
+          "description": "12 episodios producidos entre 2020 y 2021. Defensa de derechos humanos, arte como apuesta política. Disponible en plataformas.",
+          "href": "https://www.aireana.org.py/"
+        },
+        {
+          "id": "incidencia",
+          "name": "Incidencia política",
+          "tagline": "Coalición TLGBI · OEA · Mercosur",
+          "description": "Co-redacción del Informe Anual de DDHH en Paraguay. Miembro de Coalición TLGBI, Codehupy, RCTD, OEA, Mercosur LGBTI. Desde 2003.",
+          "href": "/historia"
+        }
+      ]
+    },
+
+    "visit": {
+      "eyebrow": "Vení",
+      "title": "Programación abierta al público",
+      "lead": "Los viernes a las 20:00 hs. — entrada libre y gratuita. De 20:00 a 02:00 hs. en Eligio Ayala 907, a dos cuadras del Centro Cultural de España.",
+      "items": [
+        { "label": "Conciertos", "value": "Música en vivo", "detail": "Banda local, regional,偶尔 internacional" },
+        { "label": "Teatro", "value": "Danza y performance", "detail": "Obras paraguayas + invitadas LATAM" },
+        { "label": "Poesía", "value": "Lecturas + conversaciones", "detail": "Espacios íntimos los viernes" },
+        { "label": "Cine", "value": "Funciones especiales", "detail": "Selección curada del equipo" }
+      ]
+    },
+
+    "history": {
+      "eyebrow": "Desde 2003",
+      "title": "Una organización tejida en 23 años",
+      "items": [
+        { "year": "2003", "text": "AIREANA se funda en Asunción. Rosa Posa Guinea, Carolina Robledo y Judith Grenno." },
+        { "year": "2005", "text": "Apertura de La Serafina como sede operativa y espacio cultural abierto al público." },
+        { "year": "2011", "text": "Premio Libertad, Igualdad, Fraternidad del gobierno francés — única paraguaya ese año." },
+        { "year": "2012", "text": "Se institucionalizan los Viernes Culturales." },
+        { "year": "2013", "text": "Lanzamiento de Ro'hendu — la línea de atención que sigue activa." },
+        { "year": "2020", "text": "Aireatena — podcast que documenta resistencia cultural en pandemia." }
+      ],
+      "cta": { "label": "Ver historia completa", "href": "/historia" }
+    },
+
+    "cta": {
+      "title": "Tu apoyo sostiene la casa",
+      "lead": "AIREANA trabaja desde hace 23 años con financiamiento internacional feminista. Cada donación — grande o pequeña — sostiene La Serafina como espacio abierto, libre y gratuito.",
+      "primary_cta": { "label": "Cómo apoyar", "href": "/apoyar" },
+      "secondary_cta": { "label": "Reservar el espacio", "href": "/espacio" }
+    }
+  },
+
+  "footer": {
+    "tagline": "La Serafina — Espacio Cultural Feminista. Sede operativa de AIREANA desde 2005.",
+    "address": "Eligio Ayala 907 c/ Tacuary, Asunción 001218, Paraguay",
+    "phone": "+595 21 492 835",
+    "whatsapp": "+595 984 123381",
+    "email": "aireana@aireana.org.py",
+    "hours": "Viernes 20:00–02:00 (público) — resto por reserva",
+    "links": [
+      { "label": "Espacio", "href": "/espacio" },
+      { "label": "Agenda", "href": "/agenda" },
+      { "label": "Festival", "href": "/festival" },
+      { "label": "Ro'hendu", "href": "/ro-hendu" },
+      { "label": "Historia", "href": "/historia" },
+      { "label": "Apoyar", "href": "/apoyar" },
+      { "label": "Privacidad", "href": "/privacidad" }
+    ],
+    "orgs": [
+      "Coalición TLGBI Paraguay",
+      "Codehupy",
+      "Coordinación de Mujeres del Paraguay",
+      "Red Contra Toda Forma de Discriminación",
+      "OEA · Mercosur LGBTI"
+    ],
+    "donorsLabel": "Con el apoyo de",
+    "donors": [
+      "Mama Cash",
+      "Astraea Lesbian Foundation for Justice",
+      "Fondo de Mujeres del Sur",
+      "Fondo Global para Mujeres"
+    ],
+    "note": "Demo site construido sobre paragu-ai-platform. No afiliado oficialmente con AIREANA — usado para portfolio interno."
+  }
+}

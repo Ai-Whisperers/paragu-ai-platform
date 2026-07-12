@@ -1,0 +1,19 @@
+services:
+  web:
+    image: la-serafina-site:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.swarm.network=agent-net"
+        - "traefik.http.routers.la-serafina-site.entrypoints=websecure"
+        - "traefik.http.routers.la-serafina-site.rule=Host(`laserafina.paragu-ai.com`)"
+        - "traefik.http.routers.la-serafina-site.tls=true"
+        - "traefik.http.routers.la-serafina-site.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.la-serafina-site.middlewares=security-headers@file"
+        - "traefik.http.services.la-serafina-site.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

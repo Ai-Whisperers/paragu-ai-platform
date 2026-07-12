@@ -1,0 +1,182 @@
+{
+  "_translator_note": "Guaraní jopará (Paraguayan Asunción dialect). Partial translation — only hero + landing text. Sacred terms preserved exactly: Ro'hendu, Aireana, Tatucada, Tatú.",
+
+  "siteName": "La Serafina",
+  "brandLine": "Mba'e erekuái joayhu",
+  "orgName": "AIREANA · Aty kuña lesbianakuérape",
+  "tagline": "Paraguái safo rape katuete",
+  "metaDescription": "La Serafina — mba'e erekuái joayhu, AIREANA-rape oĩ ha 2005 guive. Arakuái 20:00-02:00, Eligio Ayala 907, Asunción.",
+
+  "site": {
+    "title": "La Serafina — Mba'e Erekuái Joayhúpe",
+    "description": "Paraguái safo rape katuete. AIREANA-rape oĩ 2005 guive. Mba'e joayhúpe: cine, jeroky, ñe'ẽ, káso.",
+    "url": "https://laserafina.paragu-ai.com",
+    "whatsappBase": "595984123381",
+    "page_decor": "violet",
+    "seo": {
+      "open_description": "La Serafina — mba'e erekuái joayhúpe, AIREANA oñangarekóva 2005 guive. Cine LesBiGayTrans, Ro'hendu ñe'ẽ joaju. Eligio Ayala 907, Asunción-pe.",
+      "local_keywords": [
+        "La Serafina Asunción",
+        "AIREANA Paraguáipe",
+        "Ro'hendu",
+        "mba'e joayhu",
+        "Tatucada Paraguáipe"
+      ]
+    }
+  },
+
+  "theme": {
+    "color": "violet",
+    "accent": "#7B2CBF",
+    "accentDeep": "#3C096C"
+  },
+
+  "navigation": [
+    { "label": "Ñepyrũ", "href": "/" },
+    { "label": "Arakuái", "href": "/agenda" },
+    { "label": "Mba'e", "href": "/espacio" },
+    { "label": "Cine", "href": "/festival" },
+    { "label": "Ro'hendu", "href": "/ro-hendu" },
+    { "label": "Teko", "href": "/historia" },
+    { "label": "Ñemitỹ", "href": "/apoyar", "highlight": true }
+  ],
+
+  "home": {
+    "hero": {
+      "eyebrow": "Asunción, Paraguái · 2005 guive",
+      "title": "La Serafina",
+      "subtitle": "Paraguái safo rape katuete",
+      "lead": "Mba'e erekuái joayhúpe, Asunción centro-pe. AIREANA-rape oĩ — kuña lesbianakuéra tekoñorã oñangarekóva 23 arakuái.",
+      "ctas": [
+        { "label": "Arakuái echa", "href": "/agenda", "style": "primary" },
+        { "label": "Mba'e jokupyty", "href": "/espacio", "style": "secondary" }
+      ],
+      "founded": "2005 guive opavavépe",
+      "location": "Eligio Ayala 907 c/ Tacuary, Asunción"
+    },
+
+    "mission": {
+      "eyebrow": "AIREANA — Kuña lesbianakuéra tekoñorã",
+      "title": "Airea, ne rovai. Joayhu tekotee ohóva.",
+      "paragraphs": [
+        "AIREANA oñepyrũ 2003-pe, kuña lesbianakuéra jehechakirã. Ore rovai opaichaguáva oñeñangareko haguãicha oréve reko tuichakuépe.",
+        "La Serafina oréve rekovái. Mba'e joayhúpe: cine, jeroky, ñe'ẽ joaju, jeroky rembe'y. Arakuái 20:00-ha, óga oñemboyke. Jepoi ndaha'éi.",
+        "Opa mba'e joayhu oñemobyta yvypóra tekoñorã ndive. Guaraní ne'ẽ oñeñongatu. Safo rape oréve ikatu oñemokyta'ỹ, 25 siglo rire."
+      ]
+    },
+
+    "programs": {
+      "title": "Ore tembiapo",
+      "subtitle": "Indi po mba'e oñemotenonde. Opaite oñemoby La Serafina-pe.",
+      "items": [
+        {
+          "id": "la-serafina",
+          "name": "La Serafina",
+          "tagline": "Óga + mba'e joayhu",
+          "description": "Arakuái 20:00-ha tembiapo. Tape'y jokupytépe: ñemoky, tembiasakue, ñemongu'e. Ñande ru pizza + sándwich.",
+          "href": "/espacio"
+        },
+        {
+          "id": "festival",
+          "name": "Cine LesBiGayTrans",
+          "tagline": "19 edición 2005 guive",
+          "description": "Ary peteį cine LGBTIQ+ joayhúpe. público premio, Paraguái mba'e iporãvéva.",
+          "href": "/festival"
+        },
+        {
+          "id": "rohendu",
+          "name": "Ro'hendu",
+          "tagline": "Aguína jaha",
+          "description": "Teléfono jehechapy, ñe'ẽ joaju LGBT tekoñorãme. Arakuái 13:00 guive 20:00 peve.",
+          "href": "/ro-hendu"
+        },
+        {
+          "id": "tatucada",
+          "name": "Tatucada",
+          "tagline": "Tatú ñemombyta",
+          "description": "Tatú apu'ã — omba'apo tape rupápe: 8 marzo, Orgullo, LBT aty. Tatú = tatú / kuña ryvu.",
+          "href": "https://www.aireana.org.py/la-tatucada/"
+        },
+        {
+          "id": "aireatena",
+          "name": "Aireatena",
+          "tagline": "Ñe'ẽ joapy",
+          "description": "12 tape guive 2020-2021. Yvypóra tekoñorã + mba'e joayhu politikape.",
+          "href": "https://www.aireana.org.py/"
+        },
+        {
+          "id": "incidencia",
+          "name": "Tembiapo政治",
+          "tagline": "TLGBI · OEA · Mercosur",
+          "description": "Yvypóra tekoñorã informe Paraguáipe. Coalición TLGBI, Codehupy, RCTD. 2003 guive.",
+          "href": "/historia"
+        }
+      ]
+    },
+
+    "visit": {
+      "eyebrow": "Eja",
+      "title": "Arakuái opavavépe",
+      "lead": "Arakuái 20:00-ha — jepoi ndaha'éi. 20:00 guive 02:00 peve Eligio Ayala 907-pe.",
+      "items": [
+        { "label": "Jeroky", "value": "Mba'e apu'ã", "detail": "Jeroky Paraguái rehegua" },
+        { "label": "Tembiasakue", "value": "Jeroky rembe'y", "detail": "Obra Paraguái + LATAM" },
+        { "label": "Ñe'ẽ", "value": "Ñe'ẽ joapy", "detail": "Arakuái oikovéva" },
+        { "label": "Cine", "value": "Cine jehechapy", "detail": "Mba'e joapy oréve" }
+      ]
+    },
+
+    "history": {
+      "eyebrow": "2003 guive",
+      "title": "23 arakuái joayhu",
+      "items": [
+        { "year": "2003", "text": "AIREANA oñepyrũ Asunción-pe. Rosa Posa Guinea, Carolina Robledo, Judith Grenno." },
+        { "year": "2005", "text": "La Serafina oñemboyke — óga + mba'e joayhu opavavépe." },
+        { "year": "2011", "text": "Francia rembiapo: Libertad, Igualdad, Fraternidad." },
+        { "year": "2012", "text": "Arakuái cultural oñemotenonde." },
+        { "year": "2013", "text": "Ro'hendu oñepyrũ." },
+        { "year": "2020", "text": "Aireatena — tape pandemicarape." }
+      ],
+      "cta": { "label": "Teko opaite echa", "href": "/historia" }
+    },
+
+    "cta": {
+      "title": "Ne ñemitỹ oñongatu óga",
+      "lead": "AIREANA oréve 23 arakuái tembiapo joayhu internacional ndive. Ñemitỹ— tuicha térã michĩ — La Serafina oñongatu jepoi",
+      "primary_cta": { "label": "Ñemitộ joavy", "href": "/apoyar" },
+      "secondary_cta": { "label": "Óga jokupyty", "href": "/espacio" }
+    }
+  },
+
+  "footer": {
+    "tagline": "La Serafina — Mba'e erekuái joayhúpe. AIREANA óga 2005 guive.",
+    "address": "Eligio Ayala 907 c/ Tacuary, Asunción 001218, Paraguay",
+    "phone": "+595 21 492 835",
+    "whatsapp": "+595 984 123381",
+    "email": "aireana@aireana.org.py",
+    "hours": "Arakuái 20:00–02:00 (opavavépe) — jepyvóikuépe jokupyty rupápe",
+    "links": [
+      { "label": "Óga", "href": "/espacio" },
+      { "label": "Arakuái", "href": "/agenda" },
+      { "label": "Cine", "href": "/festival" },
+      { "label": "Ro'hendu", "href": "/ro-hendu" },
+      { "label": "Teko", "href": "/historia" },
+      { "label": "Ñemitỹ", "href": "/apoyar" }
+    ],
+    "orgs": [
+      "Coalición TLGBI Paraguay",
+      "Codehupy",
+      "Coordinación de Mujeres del Paraguay",
+      "Red Contra Toda Forma de Discriminación",
+      "OEA · Mercosur LGBTI"
+    ],
+    "donorsLabel": "Ñemitỹ oikóva",
+    "donors": [
+      "Mama Cash",
+      "Astraea Lesbian Foundation for Justice",
+      "Fondo de Mujeres del Sur",
+      "Fondo Global para Mujeres"
+    ],
+    "note": "Demo site paragu-ai-platform rehegua. AIREANA ndive oñembojoapy'ỹ — portfolio-pe oñemoby."
+  }
+}
