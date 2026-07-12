@@ -52,7 +52,12 @@ const organization = {
     "https://www.facebook.com/LaSerafinaPy/",
     "https://www.facebook.com/aireana.laserafina",
     "https://x.com/aireanapy",
-    "https://www.instagram.com/laserafinapy/",
+    "https://www.instagram.com/laserapy/",
+    "https://www.instagram.com/aireanalaserafina/",
+    "https://www.tiktok.com/@laserapy",
+    "https://www.tiktok.com/@aireanapy",
+    "https://www.youtube.com/channel/UCpaG8scWVJ6D8qWkq0NvC0Q",
+    "https://linktr.ee/laserafinapy",
   ],
 };
 
@@ -72,7 +77,7 @@ const festival = {
   },
   organizer: { "@id": `${SITE_URL}/#organization` },
   description:
-    "Festival anual de cine LGBTIQ+ independiente de una semana de duración. Lleva 19 ediciones desde 2005. Premios del público y mejor producción paraguaya.",
+    "Festival anual de cine LGBTIQ+ independiente de una semana de duración. Lleva 21 ediciones desde 2005. Más de 700 películas exhibidas y 24.000+ asistentes acumulados. Premios del público y mejor producción paraguaya.",
 };
 
 const website = {
@@ -108,7 +113,7 @@ export const metadata: Metadata = {
   keywords: c.site.seo.local_keywords,
   authors: [{ name: "La Serafina — AIREANA" }],
   alternates: {
-    canonical: "/",
+    canonical: SITE_URL,
     languages: {
       "es-PY": `${SITE_URL}/`,
       "gn": `${SITE_URL}/gn`,
@@ -133,6 +138,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Header is a client component reading pathname via usePathname.
+  // Layout stays a server component so JSON-LD and metadata work without hydration.
   return (
     <html lang="es" className={`${playfair.variable} ${inter.variable}`}>
       <head>

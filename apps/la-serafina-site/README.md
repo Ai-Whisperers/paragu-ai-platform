@@ -1,116 +1,107 @@
-# SOMOSGAY site
+# La Serafina — Demo Site
 
-Sitio institucional bilingüe (ES + guaraní parcial) de SOMOSGAY.
-ONG LGBTQ+ en Paraguay.
+Sitio institucional bilingüe (ES + guaraní parcial) de **La Serafina**, espacio cultural feminista y sede operativa de **AIREANA — Grupo por los derechos de las lesbianas** (Asunción, Paraguay).
+
+> **Estado:** Demo portfolio construido sobre `paragu-ai-platform`. No afiliado oficialmente con AIREANA — usado para portfolio interno de Ai-Whisperers.
 
 ## Stack
 
 - **Next.js 16** (App Router)
 - **React 19** server components por defecto
 - **TypeScript** estricto
-- **Tailwind v4** con design tokens en `content/tokens.json`
-- **Standalone output** para Docker (no se usa `@vercel/nft`)
+- **Tailwind v4** con design tokens en `content/es.json`
+- **Standalone output** para Docker
 
 ## Local dev
 
 ```bash
-pnpm install  # o npm i / bun install
+pnpm install
 pnpm dev      # http://localhost:3000
 ```
 
 ## Build
 
 ```bash
-NODE_ENV=production npx next build   # genera .next/standalone
-docker buildx build -f Dockerfile.standalone -t somosgay-site:latest --load .
+NODE_ENV=production npx next build
+docker buildx build -f Dockerfile.standalone -t la-serafina-site:latest --load .
 ```
 
 ## Estructura
 
 ```
-app/                       # Rutas (por dominio, no por locale)
-├── page.tsx               # /
-├── gn/                    # Splashes localizados (poco contenido por ahora)
-├── clinica-kunuu/         # Página clínica
-├── donar/                 # Donación (con DonationForm)
-├── memoria-108/           # Evento anual
-├── eventos-ics/route.ts   # iCal feed
-├── search-index.json/     # JSON dump para SearchBar
-└── ...
+app/
+├── layout.tsx              # Root layout (fonts, JSON-LD, Header, Footer)
+├── page.tsx                # / (home ES)
+├── HomeClient.tsx          # Home body (secciones: hero, misión, programas, visita, historia, CTA)
+├── gn/page.tsx             # /gn (splash bilingüe)
+├── espacio/page.tsx        # /espacio — venue, alquiler
+├── ro-hendu/page.tsx       # /ro-hendu — línea de apoyo
+├── historia/page.tsx       # /historia — timeline 1959–2026
+├── apoyar/page.tsx         # /apoyar — donaciones, alianzas, transparencia
+├── privacidad/page.tsx     # /privacidad
+├── sitemap.ts              # /sitemap.xml
+├── robots.ts               # /robots.txt
+├── opengraph-image.tsx     # Dinámico
+├── icon.tsx + icon.svg     # Favicon
+└── manifest.ts             # PWA manifest
 
-components/                # Reusables
-├── Header.tsx             # Nav + LangSwitcher + QuickExit
-├── Footer.tsx             # Legal + SearchBar + social
-├── DonationForm.tsx       # 5 presets + monthly + tribute
-├── PrEP ...
-├── QuickExit.tsx          # Salir / Esc → google
-├── FeedbackWidget.tsx     # Bottom-right bug/typo
-├── Rsvp108.tsx            # Memoria 108 RSVP
-└── SearchBar.tsx          # Footer search (cliente, no algolia)
+components/
+├── Header.tsx              # Client (usePathname) — nav desktop + LangSwitcher
+├── MobileMenu.tsx          # Client — hamburger sheet
+├── Footer.tsx              # Institucional (4 columnas)
+├── LangSwitcher.tsx        # ES/GN toggle
+└── WhatsAppFloat.tsx       # Floating WhatsApp
 
 content/
-├── es.json                # Idioma principal (canonical)
-├── gn.json                # Partial guaraní (hero, navigation, klinika)
-├── tokens.json            # Design tokens
-├── news.ts                # Articulos /noticias
-├── equipo.ts              # Team members
-├── hitos.ts               # Histórico (timeline)
-├── testimonios.ts         # Voces comunidad
-├── aliados-directorio.ts  # Directorio de aliados
-└── search-index.ts        # Índice de búsqueda
+├── es.json                 # Idioma principal (canonical) — TODO el contenido
+└── gn.json                 # Partial guaraní (hero, navegación)
 
 lib/
-└── content.ts             # getContent(locale) — wrapper multi-locale
-
-cron jobs:
-  2cc3681cec60  each 5min   probe-somosgay.sh → Telegram alert
-  a770de1df44b  weekly     probe-somosgay-weekly.sh → 17 routes + JSON-LD
-
-Tópicos delicados (open-core):
-  + contraseña del banco está en `.env.example` (no `.env`).
-  + datos del banco en vivo (en `transferencia/page.tsx`) están [Por confirmar].
-  + WhatsApp number tunnable vía `NEXT_PUBLIC_WHATSAPP_NUMBER`.
+└── content.ts              # getContent(locale) — multi-locale wrapper
 ```
+
+## Contenido
+
+Todo el contenido editable está en `content/es.json` bajo estas claves:
+
+| Clave | Uso |
+|-------|-----|
+| `siteName`, `brandLine`, `tagline` | Branding |
+| `site.seo.*` | Meta description, keywords |
+| `theme.*` | Design tokens (CSS variables) |
+| `navigation[]` | Items del header |
+| `home.*` | Secciones de la home |
+| `espacio.*` | Página /espacio |
+| `ro-hendu.*` | Página /ro-hendu |
+| `historia.*` | Página /historia |
+| `apoyar.*` | Página /apoyar |
+| `footer.*` | Footer institucional |
 
 ## Editar contenido
 
-### Traducir algo nuevo al guaraní
+1. Abrí `content/es.json`
+2. Buscá la clave (ej. `home.mission.title`)
+3. Modificá
+4. Rebuild
 
-1. Buscar la clave en `content/es.json`.
-2. Agregar la traducción en `content/gn.json` (mismo path).
-3. Importar `getContent` en lugar de `content` en el componente que lo usa:
+## Sources / OPSEC
 
-   ```ts
-   import { getContent } from "@/lib/content";
-   const c = getContent("es");   // o "gn"
-   ```
+Datos basados en research en [`Ai-Whisperers/la-serafina-context`](https://github.com/Ai-Whisperers/la-serafina-context) (75 docs, 387 URLs verificadas).
 
-4. Si la página no tiene variante `/gn/<slug>`, no hace falta todavía.
-   El language switcher (/gn) ya muestra un splash que apunta al ES.
+- Handles sociales reales del footer de `aireana.org.py` (ver `social-media-real-handles.md`)
+- Festival LesBiGayTrans: **21 ediciones (2005-2025)**, 700+ películas, 24K+ asistentes
+- Programa radial "Aireana en Radio Viva 90.1" jueves 20:00-22:30
+- Premio Francés 2011: 15.000 €, François Fillon, París
 
-### Corregir un dato (ejemplo: dirección)
+**Disclaimer:** Este sitio es un demo de portfolio. No afiliado oficialmente con AIREANA. Toda la información es pública.
 
-1. Abrir `content/es.json`.
-2. Buscar `direccion` o `address`.
-3. Modificar.
-4. Rebuild.
+## Auditoría
 
-## Auditoria automatica
-
-```bash
-./scripts/probe-somosgay.sh            # cada 5 min (cron)
-/root/.hermes/scripts/probe-somosgay-weekly.sh   # cada 7 dias
-```
-
-Ambos revisan 17+ rutas y la presencia de JSON-LD en paginas clave.
-
-## Manuales de estilo en otros documentos
-
-- /Users/ivan/.claude/projects/.../skill.md → som_lgbtq_paraguay
-- /Users/ivan/.claude/projects/.../client-intake-analysis.md
+- `audits/LA-SERAFINA-SITE-AUDIT-2026-07-12.md` — auditoría técnica completa
+- Lighthouse: pendiente medir
 
 ## Donde conseguir ayuda
 
-- Ivan · Founder
-- Gaby / Paloma · Coordinación clínica
-- Equipo de comunicación de SOMOSGAY
+- Ivan · Founder, Ai-Whisperers
+- Kiki · Sales & Marketing
+- Erebus · AI workforce lead (asistente)
