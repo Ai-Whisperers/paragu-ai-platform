@@ -1,7 +1,6 @@
 /* Server home client component */
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import content from "@/content/es.json";
 import {
@@ -13,7 +12,6 @@ import {
   CrescentMoon,
   DividerOrnament,
 } from "@/components/ornaments";
-import { EarAnatomy, type PinPosition } from "@/components/EarAnatomy";
 import { whatsappUrl } from "@/lib/site-config";
 import { BannerTicker } from "@/components/BannerTicker";
 import { Testimonials } from "@/components/Testimonials";
@@ -28,18 +26,7 @@ const features = h.features?.items || [];
 const steps = h.process?.steps || [];
 const finalCta = h.finalCta || {};
 
-const heroPins: PinPosition[] = [
-  { id: "helix",  name: "Helix",  price: "Gs 100.000", x: 38, y: 22 },
-  { id: "rook",   name: "Rook",   price: "Gs 100.000", x: 24, y: 47 },
-  { id: "daith",  name: "Daith",  price: "Gs 100.000", x: 18, y: 48 },
-  { id: "lobulo", name: "Lóbulo", price: "Gs 50.000",  x: 32, y: 82 },
-  { id: "tragus", name: "Tragus", price: "Gs 100.000", x: 18, y: 55 },
-  { id: "conch",  name: "Conch",  price: "Gs 100.000", x: 22, y: 60 },
-];
-
 export default function HomeInner() {
-  const [activePin, setActivePin] = useState<string | null>(null);
-
   return (
     <div className="relative">
       {bannerTicker?.enabled && bannerTicker?.messages?.length ? (
@@ -63,10 +50,7 @@ export default function HomeInner() {
             <p className="eyebrow mb-4">Estudio de piercings · Asunción</p>
             <h1 className="text-balance mb-5 text-[var(--color-foreground)]">
               <span className="block text-[0.78rem] font-[var(--font-display)] uppercase tracking-[0.3em] text-[var(--color-primary-light)] mb-2">Estudio de Piercings · Asunción</span>
-              <span className="block">{c.tagline}</span>
-              <span className="block font-[var(--font-script)] text-[var(--color-primary-light)] text-[1.4em] -mt-2 leading-none">
-                {h.hero?.headline?.split("\n")?.[1] || "tu historia"}
-              </span>
+              <span className="block">Pierce Charm Py</span>
             </h1>
             <p className="text-[var(--color-muted-foreground)] text-[1.05rem] md:text-[1.15rem] leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
               {h.hero?.subheadline}
@@ -95,16 +79,24 @@ export default function HomeInner() {
               <div className="text-center mb-3">
                 <p className="eyebrow text-[var(--color-gold)]">Cartografía · Mapa de piercings</p>
                 <p className="font-[var(--font-script)] text-[var(--color-primary-light)] text-[1.4rem] leading-none mt-1">
-                  Toca una zona
+                  Tipos de perforación
                 </p>
               </div>
 
-              <EarAnatomy pins={heroPins} activeId={activePin} onSelect={(id) => setActivePin(id)} />
+              <div className="relative w-full max-w-[420px] mx-auto">
+                <div className="absolute inset-0 blur-3xl opacity-40 pointer-events-none" style={{ background: "radial-gradient(circle at 50% 50%, rgba(178, 54, 79, 0.5), transparent 70%)" }} aria-hidden="true" />
+                <img
+                  src="/img/celinni-piercings-oreille.jpg"
+                  alt="Esquema de los distintos tipos de piercings de oreja: hélix, tragus, conch, daith, rook, snug, industrial y más"
+                  width={840}
+                  height={1120}
+                  loading="eager"
+                  className="relative w-full h-auto drop-shadow-2xl"
+                />
+              </div>
 
               <p className="text-center mt-4 text-[0.75rem] text-[var(--color-muted-foreground)] font-[var(--font-display)] uppercase tracking-[0.22em]">
-                {activePin
-                  ? `${heroPins.find((p) => p.id === activePin)?.name} — ${heroPins.find((p) => p.id === activePin)?.price}`
-                  : "6 ubicaciones populares en el cartílago"}
+                Hacé click en cualquier zona para ver precio y tiempo de cicatrización
               </p>
             </div>
           </div>
