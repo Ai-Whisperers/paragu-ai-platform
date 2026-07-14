@@ -68,6 +68,10 @@
       "href": "/nosotros"
     },
     {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
       "label": "Joyería",
       "href": "/galeria"
     },
@@ -1084,6 +1088,26 @@
         "q": "¿Qué hago si me aparece un granito (granuloma) cerca del piercing?",
         "a": "Un granito pequeño (granuloma o piercing bump) es una reacción común del cuerpo a la cicatrización. Pasos: (1) lavá bien las manos; (2) limpiá la zona con solución fisiológica tibia; (3) NO lo aprietes ni lo revientes; (4) evitá que la joya se mueva bruscamente. Si después de 5-7 días no mejora, o si hay sangrado/secreción verde o fiebre, escribinos por WhatsApp. Evaluamos el caso y vemos si requiere retirar la joya, cambiar el material, o hacer una consulta presencial.",
         "category": "post-cuidados"
+      },
+      {
+        "q": "¿Cuánto sale un piercing en Asunción, Paraguay?",
+        "a": "Los precios en Pierce Charm van desde Gs 50.000 (lóbulo) hasta Gs 150.000 (industrial, snug). El rango medio para cartílago y facial es Gs 100.000. Todos los precios incluyen la joyería inicial de titanio ASTM F136 (implantgrade). No hay recargos ocultos: la consulta previa es Gs 10.000 y se transfiere al piercing si agendás dentro de las 2 semanas. Atendemos en Asunción con cita previa y seña de Gs 50.000 (transferible hasta 24h antes)."
+      },
+      {
+        "q": "¿Dónde hacerse un septum piercing en Asunción?",
+        "a": "En Pierce Charm hacemos septum piercing profesional en Asunción con agujas hueca de calibre 1.2mm y titanio ASTM F136 certificado. Cuesta Gs 100.000 e incluye la joyería inicial (circular barbell de titanio). El septum cicatriza en 2-3 meses, una de las zonas más rápidas. Recomendamos no usar aro con peso los primeros 2 meses y bajar a una pieza más liviana al bajar la inflamación (downsizing, incluido en el precio si lo hacés con nosotros)."
+      },
+      {
+        "q": "¿Cuál es el mejor material para un piercing nuevo?",
+        "a": "Titanio ASTM F136 (también llamado Ti-6Al-4V ELI) es el estándar de oro para perforaciones nuevas. Es el mismo material que se usa en implantes médicos, no libera níquel y tiene la biocompatibilidad más alta. En Pierce Charm usamos titanio ASTM F136 en color natural y PVD negro como primera opción. El oro sólido 14k/18k también es válido pero más caro. EVITÁ el acero quirúrgico en perforaciones nuevas: contiene níquel y puede irritar las primeras semanas. EVITÁ piercing gun: traumatiza el cartílago y nunca se debería usar."
+      },
+      {
+        "q": "¿Puedo cambiarme la joya yo mismo después de la cicatrización?",
+        "a": "Sí, una vez completado el tiempo de cicatrización (lóbulo 6-8 semanas, cartílago 4-12 meses según zona, septum 2-3 meses). Pasos seguros: (1) lavate las manos con agua y jabón; (2) limpiá la joya nueva con solución fisiológica antes de ponerla; (3) no fuerces si el piercing está duro — esperá unos días con calor (compresa tibia); (4) si tenés molestias o sangrado, contactanos por WhatsApp y te guiamos. En el estudio te hacemos el cambio sin cargo si lo hicimos nosotros."
+      },
+      {
+        "q": "¿Cómo elegir la joyería para mi segundo piercing?",
+        "a": "Tres reglas: (1) MATERIAL antes que estética — titanio ASTM F136 siempre, sin excepciones. (2) CALIBRE según zona — 1.0-1.2mm para facial, 1.2-1.6mm para cartílago e industrial. (3) LARGO suficiente para bajar la inflamación (lo que llamamos 'downsizing'). En Pierce Charm tenemos plugs, túneles, cadenas, dijes y piezas curadas para segunda perforación. Pasá por el showroom sin cita o pedinos por WhatsApp y te armamos una propuesta."
       }
     ]
   },
@@ -1562,5 +1586,23 @@
       "fuera_de_mostrar": "No referenciar por nombre en el sitio público (anti-competencia)",
       "diferenciacion_en_sitio": "Honestidad sobre la anatomía del cliente"
     }
+  },
+  "seo_long_tail": {
+    "intro_h1_asuncion": "Piercing en Asunción, Paraguay",
+    "intro_subtitle": "Estudio profesional de piercings en Asunción · Cuesta 50/100/150K · Bioseguridad certificada · Titanio implantgrade",
+    "long_tail_copy": [
+      {
+        "title": "Piercing profesional en Asunción",
+        "body": "Pierce Charm es un estudio de piercings en Asunción, Paraguay, atendido por Luana López. Ofrecemos 26 tipos de perforaciones (lóbulo, cartílago, facial, industrial, body) con titanio ASTM F136 certificado. La seña para reservar es Gs 50.000, transferible hasta 24h antes. Atendemos con cita previa de lunes a sábado."
+      },
+      {
+        "title": "Precios de piercing en Paraguay",
+        "body": "Los precios de piercing en Paraguay varían entre Gs 50.000 (lóbulo) y Gs 280.000 (industrial premium) según el estudio. En Pierce Charm mantenemos un rango accesible: lóbulo Gs 50.000, cartílago/facial/body Gs 100.000, industrial y snug Gs 150.000. Todos los precios incluyen la primera joya de titanio implantgrade."
+      },
+      {
+        "title": "Septum, helix, daith y otros piercings populares",
+        "body": "Septum: Gs 100.000, cicatriza en 2-3 meses. Helix: Gs 100.000, 4-6 meses. Daith: Gs 100.000, 9-12 meses. Tragus: Gs 100.000, 6-9 meses. Industrial: Gs 150.000, 9-12 meses. Cada perforación incluye consulta previa, joyería inicial de titanio, y seguimiento por WhatsApp a 1 semana, 1 mes y 3 meses."
+      }
+    ]
   }
 }

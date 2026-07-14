@@ -7,6 +7,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { BottomNav } from "@/components/BottomNav";
 import { CookieBanner } from "@/components/CookieBanner";
 import { CartBar } from "@/components/CartBar";
+import { BookingModal } from "@/components/BookingModal";
 import content from "@/content/es.json";
 
 const c = content as any;
@@ -177,6 +178,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BottomNav />
         <CookieBanner />
         <CartBar phone={c.contacto?.whatsapp || "595981324569"} />
+        <BookingModal phone={c.contacto?.whatsapp || "595981324569"} />
       </body>
     </html>
   );

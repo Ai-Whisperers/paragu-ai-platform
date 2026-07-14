@@ -259,6 +259,24 @@ export default function HomeInner() {
         </section>
       )}
 
+      {/* SEO LONG-TAIL COPY — pure H2/H3 paragraphs for indexing */}
+      {(c as any).seo_long_tail?.long_tail_copy && (
+        <section className="py-12 md:py-16 px-4 md:px-6 bg-[var(--color-background)] border-y border-[var(--color-border)]">
+          <div className="max-w-3xl mx-auto space-y-7">
+            {(c as any).seo_long_tail.long_tail_copy.map((block: any, i: number) => (
+              <article key={i} className="prose-gothic">
+                <h3 className="text-[1.15rem] md:text-[1.3rem] mb-2 text-[var(--color-foreground)]">
+                  {block.title}
+                </h3>
+                <p className="text-[var(--color-muted-foreground)] text-[0.95rem] md:text-[1rem] leading-[1.65]">
+                  {block.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* FINAL CTA */}
       <section className="py-20 md:py-28 px-4 md:px-6 relative overflow-hidden smoke-bg">
         <div

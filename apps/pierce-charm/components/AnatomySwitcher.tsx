@@ -6,7 +6,8 @@ import { FaceSelector, FacePin } from "./FaceSelector";
 import { BodySelector, BodyPin } from "./BodySelector";
 import { JewelryIcon } from "./JewelryIcon";
 import { whatsappUrl } from "@/lib/site-config";
-import Link from "next/link";
+import { addToCart } from "./CartBar";
+import { openBooking } from "./BookingModal";
 
 export interface CatalogItem {
   id: string;
@@ -162,46 +163,70 @@ export function AnatomySwitcher({ items, whatsapp = "595981324569", initialRegio
             {regionItems.map((it) => {
               const isActive = activeId === it.id;
               return (
-                <button
+                <div
+                  id={`card-${it.id}`}
                   key={it.id}
-                  type="button"
-                  onClick={() => setActiveId(isActive ? null : it.id)}
-                  className={`text-left border p-3 transition-all group ${
+                  className={`text-left border p-3 transition-all group relative ${
                     isActive
                       ? "border-[var(--color-gold)] bg-[var(--color-primary)]/20"
                       : "border-[var(--color-border)] bg-[var(--color-card)] hover:border-[var(--color-primary-light)]"
                   }`}
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="shrink-0 w-9 h-9 flex items-center justify-center">
-                      <JewelryIcon
-                        type={it.jewelry || "labret-stud"}
-                        size={28}
-                        active={isActive}
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-[var(--font-display)] text-[0.78rem] uppercase tracking-[0.18em] text-[var(--color-foreground)] leading-tight">
-                        {it.name}
-                      </p>
-                      {it.zone && (
-                        <p className="text-[0.68rem] text-[var(--color-muted-foreground)] mt-0.5">
-                          {it.zone}
+                  <button
+                    type="button"
+                    onClick={() => setActiveId(isActive ? null : it.id)}
+                    className="w-full text-left"
+                    aria-label={`Ver ${it.name}`}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="shrink-0 w-9 h-9 flex items-center justify-center">
+                        <JewelryIcon
+                          type={it.jewelry || "labret-stud"}
+                          size={28}
+                          active={isActive}
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-[var(--font-display)] text-[0.78rem] uppercase tracking-[0.18em] text-[var(--color-foreground)] leading-tight">
+                          {it.name}
                         </p>
-                      )}
-                      <div className="flex items-center justify-between gap-2 mt-1.5">
-                        <span className="font-[var(--font-script)] text-[var(--color-gold)] text-[1.1rem] leading-none">
-                          {it.price}
-                        </span>
-                        {it.downtime && (
-                          <span className="text-[0.65rem] text-[var(--color-muted-foreground)]">
-                            {it.downtime}
-                          </span>
+                        {it.zone && (
+                          <p className="text-[0.68rem] text-[var(--color-muted-foreground)] mt-0.5">
+                            {it.zone}
+                          </p>
                         )}
+                        <div className="flex items-center justify-between gap-2 mt-1.5">
+                          <span className="font-[var(--font-script)] text-[var(--color-gold)] text-[1.1rem] leading-none">
+                            {it.price}
+                          </span>
+                          {it.downtime && (
+                            <span className="text-[0.65rem] text-[var(--color-muted-foreground)]">
+                              {it.downtime}
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                  {/* Mini "Lo quiero" */}
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      addToCart({
+                        id: it.id,
+                        name: it.name,
+                        region: it.region,
+                        price: it.price,
+                        jewelryType: it.jewelry,
+                      });
+                    }}
+                    className="mt-2 w-full text-[0.7rem] uppercase tracking-[0.18em] font-[var(--font-display)] text-[var(--color-gold)] hover:text-[var(--color-foreground)] border border-[var(--color-border)] hover:border-[var(--color-gold)] py-1 transition-colors"
+                    aria-label={`Agregar ${it.name} a tu selección`}
+                  >
+                    + Lo quiero
+                  </button>
+                </div>
               );
             })}
           </div>
@@ -210,6 +235,51 @@ export function AnatomySwitcher({ items, whatsapp = "595981324569", initialRegio
 
       {/* CTA final */}
       <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+        {activeId && (() => {
+          const sel = regionItems.find((it) => it.id === activeId);
+          if (!sel) return null;
+          const inCart = false; // cart is global, kept in CartBar
+          return (
+            <button
+              type="button"
+              onClick={() => {
+                addToCart({
+                  id: sel.id,
+                  name: sel.name,
+                  region: sel.region,
+                  price: sel.price,
+                  jewelryType: sel.jewelry,
+                });
+                // brief visual confirmation
+                const btn = document.getElementById(`card-${sel.id}`);
+                if (btn) {
+                  btn.classList.add("ring-2", "ring-[var(--color-gold)]");
+                  setTimeout(() => btn.classList.remove("ring-2", "ring-[var(--color-gold)]"), 600);
+                }
+              }}
+              className="btn-gothic-outline tap"
+            >
+              + Agregar a mi selección
+            </button>
+          );
+        })()}
+        {activeId ? (
+          <button
+            type="button"
+            onClick={() => openBooking()}
+            className="btn-gothic tap"
+          >
+            Reservar este piercing
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => openBooking()}
+            className="btn-gothic tap"
+          >
+            Reservar cita
+          </button>
+        )}
         <a
           href={whatsappUrl(
             whatsapp,
@@ -219,13 +289,10 @@ export function AnatomySwitcher({ items, whatsapp = "595981324569", initialRegio
           )}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-gothic tap"
+          className="btn-gothic-outline tap"
         >
-          {activeId ? "Consultar por WhatsApp" : "Reservar cita"}
+          {activeId ? "Solo consultar" : "WhatsApp directo"}
         </a>
-        <Link href="/contacto" className="btn-gothic-outline tap">
-          Ver contacto
-        </Link>
       </div>
     </div>
   );
