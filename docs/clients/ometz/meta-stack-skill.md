@@ -88,6 +88,35 @@ Read `references/connector.md` for the routing table and the trigger-pattern →
 - ⚠️ **Messenger 24h window**: DMs only respondable within 24h of user's last message. After that, need pre-approved message tag.
 - ⚠️ **Repo copy vs skill copy** (added 2026-07-14): The canonical version of these docs lives in `~/.hermes/skills/meta-stack/` (skill library). Mirror copies also live in the client repo at `paragu-ai-platform/docs/clients/<slug>/`. When the operator asks "pass me the link to the guide", give them the **GitHub UI URL** (`github.com/<org>/paragu-ai-platform/blob/main/docs/clients/<slug>/...`), NOT `raw.githubusercontent.com/...`. Raw URLs only when they're going to `curl`/`wget` the file.
 - ⚠️ **Never invent repo paths.** If a client asks for a link to a doc, `find`/`ls` first to confirm the file actually exists at that path before giving them a URL. Fabricated paths break trust.
+- ⚠️ **`https://connect.composio.dev/api/onboarding/setup` does NOT describe a Hermes-compatible auth path.** That page is Composio's onboarding doc for Claude/Cursor/VS Code clients — each has its own way of injecting the API key. For Hermes, the hosted MCP at `https://connect.composio.dev/mcp` returns **401** without `x-consumer-api-key` and there is no `oauth:` block precedent for MCP servers (only `dashboard.oauth.*` which is unrelated). `hermes mcp login composio` errors: *"Server 'composio' is not configured for OAuth (auth=None)"*. **Conclusion: keep the `x-consumer-api-key` header.** Do not waste a session on bare-URL experiments.
+- ⚠️ **`hermes mcp configure <name>` is curses-interactive** — won't accept piped input, errors with *"requires an interactive terminal"* if stdin is not a TTY. To toggle `enabled: true/false` or change headers when `hermes mcp list` shows the wrong state, mutate `~/.hermes/config.yaml` directly via `execute_code` python heredoc. `hermes config set` only handles scalar keys, NOT nested MCP blocks. Pattern:
+  ```python
+  from pathlib import Path
+  p = Path("/root/.hermes/config.yaml")
+  src = p.read_text()
+  old = "  composio:\n    url: https://connect.composio.dev/mcp\n    enabled: false"
+  new = "  composio:\n    url: https://connect.composio.dev/mcp\n    enabled: true"
+  assert old in src
+  p.write_text(src.replace(old, new, 1))
+  ```
+  Then `hermes mcp list` reflects the new state immediately.
+
+## Secrets handling — CRITICAL (added 2026-07-14 after real Composio key leak)
+
+**When Ivan pastes any API key in chat (Composio `ck_*`, Pipeboard, Stripe `sk_*`, any token):**
+
+1. **DO NOT** echo it back in your reply (don't say "got it: ck_...").
+2. **DO NOT** include it in any tool argument (no `echo $KEY >> file`, no shell heredoc).
+3. **DO NOT** log it in commit messages, skill files, or skill footnotes.
+4. **DO** use `bash /root/.hermes/scripts/paste-secret.sh` (stdin-based, no echo in chat).
+5. **DO** immediately tell Ivan the key is compromised and to rotate it in the vendor dashboard.
+6. **DO** treat any secret that ever appeared in chat as burned — even if you delete the message, server logs, screenshots, and Hermes session archives may still have it.
+
+This rule overrides any "show what you ran" / "verify by printing" instinct.
+
+**Pipeboard gotcha (2026-07-14):** Pipeboard does NOT use a static API token. It uses OAuth at pipeboard.co that connects per-ad-account (Google Ads + Meta Ads separately). Once Ivan completes OAuth in browser, the MCP endpoints https://google-ads.mcp.pipeboard.co/ and https://meta-ads.mcp.pipeboard.co/ become available — no token to inject, MCP client does OAuth on first call. Update the runbook's "Bearer ${PIPEBOARD_API_TOKEN}" pattern: it's WRONG. Bare URL + OAuth-on-first-call is the right shape for Pipeboard.
+
+**Composio key format (2026-07-14):** starts with `ck_` (NOT `cmp_` as older docs claimed). Confirmed wire format: `x-consumer-api-key` header IS correct, per dashboard's own JSON example.
 
 ## Verify
 
@@ -139,18 +168,3 @@ The three siblings are still on disk for backward compatibility but should be ar
 ---
 
 **Version:** 1.0.0 · **Created:** 2026-07-13 (Meta stack implementation session)
-
-
-## Footnote — composio.dev/api/onboarding/setup (added 2026-07-14)
-
-Tried to switch Hermes from API-key mode → bare-URL OAuth based on this page.
-**Did NOT work.** The page is the vendor's onboarding doc for Claude/Cursor/VS
-Code clients, none of which apply to Hermes. The hosted MCP at
-`https://connect.composio.dev/mcp` returns 401 without an `x-consumer-api-key`
-header, and Hermes has no precedent `oauth:` block for MCP servers (only the
-dashboard OAuth, which is unrelated). `hermes mcp login composio` errors out:
-> "Server 'composio' is not configured for OAuth (auth=None)"
-
-**Conclusion:** Keep the API-key pattern. Reverted. Until Composio adds a
-proper MCP OAuth discovery flow, `x-consumer-api-key: ${MCP_COMPOSIO_API_KEY}`
-is the only working path for Hermes.
