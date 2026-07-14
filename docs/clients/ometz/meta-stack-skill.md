@@ -86,6 +86,8 @@ Read `references/connector.md` for the routing table and the trigger-pattern →
 - ⚠️ **Postiz media uploads MUST go through `postiz upload`** before `posts:create`. Raw paths and external URLs are silently rejected by IG/TT/YT.
 - ⚠️ **IG publishing cap = 25 posts / 24h via API.** Check `INSTAGRAM_GET_IG_USER_CONTENT_PUBLISHING_LIMIT` before scheduling bursts.
 - ⚠️ **Messenger 24h window**: DMs only respondable within 24h of user's last message. After that, need pre-approved message tag.
+- ⚠️ **Repo copy vs skill copy** (added 2026-07-14): The canonical version of these docs lives in `~/.hermes/skills/meta-stack/` (skill library). Mirror copies also live in the client repo at `paragu-ai-platform/docs/clients/<slug>/`. When the operator asks "pass me the link to the guide", give them the **GitHub UI URL** (`github.com/<org>/paragu-ai-platform/blob/main/docs/clients/<slug>/...`), NOT `raw.githubusercontent.com/...`. Raw URLs only when they're going to `curl`/`wget` the file.
+- ⚠️ **Never invent repo paths.** If a client asks for a link to a doc, `find`/`ls` first to confirm the file actually exists at that path before giving them a URL. Fabricated paths break trust.
 
 ## Verify
 
@@ -137,3 +139,18 @@ The three siblings are still on disk for backward compatibility but should be ar
 ---
 
 **Version:** 1.0.0 · **Created:** 2026-07-13 (Meta stack implementation session)
+
+
+## Footnote — composio.dev/api/onboarding/setup (added 2026-07-14)
+
+Tried to switch Hermes from API-key mode → bare-URL OAuth based on this page.
+**Did NOT work.** The page is the vendor's onboarding doc for Claude/Cursor/VS
+Code clients, none of which apply to Hermes. The hosted MCP at
+`https://connect.composio.dev/mcp` returns 401 without an `x-consumer-api-key`
+header, and Hermes has no precedent `oauth:` block for MCP servers (only the
+dashboard OAuth, which is unrelated). `hermes mcp login composio` errors out:
+> "Server 'composio' is not configured for OAuth (auth=None)"
+
+**Conclusion:** Keep the API-key pattern. Reverted. Until Composio adds a
+proper MCP OAuth discovery flow, `x-consumer-api-key: ${MCP_COMPOSIO_API_KEY}`
+is the only working path for Hermes.
