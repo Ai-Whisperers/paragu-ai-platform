@@ -28,6 +28,8 @@ const PLACEHOLDER_DROPPABLE_FIELDS = new Set([
   "priceRange",
   "streetAddress",
   "address",
+  "aggregateRating",   // pre-launch: drop fake "5/0" or "4.9/20" ratings — Google red-flag
+  "review",            // pre-launch: drop individual fake reviews
 ])
 
 function clean(obj: any): any {

@@ -67,11 +67,11 @@ export const metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ometzdental.com/en",
+    canonical: "https://ometzdental.com/es",
     languages: {
-      en: "/en",
-      es: "/es",
-      "x-default": "/en",
+      en: "https://ometzdental.com/en",
+      es: "https://ometzdental.com/es",
+      "x-default": "https://ometzdental.com/es",
     },
   },
   icons: {
@@ -87,6 +87,10 @@ export const metadata = {
   },
   other: {
     "msapplication-TileColor": "#1A5F5A",
+    // fb:app_id — populated from NEXT_PUBLIC_FB_APP_ID env var once Meta App is wired
+    // (see docs/clients/ometz/meta-stack-guide-es.md §5 — Meta App creation).
+    // Until then, we omit the meta tag to avoid invalid IDs triggering FB warnings.
+    "theme-color": "#1A5F5A",
   },
 }
 
@@ -99,7 +103,7 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${dmSerif.variable} ${caveat.variable}`} suppressHydrationWarning>
+    <html lang="es" data-scroll-behavior="smooth" className={`${inter.variable} ${dmSerif.variable} ${caveat.variable}`} suppressHydrationWarning>
 
       <head>
         <link rel="manifest" href="/manifest.json" />
@@ -108,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-title" content="Ometz Dental" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var p=location.pathname.match(/^\\/(en|es)\\b/);var l=p?p[1]:'en';document.documentElement.lang=l;}catch(e){}})();`,
+            __html: `(function(){try{var p=location.pathname.match(/^\/(en|es)\b/);var l=p?p[1]:'es';document.documentElement.lang=l;document.documentElement.setAttribute('data-locale',l);}catch(e){}})();`,
           }}
         />
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH_SCRIPT }} />

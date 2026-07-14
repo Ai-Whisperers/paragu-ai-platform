@@ -1,6 +1,6 @@
 services:
   web:
-    image: dra-gabriela:prod
+    image: dra-gabriela:prod-r4-20260708
     deploy:
       replicas: 1
       labels:
@@ -17,10 +17,7 @@ services:
         - "traefik.http.routers.dra-gabriela-www.rule=Host(`www.ometzdental.com`)"
         - "traefik.http.routers.dra-gabriela-www.tls=true"
         - "traefik.http.routers.dra-gabriela-www.tls.certresolver=letsencryptresolver"
-        - "traefik.http.routers.dra-gabriela-www.middlewares=dra-gabriela-www-redirect@docker,security-headers@file"
-        - "traefik.http.middlewares.dra-gabriela-www-redirect.redirectregex.regex=^https?://www\\.ometzdental\\.com/(.*)"
-        - "traefik.http.middlewares.dra-gabriela-www-redirect.redirectregex.replacement=https://ometzdental.com/$${1}"
-        - "traefik.http.middlewares.dra-gabriela-www-redirect.redirectregex.permanent=true"
+        - "traefik.http.routers.dra-gabriela-www.middlewares=dra-gabriela-www-redirect@file,security-headers@file"
         # Legacy redirect — ometzdental.com → ometzdental.com (301)
         # NOTE: For now, ometzdental.com serves the site directly
         # because ometzdental.com DNS does not currently point to this VPS.
@@ -29,16 +26,14 @@ services:
         - "traefik.http.routers.dra-gabriela-legacy.rule=Host(`ometzdental.com.py`) || Host(`www.ometzdental.com.py`)"
         - "traefik.http.routers.dra-gabriela-legacy.tls=true"
         - "traefik.http.routers.dra-gabriela-legacy.tls.certresolver=letsencryptresolver"
-        - "traefik.http.routers.dra-gabriela-legacy.middlewares=dra-gabriela-legacy-redirect@docker"
-        - "traefik.http.middlewares.dra-gabriela-legacy-redirect.redirectregex.regex=^https?://(dra-gabriela\\.com\\.py|www\\.dra-gabriela\\.com\\.py)/?(.*)"
-        - "traefik.http.middlewares.dra-gabriela-legacy-redirect.redirectregex.replacement=https://ometzdental.com/$${1}"
-        - "traefik.http.middlewares.dra-gabriela-legacy-redirect.redirectregex.permanent=true"
-        # Secondary router — ometzdental.com serves the site directly
+        - "traefik.http.routers.dra-gabriela-legacy.middlewares=dra-gabriela-legacy-redirect@file"
+        # Secondary router — dragabriela.paragu-ai.com (legacy alias) → 301 to ometzdental.com
         - "traefik.http.routers.dra-gabriela-pa.entrypoints=websecure"
-        - "traefik.http.routers.dra-gabriela-pa.rule=Host(`ometzdental.com`)"
+        - "traefik.http.routers.dra-gabriela-pa.rule=Host(`dragabriela.paragu-ai.com`)"
         - "traefik.http.routers.dra-gabriela-pa.tls=true"
         - "traefik.http.routers.dra-gabriela-pa.tls.certresolver=letsencryptresolver"
-        - "traefik.http.routers.dra-gabriela-pa.middlewares=security-headers@file"
+        - "traefik.http.routers.dra-gabriela-pa.middlewares=dra-gabriela-pa-redirect@file"
+        # Middleware: redirect dragabriela.paragu-ai.com → ometzdental.com (301)
         - "traefik.http.services.dra-gabriela.loadbalancer.server.port=3000"
     networks:
       - agent-net
