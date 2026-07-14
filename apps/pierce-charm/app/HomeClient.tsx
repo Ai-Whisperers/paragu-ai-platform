@@ -16,6 +16,7 @@ import { whatsappUrl } from "@/lib/site-config";
 import { BannerTicker } from "@/components/BannerTicker";
 import { Testimonials } from "@/components/Testimonials";
 import { Newsletter } from "@/components/Newsletter";
+import { CelinniPiercingMap } from "@/components/CelinniPiercingMap";
 
 const c = content as any;
 const h = c.home || {};
@@ -79,24 +80,14 @@ export default function HomeInner() {
               <div className="text-center mb-3">
                 <p className="eyebrow text-[var(--color-gold)]">Cartografía · Mapa de piercings</p>
                 <p className="font-[var(--font-script)] text-[var(--color-primary-light)] text-[1.4rem] leading-none mt-1">
-                  Tipos de perforación
+                  Tocá una perforación
                 </p>
               </div>
 
-              <div className="relative w-full max-w-[420px] mx-auto">
-                <div className="absolute inset-0 blur-3xl opacity-40 pointer-events-none" style={{ background: "radial-gradient(circle at 50% 50%, rgba(178, 54, 79, 0.5), transparent 70%)" }} aria-hidden="true" />
-                <img
-                  src="/img/celinni-piercings-oreille.jpg"
-                  alt="Esquema de los distintos tipos de piercings de oreja: hélix, tragus, conch, daith, rook, snug, industrial y más"
-                  width={840}
-                  height={1120}
-                  loading="eager"
-                  className="relative w-full h-auto drop-shadow-2xl"
-                />
-              </div>
+              <CelinniPiercingMap phone={c.contacto?.whatsapp || "595981324569"} />
 
               <p className="text-center mt-4 text-[0.75rem] text-[var(--color-muted-foreground)] font-[var(--font-display)] uppercase tracking-[0.22em]">
-                Hacé click en cualquier zona para ver precio y tiempo de cicatrización
+                Cada hotspot muestra nombre, zona, precio y tiempo de cicatrización
               </p>
             </div>
           </div>
