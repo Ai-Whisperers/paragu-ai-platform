@@ -57,7 +57,7 @@ const organization = {
     "https://www.tiktok.com/@laserapy",
     "https://www.tiktok.com/@aireanapy",
     "https://www.youtube.com/channel/UCpaG8scWVJ6D8qWkq0NvC0Q",
-    "https://linktr.ee/laserafinapy",
+    "https://linktr.ee/laserapy",
   ],
 };
 

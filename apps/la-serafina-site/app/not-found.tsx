@@ -32,7 +32,7 @@ export default function NotFound() {
               real notFound() so the response code is a true 404. */}
           Si tenés un enlace que debería funcionar,{" "}
           <a
-            href="mailto:hola@somosgay.org"
+            href={`mailto:${c.footer.email}`}
             className="text-[var(--color-primary)] underline hover:no-underline"
           >
             avisanos por email
@@ -50,16 +50,16 @@ export default function NotFound() {
             Volver al inicio
           </Link>
           <Link
-            href="/programas"
+            href="/espacio"
             className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-[var(--color-warm-deep)] bg-warm text-text hover:bg-warm-deep"
           >
-            Ver programas
+            Conocer el espacio
           </Link>
           <Link
-            href="/clinica-kunuu"
+            href="/festival"
             className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-[var(--color-warm-deep)] bg-warm text-text hover:bg-warm-deep"
           >
-            Clínica Kunu'u
+            Festival de Cine
           </Link>
         </div>
       </div>
