@@ -66,14 +66,9 @@ export const metadata = {
     creator: "@dragabriellagp",
   },
   robots: { index: true, follow: true },
-  alternates: {
-    canonical: "https://ometzdental.com/es",
-    languages: {
-      en: "https://ometzdental.com/en",
-      es: "https://ometzdental.com/es",
-      "x-default": "https://ometzdental.com/es",
-    },
-  },
+  // Note: canonical + languages are set in app/[locale]/layout.tsx via generateMetadata
+  // because they need to be locale-aware. Root-level defaults here are NOT used
+  // when a locale layout overrides them (which it does for every page).
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },

@@ -27,8 +27,19 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  const { getSchemaOrgJson } = await import('@/components/SchemaOrg')
-  return {}
+  const base = "https://ometzdental.com"
+  // Canonical: each locale page canonicalizes to itself
+  // x-default: Spanish (es) is the primary locale for Paraguay audience
+  return {
+    alternates: {
+      canonical: `${base}/${locale}`,
+      languages: {
+        en: `${base}/en`,
+        es: `${base}/es`,
+        "x-default": `${base}/es`,
+      },
+    },
+  }
 }
 
 export const viewport = {
