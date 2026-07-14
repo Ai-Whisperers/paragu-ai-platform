@@ -28,8 +28,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const base = "https://ometzdental.com"
-  // Canonical: each locale page canonicalizes to itself
-  // x-default: Spanish (es) is the primary locale for Paraguay audience
+  // Fallback metadata — most pages override this via buildMetadata() in their own
+  // generateMetadata. We still set per-locale canonical + hreflang at the layout
+  // level so even un-overridden pages have correct SEO.
   return {
     alternates: {
       canonical: `${base}/${locale}`,

@@ -52,17 +52,25 @@ function withLocale(slug: string, locale: "en" | "es"): string {
  * Given the canonical EN slug (or any path under [locale]), build the EN
  * and ES alternates. Both pages always exist (slug aliases make the
  * cross-locale routes work).
+ *
+ * NOTE: canonical should be the CURRENT page's own URL (not the EN version).
+ * x-default points to Spanish (the primary Paraguay audience locale).
  */
-function getAlternates(slug: string) {
+function getAlternates(slug: string, locale?: "en" | "es") {
   const enUrl = `${SITE_URL}${withLocale(slug, "en")}`
   const esSlug = EN_TO_ES[slug] ?? slug // fall back to same slug
   const esUrl = `${SITE_URL}${withLocale(esSlug, "es")}`
+  // Canonical: the page's own URL in its current locale (so /es/foo canonicalizes
+  // to /es/foo, not /en/foo). When locale is not provided (used in sitemap),
+  // default to EN as the canonical (since /en is canonical for the bilingual pair).
+  const canonical = locale === "es" ? esUrl : enUrl
   return {
-    canonical: enUrl,
+    canonical,
     languages: {
       en: enUrl,
       es: esUrl,
-      "x-default": enUrl, // English is the default language
+      // Spanish is the primary audience in Paraguay — x-default points to es
+      "x-default": esUrl,
     },
   }
 }
@@ -95,7 +103,7 @@ export function buildMetadata({
   modifiedTime,
   author,
 }: BuildMetadataInput) {
-  const alts = getAlternates(slug)
+  const alts = getAlternates(slug, locale)
   const ogLocale = locale === "es" ? "es_PY" : "en_US"
   // Per-page OG image: derive from slug if not explicitly provided.
   // Falls back to the generic /og/og-image.png for the home page.
