@@ -1,6 +1,6 @@
 services:
   web:
-    image: dra-gabriela:prod-cover-20260714
+    image: dra-gabriela:prod-meta-og-20260714
     deploy:
       replicas: 1
       labels:

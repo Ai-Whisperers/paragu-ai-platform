@@ -55,10 +55,21 @@ export const metadata = {
   formatDetection: { email: false, address: false, telephone: false },
   openGraph: {
     type: "website",
+    // Primary: Spanish (Paraguay). English variant provided for hreflang completeness.
     locale: "es_PY",
+    alternateLocale: ["en_US", "en_PY"],
     siteName: "Ometz Dental",
     title: "Ometz Dental · Te escucho. · Dentista conservadora en Asunción",
     description: "Ometz Dental (אומץ) · Rehabilitación oral + segunda opinión escrita en Mburucuyá, Asunción. Bilingüe. 20+ años.",
+    // Image with explicit dimensions — required by FB to render link previews correctly
+    images: [
+      {
+        url: "/og/og-home.png",
+        width: 1200,
+        height: 630,
+        alt: "Ometz Dental · אומץ · Dra. Gabriella González Pane · Dentista conservadora en Asunción",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -66,6 +77,12 @@ export const metadata = {
     creator: "@dragabriellagp",
   },
   robots: { index: true, follow: true },
+  // Facebook Open Graph — fb:app_id is set when NEXT_PUBLIC_META_APP_ID env var exists.
+  // To enable: create a Meta App at developers.facebook.com, then set the env var
+  // in /root/paragu-ai-platform/apps/dra-gabriela/.env.local
+  facebook: {
+    appId: process.env.NEXT_PUBLIC_META_APP_ID || "",
+  },
   // Note: canonical + languages are set in app/[locale]/layout.tsx via generateMetadata
   // because they need to be locale-aware. Root-level defaults here are NOT used
   // when a locale layout overrides them (which it does for every page).
