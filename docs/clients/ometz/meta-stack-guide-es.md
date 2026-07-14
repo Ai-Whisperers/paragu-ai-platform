@@ -513,6 +513,149 @@ Si tenés diseñadora o agencia previa, pasanos el "brand kit" o archivos fuente
 
 ---
 
+## 🔧 Anexo operador (Ai-Whisperers) — qué hacer cuando llegan los 3 keys
+
+**Esta sección NO es para el cliente.** Es la checklist técnica que ejecuta Ivan/Erebus en cuanto Gaby manda `cmp_***` / `pk_***` / `pbd_***`. Está acá para que un agente nuevo (o vos en 3 meses) sepa exactamente qué tocar.
+
+### A.1 — Dashboards de los 3 vendors (alta + gestión)
+
+| Vendor | Sign-up | Dashboard | API key location | Doc oficial |
+|---|---|---|---|---|
+| **Composio** (orgánico FB/IG/DMs) | https://dashboard.composio.dev/signup | https://dashboard.composio.dev | Settings → API Key | https://docs.composio.dev/introduction |
+| **Postiz** (cross-platform) | https://postiz.com | https://postiz.com | Settings → Developers → API | https://docs.postiz.com/public-api/introduction |
+| **Pipeboard** (Meta Ads) | https://pipeboard.co | https://pipeboard.co | Settings → API Tokens | https://pipeboard.co |
+
+### A.2 — Inyectar los 3 keys en `~/.hermes/.env` (chmod 600)
+
+```bash
+# El cliente manda los keys por WhatsApp/email. NO loguearlos en chat.
+# Pattern seguro (paste-secret.sh evita que se trunque al pegar):
+bash /root/.hermes/scripts/paste-secret.sh
+
+# O manualmente con heredoc + redirect (background del chat no ve el contenido):
+read -s -p "Composio key: " CMP; echo "MCP_COMPOSIO_API_KEY=${CMP}" >> /root/.hermes/.env
+read -s -p "Postiz key: "  PST; echo "POSTIZ_API_KEY=${PST}"         >> /root/.hermes/.env
+read -s -p "Pipeboard: "   PBD; echo "PIPEBOARD_API_TOKEN=${PBD}"   >> /root/.hermes/.env
+chmod 600 /root/.hermes/.env
+```
+
+### A.3 — Activar los MCP servers
+
+```bash
+hermes mcp configure composio  --enable
+hermes mcp configure pipeboard --enable   # omitir si no hay Ads
+
+# Pitfall Composio: hermes mcp add --auth header escribe "Authorization: Bearer"
+# por default. Composio necesita header "x-consumer-api-key".
+# Verificar y parchear:
+grep -A 4 "^  composio:" /root/.hermes/config.yaml
+# Debe verse así:
+#   composio:
+#     url: https://connect.composio.dev/mcp
+#     headers:
+#       x-consumer-api-key: ${MCP_COMPOSIO_API_KEY}
+# NO debe decir "Authorization: Bearer".
+
+# Test de los 3 vendors:
+hermes mcp test composio     # espera "78 tools"
+hermes mcp test pipeboard    # espera "42 tools"
+postiz integrations:list     # espera lista no vacía
+```
+
+### A.4 — Validar stack completo (un solo comando)
+
+```bash
+bash /root/.hermes/scripts/validate-meta-stack.sh
+# Esperado: composio ✓, pipeboard ✓, postiz ✓ (todos verdes)
+# Si alguno dice "DISABLED", el env var está vacío — volver a A.2.
+```
+
+### A.5 — Limpiar config muerta (idempotente)
+
+```bash
+# Si alguien re-introdujo el MCP roto @horizondatawave/meta-mcp (npm 404):
+bash /root/.hermes/scripts/scrub-dead-meta-mcp.sh
+```
+
+### A.6 — Cron que levanta solo el día que se publican posts
+
+El cron `social-queue-runner` (id `1a26a58452d7`, every 30 min) ya está creado. Es NO-OP hasta que `post-queue.jsonl` tenga entradas y los 3 keys estén cargados.
+
+```bash
+# Una vez los keys estén, smoke test:
+bash /root/.hermes/scripts/social-draft.sh es        # genera drafts a stdout
+bash /root/.hermes/scripts/queue-post.sh facebook "Hola desde Erebus" "$(date -Iseconds)"
+bash /root/.hermes/scripts/social-queue-runner.sh   # ejecuta el queue
+
+# Verificar que publicó:
+mcporter call composio.FACEBOOK_GET_PAGE_INSIGHTS '{"page_id":"<ID>","metric":"page_impressions","period":"day"}'
+```
+
+### A.7 — Qué archivos tocar en el repo cuando hay que actualizar docs/scripts
+
+| Archivo | Cuándo tocarlo |
+|---|---|
+| `~/.hermes/scripts/fb-post.sh` | Cambia API Graph de Facebook (raro) |
+| `~/.hermes/scripts/ig-post.sh` | Cambia API Graph de Instagram |
+| `~/.hermes/scripts/social-queue-runner.sh` | Cambia lógica de queue |
+| `~/.hermes/config.yaml` | Agregar/quitar MCP servers |
+| `~/.hermes/.env` | Los 3 keys + futuros tokens |
+| `docs/clients/ometz/meta-credentials-template.md` | Cuando Gaby completa → copiar a `~/.hermes/clients/ometz/meta-credentials.md` (chmod 600) |
+
+### A.8 — Inventario de tokens activos + cron que avisa faltantes
+
+```bash
+bash /root/.hermes/scripts/token-status.sh   # estado actual de los 7 grupos
+hermes cronjob action=list | grep token-status-daily   # cron que corre a las 09:00
+```
+
+### A.9 — Links rápidos a páginas Meta específicas que solemos necesitar
+
+| Acción | Link directo |
+|---|---|
+| Verificar status Business Verification | https://business.facebook.com/settings/security |
+| Crear System User Token | https://business.facebook.com/settings/system-users |
+| App Dashboard (post-creación) | https://developers.facebook.com/apps |
+| App Review (cuando un scope lo pide) | https://developers.facebook.com/apps/<APP_ID>/app-review/ |
+| Graph API Explorer (testing manual) | https://developers.facebook.com/tools/explorer/ |
+| Token Debugger (ver scopes + expiry) | https://developers.facebook.com/tools/debug/accesstoken/ |
+| Revocar acceso de Ai-Whisperers | https://www.facebook.com/settings/?tab=business |
+| Instagram Insights | https://business.instagram.com/insights/ |
+| Ads Manager | https://business.facebook.com/adsmanager/ |
+
+### A.10 — Permisos del System User Token (copiar/pegar al crearlo)
+
+```
+pages_manage_posts            (publicar FB)
+pages_read_engagement         (FB insights)
+pages_manage_engagement       (responder comments FB)
+pages_show_list               (dep)
+pages_messaging               (Messenger DMs, 24h window)
+instagram_basic               (IG read profile/media)
+instagram_content_publish     (publicar IG)
+instagram_manage_comments     (responder IG comments)
+instagram_manage_messages     (IG DMs, 24h window)
+business_management           (dep)
+read_insights                 (cross insights)
+ads_management                (solo si Ads)
+ads_read                      (solo si Ads)
+```
+
+**Expiry:** "Never" (long-lived). User tokens de 60 días NO sirven para producción.
+
+---
+
+## Una vez que nos mandás todo (parte del cliente — repetido)
+
+1. **Días 1-2:** Nosostros verificamos que todo esté correcto y testeamos internamente.
+2. **Día 3-4:** Te mandamos un "test post" en horario bajo + una campaña de prueba en Facebook Ads (si aplica) para validar todo el flujo end-to-end.
+3. **Día 5:** Nos das el OK final.
+4. **Día 6+:** Empieza la operatoria regular.
+
+**Tiempo total estimado:** ~1 semana entre que completás los pasos y arrancamos a publicar. Si Meta Verification se aprueba rápido, puede ser 3-4 días.
+
+---
+
 ## Qué pasa con tu información — Seguridad y privacidad
 
 🔒 **Lo que nos das queda en:**
@@ -534,6 +677,8 @@ Si tenés diseñadora o agencia previa, pasanos el "brand kit" o archivos fuente
 
 ## Links útiles para tener a mano (todos verificados al 2026-07)
 
+### Meta (cliente)
+
 | Tarea | Link oficial |
 |---|---|
 | Crear cuenta Instagram professional | https://help.instagram.com/502981923235522 |
@@ -541,19 +686,37 @@ Si tenés diseñadora o agencia previa, pasanos el "brand kit" o archivos fuente
 | Vincular IG a Page | https://www.leadsie.com/blog/link-instagram-facebook-page |
 | Meta Business Suite | https://business.facebook.com |
 | App developers meta | https://developers.facebook.com/apps |
+| Business Verification status | https://business.facebook.com/settings/security |
+| System User Tokens | https://business.facebook.com/settings/system-users |
+| Token Debugger | https://developers.facebook.com/tools/debug/accesstoken/ |
+| Graph API Explorer | https://developers.facebook.com/tools/explorer/ |
+| Revocar acceso de Ai-Whisperers | https://www.facebook.com/settings/?tab=business |
+| Ads Manager | https://business.facebook.com/adsmanager/ |
 | Pages API docs (referencia técnica) | https://developers.facebook.com/docs/pages/overview |
 | Meta Help Center (en español) | https://www.facebook.com/help |
 | Instagram Help Center | https://help.instagram.com |
 | Recupera cuenta hackeada | https://www.facebook.com/hacked |
 | Soporte de Ads | https://www.facebook.com/business/help |
 
----
+### Vendors que Ai-Whisperers usa (links compartidos)
+
+| Vendor | Sign-up | Dashboard | Doc oficial |
+|---|---|---|---|
+| Composio (orgánico FB/IG/DMs) | https://dashboard.composio.dev/signup | https://dashboard.composio.dev | https://docs.composio.dev/introduction |
+| Postiz (cross-platform) | https://postiz.com | https://postiz.com | https://docs.postiz.com/public-api/introduction |
+| Pipeboard (Meta Ads) | https://pipeboard.co | https://pipeboard.co | https://pipeboard.co |
 
 ## Soporte durante el proceso
 
 📞 **WhatsApp Ai-Whisperers:** +595 9XX XXX XXX (lun-vie 9am-6pm PYT)
 📧 **Email:** onboarding@ai-whisperers.com
-🔗 **Status page de vendors** (si algo se rompe del lado de Meta/Composio/Pipeboard/Postiz, lo chequeamos acá antes de tocarte): te lo pasamos cuando empieces.
+🔗 **Status page de vendors** (si algo se rompe del lado de Meta/Composio/Pipeboard/Postiz, lo chequeamos acá antes de tocarte):
+- Meta status: https://metastatus.com
+- Composio status: https://status.composio.dev
+- Postiz status: https://status.postiz.com
+- Pipeboard status: https://status.pipeboard.co
+
+**Versión:** 1.1.0 · **Fecha:** 2026-07-14 · **Mantenedor:** Ai-Whisperers · **Idiomas:** Spanish (primary) + English inline
 
 ---
 
