@@ -9,6 +9,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-07-15: chore: commit local work-in-progress — pierce-charm regen, designer handoffs, LA-SERAFINA audit (by Erebus)
+
 - 2026-06-24: fix(ci): use pnpm.onlyBuiltDependencies to allow symlinks without inotify build (by Erebus)
 
 - 2026-06-24: fix(ci): disable inotify native build via .pnpmfile.cjs (by Erebus)

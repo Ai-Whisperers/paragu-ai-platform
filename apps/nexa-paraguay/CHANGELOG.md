@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-07-15: chore: commit local work-in-progress — pierce-charm regen, designer handoffs, LA-SERAFINA audit (by Erebus)
+
 - 2026-06-28: feat(dra-gabriela): adopt Gaby's own words for "Quién es" / "Who she is" (by Erebus)
 
 - 2026-06-28: feat(dra-gabriela): Ometz Dental brand rollout + Te escucho. + rehabilitación oral destacada (by Erebus)
