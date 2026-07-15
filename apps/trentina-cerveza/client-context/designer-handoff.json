@@ -1,0 +1,73 @@
+{
+  "client": "trentina-cerveza",
+  "designer": "Luana L\u00f3pez",
+  "date": "2026-07-06",
+  "version": "auto-generated",
+  "live_url": "",
+  "palette": {
+    "accent": "#1A0F00",
+    "primary-light": "#3D2B1F",
+    "primary-dark": "#0A0600",
+    "accent-light": "#E8C06A",
+    "accent-dark": "#B8862E",
+    "bg": "#0D0D0D",
+    "surface": "#1A1A1A",
+    "surface-alt": "#222222",
+    "surface-light": "#2A2A2A",
+    "fg": "#F5F0E8",
+    "text-light": "#D0C8B8",
+    "fg-muted": "#888080",
+    "border": "#333333"
+  },
+  "text_bg_pairs": [
+    {
+      "fg": "fg",
+      "bg": "bg",
+      "context": "body text"
+    },
+    {
+      "fg": "fg",
+      "bg": "surface",
+      "context": "body on white card"
+    },
+    {
+      "fg": "fg-muted",
+      "bg": "surface",
+      "context": "secondary text on white"
+    },
+    {
+      "fg": "accent",
+      "bg": "bg",
+      "context": "link text"
+    }
+  ],
+  "usage": {
+    "accent": [
+      "text",
+      "icon",
+      "button-bg",
+      "link"
+    ],
+    "bg": [
+      "background"
+    ],
+    "surface": [
+      "background"
+    ],
+    "fg": [
+      "text"
+    ],
+    "fg-muted": [
+      "text"
+    ]
+  },
+  "do_not_use": [],
+  "notes": "Auto-generated from globals.css by generate_client_context.py. Review and refine before committing.",
+  "themes": [
+    {
+      "id": "default",
+      "name": "Default",
+      "is_default": true
+    }
+  ]
+}

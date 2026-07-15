@@ -1,0 +1,73 @@
+{
+  "client": "depiflash",
+  "designer": "Luana L\u00f3pez",
+  "date": "2026-07-06",
+  "version": "auto-generated",
+  "live_url": "",
+  "palette": {
+    "accent": "#E8A0BF",
+    "primary-foreground": "#FFFFFF",
+    "fg-muted": "#F3E8FF",
+    "secondary-foreground": "#1A1A2E",
+    "accent-foreground": "#1A1A2E",
+    "bg": "#FFFFFF",
+    "surface": "#F8F0FF",
+    "surface-light": "#FFF0F5",
+    "fg": "#1A1A2E",
+    "text-light": "#4A4A5E",
+    "success": "#059669",
+    "error": "#DC2626",
+    "warning": "#D97706"
+  },
+  "text_bg_pairs": [
+    {
+      "fg": "fg",
+      "bg": "bg",
+      "context": "body text"
+    },
+    {
+      "fg": "fg",
+      "bg": "surface",
+      "context": "body on white card"
+    },
+    {
+      "fg": "fg-muted",
+      "bg": "surface",
+      "context": "secondary text on white"
+    },
+    {
+      "fg": "accent",
+      "bg": "bg",
+      "context": "link text"
+    }
+  ],
+  "usage": {
+    "accent": [
+      "text",
+      "icon",
+      "button-bg",
+      "link"
+    ],
+    "fg-muted": [
+      "text"
+    ],
+    "bg": [
+      "background"
+    ],
+    "surface": [
+      "background"
+    ],
+    "fg": [
+      "text"
+    ]
+  },
+  "do_not_use": [],
+  "notes": "Auto-generated from globals.css by generate_client_context.py. Review and refine before committing.",
+  "themes": [
+    {
+      "id": "default",
+      "name": "Default",
+      "is_default": true
+    }
+  ]
+}
