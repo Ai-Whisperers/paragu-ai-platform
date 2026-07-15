@@ -20,7 +20,7 @@ import { LogoStrip } from '@/components/landing/logo-strip'
 import { FloatingShape } from '@/components/landing/chrome'
 import { BrandMark } from '@/components/ui/brand-icons'
 
-import { REAL_CLIENTS, RUBROS } from '@/lib/landing/marketing-data'
+import { REAL_CLIENTS, RUBROS, PLANS } from '@/lib/landing/marketing-data'
 
 /* ── Schema.org Structured Data ────────────────────────────────── */
 
@@ -289,87 +289,7 @@ const GUARANTEES = [
   { icon: Unlock, title: 'Sin contrato', desc: 'Cancelás cuando quieras. Tu dominio es tuyo, te lo llevás.' },
 ]
 
-// REAL_CLIENTS imported from marketing-data (includes all paying clients:
- // Trentina, Reina de Copas, El Gato Siamés, Nexa + 6 more)
-const PLANS = [
-  {
-    name: 'Diagnóstico',
-    setup: 'Gratis',
-    monthly: null,
-    period: 'sin compromiso',
-    description: 'Analizamos tu negocio y te mostramos cómo sería tu sitio con IA',
-    features: [
-      { text: 'Análisis de tu negocio y competencia local', included: true },
-      { text: 'Demo de tu futuro sitio funcionando', included: true },
-      { text: 'Recomendación de plan según tus objetivos', included: true },
-      { text: 'Sin tarjeta, sin contrato', included: true },
-      { text: 'Tu propio dominio .com.py', included: false },
-      { text: 'Tu asistente IA para manejar el contenido', included: false },
-    ],
-    cta: 'Pedir diagnóstico gratis',
-    waMessage: 'Hola, quiero pedir el diagnóstico gratis para mi negocio.',
-    popular: false,
-  },
-  {
-    name: 'Autónomo',
-    setup: '0',
-    monthly: 'Gs 650.000',
-    period: '/mes',
-    description: 'Tu sitio clonado de un template exitoso. Lo manejás con tu IA.',
-    features: [
-      { text: 'Sitio profesional basado en template (hasta 5 páginas)', included: true },
-      { text: 'Dominio .com.py + hosting + SSL', included: true },
-      { text: 'WhatsApp integrado + formulario de contacto', included: true },
-      { text: 'Asistente IA entrenado con TU negocio para autogestionar contenido', included: true },
-      { text: 'SEO local + ficha Google Business', included: true },
-      { text: 'Reporte mensual de visitas y leads', included: true },
-      { text: 'Soporte técnico incluido', included: true },
-      { text: 'Cambios y arreglos por IA (sin costo)', included: true },
-      { text: 'Funcionalidades nuevas o arreglos complejos', included: false, extra: 'consultar precio' },
-    ],
-    cta: 'Elegir Autónomo',
-    waMessage: 'Hola, me interesa el plan Autónomo (0 setup + Gs 650.000/mes). Cuentenme más.',
-    popular: true,
-  },
-  {
-    name: 'Profesional',
-    setup: '0',
-    monthly: 'Gs 1.200.000',
-    period: '/mes',
-    description: 'Sitio personalizado desde cero con IA contextual y features a medida.',
-    features: [
-      { text: 'Todo lo del plan Autónomo', included: true },
-      { text: 'Sitio diseñado desde cero para tu negocio (no template)', included: true },
-      { text: 'IA entrenada con todo el contexto de tu negocio', included: true },
-      { text: 'Blog + contenidos SEO mensuales', included: true },
-      { text: 'Funcionalidades nuevas creadas a tu medida', included: true },
-      { text: 'Panel de leads y conversiones', included: true },
-      { text: 'Soporte prioritario + sesión estratégica mensual', included: true },
-      { text: '6 actualizaciones por mes', included: true },
-    ],
-    cta: 'Elegir Profesional',
-    waMessage: 'Hola, me interesa el plan Profesional (0 setup + Gs 1.200.000/mes). ¿Podemos hablar?',
-    popular: false,
-  },
-  {
-    name: 'Empresa',
-    setup: '0',
-    monthly: 'Gs 2.000.000',
-    period: '/mes',
-    description: 'Sistema completo para negocios con múltiples sucursales y operaciones.',
-    features: [
-      { text: 'Todo lo del plan Profesional', included: true },
-      { text: 'Múltiples sucursales o ubicaciones', included: true },
-      { text: 'CRM + automatizaciones y flujos de seguimiento', included: true },
-      { text: 'Landing pages para campañas pagas', included: true },
-      { text: 'Optimización quincenal de conversión', included: true },
-      { text: 'Soporte same-day + asesor dedicado', included: true },
-    ],
-    cta: 'Elegir Empresa',
-    waMessage: 'Hola, me interesa el plan Empresa (0 setup + Gs 2.000.000/mes). ¿Podemos agendar una llamada?',
-    popular: false,
-  },
-]
+
 
 const FAQS = [
   { question: '¿Cuánto tiempo tarda en estar listo mi sitio?', answer: 'Entre 24 y 48 horas desde que elegís tu plan. Te clonamos un template exitoso o te diseñamos algo desde cero, según el plan.' },
