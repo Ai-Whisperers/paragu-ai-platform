@@ -31,7 +31,7 @@ export function TestimonialCarousel({ testimonials }: { testimonials: Testimonia
 
   return (
     <div className="relative mx-auto max-w-3xl">
-      <div className="overflow-hidden rounded-3xl border border-border bg-surface p-8 md:p-12">
+      <div className="overflow-hidden rounded-3xl border border-brand-300/30 bg-deep/85 p-8 md:p-12">
         {testimonials.map((t, i) => (
           <div
             key={i}
@@ -42,8 +42,8 @@ export function TestimonialCarousel({ testimonials }: { testimonials: Testimonia
               transform: i === current ? 'translateX(0)' : 'translateX(20px)',
             }}
           >
-            <Quote size={48} className="mb-6 text-primary/20" />
-            <p className="mb-8 text-2xl font-medium italic text-foreground md:text-3xl">
+            <Quote size={48} className="mb-6 text-accent/20" />
+            <p className="mb-8 text-2xl font-medium italic text-white md:text-3xl">
               &ldquo;{t.quote}&rdquo;
             </p>
             <div className="flex items-center gap-4">
@@ -51,8 +51,8 @@ export function TestimonialCarousel({ testimonials }: { testimonials: Testimonia
                 {t.name[0]}
               </div>
               <div>
-                <p className="font-bold text-foreground">{t.name}</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="font-bold text-white">{t.name}</p>
+                <p className="text-sm text-white/70">
                   {t.business} • {t.location}
                 </p>
               </div>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Cyber pixel glyph -->
+  <g fill="#7834C0">
+    <rect x="40" y="40" width="20" height="20"/>
+    <rect x="60" y="40" width="20" height="20"/>
+    <rect x="80" y="40" width="20" height="20"/>
+    <rect x="100" y="40" width="20" height="20"/>
+    <rect x="120" y="40" width="20" height="20"/>
+    <rect x="140" y="40" width="20" height="20"/>
+  </g>
+  <g fill="#AF7AC9">
+    <rect x="40" y="60" width="20" height="20"/>
+    <rect x="140" y="60" width="20" height="20"/>
+    <rect x="60" y="80" width="20" height="20"/>
+    <rect x="120" y="80" width="20" height="20"/>
+  </g>
+  <g fill="#D2AE3F">
+    <rect x="80" y="80" width="20" height="20"/>
+    <rect x="100" y="80" width="20" height="20"/>
+    <rect x="80" y="100" width="20" height="20"/>
+    <rect x="100" y="100" width="20" height="20"/>
+    <rect x="60" y="120" width="20" height="20"/>
+    <rect x="80" y="120" width="20" height="20"/>
+    <rect x="100" y="120" width="20" height="20"/>
+    <rect x="120" y="120" width="20" height="20"/>
+  </g>
+  <g fill="#4C2C73">
+    <rect x="40" y="80" width="20" height="20"/>
+    <rect x="40" y="100" width="20" height="20"/>
+    <rect x="40" y="120" width="20" height="20"/>
+    <rect x="140" y="80" width="20" height="20"/>
+    <rect x="140" y="100" width="20" height="20"/>
+    <rect x="140" y="120" width="20" height="20"/>
+  </g>
+</svg>

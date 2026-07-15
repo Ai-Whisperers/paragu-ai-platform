@@ -11,7 +11,7 @@ export function PressStrip({ label = 'Mencionados en:' }: { label?: string }) {
 
   return (
     <div className="mx-auto mt-12 flex max-w-4xl flex-col items-center gap-4">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
         {label}
       </p>
       <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
@@ -22,7 +22,7 @@ export function PressStrip({ label = 'Mencionados en:' }: { label?: string }) {
               href={m.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base font-bold tracking-tight text-muted-foreground transition-colors hover:text-foreground"
+              className="text-base font-bold tracking-tight text-white/70 transition-colors hover:text-white"
               title={m.context}
             >
               {m.outlet}
@@ -30,7 +30,7 @@ export function PressStrip({ label = 'Mencionados en:' }: { label?: string }) {
           ) : (
             <span
               key={`${m.outlet}-${m.date}`}
-              className="text-base font-bold tracking-tight text-muted-foreground"
+              className="text-base font-bold tracking-tight text-white/70"
               title={m.context}
             >
               {m.outlet}
