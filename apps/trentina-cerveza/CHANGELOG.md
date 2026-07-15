@@ -13,6 +13,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-07-15: chore: refresh CHANGELOG.md stubs (post-deploy refresh) (by Erebus)
+
 - 2026-07-15: chore: stub CHANGELOG.md files for apps that need prerender during build (by Erebus)
 
 - 2026-07-15: chore: commit local work-in-progress — pierce-charm regen, designer handoffs, LA-SERAFINA audit (by Erebus)
