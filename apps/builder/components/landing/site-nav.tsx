@@ -39,8 +39,8 @@ export function SiteNav() {
       <nav
         className={`fixed top-0 z-50 w-full transition-all duration-300 ${
           scrolled
-            ? 'border-b border-border bg-background/95 backdrop-blur-xl shadow-sm'
-            : 'bg-background/70 backdrop-blur-sm'
+            ? 'border-b border-brand-300/30 bg-deep/95/95 backdrop-blur-xl shadow-sm'
+            : 'bg-deep/95/70 backdrop-blur-sm'
         }`}
       >
         <Container>
@@ -50,8 +50,8 @@ export function SiteNav() {
                 <Wand2 size={20} />
               </div>
               <span className="text-lg font-bold">
-                <span className="text-foreground">Paragu</span>
-                <span className="text-primary">AI</span>
+                <span className="text-white">Paragu</span>
+                <span className="text-accent">AI</span>
               </span>
             </Link>
 
@@ -60,7 +60,7 @@ export function SiteNav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-lg px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="rounded-lg px-4 py-2 text-sm font-medium text-white/70 transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -70,7 +70,7 @@ export function SiteNav() {
             <div className="flex items-center gap-3">
               <Link
                 href="/admin"
-                className="hidden text-sm font-medium text-muted-foreground hover:text-primary md:block"
+                className="hidden text-sm font-medium text-white/70 hover:text-accent md:block"
               >
                 Acceso clientes
               </Link>
@@ -86,7 +86,7 @@ export function SiteNav() {
               <button
                 onClick={() => setMobileMenuOpen(true)}
                 aria-label="Abrir menú"
-                className="rounded-lg p-2 text-foreground md:hidden"
+                className="rounded-lg p-2 text-white md:hidden"
               >
                 <Menu size={24} />
               </button>
@@ -96,21 +96,21 @@ export function SiteNav() {
       </nav>
 
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[60] bg-background md:hidden">
+        <div className="fixed inset-0 z-[60] bg-deep/95 md:hidden">
           <div className="flex h-16 items-center justify-between px-4">
             <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-[var(--primary-foreground)]">
                 <Wand2 size={20} />
               </div>
               <span className="text-lg font-bold">
-                <span className="text-foreground">Paragu</span>
-                <span className="text-primary">AI</span>
+                <span className="text-white">Paragu</span>
+                <span className="text-accent">AI</span>
               </span>
             </Link>
             <button
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Cerrar menú"
-              className="rounded-lg p-2 text-foreground"
+              className="rounded-lg p-2 text-white"
             >
               <XIcon size={24} />
             </button>
@@ -121,7 +121,7 @@ export function SiteNav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-4 text-lg font-medium text-foreground hover:bg-surface-light"
+                className="rounded-xl px-4 py-4 text-lg font-medium text-white hover:bg-deep/85-light"
               >
                 {link.label}
               </Link>
@@ -139,7 +139,7 @@ export function SiteNav() {
             <Link
               href="/admin"
               onClick={() => setMobileMenuOpen(false)}
-              className="rounded-xl border border-border px-4 py-3 text-center text-sm font-medium text-muted-foreground"
+              className="rounded-xl border border-brand-300/30 px-4 py-3 text-center text-sm font-medium text-white/70"
             >
               Acceso clientes
             </Link>

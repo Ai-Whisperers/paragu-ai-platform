@@ -20,7 +20,7 @@ import { LogoStrip } from '@/components/landing/logo-strip'
 import { FloatingShape } from '@/components/landing/chrome'
 import { BrandMark } from '@/components/ui/brand-icons'
 
-import { REAL_CLIENTS } from '@/lib/landing/marketing-data'
+import { REAL_CLIENTS, RUBROS } from '@/lib/landing/marketing-data'
 
 /* ── Schema.org Structured Data ────────────────────────────────── */
 
@@ -417,19 +417,19 @@ function Navigation() {
       <nav
         className={`fixed top-0 z-50 w-full transition-all duration-300 ${
           scrolled
-            ? 'border-b border-gray-200 bg-white/95 backdrop-blur-xl shadow-sm'
+            ? 'border-b border-accent/30 bg-deep/85 backdrop-blur-xl shadow-glow'
             : 'bg-transparent'
         }`}
       >
         <Container>
           <div className="flex h-16 items-center justify-between">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 text-white transition-transform group-hover:scale-110">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-deep text-white shadow-glow transition-transform group-hover:scale-110">
                 <BrandMark width={20} height={20} />
               </div>
               <span className="text-lg font-bold">
-                <span className="text-gray-900">Paragu</span>
-                <span className="text-blue-600">AI</span>
+                <span className="text-white">Paragu</span>
+                <span className="text-accent text-glow-gold">AI</span>
               </span>
             </Link>
 
@@ -438,7 +438,7 @@ function Navigation() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900"
+                  className="rounded-lg px-4 py-2 text-sm font-medium text-white/70 hover:text-accent"
                 >
                   {link.label}
                 </a>
@@ -448,7 +448,7 @@ function Navigation() {
             <div className="flex items-center gap-3">
               <Link
                 href="/admin"
-                className="hidden text-sm font-medium text-gray-600 hover:text-blue-600 md:block"
+                className="hidden text-sm font-medium text-white/70 hover:text-accent md:block"
               >
                 Acceso clientes
               </Link>
@@ -456,7 +456,7 @@ function Navigation() {
                 href={waLink('Hola, quiero una demo gratis de mi sitio web.')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-blue-700 hover:shadow-lg md:inline-flex md:items-center md:gap-2"
+                className="hidden rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-deep shadow-lg shadow-accent/30 transition-all hover:bg-accent/90 hover:shadow-glow md:inline-flex md:items-center md:gap-2"
               >
                 <MessageCircle size={16} />
                 Demo gratis
@@ -464,7 +464,7 @@ function Navigation() {
               <button
                 onClick={() => setMobileMenuOpen(true)}
                 aria-label="Abrir menú"
-                className="rounded-lg p-2 text-gray-700 md:hidden"
+                className="rounded-lg p-2 text-white/85 md:hidden"
               >
                 <Menu size={24} />
               </button>
@@ -481,11 +481,11 @@ function Navigation() {
                 <BrandMark width={20} height={20} />
               </div>
               <span className="text-lg font-bold">
-                <span className="text-gray-900">Paragu</span>
-                <span className="text-blue-600">AI</span>
+                <span className="text-white text-glow">Paragu</span>
+                <span className="text-accent">AI</span>
               </span>
             </Link>
-            <button onClick={() => setMobileMenuOpen(false)} aria-label="Cerrar menú" className="rounded-lg p-2 text-gray-700">
+            <button onClick={() => setMobileMenuOpen(false)} aria-label="Cerrar menú" className="rounded-lg p-2 text-white/85">
               <XIcon size={24} />
             </button>
           </div>
@@ -495,7 +495,7 @@ function Navigation() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-4 text-lg font-medium text-gray-900 hover:bg-gray-100"
+                className="rounded-xl px-4 py-4 text-lg font-medium text-white text-glow hover:bg-deep/55"
               >
                 {link.label}
               </a>
@@ -505,7 +505,7 @@ function Navigation() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-4 text-center text-lg font-semibold text-white"
+              className="mt-4 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-4 text-center text-lg font-semibold text-white"
             >
               <MessageCircle size={18} />
               Pedir demo gratis
@@ -532,33 +532,34 @@ export default function HomePage() {
         {/* ── Hero ──────────────────────────────────────────────── */}
         <section className="relative min-h-screen overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-teal-50" />
-            <FloatingShape className="top-20 right-20 h-[500px] w-[500px] bg-blue-200/30" delay={0} />
-            <FloatingShape className="bottom-20 left-10 h-[400px] w-[400px] bg-teal-200/30" delay={1} />
+            <div className="absolute inset-0 bg-gradient-to-br from-deep/60 via-bg to-primary/40" />
+            <FloatingShape className="top-20 right-20 h-[500px] w-[500px] bg-primary/30" delay={0} />
+            <FloatingShape className="bottom-20 left-10 h-[400px] w-[400px] bg-accent/15" delay={1} />
+            <FloatingShape className="top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 bg-brand/20" delay={2} />
           </div>
 
           <Container>
             <div className="mx-auto max-w-4xl text-center">
               <FadeIn delay={0}>
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-4 py-2 backdrop-blur-sm">
-                  <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-green-500" />
-                  <span className="text-sm font-medium text-gray-600">
+                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-deep/70 px-4 py-2 backdrop-blur-sm">
+                  <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-accent shadow-[0_0_8px_#D2AE3F]" />
+                  <span className="text-sm font-medium text-white/90">
                     Más de 250 negocios en Paraguay ya tienen su sitio
                   </span>
                 </div>
               </FadeIn>
 
                 <FadeIn delay={150}>
-                <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl text-balance">
+                <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl text-balance text-glow">
                   Tu negocio crece{' '}
-                  <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-accent via-brand to-primary bg-clip-text text-transparent">
                     mientras dormís
                   </span>
                 </h1>
               </FadeIn>
 
               <FadeIn delay={300}>
-                <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600 md:text-xl">
+                <p className="mx-auto mb-8 max-w-2xl text-lg text-white/85 md:text-xl">
                   Tu sitio web en 48 horas con inteligencia artificial para que lo manejés solo.
                   Aparecés en Google, recibís consultas por WhatsApp y sabés cuántos te visitan.
                   Sin entrada, Gs 650.000/mes.
@@ -571,7 +572,7 @@ export default function HomePage() {
                     href={waLink('Hola, quiero una demo gratis de mi sitio web.')}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-8 py-4 text-lg font-bold text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-blue-700 hover:shadow-xl"
+                    className="group inline-flex items-center gap-2 rounded-2xl bg-accent px-8 py-4 text-lg font-bold text-deep shadow-lg shadow-accent/40 transition-all hover:-translate-y-1 hover:bg-accent/90 hover:shadow-glow"
                   >
                     <MessageCircle size={20} />
                     Quiero mi demo gratis
@@ -579,16 +580,15 @@ export default function HomePage() {
                   </a>
                   <a
                     href="#clientes"
-                    className="inline-flex items-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-8 py-4 text-lg font-semibold text-gray-700 transition-all hover:border-blue-600 hover:text-blue-600"
+                    className="inline-flex items-center gap-2 rounded-2xl border-2 border-accent/50 bg-deep/40 px-8 py-4 text-lg font-bold text-accent backdrop-blur-sm transition-all hover:border-accent hover:bg-accent/10 hover:shadow-glow"
                   >
-                    <PlayCircle size={20} />
                     Ver sitios reales
                   </a>
                 </div>
               </FadeIn>
 
               <FadeIn delay={600}>
-                <div className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-8 rounded-2xl border border-gray-100 bg-white/80 p-8 backdrop-blur-sm sm:grid-cols-4">
+                <div className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-8 rounded-2xl border border-brand-300/30 bg-deep/60 p-8 backdrop-blur-sm sm:grid-cols-4 shadow-glow">
                   {[
                     { value: '250+', label: 'Sitios publicados' },
                     { value: '48h', label: 'Tiempo promedio' },
@@ -596,8 +596,8 @@ export default function HomePage() {
                     { value: '98%', label: 'Clientes felices' },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <p className="text-3xl font-bold text-blue-600 md:text-4xl">{stat.value}</p>
-                      <p className="mt-1 text-sm text-gray-500">{stat.label}</p>
+                      <p className="text-3xl font-bold text-accent md:text-4xl text-glow-gold">{stat.value}</p>
+                      <p className="mt-1 text-sm text-white/70">{stat.label}</p>
                     </div>
                   ))}
                 </div>
@@ -607,37 +607,60 @@ export default function HomePage() {
         </section>
 
         {/* ── Real Clients ───────────────────────────────────────── */}
-        <section id="clientes" className="py-20 bg-gray-50">
+        <section id="clientes" className="py-20 relative overflow-hidden">
+          {/* Decorative digital-transformation icon — right side */}
+          <img
+            src="/decor/digital-transformation.svg"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-24 top-20 hidden w-[360px] opacity-30 lg:block"
+          />
           <Container>
             <FadeIn>
               <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+                <h2 className="text-3xl text-white md:text-4xl text-glow">
                   Negocios reales, sitios reales
                 </h2>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 text-lg text-white/80">
                   No son plantillas vacías. Estos son negocios paraguayos que ya venden online.
                 </p>
               </div>
             </FadeIn>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {REAL_CLIENTS.map((client, idx) => (
-                <FadeIn key={client.name} delay={idx * 100}>
+                <FadeIn key={client.slug} delay={idx * 80}>
                   <a
                     href={client.href}
-                    className="group block rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-lg"
+                    target="_blank"
+                    rel="noopener"
+                    className="group block overflow-hidden rounded-2xl border border-brand-300/40 bg-brand/80 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-glow"
                   >
-                    <div 
-                      className="mb-4 h-2 w-16 rounded-full"
-                      style={{ backgroundColor: client.color }}
-                    />
-                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600">
-                      {client.name}
-                    </h3>
-                    <p className="mt-1 text-sm text-gray-600">{client.tagline}</p>
-                    <p className="mt-2 text-xs font-medium text-gray-400 uppercase tracking-wide">
-                      {client.vertical}
-                    </p>
+                    {client.screenshot ? (
+                      <div className="flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-deep to-primary">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={client.screenshot}
+                          alt={`${client.name} preview`}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        className="flex aspect-video items-center justify-center bg-gradient-to-br from-deep to-primary"
+                      >
+                        <span className="text-2xl text-white/40 text-glow">{client.name}</span>
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <span className="mb-2 inline-block rounded-full bg-deep/60 px-2.5 py-1 text-xs font-semibold text-accent">
+                        {client.vertical}
+                      </span>
+                      <h3 className="font-bold text-white group-hover:text-accent">
+                        {client.name}
+                      </h3>
+                      <p className="mt-1 text-xs text-white/70">{client.summary}</p>
+                    </div>
                   </a>
                 </FadeIn>
               ))}
@@ -652,45 +675,51 @@ export default function HomePage() {
         </section>
 
         {/* ── Templates ──────────────────────────────────────────── */}
-        <section id="rubros" className="py-20">
+        <section id="rubros" className="py-20 relative overflow-hidden">
+          {/* Decorative cyber panel — left side */}
+          <img
+            src="/decor/cyber-panel.svg"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-20 top-10 hidden w-[420px] opacity-40 lg:block"
+          />
           <Container>
             <FadeIn>
               <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+                <h2 className="text-3xl text-white md:text-4xl text-glow">
                   Diseños por tipo de negocio
                 </h2>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 text-lg text-white/80">
                   Cada rubro tiene un diseño especializado. Elegí el tuyo.
                 </p>
               </div>
             </FadeIn>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {TEMPLATES.filter(t => t.leads > 0 || t.demoSlug).map((template, idx) => (
-                <FadeIn key={template.id} delay={idx * 50}>
+            <div className="grid grid-flow-col justify-start gap-3 overflow-x-auto pb-4 px-1 md:grid-flow-row md:grid md:grid-cols-3 lg:grid-cols-6">
+              {RUBROS.map((rubro, idx) => (
+                <FadeIn key={rubro.id} delay={idx * 60}>
                   <a
-                    href={template.demoUrl || (template.demoSlug ? `/${template.demoSlug}` : waLink(`Hola, quiero un sitio web para mi negocio de ${template.name.toLowerCase()}.`))}
-                    target={template.demoUrl ? '_blank' : undefined}
-                    rel={template.demoUrl ? 'noopener noreferrer' : undefined}
-                    className="group flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 transition-all hover:border-blue-300 hover:shadow-md"
+                    href={rubro.href}
+                    target="_blank"
+                    rel="noopener"
+                    className="group shrink-0 rounded-xl border border-brand-300/40 bg-deep/85 p-4 text-left backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-glow"
+                    style={{ minWidth: '160px' }}
                   >
                     <div
-                      className="flex h-12 w-12 items-center justify-center rounded-xl text-white"
-                      style={{ backgroundColor: template.color }}
+                      className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg p-2"
+                      style={{ backgroundColor: `${rubro.color}44` }}
                     >
-                      <template.icon size={24} />
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={rubro.icon}
+                        alt={rubro.name}
+                        className="h-full w-full object-contain"
+                      />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                        {template.name}
-                      </h3>
-                      {template.leads > 0 && (
-                        <p className="text-xs text-gray-500">
-                          {template.leads.toLocaleString()} negocios en PY
-                        </p>
-                      )}
-                    </div>
-                    <ArrowRight size={16} className="text-gray-400 group-hover:text-blue-600" />
+                    <p className="text-sm font-bold text-white group-hover:text-accent">
+                      {rubro.name}
+                    </p>
+                    <p className="mt-0.5 text-xs text-white/60">{rubro.badge}</p>
                   </a>
                 </FadeIn>
               ))}
@@ -699,14 +728,22 @@ export default function HomePage() {
         </section>
 
         {/* ── How it Works ───────────────────────────────────────── */}
-        <section id="como-funciona" className="py-20 bg-gray-50">
+        <section id="como-funciona" className="py-20 relative overflow-hidden">
+          <div
+            className="absolute inset-0 -z-10"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(120, 52, 192, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(120, 52, 192, 0.06) 1px, transparent 1px)",
+              backgroundSize: '32px 32px',
+            }}
+          />
           <Container>
             <FadeIn>
               <div className="mb-16 text-center">
-                <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+                <h2 className="text-3xl font-bold text-white text-glow md:text-4xl">
                   Así de simple
                 </h2>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 text-lg text-white/75">
                   Tres pasos y tu negocio está online. Sin tocar código.
                 </p>
               </div>
@@ -715,12 +752,12 @@ export default function HomePage() {
             <div className="grid gap-8 md:grid-cols-3">
               {STEPS.map((step, idx) => (
                 <FadeIn key={step.num} delay={idx * 150}>
-                  <div className="relative rounded-2xl border border-gray-200 bg-white p-8">
-                    <span className="absolute -top-4 left-8 rounded-full bg-blue-600 px-4 py-1 text-sm font-bold text-white">
+                  <div className="relative rounded-2xl border border-brand-300/30 bg-white p-8">
+                    <span className="absolute -top-4 left-8 rounded-full bg-primary px-4 py-1 text-sm font-bold text-white">
                       {step.num}
                     </span>
-                    <h3 className="mb-3 mt-2 text-xl font-bold text-gray-900">{step.title}</h3>
-                    <p className="text-gray-600">{step.desc}</p>
+                    <h3 className="mb-3 mt-2 text-xl font-bold text-white text-glow">{step.title}</h3>
+                    <p className="text-white/75">{step.desc}</p>
                   </div>
                 </FadeIn>
               ))}
@@ -730,12 +767,12 @@ export default function HomePage() {
               <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {GUARANTEES.map((g) => (
                   <div key={g.title} className="flex items-start gap-3 rounded-xl bg-white p-4">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-deep/30 text-accent">
                       <g.icon size={20} />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">{g.title}</h4>
-                      <p className="text-sm text-gray-600">{g.desc}</p>
+                      <h4 className="font-semibold text-white text-glow">{g.title}</h4>
+                      <p className="text-sm text-white/75">{g.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -749,10 +786,10 @@ export default function HomePage() {
           <Container>
             <FadeIn>
               <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+                <h2 className="text-3xl font-bold text-white text-glow md:text-4xl">
                   Todo lo que necesitás incluido
                 </h2>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 text-lg text-white/75">
                   Sin sorpresas, sin costos extras, sin letra chica.
                 </p>
               </div>
@@ -761,12 +798,12 @@ export default function HomePage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {FEATURES.map((feature, idx) => (
                 <FadeIn key={feature.title} delay={idx * 100}>
-                  <div className="rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:shadow-md">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                  <div className="rounded-2xl border border-brand-300/30 bg-white p-6 transition-all hover:shadow-md">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-deep/30 text-accent">
                       <feature.icon size={24} />
                     </div>
-                    <h3 className="mb-2 text-lg font-bold text-gray-900">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.desc}</p>
+                    <h3 className="mb-2 text-lg font-bold text-white text-glow">{feature.title}</h3>
+                    <p className="text-white/75">{feature.desc}</p>
                   </div>
                 </FadeIn>
               ))}
@@ -812,66 +849,82 @@ export default function HomePage() {
         </section>
 
         {/* ── Pricing ────────────────────────────────────────────── */}
-        <section id="precios" className="py-20 bg-gray-50">
+        <section id="precios" className="py-20 relative overflow-hidden">
+          {/* Decorative cyber panel — right side */}
+          <img
+            src="/decor/cyber-panel.svg"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-32 top-10 hidden w-[420px] opacity-30 lg:block"
+          />
           <Container>
             <FadeIn>
               <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+                <h2 className="text-3xl text-white md:text-4xl text-glow">
                   Elegí tu plan
                 </h2>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 text-lg text-white/80">
                   Empezá gratis y escalá cuando tu negocio crezca.
                 </p>
               </div>
             </FadeIn>
 
-            <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {PLANS.map((plan, idx) => (
                 <FadeIn key={plan.name} delay={idx * 100}>
-                  <div className={`relative rounded-2xl border bg-white p-8 ${
-                    plan.popular 
-                      ? 'border-blue-600 shadow-xl ring-2 ring-blue-600' 
-                      : 'border-gray-200'
-                  }`}>
+                  <div
+                    className={`relative flex flex-col rounded-2xl border p-8 transition-all ${
+                      plan.popular
+                        ? 'border-primary bg-gradient-to-br from-deep to-primary shadow-xl shadow-primary/40'
+                        : 'border-brand-300/40 bg-deep/80 hover:border-accent hover:shadow-glow'
+                    }`}
+                  >
                     {plan.popular && (
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-4 py-1 text-sm font-semibold text-white">
-                        Más elegido
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-accent to-brand px-4 py-1 text-xs font-bold text-deep">
+                        Más recomendado
                       </span>
                     )}
-                    
-                    <h3 className="text-xl font-bold text-gray-900">{plan.name}</h3>
-                    <p className="mt-1 text-sm text-gray-500">{plan.description}</p>
-                    
-                    <div className="mt-6">
-                      <span className="text-4xl font-bold text-gray-900">
-                        {plan.setup === '0' ? 'Sin entrada' : plan.setup === 'Gratis' ? 'Gratis' : plan.setup}
-                      </span>
+                    <div className="mb-5">
+                      <h3 className={`text-xl font-bold ${plan.popular ? 'text-white' : 'text-white'}`}>
+                        {plan.name}
+                      </h3>
+                      <p className={`mt-1.5 text-sm ${plan.popular ? 'text-white/80' : 'text-white/60'}`}>
+                        {plan.description}
+                      </p>
+                    </div>
+                    <div className="mb-6">
+                      <p className={`text-3xl font-bold ${plan.popular ? 'text-accent text-glow-gold' : 'text-white'}`}>
+                        {plan.setup}
+                      </p>
                       {plan.monthly && (
-                        <div className="mt-1 text-sm text-gray-600">
-                          + <span className="font-semibold">{plan.monthly}</span> {plan.period}
-                        </div>
+                        <p className={`mt-1 text-sm ${plan.popular ? 'text-white/80' : 'text-white/60'}`}>
+                          plus {plan.monthly}{' '}
+                          <span className="text-xs text-white/50">({plan.period})</span>
+                        </p>
                       )}
                     </div>
-
-                    <ul className="mt-6 space-y-3">
+                    <ul className="mb-8 space-y-3 text-sm">
                       {plan.features.map((f) => (
-                        <li key={f.text} className="flex items-start gap-3">
-                          <Check size={18} className={f.included ? 'text-green-500' : 'text-gray-300'} />
-                          <span className={f.included ? 'text-gray-700' : 'text-gray-400'}>
+                        <li key={f.text} className="flex items-start gap-2.5">
+                          {f.included ? (
+                            <Check size={16} className="mt-0.5 shrink-0 text-accent" />
+                          ) : (
+                            <XIcon size={16} className="mt-0.5 shrink-0 text-white/30" />
+                          )}
+                          <span className={f.included ? 'text-white/90' : 'text-white/40 line-through'}>
                             {f.text}
                           </span>
                         </li>
                       ))}
                     </ul>
-
                     <a
                       href={waLink(plan.waMessage)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`mt-8 block w-full rounded-xl py-3 text-center font-semibold transition-all ${
+                      className={`mt-auto w-full rounded-full py-3.5 text-center font-semibold transition-all ${
                         plan.popular
-                          ? 'bg-blue-600 text-white hover:bg-blue-700'
-                          : 'border-2 border-gray-200 text-gray-700 hover:border-blue-600 hover:text-blue-600'
+                          ? 'bg-accent text-deep shadow-lg shadow-accent/40 hover:-translate-y-0.5 hover:shadow-xl hover:bg-accent/90'
+                          : 'border-2 border-accent/40 text-accent hover:border-accent hover:bg-accent/10'
                       }`}
                     >
                       {plan.cta}
@@ -883,13 +936,13 @@ export default function HomePage() {
 
             <FadeIn delay={400}>
               <div className="mt-12 text-center">
-                <p className="text-gray-600">
+                <p className="text-white/70">
                   ¿Necesitás algo más avanzado?{' '}
-                  <a 
+                  <a
                     href={waLink('Hola, necesito un plan personalizado para mi negocio.')}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-blue-600 hover:underline"
+                    className="font-semibold text-accent hover:underline text-glow-gold"
                   >
                     Hablamos por WhatsApp
                   </a>
@@ -900,18 +953,24 @@ export default function HomePage() {
         </section>
 
         {/* ── FAQ ────────────────────────────────────────────────── */}
-        <section id="faq" className="py-20">
+        <section id="faq" className="py-20 relative overflow-hidden">
           <Container>
             <div className="mx-auto max-w-3xl">
               <FadeIn>
                 <div className="mb-12 text-center">
-                  <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+                  <h2 className="text-3xl text-white md:text-4xl text-glow">
                     Preguntas frecuentes
                   </h2>
                 </div>
               </FadeIn>
 
-              <div className="space-y-4">
+              <div
+                className="divide-y-2 divide-primary/40 rounded-2xl border-2 px-6 backdrop-blur-sm"
+                style={{
+                  borderColor: '#7834C0',
+                  backgroundColor: 'rgba(76, 44, 115, 0.55)',
+                }}
+              >
                 {FAQS.map((faq, idx) => (
                   <FadeIn key={idx} delay={idx * 50}>
                     <FAQItem question={faq.question} answer={faq.answer} />
@@ -923,25 +982,47 @@ export default function HomePage() {
         </section>
 
         {/* ── Final CTA ──────────────────────────────────────────── */}
-        <section className="py-20 bg-gray-900 text-white">
+        <section
+          className="relative overflow-hidden py-20 text-white"
+          style={{
+            // Solid #4C2C73 — no gradients per spec
+            backgroundColor: '#4C2C73',
+            // Subtle cyber grid overlay
+            backgroundImage:
+              "linear-gradient(rgba(120, 52, 192, 0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(120, 52, 192, 0.18) 1px, transparent 1px)",
+            backgroundSize: '32px 32px',
+          }}
+        >
+          {/* Decorative pixel glyph — corners */}
+          <img
+            src="/decor/pixel-glyph.svg"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute right-8 top-8 hidden w-32 opacity-40 lg:block"
+          />
+          <img
+            src="/decor/pixel-glyph.svg"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-8 left-8 hidden w-24 rotate-180 opacity-30 lg:block"
+          />
           <Container>
             <FadeIn>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-3xl font-bold md:text-4xl">
-                  Tu negocio merece estar online
+                <h2 className="text-3xl text-white md:text-4xl text-glow">
+                  ¿Tenés dudas?
                 </h2>
-                <p className="mt-4 text-lg text-gray-300">
-                  Empezá gratis. Sin tarjeta, sin compromiso. Solo pagás si te gusta.
+                <p className="mt-4 text-lg text-white/85">
+                  Escribinos por WhatsApp y te respondemos en minutos.
                 </p>
                 <a
-                  href={waLink('Hola, quiero empezar con mi sitio web gratis.')}
+                  href={waLink('Hola, tengo una pregunta sobre ParaguAI.')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-8 py-4 text-lg font-bold transition-all hover:bg-blue-700 hover:shadow-xl"
+                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-bold text-deep shadow-lg shadow-accent/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:bg-accent/90"
                 >
-                  <MessageCircle size={20} />
-                  Empezar gratis por WhatsApp
-                  <ArrowRight size={20} />
+                  <MessageCircle size={18} />
+                  Escribir por WhatsApp
                 </a>
               </div>
             </FadeIn>
@@ -950,62 +1031,62 @@ export default function HomePage() {
       </main>
 
       {/* ── Footer ───────────────────────────────────────────────── */}
-      <footer className="border-t border-gray-200 bg-white py-12">
+      <footer className="border-t border-brand-300/30 bg-deep py-12 text-white/85">
         <Container>
           <div className="grid gap-8 md:grid-cols-4">
             <div>
               <Link href="/" className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-teal-500 text-white">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-deep text-white shadow-glow">
                   <BrandMark width={16} height={16} />
                 </div>
                 <span className="font-bold">
-                  <span className="text-gray-900">Paragu</span>
-                  <span className="text-blue-600">AI</span>
+                  <span className="text-white">Paragu</span>
+                  <span className="text-accent text-glow-gold">AI</span>
                 </span>
               </Link>
-              <p className="mt-4 text-sm text-gray-600">
-                Sitios web profesionales para negocios paraguayos. Hecho con 💙 en Asunción.
+              <p className="mt-4 text-sm text-white/70">
+                Sitios web profesionales para negocios paraguayos. Hecho con 💜 en Asunción.
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-900">Producto</h4>
+              <h4 className="font-semibold text-white">Producto</h4>
               <ul className="mt-4 space-y-2 text-sm">
-                <li><Link href="/metodo" className="text-gray-600 hover:text-blue-600">Cómo funciona</Link></li>
-                <li><Link href="/precios" className="text-gray-600 hover:text-blue-600">Precios</Link></li>
-                <li><Link href="/clientes" className="text-gray-600 hover:text-blue-600">Clientes</Link></li>
-                <li><Link href="/changelog" className="text-gray-600 hover:text-blue-600">Novedades</Link></li>
+                <li><Link href="/metodo" className="text-white/70 hover:text-accent">Cómo funciona</Link></li>
+                <li><Link href="/precios" className="text-white/70 hover:text-accent">Precios</Link></li>
+                <li><Link href="/clientes" className="text-white/70 hover:text-accent">Clientes</Link></li>
+                <li><Link href="/changelog" className="text-white/70 hover:text-accent">Novedades</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-900">Recursos</h4>
+              <h4 className="font-semibold text-white">Recursos</h4>
               <ul className="mt-4 space-y-2 text-sm">
-                <li><Link href="/blog" className="text-gray-600 hover:text-blue-600">Blog</Link></li>
-                <li><Link href="/faq" className="text-gray-600 hover:text-blue-600">FAQ</Link></li>
-                <li><Link href="/contacto" className="text-gray-600 hover:text-blue-600">Contacto</Link></li>
+                <li><Link href="/blog" className="text-white/70 hover:text-accent">Blog</Link></li>
+                <li><Link href="/faq" className="text-white/70 hover:text-accent">FAQ</Link></li>
+                <li><Link href="/contacto" className="text-white/70 hover:text-accent">Contacto</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-900">Contacto</h4>
+              <h4 className="font-semibold text-white">Contacto</h4>
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
-                  <a 
+                  <a
                     href={waLink('Hola, tengo una consulta.')}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-blue-600"
+                    className="text-white/70 hover:text-accent"
                   >
                     WhatsApp
                   </a>
                 </li>
-                <li><Link href="/admin" className="text-gray-600 hover:text-blue-600">Acceso clientes</Link></li>
+                <li><Link href="/admin" className="text-white/70 hover:text-accent">Acceso clientes</Link></li>
               </ul>
             </div>
           </div>
 
-          <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-500">
+          <div className="mt-12 border-t border-brand-300/20 pt-8 text-center text-sm text-white/55">
             © {new Date().getFullYear()} ParaguAI. Todos los derechos reservados.
           </div>
         </Container>

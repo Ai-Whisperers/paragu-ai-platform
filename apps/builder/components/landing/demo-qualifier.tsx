@@ -107,7 +107,7 @@ export function DemoQualifier() {
   return (
     <div className="mx-auto max-w-2xl">
       {/* Progress: numeric label + bar (BUG_HUNT_500 #375) */}
-      <div className="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+      <div className="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-white/70">
         Paso {Math.min(step + 1, 4)} de 4
       </div>
       <div className="mb-8 flex items-center justify-center gap-2">
@@ -121,11 +121,11 @@ export function DemoQualifier() {
         ))}
       </div>
 
-      <div className="rounded-3xl border border-border bg-surface p-6 md:p-10">
+      <div className="rounded-3xl border border-brand-300/30 bg-deep/85 p-6 md:p-10">
         {step === 0 && (
           <div>
             <Heading level={2} className="mb-2 text-2xl">¿Cuál es tu rubro?</Heading>
-            <p className="mb-6 text-sm text-muted-foreground">
+            <p className="mb-6 text-sm text-white/70">
               Esto nos ayuda a armar la demo más cercana a lo que necesitás.
             </p>
             <div className="grid max-h-96 gap-2 overflow-y-auto pr-2 sm:grid-cols-2">
@@ -139,15 +139,15 @@ export function DemoQualifier() {
                     onClick={() => setRubro(t.id)}
                     className={`flex items-center justify-between rounded-xl border-2 px-4 py-3 text-left text-sm font-medium transition-all ${
                       selected
-                        ? 'border-[var(--primary)] bg-primary/5 text-foreground'
-                        : 'border-border text-muted-foreground hover:border-[var(--primary)]/50'
+                        ? 'border-[var(--primary)] bg-primary/5 text-white'
+                        : 'border-brand-300/30 text-white/70 hover:border-[var(--primary)]/50'
                     }`}
                   >
                     <span>{t.name}</span>
                     {isLive ? (
                       <span className="text-xs text-[var(--success)]">Demo lista</span>
                     ) : (
-                      <span className="text-xs text-muted-foreground">Próx.</span>
+                      <span className="text-xs text-white/70">Próx.</span>
                     )}
                   </button>
                 )
@@ -159,7 +159,7 @@ export function DemoQualifier() {
         {step === 1 && (
           <div>
             <Heading level={2} className="mb-2 text-2xl">¿Cuántos son en tu equipo?</Heading>
-            <p className="mb-6 text-sm text-muted-foreground">
+            <p className="mb-6 text-sm text-white/70">
               Para sugerirte el plan más realista — no para ofrecerte el más caro.
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -170,8 +170,8 @@ export function DemoQualifier() {
                   onClick={() => setSize(s.id)}
                   className={`rounded-xl border-2 px-4 py-4 text-left font-medium transition-all ${
                     size === s.id
-                      ? 'border-[var(--primary)] bg-primary/5 text-foreground'
-                      : 'border-border text-muted-foreground hover:border-[var(--primary)]/50'
+                      ? 'border-[var(--primary)] bg-primary/5 text-white'
+                      : 'border-brand-300/30 text-white/70 hover:border-[var(--primary)]/50'
                   }`}
                 >
                   {s.label}
@@ -184,7 +184,7 @@ export function DemoQualifier() {
         {step === 2 && (
           <div>
             <Heading level={2} className="mb-2 text-2xl">¿Qué presencia digital tenés hoy?</Heading>
-            <p className="mb-6 text-sm text-muted-foreground">
+            <p className="mb-6 text-sm text-white/70">
               Si ya tenés Wix o WordPress, te ayudamos a migrar sin perder dominio ni SEO.
             </p>
             <div className="grid gap-3">
@@ -195,8 +195,8 @@ export function DemoQualifier() {
                   onClick={() => setPresence(p.id)}
                   className={`rounded-xl border-2 px-4 py-4 text-left font-medium transition-all ${
                     presence === p.id
-                      ? 'border-[var(--primary)] bg-primary/5 text-foreground'
-                      : 'border-border text-muted-foreground hover:border-[var(--primary)]/50'
+                      ? 'border-[var(--primary)] bg-primary/5 text-white'
+                      : 'border-brand-300/30 text-white/70 hover:border-[var(--primary)]/50'
                   }`}
                 >
                   {p.label}
@@ -215,18 +215,18 @@ export function DemoQualifier() {
             {/* BUG_HUNT_500 #372: visitors who picked a vertical without a
                 live demo get a friendlier framing — we still want them. */}
             {rubro && !liveSlugs.has(rubro) ? (
-              <p className="mb-6 text-muted-foreground">
+              <p className="mb-6 text-white/70">
                 Tu rubro es uno donde todavía no tenemos plantilla productizada,
-                pero <strong className="text-foreground">vos podés ser nuestro primer caso</strong>.
+                pero <strong className="text-white">vos podés ser nuestro primer caso</strong>.
                 Mandanos el WhatsApp y armamos algo a medida.
               </p>
             ) : (
-              <p className="mb-6 text-muted-foreground">
+              <p className="mb-6 text-white/70">
                 Ya armamos el mensaje con la info que nos diste. Hacé clic abajo, revisalo si querés
                 y mandalo. Te respondemos en horario hábil.
               </p>
             )}
-            <pre className="mb-6 whitespace-pre-wrap rounded-xl bg-surface-light p-4 text-left text-sm text-foreground">
+            <pre className="mb-6 whitespace-pre-wrap rounded-xl bg-deep/85-light p-4 text-left text-sm text-white">
               {waMessage}
             </pre>
             <a
@@ -249,7 +249,7 @@ export function DemoQualifier() {
             <div className="mt-6">
               <Link
                 href={`/p/${rubro.replace(/_/g, '-')}`}
-                className="text-sm font-semibold text-primary"
+                className="text-sm font-semibold text-accent"
               >
                 Mientras tanto, mirá la plantilla de tu rubro →
               </Link>
@@ -263,7 +263,7 @@ export function DemoQualifier() {
               type="button"
               onClick={back}
               disabled={step === 0}
-              className="inline-flex items-center gap-1 text-sm font-semibold text-muted-foreground disabled:opacity-40"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-white/70 disabled:opacity-40"
             >
               <ArrowLeft size={14} />
               Atrás

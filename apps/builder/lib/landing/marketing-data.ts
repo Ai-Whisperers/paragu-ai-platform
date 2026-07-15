@@ -1,5 +1,28 @@
 import { Scissors, Dumbbell, Flower2, Hand, PenTool, User, Sparkles, Palette, Zap, Eye, Globe, Smartphone, Search, MessageCircle } from 'lucide-react'
 
+/**
+ * Rubros grid — quick-pick cards shown above the showcase.
+ * Each card uses an icon asset from /public/icons/ and an external link
+ * to a live ParaguAI tenant. Designed for the cyberpunk theme.
+ */
+export type RubroCard = {
+  id: string
+  name: string
+  href: string
+  icon: string // path under /public/icons/
+  badge: string // 'Demo live' | '<n> leads' | etc.
+  color: string // hex used for the icon background tint
+}
+
+export const RUBROS: readonly RubroCard[] = [
+  { id: 'indumentaria', name: 'Indumentaria', href: 'https://superspuma.paragu-ai.com', icon: '/icons/indumentaria.png', badge: 'Demo live', color: '#92400e' },
+  { id: 'spa', name: 'Spa & Wellness', href: 'https://mantraspa.paragu-ai.com', icon: '/icons/spa-wellness.png', badge: '927 leads', color: '#7c9885' },
+  { id: 'gimnasio', name: 'Gimnasio', href: 'https://bichosgym.paragu-ai.com', icon: '/icons/gimnasio.png', badge: '1,087 leads', color: '#2d6a4f' },
+  { id: 'depilacion', name: 'Depilación', href: 'https://depiflash.paragu-ai.com', icon: '/icons/depilacion.png', badge: 'Demo live', color: '#be185d' },
+  { id: 'reubicacion', name: 'Reubicación', href: 'https://nexa.paragu-ai.com', icon: '/icons/reubicacion.png', badge: 'Demo live', color: '#1e3a5f' },
+  { id: 'belleza', name: 'Belleza', href: 'https://mantraspa.paragu-ai.com', icon: '/icons/belleza.png', badge: '2,393 leads', color: '#b76e79' },
+]
+
 export type Template = {
   id: string
   name: string
@@ -35,89 +58,99 @@ export type RealClient = {
   href: string
   color: string
   summary: string
+  screenshot?: string
 }
 
 export const REAL_CLIENTS: readonly RealClient[] = [
   {
-    slug: 'nexa-paraguay',
+    slug: 'nexa',
     name: 'Nexa Paraguay',
     tagline: 'Reubicación Europa → Paraguay',
-    vertical: 'Relocation · 4 idiomas',
+    vertical: 'Reubicación',
     href: 'https://nexa.paragu-ai.com',
     color: '#1e3a5f',
-    summary: 'Sitio multi-idioma (ES/EN/DE/NL) para clientes europeos que evalúan mudarse a Paraguay.',
-  },
-  {
-    slug: 'dayah-litworks',
-    name: 'Dayah Litworks',
-    tagline: 'Diseño de tapas de libros',
-    vertical: 'Portfolio · pago en USD',
-    href: 'https://dayah.paragu-ai.com',
-    color: '#c44569',
-    summary: 'Portfolio de diseñadora gráfica con pricing en USD y proceso de encargo claro.',
-  },
-  {
-    slug: 'magnolia-peluqueria',
-    name: 'Magnolia Peluquería',
-    tagline: 'Cortes y coloración profesional',
-    vertical: 'Peluquería · Asunción',
-    href: 'https://magnolia-peluqueria.paragu-ai.com',
-    color: '#b76e79',
-    summary: 'Sitio para peluquería con galería de trabajos, servicios y botón de reservas por WhatsApp.',
-  },
-  {
-    slug: 'mantra-spa',
-    name: 'Mantra Spa',
-    tagline: 'Masajes y tratamientos faciales',
-    vertical: 'Spa & Wellness · Asunción',
-    href: 'https://mantraspa.paragu-ai.com',
-    color: '#7c9885',
-    summary: 'Sitio para spa con galería de tratamientos, horarios y botón de reservas por WhatsApp.',
-  },
-  {
-    slug: 'bichos-gym',
-    name: 'Bichos Gym',
-    tagline: 'Entrenamiento funcional',
-    vertical: 'Gimnasio · Asunción',
-    href: 'https://bichosgym.paragu-ai.com',
-    color: '#2d6a4f',
-    summary: 'Sitio para gimnasio con planes, horarios y botón de WhatsApp para consultas.',
-  },
-  {
-    slug: 'jota-ink-tattoo',
-    name: 'Jota Ink Tattoo',
-    tagline: 'Tatuajes personalizados',
-    vertical: 'Tatuajes · Asunción',
-    href: 'https://jotaink.paragu-ai.com',
-    color: '#1a1a2e',
-    summary: 'Portfolio de tatuador con galería de trabajos, estilos y botón de contacto directo.',
-  },
-  {
-    slug: 'depi-flash',
-    name: 'DepiFlash',
-    tagline: 'Depilación láser a domicilio',
-    vertical: 'Depilación · Paraguay',
-    href: 'https://depiflash.paragu-ai.com',
-    color: '#e17055',
-    summary: 'Landing para servicio de depilación láser con formulario de contacto y pricing claro.',
-  },
-  {
-    slug: 'trentina',
-    name: 'Trentina',
-    tagline: 'Cerveza artesanal paraguaya',
-    vertical: 'Cervecería · Santa Rita',
-    href: 'https://trentina.paragu-ai.com',
-    color: '#d97706',
-    summary: 'Sitio para cervecería artesanal con catálogo de cervezas y pedidos por WhatsApp.',
+    summary: 'Programa de reubicación para europeos (4 idiomas)',
+    screenshot: '/screenshots/nexa.jpg',
   },
   {
     slug: 'superspuma',
     name: 'Superspuma',
-    tagline: 'Accesorios de limpieza industriales',
-    vertical: 'B2B · Asunción',
-    href: 'https://superspuma.com.py',
-    color: '#0ea5e9',
-    summary: 'Catálogo B2B para empresa de accesorios de limpieza con precios y botón de contacto.',
+    tagline: 'Ropa oversize y streetwear paraguayo',
+    vertical: 'Indumentaria',
+    href: 'https://superspuma.paragu-ai.com',
+    color: '#92400e',
+    summary: 'Ropa oversize y streetwear paraguayo',
+    screenshot: '/screenshots/superspuma.jpg',
+  },
+  {
+    slug: 'reinadecopas',
+    name: 'Reinadecopas',
+    tagline: 'Cerveza artesanal paraguaya',
+    vertical: 'Cerveza Artesanal',
+    href: 'https://reinadecopas.paragu-ai.com',
+    color: '#d97706',
+    summary: 'Tienda online de cerveza artesanal paraguaya',
+    screenshot: '/screenshots/reinadecopas.jpg',
+  },
+  {
+    slug: 'fun4me',
+    name: 'Fun4Me',
+    tagline: 'Eventos infantiles y cumpleaños',
+    vertical: 'Eventos / Kids',
+    href: 'https://fun4me.paragu-ai.com',
+    color: '#f59e0b',
+    summary: 'Eventos infantiles y cumpleaños',
+    screenshot: '/screenshots/fun4me.jpg',
+  },
+  {
+    slug: 'magnolia-peluqueria',
+    name: 'Magnolia Peluquería',
+    tagline: 'Peluquería integral en barrio Oporto',
+    vertical: 'Peluquería',
+    href: 'https://magnolia-peluqueria.paragu-ai.com',
+    color: '#b76e79',
+    summary: 'Peluquería integral en barrio Oporto',
+    screenshot: '/screenshots/magnolia-peluqueria.jpg',
+  },
+  {
+    slug: 'depiflash',
+    name: 'DepiFlash',
+    tagline: 'Depilación láser IPL a domicilio',
+    vertical: 'Depilación',
+    href: 'https://depiflash.paragu-ai.com',
+    color: '#be185d',
+    summary: 'Depilación láser IPL a domicilio',
+    screenshot: '/screenshots/depiflash.jpg',
+  },
+  {
+    slug: 'dayah-litworks',
+    name: 'Dayah LitWorks',
+    tagline: 'Diseño de portadas · Amazon Prime Reading',
+    vertical: 'Diseño / Literatura',
+    href: 'https://dayah-litworks.paragu-ai.com',
+    color: '#c44569',
+    summary: 'Diseño de portadas, autora Amazon Prime Reading — 400+ portadas',
+    screenshot: '/screenshots/dayah.jpg',
+  },
+  {
+    slug: 'ozmontania',
+    name: 'Oz Montanía',
+    tagline: 'Artista visual paraguayo',
+    vertical: 'Arte / Muralismo',
+    href: 'https://ozmontania.paragu-ai.com',
+    color: '#7c3aed',
+    summary: 'Artista visual, muralista e ilustrador paraguayo',
+    screenshot: '/screenshots/ozz.jpg',
+  },
+  {
+    slug: 'elgatosiames',
+    name: 'El Gato Siamés',
+    tagline: 'Stand up comedy desde Paraguay',
+    vertical: 'Comedia / Stand Up',
+    href: 'https://elgatosiames.com',
+    color: '#1a1a2e',
+    summary: 'Camilo Acosta — stand up comedy, humor ácido y original desde Paraguay',
+    screenshot: '/screenshots/elgatosiames.jpg',
   },
 ] as const
 
@@ -151,60 +184,88 @@ export type Plan = {
   features: PlanFeature[]
   cta: string
   highlight?: boolean
+  popular?: boolean
+  waMessage: string
 }
 
 export const PLANS: readonly Plan[] = [
   {
-    name: 'Diagnóstico',
+    name: 'Prueba',
     setup: 'Gratis',
     monthly: null,
-    period: 'sin compromiso',
-    description: 'Analizamos tu negocio y te mostramos cómo sería tu sitio con IA',
+    period: '3 meses',
+    description: 'Probá todo lo que ofrecemos antes de pagar nada. Sin tarjeta, sin compromiso.',
     features: [
-      { text: 'Análisis de tu negocio y competencia local', included: true },
-      { text: 'Demo de tu futuro sitio funcionando', included: true },
-      { text: 'Recomendación de plan según tus objetivos', included: true },
-      { text: 'Sin tarjeta, sin contrato', included: true },
-      { text: 'Listo en 48 horas', included: false },
+      { text: 'Tu sitio en subdominio .paragu-ai.com', included: true },
+      { text: 'WhatsApp + Google Maps + SSL', included: true },
+      { text: 'Soporte por WhatsApp', included: true },
+      { text: 'Demo lista en 48h', included: true },
+      { text: 'Después: seguís online (marca ParaguAI) o pasás a plan pago', included: true },
+      { text: 'Dominio propio (.com.py)', included: false },
+      { text: 'Sin marca ParaguAI', included: false },
     ],
-    cta: 'Pedir diagnóstico gratis',
+    cta: 'Pedir demo gratis',
+    waMessage: 'Hola, quiero una demo gratis de mi sitio web con ParaguAI.',
   },
   {
-    name: 'Lanzamiento',
-    setup: 'Desde Gs 2.500.000',
-    monthly: 'Gs 350.000/mes',
-    period: 'primer año',
-    description: 'Tu sitio profesional listo para vender, con dominio .com.py incluido',
+    name: 'Presencia',
+    setup: 'Gs 650.000',
+    monthly: '+ Gs 100.000/mes',
+    period: 'después de 7 meses incluidos',
+    description: 'Tu primer sitio profesional con dominio propio. Los primeros 7 meses incluidos.',
     features: [
-      { text: 'Diseño profesional responsive', included: true },
-      { text: 'Dominio .com.py incluido (1 año)', included: true },
-      { text: 'SEO básico optimizado para Paraguay', included: true },
-      { text: 'Botón de WhatsApp integrado', included: true },
-      { text: '5 páginas (inicio, servicios, galería, etc.)', included: true },
-      { text: 'Sistema de reservas / pedidos', included: true },
-      { text: 'SSL y hosting incluidos', included: true },
-      { text: 'Atención en Guaraní o USD', included: true },
+      { text: '7 meses con todas las features desbloqueadas', included: true },
+      { text: 'Hasta 5 páginas', included: true },
+      { text: 'Dominio propio .com.py incluido 1 año', included: true },
+      { text: 'Hasta 15 fotos optimizadas', included: true },
+      { text: 'Formulario + WhatsApp Business', included: true },
+      { text: 'SEO básico + Google Maps', included: true },
+      { text: '2 cambios de contenido al mes', included: true },
+      { text: 'Soporte dedicado por WhatsApp', included: true },
     ],
-    cta: 'Comenzar con Lanzamiento',
-    highlight: true,
+    cta: 'Comenzar Presencia',
+    waMessage: 'Hola, me interesa el plan Presencia (Gs 650.000 + 100.000/mes).',
   },
   {
     name: 'Crecimiento',
-    setup: 'Desde Gs 4.500.000',
-    monthly: 'Gs 700.000/mes',
-    period: 'primer año',
-    description: 'Tu sitio con tienda online, blog y analytics para medir qué funciona',
+    setup: 'Gs 1.200.000',
+    monthly: '+ Gs 150.000/mes',
+    period: 'después de 8 meses incluidos',
+    description: 'Reservas online, blog y catálogo de productos. Los primeros 8 meses incluidos.',
     features: [
-      { text: 'Todo lo de Lanzamiento +', included: true },
-      { text: 'Tienda online completa', included: true },
-      { text: 'Blog con artículos SEO', included: true },
-      { text: 'Google Analytics integrado', included: true },
-      { text: 'Integración con MercadoPago / Stripe', included: true },
-      { text: 'Reportes mensuales de rendimiento', included: true },
-      { text: 'Hasta 20 páginas', included: true },
-      { text: 'Chat en vivo opcional', included: true },
+      { text: '8 meses con todas las features desbloqueadas', included: true },
+      { text: 'Todo lo de Presencia + páginas ilimitadas', included: true },
+      { text: 'Sistema de reservas online', included: true },
+      { text: 'Catálogo con hasta 20 productos', included: true },
+      { text: 'Blog + analytics avanzado', included: true },
+      { text: 'SEO avanzado + Schema.org', included: true },
+      { text: '5 cambios al mes + soporte prioritario', included: true },
+      { text: 'Emails profesionales', included: true },
     ],
-    cta: 'Comenzar con Crecimiento',
+    cta: 'Comenzar Crecimiento',
+    popular: true,
+    highlight: true,
+    waMessage: 'Hola, me interesa el plan Crecimiento (Gs 1.200.000 + 150.000/mes).',
+  },
+  {
+    name: 'Profesional',
+    setup: 'Gs 2.200.000',
+    monthly: '+ Gs 300.000/mes',
+    period: 'después del período incluido',
+    description: 'Cadenas, franquicias y multi-sucursal. Experiencia Profesional completa, siempre.',
+    features: [
+      { text: 'Experiencia Profesional completa, siempre', included: true },
+      { text: 'Todo lo de Crecimiento sin límite de tiempo', included: true },
+      { text: 'Hasta 5 sucursales / locales', included: true },
+      { text: 'Sitio multi-idioma (es/en/pt)', included: true },
+      { text: 'Integraciones personalizadas', included: true },
+      { text: 'Account manager dedicado', included: true },
+      { text: 'SLA 99.9% uptime', included: true },
+      { text: '10 horas de desarrollo al mes', included: true },
+    ],
+    cta: 'Hablar con ventas',
+    waMessage:
+      'Hola, me interesa el plan Profesional (Gs 2.200.000 + 300.000/mes). Quiero hablar con ventas.',
   },
 ]
 
