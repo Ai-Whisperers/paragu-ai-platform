@@ -1,0 +1,16 @@
+{
+  "name": "@ai-whisperers/dockerfiles",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "bin": {
+    "aiw-dockerfile": "./bin/generate.mjs"
+  },
+  "files": [
+    "bin",
+    "templates"
+  ],
+  "scripts": {
+    "generate": "node ./bin/generate.mjs"
+  }
+}
