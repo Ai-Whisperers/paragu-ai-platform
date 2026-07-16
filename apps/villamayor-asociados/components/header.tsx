@@ -21,46 +21,47 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-white border-b border-border sticky top-0 z-50">
-      <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-[72px]">
-        <Link href="/" className="flex items-center gap-2 no-underline">
-          <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-secondary">
+    <header style={{ backgroundColor: "white", borderBottom: "1px solid #E8E3DA", position: "sticky", top: 0, zIndex: 50 }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
+        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", textDecoration: "none" }}>
+          <div style={{ width: "36px", height: "36px", borderRadius: "8px", backgroundColor: "#1B2A4A", display: "flex", alignItems: "center", justifyContent: "center", color: "#C9A96E" }}>
             <Scale size={18} />
           </div>
           <div>
-            <div className="font-bold text-[0.9375rem] text-primary leading-tight">{s.shortName}</div>
-            <div className="text-[0.625rem] text-secondary tracking-[0.08em] uppercase">& Asociados</div>
+            <div style={{ fontWeight: 700, fontSize: "0.9375rem", color: "#1B2A4A", lineHeight: 1.2 }}>{s.shortName}</div>
+            <div style={{ fontSize: "0.625rem", color: "#C9A96E", letterSpacing: "0.08em", textTransform: "uppercase" }}>Jurídico Demo</div>
           </div>
         </Link>
 
-        <nav className="hide-mobile flex gap-8">
+        <nav className="hide-mobile" style={{ display: "flex", gap: "2rem" }}>
           {nav.map((n, i) => (
-            <Link key={i} href={n.href} className="text-gray-600 no-underline text-sm font-medium">
+            <Link key={i} href={n.href} style={{ color: "#4B5563", textDecoration: "none", fontSize: "0.875rem", fontWeight: 500 }}>
               {n.label}
             </Link>
           ))}
         <LocaleSwitcher /></nav>
 
         <a href={content.hero.ctaLink} target="_blank" rel="noopener noreferrer"
-          className="hide-mobile bg-secondary text-primary py-2 px-5 rounded-md font-semibold no-underline text-[0.8125rem]">
+          className="hide-mobile"
+          style={{ backgroundColor: "#C9A96E", color: "#1B2A4A", padding: "0.5rem 1.25rem", borderRadius: "6px", fontWeight: 600, textDecoration: "none", fontSize: "0.8125rem" }}>
           Consulta Gratis
         </a>
 
-        <button onClick={() => setOpen(!open)} className="hide-desktop bg-transparent border-none cursor-pointer">
+        <button onClick={() => setOpen(!open)} style={{ background: "none", border: "none", cursor: "pointer" }} className="hide-desktop">
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       {open && (
-        <div className="hide-desktop py-4 px-6 bg-white border-t border-border">
+        <div style={{ padding: "1rem 1.5rem", backgroundColor: "white", borderTop: "1px solid #E8E3DA" }} className="hide-desktop">
           {nav.map((n, i) => (
             <Link key={i} href={n.href} onClick={() => setOpen(false)}
-              className={`block py-3 text-primary no-underline text-[0.9375rem] ${i < nav.length-1 ? "border-b border-muted" : ""}`}>
+              style={{ display: "block", padding: "0.75rem 0", color: "#1B2A4A", textDecoration: "none", borderBottom: i < nav.length-1 ? "1px solid #F3F0EA" : "none", fontSize: "0.9375rem" }}>
               {n.label}
             </Link>
           ))}
           <a href={content.hero.ctaLink} target="_blank" rel="noopener noreferrer"
-            className="block mt-4 bg-secondary text-primary py-3 rounded-md font-semibold no-underline text-center text-sm">
+            style={{ display: "block", marginTop: "1rem", backgroundColor: "#C9A96E", color: "#1B2A4A", padding: "0.75rem", borderRadius: "6px", fontWeight: 600, textDecoration: "none", textAlign: "center", fontSize: "0.875rem" }}>
             Consulta Gratis
           </a>
         </div>

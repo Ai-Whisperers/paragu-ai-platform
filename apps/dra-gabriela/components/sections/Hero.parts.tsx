@@ -210,7 +210,7 @@ export function PhotoFrame({ heroImage, slide, active, safeLocale, isEs }: Photo
             </div>
             <div className="flex-1 min-w-0">
               <div className="text-xs font-bold text-fg truncate">
-                {isEs ? "Dra. Gabriella González Pane" : "Dr. Gabriella González Pane"}
+                {isEs ? "Ometz Dental · Dra. Gabriella González Pane" : "Dr. Gabriella González Pane"}
               </div>
               <div className="text-[10px] text-fg-muted truncate">
                 {isEs ? "Odontóloga · UAP 2005" : "Dentist · UAP 2005"}

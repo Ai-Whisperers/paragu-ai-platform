@@ -1,0 +1,65 @@
+{
+  "client": "superspuma",
+  "designer": "Luana L\u00f3pez",
+  "date": "2026-07-06",
+  "version": "auto-generated",
+  "live_url": "",
+  "palette": {
+    "accent": "#1A1A2E",
+    "fg-muted": "#16213E",
+    "bg": "#FFFFFF",
+    "fg": "#1A1A2E",
+    "surface": "#F8F9FA"
+  },
+  "text_bg_pairs": [
+    {
+      "fg": "fg",
+      "bg": "bg",
+      "context": "body text"
+    },
+    {
+      "fg": "fg",
+      "bg": "surface",
+      "context": "body on white card"
+    },
+    {
+      "fg": "fg-muted",
+      "bg": "surface",
+      "context": "secondary text on white"
+    },
+    {
+      "fg": "accent",
+      "bg": "bg",
+      "context": "link text"
+    }
+  ],
+  "usage": {
+    "accent": [
+      "text",
+      "icon",
+      "button-bg",
+      "link"
+    ],
+    "fg-muted": [
+      "text"
+    ],
+    "bg": [
+      "background"
+    ],
+    "fg": [
+      "text"
+    ],
+    "surface": [
+      "background"
+    ]
+  },
+  "do_not_use": [],
+  "notes": "Auto-generated from globals.css by generate_client_context.py. Review and refine before committing.",
+  "themes": [
+    {
+      "id": "default",
+      "name": "Default",
+      "is_default": true
+    }
+  ]
+}

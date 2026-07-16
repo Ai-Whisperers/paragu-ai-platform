@@ -67,38 +67,12 @@
     "hero": {
       "eyebrow": "Residency, business and investment in Paraguay",
       "headline": "Your relocation to Paraguay, with someone who did it",
-      "subheadline": "Residency, banking, real estate and installation. Personally managed by Sonia and Luana — Dutch women living in Paraguay for 7+ years.",
+      "subheadline": "Residency, banking, real estate and settling in. Personal support through the Paraguayan system and bureaucracy.",
       "ctaText": "Book free consultation",
       "ctaHref": "/agenda",
       "secondaryCtaText": "See the process",
       "secondaryCtaHref": "/proceso",
-      "backgroundImage": "@src:hero.home",
-      "stats": [
-        {
-          "prefix": "",
-          "value": "80",
-          "suffix": "+",
-          "label": "People resettled"
-        },
-        {
-          "prefix": "",
-          "value": "4.8",
-          "suffix": "/5",
-          "label": "Satisfaction"
-        },
-        {
-          "prefix": "",
-          "value": "8-12",
-          "suffix": " wks",
-          "label": "Total time"
-        },
-        {
-          "prefix": "",
-          "value": "USD",
-          "suffix": "",
-          "label": "Fixed price"
-        }
-      ]
+      "backgroundImage": "@src:hero.home"
     },
     "trust": {
       "eyebrow": "WHY NEXA",
@@ -655,21 +629,22 @@
       "eyebrow": "GET TO KNOW US"
     },
     "seo": {
-      "title": "About Nexa Paraguay — Sonia Weiss van der Pol, founder",
-      "description": "Nexa Paraguay: founded by someone who lived the relocation process personally. Real, structured support for European families moving to Paraguay.",
+      "title": "About Nexa Paraguay — Experience turned into expertise",
+      "description": "Nexa Paraguay supports your move with lived experience: founded by someone who went through the relocation process with their family and understands the paperwork from the inside.",
       "targetKeyword": "about Nexa Paraguay"
     },
     "hero": {
-      "headline": "Experience turned into service",
-      "subheadline": "We are Sonia and Luana Weiss van der Pol. Dutch women living in Paraguay for 7+ years. We founded Nexa after processing each step of the migration process ourselves.",
-      "eyebrow": "About Nexa Paraguay",
+      "headline": "Experience turned into expertise",
+      "subheadline": "Nexa Paraguay was founded with a single mission: to transform the relocation process from a bureaucratic hurdle into a welcoming experience.",
+      "eyebrow": "Our story",
       "ctaText": "Book a free consultation",
       "ctaHref": "/contacto",
       "secondaryCtaText": "See our process",
-      "secondaryCtaHref": "/proceso"
+      "secondaryCtaHref": "/proceso",
+      "image": "@src:team.group"
     },
     "team": {
-      "title": "Our team",
+      "title": "Sonia and Luana",
       "members": [
         {
           "id": "sonia",
@@ -680,15 +655,15 @@
             "de": "Sonia Weiss van der Pol"
           },
           "role": {
-            "es": "Founder and Legal Guide",
-            "en": "Founder and Legal Guide",
+            "es": "Fundadora",
+            "en": "Founder",
             "nl": "Founder and Juridisch Gids",
             "de": "Gründerin und Rechtliche Begleitung"
           },
           "image": "@img:team.sonia",
           "bio": {
-            "es": "Paraguayan, lived 7 years in the Netherlands. Founder of Nexa Paraguay and creator of the Dutch community 'Proyecto Paraguay'.",
-            "en": "Paraguayan, lived 7 years in the Netherlands. Founder of Nexa Paraguay and creator of the Dutch community 'Proyecto Paraguay'.",
+            "es": "Sonia es paraguaya y está casada con un ciudadano neerlandés. Recorrió personalmente cada trámite de la mudanza internacional de su familia: residencia, documentación, empresa y banca. Fundó Nexa para que nadie tenga que aprender ese proceso solo.",
+            "en": "Sonia is Paraguayan and married to a Dutch national. She personally handled every step of her family’s international relocation: residency, documentation, company, and banking. She founded Nexa so no one has to learn that process alone.",
             "nl": "Paraguayaanse, woonde 7 jaar in Nederland. Oprichtster van Nexa Paraguay en bedenker van de Nederlandse gemeenschap 'Proyecto Paraguay'.",
             "de": "Paraguayerin, lebte 7 Jahre in den Niederlanden. Gründerin von Nexa Paraguay und Schöpferin der niederländischen Gemeinschaft 'Proyecto Paraguay'."
           }
@@ -702,46 +677,27 @@
             "de": "Luana Weiss van der Pol"
           },
           "role": {
-            "es": "Operations Director",
+            "es": "Directora de Operaciones",
             "en": "Operations Director",
             "nl": "Operations Director",
             "de": "Operations Director"
           },
           "image": "@img:team.luana",
           "bio": {
-            "es": "Daughter of Sonia, born in the Netherlands. Speaks Dutch, English, and Spanish. Coordinates the operational side of every case.",
-            "en": "Daughter of Sonia, born in the Netherlands. Speaks Dutch, English, and Spanish. Coordinates the operational side of every case.",
+            "es": "Luana coordina cada expediente de punta a punta. Desde el primer contacto hasta la conclusión del proceso, su trabajo es que tengas un solo interlocutor y un camino claro.",
+            "en": "Luana coordinates every file from start to finish. From first contact to the end of the process, her job is to give you one point of contact and a clear path.",
             "nl": "Dochter van Sonia, geboren in Nederland. Spreekt Nederlands, Engels en Spaans. Coördineert de operationele kant van elke zaak.",
             "de": "Sohnias Tochter, geboren in den Niederlanden. Spricht Niederländisch, Englisch und Spanisch. Koordiniert die operative Seite jedes Falls."
-          }
+          },
+          "credentials": [
+            "Operations and client care",
+            "Relocation case coordination",
+            "Accounts and paperwork follow-up"
+          ]
         }
-      ]
-    },
-    "trust": {
-      "eyebrow": "WHY NEXA",
-      "title": "What we achieve together",
-      "items": [
-        {
-          "icon": "Users",
-          "value": "80+",
-          "label": "People resettled"
-        },
-        {
-          "icon": "Building2",
-          "value": "40+",
-          "label": "Companies incorporated"
-        },
-        {
-          "icon": "Landmark",
-          "value": "60+",
-          "label": "Bank accounts opened"
-        },
-        {
-          "icon": "Star",
-          "value": "4.8/5",
-          "label": "Average satisfaction"
-        }
-      ]
+      ],
+      "eyebrow": "Founding team",
+      "subtitle": "Mother and daughter. One founded Nexa after living the move firsthand; the other coordinates every case with clarity and personal follow-up."
     },
     "gallery": {
       "title": "Our office in Asunción",
@@ -760,66 +716,40 @@
       }
     },
     "story": {
-      "title": "Sonia's story",
-      "eyebrow": "Why we exist",
+      "eyebrow": "Our story",
+      "title": "Experience turned into expertise",
+      "subtitle": "We know exactly how overwhelming the paperwork can feel because we have lived it ourselves.",
+      "image": "@src:office.team-huddle",
       "paragraphs": [
-        "Sonia is Paraguayan. She lived 7 years in the Netherlands, where she initially worked in the cleaning industry. She always knew she would return to Paraguay — her plan was to stay long enough to gain experience and then go back home with structure and clarity.",
-        "What was hardest about coming back was reinventing herself culturally. The paperwork was complicated, but the hardest part was rebuilding her life in a country that was both hers and foreign at the same time. That experience is what makes her understand European clients who arrive for the first time: they don't need just a lawyer, they need someone who has lived through the same thing.",
-        "Nexa Paraguay is exactly that: almost-family accompaniment for European citizens who decide to live in Paraguay. Not because Paraguay is perfect, but because the opportunity is real, and having someone who has lived it makes the path much shorter."
-      ],
-      "resultsEyebrow": "RESULTS",
-      "resultsTitle": "Real results, real people",
-      "resultsParagraphs": [
-        "So far I have helped 10 people — all Dutch — find their way in Paraguay. Some came for residency, others for business, others for the lifestyle. The common thread: they all wanted a path, not just a service.",
-        "What they value most is the almost-family support. My greatest pride is having helped families with children settle here in a way that feels safe, structured, and accompanied — not just a transaction.",
-        "The residency process takes 3 to 4 months in normal cases. During that time, we don't disappear: we coordinate, we respond, we resolve. Our clients don't feel alone at any point of the process."
-      ],
-      "highlights": [
-        {
-          "value": "14",
-          "suffix": " months",
-          "label": "Sonia's process (2017)",
-          "note": "no guidance, no contacts"
-        },
-        {
-          "value": "USD 11,000",
-          "label": "Sonia paid",
-          "note": "to 3 professionals who didn't talk to each other"
-        },
-        {
-          "value": "10",
-          "suffix": " weeks",
-          "label": "Luana's process",
-          "note": "with Sonia's experience"
-        },
-        {
-          "value": "6x",
-          "label": "Faster",
-          "note": "same process, different preparation"
-        }
+        "Nexa Paraguay was founded with a single mission: to transform the relocation process from a bureaucratic hurdle into a welcoming experience. We know exactly how overwhelming the paperwork can feel because we have lived it ourselves.",
+        "Our founder is married to a Dutch national and personally navigated the complexities of international relocation and documentation. This first-hand experience revealed a clear need for a service that does not just process papers, but truly supports people in building a good life in Paraguay.",
+        "We believe your move should be more than just \"getting a permit\" — it should be the beginning of your best life here. By combining our understanding of Paraguayan law with a personal touch, we help you skip the hassle and move straight to enjoying everything this beautiful country has to offer."
       ]
     },
     "whyNexa": {
-      "eyebrow": "WHY NEXA",
-      "title": "Why we're not just another agency",
-      "pillars": [
-        {
-          "icon": "Package",
-          "title": "We help with what you need",
-          "description": "Residency, company, and bank account — integrated.",
-          "image": "@src:trust.certificate"
-        },
-        {
-          "icon": "Plane",
-          "title": "We guide you through the process",
-          "description": "On-site appointments in a single coordinated day.",
-          "image": "@src:trust.meeting"
-        },
+      "eyebrow": "Why Nexa",
+      "title": "More than paperwork: real support",
+      "subtitle": "We are not an agency that only moves papers. We are here to help you build your life in Paraguay.",
+      "items": [
         {
           "icon": "Heart",
-          "title": "Close, ongoing support",
-          "description": "We are available whenever you need us.",
-          "image": "@src:trust.team"
+          "title": "Lived experience, not theory",
+          "description": "Our founder went through an international family relocation. We understand the process because we lived it."
+        },
+        {
+          "icon": "BadgeCheck",
+          "title": "Personal accompaniment",
+          "description": "When you write to us, we reply ourselves. Your file is handled by a person, not a call center."
+        },
+        {
+          "icon": "Languages",
+          "title": "Communication in your language",
+          "description": "ES, EN, NL, DE. We speak with you in your language, without intermediaries or machine translation."
+        },
+        {
+          "icon": "FileCheck",
+          "title": "Legal knowledge with a human touch",
+          "description": "We combine knowledge of the Paraguayan system with close support at every step."
         }
       ]
     },
@@ -905,8 +835,8 @@
     },
     "specialist": {
       "name": "Sonia Weiss van der Pol",
-      "title": "Founder and Legal Guide",
-      "bio": "Switzerland, Netherlands, Paraguay — three countries, one vision. Born in Switzerland, raised in Paraguay, lived in the Netherlands. Speaks four languages. Founded Nexa Paraguay to offer European families the structured, human support she wishes she had during her own relocation.",
+      "title": "Founder — Nexa Paraguay",
+      "bio": "Paraguayan, married to a Dutch national. She personally lived through her family’s international relocation and founded Nexa to support people who want a good life in Paraguay, not just a permit.",
       "image": "@img:team.sonia",
       "credentials": [
         "Founder & Director, Nexa Paraguay",
@@ -3435,13 +3365,13 @@
     },
     "team": {
       "eyebrow": "Founding team",
-      "title": "Sonia and Luana, sisters and partners",
-      "subtitle": "Dutch women in Paraguay. Nexa founders. Multilingual. Multicultural. 7+ years living the process they now manage.",
+      "title": "Sonia and Luana",
+      "subtitle": "Mother and daughter. One founded Nexa after living the move firsthand; the other coordinates every case with clarity and personal follow-up.",
       "members": [
         {
           "name": "Sonia Weiss van der Pol",
-          "role": "Founder & Legal Guide",
-          "bio": "Sonia lived 7 years in the Netherlands. Arrived without speaking Dutch, without contacts, without a support network. She processed her own residency, company, and bank account. Now she does the same for every Nexa client. Speaks Spanish, English, Dutch, and German.",
+          "role": "Founder",
+          "bio": "Sonia is Paraguayan and married to a Dutch national. She personally handled every step of her family’s international relocation: residency, documentation, company, and banking. She founded Nexa so no one has to learn that process alone.",
           "languages": [
             "ES",
             "EN",
@@ -3461,16 +3391,16 @@
         {
           "name": "Luana Weiss van der Pol",
           "role": "Operations Director",
-          "bio": "Luana coordinates every case from start to finish. From the first email to the delivery of the ID card. Her job is for you not to have to research anything: she has already researched, gone, come back. Speaks Spanish, English, and Dutch.",
+          "bio": "Luana coordinates every file from start to finish. From first contact to the end of the process, her job is to give you one point of contact and a clear path.",
           "languages": [
             "ES",
             "EN",
             "NL"
           ],
           "credentials": [
-            "Operations & Client Care",
-            "Specialist in Migraciones",
-            "Corporate account coordinator"
+            "Operations and client care",
+            "Relocation case coordination",
+            "Accounts and paperwork follow-up"
           ],
           "icon": "Heart",
           "memberImage": "@src:team.luana",
@@ -3682,33 +3612,6 @@
     "hero": {
       "headline": "What those already in Paraguay say",
       "subheadline": "Real stories from people who completed the process with us. Full names available on request for privacy."
-    },
-    "trust": {
-      "eyebrow": "Measurable results",
-      "title": "What we achieve together",
-      "subtitle": "Aggregate figures from the last 18 months of operations.",
-      "items": [
-        {
-          "icon": "Users",
-          "title": "80+ people resettled",
-          "description": "Permanent residencies filed and approved"
-        },
-        {
-          "icon": "Building2",
-          "title": "40+ companies incorporated",
-          "description": "S.A. and EAS registered with active RUC"
-        },
-        {
-          "icon": "Landmark",
-          "title": "60+ bank accounts",
-          "description": "Personal and business accounts opened"
-        },
-        {
-          "icon": "Star",
-          "title": "4.8/5 satisfaction",
-          "description": "Average post-process rating (anonymous survey)"
-        }
-      ]
     },
     "testimonials": {
       "eyebrow": "Testimonials",
@@ -3977,7 +3880,7 @@
     "hero": {
       "eyebrow": "For Dutch clients",
       "headline": "Dutch considering Paraguay?",
-      "subheadline": "Sonia and Luana are Dutch. 7 years living the process. We accompany Dutch clients in their move with fiscal context, box 3 and emigratieheffing.",
+      "subheadline": "Sonia is Paraguayan and married to a Dutch national; Luana coordinates every case. We accompany Dutch clients in their move with fiscal context, box 3 and emigratieheffing.",
       "ctaPrimaryText": "Book consultation in Dutch",
       "ctaPrimaryHref": "/contacto",
       "backgroundImage": "@src:hero.localizedNl"

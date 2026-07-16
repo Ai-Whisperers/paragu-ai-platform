@@ -3,6 +3,7 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import WhatsAppFloat from "@/components/whatsapp-float"
+import DemoBanner from "@/components/demo-banner"
 import type { Content } from "@/types/content"
 import raw from "@/content/es.json"
 
@@ -11,27 +12,27 @@ const s = content.site
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://villamayor.paragu-ai.com"),
-  title: "Villamayor & Asociados | Estudio Jurídico — Derecho Civil y Comercial",
+  title: "Estudio Jurídico Demo | Estudio Jurídico — Derecho Civil y Comercial",
   description: "Estudio jurídico en Paraguay especializado en derecho civil, comercial, corporativo, inmobiliario, laboral y de familia. Asesoría legal integral en Asunción.",
   keywords: "abogados Paraguay, estudio jurídico Asunción, derecho civil Paraguay, derecho comercial, abogado corporativo, contratos Paraguay, divorcio, inversiones Paraguay",
-  authors: [{ name: "Villamayor & Asociados" }],
-  creator: "Villamayor & Asociados",
-  publisher: "Villamayor & Asociados",
+  authors: [{ name: "Estudio Jurídico Demo" }],
+  creator: "Estudio Jurídico Demo",
+  publisher: "Estudio Jurídico Demo",
   robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   alternates: { canonical: "https://villamayor.paragu-ai.com", languages: { "es": "https://villamayor.paragu-ai.com/" } },
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "Villamayor & Asociados | Estudio Jurídico",
+    title: "Estudio Jurídico Demo | Estudio Jurídico",
     description: "Asesoría legal integral en Paraguay. Derecho civil, comercial, corporativo, inmobiliario. Primera consulta sin costo.",
     url: "https://villamayor.paragu-ai.com",
-    siteName: "Villamayor & Asociados",
+    siteName: "Estudio Jurídico Demo",
     images: [{ url: "https://villamayor.paragu-ai.com/og-default.png", width: 1200, height: 630 }, { url: "https://villamayor.paragu-ai.com/og/og-image.png", width: 1200, height: 630 }],
     locale: "es_PY",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Villamayor & Asociados | Estudio Jurídico",
+    title: "Estudio Jurídico Demo | Estudio Jurídico",
     description: "Asesoría legal integral en Paraguay. Derecho civil, comercial, corporativo, inmobiliario. Primera consulta sin costo.",
     images: ["/og-default.png"],
   },
@@ -51,14 +52,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LegalService",
-            "name": "Villamayor & Asociados",
+            "name": "Estudio Jurídico Demo",
             "description": s.description,
             "url": "https://villamayor.paragu-ai.com",
             "telephone": s.phone,
             "email": s.email,
             "image": "https://villamayor.paragu-ai.com/og-default.png",
             "address": { "@type": "PostalAddress", "addressLocality": s.city, "addressCountry": s.country },
-            "founder": { "@type": "Person", "name": "Alejandro Villamayor" },
             "foundingDate": "2018",
             "priceRange": "Primera consulta sin costo",
             "sameAs": [
@@ -81,6 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Ir al contenido principal
         </a>
         <div id="main-content">
+          <DemoBanner />
           <Header />
           <main>{children}</main>
           <Footer />

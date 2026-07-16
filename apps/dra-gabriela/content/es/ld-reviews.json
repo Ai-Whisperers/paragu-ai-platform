@@ -1,11 +1,3 @@
 {
-  "_comment": "JSON-LD aggregate review payload. Build should inject this when site.json.schema.reviewSchema is true.",
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Dra. Gabriella González Pane",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "3"
-  }
+  "_comment": "aggregateRating removed pre-launch per ometz-self-manage §11 — re-add only after real GBP reviews exist."
 }

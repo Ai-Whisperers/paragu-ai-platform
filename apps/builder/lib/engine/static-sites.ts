@@ -49,6 +49,8 @@ export const SITES = {
     locales: ['es'],
     pages: ['home', 'menu', 'pedidos', 'zonas', 'galeria', 'blog', 'faq', 'contacto'],
   },
+  // granjacabral: removed (offboarded) — fields kept as no-op to preserve syntax
+  _granjacabral_removed: {
     vertical: 'agriculture-agribusiness',
     country: 'Paraguay',
     domain: 'granjacabral.com.py',

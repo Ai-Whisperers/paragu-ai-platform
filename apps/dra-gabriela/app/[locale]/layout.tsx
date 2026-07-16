@@ -27,18 +27,26 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  const { getSchemaOrgJson } = await import('@/components/SchemaOrg')
+  const base = "https://ometzdental.com"
+  // Fallback metadata — most pages override this via buildMetadata() in their own
+  // generateMetadata. We still set per-locale canonical + hreflang at the layout
+  // level so even un-overridden pages have correct SEO.
   return {
-    other: {
-      'script:ld+json': getSchemaOrgJson(locale),
+    alternates: {
+      canonical: `${base}/${locale}`,
+      languages: {
+        en: `${base}/en`,
+        es: `${base}/es`,
+        "x-default": `${base}/es`,
+      },
     },
   }
 }
 
 export const viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#03045e' },
-    { media: '(prefers-color-scheme: dark)', color: '#020338' },
+    { media: '(prefers-color-scheme: light)', color: '#1A5F5A' },
+    { media: '(prefers-color-scheme: dark)', color: '#0F3F3B' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -55,8 +63,15 @@ export default async function LocaleLayout({
   const { locale } = await params
   if (!isLocale(locale)) notFound()
   const content = getContent(locale)
+  const { getSchemaOrgJson } = await import('@/components/SchemaOrg')
+  const schemaOrgJson = getSchemaOrgJson(locale)
+  
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: schemaOrgJson }}
+      />
       <SkipToContent locale={locale} />
       <Navbar locale={locale} business={content.business} />
       <main id="main-content" lang={locale} className="pb-20 md:pb-0">{children}</main>

@@ -3,12 +3,23 @@ name: central
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'apps/**'
+      - 'packages/**'
+      - 'pnpm-lock.yaml'
+      - 'Dockerfile.*'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'apps/**'
+      - 'packages/**'
+      - 'pnpm-lock.yaml'
+      - 'Dockerfile.*'
 
 permissions:
   contents: read
   packages: write
+  pull-requests: read
 
 concurrency:
   group: central-${{ github.head_ref || github.ref }}
@@ -115,6 +126,9 @@ jobs:
               - 'apps/villamayor-asociados/**'
             apps/xxgym:
               - 'apps/xxgym/**'
+            apps/pierce-charm:
+              - 'apps/pierce-charm/**'
+              - 'Dockerfile.pierce-charm'
       - name: Emit changed apps
         id: emit
         run: |
@@ -351,7 +365,7 @@ jobs:
             nde-barba)             SVC="nde-barba_web" ;;
             nexa-paraguay)         SVC="nexa-paraguay_web" ;;
             nudo)                  SVC="nudo_web" ;;
-            hidrobaby-spa)          SVC="hidrobaby-spa_web" ;;
+            hidrobaby-spa)         SVC="hidrobaby-spa_web" ;;
             arnos-barber-shop)    SVC="arnos-barber-shop_web" ;;
             cronos-academy)        SVC="cronos-academy_web" ;;
             scott-tatuajes)         SVC="scott-tatuajes_web" ;;
@@ -360,7 +374,7 @@ jobs:
             meal-prep)             SVC="meal-prep_web" ;;
             *)                     SVC="${APP}_web" ;;
           esac
-          ssh -o StrictHostKeyChecking=accept-new root@72.61.44.159 "
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@72.61.44.159 "
             docker pull ${IMAGE} &&
             docker service update --image ${IMAGE} ${SVC} --with-registry-auth 2>&1
           "

@@ -1,0 +1,117 @@
+{
+  "client": "dra-gabriela",
+  "designer": "Luana López",
+  "designer_email": "luana@lopez.dev",
+  "date": "2026-07-06",
+  "version": "ocean-palette-v2",
+  "live_url": "https://ometzdental.com",
+  "palette": {
+    "bg": "#caf0f8",
+    "surface": "#ffffff",
+    "surface-muted": "#e4f6fb",
+    "surface-alt": "#ade8f4",
+    "fg": "#03045e",
+    "fg-muted": "#023e8a",
+    "fg-subtle": "#0353a4",
+    "border": "#8ccbde",
+    "border-light": "#b3dfeb",
+    "accent": "#023e8a",
+    "accent-2": "#03045e",
+    "accent-light": "#ade8f4",
+    "accent-soft": "#ade8f4",
+    "yellow": "#FFEF00",
+    "yellow-2": "#E6D700",
+    "yellow-soft": "#FFFBCC",
+    "pink": "#FF69B4",
+    "pink-soft": "#FFD6EA",
+    "gold": "#FFEF00",
+    "gold-2": "#E6D700",
+    "gold-soft": "#FFFBCC",
+    "success": "#1f5d44",
+    "success-soft": "#e1f0ea",
+    "error": "#8b1a1a",
+    "error-soft": "#f5dedb",
+    "warning": "#b57f18",
+    "warning-soft": "#f5ecce",
+    "white": "#ffffff",
+    "navy": "#03045e"
+  },
+  "_known_fail_documented": [
+    "gold-2-gold-soft"
+  ],
+  "_fix_log": [
+    "2026-07-06: success darkened #2d7a5f → #1f5d44 (was 4.40:1 FAIL on success-soft, now ~6.5:1 AA)",
+    "2026-07-06: error darkened #c0392b → #8b1a1a (was 4.24:1 FAIL on error-soft, now ~7.5:1 AA)",
+    "Note: gold-2/gold-soft (1.41:1 FAIL) intentionally retained as aliases for yellow family — decorative-only, never text. See do_not_use[]."
+  ],
+  "text_bg_pairs": [
+    { "fg": "fg", "bg": "bg", "context": "body text on page bg (light cyan)" },
+    { "fg": "fg", "bg": "surface", "context": "body text on white card" },
+    { "fg": "fg-muted", "bg": "surface", "context": "secondary text on white" },
+    { "fg": "fg-muted", "bg": "bg", "context": "secondary text on cyan bg" },
+    { "fg": "fg-muted", "bg": "surface-muted", "context": "secondary text on soft callout" },
+    { "fg": "fg-subtle", "bg": "surface", "context": "caption text" },
+    { "fg": "accent", "bg": "bg", "context": "link text" },
+    { "fg": "accent", "bg": "surface", "context": "link text on white card" },
+    { "fg": "accent", "bg": "accent-soft", "context": "icon in soft circle" },
+    { "fg": "fg", "bg": "accent-soft", "context": "body in soft callout" },
+    { "fg": "success", "bg": "success-soft", "context": "open-now pill" },
+    { "fg": "error", "bg": "error-soft", "context": "error message" },
+    { "fg": "white", "bg": "accent", "context": "button text on primary CTA" },
+    { "fg": "navy", "bg": "yellow", "context": "button-gold text on yellow CTA" }
+  ],
+  "usage": {
+    "accent": ["text", "icon", "button-bg", "link", "heading"],
+    "accent-2": ["text", "hover-state", "heading-on-light"],
+    "accent-soft": ["icon-bg", "callout-bg", "surface-muted-alt"],
+    "yellow": ["cta-bg", "decorative-divider", "logo-accent"],
+    "yellow-2": ["cta-hover", "logo-accent-hover"],
+    "yellow-soft": ["callout-bg"],
+    "pink": ["decorative-only"],
+    "pink-soft": ["decorative-bg"],
+    "gold": ["alias-for-yellow", "decorative-divider"],
+    "gold-2": ["alias-for-yellow-2"],
+    "gold-soft": ["alias-for-yellow-soft"],
+    "success": ["text", "dot", "border"],
+    "error": ["text", "icon", "border"]
+  },
+  "do_not_use": [
+    "text-fg-muted on bg-surface-muted when surface-muted is too close to fg-muted (verify WCAG)",
+    "text-pink on bg-white (insufficient contrast)",
+    "btn-gold without explicit WCAG verification (yellow on navy passes, but yellow on yellow-soft fails)",
+    "text-success (#2d7a5f) on bg-success-soft (#e1f0ea) = 4.40:1 FAIL — raise success to #1f5d44 or darken",
+    "text-error (#c0392b) on bg-error-soft (#f5dedb) = 4.24:1 FAIL — raise error to #8b1a1a or darken",
+    "text-gold-2 (#E6D700) on bg-gold-soft (#FFFBCC) = 1.41:1 FAIL — gold alias is decorative only, never on light bg with text"
+  ],
+  "notes": "Ocean palette: navy + cyan + yellow CTA. 'Gold' is an alias for yellow — kept for backward compat with older warm-classic theme. Pink is decorative only. See lib/themes.ts for 7 alternate theme palettes (lilac, discreet, friend, pin, shades, random). All theme overrides MUST be wrapped in @layer theme { }.",
+  "themes": [
+    { "id": "default", "name": "Ocean (Default)", "is_default": true },
+    { "id": "lilac", "name": "Lilac" },
+    { "id": "discreet", "name": "Discreet" },
+    { "id": "friend", "name": "Friend" },
+    { "id": "pin", "name": "Pin" },
+    { "id": "shades", "name": "Shades" },
+    { "id": "random", "name": "Random Shades" }
+  ],
+  "typography": {
+    "heading": { "family": "DM Serif Display", "fallback": "Georgia, serif" },
+    "body": { "family": "Inter", "fallback": "system-ui, sans-serif" },
+    "mono": { "family": "JetBrains Mono", "fallback": "SF Mono, Menlo, Consolas, Courier New, monospace" },
+    "decorative": { "family": "Caveat", "fallback": "Comic Sans MS, cursive" }
+  },
+  "radii": {
+    "sm": "0.375rem",
+    "md": "0.625rem",
+    "lg": "1rem",
+    "xl": "1.5rem",
+    "2xl": "2rem",
+    "full": "9999px"
+  },
+  "shadows": {
+    "sm": "0 1px 2px rgba(3,4,94,0.05), 0 1px 3px rgba(3,4,94,0.07)",
+    "md": "0 4px 14px rgba(3,4,94,0.07), 0 2px 4px rgba(3,4,94,0.05)",
+    "lg": "0 12px 40px rgba(3,4,94,0.10), 0 4px 8px rgba(3,4,94,0.06)",
+    "xl": "0 24px 60px rgba(3,4,94,0.14)",
+    "cta": "0 8px 24px rgba(255,239,0,0.30)"
+  }
+}

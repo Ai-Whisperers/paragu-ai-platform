@@ -2,7 +2,7 @@
 
 > Ometz Dental — Dra. Gabriella González Pane dental practice site. Conservative, planning-first dentistry in Asunción, Paraguay. "Te escucho."
 
-**Live at:** https://ometzdental.com (and https://dragabriela.paragu-ai.com as legacy/redirect)
+**Live at:** https://ometzdental.com (and https://ometzdental.com as legacy/redirect)
 
 ## Stack
 
@@ -15,7 +15,7 @@
 ## Domain
 
 - **Primary:** `ometzdental.com` (registered 28 jun 2026 via Hostinger)
-- **Legacy:** `dragabriela.paragu-ai.com` (kept for redirects)
+- **Legacy:** `ometzdental.com` (kept for redirects)
 
 ## Content source
 
@@ -61,8 +61,8 @@ npm run dev
 
 - `Host(`ometzdental.com`)` → primary
 - `Host(`www.ometzdental.com`)` → primary (www redirect handled at DNS level)
-- `Host(`dragabriela.paragu-ai.com`)` → paragu-ai.com subdomain (legacy, redirect to ometzdental.com)
-- `Host(`dra-gabriela.com.py`)` → legacy, redirect (kept for historical reasons)
+- `Host(`ometzdental.com`)` → paragu-ai.com subdomain (legacy, redirect to ometzdental.com)
+- `Host(`ometzdental.com.py`)` → legacy, redirect (kept for historical reasons)
 
 ## 🚦 Status & open gates
 

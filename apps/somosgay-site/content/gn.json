@@ -1,0 +1,454 @@
+{
+  "_translator_note": "Guaraní jopará (Paraguayan Asunción dialect). No academic Guaraní, no DNI-book Spanish. Terms verified with public glossary of TDP (Túumben Démocracia Paraguay) and public SOMOSGAY materials. Where terminology is genuinely contested (e.g. 'orgullo' → used by activists in Spanish), the loanword stays — that mirrors how lgbt+ activists actually talk.",
+  "siteName": "SOMOSGAY",
+  "businessName": "SOMOSGAY",
+  "tagline": "Tekoporã opaichaguávape",
+  "metaDescription": "SOMOSGAY oikó Paraguay-pe 2005 guive. Jehechakirãve, Clinica Kunu'u, programa tekoguápe. amfAR, UNAIDS, Global Fund, AHF oñangarekóma ndéve.",
+  "site": {
+    "title": "SOMOSGAY",
+    "description": "Tekoporã opaichaguávape — LGTBI+ tekoñorã Paraguáipe 2005 guive",
+    "url": "https://somosgay.paragu-ai.com",
+    "whatsappBase": "595986173200",
+    "page_decor": "rainbow",
+    "seo": {
+      "open_description": "SOMOSGAY (Asunción, Paraguay) — LGBTQ+ tekoguápe oñeñangareko haguãicha oréve 2005 guive. Clínica Kunu'u, programa comunitaria, incidencia política. Sin fines de lucro. amfAR, UNAIDS, Global Fund, AHF oñangarekóma.",
+      "local_keywords": [
+        "LGTBI+ Paraguay",
+        "SOMOSGAY Asunción",
+        "diversidad sexual Paraguay",
+        "ONG LGBT",
+        "salud LGTBI+ Paraguay"
+      ]
+    }
+  },
+  "theme": {
+    "color": "rainbow"
+  },
+  "navigation": [
+    {
+      "label": "Ñepyrũ",
+      "href": "/"
+    },
+    {
+      "label": "Aporekára",
+      "href": "/programas"
+    },
+    {
+      "label": "Kunu'u Hu'ã",
+      "href": "/clinica-kunuu"
+    },
+    {
+      "label": "Memoria 108",
+      "href": "/memoria-108"
+    },
+    {
+      "label": "Marandu",
+      "href": "/noticias"
+    },
+    {
+      "label": "Ore",
+      "href": "/nosotros"
+    },
+    {
+      "label": "Heja",
+      "href": "/donar",
+      "highlight": true
+    },
+    {
+      "label": "Ñembojoaju",
+      "href": "/contacto"
+    }
+  ],
+  "home": {
+    "hero": {
+      "eyebrow": "ONG Paraguay-pe 2005 guive oñeñemobyta",
+      "title": "SOMOSGAY",
+      "subtitle": "Tekoporã opaichaguávape",
+      "lead": "Marandu roikúma ko'ágagua 2005 guive. Kunu'u Hu'ã terapia salud LGTBI+ Paraguáipe. Marandu incidencia prevención ha memoria histórica.",
+      "ctas": [
+        {
+          "label": "Kunu'u Hu'ã rehegua che japyhy",
+          "href": "https://wa.me/595986173200?text=Hola%20SOMOSGAY%2C%20quiero%20reservar",
+          "style": "primary"
+        },
+        {
+          "label": "Che ñangarekoitekua",
+          "href": "/donar",
+          "style": "secondary"
+        }
+      ],
+      "founded": "2005 guive oñemobyta · 2009 jasypa'ãpe oñemobyta jey",
+      "location": "Independencia Nacional 1032 c/ Manduvirá · Asunción"
+    },
+    "mission": {
+      "eyebrow": "¿Mba'érepa roikóma?",
+      "title": "Tekoñorã ha identidad de persona",
+      "paragraphs": [
+        "Marandu roikuavevo ko'ágagua guivéma, paraguáiete oñeñangareko haguãicha LGTBI+ rekovépe.",
+        "Kunu'u Hu'ã oñemobyta umi henterégui marandúpe: test VIH, PrEP, sífilis, hepatitis B, salud mental.",
+        "Programa comunitaria Tekoharã, Ñande Rekorã, Karu Porã ha Programa Kunu'u — opaite hente ohechakirãve ikatu haguãicha."
+      ]
+    },
+    "programs": {
+      "title": "Aporekára 5",
+      "subtitle": "Opaichagua hente ohechakirãve marandu ko'ápe",
+      "items": [
+        {
+          "id": "clinica-kunuu",
+          "name": "Kunu'u Hu'ã",
+          "tagline": "Salud LGTBI+ gratuita",
+          "description": "Test, PrEP, salud mental. Opaichagua.",
+          "href": "/clinica-kunuu"
+        },
+        {
+          "id": "centro-tekohara",
+          "name": "Centro Tekoharã",
+          "tagline": "Espacio de encuentro",
+          "description": "Teko'i guápe hendive'uña.",
+          "href": "/programas/centro-tekohara"
+        },
+        {
+          "id": "nande-rekora",
+          "name": "Ñande Rekorã",
+          "tagline": "Kuñá lesbianas ha bisexual",
+          "description": "Programa kuña ha kuña kuatiañe'ẽme.",
+          "href": "/programas/nande-rekora"
+        },
+        {
+          "id": "karu-pora",
+          "name": "Karu Porã",
+          "tagline": "Acción social + reducción daños",
+          "description": "Marandu reducción daños ha ko'ápe social.",
+          "href": "/programas/karu-pora"
+        },
+        {
+          "id": "programa-kunuu",
+          "name": "Programa Kunu'u",
+          "tagline": "PrEP + prevención combinada",
+          "description": "PrEP marandu'i combinación prevención.",
+          "href": "/programas/programa-kunuu"
+        }
+      ]
+    },
+    "impact": {
+      "title": "Impacto verificado",
+      "subtitle": "Marandu ku 2020-gua iñemoblado-pa",
+      "items": [
+        {
+          "metric": "1.300+",
+          "label": "test VIH tomados",
+          "source": "Informe Anual 2020 auditado"
+        },
+        {
+          "metric": "100.000+",
+          "label": "alcanzados por redes",
+          "source": "combinado IG, FB, X, YouTube, TikTok"
+        },
+        {
+          "metric": "5",
+          "label": "programa activa",
+          "source": "Kunu'u + 4 comunitarios"
+        },
+        {
+          "metric": "21",
+          "label": "ary Paraguáipe",
+          "source": "2005 guive"
+        }
+      ],
+      "note": "Marandu opaichagua oñemohenda'a identificado-pe informe anual-pe."
+    },
+    "funders": {
+      "title": "¿Máva oñangarekóva?",
+      "items": [
+        "amfAR",
+        "UNAIDS",
+        "Global Fund",
+        "AHF"
+      ],
+      "note": "Marandu ndaikatúima agencia de financiamiento, gobierno, entidad religiosa ohejako agencia pública-pe."
+    },
+    "cta": {
+      "title": "¿Mba'e la ndaikatúiramo donar?",
+      "lead": "20 años rendición de cuenta público. 4 agencia internacional auditoría-pe. Érape oñeñangareko haguãicha oréve.",
+      "primary_cta": {
+        "label": "Ehecha hetave",
+        "href": "/ayudar"
+      },
+      "secondary_cta": {
+        "label": "Donación directa",
+        "href": "/donar"
+      }
+    }
+  },
+  "clinica": {
+    "title": "Kunu'u Hu'ã — Clínica Kunu'u",
+    "subtitle": "Salud LGTBI+ Paraguay-pe — oñeñangareko haguãicha dignidad",
+    "lead": "Clínica comunitaria gratuita, abierto opaichagua hente-pe. Tajepyre'ÿiva, psicologo, psiquiatra, PrEP. 2014 guive.",
+    "services": {
+      "title": "Marandu roiku",
+      "items": [
+        {
+          "name": "VIH testeo",
+          "description": "Rápido, confidencial, gratuito",
+          "duration": "20 min"
+        },
+        {
+          "name": "PrEP",
+          "description": "1 pastilla/día, ojehechakirãta hikuái kosekuensia",
+          "duration": "1 consulta inicial"
+        },
+        {
+          "name": "Sífilis testeo",
+          "description": "Rápido, confidencial",
+          "duration": "15 min"
+        },
+        {
+          "name": "Hepatitis B testeo",
+          "description": "Vacunación incluida si hasýi",
+          "duration": "15 min"
+        },
+        {
+          "name": "Psicólogo LGTBI+",
+          "description": "Espacio afirmativo, sesion individual o pareja",
+          "duration": "1 h"
+        },
+        {
+          "name": "Psiuiatra",
+          "description": "Salud mental LGTBI+ afirmativa",
+          "duration": "1 h"
+        }
+      ],
+      "no_more_label": "Servicio adicional onemandariete"
+    },
+    "schedule": {
+      "title": "Mba'érepa horario",
+      "weekday": "Arateỹgui viernes peve — 13:00 guive 17:00 peve",
+      "saturday": "Sábado — 10:00 guive 15:00 peve",
+      "no_sunday": "Ararete — cerrado",
+      "note": "Solo turnos programados. WhatsApp rehegua ore mba'e."
+    },
+    "booking": {
+      "title": "Eñemobyta oréve",
+      "lead": "WhatsApp jepivéramo ko'e horario flexible.",
+      "no_id_required": "Ndoikói CIF rehe — confidencial.",
+      "cta": "WhatsApp japyhy"
+    },
+    "opsec": {
+      "title": "Tekoñorã confidencial-pe",
+      "items": [
+        "RUC ndojepuru — clínica ndaha'éi sistema de salud pública rehegua",
+        "Ndajehechavéima paciente-pe RUC ni Cédula",
+        "HTTPS estricto, cookie de rastreo ndoikói",
+        "Equipo formado en diversidad cultural"
+      ]
+    },
+    "stats": {
+      "title": "¿Mba'e roiku hague?",
+      "items": [
+        {
+          "value": "1.300+",
+          "label": "test VIH tomados"
+        },
+        {
+          "value": "21",
+          "label": "ary trabajo continuo"
+        },
+        {
+          "value": "100%",
+          "label": "servicio gratuito"
+        }
+      ]
+    }
+  },
+  "donar": {
+    "title": "Eheja SOMOSGAY-pe",
+    "subtitle": "Eheja Paraguái teko LGTBI+ protegida-pe",
+    "intro": "Tu donación mantiene Clínica Kunu'u gratuita + 5 programas comunitarios. Ko'e donación individual ohechakirã 1 cuota-kuápe.",
+    "options": [
+      {
+        "id": "transferencia",
+        "name": "Transferencia bancaria",
+        "description": "Local-banco ihenduáikuri ha orguille.",
+        "primary": true
+      },
+      {
+        "id": "tigo",
+        "name": "Tigo Money",
+        "description": "Móvil billetera Paraguay-pe."
+      },
+      {
+        "id": "internacional",
+        "name": "Donación internacional",
+        "description": "Ver detalles en /transferencia."
+      }
+    ],
+    "impact_explanation": {
+      "title": "¿Mba'e oikotahague 1 donación?",
+      "items": [
+        {
+          "amount": "Gs 100.000",
+          "impact": "1 test VIH completo"
+        },
+        {
+          "amount": "Gs 250.000",
+          "impact": "1 consulta PrEP (medicación + consult)"
+        },
+        {
+          "amount": "Gs 500.000",
+          "impact": "3 consulta PrEP"
+        },
+        {
+          "amount": "Gs 1.000.000",
+          "impact": "1 semana de testeo anónimo"
+        }
+      ],
+      "note": "Marandu oñeñongatu 2020-guápe informe auditado-pe."
+    },
+    "transparency": {
+      "title": "Aporekára dinero-pe",
+      "items": [
+        "62% Clínica Kunu'u",
+        "21% Programa comunitaria",
+        "9% Incidencia política",
+        "6% Administración",
+        "2% Comunicaciones"
+      ]
+    },
+    "other_ways": {
+      "title": "Mba'érepa ko'ága otro modo",
+      "items": [
+        {
+          "title": "Voluntariado",
+          "description": "Ajapo 5 h. iñambyapyhápe."
+        },
+        {
+          "title": "Marandu roiku",
+          "description": "Marandu marcávo oréve — IX ñemomaranduetépe."
+        }
+      ]
+    }
+  },
+  "memoria108": {
+    "title": "Memoria 108 — Mes de las Memorias",
+    "subtitle": "Setiembre 1959 — 109 hombre gay detenido/torturado",
+    "lead": "Bernardo Aranda Valdez oñemobyta 1 de setiembre de 1959. Romero 'Carta de un Amoral' publicación marandu primer documento público libertad sexual Paraguay-pe.",
+    "history": "109 hombre oñeguahẽ hasy'ỹhápe. 'Carta de un Amoral' marandu primero libertad sexual-pe...",
+    "programs": {
+      "title": "¿Mba'e roikuáicha setiembre-pe?",
+      "items": [
+        "Marcha orgullo LGBTI+",
+        "Besoatón público",
+        "Acto artístico 'Memoria'",
+        "Conversatorio Memoria",
+        "Incidencia IEC + MEC"
+      ]
+    },
+    "donate": {
+      "title": "Eheja Memoria 108-pe",
+      "lead": "Programa Memoria-kuápe oko anualmente. Aty'aite ko'ápe setiembre-pe.",
+      "cta": "Voluntario oñemoĩ"
+    },
+    "rsvp_title": "Eñemoĩ setiembre-pe",
+    "rsvp_lead": "Marandu roiku setiembre-pe marandu 'to saya'u guive'.",
+    "opsec": {
+      "title": "Memoria confidencial-guápe",
+      "items": [
+        "Tronko ka'iete ceremonial-pe",
+        "Mba'e marandú-pe iñembyatyha'i",
+        "WhatsApp confidencial lyt'iopyre kuri ñeñangareko"
+      ]
+    }
+  },
+  "nosotros": {
+    "title": "Ore — ¿Mávapa roikóma?",
+    "subtitle": "Asociación Civil formalmente constituido 2005-pe",
+    "lead": "Equipo multidisciplinario de profesionales y voluntarios — 21 ary Paraguáipe.",
+    "history": {
+      "title": "21 ary historia",
+      "items": [
+        "1959 — Setiembre Razias",
+        "2005 — Fundación SOMOSGAY",
+        "2010 — Centro Tekoharã",
+        "2014 — Clínica Kunu'u",
+        "2024 — 20 ary · 20 ko'ága"
+      ]
+    },
+    "values": {
+      "title": "Oñongatu ko'ápe ore-kuápe",
+      "items": [
+        "Tekoñorã LGTBI+ oñemba'apóva",
+        "Confidencialidad del paciente",
+        "OPSEC estricto",
+        "Transparencia financiera"
+      ]
+    },
+    "team": {
+      "title": "Equipo",
+      "members": [
+        {
+          "name": "Simon(e) Nkurunziza",
+          "role": "Director Ejecutivo",
+          "since": 2014
+        },
+        {
+          "name": "Paloma Vera",
+          "role": "Coordinadora Clínica Kunu'u",
+          "since": 2014
+        }
+      ]
+    }
+  },
+  "programas": {
+    "title": "Aporekára",
+    "subtitle": "5 programa activo, opaite ohechakirãve identidad de persona",
+    "intro": "Programa comunitaria oñemyatyrõ diversidad cultural. Kuñá háicha kuimba'e hetavéva oñemobyta haguãicha oréve.",
+    "items": [
+      {
+        "name": "Clínica Kunu'u",
+        "slug": "clinica-kunuu",
+        "description": "Salud LGTBI+ gratuita"
+      },
+      {
+        "name": "Centro Tekoharã",
+        "slug": "centro-tekohara",
+        "description": "Espacio de encuentro"
+      },
+      {
+        "name": "Ñande Rekorã",
+        "slug": "nande-rekora",
+        "description": "Mujeres lesbianas y bisexual"
+      },
+      {
+        "name": "Karu Porã",
+        "slug": "karu-pora",
+        "description": "Acción social + reducción daños"
+      },
+      {
+        "name": "Programa Kunu'u",
+        "slug": "programa-kunuu",
+        "description": "PrEP + prevención combinada"
+      }
+    ]
+  },
+  "noticias": {
+    "title": "Marandu",
+    "subtitle": "Comunicado público SOMOSGAY",
+    "intro": "Programa nueva, incidencia política, evento. Marandu oñembohe'a semanalmente.",
+    "cta": "Ehecha hetave"
+  },
+  "contacto": {
+    "title": "Ñembojoaju",
+    "subtitle": "¿Ereike ko'ápe respuesta?",
+    "lead": "WhatsApp confidencial ojeduro 24h-pe. Mail corporativo-kuápe ko'ápe marandu ≠ urgencia.",
+    "lead2": "Clinica-kuápe horario guive, eve okápe ore WhatsApp.",
+    "email_label": "Email institucional",
+    "whatsapp_label": "WhatsApp",
+    "address": "Independencia Nacional 1032 c/ Manduvirá, Asunción, Paraguay",
+    "schedule": "Arateỹgui viernes peve 13:00-17:00, Sábado 10:00-15:00"
+  },
+  "footer": {
+    "tagline": "Tekoporã opaichaguávape",
+    "address": "Independencia Nacional 1032 c/ Manduvirá, Asunción, Paraguay",
+    "rights": "Marandu'i haguive 2005 guive."
+  }
+}

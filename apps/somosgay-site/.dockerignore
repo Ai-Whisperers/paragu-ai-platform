@@ -1,0 +1,10 @@
+node_modules
+.next/cache
+.next/dev
+out
+build
+dist
+.git
+.gitignore
+.env*.local
+*.tsbuildinfo

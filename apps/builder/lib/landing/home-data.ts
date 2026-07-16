@@ -38,6 +38,7 @@ export const HOME_FAQS = [
 ] as const
 
 export const HOME_PLANS_SCHEMA = [
+  { name: 'Prueba', setup: 0, monthly: 0 },
   { name: 'Presencia', setup: 650000, monthly: 100000 },
   { name: 'Crecimiento', setup: 1200000, monthly: 150000 },
   { name: 'Profesional', setup: 2200000, monthly: 300000 },

@@ -1,0 +1,19 @@
+services:
+  web:
+    image: pierce-charm:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.pierce-charm.entrypoints=websecure"
+        - "traefik.http.routers.pierce-charm.rule=Host(`piercecharm.paragu-ai.com`)"
+        - "traefik.http.routers.pierce-charm.tls=true"
+        - "traefik.http.routers.pierce-charm.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.pierce-charm.middlewares=security-headers@file"
+        - "traefik.http.services.pierce-charm.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

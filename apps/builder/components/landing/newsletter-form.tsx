@@ -56,7 +56,7 @@ export function NewsletterForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="flex flex-col gap-4 sm:flex-row">
         <div className="relative flex-1">
-          <Mail className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+          <Mail className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/70" />
           <input
             type="email"
             inputMode="email"
@@ -66,7 +66,7 @@ export function NewsletterForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={isLoading}
-            className="w-full rounded-xl border border-border bg-surface py-4 pl-12 pr-4 text-foreground placeholder-[var(--text-muted)] transition-all focus:border-[var(--primary)] focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:opacity-60"
+            className="w-full rounded-xl border border-brand-300/30 bg-deep/85 py-4 pl-12 pr-4 text-white placeholder-[var(--text-muted)] transition-all focus:border-[var(--primary)] focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:opacity-60"
           />
         </div>
         <button
@@ -80,13 +80,13 @@ export function NewsletterForm() {
         </button>
       </div>
 
-      <label className="flex items-start gap-3 text-left text-sm text-muted-foreground">
+      <label className="flex items-start gap-3 text-left text-sm text-white/70">
         <input
           type="checkbox"
           checked={consent}
           onChange={(e) => setConsent(e.target.checked)}
           disabled={isLoading}
-          className="mt-1 h-4 w-4 shrink-0 rounded border-border text-primary focus:ring-primary"
+          className="mt-1 h-4 w-4 shrink-0 rounded border-brand-300/30 text-accent focus:ring-primary"
         />
         <span>
           Acepto recibir novedades de ParaguAI por email. Puedo darme de baja en cualquier momento.

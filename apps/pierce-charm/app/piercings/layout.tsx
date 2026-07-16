@@ -1,18 +1,30 @@
 import type { Metadata } from "next";
+import content from "@/content/es.json";
+
+const c = content as any;
+const SITE_URL = c.site?.url || "https://piercecharm.paragu-ai.com";
 
 export const metadata: Metadata = {
-  title: "Piercings",
-  description:
-    "Catálogo completo de piercings: lóbulo, helix, tragus, daith, rook, conch, industrial, septum y más. Precios en guaraníes, tiempos de cicatrización y niveles de cuidado.",
-  alternates: { canonical: "/piercings" },
+  title: 'Catálogo de piercings',
+  description: 'Catálogo interactivo de perforaciones profesionales: oreja (lóbulo, helix, tragus, daith, rook, industrial), rostro (septum, nostril, labret, eyebrow) y cuerpo (ombligo). 14 ubicaciones del cartílago y lóbulo + 10 faciales + 2 corporales.',
+  alternates: {
+    canonical: `${SITE_URL}/piercings`,
+  },
   openGraph: {
-    title: "Piercings | Pierce Charm",
-    description:
-      "Todos los piercings que hacemos, con precio, tiempo de cicatrización y nivel de cuidado.",
-    url: "/piercings",
+    title: 'Catálogo de piercings',
+    description: 'Catálogo interactivo de perforaciones profesionales: oreja (lóbulo, helix, tragus, daith, rook, industrial), rostro (septum, nostril, labret, eyebrow) y cuerpo (ombligo). 14 ubicaciones del cartílago y lóbulo + 10 faciales + 2 corporales.',
+    url: `${SITE_URL}/piercings`,
+    siteName: c.businessName,
+    locale: "es_PY",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: 'Catálogo de piercings',
+    description: 'Catálogo interactivo de perforaciones profesionales: oreja (lóbulo, helix, tragus, daith, rook, industrial), rostro (septum, nostril, labret, eyebrow) y cuerpo (ombligo). 14 ubicaciones del cartílago y lóbulo + 10 faciales + 2 corporales.',
   },
 };
 
 export default function PiercingsLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return <>{children}</>;
 }

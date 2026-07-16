@@ -1,20 +1,20 @@
 {
   "site": {
-    "name": "Villamayor & Asociados",
-    "shortName": "Villamayor",
+    "name": "Estudio Jurídico Demo",
+    "shortName": "Estudio",
     "tagline": "Estudio Jurídico | Fuero Civil y Comercial",
     "description": "Estudio jurídico paraguayo especializado en derecho civil y comercial. Asesoría legal integral para empresas y particulares en Asunción, Paraguay.",
     "locale": "es-PY",
-    "phone": "+595 981 324 569",
-    "whatsapp": "595981324569",
-    "email": "contacto@villamayorlaw.com.py",
+    "phone": "+595 981 000 000",
+    "whatsapp": "595981000000",
+    "email": "contacto@estudiojuridicodemo.com.py",
     "address": "Asunción, Paraguay",
     "city": "Asunción",
     "country": "Paraguay",
     "founded": 2018,
     "hours": "Lun–Vie 8:00–18:00 | Sáb 8:00–12:00",
-    "instagram": "villamayorasociados",
-    "linkedin": "villamayor-asociados",
+    "instagram": "estudiojuridicodemo",
+    "linkedin": "estudio-juridico-demo",
     "memberships": [
       "Colegio de Abogados del Paraguay (CAP)",
       "Cámara de Comercio Paraguayo-Americana (PARAM)"
@@ -22,9 +22,9 @@
   },
   "hero": {
     "title": "Experiencia Jurídica con Compromiso Personal",
-    "subtitle": "En Villamayor & Asociados ofrecemos asesoría legal integral en derecho civil y comercial. Defendemos tus intereses con excelencia, ética profesional y atención cercana.",
+    "subtitle": "En nuestro estudio ofrecemos asesoría legal integral en derecho civil y comercial. Defendemos tus intereses con excelencia, ética profesional y atención cercana.",
     "ctaText": "Agendar Consulta",
-    "ctaLink": "https://wa.me/595981324569?text=Hola%2C%20Villamayor%20%26%20Asociados%20-%20Quiero%20agendar%20una%20consulta%20legal",
+    "ctaLink": "https://wa.me/595981000000?text=Hola%2C%20Estudio%20Jur%C3%ADdico%20Demo%20-%20Quiero%20agendar%20una%20consulta%20legal",
     "secondaryCta": "Conocé Nuestros Servicios",
     "secondaryCtaLink": "/servicios",
     "stats": [
@@ -48,7 +48,7 @@
   },
   "about": {
     "title": "Sobre Nosotros",
-    "intro": "Villamayor & Asociados es un estudio jurídico paraguayo con más de 8 años de trayectoria en el fuero civil y comercial. Fundado por el Abog. Alejandro Villamayor, nuestro equipo combina experiencia litigiosa con una visión estratégica del derecho.",
+    "intro": "Somos un estudio jurídico paraguayo con más de 8 años de trayectoria en el fuero civil y comercial. Nuestro equipo combina experiencia litigiosa con una visión estratégica del derecho.",
     "mission": "Brindar asesoría legal de excelencia con estándares internacionales, manteniendo un trato personalizado y cercano con cada cliente.",
     "vision": "Ser el estudio jurídico de referencia en Paraguay para empresas y particulares que buscan soluciones legales eficientes, éticas y orientadas a resultados.",
     "values": [
@@ -295,7 +295,7 @@
     ]
   },
   "footer": {
-    "copyright": "Villamayor & Asociados. Todos los derechos reservados.",
+    "copyright": "Estudio Jurídico Demo. Todos los derechos reservados.",
     "disclaimer": "Este sitio web es solo para fines informativos y no constituye asesoría legal. Consulte con un abogado para obtener consejo legal específico a su situación."
   }
 }

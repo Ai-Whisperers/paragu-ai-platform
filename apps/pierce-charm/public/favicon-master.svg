@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Background -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#1a0e25"/>
+      <stop offset="100%" stop-color="#0a0612"/>
+    </radialGradient>
+    <linearGradient id="diamond" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b1a31"/>
+      <stop offset="100%" stop-color="#520b4e"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <!-- Diamond rotated -->
+  <g transform="translate(128 128)">
+    <rect x="-72" y="-72" width="144" height="144" transform="rotate(45)" fill="none" stroke="url(#diamond)" stroke-width="8"/>
+    <!-- Inner ornament line -->
+    <rect x="-60" y="-60" width="120" height="120" transform="rotate(45)" fill="none" stroke="#b08838" stroke-width="1.5" opacity="0.5"/>
+    <!-- P letter -->
+    <text x="0" y="20" font-family="Georgia, serif" font-size="110" font-weight="700" fill="#b08838" text-anchor="middle" dominant-baseline="middle">P</text>
+  </g>
+  <!-- Decorative bottom dots -->
+  <g fill="#8b1a31">
+    <circle cx="60" cy="240" r="3"/>
+    <circle cx="128" cy="246" r="3"/>
+    <circle cx="196" cy="240" r="3"/>
+  </g>
+</svg>

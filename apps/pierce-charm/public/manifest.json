@@ -1,0 +1,17 @@
+{
+  "name": "Pierce Charm",
+  "short_name": "Pierce Charm",
+  "description": "Estudio de piercings & joyería alternativa en Asunción",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#63081d",
+  "background_color": "#0a0612",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

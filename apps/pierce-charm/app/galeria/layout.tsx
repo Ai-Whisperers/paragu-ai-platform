@@ -1,17 +1,30 @@
 import type { Metadata } from "next";
+import content from "@/content/es.json";
+
+const c = content as any;
+const SITE_URL = c.site?.url || "https://piercecharm.paragu-ai.com";
 
 export const metadata: Metadata = {
-  title: "Galería",
-  description:
-    "Curaduría de joyería alternativa y piezas del estudio. Cadenas, plugs, septum, captives y ornamentos góticos.",
-  alternates: { canonical: "/galeria" },
+  title: 'Joyería alternativa',
+  description: 'Curaduría de joyería alternativa para piercings: cadenas, expansores, captives, septum y labrets. Materiales implantgrade, titanio ASTM F136 y acero quirúrgico certificado.',
+  alternates: {
+    canonical: `${SITE_URL}/galeria`,
+  },
   openGraph: {
-    title: "Galería | Pierce Charm",
-    description: "Nuestra curaduría de joyería alternativa y ornamentos.",
-    url: "/galeria",
+    title: 'Joyería alternativa',
+    description: 'Curaduría de joyería alternativa para piercings: cadenas, expansores, captives, septum y labrets. Materiales implantgrade, titanio ASTM F136 y acero quirúrgico certificado.',
+    url: `${SITE_URL}/galeria`,
+    siteName: c.businessName,
+    locale: "es_PY",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: 'Joyería alternativa',
+    description: 'Curaduría de joyería alternativa para piercings: cadenas, expansores, captives, septum y labrets. Materiales implantgrade, titanio ASTM F136 y acero quirúrgico certificado.',
   },
 };
 
 export default function GaleriaLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return <>{children}</>;
 }

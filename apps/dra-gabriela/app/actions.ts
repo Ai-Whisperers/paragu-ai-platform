@@ -140,7 +140,7 @@ export async function submitContactForm(input: ContactFormInput): Promise<Contac
           Authorization: `Bearer ${resendKey}`,
         },
         body: JSON.stringify({
-          from: "Dra. Gabriella Website <noreply@dragabriela.paragu-ai.com>",
+          from: "Dra. Gabriella Website <noreply@ometzdental.com>",
           to: [notifyEmail],
           reply_to: data.email,
           subject: `[Website] ${data.subject || "Contact form submission"} — ${data.name}`,

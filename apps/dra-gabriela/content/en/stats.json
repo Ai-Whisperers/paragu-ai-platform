@@ -7,14 +7,6 @@
     "source": "Graduated ~2005"
   },
   {
-    "label": "Patients per month",
-    "value": "~130",
-    "icon": "heart",
-    "verified": true,
-    "source": "Current practice average",
-    "note": "Actual volume at current clinic"
-  },
-  {
     "label": "Languages",
     "value": "Español + English",
     "icon": "globe",
@@ -26,13 +18,5 @@
     "icon": "fileText",
     "view": "Every case reviewed before any irreversible step",
     "verified": true
-  },
-  {
-    "label": "Restorations last month",
-    "value": "42",
-    "icon": "activity",
-    "verified": true,
-    "source": "May 2026 solo month",
-    "highlight": true
   }
 ]

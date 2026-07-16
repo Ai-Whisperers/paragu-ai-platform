@@ -10,6 +10,7 @@ import { PageHero } from "@/components/PageHero"
 import { PageSection } from "@/components/PageSection"
 import { buildMetadata } from "@/lib/seo"
 import { ContactButtons } from "@/components/ContactButton"
+import { FAQSearch } from "@/components/FAQSearch"
 import { getContent, whatsappLink, isPlaceholder } from "@/lib/content"
 
 const LOCALES = ["en", "es"] as const
@@ -101,6 +102,12 @@ export default async function FAQ({ params }: { params: Promise<{ locale: string
         </div>
       </PageSection>
 
+      <div className="max-w-4xl mx-auto px-4 my-8">
+        <FAQSearch
+          items={groups.flatMap((g: any) => (g.items || []).map((it: any) => ({ q: it.q || it.question, a: it.a || it.answer })))}
+          placeholder={isEs ? "Buscar en preguntas… (ej: miedo, precio, sedación)" : "Search questions… (e.g. fear, price, sedation)"}
+        />
+      </div>
       <PageSection layout="wide" py="lg" id="groups">
         <div className="space-y-12">
           {groups.map((g: any, gi: number) => (

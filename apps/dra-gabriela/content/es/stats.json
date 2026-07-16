@@ -8,14 +8,6 @@
     "source": "Graduada ~2005"
   },
   {
-    "label": "Pacientes por mes",
-    "value": "~130",
-    "icon": "heart",
-    "verified": true,
-    "source": "Promedio actual",
-    "note": "Volumen real en clínica actual"
-  },
-  {
     "label": "Idiomas",
     "value": "Español + English",
     "icon": "globe",
@@ -27,13 +19,5 @@
     "icon": "fileText",
     "view": "Evaluación escrita antes de cualquier paso irreversible",
     "verified": true
-  },
-  {
-    "label": "Restauraciones último mes",
-    "value": "42",
-    "icon": "activity",
-    "verified": true,
-    "source": "Mayo 2026",
-    "highlight": true
   }
 ]

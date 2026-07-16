@@ -29,7 +29,7 @@ export function MeetDoctor({ locale }: MeetDoctorProps) {
             <div className="relative aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl border border-border">
               <Image
                 src="/images/team/dra-gp-portrait-v2.svg"
-                alt={isEs ? "Dra. Gabriella González Pane" : "Dra. Gabriella González Pane"}
+                alt={isEs ? "Ometz Dental · Dra. Gabriella González Pane" : "Ometz Dental · Dra. Gabriella González Pane"}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"

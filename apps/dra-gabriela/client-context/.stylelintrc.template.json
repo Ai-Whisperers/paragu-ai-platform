@@ -1,0 +1,9 @@
+{
+  "plugins": ["./stylelint-plugin-no-inline-hex.js"],
+  "rules": {
+    "aiw/no-inline-hex": ["error", {
+      "allowFiles": ["globals.css", "themes.css", "**/print.css"]
+    }]
+  },
+  "extends": ["next/core-web-vitals"]
+}

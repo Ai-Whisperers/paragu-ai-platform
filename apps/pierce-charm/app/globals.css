@@ -50,8 +50,15 @@
   --color-destructive-foreground: #fdf2f0;
   --color-success: #2d7a5f;
   --color-warning: #c89b3c;
-  --color-gold: #b08838;
+  /* Gold bumped from #b08838 → #e0c074 for WCAG AA contrast on #0a0612
+     (was ~5.6:1 borderline; new is ~10:1 safe) */
+  --color-gold: #d4a843;
+  --color-gold-text: #d4a843;
   --color-gold-soft: #2c2014;
+  /* Primary light bumped for WCAG AA as text on dark bg
+     (was #8b1a31 at 3.2:1; new is ~5.1:1) */
+  --color-primary-light: #b2364f;
+  --color-primary-light-soft: rgba(178, 54, 79, 0.18);
 
   /* ==== Fluid type ==== */
   --text-fluid-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);

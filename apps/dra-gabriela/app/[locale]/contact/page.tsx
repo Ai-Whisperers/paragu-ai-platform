@@ -8,6 +8,9 @@ import { getContent, isLocale, isPlaceholder, whatsappLink } from "@/lib/content
 import { PageHero } from "@/components/PageHero"
 import { PageSection } from "@/components/PageSection"
 import { ContactForm } from "@/components/ContactForm"
+import { GoogleMapEmbed } from "@/components/GoogleMapEmbed"
+import { CalendlyLink } from "@/components/CalendlyLink"
+import { Breadcrumbs } from "@/components/Breadcrumbs"
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }]
@@ -108,6 +111,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <>
+      <Breadcrumbs items={[
+        { name: isEs ? "Inicio" : "Home", href: `/${locale}` },
+        { name: isEs ? "Contacto" : "Contact", href: `/${locale}/contact` }
+      ]} className="max-w-6xl mx-auto px-4 sm:px-6 pt-6" />
       <PageHero
         eyebrow={isEs ? "Contacto" : "Contact"}
         title={data.title || (isEs ? "Contacto y turnos" : "Contact & appointments")}
@@ -275,7 +282,33 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       </PageSection>
 
       {/* What to bring + Cancellation policy */}
-      <PageSection layout="wide" py="md">
+      
+      <PageSection id="mapa" py="md">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-medium mb-3 text-left">
+            {isEs ? "Cómo llegar" : "How to find us"}
+          </h2>
+          <p className="text-fg-muted mb-6 text-left">
+            {isEs ? "Estamos en Mburucuyá, Asunción. Dos minutos caminando de la plaza principal." : "We are in Mburucuyá, Asunción. Two minutes walking from the main square."}
+          </p>
+          <GoogleMapEmbed locale={isEs ? "es" : "en"} />
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <CalendlyLink
+              variant="primary"
+              label={isEs ? "📅 Agendar consulta online" : "📅 Book consultation online"}
+            />
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=Auditores+de+la+Guerra+del+Chaco+617+Asuncion+Paraguay`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              {isEs ? "Cómo llegar →" : "Get directions →"}
+            </a>
+          </div>
+        </div>
+      </PageSection>
+<PageSection layout="wide" py="md">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           <div className="card-accent card p-6 md:p-7">
             <div className="flex items-center gap-3 mb-4">

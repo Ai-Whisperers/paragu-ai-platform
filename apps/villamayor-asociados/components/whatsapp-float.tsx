@@ -2,7 +2,7 @@ import content from "@/content/es.json"
 
 export default function WhatsAppFloat() {
   const s = content.site
-  const url = `https://wa.me/${s.whatsapp}?text=Hola%2C%20Villamayor%20%26%20Asociados%20-%20Quiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20legales`
+  const url = `https://wa.me/${s.whatsapp}?text=Hola%2C%20Estudio%20Jur%C3%ADdico%20Demo%20-%20Quiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20legales`
 
   return (
     <a

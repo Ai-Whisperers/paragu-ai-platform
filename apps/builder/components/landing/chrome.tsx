@@ -81,7 +81,7 @@ export function BackToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Volver arriba"
-      className="fixed bottom-44 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-foreground shadow-md transition-all hover:bg-surface-light md:bottom-24"
+      className="fixed bottom-44 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-brand-300/30 bg-deep/85 text-white shadow-md transition-all hover:bg-deep/85-light md:bottom-24"
     >
       <ArrowUp size={20} />
     </button>

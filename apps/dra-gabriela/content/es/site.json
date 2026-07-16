@@ -1,9 +1,9 @@
 {
-  "name": "Dra. Gabriella González Pane",
+  "name": "Ometz Dental · Dra. Gabriella González Pane",
   "short_name": "Dra. Gabriella",
   "brand_name": "Ometz Dental",
-  "description": "Odontología anti-ansiedad en Asunción. Rehabilitación oral, estética y operatoria dental basadas en criterio clínico.",
-  "metaDescription": "Dra. Gabriella González Pane — odontología anti-ansiedad y planificada en Asunción. Planes escritos, segundas opiniones honestas, atención en español e inglés.",
+  "description": "Ometz Dental · Odontología anti-ansiedad en Asunción · Bilingüe · 20+ años de criterio clínico",
+  "metaDescription": "Ometz Dental (אומץ) · Odontología conservadora, rehabilitación oral, segunda opinión escrita en Mburucuyá, Asunción. Bilingüe ES/EN. 20+ años de criterio clínico.",
   "contact": {
     "whatsapp": "595981146759",
     "whatsapp_display": "+595 981 146 759",
@@ -12,7 +12,7 @@
     "email": "doctora.gabi@ometzdental.com.py",
     "email_display": "doctora.gabi@ometzdental.com.py",
     "phone": "+595 981 146 759",
-    "phone_e164": "+595****6759",
+    "phone_e164": "+595981146759",
     "whatsapp_business_note": {
       "en": "WhatsApp Business line coming soon. Currently using the practice line during pre-launch.",
       "es": "Línea WhatsApp Business próximamente. Por ahora se usa la línea del consultorio durante la pre-apertura."
@@ -36,13 +36,32 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Auditores+de+la+Guerra+del+Chaco+617+Asuncion+Paraguay"
   },
   "hours": {
-    "monday": { "open": "14:30", "close": "19:00" },
-    "tuesday": { "open": "14:30", "close": "19:00" },
-    "wednesday": { "open": "14:30", "close": "19:00" },
-    "thursday": { "open": "14:30", "close": "19:00" },
-    "friday": { "open": "14:30", "close": "19:00" },
-    "saturday": { "closed": true },
-    "sunday": { "closed": true }
+    "monday": {
+      "open": "14:30",
+      "close": "19:00"
+    },
+    "tuesday": {
+      "open": "14:30",
+      "close": "19:00"
+    },
+    "wednesday": {
+      "open": "14:30",
+      "close": "19:00"
+    },
+    "thursday": {
+      "open": "14:30",
+      "close": "19:00"
+    },
+    "friday": {
+      "open": "14:30",
+      "close": "19:00"
+    },
+    "saturday": {
+      "closed": true
+    },
+    "sunday": {
+      "closed": true
+    }
   },
   "hours_display": {
     "en": "Mon–Fri, 2:30pm – 7:00pm",
@@ -77,8 +96,12 @@
   "practice": {
     "priceRange": "Gs 300.000 – Gs 5.000.000",
     "priceRange_short": "Gs 300k – Gs 5M",
-    "languages": ["Spanish", "English"],
-    "languages_display": "Español · English"
+    "languages": [
+      "Spanish",
+      "English"
+    ],
+    "languages_display": "Español · English",
+    "phone_e164": "+595981146759"
   },
   "social": {
     "instagram": "https://www.instagram.com/dragabriellagp",

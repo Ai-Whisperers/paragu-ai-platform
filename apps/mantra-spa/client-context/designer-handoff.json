@@ -1,0 +1,76 @@
+{
+  "client": "mantra-spa",
+  "designer": "Luana L\u00f3pez",
+  "date": "2026-07-06",
+  "version": "auto-generated",
+  "live_url": "",
+  "palette": {
+    "accent": "#0F1A2E",
+    "primary-light": "#1A3050",
+    "fg-muted": "#C9A96E",
+    "secondary-dark": "#B8944E",
+    "bg": "#F8F7F4",
+    "surface": "#FFFFFF",
+    "surface-muted": "#F1EFE9",
+    "fg": "#2D2D2D",
+    "foreground-light": "#6B6B6B",
+    "foreground-muted": "#9CA3AF",
+    "border": "#E5E2DA",
+    "success": "#4A7C59",
+    "error": "#C0392B",
+    "warning": "#F39C12"
+  },
+  "text_bg_pairs": [
+    {
+      "fg": "fg",
+      "bg": "bg",
+      "context": "body text"
+    },
+    {
+      "fg": "fg",
+      "bg": "surface",
+      "context": "body on white card"
+    },
+    {
+      "fg": "fg-muted",
+      "bg": "surface",
+      "context": "secondary text on white"
+    },
+    {
+      "fg": "accent",
+      "bg": "bg",
+      "context": "link text"
+    }
+  ],
+  "usage": {
+    "accent": [
+      "text",
+      "icon",
+      "button-bg",
+      "link"
+    ],
+    "fg-muted": [
+      "text"
+    ],
+    "bg": [
+      "background"
+    ],
+    "surface": [
+      "background"
+    ],
+    "fg": [
+      "text"
+    ]
+  },
+  "do_not_use": [
+    "text-fg-muted on bg-surface-muted = 1.95:1 FAIL \u2014 needs darkening"
+  ],
+  "notes": "Auto-generated from globals.css by generate_client_context.py. Review and refine before committing.",
+  "themes": [
+    {
+      "id": "default",
+      "name": "Default",
+      "is_default": true
+    }
+  ]
+}
