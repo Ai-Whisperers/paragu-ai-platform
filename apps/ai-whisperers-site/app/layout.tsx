@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
+import { SITE_URL, buildAlternates } from "@/lib/seo"
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" })
 const jbmono = JetBrains_Mono({ subsets: ["latin"], display: "swap", variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ai-whisperers.org"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "AI Whisperers — We build AI systems that actually work.",
     template: "%s · AI Whisperers",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   authors: [{ name: "AI Whisperers" }],
   openGraph: {
     type: "website",
-    url: "https://ai-whisperers.org",
+    url: SITE_URL,
     siteName: "AI Whisperers",
     title: "AI Whisperers — We build AI systems that actually work.",
     description: "A 2-person engineering studio in Paraguay shipping production AI. 30+ public repos. 42 client sites live.",
@@ -27,15 +28,7 @@ export const metadata: Metadata = {
     title: "AI Whisperers — We build AI systems that actually work.",
     description: "A 2-person engineering studio in Paraguay shipping production AI. 30+ public repos. 42 client sites live.",
   },
-  alternates: {
-    canonical: "/en",
-    languages: {
-      "en": "/en",
-      "es": "/es",
-      "nl": "/nl",
-      "pt": "/pt",
-    },
-  },
+  alternates: buildAlternates(""),
   robots: { index: true, follow: true },
 }
 
