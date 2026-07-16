@@ -72,33 +72,7 @@
       "ctaHref": "/agenda",
       "secondaryCtaText": "See the process",
       "secondaryCtaHref": "/proceso",
-      "backgroundImage": "@src:hero.home",
-      "stats": [
-        {
-          "prefix": "",
-          "value": "80",
-          "suffix": "+",
-          "label": "People resettled"
-        },
-        {
-          "prefix": "",
-          "value": "4.8",
-          "suffix": "/5",
-          "label": "Satisfaction"
-        },
-        {
-          "prefix": "",
-          "value": "8-12",
-          "suffix": " wks",
-          "label": "Total time"
-        },
-        {
-          "prefix": "",
-          "value": "USD",
-          "suffix": "",
-          "label": "Fixed price"
-        }
-      ]
+      "backgroundImage": "@src:hero.home"
     },
     "trust": {
       "eyebrow": "WHY NEXA",
@@ -714,32 +688,6 @@
             "nl": "Dochter van Sonia, geboren in Nederland. Spreekt Nederlands, Engels en Spaans. Coördineert de operationele kant van elke zaak.",
             "de": "Sohnias Tochter, geboren in den Niederlanden. Spricht Niederländisch, Englisch und Spanisch. Koordiniert die operative Seite jedes Falls."
           }
-        }
-      ]
-    },
-    "trust": {
-      "eyebrow": "WHY NEXA",
-      "title": "What we achieve together",
-      "items": [
-        {
-          "icon": "Users",
-          "value": "80+",
-          "label": "People resettled"
-        },
-        {
-          "icon": "Building2",
-          "value": "40+",
-          "label": "Companies incorporated"
-        },
-        {
-          "icon": "Landmark",
-          "value": "60+",
-          "label": "Bank accounts opened"
-        },
-        {
-          "icon": "Star",
-          "value": "4.8/5",
-          "label": "Average satisfaction"
         }
       ]
     },
@@ -3682,33 +3630,6 @@
     "hero": {
       "headline": "What those already in Paraguay say",
       "subheadline": "Real stories from people who completed the process with us. Full names available on request for privacy."
-    },
-    "trust": {
-      "eyebrow": "Measurable results",
-      "title": "What we achieve together",
-      "subtitle": "Aggregate figures from the last 18 months of operations.",
-      "items": [
-        {
-          "icon": "Users",
-          "title": "80+ people resettled",
-          "description": "Permanent residencies filed and approved"
-        },
-        {
-          "icon": "Building2",
-          "title": "40+ companies incorporated",
-          "description": "S.A. and EAS registered with active RUC"
-        },
-        {
-          "icon": "Landmark",
-          "title": "60+ bank accounts",
-          "description": "Personal and business accounts opened"
-        },
-        {
-          "icon": "Star",
-          "title": "4.8/5 satisfaction",
-          "description": "Average post-process rating (anonymous survey)"
-        }
-      ]
     },
     "testimonials": {
       "eyebrow": "Testimonials",

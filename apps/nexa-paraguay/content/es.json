@@ -67,63 +67,37 @@
     "hero": {
       "eyebrow": "Residencia, empresa e inversión en Paraguay",
       "headline": "Tu mudanza a Paraguay, con quien ya la hizo",
-      "subheadline": "Residencia, banca, bienes raíces e instalación. Tramitada personalmente por Sonia y Luana — holandesas viviendo en Paraguay hace 7+ años.",
+      "subheadline": "Residencia, banca, bienes raíces e instalación. Asistencia personal en el sistema paraguayo y burocracia ",
       "ctaText": "Agendar consulta gratuita",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Ver el proceso",
       "secondaryCtaHref": "/proceso",
-      "backgroundImage": "@src:hero.home",
-      "stats": [
-        {
-          "prefix": "",
-          "value": "80",
-          "suffix": "+",
-          "label": "Personas radicadas"
-        },
-        {
-          "prefix": "",
-          "value": "4.8",
-          "suffix": "/5",
-          "label": "Satisfacción"
-        },
-        {
-          "prefix": "",
-          "value": "8-12",
-          "suffix": " sem.",
-          "label": "Tiempo total"
-        },
-        {
-          "prefix": "",
-          "value": "USD",
-          "suffix": "",
-          "label": "Precio fijo"
-        }
-      ]
+      "backgroundImage": "@src:hero.home"
     },
     "trust": {
       "eyebrow": "POR QUÉ NEXA",
-      "title": "Residencia, cuenta y empresa — tramitadas en una jornada",
+      "title": "Residencia, cuenta y empresa ",
       "items": [
         {
           "icon": "Stamp",
           "title": "Residencia tramitada en persona",
-          "description": "Acompañamos todo el proceso en Migraciones y la oficina de radicaciones. Vos no volvés solo.",
+          "description": "Acompañamos todo el proceso en Migraciones y la oficina de radicaciones.",
           "image": "@src:trust.migraciones"
         },
         {
           "icon": "CreditCard",
-          "title": "Cédula paraguaya en mano",
-          "description": "Te entregamos tu cédula de identidad paraguaya. Salís del proceso con documento, no con promesas.",
+          "title": "Cédula de Identidad Paraguaya",
+          "description": "Te guiamos en la obtencion de tu cédula de identidad paraguaya.",
           "image": "@src:trust.cedula"
         },
         {
           "icon": "Landmark",
-          "title": "Empresa y cuenta bancaria integradas",
-          "description": "Constituimos tu sociedad anónima y abrimos la cuenta bancaria — todo encadenado en una sola jornada.",
+          "title": "Registro de Empresa y cuenta bancaria",
+          "description": "Constituimos tu sociedad anónima y abrimos la cuenta bancaria.",
           "image": "@src:trust.registry"
         }
       ],
-      "subtitle": "No tercerizamos. No subcontratamos. Tramitamos personalmente en Asunción con vos."
+      "subtitle": "No tercerizamos. No subcontratamos. Tramitamos  la traduccion y apostillado de tus documentos en asuncion."
     },
     "whyCountry": {
       "eyebrow": "Por qué Paraguay",
@@ -133,34 +107,19 @@
         {
           "icon": "TrendingUp",
           "title": "Crecimiento sostenido",
-          "description": "PIB creciendo al 4-5% anual desde 2009. Inflación de un dígito desde 2020. La economía paraguaya no para.",
-          "bullets": [
-            "PIB +4,7% en 2024",
-            "Inflación 3,5% anual",
-            "Desempleo bajo 6%"
-          ],
+          "description": "PIB (producto interno bruto)creciendo al 4-5% anual desde 2009. Inflación de un dígito desde 2020. La economía paraguaya no para.",
           "imageUrl": "@src:whyParaguay.growth"
         },
         {
           "icon": "Landmark",
           "title": "Sistema fiscal territorial",
-          "description": "El IRP grava solo lo que ganás dentro de Paraguay. Ingresos del exterior no tributan. Así de simple.",
-          "bullets": [
-            "10% IRP (renta personal)",
-            "10% ISC (renta corporativa)",
-            "Cero impuestos sobre ingresos del exterior"
-          ],
+          "description": "El IRP(impuesto a la renta personal) grava solo lo que ganás dentro de Paraguay. Ingresos del exterior no tributan. Así de simple.",
           "imageUrl": "@src:whyParaguay.tax"
         },
         {
           "icon": "Globe",
           "title": "Comunidad europea activa",
           "description": "Más de 30.000 europeos residen en Paraguay. Comunidad brasileña, argentina, alemana y menonita con décadas de presencia.",
-          "bullets": [
-            "30.000+ europeos residentes",
-            "Aeropuerto directo desde Europa",
-            "Costos 50-70% menores"
-          ],
           "imageUrl": "@src:whyParaguay.community"
         }
       ],
@@ -179,8 +138,7 @@
           "icon": "ClipboardCheck",
           "image": {
             "$img": "process.consultation"
-          },
-          "duration": "Semana 1"
+          }
         },
         {
           "number": 2,
@@ -189,18 +147,16 @@
           "icon": "Layers",
           "image": {
             "$img": "process.documents"
-          },
-          "duration": "Semanas 1-5"
+          }
         },
         {
           "number": 3,
           "title": "Tu Día en Paraguay",
-          "description": "Viajás a Paraguay con tus documentos listos. Te acompañamos en las citas presenciales — todas se resuelven en una sola jornada.",
+          "description": "Viajás a Paraguay con tus documentos listos. Te acompañamos en las citas presenciales.",
           "icon": "CalendarCheck",
           "image": {
             "$img": "process.arrival"
-          },
-          "duration": "Semana 6"
+          }
         },
         {
           "number": 4,
@@ -209,8 +165,7 @@
           "icon": "Building",
           "image": {
             "$img": "process.banking"
-          },
-          "duration": "Semanas 7-9"
+          }
         },
         {
           "number": 5,
@@ -219,12 +174,10 @@
           "icon": "Home",
           "image": {
             "$img": "process.completion"
-          },
-          "duration": "Semanas 10-12"
+          }
         }
       ],
-      "title": "Un proceso claro, paso a paso",
-      "totalDuration": "Tiempo total estimado: 8–12 semanas."
+      "title": "Un proceso claro, paso a paso"
     },
     "finalCta": {
       "title": "Dé el primer paso",
@@ -234,7 +187,7 @@
     },
     "services": {
       "eyebrow": "Nuestros Servicios",
-      "title": "Todo lo que necesitás para radicarte, operar y vivir en Paraguay",
+      "title": "Todo lo que necesitás para migrar, trabajar y vivir en Paraguay",
       "subtitle": "Residencia, banca, impuestos y bienes raíces — tramitados personalmente por un equipo que ya hizo el proceso.",
       "groups": [
         {
@@ -385,10 +338,10 @@
             "de": "Aufenthalt"
           },
           "tagline": {
-            "es": "Residencia permanente + cédula paraguaya. Un día operativo, un solo equipo.",
-            "en": "Permanent residency + Paraguayan ID. One operational day, one team.",
-            "nl": "Permanente verblijfsvergunning + Paraguayaanse ID. Eén operationele dag, één team.",
-            "de": "Daueraufenthalt + paraguayischer Ausweis. Ein operativer Tag, ein Team."
+            "es": "Residencia permanente + cédula paraguaya. .",
+            "en": "Permanent residency + Paraguayan ID. ",
+            "nl": "Permanente verblijfsvergunning + Paraguayaanse ID. ",
+            "de": "Daueraufenthalt + paraguayischer Ausweis. "
           },
           "icon": "Home",
           "included": [
@@ -590,7 +543,7 @@
           "origin": "Alemania",
           "program": "inversores",
           "quote": {
-            "es": "Acompañamiento profesional y honesto. Sin sorpresas en los costos.",
+            "es": "Asistimos de manera profesional y honesta para que no tengas que idiar con la burocracia paraguaya.",
             "en": "Professional and honest guidance. No surprises in costs.",
             "nl": "Professionele en eerlijke begeleiding. Geen verrassingen in de kosten.",
             "de": "Professionelle und ehrliche Begleitung. Keine Überraschungen bei den Kosten."
@@ -602,12 +555,12 @@
   "whyCountryPage": {
     "seo": {
       "title": "Por qué Paraguay — 7 razones para elegirlo como nuevo hogar",
-      "description": "Crecimiento, estabilidad fiscal, calidad de vida y proceso migratorio claro para ciudadanos europeos. Datos concretos.",
+      "description": "Crecimiento, estabilidad fiscal, calidad de vida y facilidad de residencia.",
       "targetKeyword": "por qué mudarse a Paraguay"
     },
     "hero": {
       "headline": "7 razones por las que europeos eligen Paraguay como nuevo hogar",
-      "subheadline": "Crecimiento económico, estabilidad fiscal, calidad de vida y un proceso migratorio claro. Datos concretos, no promesas."
+      "subheadline": "Crecimiento económico, estabilidad fiscal, calidad de vida."
     },
     "pillars": {
       "eyebrow": "Por qué Paraguay",
@@ -674,11 +627,11 @@
           ]
         }
       ],
-      "subtitle": "Seis razones concretas, con datos. No promesas."
+      "subtitle": "Seis razones concretas."
     },
     "trust": {
       "eyebrow": "Por qué Nexa Paraguay",
-      "title": "Un sistema integral, no una gestoría de trámites",
+      "title": "un equipo honesto y experto en el sistema paraguayo",
       "items": [
         {
           "icon": "Package",
@@ -816,15 +769,15 @@
       "buttonHref": "/contacto"
     },
     "seo": {
-      "title": "Sobre Nexa Paraguay",
-      "description": "Nexa Paraguay: fundada por alguien que vivió el proceso de mudanza en persona. Residencia, banca, bienes raíces e instalación.",
+      "title": "Sobre Nexa Paraguay — Experiencia convertida en conocimiento",
+      "description": "Nexa Paraguay acompaña tu mudanza con experiencia personal: fundada por alguien que vivió el proceso migratorio en familia y entiende el papeleo desde adentro.",
       "targetKeyword": "sobre Nexa Paraguay"
     },
     "hero": {
-      "headline": "Experiencia Convertida en Servicio",
-      "subheadline": "Somos Sonia y Luana Weiss van der Pol. Holandesas viviendo en Paraguay hace 7+ años. Fundamos Nexa después de haber tramitado nosotras mismas cada paso del proceso migratorio.",
+      "headline": "Experiencia convertida en conocimiento",
+      "subheadline": "Nexa Paraguay nació con una sola misión: transformar la mudanza de un obstáculo burocrático en una experiencia de bienvenida.",
       "image": "@src:team.group",
-      "eyebrow": "Sobre Nexa Paraguay",
+      "eyebrow": "Nuestra historia",
       "ctaText": "Agendar consulta gratuita",
       "ctaHref": "/contacto",
       "secondaryCtaText": "Ver nuestro proceso",
@@ -833,22 +786,17 @@
     "team": {
       "eyebrow": "Equipo fundador",
       "title": "Sonia y Luana",
-      "subtitle": "Hermanas y socias. Holandesas en Paraguay. Las personas que gestionan tu expediente.",
+      "subtitle": "Madre e hija. Una fundó Nexa después de vivir la mudanza en carne propia; la otra coordina cada caso con claridad y seguimiento personal.",
       "members": [
         {
           "name": "Sonia Weiss van der Pol",
-          "role": "Fundadora y Guía Legal",
-          "bio": "Sonia vivió 7 años en Holanda. Llegó sin hablar neerlandés, sin contactos, sin red de apoyo. Tramitó su propia residencia, su empresa y su cuenta bancaria. Ahora hace lo mismo por cada cliente de Nexa.",
+          "role": "Fundadora",
+          "bio": "Sonia es paraguaya y está casada con un ciudadano neerlandés. Recorrió personalmente cada trámite de la mudanza internacional de su familia: residencia, documentación, empresa y banca. Fundó Nexa para que nadie tenga que aprender ese proceso solo.",
           "languages": [
             "ES",
             "EN",
             "NL",
             "DE"
-          ],
-          "credentials": [
-            "Licenciada en Derecho (Holanda)",
-            "7 años viviendo en Paraguay",
-            "Inscrita como sujeto obligado SEPRELAD"
           ],
           "icon": "Star",
           "memberImage": "@src:team.sonia",
@@ -857,49 +805,22 @@
         },
         {
           "name": "Luana Weiss van der Pol",
-          "role": "Operations Director",
-          "bio": "Luana coordina cada expediente de punta a punta. Desde el primer email hasta la entrega de la cédula. Su trabajo es que vos no tengas que investigar nada.",
+          "role": "Directora de Operaciones",
+          "bio": "Luana coordina cada expediente de punta a punta. Desde el primer contacto hasta la conclusión del proceso, su trabajo es que tengas un solo interlocutor y un camino claro.",
           "languages": [
             "ES",
             "EN",
             "NL"
           ],
           "credentials": [
-            "Operations & Client Care",
-            "Especialista en Migraciones",
-            "Coordinadora de cuentas corporativas"
+            "Operaciones y atención al cliente",
+            "Coordinación de expedientes migratorios",
+            "Seguimiento de cuentas y trámites"
           ],
           "icon": "Heart",
           "memberImage": "@src:team.luana",
           "imageUrl": "@src:team.luana",
           "image": "@img:team.luana"
-        }
-      ]
-    },
-    "trust": {
-      "eyebrow": "En cifras",
-      "title": "Lo que conseguimos juntos",
-      "subtitle": "Métricas agregadas de los últimos 18 meses.",
-      "items": [
-        {
-          "icon": "Users",
-          "value": "80+",
-          "label": "Personas radicadas"
-        },
-        {
-          "icon": "Building2",
-          "value": "40+",
-          "label": "Empresas constituidas"
-        },
-        {
-          "icon": "Landmark",
-          "value": "60+",
-          "label": "Cuentas bancarias abiertas"
-        },
-        {
-          "icon": "Star",
-          "value": "4.8/5",
-          "label": "Satisfacción promedio"
         }
       ]
     },
@@ -927,64 +848,40 @@
       "lightbox": true
     },
     "story": {
-      "eyebrow": "Por qué existimos",
-      "title": "Un proceso que nosotras tuvimos que aprender solas",
-      "subtitle": "Antes de fundar Nexa, ninguna de las dos tenía experiencia en Paraguay. Hoy usamos esa vivencia para que tu proceso sea claro, predecible y soportado por alguien que ya pasó.",
+      "eyebrow": "Nuestra historia",
+      "title": "Experiencia convertida en conocimiento",
+      "subtitle": "Sabemos exactamente lo abrumador que puede sentirse el papeleo porque lo vivimos en carne propia.",
       "image": "@src:office.team-huddle",
       "paragraphs": [
-        "Sonia llegó a Paraguay en 2017. Sin hablar español, sin contactos, sin red de apoyo. Tramitó su propia residencia, su propia empresa, su propia cuenta bancaria. Tardó 14 meses y pagó USD 11.000 a tres profesionales distintos que no se hablaban entre sí.",
-        "Luana llegó dos años después. Ya con la experiencia de Sonia, su proceso tomó 10 semanas. Mismo país, mismo proceso, resultado 6x más rápido. La diferencia fue tener a alguien que ya conocía cada paso, cada oficina, cada profesional necesario.",
-        "Esa diferencia es lo que ofrecemos. No somos una gestoría más. Somos dos personas que hicieron exactamente el proceso que vas a hacer, y ahora lo hacen por vos. Mismo idioma (holandés, inglés, español, alemán). Mismo continente de origen (Europa). Misma experiencia migratoria personal."
-      ],
-      "highlights": [
-        {
-          "value": "14",
-          "suffix": " meses",
-          "label": "Proceso de Sonia (2017)",
-          "note": "sin guía, sin contactos"
-        },
-        {
-          "value": "USD 11.000",
-          "label": "Pagó Sonia",
-          "note": "a 3 profesionales que no se hablaban"
-        },
-        {
-          "value": "10",
-          "suffix": " semanas",
-          "label": "Proceso de Luana",
-          "note": "con la experiencia de Sonia"
-        },
-        {
-          "value": "6x",
-          "label": "Más rápido",
-          "note": "mismo proceso, distinta preparación"
-        }
+        "Nexa Paraguay nació con una sola misión: transformar el proceso de mudanza de un obstáculo burocrático en una experiencia de bienvenida. Sabemos exactamente lo abrumador que puede sentirse el papeleo porque lo vivimos en carne propia.",
+        "Nuestra fundadora está casada con un ciudadano neerlandés y recorrió personalmente las complejidades de una mudanza internacional y toda la documentación. Esa experiencia directa reveló la necesidad de un servicio que no solo tramita papeles, sino que acompaña de verdad a las personas a construir una buena vida en Paraguay.",
+        "Creemos que tu mudanza debe ser algo más que \"sacar un permiso\": debe ser el comienzo de tu mejor vida aquí. Combinando nuestro conocimiento del derecho paraguayo con un trato personal, te ayudamos a evitar el lío y pasar directo a disfrutar todo lo que este hermoso país tiene para ofrecer."
       ]
     },
     "whyNexa": {
       "eyebrow": "Por qué Nexa",
-      "title": "Por qué no somos una gestoría más",
-      "subtitle": "Hay al menos 5 gestorias grandes en Asunción. Esto es lo que nos hace diferentes.",
+      "title": "Más que trámites: acompañamiento real",
+      "subtitle": "No somos una gestoría que solo mueve papeles. Estamos para apoyarte en construir tu vida en Paraguay.",
       "items": [
         {
           "icon": "Heart",
-          "title": "Fundado por europeas que vivieron el proceso",
-          "description": "Sonia y Luana pasaron por Migraciones, escribanos, bancos, y RUC. No subcontratamos a nadie porque ya sabemos hacerlo."
+          "title": "Experiencia vivida, no teoría",
+          "description": "Nuestra fundadora pasó por la mudanza internacional en familia. Entendemos el proceso porque lo hicimos nosotras."
         },
         {
           "icon": "BadgeCheck",
-          "title": "100% personal, no chatbot ni call center",
-          "description": "Cuando nos escribís, te respondemos nosotros. Tu expediente lo maneja una persona, no un sistema."
+          "title": "Acompañamiento personal",
+          "description": "Cuando nos escribís, te respondemos nosotras. Tu expediente lo maneja una persona, no un call center."
         },
         {
           "icon": "Languages",
-          "title": "4 idiomas sin traducción automática",
-          "description": "ES, EN, NL, DE. Te hablamos en tu idioma nativo, sin intermediarios."
+          "title": "Comunicación en tu idioma",
+          "description": "ES, EN, NL, DE. Te hablamos en tu idioma, sin intermediarios ni traducciones automáticas."
         },
         {
           "icon": "FileCheck",
-          "title": "Precio cerrado en USD, sin sorpresas",
-          "description": "Lo que ves es lo que pagás. Cero estimaciones, cero adicionales después de empezar."
+          "title": "Conocimiento legal con trato humano",
+          "description": "Combinamos el conocimiento del sistema paraguayo con un acompañamiento cercano en cada paso."
         }
       ]
     },
@@ -1118,18 +1015,18 @@
       ]
     },
     "specialist": {
-      "name": "Sonia Wehrli",
+      "name": "Sonia Weiss van der Pol",
       "title": {
-        "es": "Fundadora y Guía Legal — Nexa Paraguay",
-        "en": "Founder & Legal Guide — Nexa Paraguay",
-        "nl": "Oprichtster & Juridisch Gids — Nexa Paraguay",
-        "de": "Gründerin & Rechtliche Beraterin — Nexa Paraguay"
+        "es": "Fundadora — Nexa Paraguay",
+        "en": "Founder — Nexa Paraguay",
+        "nl": "Oprichtster — Nexa Paraguay",
+        "de": "Gründerin — Nexa Paraguay"
       },
       "bio": {
-        "es": "Suiza, Países Bajos, Paraguay — tres países, una visión. Nacida en Suiza, criada en los Países Bajos, me mudé a Paraguay y vi la oportunidad de ayudar a europeos a radicarse de forma legal y segura. Hablo cuatro idiomas con fluidez: español, neerlandés, inglés y alemán. Cada cliente recibe atención personal, no llamadas en cascada.",
-        "en": "Switzerland, Netherlands, Paraguay — three countries, one vision. Born in Switzerland, raised in the Netherlands, I moved to Paraguay and saw the opportunity to help Europeans relocate legally and confidently. I speak four languages fluently: Spanish, Dutch, English and German. Every client receives personal attention, not call cascades.",
-        "nl": "Zwitserland, Nederland, Paraguay — drie landen, één visie. Geboren in Zwitserland, opgegroeid in Nederland, verhuisd naar Paraguay en zag de kans om Europeanen te helpen zich legaal te vestigen. Ik spreek vier talen vloeiend: Spaans, Nederlands, Engels en Duits. Elke klant krijgt persoonlijke aandacht.",
-        "de": "Schweiz, Niederlande, Paraguay — drei Länder, eine Vision. In der Schweiz geboren, in den Niederlanden aufgewachsen, nach Paraguay gezogen und sah die Chance, Europäern zu einem legalen Umzug zu verhelfen. Ich spreche vier Sprachen fließend: Spanisch, Niederländisch, Englisch und Deutsch."
+        "es": "Paraguaya, casada con un ciudadano neerlandés. Vivió en carne propia la mudanza internacional de su familia y fundó Nexa para acompañar a quienes quieren una buena vida en Paraguay, no solo un permiso.",
+        "en": "Paraguayan, married to a Dutch national. She personally navigated her family's international relocation and founded Nexa to support people building a life in Paraguay, not just getting a permit.",
+        "nl": "Paraguayaanse, getrouwd met een Nederlandse staatsburger. Doorliep zelf de internationale verhuizing van haar gezin en richtte Nexa op om mensen te begeleiden naar een goed leven in Paraguay, niet alleen een vergunning.",
+        "de": "Paraguayerin, verheiratet mit einem niederländischen Staatsbürger. Sie durchlief persönlich die internationale Umsiedlung ihrer Familie und gründete Nexa, um Menschen beim Aufbau eines guten Lebens in Paraguay zu begleiten, nicht nur bei einer Genehmigung."
       },
       "image": "@src:team.sonia",
       "credentials": [
@@ -1174,19 +1071,11 @@
           "items": [
             {
               "q": "¿Cuánto cuesta todo el proceso?",
-              "a": "Depende del programa. Base USD 4.500, Business USD 7.500, Investor USD 12.000, Tierras USD 2.500. Todos los precios son cerrados en USD."
-            },
-            {
-              "q": "¿Qué incluye el precio?",
-              "a": "Honorarios profesionales, tasas gubernamentales, traducciones certificadas, apostillas, acompañamiento presencial completo y asesoría fiscal inicial (3 meses en Business e Investor)."
-            },
+              "a": "Depende del programa. Puede agendar una consulta gratuita para identificar sus necesidades y definir costos Todos los precios son cerrados en USD."
+            }, 
             {
               "q": "¿Qué NO está incluido?",
               "a": "Pasajes aéreos, alojamiento en Paraguay, costo de constitución de S.A. (USD 800-1.500), capital mínimo bancario (varía por banco), honorarios notariales para propiedades."
-            },
-            {
-              "q": "¿Puedo pagar en cuotas?",
-              "a": "Sí. 50% al firmar, 50% al recibir la cédula. Para montos mayores, acordamos un esquema personalizado."
             },
             {
               "q": "¿Necesito hablar español?",
@@ -3006,7 +2895,7 @@
           },
           {
             "title": "Cédula de Identidad Paraguaya",
-            "description": "Te ayudamos a sacar tu cédula.",
+            "description": "Obtención de tu documento nacional de identidad.",
             "image": "@src:office.signing",
             "benefits": [
               "Tramitación ante el Departamento de Identificaciones",
@@ -3040,7 +2929,7 @@
         "items": [
           {
             "title": "Apertura de Cuenta Bancaria",
-            "description": "Te guiamos en la apertura de tu cuenta bancaria.",
+            "description": "Cuenta personal y/o empresarial en bancos paraguayos top-tier.",
             "image": "@src:office.reception",
             "benefits": [
               "Selección del banco según tu perfil (Itaú, Continental, GNB, etc.)",
@@ -3053,7 +2942,7 @@
           },
           {
             "title": "Registro Tributario (RUC)",
-            "description": "Te inscribimos en la SET (subsecretaria de estado de tributacion). Tu RUC personal o empresarial listo para operar.",
+            "description": "Inscripción en la SET como persona física o empresa.",
             "image": "@src:office.exterior",
             "benefits": [
               "Inscripción en el régimen correcto (persona física o IRP)",
@@ -3686,13 +3575,13 @@
     },
     "team": {
       "eyebrow": "Equipo fundador",
-      "title": "Sonia y Luana, hermanas y socias",
-      "subtitle": "Holandesas en Paraguay. Fundadoras de Nexa. Multilingües. Multiculturadas. Con 7+ años viviendo el proceso que ahora gestionan.",
+      "title": "Sonia y Luana",
+      "subtitle": "Madre e hija. Una fundó Nexa después de vivir la mudanza en carne propia; la otra coordina cada caso con claridad y seguimiento personal.",
       "members": [
         {
           "name": "Sonia Weiss van der Pol",
-          "role": "Fundadora y Guía Legal",
-          "bio": "Sonia vivió 7 años en Holanda. Llegó sin hablar neerlandés, sin contactos, sin red de apoyo. Tramitó su propia residencia, su empresa y su cuenta bancaria. Ahora hace lo mismo por cada cliente de Nexa. Habla español, inglés, neerlandés y alemán.",
+          "role": "Fundadora",
+          "bio": "Sonia es paraguaya y está casada con un ciudadano neerlandés. Recorrió personalmente cada trámite de la mudanza internacional de su familia: residencia, documentación, empresa y banca. Fundó Nexa para que nadie tenga que aprender ese proceso solo.",
           "languages": [
             "ES",
             "EN",
@@ -3711,8 +3600,8 @@
         },
         {
           "name": "Luana Weiss van der Pol",
-          "role": "Operations Director",
-          "bio": "Luana coordina cada expediente de punta a punta. Desde el primer email hasta la entrega de la cédula. Su trabajo es que vos no tengas que investigar nada: ella ya investigó, ya fue, ya volvió. Habla español, inglés y neerlandés.",
+          "role": "Directora de Operaciones",
+          "bio": "Luana coordina cada expediente de punta a punta. Desde el primer contacto hasta la conclusión del proceso, su trabajo es que tengas un solo interlocutor y un camino claro.",
           "languages": [
             "ES",
             "EN",
@@ -3933,33 +3822,6 @@
     "hero": {
       "headline": "Lo que dicen quienes ya están en Paraguay",
       "subheadline": "Historias reales de personas que cruzaron el proceso con nosotros. Nombres completos disponibles bajo solicitud por privacidad."
-    },
-    "trust": {
-      "eyebrow": "Resultados medibles",
-      "title": "Lo que conseguimos juntos",
-      "subtitle": "Cifras agregadas de los últimos 18 meses de operación.",
-      "items": [
-        {
-          "icon": "Users",
-          "title": "80+ personas radicadas",
-          "description": "Residencias permanentes tramitadas y aprobadas"
-        },
-        {
-          "icon": "Building2",
-          "title": "40+ empresas constituidas",
-          "description": "S.A. y EAS registradas con RUC activo"
-        },
-        {
-          "icon": "Landmark",
-          "title": "60+ cuentas bancarias",
-          "description": "Cuentas personales y empresariales abiertas"
-        },
-        {
-          "icon": "Star",
-          "title": "4.8/5 satisfacción",
-          "description": "Promedio de evaluación post-proceso (encuesta anónima)"
-        }
-      ]
     },
     "testimonials": {
       "eyebrow": "Testimonios",

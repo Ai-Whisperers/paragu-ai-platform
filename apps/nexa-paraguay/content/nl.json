@@ -70,32 +70,6 @@
         }
       ]
     },
-    "trust": {
-      "eyebrow": "WAAROM NEXA",
-      "title": "Wat we samen bereiken",
-      "items": [
-        {
-          "icon": "Users",
-          "value": "80+",
-          "label": "Personen gevestigd"
-        },
-        {
-          "icon": "Building2",
-          "value": "40+",
-          "label": "Bedrijven opgericht"
-        },
-        {
-          "icon": "Landmark",
-          "value": "60+",
-          "label": "Bankrekeningen geopend"
-        },
-        {
-          "icon": "Star",
-          "value": "4.8/5",
-          "label": "Gemiddelde tevredenheid"
-        }
-      ]
-    },
     "gallery": {
       "title": "Ons kantoor in Asunción",
       "subtitle": "Waar consult, ondertekening en bankzaken daadwerkelijk plaatsvinden. AI-plaatshouders hieronder — vervangen wanneer we echte foto's hebben.",
@@ -1412,33 +1386,7 @@
       "ctaHref": "/agenda",
       "secondaryCtaText": "Bekijk het proces",
       "secondaryCtaHref": "/proceso",
-      "backgroundImage": "@src:hero.home",
-      "stats": [
-        {
-          "prefix": "",
-          "value": "80",
-          "suffix": "+",
-          "label": "Personen gevestigd"
-        },
-        {
-          "prefix": "",
-          "value": "4.8",
-          "suffix": "/5",
-          "label": "Tevredenheid"
-        },
-        {
-          "prefix": "",
-          "value": "8-12",
-          "suffix": " wk",
-          "label": "Totale tijd"
-        },
-        {
-          "prefix": "",
-          "value": "USD",
-          "suffix": "",
-          "label": "Vaste prijs"
-        }
-      ]
+      "backgroundImage": "@src:hero.home"
     },
     "trust": {
       "eyebrow": "WAAROM NEXA",
@@ -3783,33 +3731,6 @@
     "hero": {
       "headline": "Wat degenen die al in Paraguay zijn zeggen",
       "subheadline": "Echte verhalen van mensen die het proces met ons hebben voltooid. Volledige namen op verzoek beschikbaar voor privacy."
-    },
-    "trust": {
-      "eyebrow": "Meetbare resultaten",
-      "title": "Wat we samen bereiken",
-      "subtitle": "Geaggregeerde cijfers van de laatste 18 maanden.",
-      "items": [
-        {
-          "icon": "Users",
-          "title": "80+ mensen gevestigd",
-          "description": "Permanente verblijfsvergunningen ingediend en goedgekeurd"
-        },
-        {
-          "icon": "Building2",
-          "title": "40+ bedrijven opgericht",
-          "description": "S.A. en EAS geregistreerd met actieve RUC"
-        },
-        {
-          "icon": "Landmark",
-          "title": "60+ bankrekeningen",
-          "description": "Persoonlijke en zakelijke rekeningen geopend"
-        },
-        {
-          "icon": "Star",
-          "title": "4.8/5 tevredenheid",
-          "description": "Gemiddelde beoordeling na proces (anonieme enquête)"
-        }
-      ]
     },
     "testimonials": {
       "eyebrow": "Getuigenissen",

@@ -307,32 +307,6 @@
         }
       ]
     },
-    "trust": {
-      "eyebrow": "WARUM NEXA",
-      "title": "Was wir gemeinsam erreichen",
-      "items": [
-        {
-          "icon": "Users",
-          "value": "80+",
-          "label": "Personen angesiedelt"
-        },
-        {
-          "icon": "Building2",
-          "value": "40+",
-          "label": "Firmen gegründet"
-        },
-        {
-          "icon": "Landmark",
-          "value": "60+",
-          "label": "Bankkonten eröffnet"
-        },
-        {
-          "icon": "Star",
-          "value": "4,8/5",
-          "label": "Durchschnittliche Zufriedenheit"
-        }
-      ]
-    },
     "gallery": {
       "title": "Unser Büro in Asunción",
       "subtitle": "Wo Beratung, Unterzeichnung und Bankgeschäfte tatsächlich stattfinden. KI-Platzhalter unten — ersetzt, wenn wir echte Fotos haben.",
@@ -1849,33 +1823,7 @@
       "ctaHref": "/agenda",
       "secondaryCtaText": "Prozess ansehen",
       "secondaryCtaHref": "/proceso",
-      "backgroundImage": "@src:hero.home",
-      "stats": [
-        {
-          "prefix": "",
-          "value": "80",
-          "suffix": "+",
-          "label": "Personen angesiedelt"
-        },
-        {
-          "prefix": "",
-          "value": "4,8",
-          "suffix": "/5",
-          "label": "Zufriedenheit"
-        },
-        {
-          "prefix": "",
-          "value": "8-12",
-          "suffix": " Wo",
-          "label": "Gesamtzeit"
-        },
-        {
-          "prefix": "",
-          "value": "USD",
-          "suffix": "",
-          "label": "Fester Preis"
-        }
-      ]
+      "backgroundImage": "@src:hero.home"
     },
     "trust": {
       "eyebrow": "WARUM NEXA",
@@ -3829,33 +3777,6 @@
     "hero": {
       "headline": "Was diejenigen sagen, die bereits in Paraguay sind",
       "subheadline": "Echte Geschichten von Menschen, die den Prozess mit uns abgeschlossen haben. Vollständige Namen auf Anfrage verfügbar zum Schutz der Privatsphäre."
-    },
-    "trust": {
-      "eyebrow": "Messbare Ergebnisse",
-      "title": "Was wir gemeinsam erreichen",
-      "subtitle": "Aggregierte Zahlen der letzten 18 Betriebsmonate.",
-      "items": [
-        {
-          "icon": "Users",
-          "title": "80+ Personen angesiedelt",
-          "description": "Daueraufenthalte eingereicht und genehmigt"
-        },
-        {
-          "icon": "Building2",
-          "title": "40+ Firmen gegründet",
-          "description": "S.A. und EAS mit aktiver RUC registriert"
-        },
-        {
-          "icon": "Landmark",
-          "title": "60+ Bankkonten",
-          "description": "Persönliche und Geschäftskonten eröffnet"
-        },
-        {
-          "icon": "Star",
-          "title": "4,8/5 Zufriedenheit",
-          "description": "Durchschnittliche Bewertung nach dem Prozess (anonyme Umfrage)"
-        }
-      ]
     },
     "testimonials": {
       "eyebrow": "Erfahrungsberichte",
