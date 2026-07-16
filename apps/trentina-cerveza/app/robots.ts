@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/qr"],
     },
-    sitemap: "https://trentina.paragu-ai.com/sitemap.xml",
+    sitemap: "https://trentina-cerveza.paragu-ai.com/sitemap.xml",
   };
 }

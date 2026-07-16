@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "Cerveza Trentina — Cerveza artesanal paraguaya",
     description:
       "Descubrí Cerveza Trentina. Cerveza artesanal paraguaya: Pilsen, APA, IPA, Metatron IPL, Dunkel Cacao. Chopp tirado, packs y delivery a toda la zona.",
-    url: "https://trentina.paragu-ai.com",
+    url: "https://trentina-cerveza.paragu-ai.com",
     siteName: siteData.name,
     locale: "es_PY",
     type: "website",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
       "Descubrí Cerveza Trentina. Cerveza artesanal paraguaya: Pilsen, APA, IPA, Metatron IPL y Dunkel Cacao.",
     images: [`${siteData.url}${siteData.ogImage}`],
   },
-  alternates: { canonical: "https://trentina.paragu-ai.com", languages: { "es": "https://trentina.paragu-ai.com/" } },
+  alternates: { canonical: "https://trentina-cerveza.paragu-ai.com", languages: { "es": "https://trentina-cerveza.paragu-ai.com/" } },
   robots: {
     index: true,
     follow: true,
