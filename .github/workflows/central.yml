@@ -27,20 +27,32 @@ jobs:
           filters: |
             apps/3md-website:
               - 'apps/3md-website/**'
+            apps/ai-whisperers-site:
+              - 'apps/ai-whisperers-site/**'
             apps/arnos-barber-shop:
               - 'apps/arnos-barber-shop/**'
             apps/bichos-gym:
               - 'apps/bichos-gym/**'
             apps/bufete-mendez:
               - 'apps/bufete-mendez/**'
+            apps/builder:
+              - 'apps/builder/**'
             apps/camilo-acosta:
               - 'apps/camilo-acosta/**'
+            apps/cocodrilo-fitness:
+              - 'apps/cocodrilo-fitness/**'
             apps/cronos-academy:
               - 'apps/cronos-academy/**'
             apps/cuidadoamiga:
               - 'apps/cuidadoamiga/**'
+            apps/dayah-litworks:
+              - 'apps/dayah-litworks/**'
             apps/de-abasto-a-casa:
               - 'apps/de-abasto-a-casa/**'
+            apps/depiflash:
+              - 'apps/depiflash/**'
+            apps/dra-gabriela:
+              - 'apps/dra-gabriela/**'
             apps/escribania-paraguay:
               - 'apps/escribania-paraguay/**'
             apps/estudio-medieval:
@@ -61,8 +73,10 @@ jobs:
               - 'apps/luis-de-leon-concept/**'
             apps/magnolia-peluqueria:
               - 'apps/magnolia-peluqueria/**'
-            apps/mantraspa:
-              - 'apps/mantraspa/**'
+            apps/mantra-spa:
+              - 'apps/mantra-spa/**'
+            apps/maskarada:
+              - 'apps/maskarada/**'
             apps/meal-prep:
               - 'apps/meal-prep/**'
             apps/nexa-paraguay:
@@ -73,16 +87,24 @@ jobs:
               - 'apps/nudo/**'
             apps/ozmontania-website:
               - 'apps/ozmontania-website/**'
+            apps/pierce-charm:
+              - 'apps/pierce-charm/**'
             apps/pitchy-website:
               - 'apps/pitchy-website/**'
             apps/portas-barber:
               - 'apps/portas-barber/**'
             apps/reina-de-copas:
               - 'apps/reina-de-copas/**'
+            apps/rockabar:
+              - 'apps/rockabar/**'
             apps/scott-tatuajes:
               - 'apps/scott-tatuajes/**'
             apps/shine-nails:
               - 'apps/shine-nails/**'
+            apps/stroopwafel-huis:
+              - 'apps/stroopwafel-huis/**'
+            apps/superspuma:
+              - 'apps/superspuma/**'
             apps/trentina-cerveza:
               - 'apps/trentina-cerveza/**'
             apps/trentina-site:
@@ -101,13 +123,19 @@ jobs:
           CHANGED=""
           # apps/<name>=true if changed
           [ "${{ steps.diff.outputs['apps/3md-website'] }}"             = "true" ] && CHANGED="$CHANGED,3md-website"
+          [ "${{ steps.diff.outputs['apps/ai-whisperers-site'] }}"       = "true" ] && CHANGED="$CHANGED,ai-whisperers-site"
           [ "${{ steps.diff.outputs['apps/arnos-barber-shop'] }}"       = "true" ] && CHANGED="$CHANGED,arnos-barber-shop"
           [ "${{ steps.diff.outputs['apps/bichos-gym'] }}"               = "true" ] && CHANGED="$CHANGED,bichos-gym"
           [ "${{ steps.diff.outputs['apps/bufete-mendez'] }}"            = "true" ] && CHANGED="$CHANGED,bufete-mendez"
+          [ "${{ steps.diff.outputs['apps/builder'] }}"                  = "true" ] && CHANGED="$CHANGED,builder"
           [ "${{ steps.diff.outputs['apps/camilo-acosta'] }}"            = "true" ] && CHANGED="$CHANGED,camilo-acosta"
+          [ "${{ steps.diff.outputs['apps/cocodrilo-fitness'] }}"        = "true" ] && CHANGED="$CHANGED,cocodrilo-fitness"
           [ "${{ steps.diff.outputs['apps/cronos-academy'] }}"           = "true" ] && CHANGED="$CHANGED,cronos-academy"
           [ "${{ steps.diff.outputs['apps/cuidadoamiga'] }}"             = "true" ] && CHANGED="$CHANGED,cuidadoamiga"
+          [ "${{ steps.diff.outputs['apps/dayah-litworks'] }}"           = "true" ] && CHANGED="$CHANGED,dayah-litworks"
           [ "${{ steps.diff.outputs['apps/de-abasto-a-casa'] }}"         = "true" ] && CHANGED="$CHANGED,de-abasto-a-casa"
+          [ "${{ steps.diff.outputs['apps/depiflash'] }}"                = "true" ] && CHANGED="$CHANGED,depiflash"
+          [ "${{ steps.diff.outputs['apps/dra-gabriela'] }}"             = "true" ] && CHANGED="$CHANGED,dra-gabriela"
           [ "${{ steps.diff.outputs['apps/escribania-paraguay'] }}"      = "true" ] && CHANGED="$CHANGED,escribania-paraguay"
           [ "${{ steps.diff.outputs['apps/estudio-medieval'] }}"        = "true" ] && CHANGED="$CHANGED,estudio-medieval"
           [ "${{ steps.diff.outputs['apps/fun4me'] }}"                  = "true" ] && CHANGED="$CHANGED,fun4me"
@@ -118,20 +146,25 @@ jobs:
           [ "${{ steps.diff.outputs['apps/jota-ink-tattoo'] }}"          = "true" ] && CHANGED="$CHANGED,jota-ink-tattoo"
           [ "${{ steps.diff.outputs['apps/luis-de-leon-concept'] }}"     = "true" ] && CHANGED="$CHANGED,luis-de-leon-concept"
           [ "${{ steps.diff.outputs['apps/magnolia-peluqueria'] }}"      = "true" ] && CHANGED="$CHANGED,magnolia-peluqueria"
-          [ "${{ steps.diff.outputs['apps/mantraspa'] }}"                = "true" ] && CHANGED="$CHANGED,mantraspa"
+          [ "${{ steps.diff.outputs['apps/mantra-spa'] }}"               = "true" ] && CHANGED="$CHANGED,mantra-spa"
+          [ "${{ steps.diff.outputs['apps/maskarada'] }}"                = "true" ] && CHANGED="$CHANGED,maskarada"
           [ "${{ steps.diff.outputs['apps/meal-prep'] }}"                = "true" ] && CHANGED="$CHANGED,meal-prep"
           [ "${{ steps.diff.outputs['apps/nexa-paraguay'] }}"            = "true" ] && CHANGED="$CHANGED,nexa-paraguay"
           [ "${{ steps.diff.outputs['apps/nde-barba'] }}"                = "true" ] && CHANGED="$CHANGED,nde-barba"
           [ "${{ steps.diff.outputs['apps/nudo'] }}"                     = "true" ] && CHANGED="$CHANGED,nudo"
           [ "${{ steps.diff.outputs['apps/ozmontania-website'] }}"       = "true" ] && CHANGED="$CHANGED,ozmontania-website"
+          [ "${{ steps.diff.outputs['apps/pierce-charm'] }}"             = "true" ] && CHANGED="$CHANGED,pierce-charm"
           [ "${{ steps.diff.outputs['apps/pitchy-website'] }}"           = "true" ] && CHANGED="$CHANGED,pitchy-website"
           [ "${{ steps.diff.outputs['apps/portas-barber'] }}"            = "true" ] && CHANGED="$CHANGED,portas-barber"
           [ "${{ steps.diff.outputs['apps/reina-de-copas'] }}"           = "true" ] && CHANGED="$CHANGED,reina-de-copas"
+          [ "${{ steps.diff.outputs['apps/rockabar'] }}"                 = "true" ] && CHANGED="$CHANGED,rockabar"
           [ "${{ steps.diff.outputs['apps/scott-tatuajes'] }}"           = "true" ] && CHANGED="$CHANGED,scott-tatuajes"
           [ "${{ steps.diff.outputs['apps/tsuki-restaurante'] }}"        = "true" ] && CHANGED="$CHANGED,tsuki-restaurante"
           [ "${{ steps.diff.outputs['apps/villamayor-asociados'] }}"     = "true" ] && CHANGED="$CHANGED,villamayor-asociados"
           [ "${{ steps.diff.outputs['apps/xxgym'] }}"                    = "true" ] && CHANGED="$CHANGED,xxgym"
           [ "${{ steps.diff.outputs['apps/shine-nails'] }}"               = "true" ] && CHANGED="$CHANGED,shine-nails"
+          [ "${{ steps.diff.outputs['apps/stroopwafel-huis'] }}"          = "true" ] && CHANGED="$CHANGED,stroopwafel-huis"
+          [ "${{ steps.diff.outputs['apps/superspuma'] }}"                = "true" ] && CHANGED="$CHANGED,superspuma"
           [ "${{ steps.diff.outputs['apps/trentina-cerveza'] }}"            = "true" ] && CHANGED="$CHANGED,trentina-cerveza"
           [ "${{ steps.diff.outputs['apps/trentina-site'] }}"              = "true" ] && CHANGED="$CHANGED,trentina-site"
           # Strip leading comma and convert to a JSON array
