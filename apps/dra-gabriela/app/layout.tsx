@@ -3,6 +3,7 @@ import Script from "next/script"
 import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { THEMES, THEME_STORAGE_KEY } from "@/lib/themes"
+import { buildAlternates } from "@/lib/seo"
 
 export const dynamic = "force-dynamic"
 export const revalidate = 0
@@ -63,14 +64,7 @@ export const metadata = {
     creator: "@dragabriellagp",
   },
   robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/en",
-    languages: {
-      en: "/en",
-      es: "/es",
-      "x-default": "/en",
-    },
-  },
+  alternates: buildAlternates(""),
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },

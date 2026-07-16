@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@ai-whisperers/site-seo": "workspace:*",
     "clsx": "^2.1.1",
     "lucide-react": "^0.577.0",
     "next": "^16.2.10",
