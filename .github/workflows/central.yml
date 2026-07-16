@@ -3,8 +3,18 @@ name: central
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'apps/**'
+      - 'packages/**'
+      - 'pnpm-lock.yaml'
+      - 'Dockerfile.*'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'apps/**'
+      - 'packages/**'
+      - 'pnpm-lock.yaml'
+      - 'Dockerfile.*'
 
 permissions:
   contents: read
