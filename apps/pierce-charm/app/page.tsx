@@ -13,13 +13,17 @@ const features = h.features?.items || [];
 const steps = h.process?.steps || [];
 const finalCta = h.finalCta || {};
 
+const CATALOG_PICKS = ["lobulo-simple", "helix", "tragus", "daith", "rook", "conch", "industrial", "septum"];
+const flatPiercings: any[] = (c.piercings?.categories || []).flatMap((cat: any) => cat.items || []);
+const catalog = CATALOG_PICKS.map((id) => flatPiercings.find((i) => i.id === id)).filter(Boolean);
+
 const heroPins: PinPosition[] = [
-  { id: "helix",  name: "Helix",  price: "Gs 120.000", x: 38, y: 22 },
-  { id: "rook",   name: "Rook",   price: "Gs 160.000", x: 24, y: 47 },
-  { id: "daith",  name: "Daith",  price: "Gs 160.000", x: 18, y: 48 },
-  { id: "lobulo", name: "Lóbulo", price: "Gs 80.000",  x: 32, y: 82 },
-  { id: "tragus", name: "Tragus", price: "Gs 140.000", x: 18, y: 55 },
-  { id: "conch",  name: "Conch",  price: "Gs 140.000", x: 22, y: 60 },
+  { id: "helix",  name: "Helix",  price: "Gs 120.000", x: 30, y: 12 },
+  { id: "rook",   name: "Rook",   price: "Gs 160.000", x: 40, y: 35 },
+  { id: "daith",  name: "Daith",  price: "Gs 160.000", x: 44, y: 46 },
+  { id: "lobulo", name: "Lóbulo", price: "Gs 80.000",  x: 36, y: 83 },
+  { id: "tragus", name: "Tragus", price: "Gs 140.000", x: 34, y: 51 },
+  { id: "conch",  name: "Conch",  price: "Gs 140.000", x: 44, y: 52 },
 ];
 
 export default function Home() {
@@ -28,25 +32,19 @@ export default function Home() {
   return (
     <div className="relative">
       <section className="relative pt-28 md:pt-32 pb-12 md:pb-20 overflow-hidden smoke-bg">
-        <div className="hidden lg:block chain-side chain-side-left">
-          <ChainVertical className="w-full h-full text-[var(--color-primary-light)]" />
-        </div>
-        <div className="hidden lg:block chain-side chain-side-right">
-          <ChainVertical className="w-full h-full text-[var(--color-primary-light)]" />
-        </div>
-
-        <Bat size={36} className="bat-flock text-[var(--color-primary-light)]" style={{ top: "12%", left: "8%" }} />
-        <Bat size={28} className="bat-flock b2 text-[var(--color-accent-light)]" style={{ top: "32%", right: "14%" }} />
-        <Bat size={24} className="bat-flock b3 text-[var(--color-primary-light)]" style={{ top: "60%", left: "18%" }} />
+        <Bat size={38} className="bat-flock text-[var(--color-primary-light)]" style={{ top: "10%", left: "4%" }} />
+        <Bat size={30} className="bat-flock b2 text-[var(--color-accent-light)]" style={{ top: "28%", left: "2%" }} />
+        <Bat size={26} className="bat-flock b3 text-[var(--color-primary-light)]" style={{ top: "52%", left: "6%" }} mirrored />
+        <Bat size={34} className="bat-flock b4 text-[var(--color-accent-light)]" style={{ top: "72%", left: "3%" }} />
+        <Bat size={40} className="bat-flock text-[var(--color-primary-light)]" style={{ top: "14%", right: "5%" }} mirrored />
+        <Bat size={28} className="bat-flock b5 text-[var(--color-accent-light)]" style={{ top: "34%", right: "3%" }} mirrored />
+        <Bat size={32} className="bat-flock b6 text-[var(--color-primary-light)]" style={{ top: "58%", right: "6%" }} />
+        <Bat size={24} className="bat-flock b2 text-[var(--color-accent-light)]" style={{ top: "78%", right: "4%" }} mirrored />
         <Spider size={36} className="absolute top-0 right-1/4 text-[var(--color-foreground)]/30 animate-flicker" />
         <CrescentMoon size={28} className="absolute top-16 right-12 text-[var(--color-gold)] opacity-70 animate-flicker" />
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
           <div className="text-center lg:text-left">
-            <p className="script text-[var(--color-gold)] text-[1.4rem] md:text-[1.6rem] mb-2 leading-none">
-              {h.hero?.eyebrow?.split("·")[0]?.trim()}
-            </p>
-            <p className="eyebrow mb-4">Estudio de piercings · Asunción</p>
             <h1 className="text-balance mb-5 text-[var(--color-foreground)]">
               <span className="block">{c.tagline}</span>
               <span className="block font-[var(--font-script)] text-[var(--color-primary-light)] text-[1.4em] -mt-2 leading-none">
@@ -81,14 +79,11 @@ export default function Home() {
             <Candle size={70} className="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block opacity-80" />
             <Candle size={70} className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block opacity-80" />
 
-            <div className="relative p-6 md:p-8 border border-[var(--color-border)] bg-gradient-to-b from-[var(--color-surface)] to-[var(--color-card)] shadow-2xl">
-              <div className="absolute top-2 left-2 right-2 h-px bg-gradient-to-r from-transparent via-[var(--color-primary-light)] to-transparent" />
-              <div className="absolute bottom-2 left-2 right-2 h-px bg-gradient-to-r from-transparent via-[var(--color-accent-light)] to-transparent" />
-
+            <div className="relative p-6 md:p-8">
               <div className="text-center mb-3">
                 <p className="eyebrow text-[var(--color-gold)]">Cartografía · Mapa de piercings</p>
                 <p className="font-[var(--font-script)] text-[var(--color-primary-light)] text-[1.4rem] leading-none mt-1">
-                  Toca una zona
+                  Te interesa? Lee mas abajo &lt;3!
                 </p>
               </div>
 
@@ -140,9 +135,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
+      <DividerOrnament />
+
+      <section className="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto relative">
+        <Bat size={26} className="bat-flock b3 text-[var(--color-primary-light)]/50" style={{ top: "8%", right: "8%" }} mirrored />
         <div className="text-left md:text-center max-w-2xl md:mx-auto mb-12">
-          <p className="eyebrow mb-3">{h.process?.eyebrow}</p>
+          <p className="eyebrow mb-2">{h.process?.eyebrow}</p>
+          <p className="font-[var(--font-script)] text-[var(--color-gold)] text-[1.5rem] leading-none mb-3">
+            paso a paso
+          </p>
           <h2>{h.process?.title}</h2>
         </div>
 
@@ -162,10 +163,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 px-4 md:px-6 bg-[var(--color-surface)] relative">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 md:py-24 px-4 md:px-6 bg-[var(--color-surface)] relative overflow-hidden">
+        <Skull size={22} className="absolute top-8 left-6 text-[var(--color-primary-light)]/30 hidden md:block" />
+        <Skull size={22} className="absolute top-8 right-6 text-[var(--color-primary-light)]/30 hidden md:block" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-left md:text-center max-w-2xl md:mx-auto mb-12">
-            <p className="eyebrow mb-3">𓆩 Catálogo 𓆪</p>
+            <p className="eyebrow mb-2">𓆩 Catálogo 𓆪</p>
+            <p className="font-[var(--font-script)] text-[var(--color-gold)] text-[1.6rem] leading-none mb-3">
+              elegí la tuya
+            </p>
             <h2>Elegí tu perforación</h2>
             <p className="text-[var(--color-muted-foreground)] mt-3">
               Más de 15 ubicaciones disponibles. Cada una con su tiempo de cicatrización y materiales específicos.
@@ -173,25 +179,28 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto">
-            {[
-              { name: "Helix", desc: "Cartílago superior" },
-              { name: "Lóbulo", desc: "Clásico" },
-              { name: "Tragus", desc: "Solapa externa" },
-              { name: "Daith", desc: "Pliegue interno" },
-              { name: "Rook", desc: "Pliegue vertical" },
-              { name: "Industrial", desc: "Doble helix" },
-              { name: "Conch", desc: "Concha central" },
-              { name: "Septum", desc: "Tabique nasal" },
-            ].map((item) => (
+            {catalog.map((item: any) => (
               <Link
-                href="/piercings"
-                key={item.name}
-                className="rock-card p-4 md:p-5 no-underline text-[var(--color-foreground)] block"
+                href={`/piercings#${item.id}`}
+                key={item.id}
+                className="rock-card p-4 md:p-5 no-underline text-[var(--color-foreground)] block group"
               >
-                <CrossInverted size={12} className="text-[var(--color-gold)] mb-2" />
-                <h3 className="text-[1rem] md:text-[1.05rem] mb-1">{item.name}</h3>
-                <p className="text-[0.78rem] text-[var(--color-muted-foreground)] font-[var(--font-display)] uppercase tracking-[0.18em]">
-                  {item.desc}
+                <div className="flex items-start justify-between mb-2">
+                  <CrossInverted size={12} className="text-[var(--color-gold)]" />
+                  <span className="flex gap-0.5" aria-label={`Nivel ${item.level} de cuidado`}>
+                    {Array.from({ length: item.level || 1 }).map((_, i) => (
+                      <CrossInverted key={i} size={7} className="text-[var(--color-primary-light)]/70" />
+                    ))}
+                  </span>
+                </div>
+                <h3 className="text-[1rem] md:text-[1.05rem] mb-1 group-hover:text-[var(--color-gold)] transition-colors">
+                  {item.name}
+                </h3>
+                <p className="text-[0.72rem] text-[var(--color-muted-foreground)] font-[var(--font-display)] uppercase tracking-[0.18em]">
+                  {item.zone}
+                </p>
+                <p className="text-[0.85rem] text-[var(--color-gold)] font-[var(--font-display)] tracking-[0.12em] mt-2">
+                  {item.price}
                 </p>
               </Link>
             ))}

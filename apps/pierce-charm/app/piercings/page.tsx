@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import content from "@/content/es.json";
 import { EarAnatomy, type PinPosition } from "@/components/EarAnatomy";
@@ -39,6 +39,23 @@ export default function PiercingsPage() {
     () => allItems.find((it: any) => it.id === activePin),
     [activePin]
   );
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+    const item = allItems.find((it: any) => it.id === hash);
+    if (!item) return;
+    setTab("all");
+    setActivePin(hash);
+    setHighlighted(hash);
+    // Wait for filtered list to render before scrolling.
+    const t = window.setTimeout(() => {
+      const el = document.getElementById(`p-${hash}`);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 120);
+    return () => window.clearTimeout(t);
+  }, []);
 
   return (
     <div className="pt-24 md:pt-32 relative">

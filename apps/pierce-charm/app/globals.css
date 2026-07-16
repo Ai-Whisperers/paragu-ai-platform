@@ -221,6 +221,9 @@ h3 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem); font-weight: 600; }
 }
 .bat-flock.b2 { animation-duration: 18s; animation-delay: -4s; }
 .bat-flock.b3 { animation-duration: 22s; animation-delay: -9s; }
+.bat-flock.b4 { animation-duration: 16s; animation-delay: -2s; }
+.bat-flock.b5 { animation-duration: 20s; animation-delay: -11s; }
+.bat-flock.b6 { animation-duration: 24s; animation-delay: -6s; }
 
 @keyframes batGlide {
   0%, 100% { transform: translate(0, 0) rotate(-2deg); }

@@ -31,14 +31,19 @@ export default function FaqPage() {
       </section>
 
       <section className="max-w-3xl mx-auto px-4 md:px-6 pb-16">
-        <div className="space-y-3">
+        <div className="space-y-3" role="list">
           {items.map((item: any, i: number) => {
             const isOpen = open === i;
+            const panelId = `faq-panel-${i}`;
+            const buttonId = `faq-button-${i}`;
             return (
-              <div key={i} className="rock-card overflow-hidden">
+              <div key={i} className="rock-card overflow-hidden" role="listitem">
                 <button
+                  id={buttonId}
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="w-full tap flex items-start justify-between gap-3 p-5 md:p-6 text-left"
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                  className="w-full tap flex items-start justify-between gap-3 p-5 md:p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-light)]"
                 >
                   <div className="flex items-start gap-3 flex-1">
                     <span className="font-[var(--font-display)] text-[var(--color-primary-light)] text-[0.78rem] tracking-[0.18em] mt-0.5 flex-shrink-0">
@@ -47,6 +52,7 @@ export default function FaqPage() {
                     <span className="text-[1.02rem] font-[var(--font-display)]">{item.q}</span>
                   </div>
                   <span
+                    aria-hidden="true"
                     className={`flex-shrink-0 w-7 h-7 flex items-center justify-center border border-[var(--color-primary-light)] text-[var(--color-primary-light)] text-[1.2rem] transition-transform ${
                       isOpen ? "rotate-45" : ""
                     }`}
@@ -54,7 +60,13 @@ export default function FaqPage() {
                     +
                   </span>
                 </button>
-                <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96" : "max-h-0"}`}>
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  hidden={!isOpen}
+                  className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96" : "max-h-0"}`}
+                >
                   <div className="px-5 md:px-6 pb-5 md:pb-6 pl-[3.2rem] md:pl-[3.5rem]">
                     <p className="text-[var(--color-muted-foreground)] text-[0.95rem] leading-relaxed border-l-2 border-[var(--color-primary-light)] pl-4">
                       {item.a}
