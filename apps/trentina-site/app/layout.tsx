@@ -100,6 +100,11 @@ const jsonLd = {
     addressRegion: "Alto Paraná",
     addressCountry: "PY",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -25.7723,
+    longitude: -55.0933,
+  },
   servesCuisine: "Beer",
   priceRange: "$$",
   aggregateRating: {

@@ -72,6 +72,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "addressLocality": "Fernando de la Mora",
                 "addressCountry": "PY"
               },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -25.3306,
+                "longitude": -57.5424
+              },
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "5.0",

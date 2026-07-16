@@ -133,6 +133,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 addressRegion: "Central",
                 addressCountry: "PY",
               },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: -25.2637,
+                longitude: -57.5759,
+              },
               areaServed: {
                 "@type": "City",
                 name: "Asunción",
