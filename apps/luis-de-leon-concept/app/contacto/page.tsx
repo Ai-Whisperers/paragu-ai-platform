@@ -5,7 +5,14 @@ import { MapPin, Phone, Clock, MessageCircle } from "lucide-react"
 
 export const metadata = { title: "Contacto — Luis De León Concept" }
 
+// TODO(engineer): real phone needed — '0981 000 000' + wa 595981000000 are placeholders
+const TODO_PHONE = "TODO_PHONE"
+const displayPhone = TODO_PHONE
+const waPhone = TODO_PHONE
+
 export default function ContactoPage() {
+  const hasPhone = displayPhone !== TODO_PHONE
+  const hasWa = waPhone !== TODO_PHONE
   return (
     <>
       <Header />
@@ -22,13 +29,15 @@ export default function ContactoPage() {
                   <p className="text-sm text-foreground-light">Asunción</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
-                <div>
-                  <p className="font-semibold text-foreground">Teléfono</p>
-                  <p className="text-sm text-foreground-light">0981 000 000</p>
+              {hasPhone && (
+                <div className="flex items-start gap-3">
+                  <Phone className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-foreground">Teléfono</p>
+                    <p className="text-sm text-foreground-light">{displayPhone}</p>
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
                 <div>
@@ -37,15 +46,17 @@ export default function ContactoPage() {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl border border-border p-8 shadow-sm">
-              <h2 className="font-heading text-xl font-bold text-primary mb-4">Escribinos por WhatsApp</h2>
-              <p className="text-foreground-light mb-6">Respondemos en menos de 5 minutos</p>
-              <a href="https://wa.me/595981000000?text=Hola!%20Quiero%20informaci%C3%B3n"
-                target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary-dark transition-all">
-                <MessageCircle className="w-5 h-5" /> Contactar por WhatsApp
-              </a>
-            </div>
+            {hasWa && (
+              <div className="bg-white rounded-xl border border-border p-8 shadow-sm">
+                <h2 className="font-heading text-xl font-bold text-primary mb-4">Escribinos por WhatsApp</h2>
+                <p className="text-foreground-light mb-6">Respondemos en menos de 5 minutos</p>
+                <a href={`https://wa.me/${waPhone}?text=Hola!%20Quiero%20informaci%C3%B3n`}
+                  target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary-dark transition-all">
+                  <MessageCircle className="w-5 h-5" /> Contactar por WhatsApp
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -53,9 +64,9 @@ export default function ContactoPage() {
         businessName="Luis De León Concept"
         tagline="Estilo y Elegancia en Asunción"
         address="Asunción"
-        phone="0981 000 000"
+        phone={hasPhone ? displayPhone : undefined}
         hours="Lun-Sáb: 9:00 - 20:00"
-        waPhone="595981000000"
+        waPhone={hasWa ? waPhone : undefined}
       />
       <WhatsAppFloat />
     </>

@@ -48,6 +48,11 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // TODO(engineer): real phone needed — shared placeholder 595986106062 was
+  // copy-pasted across cocodrilo-fitness + mantra-spa. Replace with real number.
+  const TODO_PHONE = "TODO_PHONE"
+  const telephone = TODO_PHONE
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -60,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "sameAs": [
       "https://instagram.com/mantraspa.py"
     ],
-    telephone: "+595986106062",
+    ...(telephone !== TODO_PHONE ? { telephone } : {}),
     openingHours: "Mo-Sa 10:00-20:00",
     priceRange: "$$",
   }

@@ -7,6 +7,10 @@ const home = c.home
 const biz = c.placeholders
 const nav = c.navigation
 
+// TODO(engineer): real phone needed — '+595 981 123 456' is a placeholder
+const TODO_PHONE = 'TODO_PHONE'
+const telephone = TODO_PHONE
+
 // LocalBusiness + LegalService schema
 const schema = {
   '@context': 'https://schema.org',
@@ -15,7 +19,7 @@ const schema = {
   description: home.seo.description,
   url: 'https://bufete-mendez.paragu-ai.com',
   image: 'https://bufete-mendez.paragu-ai.com/og/og-image.png',
-  telephone: '+595 981 123 456',
+  ...(telephone !== TODO_PHONE ? { telephone } : {}),
   address: {
     '@type': 'PostalAddress',
     addressLocality: biz.city,
