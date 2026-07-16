@@ -9,6 +9,7 @@ import HtmlLangSyncer from "@/components/HtmlLangSyncer";
 import CookieBanner from "@/components/CookieBanner";
 import { getContent, type Locale } from "@/lib/content";
 import { JsonLd, organization, website } from "@/lib/jsonld";
+import { SITE_URL, buildAlternates } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,7 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const enDesc =
     "BDSM, kink and conscious-exploration community in Asunción, Paraguay. Editions, munches, workshops and community marketplace. Next: September 19, 2026.";
   return {
-    metadataBase: new URL("https://maskarada.paragu-ai.com"),
+    metadataBase: new URL(SITE_URL),
     title: {
       default: locale === "en"
         ? `Club maškaráda — ${c.hero.tagline} | Asunción`
@@ -58,7 +59,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       locale: locale === "en" ? "en_US" : "es_PY",
-      url: "https://maskarada.paragu-ai.com",
+      url: SITE_URL,
       title: `Club maškaráda — ${c.hero.tagline}`,
       description: locale === "en" ? enDesc : esDesc,
       siteName: "Club maškaráda",
@@ -80,13 +81,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
       apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     },
-    alternates: {
-      canonical: "https://maskarada.paragu-ai.com",
-      languages: {
-        es: "https://maskarada.paragu-ai.com/",
-        en: "https://maskarada.paragu-ai.com/en",
-      },
-    },
+    alternates: buildAlternates(""),
   };
 }
 
@@ -96,8 +91,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang={locale} className={inter.variable}>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="alternate" hrefLang="es" href="https://maskarada.paragu-ai.com/" />
-        <link rel="alternate" hrefLang="en" href="https://maskarada.paragu-ai.com/en" />
       </head>
       <body className="antialiased">
         <HtmlLangSyncer locale={locale} />
