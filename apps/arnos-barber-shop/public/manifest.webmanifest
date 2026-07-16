@@ -1,0 +1,16 @@
+{
+  "name": "Arno's Barber Shop",
+  "short_name": "Arno's",
+  "description": "Arno's Barber Shop en San Lorenzo, Paraguay. Cortes, barba y perfilado con reserva directa por WhatsApp.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d0f0f",
+  "theme_color": "#0d0f0f",
+  "lang": "es-PY",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}

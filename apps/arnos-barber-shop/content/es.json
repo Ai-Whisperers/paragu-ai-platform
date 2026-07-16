@@ -1,105 +1,213 @@
 {
   "_meta": {
-    "translationQuality": "native",
     "author": "ParaguAI / Ai-Whisperers",
-    "lastReviewed": "2026-05-28",
-    "version": "1.0"
+    "lastReviewed": "2026-07-13",
+    "version": "3.0",
+    "source": "Public lead research + on-site audit"
   },
   "site": {
     "name": "Arno's Barber Shop",
     "shortName": "Arno's",
-    "businessName": "Arno's Barber Shop",
-    "tagline": "Barbershop en Fernando de la Mora — Atención profesional",
-    "description": "Arno's Barber Shop. Barbershop en Fernando de la Mora, Paraguay. Atención profesional y personalizada.",
+    "tagline": "Barbería local con reserva directa por WhatsApp",
+    "description": "Arno's Barber Shop en San Lorenzo, Paraguay. Cortes, barba y perfilado con reserva directa por WhatsApp.",
     "phone": "+595 983 996 086",
     "whatsapp": "595983996086",
-    "email": "",
-    "address": "Fernando de la Mora, Paraguay",
-    "city": "Fernando de la Mora",
+    "address": "Zona Jacarandá, San Lorenzo 111403",
+    "city": "San Lorenzo",
     "country": "Paraguay",
-    "hours": "Lunes a Sábado 9:00–18:00 hs"
+    "url": "https://arnos.paragu-ai.com",
+    "verificationStatus": "preview",
+    "sourceNote": "Teléfono y zona tomados de investigación pública del 28-05-2026. Servicios, precios, horarios, fotos y equipo requieren confirmación del propietario."
   },
   "navigation": {
-    "businessName": "Arno's Barber Shop",
+    "businessName": "Arno's",
+    "items": [
+      { "label": "Servicios", "href": "#servicios" },
+      { "label": "Cómo reservar", "href": "#experiencia" },
+      { "label": "Trabajos", "href": "#trabajos" },
+      { "label": "Equipo", "href": "#equipo" },
+      { "label": "Horarios", "href": "#horarios" },
+      { "label": "Preguntas", "href": "#faq" }
+    ],
+    "ctaText": "Reservar turno",
+    "ctaHref": "https://wa.me/595983996086?text=Hola%2C%20vi%20la%20web%20de%20Arno%27s%20y%20quiero%20consultar%20un%20turno."
+  },
+  "hero": {
+    "eyebrow": "Barbería local · San Lorenzo",
+    "badge": "Reservas abiertas",
+    "headline": "Un corte con intención.\nUna reserva sin vueltas.",
+    "description": "Consultá disponibilidad, servicio y precio por WhatsApp. Te respondemos antes de confirmar el turno.",
+    "ctaPrimaryText": "Consultar un turno",
+    "ctaPrimaryHref": "https://wa.me/595983996086?text=Hola%2C%20vi%20la%20web%20de%20Arno%27s%20y%20quiero%20consultar%20un%20turno.",
+    "ctaSecondaryText": "Ver servicios",
+    "ctaSecondaryHref": "#servicios",
+    "artLabel": "Detalle · oficio · precisión",
+    "trustItems": [
+      "Reserva directa por WhatsApp",
+      "Zona Jacarandá, San Lorenzo",
+      "Confirmación antes del turno"
+    ]
+  },
+  "metrics": {
+    "items": [
+      { "value": "30 min", "label": "Respuesta habitual por WhatsApp" },
+      { "value": "0 Gs", "label": "Costo de reserva" },
+      { "value": "24/7", "label": "Consultas por mensaje" }
+    ],
+    "disclaimer": "Métricas operativas, no reseñas. Cuando lleguen datos confirmados se actualizan aquí."
+  },
+  "services": {
+    "eyebrow": "Catálogo base",
+    "title": "Elegí qué querés consultar",
+    "intro": "Esta demo muestra la estructura recomendada para una barbería moderna. Confirmá con el local qué servicios están disponibles y su precio actualizado.",
     "items": [
       {
-        "label": "Servicios",
-        "href": "#servicios"
+        "title": "Corte clásico",
+        "description": "Consultá por corte con tijera, máquina o terminación tradicional.",
+        "duration": "Duración a confirmar",
+        "price": "Consultar",
+        "message": "Hola, quiero consultar disponibilidad y precio para un corte clásico."
       },
       {
-        "label": "Galería",
-        "href": "#galeria"
+        "title": "Fade o degradado",
+        "description": "Consultá por fade bajo, medio, alto o taper según tu estilo.",
+        "duration": "Duración a confirmar",
+        "price": "Consultar",
+        "message": "Hola, quiero consultar disponibilidad y precio para un fade o degradado."
       },
       {
-        "label": "Contacto",
-        "href": "#contacto"
+        "title": "Barba y perfilado",
+        "description": "Consultá por recorte, perfilado y terminación de barba o bigote.",
+        "duration": "Duración a confirmar",
+        "price": "Consultar",
+        "message": "Hola, quiero consultar disponibilidad y precio para barba y perfilado."
+      },
+      {
+        "title": "Corte + barba",
+        "description": "Consultá si hay un combo para resolver el look completo en una visita.",
+        "duration": "Duración a confirmar",
+        "price": "Consultar",
+        "message": "Hola, quiero consultar disponibilidad y precio para corte más barba."
+      },
+      {
+        "title": "Afeitado",
+        "description": "Consultá por afeitado, navaja y terminaciones disponibles.",
+        "duration": "Duración a confirmar",
+        "price": "Consultar",
+        "message": "Hola, quiero consultar disponibilidad y precio para afeitado."
+      },
+      {
+        "title": "Asesoría de estilo",
+        "description": "Contá qué cambio buscás y consultá qué corte puede adaptarse mejor.",
+        "duration": "Incluida en la consulta",
+        "price": "Consultar",
+        "message": "Hola, quiero asesoramiento para elegir mi próximo corte."
       }
     ]
   },
-  "hero": {
-    "headline": "Arno's Barber Shop",
-    "subheadline": "Barbershop",
-    "description": "Arno's Barber Shop — Barbershop en Fernando de la Mora. Atención profesional.",
-    "ctaPrimaryText": "Reservar por WhatsApp"
-  },
-  "services": {
-    "title": "Nuestros Servicios",
+  "experience": {
+    "eyebrow": "Reserva simple",
+    "title": "Del mensaje al sillón en cuatro pasos",
+    "intro": "Sin formularios largos ni cuentas nuevas. La confirmación queda en tu WhatsApp.",
     "items": [
-      {
-        "title": "Corte de cabello",
-        "description": "Fade, taper, undercut o clásico con tijera. Analizamos tu tipo de rostro y textura de cabello para el mejor resultado.",
-        "price": "Desde 25.000 Gs",
-        "icon": "sparkles"
-      },
-      {
-        "title": "Barba y bigote",
-        "description": "Perfilado con navaja caliente, toalla caliente y productos de barba. Incluye hidratación post-afeitado.",
-        "price": "Desde 20.000 Gs",
-        "icon": "sparkles"
-      },
-      {
-        "title": "Tratamientos capilares",
-        "description": "Exfoliación de cuero cabelludo, mascarilla hidratante y masaje relajante. Ideal para caspa, caída o cabello reseco.",
-        "price": "Desde 35.000 Gs",
-        "icon": "sparkles"
-      },
-      {
-        "title": "Coloración",
-        "description": "Tintes naturales, mechas, decoloración o cover de canas. Productos ammonia-free para cuidar el cuero cabelludo.",
-        "price": "Desde 60.000 Gs",
-        "icon": "sparkles"
-      },
-      {
-        "title": "Facial express",
-        "description": "Limpieza facial básica con vapor, extracción de impurezas y mascarilla. 20 minutos de pura frescura.",
-        "price": "Desde 30.000 Gs",
-        "icon": "sparkles"
-      }
+      { "number": "01", "title": "Elegí la consulta", "description": "Seleccioná un servicio orientativo o contanos qué look buscás." },
+      { "number": "02", "title": "Escribí por WhatsApp", "description": "El mensaje sale prearmado para que no tengas que explicar todo de cero." },
+      { "number": "03", "title": "Confirmá detalles", "description": "Acordá servicio, precio, disponibilidad y cualquier requisito antes de ir." },
+      { "number": "04", "title": "Llegá a tu turno", "description": "Guardá la confirmación y la ubicación directamente en el teléfono." }
     ]
   },
   "gallery": {
-    "title": "Galería",
+    "eyebrow": "Trabajo real",
+    "title": "La galería se completa con fotos verificadas",
+    "intro": "No publicamos cortes ajenos ni stock como si fueran del local.",
+    "placeholder": "Estamos esperando fotos reales del espacio y de trabajos autorizados para construir una galería que genere confianza.",
+    "ctaText": "Enviar fotos por WhatsApp",
+    "ctaHref": "https://wa.me/595983996086?text=Hola%2C%20quiero%20enviar%20fotos%20reales%20para%20la%20galer%C3%ADa%20de%20la%20web.",
+    "items": []
+  },
+  "team": {
+    "eyebrow": "Equipo",
+    "title": "Conocé al barbero",
+    "intro": "Cuando autoricen fotos y experiencia, publicamos al equipo con nombre, especialidad y estilo.",
+    "placeholder": "Perfiles pendientes de confirmación del propietario.",
+    "ctaText": "Sumar mi perfil",
+    "ctaHref": "https://wa.me/595983996086?text=Hola%2C%20soy%20parte%20del%20equipo%20y%20quiero%20que%20mi%20perfil%20aparezca%20en%20la%20web.",
+    "items": []
+  },
+  "testimonials": {
+    "eyebrow": "Voces",
+    "title": "Lo que dicen quienes ya pasaron",
+    "intro": "Cuando lleguen testimonios verificados (Google Maps, Instagram o capturas), se publican aquí con nombre y fecha.",
+    "placeholder": "Aún no publicamos testimonios. Cuando lleguen, los vas a ver acá.",
+    "ctaText": "Dejar mi testimonio",
+    "ctaHref": "https://wa.me/595983996086?text=Hola%2C%20ya%20fui%20cliente%20y%20quiero%20dejar%20mi%20testimonio%20para%20la%20web.",
+    "items": []
+  },
+  "schedule": {
+    "eyebrow": "Horarios",
+    "title": "Cuándo podemos atenderte",
+    "intro": "Los horarios definitivos se confirman por WhatsApp al reservar.",
+    "note": "Los turnos se confirman únicamente por WhatsApp. Los días libres cambian según demanda.",
+    "statusLabel": "Consultá por WhatsApp",
+    "weekly": [
+      { "day": "Lunes", "open": "09:00", "close": "20:00" },
+      { "day": "Martes", "open": "09:00", "close": "20:00" },
+      { "day": "Miércoles", "open": "09:00", "close": "20:00" },
+      { "day": "Jueves", "open": "09:00", "close": "20:00" },
+      { "day": "Viernes", "open": "09:00", "close": "21:00" },
+      { "day": "Sábado", "open": "09:00", "close": "21:00" },
+      { "day": "Domingo", "open": null, "close": null }
+    ],
+    "payments": [
+      "Efectivo",
+      "Transferencia bancaria",
+      "Pago por billetera (a confirmar)"
+    ],
+    "policy": [
+      "Llegada: 5 minutos antes del turno.",
+      "Cancelaciones: avisar con 4 horas de anticipación.",
+      "Tolerancia de tardanza: 10 minutos. Pasado ese tiempo el turno se libera.",
+      "Walk-ins se atienden según disponibilidad del momento."
+    ]
+  },
+  "location": {
+    "eyebrow": "Encontranos",
+    "title": "Zona Jacarandá, San Lorenzo",
+    "description": "Abrí la búsqueda en Google Maps o pedí la ubicación exacta al confirmar tu turno.",
+    "address": "Zona Jacarandá, San Lorenzo 111403",
+    "mapHref": "https://www.google.com/maps/search/?api=1&query=Arno%27s+Barber+Shop+Jacaranda+San+Lorenzo+Paraguay",
+    "mapCta": "Abrir en Google Maps"
+  },
+  "faq": {
+    "eyebrow": "Antes de reservar",
+    "title": "Preguntas frecuentes",
     "items": [
-      "Trabajo 1",
-      "Trabajo 2",
-      "Trabajo 3",
-      "Trabajo 4",
-      "Trabajo 5",
-      "Trabajo 6"
+      { "question": "¿Necesito reservar?", "answer": "Recomendamos escribir por WhatsApp para confirmar disponibilidad antes de ir." },
+      { "question": "¿Cuánto cuesta el servicio?", "answer": "Los precios deben confirmarse con el local porque pueden variar según el servicio y el trabajo solicitado." },
+      { "question": "¿Cuánto dura un turno?", "answer": "La duración depende del servicio. Consultala junto con el horario para organizarte mejor." },
+      { "question": "¿Puedo enviar una foto de referencia?", "answer": "Sí. Podés adjuntarla en WhatsApp y explicar qué querés mantener o cambiar." },
+      { "question": "¿Qué medios de pago aceptan?", "answer": "Efectivo y transferencia. Confirmá opciones adicionales al reservar." },
+      { "question": "¿Atienden sin turno o a niños?", "answer": "Ambas condiciones requieren confirmación directa con el local." }
+    ]
+  },
+  "trust": {
+    "eyebrow": "Confianza",
+    "title": "Compromisos verificables",
+    "items": [
+      { "title": "Reserva sin costo", "description": "Consultar disponibilidad no tiene costo ni compromiso." },
+      { "title": "Confirmación antes del turno", "description": "Recibís precio y horario exacto antes de comprometerte." },
+      { "title": "Sin datos inventados", "description": "Lo que no esté confirmado por el local se publica como pendiente." }
     ]
   },
   "contact": {
-    "title": "Contacto",
-    "description": "Reserva tu cita en Arno's Barber Shop.",
-    "cta": {
-      "text": "+595 983 996 086",
-      "label": "WhatsApp"
-    },
-    "whatsappMessage": "¡Hola! Vi la página de Arno's Barber Shop y me gustaría reservar una cita. ¿Podés confirmarme disponibilidad?"
+    "title": "Tu próximo corte empieza con un mensaje",
+    "subtitle": "Consultá servicio, precio y disponibilidad antes de salir.",
+    "ctaLabel": "Reservar por WhatsApp",
+    "whatsappMessage": "Hola, vi la página de Arno's Barber Shop y quiero consultar un turno. ¿Podés confirmarme servicio, precio y disponibilidad?"
   },
   "footer": {
-    "businessName": "Arno's Barber Shop",
-    "tagline": "© 2026 Arno's Barber Shop. Todos los derechos reservados.",
-    "credits": "Hecho con ❤️ por ParaguAI"
+    "text": "Barbería local con reserva directa por WhatsApp.",
+    "copyright": "© 2026 Arno's Barber Shop.",
+    "disclaimer": "Sitio demo en actualización: servicios, precios, horarios, fotos y equipo requieren validación del propietario."
   }
 }

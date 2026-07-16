@@ -1,27 +1,6 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-import { SectionsRenderer } from '../components/SectionsRenderer';
-import type { Metadata } from 'next';
+import content from "../../content/es.json"
+import { SectionsRenderer } from "../components/SectionsRenderer"
 
-export const metadata: Metadata = {
-  title: 'Arno\'s Barber Shop | Barbería en Fernando de la Mora',
-  description: 'Arno\'s Barber Shop. Barbershop en Fernando de la Mora, Paraguay. Atención profesional y personalizada.',
-  keywords: 'barbería Paraguay, cortes masculinos San Lorenzo',
-  robots: 'index, follow',
-};
-
-async function loadContent(locale: string = 'es') {
-  try {
-    const contentPath = path.join(process.cwd(), 'content', `${locale}.json`);
-    const contentRaw = await fs.readFile(contentPath, 'utf-8');
-    return JSON.parse(contentRaw);
-  } catch (e) {
-    console.error('Failed to load content:', e);
-    return null;
-  }
-}
-
-export default async function HomePage() {
-  const content = await loadContent('es');
-  return <SectionsRenderer content={content} locale="es" />;
+export default function HomePage() {
+  return <SectionsRenderer content={content} />
 }

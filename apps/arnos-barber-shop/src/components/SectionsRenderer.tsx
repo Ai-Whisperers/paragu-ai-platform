@@ -1,319 +1,291 @@
-// SectionsRenderer - Server Component
-// Renders all sections from content/es.json
+import { Header } from "./Header"
+import { Footer } from "./Footer"
 
-interface SectionProps {
-  content: any;
-  locale?: string;
+type AnyContent = Record<string, any>
+
+function whatsappUrl(phone: string, message: string) {
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 }
 
-// Header
-function Header({ content }: SectionProps) {
-  const nav = content?.navigation;
-  const site = content?.site;
+function SectionHeading({ eyebrow, title, intro, light = false }: { eyebrow: string; title: string; intro?: string; light?: boolean }) {
   return (
-    <header style={{ background: '#1a1a2e', padding: '1rem 2rem', position: 'sticky', top: 0, zIndex: 50 }}>
-      <div style={{ maxWidth: '80rem', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <div style={{ width: 40, height: 40, background: '#e94560', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span style={{ color: 'white', fontSize: '1.25rem' }}>⚔</span>
-          </div>
-          <span style={{ color: 'white', fontFamily: 'Georgia, serif', fontSize: '1.25rem', fontWeight: 700 }}>{nav?.businessName || 'Estudio Medieval'}</span>
-        </div>
-        <nav style={{ display: 'flex', gap: '1.5rem' }}>
-          {(nav?.items || []).map((link: any, i: number) => (
-            <a key={i} href={link.href || '#'} style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontSize: '0.875rem' }}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
-        {site?.whatsapp && (
-          <a href={`https://wa.me/${site.whatsapp.replace(/[^0-9]/g, '')}`}
-            style={{ background: '#25D366', color: 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', textDecoration: 'none', fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            💬 {nav?.ctaText || 'Reservar'}
-          </a>
-        )}
+    <div className={`section-heading ${light ? "section-heading-light" : ""}`}>
+      <p className="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      {intro && <p className="section-intro">{intro}</p>}
+    </div>
+  )
+}
+
+function ScissorsArt() {
+  return (
+    <div className="hero-art" aria-hidden="true">
+      <div className="hero-art-ring hero-art-ring-one" />
+      <div className="hero-art-ring hero-art-ring-two" />
+      <svg viewBox="0 0 320 320" role="presentation" focusable="false">
+        <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="14">
+          <circle cx="82" cy="224" r="36" />
+          <circle cx="150" cy="242" r="36" />
+          <path d="M108 202L248 72" />
+          <path d="M142 215L244 116" />
+          <path d="M119 205L255 247" />
+          <path d="M150 215L258 174" />
+          <circle cx="132" cy="211" r="9" fill="currentColor" stroke="none" />
+        </g>
+      </svg>
+      <span>{"Detalle · oficio · precisión"}</span>
+    </div>
+  )
+}
+
+function ServiceCard({ service, phone, index }: { service: AnyContent; phone: string; index: number }) {
+  return (
+    <article className="service-card">
+      <div className="service-index">{String(index + 1).padStart(2, "0")}</div>
+      <h3>{service.title}</h3>
+      <p>{service.description}</p>
+      <div className="service-meta">
+        <span>{service.duration}</span>
+        <strong>{service.price}</strong>
       </div>
-    </header>
-  );
+      <a href={whatsappUrl(phone, service.message)} target="_blank" rel="noopener noreferrer" data-cta={`service-${index + 1}`}>
+        Consultar este servicio <span aria-hidden="true">↗</span>
+      </a>
+    </article>
+  )
 }
 
-// Hero Section
-function HeroSection({ content }: SectionProps) {
-  const hero = content?.hero || {};
-  const site = content?.site || {};
+function Placeholder({ title, text, action, href }: { title: string; text: string; action?: string; href?: string }) {
   return (
-    <section style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', padding: '5rem 2rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-      <div style={{ maxWidth: '64rem', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-        {hero.subheadline && (
-          <p style={{ color: '#e94560', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>
-            {hero.subheadline}
-          </p>
-        )}
-        <h1 style={{ color: 'white', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, fontFamily: 'Georgia, serif', marginBottom: '1.5rem', lineHeight: 1.1 }}>
-          {hero.headline || 'Estudio Medieval'}
-        </h1>
-        <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.125rem', maxWidth: '42rem', margin: '0 auto 2rem', lineHeight: 1.7 }}>
-          {hero.description || site.tagline || 'Tatuajes y body piercing en San Lorenzo'}
-        </p>
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href={hero.ctaPrimaryHref || `https://wa.me/${(site.whatsapp || '').replace(/[^0-9]/g, '')}`}
-            style={{ background: '#e94560', color: 'white', padding: '0.875rem 2rem', borderRadius: '0.5rem', textDecoration: 'none', fontWeight: 600 }}>
-            {hero.ctaPrimaryText || 'Reservar Cita →'}
-          </a>
-          {hero.secondaryCtaHref && (
-            <a href={hero.secondaryCtaHref}
-              style={{ background: 'rgba(255,255,255,0.1)', color: 'white', padding: '0.875rem 2rem', borderRadius: '0.5rem', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>
-              {hero.secondaryCtaText || 'Ver Galería'}
-            </a>
-          )}
-        </div>
-        {hero.stats && (
-          <div style={{ marginTop: '3rem', display: 'flex', gap: '3rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {hero.stats.map((stat: any, i: number) => (
-              <div key={i} style={{ textAlign: 'center' }}>
-                <div style={{ color: '#e94560', fontSize: '2rem', fontWeight: 700 }}>{stat.value}</div>
-                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.875rem' }}>{stat.label}</div>
+    <div className="honest-placeholder">
+      <div className="placeholder-lines" aria-hidden="true"><span /><span /><span /></div>
+      <p className="eyebrow">Contenido real, no inventado</p>
+      <h3>{title}</h3>
+      <p>{text}</p>
+      {action && href && <a className="text-link" href={href} target="_blank" rel="noopener noreferrer">{action} <span aria-hidden="true">↗</span></a>}
+    </div>
+  )
+}
+
+function MetricCard({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="metric-card">
+      <strong>{value}</strong>
+      <span>{label}</span>
+    </div>
+  )
+}
+
+function TrustItem({ title, description }: { title: string; description: string }) {
+  return (
+    <article className="trust-card">
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </article>
+  )
+}
+
+function ScheduleRow({ day, open, close, status }: { day: string; open: string | null; close: string | null; status: string }) {
+  return (
+    <li className={`schedule-row ${status}`}>
+      <span className="schedule-day">{day}</span>
+      <span className="schedule-hours">
+        {open && close ? `${open} – ${close}` : "Cerrado"}
+      </span>
+      <span className={`schedule-status status-${status}`}>
+        <span aria-hidden="true">●</span> {status === "open" ? "Abierto" : status === "soon" ? "Próximo" : "Cerrado"}
+      </span>
+    </li>
+  )
+}
+
+export function SectionsRenderer({ content }: { content: AnyContent }) {
+  const phone = content.site.whatsapp
+  const bookingUrl = whatsappUrl(phone, content.contact.whatsappMessage)
+  const lines = String(content.hero.headline).split("\n")
+  const heroHeadlineLines = lines.length > 1 ? lines : [lines[0]?.slice(0, Math.ceil(lines[0]?.length / 2)).trim(), lines[0]?.slice(Math.ceil(lines[0]?.length / 2)).trim()]
+
+  return (
+    <>
+      <Header navigation={content.navigation} />
+      <main>
+        <section id="inicio" className="hero-section">
+          <div className="site-container hero-grid">
+            <div className="hero-copy">
+              <div className="hero-meta">
+                <p className="eyebrow">{content.hero.eyebrow}</p>
+                <span className="hero-badge" aria-label="Estado de la barbería">
+                  <span aria-hidden="true" /> {content.hero.badge}
+                </span>
               </div>
+              <h1 className="hero-headline">
+                {heroHeadlineLines.map((line: string, i: number) => (
+                  <span key={i} className="hero-headline-line">{line}</span>
+                ))}
+              </h1>
+              <p className="hero-description">{content.hero.description}</p>
+              <div className="hero-actions">
+                <a className="button button-primary" href={content.hero.ctaPrimaryHref} target="_blank" rel="noopener noreferrer" data-cta="hero-booking">
+                  {content.hero.ctaPrimaryText} <span aria-hidden="true">↗</span>
+                </a>
+                <a className="button button-secondary" href={content.hero.ctaSecondaryHref}>{content.hero.ctaSecondaryText}</a>
+              </div>
+              <ul className="trust-list" aria-label="Información rápida">
+                {content.hero.trustItems.map((item: string) => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}
+              </ul>
+            </div>
+            <ScissorsArt />
+          </div>
+        </section>
+
+        <section className="metrics-strip" aria-label="Indicadores operativos">
+          <div className="site-container metrics-grid">
+            {content.metrics.items.map((metric: AnyContent) => (
+              <MetricCard key={metric.label} value={metric.value} label={metric.label} />
             ))}
           </div>
-        )}
-      </div>
-    </section>
-  );
-}
+        </section>
 
-// Services Section
-function ServicesSection({ content }: SectionProps) {
-  const services = content?.services;
-  const items = services?.items || [];
-  return (
-    <section id="servicios" style={{ padding: '5rem 2rem', background: 'white' }}>
-      <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          {services?.title && (
-            <>
-              <p style={{ color: '#e94560', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>Servicios</p>
-              <h2 style={{ fontSize: '2.25rem', fontWeight: 700, fontFamily: 'Georgia, serif', color: '#1a1a2e' }}>{services.title}</h2>
-            </>
-          )}
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-          {items.map((service: any, i: number) => (
-            <div key={i} style={{ padding: '2rem', background: '#f8f9fa', borderRadius: '1rem', border: '1px solid #e5e7eb' }}>
-              {service.icon && <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{service.icon}</div>}
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.75rem', color: '#1a1a2e' }}>{service.title}</h3>
-              <p style={{ color: '#6b7280', fontSize: '0.9rem', lineHeight: 1.6 }}>{service.description}</p>
-              {service.price && <p style={{ marginTop: '1rem', color: '#e94560', fontWeight: 600 }}>Desde {service.price}</p>}
+        <section id="servicios" className="section section-paper">
+          <div className="site-container">
+            <SectionHeading eyebrow={content.services.eyebrow} title={content.services.title} intro={content.services.intro} />
+            <div className="service-grid">
+              {content.services.items.map((service: AnyContent, index: number) => (
+                <ServiceCard key={service.title} service={service} phone={phone} index={index} />
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+          </div>
+        </section>
 
-// Gallery Section
-function GallerySection({ content }: SectionProps) {
-  const gallery = content?.gallery;
-  const items = gallery?.items || [];
-  return (
-    <section id="galeria" style={{ padding: '5rem 2rem', background: '#f8f9fa' }}>
-      <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          {gallery?.title && (
-            <>
-              <p style={{ color: '#e94560', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>Galería</p>
-              <h2 style={{ fontSize: '2.25rem', fontWeight: 700, fontFamily: 'Georgia, serif', color: '#1a1a2e' }}>{gallery.title}</h2>
-            </>
-          )}
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
-          {items.slice(0, 8).map((img: any, i: number) => (
-            <div key={i} style={{ aspectRatio: '1', background: '#e5e7eb', borderRadius: '0.75rem', overflow: 'hidden', position: 'relative' }}>
-              <img src={img.url || img.src || `https://picsum.photos/400/400?random=${i}`}
-                alt={img.caption || img.alt || 'Cortes de cabello'}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              {img.caption && (
-                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem', background: 'linear-gradient(transparent, rgba(0,0,0,0.8))', color: 'white', fontSize: '0.875rem' }}>
-                  {img.caption}
-                </div>
-              )}
+        <section id="experiencia" className="section section-dark">
+          <div className="site-container">
+            <SectionHeading eyebrow={content.experience.eyebrow} title={content.experience.title} intro={content.experience.intro} light />
+            <div className="process-grid">
+              {content.experience.items.map((item: AnyContent) => (
+                <article key={item.number} className="process-card">
+                  <span>{item.number}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+          </div>
+        </section>
 
-// Testimonials Section
-function TestimonialsSection({ content }: SectionProps) {
-  const testimonials = content?.testimonials;
-  const items = testimonials?.items || [];
-  return (
-    <section style={{ padding: '5rem 2rem', background: 'white' }}>
-      <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          {testimonials?.title && (
-            <>
-              <p style={{ color: '#e94560', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>Reseñas</p>
-              <h2 style={{ fontSize: '2.25rem', fontWeight: 700, fontFamily: 'Georgia, serif', color: '#1a1a2e' }}>{testimonials.title}</h2>
-            </>
-          )}
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-          {items.slice(0, 6).map((t: any, i: number) => (
-            <div key={i} style={{ padding: '2rem', background: '#f8f9fa', borderRadius: '1rem' }}>
-              <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1rem' }}>
-                {[1,2,3,4,5].map(s => <span key={s} style={{ color: '#f59e0b' }}>★</span>)}
+        <section className="section section-paper">
+          <div className="site-container">
+            <SectionHeading eyebrow={content.trust.eyebrow} title={content.trust.title} />
+            <div className="trust-grid">
+              {content.trust.items.map((item: AnyContent) => (
+                <TrustItem key={item.title} title={item.title} description={item.description} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="trabajos" className="section section-paper">
+          <div className="site-container split-section">
+            <SectionHeading eyebrow={content.gallery.eyebrow} title={content.gallery.title} intro={content.gallery.intro} />
+            <Placeholder title="Próximamente: trabajos reales" text={content.gallery.placeholder} action={content.gallery.ctaText} href={content.gallery.ctaHref} />
+          </div>
+        </section>
+
+        <section id="equipo" className="section section-dark">
+          <div className="site-container split-section">
+            <SectionHeading eyebrow={content.team.eyebrow} title={content.team.title} intro={content.team.intro} light />
+            <Placeholder title="Perfiles del equipo" text={content.team.placeholder} action={content.team.ctaText} href={content.team.ctaHref} />
+          </div>
+        </section>
+
+        <section className="section section-paper">
+          <div className="site-container">
+            <SectionHeading eyebrow={content.testimonials.eyebrow} title={content.testimonials.title} intro={content.testimonials.intro} />
+            <Placeholder title="Pronto publicaremos voces verificadas" text={content.testimonials.placeholder} action={content.testimonials.ctaText} href={content.testimonials.ctaHref} />
+          </div>
+        </section>
+
+        <section id="horarios" className="section section-sand">
+          <div className="site-container schedule-grid">
+            <div>
+              <SectionHeading eyebrow={content.schedule.eyebrow} title={content.schedule.title} intro={content.schedule.intro} />
+              <p className="schedule-note">{content.schedule.note}</p>
+              <ul className="schedule-list" aria-label="Horarios semanales">
+                {content.schedule.weekly.map((row: AnyContent) => {
+                  const isOpen = !!row.open
+                  const status = !isOpen ? "closed" : "open"
+                  return <ScheduleRow key={row.day} day={row.day} open={row.open} close={row.close} status={status} />
+                })}
+              </ul>
+            </div>
+            <div className="schedule-side">
+              <div className="schedule-card">
+                <p className="eyebrow">Medios de pago</p>
+                <ul>
+                  {content.schedule.payments.map((payment: string) => <li key={payment}>{payment}</li>)}
+                </ul>
               </div>
-              <p style={{ color: '#2d2d2d', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                "{t.text || t.content || t.quote || ''}"
-              </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <div style={{ width: 40, height: 40, background: '#1a1a2e', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '1rem' }}>
-                  {(t.name || t.author || 'C').charAt(0)}
-                </div>
-                <div>
-                  <p style={{ fontWeight: 600, color: '#1a1a2e', margin: 0 }}>{t.name || t.author || 'Cliente'}</p>
-                  {t.rating && <p style={{ color: '#6b7280', fontSize: '0.8rem', margin: 0 }}>⭐ {t.rating}/5</p>}
-                </div>
+              <div className="schedule-card schedule-policy">
+                <p className="eyebrow">Política del local</p>
+                <ul>
+                  {content.schedule.policy.map((line: string) => <li key={line}>{line}</li>)}
+                </ul>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+          </div>
+        </section>
 
-// FAQ Section
-function FAQSection({ content }: SectionProps) {
-  const faq = content?.faq;
-  const items = faq?.items || [];
-  return (
-    <section style={{ padding: '5rem 2rem', background: '#f8f9fa' }}>
-      <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          {faq?.title && (
-            <>
-              <p style={{ color: '#e94560', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>FAQ</p>
-              <h2 style={{ fontSize: '2.25rem', fontWeight: 700, fontFamily: 'Georgia, serif', color: '#1a1a2e' }}>{faq.title}</h2>
-            </>
-          )}
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          {items.slice(0, 8).map((item: any, i: number) => (
-            <details key={i} style={{ background: 'white', borderRadius: '0.75rem', border: '1px solid #e5e7eb', overflow: 'hidden' }}>
-              <summary style={{ padding: '1.25rem', fontWeight: 600, color: '#1a1a2e', cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between' }}>
-                {item.question || item.q || item.title} <span style={{ color: '#e94560' }}>▾</span>
-              </summary>
-              <div style={{ padding: '0 1.25rem 1.25rem', color: '#6b7280', lineHeight: 1.6 }}>
-                {item.answer || item.a || item.description || ''}
+        <section id="ubicacion" className="section section-paper">
+          <div className="site-container location-grid">
+            <div>
+              <SectionHeading eyebrow={content.location.eyebrow} title={content.location.title} intro={content.location.description} />
+              <address>{content.location.address}</address>
+              <div className="location-actions">
+                <a className="button button-dark" href={content.location.mapHref} target="_blank" rel="noopener noreferrer">{content.location.mapCta} <span aria-hidden="true">↗</span></a>
+                <a className="text-link dark-link" href={bookingUrl} target="_blank" rel="noopener noreferrer">Pedir ubicación exacta</a>
               </div>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// Booking/CTA Section
-function CTASection({ content }: SectionProps) {
-  const contact = content?.contact || {};
-  const site = content?.site || {};
-  const whatsapp = (site.whatsapp || '').replace(/[^0-9]/g, '');
-  const msg = encodeURIComponent(contact.cta?.text || contact.whatsappMessage || 'Hola! Quiero reservar un turno en Estudio Medieval');
-  return (
-    <section id="reservar" style={{ padding: '5rem 2rem', background: 'linear-gradient(135deg, #1a1a2e 0%, #e94560 100%)', textAlign: 'center' }}>
-      <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
-        <h2 style={{ color: 'white', fontSize: '2.5rem', fontWeight: 700, fontFamily: 'Georgia, serif', marginBottom: '1rem' }}>
-          ¿Listo para tu nuevo look?
-        </h2>
-        <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.125rem', marginBottom: '2rem' }}>
-          {contact.subtitle || 'Reserva tu cita por WhatsApp. Te responderemos en minutos.'}
-        </p>
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href={`https://wa.me/${whatsapp}?text=${msg}`}
-            style={{ background: '#25D366', color: 'white', padding: '1rem 2.5rem', borderRadius: '0.75rem', textDecoration: 'none', fontWeight: 700, fontSize: '1.125rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            💬 {contact.cta?.label || 'Reservar por WhatsApp'}
-          </a>
-        </div>
-        <div style={{ marginTop: '2rem', color: 'rgba(255,255,255,0.6)', fontSize: '0.875rem' }}>
-          📍 {site.address || 'San Lorenzo, cerca de la Politécnica'}
-          {site.hours && ` · ${site.hours}`}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// Footer
-function Footer({ content }: SectionProps) {
-  const footer = content?.footer || {};
-  const site = content?.site || {};
-  return (
-    <footer style={{ background: '#1a1a2e', color: 'rgba(255,255,255,0.7)', padding: '3rem 2rem' }}>
-      <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
-          <div>
-            <h3 style={{ color: 'white', fontSize: '1.25rem', marginBottom: '1rem', fontFamily: 'Georgia, serif' }}>{site.name || 'Estudio Medieval'}</h3>
-            <p style={{ lineHeight: 1.6 }}>{footer.text || site.description || 'Tatuajes y body piercing.'}</p>
+            </div>
+            <div className="location-card" aria-label="Referencia de ubicación">
+              <div className="map-grid" aria-hidden="true" />
+              <span className="map-pin" aria-hidden="true" />
+              <div>
+                <strong>San Lorenzo</strong>
+                <p>Ubicación final a confirmar al reservar</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <h4 style={{ color: 'white', fontSize: '1rem', marginBottom: '1rem' }}>Servicios</h4>
-            <ul style={{ listStyle: 'none', padding: 0, lineHeight: 2 }}>
-              <li><a href="#servicios" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Cortes</a></li>
-              <li><a href="#servicios" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Barba</a></li>
-              <li><a href="#galeria" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Galería</a></li>
-              <li><a href="#reservar" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Reservar</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 style={{ color: 'white', fontSize: '1rem', marginBottom: '1rem' }}>Contacto</h4>
-            <ul style={{ listStyle: 'none', padding: 0, lineHeight: 2 }}>
-              {site.address && <li>📍 {site.address}</li>}
-              {site.phone && <li>📞 {site.phone}</li>}
-              {site.whatsapp && <li>💬 +{site.whatsapp}</li>}
-              {site.email && <li>✉ {site.email}</li>}
-              {site.hours && <li>🕐 {site.hours}</li>}
-            </ul>
-          </div>
-        </div>
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.875rem' }}>
-            © {new Date().getFullYear()} {site.name || 'Estudio Medieval'} · {site.city || 'San Lorenzo'}, {site.country || 'Paraguay'}<br />
-            <span style={{ color: '#e94560' }}>Hecho con ⚔️ por ParaguAI</span>
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-}
+        </section>
 
-// Main SectionsRenderer
-export function SectionsRenderer({ content, locale }: SectionProps) {
-  if (!content) {
-    return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#1a1a2e' }}>
-        <div style={{ color: 'white', textAlign: 'center' }}>
-          <h1 style={{ fontFamily: 'Georgia, serif', fontSize: '3rem', marginBottom: '1rem' }}>ESTUDIO MEDIEVAL</h1>
-          <p>Cargando contenido...</p>
-        </div>
-      </div>
-    );
-  }
-  return (
-    <main>
-      <Header content={content} />
-      <HeroSection content={content} />
-      <ServicesSection content={content} />
-      <GallerySection content={content} />
-      <TestimonialsSection content={content} />
-      <FAQSection content={content} />
-      <CTASection content={content} />
-      <Footer content={content} />
-    </main>
-  );
+        <section id="faq" className="section section-paper">
+          <div className="site-container faq-layout">
+            <SectionHeading eyebrow={content.faq.eyebrow} title={content.faq.title} intro="Respuestas honestas para evitar sorpresas antes del turno." />
+            <div className="faq-list">
+              {content.faq.items.map((item: AnyContent, index: number) => (
+                <details key={item.question} open={index === 0}>
+                  <summary aria-expanded="false">{item.question}<span aria-hidden="true">+</span></summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section final-cta">
+          <div className="site-container final-cta-inner">
+            <div>
+              <p className="eyebrow">Reserva directa</p>
+              <h2>{content.contact.title}</h2>
+              <p>{content.contact.subtitle}</p>
+            </div>
+            <a className="button button-whatsapp" href={bookingUrl} target="_blank" rel="noopener noreferrer" data-cta="final-booking">
+              {content.contact.ctaLabel} <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+      </main>
+      <a className="whatsapp-float" href={bookingUrl} target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp" title="Reservar por WhatsApp" data-cta="floating-whatsapp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-2.1-1-3.5-2.5-4.5-4.5-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5L8.7 6c-.2-.5-.4-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.2-.2-.3-.5-.4M12 21.8c-1.8 0-3.6-.5-5.1-1.4L1.2 22l1.5-5.5A10 10 0 1 1 12 21.8m0-18.2a8.2 8.2 0 0 0-7 12.5l.2.3-.9 3.3 3.4-.9.3.2A8.2 8.2 0 1 0 12 3.6" /></svg>
+      </a>
+      <Footer content={content as any} />
+    </>
+  )
 }
