@@ -4,33 +4,32 @@ import Link from "next/link"
 export default function Blog() {
   return (
     <>
-      <section style={{ background: "linear-gradient(135deg, #1B2A4A, #0F1A30)", color: "white", padding: "5rem 1.5rem", textAlign: "center" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <span style={{ color: "#C9A96E", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>Blog</span>
-          <h1 className="serif" style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, margin: "0.75rem 0 1rem" }}>
+      <section className="text-white py-20 px-6 text-center bg-[linear-gradient(135deg,#1B2A4A,#0F1A30)]">
+        <div className="max-w-[700px] mx-auto">
+          <span className="text-secondary text-[0.8125rem] font-semibold tracking-[0.08em] uppercase">Blog</span>
+          <h1 className="serif font-bold mt-3 mb-4 text-[clamp(1.75rem,4vw,2.5rem)]">
             {content.blog.title}
           </h1>
-          <p style={{ fontSize: "1.0625rem", opacity: 0.85 }}>{content.blog.subtitle}</p>
+          <p className="text-[1.0625rem] opacity-85">{content.blog.subtitle}</p>
         </div>
       </section>
 
-      <section style={{ padding: "5rem 1.5rem", backgroundColor: "white" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))", gap: "2rem" }}>
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-[900px] mx-auto">
+          <div className="grid gap-8 grid-cols-[repeat(auto-fill,minmax(350px,1fr))]">
             {content.blog.posts.map((post, i) => (
               <Link key={i} href={`/blog/${post.slug}`}
-                style={{ textDecoration: "none", backgroundColor: "#F8F6F2", borderRadius: "12px", padding: "1.75rem", border: "1px solid #E8E3DA", display: "block" }}
-                className="hover-lift">
-                <span style={{ display: "inline-block", backgroundColor: "rgba(201,169,110,0.15)", color: "#8B7355", padding: "0.2rem 0.6rem", borderRadius: "4px", fontSize: "0.6875rem", fontWeight: 600, marginBottom: "0.75rem" }}>
+                className="hover-lift no-underline bg-surface-alt rounded-xl p-7 border border-border block">
+                <span className="inline-block bg-secondary/15 text-muted-foreground py-[0.2rem] px-[0.6rem] rounded text-[0.6875rem] font-semibold mb-3">
                   {post.category}
                 </span>
-                <h2 style={{ fontWeight: 700, fontSize: "1.0625rem", color: "#1B2A4A", marginBottom: "0.5rem", lineHeight: 1.4 }}>
+                <h2 className="font-bold text-[1.0625rem] text-primary mb-2 leading-snug">
                   {post.title}
                 </h2>
-                <p style={{ fontSize: "0.8125rem", color: "#6B7280", lineHeight: 1.6, marginBottom: "0.75rem" }}>
+                <p className="text-[0.8125rem] text-text-muted leading-[1.6] mb-3">
                   {post.excerpt}
                 </p>
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", color: "#9CA3AF" }}>
+                <div className="flex justify-between text-xs text-gray-400">
                   <span>{post.date}</span>
                   <span>{post.readTime}</span>
                 </div>

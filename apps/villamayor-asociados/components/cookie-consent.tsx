@@ -15,19 +15,9 @@ export function CookieConsent() {
   if (!show) return null
 
   return (
-    <div style={{
-      position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 99999,
-      backgroundColor: "var(--surface, #1a1a2e)", color: "var(--text, white)",
-      padding: "12px 24px", display: "flex", alignItems: "center",
-      justifyContent: "space-between", gap: 16, flexWrap: "wrap",
-      fontSize: "0.875rem", boxShadow: "0 -4px 12px rgba(0,0,0,0.15)"
-    }}>
+    <div className="fixed bottom-0 left-0 right-0 z-[99999] bg-text text-white py-3 px-6 flex items-center justify-between gap-4 flex-wrap text-sm shadow-[0_-4px_12px_rgba(0,0,0,0.15)]">
       <span>Este sitio usa cookies para mejorar tu experiencia.</span>
-      <button onClick={accept} style={{
-        backgroundColor: "var(--primary, #2563eb)", color: "white",
-        border: "none", padding: "8px 20px", borderRadius: 8,
-        cursor: "pointer", fontWeight: 600, fontSize: "0.875rem"
-      }}>Aceptar</button>
+      <button onClick={accept} className="bg-blue-600 text-white border-none py-2 px-5 rounded-lg cursor-pointer font-semibold text-sm">Aceptar</button>
     </div>
   )
 }
