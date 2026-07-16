@@ -18,6 +18,5 @@
     "@types/react": "18.3.29",
     "@types/react-dom": "^18.3.0",
     "typescript": "5.8.2"
-  },
-  "buildId": "portas-barber-1780001925"
+  }
 }
