@@ -35,10 +35,12 @@ export default function GaleriaPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-8">
-        <div className="flex flex-wrap gap-2 justify-center">
+        <div className="flex flex-wrap gap-2 justify-center" role="tablist" aria-label="Filtrar por categoría">
           <button
             onClick={() => setTab("all")}
-            className={`tap px-4 py-2 font-[var(--font-display)] text-[0.72rem] uppercase tracking-[0.18em] border transition-all ${
+            role="tab"
+            aria-selected={tab === "all"}
+            className={`tap px-4 py-2 font-[var(--font-display)] text-[0.72rem] uppercase tracking-[0.18em] border transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-light)] ${
               tab === "all"
                 ? "border-[var(--color-primary-light)] bg-[var(--color-primary)] text-[var(--color-foreground)]"
                 : "border-[var(--color-border)] text-[var(--color-muted-foreground)] hover:border-[var(--color-primary-light)]"
@@ -50,7 +52,9 @@ export default function GaleriaPage() {
             <button
               key={cat}
               onClick={() => setTab(cat)}
-              className={`tap px-4 py-2 font-[var(--font-display)] text-[0.72rem] uppercase tracking-[0.18em] border transition-all ${
+              role="tab"
+              aria-selected={tab === cat}
+              className={`tap px-4 py-2 font-[var(--font-display)] text-[0.72rem] uppercase tracking-[0.18em] border transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-light)] ${
                 tab === cat
                   ? "border-[var(--color-primary-light)] bg-[var(--color-primary)] text-[var(--color-foreground)]"
                   : "border-[var(--color-border)] text-[var(--color-muted-foreground)] hover:border-[var(--color-primary-light)]"
@@ -62,12 +66,14 @@ export default function GaleriaPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12" aria-label="Galería de piezas">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 list-none p-0 m-0">
           {items.map((it: any, i: number) => (
-            <GalleryCard key={i} item={it} index={i} />
+            <li key={i}>
+              <GalleryCard item={it} index={i} />
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <DividerOrnament />
@@ -96,9 +102,13 @@ function GalleryCard({ item, index }: { item: any; index: number }) {
   const variant = index % 6;
 
   return (
-    <div className="rock-card overflow-hidden text-left group">
-      <div className="relative aspect-square w-full bg-gradient-to-br from-[var(--color-secondary-deep)] via-[var(--color-surface)] to-[var(--color-card)] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
+    <article className="rock-card overflow-hidden text-left group h-full">
+      <div
+        role="img"
+        aria-label={`${item.name} — ${item.category}`}
+        className="relative aspect-square w-full bg-gradient-to-br from-[var(--color-secondary-deep)] via-[var(--color-surface)] to-[var(--color-card)] flex items-center justify-center overflow-hidden"
+      >
+        <div aria-hidden="true" className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-4 right-4 text-[var(--color-primary-light)]">
             <CrossInverted size={28} />
           </div>
@@ -118,7 +128,7 @@ function GalleryCard({ item, index }: { item: any; index: number }) {
         <h3 className="text-[1rem] mb-1.5">{item.name}</h3>
         <p className="text-[var(--color-muted-foreground)] text-[0.85rem] leading-relaxed">{item.description}</p>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -126,7 +136,7 @@ function OrnamentVisual({ variant }: { variant: number }) {
   const v = variant;
   if (v === 0) {
     return (
-      <svg width="60%" height="60%" viewBox="0 0 100 100" fill="none">
+      <svg aria-hidden="true" width="60%" height="60%" viewBox="0 0 100 100" fill="none">
         {Array.from({ length: 5 }).map((_, i) => (
           <ellipse key={i} cx="50" cy={20 + i * 18} rx="20" ry="8" fill="none" stroke="#b08838" strokeWidth="2" />
         ))}
@@ -136,7 +146,7 @@ function OrnamentVisual({ variant }: { variant: number }) {
   }
   if (v === 1) {
     return (
-      <svg width="55%" height="55%" viewBox="0 0 24 24" fill="none">
+      <svg aria-hidden="true" width="55%" height="55%" viewBox="0 0 24 24" fill="none">
         <path d="M5 8 C5 4.5 8.5 2 12 2 C15.5 2 19 4.5 19 8 V14 L17 16 V20 H14 V18 H10 V20 H7 V16 L5 14 Z" fill="#8b1a31" />
         <circle cx="9" cy="9" r="2" fill="#0a0612" />
         <circle cx="15" cy="9" r="2" fill="#0a0612" />
@@ -146,7 +156,7 @@ function OrnamentVisual({ variant }: { variant: number }) {
   }
   if (v === 2) {
     return (
-      <svg width="50%" height="50%" viewBox="0 0 24 24" fill="#520b4e">
+      <svg aria-hidden="true" width="50%" height="50%" viewBox="0 0 24 24" fill="#520b4e">
         <path d="M9 2 H15 V8 H21 V14 H15 V20 H9 V14 H3 V8 H9 Z" />
         <circle cx="12" cy="11" r="2" fill="#b08838" />
       </svg>
@@ -154,7 +164,7 @@ function OrnamentVisual({ variant }: { variant: number }) {
   }
   if (v === 3) {
     return (
-      <svg width="65%" height="40%" viewBox="0 0 64 36" fill="#211b54">
+      <svg aria-hidden="true" width="65%" height="40%" viewBox="0 0 64 36" fill="#211b54">
         <path d="M32 6 L30 8 C18 4 6 8 2 16 C6 12 12 12 18 16 C16 12 22 10 28 14 L30 12 L32 14 L34 12 L36 14 C42 10 48 12 46 16 C52 12 58 12 62 16 C58 8 46 4 34 8 Z" />
         <circle cx="28" cy="9" r="0.8" fill="#c0392b" />
         <circle cx="36" cy="9" r="0.8" fill="#c0392b" />
@@ -163,14 +173,14 @@ function OrnamentVisual({ variant }: { variant: number }) {
   }
   if (v === 4) {
     return (
-      <svg width="50%" height="60%" viewBox="0 0 24 32" fill="none">
+      <svg aria-hidden="true" width="50%" height="60%" viewBox="0 0 24 32" fill="none">
         <path d="M12 2 C 8 8, 4 14, 4 20 A8 8 0 0 0 20 20 C 20 14, 16 8, 12 2 Z" fill="none" stroke="#b08838" strokeWidth="1.5" />
         <path d="M12 2 C 8 8, 4 14, 4 20 A8 8 0 0 0 20 20 C 20 14, 16 8, 12 2 Z" fill="rgba(139, 26, 49, 0.4)" />
       </svg>
     );
   }
   return (
-    <svg width="55%" height="55%" viewBox="0 0 100 100" fill="none">
+    <svg aria-hidden="true" width="55%" height="55%" viewBox="0 0 100 100" fill="none">
       <circle cx="50" cy="50" r="36" stroke="#b08838" strokeWidth="3" fill="none" />
       <circle cx="50" cy="50" r="14" fill="#63081d" />
       <circle cx="50" cy="50" r="6" fill="#b08838" />

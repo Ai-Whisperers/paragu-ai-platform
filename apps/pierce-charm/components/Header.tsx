@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 export function Header({ content }: { content: any }) {
   const nav = content.navigation || [];
+  const wa = content.contacto?.whatsapp || "";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -59,7 +60,8 @@ export function Header({ content }: { content: any }) {
               <Link
                 key={n.href}
                 href={n.href}
-                className={`relative no-underline font-[var(--font-display)] text-[0.78rem] uppercase tracking-[0.22em] py-2 transition-colors ${
+                aria-current={isActive ? "page" : undefined}
+                className={`relative no-underline font-[var(--font-display)] text-[0.78rem] uppercase tracking-[0.22em] py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-light)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background)] ${
                   isActive
                     ? "text-[var(--color-primary-light)]"
                     : "text-[var(--color-foreground)]/80 hover:text-[var(--color-foreground)]"
@@ -76,42 +78,54 @@ export function Header({ content }: { content: any }) {
 
         <div className="flex items-center gap-3">
           <Link
-            href="https://wa.me/595981324569"
+            href={`https://wa.me/${wa}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex tap border border-[var(--color-primary-light)] px-4 py-2 font-[var(--font-display)] text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-foreground)] hover:bg-[var(--color-primary)] hover:border-[var(--color-gold)] transition-all"
+            className="hidden md:inline-flex tap border border-[var(--color-primary-light)] px-4 py-2 font-[var(--font-display)] text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-foreground)] hover:bg-[var(--color-primary)] hover:border-[var(--color-gold)] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)]"
           >
             Reservar
           </Link>
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden tap w-10 h-10 flex flex-col items-center justify-center gap-1.5 border border-[var(--color-border)] text-[var(--color-foreground)]"
-            aria-label="Menú"
+            className="md:hidden tap w-10 h-10 flex flex-col items-center justify-center gap-1.5 border border-[var(--color-border)] text-[var(--color-foreground)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-light)]"
+            aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
           >
-            <span className={`block w-5 h-px bg-current transition-transform ${open ? "rotate-45 translate-y-3.5" : ""}`} />
-            <span className={`block w-5 h-px bg-current transition-opacity ${open ? "opacity-0" : ""}`} />
-            <span className={`block w-5 h-px bg-current transition-transform ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
+            <span aria-hidden="true" className={`block w-5 h-px bg-current transition-transform ${open ? "rotate-45 translate-y-3.5" : ""}`} />
+            <span aria-hidden="true" className={`block w-5 h-px bg-current transition-opacity ${open ? "opacity-0" : ""}`} />
+            <span aria-hidden="true" className={`block w-5 h-px bg-current transition-transform ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
           </button>
         </div>
       </div>
 
       <div
+        id="mobile-nav"
+        hidden={!open}
         className={`md:hidden overflow-hidden bg-[var(--color-background)]/98 backdrop-blur-md border-b border-[var(--color-border)] transition-[max-height] duration-300 ${
           open ? "max-h-96" : "max-h-0"
         }`}
       >
-        <nav className="flex flex-col p-5 gap-1">
-          {nav.map((n: any) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className="tap font-[var(--font-display)] text-[0.85rem] uppercase tracking-[0.22em] py-3 px-3 border-l-2 border-transparent hover:border-[var(--color-primary-light)] hover:bg-[var(--color-surface)]/30 transition-all"
-            >
-              {n.label}
-            </Link>
-          ))}
+        <nav aria-label="Navegación móvil" className="flex flex-col p-5 gap-1">
+          {nav.map((n: any) => {
+            const isActive = n.href === "/" ? pathname === "/" : pathname?.startsWith(n.href);
+            return (
+              <Link
+                key={n.href}
+                href={n.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`tap font-[var(--font-display)] text-[0.85rem] uppercase tracking-[0.22em] py-3 px-3 border-l-2 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-light)] ${
+                  isActive
+                    ? "border-[var(--color-primary-light)] text-[var(--color-primary-light)] bg-[var(--color-surface)]/40"
+                    : "border-transparent hover:border-[var(--color-primary-light)] hover:bg-[var(--color-surface)]/30"
+                }`}
+              >
+                {n.label}
+              </Link>
+            );
+          })}
           <Link
-            href="https://wa.me/595981324569"
+            href={`https://wa.me/${wa}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gothic tap mt-3 w-full justify-center"

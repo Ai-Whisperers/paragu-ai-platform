@@ -37,11 +37,53 @@ export const metadata: Metadata = {
     template: `%s | ${c.site?.title || "Pierce Charm"}`,
   },
   description: c.site?.description || c.metaDescription,
+  keywords: [
+    "piercing Asunción",
+    "piercing Paraguay",
+    "estudio de piercing",
+    "joyería alternativa",
+    "helix",
+    "septum",
+    "daith",
+    "conch",
+    "industrial",
+    "estilo alternativo",
+    "gótico",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: c.site?.title,
     description: c.site?.description,
+    url: c.site?.url,
+    siteName: c.site?.title,
     locale: "es_PY",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: c.site?.title || "Pierce Charm",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: c.site?.title,
+    description: c.site?.description,
+    images: ["/og.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   themeColor: "#63081d",
 };
@@ -74,25 +116,53 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HealthAndBeautyBusiness",
+              "@id": `${c.site?.url}/#business`,
               name: c.businessName,
+              alternateName: c.site?.title,
               description: c.metaDescription,
               url: c.site?.url,
               telephone: `+${c.contacto?.whatsapp || ""}`,
+              email: c.contacto?.email,
               priceRange: "Gs 80.000 - Gs 250.000",
+              currenciesAccepted: "PYG",
+              paymentAccepted: "Cash, Bank Transfer",
               address: {
                 "@type": "PostalAddress",
+                streetAddress: c.contacto?.address || "Asunción",
                 addressLocality: "Asunción",
+                addressRegion: "Central",
                 addressCountry: "PY",
               },
+              areaServed: {
+                "@type": "City",
+                name: "Asunción",
+              },
               openingHoursSpecification: (c.contacto?.schedule || [])
-                .filter((s: any) => s.hours !== "Cerrado")
+                .filter((s: any) => s.hours && s.hours !== "Cerrado" && /\d/.test(s.hours))
                 .map((s: any) => ({
                   "@type": "OpeningHoursSpecification",
                   dayOfWeek: s.day,
-                  opens: (s.hours || "").split(" - ")[0]?.trim() || "",
-                  closes: (s.hours || "").split(" - ")[1]?.trim() || "",
+                  opens: (s.hours || "").split(/\s*-\s*/)[0]?.trim() || "",
+                  closes: (s.hours || "").split(/\s*-\s*/)[1]?.trim() || "",
                 })),
               image: `${c.site?.url}/og.png`,
+              logo: `${c.site?.url}/og.png`,
+              sameAs: [
+                c.contacto?.instagram ? `https://instagram.com/${String(c.contacto.instagram).replace("@", "")}` : null,
+              ].filter(Boolean),
+              makesOffer: (c.piercings?.categories || []).flatMap((cat: any) =>
+                (cat.items || []).slice(0, 3).map((it: any) => ({
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: it.name,
+                    description: it.description,
+                    category: cat.label,
+                  },
+                  price: (it.price || "").replace(/[^\d]/g, "") || undefined,
+                  priceCurrency: "PYG",
+                }))
+              ),
             }),
           }}
         />
