@@ -1072,7 +1072,7 @@
             {
               "q": "¿Cuánto cuesta todo el proceso?",
               "a": "Depende del programa. Puede agendar una consulta gratuita para identificar sus necesidades y definir costos Todos los precios son cerrados en USD."
-            }, 
+            },
             {
               "q": "¿Qué NO está incluido?",
               "a": "Pasajes aéreos, alojamiento en Paraguay, costo de constitución de S.A. (USD 800-1.500), capital mínimo bancario (varía por banco), honorarios notariales para propiedades."
@@ -2808,7 +2808,7 @@
           "items": [
             {
               "title": "Alquiler de Departamentos y Casas",
-              "description": "Búsqueda y negociación de propiedades en Asunción y área metropolitana.",
+              "description": "Buscamos propiedades en el territorio paraguayo según tu presupuesto y preferencias.",
               "benefits": [
                 "Búsqueda según tu presupuesto y estilo de vida",
                 "Visitas coordinadas a 5-10 propiedades",
@@ -2963,7 +2963,7 @@
         "items": [
           {
             "title": "Alquiler de Apartamentos y Casas",
-            "description": "Búsqueda y negociación de propiedades en Asunción y área metropolitana.",
+            "description": "Buscamos propiedades en el territorio paraguayo según tu presupuesto y preferencias.",
             "image": "@src:office.meetingRoom",
             "benefits": [
               "Búsqueda según tu presupuesto y estilo de vida",
@@ -4091,7 +4091,7 @@
     "hero": {
       "eyebrow": "Para clientes holandeses",
       "headline": "¿Holandés pensando en Paraguay?",
-      "subheadline": "Sonia y Luana son holandesas. 7 años viviendo el proceso. Acompañamos holandeses en su mudanza con contexto fiscal, box 3 y emigratieheffing.",
+      "subheadline": "Sonia es paraguaya y está casada con un ciudadano neerlandés; Luana coordina cada caso. Acompañamos a holandeses en su mudanza con contexto fiscal, box 3 y emigratieheffing.",
       "ctaPrimaryText": "Agendar consulta en neerlandés",
       "ctaPrimaryHref": "/contacto",
       "backgroundImage": "@src:hero.localizedNl"

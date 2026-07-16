@@ -8,21 +8,22 @@
       "eyebrow": "MAAK KENNIS"
     },
     "seo": {
-      "title": "Over Nexa Paraguay — Sonia Weiss van der Pol, oprichtster",
-      "description": "Nexa Paraguay: opgericht door iemand die het verhuisproces persoonlijk heeft meegemaakt. Echte, gestructureerde ondersteuning voor Europese gezinnen die naar Paraguay verhuizen.",
+      "title": "Over Nexa Paraguay — Ervaring omgezet in expertise",
+      "description": "Nexa Paraguay begeleidt jouw verhuizing met geleefde ervaring: opgericht door iemand die het migratieproces met haar gezin zelf heeft doorlopen en het papierwerk van binnenuit kent.",
       "targetKeyword": "over Nexa Paraguay"
     },
     "hero": {
-      "headline": "Ervaring omgezet in dienst",
-      "subheadline": "Wij zijn Sonia en Luana Weiss van der Pol. Nederlandse vrouwen die al 7+ jaar in Paraguay wonen. We hebben Nexa opgericht nadat we elke stap van het migratieproces zelf hadden doorlopen.",
-      "eyebrow": "Over Nexa Paraguay",
-      "ctaText": "Boek een gratis consult",
+      "headline": "Ervaring omgezet in expertise",
+      "subheadline": "Nexa Paraguay is opgericht met één missie: het verhuisproces veranderen van een bureaucratische horde in een warm welkom.",
+      "eyebrow": "Ons verhaal",
+      "ctaText": "Gratis consult boeken",
       "ctaHref": "/contacto",
       "secondaryCtaText": "Bekijk ons proces",
-      "secondaryCtaHref": "/proceso"
+      "secondaryCtaHref": "/proceso",
+      "image": "@src:team.group"
     },
     "team": {
-      "title": "Ons team",
+      "title": "Sonia en Luana",
       "members": [
         {
           "id": "sonia",
@@ -33,16 +34,16 @@
             "de": "Sonia Weiss van der Pol"
           },
           "role": {
-            "es": "Oprichtster en Juridisch Gids",
+            "es": "Fundadora",
             "en": "Founder and Legal Guide",
-            "nl": "Oprichtster en Juridisch Gids",
+            "nl": "Oprichtster",
             "de": "Gründerin und Rechtliche Begleitung"
           },
           "image": "@img:team.sonia",
           "bio": {
-            "es": "Paraguayaanse, woonde 7 jaar in Nederland. Oprichtster van Nexa Paraguay en bedenker van de Nederlandse gemeenschap 'Proyecto Paraguay'.",
+            "es": "Sonia es paraguaya y está casada con un ciudadano neerlandés. Recorrió personalmente cada trámite de la mudanza internacional de su familia: residencia, documentación, empresa y banca. Fundó Nexa para que nadie tenga que aprender ese proceso solo.",
             "en": "Paraguayan, lived 7 years in the Netherlands. Founder of Nexa Paraguay and creator of the Dutch community 'Proyecto Paraguay'.",
-            "nl": "Paraguayaanse, woonde 7 jaar in Nederland. Oprichtster van Nexa Paraguay en bedenker van de Nederlandse gemeenschap 'Proyecto Paraguay'.",
+            "nl": "Sonia is Paraguayaanse en getrouwd met een Nederlandse staatsburger. Zij regelde zelf elk onderdeel van de internationale verhuizing van haar gezin: verblijf, documentatie, bedrijf en bankieren. Zij richtte Nexa op zodat niemand dat proces alleen hoeft te leren.",
             "de": "Paraguayerin, lebte 7 Jahre in den Niederlanden. Gründerin von Nexa Paraguay und Schöpferin der niederländischen Gemeinschaft 'Proyecto Paraguay'."
           }
         },
@@ -55,20 +56,27 @@
             "de": "Luana Weiss van der Pol"
           },
           "role": {
-            "es": "Operations Director",
+            "es": "Directora de Operaciones",
             "en": "Operations Director",
             "nl": "Operations Director",
             "de": "Operations Director"
           },
           "image": "@img:team.luana",
           "bio": {
-            "es": "Dochter van Sonia, geboren in Nederland. Spreekt Nederlands, Engels en Spaans. Coördineert de operationele kant van elke zaak.",
+            "es": "Luana coordina cada expediente de punta a punta. Desde el primer contacto hasta la conclusión del proceso, su trabajo es que tengas un solo interlocutor y un camino claro.",
             "en": "Daughter of Sonia, born in the Netherlands. Speaks Dutch, English, and Spanish. Coordinates the operational side of every case.",
-            "nl": "Dochter van Sonia, geboren in Nederland. Spreekt Nederlands, Engels en Spaans. Coördineert de operationele kant van elke zaak.",
+            "nl": "Luana coördineert elk dossier van begin tot eind. Van het eerste contact tot de afronding is haar werk dat jij één aanspreekpunt hebt en een duidelijk pad.",
             "de": "Sohnias Tochter, geboren in den Niederlanden. Spricht Niederländisch, Englisch und Spanisch. Koordiniert die operative Seite jedes Falls."
-          }
+          },
+          "credentials": [
+            "Operaties en klantenzorg",
+            "Coördinatie van migratiedossiers",
+            "Opvolging van rekeningen en formaliteiten"
+          ]
         }
-      ]
+      ],
+      "eyebrow": "Oprichters",
+      "subtitle": "Moeder en dochter. De ene richtte Nexa op na zelf de verhuizing te hebben meegemaakt; de andere coördineert elk dossier met duidelijkheid en persoonlijke opvolging."
     },
     "gallery": {
       "title": "Ons kantoor in Asunción",
@@ -87,66 +95,40 @@
       }
     },
     "story": {
-      "title": "Het verhaal van Sonia",
-      "eyebrow": "Waarom we bestaan",
+      "eyebrow": "Ons verhaal",
+      "title": "Ervaring omgezet in expertise",
+      "subtitle": "Wij weten precies hoe overweldigend het papierwerk kan voelen, omdat we het zelf hebben meegemaakt.",
+      "image": "@src:office.team-huddle",
       "paragraphs": [
-        "Sonia is Paraguayse. Ze woonde 7 jaar in Nederland, waar ze aanvankelijk werkte in de schoonmaaksector. Ze wist altijd dat ze zou terugkeren naar Paraguay — haar plan was om lang genoeg te blijven om ervaring op te doen en dan met structuur en duidelijkheid naar huis terug te keren.",
-        "Het moeilijkste aan de terugkeer was zichzelf cultureel heruitvinden. Het papierwerk was ingewikkeld, maar het moeilijkste was haar leven opnieuw opbouwen in een land dat tegelijkertijd van haar en vreemd was. Die ervaring is wat haar doet begrijpen wat Europese klanten doormaken die voor het eerst aankomen: ze hebben niet alleen een advocaat nodig, ze hebben iemand nodig die hetzelfde heeft meegemaakt.",
-        "Nexa Paraguay is precies dat: bijna-familiaire begeleiding voor Europese burgers die besluiten in Paraguay te wonen. Niet omdat Paraguay perfect is, maar omdat de kans reëel is, en iemand die het heeft meegemaakt de weg aanzienlijk verkort."
-      ],
-      "resultsEyebrow": "RESULTATEN",
-      "resultsTitle": "Echte resultaten, echte mensen",
-      "resultsParagraphs": [
-        "Tot nu toe heb ik 10 mensen geholpen — allemaal Nederlands — hun weg in Paraguay te vinden. Sommigen kwamen voor het verblijf, anderen voor het bedrijf, weer anderen voor de levensstijl. De gemene deler: ze wilden allemaal een pad, niet alleen een dienst.",
-        "Wat ze het meest waarderen is de bijna-familiaire ondersteuning. Mijn grootste trots is het helpen van gezinnen met kinderen om zich hier te vestigen op een manier die veilig, gestructureerd en begeleid voelt — niet alleen een transactie.",
-        "Het verblijfsproces duurt in normale gevallen 3 tot 4 maanden. Gedurende die tijd verdwijnen we niet: we coördineren, we reageren, we lossen op. Onze klanten voelen zich op geen enkel moment alleen in het proces."
-      ],
-      "highlights": [
-        {
-          "value": "14",
-          "suffix": " maanden",
-          "label": "Sonia's proces (2017)",
-          "note": "geen begeleiding, geen contacten"
-        },
-        {
-          "value": "USD 11.000",
-          "label": "Sonia betaalde",
-          "note": "aan 3 professionals die niet met elkaar spraken"
-        },
-        {
-          "value": "10",
-          "suffix": " weken",
-          "label": "Luana's proces",
-          "note": "met Sonia's ervaring"
-        },
-        {
-          "value": "6x",
-          "label": "Sneller",
-          "note": "zelfde proces, andere voorbereiding"
-        }
+        "Nexa Paraguay is opgericht met één missie: het verhuisproces veranderen van een bureaucratische horde in een warm welkom. Wij weten precies hoe overweldigend het papierwerk kan voelen, omdat we het zelf hebben meegemaakt.",
+        "Onze oprichtster is getrouwd met een Nederlandse staatsburger en doorliep zelf de complexiteit van een internationale verhuizing en alle documentatie. Die directe ervaring liet zien dat er behoefte is aan een dienst die niet alleen papieren verwerkt, maar mensen echt begeleidt bij het opbouwen van een goed leven in Paraguay.",
+        "Wij geloven dat jouw verhuizing meer moet zijn dan alleen “een vergunning krijgen” — het moet het begin zijn van jouw beste leven hier. Door onze kennis van het Paraguayaanse recht te combineren met een persoonlijke aanpak, helpen we je de rompslomp over te slaan en direct te genieten van alles wat dit mooie land te bieden heeft."
       ]
     },
     "whyNexa": {
-      "eyebrow": "WAAROM NEXA",
-      "title": "Waarom we niet zomaar een agentschap zijn",
-      "pillars": [
-        {
-          "icon": "Package",
-          "title": "We helpen met wat je nodig hebt",
-          "description": "Verblijf, bedrijf en bankrekening — geïntegreerd.",
-          "image": "@src:trust.certificate"
-        },
-        {
-          "icon": "Plane",
-          "title": "We begeleiden je in het proces",
-          "description": "Persoonlijke afspraken op één gecoördineerde dag.",
-          "image": "@src:trust.meeting"
-        },
+      "eyebrow": "Waarom Nexa",
+      "title": "Meer dan papieren: echte begeleiding",
+      "subtitle": "Wij zijn geen gestoría die alleen dossiers doorstuurt. Wij helpen je een leven op te bouwen in Paraguay.",
+      "items": [
         {
           "icon": "Heart",
-          "title": "Nauwe, doorlopende begeleiding",
-          "description": "Wij zijn beschikbaar wanneer u ons nodig heeft.",
-          "image": "@src:trust.team"
+          "title": "Geleefde ervaring, geen theorie",
+          "description": "Onze oprichtster doorliep zelf een internationale gezinsverhuizing. Wij begrijpen het proces omdat we het geleefd hebben."
+        },
+        {
+          "icon": "BadgeCheck",
+          "title": "Persoonlijke begeleiding",
+          "description": "Als je ons schrijft, antwoorden wij zelf. Jouw dossier wordt door een persoon behandeld, niet door een callcenter."
+        },
+        {
+          "icon": "Languages",
+          "title": "Communicatie in jouw taal",
+          "description": "ES, EN, NL, DE. Wij spreken met je in jouw taal, zonder tussenpersonen of automatische vertaling."
+        },
+        {
+          "icon": "FileCheck",
+          "title": "Juridische kennis met een menselijke aanpak",
+          "description": "Wij combineren kennis van het Paraguayaanse systeem met nabije begeleiding bij elke stap."
         }
       ]
     },
@@ -232,8 +214,8 @@
     },
     "specialist": {
       "name": "Sonia Weiss van der Pol",
-      "title": "Oprichtster en Juridisch Gids",
-      "bio": "Zwitserland, Nederland, Paraguay — drie landen, één visie. Geboren in Zwitserland, opgegroeid in Paraguay, gewoond in Nederland. Spreekt vier talen. Heeft Nexa Paraguay opgericht om Europese gezinnen de gestructureerde, menselijke ondersteuning te bieden die ze zelf had willen hebben tijdens haar eigen verhuizing.",
+      "title": "Oprichtster — Nexa Paraguay",
+      "bio": "Paraguayaanse, getrouwd met een Nederlandse staatsburger. Doorliep zelf de internationale verhuizing van haar gezin en richtte Nexa op om mensen te begeleiden naar een goed leven in Paraguay, niet alleen een vergunning.",
       "image": "@img:team.sonia",
       "credentials": [
         "Oprichtster & Directeur, Nexa Paraguay",
@@ -1381,7 +1363,7 @@
     "hero": {
       "eyebrow": "Verblijf, bedrijf en investering in Paraguay",
       "headline": "Jouw verhuizing naar Paraguay, met iemand die het deed",
-      "subheadline": "Verblijf, bankieren, onroerend goed en installatie. Persoonlijk beheerd door Sonia en Luana — Nederlandse vrouwen die al 7+ jaar in Paraguay wonen.",
+      "subheadline": "Verblijf, bankieren, onroerend goed en installatie. Persoonlijke begeleiding in het Paraguayaanse systeem en de bureaucratie.",
       "ctaText": "Gratis consult boeken",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Bekijk het proces",
@@ -3483,14 +3465,14 @@
       "image": "@src:team.group"
     },
     "team": {
-      "eyebrow": "Oprichtend team",
-      "title": "Sonia en Luana, zussen en partners",
-      "subtitle": "Nederlandse vrouwen in Paraguay. Nexa-oprichters. Meertalig. Multicultureel. 7+ jaar levend in het proces dat ze nu beheren.",
+      "eyebrow": "Oprichters",
+      "title": "Sonia en Luana",
+      "subtitle": "Moeder en dochter. De ene richtte Nexa op na zelf de verhuizing te hebben meegemaakt; de andere coördineert elk dossier met duidelijkheid en persoonlijke opvolging.",
       "members": [
         {
           "name": "Sonia Weiss van der Pol",
-          "role": "Oprichtster & Juridisch Gids",
-          "bio": "Sonia woonde 7 jaar in Nederland. Kwam aan zonder Nederlands te spreken, zonder contacten, zonder vangnet. Heeft haar eigen verblijfsvergunning, bedrijf en bankrekening geregeld. Nu doet ze hetzelfde voor elke Nexa-cliënt. Spreekt Spaans, Engels, Nederlands en Duits.",
+          "role": "Oprichtster",
+          "bio": "Sonia is Paraguayaanse en getrouwd met een Nederlandse staatsburger. Zij regelde zelf elk onderdeel van de internationale verhuizing van haar gezin: verblijf, documentatie, bedrijf en bankieren. Zij richtte Nexa op zodat niemand dat proces alleen hoeft te leren.",
           "languages": [
             "ES",
             "EN",
@@ -3510,16 +3492,16 @@
         {
           "name": "Luana Weiss van der Pol",
           "role": "Operations Director",
-          "bio": "Luana coördineert elk dossier van begin tot eind. Van de eerste e-mail tot de aflevering van de identiteitskaart. Haar taak is dat jij niets hoeft uit te zoeken: zij heeft het al uitgezocht, is gegaan, teruggekomen. Spreekt Spaans, Engels en Nederlands.",
+          "bio": "Luana coördineert elk dossier van begin tot eind. Van het eerste contact tot de afronding is haar werk dat jij één aanspreekpunt hebt en een duidelijk pad.",
           "languages": [
             "ES",
             "EN",
             "NL"
           ],
           "credentials": [
-            "Operations & Klantenzorg",
-            "Specialist bij Migraciones",
-            "Coördinator zakelijke rekeningen"
+            "Operaties en klantenzorg",
+            "Coördinatie van migratiedossiers",
+            "Opvolging van rekeningen en formaliteiten"
           ],
           "icon": "Heart",
           "memberImage": "@src:team.luana",
