@@ -5,13 +5,17 @@ import Footer from '@/components/Footer'
 import { CartProvider } from '@/components/CartContext'
 import { Analytics, TrackCtas } from "../components/analytics"
 
+// TODO(engineer): real phone needed — replace TODO_PHONE with actual number
+const TODO_PHONE = "TODO_PHONE"
+const telephone = TODO_PHONE
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
+  "@type": "Store",
   name: "Reina de Copas",
   url: "https://reina-de-copas.paragu-ai.com",
   image: "https://reina-de-copas.paragu-ai.com/og/og-image.png",
-  telephone: "+595****0000",
+  ...(telephone !== TODO_PHONE ? { telephone } : {}),
   address: {
     "@type": "PostalAddress",
     addressLocality: "Asunción",
@@ -23,6 +27,7 @@ const jsonLd = {
     latitude: -25.2637,
     longitude: -57.5759
   },
+  paymentAccepted: "Cash, Credit Card, Bank Transfer, Bancard, Pagopar",
   "sameAs": ["https://instagram.com/reinadecopas"]
 }
 
