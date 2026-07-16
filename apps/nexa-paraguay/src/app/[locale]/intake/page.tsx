@@ -3,6 +3,7 @@ import { IntakeWizard } from '@/components/IntakeWizard'
 import { LOCALES } from '@/lib/locales'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { buildAlternates } from '@/lib/seo'
 
 interface Props { params: Promise<{ locale: string }> }
 
@@ -27,10 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: titles[locale] || titles.en,
     description: descriptions[locale] || descriptions.en,
-    alternates: {
-      canonical: `https://nexa.paragu-ai.com/${locale}/intake`,
-      languages: Object.fromEntries(LOCALES.map(l => [l, `https://nexa.paragu-ai.com/${l}/intake`])),
-    },
+    alternates: buildAlternates('intake'),
   }
 }
 

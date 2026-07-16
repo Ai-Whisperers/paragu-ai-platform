@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import { LOCALES } from '@/lib/locales'
 import { ShareButtons } from '@/components/ShareButtons'
 import { generateArticleSchema, generateBreadcrumbSchema, generateOrganizationSchema } from '@/lib/schemas'
+import { SITE_URL } from '@/lib/seo'
 
 interface Props { params: Promise<{ locale: string; slug: string }> }
 
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: post.author ? [post.author] : undefined,
       images: post.image ? [{ url: post.image, width: 1200, height: 630 }] : undefined,
     },
-    alternates: { canonical: `https://nexa.paragu-ai.com/${locale}/blog/${slug}` },
+    alternates: { canonical: `${SITE_URL}/${locale}/blog/${slug}` },
   }
 }
 
@@ -58,7 +59,7 @@ async function BlogContent({ locale, slug }: { locale: string; slug: string }) {
   const data = await loadBlogPost(locale, slug)
   if (!data?.post) return <div className="text-center p-16 text-text-muted">Post not found</div>
   const { content, post } = data
-  const baseUrl = `https://nexa.paragu-ai.com/${locale}`
+  const baseUrl = `${SITE_URL}/${locale}`
   const postUrl = `${baseUrl}/blog/${post.slug}`
 
   return (

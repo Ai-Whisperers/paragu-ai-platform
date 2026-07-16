@@ -2,6 +2,7 @@ import { loadPageData } from '@/lib/page-data'
 import SectionsRenderer from '@/components/SectionsRenderer'
 import type { Metadata } from 'next'
 import { LOCALES } from '@/lib/locales'
+import { buildAlternates } from '@/lib/seo'
 
 interface Props { params: Promise<{ locale: string }> }
 
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const data = await loadPageData(locale, 'home')
   if (!data?.pageConfig) return {}
-  return { title: data.pageConfig.title || 'Nexa Paraguay', alternates: { languages: { es: '/es', en: '/en', nl: '/nl', de: '/de' } } }
+  return { title: data.pageConfig.title || 'Nexa Paraguay', alternates: buildAlternates('') }
 }
 
 export default async function Page({ params }: Props) {

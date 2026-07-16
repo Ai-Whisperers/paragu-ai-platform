@@ -8,13 +8,12 @@ import { CookieConsent } from '../components/ui/CookieConsent'
 import WhatsAppButton from '../../components/WhatsAppButton'
 import { LocalBusinessSchema } from '../components/seo/LocalBusinessSchema'
 import { OrganizationSchema } from '../components/seo/OrganizationSchema'
-import { resolveLocale } from '@ai-whisperers/i18n'
+import { SITE_URL, buildAlternates } from '@/lib/seo'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA4_ID || 'G-XE49GLEP34'
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://nexaparaguay.com'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Nexa Paraguay — Residency, Banking & Company for Europeans',
     template: '%s | Nexa Paraguay',
@@ -26,21 +25,13 @@ export const metadata: Metadata = {
     title: 'Nexa Paraguay — Residency, Banking & Company for Europeans',
     description:
       'Professional advisory for permanent residency, banking and company incorporation in Paraguay. Close guidance for European citizens.',
-    url: BASE_URL,
+    url: SITE_URL,
     siteName: 'Nexa Paraguay',
-    locale: 'en_US',
+    locale: 'es_PY',
     type: 'website',
     images: [{ url: '/images/og-default.svg', width: 1200, height: 630 }],
   },
-  alternates: {
-    canonical: BASE_URL,
-    languages: {
-      es: `${BASE_URL}/es`,
-      en: `${BASE_URL}/en`,
-      nl: `${BASE_URL}/nl`,
-      de: `${BASE_URL}/de`,
-    },
-  },
+  alternates: buildAlternates(''),
   robots: {
     index: true,
     follow: true,

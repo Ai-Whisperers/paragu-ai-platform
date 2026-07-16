@@ -3,6 +3,7 @@ import SectionsRenderer from '@/components/SectionsRenderer'
 import type { Metadata } from 'next'
 import { LOCALES } from '@/lib/locales'
 import { generateBreadcrumbSchema, generateFaqSchema, generateLocalBusinessSchema, generateOrganizationSchema, generateWebPageSchema } from '@/lib/schemas'
+import { SITE_URL, buildAlternates } from '@/lib/seo'
 
 interface Props { params: Promise<{ locale: string; slug: string }> }
 
@@ -29,10 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: data.pageConfig?.description || data.content?.description || '',
       images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
     },
-    alternates: {
-      canonical: `/${locale}/${slug}`,
-      languages: Object.fromEntries(LOCALES.map((l: string) => [l, `/${l}/${slug}`])),
-    },
+    alternates: buildAlternates(slug),
   }
 }
 
@@ -41,7 +39,7 @@ export default async function Page({ params }: Props) {
   const data = await loadPageData(locale, slug)
   if (!data) return <div className="text-center p-16 text-text-muted">Not found</div>
 
-  const baseUrl = `https://nexa.paragu-ai.com/${locale}`
+  const baseUrl = `${SITE_URL}/${locale}`
   const pageUrl = `${baseUrl}/${slug}`
   const pageName = data.pageConfig?.title || data.content?.siteName || slug
 

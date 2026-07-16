@@ -24,6 +24,7 @@
     "@ai-whisperers/i18n": "workspace:*",
     "@ai-whisperers/sections": "workspace:*",
     "@ai-whisperers/seo": "workspace:*",
+    "@ai-whisperers/site-seo": "workspace:*",
     "@ai-whisperers/theme": "workspace:*",
     "@ai-whisperers/ui": "workspace:*",
     "@ai-whisperers/ui-extras": "workspace:*",
