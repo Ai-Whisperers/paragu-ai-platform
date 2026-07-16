@@ -1,4 +1,4 @@
-# HidroBaby-Spa
+# HidroBaby Spa
 
 > **ParaguAI.com Lead · Fernando de la Mora, Paraguay**  
 > Distance from FP Universidad Politécnica: **~3.0 km** | Score: **135.1** / 150 (★★★★)
@@ -9,7 +9,7 @@
 
 | Field | Data |
 |-------|------|
-| **Name** | HidroBaby-Spa |
+| **Name** | HidroBaby Spa |
 | **Owner** | Fabio Castillo + Fatima Flecha |
 | **Category** | Baby Spa |
 | **Phone / WhatsApp** | [+wa.me/595993444222](https://wa.me/595993444222) |
@@ -30,7 +30,7 @@ Baby SPA — UNIQUE in Paraguay. 3 branches. 5.0★ PERFECTO rating, 377 reviews
 ## 📱 Contact
 
 - **WhatsApp:** [Send message](https://wa.me/595993444222)
-- **Google Maps:** Search "HidroBaby-Spa Fernando de la Mora Paraguay"
+- **Google Maps:** Search "HidroBaby Spa Fernando de la Mora Paraguay"
 
 ---
 
