@@ -254,7 +254,7 @@
             },
             {
               "title": "Cédula de Identidad Paraguaya",
-              "description": "Te acompañamos a sacar tu cédula. Salís con el documento, no con promesas.",
+              "description": "Te ayudamos a sacar tu cédula.",
               "benefits": [
                 "Acompañamiento a la oficina de Identificaciones",
                 "Verificación de documentación previa",
@@ -271,7 +271,7 @@
           "items": [
             {
               "title": "Apertura de Cuenta Bancaria",
-              "description": "Te abrimos la cuenta en bancos locales. Sin vueltas, sin respuestas en inglés.",
+              "description": "Te guiamos en la apertura de tu cuenta bancaria.",
               "benefits": [
                 "Selección del banco según tu perfil",
                 "Acompañamiento a la sucursal",
@@ -281,7 +281,7 @@
             },
             {
               "title": "Registro Tributario (RUC)",
-              "description": "Te inscribimos en la SET. Tu RUC personal o empresarial listo para operar.",
+              "description": "Te inscribimos en la SET (subsecretaria de estado de tributacion). Tu RUC personal o empresarial listo para operar.",
               "benefits": [
                 "Inscripción como persona física o S.A.",
                 "Configuración del régimen impositivo",
@@ -298,7 +298,7 @@
           "items": [
             {
               "title": "Alquiler de Departamentos y Casas",
-              "description": "Buscamos propiedades en Asunción y el área metropolitana según tu presupuesto.",
+              "description": "Buscamos propiedades en el territorio paraguayo según tu presupuesto y preferencias.",
               "benefits": [
                 "Búsqueda en zonas seguras y bien conectadas",
                 "Negociación con propietarios",
@@ -3006,7 +3006,7 @@
           },
           {
             "title": "Cédula de Identidad Paraguaya",
-            "description": "Obtención de tu documento nacional de identidad.",
+            "description": "Te ayudamos a sacar tu cédula.",
             "image": "@src:office.signing",
             "benefits": [
               "Tramitación ante el Departamento de Identificaciones",
@@ -3040,7 +3040,7 @@
         "items": [
           {
             "title": "Apertura de Cuenta Bancaria",
-            "description": "Cuenta personal y/o empresarial en bancos paraguayos top-tier.",
+            "description": "Te guiamos en la apertura de tu cuenta bancaria.",
             "image": "@src:office.reception",
             "benefits": [
               "Selección del banco según tu perfil (Itaú, Continental, GNB, etc.)",
@@ -3053,7 +3053,7 @@
           },
           {
             "title": "Registro Tributario (RUC)",
-            "description": "Inscripción en la SET como persona física o empresa.",
+            "description": "Te inscribimos en la SET (subsecretaria de estado de tributacion). Tu RUC personal o empresarial listo para operar.",
             "image": "@src:office.exterior",
             "benefits": [
               "Inscripción en el régimen correcto (persona física o IRP)",
