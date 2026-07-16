@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const SITE = 'https://goldenvisa.paragu-ai.com'
+const SITE = 'https://golden-visa-advisory.paragu-ai.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
