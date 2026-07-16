@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
 import { Analytics, TrackCtas } from "../components/analytics"
 
+const TODO_PHONE = "TODO_PHONE";
+const telephone = "+595986693259"; // SHINE Nails & Beauty — from content/es.json
+
 const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    name: "Shine Nails & Beauty",
+    name: "SHINE Nails & Beauty",
     url: "https://shine-nails.paragu-ai.com",
     image: "https://shine-nails.paragu-ai.com/og/og-image.png",
-    telephone: "+595****0000",
+    ...(telephone !== TODO_PHONE ? { telephone } : {}),
     address: {
       "@type": "PostalAddress",
       addressLocality: "San Lorenzo",
@@ -21,11 +24,11 @@ const jsonLd = {
     },
     "sameAs": ["https://instagram.com/shinenails.py"]
   }
-  
+
 export const metadata: Metadata = {
-  title: 'Estudio Medieval | Tatuajes & Body Piercing en San Lorenzo, Paraguay',
-  description: '8+ años de experiencia en tatuajes y body piercing. Ubicados en San Lorenzo, a 0.8km de la Facultad Politécnica.',
-  keywords: 'tatuajes Paraguay, body piercing San Lorenzo',
+  title: 'Shine Nails | Estudio de uñas en San Lorenzo, Paraguay',
+  description: 'Uñas acrílicas, gel y esmaltado semipermanente. Manicure y pedicure profesional en San Lorenzo.',
+  keywords: 'uñas San Lorenzo, manicure Paraguay, acrílicas gel, Shine Nails',
   robots: 'index, follow',
 
   alternates: { canonical: "https://shine-nails.paragu-ai.com", languages: { "es": "https://shine-nails.paragu-ai.com/" } },};

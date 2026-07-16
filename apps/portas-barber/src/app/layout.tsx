@@ -1,37 +1,40 @@
 import type { Metadata } from 'next';
 import { Analytics, TrackCtas } from "../components/analytics"
 
+const TODO_PHONE = "TODO_PHONE";
+const telephone = "+595994215627"; // Portas Barber — from content/es.json
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BarberShop",
-  name: "Portas Barber",
+  name: "Portas Barber Shop",
   url: "https://portas-barber.paragu-ai.com",
   image: "https://portas-barber.paragu-ai.com/og/og-image.png",
-  telephone: "+595****0000",
+  ...(telephone !== TODO_PHONE ? { telephone } : {}),
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Asunción",
+    addressLocality: "Fernando de la Mora",
     addressRegion: "Central",
     addressCountry: "PY"
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: -25.2637,
-    longitude: -57.5759
+    latitude: -25.3187,
+    longitude: -57.5410
   },
   "sameAs": ["https://instagram.com/portasbarber"]
 }
 
 export const metadata: Metadata = {
-  title: 'Estudio Medieval | Tatuajes & Body Piercing en San Lorenzo, Paraguay',
-  description: '8+ años de experiencia en tatuajes y body piercing. Ubicados en San Lorenzo, a 0.8km de la Facultad Politécnica.',
-  keywords: 'tatuajes Paraguay, body piercing San Lorenzo',
+  title: 'Portas Barber | Barbería tradicional en Fernando de la Mora',
+  description: 'Barbería clásica en Av. Santa Teresa, Fernando de la Mora. Experiencia premium en corte y afeitado.',
+  keywords: 'barbería Fernando de la Mora, Portas Barber, corte clásico Paraguay',
   robots: 'index, follow',
   openGraph: {
     type: "website",
     url: "https://portas-barber.paragu-ai.com",
-    title: "Portas Barber",
-    description: "Sitio oficial",
+    title: "Portas Barber Shop",
+    description: "Barbería clásica en Fernando de la Mora",
     images: [{ url: "https://portas-barber.paragu-ai.com/og/og-image.png", width: 1200, height: 630 }]
   },
   twitter: {

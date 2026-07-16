@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
 import { Analytics, TrackCtas } from "../components/analytics"
 
+// Sentinel used when a real phone number is not yet known. When telephone === TODO_PHONE
+// we omit tel: links and JSON-LD telephone entirely to avoid shipping placeholder digits.
+const TODO_PHONE = "TODO_PHONE";
+const telephone = "+595991444268"; // Nde Barba — from content/es.json
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BarberShop",
   name: "Nde Barba",
   url: "https://nde-barba.paragu-ai.com",
   image: "https://nde-barba.paragu-ai.com/og/og-image.png",
-  telephone: "+595****0000",
+  ...(telephone !== TODO_PHONE ? { telephone } : {}),
   address: {
     "@type": "PostalAddress",
     addressLocality: "Fernando de la Mora",
@@ -28,9 +33,9 @@ const jsonLd = {
 }
 
 export const metadata: Metadata = {
-  title: 'Estudio Medieval | Tatuajes & Body Piercing en San Lorenzo, Paraguay',
-  description: '8+ años de experiencia en tatuajes y body piercing. Ubicados en San Lorenzo, a 0.8km de la Facultad Politécnica.',
-  keywords: 'tatuajes Paraguay, body piercing San Lorenzo',
+  title: 'Nde Barba | Barbería en Fernando de la Mora, Paraguay',
+  description: 'Barbería y peluquería masculina en Fernando de la Mora. Cortes modernos y clásicos.',
+  keywords: 'barbería Fernando de la Mora, corte masculino Paraguay, Nde Barba',
   robots: 'index, follow',
 
   alternates: { canonical: "https://nde-barba.paragu-ai.com", languages: { "es": "https://nde-barba.paragu-ai.com/" } },};

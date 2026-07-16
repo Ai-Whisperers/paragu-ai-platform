@@ -1,31 +1,34 @@
 import type { Metadata } from 'next';
 import { Analytics, TrackCtas } from "../components/analytics"
 
+const TODO_PHONE = "TODO_PHONE";
+const telephone = "+59521678171"; // XXGym — from content/es.json
+
 const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HealthClub",
-    name: "XX Gym",
+    name: "XXGym",
     url: "https://xxgym.paragu-ai.com",
     image: "https://xxgym.paragu-ai.com/og/og-image.png",
-    telephone: "+595****0000",
+    ...(telephone !== TODO_PHONE ? { telephone } : {}),
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Asunción",
+      addressLocality: "Fernando de la Mora",
       addressRegion: "Central",
       addressCountry: "PY"
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -25.2637,
-      longitude: -57.5759
+      latitude: -25.3187,
+      longitude: -57.5410
     },
     "sameAs": ["https://instagram.com/xxgym.py"]
   }
-  
+
 export const metadata: Metadata = {
-  title: 'Estudio Medieval | Tatuajes & Body Piercing en San Lorenzo, Paraguay',
-  description: '8+ años de experiencia en tatuajes y body piercing. Ubicados en San Lorenzo, a 0.8km de la Facultad Politécnica.',
-  keywords: 'tatuajes Paraguay, body piercing San Lorenzo',
+  title: 'XXGym | Gimnasio y entrenamiento personal Fernando de la Mora',
+  description: 'Gimnasio de musculación y fitness en Fernando de la Mora zona norte. Equipamiento completo y clases dirigidas.',
+  keywords: 'gimnasio Fernando de la Mora, musculación Paraguay, XXGym, fitness',
   robots: 'index, follow',
 
   alternates: { canonical: "https://xxgym.paragu-ai.com", languages: { "es": "https://xxgym.paragu-ai.com/" } },};

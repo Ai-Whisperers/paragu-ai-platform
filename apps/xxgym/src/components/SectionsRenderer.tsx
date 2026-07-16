@@ -17,7 +17,7 @@ function Header({ content }: SectionProps) {
           <div style={{ width: 40, height: 40, background: '#e94560', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <span style={{ color: 'white', fontSize: '1.25rem' }}>⚔</span>
           </div>
-          <span style={{ color: 'white', fontFamily: 'Georgia, serif', fontSize: '1.25rem', fontWeight: 700 }}>{nav?.businessName || 'Estudio Medieval'}</span>
+          <span style={{ color: 'white', fontFamily: 'Georgia, serif', fontSize: '1.25rem', fontWeight: 700 }}>{nav?.businessName || 'XXGym'}</span>
         </div>
         <nav style={{ display: 'flex', gap: '1.5rem' }}>
           {(nav?.items || []).map((link: any, i: number) => (
@@ -50,7 +50,7 @@ function HeroSection({ content }: SectionProps) {
           </p>
         )}
         <h1 style={{ color: 'white', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, fontFamily: 'Georgia, serif', marginBottom: '1.5rem', lineHeight: 1.1 }}>
-          {hero.headline || 'Estudio Medieval'}
+          {hero.headline || 'XXGym'}
         </h1>
         <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.125rem', maxWidth: '42rem', margin: '0 auto 2rem', lineHeight: 1.7 }}>
           {hero.description || site.tagline || 'Tatuajes y body piercing en San Lorenzo'}
@@ -224,7 +224,7 @@ function CTASection({ content }: SectionProps) {
   const contact = content?.contact || {};
   const site = content?.site || {};
   const whatsapp = (site.whatsapp || '').replace(/[^0-9]/g, '');
-  const msg = encodeURIComponent(contact.cta?.text || contact.whatsappMessage || 'Hola! Quiero reservar un turno en Estudio Medieval');
+  const msg = encodeURIComponent(contact.cta?.text || contact.whatsappMessage || 'Hola! Quiero reservar un turno en XXGym');
   return (
     <section id="reservar" style={{ padding: '5rem 2rem', background: 'linear-gradient(135deg, #1a1a2e 0%, #e94560 100%)', textAlign: 'center' }}>
       <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
@@ -258,7 +258,7 @@ function Footer({ content }: SectionProps) {
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
           <div>
-            <h3 style={{ color: 'white', fontSize: '1.25rem', marginBottom: '1rem', fontFamily: 'Georgia, serif' }}>{site.name || 'Estudio Medieval'}</h3>
+            <h3 style={{ color: 'white', fontSize: '1.25rem', marginBottom: '1rem', fontFamily: 'Georgia, serif' }}>{site.name || 'XXGym'}</h3>
             <p style={{ lineHeight: 1.6 }}>{footer.text || site.description || 'Tatuajes y body piercing.'}</p>
           </div>
           <div>
@@ -283,7 +283,7 @@ function Footer({ content }: SectionProps) {
         </div>
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', textAlign: 'center' }}>
           <p style={{ fontSize: '0.875rem' }}>
-            © {new Date().getFullYear()} {site.name || 'Estudio Medieval'} · {site.city || 'San Lorenzo'}, {site.country || 'Paraguay'}<br />
+            © {new Date().getFullYear()} {site.name || 'XXGym'} · {site.city || 'San Lorenzo'}, {site.country || 'Paraguay'}<br />
             <span style={{ color: '#e94560' }}>Hecho con ⚔️ por ParaguAI</span>
           </p>
         </div>

@@ -98,7 +98,7 @@ export function Footer({ footer, site }: FooterProps) {
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/50">
-            {footer?.copyright || '© 2024 Estudio Medieval S.R.L. Todos los derechos reservados.'}
+            {footer?.copyright || `© ${new Date().getFullYear()} Nde Barba. Todos los derechos reservados.`}
           </p>
           <p className="text-xs text-white/30">Hecho con ❤️ por ParaguAI — Ai-Whisperers</p>
         </div>

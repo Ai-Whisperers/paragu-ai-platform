@@ -1,31 +1,34 @@
 import type { Metadata } from 'next';
 import { Analytics, TrackCtas } from "../../components/analytics"
 
+const TODO_PHONE = "TODO_PHONE";
+const telephone = "+595981575176"; // Scott Tatuajes — from content/es.json
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "TattooParlor",
   name: "Scott Tatuajes",
   url: "https://scott-tatuajes.paragu-ai.com",
   image: "https://scott-tatuajes.paragu-ai.com/og/og-image.png",
-  telephone: "+595****0000",
+  ...(telephone !== TODO_PHONE ? { telephone } : {}),
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Asunción",
+    addressLocality: "Fernando de la Mora",
     addressRegion: "Central",
     addressCountry: "PY"
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: -25.2637,
-    longitude: -57.5759
+    latitude: -25.3187,
+    longitude: -57.5410
   },
   "sameAs": ["https://instagram.com/scotttatuajes"]
 }
 
 export const metadata: Metadata = {
-  title: 'Scott Tatuajes | Tatuajes & Body Piercing en Fernando de la Mora',
+  title: 'Scott Tatuajes | Estudio de tatuajes en Fernando de la Mora',
   description: 'Scott Tatuajes. Tattoo Studio en Fernando de la Mora, Paraguay. Atención profesional y personalizada.',
-  keywords: 'tatuajes Paraguay, body piercing San Lorenzo',
+  keywords: 'tatuajes Fernando de la Mora, tattoo Paraguay, Scott Tatuajes',
   robots: 'index, follow',
   openGraph: {
     type: "website",

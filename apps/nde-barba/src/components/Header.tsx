@@ -21,7 +21,7 @@ export function Header({ navigation }: { navigation?: { items?: NavItem[]; busin
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const items = navigation?.items?.length ? navigation.items : DEFAULT_NAV;
-  const businessName = navigation?.businessName || 'Estudio Medieval';
+  const businessName = navigation?.businessName || 'Nde Barba';
   const ctaText = navigation?.ctaText || 'Reservar turno';
   const ctaHref = navigation?.ctaHref || 'https://wa.me/595961482854?text=Hola!%20Quiero%20reservar%20un%20turno';
 
