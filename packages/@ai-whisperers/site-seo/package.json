@@ -1,0 +1,34 @@
+{
+  "name": "@ai-whisperers/site-seo",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./alternates": {
+      "import": "./dist/alternates.js",
+      "types": "./dist/alternates.d.ts"
+    },
+    "./metadata": {
+      "import": "./dist/metadata.js",
+      "types": "./dist/metadata.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  }
+}
