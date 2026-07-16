@@ -42,15 +42,14 @@ function getHomepageMetadata(source: SectionContent): Metadata {
 }
 
 async function loadContent(locale: string = 'es') {
+  const contentPath = path.join(process.cwd(), 'content', `${locale}.json`);
   try {
-    const contentPath = path.join(process.cwd(), 'content', `${locale}.json`);
     const contentRaw = await fs.readFile(contentPath, 'utf-8');
     const source = JSON.parse(contentRaw) as SectionContent;
     const metadata = getHomepageMetadata(source);
     return { source, metadata };
   } catch (e) {
-    console.error('Failed to load content:', e);
-    return null;
+    throw new Error(`Failed to load content at ${contentPath}: ${e instanceof Error ? e.message : String(e)}`);
   }
 }
 

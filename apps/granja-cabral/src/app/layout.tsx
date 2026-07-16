@@ -10,7 +10,12 @@ import { Analytics, TrackCtas } from "../../components/analytics"
 function getSeo() {
   const p = path.join(process.cwd(), 'content', 'es.json')
   if (!existsSync(p)) return null
-  try { return JSON.parse(readFileSync(p, 'utf-8')) } catch { return null }
+  try {
+    return JSON.parse(readFileSync(p, 'utf-8'))
+  } catch (e) {
+    console.warn(`getSeo: failed to parse ${p}, falling back to hardcoded defaults:`, e instanceof Error ? e.message : String(e))
+    return null
+  }
 }
 
 const seo = getSeo()
