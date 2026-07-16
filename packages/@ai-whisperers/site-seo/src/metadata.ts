@@ -99,6 +99,7 @@ export function buildMetadata(
 }
 
 export function resolveSiteUrl(envVarName: string, fallback: string): string {
-  const fromEnv = typeof process !== "undefined" ? process.env?.[envVarName] : undefined
+  const g = globalThis as { process?: { env?: Record<string, string | undefined> } }
+  const fromEnv = g.process?.env?.[envVarName]
   return fromEnv || fallback
 }
