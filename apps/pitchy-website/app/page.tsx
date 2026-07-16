@@ -1,6 +1,6 @@
-"use client"
 import Link from "next/link"
 import content from "@/content/es.json"
+import { HeroBackgroundImage, ProductThumb } from "@/components/home-images.client"
 
 const c = content as Record<string, any>
 const h = c.home || {}
@@ -15,8 +15,7 @@ export default function Home() {
       <section className="py-20 px-4 text-center relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #0F62FE 0%, #00A3E0 100%)" }}>
         <div className="absolute inset-0 opacity-10">
-          <img src="/images/hero.jpg" alt="Vidrio Blindex instalado en edificio" className="w-full h-full object-cover"
-            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+          <HeroBackgroundImage src="/images/hero.jpg" alt="Vidrio Blindex instalado en edificio" />
         </div>
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">{h.hero?.headline}</h1>
@@ -83,12 +82,7 @@ export default function Home() {
             {productos.slice(0, 4).map((p: any) => (
               <a key={p.id} href={`/productos#${p.id}`} className="block rounded-xl border border-gray-200 bg-white overflow-hidden hover:shadow-md transition-shadow no-underline">
                 <div className="aspect-video bg-gray-100 overflow-hidden">
-                  <img
-                    src={p.image || `/images/products/${p.id}.jpg`}
-                    alt={p.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none' }}
-                  />
+                  <ProductThumb src={p.image || `/images/products/${p.id}.jpg`} alt={p.name} />
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold text-lg text-[#0F62FE] mb-2">{p.name}</h3>
