@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://www.ai-whisperers.org/sitemap.xml',
-    host: 'https://www.ai-whisperers.org',
+    sitemap: 'https://ai-whisperers.org/sitemap.xml',
+    host: 'https://ai-whisperers.org',
   }
 }

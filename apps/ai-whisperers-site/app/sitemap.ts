@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const SITE = 'https://www.ai-whisperers.org'
+const SITE = 'https://ai-whisperers.org'
 const LOCALES = ['en', 'es', 'nl', 'pt']
 const PAGES = ['', '/services', '/portfolio', '/process', '/open-source', '/pricing', '/faq', '/changelog', '/about', '/contact', '/sales-sheet', '/what-we-dont-do']
 

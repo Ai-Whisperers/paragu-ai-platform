@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-int
 const jbmono = JetBrains_Mono({ subsets: ["latin"], display: "swap", variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.ai-whisperers.org"),
+  metadataBase: new URL("https://ai-whisperers.org"),
   title: {
     default: "AI Whisperers — We build AI systems that actually work.",
     template: "%s · AI Whisperers",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   authors: [{ name: "AI Whisperers" }],
   openGraph: {
     type: "website",
-    url: "https://www.ai-whisperers.org",
+    url: "https://ai-whisperers.org",
     siteName: "AI Whisperers",
     title: "AI Whisperers — We build AI systems that actually work.",
     description: "A 2-person engineering studio in Paraguay shipping production AI. 30+ public repos. 42 client sites live.",
