@@ -16,12 +16,10 @@
   },
   "dependencies": {
     "@ai-whisperers/admin": "workspace:*",
-    "@ai-whisperers/analytics": "workspace:*",
     "@ai-whisperers/api-helpers": "workspace:*",
     "@ai-whisperers/auth": "workspace:*",
     "@ai-whisperers/client-kit": "workspace:*",
     "@ai-whisperers/content": "workspace:*",
-    "@ai-whisperers/hooks": "workspace:*",
     "@ai-whisperers/seo": "workspace:*",
     "@ai-whisperers/theme": "workspace:*",
     "@ai-whisperers/ui": "workspace:*",

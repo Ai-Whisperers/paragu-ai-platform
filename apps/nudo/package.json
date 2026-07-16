@@ -12,7 +12,6 @@
     "@ai-whisperers/admin": "workspace:*",
     "@ai-whisperers/auth": "workspace:*",
     "@ai-whisperers/commerce": "workspace:*",
-    "@ai-whisperers/i18n": "workspace:*",
     "@ai-whisperers/seo": "workspace:*",
     "@ai-whisperers/theme": "workspace:*",
     "@ai-whisperers/ui": "workspace:*",
