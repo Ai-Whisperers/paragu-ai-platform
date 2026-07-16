@@ -3,7 +3,7 @@ import { existsSync, readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
 import { LOCALES } from '../lib/locales'
 
-const BASE = process.env.NEXT_PUBLIC_APP_URL || 'https://nexaparaguay.com.py'
+const BASE = process.env.NEXT_PUBLIC_APP_URL || 'https://nexaparaguay.com'
 
 /**
  * Read the features flag from site.json to determine if blog is enabled.

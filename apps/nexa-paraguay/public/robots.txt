@@ -2,8 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap — Next.js serves this at /sitemap.xml
-Sitemap: https://nexaparaguay.com.py/sitemap.xml
-Sitemap: https://nexa.paragu-ai.com/sitemap.xml
+Sitemap: https://nexaparaguay.com/sitemap.xml
 
 # Crawl delay for polite bots
 Crawl-delay: 1

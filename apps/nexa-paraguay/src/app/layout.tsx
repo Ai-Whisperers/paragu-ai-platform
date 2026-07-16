@@ -11,7 +11,7 @@ import { OrganizationSchema } from '../components/seo/OrganizationSchema'
 import { resolveLocale } from '@ai-whisperers/i18n'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA4_ID || 'G-XE49GLEP34'
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://nexaparaguay.com.py'
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://nexaparaguay.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
