@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mantraspa.paragu-ai.com"),
+  metadataBase: new URL("https://mantra-spa.paragu-ai.com"),
   title: {
     default: "Mantra Spa | Masajes y Tratamientos en Concepción",
     template: "%s | Mantra Spa",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mantra Spa | Masajes y Tratamientos en Concepción",
     description: "Masajes relajantes, descontracturantes, tratamientos faciales y corporales en Concepción.",
-    url: "https://mantraspa.paragu-ai.com",
+    url: "https://mantra-spa.paragu-ai.com",
     siteName: "Mantra Spa",
     locale: "es_PY",
     type: "website",
@@ -58,8 +58,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "LocalBusiness",
     name: "Mantra Spa",
     description: "Masajes relajantes, tratamientos corporales y experiencias de bienestar únicas",
-    url: "https://mantraspa.paragu-ai.com",
-    image: "https://mantraspa.paragu-ai.com/images/og-default.jpg",
+    url: "https://mantra-spa.paragu-ai.com",
+    image: "https://mantra-spa.paragu-ai.com/images/og-default.jpg",
     address: { "@type": "PostalAddress", addressLocality: "Concepción", addressCountry: "PY" },
     geo: { "@type": "GeoCoordinates", latitude: -23.4064, longitude: -57.4344 },
     "sameAs": [
