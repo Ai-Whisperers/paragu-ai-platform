@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@ai-whisperers/admin": "workspace:*",
-    "@ai-whisperers/analytics": "workspace:*",
     "@ai-whisperers/api-helpers": "workspace:*",
     "@ai-whisperers/auth": "workspace:*",
     "@ai-whisperers/catalog": "workspace:*",
@@ -24,8 +23,6 @@
     "@ai-whisperers/client-kit": "workspace:*",
     "@ai-whisperers/commerce": "workspace:*",
     "@ai-whisperers/content": "workspace:*",
-    "@ai-whisperers/hooks": "workspace:*",
-    "@ai-whisperers/loyalty": "workspace:*",
     "@ai-whisperers/payments": "workspace:*",
     "@ai-whisperers/product": "workspace:*",
     "@ai-whisperers/sections": "workspace:*",
