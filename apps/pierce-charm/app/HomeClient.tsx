@@ -30,9 +30,6 @@ const finalCta = h.finalCta || {};
 export default function HomeInner() {
   return (
     <div className="relative">
-      {bannerTicker?.enabled && bannerTicker?.messages?.length ? (
-        <BannerTicker messages={bannerTicker.messages} intervalSec={bannerTicker.rotation_seconds || 5} />
-      ) : null}
       <section className="relative pt-28 md:pt-32 pb-12 md:pb-20 overflow-hidden smoke-bg">
         <div className="hidden lg:block chain-side chain-side-left">
           <ChainVertical className="w-full h-full text-[var(--color-primary-light)]" />
@@ -42,13 +39,12 @@ export default function HomeInner() {
         </div>
 
         <Bat size={36} className="bat-flock text-[var(--color-primary-light)]" style={{ top: "12%", left: "8%" }} />
-                                
+        <Bat size={28} className="bat-flock text-[var(--color-primary-light)] hidden md:block" style={{ top: "22%", right: "6%", animationDelay: "1.2s" }} />
+        <Bat size={24} className="bat-flock text-[var(--color-primary-light)] hidden md:block" style={{ top: "58%", left: "4%", animationDelay: "2.4s" }} />
+        <Bat size={30} className="bat-flock text-[var(--color-primary-light)] hidden md:block" style={{ top: "70%", right: "8%", animationDelay: "0.6s" }} />
+
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
           <div className="text-center lg:text-left">
-            <p className="script text-[var(--color-gold)] text-[1.4rem] md:text-[1.6rem] mb-2 leading-none">
-              {h.hero?.eyebrow?.split("·")[0]?.trim()}
-            </p>
-            <p className="eyebrow mb-4">Estudio de piercings · Asunción</p>
             <h1 className="text-balance mb-5 text-[var(--color-foreground)]">
               <span className="block text-[0.78rem] font-[var(--font-display)] uppercase tracking-[0.3em] text-[var(--color-primary-light)] mb-2">Estudio de Piercings · Asunción</span>
               <span className="block">Pierce Charm Py</span>
@@ -65,7 +61,7 @@ export default function HomeInner() {
               ))}
             </div>
             <p className="font-[var(--font-script)] text-[var(--color-primary-light)] text-[1.2rem] mt-4 text-center lg:text-left italic">
-              ↓ explorá el catálogo abajo
+              Te interesa? Lee mas abajo &lt;3!
             </p>
           </div>
 
@@ -73,7 +69,7 @@ export default function HomeInner() {
             <Candle size={70} className="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block opacity-80" />
             <Candle size={70} className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block opacity-80" />
 
-            <div className="relative p-6 md:p-8 border border-[var(--color-border)] bg-gradient-to-b from-[var(--color-surface)] to-[var(--color-card)] shadow-2xl">
+            <div className="relative p-6 md:p-8 bg-gradient-to-b from-[var(--color-surface)] to-[var(--color-card)] shadow-2xl">
               <div className="absolute top-2 left-2 right-2 h-px bg-gradient-to-r from-transparent via-[var(--color-primary-light)] to-transparent" />
               <div className="absolute bottom-2 left-2 right-2 h-px bg-gradient-to-r from-transparent via-[var(--color-accent-light)] to-transparent" />
 
@@ -95,6 +91,10 @@ export default function HomeInner() {
 
         <DividerOrnament className="mt-10" />
       </section>
+
+      {bannerTicker?.enabled && bannerTicker?.messages?.length ? (
+        <BannerTicker messages={bannerTicker.messages} intervalSec={bannerTicker.rotation_seconds || 5} />
+      ) : null}
 
       <section className="py-16 md:py-20 px-4 md:px-6 max-w-4xl mx-auto relative blood-wash">
         <Skull size={20} className="absolute top-6 left-4 text-[var(--color-primary-light)]/40 hidden md:block" />
