@@ -206,6 +206,20 @@
         ],
         "tier": "Web & SaaS",
         "url": "https://github.com/Ai-Whisperers/Vete"
+      },
+      {
+        "title": "Nexa Paraguay",
+        "subtitle": "Servicios de reubicación multilingües (4 locales)",
+        "desc": "Sitio cliente multilingüe insignia. Acaba de pasar por un barrido completo P0-P3: se eliminó pricing deprecado, se borraron testimonios fabricados, se corrigieron fugas de i18n en 3 de 4 locales. 4-locales, 2/2 réplicas, engine multi-tenant. Ver NEXA_DECISIONS.md para el rastro completo de la auditoría.",
+        "stack": [
+          "Next.js 16",
+          "React 19",
+          "Tailwind 4",
+          "Supabase",
+          "Standalone"
+        ],
+        "tier": "Web & SaaS",
+        "url": "https://nexa.paragu-ai.com"
       }
     ]
   },
@@ -268,6 +282,20 @@
         "url": "https://github.com/Ai-Whisperers/infrastructure",
         "license": "—",
         "stars": "0"
+      },
+      {
+        "name": "marketing-strategy",
+        "desc": "Análisis de ICP, pricing, posicionamiento, playbook de marketing",
+        "url": "https://github.com/Ai-Whisperers/marketing-strategy",
+        "license": "—",
+        "live": null
+      },
+      {
+        "name": "company",
+        "desc": "La única fuente de verdad de AI Whisperers (este sitio)",
+        "url": "https://github.com/Ai-Whisperers/company",
+        "license": "MIT",
+        "live": "ai-whisperers.org"
       }
     ]
   },
@@ -385,6 +413,11 @@
         "service": "Hosting (shared VPS)",
         "rate": "$20/month",
         "notes": "Includes API tokens + maintenance + uptime."
+      },
+      {
+        "service": "30-Day AI Kickstart (flagship)",
+        "rate": "$5-15K fijo",
+        "notes": "1 semana de auditoría, 2 semanas de PoC, 1 semana de entrenamiento + handoff."
       }
     ]
   },
@@ -432,6 +465,18 @@
           "href": "/open-source"
         },
         {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        {
+          "label": "FAQ",
+          "href": "/faq"
+        },
+        {
+          "label": "Changelog",
+          "href": "/changelog"
+        },
+        {
           "label": "Contact",
           "href": "/contact"
         }
@@ -442,8 +487,8 @@
           "href": "/sales-sheet"
         },
         {
-          "label": "Pricing",
-          "href": "/pricing"
+          "label": "Competitor analysis (20)",
+          "href": "https://github.com/Ai-Whisperers/company/blob/main/Company/competitors/README.md"
         },
         {
           "label": "Case Studies (in repo)",

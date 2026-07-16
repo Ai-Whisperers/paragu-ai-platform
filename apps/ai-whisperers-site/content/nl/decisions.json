@@ -5,6 +5,10 @@
     "title": "Wil je dieper graven?",
     "body": "Elke beslissing linkt naar het bronmateriaal: PR's, audits, GitHub commits, klantgesprekken. Openbaar bouwen betekent dat de bonnen ook openbaar zijn."
   },
+  "intro": {
+    "title": "Why this exists",
+    "body": "Most agencies show you the polished case study AFTER the work. We show you the messy middle — the trade-offs, the dead ends, the moments we got it wrong. Public decision logs are the highest-trust form of credibility for technical buyers. They're also a forcing function for better thinking: writing down 'why we picked X' makes you actually have to pick, and defend."
+  },
   "items": [
     {
       "id": "stack-nextjs-16-over-15",
@@ -13,10 +17,89 @@
       "decision": "Next.js 16.2.4 met Turbopack + App Router.",
       "reasoning": "Vereisten: 4-locale SSG met sub-millisecond TTFB, content-driven (niet CMS-driven), en Swarm-deployable. Next 16's async `params: Promise<{...}>` is de juiste afweging: het dwingt correct async handling af en ontgrendelt streaming SSR later.",
       "alternatives": {
-        "considered": ["Astro 5", "SvelteKit", "Remix", "Next.js 14 (Pages Router)", "Vite + React Router"]
+        "considered": [
+          "Astro 5",
+          "SvelteKit",
+          "Remix",
+          "Next.js 14 (Pages Router)",
+          "Vite + React Router"
+        ]
       },
       "what_went_wrong": "Eerste deploy had 4 pagina's met de oude sync `params: { lang: string }` vorm. Die 500'en in de prerender pass. Handmatige sweep over alle 22 apps in de monorepo was nodig.",
       "what_we_learned": "Een grep one-liner bespaarde uren: `grep -rE 'params\\s*:\\s*\\{\\s*[\\w]+\\s*:\\s*string' apps/*/app/`. Had dat vóór de eerste build moeten draaien."
+    },
+    {
+      "id": "docker-swarm-no-k8s",
+      "date": "2026-06-15",
+      "title": "Why Docker Swarm (and not Kubernetes) for the Paragu-ai fleet",
+      "decision": "All 42+ client sites run on a single VPS with Docker Swarm, Traefik v3.5, and CF orange-cloud proxy in front.",
+      "reasoning": "We have 1 engineer (me) running 42 client sites. K8s would mean a cluster, control plane upgrades, RBAC, ingress controllers, cert-manager, etcd backups — that's 3-5 days/month of yak-shaving per month. Swarm has the same declarative model with one binary, one `docker stack deploy`, zero cluster management. The downside is no auto-scaling, but we don't need it — the entire fleet peaks at ~30% CPU.",
+      "alternatives": {
+        "considered": [
+          "K3s",
+          "Nomad",
+          "Plain docker-compose",
+          "Vercel/Netlify per site",
+          "Cloudflare Pages per site"
+        ],
+        "rejected": "K3s still needs cluster maintenance. Nomad has a smaller community. docker-compose can't do zero-downtime deploys. Vercel/Netlify would mean 42 separate bills and 42 separate build pipelines. CF Pages requires CF Workers build system, less flexible."
+      },
+      "what_went_wrong": "First 12 sites I deployed had a static Traefik config in /opt/traefik/dynamic/ that took precedence over Swarm labels — caused 502s for 6 hours before I caught it. Now I have a rule: labels at .Spec.Labels (service-level), NEVER static dynamic files unless documenting why.",
+      "what_we_learned": "Write the failure mode into the deploy script itself. `paragu-ai-platform-maintenance` skill captures the exact deploy flow + the static-dynamic file trap. Future-me (or anyone else) can't repeat the mistake."
+    },
+    {
+      "id": "transparent-pricing",
+      "date": "2026-06-15",
+      "title": "Why we publish pricing publicly (when 95% of Paraguayan agencies don't)",
+      "decision": "All 28 services with reference prices, market low/high, and internal proof — on a public Google Sheet + on the company site.",
+      "reasoning": "When I started AI Whisperers, the #1 buyer objection was 'how much?'. The #1 buyer complaint after hiring us was 'I had no idea it would cost that'. Both come from the same root: hidden pricing. Publishing rates up-front filters out clients who can't afford us (good — wrong fit) and earns trust from clients who can (good — long-term ROI). The risk is competitors undercutting us. The counter-risk is looking like every other opaque agency in Paraguay.",
+      "alternatives": {
+        "considered": [
+          "Quote-only (industry default)",
+          "Tier-only (\"Starter/Pro/Enterprise\")",
+          "Hourly-only with discovery call"
+        ],
+        "rejected": "Quote-only means a 30-min call for every prospect, even the ones who can't afford us. Tier-only is the worst — it's hard to compare and lets us hide the actual rates. Hourly-only is technically transparent but psychologically worse: a $5K quote looks like 50 hours × $100, which is intimidating."
+      },
+      "what_went_wrong": "Initial pricing page had 'starting from' qualifiers everywhere, which is the same problem as no pricing. The current page shows: (1) the actual reference price, (2) market low/high for context, (3) what's included, (4) what changes the price up or down. Total transparency.",
+      "what_we_learned": "Price opacity is a defensive posture from agencies that compete on charm, not competence. If your work is good enough, publishing the price is a *selling point*, not a risk."
+    },
+    {
+      "id": "no-cms-content-as-code",
+      "date": "2026-06-15",
+      "title": "Why content lives in JSON files in the repo (and not in Sanity / Contentful / Strapi)",
+      "decision": "All site copy is in `content/{en,es,nl,pt}/site.json` + per-section JSON files. No CMS. Git is the source of truth.",
+      "reasoning": "For a 4-locale, 44-page site with 28 service items, the CMS overhead doesn't pay back. Git gives us: (1) versioned content, (2) PR review on copy changes, (3) Claude/Cursor can edit JSON in seconds, (4) no vendor lock-in, (5) no separate deploy pipeline. The downside is non-technical users can't edit — but we have 2 people, both technical, and the client doesn't need to edit copy (they sign off on it before deployment).",
+      "alternatives": {
+        "considered": [
+          "Sanity",
+          "Contentful",
+          "Strapi (self-hosted)",
+          "Decap CMS (git-backed)",
+          "Markdown files in repo"
+        ],
+        "rejected": "Sanity/Contentful cost $200+/mo and add a separate API to debug. Strapi is just more YAML config to maintain. Decap CMS is good but adds a runtime. Markdown would work but JSON is more structured for our use case (pricing tables, testimonials, etc.)."
+      },
+      "what_went_wrong": "First version had nested JSON 6 levels deep that was a nightmare to grep. The v2 schema flattens arrays and uses consistent keys. Now any copy edit is a 5-second PR.",
+      "what_we_learned": "For 2-person teams, the CMS is a layer that exists to solve problems you don't have. Add it when you have a content team that isn't engineering. Until then, JSON + Git is faster, free, and reviewable."
+    },
+    {
+      "id": "ai-whisperers-site-full-rebuild",
+      "date": "2026-06-15",
+      "title": "Why we rebuilt ai-whisperers.org from scratch (and didn't iterate on the Vercel build)",
+      "decision": "Built a fresh Next.js 16 + Turbopack app, deployed to our own VPS, killed the Vercel deployment. Same DNS, different backend.",
+      "reasoning": "The old Vercel build was the 'Machines for the math. Humans for the magic.' tagline — circa 2025. By 2026 we'd moved past the AI-training pitch into the AI-engineering pitch. The old tagline was hurting us in sales calls. Iterating on the Vercel build would have meant: editing React components, hitting Vercel's API to redeploy, dealing with the Vercel-only edge functions, etc. Starting fresh on our own VPS gave us: full control, no per-function billing, security headers, Traefik middlewares, content-driven rebuild. Took 4 days end-to-end.",
+      "alternatives": {
+        "considered": [
+          "Iterate on Vercel build",
+          "Astro on Vercel",
+          "Hugo static site"
+        ],
+        "rejected": "Vercel iteration kept the wrong architecture. Astro would have meant rewriting every interactive component. Hugo would have meant no SSG with per-locale content. Fresh Next on VPS won on all axes."
+      },
+      "what_went_wrong": "The DNS cutover (Squarespace NS flip) is still pending — the old Vercel build is still serving public traffic. We're ready, just waiting on a 5-min browser task. Until then, this whole audit-and-fix cycle is invisible to the public.",
+      "what_we_learned": "The build is the easy part. The DNS delegation is the friction. Next time, do the DNS migration FIRST, even before the build is ready."
     }
-  ]
+  ],
+  "__translation_note": "Nederlandse vertaling in voorbereiding. Sommige items tonen tijdelijk de Engelse versie."
 }

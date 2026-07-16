@@ -145,6 +145,15 @@ Ordered by (blast radius) × (ease):
 19. Fill 3 STUB packages (analytics, hooks, loyalty) or archive them.
 20. Migrate `villamayor-asociados` inline styles → Tailwind classes.
 21. Balance `ai-whisperers-site` locale content (EN 328 vs PT/NL 805).
+    **Resolved 2026-07-16.** Line-count "asymmetry" was a JSON formatting artifact:
+    EN was compact-formatted, ES/NL/PT pretty-printed — same top-level structure.
+    NL/PT `site.json` are placeholder-English carrying `__translation_note`
+    (translation coming soon, marked in-file). Real content gaps were in ES only
+    (missing 1 case study, 2 open-source items, 1 pricing rate, 3 footer links)
+    and in NL/PT `decisions.json` (only 1 item vs EN's 5, no intro). Fix: filled
+    ES gaps in `site.json`; grew NL/PT `decisions.json` to 5 items + intro +
+    cta, preserving existing native translations of item 1, with EN placeholder
+    for items 2-5 flagged by `__translation_note`. Build: 61/61 static pages OK.
 
 ---
 
