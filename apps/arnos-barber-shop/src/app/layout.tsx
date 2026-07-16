@@ -1,60 +1,79 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from "next"
+import "./globals.css"
 import { Analytics, TrackCtas } from "../../components/analytics"
+import { SchemaMarkup } from "../components/SchemaMarkup"
 
-const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BarberShop",
-    name: "Arno's Barber Shop",
-    url: "https://arnos.paragu-ai.com",
-    image: "https://arnos.paragu-ai.com/og/og-image.png",
-    telephone: "+595****0000",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Asunción",
-      addressRegion: "Central",
-      addressCountry: "PY"
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: -25.2637,
-      longitude: -57.5759
-    },
-    "sameAs": ["https://instagram.com/arnosbarbershop"]
-  }
-  
 export const metadata: Metadata = {
-  title: 'Arno\'s Barber Shop | Barbería en Fernando de la Mora',
-  description: 'Arno\'s Barber Shop. Barbershop en Fernando de la Mora, Paraguay. Atención profesional y personalizada.',
-  keywords: 'barbería Paraguay, cortes masculinos San Lorenzo',
-  robots: 'index, follow',
+  metadataBase: new URL("https://arnos.paragu-ai.com"),
+  title: "Arno's Barber Shop | Barbería en San Lorenzo",
+  description: "Arno's Barber Shop en San Lorenzo, Paraguay. Cortes, barba y perfilado con reserva directa por WhatsApp.",
+  applicationName: "Arno's Barber Shop",
+  keywords: [
+    "barbería San Lorenzo",
+    "barber shop San Lorenzo",
+    "corte de cabello San Lorenzo",
+    "barbería zona Jacarandá",
+    "barbería Paraguay",
+    "reserva por WhatsApp",
+    "fade San Lorenzo",
+    "barba y bigote",
+  ],
+  authors: [{ name: "ParaguAI · Ai-Whisperers" }],
+  alternates: {
+    canonical: "https://arnos.paragu-ai.com",
+    languages: { "es-PY": "https://arnos.paragu-ai.com" },
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_PY",
+    url: "https://arnos.paragu-ai.com",
+    siteName: "Arno's Barber Shop",
+    title: "Arno's Barber Shop | Barbería en San Lorenzo",
+    description: "Cortes, barba y perfilado con reserva directa por WhatsApp.",
+    images: [{ url: "/og/og-image.png", width: 1200, height: 630, alt: "Arno's Barber Shop — estilo y precisión" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arno's Barber Shop | Barbería en San Lorenzo",
+    description: "Cortes, barba y perfilado con reserva directa por WhatsApp.",
+    images: ["/og/og-image.png"],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
+  manifest: "/manifest.webmanifest",
+}
 
-  alternates: { canonical: "https://arnos.paragu-ai.com", languages: { "es": "https://arnos.paragu-ai.com/" } },};
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f4efe6" },
+    { media: "(prefers-color-scheme: dark)", color: "#0d0f0f" },
+  ],
+  colorScheme: "dark light",
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es-PY">
       <head>
-        <meta property="og:image" content="https://arnos-barber-shop.paragu-ai.com/og/og-image.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://arnos-barber-shop.paragu-ai.com" />
-        <meta property="og:site_name" content="Arno's Barber" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://arnos-barber-shop.paragu-ai.com/og/og-image.png" />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-    </head>
-      <body style={{ margin: 0, fontFamily: "'Inter', -apple-system, sans-serif", background: '#ffffff', color: '#1a1a2e' }}>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="apple-touch-icon" href="/icons/icon-180.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Arno's" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="canonical" href="https://arnos.paragu-ai.com" />
+        <SchemaMarkup />
+      </head>
+      <body>
         <Analytics />
         <TrackCtas />
-
         {children}
       </body>
     </html>
-  );
+  )
 }

@@ -1,17 +1,14 @@
-import type { MetadataRoute } from 'next'
-
-const SITE = 'https://arnos.paragu-ai.com'
-
-const ROUTES = [
-    { path: "/", changefreq: "weekly", priority: 1.0 }
-  ]
+import type { MetadataRoute } from "next"
+import { SITE_URL } from "../lib/site-schema"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
-  return ROUTES.map(r => ({
-    url: `${SITE}${r.path}`,
-    lastModified: now,
-    changeFrequency: r.changefreq as any,
-    priority: r.priority,
-  }))
+  return [
+    {
+      url: SITE_URL,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+      images: [`${SITE_URL}/og/og-image.png`],
+    },
+  ]
 }
