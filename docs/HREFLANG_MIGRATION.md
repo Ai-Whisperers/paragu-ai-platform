@@ -2,7 +2,14 @@
 
 Playbook for migrating remaining apps from ad-hoc `alternates` blocks to
 the shared `@ai-whisperers/site-seo` package. Reference implementation:
-`apps/dra-gabriela/lib/seo.ts`.
+`apps/nexa-paraguay/lib/seo.ts` (bilingual `[locale]` router with the
+shared adapter).
+
+> **Note (2026-07-16):** `apps/dra-gabriela` was un-migrated back to a
+> hand-rolled `lib/seo.ts` as part of the Ometz Dental rebrand — do not
+> use it as the reference impl. The rebrand's per-locale metadata and
+> `metadataBase` overrides diverged from the shared adapter's shape;
+> re-migration is deferred until the rebrand stabilises.
 
 ## When to migrate
 
@@ -17,12 +24,12 @@ Discovered via `[locale]` route segments and metadata alternates:
 
 | App                    | Status              | Locales     | Priority |
 | ---------------------- | ------------------- | ----------- | -------- |
-| `dra-gabriela`         | migrated            | en, es      | done     |
-| `nexa-paraguay`        | `[locale]` router   | en, es      | high     |
-| `ai-whisperers-site`   | alternates block    | en, es      | high     |
-| `bufete-mendez`        | alternates block    | en, es      | medium   |
+| `dra-gabriela`         | un-migrated (Ometz rebrand) | en, es      | deferred |
+| `nexa-paraguay`        | migrated (reference impl) | en, es      | done     |
+| `ai-whisperers-site`   | migrated            | en, es      | done     |
+| `bufete-mendez`        | migrated            | en, es      | done     |
 | `golden-visa-advisory` | alternates block    | en, es      | medium   |
-| `maskarada`            | alternates block    | en, es      | low      |
+| `maskarada`            | migrated            | en, es      | done     |
 
 Everything else in `apps/` is single-locale (Spanish only in most cases).
 Do not migrate single-locale apps — no hreflang benefit and the workspace
@@ -39,7 +46,7 @@ dep adds nothing.
    ```
 
 2. **Create or update** `apps/<name>/lib/seo.ts` (or the local equivalent) as
-   a thin adapter. See `apps/dra-gabriela/lib/seo.ts` for the full pattern.
+   a thin adapter. See `apps/nexa-paraguay/lib/seo.ts` for the full pattern.
    Key config:
    ```ts
    const SITE_CONFIG: SiteConfig = {
