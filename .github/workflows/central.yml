@@ -56,8 +56,6 @@ jobs:
               - 'apps/bichos-gym/**'
             apps/bufete-mendez:
               - 'apps/bufete-mendez/**'
-            apps/builder:
-              - 'apps/builder/**'
             apps/camilo-acosta:
               - 'apps/camilo-acosta/**'
             apps/cocodrilo-fitness:
@@ -151,7 +149,6 @@ jobs:
           [ "${{ steps.diff.outputs['apps/arnos-barber-shop'] }}"       = "true" ] && CHANGED="$CHANGED,arnos-barber-shop"
           [ "${{ steps.diff.outputs['apps/bichos-gym'] }}"               = "true" ] && CHANGED="$CHANGED,bichos-gym"
           [ "${{ steps.diff.outputs['apps/bufete-mendez'] }}"            = "true" ] && CHANGED="$CHANGED,bufete-mendez"
-          [ "${{ steps.diff.outputs['apps/builder'] }}"                  = "true" ] && CHANGED="$CHANGED,builder"
           [ "${{ steps.diff.outputs['apps/camilo-acosta'] }}"            = "true" ] && CHANGED="$CHANGED,camilo-acosta"
           [ "${{ steps.diff.outputs['apps/cocodrilo-fitness'] }}"        = "true" ] && CHANGED="$CHANGED,cocodrilo-fitness"
           [ "${{ steps.diff.outputs['apps/cronos-academy'] }}"           = "true" ] && CHANGED="$CHANGED,cronos-academy"
