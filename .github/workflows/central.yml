@@ -27,7 +27,6 @@ on:
 permissions:
   contents: read
   packages: write
-  pull-requests: read
 
 concurrency:
   group: central-${{ github.head_ref || github.ref }}
