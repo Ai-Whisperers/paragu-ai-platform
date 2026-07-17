@@ -5,8 +5,13 @@ import enUi from "@/content/en/ui.json"
 
 type AnyRecord = Record<string, unknown>
 
-const es = esSite as AnyRecord
-const en = enSite as AnyRecord
+// Cast to `any` for chained property access on nested fixture JSON —
+// full typing would require generating .d.ts from the JSON shape which
+// is not worth the churn for this fallback surface.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const es = esSite as any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const en = enSite as any
 
 export function getSiteName() {
   return es.site?.name || en.site?.name || "nuestro local"

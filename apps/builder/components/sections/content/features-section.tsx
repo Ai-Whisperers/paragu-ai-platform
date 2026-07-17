@@ -1,4 +1,5 @@
 import { Section } from '@/components/ui/section'
+import type { LucideIcon } from 'lucide-react'
 import { ArrowDownToLine, ArrowUpRight, Shield, Download, ExternalLink, CheckCircle, Star, Zap, Heart, Target, TrendingUp, Users, Clock, DollarSign, Award } from 'lucide-react'
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
@@ -41,7 +42,7 @@ const OPEN_LABEL: Record<string, string> = {
   es: 'Ver más',
 }
 
-const FEATURE_ICONS: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const FEATURE_ICONS: Record<string, LucideIcon> = {
   shield: Shield,
   download: Download,
   'external-link': ExternalLink,
