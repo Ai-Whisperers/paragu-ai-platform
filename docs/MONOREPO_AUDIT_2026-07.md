@@ -115,18 +115,31 @@ Ordered by (blast radius) × (ease):
 
 **P0 — this week (safety + brand):**
 1. Fix barbershop cluster metadata & placeholder phone (5 apps, ~30 min per app).
+   **Resolved** in the 2026-07-16 autonomous P0 batch (see §7).
 2. Remove silent fs error in `loadContent` fleet-wide — throw with context. Grep for
    `catch { return null }` under `apps/*/lib/content.ts` (or equivalent).
+   **Resolved** in the 2026-07-16 autonomous P0 batch (see §7).
 3. Replace placeholder phones: `luis-de-leon-concept`, `bufete-mendez`,
    `cocodrilo-fitness`/`mantra-spa` share — pick real numbers or explicit TODO markers.
+   **Resolved** in the 2026-07-16 autonomous P0 batch (see §7).
 4. Fix `reina-de-copas` JSON-LD `@type` (Store, not Restaurant).
+   **Resolved.** Verified at HEAD: `apps/reina-de-copas/app/layout.tsx:14`
+   emits `"@type": "Store"`.
 5. Fix `shine-nails/package.json` stray `buildId`.
+   **Resolved.** Verified at HEAD: no `buildId` key in
+   `apps/shine-nails/package.json`.
 
 **P1 — next week (package extraction):**
 6. Extract `@ai-whisperers/site-seo` from `dra-gabriela/lib/seo.ts`. Publish. Migrate the 4 leaders.
+   **Resolved** in the 2026-07-16 autonomous P1 batch (see §7). Package
+   lives at `packages/@ai-whisperers/site-seo`; leaders migrated as noted
+   under item #17.
 7. Extract `@ai-whisperers/site-content` (isPlaceholder + whatsappLink + phoneDisplay).
    Migrate leaders + barbershop cluster (barbershops need it most).
+   **Resolved** in the 2026-07-16 autonomous P1 batch (see §7).
 8. Extract `@ai-whisperers/dockerfiles` (canonical `node:20-slim` + pnpm@10). Migrate `reina-de-copas`.
+   **Resolved** in the 2026-07-16 autonomous P1 batch (see §7); package at
+   `packages/@ai-whisperers/dockerfiles`.
 9. ~~Deduplicate `@ai-whisperers/i18n` vs `@ai-whisperers/i18n-paraguay`~~ — moot; no
    `i18n-paraguay` package in workspace (see §1).
 
@@ -140,6 +153,9 @@ Ordered by (blast radius) × (ease):
     `apps/depiflash/app/page.tsx` are both server components (no top-level
     `"use client"`; imports start with `next/link` and `@/components/*`).
 12. Fix README titles: `arnos`, `cronos`, `hidrobaby`.
+    **Resolved** in commit `b585fd8d`. Verified at HEAD: all three READMEs
+    have the correct app-name titles (`Arno's Barber Shop`, `Cronos Academy`,
+    `HidroBaby Spa`).
 13. Fix `stroopwafel-huis` OG URL hyphenation.
     **Resolved 2026-07-17** (commit `0b23c3b6`).
 14. Pick canonical between `trentina-cerveza` and `trentina-site`; archive the other via
@@ -156,6 +172,18 @@ Ordered by (blast radius) × (ease):
     `apps/nudo/src/app/sitemap.ts` both exist at HEAD. `site-template` is a
     workspace fixture template not a deployable app — skip.
 17. Add hreflang to 39 apps.
+    **Resolved.** Scope was corrected in §7 P2 batch triage: only 6 apps
+    are bilingual (the other 40 are single-locale by design). Migration
+    status per `docs/HREFLANG_MIGRATION.md`:
+    - `nexa-paraguay` — migrated (reference impl).
+    - `ai-whisperers-site`, `bufete-mendez`, `maskarada` — migrated
+      (share `@ai-whisperers/site-seo` + adapter `lib/seo.ts`).
+    - `golden-visa-advisory` — exempt (client-side React Context locale
+      switcher, single URL; `buildAlternates` semantics would emit URLs
+      that don't exist). Fixed in-place with expanded `alternates.languages`
+      instead.
+    - `dra-gabriela` — deliberately un-migrated pending Ometz Dental
+      rebrand stabilisation; noted in migration playbook.
 18. Add `geo` to 13 LocalBusiness JSON-LDs.
     **Resolved (partial)** in commit `60f1751b` — 6 apps got GeoCoordinates
     added. Remaining apps use Asunción-centroid `(-25.2637, -57.5759)`
