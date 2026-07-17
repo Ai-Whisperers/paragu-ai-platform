@@ -84,6 +84,8 @@ jobs:
               - 'apps/hidrobaby-spa/**'
             apps/jota-ink-tattoo:
               - 'apps/jota-ink-tattoo/**'
+            apps/la-serafina-site:
+              - 'apps/la-serafina-site/**'
             apps/luis-de-leon-concept:
               - 'apps/luis-de-leon-concept/**'
             apps/magnolia-peluqueria:
@@ -116,6 +118,8 @@ jobs:
               - 'apps/scott-tatuajes/**'
             apps/shine-nails:
               - 'apps/shine-nails/**'
+            apps/somosgay-site:
+              - 'apps/somosgay-site/**'
             apps/stroopwafel-huis:
               - 'apps/stroopwafel-huis/**'
             apps/superspuma:
@@ -181,6 +185,8 @@ jobs:
           [ "${{ steps.diff.outputs['apps/superspuma'] }}"                = "true" ] && CHANGED="$CHANGED,superspuma"
           [ "${{ steps.diff.outputs['apps/trentina-cerveza'] }}"            = "true" ] && CHANGED="$CHANGED,trentina-cerveza"
           [ "${{ steps.diff.outputs['apps/trentina-site'] }}"              = "true" ] && CHANGED="$CHANGED,trentina-site"
+          [ "${{ steps.diff.outputs['apps/la-serafina-site'] }}"           = "true" ] && CHANGED="$CHANGED,la-serafina-site"
+          [ "${{ steps.diff.outputs['apps/somosgay-site'] }}"              = "true" ] && CHANGED="$CHANGED,somosgay-site"
           # Strip leading comma and convert to a JSON array
           CHANGED="${CHANGED#,}"
           if [ -z "$CHANGED" ]; then
