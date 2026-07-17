@@ -11,8 +11,7 @@ COPY --chown=nextjs:nodejs .next/standalone/apps/ai-whisperers-site ./apps/ai-wh
 COPY --chown=nextjs:nodejs .next/standalone/node_modules ./node_modules
 # Static chunks (JS, CSS) — CRITICAL for Next.js to load assets
 COPY --chown=nextjs:nodejs .next/static ./apps/ai-whisperers-site/.next/static
-# Public + content (read at runtime by server.js)
-COPY --chown=nextjs:nodejs public ./apps/ai-whisperers-site/public
+# Content (read at runtime by server.js). No public/ in this app.
 COPY --chown=nextjs:nodejs content ./apps/ai-whisperers-site/content
 USER nextjs
 EXPOSE 3000
