@@ -374,3 +374,4 @@ jobs:
             docker pull ${IMAGE} &&
             docker service update --image ${IMAGE} ${SVC} --with-registry-auth 2>&1
           "
+
