@@ -1,3 +1,3 @@
 // API routes moved to /api/ — middleware not needed for static deployment
-export function middleware() {}
+export function proxy() {}
 export const config = { matcher: ['/((?!api/).*)'] }

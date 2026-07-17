@@ -12,7 +12,7 @@ import type { NextRequest } from 'next/server';
 // }
 // export const config = { matcher: '/' };
 
-export function middleware(_request: NextRequest) {
+export function proxy(_request: NextRequest) {
   return NextResponse.next();
 }
 export const config = { matcher: '/' };

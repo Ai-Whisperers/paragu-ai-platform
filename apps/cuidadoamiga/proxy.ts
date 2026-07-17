@@ -21,7 +21,7 @@ function isRateLimited(ip: string): boolean {
   return false
 }
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const response = NextResponse.next({ request })
 
   // --- Locale routing: redirect bare paths to the user's preferred locale ---
