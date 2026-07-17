@@ -18,13 +18,17 @@ const seed = {
 }
 
 function loadJson(path: string, fallback: any) {
-  try { if (existsSync(path)) return JSON.parse(readFileSync(path, 'utf8')) } catch {}
+  try { if (existsSync(path)) return JSON.parse(readFileSync(path, 'utf8')) } catch (err) {
+    console.debug("[admin/clients] loadJson fallback — file unreadable or invalid JSON", { path, err })
+  }
   return fallback
 }
 
 function loadData() {
   if (!existsSync(DATA_DIR)) {
-    try { require('fs').mkdirSync(DATA_DIR, { recursive: true }) } catch {}
+    try { require('fs').mkdirSync(DATA_DIR, { recursive: true }) } catch (err) {
+      console.debug("[admin/clients] mkdir DATA_DIR failed — writeFileSync will surface the real error", err)
+    }
   }
   if (!existsSync(CLIENTS_FILE)) writeFileSync(CLIENTS_FILE, JSON.stringify(seed, null, 2))
   return JSON.parse(readFileSync(CLIENTS_FILE, 'utf8'))

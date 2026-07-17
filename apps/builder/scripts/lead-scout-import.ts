@@ -75,7 +75,9 @@ function parseDate(raw: string): string {
   try {
     const d = new Date(raw)
     if (!isNaN(d.getTime())) return d.toISOString()
-  } catch {}
+  } catch (err) {
+    console.debug("[lead-scout-import] parseDate fallback — invalid date input", { raw, err })
+  }
   return new Date().toISOString()
 }
 

@@ -77,7 +77,9 @@ export default async function AdminDashboard() {
         if (age > 48) inboxOverdueCount++
       }
     }
-  } catch {}
+  } catch (err) {
+    console.error("[admin/page] dashboard aggregation failed — showing zero counts", err)
+  }
 
   return (
     <main className="min-h-screen bg-gray-50">
