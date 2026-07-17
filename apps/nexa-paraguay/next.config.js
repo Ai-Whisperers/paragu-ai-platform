@@ -29,6 +29,7 @@ const nextConfig = {
       "@ai-whisperers/content": "../../packages/@ai-whisperers/content",
       "@ai-whisperers/product": "../../packages/@ai-whisperers/product",
       "@ai-whisperers/seo": "../../packages/@ai-whisperers/seo",
+      "@ai-whisperers/site-seo": "../../packages/@ai-whisperers/site-seo",
       "@ai-whisperers/sections": "../../packages/@ai-whisperers/sections",
       "@ai-whisperers/theme": "../../packages/@ai-whisperers/theme",
       "@ai-whisperers/ui": "../../packages/@ai-whisperers/ui",

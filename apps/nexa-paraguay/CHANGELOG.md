@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-07-17: fix(nexa,site-seo): add turbopack alias for site-seo + commit compiled dist (by Erebus)
+
 - 2026-07-15: chore: refresh CHANGELOG.md stubs (post-deploy refresh) (by Erebus)
 
 - 2026-07-15: chore: stub CHANGELOG.md files for apps that need prerender during build (by Erebus)
