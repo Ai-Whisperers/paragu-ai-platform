@@ -32,25 +32,11 @@ export default function DemoBanner() {
     <div
       role="status"
       aria-live="polite"
-      style={{
-        position: "relative",
-        zIndex: 60,
-        backgroundColor: "#FFF7E6",
-        borderBottom: "1px solid #E8C97A",
-        color: "#5A4500",
-        padding: "0.625rem 1rem",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: "0.625rem",
-        fontSize: "0.8125rem",
-        lineHeight: 1.4,
-        textAlign: "center",
-      }}
+      className="relative z-[60] flex items-center justify-center gap-2.5 border-b border-[#E8C97A] bg-[#FFF7E6] px-4 py-2.5 text-center text-[13px] leading-[1.4] text-[#5A4500]"
     >
-      <Info size={15} style={{ flexShrink: 0, color: "#8B6A00" }} />
-      <span style={{ fontWeight: 500 }}>
-        <strong style={{ fontWeight: 700 }}>Sitio de demostración.</strong>{" "}
+      <Info size={15} className="shrink-0 text-[#8B6A00]" />
+      <span className="font-medium">
+        <strong className="font-bold">Sitio de demostración.</strong>{" "}
         Esta es una página de ejemplo de un estudio jurídico, creada para mostrar
         nuestro trabajo a posibles clientes. Los datos, nombres y servicios son
         ilustrativos.
@@ -58,21 +44,7 @@ export default function DemoBanner() {
       <button
         onClick={dismiss}
         aria-label="Cerrar aviso"
-        style={{
-          position: "absolute",
-          right: "0.75rem",
-          top: "50%",
-          transform: "translateY(-50%)",
-          background: "transparent",
-          border: "none",
-          cursor: "pointer",
-          padding: "0.25rem",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#5A4500",
-          borderRadius: "4px",
-        }}
+        className="absolute right-3 top-1/2 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded border-0 bg-transparent p-1 text-[#5A4500]"
       >
         <X size={16} />
       </button>
