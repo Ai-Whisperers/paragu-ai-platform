@@ -32,12 +32,9 @@ export function CtaBanner({ waPhone, message }: CtaBannerProps) {
   const waLink = `https://wa.me/${waPhone}?text=${message}`
 
   return (
-    <section className="py-20 bg-gradient-to-r from-secondary via-secondary to-secondary-dark relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10" style={{
-        backgroundImage: "radial-gradient(circle at 3px 3px, white 1px, transparent 0)",
-        backgroundSize: "28px 28px"
-      }} />
+    <section className="py-20 bg-deep relative overflow-hidden">
+      {/* Solid wash (no gradients) */}
+      <div className="absolute inset-0 opacity-10 bg-white" />
 
       <div className="container-page relative z-10 text-center">
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-6">

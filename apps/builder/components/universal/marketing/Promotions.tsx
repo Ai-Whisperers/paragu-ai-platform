@@ -29,10 +29,10 @@ const GIFT_ICONS: Record<string, React.ComponentType<{ className?: string }>> = 
   heart: Star,
 }
 const GIFT_GRADIENTS = [
-  "from-rose-400 to-rose-600",
-  "from-violet-400 to-violet-600",
-  "from-amber-400 to-amber-600",
-  "from-sky-400 to-sky-600",
+  "bg-rose-600",
+  "bg-violet-600",
+  "bg-amber-600",
+  "bg-sky-600",
 ]
 
 function getTimeRemaining(expiresAt: string): { days: number; hours: number; minutes: number; seconds: number; expired: boolean } {
@@ -129,7 +129,7 @@ export function Promotions({ lang }: PromotionsProps) {
 
         {/* Gift Cards teaser */}
         {giftCards?.length > 0 && (
-          <div className="mt-12 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-6">
+          <div className="mt-12 bg-primary/5 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-6">
             <div className="flex-shrink-0 w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center">
               <Gift className="w-7 h-7 text-secondary" />
             </div>
@@ -161,7 +161,7 @@ export function LoyaltySection({ lang }: LoyaltySectionProps) {
 
   return (
     <section className="py-20 bg-primary text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 50% 50%, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+      <div className="absolute inset-0 opacity-5 bg-white" />
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <ScrollReveal direction="up">
           <div className="text-center mb-16">
@@ -182,7 +182,7 @@ export function LoyaltySection({ lang }: LoyaltySectionProps) {
               <h4 className="font-semibold text-sm text-primary mb-1">{step.after as string}</h4>
               <p className="text-xs text-foreground-light max-w-[140px]">{step.reward as string}</p>
               {!isLast(((loyalty as Record<string, unknown>).steps as AnyRecord[] || []).length, i) && (
-                <div className="hidden md:block absolute top-7 left-[55%] right-0 h-0.5 bg-gradient-to-r from-secondary to-primary/30 -translate-y-full mb-14" />
+                <div className="hidden md:block absolute top-7 left-[55%] right-0 h-0.5 bg-secondary -translate-y-full mb-14" />
               )}
               <div className="w-14 h-14 rounded-full bg-secondary/10 text-secondary flex items-center justify-center border-2 border-secondary z-10 mb-4">
                 <Star className="w-6 h-6" />
@@ -242,9 +242,9 @@ export function GiftCardsSection({ lang }: GiftCardsSectionProps) {
             return (
               <ScrollReveal key={i} delay={i * 80} direction="down">
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden group flex flex-col">
-                  <div className={`h-2 bg-gradient-to-r ${gradient}`} />
+                  <div className={`h-2 ${gradient}`} />
                   <div className="p-6 flex flex-col flex-1">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center mx-auto mb-4 text-white`}>
+                    <div className={`w-16 h-16 rounded-2xl ${gradient} flex items-center justify-center mx-auto mb-4 text-white`}>
                       <Icon className="w-7 h-7" />
                     </div>
                     <h3 className="font-heading text-lg font-bold text-primary text-center mb-2">{card.name}</h3>

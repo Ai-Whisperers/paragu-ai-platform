@@ -66,7 +66,7 @@ export function InstagramFeed({ lang = "es" as "es" | "en" }: { lang?: "es" | "e
   const showPreviewLabel = fallback
 
   return (
-    <section className="py-16 bg-gradient-to-b from-primary to-primary-light">
+    <section className="py-16 bg-primary">
       <div className="container-page">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-5 py-2 mb-6">

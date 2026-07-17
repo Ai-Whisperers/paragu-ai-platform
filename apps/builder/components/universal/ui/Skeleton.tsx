@@ -20,7 +20,7 @@ interface SkeletonProps {
 }
 
 export function Skeleton({ className = "", style, variant = "rectangular" }: SkeletonProps) {
-  const base = "animate-pulse bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] rounded"
+  const base = "animate-pulse bg-gray-200 rounded"
   const variantClass = variant === "circular" ? "rounded-full" : variant === "text" ? "rounded h-4" : "rounded-lg"
   return <div className={`${base} ${variantClass} ${className}`} style={style} />
 }

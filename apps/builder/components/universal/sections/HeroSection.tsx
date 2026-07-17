@@ -51,7 +51,7 @@ export function Hero({ lang, heroSlides: heroSlidesProp }: HeroProps) {
       {slides.map((s: HeroSlide, i: number) => (
         <div key={i}
           className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/60 z-10" />
+          <div className="absolute inset-0 bg-deep/55 z-10" />
           <Image src={s.image} alt={s.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 1200px" priority={i === 0} />
         </div>
       ))}

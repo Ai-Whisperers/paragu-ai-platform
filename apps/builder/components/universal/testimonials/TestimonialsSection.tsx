@@ -158,9 +158,7 @@ export function Testimonials() {
         <div
           className="relative"
         >
-          {/* Fade masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-surface-muted to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-surface-muted to-transparent z-10 pointer-events-none" />
+          {/* Edge fades removed — no gradients per canonical palette */}
 
           {/* Track */}
           <div

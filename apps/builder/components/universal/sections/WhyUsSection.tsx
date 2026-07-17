@@ -39,10 +39,7 @@ const reasons: ReasonItem[] = (reasonsData as ReasonItem[]).map((r) => ({
 export function WhyUs() {
   return (
     <section className="py-20 bg-primary relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-        backgroundSize: "32px 32px"
-      }} />
+      <div className="absolute inset-0 opacity-[0.04] bg-white" />
 
       <div className="container-page relative z-10">
         <div className="text-center mb-16">

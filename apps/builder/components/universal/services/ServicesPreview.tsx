@@ -58,10 +58,10 @@ export function ServicesPreview({ lang }: ServicesPreviewProps) {
             const colorNames = ["rose", "violet", "amber", "sky"] as const
             const color = colorNames[i % colorNames.length]
             const gradients = {
-              rose: "from-rose-500 to-rose-600",
-              violet: "from-violet-500 to-violet-600",
-              amber: "from-amber-500 to-amber-600",
-              sky: "from-sky-500 to-sky-600",
+              rose: "bg-rose-600",
+              violet: "bg-violet-600",
+              amber: "bg-amber-600",
+              sky: "bg-sky-600",
             }
             const lightBgs = {
               rose: "bg-rose-50",
@@ -81,7 +81,7 @@ export function ServicesPreview({ lang }: ServicesPreviewProps) {
                   href={`/${lang}/servicios`}
                   className="block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all p-6 group"
                 >
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${gradients[color]} flex items-center justify-center mb-4 shadow-sm`}>
+                  <div className={`w-14 h-14 rounded-2xl ${gradients[color]} flex items-center justify-center mb-4 shadow-sm`}>
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="font-heading text-xl font-bold text-primary mb-2">{cat.title}</h3>

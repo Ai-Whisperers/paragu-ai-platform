@@ -15,10 +15,10 @@ import { Sparkle, Star, Crown, Heart, Gift, Loader2, CreditCard } from "lucide-r
 
 const ICON_NAMES = ["sparkle", "star", "crown", "heart"]
 const COLORS = [
-  "from-rose-400 to-rose-600",
-  "from-violet-400 to-violet-600",
-  "from-amber-400 to-amber-600",
-  "from-sky-400 to-sky-600",
+  "bg-rose-600",
+  "bg-violet-600",
+  "bg-amber-600",
+  "bg-sky-600",
 ]
 
 function GiftCard({ card, index }: { card: (typeof giftCards)[number]; index: number }) {
@@ -58,9 +58,9 @@ function GiftCard({ card, index }: { card: (typeof giftCards)[number]; index: nu
   return (
     <ScrollReveal delay={index * 80} direction="down">
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden group flex flex-col">
-        <div className={`h-2 bg-gradient-to-r ${gradient}`} />
+        <div className={`h-2 ${gradient}`} />
         <div className="p-6 flex flex-col flex-1">
-          <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center mx-auto mb-4 text-white`}>
+          <div className={`w-16 h-16 rounded-2xl ${gradient} flex items-center justify-center mx-auto mb-4 text-white`}>
             {icons[iconName]}
           </div>
           <h3 className="font-heading text-lg font-bold text-primary text-center mb-1">{card.title}</h3>

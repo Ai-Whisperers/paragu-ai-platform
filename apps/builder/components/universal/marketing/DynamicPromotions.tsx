@@ -56,9 +56,9 @@ function DynamicPromotionCard({ promo, index }: { promo: Promotion; index: numbe
     : `https://wa.me/595986106062?text=${encodeURIComponent("Hola! Quiero usar la promoción: " + promo.title)}`;
 
   const colorMap: Record<string, string> = {
-    amber: "from-amber-400 to-amber-600",
-    secondary: "from-secondary to-secondary-dark",
-    primary: "from-primary to-primary-light",
+    amber: "bg-amber-600",
+    secondary: "bg-secondary",
+    primary: "bg-primary",
   };
   const bgMap: Record<string, string> = {
     amber: "bg-amber-500 text-white hover:bg-amber-600",
@@ -77,7 +77,7 @@ function DynamicPromotionCard({ promo, index }: { promo: Promotion; index: numbe
   return (
     <ScrollReveal delay={index * 100} direction="up">
       <div className={`relative bg-white rounded-2xl border ${isExpiresSoon ? "border-amber-200" : "border-gray-100"} shadow-sm hover:shadow-md transition-all overflow-hidden group`}>
-        <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${color}`} />
+        <div className={`absolute top-0 left-0 right-0 h-1 ${color}`} />
         <div className="pt-6 p-6">
           <div className="flex items-center justify-between mb-4">
             {promo.badge && (
@@ -126,7 +126,7 @@ export function DynamicPromotions() {
   if (promotions.length === 0) return null;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-amber-50 to-white">
+    <section className="py-20 bg-accent/10">
       <div className="max-w-6xl mx-auto px-4">
         <ScrollReveal direction="up">
           <div className="text-center mb-14">

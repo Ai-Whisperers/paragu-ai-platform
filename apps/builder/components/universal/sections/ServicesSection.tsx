@@ -121,7 +121,7 @@ export function Services({ lang }: ServicesProps) {
             const colors = getColorMap(String(cat.color) as ColorName)
             return (
               <div key={cat.title} className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
-                <div className={`flex items-center gap-3 px-6 py-4 bg-gradient-to-r ${colors.light} to-white border-b border-gray-100`}>
+                <div className={`flex items-center gap-3 px-6 py-4 ${colors.light} border-b border-gray-100`}>
                   <div className={`w-10 h-10 rounded-xl ${colors.bg}/10 flex items-center justify-center`}>
                     <Icon className={`w-5 h-5 ${colors.text}`} />
                   </div>
@@ -190,7 +190,7 @@ export function Services({ lang }: ServicesProps) {
                   {pkg.badge}
                 </div>
                 {/* Header */}
-                <div className={`px-6 pt-6 pb-4 bg-gradient-to-br ${colors.light} to-white`}>
+                <div className={`px-6 pt-6 pb-4 ${colors.light}`}>
                   <div className={`w-12 h-12 rounded-xl ${colors.bg}/10 flex items-center justify-center mb-3`}>
                     <Icon className={`w-6 h-6 ${colors.text}`} />
                   </div>

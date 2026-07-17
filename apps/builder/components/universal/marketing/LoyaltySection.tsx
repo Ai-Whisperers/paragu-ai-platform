@@ -51,7 +51,7 @@ export function LoyaltySection() {
 
   return (
     <section className="py-20 bg-primary text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 50% 50%, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+      <div className="absolute inset-0 opacity-5 bg-white" />
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <ScrollReveal direction="up">
