@@ -44,7 +44,7 @@ export function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link href="/" className="mb-4 inline-flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-[var(--primary-foreground)]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-[var(--primary-foreground)]">
                 <Wand2 size={20} />
               </div>
               <span className="text-xl font-bold">

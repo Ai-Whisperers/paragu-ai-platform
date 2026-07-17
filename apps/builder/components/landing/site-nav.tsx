@@ -39,14 +39,14 @@ export function SiteNav() {
       <nav
         className={`fixed top-0 z-50 w-full transition-all duration-300 ${
           scrolled
-            ? 'border-b border-brand-300/30 bg-deep/95/95 backdrop-blur-xl shadow-sm'
-            : 'bg-deep/95/70 backdrop-blur-sm'
+            ? 'border-b border-brand-300/30 bg-deep/95 backdrop-blur-xl shadow-sm'
+            : 'bg-deep/70 backdrop-blur-sm'
         }`}
       >
         <Container>
           <div className="flex h-16 items-center justify-between">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-[var(--primary-foreground)] transition-transform group-hover:scale-110">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-[var(--primary-foreground)] transition-transform group-hover:scale-110">
                 <Wand2 size={20} />
               </div>
               <span className="text-lg font-bold">
@@ -99,7 +99,7 @@ export function SiteNav() {
         <div className="fixed inset-0 z-[60] bg-deep/95 md:hidden">
           <div className="flex h-16 items-center justify-between px-4">
             <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-[var(--primary-foreground)]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-[var(--primary-foreground)]">
                 <Wand2 size={20} />
               </div>
               <span className="text-lg font-bold">
@@ -121,7 +121,7 @@ export function SiteNav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-4 text-lg font-medium text-white hover:bg-deep/85-light"
+                className="rounded-xl px-4 py-4 text-lg font-medium text-white hover:bg-deep/70"
               >
                 {link.label}
               </Link>

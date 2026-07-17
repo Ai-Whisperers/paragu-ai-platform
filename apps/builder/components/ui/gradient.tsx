@@ -44,12 +44,12 @@ export function GradientBackground({
   patternOpacity = 0.05,
 }: GradientBackgroundProps) {
   const gradientClasses = {
-    'primary-secondary': 'bg-gradient-primary-secondary',
-    'secondary-accent': 'bg-gradient-secondary-accent',
-    'primary-accent': 'bg-gradient-primary-accent',
-    'mesh-1': 'bg-gradient-mesh-1',
-    'mesh-2': 'bg-gradient-mesh-2',
-    'animated': 'bg-gradient-animated bg-[length:400%_400%]',
+    'primary-secondary': 'bg-primary',
+    'secondary-accent': 'bg-brand',
+    'primary-accent': 'bg-primary',
+    'mesh-1': 'bg-deep',
+    'mesh-2': 'bg-deep',
+    'animated': 'bg-primary',
   }
 
   const patternStyles = pattern !== 'none' ? {
@@ -101,7 +101,7 @@ export function GradientText({
   return (
     <span
       className={cn(
-        animated ? 'text-gradient-animated' : 'text-gradient',
+        'text-primary',
         className
       )}
     >
@@ -136,7 +136,7 @@ export function GradientBorder({
     <div
       className={cn(
         'relative p-[2px]',
-        'bg-gradient-primary-secondary',
+        'bg-primary',
         roundedClasses[rounded],
         className
       )}

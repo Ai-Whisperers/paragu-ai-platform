@@ -28,7 +28,7 @@ export function VideoBlock({
 
   return (
     <figure className="mx-auto w-full max-w-3xl">
-      <div className="relative aspect-video overflow-hidden rounded-2xl border border-brand-300/30 bg-gradient-to-br from-[var(--primary)]/10 via-[var(--surface)] to-[var(--accent)]/10 shadow-xl">
+      <div className="relative aspect-video overflow-hidden rounded-2xl border border-brand-300/30 bg-deep/85 shadow-xl">
         {showEmbed ? (
           <iframe
             src={embedUrl}
@@ -44,7 +44,7 @@ export function VideoBlock({
             aria-label={posterAlt}
             className="group absolute inset-0 flex items-center justify-center"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/30 to-[var(--accent)]/30" aria-hidden />
+            <div className="absolute inset-0 bg-primary/30" aria-hidden />
             <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-white/95 text-accent shadow-2xl transition-transform group-hover:scale-110">
               <PlayCircle size={48} />
             </span>
@@ -54,7 +54,7 @@ export function VideoBlock({
             href={fallbackHref || '#como-funciona'}
             className="group absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/20 to-[var(--accent)]/20" aria-hidden />
+            <div className="absolute inset-0 bg-primary/20" aria-hidden />
             <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-white/95 text-accent shadow-2xl transition-transform group-hover:scale-110">
               <PlayCircle size={48} />
             </span>

@@ -72,7 +72,7 @@ export default function CommerceActivatePage() {
         <p className="mt-1 text-sm text-gray-500">Agregá tus productos para activar la tienda en tu sitio</p>
       </div>
 
-      <div className="rounded-xl border bg-gradient-to-r from-purple-50 to-blue-50 p-6">
+      <div className="rounded-xl border bg-primary/10 p-6">
         <p className="text-sm text-gray-700">
           Una vez activada, tus productos aparecerán en tu sitio web con botón de pedido por WhatsApp.
           Tus clientes pueden navegar el catálogo y hacer pedidos directos.

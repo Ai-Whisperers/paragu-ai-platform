@@ -42,7 +42,7 @@ export function ROICalculator() {
   return (
     <div className="mx-auto max-w-3xl rounded-3xl border border-brand-300/30 bg-deep/85 p-6 md:p-10">
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-[var(--primary-foreground)]">
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-[var(--primary-foreground)]">
           <Calculator size={22} />
         </div>
         <div>
@@ -102,7 +102,7 @@ export function ROICalculator() {
         </div>
       </div>
 
-      <div className="mt-8 grid gap-4 rounded-2xl bg-deep/85-light p-6 sm:grid-cols-3">
+      <div className="mt-8 grid gap-4 rounded-2xl bg-deep/60 p-6 sm:grid-cols-3">
         <Stat label="Ingreso extra mensual" value={fmt(monthlyRevenue)} />
         <Stat label="Neto mensual (después del plan)" value={fmt(monthlyNet)} highlight={monthlyNet > 0} />
         <Stat

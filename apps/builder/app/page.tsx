@@ -344,7 +344,7 @@ function Navigation() {
         <Container>
           <div className="flex h-16 items-center justify-between">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-deep text-white shadow-glow transition-transform group-hover:scale-110">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white shadow-glow transition-transform group-hover:scale-110">
                 <BrandMark width={20} height={20} />
               </div>
               <span className="text-lg font-bold">
@@ -397,7 +397,7 @@ function Navigation() {
         <div className="fixed inset-0 z-[60] bg-white md:hidden">
           <div className="flex h-16 items-center justify-between px-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 text-white">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-deep text-white">
                 <BrandMark width={20} height={20} />
               </div>
               <span className="text-lg font-bold">
@@ -452,7 +452,7 @@ export default function HomePage() {
         {/* ── Hero ──────────────────────────────────────────────── */}
         <section className="relative min-h-screen overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-deep/60 via-bg to-primary/40" />
+            <div className="absolute inset-0 bg-bg" />
             <FloatingShape className="top-20 right-20 h-[500px] w-[500px] bg-primary/30" delay={0} />
             <FloatingShape className="bottom-20 left-10 h-[400px] w-[400px] bg-accent/15" delay={1} />
             <FloatingShape className="top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 bg-brand/20" delay={2} />
@@ -472,7 +472,7 @@ export default function HomePage() {
                 <FadeIn delay={150}>
                 <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl text-balance text-glow">
                   Tu negocio crece{' '}
-                  <span className="bg-gradient-to-r from-accent via-brand to-primary bg-clip-text text-transparent">
+                  <span className="text-brand">
                     mientras dormís
                   </span>
                 </h1>
@@ -557,7 +557,7 @@ export default function HomePage() {
                     className="group block overflow-hidden rounded-2xl border border-brand-300/40 bg-brand/80 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-glow"
                   >
                     {client.screenshot ? (
-                      <div className="flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-deep to-primary">
+                      <div className="flex aspect-video items-center justify-center overflow-hidden bg-deep">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={client.screenshot}
@@ -567,7 +567,7 @@ export default function HomePage() {
                       </div>
                     ) : (
                       <div
-                        className="flex aspect-video items-center justify-center bg-gradient-to-br from-deep to-primary"
+                        className="flex aspect-video items-center justify-center bg-deep"
                       >
                         <span className="text-2xl text-white/40 text-glow">{client.name}</span>
                       </div>
@@ -732,7 +732,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Testimonials ───────────────────────────────────────── */}
-        <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600 text-white">
+        <section className="py-20 bg-deep text-white">
           <Container>
             <FadeIn>
               <div className="mb-12 text-center">
@@ -795,12 +795,12 @@ export default function HomePage() {
                   <div
                     className={`relative flex flex-col rounded-2xl border p-8 transition-all ${
                       plan.popular
-                        ? 'border-primary bg-gradient-to-br from-deep to-primary shadow-xl shadow-primary/40'
+                        ? 'border-primary bg-deep shadow-xl shadow-primary/40'
                         : 'border-brand-300/40 bg-deep/80 hover:border-accent hover:shadow-glow'
                     }`}
                   >
                     {plan.popular && (
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-accent to-brand px-4 py-1 text-xs font-bold text-deep">
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-4 py-1 text-xs font-bold text-deep">
                         Más recomendado
                       </span>
                     )}
@@ -956,7 +956,7 @@ export default function HomePage() {
           <div className="grid gap-8 md:grid-cols-4">
             <div>
               <Link href="/" className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-deep text-white shadow-glow">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white shadow-glow">
                   <BrandMark width={16} height={16} />
                 </div>
                 <span className="font-bold">

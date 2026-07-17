@@ -24,7 +24,7 @@ const BG_MAP: Record<string, string> = {
   accent: 'bg-primary',
   dark: 'bg-neutral-900',
   image: '',
-  gradient: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
+  gradient: 'bg-primary',
   transparent: 'bg-transparent',
 }
 

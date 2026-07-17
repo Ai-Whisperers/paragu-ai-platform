@@ -15,7 +15,7 @@ export default async function Image() {
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
-          background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+          background: '#4C2C73',
           padding: 80,
           color: 'white',
           fontFamily: 'system-ui, sans-serif',
@@ -35,7 +35,7 @@ export default async function Image() {
               width: 56,
               height: 56,
               borderRadius: 16,
-              background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
+              background: '#7834C0',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -46,7 +46,7 @@ export default async function Image() {
           </div>
           <div style={{ display: 'flex' }}>
             <span style={{ color: 'white' }}>Paragu</span>
-            <span style={{ color: '#a78bfa' }}>AI</span>
+            <span style={{ color: '#AF7AC9' }}>AI</span>
           </div>
         </div>
 
@@ -64,13 +64,7 @@ export default async function Image() {
             }}
           >
             <span>Tu sitio web</span>
-            <span
-              style={{
-                background: 'linear-gradient(90deg, #a78bfa 0%, #f472b6 100%)',
-                backgroundClip: 'text',
-                color: 'transparent',
-              }}
-            >
+            <span style={{ color: '#AF7AC9' }}>
               profesional
             </span>
             <span>en 48 horas</span>

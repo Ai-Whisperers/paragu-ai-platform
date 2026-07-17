@@ -226,7 +226,7 @@ export function DemoQualifier() {
                 y mandalo. Te respondemos en horario hábil.
               </p>
             )}
-            <pre className="mb-6 whitespace-pre-wrap rounded-xl bg-deep/85-light p-4 text-left text-sm text-white">
+            <pre className="mb-6 whitespace-pre-wrap rounded-xl bg-deep/60 p-4 text-left text-sm text-white">
               {waMessage}
             </pre>
             <a
@@ -241,7 +241,7 @@ export function DemoQualifier() {
                   leadId: leadIdRef.current,
                 })
               }}
-              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] px-8 py-4 font-bold text-[var(--primary-foreground)] shadow-lg transition-all hover:-translate-y-1"
+              className="inline-flex items-center gap-2 rounded-2xl bg-primary px-8 py-4 font-bold text-[var(--primary-foreground)] shadow-lg transition-all hover:-translate-y-1"
             >
               <MessageCircle size={20} />
               Enviar por WhatsApp

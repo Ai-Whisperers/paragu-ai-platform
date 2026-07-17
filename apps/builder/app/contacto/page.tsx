@@ -129,7 +129,7 @@ export default function ContactoPage() {
           </div>
 
           {/* ── CTA ─────────────────────────────────────────── */}
-          <div className="mt-16 rounded-2xl bg-gradient-to-br from-blue-600 to-teal-600 p-10 text-center text-white">
+          <div className="mt-16 rounded-2xl bg-deep p-10 text-center text-white">
             <h2 className="text-2xl font-bold">¿Empezamos hoy?</h2>
             <p className="mt-2 text-white/80">
               Mandanos tu negocio por WhatsApp y te armamos la demo en 48 horas.

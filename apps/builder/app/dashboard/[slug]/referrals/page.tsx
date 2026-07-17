@@ -75,7 +75,7 @@ export default function ReferralsPage() {
         </p>
       </div>
 
-      <div className="rounded-xl border bg-gradient-to-r from-amber-50 to-orange-50 p-6">
+      <div className="rounded-xl border bg-accent/10 p-6">
         <h2 className="font-semibold text-gray-900 mb-2">¿Cómo funciona?</h2>
         <ul className="space-y-2 text-sm text-gray-600">
           <li>1. Invitá a otro negocio a tener su sitio con ParaguAI</li>

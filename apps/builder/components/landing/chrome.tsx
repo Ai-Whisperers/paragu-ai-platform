@@ -33,7 +33,7 @@ export function ScrollProgress() {
   return (
     <div className="fixed left-0 top-0 z-[51] h-0.5 w-full bg-transparent">
       <div
-        className="h-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] transition-all duration-100"
+        className="h-full bg-primary transition-all duration-100"
         style={{ width: `${progress}%` }}
       />
     </div>
@@ -81,7 +81,7 @@ export function BackToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Volver arriba"
-      className="fixed bottom-44 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-brand-300/30 bg-deep/85 text-white shadow-md transition-all hover:bg-deep/85-light md:bottom-24"
+      className="fixed bottom-44 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-brand-300/30 bg-deep/85 text-white shadow-md transition-all hover:bg-deep/70 md:bottom-24"
     >
       <ArrowUp size={20} />
     </button>

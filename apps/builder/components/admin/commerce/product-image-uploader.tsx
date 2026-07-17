@@ -167,7 +167,7 @@ export function ProductImageUploader({ businessId, productId, images: initialIma
                   Portada
                 </span>
               ) : null}
-              <div className="absolute inset-x-0 bottom-0 flex justify-end gap-1 bg-gradient-to-t from-black/60 to-transparent p-2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute inset-x-0 bottom-0 flex justify-end gap-1 bg-black/60 p-2 opacity-0 transition-opacity group-hover:opacity-100">
                 {!img.isCover && (
                   <button
                     type="button"

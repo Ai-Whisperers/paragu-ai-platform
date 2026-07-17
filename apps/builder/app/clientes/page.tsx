@@ -79,7 +79,7 @@ export default function ClientesPage() {
               >
                 <div
                   className="aspect-video flex items-center justify-center overflow-hidden"
-                  style={{ background: `linear-gradient(135deg, ${c.color}22, ${c.color}44)` }}
+                  style={{ background: `${c.color}33` }}
                 >
                   <div className="text-center px-4">
                     <div
@@ -114,7 +114,7 @@ export default function ClientesPage() {
             ))}
           </div>
 
-          <div className="mx-auto mt-16 max-w-2xl rounded-2xl bg-gradient-to-br from-blue-600 to-teal-600 p-8 text-center text-white">
+          <div className="mx-auto mt-16 max-w-2xl rounded-2xl bg-deep p-8 text-center text-white">
             <h2 className="text-2xl font-bold">El próximo sitio puede ser el tuyo</h2>
             <p className="mt-2 text-white/80">
               Demo gratis. Sin tarjeta, sin compromiso. Te mostramos cómo quedaría antes de pagar.

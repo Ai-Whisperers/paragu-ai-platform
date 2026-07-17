@@ -47,7 +47,7 @@ export function TestimonialCarousel({ testimonials }: { testimonials: Testimonia
               &ldquo;{t.quote}&rdquo;
             </p>
             <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-lg font-bold text-[var(--primary-foreground)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-lg font-bold text-[var(--primary-foreground)]">
                 {t.name[0]}
               </div>
               <div>

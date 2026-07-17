@@ -69,9 +69,9 @@ export default function HomeInner() {
             <Candle size={70} className="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block opacity-80" />
             <Candle size={70} className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block opacity-80" />
 
-            <div className="relative p-6 md:p-8 bg-gradient-to-b from-[var(--color-surface)] to-[var(--color-card)] shadow-2xl">
-              <div className="absolute top-2 left-2 right-2 h-px bg-gradient-to-r from-transparent via-[var(--color-primary-light)] to-transparent" />
-              <div className="absolute bottom-2 left-2 right-2 h-px bg-gradient-to-r from-transparent via-[var(--color-accent-light)] to-transparent" />
+            <div className="relative p-6 md:p-8 bg-[var(--color-surface)] shadow-2xl">
+              <div className="absolute top-2 left-2 right-2 h-px bg-[var(--color-primary-light)]" />
+              <div className="absolute bottom-2 left-2 right-2 h-px bg-[var(--color-accent-light)]" />
 
               <div className="text-center mb-3">
                 <p className="eyebrow text-[var(--color-gold)]">Cartografía · Mapa de piercings</p>

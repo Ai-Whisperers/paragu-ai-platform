@@ -130,7 +130,7 @@ export default function DashboardOverview() {
       </div>
 
       {/* View site link */}
-      <div className="rounded-xl border bg-gradient-to-r from-blue-50 to-indigo-50 p-6">
+      <div className="rounded-xl border bg-brand/10 p-6">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="font-semibold text-gray-900">Visitá tu sitio web</h3>

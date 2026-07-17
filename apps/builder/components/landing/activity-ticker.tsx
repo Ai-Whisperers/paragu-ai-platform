@@ -58,7 +58,7 @@ export function ActivityTicker() {
   if (!current) return null
 
   return (
-    <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-brand-300/30 bg-deep/85/80 px-4 py-2 text-sm shadow-sm backdrop-blur-sm">
+    <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-brand-300/30 bg-deep/80 px-4 py-2 text-sm shadow-sm backdrop-blur-sm">
       <span className="flex h-6 w-6 items-center justify-center rounded-full bg-success/10 text-[var(--success)]">
         <Activity size={14} />
       </span>

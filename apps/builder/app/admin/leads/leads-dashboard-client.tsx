@@ -899,7 +899,7 @@ export function LeadsDashboardClient({
                       </td>
                       <td className="py-3 px-4">
                         <div className="flex items-start gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
+                          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm">
                             {lead.business_name.charAt(0).toUpperCase()}
                           </div>
                           <div>
@@ -962,7 +962,7 @@ export function LeadsDashboardClient({
                             title={`Score: ${lead.priority_score}`}
                           >
                             <div 
-                              className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
+                              className="h-full bg-primary"
                               style={{ width: `${lead.priority_score}%` }}
                             />
                           </div>
