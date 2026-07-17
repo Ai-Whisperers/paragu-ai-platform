@@ -1,5 +1,4 @@
 node_modules
-.next
 out
 .env
 .env.local
@@ -7,4 +6,3 @@ out
 *.log
 .turbo
 .vercel
-node_modules_target_realpath_placeholder
