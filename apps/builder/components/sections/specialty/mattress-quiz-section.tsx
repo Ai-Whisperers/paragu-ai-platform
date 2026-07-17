@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { Button } from '@/components/ui/button'
 import { AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { ChevronLeft, ChevronRight, RotateCcw, Check } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { trackQuizStart, trackQuizComplete } from '@/lib/analytics/tenant-events'
@@ -162,8 +163,9 @@ export function MattressQuizSection({
   }
 
   return (
-    <section id="quiz" className="bg-background py-16 sm:py-20 lg:py-24">
-      <Container className="max-w-3xl">
+    <section id="quiz" className="relative overflow-hidden bg-background py-16 sm:py-20 lg:py-24">
+      <WaterDropletDecor idSuffix="mattress-quiz" />
+      <Container className="max-w-3xl relative z-10">
         <AnimatedSectionHeader className="mb-10 text-center">
           {eyebrow && (
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest" style={{ color: 'var(--secondary)' }}>

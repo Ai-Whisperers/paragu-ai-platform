@@ -10,6 +10,7 @@ import Image from 'next/image'
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { ImageLightbox } from '@/components/ui/image-lightbox'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 export interface GalleryImage {
   src: string
@@ -97,8 +98,9 @@ export function GallerySection({
   )
 
   return (
-    <section id="galeria" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="galeria" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="gallery" />
+      <Container size="md" className="relative z-10">
         <div className="mb-12 text-center">
           <Heading level={2}>{title}</Heading>
           {subtitle && (

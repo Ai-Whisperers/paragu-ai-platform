@@ -7,6 +7,7 @@ import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { Button } from '@/components/ui/button'
 import { AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { formatGs, cleanPhone } from '@/lib/format'
 
 export interface SavingsCalculatorTierOption {
@@ -124,8 +125,9 @@ export function SavingsCalculatorSection({
   }
 
   return (
-    <section id="calculadora" className="scroll-mt-24 bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="calculadora" className="scroll-mt-24 relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="savings-calc" />
+      <Container size="md" className="relative z-10">
         <AnimatedSectionHeader>
           <Heading level={2}>{title}</Heading>
           {subtitle && (

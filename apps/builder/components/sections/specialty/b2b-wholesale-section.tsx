@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import Link from 'next/link'
 import { CheckCircle, Shield, Truck, Leaf, Award, Users, Package, Clock, HeartHandshake, Phone, MessageCircle, Building2, ChefHat, Store, Coffee, School, MapPin, Calculator, Star, ChevronRight, Check } from 'lucide-react'
 
@@ -32,8 +33,9 @@ export function B2BWholesaleSection({
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className=" mx-auto text-center">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-background">
+        <WaterDropletDecor idSuffix="b2b-hero" />
+        <div className="relative z-10 mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-800 text-sm font-medium mb-6">
             <Building2 className="w-4 h-4" />
             Soluciones para Negocios
@@ -79,8 +81,9 @@ export function B2BWholesaleSection({
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className=" mx-auto">
+      <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <WaterDropletDecor idSuffix="b2b-why" />
+        <div className="relative z-10 mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">¿Por Qué Negocios Nos Eligen?</Heading>
             <p className="text-lg text-muted-foreground">Ventajas que marcan la diferencia</p>
@@ -104,8 +107,9 @@ export function B2BWholesaleSection({
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className=" mx-auto">
+      <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <WaterDropletDecor idSuffix="b2b-industries" />
+        <div className="relative z-10 mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Atendemos Diversos Negocios</Heading>
             <p className="text-lg text-muted-foreground">Soluciones adaptadas a tu industria</p>
@@ -135,8 +139,9 @@ export function B2BWholesaleSection({
       </section>
 
       {/* Pricing Tiers */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className=" mx-auto">
+      <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <WaterDropletDecor idSuffix="b2b-pricing" />
+        <div className="relative z-10 mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Descuentos por Volumen</Heading>
             <p className="text-lg text-muted-foreground">Planes diseñados para diferentes necesidades</p>
@@ -179,8 +184,9 @@ export function B2BWholesaleSection({
       </section>
 
       {/* How It Works */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className=" mx-auto">
+      <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <WaterDropletDecor idSuffix="b2b-process" />
+        <div className="relative z-10 mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Proceso Simple en 4 Pasos</Heading>
             <p className="text-lg text-muted-foreground">Empezar es fácil y rápido</p>
@@ -201,8 +207,9 @@ export function B2BWholesaleSection({
       </section>
 
       {/* Guarantees */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className=" mx-auto">
+      <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <WaterDropletDecor idSuffix="b2b-guarantees" />
+        <div className="relative z-10 mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Nuestras Promesas</Heading>
             <p className="text-lg text-muted-foreground">Garantías que nos comprometen</p>
@@ -223,8 +230,9 @@ export function B2BWholesaleSection({
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <WaterDropletDecor idSuffix="b2b-faq" />
+        <div className="relative z-10 max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Preguntas Frecuentes para Negocios</Heading>
             <p className="text-lg text-muted-foreground">Resolvemos tus dudas</p>
@@ -247,8 +255,9 @@ export function B2BWholesaleSection({
 
       {/* Urgent Banner */}
       {urgentMessage && (
-        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 bg-background">
+          <WaterDropletDecor idSuffix="b2b-urgent" />
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-2">
               <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
               <span className="text-primary font-semibold">¿NECESITÁS ATENCIÓN HOY?</span>

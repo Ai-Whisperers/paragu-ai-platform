@@ -8,6 +8,7 @@ import { cleanPhone } from '@/lib/format'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { AnimateOnScroll, AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { useState } from 'react'
 import { trackWhatsappClick } from '@/lib/analytics/tenant-events'
 import { ProductCard } from './product-card'
@@ -196,8 +197,9 @@ export function ProductCatalogSection({
     : safeProducts
 
   return (
-    <section id="catalogo" className="bg-background py-16 sm:py-20">
-      <Container>
+    <section id="catalogo" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="product-catalog" />
+      <Container className="relative z-10">
         <AnimatedSectionHeader>
           <Heading level={2}>{title}</Heading>
           {subtitle && (

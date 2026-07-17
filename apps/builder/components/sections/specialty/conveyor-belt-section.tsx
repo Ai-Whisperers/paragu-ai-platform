@@ -2,6 +2,7 @@ import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { AnimateOnScroll, AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 export interface ConveyorBeltStep {
   number: number
@@ -32,8 +33,9 @@ export function ConveyorBeltSection({
   tips
 }: ConveyorBeltSectionProps) {
   return (
-    <section id="como-funciona" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="como-funciona" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="conveyor-belt" />
+      <Container size="md" className="relative z-10">
         <AnimatedSectionHeader className="mb-12 text-center">
           <Heading as="h2" level={2} className="mb-4">
             {title}

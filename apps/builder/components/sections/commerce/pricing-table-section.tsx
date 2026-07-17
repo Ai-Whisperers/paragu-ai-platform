@@ -3,6 +3,7 @@
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { Button } from '@/components/ui/button'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 interface PricingFeature {
   text: string
@@ -55,8 +56,9 @@ export function PricingTableSection({
 
   if (!plans.length) {
     return (
-      <section className="bg-background py-16">
-        <Container className="text-center">
+      <section className="relative overflow-hidden bg-background py-16">
+        <WaterDropletDecor idSuffix="pricing-empty" />
+        <Container className="relative z-10 text-center">
           <p className="text-muted-foreground">Paquetes próximamente.</p>
         </Container>
       </section>
@@ -64,8 +66,9 @@ export function PricingTableSection({
   }
 
   return (
-    <section id="paquetes" className="bg-background py-16 sm:py-20">
-      <Container>
+    <section id="paquetes" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="pricing-paquetes" />
+      <Container className="relative z-10">
         <div className="text-center mb-12">
           <Heading level={2}>{title}</Heading>
           {subtitle && (

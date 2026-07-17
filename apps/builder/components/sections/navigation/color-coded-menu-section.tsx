@@ -4,6 +4,7 @@ import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { AnimateOnScroll, AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
 import { SushiPlate, SeigaihaPattern } from '@/components/icons/sushi'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 export interface ColorCodedPlate {
   key: string
@@ -154,8 +155,9 @@ export function SpecialOrderSection({
   )
 
   return (
-    <section id="special-order" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="special-order" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="special-order" />
+      <Container size="md" className="relative z-10">
         <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-primary/10 bg-background shadow-lg">
           <div className="grid gap-0 md:grid-cols-[1fr_1.5fr]">
             <div className="relative flex items-center justify-center bg-primary p-10 text-[var(--primary-foreground)]">

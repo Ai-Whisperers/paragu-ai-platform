@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { Button } from '@/components/ui/button'
 import { AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { logger } from '@/lib/logger'
 
 export type LeadFormVariant = 'standard' | 'compact'
@@ -140,8 +141,9 @@ export function LeadFormSection({
   const compact = variant === 'compact'
 
   return (
-    <section id="lead" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="lead" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="lead-form" />
+      <Container size="md" className="relative z-10">
         <AnimatedSectionHeader>
           <Heading level={2}>{title}</Heading>
           {subtitle && (

@@ -1,6 +1,7 @@
 'use client'
 
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 import QuoteFormComponent, { type QuoteFormField } from '@/components/location/quote-form'
 
@@ -44,8 +45,9 @@ export function QuoteFormSection({
   }
 
   return (
-    <section id="presupuesto" className="font-heading bg-background py-16 sm:py-20">
-      <div className="font-heading mx-auto max-w-2xl px-4">
+    <section id="presupuesto" className="font-heading relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="quote-form" />
+      <div className="font-heading mx-auto max-w-2xl px-4 relative z-10">
         <div className="font-heading text-center mb-8">
           <Heading level={2} className="font-heading text-xl sm:text-3xl font-bold text-foreground">
             {title}

@@ -1,6 +1,7 @@
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 export type BookingEmbedVariant = 'iframe' | 'link'
 
@@ -92,8 +93,9 @@ export function BookingEmbedSection({
   const unavailable = isPlaceholderUrl(bookingUrl)
 
   return (
-    <section id="agendar" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="agendar" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="booking-embed" />
+      <Container size="md" className="relative z-10">
         {(title || subtitle) && (
           <AnimatedSectionHeader>
             {title && <Heading level={2}>{title}</Heading>}

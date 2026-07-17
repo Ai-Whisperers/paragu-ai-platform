@@ -3,6 +3,7 @@
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { Button } from '@/components/ui/button'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 interface Plan {
   name: string
@@ -39,8 +40,9 @@ export function MembershipPlansSection({
   }
 
   return (
-    <section id="planes" className="bg-background py-16 sm:py-20">
-      <Container>
+    <section id="planes" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="membership-plans" />
+      <Container className="relative z-10">
         <div className="text-center mb-12">
           <Heading level={2}>{title}</Heading>
           {subtitle && (

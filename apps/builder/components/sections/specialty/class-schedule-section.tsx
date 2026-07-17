@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 interface ClassSchedule {
   day: string
@@ -33,8 +34,9 @@ export function ClassScheduleSection({
   const daySchedule = schedule.find(d => d.day === selectedDay)
 
   return (
-    <section id="horarios" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="horarios" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="class-schedule" />
+      <Container size="md" className="relative z-10">
         <div className="text-center mb-12">
           <Heading level={2}>{title}</Heading>
           {subtitle && (

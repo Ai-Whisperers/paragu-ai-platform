@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge'
 import { AnimatedSectionHeader, AnimateOnScroll } from '@/components/ui/animate-on-scroll'
 import { SpotlightCard } from '@/components/ui/glow'
 import { StaggerContainer } from '@/components/ui/animated'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { cn } from '@/lib/utils'
 
 export interface ServiceItem {
@@ -101,8 +102,9 @@ export function ServicesSection({
   const services = servicesProp || items || []
   if (services.length === 0) {
     return (
-      <section className="bg-background py-16">
-        <Container size="md" className="text-center">
+      <section className="relative overflow-hidden bg-background py-16">
+        <WaterDropletDecor idSuffix="services-empty" />
+        <Container size="md" className="relative z-10 text-center">
           <p className="text-muted-foreground">Servicios próximamente.</p>
         </Container>
       </section>
@@ -233,8 +235,9 @@ export function ServicesSection({
   }
 
   return (
-    <section id="servicios" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="servicios" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="services" />
+      <Container size="md" className="relative z-10">
         <AnimatedSectionHeader>
           <Heading level={2}>{title}</Heading>
           {subtitle && (

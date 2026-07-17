@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { cleanPhone } from '@/lib/format'
 
 interface Room {
@@ -40,8 +41,9 @@ export function RoomBookingSection({
   }
 
   return (
-    <section id="salas" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="salas" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="room-booking" />
+      <Container size="md" className="relative z-10">
         <div className="text-center mb-12">
           <Heading level={2}>{title}</Heading>
           {subtitle && (

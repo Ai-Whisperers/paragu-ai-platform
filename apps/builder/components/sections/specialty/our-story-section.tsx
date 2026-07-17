@@ -5,6 +5,7 @@ import { Heading } from '@/components/ui/heading'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import Link from 'next/link'
 import { Heart, Leaf, Award, MapPin, Clock, Phone, MessageCircle, CheckCircle, Egg, Bird, Sprout, Shield, TreePine, Users, Sparkles, Droplets, Recycle, ArrowRight, Check } from 'lucide-react'
 
@@ -53,8 +54,9 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
   return (
     <div className="w-full">
       {/* Hero Story */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className=" mx-auto">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-background">
+        <WaterDropletDecor idSuffix="our-story-hero" />
+        <div className=" mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-orange-100 text-orange-800 hover:bg-orange-100">{heroBadge}</Badge>
@@ -108,8 +110,9 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Stats */}
       {business.stats && business.stats.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className=" mx-auto">
+        <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+          <WaterDropletDecor idSuffix="our-story-stats" />
+          <div className=" mx-auto relative z-10">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
               {business.stats.map((stat, index) => (
                 <Card key={index} className="text-center border-border">
@@ -126,8 +129,9 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Mission & Vision */}
       {missionVisionEnabled && (business.story?.mission || business.story?.vision) ? (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className=" mx-auto">
+        <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+          <WaterDropletDecor idSuffix="our-story-mission" />
+          <div className=" mx-auto relative z-10">
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-orange-200">
                 <CardHeader>
@@ -165,8 +169,9 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Values */}
       {valuesEnabled && valuesList.length > 0 ? (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className=" mx-auto">
+        <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+          <WaterDropletDecor idSuffix="our-story-values" />
+          <div className=" mx-auto relative z-10">
             <div className="text-center mb-12">
               <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">
                 {overrides?.values?.title ?? 'Nuestros Valores'}
@@ -198,8 +203,9 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Our Process */}
       {processEnabled ? (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className=" mx-auto">
+        <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+          <WaterDropletDecor idSuffix="our-story-process" />
+          <div className=" mx-auto relative z-10">
             <div className="text-center mb-12">
               <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">
                 {overrides?.process?.title ?? 'Nuestro Proceso'}
@@ -228,8 +234,9 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Sustainability */}
       {business.sustainability && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className=" mx-auto">
+        <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+          <WaterDropletDecor idSuffix="our-story-sustainability" />
+          <div className=" mx-auto relative z-10">
             <div className="text-center mb-12">
               <Badge className="mb-4 bg-green-100 text-green-800">Compromiso Ambiental</Badge>
               <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">
@@ -266,8 +273,9 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Visit Us */}
       {visitEnabled && business.address ? (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className=" mx-auto">
+        <section className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-background">
+          <WaterDropletDecor idSuffix="our-story-visit" />
+          <div className=" mx-auto relative z-10">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-6">

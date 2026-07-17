@@ -3,6 +3,7 @@ import { Heading } from '@/components/ui/heading'
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { AnimateOnScroll, AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 export interface OmakaseTier {
   name: string
@@ -28,8 +29,9 @@ export function OmakaseSection({
   notes
 }: OmakaseSectionProps) {
   return (
-    <section id="omakase" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="omakase" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="omakase" />
+      <Container size="md" className="relative z-10">
         <AnimatedSectionHeader className="mb-12 text-center">
           <Heading as="h2" level={2} className="mb-4">
             {title}

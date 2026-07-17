@@ -4,6 +4,7 @@ import { Card, CardContent, CardTitle, CardDescription } from '@/components/ui/c
 import { Badge } from '@/components/ui/badge'
 import { AnimateOnScroll, AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
 import { SushiCategoryIcon } from '@/components/icons/sushi-category'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 export interface MenuItem {
   name: string
@@ -49,8 +50,9 @@ export function FeaturedMenuSection({
   const filtered = categories.filter((c) => (c.items?.length ?? 0) > 0 || c.description)
 
   return (
-    <section id="featured-menu" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="featured-menu" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="featured-menu" />
+      <Container size="md" className="relative z-10">
         <AnimatedSectionHeader className="mb-12 text-center">
           <Heading as="h2" level={2} className="mb-4">
             {title}
@@ -165,8 +167,9 @@ export function FullMenuSection({
   japaneseTerms,
 }: FullMenuSectionProps) {
   return (
-    <section id="full-menu" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="full-menu" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="full-menu" />
+      <Container size="md" className="relative z-10">
         <AnimatedSectionHeader className="mb-12 text-center">
           <Heading as="h1" level={1} className="mb-4">
             {title}
