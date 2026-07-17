@@ -24,9 +24,7 @@ export const metadata: Metadata = {
   description: "400+ portadas diseñadas. Autora seleccionada por Amazon Prime Reading. Portadas personalizadas, premades, maquetación y mockups 3D. Desde Paraguay para el mundo.",
   alternates: { canonical: "https://dayahlitworks.paragu-ai.com", languages: { "es": "https://dayahlitworks.paragu-ai.com/" } },
   icons: [
-    { rel: "icon", url: "/favicon.ico",url: "/favicon.ico",
-    address: { "@type": "PostalAddress", addressCountry: "PY" },
-    geo: { "@type": "GeoCoordinates", latitude: -25.2637, longitude: -57.5759 }, sizes: "32x32" },
+    { rel: "icon", url: "/favicon.ico", sizes: "32x32" },
     { rel: "icon", url: "/favicon.png", sizes: "256x256" },
     { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
   ],

@@ -6,9 +6,12 @@ import type { Content } from "@/types/content"
 const content = raw as unknown as Content
 const phone = content.whatsapp.phone
 
+type BlogPost = { slug: string; title: string; excerpt: string; date?: string; readingTime?: string }
+
 export default function Blog() {
-  const posts = (content as unknown as Record<string, unknown>).blog?.posts || []
-  
+  const blog = (content as unknown as { blog?: { posts?: BlogPost[] } }).blog
+  const posts: BlogPost[] = blog?.posts ?? []
+
   return (
     <PageLayout phone={phone}>
       <section className="flex min-h-[25vh] items-center justify-center bg-surface px-4 py-14 sm:min-h-[30vh]">
@@ -20,7 +23,7 @@ export default function Blog() {
       <section className="bg-background px-4 py-12 sm:py-16">
         <div className="mx-auto max-w-2xl">
           <div className="flex flex-col gap-4 sm:gap-6">
-            {posts.map((post: any, i: number) => (
+            {posts.map((post, i) => (
               <a key={i} href={`/blog/${post.slug}`} className="block no-underline">
                 <article className="rounded-xl border border-border bg-surface p-5 transition-all hover:-translate-y-1 hover:shadow-lg sm:p-6">
                   <h2 className="mb-2 text-base font-semibold text-foreground sm:text-lg">{post.title}</h2>

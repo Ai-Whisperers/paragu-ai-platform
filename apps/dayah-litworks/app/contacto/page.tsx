@@ -14,8 +14,8 @@ export default function ContactoPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (typeof window !== "undefined" && typeof (window as Record<string, unknown>).gtag !== "undefined") {
-      ;(window as Record<string, unknown>).gtag("event", "form_submit", { event_category: "contact", event_label: "Contacto" })
+    if (typeof window !== "undefined" && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+      ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", "form_submit", { event_category: "contact", event_label: "Contacto" })
     }
     const text = `Hola! Soy ${form.name} (${form.email}).%0A%0A${form.message}`
     window.open(`https://wa.me/${phone}?text=${text}`, "_blank")

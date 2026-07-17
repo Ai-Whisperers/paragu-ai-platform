@@ -22,5 +22,11 @@ export function Analytics() {
 }
 
 export function trackEvent(action: string, params?: Record<string, any>) {
-  try { if (typeof window !== "undefined" && (window as Record<string, unknown>).gtag) (window as Record<string, unknown>).gtag("event", action, params) } catch {}
+  try {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", action, params)
+    }
+  } catch (err) {
+    console.warn("[analytics] trackEvent failed", err)
+  }
 }

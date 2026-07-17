@@ -8,11 +8,15 @@ import type { Content } from "@/types/content"
 const content = raw as unknown as Content
 const phone = content.whatsapp.phone
 
+type BlogPost = { slug: string; title: string; excerpt?: string; date?: string; readingTime?: string }
+type BlogPostDetail = { content?: string; sections?: Array<{ title: string; text: string }> }
+
 export default function BlogPost() {
   const { slug } = useParams()
-  const posts = (content as unknown as Record<string, unknown>).blog?.posts || []
-  const post = posts.find((p: any) => p.slug === slug)
-  const blogPostMap = (content as unknown as Record<string, unknown>).blogPost as Record<string, any> || {}
+  const blog = (content as unknown as { blog?: { posts?: BlogPost[] } }).blog
+  const posts: BlogPost[] = blog?.posts ?? []
+  const post = posts.find((p) => p.slug === slug)
+  const blogPostMap = ((content as unknown as { blogPost?: Record<string, BlogPostDetail> }).blogPost) ?? {}
   const postDetail = blogPostMap[slug as string]
   
   if (!post) {

@@ -17,7 +17,12 @@ const testimonials = h.testimonials
 const process = h.process
 const cta = h.finalCta
 const phone = content.whatsapp.phone
-const certifications = (h as Record<string, unknown>).certifications
+type Certifications = {
+  title?: string
+  subtitle?: string
+  institutions?: Array<{ url: string; name: string; program: string }>
+}
+const certifications = (h as unknown as { certifications?: Certifications }).certifications
 
 function matchesPortfolio(testimonial: { book?: string }): string | undefined {
   if (!testimonial.book) return undefined
@@ -101,7 +106,7 @@ export default function Home() {
             {/* Mobile: swipeable scroll, Desktop: flex wrap */}
             <div className="-mx-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:overflow-visible sm:pb-0">
               <div className="flex w-max gap-4 sm:w-auto sm:flex-wrap sm:justify-center sm:gap-6">
-                {certifications.institutions.map((inst: any, i: number) => (
+                {certifications.institutions.map((inst, i) => (
                   <a key={i} href={inst.url} target="_blank" rel="noopener noreferrer"
                     className="group w-36 shrink-0 rounded-xl border border-border bg-white p-4 text-center shadow-sm transition-all hover:-translate-y-2 hover:shadow-lg animate-scale-in sm:w-44 sm:p-5" style={{ animationDelay: `${i * 0.1}s` }}>
                     <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all sm:h-12 sm:w-12">
@@ -235,15 +240,18 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            {(books as Record<string, unknown>).ctaText && (
-              <div className="mt-8 text-center sm:mt-12">
-                <a href={(books as Record<string, unknown>).ctaUrl || "https://www.amazon.com/author/dayaharaujo"}
-                  target="_blank" rel="noopener noreferrer"
-                  className="inline-block w-full rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-[0.98] sm:w-auto sm:px-10">
-                  {(books as Record<string, unknown>).ctaText}
-                </a>
-              </div>
-            )}
+            {(() => {
+              const extra = books as unknown as { ctaText?: string; ctaUrl?: string }
+              return extra.ctaText ? (
+                <div className="mt-8 text-center sm:mt-12">
+                  <a href={extra.ctaUrl || "https://www.amazon.com/author/dayaharaujo"}
+                    target="_blank" rel="noopener noreferrer"
+                    className="inline-block w-full rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-[0.98] sm:w-auto sm:px-10">
+                    {extra.ctaText}
+                  </a>
+                </div>
+              ) : null
+            })()}
           </div>
         </section>
       )}
@@ -306,9 +314,12 @@ export default function Home() {
                       <p className="mb-2 text-muted-foreground text-xs leading-relaxed sm:text-sm sm:mb-3">&ldquo;{t.text}&rdquo;</p>
                       <p className="font-semibold text-foreground text-xs sm:text-sm">{t.name}</p>
                       <p className="text-[10px] text-muted-foreground sm:text-xs">{t.country}</p>
-                      {(t as Record<string, unknown>).service && (
-                        <p className="text-[10px] font-medium text-accent mt-1 sm:text-xs">{(t as Record<string, unknown>).service}</p>
-                      )}
+                      {(() => {
+                        const service = (t as unknown as { service?: string }).service
+                        return service ? (
+                          <p className="text-[10px] font-medium text-accent mt-1 sm:text-xs">{service}</p>
+                        ) : null
+                      })()}
                     </div>
                   </div>
                 )
