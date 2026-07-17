@@ -372,22 +372,10 @@ jobs:
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
-      - name: Push GHCR config to VPS
-        # Copy the runner's GHCR credentials (just-written by docker/login-action in the docker job)
-        # to the VPS so the VPS can pull. The runner is authed via GITHUB_TOKEN already.
-        run: |
-          if [ -f /root/.docker/config.json ]; then
-            ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-              root@72.61.44.159 "mkdir -p /root/.docker && cat > /root/.docker/config.json" \
-              < /root/.docker/config.json
-          else
-            echo "::warning::no /root/.docker/config.json on runner; VPS GHCR auth missing"
-          fi
-      - name: Deploy to VPS
+      - name: Map app to Swarm service
+        id: svc
         run: |
           APP="${{ matrix.app }}"
-          IMAGE="ghcr.io/ai-whisperers/paragu-ai-platform/${APP}:${{ github.sha }}"
-          # Map app name to Docker Swarm service name
           case "$APP" in
             golden-visa-advisory)  SVC="golden-visa-advisory_web" ;;
             pitchy-website)        SVC="pitchy-website_web" ;;
@@ -405,9 +393,20 @@ jobs:
             meal-prep)             SVC="meal-prep_web" ;;
             *)                     SVC="${APP}_web" ;;
           esac
-          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@72.61.44.159 "
-            docker pull ${IMAGE} &&
-            docker service update --image ${IMAGE} ${SVC} --with-registry-auth 2>&1
-          "
+          echo "svc=$SVC" >> "$GITHUB_OUTPUT"
+      - name: Pull image on runner, transfer to VPS, update service
+        # The runner is already authed to GHCR (docker/login-action ran in the
+        # docker job). Pulling on the runner avoids needing GHCR auth on the VPS.
+        # docker save -> ssh pipe -> docker load on VPS, then service update.
+        run: |
+          APP="${{ matrix.app }}"
+          IMAGE="ghcr.io/ai-whisperers/paragu-ai-platform/${APP}:${{ github.sha }}"
+          SVC="${{ steps.svc.outputs.svc }}"
+          echo "Pulling ${IMAGE} on runner..."
+          docker pull "${IMAGE}"
+          echo "Saving and streaming to VPS..."
+          docker save "${IMAGE}" | \
+            ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+              root@72.61.44.159 "docker load && docker service update --image ${IMAGE} ${SVC} --with-registry-auth 2>&1"
 
 # noop
