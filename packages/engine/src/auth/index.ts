@@ -1,3 +1,3 @@
-export * from './auth/admin-auth'
-export * from './auth/client-auth'
-export * from './auth/otp-service'
+export * from './admin-auth'
+export * from './client-auth'
+export * from './otp-service'

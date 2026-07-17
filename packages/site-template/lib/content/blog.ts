@@ -5,8 +5,8 @@ export async function getBlogIndex(lang: 'es' | 'en') {
 
 export async function getBlogPosts(lang: 'es' | 'en') {
   const index = await getBlogIndex(lang)
-  const entries = Array.isArray((index as { posts?: unknown[] }).posts)
-    ? ((index as { posts: { slug: string }[] }).posts as { slug: string }[])
+  const entries = Array.isArray((index as unknown as { posts?: unknown[] }).posts)
+    ? ((index as unknown as { posts: { slug: string }[] }).posts as { slug: string }[])
     : []
   if (entries.length === 0) {
     return []

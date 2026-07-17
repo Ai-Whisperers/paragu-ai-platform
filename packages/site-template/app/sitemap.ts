@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { getBlogIndex } from '../lib/content/blog';
 
 export const dynamic = 'force-static';
 
@@ -32,9 +33,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const buildBlogPages = async (lang: 'es' | 'en') => {
     try {
-      const index = await getBlogIndex(lang);
-      const slugs = Array.isArray((index as { posts?: unknown[] }).posts)
-        ? ((index as { posts: { slug: string }[] }).posts as { slug: string }[]).map(entry => entry.slug)
+      // The blog index JSON is typed by tsc from its literal contents, so its
+      // shape does not overlap with the runtime shape we expect. Route through
+      // `unknown` before narrowing to satisfy TS 5.x's stricter cast checks.
+      const index = (await getBlogIndex(lang)) as unknown as { posts?: { slug: string }[] };
+      const slugs = Array.isArray(index.posts)
+        ? index.posts.map(entry => entry.slug)
         : [];
       return slugs.map(slug => ({
         url: `${domain}/${lang}/blog/${slug}`,

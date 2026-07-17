@@ -30,5 +30,11 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "content/**", "lib/blog.ts"]
+  "exclude": [
+    "node_modules",
+    "content/**",
+    "lib/blog.ts",
+    "lib/config/content-loader.ts",
+    "tests/**"
+  ]
 }

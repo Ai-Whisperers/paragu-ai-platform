@@ -5,8 +5,14 @@ import enUi from "@/content/en/ui.json"
 
 type AnyRecord = Record<string, unknown>
 
-const es = esSite as AnyRecord
-const en = enSite as AnyRecord
+// site.json shape is inferred as literal at compile time, so nested access
+// like `es.site?.name` is not typeable via `Record<string, unknown>`.
+// Cast to `any` here — this file is the runtime fallback shim, so shape
+// changes in the JSON are expected and validated at call sites, not here.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const es = esSite as any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const en = enSite as any
 
 export function getSiteName() {
   return es.site?.name || en.site?.name || "nuestro local"

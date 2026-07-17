@@ -1,7 +1,5 @@
 "use client"
 import { useState, useEffect } from "react"
-import { useContent } from "@/lib/content-store"
-import { waLink } from "@/lib/config"
 
 /**
  * Gallery — full-bleed tattoo/portfolio gallery.
