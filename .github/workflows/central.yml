@@ -4,25 +4,17 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'apps/**'
+      - 'apps/arnos-barber-shop/**'
       - 'packages/**'
       - 'pnpm-lock.yaml'
       - 'Dockerfile.*'
-    paths-ignore:
-      # apps/builder is a Next.js admin shell, not a Swarm-deployed client site.
-      # Its Dockerfile.prod references a `web/` layout that the central pipeline
-      # does not reproduce, so its docker job fails. Production clients live under
-      # their own dedicated apps/<slug>/ apps.
-      - 'apps/builder/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'apps/**'
+      - 'apps/arnos-barber-shop/**'
       - 'packages/**'
       - 'pnpm-lock.yaml'
       - 'Dockerfile.*'
-    paths-ignore:
-      - 'apps/builder/**'
 
 permissions:
   contents: read
