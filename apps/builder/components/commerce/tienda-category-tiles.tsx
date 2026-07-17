@@ -131,7 +131,7 @@ export function TiendaCategoryTiles({ siteSlug, locale, availableCategories, cat
               </div>
             ) : null}
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-deep/60" />
 
             {/* Content */}
             <span className="relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/90 text-[color:var(--primary,#111)] shadow-sm backdrop-blur-sm">

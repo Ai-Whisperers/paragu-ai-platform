@@ -36,7 +36,7 @@ export function TiendaHero({ siteSlug, locale, whatsappNumber }: Props) {
       </div>
 
       {/* Gradient overlay — dark on left, fades to transparent */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-deep/60" />
 
       {/* Content */}
       <div className="relative z-10 flex aspect-video flex-col justify-center px-6 py-10 sm:aspect-[21/9] sm:px-10 sm:py-16 lg:px-16">
