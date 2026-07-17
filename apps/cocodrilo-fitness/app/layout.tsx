@@ -39,6 +39,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     description: "Gimnasio completo, pileta climatizada y las mejores instalaciones para tu entrenamiento",
     url: "https://cocodrilo-fitness.paragu-ai.com",
     image: "https://cocodrilo-fitness.paragu-ai.com/images/og-default.jpg",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Asunción",
+      addressRegion: "Central",
+      addressCountry: "PY",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -25.2637,
+      longitude: -57.5759,
+    },
   }
 
   return (

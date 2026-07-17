@@ -60,6 +60,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               url: "https://escribania.paragu-ai.com",
               areaServed: "PY",
               availableLanguage: ["es"],
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Asunción",
+                addressRegion: "Central",
+                addressCountry: "PY",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: -25.2637,
+                longitude: -57.5759,
+              },
             }),
           }}
         />   </head>

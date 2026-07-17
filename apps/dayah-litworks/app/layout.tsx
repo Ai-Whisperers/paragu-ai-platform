@@ -72,6 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "email": "dayahlitworks@gmail.com",
             "image": "https://dayah.paragu-ai.com/dayah/logo-color-small.webp",
             "address": { "@type": "PostalAddress", "addressLocality": "Asunción", "addressCountry": "PY" },
+            "geo": { "@type": "GeoCoordinates", "latitude": -25.2637, "longitude": -57.5759 },
             "founder": { "@type": "Person", "name": "Daihana Araujo" },
             "foundingDate": "2019-11-20",
             "priceRange": "Gs. 160.000 - 800.000",

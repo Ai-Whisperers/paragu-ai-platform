@@ -36,6 +36,11 @@ export function buildBarberShopSchema(content: SiteContent) {
       addressLocality: site.city,
       addressCountry: "PY",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -25.2637,
+      longitude: -57.5759,
+    },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

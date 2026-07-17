@@ -125,6 +125,11 @@ const jsonLd = {
     addressRegion: "Central",
     addressCountry: "PY",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -25.2637,
+    longitude: -57.5759,
+  },
   openingHoursSpecification: (c.contacto?.schedule || [])
     .filter((s: any) => s.hours !== "Cerrado")
     .map((s: any) => {

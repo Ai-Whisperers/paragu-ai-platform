@@ -59,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "email": s.email,
             "image": "https://villamayor.paragu-ai.com/og-default.png",
             "address": { "@type": "PostalAddress", "addressLocality": s.city, "addressCountry": s.country },
+            "geo": { "@type": "GeoCoordinates", "latitude": -25.2637, "longitude": -57.5759 },
             "foundingDate": "2018",
             "priceRange": "Primera consulta sin costo",
             "sameAs": [
