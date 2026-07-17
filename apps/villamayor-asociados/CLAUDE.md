@@ -22,7 +22,7 @@ All text, services, products, FAQ items are editable there.
 
 ## Build & Deploy
 ```bash
-npm run build
+pnpm build
 docker build -t villamayor-asociados:prod .
 docker stack deploy -c docker-compose.yml villamayor-asociados
 ```

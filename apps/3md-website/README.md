@@ -9,8 +9,8 @@ Template for AI Whisperers client websites. Built with Next.js 15, React 19, Tai
 git clone <your-repo-url> my-client-site
 cd my-client-site
 
-# 2. Install dependencies
-npm install
+# 2. Install dependencies (from monorepo root)
+pnpm install
 
 # 3. Edit client content
 vim content/es.json  # products, prices, FAQ, blog, etc.
@@ -22,7 +22,7 @@ vim app/globals.css  # change --color-* variables
 # Edit WA_PHONE in the components that use it (search for "595981234567")
 
 # 6. Build
-npm run build
+pnpm --filter . build   # or: pnpm build from this dir
 
 # 7. Deploy
 docker build -t my-client:prod .
@@ -103,5 +103,5 @@ Traefik + agent-net required on the VPS.
 - [ ] Set domains in `docker-compose.yml`
 - [ ] Add VPS secrets to GitHub repo
 - [ ] Remove age gate if not an adult store
-- [ ] Test build: `npm run build`
+- [ ] Test build: `pnpm build`
 - [ ] Deploy: `docker build -t client:prod . && docker stack deploy -c docker-compose.yml client`

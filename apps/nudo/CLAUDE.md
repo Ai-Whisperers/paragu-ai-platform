@@ -13,4 +13,4 @@ Single-page app with sections: hero, about, music, lyrics, merch, events, contac
 hero-section, about-section, music-section, lyrics-section, merch-section, events-section, contact-section, header-section, footer-section
 
 ## Build & Deploy
-npm run build && docker build -t nudo:prod . && docker stack deploy -c docker-compose.yml nudo
+pnpm build && docker build -t nudo:prod . && docker stack deploy -c docker-compose.yml nudo

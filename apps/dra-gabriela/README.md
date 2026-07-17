@@ -45,8 +45,8 @@ cd /root/paragu-ai-platform/apps/dra-gabriela && ./deploy.sh
 ## Local dev
 
 ```bash
-npm install --legacy-peer-deps
-npm run dev
+pnpm install
+pnpm --filter dra-gabriela dev
 # → http://localhost:3000
 ```
 

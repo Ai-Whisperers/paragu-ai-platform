@@ -12,7 +12,7 @@ Home, Productos, Blog, Mayorista, Contacto, FAQ
 es.json + pages-config/ per page. Images.json for 50+ product photos.
 
 ## Build & Deploy
-npm run build && docker build -t granja-cabral:prod . && docker stack deploy -c docker-compose.yml granja-cabral
+pnpm build && docker build -t granja-cabral:prod . && docker stack deploy -c docker-compose.yml granja-cabral
 
 ## Critical Patterns
 Farm-to-table. B2C + B2B (mayorista). WhatsApp ordering. Image-heavy.

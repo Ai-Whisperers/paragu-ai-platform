@@ -16,7 +16,7 @@ cta-banner, footer, header, hero, whatsapp-float, animations/
 content/es.json (19KB) + site.json + tokens.json + portfolio/
 
 ## Build & Deploy
-npm run build && docker build -t 3md-website:prod . && docker stack deploy -c docker-compose.yml 30vcs
+pnpm build && docker build -t 3md-website:prod . && docker stack deploy -c docker-compose.yml 30vcs
 
 ## Critical Patterns
 Portfolio-driven creative agency. Video showreel. Dark/light hybrid. WhatsApp contact. Sitemap + robots for SEO.

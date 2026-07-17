@@ -79,11 +79,11 @@ Sitio web profesional para una escribanía (notary office) en Paraguay. Construi
 
 ```bash
 # Local dev
-npm install
-npm run dev
+pnpm install
+pnpm --filter escribania-paraguay dev
 
 # Build
-npm run build
+pnpm --filter escribania-paraguay build
 
 # Docker
 docker build -t escribania-paraguay:prod .

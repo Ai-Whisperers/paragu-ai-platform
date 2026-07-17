@@ -21,7 +21,7 @@ All content in `content/es.json`. Pricing, FAQ, prep instructions — all there.
 
 ## Build & Deploy
 ```bash
-npm run build
+pnpm build
 docker build -t depiflash:prod .
 docker stack deploy -c docker-compose.yml depiflash
 ```

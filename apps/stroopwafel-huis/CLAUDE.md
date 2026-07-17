@@ -23,7 +23,7 @@ Content lives in `src/content/es.json`. All menu items, brand copy, FAQ, pages a
 ## Build & Deploy
 ```bash
 cd /root/stroopwafel-huis
-npm run build
+pnpm build
 docker build -t stroopwafel-huis:prod .
 docker stack deploy -c docker-compose.yml stroopwafel-huis
 ```

@@ -17,7 +17,7 @@ Coral (#E8795B) + lavender (#F3E8FF) + teal (#2DD4BF). Playfair Display headings
 
 ## Build & Deploy
 ```bash
-npm run build
+pnpm --filter depiflash build
 docker build -t depiflash:prod .
 docker stack deploy -c docker-compose.yml depiflash
 ```

@@ -17,8 +17,8 @@
 ## Local dev
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm --filter ai-whisperers-site dev
 # → http://localhost:3000
 ```
 

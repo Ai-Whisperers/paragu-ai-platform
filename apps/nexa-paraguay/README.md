@@ -44,13 +44,12 @@
 
 ```bash
 # From the monorepo root (/root/paragu-ai-platform)
-pnpm install                                                # platform deps
-npm install --prefix apps/nexa-paraguay                     # app deps
+pnpm install                                                # workspace deps
 cp apps/nexa-paraguay/.env.example apps/nexa-paraguay/.env.local
 # fill in NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY,
 # SUPABASE_SERVICE_ROLE_KEY
 node apps/nexa-paraguay/scripts/copy-ai-packages.cjs         # resolve .tgz
-npm run dev --prefix apps/nexa-paraguay                     # http://localhost:3001
+pnpm --filter nexa-paraguay dev                             # http://localhost:3001
 ```
 
 ## Build + deploy
@@ -59,7 +58,7 @@ npm run dev --prefix apps/nexa-paraguay                     # http://localhost:3
 
 ```bash
 cd /root/paragu-ai-platform
-npm run build --prefix apps/nexa-paraguay
+pnpm --filter nexa-paraguay build
 # produces apps/nexa-paraguay/.next/standalone/ (entrypoint: apps/nexa-paraguay/server.js)
 ```
 

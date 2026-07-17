@@ -5,8 +5,8 @@ Tienda online de copas y discos menstruales. Paraguay.
 ## Setup
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm --filter reina-de-copas dev
 ```
 
 ## Environment Variables

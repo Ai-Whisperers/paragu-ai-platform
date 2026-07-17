@@ -5,8 +5,8 @@ Book cover design studio — built on ParaguAI Platform.
 ## Setup
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm --filter dayah-litworks dev
 ```
 
 ## Content
@@ -17,6 +17,6 @@ Edit `app/globals.css` for theme customization.
 ## Deploy
 
 ```bash
-npm run build
-npm start
+pnpm --filter dayah-litworks build
+pnpm --filter dayah-litworks start
 ```
