@@ -5,7 +5,11 @@ on:
     branches:
       - main
     paths:
-      - 'apps/arnos-barber-shop/**'
+      # WHY: workflow must fire on any app change. Previously narrowed to
+      # arnos-barber-shop only in 1efc7773 (accidental during reformat) —
+      # that gated the entire central pipeline on a single client. Restore
+      # apps/** so every app in dorny/paths-filter can be detected.
+      - 'apps/**'
       - 'packages/**'
       - 'pnpm-lock.yaml'
       - 'Dockerfile.*'
@@ -13,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - 'apps/arnos-barber-shop/**'
+      - 'apps/**'
       - 'packages/**'
       - 'pnpm-lock.yaml'
       - 'Dockerfile.*'
@@ -22,6 +26,10 @@ on:
 permissions:
   contents: read
   packages: write
+  packages: read
+  # read scope needed so the runner-side `docker pull` in the deploy
+  # step can authenticate against GHCR private packages. write alone
+  # lets us push but not pull back what we just shipped (2026-07-17).
 
 concurrency:
   # Group per PR. Push to main uses no concurrency control so deploys always
@@ -368,11 +376,10 @@ jobs:
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
-      - name: Deploy to VPS
+      - name: Map app to Swarm service
+        id: svc
         run: |
           APP="${{ matrix.app }}"
-          IMAGE="ghcr.io/ai-whisperers/paragu-ai-platform/${APP}:${{ github.sha }}"
-          # Map app name to Docker Swarm service name
           case "$APP" in
             golden-visa-advisory)  SVC="golden-visa-advisory_web" ;;
             pitchy-website)        SVC="pitchy-website_web" ;;
@@ -390,9 +397,20 @@ jobs:
             meal-prep)             SVC="meal-prep_web" ;;
             *)                     SVC="${APP}_web" ;;
           esac
-          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@72.61.44.159 "
-            docker pull ${IMAGE} &&
-            docker service update --image ${IMAGE} ${SVC} --with-registry-auth 2>&1
-          "
+          echo "svc=$SVC" >> "$GITHUB_OUTPUT"
+      - name: Pull image on runner, transfer to VPS, update service
+        # The runner is already authed to GHCR (docker/login-action ran in the
+        # docker job). Pulling on the runner avoids needing GHCR auth on the VPS.
+        # docker save -> ssh pipe -> docker load on VPS, then service update.
+        run: |
+          APP="${{ matrix.app }}"
+          IMAGE="ghcr.io/ai-whisperers/paragu-ai-platform/${APP}:${{ github.sha }}"
+          SVC="${{ steps.svc.outputs.svc }}"
+          echo "Pulling ${IMAGE} on runner..."
+          docker pull "${IMAGE}"
+          echo "Saving and streaming to VPS..."
+          docker save "${IMAGE}" | \
+            ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+              root@72.61.44.159 "docker load && docker service update --image ${IMAGE} ${SVC} --with-registry-auth 2>&1"
 
 # noop
