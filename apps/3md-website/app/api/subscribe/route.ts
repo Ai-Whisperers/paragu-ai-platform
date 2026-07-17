@@ -11,7 +11,8 @@ export async function POST(req: Request) {
     console.log(`[NEWSLETTER] ${email} at ${new Date().toISOString()}`)
     // In production: send to email list or DB
     return NextResponse.redirect(new URL("/?subscribed=true", req.url))
-  } catch {
+  } catch (err) {
+    console.error("[NEWSLETTER] subscribe failed", err)
     return NextResponse.json({ error: "Error" }, { status: 500 })
   }
 }
