@@ -176,6 +176,12 @@ export const TESTIMONIALS: readonly Testimonial[] = [
 export type PlanFeature = { text: string; included: boolean }
 
 export type Plan = {
+  /**
+   * Stable, non-i18n key used by the ROI calculator and CTA routing to look
+   * up a specific plan without depending on the display `name` (which may
+   * change per campaign).
+   */
+  id: 'prueba' | 'presencia' | 'crecimiento' | 'profesional'
   name: string
   setup: string
   monthly: string | null
@@ -190,6 +196,7 @@ export type Plan = {
 
 export const PLANS: readonly Plan[] = [
   {
+    id: 'prueba',
     name: 'Prueba',
     setup: 'Gratis',
     monthly: null,
@@ -208,6 +215,7 @@ export const PLANS: readonly Plan[] = [
     waMessage: 'Hola, quiero una demo gratis de mi sitio web con ParaguAI.',
   },
   {
+    id: 'presencia',
     name: 'Presencia',
     setup: 'Gs 650.000',
     monthly: '+ Gs 100.000/mes',
@@ -227,6 +235,7 @@ export const PLANS: readonly Plan[] = [
     waMessage: 'Hola, me interesa el plan Presencia (Gs 650.000 + 100.000/mes).',
   },
   {
+    id: 'crecimiento',
     name: 'Crecimiento',
     setup: 'Gs 1.200.000',
     monthly: '+ Gs 150.000/mes',
@@ -248,6 +257,7 @@ export const PLANS: readonly Plan[] = [
     waMessage: 'Hola, me interesa el plan Crecimiento (Gs 1.200.000 + 150.000/mes).',
   },
   {
+    id: 'profesional',
     name: 'Profesional',
     setup: 'Gs 2.200.000',
     monthly: '+ Gs 300.000/mes',
@@ -281,3 +291,15 @@ export const TEMPLATE_FEATURES = [
 export function waLink(message: string): string {
   return `https://wa.me/595981324569?text=${encodeURIComponent(message)}`
 }
+
+/**
+ * Marketing-copy constants surfaced across landing modules.
+ *
+ * `marketSize` is a rough headline figure for total SMBs in Paraguay used in
+ * social-proof copy (Sticky mobile CTA). Sourced from MIC/DGEEC SMB registries
+ * — updated when the reference publication changes, not per campaign.
+ */
+export const SITE_CONFIG = {
+  whatsapp: '595981324569',
+  marketSize: 250000,
+} as const

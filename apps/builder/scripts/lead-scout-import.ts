@@ -101,51 +101,54 @@ async function main() {
 
   console.log(`📖 Reading ${csvFile}...`)
   const content = readFileSync(csvFile, 'utf-8')
+  // csv-parse `parse` returns `unknown[]` under strict TS; the row shape is
+  // fully string-keyed (columns:true + trim:true). Casting at the parse
+  // boundary avoids ~9 downstream narrowing errors on each field access.
   const records = parse(content, {
     columns: true,
     skip_empty_lines: true,
     trim: true,
     // Handle potential BOM
     bom: true,
-  })
+  }) as Array<Record<string, string>>
 
   console.log(`📊 Found ${records.length} records in CSV`)
 
   // Filter out header-row duplicates (if CSV was appended multiple times)
   const headerNames = ['Date', 'Name', 'City', 'Category', 'Phone', 'URL', 'Priority', 'Status']
-  const cleanRecords = records.filter((r: Record<string, unknown>) => {
+  const cleanRecords = records.filter((r) => {
     return r.Name && !headerNames.includes(r.Name) && r.Name !== 'Name'
   })
 
   console.log(`🧹 After dedup headers: ${cleanRecords.length} records`)
 
-  let leads = cleanRecords.map((r: Record<string, unknown>, index: number) => {
+  let leads = cleanRecords.map((r, index) => {
     const businessType = guessBusinessType(r.Category)
-    
+
     return {
       business_name: r.Name?.slice(0, 200) || 'Unknown Business',
       business_type: businessType,
       slug: `${businessType}-${r.Phone || r.Name?.slice(0, 20) || index}-${Date.now()}`,
-      
+
       // Contact
       phone: r.Phone || null,
       whatsapp: r.Phone || null,
-      
+
       // Location
       city: r.City || 'Asuncion',
       state: 'Central',
-      
+
       // Source
       source: 'lead_scout',
       google_maps_url: r.URL || null,
-      
+
       // Scoring
       priority_score: parseInt(r.Priority || r.Score) || 50,
       priority_tier: (parseInt(r.Priority || r.Score) || 50) >= 60 ? 'A' : 'B',
       has_phone: !!r.Phone,
       has_website: false,
       has_reviews: false,
-      
+
       // Pipeline
       status: 'new',
       imported_at: parseDate(r.Date),

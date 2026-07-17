@@ -74,11 +74,26 @@ function parseCSV(filePath: string): Lead[] {
   return leads;
 }
 
-function callAgentCash(endpoint: string, method: string, body: object): object | null {
+/**
+ * Loosely-typed AgentCash response shape. The two upstreams we call
+ * (Apollo people-enrich, Google Maps places-search) return heterogeneous
+ * payloads; typing at the boundary lets the caller do the field-by-field
+ * dance without every access being a TS narrowing exercise.
+ */
+interface AgentCashResponse {
+  _noFunds?: boolean
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data?: any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  results?: any[]
+  [key: string]: unknown
+}
+
+function callAgentCash(endpoint: string, method: string, body: object): AgentCashResponse | null {
   const cmd = `${AGENTCASH} fetch "${endpoint}" -m ${method} -b '${JSON.stringify(body)}' -q 2>/dev/null`;
   try {
     const out = execSync(cmd, { timeout: 15000, encoding: 'utf-8' });
-    return JSON.parse(out);
+    return JSON.parse(out) as AgentCashResponse;
   } catch (e: unknown) {
     const err = e as { stderr?: string }
     const msg = err.stderr?.toLowerCase() || '';

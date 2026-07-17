@@ -1,6 +1,5 @@
 'use client'
 
-import Layout from '@/components/Layout'
 import { useState, useEffect } from 'react'
 
 export default function CostsPage() {

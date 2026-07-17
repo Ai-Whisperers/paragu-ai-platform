@@ -11,9 +11,12 @@
  */
 import { loadSiteContent, loadSite } from '@/lib/engine/site-loader'
 import type { Locale } from '@/lib/i18n/config'
-import { FooterSection } from '@/components/sections/navigation/footer-section'
-import { WhatsAppFloat } from '@/components/sections/navigation/whatsapp-float'
-import { ComplianceDisclaimerFooterSection } from '@/components/sections/navigation/compliance-disclaimer-footer-section'
+import { FooterSection, type FooterSectionProps } from '@/components/sections/navigation/footer-section'
+import { WhatsAppFloat, type WhatsAppFloatProps } from '@/components/sections/navigation/whatsapp-float'
+import {
+  ComplianceDisclaimerFooterSection,
+  type ComplianceDisclaimerFooterProps,
+} from '@/components/sections/navigation/compliance-disclaimer-footer-section'
 
 interface Props {
   siteSlug: string
@@ -41,14 +44,20 @@ export async function CommerceChrome({ siteSlug, locale }: Props) {
 
   const features = (site.features as Record<string, boolean> | undefined) ?? {}
 
+  // Content JSON supplies these props but the shape isn't statically typed
+  // upstream — casting at the JSX boundary keeps the spread ergonomic while
+  // still funnelling through the section component's own required-fields
+  // validation at runtime (missing businessName renders as undefined).
   return (
     <>
-      <FooterSection {...footerProps} />
+      <FooterSection {...(footerProps as unknown as FooterSectionProps)} />
       {Object.keys(complianceProps).length > 0 ? (
-        <ComplianceDisclaimerFooterSection {...complianceProps} />
+        <ComplianceDisclaimerFooterSection
+          {...(complianceProps as unknown as ComplianceDisclaimerFooterProps)}
+        />
       ) : null}
       {features.whatsappFloat !== false && whatsappProps.phone ? (
-        <WhatsAppFloat {...whatsappProps} />
+        <WhatsAppFloat {...(whatsappProps as unknown as WhatsAppFloatProps)} />
       ) : null}
     </>
   )

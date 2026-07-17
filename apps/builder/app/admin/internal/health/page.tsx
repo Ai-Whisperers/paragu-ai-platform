@@ -1,6 +1,5 @@
 'use client'
 
-import Layout from '@/components/Layout'
 import { useEffect, useMemo, useState } from 'react'
 
 async function getJson(url: string, opts?: RequestInit) {

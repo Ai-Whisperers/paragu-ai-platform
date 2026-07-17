@@ -1,6 +1,5 @@
 'use client'
 
-import Layout from '@/components/Layout'
 import { useState, useEffect } from 'react'
 
 const stages = ['contactado', 'demo', 'negociando', 'ganado', 'perdido']
@@ -103,7 +102,7 @@ export default function PipelinePage() {
             <div className="modal-title">Agregar lead</div>
             <form onSubmit={async e => {
               e.preventDefault()
-              const fd = new FormData(e.target)
+              const fd = new FormData(e.currentTarget)
               const data = Object.fromEntries(fd.entries())
               const newLead = { id: Date.now(), ...data, last_update: new Date().toISOString().slice(0, 10) }
               setLeads(prev => [...prev, newLead])
