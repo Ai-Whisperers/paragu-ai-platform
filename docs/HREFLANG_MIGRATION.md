@@ -10,6 +10,14 @@ shared adapter).
 > use it as the reference impl. The rebrand's per-locale metadata and
 > `metadataBase` overrides diverged from the shared adapter's shape;
 > re-migration is deferred until the rebrand stabilises.
+>
+> **Note (2026-07-17):** `apps/golden-visa-advisory` is architecturally
+> exempt from the shared adapter. It uses a client-side React Context
+> locale switcher (`src/lib/locale-context.tsx`) with a single URL —
+> there are no `[locale]` route segments, so `buildAlternates`'s
+> `/${locale}/slug` URL emission would point at pages that don't exist.
+> Fixed in-place instead: added `metadataBase` + expanded `alternates.languages`
+> to include `es` / `en` / `x-default` all pointing at the single canonical URL.
 
 ## When to migrate
 
@@ -28,7 +36,7 @@ Discovered via `[locale]` route segments and metadata alternates:
 | `nexa-paraguay`        | migrated (reference impl) | en, es      | done     |
 | `ai-whisperers-site`   | migrated            | en, es      | done     |
 | `bufete-mendez`        | migrated            | en, es      | done     |
-| `golden-visa-advisory` | alternates block    | en, es      | medium   |
+| `golden-visa-advisory` | N/A — inline alternates (context-based single-URL locale switcher) | en, es      | exempt   |
 | `maskarada`            | migrated            | en, es      | done     |
 
 Everything else in `apps/` is single-locale (Spanish only in most cases).

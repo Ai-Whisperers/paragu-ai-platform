@@ -28,10 +28,18 @@ const jsonLd = {
   }
   
 export const metadata: Metadata = {
+  metadataBase: new URL("https://golden-visa-advisory.paragu-ai.com"),
   title: "Golden Visa Advisory — Paraguai",
   description: "Market-building advisory firm helping Paraguayan businesses design investment products aligned with international Golden Visa demand. Direct advisory for foreign investors.",
-
-  alternates: { canonical: "https://golden-visa-advisory.paragu-ai.com", languages: { "es": "https://golden-visa-advisory.paragu-ai.com/" } },}
+  alternates: {
+    canonical: "https://golden-visa-advisory.paragu-ai.com",
+    languages: {
+      "es": "https://golden-visa-advisory.paragu-ai.com",
+      "en": "https://golden-visa-advisory.paragu-ai.com",
+      "x-default": "https://golden-visa-advisory.paragu-ai.com",
+    },
+  },
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
