@@ -17,43 +17,45 @@ export default function Contacto() {
 
   return (
     <>
-      <section style={{ background: "linear-gradient(135deg, #1B2A4A, #0F1A30)", color: "white", padding: "5rem 1.5rem", textAlign: "center" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <span style={{ color: "#C9A96E", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>Contacto</span>
-          <h1 className="serif" style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, margin: "0.75rem 0 1rem" }}>
+      <section className="bg-[linear-gradient(135deg,#1B2A4A,#0F1A30)] px-6 py-20 text-center text-white">
+        <div className="mx-auto max-w-[700px]">
+          <span className="text-[13px] font-semibold uppercase tracking-[0.08em] text-[#C9A96E]">Contacto</span>
+          <h1 className="serif my-3 mb-4 font-bold [font-size:clamp(1.75rem,4vw,2.5rem)]">
             {content.contact.title}
           </h1>
-          <p style={{ fontSize: "1.0625rem", opacity: 0.85 }}>{content.contact.subtitle}</p>
+          <p className="text-[17px] opacity-85">{content.contact.subtitle}</p>
         </div>
       </section>
 
-      <section style={{ padding: "5rem 1.5rem", backgroundColor: "white" }}>
-        <div style={{ maxWidth: "1000px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "3rem" }}>
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto grid max-w-[1000px] gap-12 [grid-template-columns:repeat(auto-fit,minmax(350px,1fr))]">
           {/* Contact Form */}
           <div>
             {sent ? (
-              <div style={{ backgroundColor: "#F0FDF4", border: "1px solid #22C55E", borderRadius: "12px", padding: "2rem", textAlign: "center" }}>
-                <p style={{ fontWeight: 700, fontSize: "1.125rem", color: "#166534", marginBottom: "0.5rem" }}>✔ Mensaje enviado</p>
-                <p style={{ fontSize: "0.875rem", color: "#4B5563" }}>Te responderemos a la brevedad</p>
+              <div className="rounded-xl border border-[#22C55E] bg-[#F0FDF4] p-8 text-center">
+                <p className="mb-2 text-lg font-bold text-[#166534]">✔ Mensaje enviado</p>
+                <p className="text-sm text-[#4B5563]">Te responderemos a la brevedad</p>
               </div>
             ) : (
               <div>
-                <h2 style={{ fontWeight: 700, fontSize: "1.25rem", color: "#1B2A4A", marginBottom: "1.5rem" }}>Enviános un mensaje</h2>
+                <h2 className="mb-6 text-xl font-bold text-[#1B2A4A]">Enviános un mensaje</h2>
                 <input
                   placeholder="Tu nombre"
                   value={name}
                   onChange={e => setName(e.target.value)}
-                  style={{ width: "100%", padding: "0.85rem 1rem", borderRadius: "8px", border: "1px solid #E8E3DA", fontSize: "0.9375rem", marginBottom: "1rem", outline: "none", fontFamily: "inherit" }}
+                  className="mb-4 w-full rounded-lg border border-[#E8E3DA] px-4 py-[13.6px] font-[inherit] text-[15px] outline-none"
                 />
                 <textarea
                   placeholder="Contanos tu caso o consulta..."
                   value={msg}
                   onChange={e => setMsg(e.target.value)}
                   rows={5}
-                  style={{ width: "100%", padding: "0.85rem 1rem", borderRadius: "8px", border: "1px solid #E8E3DA", fontSize: "0.9375rem", marginBottom: "1.25rem", outline: "none", resize: "vertical", fontFamily: "inherit" }}
+                  className="mb-5 w-full resize-y rounded-lg border border-[#E8E3DA] px-4 py-[13.6px] font-[inherit] text-[15px] outline-none"
                 />
-                <button onClick={handleSend}
-                  style={{ width: "100%", backgroundColor: "#25D366", color: "white", padding: "0.85rem", borderRadius: "8px", border: "none", fontWeight: 700, fontSize: "0.9375rem", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}>
+                <button
+                  onClick={handleSend}
+                  className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border-0 bg-[#25D366] p-[13.6px] text-[15px] font-bold text-white"
+                >
                   Enviar por WhatsApp
                 </button>
               </div>
@@ -62,41 +64,45 @@ export default function Contacto() {
 
           {/* Contact Info */}
           <div>
-            <h2 style={{ fontWeight: 700, fontSize: "1.25rem", color: "#1B2A4A", marginBottom: "1.5rem" }}>Información de Contacto</h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem" }}>
-                <span style={{ fontSize: "1.25rem" }}>📍</span>
+            <h2 className="mb-6 text-xl font-bold text-[#1B2A4A]">Información de Contacto</h2>
+            <div className="flex flex-col gap-5">
+              <div className="flex items-start gap-3">
+                <span className="text-xl">📍</span>
                 <div>
-                  <p style={{ fontWeight: 600, fontSize: "0.9375rem", color: "#1B2A4A", marginBottom: "0.25rem" }}>Dirección</p>
-                  <p style={{ fontSize: "0.875rem", color: "#6B7280", lineHeight: 1.5 }}>{s.address}</p>
+                  <p className="mb-1 text-[15px] font-semibold text-[#1B2A4A]">Dirección</p>
+                  <p className="text-sm leading-[1.5] text-[#6B7280]">{s.address}</p>
                 </div>
               </div>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem" }}>
-                <span style={{ fontSize: "1.25rem" }}>📞</span>
+              <div className="flex items-start gap-3">
+                <span className="text-xl">📞</span>
                 <div>
-                  <p style={{ fontWeight: 600, fontSize: "0.9375rem", color: "#1B2A4A", marginBottom: "0.25rem" }}>Teléfono / WhatsApp</p>
-                  <p style={{ fontSize: "0.875rem", color: "#6B7280" }}>{s.phone}</p>
+                  <p className="mb-1 text-[15px] font-semibold text-[#1B2A4A]">Teléfono / WhatsApp</p>
+                  <p className="text-sm text-[#6B7280]">{s.phone}</p>
                 </div>
               </div>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem" }}>
-                <span style={{ fontSize: "1.25rem" }}>📧</span>
+              <div className="flex items-start gap-3">
+                <span className="text-xl">📧</span>
                 <div>
-                  <p style={{ fontWeight: 600, fontSize: "0.9375rem", color: "#1B2A4A", marginBottom: "0.25rem" }}>Email</p>
-                  <p style={{ fontSize: "0.875rem", color: "#6B7280" }}>{s.email}</p>
+                  <p className="mb-1 text-[15px] font-semibold text-[#1B2A4A]">Email</p>
+                  <p className="text-sm text-[#6B7280]">{s.email}</p>
                 </div>
               </div>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem" }}>
-                <span style={{ fontSize: "1.25rem" }}>🕐</span>
+              <div className="flex items-start gap-3">
+                <span className="text-xl">🕐</span>
                 <div>
-                  <p style={{ fontWeight: 600, fontSize: "0.9375rem", color: "#1B2A4A", marginBottom: "0.25rem" }}>Horarios</p>
-                  <p style={{ fontSize: "0.875rem", color: "#6B7280" }}>{s.hours}</p>
+                  <p className="mb-1 text-[15px] font-semibold text-[#1B2A4A]">Horarios</p>
+                  <p className="text-sm text-[#6B7280]">{s.hours}</p>
                 </div>
               </div>
             </div>
 
-            <div style={{ marginTop: "2rem", paddingTop: "2rem", borderTop: "1px solid #E8E3DA" }}>
-              <a href={`https://wa.me/${s.whatsapp}?text=Hola%2C%20Estudio%20Jur%C3%ADdico%20Demo%20-%20Quiero%20agendar%20una%20consulta`} target="_blank" rel="noopener noreferrer"
-                style={{ display: "block", backgroundColor: "#C9A96E", color: "#1B2A4A", padding: "0.85rem", borderRadius: "8px", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem", textAlign: "center" }}>
+            <div className="mt-8 border-t border-[#E8E3DA] pt-8">
+              <a
+                href={`https://wa.me/${s.whatsapp}?text=Hola%2C%20Estudio%20Jur%C3%ADdico%20Demo%20-%20Quiero%20agendar%20una%20consulta`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-lg bg-[#C9A96E] p-[13.6px] text-center text-[15px] font-bold text-[#1B2A4A] no-underline"
+              >
                 Agendar Consulta Gratis
               </a>
             </div>

@@ -17,15 +17,15 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
 
   return (
     <>
-      <section style={{ background: "linear-gradient(135deg, #1B2A4A, #0F1A30)", color: "white", padding: "5rem 1.5rem", textAlign: "center" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <span style={{ color: "#C9A96E", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>
+      <section className="bg-[linear-gradient(135deg,#1B2A4A,#0F1A30)] px-6 py-20 text-center text-white">
+        <div className="mx-auto max-w-[700px]">
+          <span className="text-[0.8125rem] font-semibold uppercase tracking-[0.08em] text-[#C9A96E]">
             {post.category}
           </span>
-          <h1 className="serif" style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)", fontWeight: 700, margin: "0.75rem 0 1rem", lineHeight: 1.3 }}>
+          <h1 className="serif my-3 mb-4 mt-3 text-[clamp(1.5rem,3.5vw,2.25rem)] font-bold leading-[1.3]">
             {post.title}
           </h1>
-          <div style={{ display: "flex", justifyContent: "center", gap: "1rem", fontSize: "0.8125rem", opacity: 0.7 }}>
+          <div className="flex justify-center gap-4 text-[0.8125rem] opacity-70">
             <span>{post.date}</span>
             <span>·</span>
             <span>{post.readTime}</span>
@@ -33,31 +33,31 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
         </div>
       </section>
 
-      <section style={{ padding: "4rem 1.5rem", backgroundColor: "white" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <p style={{ fontSize: "1.0625rem", lineHeight: 1.8, color: "#4B5563", marginBottom: "1.5rem" }}>
+      <section className="bg-white px-6 py-16">
+        <div className="mx-auto max-w-[700px]">
+          <p className="mb-6 text-[1.0625rem] leading-[1.8] text-[#4B5563]">
             {post.excerpt}
           </p>
-          <div style={{ height: "300px", borderRadius: "12px", backgroundColor: "#F8F6F2", border: "1px solid #E8E3DA", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "2rem" }}>
-            <p style={{ color: "#9CA3AF", fontSize: "0.875rem" }}>Ilustración del artículo</p>
+          <div className="mb-8 flex h-[300px] items-center justify-center rounded-xl border border-[#E8E3DA] bg-[#F8F6F2]">
+            <p className="text-sm text-[#9CA3AF]">Ilustración del artículo</p>
           </div>
-          <div style={{ fontSize: "1rem", lineHeight: 1.8, color: "#4B5563" }}>
-            <p style={{ marginBottom: "1rem" }}>
+          <div className="text-base leading-[1.8] text-[#4B5563]">
+            <p className="mb-4">
               Este artículo es parte de nuestro blog jurídico de demostración. Para obtener asesoría personalizada sobre este tema, agendá una consulta con un estudio jurídico real.
             </p>
-            <p style={{ marginBottom: "1rem" }}>
+            <p className="mb-4">
               Contamos con amplia experiencia en {post.category.toLowerCase()}. Nuestro equipo está listo para ayudarte a resolver tus inquietudes legales con profesionalismo y dedicación.
             </p>
           </div>
-          <div style={{ marginTop: "3rem", padding: "1.5rem", borderRadius: "12px", backgroundColor: "#F8F6F2", border: "1px solid #E8E3DA", textAlign: "center" }}>
-            <p style={{ fontWeight: 600, color: "#1B2A4A", marginBottom: "0.75rem" }}>¿Necesitás asesoría legal?</p>
+          <div className="mt-12 rounded-xl border border-[#E8E3DA] bg-[#F8F6F2] p-6 text-center">
+            <p className="mb-3 font-semibold text-[#1B2A4A]">¿Necesitás asesoría legal?</p>
             <a href={content.hero.ctaLink} target="_blank" rel="noopener noreferrer"
-              style={{ display: "inline-block", backgroundColor: "#C9A96E", color: "#1B2A4A", padding: "0.75rem 1.5rem", borderRadius: "6px", fontWeight: 700, textDecoration: "none", fontSize: "0.875rem" }}>
+              className="inline-block rounded-md bg-[#C9A96E] px-6 py-3 text-sm font-bold text-[#1B2A4A] no-underline">
               {content.hero.ctaText}
             </a>
           </div>
-          <div style={{ marginTop: "2rem", textAlign: "center" }}>
-            <Link href="/blog" style={{ color: "#C9A96E", fontWeight: 600, textDecoration: "none", fontSize: "0.875rem" }}>
+          <div className="mt-8 text-center">
+            <Link href="/blog" className="text-sm font-semibold text-[#C9A96E] no-underline">
               ← Volver al blog
             </Link>
           </div>

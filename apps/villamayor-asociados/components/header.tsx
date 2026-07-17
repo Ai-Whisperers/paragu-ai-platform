@@ -21,47 +21,46 @@ export default function Header() {
   ]
 
   return (
-    <header style={{ backgroundColor: "white", borderBottom: "1px solid #E8E3DA", position: "sticky", top: 0, zIndex: 50 }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", textDecoration: "none" }}>
-          <div style={{ width: "36px", height: "36px", borderRadius: "8px", backgroundColor: "#1B2A4A", display: "flex", alignItems: "center", justifyContent: "center", color: "#C9A96E" }}>
+    <header className="sticky top-0 z-50 border-b border-[#E8E3DA] bg-white">
+      <div className="mx-auto flex h-[72px] max-w-[1200px] items-center justify-between px-6">
+        <Link href="/" className="flex items-center gap-2 no-underline">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#1B2A4A] text-[#C9A96E]">
             <Scale size={18} />
           </div>
           <div>
-            <div style={{ fontWeight: 700, fontSize: "0.9375rem", color: "#1B2A4A", lineHeight: 1.2 }}>{s.shortName}</div>
-            <div style={{ fontSize: "0.625rem", color: "#C9A96E", letterSpacing: "0.08em", textTransform: "uppercase" }}>Jurídico Demo</div>
+            <div className="text-[0.9375rem] font-bold leading-tight text-[#1B2A4A]">{s.shortName}</div>
+            <div className="text-[0.625rem] uppercase tracking-[0.08em] text-[#C9A96E]">Jurídico Demo</div>
           </div>
         </Link>
 
-        <nav className="hide-mobile" style={{ display: "flex", gap: "2rem" }}>
+        <nav className="hide-mobile flex gap-8">
           {nav.map((n, i) => (
-            <Link key={i} href={n.href} style={{ color: "#4B5563", textDecoration: "none", fontSize: "0.875rem", fontWeight: 500 }}>
+            <Link key={i} href={n.href} className="text-sm font-medium text-[#4B5563] no-underline">
               {n.label}
             </Link>
           ))}
         <LocaleSwitcher /></nav>
 
         <a href={content.hero.ctaLink} target="_blank" rel="noopener noreferrer"
-          className="hide-mobile"
-          style={{ backgroundColor: "#C9A96E", color: "#1B2A4A", padding: "0.5rem 1.25rem", borderRadius: "6px", fontWeight: 600, textDecoration: "none", fontSize: "0.8125rem" }}>
+          className="hide-mobile rounded-md bg-[#C9A96E] px-5 py-2 text-[0.8125rem] font-semibold text-[#1B2A4A] no-underline">
           Consulta Gratis
         </a>
 
-        <button onClick={() => setOpen(!open)} style={{ background: "none", border: "none", cursor: "pointer" }} className="hide-desktop">
+        <button onClick={() => setOpen(!open)} className="hide-desktop cursor-pointer border-none bg-transparent">
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       {open && (
-        <div style={{ padding: "1rem 1.5rem", backgroundColor: "white", borderTop: "1px solid #E8E3DA" }} className="hide-desktop">
+        <div className="hide-desktop border-t border-[#E8E3DA] bg-white px-6 py-4">
           {nav.map((n, i) => (
             <Link key={i} href={n.href} onClick={() => setOpen(false)}
-              style={{ display: "block", padding: "0.75rem 0", color: "#1B2A4A", textDecoration: "none", borderBottom: i < nav.length-1 ? "1px solid #F3F0EA" : "none", fontSize: "0.9375rem" }}>
+              className={`block py-3 text-[0.9375rem] text-[#1B2A4A] no-underline ${i < nav.length-1 ? "border-b border-[#F3F0EA]" : ""}`}>
               {n.label}
             </Link>
           ))}
           <a href={content.hero.ctaLink} target="_blank" rel="noopener noreferrer"
-            style={{ display: "block", marginTop: "1rem", backgroundColor: "#C9A96E", color: "#1B2A4A", padding: "0.75rem", borderRadius: "6px", fontWeight: 600, textDecoration: "none", textAlign: "center", fontSize: "0.875rem" }}>
+            className="mt-4 block rounded-md bg-[#C9A96E] p-3 text-center text-sm font-semibold text-[#1B2A4A] no-underline">
             Consulta Gratis
           </a>
         </div>

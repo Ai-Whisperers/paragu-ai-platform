@@ -5,16 +5,19 @@ export default function Footer() {
   const now = new Date().getFullYear()
 
   return (
-    <footer style={{ backgroundColor: "#1B2A4A", color: "#E8E3DA", padding: "4rem 1.5rem 2rem" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2.5rem" }}>
+    <footer className="bg-[#1B2A4A] px-6 pb-8 pt-16 text-[#E8E3DA]">
+      <div className="mx-auto max-w-[1200px]">
+        <div className="grid gap-10 [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))]">
           {/* Brand */}
           <div>
-            <h3 style={{ color: "white", fontWeight: 700, fontSize: "1.125rem", marginBottom: "1rem" }}>{s.name}</h3>
-            <p style={{ fontSize: "0.8125rem", lineHeight: 1.7, color: "#9CA3AF", marginBottom: "0.75rem" }}>{s.description}</p>
-            <div style={{ display: "flex", gap: "0.5rem" }}>
+            <h3 className="mb-4 text-lg font-bold text-white">{s.name}</h3>
+            <p className="mb-3 text-[13px] leading-[1.7] text-[#9CA3AF]">{s.description}</p>
+            <div className="flex gap-2">
               {s.memberships.map((m, i) => (
-                <span key={i} style={{ backgroundColor: "rgba(201,169,110,0.15)", color: "#C9A96E", padding: "0.2rem 0.5rem", borderRadius: "4px", fontSize: "0.625rem", fontWeight: 600 }}>
+                <span
+                  key={i}
+                  className="rounded bg-[rgba(201,169,110,0.15)] px-2 py-[3px] text-[10px] font-semibold text-[#C9A96E]"
+                >
                   {m}
                 </span>
               ))}
@@ -23,8 +26,8 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 style={{ color: "white", fontWeight: 600, fontSize: "0.8125rem", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "1rem" }}>Enlaces</h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.08em] text-white">Enlaces</h3>
+            <div className="flex flex-col gap-2">
               {[
                 { label: "Inicio", href: "/" },
                 { label: "Servicios", href: "/servicios" },
@@ -32,38 +35,44 @@ export default function Footer() {
                 { label: "Blog", href: "/blog" },
                 { label: "Contacto", href: "/contacto" },
               ].map((l, i) => (
-                <a key={i} href={l.href} style={{ color: "#9CA3AF", textDecoration: "none", fontSize: "0.8125rem" }}>{l.label}</a>
+                <a key={i} href={l.href} className="text-[13px] text-[#9CA3AF] no-underline">
+                  {l.label}
+                </a>
               ))}
             </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 style={{ color: "white", fontWeight: 600, fontSize: "0.8125rem", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "1rem" }}>Contacto</h3>
-            <p style={{ fontSize: "0.8125rem", color: "#9CA3AF", marginBottom: "0.5rem" }}>📍 {s.address}</p>
-            <p style={{ fontSize: "0.8125rem", color: "#9CA3AF", marginBottom: "0.5rem" }}>📞 {s.phone}</p>
-            <p style={{ fontSize: "0.8125rem", color: "#9CA3AF", marginBottom: "0.5rem" }}>📧 {s.email}</p>
-            <p style={{ fontSize: "0.8125rem", color: "#9CA3AF" }}>🕐 {s.hours}</p>
+            <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.08em] text-white">Contacto</h3>
+            <p className="mb-2 text-[13px] text-[#9CA3AF]">📍 {s.address}</p>
+            <p className="mb-2 text-[13px] text-[#9CA3AF]">📞 {s.phone}</p>
+            <p className="mb-2 text-[13px] text-[#9CA3AF]">📧 {s.email}</p>
+            <p className="text-[13px] text-[#9CA3AF]">🕐 {s.hours}</p>
           </div>
 
           {/* Schedule */}
           <div>
-            <h3 style={{ color: "white", fontWeight: 600, fontSize: "0.8125rem", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "1rem" }}>Agendá tu Consulta</h3>
-            <p style={{ fontSize: "0.8125rem", color: "#9CA3AF", marginBottom: "1rem", lineHeight: 1.6 }}>
+            <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.08em] text-white">Agendá tu Consulta</h3>
+            <p className="mb-4 text-[13px] leading-[1.6] text-[#9CA3AF]">
               Primera consulta sin costo. Respondemos consultas por WhatsApp en el día.
             </p>
-            <a href={`https://wa.me/${s.whatsapp}?text=Hola%2C%20Estudio%20Jur%C3%ADdico%20Demo%20-%20Quiero%20agendar%20una%20consulta`} target="_blank" rel="noopener noreferrer"
-              style={{ display: "inline-block", backgroundColor: "#25D366", color: "white", padding: "0.6rem 1.5rem", borderRadius: "6px", fontWeight: 600, textDecoration: "none", fontSize: "0.8125rem" }}>
+            <a
+              href={`https://wa.me/${s.whatsapp}?text=Hola%2C%20Estudio%20Jur%C3%ADdico%20Demo%20-%20Quiero%20agendar%20una%20consulta`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-md bg-[#25D366] px-6 py-[10px] text-[13px] font-semibold text-white no-underline"
+            >
               WhatsApp
             </a>
           </div>
         </div>
 
-        <div style={{ marginTop: "3rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(255,255,255,0.08)", textAlign: "center" }}>
-          <p style={{ fontSize: "0.75rem", color: "#6B7280", marginBottom: "0.5rem" }}>
+        <div className="mt-12 border-t border-white/[0.08] pt-6 text-center">
+          <p className="mb-2 text-xs text-[#6B7280]">
             &copy; {now} {content.footer.copyright}
           </p>
-          <p style={{ fontSize: "0.6875rem", color: "#6B7280", lineHeight: 1.5, maxWidth: "700px", margin: "0 auto" }}>
+          <p className="mx-auto max-w-[700px] text-[11px] leading-[1.5] text-[#6B7280]">
             {content.footer.disclaimer}
           </p>
         </div>

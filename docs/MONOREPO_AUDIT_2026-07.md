@@ -146,6 +146,10 @@ Ordered by (blast radius) × (ease):
     `docs/ARCHIVED_REPOS.md` + rm.
 15. Sync `.github/workflows/central.yml` hardcoded list to actual 45-app fleet (or remove list
     and rely solely on `dorny/paths-filter`).
+    **Resolved.** Verified at HEAD: both the `dorny/paths-filter` block and
+    the emit-changed-apps shell block enumerate the same 47 apps (all of
+    `apps/*` minus the `site-template` fixture). Diff against `apps/`
+    directory returned empty in both directions.
 16. Add missing `sitemap.ts` to 3 apps still lacking one (`fun4me-store`, `nudo`,
     `site-template`). Original 2026-06-11 count of 18 was pre-fleet-audit fixes.
     **Resolved (partial).** `apps/fun4me-store/src/app/sitemap.ts` and
