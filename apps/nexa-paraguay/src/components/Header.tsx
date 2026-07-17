@@ -92,7 +92,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
                       className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-lg border border-border/40 py-2 min-w-[280px] z-50"
                       style={{ boxShadow: '0 8px 24px rgba(0,0,0,0.12)' }}
                     >
-                      {item.children.map((child: any, j: number) => {
+                      {item.children?.map((child: any, j: number) => {
                         let childHref = child.href || '#'
                         childHref = childHref.replace(/^\/s\/[^/]+\/[^/]+/, '')
                         if (!childHref.startsWith('http') && !childHref.startsWith('/' + currentLocale)) {

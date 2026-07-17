@@ -1667,7 +1667,7 @@ importers:
         version: link:../../packages/@ai-whisperers/commerce
       '@ai-whisperers/i18n':
         specifier: workspace:*
-        version: link:../../packages/@ai-whisperers/i18n/i18n
+        version: link:../../packages/@ai-whisperers/i18n
       '@ai-whisperers/sections':
         specifier: workspace:*
         version: link:../../packages/@ai-whisperers/sections
@@ -1933,7 +1933,7 @@ importers:
         version: link:../../packages/@ai-whisperers/content
       '@ai-whisperers/i18n':
         specifier: workspace:*
-        version: link:../../packages/@ai-whisperers/i18n/i18n
+        version: link:../../packages/@ai-whisperers/i18n
       '@ai-whisperers/sections':
         specifier: workspace:*
         version: link:../../packages/@ai-whisperers/sections
@@ -3016,31 +3016,9 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
-  packages/@ai-whisperers/content/content:
-    devDependencies:
-      typescript:
-        specifier: 5.9.3
-        version: 5.9.3
-
   packages/@ai-whisperers/dockerfiles: {}
 
   packages/@ai-whisperers/i18n:
-    dependencies:
-      '@types/react':
-        specifier: 18.3.12
-        version: 18.3.12
-      '@types/react-dom':
-        specifier: 18.3.1
-        version: 18.3.1
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-    devDependencies:
-      typescript:
-        specifier: 5.9.3
-        version: 5.9.3
-
-  packages/@ai-whisperers/i18n/i18n:
     dependencies:
       '@types/react':
         specifier: 18.3.12
