@@ -29,8 +29,11 @@ permissions:
   packages: write
 
 concurrency:
-  group: central-${{ github.head_ref || github.ref }}
-  cancel-in-progress: true
+  # Scope concurrency to PRs only. Push to main must always run to completion
+  # because it's the deploy path; cancelling an in-flight main run would leave
+  # the deploy job half-applied. PRs still self-cancel.
+  group: central-pr-${{ github.head_ref || '' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   detect-apps:
