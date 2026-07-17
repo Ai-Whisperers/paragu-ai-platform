@@ -29,7 +29,7 @@ const jsonLd = {
   "url": "https://fun4me.paragu-ai.com",
   "telephone": "+595****4567",
   "address": { "@type": "PostalAddress", "addressLocality": "Asunción", "addressRegion": "Central", "addressCountry": "PY" },
-  "geo": { "@type": "GeoCoordinates", "latitude": -25.2637, "longitude": -57.5759 },
+  "geo": { "@type": "GeoCoordinates", "latitude": -25.2933, "longitude": -57.5722 },
   "priceRange": "Gs. 45.000 - Gs. 250.000",
   "currenciesAccepted": "PYG",
   "paymentAccepted": "Transferencia, Efectivo, Contra Entrega",

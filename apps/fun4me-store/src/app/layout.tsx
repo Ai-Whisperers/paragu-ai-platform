@@ -14,8 +14,8 @@ const jsonLd = {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -25.2637,
-      longitude: -57.5759
+      latitude: -25.2933,
+      longitude: -57.5722
     },
     "sameAs": ["https://instagram.com/fun4me_py"]
   }

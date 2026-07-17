@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             telephone: '+595XXX XXX XXX',
             email: 'hola@stroopwafelhuis.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Asunción', addressCountry: 'PY' },
-            geo: { '@type': 'GeoCoordinates', latitude: -25.2637, longitude: -57.5759 },
+            geo: { '@type': 'GeoCoordinates', latitude: -25.2856, longitude: -57.5762 },
             servesCuisine: 'Dutch',
             priceRange: 'Gs. 8.000 - 50.000',
             sameAs: ['https://instagram.com/stroopwafelhuis', 'https://facebook.com/stroopwafelhuis'],

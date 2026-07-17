@@ -16,8 +16,8 @@ const jsonLd = {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -25.2637,
-      longitude: -57.5759
+      latitude: -25.3234,
+      longitude: -57.5417
     },
     "sameAs": ["https://instagram.com/cronosacademy"]
   }

@@ -12,8 +12,8 @@ export default function JsonLd() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": -25.2637,
-      "longitude": -57.5759
+      "latitude": -25.3419,
+      "longitude": -57.5083
     }
   }
 
