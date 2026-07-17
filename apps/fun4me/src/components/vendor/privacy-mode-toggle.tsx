@@ -11,13 +11,17 @@ export function PrivacyModeToggle() {
         setActive(true)
         document.documentElement.classList.add("privacy-mode")
       }
-    } catch {}
+    } catch (err) {
+      console.debug("[fun4me/privacy-mode-toggle] read failed — storage unavailable", err)
+    }
   }, [])
 
   const toggle = () => {
     const next = !active
     setActive(next)
-    try { localStorage.setItem("fun4me_privacy_mode", next ? "true" : "false") } catch {}
+    try { localStorage.setItem("fun4me_privacy_mode", next ? "true" : "false") } catch (err) {
+      console.debug("[fun4me/privacy-mode-toggle] write failed — likely quota exceeded or private mode", err)
+    }
     document.documentElement.classList.toggle("privacy-mode", next)
   }
 

@@ -10,7 +10,9 @@ export function useWishlist() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY)
       if (saved) setItems(JSON.parse(saved))
-    } catch {}
+    } catch (err) {
+      console.debug("[fun4me/wishlist] read failed — corrupted JSON or storage unavailable", err)
+    }
   }, [])
 
   const toggle = (product: any) => {

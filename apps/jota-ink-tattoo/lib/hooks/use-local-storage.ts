@@ -18,7 +18,9 @@ export function useLocalStorage<T>(key: string, initial: T, ttlMs?: number) {
       } else {
         setValue(parsed)
       }
-    } catch {}
+    } catch (err) {
+      console.debug("[jota-ink/use-local-storage] read failed — corrupted JSON or storage unavailable", { key, err })
+    }
   }, [key])
 
   const set = (next: T) => {
@@ -29,11 +31,15 @@ export function useLocalStorage<T>(key: string, initial: T, ttlMs?: number) {
       } else {
         localStorage.setItem(key, JSON.stringify(next))
       }
-    } catch {}
+    } catch (err) {
+      console.debug("[jota-ink/use-local-storage] write failed — likely quota exceeded or private mode", { key, err })
+    }
   }
 
   const remove = () => {
-    try { localStorage.removeItem(key) } catch {}
+    try { localStorage.removeItem(key) } catch (err) {
+      console.debug("[jota-ink/use-local-storage] remove failed — storage unavailable", { key, err })
+    }
     setValue(initial)
   }
 

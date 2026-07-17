@@ -28,7 +28,9 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
         const p = JSON.parse(stored)
         if (p.locale) setLocaleState(p.locale)
         if (p.path) setPathState(p.path)
-      } catch {}
+      } catch (err) {
+        console.debug("[golden-visa/locale-context] read failed — corrupted JSON or storage unavailable", err)
+      }
     }
     setLoaded(true)
   }, [])

@@ -113,7 +113,10 @@ export async function loadJSONAsync(dir: string, file: string): Promise<any> {
     setCache(key, data)
     pruneCache()
     return data
-  } catch { return null }
+  } catch (err) {
+    console.debug("[nexa/loader] loadJSONAsync failed — missing file or invalid JSON", { dir, file, err })
+    return null
+  }
 }
 
 // Keep synchronous version for compatibility
@@ -126,7 +129,10 @@ export function loadJSON(dir: string, file: string): any {
     setCache(key, data)
     pruneCache()
     return data
-  } catch { return null }
+  } catch (err) {
+    console.debug("[nexa/loader] loadJSON failed — missing file or invalid JSON", { dir, file, err })
+    return null
+  }
 }
 
 export function loadContentJSON(dir: string, file: string): any {

@@ -11,7 +11,9 @@ export function useRecentlyViewed() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY)
       if (saved) setItems(JSON.parse(saved))
-    } catch {}
+    } catch (err) {
+      console.debug("[fun4me/recently-viewed] read failed — corrupted JSON or storage unavailable", err)
+    }
   }, [])
 
   const addItem = (product: any) => {

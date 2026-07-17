@@ -48,7 +48,9 @@ export function CookieConsent({ locale }: { locale: string }) {
   function decide(value: Choice) {
     try {
       window.localStorage.setItem(STORAGE_KEY, value)
-    } catch {}
+    } catch (err) {
+      console.debug("[dra-gabriela/cookie-consent] persist failed — likely private mode; choice not remembered across visits", err)
+    }
     setShow(false)
   }
 

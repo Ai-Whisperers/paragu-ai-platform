@@ -26,7 +26,8 @@ export function createLocalStorageStore<T>(config: LocalStorageStoreConfig<T>) {
         .filter((it): it is T => validate(it))
         .slice(0, maxItems)
       return filtered.length === 0 ? EMPTY : filtered
-    } catch {
+    } catch (err) {
+      console.debug("[local-storage-store] parseFromStorage fallback — corrupted JSON or storage unavailable", { siteSlug, err })
       return EMPTY
     }
   }
@@ -69,7 +70,9 @@ export function createLocalStorageStore<T>(config: LocalStorageStoreConfig<T>) {
       window.localStorage.setItem(storageKey(siteSlug), JSON.stringify(items))
       invalidate(siteSlug)
       window.dispatchEvent(new CustomEvent(changeEvent, { detail: siteSlug }))
-    } catch {}
+    } catch (err) {
+      console.debug("[local-storage-store] write failed — likely quota exceeded or private mode", { siteSlug, err })
+    }
   }
 
   function clear(siteSlug: string): void {
@@ -78,7 +81,9 @@ export function createLocalStorageStore<T>(config: LocalStorageStoreConfig<T>) {
       window.localStorage.removeItem(storageKey(siteSlug))
       invalidate(siteSlug)
       window.dispatchEvent(new CustomEvent(changeEvent, { detail: siteSlug }))
-    } catch {}
+    } catch (err) {
+      console.debug("[local-storage-store] clear failed — storage unavailable", { siteSlug, err })
+    }
   }
 
   return { getSnapshot, subscribe, read, write, clear, storageKey, maxItems }

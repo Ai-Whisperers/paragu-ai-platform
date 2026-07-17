@@ -23,7 +23,9 @@ export function DemoLeadBar({ isDemo = false, siteSlug, siteName, vertical, loca
         setHidden(true)
         return
       }
-    } catch {}
+    } catch (err) {
+      console.debug("[demo-lead-bar] sessionStorage read failed — showing bar", err)
+    }
     setHidden(false)
   }, [isDemo, siteSlug])
 
@@ -36,7 +38,9 @@ export function DemoLeadBar({ isDemo = false, siteSlug, siteName, vertical, loca
   const demoUrl = vertical ? `/demo?v=${encodeURIComponent(vertical)}` : '/demo'
 
   const dismiss = () => {
-    try { sessionStorage.setItem(DISMISS_KEY, siteSlug) } catch {}
+    try { sessionStorage.setItem(DISMISS_KEY, siteSlug) } catch (err) {
+      console.debug("[demo-lead-bar] sessionStorage write failed — dismissal will not persist", err)
+    }
     setHidden(true)
   }
 

@@ -13,14 +13,18 @@ export function DarkModeToggle() {
         setDark(false)
         document.documentElement.classList.add("light")
       }
-    } catch {}
+    } catch (err) {
+      console.debug("[fun4me/dark-mode-toggle] read failed — storage unavailable", err)
+    }
   }, [])
 
   const toggle = () => {
     const next = !dark
     setDark(next)
     document.documentElement.classList.toggle("light", !next)
-    try { localStorage.setItem(STORAGE_KEY, next ? "dark" : "light") } catch {}
+    try { localStorage.setItem(STORAGE_KEY, next ? "dark" : "light") } catch (err) {
+      console.debug("[fun4me/dark-mode-toggle] write failed — likely quota exceeded or private mode", err)
+    }
   }
 
   return (

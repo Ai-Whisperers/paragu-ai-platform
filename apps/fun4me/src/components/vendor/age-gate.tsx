@@ -15,10 +15,14 @@ export function AgeGate({ children }: { children: ReactNode }) {
         const { ts } = JSON.parse(raw)
         if (Date.now() - ts < AGE_EXPIRY) setVerified(true)
       }
-    } catch {}
+    } catch (err) {
+      console.debug("[fun4me/age-gate] read failed — corrupted JSON or storage unavailable", err)
+    }
   }, [])
   const confirm = () => {
-    try { localStorage.setItem(AGE_KEY, JSON.stringify({ ts: Date.now() })) } catch {}
+    try { localStorage.setItem(AGE_KEY, JSON.stringify({ ts: Date.now() })) } catch (err) {
+      console.debug("[fun4me/age-gate] write failed — likely quota exceeded or private mode", err)
+    }
     setVerified(true)
   }
   if (verified) return <>{children}</>
