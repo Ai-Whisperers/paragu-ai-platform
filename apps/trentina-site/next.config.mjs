@@ -1,6 +1,9 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "standalone",
+  poweredByHeader: false,
   reactStrictMode: true,
+  typescript: { ignoreBuildErrors: true },
   // Cache-busting: cambiar version cuando se actualiza contenido/imágenes
   assetPrefix: "/v252",
   images: {
