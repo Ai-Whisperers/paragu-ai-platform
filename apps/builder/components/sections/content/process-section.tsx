@@ -78,7 +78,7 @@ export function ProcessSection({
         )}
 
         <div className="relative">
-          <div className="absolute left-8 top-0 bottom-0 w-1 md:left-1/2" style={{ background: 'linear-gradient(to bottom, var(--primary), var(--secondary))' }} />
+          <div className="absolute left-8 top-0 bottom-0 w-1 md:left-1/2 bg-primary" />
 
           <div className="space-y-12">
             {steps.map((step, index) => (

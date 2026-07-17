@@ -53,7 +53,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
   return (
     <div className="w-full">
       {/* Hero Story */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className=" mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -90,7 +90,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-orange-200 to-amber-200 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-brand/30 flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <span className="text-xl sm:text-3xl sm:text-5xl">{heroImageEmoji}</span>
@@ -198,7 +198,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Our Process */}
       {processEnabled ? (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 to-orange-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className=" mx-auto">
             <div className="text-center mb-12">
               <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">
@@ -327,7 +327,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
               </div>
 
               <div className="relative">
-                <div className="aspect-video rounded-2xl bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                <div className="aspect-video rounded-2xl bg-brand/20 flex items-center justify-center">
                   <div className="text-center p-8">
                     <MapPin className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
                     <p className="text-muted-foreground font-medium">Mapa de Ubicación</p>
@@ -342,7 +342,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* CTA */}
       {ctaEnabled ? (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-600 to-amber-600 text-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-deep text-white">
           <div className="max-w-4xl mx-auto text-center">
             <Heading level={2} className="text-xl sm:text-3xl md:text-2xl sm:text-4xl font-bold mb-4">
               {overrides?.cta?.title ?? '¿Querés probar la diferencia?'}

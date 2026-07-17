@@ -50,8 +50,7 @@ export function ProductCard({
     <div
       className="font-heading flex h-64 items-center justify-center px-6"
       style={{
-        background:
-          'linear-gradient(135deg, var(--surface) 0%, var(--surface-light, var(--surface)) 100%)',
+        background: 'var(--surface)',
         borderBottom: '1px solid var(--border)',
       }}
       aria-label={`${product.name} — foto próximamente`}

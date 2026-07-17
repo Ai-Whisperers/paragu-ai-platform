@@ -106,7 +106,7 @@ export function SuccessStories({
   const [activeStory, setActiveStory] = useState(0)
 
   return (
-    <Section fullWidth spacing="md" className="bg-gradient-to-b from-surface to-surface-light" id="testimonials">
+    <Section fullWidth spacing="md" className="bg-background" id="testimonials">
       <div className="mx-auto  px-6">
         {title && (
           <div className="mb-12 text-center">

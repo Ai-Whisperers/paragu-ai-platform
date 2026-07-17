@@ -48,7 +48,7 @@ export function TrustBadges({
   const [hoveredBadge, setHoveredBadge] = useState<string | null>(null)
 
   return (
-    <Section fullWidth spacing="md" className="bg-gradient-to-b from-surface to-surface-light">
+    <Section fullWidth spacing="md" className="bg-background">
       <div className="mx-auto  px-6">
         {title && (
           <div className="mb-10 text-center">

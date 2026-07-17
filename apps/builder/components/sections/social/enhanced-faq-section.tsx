@@ -172,7 +172,7 @@ export function EnhancedFAQSection({ business, items, title, subtitle }: FAQSect
         )}
 
         {/* Still Have Questions */}
-        <Card className="mt-10 bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200">
+        <Card className="mt-10 bg-accent/10 border-accent/40">
           <CardContent className="p-8">
             <div className="text-center">
               <Heading level={3} className="text-xl font-bold text-foreground mb-3">

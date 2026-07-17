@@ -251,7 +251,7 @@ export function FAQChatbot({ phone, className, items }: FAQChatbotProps) {
         </div>
 
         {/* Still have questions? */}
-        <Card className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white">
+        <Card className="bg-primary text-white">
           <CardContent className="p-8 text-center">
             <Heading level={3} className="text-2xl font-bold mb-3">¿No encontraste tu respuesta?</Heading>
             <p className="mb-6 opacity-90">

@@ -220,7 +220,13 @@ export function HeroSection({
   // an absolute layer above the picture.
   const useResponsivePicture = Boolean(backgroundImage && backgroundImageMobile)
   const backgroundStyle = backgroundImage && !useResponsivePicture
-    ? { backgroundImage: `linear-gradient(${overlayColor || 'rgba(10,10,20,0.85)'}, ${overlayColor || 'rgba(10,10,20,0.85)'}), url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+    ? {
+        backgroundColor: overlayColor || 'rgba(76,44,115,0.85)',
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundBlendMode: 'multiply' as const,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }
     : undefined
 
   // Split layout: text on dark left half, image on right half
@@ -309,12 +315,12 @@ export function HeroSection({
         </picture>
       )}
       {useResponsivePicture && (
-        <div className="absolute inset-0 bg-gradient-to-b from-[color-mix(in_srgb,var(--primary)_70%,transparent)] to-[color-mix(in_srgb,var(--primary)_80%,transparent)] pointer-events-none" />
+        <div className="absolute inset-0 bg-primary/75 pointer-events-none" />
       )}
       {useGradient && !backgroundImage && (
         <GradientBackground variant={gradientVariant} animated={enhanced} className="absolute inset-0" />
       )}
-      <div className="absolute inset-0 bg-gradient-to-b from-[color-mix(in_srgb,var(--primary)_10%,transparent)] via-transparent to-[color-mix(in_srgb,var(--primary)_20%,transparent)] pointer-events-none" />
+      <div className="absolute inset-0 bg-primary/15 pointer-events-none" />
       {enhanced && (
         <>
           <DecorativeBlob variant="accent" size="xl" animated position="absolute" placement={{ top: '-15%', right: '-10%' }} blur="xl" opacity={0.12} />

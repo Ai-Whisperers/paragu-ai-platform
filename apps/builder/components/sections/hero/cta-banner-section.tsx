@@ -18,17 +18,12 @@ export function CTABannerSection({
 }: CTABannerSectionProps) {
   return (
     <section
-      className="font-heading relative overflow-hidden py-16"
-      style={{
-        background: 'linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%)',
-      }}
+      className="font-heading relative overflow-hidden py-16 bg-deep"
     >
-      {/* Decorative pattern */}
+      {/* Decorative pattern (solid low-opacity wash — no gradients) */}
       <div
-        className="font-heading absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage: `radial-gradient(circle at 30% 40%, rgba(255,255,255,0.5) 0%, transparent 50%)`,
-        }}
+        className="font-heading absolute inset-0 opacity-[0.05]"
+        style={{ backgroundColor: 'rgba(255,255,255,0.5)' }}
       />
 
       <Container className="font-heading relative z-10 text-center">

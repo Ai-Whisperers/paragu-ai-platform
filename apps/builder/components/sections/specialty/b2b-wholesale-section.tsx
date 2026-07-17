@@ -32,7 +32,7 @@ export function B2BWholesaleSection({
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className=" mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-800 text-sm font-medium mb-6">
             <Building2 className="w-4 h-4" />
@@ -179,7 +179,7 @@ export function B2BWholesaleSection({
       </section>
 
       {/* How It Works */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-amber-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className=" mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Proceso Simple en 4 Pasos</Heading>
@@ -262,7 +262,7 @@ export function B2BWholesaleSection({
       )}
 
       {/* Final CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-600 to-amber-600 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-deep text-white">
         <div className="max-w-4xl mx-auto text-center">
           <Heading level={2} className="text-4xl font-bold mb-6">Empezá Ahora</Heading>
           <p className="text-xl mb-8 opacity-90">{resolvedClaim}</p>

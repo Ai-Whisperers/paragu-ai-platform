@@ -34,16 +34,11 @@ export function ConveyorBeltStrip({
     >
       <div
         className="absolute inset-x-0 top-1/2 h-20 -translate-y-1/2 rounded-md"
-        style={{
-          background: `linear-gradient(180deg, ${beltColor}DD 0%, ${beltColor} 50%, ${beltColor}CC 100%)`,
-        }}
+        style={{ background: beltColor }}
       />
       <div
-        className="absolute inset-x-0 top-1/2 h-20 -translate-y-1/2 opacity-40"
-        style={{
-          background:
-            'repeating-linear-gradient(90deg, transparent 0 28px, rgba(255,255,255,0.15) 28px 30px)',
-        }}
+        className="absolute inset-x-0 top-1/2 h-20 -translate-y-1/2 opacity-25"
+        style={{ background: 'rgba(255,255,255,0.08)' }}
       />
       <div className="absolute inset-x-0 top-[calc(50%-40px)] h-1 bg-black/25" />
       <div className="absolute inset-x-0 top-[calc(50%+39px)] h-1 bg-black/40" />

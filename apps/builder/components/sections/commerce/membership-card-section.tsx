@@ -48,7 +48,7 @@ export function MembershipCardSection({
       <Container>
         <div className="mx-auto max-w-sm">
           <Card className="overflow-hidden">
-            <div className="bg-gradient-to-br from-primary to-[var(--primary-dark,#1a4a1a)] p-6 text-white">
+            <div className="bg-primary p-6 text-white">
               <div className="mb-4 flex items-center justify-between">
                 <Award className="h-8 w-8 opacity-80" />
                 <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-medium">{tier}</span>

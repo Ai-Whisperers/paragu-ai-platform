@@ -57,7 +57,7 @@ export function TeamSection({ title, subtitle, members = [], variant = 'cards' }
                     <IconByName name={member.icon || 'Users'} size={48} />
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-deep/60" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                   <Heading level={3} className="text-lg font-semibold">{member.name}</Heading>
                   {member.role && <p className="text-sm text-white/80">{member.role}</p>}

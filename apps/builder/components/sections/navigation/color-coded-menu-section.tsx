@@ -158,7 +158,7 @@ export function SpecialOrderSection({
       <Container size="md">
         <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-primary/10 bg-background shadow-lg">
           <div className="grid gap-0 md:grid-cols-[1fr_1.5fr]">
-            <div className="relative flex items-center justify-center bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] p-10 text-[var(--primary-foreground)]">
+            <div className="relative flex items-center justify-center bg-primary p-10 text-[var(--primary-foreground)]">
               <div className="relative z-10 text-center">
                 <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-white/15 backdrop-blur-sm">
                   <svg
@@ -194,11 +194,8 @@ export function SpecialOrderSection({
                 </p>
               </div>
               <div
-                className="pointer-events-none absolute inset-0 opacity-20"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(circle at 30% 30%, white 0%, transparent 60%)',
-                }}
+                className="pointer-events-none absolute inset-0 opacity-10"
+                style={{ background: 'rgba(255,255,255,0.15)' }}
               />
             </div>
 

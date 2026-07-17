@@ -55,7 +55,7 @@ O escribime por WhatsApp: ${phone}`
 
   return (
     <Card className={cn('overflow-hidden', className)}>
-      <CardHeader className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white">
+      <CardHeader className="bg-primary text-white">
         <CardTitle className="flex items-center gap-2 text-lg">
           <Gift className="w-5 h-5" />
           Programa de Referidos

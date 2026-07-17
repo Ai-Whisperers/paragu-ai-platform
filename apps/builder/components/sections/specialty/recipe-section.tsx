@@ -39,7 +39,7 @@ function RecipeCard({ recipe, business }: { recipe: Recipe; business: RecipePage
 
   return (
     <Card className="overflow-hidden border-border hover:shadow-lg transition-shadow">
-      <div className="relative h-48 bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center">
+      <div className="relative h-48 bg-accent/20 flex items-center justify-center">
         <div className="text-center p-4">
           <ChefHatIcon className="w-16 h-16 text-orange-400 mx-auto mb-2" />
           <span className="text-sm text-orange-700 font-medium">{recipe.category}</span>
@@ -100,7 +100,7 @@ function RecipeDetail({ recipe, business, onBack }: { recipe: Recipe; business: 
         Volver a recetas
       </Button>
 
-      <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 mb-8">
+      <div className="bg-accent/10 rounded-2xl p-8 mb-8">
         <div className="flex flex-wrap gap-2 mb-4">
           <Badge className={recipe.difficulty === 'Fácil' ? 'bg-green-100 text-green-800' : recipe.difficulty === 'Media' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-primary'}>
             {recipe.difficulty}
@@ -215,7 +215,7 @@ function RecipeDetail({ recipe, business, onBack }: { recipe: Recipe; business: 
         ))}
       </div>
 
-      <div className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl p-6 text-white">
+      <div className="bg-deep rounded-xl p-6 text-white">
         <Heading level={3} className="text-xl font-bold mb-2">¿Te falta algún ingrediente?</Heading>
         <p className="mb-4 opacity-90">
           Tenemos huevos frescos de granja y muchos otros ingredientes de calidad. 
@@ -365,7 +365,7 @@ export function RecipeSection({
         </div>
 
         {/* CTA */}
-        <div className="mt-16 bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl p-8 text-white text-center">
+        <div className="mt-16 bg-deep rounded-2xl p-8 text-white text-center">
           <Heading level={3} className="text-2xl font-bold mb-3">¿Tenés una receta favorita?</Heading>
           <p className="mb-6 opacity-90">
             Compartila con nosotros y podemos publicarla en nuestra web.

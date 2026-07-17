@@ -140,7 +140,7 @@ export function PhotoGallery({ className }: PhotoGalleryProps) {
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="group relative aspect-square bg-gradient-to-br from-[var(--surface)] to-[var(--surfaceAlt)] rounded-lg overflow-hidden hover:shadow-lg transition-all cursor-pointer"
+              className="group relative aspect-square bg-[var(--surface)] rounded-lg overflow-hidden hover:shadow-lg transition-all cursor-pointer"
             >
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                 <span className="text-xl sm:text-3xl sm:text-5xl mb-3 group-hover:scale-110 transition-transform">

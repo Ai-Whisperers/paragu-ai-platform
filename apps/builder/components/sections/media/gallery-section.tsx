@@ -89,7 +89,7 @@ export function GallerySection({
         unoptimized={image.src.startsWith('data:')}
       />
       {showCategory && image.category && (
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 opacity-0 transition-opacity duration-normal group-hover:opacity-100">
+        <div className="absolute bottom-0 left-0 right-0 bg-deep/70 p-4 opacity-0 transition-opacity duration-normal group-hover:opacity-100">
           <span className="text-sm font-medium text-white">{image.category}</span>
         </div>
       )}

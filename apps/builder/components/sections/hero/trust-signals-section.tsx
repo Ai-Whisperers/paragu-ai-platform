@@ -65,7 +65,9 @@ export function TrustSignalsSection({
   if (resolvedItems.length === 0 && !title && !subtitle) return null
   const sectionStyle = backgroundImage
     ? {
-        backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${backgroundImage})`,
+        backgroundColor: 'rgba(255,255,255,0.92)',
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundBlendMode: 'lighten' as const,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }

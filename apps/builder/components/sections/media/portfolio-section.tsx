@@ -115,13 +115,13 @@ export function PortfolioSection({
                   fetchPriority={index < 4 ? 'high' : undefined}
                 />
               ) : (
-                <div className="font-heading flex h-full items-center justify-center bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]">
+                <div className="font-heading flex h-full items-center justify-center bg-primary">
                   <span className="font-heading text-2xl sm:text-4xl font-bold text-white opacity-30">
                     {item.title.charAt(0)}
                   </span>
                 </div>
               )}
-              <div className="font-heading absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-normal group-hover:opacity-100">
+              <div className="font-heading absolute inset-0 bg-deep/70 opacity-0 transition-opacity duration-normal group-hover:opacity-100">
                 <div className="font-heading absolute bottom-0 left-0 right-0 p-4">
                   <Heading level={3} className="font-heading text-lg font-semibold text-white">{item.title}</Heading>
                   {item.category && (
