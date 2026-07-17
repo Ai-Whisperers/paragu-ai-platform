@@ -462,7 +462,7 @@ export default function HomePage() {
             <div className="mx-auto max-w-4xl text-center">
               <FadeIn delay={0}>
                 <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-deep/70 px-4 py-2 backdrop-blur-sm">
-                  <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-accent shadow-[0_0_8px_#D2AE3F]" />
+                  <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-accent shadow-[0_0_8px_var(--accent)]" />
                   <span className="text-sm font-medium text-white/90">
                     Más de 250 negocios en Paraguay ya tienen su sitio
                   </span>
@@ -888,7 +888,7 @@ export default function HomePage() {
               <div
                 className="divide-y-2 divide-primary/40 rounded-2xl border-2 px-6 backdrop-blur-sm"
                 style={{
-                  borderColor: '#7834C0',
+                  borderColor: 'var(--primary)',
                   backgroundColor: 'rgba(76, 44, 115, 0.55)',
                 }}
               >
@@ -906,8 +906,7 @@ export default function HomePage() {
         <section
           className="relative overflow-hidden py-20 text-white"
           style={{
-            // Solid #4C2C73 — no gradients per spec
-            backgroundColor: '#4C2C73',
+            backgroundColor: 'var(--deep)',
             // Subtle cyber grid overlay (solid-color SVG, no gradients)
             backgroundImage:
               "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M0 0H32V1H0zM0 0V32H1V0z' fill='rgba(120,52,192,0.18)'/></svg>\")",
