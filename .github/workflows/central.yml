@@ -126,9 +126,6 @@ jobs:
               - 'apps/villamayor-asociados/**'
             apps/xxgym:
               - 'apps/xxgym/**'
-            apps/pierce-charm:
-              - 'apps/pierce-charm/**'
-              - 'Dockerfile.pierce-charm'
       - name: Emit changed apps
         id: emit
         run: |
