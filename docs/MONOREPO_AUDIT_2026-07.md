@@ -14,7 +14,8 @@ shared infra, deploys, docs. Ranked by leverage; every finding actionable.
   packages analytics/hooks/loyalty were archived 2026-07-16 in commit
   e5b7f3f2 — see #19 below.)
 - **Framework state**: fleet is on **Next 16.2.4 / 16.2.6** with **React 18.3.1 or 19**.
-  Stragglers: `nudo` (Next ^15.0.0), `depiflash` + `dayah-litworks` (^15.3.6).
+  (Previous stragglers `nudo`, `depiflash`, `dayah-litworks` bumped to 16.2.6
+  in commits `19d08c2e`, `54509f7c`, `07df00fd` — see #10 below.)
 - **CI**: `.github/workflows/central.yml` (330 lines) with hardcoded 35-app list — drift risk.
 - **Deploy path**: VPS Docker Swarm `docker service update`. Vercel migration **blocked**
   (account suspended, `VERCEL_API_TOKEN` returns 403).
@@ -131,17 +132,30 @@ Ordered by (blast radius) × (ease):
 
 **P2 — this month (fleet hygiene):**
 10. Bump `nudo`, `depiflash`, `dayah-litworks` off Next 15 → 16.2.6.
+    **Resolved 2026-07-16.** All three bumped in dedicated commits:
+    `nudo` → `19d08c2e`, `depiflash` → `54509f7c`, `dayah-litworks` → `07df00fd`.
+    Verified at HEAD: all three `apps/*/package.json` now declare `"next": "^16.2.6"`.
 11. Fix `"use client"` homepage on `pitchy-website` + `depiflash` (moves SSR SEO out).
+    **Resolved.** Verified at HEAD: `apps/pitchy-website/app/page.tsx` and
+    `apps/depiflash/app/page.tsx` are both server components (no top-level
+    `"use client"`; imports start with `next/link` and `@/components/*`).
 12. Fix README titles: `arnos`, `cronos`, `hidrobaby`.
 13. Fix `stroopwafel-huis` OG URL hyphenation.
+    **Resolved 2026-07-17** (commit `0b23c3b6`).
 14. Pick canonical between `trentina-cerveza` and `trentina-site`; archive the other via
     `docs/ARCHIVED_REPOS.md` + rm.
 15. Sync `.github/workflows/central.yml` hardcoded list to actual 45-app fleet (or remove list
     and rely solely on `dorny/paths-filter`).
 16. Add missing `sitemap.ts` to 3 apps still lacking one (`fun4me-store`, `nudo`,
     `site-template`). Original 2026-06-11 count of 18 was pre-fleet-audit fixes.
+    **Resolved (partial).** `apps/fun4me-store/src/app/sitemap.ts` and
+    `apps/nudo/src/app/sitemap.ts` both exist at HEAD. `site-template` is a
+    workspace fixture template not a deployable app — skip.
 17. Add hreflang to 39 apps.
 18. Add `geo` to 13 LocalBusiness JSON-LDs.
+    **Resolved (partial)** in commit `60f1751b` — 6 apps got GeoCoordinates
+    added. Remaining apps use Asunción-centroid `(-25.2637, -57.5759)`
+    placeholder; replace with per-business precise coordinates as leads confirm.
 
 **P3 — later:**
 19. Fill 3 STUB packages (analytics, hooks, loyalty) or archive them.
