@@ -2,38 +2,32 @@ name: central
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
     paths:
-      - 'apps/**'
+      - 'apps/arnos-barber-shop/**'
       - 'packages/**'
       - 'pnpm-lock.yaml'
       - 'Dockerfile.*'
-    paths-ignore:
-      # apps/builder is a Next.js admin shell, not a Swarm-deployed client site.
-      # Its Dockerfile.prod references a `web/` layout that the central pipeline
-      # does not reproduce, so its docker job fails. Production clients live under
-      # their own dedicated apps/<slug>/ apps.
-      - 'apps/builder/**'
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
     paths:
-      - 'apps/**'
+      - 'apps/arnos-barber-shop/**'
       - 'packages/**'
       - 'pnpm-lock.yaml'
       - 'Dockerfile.*'
-    paths-ignore:
-      - 'apps/builder/**'
+  workflow_dispatch:
 
 permissions:
   contents: read
   packages: write
 
 concurrency:
-  # Scope concurrency to PRs only. Push to main must always run to completion
-  # because it's the deploy path; cancelling an in-flight main run would leave
-  # the deploy job half-applied. PRs still self-cancel.
-  group: central-pr-${{ github.head_ref || '' }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  # Group per PR. Push to main uses no concurrency control so deploys always
+  # run to completion — never cancel an in-flight deploy.
+  group: central-pr-${{ github.head_ref || format('main-{0}', github.run_id) }}
+  cancel-in-progress: false
 
 jobs:
   detect-apps:
