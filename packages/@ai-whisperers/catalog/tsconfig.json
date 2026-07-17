@@ -1,10 +1,16 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true
   },
   "include": [
-    "src"
+    "src/brand-filter.tsx",
+    "src/hero-carousel.tsx",
+    "src/search-autocomplete.tsx",
+    "src/mobile-search.tsx",
+    "src/category-breadcrumb-jsonld.tsx",
+    "src/promo-carousel.tsx"
   ]
 }

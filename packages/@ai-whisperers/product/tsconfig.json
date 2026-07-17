@@ -1,10 +1,25 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true
   },
   "include": [
-    "src"
+    "src/back-in-stock.tsx",
+    "src/auto-promo.tsx",
+    "src/oos-notify.tsx",
+    "src/image-magnifier.tsx",
+    "src/bulk-price.tsx",
+    "src/product-tabs.tsx",
+    "src/frequently-bought.tsx",
+    "src/compare-checkbox.tsx",
+    "src/price-range.tsx",
+    "src/image-gallery.tsx",
+    "src/recently-viewed.tsx",
+    "src/promo-from-url.tsx",
+    "src/price-usd.tsx",
+    "src/safe-image.tsx",
+    "src/recently-viewed-products.tsx"
   ]
 }

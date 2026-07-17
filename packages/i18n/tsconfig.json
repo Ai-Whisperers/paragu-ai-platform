@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true
+  },
+  "include": [
+    "index.ts",
+    "server.ts",
+    "middleware.ts",
+    "LocaleSwitcher.tsx",
+    "translations/**/*"
+  ]
+}

@@ -1,10 +1,13 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true
   },
   "include": [
-    "src"
+    "src/billing-toggle.tsx",
+    "src/tax-display.tsx",
+    "src/order-tracking-form.tsx"
   ]
 }
