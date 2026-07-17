@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Analytics, TrackCtas } from "../components/analytics"
 
-const TODO_PHONE = "TODO_PHONE";
+// Type widened to `string` so the sentinel check below isn't reduced to a
+// literal-vs-literal comparison (TS would prove it always-false and error out).
+const TODO_PHONE: string = "TODO_PHONE";
 const telephone = "+59521678171"; // XXGym — from content/es.json
 
 const jsonLd = {

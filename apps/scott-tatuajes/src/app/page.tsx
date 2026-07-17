@@ -2,7 +2,6 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { SectionsRenderer } from '../components/SectionsRenderer';
 import type { Metadata } from 'next';
-import { TrustStrip, TRUST_ITEMS_VISUAL } from "@/components/truststrip"
 
 export const metadata: Metadata = {
   title: 'Scott Tatuajes | Tatuajes & Body Piercing en Fernando de la Mora',
