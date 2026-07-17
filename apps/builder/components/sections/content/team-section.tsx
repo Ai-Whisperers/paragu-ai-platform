@@ -2,6 +2,7 @@ import Image from 'next/image'
 import * as Icons from 'lucide-react'
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { cleanInstagram } from '@/lib/format'
 import { Card, CardContent } from '@/components/ui/card'
 
@@ -41,8 +42,9 @@ export function TeamSection({ title, subtitle, members = [], variant = 'cards' }
 
   if (variant === 'grid-photos') {
     return (
-      <section id="equipo" className="bg-background py-16 sm:py-20">
-        <Container size="md">
+      <section id="equipo" className="relative overflow-hidden bg-background py-16 sm:py-20">
+        <WaterDropletDecor idSuffix="team-grid-photos" />
+        <Container size="md" className="relative z-10">
           <div className="mb-12 text-center">
             <Heading level={2}>{title}</Heading>
             {subtitle && <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{subtitle}</p>}
@@ -71,8 +73,9 @@ export function TeamSection({ title, subtitle, members = [], variant = 'cards' }
   }
 
   return (
-    <section id="equipo" className="bg-background py-16 sm:py-20">
-      <Container size="md">
+    <section id="equipo" className="relative overflow-hidden bg-background py-16 sm:py-20">
+      <WaterDropletDecor idSuffix="team-cards" />
+      <Container size="md" className="relative z-10">
         <div className="mb-12 text-center">
           <Heading level={2}>{title}</Heading>
           {subtitle && (

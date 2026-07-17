@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { TrackAudioPlayer } from './track-audio-player'
 
 interface TrackLyrics {
@@ -66,8 +67,9 @@ export function AlbumTracklistSection(props: AlbumTracklistSectionProps) {
 
   if (variant === 'album-spotlight') {
     return (
-      <section className="bg-background py-16 md:py-24">
-        <Container>
+      <section className="relative overflow-hidden bg-background py-16 md:py-24">
+        <WaterDropletDecor idSuffix="album-spotlight" />
+        <Container className="relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <Heading as="h2" level={2} className="mb-3">
               {title}
@@ -94,8 +96,9 @@ export function AlbumTracklistSection(props: AlbumTracklistSectionProps) {
   }
 
   return (
-    <section className="bg-background py-16 md:py-24">
-      <Container>
+    <section className="relative overflow-hidden bg-background py-16 md:py-24">
+      <WaterDropletDecor idSuffix="album-full" />
+      <Container className="relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <Heading as="h1" level={1} className="mb-3">

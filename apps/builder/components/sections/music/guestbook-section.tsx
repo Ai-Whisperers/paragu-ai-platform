@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 interface GuestbookMessage {
   author: string
@@ -24,8 +25,9 @@ export function GuestbookSection({
   ctaLink,
 }: GuestbookSectionProps) {
   return (
-    <section className="bg-background py-16 md:py-24">
-      <Container>
+    <section className="relative overflow-hidden bg-background py-16 md:py-24">
+      <WaterDropletDecor idSuffix="guestbook" />
+      <Container className="relative z-10">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="mb-3">

@@ -4,6 +4,7 @@ import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { Button } from '@/components/ui/button'
 import { AnimateOnScroll, AnimatedSectionHeader } from '@/components/ui/animate-on-scroll'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { cn } from '@/lib/utils'
 
 export interface ContactSectionProps {
@@ -115,8 +116,9 @@ export function ContactSection({
     : ''
 
   return (
-    <section id="contacto" className="py-20 sm:py-28 lg:py-32 bg-background">
-      <Container size="md">
+    <section id="contacto" className="relative overflow-hidden py-20 sm:py-28 lg:py-32 bg-background">
+      <WaterDropletDecor idSuffix="contact" />
+      <Container size="md" className="relative z-10">
         <AnimatedSectionHeader className="mb-12 sm:mb-16">
           <Heading level={2}
             style={{

@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 interface StreamingPlatform {
   name: string
@@ -35,8 +36,9 @@ export function StreamingLinksSection({
   if (!platforms || platforms.length === 0) return null
 
   return (
-    <section className="bg-background py-12 md:py-16">
-      <Container>
+    <section className="relative overflow-hidden bg-background py-12 md:py-16">
+      <WaterDropletDecor idSuffix="streaming-links" />
+      <Container className="relative z-10">
         {(title || subtitle) && (
           <div className="text-center mb-8">
             {title && (

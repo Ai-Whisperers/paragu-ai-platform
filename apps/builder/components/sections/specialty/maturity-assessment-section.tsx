@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 /**
  * Multi-question maturity assessment with scoring + tier-specific result.
@@ -143,9 +144,10 @@ export function MaturityAssessmentSection({
 
   return (
     <section
-      className="bg-background py-16 md:py-24"
+      className="relative overflow-hidden bg-background py-16 md:py-24"
     >
-      <Container>
+      <WaterDropletDecor idSuffix="maturity-assessment" />
+      <Container className="relative z-10">
         <div className="mx-auto max-w-3xl">
           <div className="mb-10 text-center">
             <Heading level={2} className="mb-3">

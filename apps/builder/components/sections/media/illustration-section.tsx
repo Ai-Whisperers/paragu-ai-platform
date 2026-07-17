@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 export interface IllustrationSectionProps {
   title?: string
@@ -32,8 +33,9 @@ export function IllustrationSection({
   if (!src) return null
   const bgClass = background === 'surface' ? 'bg-surface' : 'bg-background'
   return (
-    <section className={`py-16 sm:py-20 ${bgClass}`}>
-      <Container size="md">
+    <section className={`relative overflow-hidden py-16 sm:py-20 ${bgClass}`}>
+      <WaterDropletDecor idSuffix="illustration" />
+      <Container size="md" className="relative z-10">
         {(title || subtitle) && (
           <div className="mb-10 text-center">
             {title && <Heading level={2}>{title}</Heading>}

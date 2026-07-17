@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -45,8 +46,9 @@ export function LyricsDisplaySection({ tracks = [], variant = 'full-album' }: Ly
   if (!tracks || tracks.length === 0) return null
 
   return (
-    <section className="bg-background py-16 md:py-24">
-      <Container>
+    <section className="relative overflow-hidden bg-background py-16 md:py-24">
+      <WaterDropletDecor idSuffix="lyrics-display" />
+      <Container className="relative z-10">
         <div className="max-w-3xl mx-auto space-y-16">
           {tracks.map((track) => (
             <TrackLyricsCard key={track.number} track={track} />

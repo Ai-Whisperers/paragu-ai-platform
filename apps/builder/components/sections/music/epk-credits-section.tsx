@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/container'
 import { Heading } from '@/components/ui/heading'
+import { WaterDropletDecor } from '@/components/ui/water-droplet-decor'
 
 interface CreditItem {
   role: string
@@ -29,8 +30,9 @@ export function EpkCreditsSection({
   if (variant === 'thank-you') {
     if (!sections || sections.length === 0) return null
     return (
-      <section className="bg-background py-16 md:py-24">
-        <Container>
+      <section className="relative overflow-hidden bg-background py-16 md:py-24">
+        <WaterDropletDecor idSuffix="epk-thankyou" />
+        <Container className="relative z-10">
           <div className="max-w-2xl mx-auto">
             {title && (
               <Heading level={2} className="text-center mb-2">
@@ -65,8 +67,9 @@ export function EpkCreditsSection({
   if (!items || items.length === 0) return null
 
   return (
-    <section className="bg-background py-16 md:py-24">
-      <Container>
+    <section className="relative overflow-hidden bg-background py-16 md:py-24">
+      <WaterDropletDecor idSuffix="epk-standard" />
+      <Container className="relative z-10">
         <div className="max-w-2xl mx-auto">
           {title && (
             <Heading level={2} className="text-center mb-2">
