@@ -52,14 +52,16 @@ export function GradientBackground({
     'animated': 'bg-primary',
   }
 
+  // Patterns rendered with solid-color SVG data URIs (no gradients per canonical palette)
+  const svgPatterns: Record<string, string> = {
+    dots: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><circle cx='2' cy='2' r='1' fill='%23ffffff'/></svg>\")",
+    lines: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><rect x='0' y='0' width='1' height='20' fill='%23ffffff'/></svg>\")",
+    grid: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path d='M0 0H40V1H0zM0 0V40H1V0z' fill='%23ffffff'/></svg>\")",
+    diagonal: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path d='M-2 6L6 -2M0 16L16 0M10 18L18 10' stroke='%23ffffff' stroke-width='1'/></svg>\")",
+  }
+
   const patternStyles = pattern !== 'none' ? {
-    backgroundImage: `
-      ${pattern === 'dots' ? 'radial-gradient(circle, currentColor 1px, transparent 1px)' : ''}
-      ${pattern === 'lines' ? 'repeating-linear-gradient(90deg, currentColor 0px, currentColor 1px, transparent 1px, transparent 20px)' : ''}
-      ${pattern === 'grid' ? 'linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)' : ''}
-      ${pattern === 'diagonal' ? 'repeating-linear-gradient(45deg, transparent, transparent 10px, currentColor 10px, currentColor 11px)' : ''}
-    `,
-    backgroundSize: pattern === 'dots' ? '20px 20px' : pattern === 'grid' ? '40px 40px' : 'auto',
+    backgroundImage: svgPatterns[pattern],
     opacity: patternOpacity,
   } : {}
 

@@ -72,7 +72,7 @@ export function GlassCard({
       <div
         className={cn(
           'relative p-[1px]',
-          'bg-gradient-primary-secondary',
+          'bg-primary',
           roundedClasses[rounded],
           hover && 'hover-lift',
           className

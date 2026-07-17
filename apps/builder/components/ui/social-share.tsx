@@ -496,7 +496,7 @@ export function SocialFeed({
   return (
     <div className={cn('rounded-lg bg-surface-light p-4', className)}>
       <div className="mb-4 flex items-center gap-2">
-        {platform === 'instagram' && <div className="h-5 w-5 rounded bg-gradient-to-br from-purple-500 to-pink-500" />}
+        {platform === 'instagram' && <div className="h-5 w-5 rounded bg-brand" />}
         {platform === 'facebook' && <div className="h-5 w-5 rounded bg-[#1877F2]" />}
         {platform === 'twitter' && <div className="h-5 w-5 rounded bg-[#1DA1F2]" />}
         <span className="font-medium">{handle}</span>

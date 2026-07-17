@@ -325,7 +325,7 @@ export function DecorativeLine({
     <div
       className={cn(
         isHorizontal ? 'w-full' : 'h-full',
-        gradient && 'bg-gradient-primary-secondary',
+        gradient && 'bg-primary',
         shimmer && 'animate-shimmer overflow-hidden',
         className
       )}

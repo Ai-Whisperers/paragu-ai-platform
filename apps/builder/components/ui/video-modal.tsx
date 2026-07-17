@@ -102,8 +102,8 @@ export function VideoModal({
         className="object-cover"
         unoptimized={poster.startsWith('data:')}
       />
-      {/* Gradient tint + play button overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      {/* Solid tint (no gradients) + play button overlay */}
+      <div className="absolute inset-0 bg-deep/50" />
       {hasVideo ? (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform group-hover:scale-110">

@@ -174,14 +174,18 @@ export function SpotlightCard({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      {/* Spotlight gradient */}
+      {/* Spotlight (solid circle, no gradient) */}
       <div
         className={cn(
-          'pointer-events-none absolute inset-0 transition-opacity duration-300',
+          'pointer-events-none absolute rounded-full blur-2xl transition-opacity duration-300',
           isHovering ? 'opacity-100' : 'opacity-0'
         )}
         style={{
-          background: `radial-gradient(${spotlightSize}px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(var(--primary-rgb), ${spotlightOpacity}), transparent 100%)`,
+          width: spotlightSize,
+          height: spotlightSize,
+          left: mousePosition.x - spotlightSize / 2,
+          top: mousePosition.y - spotlightSize / 2,
+          backgroundColor: `rgba(var(--primary-rgb), ${spotlightOpacity})`,
         }}
       />
       
@@ -266,15 +270,17 @@ export function TiltCard({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Glare effect */}
+      {/* Glare (solid soft circle following cursor, no gradient) */}
       {glare && (
         <div
           className={cn(
-            'pointer-events-none absolute inset-0 transition-opacity duration-200',
+            'pointer-events-none absolute w-1/2 h-1/2 rounded-full blur-2xl transition-opacity duration-200',
             isHovering ? 'opacity-100' : 'opacity-0'
           )}
           style={{
-            background: `radial-gradient(circle at ${glarePosition.x}% ${glarePosition.y}%, rgba(255,255,255,${glareOpacity}), transparent 50%)`,
+            left: `calc(${glarePosition.x}% - 25%)`,
+            top: `calc(${glarePosition.y}% - 25%)`,
+            backgroundColor: `rgba(255,255,255,${glareOpacity})`,
           }}
         />
       )}
@@ -420,12 +426,12 @@ export function MorphingCard({
         border: animatedBorder ? `2px solid ${colorVars[borderColor]}` : undefined,
       }}
     >
-      {/* Animated border glow */}
+      {/* Animated border glow (solid tint, no gradient) */}
       {animatedBorder && (
         <div
-          className="absolute inset-0 animate-pulse-gentle opacity-30"
+          className="absolute inset-0 animate-pulse-gentle opacity-20"
           style={{
-            background: `linear-gradient(135deg, ${colorVars[borderColor]}40, transparent 50%)`,
+            backgroundColor: `${colorVars[borderColor]}30`,
           }}
         />
       )}
