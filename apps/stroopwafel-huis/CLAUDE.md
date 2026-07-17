@@ -1,7 +1,7 @@
 # Stroopwafel Huis — AI Agent Guide
 
 ## Quick Links
-- **Live:** https://stroopwafelhuis.paragu-ai.com
+- **Live:** https://stroopwafel-huis.paragu-ai.com
 - **Repo:** github.com/Ai-Whisperers/stroopwafel-huis
 - **Business plan repo:** github.com/Ai-Whisperers/stroopwafel-huis (same repo, business docs in root)
 

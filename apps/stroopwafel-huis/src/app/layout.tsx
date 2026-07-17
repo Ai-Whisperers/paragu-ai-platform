@@ -16,15 +16,15 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://stroopwafelhuis.paragu-ai.com'),
+  metadataBase: new URL('https://stroopwafel-huis.paragu-ai.com'),
   title: 'Stroopwafel Huis — Verse Stroopwafels & Specialty Coffee · Asunción',
   description: 'La primera cafetería holandesa del Paraguay. Stroopwafels frescos hechos frente a vos, café de especialidad y un pedacito de Holanda en Asunción.',
-  alternates: { canonical: 'https://stroopwafelhuis.paragu-ai.com', languages: { 'es': 'https://stroopwafelhuis.paragu-ai.com/' } },
+  alternates: { canonical: 'https://stroopwafel-huis.paragu-ai.com', languages: { 'es': 'https://stroopwafel-huis.paragu-ai.com/' } },
   icons: [{ rel: 'icon', url: '/favicon.ico', sizes: '32x32' }],
   openGraph: {
     title: 'Stroopwafel Huis — La primera cafetería holandesa del Paraguay',
     description: 'Stroopwafels frescos & specialty coffee. Hechos con amor holandés en Asunción.',
-    url: 'https://stroopwafelhuis.paragu-ai.com',
+    url: 'https://stroopwafel-huis.paragu-ai.com',
     siteName: 'Stroopwafel Huis',
     locale: 'es_PY',
     type: 'website',
@@ -35,13 +35,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='es' className={playfair.variable + ' ' + inter.variable}>
       <head>
-        <meta property="og:image" content="https://stroopwafelhuis.paragu-ai.com/og/og-image.png" />
+        <meta property="og:image" content="https://stroopwafel-huis.paragu-ai.com/og/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://stroopwafelhuis.paragu-ai.com" />
+        <meta property="og:url" content="https://stroopwafel-huis.paragu-ai.com" />
         <meta property="og:site_name" content="Stroopwafel Huis" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://stroopwafelhuis.paragu-ai.com/og/og-image.png" />
+        <meta name="twitter:image" content="https://stroopwafel-huis.paragu-ai.com/og/og-image.png" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         
         <meta name='theme-color' content='#FF6B00' />
@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             '@type': 'CafeOrCoffeeShop',
             name: 'Stroopwafel Huis',
             description: 'La primera cafetería holandesa del Paraguay. Stroopwafels frescos & specialty coffee.',
-            url: 'https://stroopwafelhuis.paragu-ai.com',
+            url: 'https://stroopwafel-huis.paragu-ai.com',
             telephone: '+595XXX XXX XXX',
             email: 'hola@stroopwafelhuis.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Asunción', addressCountry: 'PY' },
