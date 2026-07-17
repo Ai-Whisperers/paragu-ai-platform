@@ -132,7 +132,6 @@ jobs:
       - name: Emit changed apps
         id: emit
         run: |
-          # dorny/paths-filter outputs are keyed by the filter name (e.g. "apps/3md-website").
           # We hardcode the list of apps and read each output with bracket notation.
           CHANGED=""
           # apps/<name>=true if changed
