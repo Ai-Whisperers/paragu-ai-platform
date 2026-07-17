@@ -5,7 +5,11 @@ on:
     branches:
       - main
     paths:
-      - 'apps/arnos-barber-shop/**'
+      # WHY: workflow must fire on any app change. Previously narrowed to
+      # arnos-barber-shop only in 1efc7773 (accidental during reformat) —
+      # that gated the entire central pipeline on a single client. Restore
+      # apps/** so every app in dorny/paths-filter can be detected.
+      - 'apps/**'
       - 'packages/**'
       - 'pnpm-lock.yaml'
       - 'Dockerfile.*'
@@ -13,7 +17,7 @@ on:
     branches:
       - main
     paths:
-      - 'apps/arnos-barber-shop/**'
+      - 'apps/**'
       - 'packages/**'
       - 'pnpm-lock.yaml'
       - 'Dockerfile.*'
