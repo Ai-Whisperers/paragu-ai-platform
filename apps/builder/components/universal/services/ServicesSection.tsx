@@ -106,7 +106,7 @@ export function Services({ lang }: ServicesProps) {
               >
                 <Icon className="w-4 h-4" />
                 {cat.title}
-                {cat.items?.some(i => i.popular) && (
+                {cat.items?.some((i: { popular?: boolean }) => i.popular) && (
                   <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                 )}
               </button>

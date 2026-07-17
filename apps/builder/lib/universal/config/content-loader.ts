@@ -20,7 +20,13 @@
  * Standalone path: lib/content-loader.ts (not part of the @ai-whisperers package)
  */
 import { cache } from "react"
-import type { SiteContent } from "@paragu-ai/engine"
+// Local type stub. The canonical shape lives at packages/engine, but that
+// package currently ships uncompiled TS with several broken internal imports;
+// pulling it in as a workspace dep drags builder's typecheck through those
+// errors. Until engine has a clean build target, treat SiteContent as an
+// opaque object at the boundary — call sites in builder don't consume its
+// fields.
+type SiteContent = Record<string, unknown>
 
 type LoaderFn = () => Promise<SiteContent>
 

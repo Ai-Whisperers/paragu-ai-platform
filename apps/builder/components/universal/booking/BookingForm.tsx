@@ -52,7 +52,8 @@ function buildServicesFromContent(lang: "es" | "en") {
   for (const cat of categories) {
     const icon = ICON_MAP[String(cat.icon)] ?? "💇"
     for (const svc of cat.items ?? []) {
-      items.push({ value: svc.name, label: svc.name, duration: String(svc.duration ?? "—"), icon })
+      const name = svc.name ?? ""
+      items.push({ value: name, label: name, duration: String(svc.duration ?? "—"), icon })
     }
   }
   return items

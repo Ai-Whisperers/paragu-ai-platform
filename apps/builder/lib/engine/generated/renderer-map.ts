@@ -20,7 +20,7 @@ import { CalcIvaSection } from '@/components/sections/calculators/calc-iva-secti
 import { CalcIreSection } from '@/components/sections/calculators/calc-ire-section'
 import { CalcIpsSection } from '@/components/sections/calculators/calc-ips-section'
 import { CalcCostoEmpleadoSection } from '@/components/sections/calculators/calc-costo-empleado-section'
-import { recommendTier } from '@/components/sections/forms/intake-wizard-section'
+import { IntakeWizardSection } from '@/components/sections/forms/intake-wizard-section'
 import { MattressQuizSection } from '@/components/sections/specialty/mattress-quiz-section'
 import { GallerySection } from '@/components/sections/media/gallery-section'
 import { IllustrationSection } from '@/components/sections/media/illustration-section'
@@ -37,7 +37,7 @@ import { FloatingCTASection } from '@/components/sections/navigation/floating-ct
 import { HeroVideoSection } from '@/components/sections/hero/hero-video-section'
 import { BlogIndexSection } from '@/components/sections/social/blog-index-section'
 import { BlogPostSection } from '@/components/sections/social/blog-post-section'
-import { buildWhatsAppUrl } from '@/components/sections/commerce/product-catalog-section'
+import { ProductCatalogSection } from '@/components/sections/commerce/product-catalog-section'
 import { AgeGateSection } from '@/components/sections/specialty/age-gate-section'
 import { TrustBadgesSection } from '@/components/sections/hero/trust-badges-section'
 import { FooterSection } from '@/components/sections/navigation/footer-section'
@@ -100,10 +100,10 @@ import { LanguageSelectorSection } from '@/components/sections/navigation/langua
 import { MaturityAssessmentSection } from '@/components/sections/specialty/maturity-assessment-section'
 import { MultiStepFormSection } from '@/components/sections/specialty/multi-step-form-section'
 import { PhotoGallery } from '@/components/sections/media/photo-gallery-section'
-import { PreOrderCalendar } from '@/components/sections/commerce/preorder-calendar-section'
-import { PriceListGenerator } from '@/components/sections/specialty/price-list-section'
+import { PreOrderSection } from '@/components/sections/commerce/preorder-calendar-section'
+import { PriceListSection } from '@/components/sections/specialty/price-list-section'
 import { RecipeSection } from '@/components/sections/specialty/recipe-section'
-import { ReferralProgram } from '@/components/sections/specialty/referral-section'
+import { ReferralSection } from '@/components/sections/specialty/referral-section'
 import { RelatedPostsSection } from '@/components/sections/specialty/related-posts-section'
 import { ReviewsSection } from '@/components/sections/social/reviews-section'
 import { ServiceAreaMapZonesSection } from '@/components/sections/specialty/service-area-map-zones-section'
@@ -188,7 +188,7 @@ export const GENERATED_MAP: Record<string, React.ComponentType<any>> = {
   'calc-ire': CalcIreSection,
   'calc-ips': CalcIpsSection,
   'calc-costo-empleado': CalcCostoEmpleadoSection,
-  'intake-wizard': recommendTier,
+  'intake-wizard': IntakeWizardSection,
   'mattress-quiz': MattressQuizSection,
   gallery: GallerySection,
   illustration: IllustrationSection,
@@ -205,7 +205,7 @@ export const GENERATED_MAP: Record<string, React.ComponentType<any>> = {
   'hero-video': HeroVideoSection,
   'blog-index': BlogIndexSection,
   'blog-post': BlogPostSection,
-  'product-catalog': buildWhatsAppUrl,
+  'product-catalog': ProductCatalogSection,
   'age-gate': AgeGateSection,
   'trust-badges': TrustBadgesSection,
   footer: FooterSection,
@@ -268,10 +268,10 @@ export const GENERATED_MAP: Record<string, React.ComponentType<any>> = {
   'maturity-assessment': MaturityAssessmentSection,
   'multi-step-form': MultiStepFormSection,
   'photo-gallery': PhotoGallery,
-  'preorder-calendar': PreOrderCalendar,
-  'price-list': PriceListGenerator,
+  'preorder-calendar': PreOrderSection,
+  'price-list': PriceListSection,
   recipe: RecipeSection,
-  referral: ReferralProgram,
+  referral: ReferralSection,
   'related-posts': RelatedPostsSection,
   reviews: ReviewsSection,
   'service-area-map-zones': ServiceAreaMapZonesSection,

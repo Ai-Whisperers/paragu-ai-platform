@@ -4,8 +4,23 @@
  * Protects against XSS and CSS injection attacks
  */
 
-import cssesc from 'cssesc'
 import { logger } from '@/lib/logger'
+
+/**
+ * Minimal inline cssesc replacement. Avoids the external dep for a module
+ * that currently has zero callers — if the escaping needs grow, swap for the
+ * npm package (`pnpm add -F builder cssesc`) and restore the original import.
+ *
+ * Escapes anything outside `[\w\s.,()#-]` as a hex CSS escape (\ HH ) with a
+ * trailing space per the CSS spec so consecutive escapes stay unambiguous.
+ */
+function cssesc(value: string, _opts: { isIdentifier?: boolean; quotes?: 'single' | 'double'; wrap?: boolean } = {}): string {
+  return value.replace(/[^\w\s.,()#-]/g, (ch) => {
+    const cp = ch.codePointAt(0)
+    if (cp == null) return ''
+    return '\\' + cp.toString(16) + ' '
+  })
+}
 
 // Dangerous CSS keywords that could enable XSS
 const DANGEROUS_CSS_KEYWORDS = [

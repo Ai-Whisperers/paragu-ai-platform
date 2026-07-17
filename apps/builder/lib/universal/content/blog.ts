@@ -5,9 +5,12 @@ export async function getBlogIndex(lang: 'es' | 'en') {
 
 export async function getBlogPosts(lang: 'es' | 'en') {
   const index = await getBlogIndex(lang)
-  const entries = Array.isArray((index as { posts?: unknown[] }).posts)
-    ? ((index as { posts: { slug: string }[] }).posts as { slug: string }[])
-    : []
+  // The blog index JSON is statically typed by tsc from the imported file's
+  // literal shape (title/subtitle/description). At runtime the same file also
+  // carries `posts`, but tsc doesn't see it — hence the double-cast through
+  // `unknown` per TS2352.
+  const indexWithPosts = index as unknown as { posts?: { slug: string }[] }
+  const entries = Array.isArray(indexWithPosts.posts) ? indexWithPosts.posts : []
   if (entries.length === 0) {
     return []
   }

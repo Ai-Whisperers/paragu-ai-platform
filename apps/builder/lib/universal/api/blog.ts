@@ -1,4 +1,4 @@
-import { getBlogPosts, getBlogPost } from '@/lib/content/blog';
+import { getBlogPosts, getBlogPost } from '@/lib/universal/content/blog';
 
 export interface BlogPost {
   slug: string
@@ -25,7 +25,9 @@ export async function getAllPosts(lang: 'es' | 'en'): Promise<BlogPost[]> {
 
 export async function getPostBySlug(slug: string, lang: 'es' | 'en'): Promise<BlogPost | undefined> {
   const post = await getBlogPost(lang, slug)
-  return post ?? undefined
+  // Blog JSON shape is validated at the content boundary — treat the loaded
+  // record as BlogPost for the API surface.
+  return post ? (post as unknown as BlogPost) : undefined
 }
 
 export async function getRelatedPosts(slug: string, category: string, lang: 'es' | 'en'): Promise<BlogPost[]> {

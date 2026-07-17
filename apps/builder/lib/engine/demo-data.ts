@@ -455,6 +455,7 @@ export const DEMO_BUSINESSES: Record<string, BusinessData> = {
 
   // granjacabral: removed (offboarded) — fields kept as no-op to preserve syntax
   _granjacabral_removed: {
+    slug: 'granjacabral',
     name: 'Granja Cabral',
     type: 'egg_farm',
     tagline: 'Huevos de Granja 100% Paraguayos - De nuestras gallinas a tu mesa',

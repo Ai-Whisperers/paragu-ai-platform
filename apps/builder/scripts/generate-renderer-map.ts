@@ -54,6 +54,8 @@ interface ComponentInfo {
   fileName: string
   exportName: string
   subdir: string
+  /** true → `import X from ...`, false → `import { X } from ...` */
+  isDefault: boolean
 }
 
 // Find which subdirectory a file is in
@@ -81,29 +83,46 @@ for (const sid of sectionIds) {
     const filePath = path.join(SECTIONS_DIR, subdir, found)
     const content = fs.readFileSync(filePath, 'utf-8')
 
-    // Extract the exported component name
-    // Pattern: "export function XxxSection(..." or "export const XxxSection"
-    const exportMatch = content.match(
-      /export (?:function|const) (\w+)\s*[/{\(]/
-    ) || content.match(/export (?:function|const) (\w+)\s*[:<;]/)
+    // Collect every top-level named export plus any `export default X`
+    // identifier. Modules like `product-catalog-section.tsx` export helper
+    // functions (`buildWhatsAppUrl`) BEFORE the actual section component —
+    // matching "first export" would wire the helper into the component map.
+    const allExports: string[] = []
+    const exportRe = /export (?:function|const|class) (\w+)/g
+    let em: RegExpExecArray | null
+    while ((em = exportRe.exec(content)) !== null) {
+      allExports.push(em[1])
+    }
 
-    if (exportMatch) {
+    // Also capture the default export identifier if any (`export default Foo`).
+    const defaultMatch = content.match(/export\s+default\s+([A-Za-z_$][\w$]*)/)
+    const defaultName = defaultMatch ? defaultMatch[1] : null
+
+    // Filter: skip helper-looking names — SCREAMING_SNAKE_CASE constants
+    // (STOCK_CONFIG, FAQ_DATA, DEFAULT_DELIVERY_ZONES, WHATSAPP_TEMPLATES),
+    // camelCase helpers (buildWhatsAppUrl), and interface/type-alias names.
+    const isComponentLike = (n: string) =>
+      /^[A-Z]/.test(n) && !/^[A-Z0-9_]+$/.test(n)
+
+    const chosen =
+      allExports.find((n) => /Section$/.test(n) && isComponentLike(n)) ||
+      allExports.find(
+        (n) =>
+          /(Float|Wizard|Embed|Gate|Feed|Header|Footer|Strip|Gallery|Stories)$/.test(n) &&
+          isComponentLike(n),
+      ) ||
+      (defaultName && isComponentLike(defaultName) ? defaultName : null) ||
+      allExports.find(isComponentLike) ||
+      allExports[0]
+
+    if (chosen) {
       components.push({
         sectionId: sid,
         fileName: found,
         subdir,
-        exportName: exportMatch[1],
+        exportName: chosen,
+        isDefault: chosen === defaultName && !allExports.includes(chosen),
       })
-    } else {
-      const altMatch = content.match(/export (?:function|const|class) (\w+)/)
-      if (altMatch) {
-        components.push({
-          sectionId: sid,
-          fileName: found,
-          subdir,
-          exportName: altMatch[1],
-        })
-      }
     }
   }
 }
@@ -122,7 +141,11 @@ const lines: string[] = [
 for (const c of components) {
   const subPath = c.subdir ? `${c.subdir}/` : ''
   const importPath = `@/components/sections/${subPath}${c.fileName.replace('.tsx', '')}`
-  lines.push(`import { ${c.exportName} } from '${importPath}'`)
+  if (c.isDefault) {
+    lines.push(`import ${c.exportName} from '${importPath}'`)
+  } else {
+    lines.push(`import { ${c.exportName} } from '${importPath}'`)
+  }
 }
 
 lines.push('')

@@ -19,9 +19,9 @@ const CACHE_CONFIG = {
   allowStale: false,           // Don't serve stale data
 }
 
-// Create cache instance
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const queryCache = new LRUCache<string, unknown>(CACHE_CONFIG)
+// Create cache instance. lru-cache's V generic requires a non-nullable type
+// (`{}` extends {}), so use NonNullable<unknown> instead of raw unknown.
+const queryCache = new LRUCache<string, NonNullable<unknown>>(CACHE_CONFIG)
 
 // Track pending requests for deduplication
 const pendingRequests = new Map<string, Promise<unknown>>()
@@ -61,8 +61,11 @@ export async function cachedQuery<T>(
   
   // Execute query
   const promise = queryFn().then(result => {
-    // Store in cache
-    queryCache.set(key, result, { ttl: options?.ttl })
+    // Store in cache. LRUCache v10's V generic requires a non-nullable value
+    // and this cachedQuery is generic over T (may include undefined/null in
+    // theory). Runtime write is safe because callers only cache resolved
+    // results — the cast just matches the tighter store type.
+    queryCache.set(key, result as NonNullable<unknown>, { ttl: options?.ttl })
     
     // Store tags for invalidation
     if (options?.tags) {

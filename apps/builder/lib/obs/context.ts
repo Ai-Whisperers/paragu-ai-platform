@@ -22,9 +22,12 @@
 // probe the module itself inside a try/catch, which bundlers can
 // statically analyze and strip from client builds.
 
-type AsyncLocalStorageConstructor = new <T>() => {
-  run<R>(store: T, fn: () => R): R
-  getStore(): T | undefined
+// Generic constructor type so the `new Ctor()` call site keeps the store shape.
+interface AsyncLocalStorageConstructor<T> {
+  new (): {
+    run<R>(store: T, fn: () => R): R
+    getStore(): T | undefined
+  }
 }
 
 let AsyncLocalStorage: AsyncLocalStorageConstructor<Record<string, unknown>> | null = null
