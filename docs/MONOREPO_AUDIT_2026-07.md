@@ -8,9 +8,11 @@ shared infra, deploys, docs. Ranked by leverage; every finding actionable.
 ## 1 · Fleet Snapshot
 
 - **46 client apps** under `apps/`. ~33 currently live on VPS (72.61.44.159 Docker Swarm).
-- **20 packages** under `packages/@ai-whisperers/*` — 3 STUBS (analytics, hooks, loyalty),
-  several with peerDep drift. (Earlier audit flagged an `i18n-paraguay` duplicate; that
-  package does not exist in the workspace — only `@ai-whisperers/i18n` v0.2.0 ships.)
+- **20 packages** under `packages/@ai-whisperers/*` — several with peerDep drift.
+  (Earlier audit flagged an `i18n-paraguay` duplicate; that package does not
+  exist in the workspace — only `@ai-whisperers/i18n` v0.2.0 ships. The 3 STUB
+  packages analytics/hooks/loyalty were archived 2026-07-16 in commit
+  e5b7f3f2 — see #19 below.)
 - **Framework state**: fleet is on **Next 16.2.4 / 16.2.6** with **React 18.3.1 or 19**.
   Stragglers: `nudo` (Next ^15.0.0), `depiflash` + `dayah-litworks` (^15.3.6).
 - **CI**: `.github/workflows/central.yml` (330 lines) with hardcoded 35-app list — drift risk.
@@ -143,6 +145,13 @@ Ordered by (blast radius) × (ease):
 
 **P3 — later:**
 19. Fill 3 STUB packages (analytics, hooks, loyalty) or archive them.
+    **Resolved 2026-07-16** (commit `e5b7f3f2`). All three were pure stubs
+    (single 2-line `export const name = ...` files). Consumer grep found zero
+    real importers across `apps/` + `packages/` — only a lingering declaration
+    in `packages/site-template/package.json` (never actually imported). Fix:
+    `rm -rf packages/@ai-whisperers/{analytics,hooks,loyalty}` + drop the 3
+    dependency lines from `site-template/package.json` + `pnpm -w install` to
+    reconcile the lockfile. No typecheck impact.
 20. Migrate `villamayor-asociados` inline styles → Tailwind classes.
 21. Balance `ai-whisperers-site` locale content (EN 328 vs PT/NL 805).
     **Resolved 2026-07-16.** Line-count "asymmetry" was a JSON formatting artifact:
