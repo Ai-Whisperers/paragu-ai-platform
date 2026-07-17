@@ -35,15 +35,15 @@ function PiercingsPageInner() {
     }
   }, []);
 
+  // #<pin-id> hash deeplink: scroll to the matching catalog card.
+  // (Region-switching is handled by the ?pin=<id> effect above.)
   useEffect(() => {
     if (typeof window === "undefined") return;
     const hash = window.location.hash.replace("#", "");
     if (!hash) return;
     const item = allItems.find((it: any) => it.id === hash);
     if (!item) return;
-    setTab("all");
-    setActivePin(hash);
-    setHighlighted(hash);
+    if (item.region) setRegion(item.region);
     // Wait for filtered list to render before scrolling.
     const t = window.setTimeout(() => {
       const el = document.getElementById(`p-${hash}`);
