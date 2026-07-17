@@ -30,3 +30,6 @@ apps/ozmontania-website/Estudio8-2026E.pdf
 apps/depiflash/video-ads/renders/
 apps/depiflash/depiflash-videos.tar.gz
 *.tar.gz
+
+# Local docker pack artifacts (transient during localpack builds)
+**/Dockerfile.localpack.tmp
