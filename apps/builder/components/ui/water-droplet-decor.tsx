@@ -56,14 +56,14 @@ export function WaterDropletDecor({
             {/* Primary droplet (large) */}
             <path
               d="M120,80 Q80,180 120,260 Q220,240 220,160 Q220,110 180,90 Q150,75 120,80 Z"
-              fill="#7834C0"
+              fill="var(--primary)"
               fillOpacity="0.08"
               filter={`url(#${primaryGlowId})`}
             />
             {/* Mirror droplet (small brand accent) */}
             <path
               d="M60,340 Q40,410 60,470 Q140,455 140,395 Q140,360 110,345 Q85,335 60,340 Z"
-              fill="#AF7AC9"
+              fill="var(--brand)"
               fillOpacity="0.06"
               filter={`url(#${brandGlowId})`}
             />
@@ -83,13 +83,13 @@ export function WaterDropletDecor({
           <g transform="translate(1200, 0) scale(-1, 1)">
             <path
               d="M180,180 Q140,280 180,360 Q280,340 280,260 Q280,210 240,190 Q210,175 180,180 Z"
-              fill="#7834C0"
+              fill="var(--primary)"
               fillOpacity="0.07"
               filter={`url(#${primaryGlowId})`}
             />
             <path
               d="M100,560 Q80,630 100,690 Q180,675 180,615 Q180,580 150,565 Q125,555 100,560 Z"
-              fill="#AF7AC9"
+              fill="var(--brand)"
               fillOpacity="0.06"
               filter={`url(#${brandGlowId})`}
             />
@@ -107,7 +107,7 @@ export function WaterDropletDecor({
         {side === 'both' && (
           <path
             d="M600,420 Q560,510 600,580 Q690,565 690,495 Q690,455 655,435 Q625,425 600,420 Z"
-            fill="#7834C0"
+            fill="var(--primary)"
             fillOpacity="0.05"
             filter={`url(#${primaryGlowId})`}
           />
