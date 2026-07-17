@@ -311,6 +311,10 @@ jobs:
 
   docker:
     if: github.ref == 'refs/heads/main'
+    # continue-on-error so a single app's docker build failure doesn't block
+    # the entire deploy matrix. Apps with broken Dockerfiles still get logged +
+    # alertable, but healthy apps ship normally.
+    continue-on-error: true
     runs-on: ubuntu-latest
     needs: [detect-apps, build]
     strategy:
