@@ -1,0 +1,19 @@
+FROM node:20-slim AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
+# Standalone bundle + node_modules (Next.js standalone needs them at /app/node_modules)
+COPY --chown=nextjs:nodejs .next/standalone/apps/ai-whisperers-site ./apps/ai-whisperers-site
+COPY --chown=nextjs:nodejs .next/standalone/node_modules ./node_modules
+# Static chunks (JS, CSS) — CRITICAL for Next.js to load assets
+COPY --chown=nextjs:nodejs .next/static ./apps/ai-whisperers-site/.next/static
+# Public + content (read at runtime by server.js)
+COPY --chown=nextjs:nodejs public ./apps/ai-whisperers-site/public
+COPY --chown=nextjs:nodejs content ./apps/ai-whisperers-site/content
+USER nextjs
+EXPOSE 3000
+CMD ["node", "apps/ai-whisperers-site/server.js"]
