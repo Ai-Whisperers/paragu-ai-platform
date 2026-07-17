@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 import content from "@/content/es.json"
 
-const c = content as Record<string, unknown>
+const c = content as Record<string, any>
 const base = "https://jota-ink-tattoo.paragu-ai.com"
 
 export default function sitemap(): MetadataRoute.Sitemap {

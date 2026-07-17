@@ -1,7 +1,7 @@
 import content from "@/content/es.json"
 
 export function FaqJsonLd() {
-  const faq = (content as Record<string, unknown>).faq || {}
+  const faq = (content as Record<string, any>).faq || {}
   const items: any[] = faq.items || []
   if (items.length === 0) return null
 

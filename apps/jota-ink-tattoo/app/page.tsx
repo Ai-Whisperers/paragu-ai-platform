@@ -4,7 +4,7 @@ import content from "@/content/es.json"
 import { Gallery } from "@/components/gallery"
 import { TrustStrip, TRUST_ITEMS_VISUAL } from "@/components/truststrip"
 
-const c = content as Record<string, unknown>
+const c = content as Record<string, any>
 const h = c.home || {}
 const stats = h.stats || []
 const styles = h.styles?.items || []

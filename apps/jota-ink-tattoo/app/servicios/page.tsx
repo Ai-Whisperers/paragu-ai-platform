@@ -1,7 +1,7 @@
 "use client"
 import content from "@/content/es.json"
 
-const c = content as Record<string, unknown>
+const c = content as Record<string, any>
 const s = c.servicios || {}
 const list = s.list || []
 const info = s.info?.items || []

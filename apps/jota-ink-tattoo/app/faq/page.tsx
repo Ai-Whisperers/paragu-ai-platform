@@ -2,7 +2,7 @@
 import { useState } from "react"
 import content from "@/content/es.json"
 
-const c = content as Record<string, unknown>
+const c = content as Record<string, any>
 
 export default function Faq() {
   const faq = c.faq || {}

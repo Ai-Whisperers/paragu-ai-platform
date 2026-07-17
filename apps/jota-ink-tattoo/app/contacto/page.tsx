@@ -1,7 +1,7 @@
 "use client"
 import content from "@/content/es.json"
 
-const c = content as Record<string, unknown>
+const c = content as Record<string, any>
 const ct = c.contacto || {}
 
 export default function Contacto() {

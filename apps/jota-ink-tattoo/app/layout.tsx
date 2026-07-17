@@ -9,7 +9,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import content from "@/content/es.json"
 
-const c = content as Record<string, unknown>
+const c = content as Record<string, any>
 const inter = Inter({ subsets: ["latin"], display: "swap" })
 
 export const metadata: Metadata = {

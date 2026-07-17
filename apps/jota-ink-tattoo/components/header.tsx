@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import content from "@/content/es.json"
 import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher";
 
-const c = content as Record<string, unknown>
+const c = content as Record<string, any>
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
