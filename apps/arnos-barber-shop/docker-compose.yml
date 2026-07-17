@@ -1,0 +1,19 @@
+services:
+  web:
+    image: arnos-barber-shop:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.arnos-barber-shop.entrypoints=websecure"
+        - "traefik.http.routers.arnos-barber-shop.rule=Host(`arnos.paragu-ai.com`)"
+        - "traefik.http.routers.arnos-barber-shop.tls=true"
+        - "traefik.http.routers.arnos-barber-shop.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.arnos-barber-shop.middlewares=security-headers@file"
+        - "traefik.http.services.arnos-barber-shop.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

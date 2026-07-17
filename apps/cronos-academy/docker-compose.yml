@@ -1,0 +1,19 @@
+services:
+  web:
+    image: cronos-academy:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.cronos-academy.entrypoints=websecure"
+        - "traefik.http.routers.cronos-academy.rule=Host(`cronos-academy.paragu-ai.com`)"
+        - "traefik.http.routers.cronos-academy.tls=true"
+        - "traefik.http.routers.cronos-academy.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.cronos-academy.middlewares=security-headers@file"
+        - "traefik.http.services.cronos-academy.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

@@ -1,0 +1,19 @@
+services:
+  web:
+    image: somosgay-site:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.somosgay-site.entrypoints=websecure"
+        - "traefik.http.routers.somosgay-site.rule=Host(`somosgay.paragu-ai.com`)"
+        - "traefik.http.routers.somosgay-site.tls=true"
+        - "traefik.http.routers.somosgay-site.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.somosgay-site.middlewares=security-headers@file"
+        - "traefik.http.services.somosgay-site.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

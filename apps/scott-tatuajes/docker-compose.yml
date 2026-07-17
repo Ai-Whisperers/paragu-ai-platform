@@ -1,0 +1,19 @@
+services:
+  web:
+    image: scott-tatuajes:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.scott-tatuajes.entrypoints=websecure"
+        - "traefik.http.routers.scott-tatuajes.rule=Host(`scott-tatuajes.paragu-ai.com`)"
+        - "traefik.http.routers.scott-tatuajes.tls=true"
+        - "traefik.http.routers.scott-tatuajes.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.scott-tatuajes.middlewares=security-headers@file"
+        - "traefik.http.services.scott-tatuajes.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

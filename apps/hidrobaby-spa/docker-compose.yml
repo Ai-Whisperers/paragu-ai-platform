@@ -1,0 +1,19 @@
+services:
+  web:
+    image: hidrobaby-spa:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.hidrobaby-spa.entrypoints=websecure"
+        - "traefik.http.routers.hidrobaby-spa.rule=Host(`hidrobaby-spa.paragu-ai.com`)"
+        - "traefik.http.routers.hidrobaby-spa.tls=true"
+        - "traefik.http.routers.hidrobaby-spa.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.hidrobaby-spa.middlewares=security-headers@file"
+        - "traefik.http.services.hidrobaby-spa.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true
