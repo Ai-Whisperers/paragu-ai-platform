@@ -171,6 +171,14 @@ Ordered by (blast radius) × (ease):
     dependency lines from `site-template/package.json` + `pnpm -w install` to
     reconcile the lockfile. No typecheck impact.
 20. Migrate `villamayor-asociados` inline styles → Tailwind classes.
+    **Resolved.** Full sweep completed in commits `1e90b2b5` (demo-banner)
+    and `f3eb01e8` (header + footer + contacto + blog/[slug]). Zero
+    `style={{ ... }}` occurrences remain under `apps/villamayor-asociados/app`
+    or `apps/villamayor-asociados/components`. Verified with
+    `pnpm --filter villamayor-asociados build` — Turbopack compiles clean,
+    all 17 static pages generate. Auto-fit grid columns and the hero linear
+    gradient preserved as Tailwind arbitrary values (the "no gradients"
+    rule is scoped to `apps/builder/` only per repo `CLAUDE.md`).
 21. Balance `ai-whisperers-site` locale content (EN 328 vs PT/NL 805).
     **Resolved 2026-07-16.** Line-count "asymmetry" was a JSON formatting artifact:
     EN was compact-formatted, ES/NL/PT pretty-printed — same top-level structure.
