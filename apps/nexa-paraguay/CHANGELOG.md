@@ -256,3 +256,5 @@ changes.
 
 ## 2026-06-25 17:35
 - Trigger CI for deploy fix verification
+
+- 2026-07-17: deploy trigger (Erebus)
