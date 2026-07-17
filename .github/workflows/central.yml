@@ -323,16 +323,26 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Resolve Dockerfile
+        id: dockerfile
+        run: |
+          for candidate in Dockerfile.standalone Dockerfile.nginx-static Dockerfile.prod Dockerfile; do
+            if [ -f "apps/${{ matrix.app }}/${candidate}" ]; then
+              echo "path=apps/${{ matrix.app }}/${candidate}" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "::error::No Dockerfile found for ${{ matrix.app }}"
+          exit 1
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: apps/${{ matrix.app }}
-          file: apps/${{ matrix.app }}/Dockerfile.standalone
+          file: ${{ steps.dockerfile.outputs.path }}
           push: true
           tags: |
             ghcr.io/ai-whisperers/paragu-ai-platform/${{ matrix.app }}:${{ github.sha }}
             ghcr.io/ai-whisperers/paragu-ai-platform/${{ matrix.app }}:latest
-            ghcr.io/ai-whisperers/paragu-ai-platform/${{ matrix.app }}:standalone-${{ github.sha }}
 
   deploy:
     if: github.ref == 'refs/heads/main'
