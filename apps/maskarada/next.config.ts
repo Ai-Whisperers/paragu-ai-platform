@@ -18,7 +18,9 @@ const config: NextConfig = {
     return [
       { source: '/(.*)', headers: securityHeaders },
       { source: '/images/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] },
-      { source: '/_next/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] },
+      // Note: Next.js handles Cache-Control for /_next/* internally with content-hashed
+      // filenames. Setting a custom Cache-Control there breaks dev behavior — leave it
+      // to the framework.
     ]
   },
 }
