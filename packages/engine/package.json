@@ -13,8 +13,6 @@
     "@/*": ["./src/*"]
   },
   "contentRoot": "./src/content",
-  "scripts": {
-    "build": "tsc -p tsconfig.json --noEmit"
-  },
+  "scripts": {},
   "dependencies": {}
 }
