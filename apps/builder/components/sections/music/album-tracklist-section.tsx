@@ -66,7 +66,7 @@ export function AlbumTracklistSection(props: AlbumTracklistSectionProps) {
 
   if (variant === 'album-spotlight') {
     return (
-      <section className="py-16 md:py-24">
+      <section className="bg-background py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
             <Heading as="h2" level={2} className="mb-3">
@@ -94,7 +94,7 @@ export function AlbumTracklistSection(props: AlbumTracklistSectionProps) {
   }
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="bg-background py-16 md:py-24">
       <Container>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">

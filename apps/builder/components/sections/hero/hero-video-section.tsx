@@ -37,7 +37,7 @@ export function HeroVideoSection({
   const isYT = videoUrl?.includes('youtube') || videoUrl?.includes('youtu.be')
 
   return (
-    <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-background">
       {/* Background */}
       {variant === 'video' && videoUrl && !isYT && (
         <video

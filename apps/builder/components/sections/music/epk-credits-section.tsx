@@ -29,7 +29,7 @@ export function EpkCreditsSection({
   if (variant === 'thank-you') {
     if (!sections || sections.length === 0) return null
     return (
-      <section className="py-16 md:py-24">
+      <section className="bg-background py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mx-auto">
             {title && (
@@ -65,7 +65,7 @@ export function EpkCreditsSection({
   if (!items || items.length === 0) return null
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="bg-background py-16 md:py-24">
       <Container>
         <div className="max-w-2xl mx-auto">
           {title && (

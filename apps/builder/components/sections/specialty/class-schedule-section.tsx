@@ -33,7 +33,7 @@ export function ClassScheduleSection({
   const daySchedule = schedule.find(d => d.day === selectedDay)
 
   return (
-    <section id="horarios" className="bg-surface py-16 sm:py-20">
+    <section id="horarios" className="bg-background py-16 sm:py-20">
       <Container size="md">
         <div className="text-center mb-12">
           <Heading level={2}>{title}</Heading>

@@ -196,7 +196,7 @@ export function ProductCatalogSection({
     : safeProducts
 
   return (
-    <section id="catalogo" className="bg-surface-light py-16 sm:py-20">
+    <section id="catalogo" className="bg-background py-16 sm:py-20">
       <Container>
         <AnimatedSectionHeader>
           <Heading level={2}>{title}</Heading>

@@ -44,7 +44,7 @@ export function QuoteFormSection({
   }
 
   return (
-    <section id="presupuesto" className="font-heading bg-surface py-16 sm:py-20">
+    <section id="presupuesto" className="font-heading bg-background py-16 sm:py-20">
       <div className="font-heading mx-auto max-w-2xl px-4">
         <div className="font-heading text-center mb-8">
           <Heading level={2} className="font-heading text-xl sm:text-3xl font-bold text-foreground">

@@ -79,7 +79,7 @@ export function B2BWholesaleSection({
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className=" mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">¿Por Qué Negocios Nos Eligen?</Heading>
@@ -104,7 +104,7 @@ export function B2BWholesaleSection({
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-surface-light">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className=" mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Atendemos Diversos Negocios</Heading>
@@ -135,7 +135,7 @@ export function B2BWholesaleSection({
       </section>
 
       {/* Pricing Tiers */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className=" mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Descuentos por Volumen</Heading>
@@ -201,7 +201,7 @@ export function B2BWholesaleSection({
       </section>
 
       {/* Guarantees */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className=" mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Nuestras Promesas</Heading>
@@ -223,7 +223,7 @@ export function B2BWholesaleSection({
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-surface-light">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">Preguntas Frecuentes para Negocios</Heading>
@@ -247,7 +247,7 @@ export function B2BWholesaleSection({
 
       {/* Urgent Banner */}
       {urgentMessage && (
-        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-red-50">
+        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-2">
               <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
@@ -298,7 +298,7 @@ export function B2BWholesaleSection({
       </section>
 
       {/* Contact Info Footer */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-surface text-white">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-deep text-white">
         <div className=" mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>

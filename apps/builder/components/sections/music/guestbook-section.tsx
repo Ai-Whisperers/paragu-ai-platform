@@ -24,7 +24,7 @@ export function GuestbookSection({
   ctaLink,
 }: GuestbookSectionProps) {
   return (
-    <section className="py-16 md:py-24">
+    <section className="bg-background py-16 md:py-24">
       <Container>
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">

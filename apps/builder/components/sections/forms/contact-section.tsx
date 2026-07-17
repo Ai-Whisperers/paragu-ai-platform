@@ -115,7 +115,7 @@ export function ContactSection({
     : ''
 
   return (
-    <section id="contacto" className="py-20 sm:py-28 lg:py-32 bg-surface">
+    <section id="contacto" className="py-20 sm:py-28 lg:py-32 bg-background">
       <Container size="md">
         <AnimatedSectionHeader className="mb-12 sm:mb-16">
           <Heading level={2}

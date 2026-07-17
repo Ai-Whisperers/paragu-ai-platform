@@ -35,7 +35,7 @@ export function StreamingLinksSection({
   if (!platforms || platforms.length === 0) return null
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="bg-background py-12 md:py-16">
       <Container>
         {(title || subtitle) && (
           <div className="text-center mb-8">

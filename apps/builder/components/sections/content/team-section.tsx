@@ -41,7 +41,7 @@ export function TeamSection({ title, subtitle, members = [], variant = 'cards' }
 
   if (variant === 'grid-photos') {
     return (
-      <section id="equipo" className="bg-surface py-16 sm:py-20">
+      <section id="equipo" className="bg-background py-16 sm:py-20">
         <Container size="md">
           <div className="mb-12 text-center">
             <Heading level={2}>{title}</Heading>
@@ -71,7 +71,7 @@ export function TeamSection({ title, subtitle, members = [], variant = 'cards' }
   }
 
   return (
-    <section id="equipo" className="bg-surface py-16 sm:py-20">
+    <section id="equipo" className="bg-background py-16 sm:py-20">
       <Container size="md">
         <div className="mb-12 text-center">
           <Heading level={2}>{title}</Heading>

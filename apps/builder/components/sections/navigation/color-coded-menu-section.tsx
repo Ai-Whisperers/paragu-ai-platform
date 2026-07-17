@@ -154,7 +154,7 @@ export function SpecialOrderSection({
   )
 
   return (
-    <section id="special-order" className="bg-surface py-16 sm:py-20">
+    <section id="special-order" className="bg-background py-16 sm:py-20">
       <Container size="md">
         <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-primary/10 bg-background shadow-lg">
           <div className="grid gap-0 md:grid-cols-[1fr_1.5fr]">

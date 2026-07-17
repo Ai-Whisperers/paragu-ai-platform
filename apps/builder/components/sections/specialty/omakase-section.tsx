@@ -28,7 +28,7 @@ export function OmakaseSection({
   notes
 }: OmakaseSectionProps) {
   return (
-    <section id="omakase" className="bg-surface py-16 sm:py-20">
+    <section id="omakase" className="bg-background py-16 sm:py-20">
       <Container size="md">
         <AnimatedSectionHeader className="mb-12 text-center">
           <Heading as="h2" level={2} className="mb-4">

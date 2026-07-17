@@ -32,7 +32,7 @@ export function ConveyorBeltSection({
   tips
 }: ConveyorBeltSectionProps) {
   return (
-    <section id="como-funciona" className="bg-surface py-16 sm:py-20">
+    <section id="como-funciona" className="bg-background py-16 sm:py-20">
       <Container size="md">
         <AnimatedSectionHeader className="mb-12 text-center">
           <Heading as="h2" level={2} className="mb-4">

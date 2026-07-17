@@ -108,7 +108,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Stats */}
       {business.stats && business.stats.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className=" mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
               {business.stats.map((stat, index) => (
@@ -126,7 +126,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Mission & Vision */}
       {missionVisionEnabled && (business.story?.mission || business.story?.vision) ? (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-surface-light">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className=" mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-orange-200">
@@ -165,7 +165,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Values */}
       {valuesEnabled && valuesList.length > 0 ? (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className=" mx-auto">
             <div className="text-center mb-12">
               <Heading level={2} className="text-xl sm:text-3xl font-bold text-foreground mb-4">
@@ -228,7 +228,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Sustainability */}
       {business.sustainability && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-green-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className=" mx-auto">
             <div className="text-center mb-12">
               <Badge className="mb-4 bg-green-100 text-green-800">Compromiso Ambiental</Badge>
@@ -266,7 +266,7 @@ export function OurStorySection({ business, overrides }: OurStorySectionProps) {
 
       {/* Visit Us */}
       {visitEnabled && business.address ? (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className=" mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>

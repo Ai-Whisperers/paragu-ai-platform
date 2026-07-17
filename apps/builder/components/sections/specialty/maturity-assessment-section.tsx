@@ -143,8 +143,7 @@ export function MaturityAssessmentSection({
 
   return (
     <section
-      className="py-16 md:py-24"
-      style={{ backgroundColor: 'var(--surface)' }}
+      className="bg-background py-16 md:py-24"
     >
       <Container>
         <div className="mx-auto max-w-3xl">

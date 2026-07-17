@@ -54,7 +54,7 @@ export function BookingSection({
 
   if (bookingComplete) {
     return (
-      <section id="reservar" className="font-heading bg-surface py-16 sm:py-20">
+      <section id="reservar" className="font-heading bg-background py-16 sm:py-20">
         <div className="font-heading mx-auto max-w-2xl px-4">
           <div className="font-heading bg-surface rounded-xl shadow-sm border border-border p-8 text-center">
             <div className="font-heading w-16 h-16 bg-[var(--color-success-surface)] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -79,7 +79,7 @@ export function BookingSection({
   }
 
   return (
-    <section id="reservar" className="font-heading bg-surface py-16 sm:py-20">
+    <section id="reservar" className="font-heading bg-background py-16 sm:py-20">
       <div className="font-heading mx-auto max-w-3xl px-4">
         <div className="font-heading text-center mb-8">
           <Heading level={2} className="font-heading text-xl sm:text-3xl font-bold text-foreground">

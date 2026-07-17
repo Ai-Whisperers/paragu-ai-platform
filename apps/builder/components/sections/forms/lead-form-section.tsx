@@ -140,7 +140,7 @@ export function LeadFormSection({
   const compact = variant === 'compact'
 
   return (
-    <section id="lead" className="bg-surface py-16 sm:py-20">
+    <section id="lead" className="bg-background py-16 sm:py-20">
       <Container size="md">
         <AnimatedSectionHeader>
           <Heading level={2}>{title}</Heading>

@@ -30,9 +30,9 @@ export function IllustrationSection({
   caption,
 }: IllustrationSectionProps) {
   if (!src) return null
-  const bg = background === 'surface' ? 'var(--surface)' : 'var(--background)'
+  const bgClass = background === 'surface' ? 'bg-surface' : 'bg-background'
   return (
-    <section className="py-16 sm:py-20" style={{ backgroundColor: bg }}>
+    <section className={`py-16 sm:py-20 ${bgClass}`}>
       <Container size="md">
         {(title || subtitle) && (
           <div className="mb-10 text-center">

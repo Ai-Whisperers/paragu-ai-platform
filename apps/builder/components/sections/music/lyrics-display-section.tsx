@@ -45,7 +45,7 @@ export function LyricsDisplaySection({ tracks = [], variant = 'full-album' }: Ly
   if (!tracks || tracks.length === 0) return null
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="bg-background py-16 md:py-24">
       <Container>
         <div className="max-w-3xl mx-auto space-y-16">
           {tracks.map((track) => (
