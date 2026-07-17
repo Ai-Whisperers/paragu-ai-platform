@@ -117,10 +117,12 @@ const config: Config = {
         xl: '24px',
       },
       backgroundImage: {
+        // Solid-color SVG patterns (no gradients per canonical palette)
         'cyber-grid':
-          "linear-gradient(rgba(120, 52, 192, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(120, 52, 192, 0.08) 1px, transparent 1px)",
+          "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M0 0H32V1H0zM0 0V32H1V0z' fill='rgba(120,52,192,0.08)'/></svg>\")",
+        // Replaced radial glow with a soft solid ellipse via SVG
         'cyber-radial':
-          'radial-gradient(ellipse at top, rgba(120, 52, 192, 0.35), transparent 60%)',
+          "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><ellipse cx='200' cy='0' rx='260' ry='120' fill='rgba(120,52,192,0.35)'/></svg>\")",
       },
       backgroundSize: {
         'cyber-grid': '32px 32px',

@@ -652,8 +652,9 @@ export default function HomePage() {
           <div
             className="absolute inset-0 -z-10"
             style={{
+              // Solid-color SVG grid overlay (no gradients per canonical palette)
               backgroundImage:
-                "linear-gradient(rgba(120, 52, 192, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(120, 52, 192, 0.06) 1px, transparent 1px)",
+                "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M0 0H32V1H0zM0 0V32H1V0z' fill='rgba(120,52,192,0.06)'/></svg>\")",
               backgroundSize: '32px 32px',
             }}
           />
@@ -907,9 +908,9 @@ export default function HomePage() {
           style={{
             // Solid #4C2C73 — no gradients per spec
             backgroundColor: '#4C2C73',
-            // Subtle cyber grid overlay
+            // Subtle cyber grid overlay (solid-color SVG, no gradients)
             backgroundImage:
-              "linear-gradient(rgba(120, 52, 192, 0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(120, 52, 192, 0.18) 1px, transparent 1px)",
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M0 0H32V1H0zM0 0V32H1V0z' fill='rgba(120,52,192,0.18)'/></svg>\")",
             backgroundSize: '32px 32px',
           }}
         >

@@ -92,10 +92,9 @@ html { scroll-behavior: smooth; }
 
 body {
   background-color: var(--bg);
-  background-image:
-    linear-gradient(rgba(120, 52, 192, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120, 52, 192, 0.05) 1px, transparent 1px);
-  background-size: 32px 32px, 32px 32px;
+  /* Solid-color SVG cyber grid (no gradients per canonical palette) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M0 0H32V1H0zM0 0V32H1V0z' fill='rgba(120,52,192,0.05)'/></svg>");
+  background-size: 32px 32px;
   color: var(--foreground);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
@@ -148,11 +147,9 @@ body, p, li, span:not(.font-heading):not(.font-cyber) {
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font-family: inherit; }
 
-/* Cyberpunk decorative utilities */
+/* Cyberpunk decorative utilities (solid-color SVG grid, no gradients) */
 .bg-cyber-grid {
-  background-image:
-    linear-gradient(rgba(120, 52, 192, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120, 52, 192, 0.12) 1px, transparent 1px);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M0 0H32V1H0zM0 0V32H1V0z' fill='rgba(120,52,192,0.12)'/></svg>");
   background-size: 32px 32px;
 }
 
