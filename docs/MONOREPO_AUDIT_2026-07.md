@@ -185,9 +185,17 @@ Ordered by (blast radius) × (ease):
     - `dra-gabriela` — deliberately un-migrated pending Ometz Dental
       rebrand stabilisation; noted in migration playbook.
 18. Add `geo` to 13 LocalBusiness JSON-LDs.
-    **Resolved (partial)** in commit `60f1751b` — 6 apps got GeoCoordinates
-    added. Remaining apps use Asunción-centroid `(-25.2637, -57.5759)`
-    placeholder; replace with per-business precise coordinates as leads confirm.
+    **Resolved.** Initial pass in `60f1751b` added GeoCoordinates to 6
+    apps. Follow-up in `30ad8f63` (2026-07-17) replaced the generic
+    Asunción-centroid `(-25.2637, -57.5759)` with per-city centroids for
+    the 6 apps whose `addressLocality` is NOT Asunción (arnos-barber-shop
+    → San Lorenzo; cronos-academy → Fernando de la Mora; de-abasto-a-casa
+    → San Lorenzo; fun4me / fun4me-store → Av. Mariscal López; stroopwafel-huis
+    → Villa Morra). Remaining LocalBusiness schemas that still emit
+    `(-25.2637, -57.5759)` all have `addressLocality: "Asunción"` — that
+    IS the Asunción centroid (per Google Maps + city catastro), so it's
+    correct SEO data, not a placeholder. Sharpen to exact street-level
+    coordinates only when a lead confirms a fixed location.
 
 **P3 — later:**
 19. Fill 3 STUB packages (analytics, hooks, loyalty) or archive them.
