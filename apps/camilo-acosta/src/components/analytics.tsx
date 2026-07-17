@@ -1,7 +1,7 @@
 "use client"
 import { useEffect } from "react"
 
-declare global { interface Window { gtag?: any; dataLayer?: any[] } }
+declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[] } }
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-X2XQZR3J6K"
 
