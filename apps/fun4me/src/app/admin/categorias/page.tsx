@@ -10,16 +10,21 @@ import {
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Plus, Pencil } from 'lucide-react';
+import type { ExtendedCategory } from '@/types/database';
+
+interface CategoryWithProductCount extends ExtendedCategory {
+  products?: { count: number }[];
+}
 
 export default async function CategoriasPage() {
   const supabase = await createClient();
 
-  const { data: categoriesData } = await (supabase as any)
+  const { data: categoriesData } = await supabase
     .from('categories')
     .select('*, products(count)')
     .order('sort_order', { ascending: true });
 
-  const categories = (categoriesData as any[]) || [];
+  const categories = (categoriesData as CategoryWithProductCount[] | null) || [];
 
   return (
     <div className="space-y-6">
@@ -53,7 +58,7 @@ export default async function CategoriasPage() {
           </TableHeader>
           <TableBody>
             {categories.length > 0 ? (
-              categories.map((category: any) => (
+              categories.map((category) => (
                 <TableRow key={category.id}>
                   <TableCell>
                     {category.image_url ? (

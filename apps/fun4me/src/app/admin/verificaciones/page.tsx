@@ -1,30 +1,40 @@
-// @ts-nocheck - bypass strict types for new tables
 'use client';
-
-// @ts-nocheck - bypass strict types for new tables
 
 import { useEffect, useState } from 'react';
 import { Loader2, CheckCircle2, XCircle, Search, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { createClient } from '@/lib/supabase/client';
 
+interface VerificationDoc {
+  id: string;
+  ci_number?: string | null;
+  customer_name?: string | null;
+  full_name?: string | null;
+  email?: string | null;
+  phone?: string | null;
+  image_url?: string | null;
+  created_at: string;
+}
+
 export default function VerificacionesPage() {
-  const [docs, setDocs] = useState<any[]>([]);
+  const [docs, setDocs] = useState<VerificationDoc[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [actionLoading, setActionLoading] = useState('');
 
-  useEffect(() => { loadDocs(); }, []);
-
   async function loadDocs() {
     const supabase = createClient();
     const { data } = await supabase.from('ci_verification_queue').select('*').order('created_at', { ascending: false });
-    setDocs(data || []);
+    setDocs((data as VerificationDoc[] | null) || []);
     setLoading(false);
   }
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    loadDocs();
+  }, []);
 
   async function handleVerify(docId: string, approve: boolean, notes?: string) {
     setActionLoading(docId);
@@ -36,7 +46,7 @@ export default function VerificacionesPage() {
       verified_by: user?.id,
       verified_at: new Date().toISOString(),
       notes: notes || (approve ? null : 'Rechazada por administrador'),
-    }).eq('id', docId);
+    } as never).eq('id', docId);
 
     setDocs(prev => prev.filter(d => d.id !== docId));
     setActionLoading('');

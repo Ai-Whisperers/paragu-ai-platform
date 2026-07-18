@@ -2,6 +2,19 @@ import { createClient } from '@/lib/supabase/server';
 import { CouponForm } from '@/components/admin/coupon-form';
 import { notFound } from 'next/navigation';
 
+interface Coupon {
+  id: string;
+  code: string;
+  type: string;
+  value: number;
+  min_order?: number | null;
+  max_uses?: number | null;
+  uses_count?: number | null;
+  expires_at?: string | null;
+  is_active: boolean;
+  created_at?: string;
+}
+
 interface Props {
   params: Promise<{ id: string }>;
 }
@@ -11,10 +24,10 @@ export default async function CuponEditPage({ params }: Props) {
   const supabase = await createClient();
   const isNew = id === 'nuevo';
 
-  let coupon = null;
+  let coupon: Coupon | null = null;
 
   if (!isNew) {
-    const { data, error } = await (supabase as any)
+    const { data, error } = await supabase
       .from('coupons')
       .select('*')
       .eq('id', id)
@@ -23,7 +36,7 @@ export default async function CuponEditPage({ params }: Props) {
     if (error || !data) {
       notFound();
     }
-    coupon = data as any;
+    coupon = data as Coupon;
   }
 
   return (

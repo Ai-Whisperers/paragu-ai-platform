@@ -1,10 +1,6 @@
-// @ts-nocheck - bypass strict types for new tables
 'use client';
 
-// @ts-nocheck - bypass strict types for new tables
-
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import { Loader2, Plus, Calendar, MapPin, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,12 +8,35 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { Separator } from '@/components/ui/separator';
 import { createClient } from '@/lib/supabase/client';
-import { formatPrice } from '@/lib/utils/format';
+
+interface TicketType {
+  id: string;
+  name: string;
+  price: number;
+  sold?: number;
+}
+
+interface EventRow {
+  id: string;
+  title: string;
+  slug: string;
+  description: string | null;
+  short_desc: string | null;
+  date: string;
+  end_date: string | null;
+  venue: string;
+  venue_address: string | null;
+  city: string;
+  max_capacity: number;
+  status: string;
+  organizer_name: string | null;
+  rules: string | null;
+  ticket_types?: TicketType[];
+}
 
 export default function AdminEventosPage() {
-  const [events, setEvents] = useState<any[]>([]);
+  const [events, setEvents] = useState<EventRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [title, setTitle] = useState('');
@@ -34,14 +53,17 @@ export default function AdminEventosPage() {
   const [rules, setRules] = useState('');
   const [saving, setSaving] = useState(false);
 
-  useEffect(() => { loadEvents(); }, []);
-
   async function loadEvents() {
     const supabase = createClient();
     const { data } = await supabase.from('events').select('*, ticket_types(*)').order('date', { ascending: false });
-    setEvents(data || []);
+    setEvents((data as EventRow[] | null) || []);
     setLoading(false);
   }
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    loadEvents();
+  }, []);
 
   function generateSlug(val: string) {
     return val.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -65,7 +87,7 @@ export default function AdminEventosPage() {
       status: 'draft',
       organizer_name: organizerName.trim() || null,
       rules: rules.trim() || null,
-    });
+    } as never);
     if (!error) {
       setShowForm(false);
       resetForm();
@@ -77,7 +99,7 @@ export default function AdminEventosPage() {
   async function toggleStatus(id: string, current: string) {
     const supabase = createClient();
     const newStatus = current === 'published' ? 'draft' : 'published';
-    await supabase.from('events').update({ status: newStatus }).eq('id', id);
+    await supabase.from('events').update({ status: newStatus } as never).eq('id', id);
     loadEvents();
   }
 
@@ -146,7 +168,7 @@ export default function AdminEventosPage() {
                   <div className="text-sm text-muted-foreground space-y-1">
                     <div className="flex items-center gap-2"><Calendar className="h-3 w-3" />{new Date(event.date).toLocaleDateString('es-PY', { dateStyle: 'long', timeStyle: 'short' })}</div>
                     <div className="flex items-center gap-2"><MapPin className="h-3 w-3" />{event.venue}, {event.city}</div>
-                    <div className="flex items-center gap-2"><Users className="h-3 w-3" />{event.max_capacity} capacidad · {event.ticket_types?.reduce((a: number, t: any) => a + (t.sold || 0), 0) || 0} vendidos</div>
+                    <div className="flex items-center gap-2"><Users className="h-3 w-3" />{event.max_capacity} capacidad · {event.ticket_types?.reduce((a: number, t: TicketType) => a + (t.sold || 0), 0) || 0} vendidos</div>
                   </div>
                 </div>
                 <div className="flex gap-2">
