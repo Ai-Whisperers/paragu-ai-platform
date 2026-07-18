@@ -1,32 +1,35 @@
-FROM paragu-ai/next-base:node20 AS deps
+FROM node:20-slim AS deps
 WORKDIR /app
-COPY web/package.json web/package-lock.json* ./
-RUN npm install --legacy-peer-deps
+RUN corepack enable && corepack prepare pnpm@10 --activate
+WORKDIR /workspace
+COPY pnpm-workspace.yaml ./
+COPY package.json pnpm-lock.yaml* .npmrc* tsconfig.base.json* ./
+COPY packages/ packages/
+COPY apps/builder/ apps/builder/
+RUN cd apps/builder && pnpm install --no-frozen-lockfile --filter builder...
 
-FROM paragu-ai/next-base:node20 AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY web/ .
-COPY src/ ./src/
-COPY sites/ ./sites/
-COPY public/ ./public/
-ENV NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
-ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
-ENV NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
+FROM node:20-slim AS builder
+WORKDIR /workspace
+RUN corepack enable && corepack prepare pnpm@10 --activate
+COPY --from=deps /workspace/node_modules ./node_modules
+COPY --from=deps /workspace/apps/builder/node_modules ./apps/builder/node_modules
+COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+RUN cd apps/builder && pnpm run build
 
-FROM paragu-ai/next-base:node20 AS runner
+FROM node:20-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
+COPY --from=builder /workspace/apps/builder/.next/standalone/ /app/standalone/
+COPY --from=builder /workspace/apps/builder/.next/static /app/standalone/apps/builder/.next/static
+COPY --from=builder /workspace/apps/builder/public /app/standalone/apps/builder/public
+RUN addgroup --system --gid 1001 nodejs 2>/dev/null || true && \
+    adduser --system --uid 1001 --ingroup nodejs nextjs 2>/dev/null || true && \
+    chown -R nextjs:nodejs /app
 USER nextjs
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/src ./src
-COPY --from=builder --chown=nextjs:nodejs /app/sites ./sites
 EXPOSE 3000
+WORKDIR /app/standalone/apps/builder
 CMD ["node", "server.js"]

@@ -1,28 +1,35 @@
-# Stage 1: Build
-FROM node:20-alpine AS builder
+FROM node:20-slim AS deps
 WORKDIR /app
-COPY package*.json ./
-RUN npm ci
+RUN corepack enable && corepack prepare pnpm@10 --activate
+WORKDIR /workspace
+COPY pnpm-workspace.yaml ./
+COPY package.json pnpm-lock.yaml* .npmrc* tsconfig.base.json* ./
+COPY packages/ packages/
+COPY apps/tsuki-restaurante/ apps/tsuki-restaurante/
+RUN cd apps/tsuki-restaurante && pnpm install --no-frozen-lockfile --filter tsuki-restaurante...
+
+FROM node:20-slim AS builder
+WORKDIR /workspace
+RUN corepack enable && corepack prepare pnpm@10 --activate
+COPY --from=deps /workspace/node_modules ./node_modules
+COPY --from=deps /workspace/apps/tsuki-restaurante/node_modules ./apps/tsuki-restaurante/node_modules
 COPY . .
-RUN npm run build
+ENV NEXT_TELEMETRY_DISABLED=1
+RUN cd apps/tsuki-restaurante && pnpm run build
 
-# Stage 2: Run — match WORKDIR with outputFileTracingRoot
-FROM node:20-alpine AS runner
+FROM node:20-slim AS runner
 WORKDIR /app
-
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 nextjs
-
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/content ./content
-
-USER nextjs
-
-EXPOSE 3000
-ENV PORT=3000
-ENV HOSTNAME=0.0.0.0
 ENV NODE_ENV=production
-
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+COPY --from=builder /workspace/apps/tsuki-restaurante/.next/standalone/ /app/standalone/
+COPY --from=builder /workspace/apps/tsuki-restaurante/.next/static /app/standalone/apps/tsuki-restaurante/.next/static
+COPY --from=builder /workspace/apps/tsuki-restaurante/public /app/standalone/apps/tsuki-restaurante/public
+RUN addgroup --system --gid 1001 nodejs 2>/dev/null || true && \
+    adduser --system --uid 1001 --ingroup nodejs nextjs 2>/dev/null || true && \
+    chown -R nextjs:nodejs /app
+USER nextjs
+EXPOSE 3000
+WORKDIR /app/standalone/apps/tsuki-restaurante
 CMD ["node", "server.js"]
