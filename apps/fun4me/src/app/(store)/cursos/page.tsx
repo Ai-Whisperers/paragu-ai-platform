@@ -1,36 +1,47 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { BookOpen, PlayCircle, Clock, BarChart, Loader2, Lock } from 'lucide-react';
+import { BookOpen, PlayCircle, Clock, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { createClient } from '@/lib/supabase/client';
 import { formatPrice } from '@/lib/utils/format';
 
+interface Course {
+  id: string;
+  slug: string;
+  title: string;
+  short_desc?: string | null;
+  image_url?: string | null;
+  level?: 'beginner' | 'intermediate' | 'advanced' | null;
+  duration_minutes?: number | null;
+  price: number;
+}
+
 export default function CursosPage() {
-  const [courses, setCourses] = useState<Record<string, any>[]>([]);
+  const [courses, setCourses] = useState<Course[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loadCourses();
-  }, []);
-
-  async function loadCourses() {
+  const loadCourses = useCallback(async () => {
     const supabase = createClient();
+    // @ts-expect-error courses table not in generated Database types yet
     const { data } = await supabase
       .from('courses')
       .select('*')
       .eq('is_published', true)
       .order('sort_order');
-    setCourses(data || []);
+    setCourses((data as Course[] | null) || []);
     setLoading(false);
-  }
+  }, []);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial fetch on mount; memoized via useCallback
+    loadCourses();
+  }, [loadCourses]);
 
   if (loading) return <div className="flex justify-center py-20"><Loader2 className="h-8 w-8 animate-spin text-rose-500" /></div>;
-
-  const levels = [...new Set(courses.map(c => c.level || 'all'))];
 
   return (
     <div className="container mx-auto px-4 py-8">

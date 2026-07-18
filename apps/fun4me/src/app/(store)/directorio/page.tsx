@@ -1,9 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Users, Search, Loader2, Shield, Star, MapPin, MessageCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Users, Search, Loader2, Star, MessageCircle } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -18,17 +17,28 @@ const KINK_OPTIONS = [
 
 const ROLE_OPTIONS = ['Dom', 'Sumisa', 'Switch', 'Domina', 'Sumiso', 'Versátil'];
 
+interface DirectoryMember {
+  id: string;
+  display_name?: string | null;
+  full_name?: string | null;
+  avatar_url?: string | null;
+  bio?: string | null;
+  experience_level?: 'curious' | 'beginner' | 'intermediate' | 'advanced' | 'expert' | null;
+  roles?: string[] | null;
+  kink_tags?: string[] | null;
+  city?: string | null;
+}
+
 export default function DirectorioPage() {
-  const [members, setMembers] = useState<Record<string, any>[]>([]);
+  const [members, setMembers] = useState<DirectoryMember[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
   const [kinkFilter, setKinkFilter] = useState('');
   const [roleFilter, setRoleFilter] = useState('');
 
-  useEffect(() => { loadMembers(); }, [kinkFilter, roleFilter]);
-
-  async function loadMembers() {
+  const loadMembers = useCallback(async () => {
     const supabase = createClient();
+    // @ts-expect-error customers.show_in_directory and directory fields not in generated Database types yet
     let query = supabase
       .from('customers')
       .select('id, display_name, full_name, avatar_url, bio, experience_level, roles, kink_tags, show_in_directory, city')
@@ -39,9 +49,14 @@ export default function DirectorioPage() {
     if (roleFilter) query = query.contains('roles', [roleFilter]);
 
     const { data } = await query;
-    setMembers(data || []);
+    setMembers((data as DirectoryMember[] | null) || []);
     setLoading(false);
-  }
+  }, [kinkFilter, roleFilter]);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- data refresh on filter change; memoized via useCallback
+    loadMembers();
+  }, [loadMembers]);
 
   const filtered = members.filter(m => {
     if (!search) return true;

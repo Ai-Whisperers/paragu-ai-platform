@@ -1,8 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ProductCard } from '@/components/store/product-card';
-import { Pagination } from '@/components/store/pagination';
 import { getKinkBySlug, getProductsByKink, PRODUCT_IMAGES_MAP } from '@/lib/content';
 import type { Metadata } from 'next';
 

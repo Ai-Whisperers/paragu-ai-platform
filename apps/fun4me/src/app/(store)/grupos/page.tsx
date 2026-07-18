@@ -1,32 +1,43 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Users, Lock, MessageSquare, Loader2, Plus, Hash } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Users, Lock, MessageSquare, Loader2, Hash } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 import { createClient } from '@/lib/supabase/client';
 
+interface CommunityGroup {
+  id: string;
+  slug: string;
+  name: string;
+  description?: string | null;
+  category?: string | null;
+  is_private?: boolean | null;
+  member_count?: number | null;
+  post_count?: number | null;
+}
+
 export default function GruposPage() {
-  const [groups, setGroups] = useState<Record<string, any>[]>([]);
+  const [groups, setGroups] = useState<CommunityGroup[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loadGroups();
-  }, []);
-
-  async function loadGroups() {
+  const loadGroups = useCallback(async () => {
     const supabase = createClient();
+    // @ts-expect-error community_groups not in generated Database types yet
     const { data } = await supabase
       .from('community_groups')
       .select('*')
       .eq('is_active', true)
       .eq('is_private', false)
       .order('member_count', { ascending: false });
-    setGroups(data || []);
+    setGroups((data as CommunityGroup[] | null) || []);
     setLoading(false);
-  }
+  }, []);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial fetch on mount; memoized via useCallback
+    loadGroups();
+  }, [loadGroups]);
 
   if (loading) return <div className="flex justify-center py-20"><Loader2 className="h-8 w-8 animate-spin text-rose-500" /></div>;
 

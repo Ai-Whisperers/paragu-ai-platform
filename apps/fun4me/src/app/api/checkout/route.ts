@@ -1,6 +1,41 @@
-// @ts-nocheck
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
+
+interface CheckoutItem {
+  product_id: string;
+  name: string;
+  price: number;
+  quantity: number;
+}
+
+interface CheckoutOrderData {
+  customer_name?: string;
+  customer_phone?: string;
+  customer_email?: string;
+  items: CheckoutItem[];
+  subtotal: number;
+  total: number;
+  shipping_cost?: number;
+  discount_amount?: number;
+  payment_method?: string;
+  shipping_address?: { address?: string; city?: string; [k: string]: unknown };
+  notes?: string;
+  coupon_code?: string;
+}
+
+interface OrderPayload {
+  status: string;
+  subtotal: number;
+  shipping_cost: number;
+  discount_amount: number;
+  total: number;
+  payment_method?: string;
+  shipping_address?: CheckoutOrderData['shipping_address'];
+  notes: string | null;
+  customer_id?: string;
+  guest_email?: string | null;
+  guest_phone?: string | null;
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -9,7 +44,7 @@ export async function POST(request: NextRequest) {
     // Get current user if authenticated
     const { data: { user } } = await supabase.auth.getUser();
 
-    let orderData: any;
+    let orderData: CheckoutOrderData;
     let receiptFile: File | null = null;
     const contentType = request.headers.get('content-type') || '';
 
@@ -60,7 +95,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create order
-    const orderPayload: any = {
+    const orderPayload: OrderPayload = {
       status: 'pending',
       subtotal: orderData.subtotal,
       shipping_cost: orderData.shipping_cost || 0,
@@ -102,7 +137,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Insert order items
-    const orderItems = orderData.items.map((item: any) => ({
+    const orderItems = orderData.items.map((item: CheckoutItem) => ({
       order_id: order.id,
       product_id: item.product_id,
       product_name: item.name,

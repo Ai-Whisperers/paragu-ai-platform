@@ -1,27 +1,39 @@
-// @ts-nocheck - bypass strict types for new tables
 'use client';
 
-// @ts-nocheck - bypass strict types for new tables
-
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Calendar, MapPin, Loader2, Ticket } from 'lucide-react';
+import { Calendar, MapPin, Ticket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { createClient } from '@/lib/supabase/client';
 import { formatPrice } from '@/lib/utils/format';
 
+interface TicketTypeRow {
+  id: string;
+  price: number;
+  quantity: number;
+  sold: number;
+}
+
+interface EventRow {
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+  venue?: string | null;
+  city?: string | null;
+  image_url?: string | null;
+  status?: string | null;
+  ticket_types?: TicketTypeRow[] | null;
+}
+
 export default function EventosPage() {
-  const [events, setEvents] = useState<any[]>([]);
+  const [events, setEvents] = useState<EventRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    loadEvents();
-  }, []);
-
-  async function loadEvents() {
+  const loadEvents = useCallback(async () => {
     const supabase = createClient();
     const { data, error: err } = await supabase
       .from('events')
@@ -31,9 +43,14 @@ export default function EventosPage() {
       .order('date');
 
     if (err) { setError('Error al cargar eventos'); setLoading(false); return; }
-    setEvents(data || []);
+    setEvents((data as EventRow[] | null) || []);
     setLoading(false);
-  }
+  }, []);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial fetch on mount; memoized via useCallback
+    loadEvents();
+  }, [loadEvents]);
 
   if (loading) return (
     <div className="container mx-auto px-4 py-12">
@@ -60,10 +77,10 @@ export default function EventosPage() {
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {events.map(event => {
-            const prices = (event.ticket_types || []).map((t: any) => t.price).filter(Boolean);
+            const prices = (event.ticket_types || []).map((t) => t.price).filter(Boolean);
             const minPrice = Math.min(...prices);
             const maxPrice = Math.max(...prices);
-            const availableTickets = (event.ticket_types || []).reduce((sum: number, t: any) => sum + (t.quantity - t.sold), 0);
+            const availableTickets = (event.ticket_types || []).reduce((sum, t) => sum + (t.quantity - t.sold), 0);
             const dateStr = new Date(event.date).toLocaleDateString('es-PY', { dateStyle: 'long', timeStyle: 'short' });
 
             return (

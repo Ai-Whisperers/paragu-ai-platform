@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { getWhatsAppLink } from '@/lib/content';
 import type { Metadata } from 'next';
 

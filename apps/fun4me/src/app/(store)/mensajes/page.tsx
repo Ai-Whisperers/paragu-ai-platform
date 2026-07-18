@@ -1,56 +1,75 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useCallback, useEffect, useState } from 'react';
 import { MessageCircle, Send, Loader2, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { createClient } from '@/lib/supabase/client';
+import type { User } from '@supabase/supabase-js';
+
+interface MessageThread {
+  id: string;
+  participant1: string;
+  participant2: string;
+  last_message_at?: string | null;
+}
+
+interface MessageRow {
+  id: string;
+  thread_id: string;
+  sender_id: string;
+  content: string;
+  created_at: string;
+}
 
 export default function MensajesPage() {
-  const [threads, setThreads] = useState<Record<string, any>[]>([]);
+  const [threads, setThreads] = useState<MessageThread[]>([]);
   const [selectedThread, setSelectedThread] = useState<string | null>(null);
-  const [messages, setMessages] = useState<Record<string, any>[]>([]);
+  const [messages, setMessages] = useState<MessageRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [newMsg, setNewMsg] = useState('');
-  const [user, setUser] = useState<Record<string, any> | null>(null);
+  const [user, setUser] = useState<User | null>(null);
 
-  useEffect(() => {
-    init();
-  }, []);
-
-  async function init() {
+  const init = useCallback(async () => {
     const supabase = createClient();
     const { data: { user: u } } = await supabase.auth.getUser();
     setUser(u);
     if (!u) return;
-    
+
+    // @ts-expect-error message_threads not in generated Database types yet
     const { data } = await supabase
       .from('message_threads')
       .select('*')
       .or(`participant1.eq.${u.id},participant2.eq.${u.id}`)
       .order('last_message_at', { ascending: false });
-    setThreads(data || []);
+    setThreads((data as MessageThread[] | null) || []);
     setLoading(false);
-  }
+  }, []);
 
-  async function loadMessages(threadId: string) {
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial fetch on mount; memoized via useCallback
+    init();
+  }, [init]);
+
+  const loadMessages = useCallback(async (threadId: string) => {
     setSelectedThread(threadId);
     const supabase = createClient();
+    // @ts-expect-error messages not in generated Database types yet
     const { data } = await supabase
       .from('messages')
       .select('*')
       .eq('thread_id', threadId)
       .order('created_at');
-    setMessages(data || []);
-  }
+    setMessages((data as MessageRow[] | null) || []);
+  }, []);
 
   async function sendMessage() {
     if (!newMsg.trim() || !selectedThread || !user) return;
     const supabase = createClient();
-    await (supabase.from('messages') as any).insert({
+    // @ts-expect-error messages not in generated Database types yet
+    await supabase.from('messages').insert({
       thread_id: selectedThread,
       sender_id: user.id,
       content: newMsg.trim(),
@@ -59,13 +78,13 @@ export default function MensajesPage() {
     loadMessages(selectedThread);
   }
 
-  function getOtherParticipant(thread: Record<string, any>) {
+  const getOtherParticipant = useCallback((thread: MessageThread) => {
     return thread.participant1 === user?.id ? thread.participant2 : thread.participant1;
-  }
+  }, [user]);
 
   if (loading) return <div className="flex justify-center py-20"><Loader2 className="h-8 w-8 animate-spin text-rose-500" /></div>;
 
-  const participantMap = new Map<string, any>();
+  const participantMap = new Map<string, { id: string; name: string }>();
   threads.forEach(t => {
     const other = getOtherParticipant(t);
     if (!participantMap.has(other)) participantMap.set(other, { id: other, name: other.slice(0, 8) });
@@ -97,7 +116,7 @@ export default function MensajesPage() {
                     <div className="flex-1 min-w-0">
                       <p className="font-medium text-sm truncate">Usuario {getOtherParticipant(t).slice(0, 8)}</p>
                       <p className="text-xs text-muted-foreground">
-                        {new Date(t.last_message_at).toLocaleDateString('es-PY')}
+                        {t.last_message_at ? new Date(t.last_message_at).toLocaleDateString('es-PY') : ''}
                       </p>
                     </div>
                   </div>

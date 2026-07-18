@@ -99,6 +99,7 @@ export default function CheckoutPage() {
   const [appliedCoupon, setAppliedCoupon] = useState<AppliedCoupon | null>(null);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- zustand persist hydration guard; safe one-shot on mount
     setMounted(true);
   }, []);
 
@@ -106,6 +107,7 @@ export default function CheckoutPage() {
   useEffect(() => {
     const normalized = city.trim().toLowerCase();
     if (CITY_ZONE_MAP[normalized]) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- derived from user-typed city; convergent, not a loop
       setShippingZone(CITY_ZONE_MAP[normalized]);
     } else if (normalized.length > 2 && !CITY_ZONE_MAP[normalized]) {
       setShippingZone('interior');

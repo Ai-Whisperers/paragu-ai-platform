@@ -1,7 +1,4 @@
-// @ts-nocheck - bypass strict types for new tables
 'use client';
-
-// @ts-nocheck - bypass strict types for new tables
 
 import { useState, type FormEvent } from 'react';
 import Link from 'next/link';

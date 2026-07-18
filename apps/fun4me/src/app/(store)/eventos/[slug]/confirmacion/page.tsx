@@ -1,48 +1,70 @@
-// @ts-nocheck - bypass strict types for new tables
 'use client';
 
-// @ts-nocheck - bypass strict types for new tables
-
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useSearchParams, useParams } from 'next/navigation';
 import Link from 'next/link';
-import { CheckCircle2, QrCode, Download, Loader2, AlertCircle, ArrowLeft } from 'lucide-react';
+import { CheckCircle2, QrCode, Loader2, AlertCircle, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
 import { createClient } from '@/lib/supabase/client';
-import { formatPrice } from '@/lib/utils/format';
+
+interface OrderRow {
+  id: string;
+  order_number: string;
+  payment_method?: string | null;
+}
+
+interface TicketEventRef {
+  title: string;
+  date: string;
+  venue?: string | null;
+  city?: string | null;
+}
+
+interface TicketTypeRef {
+  name: string;
+}
+
+interface TicketRow {
+  id: string;
+  holder_name?: string | null;
+  holder_ci?: string | null;
+  ticket_types?: TicketTypeRef | null;
+  events?: TicketEventRef | null;
+}
 
 export default function ConfirmacionPage() {
   const searchParams = useSearchParams();
-  const params = useParams();
+  useParams();
   const orderId = searchParams.get('order_id');
-  const slug = params.slug as string;
 
-  const [order, setOrder] = useState<any>(null);
-  const [tickets, setTickets] = useState<any[]>([]);
+  const [order, setOrder] = useState<OrderRow | null>(null);
+  const [tickets, setTickets] = useState<TicketRow[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (orderId) loadOrder();
-    else setLoading(false);
-  }, [orderId]);
-
-  async function loadOrder() {
+  const loadOrder = useCallback(async () => {
+    if (!orderId) { setLoading(false); return; }
     const supabase = createClient();
+    // @ts-expect-error orders.order_number not in generated Database types yet
     const { data: ord } = await supabase.from('orders').select('*').eq('id', orderId).single();
     if (!ord) { setLoading(false); return; }
-    setOrder(ord);
+    setOrder(ord as OrderRow);
 
+    // @ts-expect-error tickets join with events/ticket_types not fully typed in generated Database types yet
     const { data: tix } = await supabase
       .from('tickets')
       .select('*, ticket_types(name), events(title, date, venue, city)')
       .eq('order_id', orderId);
 
-    setTickets(tix || []);
+    setTickets((tix as TicketRow[] | null) || []);
     setLoading(false);
-  }
+  }, [orderId]);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial fetch on mount; memoized via useCallback
+    loadOrder();
+  }, [loadOrder]);
 
   if (loading) return <div className="container mx-auto px-4 py-12 text-center"><Loader2 className="mx-auto h-8 w-8 animate-spin text-muted-foreground" /></div>;
   if (!order) return (

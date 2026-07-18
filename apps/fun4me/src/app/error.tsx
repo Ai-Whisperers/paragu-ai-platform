@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 export default function ErrorPage({ reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center bg-background px-4 text-center">
@@ -15,12 +17,12 @@ export default function ErrorPage({ reset }: { error: Error; reset: () => void }
         >
           Intentar de nuevo
         </button>
-        <a
+        <Link
           href="/"
           className="rounded-lg border border-border px-8 py-3 font-semibold text-foreground hover:bg-muted"
         >
           Volver al inicio
-        </a>
+        </Link>
       </div>
     </div>
   )
