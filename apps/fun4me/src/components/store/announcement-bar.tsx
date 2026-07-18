@@ -15,15 +15,16 @@ export function AnnouncementBar() {
     async function fetchAnnouncements() {
       try {
         const supabase = createClient();
-        const { data } = await (supabase as any)
+        const { data } = await supabase
           .from('announcements')
           .select('text')
           .eq('is_active', true)
           .order('sort_order', { ascending: true });
 
-        const texts = ((data as any[]) || [])
-          .map((a: any) => a.text)
-          .filter(Boolean);
+        const rows = (data ?? []) as Array<{ text: string | null }>;
+        const texts = rows
+          .map((a) => a.text)
+          .filter((t): t is string => Boolean(t));
 
         if (texts.length > 0) {
           setMessages(texts);

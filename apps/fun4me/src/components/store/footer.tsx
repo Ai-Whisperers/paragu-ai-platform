@@ -2,8 +2,22 @@
 import Link from "next/link"
 import content from "@/content/es.json"
 
-const c = content as any
-const f = c.footer || {}
+interface FooterLink { href: string; label: string }
+interface FooterColumn { title: string; links?: FooterLink[] }
+interface FooterSocial { url: string; name: string; icon: string }
+interface FooterPayment { name: string }
+interface FooterContactItem { icon: string; text: string }
+interface FooterContent {
+  description?: string
+  columns?: FooterColumn[]
+  social?: FooterSocial[]
+  paymentMethods?: FooterPayment[]
+  contactStrip?: FooterContactItem[]
+  copyright?: string
+}
+
+const c = content as unknown as { footer?: FooterContent }
+const f: FooterContent = c.footer || {}
 const socialIcons: Record<string, string> = {
   instagram: "M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 5A3.6 3.6 0 0 0 4 10.6v2.8A3.6 3.6 0 0 0 7.6 17h2.8A3.6 3.6 0 0 0 14 13.4v-2.8A3.6 3.6 0 0 0 10.4 7H7.6Zm-.6 2a1.6 1.6 0 0 1 1.6-1.6h2.8A1.6 1.6 0 0 1 13 9v2.8a1.6 1.6 0 0 1-1.6 1.6H8.6A1.6 1.6 0 0 1 7 11.8V9Zm7.5 6.2a1 1 0 1 0 0 2 1 1 0 0 0 0-2ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z",
   "message-circle": "M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z",
@@ -22,7 +36,7 @@ export function Footer() {
         {/* Contact strip */}
         {contactStrip.length > 0 && (
           <div className="mb-10 grid gap-4 border-b border-white/20 pb-8 sm:grid-cols-2">
-            {contactStrip.map((item: any, i: number) => (
+            {contactStrip.map((item, i) => (
               <div key={i} className="flex items-center gap-3 text-sm text-white/80">
                 <span>{item.icon}</span>
                 <span>{item.text}</span>
@@ -40,11 +54,11 @@ export function Footer() {
             <p className="text-sm text-white/60 leading-relaxed">{f.description}</p>
           </div>
 
-          {cols.map((col: any, i: number) => (
+          {cols.map((col, i) => (
             <div key={i}>
               <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/70">{col.title}</h4>
               <div className="flex flex-col gap-2 text-sm">
-                {(col.links || []).map((lnk: any, j: number) => (
+                {(col.links || []).map((lnk, j) => (
                   <Link key={j} href={lnk.href} className="text-white/60 hover:text-white transition-colors">
                     {lnk.label}
                   </Link>
@@ -57,7 +71,7 @@ export function Footer() {
         {/* Social */}
         {social.length > 0 && (
           <div className="mt-10 flex items-center gap-3">
-            {social.map((s: any, i: number) => (
+            {social.map((s, i) => (
               <a key={i} href={s.url} target="_blank" rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white/60 hover:bg-white/20 hover:text-white transition-all"
                 aria-label={s.name}>
@@ -74,7 +88,7 @@ export function Footer() {
           <div className="mt-10 border-t border-white/20 pt-8">
             <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-white/50">Medios de pago</p>
             <div className="flex flex-wrap gap-3">
-              {payments.map((pm: any, i: number) => (
+              {payments.map((pm, i) => (
                 <div key={i} className="flex items-center rounded-lg bg-white/10 px-3 py-2 text-xs font-bold text-white/70 shadow-sm">
                   {pm.name}
                 </div>

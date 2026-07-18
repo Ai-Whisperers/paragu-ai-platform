@@ -35,8 +35,8 @@ export function OrderStatusUpdate({
     setMessage(null);
 
     try {
-      const { error } = await (supabase
-        .from('orders') as any)
+      const { error } = await supabase
+        .from('orders')
         .update({ status })
         .eq('id', orderId);
 
@@ -44,8 +44,9 @@ export function OrderStatusUpdate({
 
       setMessage('Estado actualizado correctamente');
       router.refresh();
-    } catch (err: any) {
-      setMessage(`Error: ${err.message}`);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      setMessage(`Error: ${msg}`);
     } finally {
       setLoading(false);
     }

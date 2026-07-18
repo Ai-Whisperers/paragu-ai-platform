@@ -22,11 +22,12 @@ export function AnunciosManager() {
 
   useEffect(() => {
     loadAnnouncements();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function loadAnnouncements() {
     setLoading(true);
-    const { data } = await (supabase as any)
+    const { data } = await supabase
       .from('announcements')
       .select('*')
       .order('sort_order', { ascending: true });
@@ -59,7 +60,7 @@ export function AnunciosManager() {
   async function handleSave() {
     setSaving(true);
     try {
-      await (supabase as any).from('announcements').delete().neq('id', '00000000-0000-0000-0000-000000000000');
+      await supabase.from('announcements').delete().neq('id', '00000000-0000-0000-0000-000000000000');
 
       const toInsert = announcements
         .filter((a) => a.text.trim())
@@ -70,7 +71,7 @@ export function AnunciosManager() {
         }));
 
       if (toInsert.length > 0) {
-        const { error } = await (supabase as any)
+        const { error } = await supabase
           .from('announcements')
           .insert(toInsert);
         if (error) throw error;
@@ -78,8 +79,9 @@ export function AnunciosManager() {
 
       await loadAnnouncements();
       alert('Anuncios guardados correctamente');
-    } catch (err: any) {
-      alert('Error al guardar: ' + (err?.message || 'Error desconocido'));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      alert('Error al guardar: ' + (msg || 'Error desconocido'));
     } finally {
       setSaving(false);
     }

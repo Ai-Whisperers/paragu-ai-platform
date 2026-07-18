@@ -10,8 +10,20 @@ import { Switch } from '@/components/ui/switch';
 import { Save, ArrowLeft, Trash2 } from 'lucide-react';
 import Link from 'next/link';
 
+interface Coupon {
+  id: string;
+  code: string;
+  type: 'percentage' | 'fixed' | 'free_shipping';
+  value: number;
+  min_order: number;
+  max_uses: number | null;
+  uses_count?: number;
+  expires_at: string | null;
+  is_active: boolean;
+}
+
 interface CouponFormProps {
-  coupon: any | null;
+  coupon: Coupon | null;
   isNew: boolean;
 }
 
@@ -34,7 +46,7 @@ export function CouponForm({ coupon, isNew }: CouponFormProps) {
     e.preventDefault();
     setLoading(true);
 
-    const payload: any = {
+    const payload: Record<string, unknown> = {
       code: code.toUpperCase().trim(),
       type,
       value,
@@ -47,21 +59,22 @@ export function CouponForm({ coupon, isNew }: CouponFormProps) {
     try {
       if (isNew) {
         payload.uses_count = 0;
-        const { error } = await (supabase as any)
+        const { error } = await supabase
           .from('coupons')
           .insert(payload);
         if (error) throw error;
       } else {
-        const { error } = await (supabase as any)
+        const { error } = await supabase
           .from('coupons')
           .update(payload)
-          .eq('id', coupon.id);
+          .eq('id', coupon!.id);
         if (error) throw error;
       }
       router.push('/admin/cupones');
       router.refresh();
-    } catch (err: any) {
-      alert('Error al guardar: ' + (err?.message || 'Error desconocido'));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      alert('Error al guardar: ' + (msg || 'Error desconocido'));
     } finally {
       setLoading(false);
     }
@@ -71,15 +84,16 @@ export function CouponForm({ coupon, isNew }: CouponFormProps) {
     if (!confirm('¿Estás seguro de que querés eliminar este cupón?')) return;
     setLoading(true);
     try {
-      const { error } = await (supabase as any)
+      const { error } = await supabase
         .from('coupons')
         .delete()
-        .eq('id', coupon.id);
+        .eq('id', coupon!.id);
       if (error) throw error;
       router.push('/admin/cupones');
       router.refresh();
-    } catch (err: any) {
-      alert('Error al eliminar: ' + (err?.message || 'Error desconocido'));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      alert('Error al eliminar: ' + (msg || 'Error desconocido'));
     } finally {
       setLoading(false);
     }

@@ -1,7 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import type { ComponentType } from 'react';
 import { Crown, Loader2, Shield, Zap, Gift } from 'lucide-react';
+import type { LucideProps } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -17,12 +19,19 @@ type Plan = {
   duration_days: number;
   color: string;
   sort_order: number;
-  features: Record<string, any>;
+  features: Record<string, unknown>;
 };
 
-type Membership = Record<string, any>;
+type Membership = {
+  has_active?: boolean;
+  plan_color?: string;
+  plan_name?: string;
+  plan_slug?: string;
+  end_date?: string;
+  features?: Record<string, unknown>;
+};
 
-const FEATURE_ICONS: Record<string, any> = {
+const FEATURE_ICONS: Record<string, ComponentType<LucideProps>> = {
   profile: Shield,
   directory: Crown,
   messaging: Zap,
@@ -41,18 +50,18 @@ export function MembershipPlans() {
 
   async function loadData() {
     const supabase = createClient();
-    const { data: plans } = await supabase
+    const { data: plansData } = await supabase
       .from('membership_plans')
       .select('*')
       .eq('is_active', true)
       .order('sort_order');
-    setPlans(plans || []);
+    setPlans((plansData ?? []) as unknown as Plan[]);
 
     const { data: { user } } = await supabase.auth.getUser();
     if (user) {
-      const { data: membership } = await supabase
-        .rpc('get_active_membership', { p_customer_id: user.id } as any);
-      setMembership(membership);
+      const { data: membershipData } = await supabase
+        .rpc('get_active_membership', { p_customer_id: user.id });
+      setMembership(membershipData as Membership | null);
     }
     setLoading(false);
   }
@@ -77,7 +86,7 @@ export function MembershipPlans() {
       status: 'active',
       auto_renew: true,
       payment_method: 'bank_transfer',
-    } as any);
+    });
 
     if (error) {
       alert('Error al activar membresía. Probá de nuevo.');

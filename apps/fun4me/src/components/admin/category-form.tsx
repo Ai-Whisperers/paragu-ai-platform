@@ -10,9 +10,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
 import { Save, ArrowLeft, Trash2 } from 'lucide-react';
 import Link from 'next/link';
+import type { ExtendedCategory } from '@/types/database';
 
 interface CategoryFormProps {
-  category: any | null;
+  category: ExtendedCategory | null;
   isNew: boolean;
 }
 
@@ -59,21 +60,22 @@ export function CategoryForm({ category, isNew }: CategoryFormProps) {
 
     try {
       if (isNew) {
-        const { error } = await (supabase as any)
+        const { error } = await supabase
           .from('categories')
           .insert(payload);
         if (error) throw error;
       } else {
-        const { error } = await (supabase as any)
+        const { error } = await supabase
           .from('categories')
           .update(payload)
-          .eq('id', category.id);
+          .eq('id', category!.id);
         if (error) throw error;
       }
       router.push('/admin/categorias');
       router.refresh();
-    } catch (err: any) {
-      alert('Error al guardar: ' + (err?.message || 'Error desconocido'));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      alert('Error al guardar: ' + (msg || 'Error desconocido'));
     } finally {
       setLoading(false);
     }
@@ -83,15 +85,16 @@ export function CategoryForm({ category, isNew }: CategoryFormProps) {
     if (!confirm('¿Estás seguro de que querés eliminar esta categoría?')) return;
     setLoading(true);
     try {
-      const { error } = await (supabase as any)
+      const { error } = await supabase
         .from('categories')
         .delete()
-        .eq('id', category.id);
+        .eq('id', category!.id);
       if (error) throw error;
       router.push('/admin/categorias');
       router.refresh();
-    } catch (err: any) {
-      alert('Error al eliminar: ' + (err?.message || 'Error desconocido'));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      alert('Error al eliminar: ' + (msg || 'Error desconocido'));
     } finally {
       setLoading(false);
     }

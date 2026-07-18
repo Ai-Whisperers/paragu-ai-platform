@@ -7,8 +7,19 @@ import { DarkModeToggle } from "@/components/vendor/dark-mode-toggle"
 import { PrivacyModeToggle } from "@/components/vendor/privacy-mode-toggle"
 import content from "@/content/es.json"
 
-const c = content as any
-const allProducts = c.products || []
+interface NavItem { href: string; label: string }
+interface HeaderProduct { id: string | number; name: string; slug?: string; price: number }
+interface HeaderContent {
+  products?: HeaderProduct[]
+  navigation: {
+    items?: NavItem[]
+    ctaHref: string
+    ctaText: string
+  }
+}
+
+const c = content as unknown as HeaderContent
+const allProducts: HeaderProduct[] = c.products || []
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -25,8 +36,8 @@ export function Header() {
 
   const nav = c.navigation.items || []
 
-  const searchResults = searchQuery.trim().length > 0
-    ? allProducts.filter((p: any) =>
+  const searchResults: HeaderProduct[] = searchQuery.trim().length > 0
+    ? allProducts.filter((p) =>
         p.name.toLowerCase().includes(searchQuery.toLowerCase())
       ).slice(0, 5)
     : []
@@ -53,7 +64,7 @@ export function Header() {
             />
             {searchResults.length > 0 && (
               <div className="absolute top-full left-0 right-0 z-50 mt-1 rounded-xl border border-border bg-surface shadow-lg overflow-hidden">
-                {searchResults.map((p: any) => {
+                {searchResults.map((p) => {
                   const slug = p.slug || p.name.toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-")
                   return (
                     <button key={p.id} type="button" onClick={() => { window.location.href = `/producto/${slug}` }}
@@ -81,7 +92,7 @@ export function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 md:flex">
-          {nav.map((n: any) => {
+          {nav.map((n) => {
             const isActive = pathname === n.href || (n.href !== "/" && pathname.startsWith(n.href))
             return (
               <Link key={n.href} href={n.href}
@@ -130,7 +141,7 @@ export function Header() {
       {mobileOpen && (
         <div className="border-t border-border bg-surface px-4 py-2 md:hidden">
           <div className="flex flex-col gap-1">
-            {nav.map((n: any) => (
+            {nav.map((n) => (
               <Link key={n.href} href={n.href}
                 className="block rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-surface-light"
                 onClick={() => setMobileOpen(false)}>
