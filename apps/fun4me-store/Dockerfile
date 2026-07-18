@@ -1,5 +1,35 @@
-FROM nginx:1.27-alpine
-COPY --chown=nginx:nginx out /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:80/ || exit 1
+FROM node:20-slim AS deps
+WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@10 --activate
+WORKDIR /workspace
+COPY pnpm-workspace.yaml ./
+COPY package.json pnpm-lock.yaml* .npmrc* tsconfig.base.json* ./
+COPY packages/ packages/
+COPY apps/fun4me-store/ apps/fun4me-store/
+RUN cd apps/fun4me-store && pnpm install --no-frozen-lockfile --filter fun4me-store...
+
+FROM node:20-slim AS builder
+WORKDIR /workspace
+RUN corepack enable && corepack prepare pnpm@10 --activate
+COPY --from=deps /workspace/node_modules ./node_modules
+COPY --from=deps /workspace/apps/fun4me-store/node_modules ./apps/fun4me-store/node_modules
+COPY . .
+ENV NEXT_TELEMETRY_DISABLED=1
+RUN cd apps/fun4me-store && pnpm run build
+
+FROM node:20-slim AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+COPY --from=builder /workspace/apps/fun4me-store/.next/standalone/ /app/standalone/
+COPY --from=builder /workspace/apps/fun4me-store/.next/static /app/standalone/apps/fun4me-store/.next/static
+COPY --from=builder /workspace/apps/fun4me-store/public /app/standalone/apps/fun4me-store/public
+RUN addgroup --system --gid 1001 nodejs 2>/dev/null || true && \
+    adduser --system --uid 1001 --ingroup nodejs nextjs 2>/dev/null || true && \
+    chown -R nextjs:nodejs /app
+USER nextjs
+EXPOSE 3000
+WORKDIR /app/standalone/apps/fun4me-store
+CMD ["node", "server.js"]
