@@ -1,11 +1,33 @@
 "use client"
 import content from "@/content/es.json"
 
-const c = content as any
+type BrandValue = string | { title: string; description?: string }
+
+interface BrandBlock {
+  story?: string
+  founded?: string
+  location?: string
+  founder?: string
+  mission?: string
+  values?: BrandValue[]
+}
+
+interface NosotrosBlock {
+  title: string
+  subtitle: string
+  values: BrandValue[]
+}
+
+interface NosotrosContent {
+  nosotros: NosotrosBlock
+  brand?: BrandBlock
+}
+
+const c = content as unknown as NosotrosContent
 
 export default function Nosotros() {
   const n = c.nosotros
-  const brand = c.brand || {}
+  const brand: BrandBlock = c.brand || {}
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold text-center mb-2">{n.title}</h1>
@@ -36,7 +58,7 @@ export default function Nosotros() {
       {/* Values */}
       <h2 className="text-2xl font-bold text-center mb-8">Nuestros Valores</h2>
       <div className="grid gap-6 sm:grid-cols-2">
-        {(brand.values || n.values).map((v: any, i: number) => {
+        {(brand.values || n.values).map((v: BrandValue, i: number) => {
           const label = typeof v === "string" ? v : v.title
           const desc = typeof v === "string" ? "" : v.description
           return (

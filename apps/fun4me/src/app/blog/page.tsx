@@ -3,6 +3,18 @@ import Link from "next/link"
 import content from "@/content/es.json"
 import { SafeImage } from "@/components/vendor/safe-image"
 
+interface BlogPost {
+  slug: string
+  title: string
+  excerpt: string
+  content?: string
+  category: string
+  date: string
+  readTime: string
+  author?: string
+  image?: string
+}
+
 export default function BlogIndex() {
   const b = content.blog
   return (
@@ -27,7 +39,7 @@ export default function BlogIndex() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {b.posts.map((post: any) => (
+        {(b.posts as BlogPost[]).map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
             <article className="rounded-xl border border-border bg-card overflow-hidden transition-all group-hover:-translate-y-1 group-hover:shadow-md">
               <div className="h-48 bg-gradient-to-br from-surface-light to-surface flex items-center justify-center overflow-hidden">

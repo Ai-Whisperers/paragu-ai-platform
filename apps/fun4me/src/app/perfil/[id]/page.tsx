@@ -1,48 +1,87 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import { Shield, Star, Calendar, MapPin, MessageCircle, Loader2, BadgeCheck } from 'lucide-react';
+import { Star, MessageCircle, Loader2, BadgeCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { createClient } from '@/lib/supabase/client';
 
+interface ProfileRow {
+  id: string;
+  avatar_url?: string | null;
+  display_name?: string | null;
+  full_name?: string | null;
+  roles?: string[] | null;
+  experience_level?: string | null;
+  bio?: string | null;
+  kink_tags?: string[] | null;
+  event_count?: number | null;
+}
+
+interface PhotoRow {
+  id: string;
+  image_url: string;
+  caption?: string | null;
+}
+
+interface MembershipRow {
+  has_active: boolean;
+  plan_color?: string | null;
+  plan_name?: string | null;
+}
+
+interface ReviewRow {
+  id: string;
+  rating: number;
+  comment?: string | null;
+}
+
+interface AuthUser {
+  id: string;
+}
+
 export default function PerfilPage() {
   const { id } = useParams<{ id: string }>();
-  const [profile, setProfile] = useState<Record<string, any> | null>(null);
-  const [photos, setPhotos] = useState<Record<string, any>[]>([]);
-  const [membership, setMembership] = useState<Record<string, any> | null>(null);
-  const [reviews, setReviews] = useState<Record<string, any>[]>([]);
+  const [profile, setProfile] = useState<ProfileRow | null>(null);
+  const [photos, setPhotos] = useState<PhotoRow[]>([]);
+  const [membership, setMembership] = useState<MembershipRow | null>(null);
+  const [reviews, setReviews] = useState<ReviewRow[]>([]);
   const [loading, setLoading] = useState(true);
-  const [currentUser, setCurrentUser] = useState<Record<string, any> | null>(null);
+  const [currentUser, setCurrentUser] = useState<AuthUser | null>(null);
 
-  useEffect(() => {
-    loadData();
-  }, [id]);
-
-  async function loadData() {
+  const loadData = useCallback(async () => {
     const supabase = createClient();
     const { data: { user } } = await supabase.auth.getUser();
-    setCurrentUser(user);
+    setCurrentUser(user as AuthUser | null);
 
-    const { data: profile } = await supabase.from('customers').select('*').eq('id', id).single();
-    setProfile(profile);
+    // @ts-expect-error - customers is not in generated Database types
+    const { data: profileData } = await supabase.from('customers').select('*').eq('id', id).single();
+    setProfile(profileData as ProfileRow | null);
 
-    const { data: photos } = await supabase.from('customer_photos')
+    // @ts-expect-error - customer_photos is not in generated Database types
+    const { data: photosData } = await supabase.from('customer_photos')
       .select('*').eq('customer_id', id).eq('is_private', false).order('sort_order');
-    setPhotos(photos || []);
+    setPhotos((photosData as PhotoRow[] | null) || []);
 
-    const { data: membership } = await supabase.rpc('get_active_membership', { p_customer_id: id } as any);
-    setMembership(membership);
+    // @ts-expect-error - get_active_membership RPC is not in generated Database types
+    const { data: membershipData } = await supabase.rpc('get_active_membership', { p_customer_id: id });
+    setMembership(membershipData as MembershipRow | null);
 
-    const { data: reviews } = await supabase.from('member_reviews')
+    // @ts-expect-error - member_reviews is not in generated Database types
+    const { data: reviewsData } = await supabase.from('member_reviews')
       .select('*').eq('reviewed_id', id);
-    setReviews(reviews || []);
+    setReviews((reviewsData as ReviewRow[] | null) || []);
     setLoading(false);
-  }
+  }, [id]);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    loadData();
+  }, [loadData]);
 
   if (loading) return <div className="flex justify-center py-20"><Loader2 className="h-8 w-8 animate-spin text-rose-500" /></div>;
   if (!profile) return <div className="container mx-auto px-4 py-20 text-center text-muted-foreground">Perfil no encontrado</div>;
