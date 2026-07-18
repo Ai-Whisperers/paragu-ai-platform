@@ -8,6 +8,7 @@ export function PrivacyModeToggle() {
     try {
       const saved = localStorage.getItem("fun4me_privacy_mode")
       if (saved === "true") {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setActive(true)
         document.documentElement.classList.add("privacy-mode")
       }

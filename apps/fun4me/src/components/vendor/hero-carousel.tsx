@@ -1,7 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import content from "@/content/es.json"
 
 const slides = [
   {

@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect, type ReactNode } from "react"
 import contentRaw from "@/content/es.json"
-const content = contentRaw as any
+const content = contentRaw as { home?: { hero?: { ageGate?: string } } }
 
 const AGE_KEY = "fun4me_age_verified"
 const AGE_EXPIRY = 7 * 24 * 60 * 60 * 1000 // 7 days
@@ -13,6 +13,7 @@ export function AgeGate({ children }: { children: ReactNode }) {
       const raw = localStorage.getItem(AGE_KEY)
       if (raw) {
         const { ts } = JSON.parse(raw)
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         if (Date.now() - ts < AGE_EXPIRY) setVerified(true)
       }
     } catch (err) {

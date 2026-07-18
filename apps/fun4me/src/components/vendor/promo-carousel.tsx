@@ -3,8 +3,16 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import content from "@/content/es.json"
 
-const c = content as any
-const promotions = c.promociones?.promotions || []
+interface Promotion {
+  icon: string
+  badge: string
+  color: string
+  title: string
+  description: string
+}
+
+const c = content as { promociones?: { promotions?: Promotion[] } }
+const promotions: Promotion[] = c.promociones?.promotions || []
 
 export function PromoCarousel() {
   const [idx, setIdx] = useState(0)
@@ -36,7 +44,7 @@ export function PromoCarousel() {
       </div>
       {len > 1 && (
         <div className="flex justify-center gap-1 pb-1">
-          {promotions.map((_: any, i: number) => (
+          {promotions.map((_, i: number) => (
             <button key={i} onClick={() => setIdx(i)}
               className={`h-1.5 rounded-full transition-all ${i === idx ? "w-4 bg-primary" : "w-1.5 bg-border"}`} />
           ))}

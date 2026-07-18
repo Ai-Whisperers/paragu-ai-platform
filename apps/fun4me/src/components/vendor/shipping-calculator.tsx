@@ -2,10 +2,17 @@
 import { useState } from "react"
 import content from "@/content/es.json"
 
+interface ShippingZone {
+  name: string
+  price: number
+  time: string
+  minFree?: number
+}
+
 export function ShippingCalculator() {
   const [selected, setSelected] = useState("")
-  const zones = content.shipping?.zones || []
-  const [result, setResult] = useState<any>(null)
+  const zones = (content.shipping?.zones || []) as ShippingZone[]
+  const [result, setResult] = useState<ShippingZone | null>(null)
 
   const calculate = () => {
     const zone = zones.find(z => z.name === selected)
