@@ -12,7 +12,6 @@
     "email": "doctora.gabi@ometzdental.com.py",
     "email_display": "doctora.gabi@ometzdental.com.py",
     "phone": "+595 981 146 759",
-    "phone_e164": "+595981146759",
     "whatsapp_business_note": {
       "en": "WhatsApp Business line coming soon. Currently using the practice line during pre-launch.",
       "es": "Línea WhatsApp Business próximamente. Por ahora se usa la línea del consultorio durante la pre-apertura."
@@ -100,8 +99,7 @@
       "Spanish",
       "English"
     ],
-    "languages_display": "Español · English",
-    "phone_e164": "+595981146759"
+    "languages_display": "Español · English"
   },
   "social": {
     "instagram": "https://www.instagram.com/dragabriellagp",

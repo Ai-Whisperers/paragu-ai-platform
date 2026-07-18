@@ -1,0 +1,242 @@
+[
+  {
+    "post": 25,
+    "date": "2026-08-10",
+    "weekday": "lun",
+    "week": "wk1",
+    "type": "text",
+    "theme": "Conocé a Ometz · Faces/place/process",
+    "topic": "¿Quién está detrás de Ometz? · Conocé a Gaby",
+    "image": "image"
+  },
+  {
+    "post": 26,
+    "date": "2026-08-11",
+    "weekday": "mar",
+    "week": "wk1",
+    "type": "photo",
+    "theme": "Conocé a Ometz · Faces/place/process",
+    "topic": "El consultorio: lo que ves y lo que no",
+    "image": "og-home.png"
+  },
+  {
+    "post": 27,
+    "date": "2026-08-12",
+    "weekday": "mié",
+    "week": "wk1",
+    "type": "text",
+    "theme": "Conocé a Ometz · Faces/place/process",
+    "topic": "Lo que cambió en 20 años de práctica",
+    "image": "image"
+  },
+  {
+    "post": 28,
+    "date": "2026-08-13",
+    "weekday": "jue",
+    "week": "wk1",
+    "type": "photo",
+    "theme": "Conocé a Ometz · Faces/place/process",
+    "topic": "Cómo se planifica un caso complejo · Paso a paso",
+    "image": "og-process.png"
+  },
+  {
+    "post": 29,
+    "date": "2026-08-14",
+    "weekday": "vie",
+    "week": "wk1",
+    "type": "text",
+    "theme": "Conocé a Ometz · Faces/place/process",
+    "topic": "Anatomía de una consulta sin miedo",
+    "image": "image"
+  },
+  {
+    "post": 30,
+    "date": "2026-08-17",
+    "weekday": "lun",
+    "week": "wk2",
+    "type": "text",
+    "theme": "Conocé a Ometz · Office & team",
+    "topic": "Tres preguntas para hacerle a tu dentista antes de empezar",
+    "image": "image"
+  },
+  {
+    "post": 31,
+    "date": "2026-08-18",
+    "weekday": "mar",
+    "week": "wk2",
+    "type": "photo",
+    "theme": "Conocé a Ometz · Office & team",
+    "topic": "Conocé el equipo · Quién atiende en Ometz",
+    "image": "og-team.png"
+  },
+  {
+    "post": 32,
+    "date": "2026-08-19",
+    "weekday": "mié",
+    "week": "wk2",
+    "type": "text",
+    "theme": "Conocé a Ometz · Office & team",
+    "topic": "Cómo se ve una segunda opinión EN SERIO",
+    "image": "image"
+  },
+  {
+    "post": 33,
+    "date": "2026-08-20",
+    "weekday": "jue",
+    "week": "wk2",
+    "type": "photo",
+    "theme": "Conocé a Ometz · Office & team",
+    "topic": "Precios transparentes · Lo que cuesta lo que ofrecemos",
+    "image": "og-pricing.png"
+  },
+  {
+    "post": 34,
+    "date": "2026-08-21",
+    "weekday": "vie",
+    "week": "wk2",
+    "type": "text",
+    "theme": "Conocé a Ometz · Office & team",
+    "topic": "Por qué 'אומץ' (Ometz) · El nombre",
+    "image": "image"
+  },
+  {
+    "post": 35,
+    "date": "2026-08-24",
+    "weekday": "lun",
+    "week": "wk3",
+    "type": "text",
+    "theme": "Conocé a Ometz · Workflow & philosophy",
+    "topic": "Qué hago cuando NO necesitás tratamiento",
+    "image": "image"
+  },
+  {
+    "post": 36,
+    "date": "2026-08-25",
+    "weekday": "mar",
+    "week": "wk3",
+    "type": "photo",
+    "theme": "Conocé a Ometz · Workflow & philosophy",
+    "topic": "Materiales · Lo que usamos (y por qué)",
+    "image": "og-materials.png"
+  },
+  {
+    "post": 37,
+    "date": "2026-08-26",
+    "weekday": "mié",
+    "week": "wk3",
+    "type": "text",
+    "theme": "Conocé a Ometz · Workflow & philosophy",
+    "topic": "La pregunta que nadie hace · Y deberías hacer",
+    "image": "image"
+  },
+  {
+    "post": 38,
+    "date": "2026-08-27",
+    "weekday": "jue",
+    "week": "wk3",
+    "type": "photo",
+    "theme": "Conocé a Ometz · Workflow & philosophy",
+    "topic": "Planificación vs improvisación · Por qué importa",
+    "image": "og-process.png"
+  },
+  {
+    "post": 39,
+    "date": "2026-08-28",
+    "weekday": "vie",
+    "week": "wk3",
+    "type": "text",
+    "theme": "Conocé a Ometz · Workflow & philosophy",
+    "topic": "Anestesia · Por qué no todas son iguales",
+    "image": "image"
+  },
+  {
+    "post": 40,
+    "date": "2026-08-31",
+    "weekday": "lun",
+    "week": "wk4",
+    "type": "text",
+    "theme": "Conocé a Ometz · What to expect first visit",
+    "topic": "Qué traer a tu primera consulta · Checklist",
+    "image": "image"
+  },
+  {
+    "post": 41,
+    "date": "2026-09-01",
+    "weekday": "mar",
+    "week": "wk4",
+    "type": "photo",
+    "theme": "Conocé a Ometz · What to expect first visit",
+    "topic": "Tu primera visita · Qué esperar paso a paso",
+    "image": "og-process.png"
+  },
+  {
+    "post": 42,
+    "date": "2026-09-02",
+    "weekday": "mié",
+    "week": "wk4",
+    "type": "text",
+    "theme": "Conocé a Ometz · What to expect first visit",
+    "topic": "Garantía real · Qué te entrego por escrito",
+    "image": "image"
+  },
+  {
+    "post": 43,
+    "date": "2026-09-03",
+    "weekday": "jue",
+    "week": "wk4",
+    "type": "photo",
+    "theme": "Conocé a Ometz · What to expect first visit",
+    "topic": "Anxious patient path · Para los que vienen con miedo",
+    "image": "og-anxiety.png"
+  },
+  {
+    "post": 44,
+    "date": "2026-09-04",
+    "weekday": "vie",
+    "week": "wk4",
+    "type": "text",
+    "theme": "Conocé a Ometz · What to expect first visit",
+    "topic": "Sobre los seguros · Qué hago y qué no",
+    "image": "image"
+  },
+  {
+    "post": 45,
+    "date": "2026-09-07",
+    "weekday": "lun",
+    "week": "wk5",
+    "type": "text",
+    "theme": "Servicios sin miedo · Anti-anxiety",
+    "topic": "Tengo miedo de ir al dentista · Empezamos por WhatsApp",
+    "image": "image"
+  },
+  {
+    "post": 46,
+    "date": "2026-09-08",
+    "weekday": "mar",
+    "week": "wk5",
+    "type": "photo",
+    "theme": "Servicios sin miedo · Anti-anxiety",
+    "topic": "Testimonio verificado · 2 semanas después",
+    "image": "og-testimonial.png"
+  },
+  {
+    "post": 47,
+    "date": "2026-09-09",
+    "weekday": "mié",
+    "week": "wk5",
+    "type": "text",
+    "theme": "Servicios sin miedo · Anti-anxiety",
+    "topic": "Mitos sobre la endodoncia · Lo que la gente cree vs lo que es",
+    "image": "image"
+  },
+  {
+    "post": 48,
+    "date": "2026-09-10",
+    "weekday": "jue",
+    "week": "wk5",
+    "type": "photo",
+    "theme": "Servicios sin miedo · Anti-anxiety",
+    "topic": "Cuándo SÍ pedir una segunda opinión · 5 señales",
+    "image": "og-second-opinion.png"
+  }
+]
