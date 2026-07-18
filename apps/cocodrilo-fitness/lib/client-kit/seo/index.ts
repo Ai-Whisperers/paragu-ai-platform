@@ -2,7 +2,7 @@ import React from "react"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://viajero.paragu-ai.com"
 
-export function JsonLd({ data }: { data: Record<string, any> }) {
+export function JsonLd({ data }: { data: Record<string, unknown> }) {
   return React.createElement("script", {
     type: "application/ld+json",
     dangerouslySetInnerHTML: { __html: JSON.stringify(data) },

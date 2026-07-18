@@ -12,9 +12,9 @@ export interface CartItem {
 export interface SiteContent {
   siteName: string
   navigation: { items: { label: string; href: string }[] }
-  home: { hero: any; features: any[]; testimonials: any[]; productCatalog?: any }
+  home: { hero: unknown; features: unknown[]; testimonials: unknown[]; productCatalog?: unknown }
   faq?: { items: { question: string; answer: string }[] }
   whatsapp?: { businessNumber: string; defaultMessage: string }
   analytics?: { ga4?: string }
-  [key: string]: any
+  [key: string]: unknown
 }

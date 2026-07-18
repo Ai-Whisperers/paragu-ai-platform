@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 const ADMIN_SECRET = process.env.NEXT_PUBLIC_ADMIN_SECRET || "admin123"
 
 export default function AdminContentPage() {
-  const [content, setContent] = useState<Record<string, any> | null>(null)
+  const [content, setContent] = useState<Record<string, unknown> | null>(null)
   const [editingKey, setEditingKey] = useState<string | null>(null)
   const [editValue, setEditValue] = useState("")
   const [saving, setSaving] = useState(false)
@@ -33,32 +33,32 @@ export default function AdminContentPage() {
       })
       const data = await res.json()
       setMsg(data.success ? "Guardado" : `Error: ${data.error}`)
-    } catch (e: any) {
-      setMsg(`Error: ${e.message}`)
+    } catch (e) {
+      setMsg(`Error: ${(e as Error).message}`)
     }
     setSaving(false)
   }
 
-  const flatten = (obj: any, prefix = ""): [string, string][] => {
+  const flatten = (obj: Record<string, unknown> | null | undefined, prefix = ""): [string, string][] => {
     const result: [string, string][] = []
     for (const [k, v] of Object.entries(obj || {})) {
       const key = prefix ? `${prefix}.${k}` : k
       if (typeof v === "string" || typeof v === "number") {
         result.push([key, String(v)])
       } else if (typeof v === "object" && v !== null) {
-        result.push(...flatten(v, key))
+        result.push(...flatten(v as Record<string, unknown>, key))
       }
     }
     return result
   }
 
-  const deepSet = (obj: any, path: string, value: string) => {
+  const deepSet = (obj: Record<string, unknown>, path: string, value: string) => {
     const parts = path.split(".")
-    const clone = JSON.parse(JSON.stringify(obj))
-    let cur: any = clone
+    const clone = JSON.parse(JSON.stringify(obj)) as Record<string, unknown>
+    let cur: Record<string, unknown> = clone
     for (let i = 0; i < parts.length - 1; i++) {
       if (!cur[parts[i]]) cur[parts[i]] = {}
-      cur = cur[parts[i]]
+      cur = cur[parts[i]] as Record<string, unknown>
     }
     cur[parts[parts.length - 1]] = value
     return clone

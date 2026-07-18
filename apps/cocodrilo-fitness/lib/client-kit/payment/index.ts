@@ -1,13 +1,13 @@
 export interface PaymentRequest {
-  order: { id: string; [key: string]: any }
+  order: { id: string; [key: string]: unknown }
   total: number
-  items?: any[]
-  customer?: { email?: string; name?: string; [key: string]: any }
-  [key: string]: any
+  items?: unknown[]
+  customer?: { email?: string; name?: string; [key: string]: unknown }
+  [key: string]: unknown
 }
 
 export interface GatewayResult {
-  ok: boolean; sandbox?: boolean; redirectUrl?: string; url?: string; error?: any
+  ok: boolean; sandbox?: boolean; redirectUrl?: string; url?: string; error?: unknown
 }
 
 export interface GatewayAdapter {

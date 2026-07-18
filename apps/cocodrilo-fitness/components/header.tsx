@@ -18,6 +18,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur-sm">
       <div className="container-page flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label="Ir al inicio">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/logo.svg" alt="Complejo Cocodrilo" className="h-9 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-1" aria-label="Navegación principal">

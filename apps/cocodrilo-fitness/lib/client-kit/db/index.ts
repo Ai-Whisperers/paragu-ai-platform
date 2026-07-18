@@ -23,7 +23,7 @@ export const crud = {
     req(`/api/db/${table}?id=${id}`, { method: "DELETE" }),
 }
 
-export function createCrudRoutes(table: string, searchFields: string[] = []) {
+export function createCrudRoutes(table: string) {
   // Returns handler functions for Next.js API routes
   return {
     GET: async (req: Request) => Response.json(await crud.list(table, new URL(req.url).searchParams.get("search") || "")),
