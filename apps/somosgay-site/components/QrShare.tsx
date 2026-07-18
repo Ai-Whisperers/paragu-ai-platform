@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 /**
  * Per-page QR — generates a QR code for the current page URL on the client.
@@ -32,6 +32,7 @@ export function QrShare({ href }: { href: string }) {
         <div className="fixed bottom-32 lg:bottom-24 right-4 z-40 bg-surface border-2 border-[var(--color-primary)] rounded-2xl shadow-xl p-3 w-44">
           <p className="text-xs text-text-muted mb-2 font-medium">QR de esta página</p>
           {href ? (
+            // eslint-disable-next-line @next/next/no-img-element
             <img
               src={qrUrl}
               alt={`Código QR para ${href}`}

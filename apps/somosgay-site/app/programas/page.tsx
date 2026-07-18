@@ -19,7 +19,7 @@ const crumbs = [
 // Service JSON-LD — one Service per program + MedicalService for Clínica Kunu'u.
 // Provides Google rich results for "SOMOSGAY services" + knowledge graph links.
 const servicesJsonLd = [
-  ...c.programas.items.map((p: any) => ({
+  ...c.programas.items.map((p) => ({
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${SITE_URL}/programas/${p.id}/#service`,
@@ -83,7 +83,7 @@ export default function ProgramasPage() {
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          {c.programas.items.map((p: any) => (
+          {c.programas.items.map((p) => (
             <Link
               key={p.id}
               href={p.href}

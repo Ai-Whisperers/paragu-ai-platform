@@ -22,7 +22,7 @@ export default function HomeClient({ locale }: { locale: Locale }) {
               {c.home.hero.lead}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
-              {c.home.hero.ctas.map((cta: any) => (
+              {c.home.hero.ctas.map((cta) => (
                 <a
                   key={cta.href}
                   href={cta.href}
@@ -75,7 +75,7 @@ export default function HomeClient({ locale }: { locale: Locale }) {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {c.home.programs.items.map((p: any) => (
+            {c.home.programs.items.map((p) => (
               <Link
                 key={p.id}
                 href={locale === "gn" ? `/gn${p.href}` : p.href}
@@ -112,7 +112,7 @@ export default function HomeClient({ locale }: { locale: Locale }) {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {c.home.impact.items.map((item: any, i: number) => (
+            {c.home.impact.items.map((item, i) => (
               <div key={i} className="text-center p-6 bg-warm rounded-xl">
                 <div className="font-display text-4xl lg:text-5xl font-bold text-[var(--color-primary)] mb-2">
                   {item.value}

@@ -61,7 +61,7 @@ export function Header() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
-            {c.navigation.map((item: any) => {
+            {c.navigation.map((item) => {
               const active = isActive(pathname, item.href);
               return (
                 <Link
@@ -105,7 +105,7 @@ export function Header() {
 
         {open && (
           <div id="mobile-nav" className="lg:hidden pb-4 space-y-1">
-            {c.navigation.map((item: any) => {
+            {c.navigation.map((item) => {
               const active = isActive(pathname, item.href);
               return (
                 <Link

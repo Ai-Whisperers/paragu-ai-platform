@@ -134,7 +134,7 @@ export default function ClinicaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl lg:text-4xl font-bold mb-12">Servicios</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {c.clinica.services.map((s: any, i: number) => (
+            {c.clinica.services.map((s, i) => (
               <div
                 key={i}
                 className="bg-surface border border-[var(--color-warm-deep)] rounded-xl p-6 hover:border-[var(--color-primary)] transition-colors"
@@ -169,7 +169,7 @@ export default function ClinicaPage() {
                 </tr>
               </thead>
               <tbody>
-                {c.clinica.schedule.rows.map((row: any, i: number) => (
+                {c.clinica.schedule.rows.map((row, i) => (
                   <tr key={i} className="border-t border-[var(--color-warm-deep)]">
                     <td className="px-4 py-3 text-sm font-medium">{row.day}</td>
                     <td className="px-4 py-3 text-sm text-[var(--color-primary)] font-mono">{row.hours}</td>
@@ -187,7 +187,7 @@ export default function ClinicaPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl lg:text-4xl font-bold mb-3">Preguntas frecuentes</h2>
           <p className="text-text-light mb-8 max-w-2xl">
-            Respuestas basadas en evidencia a las dudas más comunes sobre Clínica Kunu'u.
+            Respuestas basadas en evidencia a las dudas más comunes sobre Clínica Kunu&apos;u.
             Si no encontrás lo que buscás, escribinos por WhatsApp.
           </p>
           <FaqAccordion items={faq} />

@@ -16,7 +16,7 @@ const crumbs = [
 ];
 
 export default function AuditoriaPage() {
-  const data = (c as any).auditoria;
+  const data = c.auditoria;
 
   return (
     <div>
@@ -64,7 +64,7 @@ export default function AuditoriaPage() {
             determina la agenda política ni la línea editorial.
           </p>
           <div className="space-y-3 mb-12">
-            {data.funders.map((f: any, i: number) => (
+            {data.funders.map((f, i) => (
               <div
                 key={i}
                 className="bg-surface border border-[var(--color-warm-deep)] rounded-xl p-5"
@@ -89,7 +89,7 @@ export default function AuditoriaPage() {
             informes firmados están disponibles abajo.
           </p>
           <div className="bg-warm rounded-xl p-6 mb-12">
-            {data.audit_firms.map((af: any, i: number) => (
+            {data.audit_firms.map((af, i) => (
               <div key={i}>
                 <div className="font-bold mb-1">{af.name}</div>
                 <div className="text-sm text-text-light">
@@ -102,7 +102,7 @@ export default function AuditoriaPage() {
           <h2 className="font-display text-3xl font-bold mb-6">¿A dónde va cada guaraní?</h2>
           <p className="text-text-light mb-6">{data.allocation_intro}</p>
           <div className="bg-surface border border-[var(--color-warm-deep)] rounded-xl p-6 mb-12">
-            {data.allocations.map((a: any, i: number) => (
+            {data.allocations.map((a, i) => (
               <div key={i} className="mb-4 last:mb-0">
                 <div className="flex justify-between text-sm mb-1">
                   <span className="font-medium text-text">{a.label}</span>
@@ -123,7 +123,7 @@ export default function AuditoriaPage() {
 
           <h2 className="font-display text-3xl font-bold mb-6">Documentos</h2>
           <ul className="space-y-2 mb-12">
-            {data.documents.map((d: any, i: number) => (
+            {data.documents.map((d, i) => (
               <li key={i}>
                 <a
                   href={d.url}

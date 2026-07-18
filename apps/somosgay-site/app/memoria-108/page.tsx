@@ -100,7 +100,7 @@ export default function MemoriaPage() {
           {/* Timeline */}
           <h2 className="font-display text-2xl font-bold mb-8">Cronología de los hechos</h2>
           <ol className="relative border-l-2 border-[var(--color-warm-deep)] pl-6 space-y-8">
-            {c.memoria108.key_dates.map((d: any, i: number) => (
+            {c.memoria108.key_dates.map((d, i) => (
               <li key={i} className="relative">
                 <span
                   className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-[var(--color-primary)] border-4 border-surface"
@@ -130,7 +130,7 @@ export default function MemoriaPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-2xl font-bold mb-8">{c.memoria108.memory_work.title}</h2>
           <div className="grid sm:grid-cols-2 gap-6">
-            {c.memoria108.memory_work.items.map((m: any, i: number) => (
+            {c.memoria108.memory_work.items.map((m, i) => (
               <div key={i} className="bg-warm rounded-xl p-6 border border-[var(--color-warm-deep)]">
                 <div className="font-display text-3xl font-bold text-[var(--color-primary)] mb-2">{m.year}</div>
                 <h3 className="font-display text-lg font-bold mb-1">{m.title}</h3>

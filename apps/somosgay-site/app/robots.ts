@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { content as c, SITE_URL } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 
 // Robots emitted at /robots.txt by Next.js App Router.
 // - Allow all crawlers on /

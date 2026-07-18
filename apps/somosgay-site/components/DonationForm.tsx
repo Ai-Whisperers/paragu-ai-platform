@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Script from "next/script";
 
 // Donation preset amounts in Guaraníes (primary), with USD approximate equivalents
 // converted at typical 7000 Gs = 1 USD reference. Amounts chosen because:

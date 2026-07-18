@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { content as c, SITE_URL } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 import { ShareButtons } from "@/components/ShareButtons";
 
@@ -89,7 +89,7 @@ export default function PrepHub() {
           </p>
           <p className="text-lg text-text-light leading-relaxed max-w-3xl mb-8">
             PrEP (Profilaxis Pre-Exposición) es una pastilla diaria que reduce el riesgo
-            de VIH en 99%. Es gratuita en Clínica Kunu'u. Sin documento de identidad.
+            de VIH en 99%. Es gratuita en Clínica Kunu&apos;u. Sin documento de identidad.
             Si vivís fuera de Asunción, coordinamos envío y consulta.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">

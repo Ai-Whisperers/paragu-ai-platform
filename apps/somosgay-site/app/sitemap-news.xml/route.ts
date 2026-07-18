@@ -11,8 +11,6 @@ import { NEWS_ARTICLES } from "@/content/news";
  */
 
 function buildNewsSitemapXml(): string {
-  const now = new Date().toISOString();
-
   const urlEntries = NEWS_ARTICLES.map((a) => {
     const articleUrl = `${SITE_URL}/noticias/${a.slug}`;
     return `  <url>

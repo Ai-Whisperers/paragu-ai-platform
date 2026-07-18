@@ -1,7 +1,5 @@
 "use client";
 
-import { SITE_URL } from "@/lib/content";
-
 /**
  * QuickExit — safety UI for users in risky environments.
  *

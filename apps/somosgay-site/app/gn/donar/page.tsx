@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_URL } from "@/lib/content";
+
 
 export const metadata: Metadata = {
   title: "Che ñangarekoitekua (guaraníme) · SOMOSGAY",
@@ -18,10 +18,10 @@ export default function GnStubPage() {
         </h1>
         <div className="bg-surface rounded-2xl border border-[var(--color-warm-deep)] p-6 mb-6">
           <p className="text-base text-text-light leading-relaxed mb-3">
-            Ko'ápe marandu'i ko'ángagua ojehecháva castellano-pe.
+            Ko&apos;ápe marandu&apos;i ko&apos;ángagua ojehecháva castellano-pe.
           </p>
           <p className="text-sm text-text-muted leading-relaxed mb-4 italic">
-            Doná a SOMOSGAY. Tu donación mantiene Clínica Kunu'u gratuita.
+            Doná a SOMOSGAY. Tu donación mantiene Clínica Kunu&apos;u gratuita.
           </p>
           <Link
             href="/donar"
@@ -31,7 +31,7 @@ export default function GnStubPage() {
           </Link>
         </div>
         <p className="text-xs text-text-muted">
-          Marandu guaraníme katu oñembyaíta etépe Paloma (coordinadora) rehegua. Ko'ágagua roikóma castellano-pe jehechapyrépe.
+          Marandu guaraníme katu oñembyaíta etépe Paloma (coordinadora) rehegua. Ko&apos;ágagua roikóma castellano-pe jehechapyrépe.
         </p>
       </div>
     </div>

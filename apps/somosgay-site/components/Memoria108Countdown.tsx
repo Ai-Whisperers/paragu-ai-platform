@@ -19,9 +19,12 @@ export function Memoria108Countdown({
   const [now, setNow] = useState<Date | null>(null);
 
   useEffect(() => {
-    setNow(new Date());
+    const bootstrap = setTimeout(() => setNow(new Date()), 0);
     const t = setInterval(() => setNow(new Date()), 60_000);
-    return () => clearInterval(t);
+    return () => {
+      clearTimeout(bootstrap);
+      clearInterval(t);
+    };
   }, []);
 
   if (!now) {
