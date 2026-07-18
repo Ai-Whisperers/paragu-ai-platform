@@ -1,17 +1,35 @@
-FROM node:20-alpine AS runner
+FROM node:20-slim AS deps
+WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@10 --activate
+WORKDIR /workspace
+COPY pnpm-workspace.yaml ./
+COPY package.json pnpm-lock.yaml* .npmrc* tsconfig.base.json* ./
+COPY packages/ packages/
+COPY apps/escribania-paraguay/ apps/escribania-paraguay/
+RUN cd apps/escribania-paraguay && pnpm install --no-frozen-lockfile --filter escribania-paraguay...
+
+FROM node:20-slim AS builder
+WORKDIR /workspace
+RUN corepack enable && corepack prepare pnpm@10 --activate
+COPY --from=deps /workspace/node_modules ./node_modules
+COPY --from=deps /workspace/apps/escribania-paraguay/node_modules ./apps/escribania-paraguay/node_modules
+COPY . .
+ENV NEXT_TELEMETRY_DISABLED=1
+RUN cd apps/escribania-paraguay && pnpm run build
+
+FROM node:20-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
-ENV HOSTNAME=0.0.0.0
-RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
-# Copy entire standalone output (root + apps + node_modules)
-COPY --chown=nextjs:nodejs .next/standalone/ ./
-# Static + public go inside the app folder
-COPY --chown=nextjs:nodejs .next/static ./apps/escribania-paraguay/.next/static
-COPY --chown=nextjs:nodejs public ./apps/escribania-paraguay/public
+ENV HOSTNAME="0.0.0.0"
+COPY --from=builder /workspace/apps/escribania-paraguay/.next/standalone/ /app/standalone/
+COPY --from=builder /workspace/apps/escribania-paraguay/.next/static /app/standalone/apps/escribania-paraguay/.next/static
+COPY --from=builder /workspace/apps/escribania-paraguay/public /app/standalone/apps/escribania-paraguay/public
+RUN addgroup --system --gid 1001 nodejs 2>/dev/null || true && \
+    adduser --system --uid 1001 --ingroup nodejs nextjs 2>/dev/null || true && \
+    chown -R nextjs:nodejs /app
 USER nextjs
 EXPOSE 3000
-WORKDIR /app/apps/escribania-paraguay
-HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:3000/ || exit 1
+WORKDIR /app/standalone/apps/escribania-paraguay
 CMD ["node", "server.js"]
