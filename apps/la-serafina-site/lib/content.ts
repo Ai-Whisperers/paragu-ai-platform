@@ -14,12 +14,36 @@ export type Locale = "es" | "gn";
 export const SUPPORTED_LOCALES: Locale[] = ["es", "gn"];
 export const DEFAULT_LOCALE: Locale = "es";
 
+// Deep-merge partial locale over es fallback. `gn` intentionally ships a
+// partial translation — any key it omits falls back to the Spanish canonical.
+function deepMerge<T>(base: T, override: unknown): T {
+  if (
+    override === null ||
+    typeof override !== "object" ||
+    Array.isArray(override) ||
+    Array.isArray(base) ||
+    typeof base !== "object" ||
+    base === null
+  ) {
+    return (override === undefined ? base : (override as T));
+  }
+  const out: Record<string, unknown> = { ...(base as Record<string, unknown>) };
+  const over = override as Record<string, unknown>;
+  for (const key of Object.keys(over)) {
+    out[key] = deepMerge(
+      (base as Record<string, unknown>)[key],
+      over[key],
+    );
+  }
+  return out as T;
+}
+
 const SOURCES: Record<Locale, Content> = {
   es: es as Content,
-  gn: gn as Content,
+  gn: deepMerge<Content>(es as Content, gn),
 };
 
-const cached: Record<Locale, Content | null> = { es: SOURCES.es, gn: null };
+const cached: Record<Locale, Content | null> = { es: SOURCES.es, gn: SOURCES.gn };
 
 export function getContent(locale: Locale = DEFAULT_LOCALE): Content {
   const hit = cached[locale];
