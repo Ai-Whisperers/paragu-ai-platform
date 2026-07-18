@@ -24,15 +24,18 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 nextjs
+# Next.js standalone output preserves relative symlinks within .next/standalone/.
+# Keep the whole tree intact under /app/standalone/ and run server.js from
+# /app/standalone/apps/dra-gabriela/ where the relative node_modules/ link resolves.
+COPY --from=builder /workspace/apps/dra-gabriela/.next/standalone/ /app/standalone/
+COPY --from=builder /workspace/apps/dra-gabriela/.next/static /app/standalone/apps/dra-gabriela/.next/static
+COPY --from=builder /workspace/apps/dra-gabriela/public /app/standalone/apps/dra-gabriela/public
+RUN addgroup --system --gid 1001 nodejs 2>/dev/null || true && \
+    adduser --system --uid 1001 --ingroup nodejs nextjs 2>/dev/null || true && \
+    chown -R nextjs:nodejs /app
 USER nextjs
 EXPOSE 3000
-# Next.js standalone output bundles apps/<name>/ into its own subfolder.
-# Use a layout that puts server.js + content/ at /app/ (matching what node server.js expects).
-COPY --from=builder --chown=nextjs:nodejs /workspace/apps/dra-gabriela/.next/standalone/apps/dra-gabriela/ ./
-COPY --from=builder --chown=nextjs:nodejs /workspace/apps/dra-gabriela/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /workspace/apps/dra-gabriela/public ./public
-COPY --from=builder --chown=nextjs:nodejs /workspace/apps/dra-gabriela/content ./content
+WORKDIR /app/standalone/apps/dra-gabriela
 CMD ["node", "server.js"]
+
 
