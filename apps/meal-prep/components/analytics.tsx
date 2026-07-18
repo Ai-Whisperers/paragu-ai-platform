@@ -1,7 +1,15 @@
 "use client"
 import { useEffect } from "react"
 
-declare global { interface Window { gtag?: any; dataLayer?: any[] } }
+type GtagFn = (...args: unknown[]) => void
+
+declare global {
+  interface Window {
+    gtag?: GtagFn
+    dataLayer?: unknown[]
+    __aiwaTracked?: boolean
+  }
+}
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-X2XQZR3J6K"
 
@@ -14,17 +22,17 @@ export function Analytics() {
     s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
     document.head.appendChild(s)
     window.dataLayer = window.dataLayer || []
-    window.gtag = function () { window.dataLayer!.push(arguments) }
+    window.gtag = function (...args: unknown[]) { window.dataLayer!.push(args) }
     window.gtag("js", new Date())
     window.gtag("config", GA_ID, { send_page_view: true })
   }, [])
   return null
 }
 
-export function trackEvent(action: string, params?: Record<string, any>) {
+export function trackEvent(action: string, params?: Record<string, unknown>) {
   try {
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", action, params)
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", action, params)
     }
   } catch (err) { console.debug("[analytics] gtag event failed", err) }
 }
@@ -32,9 +40,8 @@ export function trackEvent(action: string, params?: Record<string, any>) {
 export function TrackCtas() {
   useEffect(() => {
     if (typeof document === "undefined") return
-    const w = window as any
-    if (w.__aiwaTracked) return
-    w.__aiwaTracked = true
+    if (window.__aiwaTracked) return
+    window.__aiwaTracked = true
     document.addEventListener("click", (e) => {
       const t = e.target as HTMLElement
       if (!t) return
