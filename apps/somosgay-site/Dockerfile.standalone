@@ -5,7 +5,6 @@ ENV HOSTNAME="0.0.0.0"
 ENV PORT=3000
 COPY .next/standalone ./
 COPY .next/static ./apps/somosgay-site/.next/static
-COPY public ./apps/somosgay-site/public
 EXPOSE 3000
 RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
 USER nextjs
