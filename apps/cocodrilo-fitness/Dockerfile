@@ -1,32 +1,35 @@
-FROM node:20-alpine AS deps
+FROM node:20-slim AS deps
 WORKDIR /app
-RUN apk add --no-cache libc6-compat
-COPY package.json package-lock.json* ./
-ARG NODE_AUTH_TOKEN
-ENV NODE_AUTH_TOKEN=$NODE_AUTH_TOKEN
-RUN echo "@ai-whisperers:registry=https://npm.pkg.github.com" > .npmrc &&     echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc &&     echo "//npm.pkg.github.com/:always-auth=true" >> .npmrc &&     npm install --legacy-peer-deps
+RUN corepack enable && corepack prepare pnpm@10 --activate
+WORKDIR /workspace
+COPY pnpm-workspace.yaml ./
+COPY package.json pnpm-lock.yaml* .npmrc* tsconfig.base.json* ./
+COPY packages/ packages/
+COPY apps/cocodrilo-fitness/ apps/cocodrilo-fitness/
+RUN cd apps/cocodrilo-fitness && pnpm install --no-frozen-lockfile --filter cocodrilo-fitness...
 
-FROM node:20-alpine AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+FROM node:20-slim AS builder
+WORKDIR /workspace
+RUN corepack enable && corepack prepare pnpm@10 --activate
+COPY --from=deps /workspace/node_modules ./node_modules
+COPY --from=deps /workspace/apps/cocodrilo-fitness/node_modules ./apps/cocodrilo-fitness/node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+RUN cd apps/cocodrilo-fitness && pnpm run build
 
-FROM node:20-alpine AS runner
+FROM node:20-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
-RUN apk add --no-cache wget curl
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 nextjs
+COPY --from=builder /workspace/apps/cocodrilo-fitness/.next/standalone/ /app/standalone/
+COPY --from=builder /workspace/apps/cocodrilo-fitness/.next/static /app/standalone/apps/cocodrilo-fitness/.next/static
+COPY --from=builder /workspace/apps/cocodrilo-fitness/public /app/standalone/apps/cocodrilo-fitness/public
+RUN addgroup --system --gid 1001 nodejs 2>/dev/null || true && \
+    adduser --system --uid 1001 --ingroup nodejs nextjs 2>/dev/null || true && \
+    chown -R nextjs:nodejs /app
 USER nextjs
 EXPOSE 3000
-HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:3000/ || exit 1
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
-CMD node server.js
+WORKDIR /app/standalone/apps/cocodrilo-fitness
+CMD ["node", "server.js"]
