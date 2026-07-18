@@ -2,7 +2,7 @@
   "name": "rockabar",
   "version": "1.0.0",
   "private": true,
-  "description": "Rocka Bar — sitio web institucional. Rock, burgers & tragos en Capiatá, Paraguay.",
+  "description": "Rocka Bar \u2014 sitio web institucional. Rock, burgers & tragos en Capiat\u00e1, Paraguay.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -21,6 +21,8 @@
     "@types/qrcode": "^1.5.6",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
     "tailwindcss": "^4.2.4",
     "typescript": "^6.0.3"
   }
