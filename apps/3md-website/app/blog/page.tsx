@@ -1,10 +1,11 @@
 "use client"
 import Link from "next/link"
 import content from "@/content/es.json"
+import type { SiteContent, BlogContent } from "@/lib/blog-types"
 
 export default function BlogIndex() {
-  const c = content as any
-  const b = c.blog || { posts: [], categories: [], title: "Blog", subtitle: "" }
+  const c = content as SiteContent
+  const b: BlogContent = c.blog || { posts: [], categories: [], title: "Blog", subtitle: "" }
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold text-center mb-2">{b.title}</h1>
@@ -17,7 +18,7 @@ export default function BlogIndex() {
         })}
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {b.posts.map((post: any) => (
+        {b.posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
             <article className="rounded-xl border border-border bg-card overflow-hidden transition-all group-hover:-translate-y-1 group-hover:shadow-md">
               <div className="h-48 bg-gradient-to-br from-surface-light to-surface flex items-center justify-center">

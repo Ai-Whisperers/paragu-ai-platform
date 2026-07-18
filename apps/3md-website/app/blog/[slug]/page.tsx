@@ -2,6 +2,7 @@
 import { useParams } from "next/navigation"
 import Link from "next/link"
 import content from "@/content/es.json"
+import type { SiteContent } from "@/lib/blog-types"
 
 const WA_PHONE = "595981234567"
 
@@ -9,8 +10,8 @@ const FULL_CONTENT: Record<string, string[]> = {}
 
 export default function BlogPost() {
   const { slug } = useParams()
-  const c = content as any
-  const post = c.blog?.posts?.find((p: any) => p.slug === slug)
+  const c = content as SiteContent
+  const post = c.blog?.posts?.find((p) => p.slug === slug)
   if (!post) return (
     <div className="py-20 text-center">
       <h2 className="text-2xl font-bold mb-4">Artículo no encontrado</h2>

@@ -2,13 +2,14 @@
 import { useParams } from "next/navigation"
 import Link from "next/link"
 import content from "@/content/es.json"
+import type { SiteContent } from "@/lib/blog-types"
 
 export default function BlogCategory() {
   const { category } = useParams()
-  const c = content as any
+  const c = content as SiteContent
   const cat = (category as string) || ""
   const catNormalized = cat.toLowerCase()
-  const posts = (c.blog?.posts || []).filter((p: any) =>
+  const posts = (c.blog?.posts || []).filter((p) =>
     p.category.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") === catNormalized
   )
   return (
@@ -19,7 +20,7 @@ export default function BlogCategory() {
         <p className="text-center text-muted-foreground py-16">No hay artículos en esta categoría.</p>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">
-          {posts.map((post: any) => (
+          {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
               <article className="rounded-xl border border-border bg-card p-4">
                 <h3 className="font-semibold text-sm mb-2 group-hover:text-primary">{post.title}</h3>
