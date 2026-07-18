@@ -30,7 +30,7 @@ export default function HomeClient({ locale }: { locale: Locale }) {
               {h.hero.lead}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
-              {h.hero.ctas.map((cta: any) => (
+              {h.hero.ctas.map((cta) => (
                 <Link
                   key={cta.href}
                   href={locale === "gn" ? (cta.href === "/" ? "/gn" : `/gn${cta.href}`) : cta.href}
@@ -88,7 +88,7 @@ export default function HomeClient({ locale }: { locale: Locale }) {
             <p className="text-text-light">{h.programs.subtitle}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {h.programs.items.map((p: any) => {
+            {h.programs.items.map((p) => {
               const internal = p.href.startsWith("/");
               if (!internal) {
                 return (
@@ -165,7 +165,7 @@ export default function HomeClient({ locale }: { locale: Locale }) {
             <p className="text-text-light max-w-2xl mx-auto">{h.visit.lead}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {h.visit.items.map((item: any, i: number) => (
+            {h.visit.items.map((item, i) => (
               <div
                 key={i}
                 className="rounded-xl p-6 text-center"
@@ -205,7 +205,7 @@ export default function HomeClient({ locale }: { locale: Locale }) {
             </h2>
           </div>
           <ol className="relative border-l-2 border-[var(--color-warm-deep)] ml-4 space-y-8">
-            {h.history.items.map((it: any, i: number) => (
+            {h.history.items.map((it, i) => (
               <li key={i} className="pl-8 relative">
                 <span
                   className="absolute -left-[11px] flex items-center justify-center w-6 h-6 rounded-full font-bold text-xs text-white"

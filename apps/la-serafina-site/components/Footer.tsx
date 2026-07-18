@@ -62,7 +62,7 @@ export function Footer() {
               Explorar
             </h3>
             <ul className="space-y-2">
-              {c.footer.links.map((link: any) => (
+              {c.footer.links.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
