@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { CrossInverted, OrnamentalBorder, DividerOrnament, Skull, CrescentMoon } from "./ornaments";
+import type { ContentItem } from "@/lib/content-types";
 
-export function Footer({ content }: { content: any }) {
+export function Footer({ content }: { content: ContentItem }) {
   const f = content.footer || {};
   const contact = content.contacto || {};
   const cols = f.columns || [];
@@ -49,13 +50,13 @@ export function Footer({ content }: { content: any }) {
             </div>
           </div>
 
-          {cols.map((col: any, i: number) => (
+          {cols.map((col: ContentItem, i: number) => (
             <div key={i}>
               <h4 className="font-[var(--font-display)] text-[0.78rem] uppercase tracking-[0.28em] text-[var(--color-primary-light)] mb-4">
                 {col.title}
               </h4>
               <ul className="space-y-2.5">
-                {col.links?.map((l: any, j: number) => (
+                {col.links?.map((l: ContentItem, j: number) => (
                   <li key={j}>
                     <Link
                       href={l.href}
@@ -75,7 +76,7 @@ export function Footer({ content }: { content: any }) {
         <DividerOrnament className="mt-10" />
 
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[var(--color-muted-foreground)] text-[0.88rem] mb-5">
-          {(f.contactStrip || []).map((s: any, i: number) => (
+          {(f.contactStrip || []).map((s: ContentItem, i: number) => (
             <span key={i} className="flex items-center gap-2">
               {i > 0 && <span className="text-[var(--color-primary-light)]">⚜</span>}
               <span>{s.label}</span>
@@ -90,7 +91,7 @@ export function Footer({ content }: { content: any }) {
         </div>
 
         <div className="flex justify-center items-center gap-5 mb-5">
-          {social.map((s: any, i: number) => (
+          {social.map((s: ContentItem, i: number) => (
             <a
               key={i}
               href={s.href}

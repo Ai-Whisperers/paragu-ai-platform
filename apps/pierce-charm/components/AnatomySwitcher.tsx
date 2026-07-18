@@ -73,7 +73,7 @@ export function AnatomySwitcher({ items, whatsapp = "595981324569", initialRegio
           jewelry: it.jewelry,
           x: it.position!.x,
           y: it.position!.y,
-          side: (it.position as any).side,
+          side: it.position!.side,
         })),
     [regionItems]
   );
@@ -238,7 +238,6 @@ export function AnatomySwitcher({ items, whatsapp = "595981324569", initialRegio
         {activeId && (() => {
           const sel = regionItems.find((it) => it.id === activeId);
           if (!sel) return null;
-          const inCart = false; // cart is global, kept in CartBar
           return (
             <button
               type="button"

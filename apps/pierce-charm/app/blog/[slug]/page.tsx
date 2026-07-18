@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, DividerOrnament } from "@/components/ornaments";
-import { getPost, listPosts, slugifyHeading } from "@/lib/blog";
+import { getPost, listPosts } from "@/lib/blog";
 import { BlogPostContent } from "./BlogPostContent";
 import content from "@/content/es.json";
+import type { SiteContent } from "@/lib/content-types";
 
-const c = content as any;
+const c = content as SiteContent;
 const SITE_URL = c.site?.url || "https://piercecharm.paragu-ai.com";
 
 export async function generateStaticParams() {

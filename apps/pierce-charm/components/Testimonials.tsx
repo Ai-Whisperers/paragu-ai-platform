@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { DividerOrnament, Skull } from "@/components/ornaments";
+import { Skull } from "@/components/ornaments";
 import { whatsappUrl } from "@/lib/site-config";
+import type { ContentItem } from "@/lib/content-types";
 
 interface Testimonial {
   name?: string;
@@ -14,7 +14,7 @@ export function Testimonials({
   data,
   phone,
 }: {
-  data: any;
+  data: ContentItem;
   phone: string;
 }) {
   const items: Testimonial[] = data?.items || [];
@@ -57,7 +57,7 @@ export function Testimonials({
                   ))}
                 </div>
                 <blockquote className="text-[var(--color-foreground)]/90 italic leading-relaxed mb-3">
-                  "{t.body}"
+                  &ldquo;{t.body}&rdquo;
                 </blockquote>
                 <p className="text-[0.85rem] uppercase tracking-[0.18em] text-[var(--color-muted-foreground)] font-[var(--font-display)]">
                   — {t.name || 'Cliente'}

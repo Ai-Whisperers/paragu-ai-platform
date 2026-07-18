@@ -6,7 +6,6 @@ import { whatsappUrl } from "@/lib/site-config";
 import { CrossInverted, CrescentMoon } from "./ornaments";
 
 const STORAGE_KEY_BOOKING = "pierce_charm_booking_v1";
-const STORAGE_KEY_OPEN = "pierce_charm_booking_open_v1";
 
 export interface BookingData {
   name: string;
@@ -60,15 +59,20 @@ export function useBooking() {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    setBooking(readBooking());
-    setHydrated(true);
+    const t = setTimeout(() => {
+      setBooking(readBooking());
+      setHydrated(true);
+    }, 0);
     const onUpdate = (e: Event) => {
       const detail = (e as CustomEvent).detail as { booking: BookingData | null } | undefined;
       if (detail) setBooking(detail.booking);
       else setBooking(readBooking());
     };
     window.addEventListener("pierce-booking:updated", onUpdate);
-    return () => window.removeEventListener("pierce-booking:updated", onUpdate);
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("pierce-booking:updated", onUpdate);
+    };
   }, []);
 
   const save = useCallback((d: BookingData) => {
@@ -98,6 +102,10 @@ export function BookingModal({ phone = "595981324569" }: Props) {
   const [service, setService] = useState("perforacion");
   const [notes, setNotes] = useState("");
 
+  // Date constraints: today + 60 days, no Sundays
+  const [today] = useState(() => new Date().toISOString().split("T")[0]);
+  const [maxDate] = useState(() => new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString().split("T")[0]);
+
   // Listen for global open event (so any CTA can launch the modal)
   useEffect(() => {
     if (!hydrated) return;
@@ -108,14 +116,16 @@ export function BookingModal({ phone = "595981324569" }: Props) {
 
   // Pre-fill from existing booking
   useEffect(() => {
-    if (open && booking) {
+    if (!open || !booking) return;
+    const t = setTimeout(() => {
       setName(booking.name);
       setCallerPhone(booking.phone);
       setDate(booking.date);
       setTime(booking.time);
       setService(booking.service);
       setNotes(booking.notes);
-    }
+    }, 0);
+    return () => clearTimeout(t);
   }, [open, booking]);
 
   // Lock body scroll when open
@@ -208,10 +218,6 @@ export function BookingModal({ phone = "595981324569" }: Props) {
   );
 
   if (!hydrated) return null;
-
-  // Date constraints: today + 60 days, no Sundays
-  const today = new Date().toISOString().split("T")[0];
-  const maxDate = new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
 
   // Available time slots (Luana: L-V 12-20, Sáb 9-15)
   const slots = ["12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"];

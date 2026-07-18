@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { whatsappUrl } from "@/lib/site-config";
+import type { ContentItem } from "@/lib/content-types";
 
-export function Header({ content }: { content: any }) {
+export function Header({ content }: { content: ContentItem }) {
   const nav = content.navigation || [];
   const phone = content.contacto?.whatsapp || "595981324569";
   const [scrolled, setScrolled] = useState(false);
@@ -20,7 +21,8 @@ export function Header({ content }: { content: any }) {
   }, []);
 
   useEffect(() => {
-    setOpen(false);
+    const t = setTimeout(() => setOpen(false), 0);
+    return () => clearTimeout(t);
   }, [pathname]);
 
   return (
@@ -55,7 +57,7 @@ export function Header({ content }: { content: any }) {
         </Link>
 
         <nav className="hidden md:flex items-center gap-7" aria-label="Navegación principal">
-          {nav.map((n: any) => {
+          {nav.map((n: ContentItem) => {
             const isActive = n.href === "/" ? pathname === "/" : pathname?.startsWith(n.href);
             return (
               <Link
@@ -110,7 +112,7 @@ export function Header({ content }: { content: any }) {
         }`}
       >
         <nav className="flex flex-col p-5 gap-1" aria-label="Navegación móvil">
-          {nav.map((n: any) => (
+          {nav.map((n: ContentItem) => (
             <Link
               key={n.href}
               href={n.href}

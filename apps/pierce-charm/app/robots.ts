@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import content from "@/content/es.json";
+import type { SiteContent } from "@/lib/content-types";
 
-const c = content as any;
+const c = content as SiteContent;
 const SITE = c.site?.url || "https://piercecharm.paragu-ai.com";
 
 export default function robots(): MetadataRoute.Robots {

@@ -13,7 +13,7 @@ interface Props {
 
 type Status = "idle" | "submitting" | "ok" | "error" | "whatsapp";
 
-export function Newsletter({ phone = "595981324569", title, subtitle, ctaLabel, source = "site" }: Props) {
+export function Newsletter({ phone = "595981324569", subtitle, ctaLabel, source = "site" }: Props) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [status, setStatus] = useState<Status>("idle");

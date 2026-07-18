@@ -14,7 +14,7 @@ export interface SiteData {
   businessName: string;
 }
 
-export function getSiteConfig(c: any): SiteData {
+export function getSiteConfig(c: SiteContent): SiteData {
   return {
     site: c.site,
     contacto: c.contacto,

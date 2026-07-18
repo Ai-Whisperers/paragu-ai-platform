@@ -9,8 +9,9 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { CartBar } from "@/components/CartBar";
 import { BookingModal } from "@/components/BookingModal";
 import content from "@/content/es.json";
+import type { SiteContent, ContentItem } from "@/lib/content-types";
 
-const c = content as any;
+const c = content as SiteContent;
 const SITE_URL = c.site?.url || "https://piercecharm.paragu-ai.com";
 const OG_IMAGE = `${SITE_URL}/og.png`;
 
@@ -131,8 +132,8 @@ const jsonLd = {
     longitude: -57.5759,
   },
   openingHoursSpecification: (c.contacto?.schedule || [])
-    .filter((s: any) => s.hours !== "Cerrado")
-    .map((s: any) => {
+    .filter((s: ContentItem) => s.hours !== "Cerrado")
+    .map((s: ContentItem) => {
       const parts = (s.hours || "").split(/[-–]/);
       return {
         "@type": "OpeningHoursSpecification",

@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import content from "@/content/es.json";
+import type { SiteContent, ContentItem } from "@/lib/content-types";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, DividerOrnament } from "@/components/ornaments";
 import { whatsappUrl } from "@/lib/site-config";
 
-const c = content as any;
+const c = content as SiteContent;
 const f = c.faq || {};
 const items = f.items || [];
 
@@ -16,7 +17,7 @@ export default function FaqPage() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: items.map((it: any) => ({
+    mainEntity: items.map((it: ContentItem) => ({
       "@type": "Question",
       name: it.q,
       acceptedAnswer: {
@@ -50,7 +51,7 @@ export default function FaqPage() {
 
       <section className="max-w-3xl mx-auto px-4 md:px-6 pb-16">
         <div className="space-y-3" role="list">
-          {items.map((item: any, i: number) => {
+          {items.map((item: ContentItem, i: number) => {
             const isOpen = open === i;
             const panelId = `faq-panel-${i}`;
             const buttonId = `faq-button-${i}`;

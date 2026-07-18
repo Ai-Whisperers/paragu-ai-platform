@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import content from "@/content/es.json";
+import type { SiteContent, ContentItem } from "@/lib/content-types";
 import { DividerOrnament, Skull, CrossInverted } from "@/components/ornaments";
 import { whatsappUrl } from "@/lib/site-config";
 
-const c = content as any;
+const c = content as SiteContent;
 const eventos = c.eventos || {};
 const phone = c.contacto?.whatsapp || "595981324569";
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function EventosPage() {
-  const items: any[] = eventos.items || [];
+  const items: ContentItem[] = eventos.items || [];
 
   return (
     <div className="pt-24 md:pt-32 pb-16 min-h-screen relative">
@@ -50,7 +51,7 @@ export default function EventosPage() {
           </div>
         ) : (
           <ul className="space-y-5">
-            {items.map((it: any, i: number) => (
+            {items.map((it: ContentItem, i: number) => (
               <li key={i} className="rock-card p-5 md:p-6 grid md:grid-cols-[140px_1fr] gap-4">
                 <div className="text-center md:text-left">
                   <p className="font-[var(--font-display)] text-[0.78rem] uppercase tracking-[0.2em] text-[var(--color-gold)]">{it.date}</p>

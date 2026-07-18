@@ -3,8 +3,9 @@ import Link from "next/link";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, DividerOrnament } from "@/components/ornaments";
 import { listPosts } from "@/lib/blog";
 import content from "@/content/es.json";
+import type { SiteContent } from "@/lib/content-types";
 
-const c = content as any;
+const c = content as SiteContent;
 const SITE_URL = c.site?.url || "https://piercecharm.paragu-ai.com";
 
 export const metadata: Metadata = {
