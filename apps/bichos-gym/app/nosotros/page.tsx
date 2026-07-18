@@ -18,7 +18,7 @@ export default function NosotrosPage() {
       <Header />
       <main className="bg-background py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="font-heading text-4xl font-bold text-primary text-center mb-4">Sobre Bicho's Gym</h1>
+          <h1 className="font-heading text-4xl font-bold text-primary text-center mb-4">Sobre Bicho&apos;s Gym</h1>
           <p className="text-center text-foreground-light max-w-2xl mx-auto mb-16 text-lg">
             Somos un gimnasio en Capiatá comprometido con transformar tu cuerpo y tu salud. Contamos con entrenadores certificados, equipamiento moderno y un ambiente único donde cada persona encuentra su mejor versión.
           </p>

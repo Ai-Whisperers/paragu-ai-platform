@@ -14,7 +14,7 @@ export default function FAQPage() {
       <main className="bg-background py-20">
         <div className="max-w-3xl mx-auto px-4">
           <h1 className="font-heading text-4xl font-bold text-primary text-center mb-2">Preguntas Frecuentes</h1>
-          <p className="text-center text-foreground-light mb-12">Todo lo que necesitás saber sobre Bicho's Gym</p>
+          <p className="text-center text-foreground-light mb-12">Todo lo que necesitás saber sobre Bicho&apos;s Gym</p>
           <div className="space-y-3">
             {faqs.map((item, i) => (
               <details key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm">

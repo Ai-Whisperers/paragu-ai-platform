@@ -17,8 +17,9 @@ export async function POST(req: NextRequest) {
     writeFileSync(contentPath, JSON.stringify(content, null, 2), 'utf-8')
     
     return NextResponse.json({ success: true })
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 })
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    return NextResponse.json({ error: message }, { status: 500 })
   }
 }
 
@@ -27,7 +28,8 @@ export async function GET() {
     const contentPath = join(process.cwd(), 'content', 'es.json')
     const raw = readFileSync(contentPath, 'utf-8')
     return NextResponse.json(JSON.parse(raw))
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 })
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    return NextResponse.json({ error: message }, { status: 500 })
   }
 }

@@ -12,7 +12,7 @@ export default function PrivacidadPage() {
         <div className="max-w-3xl mx-auto px-4">
           <h1 className="font-heading text-3xl font-bold text-primary mb-8">Política de Privacidad</h1>
           <div className="prose prose-sm max-w-none text-foreground-light space-y-4">
-            <p>En Bicho's Gym nos tomamos muy en serio la privacidad de nuestros usuarios. Esta política describe cómo recopilamos, usamos y protegemos tu información personal.</p>
+            <p>En Bicho&apos;s Gym nos tomamos muy en serio la privacidad de nuestros usuarios. Esta política describe cómo recopilamos, usamos y protegemos tu información personal.</p>
             <h2 className="font-heading text-xl font-bold text-foreground">Información que recopilamos</h2>
             <p>Recopilamos la información que nos proporcionas voluntariamente al contactarnos a través de formularios o WhatsApp: nombre, número de teléfono y dirección de correo electrónico.</p>
             <h2 className="font-heading text-xl font-bold text-foreground">Uso de la información</h2>
