@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "next": "16.2.4",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "@ai-whisperers/i18n-paraguay": "workspace:*"
   },
   "devDependencies": {
@@ -19,6 +19,6 @@
     "@types/react-dom": "^18.3.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
-    "typescript": "5.8.2"
+    "typescript": "^5.9.3"
   }
 }

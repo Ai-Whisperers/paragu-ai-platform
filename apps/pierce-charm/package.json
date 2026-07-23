@@ -2,7 +2,7 @@
   "name": "pierce-charm",
   "version": "0.1.0",
   "private": true,
-  "description": "Pierce Charm — Estudio de piercings & joyería alternativa en Asunción. Estética política dark/gothic.",
+  "description": "Pierce Charm \u2014 Estudio de piercings & joyer\u00eda alternativa en Asunci\u00f3n. Est\u00e9tica pol\u00edtica dark/gothic.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,9 +13,9 @@
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.577.0",
-    "next": "^16.2.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
@@ -26,6 +26,6 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4.2.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.9.3"
   }
 }

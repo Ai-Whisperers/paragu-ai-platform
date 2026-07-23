@@ -2,7 +2,7 @@
   "name": "cuidadoamiga",
   "version": "2.0.0",
   "private": true,
-  "description": "Cuidado Amiga — Mapa colaborativo de casos de violencia de género en América Latina. Demo Ai-Whisperers platform.",
+  "description": "Cuidado Amiga \u2014 Mapa colaborativo de casos de violencia de g\u00e9nero en Am\u00e9rica Latina. Demo Ai-Whisperers platform.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -37,8 +37,8 @@
     "lucide-react": "^0.510.0",
     "next": "16.2.4",
     "next-cloudinary": "^6.17.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "react-hook-form": "^7.53.0",
     "react-leaflet": "^5.0.0",
     "react-leaflet-cluster": "^2.1.0",
@@ -63,7 +63,7 @@
     "jsdom": "^25.0.0",
     "react-hook-form": "^7.53.0",
     "tailwindcss": "^4",
-    "typescript": "^5.8.0",
+    "typescript": "^5.9.3",
     "vitest": "^2.1.0"
   }
 }

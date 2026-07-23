@@ -2,7 +2,7 @@
   "name": "nexa-paraguay",
   "version": "0.3.0",
   "private": true,
-  "description": "Nexa Paraguay — Web development, process automation, and AI for Paraguayan businesses. Migrated to platform monorepo 2026-06-23.",
+  "description": "Nexa Paraguay \u2014 Web development, process automation, and AI for Paraguayan businesses. Migrated to platform monorepo 2026-06-23.",
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
@@ -32,10 +32,10 @@
     "@supabase/supabase-js": "^2.105.4",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "next": "^16.2.6",
+    "next": "16.2.4",
     "pg": "^8.20.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "web-vitals": "^5.2.0"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
     "prettier": "^3.4.2",
     "sharp": "^0.34.1",
     "tailwindcss": "^4",
-    "typescript": "^5",
+    "typescript": "^5.9.3",
     "vitest": "^4.1.7"
   },
   "engines": {

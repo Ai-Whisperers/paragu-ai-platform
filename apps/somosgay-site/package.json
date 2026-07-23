@@ -2,7 +2,7 @@
   "name": "somosgay-site",
   "version": "0.1.0",
   "private": true,
-  "description": "SOMOSGAY — LGBTQ+ rights + Clínica Kunu'u (Asunción, Paraguay). Rainbow-forward, OPSEC-conscious.",
+  "description": "SOMOSGAY \u2014 LGBTQ+ rights + Cl\u00ednica Kunu'u (Asunci\u00f3n, Paraguay). Rainbow-forward, OPSEC-conscious.",
   "scripts": {
     "dev": "next dev",
     "build": "NODE_ENV=production next build",
@@ -10,9 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "next": "^16.2.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.0",
@@ -20,6 +20,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "tailwindcss": "^4.2.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.9.3"
   }
 }

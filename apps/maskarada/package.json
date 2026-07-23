@@ -2,7 +2,7 @@
   "name": "maskarada",
   "version": "1.0.0",
   "private": true,
-  "description": "Club maškaráda — BDSM/kink party en Asunción, Paraguay. Migrated to monorepo 2026-06-15.",
+  "description": "Club ma\u0161kar\u00e1da \u2014 BDSM/kink party en Asunci\u00f3n, Paraguay. Migrated to monorepo 2026-06-15.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -28,6 +28,6 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5.9.3"
   }
 }

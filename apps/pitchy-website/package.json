@@ -30,8 +30,8 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.510.0",
     "next": "16.2.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "recharts": "*",
     "tailwind-merge": "^3.5.0",
     "@ai-whisperers/i18n-paraguay": "workspace:*"
@@ -47,7 +47,7 @@
     "eslint-config-next": "16.2.4",
     "jsdom": "^29.1.1",
     "tailwindcss": "^4.0.0",
-    "typescript": "^5.8.0",
+    "typescript": "^5.9.3",
     "vitest": "^4.1.7"
   }
 }

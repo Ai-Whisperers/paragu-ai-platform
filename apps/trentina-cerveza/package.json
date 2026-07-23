@@ -11,8 +11,8 @@
     "lucide-react": "^0.510.0",
     "next": "16.2.4",
     "qrcode": "^1.5.4",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "@ai-whisperers/i18n-paraguay": "workspace:*"
   },
   "devDependencies": {
@@ -25,6 +25,6 @@
     "eslint-config-next": "16.2.4",
     "postcss": "^8.5.15",
     "tailwindcss": "^4.3.0",
-    "typescript": "^6.0.3"
+    "typescript": "^5.9.3"
   }
 }
