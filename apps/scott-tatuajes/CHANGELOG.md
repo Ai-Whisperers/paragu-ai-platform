@@ -13,6 +13,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-07-22: feat(deploy): add Dockerfile.standalone for fun4me-store, meal-prep, portas-barber (by Erebus)
+
 - 2026-07-22: chore(standardize): lock next@16.2.4 react@19.2.4 ts@^5.9.3 across 47 apps (by Erebus)
 
 - 2026-06-13: perf: image sweep - convert 274 oversized PNG/JPG to WebP across 10 apps (by erebus)
