@@ -2,44 +2,27 @@ name: central
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      # WHY: workflow must fire on any app change. Previously narrowed to
-      # arnos-barber-shop only in 1efc7773 (accidental during reformat) —
-      # that gated the entire central pipeline on a single client. Restore
-      # apps/** so every app in dorny/paths-filter can be detected.
-      - 'apps/**'
-      - 'packages/**'
-      - 'pnpm-lock.yaml'
-      - 'Dockerfile.*'
+    branches: [main]
   pull_request:
-    branches:
-      - main
-    paths:
-      - 'apps/**'
-      - 'packages/**'
-      - 'pnpm-lock.yaml'
-      - 'Dockerfile.*'
-  workflow_dispatch:
+    branches: [main]
+
+concurrency:
+  group: central-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_BASE: ghcr.io/ai-whisperers/paragu-ai-platform
 
 permissions:
   contents: read
   packages: write
-  # packages: read cannot be added here — duplicate top-level keys are
-  # rejected by GitHub Actions. Instead, see deploy.permissions below.
-
-concurrency:
-  # Group per PR. Push to main uses no concurrency control so deploys always
-  # run to completion — never cancel an in-flight deploy.
-  group: central-pr-${{ github.head_ref || format('main-{0}', github.run_id) }}
-  cancel-in-progress: false
 
 jobs:
   detect-apps:
     runs-on: ubuntu-latest
     outputs:
-      apps: ${{ steps.emit.outputs.apps }}
+      apps: ${{ steps.diff.outputs.apps }}
     steps:
       - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v3
@@ -48,30 +31,16 @@ jobs:
           filters: |
             apps/3md-website:
               - 'apps/3md-website/**'
-            apps/ai-whisperers-site:
-              - 'apps/ai-whisperers-site/**'
-            apps/arnos-barber-shop:
-              - 'apps/arnos-barber-shop/**'
             apps/bichos-gym:
               - 'apps/bichos-gym/**'
             apps/bufete-mendez:
               - 'apps/bufete-mendez/**'
+            apps/builder:
+              - 'apps/builder/**'
             apps/camilo-acosta:
               - 'apps/camilo-acosta/**'
-            apps/cocodrilo-fitness:
-              - 'apps/cocodrilo-fitness/**'
-            apps/cronos-academy:
-              - 'apps/cronos-academy/**'
-            apps/cuidadoamiga:
-              - 'apps/cuidadoamiga/**'
-            apps/dayah-litworks:
-              - 'apps/dayah-litworks/**'
             apps/de-abasto-a-casa:
               - 'apps/de-abasto-a-casa/**'
-            apps/depiflash:
-              - 'apps/depiflash/**'
-            apps/dra-gabriela:
-              - 'apps/dra-gabriela/**'
             apps/escribania-paraguay:
               - 'apps/escribania-paraguay/**'
             apps/estudio-medieval:
@@ -84,50 +53,30 @@ jobs:
               - 'apps/golden-visa-advisory/**'
             apps/granja-cabral:
               - 'apps/granja-cabral/**'
-            apps/hidrobaby-spa:
-              - 'apps/hidrobaby-spa/**'
             apps/jota-ink-tattoo:
               - 'apps/jota-ink-tattoo/**'
-            apps/la-serafina-site:
-              - 'apps/la-serafina-site/**'
             apps/luis-de-leon-concept:
               - 'apps/luis-de-leon-concept/**'
             apps/magnolia-peluqueria:
               - 'apps/magnolia-peluqueria/**'
-            apps/mantra-spa:
-              - 'apps/mantra-spa/**'
-            apps/maskarada:
-              - 'apps/maskarada/**'
+            apps/mantraspa:
+              - 'apps/mantraspa/**'
             apps/meal-prep:
               - 'apps/meal-prep/**'
-            apps/nexa-paraguay:
-              - 'apps/nexa-paraguay/**'
             apps/nde-barba:
               - 'apps/nde-barba/**'
-            apps/nudo:
-              - 'apps/nudo/**'
+            apps/nexa-paraguay:
+              - 'apps/nexa-paraguay/**'
             apps/ozmontania-website:
               - 'apps/ozmontania-website/**'
-            apps/pierce-charm:
-              - 'apps/pierce-charm/**'
             apps/pitchy-website:
               - 'apps/pitchy-website/**'
             apps/portas-barber:
               - 'apps/portas-barber/**'
             apps/reina-de-copas:
               - 'apps/reina-de-copas/**'
-            apps/rockabar:
-              - 'apps/rockabar/**'
-            apps/scott-tatuajes:
-              - 'apps/scott-tatuajes/**'
             apps/shine-nails:
               - 'apps/shine-nails/**'
-            apps/somosgay-site:
-              - 'apps/somosgay-site/**'
-            apps/stroopwafel-huis:
-              - 'apps/stroopwafel-huis/**'
-            apps/superspuma:
-              - 'apps/superspuma/**'
             apps/trentina-cerveza:
               - 'apps/trentina-cerveza/**'
             apps/trentina-site:
@@ -139,288 +88,162 @@ jobs:
             apps/xxgym:
               - 'apps/xxgym/**'
       - name: Emit changed apps
-        id: emit
         run: |
-          # We hardcode the list of apps and read each output with bracket notation.
-          CHANGED=""
-          # apps/<name>=true if changed
-          [ "${{ steps.diff.outputs['apps/3md-website'] }}"             = "true" ] && CHANGED="$CHANGED,3md-website"
-          [ "${{ steps.diff.outputs['apps/ai-whisperers-site'] }}"       = "true" ] && CHANGED="$CHANGED,ai-whisperers-site"
-          [ "${{ steps.diff.outputs['apps/arnos-barber-shop'] }}"       = "true" ] && CHANGED="$CHANGED,arnos-barber-shop"
-          [ "${{ steps.diff.outputs['apps/bichos-gym'] }}"               = "true" ] && CHANGED="$CHANGED,bichos-gym"
-          [ "${{ steps.diff.outputs['apps/bufete-mendez'] }}"            = "true" ] && CHANGED="$CHANGED,bufete-mendez"
-          [ "${{ steps.diff.outputs['apps/camilo-acosta'] }}"            = "true" ] && CHANGED="$CHANGED,camilo-acosta"
-          [ "${{ steps.diff.outputs['apps/cocodrilo-fitness'] }}"        = "true" ] && CHANGED="$CHANGED,cocodrilo-fitness"
-          [ "${{ steps.diff.outputs['apps/cronos-academy'] }}"           = "true" ] && CHANGED="$CHANGED,cronos-academy"
-          [ "${{ steps.diff.outputs['apps/cuidadoamiga'] }}"             = "true" ] && CHANGED="$CHANGED,cuidadoamiga"
-          [ "${{ steps.diff.outputs['apps/dayah-litworks'] }}"           = "true" ] && CHANGED="$CHANGED,dayah-litworks"
-          [ "${{ steps.diff.outputs['apps/de-abasto-a-casa'] }}"         = "true" ] && CHANGED="$CHANGED,de-abasto-a-casa"
-          [ "${{ steps.diff.outputs['apps/depiflash'] }}"                = "true" ] && CHANGED="$CHANGED,depiflash"
-          [ "${{ steps.diff.outputs['apps/dra-gabriela'] }}"             = "true" ] && CHANGED="$CHANGED,dra-gabriela"
-          [ "${{ steps.diff.outputs['apps/escribania-paraguay'] }}"      = "true" ] && CHANGED="$CHANGED,escribania-paraguay"
-          [ "${{ steps.diff.outputs['apps/estudio-medieval'] }}"        = "true" ] && CHANGED="$CHANGED,estudio-medieval"
-          [ "${{ steps.diff.outputs['apps/fun4me'] }}"                  = "true" ] && CHANGED="$CHANGED,fun4me"
-          [ "${{ steps.diff.outputs['apps/fun4me-store'] }}"            = "true" ] && CHANGED="$CHANGED,fun4me-store"
-          [ "${{ steps.diff.outputs['apps/golden-visa-advisory'] }}"     = "true" ] && CHANGED="$CHANGED,golden-visa-advisory"
-          [ "${{ steps.diff.outputs['apps/granja-cabral'] }}"            = "true" ] && CHANGED="$CHANGED,granja-cabral"
-          [ "${{ steps.diff.outputs['apps/hidrobaby-spa'] }}"            = "true" ] && CHANGED="$CHANGED,hidrobaby-spa"
-          [ "${{ steps.diff.outputs['apps/jota-ink-tattoo'] }}"          = "true" ] && CHANGED="$CHANGED,jota-ink-tattoo"
-          [ "${{ steps.diff.outputs['apps/luis-de-leon-concept'] }}"     = "true" ] && CHANGED="$CHANGED,luis-de-leon-concept"
-          [ "${{ steps.diff.outputs['apps/magnolia-peluqueria'] }}"      = "true" ] && CHANGED="$CHANGED,magnolia-peluqueria"
-          [ "${{ steps.diff.outputs['apps/mantra-spa'] }}"               = "true" ] && CHANGED="$CHANGED,mantra-spa"
-          [ "${{ steps.diff.outputs['apps/maskarada'] }}"                = "true" ] && CHANGED="$CHANGED,maskarada"
-          [ "${{ steps.diff.outputs['apps/meal-prep'] }}"                = "true" ] && CHANGED="$CHANGED,meal-prep"
-          [ "${{ steps.diff.outputs['apps/nexa-paraguay'] }}"            = "true" ] && CHANGED="$CHANGED,nexa-paraguay"
-          [ "${{ steps.diff.outputs['apps/nde-barba'] }}"                = "true" ] && CHANGED="$CHANGED,nde-barba"
-          [ "${{ steps.diff.outputs['apps/nudo'] }}"                     = "true" ] && CHANGED="$CHANGED,nudo"
-          [ "${{ steps.diff.outputs['apps/ozmontania-website'] }}"       = "true" ] && CHANGED="$CHANGED,ozmontania-website"
-          [ "${{ steps.diff.outputs['apps/pierce-charm'] }}"             = "true" ] && CHANGED="$CHANGED,pierce-charm"
-          [ "${{ steps.diff.outputs['apps/pitchy-website'] }}"           = "true" ] && CHANGED="$CHANGED,pitchy-website"
-          [ "${{ steps.diff.outputs['apps/portas-barber'] }}"            = "true" ] && CHANGED="$CHANGED,portas-barber"
-          [ "${{ steps.diff.outputs['apps/reina-de-copas'] }}"           = "true" ] && CHANGED="$CHANGED,reina-de-copas"
-          [ "${{ steps.diff.outputs['apps/rockabar'] }}"                 = "true" ] && CHANGED="$CHANGED,rockabar"
-          [ "${{ steps.diff.outputs['apps/scott-tatuajes'] }}"           = "true" ] && CHANGED="$CHANGED,scott-tatuajes"
-          [ "${{ steps.diff.outputs['apps/tsuki-restaurante'] }}"        = "true" ] && CHANGED="$CHANGED,tsuki-restaurante"
-          [ "${{ steps.diff.outputs['apps/villamayor-asociados'] }}"     = "true" ] && CHANGED="$CHANGED,villamayor-asociados"
-          [ "${{ steps.diff.outputs['apps/xxgym'] }}"                    = "true" ] && CHANGED="$CHANGED,xxgym"
-          [ "${{ steps.diff.outputs['apps/shine-nails'] }}"               = "true" ] && CHANGED="$CHANGED,shine-nails"
-          [ "${{ steps.diff.outputs['apps/stroopwafel-huis'] }}"          = "true" ] && CHANGED="$CHANGED,stroopwafel-huis"
-          [ "${{ steps.diff.outputs['apps/superspuma'] }}"                = "true" ] && CHANGED="$CHANGED,superspuma"
-          [ "${{ steps.diff.outputs['apps/trentina-cerveza'] }}"            = "true" ] && CHANGED="$CHANGED,trentina-cerveza"
-          [ "${{ steps.diff.outputs['apps/trentina-site'] }}"              = "true" ] && CHANGED="$CHANGED,trentina-site"
-          [ "${{ steps.diff.outputs['apps/la-serafina-site'] }}"           = "true" ] && CHANGED="$CHANGED,la-serafina-site"
-          [ "${{ steps.diff.outputs['apps/somosgay-site'] }}"              = "true" ] && CHANGED="$CHANGED,somosgay-site"
-          # Strip leading comma and convert to a JSON array
-          CHANGED="${CHANGED#,}"
-          if [ -z "$CHANGED" ]; then
-            APPS_JSON="[]"
-          else
-            APPS_JSON="["
-            IFS=','
-            for a in $CHANGED; do
-              if [ -n "$a" ]; then
-                if [ "$APPS_JSON" != "[" ]; then APPS_JSON="$APPS_JSON,"; fi
-                APPS_JSON="$APPS_JSON\"$a\""
-              fi
-            done
-            unset IFS
-            APPS_JSON="$APPS_JSON]"
-          fi
-          echo "apps=$APPS_JSON" >> "$GITHUB_OUTPUT"
+          APPS=""
+          for app in 3md-website bichos-gym bufete-mendez builder camilo-acosta de-abasto-a-casa escribania-paraguay estudio-medieval fun4me fun4me-store golden-visa-advisory granja-cabral jota-ink-tattoo luis-de-leon-concept magnolia-peluqueria mantraspa meal-prep nde-barba nexa-paraguay ozmontania-website pitchy-website portas-barber reina-de-copas shine-nails trentina-cerveza trentina-site tsuki-restaurante villamayor-asociados xxgym; do
+            VAL="${{ steps.diff.outputs[app] }}"
+            if [ "$VAL" = "true" ]; then
+              if [ -z "$APPS" ]; then APPS="$app"; else APPS="$APPS,$app"; fi
+            fi
+          done
+          echo "apps=$APPS" >> "$GITHUB_OUTPUT"
 
   lint:
     runs-on: ubuntu-latest
     needs: detect-apps
-    continue-on-error: true
+    if: needs.detect-apps.outputs.apps != ''
     strategy:
       fail-fast: false
       matrix:
-        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+        app: ${{ fromJson(needs.detect-apps.outputs.apps) }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
-      - name: pnpm install
-        # All @ai-whisperers/* deps are now workspace:* refs resolved through
-        # packages/@ai-whisperers/*. No GitHub Packages auth needed.
-        # --ignore-scripts skips native build steps (inotify etc.) that
-        # fail on Node 20's gyp and aren't needed for our use case.
-        run: pnpm install --no-frozen-lockfile
-      - run: pnpm -r --filter "./apps/${{ matrix.app }}" run lint || echo "lint warnings - non-blocking"
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm -r --filter "./apps/${{ matrix.app }}" run lint || true
 
   typecheck:
     runs-on: ubuntu-latest
     needs: detect-apps
-    continue-on-error: true
+    if: needs.detect-apps.outputs.apps != ''
     strategy:
       fail-fast: false
       matrix:
-        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+        app: ${{ fromJson(needs.detect-apps.outputs.apps) }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
-      - name: pnpm install
-        # All @ai-whisperers/* deps are now workspace:* refs resolved through
-        # packages/@ai-whisperers/*. No GitHub Packages auth needed.
-        # --ignore-scripts skips native build steps (inotify etc.) that
-        # fail on Node 20's gyp and aren't needed for our use case.
-        run: pnpm install --no-frozen-lockfile
-      - run: pnpm -r --filter "./apps/${{ matrix.app }}" run typecheck || echo "typecheck warnings - non-blocking"
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm -r --filter "./apps/${{ matrix.app }}" run typecheck || true
 
   build:
     runs-on: ubuntu-latest
     needs: detect-apps
-    continue-on-error: true
+    if: needs.detect-apps.outputs.apps != ''
     strategy:
       fail-fast: false
       matrix:
-        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+        app: ${{ fromJson(needs.detect-apps.outputs.apps) }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
-      - name: pnpm install
-        # All @ai-whisperers/* deps are now workspace:* refs resolved through
-        # packages/@ai-whisperers/*. No GitHub Packages auth needed.
-        # --ignore-scripts skips native build steps (inotify etc.) that
-        # fail on Node 20's gyp and aren't needed for our use case.
-        run: pnpm install --no-frozen-lockfile
-      - name: Build workspace packages
-        # @ai-whisperers/* workspace packages need to be compiled before
-        # any app can import them. The sections package's dist/ is required
-        # for the @ai-whisperers/sections import in SectionsRenderer.
-        run: pnpm --filter "@ai-whisperers/sections" run build
-      - name: Build app
+      - run: pnpm install --frozen-lockfile
+      - name: Build ${{ matrix.app }}
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
         run: pnpm --filter "./apps/${{ matrix.app }}" build
-      - name: Verify build output exists
-        run: |
-          test -d apps/${{ matrix.app }}/.next && echo "✓ .next/ exists" || (echo "✗ .next/ MISSING" && exit 1)
-      - name: Tar .next (bypass gitignore filter)
-        # actions/upload-artifact@v4 respects .gitignore and silently skips
-        # gitignored files. Since apps/<app>/.next is gitignored, we tar
-        # it first (tar doesn't care about gitignore), then upload the tarball.
-        run: |
-          mkdir -p /tmp/build-artifacts/${{ matrix.app }}
-          tar -czf /tmp/build-artifacts/${{ matrix.app }}.tar.gz -C apps/${{ matrix.app }} .next
-          echo "Tarball: $(du -sh /tmp/build-artifacts/${{ matrix.app }}.tar.gz | cut -f1)"
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-${{ matrix.app }}
-          path: /tmp/build-artifacts/${{ matrix.app }}.tar.gz
-          if-no-files-found: error
 
-  docker:
-    if: github.ref == 'refs/heads/main'
-    # continue-on-error so a single app's docker build failure doesn't block
-    # the entire deploy matrix. Apps with broken Dockerfiles still get logged +
-    # alertable, but healthy apps ship normally.
-    continue-on-error: true
+  docker-build:
     runs-on: ubuntu-latest
-    needs: [detect-apps, build]
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     strategy:
       fail-fast: false
       matrix:
-        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+        app: ${{ fromJson(needs.build.outputs.apps || '[]') }}
     steps:
       - uses: actions/checkout@v4
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4
         with:
-          name: build-${{ matrix.app }}
-          path: /tmp/build-artifacts/
-          if-no-files-found: error
-      - name: Extract .next from tarball
-        run: |
-          mkdir -p apps/${{ matrix.app }}
-          tar -xzf /tmp/build-artifacts/${{ matrix.app }}.tar.gz -C apps/${{ matrix.app }}/
-          echo "Restored .next/ to apps/${{ matrix.app }}/.next"
-          ls apps/${{ matrix.app }}/.next | head -5
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-      - name: Log in to GHCR
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Build app
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+        run: pnpm --filter "./apps/${{ matrix.app }}" build
+      - name: Login to GHCR
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
+          registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Resolve Dockerfile
-        id: dockerfile
-        run: |
-          for candidate in Dockerfile.standalone Dockerfile.nginx-static Dockerfile.prod Dockerfile; do
-            if [ -f "apps/${{ matrix.app }}/${candidate}" ]; then
-              echo "path=apps/${{ matrix.app }}/${candidate}" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-          done
-          echo "::error::No Dockerfile found for ${{ matrix.app }}"
-          exit 1
       - name: Build and push Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          file: ${{ steps.dockerfile.outputs.path }}
-          push: true
-          tags: |
-            ghcr.io/ai-whisperers/paragu-ai-platform/${{ matrix.app }}:${{ github.sha }}
-            ghcr.io/ai-whisperers/paragu-ai-platform/${{ matrix.app }}:latest
+        run: |
+          APP="${{ matrix.app }}"
+          SHA="${{ github.sha }}"
+          IMAGE="${{ env.IMAGE_BASE }}/${APP}"
+          DF="apps/${APP}/Dockerfile.standalone"
+          [ -f "$DF" ] || DF="apps/${APP}/Dockerfile"
+          docker build -t "${IMAGE}:${SHA}" -t "${IMAGE}:latest" -f "$DF" .
+          docker push "${IMAGE}:${SHA}"
+          docker push "${IMAGE}:latest"
 
   deploy:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    needs: [detect-apps, docker]
-    permissions:
-      contents: read
-      packages: read   # need packages:read to pull from GHCR (write alone doesn't grant read)
+    needs: docker-build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment: production
     strategy:
       fail-fast: false
       matrix:
-        app: ${{ fromJson(needs.detect-apps.outputs.apps || '[]') }}
+        app: ${{ fromJson(needs.docker-build.outputs.apps || '[]') }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Install SSH key
-        uses: webfactory/ssh-agent@v0.9.0
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1
         with:
-          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
-      - name: Log in to GHCR
-        # Each runner is fresh; docker/login-action from the docker job
-        # doesn't carry over. Login here so we can pull the just-pushed image.
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Map app to Swarm service
-        id: svc
-        run: |
-          APP="${{ matrix.app }}"
-          case "$APP" in
-            golden-visa-advisory)  SVC="golden-visa-advisory_web" ;;
-            pitchy-website)        SVC="pitchy-website_web" ;;
-            trentina-cerveza)      SVC="trentina-cerveza_web" ;;
-            ozmontania-website)    SVC="ozmontania-website_web" ;;
-            nde-barba)             SVC="nde-barba_web" ;;
-            nexa-paraguay)         SVC="nexa-paraguay_web" ;;
-            nudo)                  SVC="nudo_web" ;;
-            hidrobaby-spa)         SVC="hidrobaby-spa_web" ;;
-            arnos-barber-shop)    SVC="arnos-barber-shop_web" ;;
-            cronos-academy)        SVC="cronos-academy_web" ;;
-            scott-tatuajes)         SVC="scott-tatuajes_web" ;;
-            jota-ink-tattoo)        SVC="jota-ink_web" ;;
-            magnolia-peluqueria)     SVC="magnolia_web" ;;
-            meal-prep)             SVC="meal-prep_web" ;;
-            *)                     SVC="${APP}_web" ;;
-          esac
-          echo "svc=$SVC" >> "$GITHUB_OUTPUT"
-      - name: Pull image on runner, transfer to VPS, update service
-        # The runner is already authed to GHCR (docker/login-action ran in the
-        # docker job). Pulling on the runner avoids needing GHCR auth on the VPS.
-        # docker save -> ssh pipe -> docker load on VPS, then service update.
-        run: |
-          APP="${{ matrix.app }}"
-          IMAGE="ghcr.io/ai-whisperers/paragu-ai-platform/${APP}:${{ github.sha }}"
-          SVC="${{ steps.svc.outputs.svc }}"
-          echo "Pulling ${IMAGE} on runner..."
-          docker pull "${IMAGE}"
-          echo "Saving and streaming to VPS..."
-          docker save "${IMAGE}" | \
-            ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-              root@72.61.44.159 "docker load && docker service update --image ${IMAGE} ${SVC} --with-registry-auth 2>&1"
-
-# noop
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            APP="${{ matrix.app }}"
+            IMAGE="${{ env.IMAGE_BASE }}/${APP}"
+            SHA="${{ github.sha }}"
+            SVC="${APP}_web"
+            
+            echo "Deploying ${APP}@${SHA}..."
+            
+            # Pull the new image
+            docker pull "${IMAGE}:${SHA}"
+            docker tag "${IMAGE}:${SHA}" "${APP}:prod"
+            
+            # Update service (with agent-net network fix)
+            docker service update --image "${APP}:prod" \
+              --network-add agent-net \
+              "${SVC}" || {
+              echo "Service ${SVC} not found, creating..."
+              docker service create --name "${SVC}" --replicas 2 \
+                --network agent-net \
+                --label "traefik.enable=true" \
+                --label "traefik.http.routers.${APP}.entrypoints=websecure" \
+                --label "traefik.http.routers.${APP}.rule=Host(\`${APP}.paragu-ai.com\`)" \
+                --label "traefik.http.routers.${APP}.tls=true" \
+                --label "traefik.http.routers.${APP}.tls.certresolver=letsencryptresolver" \
+                --label "traefik.http.services.${APP}.loadbalancer.server.port=3000" \
+                --constraint "node.role==manager" \
+                "${APP}:prod"
+            }
+            
+            # Wait for convergence
+            sleep 10
+            
+            # Smoke test
+            STATUS=$(curl -sI -o /dev/null -w "%{http_code}" --max-time 8 "http://127.0.0.1:$(docker service ps ${SVC} --format '{{.Ports}}' | head -1 | grep -oP '0\.0\.0\.0:\K[0-9]+' | head -1)/" 2>/dev/null)
+            if [ "$STATUS" = "200" ]; then
+              echo "✅ ${APP} deployed and responding (200)"
+            else
+              echo "⚠️ ${APP} returned ${STATUS} - manual check needed"
+            fi
