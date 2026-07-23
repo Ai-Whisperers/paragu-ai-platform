@@ -1,4 +1,4 @@
-import { Clock, Dumbbell } from "lucide-react"
+import { Clock } from "lucide-react"
 
 const cats = [
   {

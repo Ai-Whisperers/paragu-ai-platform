@@ -43,7 +43,7 @@ export default function TestimoniosPage() {
             Testimonios
           </h1>
           <p className="text-lg text-text-light max-w-3xl mb-4">
-            Cuatro voces de personas que pasaron por Clínica Kunu'u, los programas comunitarios
+            Cuatro voces de personas que pasaron por Clínica Kunu&apos;u, los programas comunitarios
             o el acto de Memoria 108. Identidades anonimizadas; los textos se publican con
             consentimiento.
           </p>
@@ -57,7 +57,7 @@ export default function TestimoniosPage() {
 
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          {TESTIMONIOS.map((t, i) => (
+          {TESTIMONIOS.map((t) => (
             <article
               key={t.id}
               className="bg-surface border border-[var(--color-warm-deep)] rounded-2xl p-6 lg:p-8"

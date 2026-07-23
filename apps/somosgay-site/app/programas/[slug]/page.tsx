@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Script from "next/script";
-import { content as c, SITE_URL } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 type Params = { slug: string };

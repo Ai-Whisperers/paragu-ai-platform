@@ -25,7 +25,7 @@ export function Header() {
       <div className="container-page flex h-16 items-center justify-between">
         <Link href={`/${locale}`} className="flex items-center gap-2" aria-label="Ir al inicio">
           <Dumbbell className="w-6 h-6 text-[#e94560]" />
-          <span className="font-heading text-lg font-bold text-[#1a1a2e]">Bicho's Gym</span>
+          <span className="font-heading text-lg font-bold text-[#1a1a2e]">Bicho&apos;s Gym</span>
         </Link>
         <nav className="hidden md:flex items-center gap-1" aria-label="Navegación principal">
           {navKeys.map((item) => (

@@ -1,7 +1,4 @@
-// @ts-nocheck - bypass strict types for new tables
 'use client';
-
-// @ts-nocheck - bypass strict types for new tables
 
 import { Suspense, useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
@@ -17,7 +14,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { createClient } from '@/lib/supabase/client';
-import { Mail, Lock, User, Phone, Calendar, AlertCircle } from 'lucide-react';
+import { Mail, Lock, User, Phone, AlertCircle } from 'lucide-react';
 
 function SignupForm() {
   const router = useRouter();
@@ -26,7 +23,6 @@ function SignupForm() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [phone, setPhone] = useState('');
-  const [dateOfBirth, setDateOfBirth] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);

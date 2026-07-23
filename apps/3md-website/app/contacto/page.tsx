@@ -1,6 +1,5 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { CtaBanner } from "@/components/cta-banner"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react"
 

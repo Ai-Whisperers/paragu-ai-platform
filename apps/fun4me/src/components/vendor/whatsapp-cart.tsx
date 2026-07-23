@@ -1,4 +1,9 @@
-export function WhatsAppCart({ products }: { products: any[] }) {
+interface CartProduct {
+  name: string
+  price: number
+}
+
+export function WhatsAppCart({ products }: { products: CartProduct[] }) {
   if (products.length === 0) return null
 
   const total = products.reduce((sum, p) => sum + p.price, 0)

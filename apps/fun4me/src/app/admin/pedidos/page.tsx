@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { Eye } from 'lucide-react';
 import { formatPrice } from '@/lib/utils/format';
 import { OrderStatusFilter } from '@/components/admin/order-status-filter';
+import type { Order } from '@/types/database';
 
 interface Props {
   searchParams: Promise<{ status?: string }>;
@@ -31,7 +32,7 @@ export default async function PedidosPage({ searchParams }: Props) {
   }
 
   const { data: ordersData } = await query;
-  const orders = (ordersData as any[]) || [];
+  const orders = (ordersData as Order[] | null) || [];
 
   const statusLabels: Record<string, string> = {
     pending: 'Pendiente',

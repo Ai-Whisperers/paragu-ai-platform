@@ -1,43 +1,67 @@
-// @ts-nocheck - bypass strict types for new tables
 'use client';
-
-// @ts-nocheck - bypass strict types for new tables
 
 import { useEffect, useState } from 'react';
 import { Search, CheckCircle2, XCircle, Loader2, ScanLine } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { createClient } from '@/lib/supabase/client';
 
+interface EventLite {
+  id: string;
+  title: string;
+  date: string;
+}
+
+interface TicketLite {
+  id: string;
+  status: string;
+  holder_name: string;
+  holder_ci: string;
+  checked_in_at?: string | null;
+  qr_code?: string;
+  event_id?: string;
+  events?: { title: string; date: string; venue: string } | null;
+  ticket_types?: { name: string } | null;
+}
+
+interface CheckResult {
+  valid: boolean;
+  error?: string | null;
+  ticket?: TicketLite;
+}
+
 export default function IngresoPage() {
-  const [events, setEvents] = useState<any[]>([]);
+  const [events, setEvents] = useState<EventLite[]>([]);
   const [selectedEventId, setSelectedEventId] = useState('');
   const [query, setQuery] = useState('');
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<CheckResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [confirming, setConfirming] = useState('');
-  const [recent, setRecent] = useState<any[]>([]);
+  const [recent, setRecent] = useState<TicketLite[]>([]);
   const [message, setMessage] = useState('');
-
-  useEffect(() => { loadEvents(); }, []);
 
   async function loadEvents() {
     const supabase = createClient();
     const { data } = await supabase.from('events').select('id, title, date').eq('status', 'published').order('date');
-    if (data?.length) {
-      setEvents(data);
-      setSelectedEventId(data[0].id);
+    const list = (data as EventLite[] | null) || [];
+    if (list.length) {
+      setEvents(list);
+      setSelectedEventId(list[0].id);
     }
   }
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    loadEvents();
+  }, []);
 
   async function handleSearch() {
     if (!query.trim()) return;
     setLoading(true); setResult(null); setMessage('');
 
     const supabase = createClient();
-    let q = query.trim();
+    const q = query.trim();
 
     // Try as QR code first
     let ticket = await supabase.from('tickets').select('*, events(title, date, venue), ticket_types(name)').eq('qr_code', q).maybeSingle();
@@ -55,7 +79,7 @@ export default function IngresoPage() {
     if (ticket.error || !ticket.data) {
       setResult({ valid: false, error: 'Entrada no encontrada' });
     } else {
-      const t = ticket.data;
+      const t = ticket.data as TicketLite;
       setResult({
         valid: t.status === 'valid',
         error: t.status === 'used' ? 'Ya ingresó' : t.status === 'cancelled' ? 'Cancelada' : t.status === 'valid' ? null : 'Estado inválido',
@@ -67,18 +91,20 @@ export default function IngresoPage() {
 
   async function confirmEntry() {
     if (!result?.ticket?.id) return;
-    setConfirming(result.ticket.id);
+    const currentTicket = result.ticket;
+    setConfirming(currentTicket.id);
     const supabase = createClient();
     const { data: { user } } = await supabase.auth.getUser();
     const { error } = await supabase.from('tickets').update({
       status: 'used',
       checked_in_at: new Date().toISOString(),
       checked_in_by: user?.id,
-    }).eq('id', result.ticket.id);
+    } as never).eq('id', currentTicket.id);
 
     if (!error) {
-      setRecent(prev => [{ ...result.ticket, checked_in_at: new Date().toISOString() }, ...prev].slice(0, 10));
-      setResult({ ...result, valid: false, error: 'Ya ingresó ✓', ticket: { ...result.ticket, status: 'used' } });
+      const now = new Date().toISOString();
+      setRecent(prev => [{ ...currentTicket, checked_in_at: now }, ...prev].slice(0, 10));
+      setResult({ valid: false, error: 'Ya ingresó ✓', ticket: { ...currentTicket, status: 'used' } });
       setMessage('✓ Ingreso confirmado');
       setQuery('');
     }

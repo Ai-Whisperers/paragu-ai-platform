@@ -31,13 +31,13 @@ export function Footer() {
             </div>
           </div>
 
-          {c.footer.columns.map((col: any) => (
+          {c.footer.columns.map((col) => (
             <div key={col.title}>
               <h3 className="font-display text-sm font-bold uppercase tracking-wider mb-4 text-white/90">
                 {col.title}
               </h3>
               <ul className="space-y-2">
-                {col.links.map((link: any) => (
+                {col.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -55,7 +55,7 @@ export function Footer() {
         {/* Social */}
         <div className="border-t border-white/20 pt-8 flex flex-wrap gap-4 items-center justify-between">
           <div className="flex gap-3 flex-wrap">
-            {c.footer.social.map((s: any) => (
+            {c.footer.social.map((s) => (
               <a
                 key={s.href}
                 href={s.href}

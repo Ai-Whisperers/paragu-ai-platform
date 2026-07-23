@@ -1,4 +1,10 @@
-export function PaymentMethods({ methods }: { methods: any[] }) {
+interface PaymentMethod {
+  icon: string
+  name: string
+  details?: string
+}
+
+export function PaymentMethods({ methods }: { methods: PaymentMethod[] }) {
   if (!methods || methods.length === 0) return null
   return (
     <div className="space-y-2">

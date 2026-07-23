@@ -15,6 +15,7 @@ import { ArrowLeft, User, Phone, Mail, MapPin, FileText } from 'lucide-react';
 import Link from 'next/link';
 import { OrderStatusUpdate } from '@/components/admin/order-status-update';
 import { formatPrice } from '@/lib/utils/format';
+import type { Order, OrderItem } from '@/types/database';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -34,7 +35,7 @@ export default async function PedidoDetailPage({ params }: Props) {
     notFound();
   }
 
-  const order = orderData as any;
+  const order = orderData as Order;
 
   const statusLabels: Record<string, string> = {
     pending: 'Pendiente',
@@ -54,7 +55,7 @@ export default async function PedidoDetailPage({ params }: Props) {
     cancelled: 'bg-red-100 text-red-800',
   };
 
-  const items = (order.items as any[]) || [];
+  const items = ((order.items as unknown) as OrderItem[]) || [];
 
   return (
     <div className="space-y-6">

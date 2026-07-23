@@ -1,14 +1,15 @@
 "use client"
 import { useState } from "react"
 import content from "@/content/es.json"
+import type { ContentProduct } from "@/types/content"
 
-const allProducts = content.products || []
+const allProducts = (content.products || []) as unknown as ContentProduct[]
 
 export function ProductComparer() {
-  const [selected, setSelected] = useState<any[]>([])
+  const [selected, setSelected] = useState<ContentProduct[]>([])
   const [open, setOpen] = useState(false)
 
-  const toggleProduct = (p: any) => {
+  const toggleProduct = (p: ContentProduct) => {
     setSelected(prev => {
       if (prev.find(x => x.id === p.id)) return prev.filter(x => x.id !== p.id)
       if (prev.length >= 3) return prev
@@ -66,15 +67,15 @@ export function ProductComparer() {
                 </tr>
               </thead>
               <tbody>
-                {([["Precio", (p: any) => `Gs. ${p.price.toLocaleString("es-PY")}`],
-                  ["Nivel", (p: any) => ({ "beginner": "🌱 Principiante", "intermediate": "⭐ Intermedio", "advanced": "🔥 Avanzado" } as Record<string, string>)[p.level] || "—"],
-                  ["Ruido", (p: any) => `${"▮".repeat(p.sound || 0)}${"▯".repeat(5 - (p.sound || 0))}`],
-                  ["Material", (p: any) => p.material || "—"],
-                  ["Impermeable", (p: any) => p.waterproof ? "✅ Sí" : "❌ No"],
-                  ["Recargable", (p: any) => p.rechargeable ? "✅ Sí" : "❌ No"],
-                  ["Body Safe", (p: any) => p.body_safe ? "✅ Sí" : "❌ No"],
-                  ["Stock", (p: any) => ({ "in_stock": "✅ En stock", "low_stock": "⚠️ Últimas", "out_of_stock": "❌ Agotado" } as Record<string, string>)[p.stock] || "—"],
-                ] as [string, (p: any) => string][]).map(([label, fn]) => (
+                {([["Precio", (p: ContentProduct) => `Gs. ${p.price.toLocaleString("es-PY")}`],
+                  ["Nivel", (p: ContentProduct) => ({ "beginner": "🌱 Principiante", "intermediate": "⭐ Intermedio", "advanced": "🔥 Avanzado" } as Record<string, string>)[p.level] || "—"],
+                  ["Ruido", (p: ContentProduct) => `${"▮".repeat(p.sound || 0)}${"▯".repeat(5 - (p.sound || 0))}`],
+                  ["Material", (p: ContentProduct) => p.material || "—"],
+                  ["Impermeable", (p: ContentProduct) => p.waterproof ? "✅ Sí" : "❌ No"],
+                  ["Recargable", (p: ContentProduct) => p.rechargeable ? "✅ Sí" : "❌ No"],
+                  ["Body Safe", (p: ContentProduct) => p.body_safe ? "✅ Sí" : "❌ No"],
+                  ["Stock", (p: ContentProduct) => ({ "in_stock": "✅ En stock", "low_stock": "⚠️ Últimas", "out_of_stock": "❌ Agotado" } as Record<string, string>)[p.stock] || "—"],
+                ] as [string, (p: ContentProduct) => string][]).map(([label, fn]) => (
                   <tr key={label as string} className="border-b border-border/50">
                     <td className="py-2 pr-4 text-muted-foreground font-medium">{label as string}</td>
                     {selected.map(p => (

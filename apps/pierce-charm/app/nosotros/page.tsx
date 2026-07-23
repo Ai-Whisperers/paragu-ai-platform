@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import content from "@/content/es.json";
+import type { SiteContent, ContentItem } from "@/lib/content-types";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, Bat, DividerOrnament } from "@/components/ornaments";
 import { whatsappUrl } from "@/lib/site-config";
 
-const c = content as any;
+const c = content as SiteContent;
 const n = c.nosotros || {};
 const v = n.values || [];
 const manifesto = n.manifesto || {};
@@ -36,7 +37,7 @@ export default function NosotrosPage() {
       {Array.isArray(n.intro_paragraphs) && n.intro_paragraphs.length > 0 && (
         <section className="py-12 md:py-16 px-4 md:px-6 relative">
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5 md:gap-7">
-            {n.intro_paragraphs.map((p: any, i: number) => (
+            {n.intro_paragraphs.map((p: ContentItem, i: number) => (
               <article key={i} className="rock-card p-5 md:p-6 text-left">
                 <p className="eyebrow mb-2">{p.eyebrow}</p>
                 <p className="text-[var(--color-foreground)]/85 text-[0.95rem] leading-relaxed">
@@ -54,7 +55,7 @@ export default function NosotrosPage() {
           <h2 className="text-[1.7rem] md:text-[2.4rem] mb-4">{manifesto.title || 'Más que un estudio'}</h2>
           <p className="text-[var(--color-foreground)]/85 max-w-2xl mx-auto leading-relaxed">{manifesto.intro}</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-8">
-            {(manifesto.valores || []).map((val: any, idx: number) => (
+            {(manifesto.valores || []).map((val: ContentItem, idx: number) => (
               <div key={idx} className="rock-card p-4 md:p-5 text-left">
                 <span className="block w-8 h-8 mb-2 text-[var(--color-primary-light)] text-[1.5rem]">✦</span>
                 <p className="font-[var(--font-display)] text-[0.7rem] uppercase tracking-[0.18em] text-[var(--color-gold)] mb-1">{val.label}</p>
@@ -82,7 +83,7 @@ export default function NosotrosPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-          {v.map((val: any, i: number) => (
+          {v.map((val: ContentItem, i: number) => (
             <div key={i} className="rock-card p-6 md:p-7 text-left relative overflow-hidden">
               <div className="absolute -top-3 -right-3 text-[var(--color-primary-light)]/15">
                 <span className="font-[var(--font-display)] text-[5rem] leading-none font-bold">0{i + 1}</span>
@@ -142,7 +143,7 @@ export default function NosotrosPage() {
             <p className="text-[var(--color-muted-foreground)] max-w-xl mx-auto">{principles.subtitle}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {(principles.items || []).map((val: any, idx: number) => (
+            {(principles.items || []).map((val: ContentItem, idx: number) => (
               <div key={idx} className="rock-card p-5 md:p-6 group">
                 <div className="flex items-start gap-3 mb-3">
                   <span className="block w-10 h-10 shrink-0 border border-[var(--color-primary-light)]/60 rounded-sm flex items-center justify-center text-[var(--color-primary-light)] text-[1.2rem]">

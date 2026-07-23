@@ -1,12 +1,26 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-import { Ticket, Calendar, MapPin, User, Loader2, CheckCircle2, XCircle, QrCode } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useCallback, useEffect, useState } from 'react';
+import { Ticket, Calendar, MapPin, User, Loader2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { createClient } from '@/lib/supabase/client';
+
+interface TicketEvent {
+  title: string;
+  slug: string;
+  date: string;
+  venue?: string | null;
+}
+
+interface UserTicket {
+  id: string;
+  qr_code?: string | null;
+  holder_name?: string | null;
+  holder_ci?: string | null;
+  status: 'valid' | 'used' | 'cancelled' | string;
+  events?: TicketEvent | null;
+}
 
 // Simple QR generation using a canvas-based approach
 function generateQR(text: string, size = 200): string {
@@ -61,24 +75,28 @@ function generateQRPattern(text: string): boolean[] {
 }
 
 export default function MisEntradasPage() {
-  const [tickets, setTickets] = useState<Record<string, any>[]>([]);
+  const [tickets, setTickets] = useState<UserTicket[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => { loadTickets(); }, []);
-
-  async function loadTickets() {
+  const loadTickets = useCallback(async () => {
     const supabase = createClient();
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) { setLoading(false); return; }
 
+    // @ts-expect-error tickets.customer_id / events join not fully typed in generated Database types yet
     const { data } = await supabase
       .from('tickets')
       .select('*, events!inner(title, slug, date, venue)')
       .eq('customer_id', user.id)
       .order('created_at', { ascending: false });
-    setTickets(data || []);
+    setTickets((data as UserTicket[] | null) || []);
     setLoading(false);
-  }
+  }, []);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial fetch on mount; memoized via useCallback
+    loadTickets();
+  }, [loadTickets]);
 
   if (loading) return <div className="flex justify-center py-20"><Loader2 className="h-8 w-8 animate-spin text-rose-500" /></div>;
 

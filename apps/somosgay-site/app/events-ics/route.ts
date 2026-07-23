@@ -1,4 +1,4 @@
-import { content as c, SITE_URL } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 
 /**
  * iCal feed for SOMOSGAY events.

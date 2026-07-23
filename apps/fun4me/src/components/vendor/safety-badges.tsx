@@ -1,5 +1,12 @@
-export function SafetyBadges({ product }: { product: any }) {
-  const badges = []
+interface SafetyProduct {
+  body_safe?: boolean
+  waterproof?: boolean
+  rechargeable?: boolean
+  stock?: string
+}
+
+export function SafetyBadges({ product }: { product: SafetyProduct }) {
+  const badges: { text: string; color: string; title: string }[] = []
   if (product.body_safe) badges.push({ text: "Body Safe", color: "bg-success", title: "Material seguro para el cuerpo" })
   if (product.waterproof) badges.push({ text: "Impermeable", color: "bg-blue-500", title: "Resistente al agua" })
   if (product.rechargeable) badges.push({ text: "Recargable", color: "bg-accent", title: "Batería recargable USB" })

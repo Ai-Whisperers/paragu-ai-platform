@@ -15,7 +15,7 @@ export function BottomNav() {
       aria-label="Navegación inferior"
     >
       <div className="flex justify-around items-center h-16">
-        {items.map((item: any) => {
+        {items.map((item) => {
           const active = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
           return (
             <Link

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { TrustBadges } from '@/components/store/trust-badges';
 import { Newsletter } from '@/components/store/newsletter';
 import { ProductCard } from '@/components/store/product-card';
@@ -11,7 +11,6 @@ import {
   getKinks,
   getFeaturedProducts,
   getWhatsAppLink,
-  CATEGORY_IMAGES_MAP,
   PRODUCT_IMAGES_MAP,
 } from '@/lib/content';
 import type { Metadata } from 'next';

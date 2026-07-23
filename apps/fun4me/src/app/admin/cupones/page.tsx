@@ -12,6 +12,19 @@ import Link from 'next/link';
 import { Plus, Pencil } from 'lucide-react';
 import { formatPrice } from '@/lib/utils/format';
 
+interface Coupon {
+  id: string;
+  code: string;
+  type: string;
+  value: number;
+  min_order?: number | null;
+  max_uses?: number | null;
+  uses_count?: number | null;
+  expires_at?: string | null;
+  is_active: boolean;
+  created_at?: string;
+}
+
 function formatCouponValue(type: string, value: number): string {
   if (type === 'percentage') return `${value}%`;
   if (type === 'fixed') return formatPrice(value);
@@ -29,12 +42,12 @@ function formatCouponType(type: string): string {
 export default async function CuponesPage() {
   const supabase = await createClient();
 
-  const { data: couponsData } = await (supabase as any)
+  const { data: couponsData } = await supabase
     .from('coupons')
     .select('*')
     .order('created_at', { ascending: false });
 
-  const coupons = (couponsData as any[]) || [];
+  const coupons = (couponsData as Coupon[] | null) || [];
 
   return (
     <div className="space-y-6">
@@ -68,7 +81,7 @@ export default async function CuponesPage() {
           </TableHeader>
           <TableBody>
             {coupons.length > 0 ? (
-              coupons.map((coupon: any) => {
+              coupons.map((coupon) => {
                 const isExpired = coupon.expires_at && new Date(coupon.expires_at) < new Date();
                 const isMaxedOut = coupon.max_uses && coupon.uses_count >= coupon.max_uses;
                 return (

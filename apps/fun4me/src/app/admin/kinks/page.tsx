@@ -10,16 +10,21 @@ import {
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Plus, Pencil } from 'lucide-react';
+import type { KinkCategory } from '@/types/database';
+
+interface KinkWithImage extends KinkCategory {
+  image_url?: string | null;
+}
 
 export default async function KinksPage() {
   const supabase = await createClient();
 
-  const { data: kinksData } = await (supabase as any)
+  const { data: kinksData } = await supabase
     .from('kink_categories')
     .select('*')
     .order('sort_order', { ascending: true });
 
-  const kinks = (kinksData as any[]) || [];
+  const kinks = (kinksData as KinkWithImage[] | null) || [];
 
   return (
     <div className="space-y-6">
@@ -52,7 +57,7 @@ export default async function KinksPage() {
           </TableHeader>
           <TableBody>
             {kinks.length > 0 ? (
-              kinks.map((kink: any) => (
+              kinks.map((kink) => (
                 <TableRow key={kink.id}>
                   <TableCell>
                     {kink.image_url ? (

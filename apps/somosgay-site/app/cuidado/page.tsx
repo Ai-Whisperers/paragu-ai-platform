@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { content as c, SITE_URL } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export default function CuidadoPage() {
             <h2 className="font-display text-2xl font-bold mb-4">Lo primero: tu seguridad</h2>
             <ol className="space-y-3 list-decimal pl-5">
               <li className="text-text-light leading-relaxed">
-                <strong>Pulsá el botón "Salir" arriba a la derecha</strong> o la tecla{" "}
+                <strong>Pulsá el botón &ldquo;Salir&rdquo; arriba a la derecha</strong> o la tecla{" "}
                 <kbd className="px-1.5 py-0.5 bg-warm border border-[var(--color-warm-deep)] rounded text-xs font-mono">ESC</kbd>
                 . Esto cierra este sitio y abre Google en su lugar.
               </li>
@@ -121,7 +121,7 @@ export default function CuidadoPage() {
             </h2>
             <ul className="space-y-3">
               <li className="text-text-light leading-relaxed">
-                <strong>Usá un dispositivo "limpio"</strong> para conversaciones sensibles:
+                <strong>Usá un dispositivo &ldquo;limpio&rdquo;</strong> para conversaciones sensibles:
                 la computadora de un amigo, un cybercafé, una biblioteca, o un café con WiFi.
               </li>
               <li className="text-text-light leading-relaxed">
@@ -151,7 +151,7 @@ export default function CuidadoPage() {
                 medios, ni otras organizaciones.
               </li>
               <li className="text-text-light leading-relaxed">
-                Clínica Kunu'u no pide documento de identidad y no reporta pruebas de
+                Clínica Kunu&apos;u no pide documento de identidad y no reporta pruebas de
                 VIH a ningún registro público.
               </li>
               <li className="text-text-light leading-relaxed">

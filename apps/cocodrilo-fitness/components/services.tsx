@@ -9,13 +9,13 @@ export function Services() {
         <h2 className="font-heading text-3xl font-bold text-center text-primary mb-2">Nuestros Servicios</h2>
         <p className="text-center text-foreground-light mb-12 max-w-xl mx-auto">Todo lo que necesitás para entrenar</p>
         <div className="space-y-10">
-          {cats.map((cat: any, ci: number) => (
+          {cats.map((cat, ci) => (
             <div key={ci}>
               <h3 className="font-heading text-xl font-bold text-primary mb-4 flex items-center gap-2">
                 <Dumbbell className="w-5 h-5 text-secondary" /> {cat.name}
               </h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {cat.items.map((svc: any, si: number) => (
+                {cat.items.map((svc, si) => (
                   <div key={si} className="bg-white rounded-xl p-5 border border-border shadow-sm hover:shadow-md hover:border-secondary/30 transition-all">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-semibold text-foreground">{svc.name}</h4>

@@ -1,5 +1,4 @@
 "use client"
-import content from "@/content/es.json"
 
 export function Analytics() {
   return (

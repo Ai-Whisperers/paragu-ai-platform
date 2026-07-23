@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import content from "@/content/es.json";
+import type { SiteContent } from "@/lib/content-types";
 import { DividerOrnament } from "@/components/ornaments";
 
-const c = content as any;
+const c = content as SiteContent;
 
 export default function TerminosPage() {
   return (

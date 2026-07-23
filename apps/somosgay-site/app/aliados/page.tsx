@@ -15,38 +15,6 @@ const crumbs = [
   { label: "Mural de aliados" },
 ];
 
-// TODO: reemplace con la lista de aliados confirmados por Paloma. Por ahora, los
-// fundadores históricos que podemos nombrar públicamente. Cuando Paloma entregue
-// la lista oficial, estos se enriquecen. Cada nivel tiene un umbral económico:
-// Bronce = <500 USD/año, Plata = 500-5.000, Oro = 5.000-20.000, Platino = >20.000.
-
-const LEVELS = [
-  {
-    name: "Platino",
-    color: "text-purple-deep border-purple-deep",
-    note: "+20.000 USD / año",
-    members: ["Account Control & Asociados", "—"],
-  },
-  {
-    name: "Oro",
-    color: "text-amber-700 border-amber-500",
-    note: "5.000–20.000 USD / año",
-    members: ["—", "—"],
-  },
-  {
-    name: "Plata",
-    color: "text-zinc-700 border-zinc-400",
-    note: "500–5.000 USD / año",
-    members: ["—", "—", "—"],
-  },
-  {
-    name: "Bronce",
-    color: "text-orange-700 border-orange-400",
-    note: "< 500 USD / año",
-    members: ["—", "—", "—", "—"],
-  },
-];
-
 export default function AliadosPage() {
   return (
     <div>
@@ -67,7 +35,7 @@ export default function AliadosPage() {
             Mural de aliados
           </h1>
           <p className="text-lg text-text-light leading-relaxed max-w-3xl mb-4">
-            Cada donación — grande o pequeña — mantuvo Clínica Kunu'u abierta y los
+            Cada donación — grande o pequeña — mantuvo Clínica Kunu&apos;u abierta y los
             programas comunitarios. Esta página es el reconocimiento público a quienes
             nos acompañan.
           </p>

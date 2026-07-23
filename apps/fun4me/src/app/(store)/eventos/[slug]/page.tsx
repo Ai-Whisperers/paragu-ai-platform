@@ -1,30 +1,91 @@
-// @ts-nocheck - bypass strict types for new tables
 'use client';
 
-// @ts-nocheck - bypass strict types for new tables
-
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Calendar, MapPin, Clock, Shield, Minus, Plus, Loader2, CheckCircle2, AlertCircle, Info } from 'lucide-react';
+import { Calendar, MapPin, Minus, Plus, Loader2, CheckCircle2, AlertCircle, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { createClient } from '@/lib/supabase/client';
 import { formatPrice } from '@/lib/utils/format';
+import type { User } from '@supabase/supabase-js';
+
+interface TicketTypeRow {
+  id: string;
+  name: string;
+  description?: string | null;
+  price: number;
+  quantity: number;
+  sold: number;
+  max_per_order?: number | null;
+}
+
+interface EventRow {
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+  venue?: string | null;
+  venue_address?: string | null;
+  city?: string | null;
+  image_url?: string | null;
+  organizer_name?: string | null;
+  description?: string | null;
+  rules?: string | null;
+  entry_requires_ci?: boolean | null;
+  ticket_types?: TicketTypeRow[] | null;
+}
+
+interface CustomerProfile {
+  id: string;
+  full_name?: string | null;
+}
+
+interface CiDocument {
+  ci_number: string;
+  verified?: boolean | null;
+}
+
+interface OrderCreatedRow {
+  id: string;
+  order_number: string;
+}
+
+interface OrderInsertPayload {
+  status: string;
+  subtotal: number;
+  shipping_cost: number;
+  discount_amount: number;
+  total: number;
+  payment_method: string;
+  shipping_address: { city: string; address: string };
+  notes: string;
+  customer_id?: string;
+}
+
+interface TicketInsertPayload {
+  order_id: string;
+  event_id: string;
+  ticket_type_id: string;
+  customer_id: string;
+  holder_name: string;
+  holder_ci: string;
+  qr_code: string;
+  status: string;
+}
 
 export default function EventDetailPage() {
   const params = useParams();
   const router = useRouter();
   const slug = params.slug as string;
 
-  const [event, setEvent] = useState<any>(null);
-  const [user, setUser] = useState<any>(null);
-  const [ciDoc, setCiDoc] = useState<any>(null);
-  const [profile, setProfile] = useState<any>(null);
+  const [event, setEvent] = useState<EventRow | null>(null);
+  const [user, setUser] = useState<User | null>(null);
+  const [ciDoc, setCiDoc] = useState<CiDocument | null>(null);
+  const [profile, setProfile] = useState<CustomerProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [quantities, setQuantities] = useState<Record<string, number>>({});
   const [attendees, setAttendees] = useState<Record<string, { name: string; ci: string }[]>>({});
@@ -33,9 +94,7 @@ export default function EventDetailPage() {
   const [error, setError] = useState('');
   const [purchasing, setPurchasing] = useState(false);
 
-  useEffect(() => { loadData(); }, [slug]);
-
-  async function loadData() {
+  const loadData = useCallback(async () => {
     const supabase = createClient();
 
     const { data: evt, error: err } = await supabase
@@ -45,30 +104,38 @@ export default function EventDetailPage() {
       .single();
 
     if (err || !evt) { setLoading(false); return; }
-    setEvent(evt);
+    const evtTyped = evt as EventRow;
+    setEvent(evtTyped);
 
     const initialQtys: Record<string, number> = {};
-    (evt.ticket_types || []).forEach((t: any) => { initialQtys[t.id] = 0; });
+    (evtTyped.ticket_types || []).forEach((t) => { initialQtys[t.id] = 0; });
     setQuantities(initialQtys);
 
     // Check auth
     const { data: { user: u } } = await supabase.auth.getUser();
     if (u) {
       setUser(u);
+      // @ts-expect-error customers table not in generated Database types yet
       const { data: p } = await supabase.from('customers').select('*').eq('id', u.id).single();
-      if (p) setProfile(p);
+      if (p) setProfile(p as CustomerProfile);
+      // @ts-expect-error ci_documents not in generated Database types yet
       const { data: ci } = await supabase.from('ci_documents').select('*').eq('customer_id', u.id).eq('verified', true).maybeSingle();
-      if (ci) setCiDoc(ci);
+      if (ci) setCiDoc(ci as CiDocument);
     }
 
     setLoading(false);
-  }
+  }, [slug]);
 
-  const totalTickets = Object.values(quantities).reduce((a: number, b: number) => a + b, 0);
-  const totalPrice = (event?.ticket_types || []).reduce((sum: number, t: any) => sum + (quantities[t.id] || 0) * t.price, 0);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial fetch on slug change; memoized via useCallback
+    loadData();
+  }, [loadData]);
+
+  const totalTickets = Object.values(quantities).reduce((a, b) => a + b, 0);
+  const totalPrice = (event?.ticket_types || []).reduce((sum, t) => sum + (quantities[t.id] || 0) * t.price, 0);
 
   function updateQty(ticketTypeId: string, delta: number) {
-    const tt = event?.ticket_types?.find((t: any) => t.id === ticketTypeId);
+    const tt = event?.ticket_types?.find((t) => t.id === ticketTypeId);
     if (!tt) return;
     const max = tt.max_per_order || 5;
     setQuantities(prev => ({
@@ -123,7 +190,7 @@ export default function EventDetailPage() {
     for (const ttId of Object.keys(attendees)) {
       for (const a of attendees[ttId]) {
         const { data: blResult } = await supabase.rpc('is_ci_blacklisted', { p_ci_number: a.ci.trim() });
-        if (blResult?.blacklisted) {
+        if ((blResult as { blacklisted?: boolean } | null)?.blacklisted) {
           setError(`La CI ${a.ci} está bloqueada. No puede comprar entradas.`);
           setPurchasing(false);
           return;
@@ -137,12 +204,13 @@ export default function EventDetailPage() {
 
   async function confirmPurchase() {
     if (!paymentMethod) { setError('Seleccioná un método de pago'); return; }
+    if (!event) return;
     setPurchasing(true); setError('');
     const supabase = createClient();
 
     try {
       // Create order
-      const orderPayload: any = {
+      const orderPayload: OrderInsertPayload = {
         status: 'pending',
         subtotal: totalPrice,
         shipping_cost: 0,
@@ -156,17 +224,20 @@ export default function EventDetailPage() {
       if (user) orderPayload.customer_id = user.id;
       else { setError('Necesitás iniciar sesión para comprar entradas'); setPurchasing(false); return; }
 
+      // @ts-expect-error orders.customer_id / order_number not in generated Database types yet
       const { data: order, error: orderErr } = await supabase.from('orders').insert(orderPayload).select('id, order_number').single();
-      if (orderErr) { setError('Error al crear el pedido'); setPurchasing(false); return; }
+      if (orderErr || !order) { setError('Error al crear el pedido'); setPurchasing(false); return; }
+      const orderTyped = order as OrderCreatedRow;
 
       // Create tickets
-      const ticketInserts: any[] = [];
+      const ticketInserts: TicketInsertPayload[] = [];
+      // eslint-disable-next-line react-hooks/purity -- Date.now() used for QR uniqueness in an async event-handler call (not render)
+      const nowMs = Date.now();
       for (const ttId of Object.keys(attendees)) {
-        const tt = event.ticket_types.find((t: any) => t.id === ttId);
         for (const a of attendees[ttId]) {
-          const qrCode = `${order.id}-${event.id}-${ttId}-${a.ci.replace(/[^0-9]/g, '')}-${Date.now()}`;
+          const qrCode = `${orderTyped.id}-${event.id}-${ttId}-${a.ci.replace(/[^0-9]/g, '')}-${nowMs}`;
           ticketInserts.push({
-            order_id: order.id,
+            order_id: orderTyped.id,
             event_id: event.id,
             ticket_type_id: ttId,
             customer_id: user.id,
@@ -178,21 +249,23 @@ export default function EventDetailPage() {
         }
       }
 
+      // @ts-expect-error tickets.customer_id not in generated Database types yet
       const { error: ticketsErr } = await supabase.from('tickets').insert(ticketInserts);
       if (ticketsErr) { setError('Error al generar las entradas'); setPurchasing(false); return; }
 
       // Update ticket_types.sold
       for (const ttId of Object.keys(attendees)) {
         const qty = attendees[ttId].length;
-        const tt = event.ticket_types.find((t: any) => t.id === ttId);
+        const tt = event.ticket_types?.find((t) => t.id === ttId);
         if (tt) {
           await supabase.from('ticket_types').update({ sold: (tt.sold || 0) + qty }).eq('id', ttId);
         }
       }
 
-      router.push(`/eventos/${slug}/confirmacion?order_id=${order.id}`);
-    } catch {
-      setError('Error inesperado. Intentá de nuevo.');
+      router.push(`/eventos/${slug}/confirmacion?order_id=${orderTyped.id}`);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      setError(`Error inesperado: ${message}`);
     }
     setPurchasing(false);
   }
@@ -262,7 +335,7 @@ export default function EventDetailPage() {
           {error && <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 mb-4">{error}</div>}
 
           <div className="space-y-3 mb-6">
-            {(event.ticket_types || []).map((tt: any) => {
+            {(event.ticket_types || []).map((tt) => {
               const available = tt.quantity - tt.sold;
               const qty = quantities[tt.id] || 0;
               return (
@@ -312,7 +385,7 @@ export default function EventDetailPage() {
           {error && <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 mb-4">{error}</div>}
 
           {Object.entries(attendees).map(([ttId, list]) => {
-            const tt = event.ticket_types.find((t: any) => t.id === ttId);
+            const tt = event.ticket_types?.find((t) => t.id === ttId);
             return list.map((a, idx) => (
               <Card key={`${ttId}-${idx}`} className="mb-4">
                 <CardContent className="p-4 space-y-3">

@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { ProductCard } from '@/components/store/product-card';
 import { ProductActions } from './product-actions';
 import { ProductTabs } from './product-tabs';
-import { PRODUCT_IMAGES_MAP, CATEGORY_IMAGES_MAP, getProductBySlug, getCategoryBySlug, getProductsByCategory } from '@/lib/content';
+import { PRODUCT_IMAGES_MAP, getProductBySlug, getCategoryBySlug, getProductsByCategory } from '@/lib/content';
 import type { Metadata } from 'next';
 
 const CATEGORY_GRADIENTS: Record<string, string> = {

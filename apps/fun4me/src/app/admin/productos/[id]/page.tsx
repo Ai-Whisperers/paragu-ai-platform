@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server';
 import { ProductForm } from '@/components/admin/product-form';
 import { notFound } from 'next/navigation';
+import type { ExtendedCategory, ExtendedProduct } from '@/types/database';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -17,11 +18,11 @@ export default async function ProductoEditPage({ params }: Props) {
     .select('*')
     .order('name');
 
-  const categories = ((categoriesData as any[]) || [])
+  const categories = ((categoriesData as ExtendedCategory[] | null) || [])
     .filter((c) => c.is_active)
     .map((c) => ({ id: c.id, name: c.name }));
 
-  let product = null;
+  let product: ExtendedProduct | null = null;
 
   if (!isNew) {
     const { data, error } = await supabase
@@ -33,7 +34,7 @@ export default async function ProductoEditPage({ params }: Props) {
     if (error || !data) {
       notFound();
     }
-    product = data as any;
+    product = data as ExtendedProduct;
   }
 
   return (

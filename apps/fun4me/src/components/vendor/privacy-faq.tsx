@@ -1,6 +1,5 @@
 "use client"
 import { useState } from "react"
-import content from "@/content/es.json"
 
 export function PrivacyFAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(null)

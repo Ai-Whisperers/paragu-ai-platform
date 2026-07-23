@@ -73,8 +73,10 @@ export function useCart() {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    setItems(readCart());
-    setHydrated(true);
+    const t = setTimeout(() => {
+      setItems(readCart());
+      setHydrated(true);
+    }, 0);
     const onUpdate = (e: Event) => {
       const detail = (e as CustomEvent).detail as { items: CartItem[] } | undefined;
       if (detail) setItems(detail.items);
@@ -84,6 +86,7 @@ export function useCart() {
     window.addEventListener("pierce-cart:updated", onUpdate);
     window.addEventListener("storage", onStorage);
     return () => {
+      clearTimeout(t);
       window.removeEventListener("pierce-cart:updated", onUpdate);
       window.removeEventListener("storage", onStorage);
     };

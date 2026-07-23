@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { QrCode, Search, CheckCircle2, XCircle, Loader2, User, Calendar } from 'lucide-react';
+import { QrCode, Search, CheckCircle2, XCircle, Loader2, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,13 +9,29 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { createClient } from '@/lib/supabase/client';
 
+interface TicketResult {
+  id: string;
+  holder_name?: string | null;
+  holder_ci?: string | null;
+  events?: { title?: string | null } | null;
+  ticket_types?: { name?: string | null } | null;
+}
+
+interface CheckinResult {
+  valid: boolean;
+  ticket?: TicketResult;
+  event_title?: string | null;
+  holder_name?: string | null;
+  error?: string;
+}
+
 export default function CheckinPage() {
   const [mode, setMode] = useState<'qr' | 'manual'>('manual');
   const [qrInput, setQrInput] = useState('');
   const [ciInput, setCiInput] = useState('');
-  const [result, setResult] = useState<Record<string, any> | null>(null);
+  const [result, setResult] = useState<CheckinResult | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [, setError] = useState('');
   const [checkedIn, setCheckedIn] = useState(false);
 
   async function validateQR() {
@@ -24,8 +40,8 @@ export default function CheckinPage() {
     setError('');
     setCheckedIn(false);
     const supabase = createClient();
-    const { data } = await supabase.rpc('validate_ticket_qr', { p_qr_code: qrInput.trim() } as any);
-    setResult(data);
+    const { data } = await supabase.rpc('validate_ticket_qr', { p_qr_code: qrInput.trim() } as never);
+    setResult(data as CheckinResult | null);
     setLoading(false);
   }
 
@@ -35,13 +51,15 @@ export default function CheckinPage() {
     setError('');
     setCheckedIn(false);
     const supabase = createClient();
-    const { data } = await (supabase.from('tickets') as any)
+    const { data } = await supabase
+      .from('tickets')
       .select('*, events(*), ticket_types(name)')
       .eq('holder_ci', ciInput.trim())
       .eq('status', 'valid');
-    
-    if (data && data.length > 0) {
-      const ticket = data[0] as any;
+
+    const tickets = data as TicketResult[] | null;
+    if (tickets && tickets.length > 0) {
+      const ticket = tickets[0];
       setResult({ valid: true, ticket, event_title: ticket.events?.title, holder_name: ticket.holder_name });
     } else {
       setResult({ valid: false, error: 'No se encontró entrada válida para esa CI' });
@@ -53,8 +71,9 @@ export default function CheckinPage() {
     if (!result?.ticket?.id) return;
     setLoading(true);
     const supabase = createClient();
-    await (supabase.from('tickets') as any)
-      .update({ status: 'used', checked_in_at: new Date().toISOString() })
+    await supabase
+      .from('tickets')
+      .update({ status: 'used', checked_in_at: new Date().toISOString() } as never)
       .eq('id', result.ticket.id);
     setCheckedIn(true);
     setLoading(false);

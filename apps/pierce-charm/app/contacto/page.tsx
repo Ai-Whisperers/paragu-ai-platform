@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import content from "@/content/es.json";
+import type { SiteContent, ContentItem } from "@/lib/content-types";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, DividerOrnament } from "@/components/ornaments";
 import { whatsappUrl } from "@/lib/site-config";
 
-const c = content as any;
+const c = content as SiteContent;
 const ct = c.contacto || {};
 const phone = ct.whatsapp || "595981324569";
 
@@ -92,7 +92,7 @@ export default function ContactoPage() {
               <h3 className="text-[1.1rem] mb-4">Atención con cita previa</h3>
 
               <div className="divide-y divide-[var(--color-border)]">
-                {ct.schedule?.map((s: any) => (
+                {ct.schedule?.map((s: ContentItem) => (
                   <div key={s.day} className="flex items-center justify-between py-3 first:pt-0 last:pb-0">
                     <span className="font-[var(--font-display)] text-[0.85rem] uppercase tracking-[0.18em] text-[var(--color-foreground)]">{s.day}</span>
                     <span className={`text-[0.92rem] ${s.hours === "Cerrado" ? "text-[var(--color-muted-foreground)] italic" : "text-[var(--color-gold)] font-[var(--font-display)] tracking-[0.08em]"}`}>

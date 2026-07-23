@@ -7,11 +7,15 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Plus, Pencil } from 'lucide-react';
 import { formatPrice } from '@/lib/utils/format';
+import type { ExtendedProduct } from '@/types/database';
+
+type ProductWithCategory = ExtendedProduct & {
+  categories?: { name: string } | null;
+};
 
 export default async function ProductosPage() {
   const supabase = await createClient();
@@ -21,7 +25,7 @@ export default async function ProductosPage() {
     .select('*, categories(name)')
     .order('created_at', { ascending: false });
 
-  const products = (productsData as any[]) || [];
+  const products = (productsData as ProductWithCategory[] | null) || [];
 
   return (
     <div className="space-y-6">
@@ -55,7 +59,7 @@ export default async function ProductosPage() {
           </TableHeader>
           <TableBody>
             {products.length > 0 ? (
-              products.map((product: any) => (
+              products.map((product) => (
                 <TableRow key={product.id}>
                   <TableCell>
                     <div className="flex items-center gap-3">
@@ -101,7 +105,7 @@ export default async function ProductosPage() {
                   </TableCell>
                   <TableCell>
                     <span className="text-sm">
-                      {(product.categories as any)?.name || 'Sin categoría'}
+                      {product.categories?.name || 'Sin categoría'}
                     </span>
                   </TableCell>
                   <TableCell>

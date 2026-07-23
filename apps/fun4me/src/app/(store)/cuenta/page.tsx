@@ -1,9 +1,9 @@
-// @ts-nocheck - bypass strict types for new tables not in Database type
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { User, MapPin, Package, IdCard, Crown, Save, Loader2, CheckCircle2, XCircle, Clock, AlertCircle } from 'lucide-react';
+import type { User as SupabaseUser } from '@supabase/supabase-js';
+import { User, MapPin, Package, IdCard, Crown, Save, Loader2, CheckCircle2, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -15,13 +15,53 @@ import { MembershipPlans } from '@/components/store/membership-plans';
 
 type Tab = 'datos' | 'direcciones' | 'pedidos' | 'ci' | 'membresia';
 
+interface CustomerProfile {
+  id: string;
+  full_name?: string | null;
+  phone?: string | null;
+  date_of_birth?: string | null;
+}
+
+interface CustomerAddress {
+  id: string;
+  label: string;
+  full_name: string;
+  phone?: string | null;
+  street: string;
+  city: string;
+  neighborhood?: string | null;
+  is_default?: boolean;
+}
+
+interface OrderItemRow {
+  id: string;
+  product_name: string;
+  quantity: number;
+}
+
+interface OrderRow {
+  id: string;
+  order_number: string;
+  status: string;
+  created_at: string;
+  total: number;
+  order_items?: OrderItemRow[];
+}
+
+interface CiDocument {
+  ci_number: string;
+  full_name: string;
+  image_url?: string | null;
+  verified?: boolean | null;
+}
+
 export default function CuentaPage() {
   const router = useRouter();
-  const [user, setUser] = useState<any>(null);
-  const [profile, setProfile] = useState<any>(null);
-  const [addresses, setAddresses] = useState<any[]>([]);
-  const [orders, setOrders] = useState<any[]>([]);
-  const [ciDoc, setCiDoc] = useState<any>(null);
+  const [user, setUser] = useState<SupabaseUser | null>(null);
+  const [profile, setProfile] = useState<CustomerProfile | null>(null);
+  const [addresses, setAddresses] = useState<CustomerAddress[]>([]);
+  const [orders, setOrders] = useState<OrderRow[]>([]);
+  const [ciDoc, setCiDoc] = useState<CiDocument | null>(null);
   const [activeTab, setActiveTab] = useState<Tab>('datos');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -46,49 +86,60 @@ export default function CuentaPage() {
   const [addrNeighborhood, setAddrNeighborhood] = useState('');
   const [addrDefault, setAddrDefault] = useState(false);
 
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  async function loadData() {
+  const loadData = useCallback(async () => {
     const supabase = createClient();
     const { data: { user: u } } = await supabase.auth.getUser();
     if (!u) { router.push('/login?redirect=/cuenta'); return; }
     setUser(u);
 
-    const profRes: any = await supabase.from('customers').select('*').eq('id', u.id).single();
-    const addrRes: any = await supabase.from('customer_addresses').select('*').eq('customer_id', u.id).order('is_default', { ascending: false });
-    const ordersRes: any = await supabase.from('orders').select('*, order_items(*)').eq('customer_id', u.id).order('created_at', { ascending: false });
-    const ciRes: any = await supabase.from('ci_documents').select('*').eq('customer_id', u.id).order('created_at', { ascending: false }).limit(1);
+    // @ts-expect-error customers table not in generated Database types yet
+    const profRes = await supabase.from('customers').select('*').eq('id', u.id).single();
+    // @ts-expect-error customer_addresses table not in generated Database types yet
+    const addrRes = await supabase.from('customer_addresses').select('*').eq('customer_id', u.id).order('is_default', { ascending: false });
+    // @ts-expect-error orders.customer_id column not in generated Database types yet
+    const ordersRes = await supabase.from('orders').select('*, order_items(*)').eq('customer_id', u.id).order('created_at', { ascending: false });
+    // @ts-expect-error ci_documents table not in generated Database types yet
+    const ciRes = await supabase.from('ci_documents').select('*').eq('customer_id', u.id).order('created_at', { ascending: false }).limit(1);
 
     if (profRes.data) {
-      setProfile(profRes.data as any);
-      setName(profRes.data.full_name || '');
-      setPhone(profRes.data.phone || '');
-      setDateOfBirth(profRes.data.date_of_birth || '');
+      const p = profRes.data as CustomerProfile;
+      setProfile(p);
+      setName(p.full_name || '');
+      setPhone(p.phone || '');
+      setDateOfBirth(p.date_of_birth || '');
     }
-    if (addrRes.data) setAddresses(addrRes.data);
-    if (ordersRes.data) setOrders(ordersRes.data);
-    if (ciRes.data?.length) setCiDoc(ciRes.data[0]);
+    if (addrRes.data) setAddresses(addrRes.data as CustomerAddress[]);
+    if (ordersRes.data) setOrders(ordersRes.data as OrderRow[]);
+    const ciData = ciRes.data as CiDocument[] | null;
+    if (ciData?.length) setCiDoc(ciData[0]);
     setLoading(false);
-  }
+  }, [router]);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial data fetch on mount; loadData is memoized via useCallback
+    loadData();
+  }, [loadData]);
 
   async function saveProfile() {
+    if (!user) return;
     setSaving(true); setSaveMsg('');
     const supabase = createClient();
+    // @ts-expect-error customers table not in generated Database types yet
     const { error } = await supabase.from('customers').update({
       full_name: name.trim(),
       phone: phone.trim(),
       date_of_birth: dateOfBirth || null,
     }).eq('id', user.id);
     setSaving(false);
-    setSaveMsg(error ? 'Error al guardar' : 'Guardado ✓');
+    setSaveMsg(error ? 'Error al guardar' : 'Guardado');
     setTimeout(() => setSaveMsg(''), 3000);
   }
 
   async function addAddress() {
+    if (!user) return;
     if (!addrStreet.trim() || !addrCity.trim()) return;
     const supabase = createClient();
+    // @ts-expect-error customer_addresses table not in generated Database types yet
     const { error } = await supabase.from('customer_addresses').insert({
       customer_id: user.id,
       label: addrLabel,
@@ -102,18 +153,21 @@ export default function CuentaPage() {
     if (!error) {
       setShowAddressForm(false);
       resetAddressForm();
+      // @ts-expect-error customer_addresses table not in generated Database types yet
       const { data } = await supabase.from('customer_addresses').select('*').eq('customer_id', user.id);
-      if (data) setAddresses(data);
+      if (data) setAddresses(data as CustomerAddress[]);
     }
   }
 
   async function deleteAddress(id: string) {
     const supabase = createClient();
+    // @ts-expect-error customer_addresses table not in generated Database types yet
     await supabase.from('customer_addresses').delete().eq('id', id);
     setAddresses(addresses.filter(a => a.id !== id));
   }
 
   async function uploadCi() {
+    if (!user) return;
     if (!ciFile || !ciNumber.trim()) return;
     setCiUploading(true);
     const supabase = createClient();
@@ -122,6 +176,7 @@ export default function CuentaPage() {
     const { error: uploadError } = await supabase.storage.from('ci-documents').upload(filePath, ciFile);
     if (uploadError) { setCiUploading(false); return; }
     const { data: { publicUrl } } = supabase.storage.from('ci-documents').getPublicUrl(filePath);
+    // @ts-expect-error ci_documents table not in generated Database types yet
     const { error: insertError } = await supabase.from('ci_documents').insert({
       customer_id: user.id,
       ci_number: ciNumber.trim(),
@@ -159,6 +214,8 @@ export default function CuentaPage() {
   }
 
   if (loading) return <div className="container mx-auto px-4 py-12 text-center"><Loader2 className="mx-auto h-8 w-8 animate-spin text-muted-foreground" /></div>;
+
+  void profile;
 
   const tabs = [
     { key: 'datos' as Tab, label: 'Mis Datos', icon: User },
@@ -272,7 +329,7 @@ export default function CuentaPage() {
                 </div>
                 <p className="text-sm text-muted-foreground">{new Date(order.created_at).toLocaleDateString('es-PY', { dateStyle: 'long' })}</p>
                 <p className="text-sm">{order.order_items?.length || 0} producto(s) — <span className="font-semibold">{formatPrice(order.total)}</span></p>
-                {order.order_items?.slice(0, 3).map((item: any) => (
+                {order.order_items?.slice(0, 3).map((item) => (
                   <p key={item.id} className="text-xs text-muted-foreground">{item.product_name} x{item.quantity}</p>
                 ))}
               </CardContent>
@@ -291,7 +348,7 @@ export default function CuentaPage() {
                 <div className="flex items-center gap-2">
                   {ciDoc.verified ? <CheckCircle2 className="h-5 w-5 text-green-500" /> : ciDoc.verified === false ? <Clock className="h-5 w-5 text-yellow-500" /> : null}
                   <Badge className={ciDoc.verified ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}>
-                    {ciDoc.verified ? 'Verificada ✓' : 'Pendiente de verificación'}
+                    {ciDoc.verified ? 'Verificada' : 'Pendiente de verificación'}
                   </Badge>
                 </div>
                 <p><span className="font-medium">CI:</span> {ciDoc.ci_number}</p>

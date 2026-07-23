@@ -5,7 +5,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { createClient } from '@/lib/supabase/server';
 import {
   ShoppingCart,
@@ -15,6 +14,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { formatPrice } from '@/lib/utils/format';
+import type { Order, ExtendedProduct } from '@/types/database';
 
 export default async function AdminDashboard() {
   const supabase = await createClient();
@@ -34,14 +34,17 @@ export default async function AdminDashboard() {
   const todayOrdersCount = todayOrders?.length || 0;
 
   // Calculate today's revenue
-  const todayRevenue = (todayOrders || []).reduce((sum: number, order: any) => sum + (order.total || 0), 0);
+  const todayRevenue = ((todayOrders as Order[] | null) || []).reduce(
+    (sum: number, order: Order) => sum + (order.total || 0),
+    0,
+  );
 
   // All products
   const { data: allProducts } = await supabase
     .from('products')
     .select('*');
 
-  const allProductsList = (allProducts as any[]) || [];
+  const allProductsList = (allProducts as ExtendedProduct[] | null) || [];
   const totalProducts = allProductsList.length;
 
   // Low stock products (stock < 5)
@@ -56,7 +59,7 @@ export default async function AdminDashboard() {
     .order('created_at', { ascending: false })
     .limit(5);
 
-  const recentOrders = (recentOrdersData as any[]) || [];
+  const recentOrders = (recentOrdersData as Order[] | null) || [];
 
   const statusLabels: Record<string, string> = {
     pending: 'Pendiente',

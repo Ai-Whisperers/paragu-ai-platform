@@ -1,7 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { LocaleSwitcher } from "@ai-whisperers/i18n-paraguay/LocaleSwitcher"
 
@@ -16,7 +15,6 @@ const navItems = [
 export function Header() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)

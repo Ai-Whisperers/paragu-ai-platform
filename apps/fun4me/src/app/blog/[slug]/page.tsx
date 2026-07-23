@@ -7,6 +7,18 @@ import { ShareWhatsApp } from "@/components/vendor/share-whatsapp"
 import { ArticleJsonLd } from "@/components/vendor/article-json-ld"
 import { SafeImage } from "@/components/vendor/safe-image"
 
+interface BlogPost {
+  slug: string
+  title: string
+  excerpt: string
+  content?: string
+  category: string
+  date: string
+  readTime: string
+  author?: string
+  image?: string
+}
+
 const WA_PHONE = "595976569739"
 
 // Extended blog content since es.json only has excerpts
@@ -65,7 +77,14 @@ const FULL_CONTENT: Record<string, string[]> = {
 
 export default function BlogPost() {
   const { slug } = useParams()
-  const post = content.blog.posts.find((p: any) => p.slug === slug)
+  const post = (content.blog.posts as BlogPost[]).find((p) => p.slug === slug)
+
+  useEffect(() => {
+    if (!post) return
+    document.title = `${post.title} | Fun4Me Store`
+    return () => { document.title = "Fun4Me Store — Bienestar y Placer" }
+  }, [post])
+
   if (!post) return (
     <div className="py-20 text-center">
       <h2 className="text-2xl font-bold mb-4">Artículo no encontrado</h2>
@@ -75,11 +94,6 @@ export default function BlogPost() {
 
   const paragraphs = FULL_CONTENT[post.slug] || [post.content, "Contenido completo próximamente."]
   const waMsg = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(`Hola! Vi el artículo "${post.title}" en Fun4Me y tengo una consulta.`)}`
-
-  useEffect(() => {
-    document.title = `${post.title} | Fun4Me Store`
-    return () => { document.title = "Fun4Me Store — Bienestar y Placer" }
-  }, [post.title])
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-10">

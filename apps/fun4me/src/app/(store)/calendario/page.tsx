@@ -1,15 +1,38 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Calendar, MapPin, Ticket, Tag, Filter, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { Calendar, MapPin, Ticket, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { createClient } from '@/lib/supabase/client';
 import { formatPrice } from '@/lib/utils/format';
 
-type EventFull = Record<string, any>;
+interface TicketType {
+  id: string;
+  name: string;
+  price: number;
+}
+
+interface EventFull {
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+  venue?: string | null;
+  venue_name?: string | null;
+  category_id?: string | null;
+  category_name?: string | null;
+  category_color?: string | null;
+  ticket_types?: TicketType[] | null;
+}
+
+interface EventCategory {
+  id: string;
+  name: string;
+  sort_order?: number | null;
+}
 
 const MONTHS = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 const DAYS = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
@@ -21,23 +44,26 @@ export default function CalendarPage() {
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const [categoryFilter, setCategoryFilter] = useState('');
-  const [categories, setCategories] = useState<Record<string, any>[]>([]);
+  const [categories, setCategories] = useState<EventCategory[]>([]);
 
-  useEffect(() => {
-    loadData();
-  }, [currentMonth, currentYear, categoryFilter]);
-
-  async function loadData() {
+  const loadData = useCallback(async () => {
     const supabase = createClient();
+    // @ts-expect-error event_categories not in generated Database types yet
     const { data: cats } = await supabase.from('event_categories').select('*').order('sort_order');
-    setCategories(cats || []);
+    setCategories((cats as EventCategory[] | null) || []);
 
+    // @ts-expect-error events_full view not in generated Database types yet
     let query = supabase.from('events_full').select('*');
     if (categoryFilter) query = query.eq('category_id', categoryFilter);
     const { data } = await query;
-    setEvents(data || []);
+    setEvents((data as EventFull[] | null) || []);
     setLoading(false);
-  }
+  }, [categoryFilter]);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- data refresh on filter/month change; memoized via useCallback
+    loadData();
+  }, [loadData, currentMonth, currentYear]);
 
   function getDaysInMonth(month: number, year: number) {
     return new Date(year, month + 1, 0).getDate();
@@ -155,7 +181,7 @@ export default function CalendarPage() {
                       <div className="flex items-center gap-4 mt-1 text-sm text-muted-foreground flex-wrap">
                         <span className="flex items-center gap-1"><MapPin className="h-3 w-3" />{e.venue_name || e.venue}</span>
                         <span className="flex items-center gap-1"><Calendar className="h-3 w-3" />{new Date(e.date).toLocaleTimeString('es-PY', { hour: '2-digit', minute: '2-digit' })}</span>
-                        {e.ticket_types?.[0] && <span className="flex items-center gap-1"><Ticket className="h-3 w-3" />Desde {formatPrice(Math.min(...e.ticket_types.map((t: any) => t.price)))}</span>}
+                        {e.ticket_types?.[0] && <span className="flex items-center gap-1"><Ticket className="h-3 w-3" />Desde {formatPrice(Math.min(...e.ticket_types.map((t) => t.price)))}</span>}
                       </div>
                     </div>
                   </CardContent>

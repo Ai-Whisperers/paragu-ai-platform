@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server';
 import { CategoryForm } from '@/components/admin/category-form';
 import { notFound } from 'next/navigation';
+import type { ExtendedCategory } from '@/types/database';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -11,10 +12,10 @@ export default async function CategoriaEditPage({ params }: Props) {
   const supabase = await createClient();
   const isNew = id === 'nueva';
 
-  let category = null;
+  let category: ExtendedCategory | null = null;
 
   if (!isNew) {
-    const { data, error } = await (supabase as any)
+    const { data, error } = await supabase
       .from('categories')
       .select('*')
       .eq('id', id)
@@ -23,7 +24,7 @@ export default async function CategoriaEditPage({ params }: Props) {
     if (error || !data) {
       notFound();
     }
-    category = data as any;
+    category = data as ExtendedCategory;
   }
 
   return (

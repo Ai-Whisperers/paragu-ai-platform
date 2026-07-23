@@ -2,7 +2,7 @@
   "name": "ai-whisperers-site",
   "version": "1.0.0",
   "private": true,
-  "description": "AI Whisperers company site — portfolio, services, open source, contact. The canonical company website.",
+  "description": "AI Whisperers company site \u2014 portfolio, services, open source, contact. The canonical company website.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,7 +22,9 @@
     "@tailwindcss/postcss": "^4.2.0",
     "@types/node": "22.0.0",
     "@types/react": "19.0.0",
-    "typescript": "5.7.2",
-    "tailwindcss": "^4.2.0"
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4.2.0",
+    "typescript": "5.7.2"
   }
 }

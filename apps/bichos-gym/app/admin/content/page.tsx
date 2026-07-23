@@ -4,8 +4,10 @@ import { useState, useEffect } from "react"
 
 const ADMIN_SECRET = process.env.NEXT_PUBLIC_ADMIN_SECRET || process.env.ADMIN_SECRET || ""
 
+type ContentTree = { [key: string]: string | number | ContentTree | null | undefined }
+
 export default function AdminContentPage() {
-  const [content, setContent] = useState<Record<string, any> | null>(null)
+  const [content, setContent] = useState<ContentTree | null>(null)
   const [editingKey, setEditingKey] = useState<string | null>(null)
   const [editValue, setEditValue] = useState("")
   const [saving, setSaving] = useState(false)
@@ -33,32 +35,33 @@ export default function AdminContentPage() {
       })
       const data = await res.json()
       setMsg(data.success ? "Guardado" : `Error: ${data.error}`)
-    } catch (e: any) {
-      setMsg(`Error: ${e.message}`)
+    } catch (e) {
+      setMsg(`Error: ${e instanceof Error ? e.message : String(e)}`)
     }
     setSaving(false)
   }
 
-  const flatten = (obj: any, prefix = ""): [string, string][] => {
+  const flatten = (obj: ContentTree | null, prefix = ""): [string, string][] => {
     const result: [string, string][] = []
     for (const [k, v] of Object.entries(obj || {})) {
       const key = prefix ? `${prefix}.${k}` : k
       if (typeof v === "string" || typeof v === "number") {
         result.push([key, String(v)])
       } else if (typeof v === "object" && v !== null) {
-        result.push(...flatten(v, key))
+        result.push(...flatten(v as ContentTree, key))
       }
     }
     return result
   }
 
-  const deepSet = (obj: any, path: string, value: string) => {
+  const deepSet = (obj: ContentTree, path: string, value: string): ContentTree => {
     const parts = path.split(".")
-    const clone = JSON.parse(JSON.stringify(obj))
-    let cur: any = clone
+    const clone = JSON.parse(JSON.stringify(obj)) as ContentTree
+    let cur: ContentTree = clone
     for (let i = 0; i < parts.length - 1; i++) {
-      if (!cur[parts[i]]) cur[parts[i]] = {}
-      cur = cur[parts[i]]
+      const next = cur[parts[i]]
+      if (!next || typeof next !== "object") cur[parts[i]] = {}
+      cur = cur[parts[i]] as ContentTree
     }
     cur[parts[parts.length - 1]] = value
     return clone

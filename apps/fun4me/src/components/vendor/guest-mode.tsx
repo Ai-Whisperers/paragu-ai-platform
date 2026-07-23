@@ -9,7 +9,11 @@ export function GuestModeBanner() {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(GUEST_KEY)
-      if (!raw) { setShow(true); return }
+      if (!raw) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setShow(true)
+        return
+      }
       const ts = parseInt(raw, 10)
       if (Date.now() - ts > 24 * 60 * 60 * 1000) setShow(true)
     } catch (err) {

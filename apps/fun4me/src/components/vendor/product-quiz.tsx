@@ -1,7 +1,5 @@
 "use client"
 import { useState } from "react"
-import content from "@/content/es.json"
-import Link from "next/link"
 
 const WA_PHONE = "595976569739"
 

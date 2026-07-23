@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Locale } from "@/lib/content";
 
 /**
@@ -19,17 +18,6 @@ const LABELS: Record<Locale, string> = {
   es: "ES",
   gn: "Gn",
 };
-
-function swapLocaleInPath(pathname: string | null, target: Locale): string {
-  if (!pathname || pathname === "/") {
-    return target === "es" ? "/" : "/gn";
-  }
-  // Strip /gn prefix
-  const stripped = pathname.replace(/^\/gn(?=\/|$)/, "");
-  // Add target prefix
-  if (target === "es") return stripped || "/";
-  return `/gn${stripped}`;
-}
 
 export function LangSwitcher({ currentLocale }: { currentLocale: Locale }) {
   // Lang switcher can't reach usePathname() in a server component,

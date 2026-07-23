@@ -1,20 +1,27 @@
-// @ts-nocheck - bypass strict types for new tables
 'use client';
-
-// @ts-nocheck - bypass strict types for new tables
 
 import { useEffect, useState } from 'react';
 import { Loader2, Plus, Trash2, Search, Ban } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
 import { createClient } from '@/lib/supabase/client';
 
+interface BlacklistEntry {
+  id: string;
+  ci_number: string;
+  full_name?: string | null;
+  reason: string;
+  blocked_by?: string | null;
+  blocked_at: string;
+  expires_at?: string | null;
+  notes?: string | null;
+}
+
 export default function BlacklistPage() {
-  const [entries, setEntries] = useState<any[]>([]);
+  const [entries, setEntries] = useState<BlacklistEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [showForm, setShowForm] = useState(false);
@@ -25,14 +32,17 @@ export default function BlacklistPage() {
   const [notes, setNotes] = useState('');
   const [saving, setSaving] = useState(false);
 
-  useEffect(() => { loadBlacklist(); }, []);
-
   async function loadBlacklist() {
     const supabase = createClient();
     const { data } = await supabase.from('blacklist').select('*').order('blocked_at', { ascending: false });
-    setEntries(data || []);
+    setEntries((data as BlacklistEntry[] | null) || []);
     setLoading(false);
   }
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    loadBlacklist();
+  }, []);
 
   async function addEntry() {
     if (!ciNumber.trim() || !reason.trim()) return;
@@ -46,7 +56,7 @@ export default function BlacklistPage() {
       blocked_by: user?.id,
       expires_at: expiresAt || null,
       notes: notes.trim() || null,
-    });
+    } as never);
     if (!error) {
       setShowForm(false);
       setCiNumber(''); setFullName(''); setReason(''); setExpiresAt(''); setNotes('');

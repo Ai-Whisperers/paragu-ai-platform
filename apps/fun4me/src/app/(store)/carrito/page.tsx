@@ -23,7 +23,10 @@ import {
 
 export default function CartPage() {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- zustand persist hydration guard; safe one-shot on mount
+    setMounted(true);
+  }, []);
 
   const items = useCartStore((s) => s.items);
   const totalItems = useCartStore((s) => s.totalItems);

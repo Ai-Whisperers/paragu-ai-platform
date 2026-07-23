@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
-import { content as c, SITE_URL } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 import { ShareButtons } from "@/components/ShareButtons";
 import { NEWS_ARTICLES, getArticleBySlug } from "@/content/news";

@@ -11,9 +11,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import { Save, ArrowLeft, Trash2 } from 'lucide-react';
 import Link from 'next/link';
+import type { ExtendedProduct } from '@/types/database';
 
 interface ProductFormProps {
-  product: any | null;
+  product: ExtendedProduct | null;
   categories: { id: string; name: string }[];
   isNew: boolean;
 }
@@ -72,7 +73,7 @@ export function ProductForm({ product, categories, isNew }: ProductFormProps) {
         .map((img: string) => img.trim())
         .filter(Boolean);
 
-      const productData: any = {
+      const productData: Record<string, unknown> = {
         name: formData.name,
         slug: formData.slug,
         description: formData.description || null,
@@ -95,22 +96,23 @@ export function ProductForm({ product, categories, isNew }: ProductFormProps) {
       };
 
       if (isNew) {
-        const { error: insertError } = await (supabase
-          .from('products') as any)
+        const { error: insertError } = await supabase
+          .from('products')
           .insert(productData);
         if (insertError) throw insertError;
       } else {
-        const { error: updateError } = await (supabase
-          .from('products') as any)
+        const { error: updateError } = await supabase
+          .from('products')
           .update(productData)
-          .eq('id', product.id);
+          .eq('id', product!.id);
         if (updateError) throw updateError;
       }
 
       router.push('/admin/productos');
       router.refresh();
-    } catch (err: any) {
-      setError(err.message || 'Error al guardar el producto');
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      setError(msg || 'Error al guardar el producto');
     } finally {
       setLoading(false);
     }
@@ -124,13 +126,14 @@ export function ProductForm({ product, categories, isNew }: ProductFormProps) {
       const { error: deleteError } = await supabase
         .from('products')
         .delete()
-        .eq('id', product.id);
+        .eq('id', product!.id);
       if (deleteError) throw deleteError;
 
       router.push('/admin/productos');
       router.refresh();
-    } catch (err: any) {
-      setError(err.message || 'Error al eliminar el producto');
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      setError(msg || 'Error al eliminar el producto');
       setLoading(false);
     }
   };

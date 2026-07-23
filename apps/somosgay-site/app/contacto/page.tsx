@@ -69,7 +69,7 @@ export default function ContactoPage() {
             <h2 className="font-display text-2xl font-bold mb-4">Horarios</h2>
             <dl className="space-y-3">
               <div className="flex justify-between items-baseline border-b border-[var(--color-warm-deep)] pb-2">
-                <dt className="text-text-light">Clínica Kunu'u</dt>
+                <dt className="text-text-light">Clínica Kunu&apos;u</dt>
                 <dd className="font-mono text-sm text-[var(--color-primary)]">{c.contacto.schedule_clinica}</dd>
               </div>
               <div className="flex justify-between items-baseline border-b border-[var(--color-warm-deep)] pb-2">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { content as c, SITE_URL } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 import Script from "next/script";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
@@ -108,7 +108,7 @@ export default function PrivacidadPage() {
           <section>
             <h2 className="font-display text-2xl font-bold text-text mb-3">8. Cambios</h2>
             <p>
-              Si modificamos esta política, lo indicaremos cambiando la fecha de "última actualización"
+              Si modificamos esta política, lo indicaremos cambiando la fecha de &ldquo;última actualización&rdquo;
               al inicio. Para cambios materiales, agregaremos una nota en la página principal.
             </p>
           </section>

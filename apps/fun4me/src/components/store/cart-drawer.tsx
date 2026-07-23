@@ -19,7 +19,10 @@ import { FREE_SHIPPING_THRESHOLD } from '@/lib/constants';
 
 export function CartDrawer() {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+  }, []);
   const items = useCartStore((s) => s.items);
   const totalItems = useCartStore((s) => s.totalItems);
   const totalPrice = useCartStore((s) => s.totalPrice);

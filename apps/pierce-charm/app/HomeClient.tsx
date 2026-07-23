@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import content from "@/content/es.json";
+import type { SiteContent, ContentItem } from "@/lib/content-types";
 import {
   ChainVertical,
   Bat,
@@ -18,9 +19,8 @@ import { Testimonials } from "@/components/Testimonials";
 import { Newsletter } from "@/components/Newsletter";
 import { CelinniPiercingMap } from "@/components/CelinniPiercingMap";
 
-const c = content as any;
+const c = content as SiteContent;
 const h = c.home || {};
-const hero = h.hero || {};
 const bannerTicker = h.banner_ticker;
 const story = h.story || {};
 const features = h.features?.items || [];
@@ -123,7 +123,7 @@ export default function HomeInner() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
-            {features.map((f: any, i: number) => (
+            {features.map((f: ContentItem, i: number) => (
               <FeatureCard key={i} f={f} />
             ))}
           </div>
@@ -137,7 +137,7 @@ export default function HomeInner() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
-          {steps.map((s: any, i: number) => (
+          {steps.map((s: ContentItem, i: number) => (
             <div key={i} className="rock-card p-5 md:p-6 text-left">
               <div className="flex items-start justify-between mb-3">
                 <span className="font-[var(--font-display)] text-[var(--color-primary-light)] text-[1.6rem] font-bold leading-none">
@@ -243,10 +243,10 @@ export default function HomeInner() {
       )}
 
       {/* SEO LONG-TAIL COPY — pure H2/H3 paragraphs for indexing */}
-      {(c as any).seo_long_tail?.long_tail_copy && (
+      {(c as SiteContent).seo_long_tail?.long_tail_copy && (
         <section className="py-12 md:py-16 px-4 md:px-6 bg-[var(--color-background)] border-y border-[var(--color-border)]">
           <div className="max-w-3xl mx-auto space-y-7">
-            {(c as any).seo_long_tail.long_tail_copy.map((block: any, i: number) => (
+            {(c as SiteContent).seo_long_tail.long_tail_copy.map((block: ContentItem, i: number) => (
               <article key={i} className="prose-gothic">
                 <h3 className="text-[1.15rem] md:text-[1.3rem] mb-2 text-[var(--color-foreground)]">
                   {block.title}
@@ -296,7 +296,7 @@ export default function HomeInner() {
   );
 }
 
-function FeatureCard({ f }: { f: any }) {
+function FeatureCard({ f }: { f: ContentItem }) {
   const iconMap: Record<string, React.ReactElement> = {
     shield: <ShieldIcon />,
     sparkles: <SparklesIcon />,

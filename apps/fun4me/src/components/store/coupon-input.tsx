@@ -20,6 +20,17 @@ interface CouponInputProps {
   onCouponApplied: (coupon: AppliedCoupon | null) => void;
 }
 
+interface CouponRow {
+  id: string;
+  code: string;
+  type: 'percentage' | 'fixed' | 'free_shipping';
+  value: number;
+  min_order?: number | null;
+  max_uses?: number | null;
+  uses_count?: number | null;
+  expires_at?: string | null;
+}
+
 export function CouponInput({ orderTotal, onCouponApplied }: CouponInputProps) {
   const [code, setCode] = useState('');
   const [loading, setLoading] = useState(false);
@@ -34,7 +45,7 @@ export function CouponInput({ orderTotal, onCouponApplied }: CouponInputProps) {
 
     try {
       const supabase = createClient();
-      const { data, error: queryError } = await (supabase as any)
+      const { data, error: queryError } = await supabase
         .from('coupons')
         .select('*')
         .eq('code', code.toUpperCase().trim())
@@ -47,7 +58,7 @@ export function CouponInput({ orderTotal, onCouponApplied }: CouponInputProps) {
         return;
       }
 
-      const coupon = data as any;
+      const coupon = data as unknown as CouponRow;
 
       // Check expiration
       if (coupon.expires_at && new Date(coupon.expires_at) < new Date()) {

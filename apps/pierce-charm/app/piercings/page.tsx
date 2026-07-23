@@ -1,18 +1,18 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import content from "@/content/es.json";
+import type { SiteContent, ContentItem } from "@/lib/content-types";
 import { AnatomySwitcher, type CatalogItem } from "@/components/AnatomySwitcher";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, DividerOrnament } from "@/components/ornaments";
 import { whatsappUrl } from "@/lib/site-config";
 
-const c = content as any;
+const c = content as SiteContent;
 const p = c.piercings || {};
 const categories = p.categories || [];
 
-const allItems: CatalogItem[] = categories.flatMap((cat: any) =>
-  cat.items.map((it: any) => ({ ...it, categoryId: cat.id, categoryLabel: cat.label }))
+const allItems: CatalogItem[] = categories.flatMap((cat: ContentItem) =>
+  cat.items.map((it: ContentItem) => ({ ...it, categoryId: cat.id, categoryLabel: cat.label }))
 );
 
 function PiercingsPageInner() {
@@ -25,12 +25,16 @@ function PiercingsPageInner() {
     if (id) {
       const it = allItems.find((x) => x.id === id);
       if (it && it.region) {
-        setRegion(it.region);
-        // Scroll to the corresponding area card
-        setTimeout(() => {
+        const nextRegion = it.region as "oreja" | "rostro" | "cuerpo";
+        const t0 = setTimeout(() => setRegion(nextRegion), 0);
+        const t1 = setTimeout(() => {
           const el = document.getElementById(`p-${id}`);
           if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
         }, 200);
+        return () => {
+          clearTimeout(t0);
+          clearTimeout(t1);
+        };
       }
     }
   }, []);
@@ -41,15 +45,18 @@ function PiercingsPageInner() {
     if (typeof window === "undefined") return;
     const hash = window.location.hash.replace("#", "");
     if (!hash) return;
-    const item = allItems.find((it: any) => it.id === hash);
+    const item = allItems.find((it: ContentItem) => it.id === hash);
     if (!item) return;
-    if (item.region) setRegion(item.region);
-    // Wait for filtered list to render before scrolling.
+    const nextRegion = item.region as "oreja" | "rostro" | "cuerpo" | undefined;
+    const t0 = nextRegion ? setTimeout(() => setRegion(nextRegion), 0) : null;
     const t = window.setTimeout(() => {
       const el = document.getElementById(`p-${hash}`);
       if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
     }, 120);
-    return () => window.clearTimeout(t);
+    return () => {
+      if (t0) clearTimeout(t0);
+      window.clearTimeout(t);
+    };
   }, []);
 
   return (

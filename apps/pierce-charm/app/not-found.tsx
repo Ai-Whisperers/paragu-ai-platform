@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CrossInverted, Skull, CrescentMoon } from "@/components/ornaments";
+import { CrossInverted, CrescentMoon } from "@/components/ornaments";
 
 export default function NotFound() {
   return (

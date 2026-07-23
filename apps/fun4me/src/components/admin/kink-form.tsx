@@ -10,9 +10,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
 import { Save, ArrowLeft, Trash2 } from 'lucide-react';
 import Link from 'next/link';
+import type { KinkCategory } from '@/types/database';
 
 interface KinkFormProps {
-  kink: any | null;
+  kink: (KinkCategory & { image_url?: string | null }) | null;
   isNew: boolean;
 }
 
@@ -59,21 +60,22 @@ export function KinkForm({ kink, isNew }: KinkFormProps) {
 
     try {
       if (isNew) {
-        const { error } = await (supabase as any)
+        const { error } = await supabase
           .from('kink_categories')
           .insert(payload);
         if (error) throw error;
       } else {
-        const { error } = await (supabase as any)
+        const { error } = await supabase
           .from('kink_categories')
           .update(payload)
-          .eq('id', kink.id);
+          .eq('id', kink!.id);
         if (error) throw error;
       }
       router.push('/admin/kinks');
       router.refresh();
-    } catch (err: any) {
-      alert('Error al guardar: ' + (err?.message || 'Error desconocido'));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      alert('Error al guardar: ' + (msg || 'Error desconocido'));
     } finally {
       setLoading(false);
     }
@@ -83,15 +85,16 @@ export function KinkForm({ kink, isNew }: KinkFormProps) {
     if (!confirm('¿Estás seguro de que querés eliminar este kink?')) return;
     setLoading(true);
     try {
-      const { error } = await (supabase as any)
+      const { error } = await supabase
         .from('kink_categories')
         .delete()
-        .eq('id', kink.id);
+        .eq('id', kink!.id);
       if (error) throw error;
       router.push('/admin/kinks');
       router.refresh();
-    } catch (err: any) {
-      alert('Error al eliminar: ' + (err?.message || 'Error desconocido'));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      alert('Error al eliminar: ' + (msg || 'Error desconocido'));
     } finally {
       setLoading(false);
     }

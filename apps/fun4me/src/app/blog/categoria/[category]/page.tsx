@@ -3,11 +3,23 @@ import { useParams } from "next/navigation"
 import Link from "next/link"
 import content from "@/content/es.json"
 
+interface BlogPost {
+  slug: string
+  title: string
+  excerpt: string
+  content?: string
+  category: string
+  date: string
+  readTime: string
+  author?: string
+  image?: string
+}
+
 export default function BlogCategory() {
   const { category } = useParams()
   const cat = (category as string) || ""
   const catNormalized = cat.toLowerCase()
-  const posts = content.blog.posts.filter((p: any) =>
+  const posts = (content.blog.posts as BlogPost[]).filter((p) =>
     p.category.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") === catNormalized
   )
 
@@ -28,7 +40,7 @@ export default function BlogCategory() {
         </>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post: any) => (
+          {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
               <article className="rounded-xl border border-border bg-card overflow-hidden transition-all group-hover:-translate-y-1 group-hover:shadow-md">
                 <div className="h-40 bg-gradient-to-br from-surface-light to-surface flex items-center justify-center">

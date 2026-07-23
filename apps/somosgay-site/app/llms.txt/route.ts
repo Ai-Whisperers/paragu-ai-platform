@@ -1,5 +1,5 @@
 import { SITE_URL } from "@/lib/content";
-import { NEWS_ARTICLES } from "@/content/news";
+import { NEWS_ARTICLES, type NewsArticle } from "@/content/news";
 
 /**
  * llms.txt — a small plain-text file that gives AI crawlers (GPTBot,
@@ -11,7 +11,7 @@ import { NEWS_ARTICLES } from "@/content/news";
  */
 function buildLlmsTxt(): string {
   const bullet = (text: string) => `- ${text}`;
-  const articleLine = (a: any) =>
+  const articleLine = (a: NewsArticle) =>
     `${bullet(`[${new Date(a.date).toISOString().slice(0, 10)}] ${a.title}`)}\n  ${bullet(`URL: ${SITE_URL}/noticias/${a.slug}`)}\n  ${bullet(`Resumen: ${a.dek}`)}`;
 
   return `# SOMOSGAY

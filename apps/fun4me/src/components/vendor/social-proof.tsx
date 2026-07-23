@@ -1,7 +1,13 @@
 "use client"
 import { useState } from "react"
 
-export function SocialProof({ orders, total }: { orders: any[]; total: number }) {
+interface SocialProofOrder {
+  product: string
+  time: string
+  city: string
+}
+
+export function SocialProof({ orders, total }: { orders: SocialProofOrder[]; total: number }) {
   const [dismissed, setDismissed] = useState(false)
   const [current] = useState(() => orders[Math.floor(Math.random() * orders.length)])
 

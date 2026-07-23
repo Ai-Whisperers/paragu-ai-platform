@@ -36,7 +36,14 @@ const jsonLd = {
   "sameAs": ["https://instagram.com/fun4me_py"],
 }
 
-const c = content as any
+interface RootContent {
+  socialProof?: {
+    recentOrders?: unknown[]
+    totalCustomers?: number
+  }
+}
+
+const c = content as RootContent
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fun4me.paragu-ai.com"),

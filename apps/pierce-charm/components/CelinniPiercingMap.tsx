@@ -57,13 +57,6 @@ export function CelinniPiercingMap({
 }: Props) {
   const [activeId, setActiveId] = useState<string | null>(null);
 
-  // Deduplicar industrial-1/2 → un solo pin para UI
-  const uiPins = CELINNI_PINS.filter(
-    (p, idx, arr) => arr.findIndex((q) => q.id === p.id) === idx
-  );
-
-  const active = activeId ? uiPins.find((p) => p.id === activeId) ?? null : null;
-
   return (
     <div className="relative w-full max-w-[420px] mx-auto select-none">
       {/* Glow halo */}
@@ -74,6 +67,7 @@ export function CelinniPiercingMap({
       />
 
       {/* Imagen base */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={imageSrc}
         alt={imageAlt}

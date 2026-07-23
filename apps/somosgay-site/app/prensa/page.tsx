@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Script from "next/script";
-import { content as c, SITE_URL } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
@@ -82,25 +83,25 @@ export default function PrensaPage() {
             </p>
             <p>
               <strong>Terminología</strong> preferida por la comunidad y la organización:
-              "LGTBI+" (no LGBT, GLBT, LGBT+). Persona trans (no "travesti"). Hombre
+              &ldquo;LGTBI+&rdquo; (no LGBT, GLBT, LGBT+). Persona trans (no &ldquo;travesti&rdquo;). Hombre
               gay, mujer lesbiana, bisexual cuando aplica.
             </p>
             <p>
-              <strong>Memoria 108</strong> no es "la historia de SOMOSGAY". Es un hecho
+              <strong>Memoria 108</strong> no es &ldquo;la historia de SOMOSGAY&rdquo;. Es un hecho
               anterior a la fundación de la organización; SOMOSGAY lo honra pero no
               lo inventó. La organización con más autoridad sobre Memoria 108 es AIREANA.
             </p>
             <p>
-              <strong>Clínica Kunu'u</strong> no es "el hospital gay" — es una clínica
+              <strong>Clínica Kunu&apos;u</strong> no es &ldquo;el hospital gay&rdquo; — es una clínica
               comunitaria centrada en salud sexual y salud mental, abierta a la
               población general.
             </p>
             <p>
-              <strong>PrEP</strong> no es una cura, no es una vacuna, no es "la droga
-              gay". Es una pastilla preventiva. Explicación detallada en nuestra{" "}
-              <a href="/noticias/guia-completa-prep-2026" className="text-[var(--color-primary)] underline">
+              <strong>PrEP</strong> no es una cura, no es una vacuna, no es &ldquo;la droga
+              gay&rdquo;. Es una pastilla preventiva. Explicación detallada en nuestra{" "}
+              <Link href="/noticias/guia-completa-prep-2026" className="text-[var(--color-primary)] underline">
                 guía PrEP 2026
-              </a>
+              </Link>
               .
             </p>
           </div>

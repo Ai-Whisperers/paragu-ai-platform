@@ -15,7 +15,9 @@ export function CookieBanner() {
   useEffect(() => {
     const dismissed =
       typeof window !== "undefined" && window.localStorage.getItem("somosgay-pref-dismissed");
-    if (!dismissed) setShow(true);
+    if (dismissed) return;
+    const t = setTimeout(() => setShow(true), 0);
+    return () => clearTimeout(t);
   }, []);
 
   function dismiss() {

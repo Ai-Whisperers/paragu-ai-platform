@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 interface ToastItem {
   id: string
@@ -17,11 +17,15 @@ export function toast(message: string, type: "success" | "info" | "error" = "inf
 export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = useState<ToastItem[]>([])
 
-  addToastGlobal = (message: string, type: "success" | "info" | "error" = "info") => {
-    const id = `toast-${++toastId}`
-    setToasts(prev => [...prev, { id, message, type }])
-    setTimeout(() => setToasts(prev => prev.filter(t => t.id !== id)), 3000)
-  }
+  // Register the module-level bridge in an effect so the assignment isn't a render-time side effect.
+  useEffect(() => {
+    addToastGlobal = (message: string, type: "success" | "info" | "error" = "info") => {
+      const id = `toast-${++toastId}`
+      setToasts(prev => [...prev, { id, message, type }])
+      setTimeout(() => setToasts(prev => prev.filter(t => t.id !== id)), 3000)
+    }
+    return () => { addToastGlobal = null }
+  }, [])
 
   return (
     <>

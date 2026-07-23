@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import content from "@/content/es.json";
+import type { SiteContent, ContentItem } from "@/lib/content-types";
 import { ChainVertical, Skull, CrossInverted, CrescentMoon, Bat, DividerOrnament } from "@/components/ornaments";
 import { whatsappUrl } from "@/lib/site-config";
 
-const c = content as any;
+const c = content as SiteContent;
 const g = c.gallery || {};
 const allItems = g.items || [];
 const cats = g.categories || [];
@@ -15,8 +16,8 @@ export default function GaleriaPage() {
   const [tab, setTab] = useState<string>("all");
   const [material, setMaterial] = useState<string>("all");
 
-  let items = tab === "all" ? allItems : allItems.filter((it: any) => it.category === tab);
-  items = material === "all" ? items : items.filter((it: any) => it.material === material);
+  let items = tab === "all" ? allItems : allItems.filter((it: ContentItem) => it.category === tab);
+  items = material === "all" ? items : items.filter((it: ContentItem) => it.material === material);
 
   return (
     <div className="pt-24 md:pt-32 relative">
@@ -73,7 +74,7 @@ export default function GaleriaPage() {
                           <span className="font-[var(--font-display)] text-[0.7rem] uppercase tracking-[0.18em] text-[var(--color-muted-foreground)] mr-2">
                             Material:
                           </span>
-                          {g.filters.material.map((m: any) => (
+                          {g.filters.material.map((m: ContentItem) => (
                             <button
                               key={m.id}
                               onClick={() => setMaterial(m.id)}
@@ -97,7 +98,7 @@ export default function GaleriaPage() {
 
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
-          {items.map((it: any, i: number) => (
+          {items.map((it: ContentItem, i: number) => (
             <GalleryCard key={i} item={it} index={i} />
           ))}
         </div>
@@ -125,7 +126,7 @@ export default function GaleriaPage() {
   );
 }
 
-function GalleryCard({ item, index }: { item: any; index: number }) {
+function GalleryCard({ item, index }: { item: ContentItem; index: number }) {
   const variant = index % 6;
 
   return (

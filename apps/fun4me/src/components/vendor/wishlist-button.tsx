@@ -1,7 +1,12 @@
 "use client"
 import { useWishlist } from "@/lib/vendor/wishlist"
 
-export function WishlistButton({ product }: { product: any }) {
+interface WishlistProduct {
+  id: string | number
+  [key: string]: unknown
+}
+
+export function WishlistButton({ product }: { product: WishlistProduct }) {
   const { toggle, isFavorite } = useWishlist()
   const fav = isFavorite(product.id)
 

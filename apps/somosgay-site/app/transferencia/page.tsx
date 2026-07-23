@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { content as c, SITE_URL } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 import { Breadcrumbs, breadcrumbJsonLd } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
