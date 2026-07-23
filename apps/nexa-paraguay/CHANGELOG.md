@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-07-23: feat(dra-gabriela): precios consistentes 130-150k en todos los JSON (by Erebus)
+
 - 2026-07-22: fix(host-rules): re-apply 5 swarm Host() corrections after merge revert (by Erebus)
 
 - 2026-07-22: chore(security): document leaked PAT in git history, add remediation guide (by Erebus)

@@ -2,7 +2,7 @@ import { Inter, DM_Serif_Display, Caveat } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
-import { THEMES, THEME_STORAGE_KEY } from "@/lib/themes"
+import { THEMES, THEME_STORAGE_KEY, DEFAULT_THEME } from "@/lib/themes"
 import { StickyWhatsApp } from "@/components/StickyWhatsApp"
 import { BreadcrumbsJsonLd } from "@/components/Breadcrumbs"
 import { getContent } from "@/lib/content"
@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic"
 export const revalidate = 0
 
 const THEME_IDS = THEMES.map((t) => t.id)
-const NO_FLASH_SCRIPT = `(function(){try{var k=${JSON.stringify(THEME_STORAGE_KEY)};var allowed=${JSON.stringify(THEME_IDS)};var v=localStorage.getItem(k);if(v&&v!=='default'&&allowed.indexOf(v)!==-1){document.documentElement.setAttribute('data-theme',v);}}catch(e){console.warn('theme no-flash failed',e);}})();`
+const NO_FLASH_SCRIPT = `(function(){try{var k=${JSON.stringify(THEME_STORAGE_KEY)};var allowed=${JSON.stringify(THEME_IDS)};var def=${JSON.stringify(DEFAULT_THEME)};var v=localStorage.getItem(k);var t=v&&allowed.indexOf(v)!==-1?v:def;if(t&&t!=='default'){document.documentElement.setAttribute('data-theme',t);}}catch(e){console.warn('theme no-flash failed',e);}})();`
 
 const inter = Inter({
   subsets: ["latin"],
