@@ -86,7 +86,7 @@ export const THEMES: ThemeInfo[] = [
   },
 ]
 
-export const DEFAULT_THEME: ThemeId = "default"
+export const DEFAULT_THEME: ThemeId = "lilac"
 export const THEME_STORAGE_KEY = "dra-gabriela-theme"
 
 export function isThemeId(value: unknown): value is ThemeId {

@@ -1,34 +1,40 @@
 {
   "title": "Services",
-  "subtitle": "The lead service is oral rehabilitation. The second opinion is the differentiator. The rest of dentistry with clinical judgment.",
+  "subtitle": "The flagship service is oral rehabilitation. The second opinion is the differentiator. Everything else with clinical criterion.",
   "tabs": [
+    { "id": "oral-rehabilitation", "label": "Oral Rehabilitation" },
     { "id": "second-opinion", "label": "Second Opinion" },
-    { "id": "treatment-planning", "label": "Planning" },
+    { "id": "treatment-planning", "label": "Treatment Planning" },
     { "id": "general-dentistry", "label": "General Dentistry" },
-    { "id": "cosmetic-dentistry", "label": "Cosmetic Dentistry" },
-    { "id": "oral-rehabilitation", "label": "Oral Rehabilitation" }
+    { "id": "cosmetic-dentistry", "label": "Cosmetic Dentistry" }
   ],
+  "featured": "oral-rehabilitation",
+  "destacados": ["oral-rehabilitation", "second-opinion"],
   "bundles": [
     {
       "id": "1",
-      "name": "Initial evaluation",
-      "description": "Clinical review, Q&A, and a written plan in one visit.",
-      "priceGs": 300000,
-      "link": "/en/services/second-opinion"
+      "name": "Initial consultation",
+      "description": "Clinical review, diagnostic conversation and written plan. 45–60 minutes. This is the only step with a published price.",
+      "priceGs": 130000,
+      "priceRange": "130,000 – 150,000 PYG",
+      "ctaLabel": "Book a consultation",
+      "link": "/en/contact"
     },
     {
       "id": "2",
       "name": "Written care plan",
-      "description": "Treatment options with documentation, timeline, and reference pricing.",
-      "priceGs": 600000,
-      "link": "/en/services/treatment-planning"
+      "description": "After the consultation, you receive a document with options, timelines and cost guidance. Yours, no commitment.",
+      "priceLabel": "Quoted in consultation",
+      "ctaLabel": "Learn more",
+      "link": "/en/second-opinion"
     },
     {
       "id": "3",
-      "name": "Complex planning (full-mouth rehabilitation)",
-      "description": "For comprehensive cases. Written plan with phases, timelines, and specialist coordination.",
-      "priceGs": 800000,
-      "link": "/en/services/oral-rehabilitation"
+      "name": "Detailed planning",
+      "description": "For complex cases or full-mouth rehabilitation. Phased plan, coordination with specialists when needed.",
+      "priceLabel": "Quoted in consultation",
+      "ctaLabel": "Learn more",
+      "link": "/en/services"
     }
   ]
 }

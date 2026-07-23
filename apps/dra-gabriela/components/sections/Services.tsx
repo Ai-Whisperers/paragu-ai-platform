@@ -111,24 +111,28 @@ export function Services({ c, locale }: { c: any; locale: string }) {
                 {isEs ? "Paquetes" : "Bundles"}
               </h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {bundles.map((b: any) => {
                 const slug = locale === "es"
                   ? b.link?.replace(/^\/en/, "/es")?.replace("/es/services/", "/es/servicios/")
                   : b.link?.replace(/^\/es/, "/en")
                 return (
-                  <Link key={b.id} href={slug || "#"} className="card p-5 group block">
+                  <Link key={b.id} href={slug || "#"} className="card p-5 md:p-6 group block">
                     <div className="flex items-start justify-between gap-3 mb-2">
-                      <h4 className="text-base font-semibold group-hover:text-accent transition-colors">{b.name}</h4>
-                      {b.priceGs && (
-                        <span className="text-sm font-mono text-accent whitespace-nowrap font-medium">
+                      <h4 className="text-base md:text-lg font-semibold group-hover:text-accent transition-colors">{b.name}</h4>
+                      {b.priceGs ? (
+                        <span className="text-sm md:text-base font-mono text-accent whitespace-nowrap font-medium">
                           Gs {Number(b.priceGs).toLocaleString("es-PY")}
                         </span>
-                      )}
+                      ) : b.priceLabel ? (
+                        <span className="text-xs md:text-sm font-mono text-fg-muted whitespace-nowrap font-medium">
+                          {b.priceLabel}
+                        </span>
+                      ) : null}
                     </div>
                     <p className="text-sm text-fg-muted leading-relaxed mb-3">{b.description}</p>
                     <span className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
-                      {isEs ? "Conocer" : "Learn more"} <ArrowRight className="w-3.5 h-3.5" />
+                      {b.ctaLabel || (isEs ? "Conocer" : "Learn more")} <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </Link>
                 )

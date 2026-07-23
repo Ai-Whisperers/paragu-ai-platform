@@ -1,215 +1,123 @@
 {
   "title": "Precios",
   "slug": "precios",
-  "metaDescription": "Precios de consulta dental en Paraguay. Valores de referencia para limpiezas, endodoncias, implantes, coronas y estética en Asunción.",
+  "metaDescription": "Consulta dental en Paraguay. Valores de referencia para la consulta inicial en Asunción. Tratamientos se cotizan en persona.",
   "og": {
-    "title": "Precios dentales — Dra. Gabriella González Pane",
-    "description": "Lista de precios publicada: sin letra chica ni sorpresas."
+    "title": "Precios — Dra. Gabriella González Pane",
+    "description": "Solo el precio de consulta es público. El resto se conversa en persona, sin sorpresas."
   },
   "pricing": {
     "currency": "Gs",
     "usd_approx": "Gs 7.800 = USD 1",
-    "disclaimer": "Precios referenciales. Costo final confirmado en consulta antes de cualquier procedimiento. No incluye laboratorio excepto donde se indica.",
+    "disclaimer": "Solo el valor de la consulta inicial es público. Cada plan de tratamiento es único y se cotiza después de la evaluación diagnóstica, por escrito.",
     "cta_whatsapp": true,
     "cta_whatsapp_text": "Pedir presupuesto por WhatsApp",
     "consultation": [
       {
-        "name": "Consulta estándar",
-        "price": 300000,
-        "duration": "30 min",
-        "note": "Evaluación básica"
-      },
-      {
-        "name": "Consulta extendida",
-        "price": 400000,
+        "name": "Consulta inicial",
+        "price": 130000,
+        "priceRange": "130.000 – 150.000 Gs",
         "duration": "45–60 min",
-        "note": "Caso complejo"
+        "note": "Evaluación + plan escrito. Traé estudios previos si tenés."
       }
     ],
     "second_opinion": {
       "name": "Segunda opinión escrita",
-      "price": 450000,
+      "priceLabel": "Cotización en consulta",
       "duration": "2–3 días",
       "includes": ["Revisión de historial", "Examen clínico", "Informe escrito"],
-      "note": "Servicio standalone. No incluido en planes corporativos."
+      "note": "Servicio standalone. Coordiná por WhatsApp."
     },
     "treatment_planning": {
       "name": "Planificación de tratamiento",
-      "price": 600000,
+      "priceLabel": "Cotización en consulta",
       "duration": "1–3 días",
       "includes": ["Diagnóstico por imágenes", "Propuesta de opciones", "Presupuesto escrito"],
       "note": "Plan sin compromiso."
     },
     "complex_planning": {
       "name": "Planificación compleja",
-      "price": 800000,
+      "priceLabel": "Cotización en consulta",
       "duration": "60–90 min",
       "note": "Boca completa / interdisciplinario"
     },
     "preventive": [
       {
         "name": "Profilaxis (limpieza)",
-        "price": 280000,
-        "duration": "40 min"
+        "priceLabel": "Cotización en consulta"
       },
       {
         "name": "Limpieza profunda (curetaje)",
-        "price": 400000,
-        "duration": "Por cuadrante"
-      },
-      {
-        "name": "Pulido",
-        "price": 150000,
-        "note": "Add-on"
+        "priceLabel": "Cotización en consulta",
+        "note": "Por cuadrante"
       }
     ],
     "operatoria": [
       {
         "name": "Restauración simple (1 superficie)",
-        "price": 350000
+        "priceLabel": "Cotización en consulta"
       },
       {
         "name": "Restauración mediana (2 superficies)",
-        "price": 450000
+        "priceLabel": "Cotización en consulta"
       },
       {
         "name": "Restauración compleja (3+ superficies)",
-        "price": 550000
-      },
-      {
-        "name": "Restauración compleja (anatomía extensa)",
-        "price": 700000,
-        "note": "MOD, caries extensa"
+        "priceLabel": "Cotización en consulta"
       }
     ],
     "endodoncia": [
       {
-        "name": "Anterior",
-        "price": 500000
+        "name": "Endodoncia unirradicular",
+        "priceLabel": "Cotización en consulta"
       },
       {
-        "name": "Premolar",
-        "price": 700000
-      },
-      {
-        "name": "Molar",
-        "price": 1200000
-      },
-      {
-        "name": "Molar (complejo / retratamiento)",
-        "price": 1500000
-      }
-    ],
-    "exodoncia": [
-      {
-        "name": "Extracción simple",
-        "price": 180000
-      },
-      {
-        "name": "Extracción quirúrgica",
-        "price": 350000
-      },
-      {
-        "name": "Muela del juicio (simple)",
-        "price": 400000
-      },
-      {
-        "name": "Muela del juicio (quirúrgica)",
-        "price": 600000
+        "name": "Endodoncia multirradicular",
+        "priceLabel": "Cotización en consulta"
       }
     ],
     "protesis": [
       {
-        "name": "Corona zirconia",
-        "price": 3500000,
-        "note": "Por pieza, con laboratorio"
+        "name": "Corona porcelana",
+        "priceLabel": "Cotización en consulta"
       },
       {
-        "name": "Corona E-max",
-        "price": 4500000,
-        "note": "Por pieza, con laboratorio"
+        "name": "Carilla porcelana",
+        "priceLabel": "Cotización en consulta"
       },
       {
-        "name": "Prótesis fija completa (arcada)",
-        "price": 2500000
-      },
-      {
-        "name": "Prótesis parcial flexible",
-        "price": 1800000
-      },
-      {
-        "name": "Póntico",
-        "price": 1200000,
-        "note": "Por unidad"
+        "name": "Prótesis removible",
+        "priceLabel": "Cotización en consulta"
       }
     ],
-    "implantes": [
+    "cirugia": [
       {
-        "name": "Implante titanio estándar",
-        "price": 1200000,
-        "note": "No incluye corona"
+        "name": "Extracción simple",
+        "priceLabel": "Cotización en consulta"
       },
       {
-        "name": "Implante titanio Swiss",
-        "price": 1800000,
-        "note": "No incluye corona"
+        "name": "Extracción compleja / quirúrgica",
+        "priceLabel": "Cotización en consulta"
       },
       {
-        "name": "Corona sobre pilar personalizado",
-        "price": 4000000
-      },
-      {
-        "name": "Injerto óseo (pequeño)",
-        "price": 600000
-      },
-      {
-        "name": "Injerto óseo (grande)",
-        "price": 1200000
+        "name": "Implante dental (sin corona)",
+        "priceLabel": "Cotización en consulta"
       }
     ],
     "estetica": [
       {
-        "name": "Blanqueamiento domiciliario (arcada)",
-        "price": 1200000
+        "name": "Blanqueamiento profesional",
+        "priceLabel": "Cotización en consulta"
       },
       {
-        "name": "Blanqueamiento consultorio (arcada)",
-        "price": 1800000
-      },
-      {
-        "name": "Carilla directa composite (por diente)",
-        "price": 600000
-      },
-      {
-        "name": "Carilla porcelana (por pieza)",
-        "price": 3500000,
-        "note": "Con laboratorio"
+        "name": "Carillas estéticas",
+        "priceLabel": "Cotización en consulta"
       }
-    ],
-    "odontopediatria": [
-      {
-        "name": "Consulta niño",
-        "price": 200000,
-        "note": "Hasta 12 años"
-      },
-      {
-        "name": "Flúor",
-        "price": 100000
-      },
-      {
-        "name": "Restauración simple niño",
-        "price": 200000
-      },
-      {
-        "name": "Corona acero inoxidable",
-        "price": 400000
-      }
-    ],
-    "corporate_note": "Planes empresariales disponibles. Segunda opinión y planificación compleja son servicios standalone, no incluidos en cuotas corporativas.",
-    "payment": {
-      "methods": ["Efectivo", "Transferencia", "Pagopar", "Bancard POS"],
-      "financing": "Para casos > Gs 1M: hasta 12 cuotas con Pagopar/Bancard",
-      "discount": "Pago en efectivo: 2–5% descuento"
-    }
+    ]
+  },
+  "notes": {
+    "why_no_public_prices": "Cada boca es un caso. Mostrar precios de tratamientos sin verte lleva a cotizaciones inexactas. La consulta existe para evaluarte y darte un plan con valores reales — sin sorpresas después.",
+    "first_step": "La consulta inicial es el único paso con precio público. Incluye evaluación diagnóstica y plan escrito.",
+    "financing": "Efectivo, transferencia, tarjeta. Para casos de alto valor, opciones de financiamiento por Pagopar o Bancard — se conversa en la consulta."
   }
 }

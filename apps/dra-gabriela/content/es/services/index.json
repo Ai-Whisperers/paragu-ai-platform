@@ -14,23 +14,27 @@
     {
       "id": "1",
       "name": "Consulta inicial",
-      "description": "Revisión clínica, preguntas y plan escrito en una visita.",
-      "priceGs": 300000,
-      "link": "/es/services/second-opinion"
+      "description": "Revisión clínica, conversación diagnóstica y plan escrito. 45–60 minutos. Este es el único paso con precio público.",
+      "priceGs": 130000,
+      "priceRange": "130.000 – 150.000 Gs",
+      "ctaLabel": "Reservar consulta",
+      "link": "/es/contacto"
     },
     {
       "id": "2",
-      "name": "Plan escrito de tratamiento",
-      "description": "Opciones de tratamiento documentadas, con plazos y precios de referencia. Plan sin compromiso.",
-      "priceGs": 600000,
-      "link": "/es/services/treatment-planning"
+      "name": "Plan de cuidado escrito",
+      "description": "Después de la consulta, te entrego un documento con las opciones, plazos y orientación de costos. Es tuyo, sin compromiso.",
+      "priceLabel": "Cotización en consulta",
+      "ctaLabel": "Conocer más",
+      "link": "/es/segunda-opinion"
     },
     {
       "id": "3",
-      "name": "Planificación compleja (rehabilitación integral)",
-      "description": "Para casos de boca completa. Plan escrito con fases, plazos y coordinación con especialistas.",
-      "priceGs": 800000,
-      "link": "/es/services/oral-rehabilitation"
+      "name": "Planeamiento detallado",
+      "description": "Para casos complejos o de rehabilitación integral. Plan por fases, coordinación con especialistas si hace falta.",
+      "priceLabel": "Cotización en consulta",
+      "ctaLabel": "Conocer más",
+      "link": "/es/servicios"
     }
   ]
 }
