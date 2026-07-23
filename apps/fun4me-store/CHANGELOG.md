@@ -13,6 +13,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-07-22: fix(host-rules): re-apply 5 swarm Host() corrections after merge revert (by Erebus)
+
 - 2026-07-22: chore(security): document leaked PAT in git history, add remediation guide (by Erebus)
 
 - 2026-07-22: feat(deploy): add Dockerfile.standalone for fun4me-store, meal-prep, portas-barber (by Erebus)

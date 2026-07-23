@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return buildMetadata({
     slug: "pricing",
     title: data?.title ? `${data.title} · Dra. Gabriella` : (isEs ? "Precios" : "Pricing"),
-    description: isEs ? "Precios públicos de servicios dentales en Asunción. Consulta desde Gs 300.000, segunda opinión, planificación y tratamientos." : "Published dental service pricing in Asunción. Consultation from Gs 300,000, second opinion, treatment planning and procedures.",
+    description: isEs ? "Precios de consulta dental en Asunción. Consulta inicial desde Gs 130.000 (rango 130–150 mil). Tratamientos se cotizan en persona después de la evaluación." : "Dental consultation pricing in Asunción. Initial consultation from PYG 130,000 (range 130–150k). Treatment costs quoted in person after evaluation.",
     locale: isEs ? "es" : "en",
   })
 }
