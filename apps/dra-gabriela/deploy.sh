@@ -3,9 +3,11 @@ set -euo pipefail
 cd "$(dirname "$0")"
 [ -f .env ] && { set -a; source ./.env; set +a; }
 
-# Ensure monorepo-level files are available for Docker build context
-[ -f pnpm-lock.yaml ] || cp ../../pnpm-lock.yaml ./pnpm-lock.yaml
-[ -f .npmrc ] || cp ../../.npmrc ./.npmrc
+# The Dockerfile uses the monorepo as build context (so it can COPY
+# packages/, apps/dra-gabriela/, pnpm-workspace.yaml, etc. from a known
+# root). Switch to ../.. before invoking docker build, and reference the
+# Dockerfile by relative path.
+MONOREPO_ROOT="$(cd ../../ && pwd)"
 
 VERSION=$(git rev-parse --short HEAD)
 DATE=$(date +%Y%m%d-%H%M)
@@ -20,7 +22,7 @@ echo "--- build: $TAG"
 NEXT_BUILD_WORKERS=1 pnpm run build 2>/dev/null || NEXT_BUILD_WORKERS=1 npm run build
 
 echo "--- docker: $TAG"
-docker build -t "$TAG" -t "$LATEST" .
+docker build -t "$TAG" -t "$LATEST" -f "$MONOREPO_ROOT/apps/dra-gabriela/Dockerfile" "$MONOREPO_ROOT"
 
 echo "--- deploy: dra-gabriela_web (rolling update)"
 if ! docker service inspect dra-gabriela_web > /dev/null 2>&1; then
@@ -31,6 +33,3 @@ else
 fi
 
 echo "--- done: $TAG"
-
-# Clean up monorepo-level files copied for Docker build
-rm -f ./pnpm-lock.yaml ./.npmrc

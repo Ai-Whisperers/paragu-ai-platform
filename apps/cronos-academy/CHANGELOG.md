@@ -13,5 +13,7 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-07-22: chore(standardize): lock next@16.2.4 react@19.2.4 ts@^5.9.3 across 47 apps (by Erebus)
+
 - _Awaiting next deploy_
 

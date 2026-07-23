@@ -1,9 +1,21 @@
 FROM node:20-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
-COPY .next/standalone ./
-COPY .next/static ./apps/meal-prep/.next/static
-COPY public ./apps/meal-prep/public
-EXPOSE 3000
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
+
+RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
+
+# Copy standalone bundle
+COPY --chown=nextjs:nodejs .next/standalone/apps/meal-prep ./apps/meal-prep
+# Copy root node_modules (shared deps)
+COPY --chown=nextjs:nodejs .next/standalone/node_modules ./node_modules
+# Copy static chunks (JS, CSS)
+COPY --chown=nextjs:nodejs .next/static ./apps/meal-prep/.next/static
+# Copy public assets
+COPY --chown=nextjs:nodejs public ./apps/meal-prep/public
+
+USER nextjs
+EXPOSE 3000
 CMD ["node", "apps/meal-prep/server.js"]
