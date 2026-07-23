@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-07-22: chore(standardization): lock next@16.2.4, react@19.2.4, ts@^5.9.3 across all apps (by Erebus)
+
 - 2026-07-17: fix(nexa,site-seo): add turbopack alias for site-seo + commit compiled dist (by Erebus)
 
 - 2026-07-15: chore: refresh CHANGELOG.md stubs (post-deploy refresh) (by Erebus)
