@@ -82,20 +82,20 @@ export function CtaBanner({ c, locale }: { c: any; locale: string }) {
                     <>
                       <span>WhatsApp disponible al abrir el consultorio. Mientras tanto, escribime a</span>
                       <a
-                        href="mailto:doctora.gabi@ometzdental.com.py"
+                        href="mailto:DrGabriellaGonzalez@ometzdental.com"
                         className="text-gold-soft font-medium hover:underline"
                       >
-                        doctora.gabi@ometzdental.com.py
+                        DrGabriellaGonzalez@ometzdental.com
                       </a>
                     </>
                   ) : (
                     <>
                       <span>WhatsApp goes live when the practice opens. In the meantime, email me at</span>
                       <a
-                        href="mailto:doctora.gabi@ometzdental.com.py"
+                        href="mailto:DrGabriellaGonzalez@ometzdental.com"
                         className="text-gold-soft font-medium hover:underline"
                       >
-                        doctora.gabi@ometzdental.com.py
+                        DrGabriellaGonzalez@ometzdental.com
                       </a>
                     </>
                   )}

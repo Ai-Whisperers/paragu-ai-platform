@@ -15,8 +15,8 @@
     "consultation": [
       {
         "name": "Consulta inicial",
-        "price": 130000,
-        "priceRange": "130.000 – 150.000 Gs",
+        "price": 125000,
+        "priceDisplay": "Gs 125.000",
         "duration": "45–60 min",
         "note": "Evaluación + plan escrito. Traé estudios previos si tenés."
       }

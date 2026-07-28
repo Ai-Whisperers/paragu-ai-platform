@@ -9,8 +9,8 @@
     "whatsapp_display": "+595 981 146 759",
     "whatsapp_message_default": "Hola Dra. Gabriella, tengo una consulta",
     "whatsapp_message_anxiety": "Hola Dra. Gabriella, tengo miedo de ir al dentista",
-    "email": "doctora.gabi@ometzdental.com.py",
-    "email_display": "doctora.gabi@ometzdental.com.py",
+    "email": "DrGabriellaGonzalez@ometzdental.com",
+    "email_display": "DrGabriellaGonzalez@ometzdental.com",
     "phone": "+595 981 146 759",
     "whatsapp_business_note": {
       "en": "WhatsApp Business line coming soon. Currently using the practice line during pre-launch.",
@@ -93,8 +93,8 @@
     }
   },
   "practice": {
-    "priceRange": "PYG 130,000 – 150,000 (initial consultation)",
-    "priceRange_short": "PYG 130k – 150k (consultation)",
+    "priceRange": "PYG 125,000 (initial consultation)",
+    "priceRange_short": "PYG 125,000 (consultation)",
     "languages": [
       "Spanish",
       "English"
