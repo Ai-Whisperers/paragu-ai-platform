@@ -1,131 +1,131 @@
 {
   "slug": "empresa",
-  "kind": "Plan Empresa",
+  "kind": "Bedrijfsplan",
   "price": {
-    "setup": "450,000 Gs (~$62)",
-    "monthly": "639,000 Gs/month (~$89)",
-    "annual": "Annual = 2 months free"
+    "setup": "450.000 Gs (~$62)",
+    "monthly": "639.000 Gs/maand (~$89)",
+    "annual": "Jaarlijks = 2 maanden gratis"
   },
   "hero": {
-    "eyebrow": "For companies with 10–80 employees",
-    "title": "Know exactly what comes back from every campaign. Every time.",
-    "subtitle": "Institutional website + conversion landing + basic CRM + WhatsApp Business + simple dashboards. For Paraguayan companies already moving volume and want to measure, not guess.",
-    "primaryCta": "Get started",
-    "secondaryCta": "Request a free audit",
-    "primaryCtaHref": "https://wa.me/595991501444?text=Hi%2C%20I%27m%20interested%20in%20the%20Plan%20Empresa%20from%20Ai-Whisperers",
-    "secondaryCtaHref": "https://wa.me/595991501444?text=I%27d%20like%20to%20schedule%20a%20free%2020-min%20audit"
+    "eyebrow": "Voor bedrijven met 10–80 medewerkers",
+    "title": "Weet precies wat er terugkomt van elke campagne. Elke keer.",
+    "subtitle": "Bedrijfswebsite + conversielanding + basis CRM + WhatsApp Business + eenvoudige dashboards. Voor Paraguayaanse bedrijven die al volume draaien en willen meten, niet gissen.",
+    "primaryCta": "Start nu",
+    "secondaryCta": "Vraag een gratis audit aan",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Hallo%2C%20ik%20heb%20interesse%20in%20het%20Bedrijfsplan%20van%20Ai-Whisperers",
+    "secondaryCtaHref": "https://wa.me/595991501444?text=Ik%20wil%20graag%20een%20gratis%20audit%20van%2020%20minuten%20plannen"
   },
   "problem": {
-    "title": "The real problem",
-    "lead": "You spend on advertising and nobody tells you what comes back. The owner learns it when it's already gone.",
+    "title": "Het echte probleem",
+    "lead": "Je geeft geld uit aan reclame en niemand vertelt je wat er terugkomt. De eigenaar hoort het pas als het al weg is.",
     "items": [
-      "You burn budget on ads without measuring what clients actually return.",
-      "Campaigns run blind. No tracking, no comparable data.",
-      "Your sales team gets leads with zero context and chases cold.",
-      "Every month the same question: where did the money go?"
+      "Je verbrandt budget op advertenties zonder te meten welke klanten echt terugkomen.",
+      "Campagnes draaien blind. Geen tracking, geen vergelijkbare data.",
+      "Je verkoopteam krijgt leads zonder context en jaagt op koude.",
+      "Elke maand dezelfde vraag: waar is het geld gebleven?"
     ]
   },
   "solution": {
-    "title": "What we deliver",
-    "subtitle": "A system, not a decorative site. 4-week implementation.",
+    "title": "Wat we opleveren",
+    "subtitle": "Een systeem, geen decoratieve site. Implementatie in 4 weken.",
     "items": [
       {
-        "title": "Institutional website + conversion landing",
-        "desc": "Pages that load under 1.5s, mobile-optimized, with CTAs that lead to WhatsApp or forms."
+        "title": "Bedrijfswebsite + conversielanding",
+        "desc": "Pagina's die onder 1,5s laden, mobiel-geoptimaliseerd, met CTA's die naar WhatsApp of formulieren leiden."
       },
       {
-        "title": "Built-in basic CRM",
-        "desc": "Every lead is logged, tagged by campaign, and assigned. No Excel, no memory."
+        "title": "Ingebouwde basis-CRM",
+        "desc": "Elke lead wordt gelogd, getagd per campagne en toegewezen. Geen Excel, geen geheugen."
       },
       {
-        "title": "WhatsApp Business connected",
-        "desc": "Direct button to your number, reply templates, sales routing. 94% of Paraguay uses WhatsApp, 98% open it."
+        "title": "WhatsApp Business verbonden",
+        "desc": "Directe knop naar jouw nummer, antwoordsjablonen, routering naar verkopers. 94% van Paraguay gebruikt WhatsApp, 98% opent het."
       },
       {
-        "title": "Simple dashboards",
-        "desc": "How many leads per day, from which campaign, which sales rep closed. One screen, no PowerBI."
+        "title": "Eenvoudige dashboards",
+        "desc": "Hoeveel leads per dag, van welke campagne, welke verkoper sloot af. Eén scherm, geen PowerBI."
       },
       {
-        "title": "Free first-month audit",
-        "desc": "We show you where the money leaks today and what to change first. No commitment."
+        "title": "Gratis audit eerste maand",
+        "desc": "We laten zien waar het geld nu lekt en wat je eerst moet veranderen. Geen verplichting."
       },
       {
-        "title": "Spanish-language WhatsApp support",
-        "desc": "Talk to us right away. No bots, no waiting for tickets."
+        "title": "WhatsApp-support in het Spaans",
+        "desc": "Praat direct met ons. Geen bots, geen wachten op tickets."
       }
     ]
   },
   "social": {
-    "title": "Teams already operating this way",
+    "title": "Teams die dit al doen",
     "items": [
-      "28 client sites in production",
-      "3 mid-market py companies currently using our CRM",
-      "Ad audits completed in retail, professional services, hospitality",
-      "Stack verifiable at github.com/Ai-Whisperers"
+      "28 klantsites in productie",
+      "3 Paraguayse mid-market bedrijven die onze CRM nu gebruiken",
+      "Advertentie-audits afgerond in retail, professionele diensten en horeca",
+      "Stack verifieerbaar op github.com/Ai-Whisperers"
     ]
   },
   "process": {
-    "title": "How we start",
-    "timeline": "Setup in 2–4 weeks",
+    "title": "Hoe we starten",
+    "timeline": "Setup in 2–4 weken",
     "steps": [
       {
         "n": 1,
-        "title": "Initial audit (week 1)",
-        "body": "We map current campaigns, lead sources, and existing metrics. You get a written report."
+        "title": "Eerste audit (week 1)",
+        "body": "We brengen je huidige campagnes, leadbronnen en bestaande metrics in kaart. Je krijgt een rapport."
       },
       {
         "n": 2,
-        "title": "Design and development (weeks 2–3)",
-        "body": "Site + landing + CRM + WhatsApp integration. We show it working before we migrate you."
+        "title": "Ontwerp en ontwikkeling (week 2–3)",
+        "body": "Site + landing + CRM + WhatsApp-integratie. We laten het werkend zien voor we migreren."
       },
       {
         "n": 3,
-        "title": "Launch + training (week 4)",
-        "body": "Going to production. We train your team. Priority support the first month."
+        "title": "Lancering + training (week 4)",
+        "body": "Naar productie. We trainen je team. Prioriteitssupport de eerste maand."
       }
     ]
   },
   "pricingBreakdown": {
-    "title": "Pricing",
-    "setup": "450,000 Gs (~$62) setup, one-time",
-    "monthly": "639,000 Gs/month (~$89) — all-inclusive",
-    "annual": "Annual payment gets 2 months free",
+    "title": "Prijs",
+    "setup": "450.000 Gs (~$62) setup, eenmalig",
+    "monthly": "639.000 Gs/maand (~$89) — alles inbegrepen",
+    "annual": "Jaarlijkse betaling = 2 maanden gratis",
     "includes": [
-      "Institutional website",
-      "1 conversion landing per vertical",
-      "Basic CRM with up to 3 users",
-      "WhatsApp Business API integrated",
-      "Metrics dashboard",
-      "Spanish-language WhatsApp support",
-      "Daily backups + hosting"
+      "Bedrijfswebsite",
+      "1 conversielanding per sector",
+      "Basis-CRM met maximaal 3 gebruikers",
+      "WhatsApp Business API geïntegreerd",
+      "Metrics-dashboard",
+      "WhatsApp-support in het Spaans",
+      "Dagelijkse back-ups + hosting"
     ]
   },
   "faq": [
     {
-      "q": "What's included in the 450,000 Gs setup?",
-      "a": "Site design and development, CRM configuration, WhatsApp Business integration, and the initial audit of your campaigns. One payment."
+      "q": "Wat zit er in de setup van 450.000 Gs?",
+      "a": "Site-ontwerp en ontwikkeling, CRM-configuratie, WhatsApp Business-integratie en de eerste audit van je campagnes. Eén betaling."
     },
     {
-      "q": "Can I pay monthly instead of annual?",
-      "a": "Yes. Monthly is 639,000 Gs. Annual pays 10 months (2 months free)."
+      "q": "Kan ik maandelijks betalen in plaats van jaarlijks?",
+      "a": "Ja. Maandelijks is 639.000 Gs. Jaarlijks betaal je 10 maanden (2 maanden gratis)."
     },
     {
-      "q": "How long until my site is in production?",
-      "a": "2–4 weeks to launch, depending on number of pages and whether you already have materials (photos, texts, logo)."
+      "q": "Hoe lang duurt het voor mijn site live is?",
+      "a": "2 tot 4 weken tot lancering, afhankelijk van het aantal pagina's en of je al materiaal hebt (foto's, teksten, logo)."
     },
     {
-      "q": "What if I'm not satisfied?",
-      "a": "Before launch we show you the system running and you test it. If something doesn't fit, we adjust before going to production. After launch there's a 30-day guarantee."
+      "q": "Wat als ik niet tevreden ben?",
+      "a": "Voor de lancering laten we je het systeem zien draaien en test je het. Als iets niet past, passen we aan voor we naar productie gaan. Na lancering is er 30 dagen garantie."
     },
     {
-      "q": "Which industries do you work with?",
-      "a": "Professional services, mid-market retail, multi-location hospitality, private health. If you bill over 50M Gs/month and have a sales team, we're a fit."
+      "q": "Met welke sectoren werken jullie?",
+      "a": "Professionele diensten, mid-market retail, horeca met meerdere locaties, privé-gezondheidszorg. Als je meer dan 50M Gs/maand factureert en een verkoopteam hebt, zijn we een match."
     }
   ],
   "finalCta": {
-    "title": "Stop operating blind.",
-    "subtitle": "Start with a free 20-minute audit. No commitment, no pitch.",
-    "button": "Contact us today",
-    "href": "https://wa.me/595991501444?text=Hi%2C%20I%27m%20interested%20in%20a%20free%20audit%20for%20Plan%20Empresa"
+    "title": "Stop met blind opereren.",
+    "subtitle": "Begin met een gratis audit van 20 minuten. Geen verplichting, geen pitch.",
+    "button": "Neem vandaag contact op",
+    "href": "https://wa.me/595991501444?text=Hallo%2C%20ik%20heb%20interesse%20in%20een%20gratis%20audit%20voor%20het%20Bedrijfsplan"
   }
 }

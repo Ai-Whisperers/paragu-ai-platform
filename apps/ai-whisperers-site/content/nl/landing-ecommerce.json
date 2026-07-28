@@ -1,132 +1,132 @@
 {
   "slug": "ecommerce",
-  "kind": "Online Store / E-commerce",
+  "kind": "Webwinkel / E-commerce",
   "price": {
-    "setup": "From 450,000 Gs (~$62)",
-    "monthly": "From 381,000 Gs/month (~$53)",
-    "annual": "Annual = 2 months free",
-    "promo": "First e-commerce client: setup free in exchange for a video testimonial and 3 qualified referrals."
+    "setup": "Vanaf 450.000 Gs (~$62)",
+    "monthly": "Vanaf 381.000 Gs/maand (~$53)",
+    "annual": "Jaarlijks = 2 maanden gratis",
+    "promo": "Eerste e-commerceklant: setup gratis in ruil voor een video-testimonial en 3 gekwalificeerde verwijzingen."
   },
   "hero_section": {
-    "eyebrow": "For py retailers with a physical store in Asunción, Lambaré, San Lorenzo",
-    "title": "Sell online without learning to code. Your physical store plus a new sales channel in 2 weeks.",
-    "subtitle": "Catalog + payments via Tigo Money, Personal Pay, and transfer + WhatsApp integrated for shipping coordination + simple admin panel + 2 training rounds. Setup from 450K Gs + 381K/mo.",
-    "primaryCta": "Get started",
-    "secondaryCta": "See a demo",
-    "primaryCtaHref": "https://wa.me/595991501444?text=Hi%2C%20I%20have%20a%20physical%20store%20and%20want%20to%20sell%20online",
-    "secondaryCtaHref": "https://wa.me/595991501444?text=I%27d%20like%20to%20see%20an%20e-commerce%20demo"
+    "eyebrow": "Voor retailers in Paraguay met fysieke winkel in Asunción, Lambaré, San Lorenzo",
+    "title": "Verkoop online zonder technische kennis. Je fysieke winkel plus een nieuwe verkooplijn in 2 weken.",
+    "subtitle": "Catalogus + betalingen via Tigo Money, Personal Pay en overschrijving + WhatsApp geïntegreerd voor verzendcoördinatie + eenvoudig paneel + 2 trainingsrondes. Setup vanaf 450K Gs + 381K/maand.",
+    "primaryCta": "Start nu",
+    "secondaryCta": "Bekijk demo",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Hallo%2C%20ik%20heb%20een%20fysieke%20winkel%20en%20wil%20online%20verkopen",
+    "secondaryCtaHref": "https://wa.me/595991501444?text=Ik%20wil%20graag%20een%20demo%20van%20een%20webwinkel%20zien"
   },
   "problem": {
-    "title": "What's blocking you",
-    "lead": "‘I want to sell online but I'm scared of the development, shipping, returns. I saw sites that cost 5 million and sold nothing.’",
+    "title": "Wat je tegenhoudt",
+    "lead": "‘Ik wil online verkopen maar ben bang voor de ontwikkeling, verzending en retourzendingen. Ik heb sites gezien die 5 miljoen kostten en niets verkochten.’",
     "items": [
-      "Others charged you millions and delivered something unusable.",
-      "You don't know how to handle Tigo Money, Personal Pay, or logistics.",
-      "You were told ‘this is 6 months’ and lost the season.",
-      "You don't want to hire a developer just to upload photos."
+      "Anderen hebben je miljoenen laten betalen en iets onbruikbaars geleverd.",
+      "Je weet niet hoe je Tigo Money, Personal Pay of logistiek moet beheren.",
+      "Men zei ‘dit is 6 maanden’ en je miste het seizoen.",
+      "Je wilt geen ontwikkelaar inhuren alleen om foto's te uploaden."
     ]
   },
   "solution": {
-    "title": "What you get in 2 weeks",
+    "title": "Wat we in 2 weken opleveren",
     "items": [
       {
-        "title": "Browseable catalog",
-        "desc": "Every product with photos, description, price in Gs and USD. Category filters. Search."
+        "title": "Doorzoekbare catalogus",
+        "desc": "Elk product met foto's, beschrijving, prijs in Gs en USD. Filters per categorie. Zoeker."
       },
       {
-        "title": "Local payments integrated",
-        "desc": "Tigo Money, Personal Pay, bank transfer. No absurd international fees."
+        "title": "Lokale betalingen geïntegreerd",
+        "desc": "Tigo Money, Personal Pay, bankoverschrijving. Geen absurde internationale commissies."
       },
       {
-        "title": "WhatsApp for shipping",
-        "desc": "When the customer buys, your WhatsApp gets an automatic message with the order ready to coordinate."
+        "title": "WhatsApp voor verzendcoördinatie",
+        "desc": "De klant koopt en er komt automatisch een bericht op jouw WhatsApp met de bestelling klaar om te coördineren."
       },
       {
-        "title": "Simple admin panel for you",
-        "desc": "Upload products, see orders, change prices. No calling the developer."
+        "title": "Eenvoudig paneel voor jou",
+        "desc": "Producten uploaden, bestellingen zien, prijzen wijzigen. Zonder de ontwikkelaar te bellen."
       },
       {
-        "title": "1-on-1 training",
-        "desc": "Two training rounds with your team. Real operations, not theory."
+        "title": "1-op-1 training",
+        "desc": "Twee trainingsrondes met je team. Echte operatie, geen theorie."
       },
       {
-        "title": "Design adapted to your brand",
-        "desc": "We take your colors, your logo, your products. The store looks like part of your brand."
+        "title": "Ontwerp afgestemd op jouw merk",
+        "desc": "We gebruiken jouw kleuren, logo en producten. De winkel ziet eruit als onderdeel van je merk."
       }
     ]
   },
   "includes": {
-    "title": "Includes",
+    "title": "Inbegrepen",
     "items": [
-      "Catalog with unlimited products",
-      "Tigo Money + Personal Pay + transfer gateway",
-      "WhatsApp Business integration",
-      "Admin panel",
-      "Responsive design (mobile + desktop)",
-      "Hosting + SSL + backups",
-      "2 training rounds with your team",
-      "WhatsApp support the first 60 days"
+      "Catalogus met onbeperkte producten",
+      "Betaalgateway Tigo Money + Personal Pay + overschrijving",
+      "WhatsApp Business-integratie",
+      "Beheerpaneel",
+      "Responsive ontwerp (mobiel + desktop)",
+      "Hosting + SSL + back-ups",
+      "2 trainingsrondes met je team",
+      "Support via WhatsApp de eerste 60 dagen"
     ]
   },
   "logistics": {
-    "title": "Shipping and returns",
+    "title": "Verzending en retourzendingen",
     "items": [
-      "Asunción and metro area: optional integration with local couriers.",
-      "Interior of the country: step-by-step guide for shipping via public transport or courrier.",
-      "Clear return policy: panel to manage them without technical jargon."
+      "Asunción en grootstedelijk gebied: optionele integratie met lokale bezorgers.",
+      "Binnenland: stapsgewijze gids voor verzending via openbaar vervoer of koerier.",
+      "Duidelijk retourbeleid: paneel om ze te beheren zonder jargon."
     ]
   },
   "promo": {
-    "title": "For the first e-commerce client",
-    "highlight": "Setup free",
-    "description": "If you're the first retailer to close the e-commerce plan with us, we waive the setup. In exchange: a 90-second video testimonial and 3 qualified referrals from your network."
+    "title": "Voor de eerste e-commerceklant",
+    "highlight": "Setup gratis",
+    "description": "Als je de eerste retailer bent die het e-commerceplan met ons sluit, krijg je de setup cadeau. In ruil: een video-testimonial van 90 seconden en 3 gekwalificeerde verwijzingen uit je netwerk van collega's."
   },
   "faq": [
     {
-      "q": "How long until the store is ready?",
-      "a": "2 weeks with products and materials ready. If you need help with photos or text, we can help but it adds time."
+      "q": "Hoe lang duurt het voor de winkel klaar is?",
+      "a": "2 weken met producten en materiaal klaar. Als je hulp nodig hebt met foto's of teksten, bieden we dat aan, maar het kost extra tijd."
     },
     {
-      "q": "Do I need my own domain?",
-      "a": "We help you get your .com.py or you can use the one you have. Included in setup."
+      "q": "Heb ik een eigen domein nodig?",
+      "a": "We helpen je je .com.py te krijgen of je kunt de jouwe gebruiken. Het is inbegrepen in de setup."
     },
     {
-      "q": "Can I add products myself later?",
-      "a": "Yes, the panel is for you. We train you on usage."
+      "q": "Kan ik zelf producten toevoegen nadien?",
+      "a": "Ja, het paneel is voor jou. We trainen je in het gebruik."
     },
     {
-      "q": "How much does it cost to maintain the store?",
-      "a": "The monthly plan starts at 381,000 Gs and includes hosting, support, maintenance, and backups."
+      "q": "Hoeveel kost het om de winkel te onderhouden?",
+      "a": "Het maandelijkse plan begint bij 381.000 Gs en bevat hosting, support, onderhoud en back-ups."
     },
     {
-      "q": "What about shipping?",
-      "a": "We teach you to configure shipping within the metro area. For the interior we provide WhatsApp coordination templates."
+      "q": "Hoe zit het met verzending?",
+      "a": "We leren je verzending binnen de grootstedelijke zone te configureren. Voor het binnenland geven we sjablonen voor coördinatie via WhatsApp."
     },
     {
-      "q": "Can I see a demo before committing?",
-      "a": "Yes. We build a demo with test products so you see how it looks and feels."
+      "q": "Kan ik een demo zien voor ik me verbind?",
+      "a": "Ja. We maken een demo met testproducten zodat je kunt zien hoe het eruitziet en aanvoelt."
     }
   ],
   "pricingBreakdown": {
-    "title": "Pricing",
-    "setup": "From 450,000 Gs (~$62) — waived for the first e-commerce client",
-    "monthly": "From 381,000 Gs/month (~$53)",
-    "annual": "Annual = 2 months free",
+    "title": "Prijs",
+    "setup": "Vanaf 450.000 Gs (~$62) — gratis voor de eerste e-commerceklant",
+    "monthly": "Vanaf 381.000 Gs/maand (~$53)",
+    "annual": "Jaarlijks = 2 maanden gratis",
     "includes": [
-      "Catalog with unlimited products",
-      "Tigo Money + Personal Pay + transfer gateway",
-      "WhatsApp Business integration for shipping",
-      "Admin panel for you",
-      "Brand-adapted responsive design",
-      "Hosting + SSL + daily backups",
-      "2 training rounds with your team",
-      "60-day WhatsApp support"
+      "Catalogus met onbeperkte producten",
+      "Betaalgateway Tigo Money + Personal Pay + overschrijving",
+      "WhatsApp Business-integratie voor verzending",
+      "Beheerpaneel voor jou",
+      "Responsive ontwerp afgestemd op je merk",
+      "Hosting + SSL + dagelijkse back-ups",
+      "2 trainingsrondes met je team",
+      "Support via WhatsApp de eerste 60 dagen"
     ]
   },
   "finalCta": {
-    "title": "Sell online this month.",
-    "subtitle": "Send us your store name and we'll build a free demo in 48 hours.",
-    "button": "Contact us today",
-    "href": "https://wa.me/595991501444?text=Hi%2C%20I%20have%20store%20%5Bname%5D%20and%20want%20to%20sell%20online"
+    "title": "Verkoop deze maand online.",
+    "subtitle": "Stuur ons de naam van je winkel en we maken gratis een demo in 48 uur.",
+    "button": "Neem vandaag contact op",
+    "href": "https://wa.me/595991501444?text=Hallo%2C%20ik%20heb%20de%20winkel%20%5Bnaam%5D%20en%20wil%20online%20verkopen"
   }
 }
