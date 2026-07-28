@@ -28,7 +28,7 @@ export function MeetDoctor({ locale }: MeetDoctorProps) {
           <div className="relative">
             <div className="relative aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl border border-border">
               <Image
-                src="/images/team/dra-gp-portrait-v2.svg"
+                src="/images/team/dra-gp-portrait-v2.webp"
                 alt={isEs ? "Ometz Dental · Dra. Gabriella González Pane" : "Ometz Dental · Dra. Gabriella González Pane"}
                 fill
                 priority
@@ -71,8 +71,8 @@ export function MeetDoctor({ locale }: MeetDoctorProps) {
             </h2>
             <p className="text-lg text-fg-muted leading-relaxed mb-6">
               {isEs
-                ? "Veinte años de práctica conservadora en Asunción. Antes de cualquier procedimiento, reviso tu caso completo, te explico todas las opciones disponibles y te entrego un plan escrito con precios. Si no necesitás tratamiento, te lo digo."
-                : "Twenty years of conservative practice in Asunción. Before any procedure, I review your complete case, explain every option available, and deliver a written plan with pricing. If you don't need treatment, I'll say so."}
+                ? "Veinte años de práctica en Asunción. Antes de cualquier procedimiento, reviso tu caso completo, te explico todas las opciones disponibles y te entrego un plan escrito con precios. Si no necesitás tratamiento, te lo digo."
+                : "Twenty years of active practice in Asunción. Before any procedure, I review your complete case, explain every option available, and deliver a written plan with pricing. If you don't need treatment, I'll say so."}
             </p>
 
             {/* Quick facts grid */}

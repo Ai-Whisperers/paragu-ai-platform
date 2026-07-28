@@ -52,14 +52,7 @@ export default async function SecondOpinionPage({ params }: { params: Promise<{ 
             <MessageCircle className="w-5 h-5" />
             {c.cta_primary || (isEs ? "Pedir segunda opinión" : "Request a second opinion")}
           </a>
-        ) : (
-          <Link href={`/${locale}/contact`} className="btn btn-primary text-base px-8 py-4">
-            {isEs ? "Ver contacto" : "See contact"}
-          </Link>
-        )}
-        <Link href={`${base}/pricing`} className="btn btn-white text-base px-8 py-4">
-          {isEs ? "Ver precios" : "See pricing"} <ArrowRight className="w-5 h-5" />
-        </Link>
+        ) : null}
       </PageHero>
 
       {/* Trust strip — 2-col content + stats */}

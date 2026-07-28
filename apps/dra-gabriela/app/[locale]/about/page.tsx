@@ -65,7 +65,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
             <div className="card overflow-hidden">
               <div className="aspect-[3/4] relative">
                 <Image
-                  src="/images/team/dra-gp-portrait-v2.svg"
+                  src="/images/team/dra-gp-portrait-v2.webp"
                   alt="Ometz Dental · Dra. Gabriella González Pane"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
@@ -106,35 +106,6 @@ export default async function About({ params }: { params: Promise<{ locale: stri
                 )}
               </div>
             ))}
-          </div>
-        </div>
-      </PageSection>
-
-      {/* CTA */}
-      <PageSection layout="narrow" py="md" bg="muted">
-        <div className="text-center">
-          <h2 className="text-2xl md:text-3xl mb-3">
-            {c.cta?.title || (isEs ? "¿Hablamos?" : "Let's talk?")}
-          </h2>
-          <p className="text-fg-muted mb-6 max-w-lg mx-auto">
-            {c.cta?.body || (isEs
-              ? "Coordiná tu consulta por WhatsApp."
-              : "Book your consultation via WhatsApp.")}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            {wa ? (
-              <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                <MessageCircle className="w-4 h-4" />
-                {isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
-              </a>
-            ) : (
-              <Link href={`${base}/contact`} className="btn btn-primary">
-                {isEs ? "Ver contacto" : "See contact"} <ArrowRight className="w-4 h-4" />
-              </Link>
-            )}
-            <Link href={`${base}/second-opinion`} className="btn btn-outline">
-              {isEs ? "Segunda opinión" : "Second opinion"}
-            </Link>
           </div>
         </div>
       </PageSection>
@@ -195,6 +166,29 @@ export default async function About({ params }: { params: Promise<{ locale: stri
           </div>
         </div>
       </section>
+
+      {/* CTA */}
+      <PageSection layout="narrow" py="md" bg="muted">
+        <div className="text-center">
+          <h2 className="text-2xl md:text-3xl mb-3">{c.cta?.title || (isEs ? "¿Hablamos?" : "Let's talk?")}</h2>
+          <p className="text-fg-muted mb-6 max-w-lg mx-auto">{c.cta?.body || (isEs ? "Coordiná tu consulta por WhatsApp." : "Book your consultation via WhatsApp.")}</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            {wa ? (
+              <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                <MessageCircle className="w-4 h-4" />
+                {isEs ? "Escribime por WhatsApp" : "Message on WhatsApp"}
+              </a>
+            ) : (
+              <Link href={`${base}/contact`} className="btn btn-primary">
+                {isEs ? "Ver contacto" : "See contact"} <ArrowRight className="w-4 h-4" />
+              </Link>
+            )}
+            <Link href={`${base}/second-opinion`} className="btn btn-outline">
+              {isEs ? "Segunda opinión" : "Second opinion"}
+            </Link>
+          </div>
+        </div>
+      </PageSection>
     </>
   )
 }
