@@ -1,121 +1,121 @@
 {
   "slug": "hosting",
-  "kind": "Managed Hosting",
+  "kind": "Apenas Hosting",
   "price": {
-    "setup": "0 Gs — migration free",
-    "monthly": "97,000 Gs/month (~$13)",
-    "annual": "Annual pays 10 (12 months for the price of 10)"
+    "setup": "0 Gs — migração grátis",
+    "monthly": "97.000 Gs/mês (~$13)",
+    "annual": "Anual paga 10 (12 meses pelo preço de 10)"
   },
   "hero_section": {
-    "eyebrow": "Managed hosting in Spanish · 24-hour migration",
-    "title": "Your site stable, fast, and supported. Without price hikes every 3 months.",
-    "subtitle": "SSL included, daily backups, 99.5% uptime SLA, Spanish-language support via WhatsApp. We migrate your current site free.",
-    "primaryCta": "Migrate now",
-    "secondaryCta": "Free diagnostic",
-    "primaryCtaHref": "https://wa.me/595991501444?text=Hi%2C%20I%20want%20to%20migrate%20my%20site%20to%20your%20hosting",
-    "secondaryCtaHref": "https://wa.me/595991501444?text=I%27d%20like%20a%20free%20diagnostic%20of%20my%20current%20site"
+    "eyebrow": "Hosting gerenciado em espanhol · Migração em 24 horas",
+    "title": "Seu site estável, rápido e atendido. Sem mudança de preço a cada 3 meses.",
+    "subtitle": "SSL incluído, backups diários, uptime 99,5% com SLA, suporte em espanhol pelo WhatsApp. Migramos seu site atual grátis.",
+    "primaryCta": "Migre agora",
+    "secondaryCta": "Diagnóstico grátis",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Ol%C3%A1%2C%20quero%20migrar%20meu%20site%20para%20o%20hosting%20de%20voc%C3%AAs",
+    "secondaryCtaHref": "https://wa.me/595991501444?text=Gostaria%20de%20um%20diagn%C3%B3stico%20gratis%20do%20meu%20site%20atual"
   },
   "problem": {
-    "title": "Sound familiar?",
-    "lead": "‘My site is slow. They charged me 200K and left it down. I don't even know where it's hosted.’",
+    "title": "Soa familiar?",
+    "lead": "‘Meu site está lento. Cobraram 200K e deixaram ele fora do ar. Não sei nem onde está hospedado.’",
     "items": [
-      "‘My site runs slow or goes down constantly.’",
-      "‘They charged me 200K Gs and left my site down.’",
-      "‘I don't know where the site is hosted or who runs it.’",
-      "‘They change prices every 3 months without notice.’",
-      "‘Support replies in English and takes 3 days.’"
+      "‘Meu site está lento ou cai direto.’",
+      "‘Cobraram 200K Gs e deixaram o site fora do ar.’",
+      "‘Não sei onde o site está hospedado nem quem administra.’",
+      "‘Mudam os preços a cada 3 meses sem avisar.’",
+      "‘O suporte responde em inglês e em 3 dias.’"
     ]
   },
   "solution": {
-    "title": "What you get",
+    "title": "O que oferecemos",
     "items": [
       {
-        "title": "Free migration",
-        "desc": "We move your site to our infrastructure in 24 hours. Without you touching anything."
+        "title": "Migração grátis",
+        "desc": "Movemos seu site para nossa infraestrutura em 24 horas. Sem você tocar em nada."
       },
       {
-        "title": "SSL included",
-        "desc": "Automatic HTTPS. Google rewards you, your users stay safe."
+        "title": "SSL incluído",
+        "desc": "HTTPS automático. O Google te premia, seus usuários ficam seguros."
       },
       {
-        "title": "Daily backups",
-        "desc": "If something breaks, we restore. 30 days of history, no questions."
+        "title": "Backups diários",
+        "desc": "Se algo quebrar, restauramos. 30 dias de histórico, sem perguntas."
       },
       {
-        "title": "99.5% uptime with SLA",
-        "desc": "If we go below that number, we refund that day's monthly. Contractually guaranteed."
+        "title": "Uptime 99,5% com SLA",
+        "desc": "Se ficarmos abaixo desse número, devolvemos o valor daquele dia. Garantido por contrato."
       },
       {
-        "title": "Spanish support via WhatsApp",
-        "desc": "Talk to a Paraguayan human, not a bot. Response in under 2 working hours."
+        "title": "Suporte em espanhol pelo WhatsApp",
+        "desc": "Você fala com um humano paraguaio, não com um bot. Resposta em menos de 2 horas úteis."
       },
       {
-        "title": "No surprise price changes",
-        "desc": "The price you see today is the one you pay next year. Annual renewal, no surprises."
+        "title": "Sem mudanças de preço surpresa",
+        "desc": "O preço que você vê hoje é o que paga no ano que vem. Renovação anual sem surpresas."
       }
     ]
   },
   "comparison": {
-    "title": "What's different",
-    "headers": ["Aspect", "Traditional hosting", "Ai-Whisperers"],
+    "title": "O que muda",
+    "headers": ["Aspecto", "Hosting tradicional", "Ai-Whisperers"],
     "rows": [
-      ["Support language", "English", "Spanish via WhatsApp"],
-      ["Response time", "24–72 hours (ticket)", "Under 2 working hours"],
-      ["Initial migration", "They charge you", "Free"],
-      ["Price changes", "Every 3 months", "Frozen for 12 months"],
-      ["Backups", "Weekly or less", "Daily, 30-day history"],
-      ["Uptime SLA", "Best effort", "99.5% with compensation"]
+      ["Idioma do suporte", "Inglês", "Espanhol pelo WhatsApp"],
+      ["Tempo de resposta", "24–72 horas (ticket)", "Menos de 2h úteis"],
+      ["Migração inicial", "Cobram", "Grátis"],
+      ["Mudanças de preço", "A cada 3 meses", "Congelados por 12 meses"],
+      ["Backups", "Semanais ou menos", "Diários, 30 dias"],
+      ["SLA de uptime", "Melhor esforço", "99,5% com compensação"]
     ]
   },
   "suitability": {
-    "title": "Ideal for",
+    "title": "Ideal para",
     "items": [
-      "WordPress, Wix, Squarespace sites that feel slow",
-      "E-commerce with periodic outages",
-      "Campaign landing pages that need to stay up",
-      "Any SMB depending on its current provider"
+      "Sites WordPress, Wix, Squarespace que parecem lentos",
+      "E-commerce com quedas periódicas",
+      "Landing pages de campanhas que precisam estar sempre no ar",
+      "Qualquer py com um site que depende do provedor atual"
     ]
   },
   "pricingBreakdown": {
-    "title": "Pricing",
-    "setup": "No setup cost — migration free",
-    "monthly": "97,000 Gs/month (~$13) — no extras",
-    "annual": "Annual = pays 10 (2 months free)",
+    "title": "Preço",
+    "setup": "Sem custo de setup — migração grátis",
+    "monthly": "97.000 Gs/mês (~$13) — sem extras",
+    "annual": "Anual = paga 10 (bonificação de 2 meses)",
     "includes": [
-      "Hosting with SSL",
-      "Daily backups (30 days)",
-      "99.5% uptime SLA",
-      "Free migration",
-      "Spanish support via WhatsApp",
-      "Annual renewal, no surprises"
+      "Hosting com SSL",
+      "Backups diários (30 dias)",
+      "SLA de uptime 99,5%",
+      "Migração grátis",
+      "Suporte em espanhol pelo WhatsApp",
+      "Renovação anual sem surpresas"
     ]
   },
   "faq": [
     {
-      "q": "How long does migration take?",
-      "a": "24 hours after you send us access. We notify you when ready and you verify before the DNS switch."
+      "q": "Quanto tempo leva a migração?",
+      "a": "24 horas a partir do acesso. Avisamos quando está pronto e você verifica antes da mudança de DNS."
     },
     {
-      "q": "What if my site uses a special CMS?",
-      "a": "We migrate WordPress, Wix, Squarespace, Webflow, static HTML, and Next.js. Something exotic? We evaluate in the free diagnostic."
+      "q": "E se meu site usa um CMS especial?",
+      "a": "Migramos WordPress, Wix, Squarespace, Webflow, sites HTML estáticos e Next.js. Se você tem algo exótico, avaliamos no diagnóstico grátis."
     },
     {
-      "q": "Is 97,000 Gs everything, no extras?",
-      "a": "Yes. SSL, backups, support, SLA — all included. No charges for reasonable traffic."
+      "q": "97.000 Gs é tudo, sem extras?",
+      "a": "Sim. SSL, backups, suporte, SLA — tudo incluído. Não há cobranças por tráfego razoável."
     },
     {
-      "q": "What if I want to cancel?",
-      "a": "No lock-in clauses. Cancel whenever you want. We refund the prorated month."
+      "q": "E se eu quiser cancelar?",
+      "a": "Sem cláusulas leoninas. Cancela quando quiser. Devolvemos o proporcional do mês."
     },
     {
-      "q": "Can I upgrade to Plan Profesional or Empresa later?",
-      "a": "Of course. The hosting cost is deducted from the full plan and migration remains free."
+      "q": "Posso fazer upgrade para o Plano Profissional ou Empresa depois?",
+      "a": "Claro. O custo do hosting é descontado do plano completo e a migração continua grátis."
     }
   ],
   "finalCta": {
-    "title": "Switch to supported hosting.",
-    "subtitle": "Send us your site's URL and we'll send a free diagnostic in under 24 hours.",
-    "button": "Get started",
-    "href": "https://wa.me/595991501444?text=Hi%2C%20I%20want%20a%20diagnostic%20of%20my%20current%20site"
+    "title": "Passe para hosting atendido.",
+    "subtitle": "Mande a URL do seu site e entregamos um diagnóstico grátis em menos de 24 horas.",
+    "button": "Comece agora",
+    "href": "https://wa.me/595991501444?text=Ol%C3%A1%2C%20quero%20um%20diagn%C3%B3stico%20do%20meu%20site%20atual"
   }
 }

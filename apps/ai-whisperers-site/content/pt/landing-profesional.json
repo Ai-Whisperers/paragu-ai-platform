@@ -1,136 +1,136 @@
 {
   "slug": "profesional",
-  "kind": "Plan Profesional",
+  "kind": "Plano Profissional",
   "hero": true,
   "price": {
-    "setup": "450,000 Gs (~$62)",
-    "monthly": "381,000 Gs/month (~$53)",
-    "annual": "Annual = 2 months free"
+    "setup": "450.000 Gs (~$62)",
+    "monthly": "381.000 Gs/mês (~$53)",
+    "annual": "Anual = 2 meses bonificados"
   },
   "hero_section": {
-    "eyebrow": "48-hour delivery · For independent professionals and SMBs of 2–10 people",
-    "title": "Your practice or office on Google, with one-tap WhatsApp button. Live in 48 hours.",
-    "subtitle": "Professional site + local SEO for your area (Villa Morra, Carmelitas, Asunción) + WhatsApp Business + booking form + consultations dashboard. Setup 450K Gs + 381K/mo.",
-    "primaryCta": "Get started",
-    "secondaryCta": "We reply fast",
-    "primaryCtaHref": "https://wa.me/595991501444?text=Hi%2C%20I%27m%20interested%20in%20the%2048-hour%20Plan%20Profesional",
+    "eyebrow": "Pronto em 48 horas · Para profissionais liberais e PMEs de 2–10 pessoas",
+    "title": "Seu consultório, estúdio ou escritório no Google, com botão direto para o WhatsApp. Pronto em 48 horas.",
+    "subtitle": "Site profissional + SEO local na sua zona (Assunção, Villa Morra, Carmelitas) + WhatsApp Business + formulário de reserva + dashboard de consultas. Setup 450K Gs + 381K/mês.",
+    "primaryCta": "Comece agora",
+    "secondaryCta": "Respondemos na hora",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20Profissional%20de%2048%20horas",
     "secondaryCtaHref": "https://wa.me/595991501444"
   },
   "problem": {
-    "title": "What's happening today",
-    "lead": "You have clients by referral but you don't show on Google. Calls get lost. You lose 30–50% of leads because nobody answers in time.",
+    "title": "O que acontece com você hoje",
+    "lead": "Você tem clientela por indicação, mas não aparece no Google. As ligações se perdem. Você perde 30–50% das consultas porque ninguém responde a tempo.",
     "items": [
-      "‘I have clients by referral but don't appear on Google when someone searches my service.’",
-      "‘Calls get lost when I'm off the clock.’",
-      "‘People search for ‘dentist Villa Morra’ or ‘employment lawyer Asunción’ and land on someone else.’",
-      "‘No way to know how many consultations I get per month.’"
+      "‘Tenho clientes por indicação, mas não apareço no Google quando alguém busca meu serviço.’",
+      "‘As ligações se perdem em horários em que não estou.’",
+      "‘As pessoas buscam ‘dentista Assunção’ ou ‘advogado trabalhista Assunção’ e encontram outro.’",
+      "‘Não tenho como saber quantas consultas recebo por mês.’"
     ]
   },
   "solution": {
-    "title": "What you get in 48 hours",
+    "title": "O que entregamos em 48 horas",
     "items": [
       {
-        "title": "Mobile-first professional site",
-        "desc": "Loads under 2s, looks perfect on phone, with your services, hours, and contact options."
+        "title": "Site profissional mobile-first",
+        "desc": "Carrega em menos de 2 segundos, fica perfeito no celular, com seus serviços, horários e formas de contato."
       },
       {
-        "title": "Local SEO by neighborhood",
-        "desc": "Optimized for ‘[your service] + your area’. Villa Morra, Carmelitas, Recoleta — wherever you operate."
+        "title": "SEO local por zona",
+        "desc": "Otimizamos para ‘[seu serviço] + seu bairro’. Assunção, Villa Morra, Carmelitas, Recoleta, dependendo de onde você atua."
       },
       {
-        "title": "WhatsApp Business with one-tap button",
-        "desc": "The main button on every page opens WhatsApp with a pre-filled message. One-click contact."
+        "title": "WhatsApp Business com botão direto",
+        "desc": "O botão principal de cada página abre seu WhatsApp com uma mensagem pré-carregada. As pessoas te contatam em 1 clique."
       },
       {
-        "title": "Booking or consultation form",
-        "desc": "For those who don't use WhatsApp. Automatic email confirmation."
+        "title": "Formulário de reserva ou consulta",
+        "desc": "Para quem não usa WhatsApp. Confirmação automática por e-mail."
       },
       {
-        "title": "Consultations dashboard",
-        "desc": "How many leads per day, what searches they came from, which channel converted most this month."
+        "title": "Dashboard de consultas",
+        "desc": "Quantas consultas por dia, de qual busca vieram, qual canal converteu mais neste mês."
       },
       {
-        "title": "48-hour delivery",
-        "desc": "If you send us materials, your site is published and showing on Google before Friday."
+        "title": "Entrega em 48 horas",
+        "desc": "Se você nos passar materiais, seu site fica publicado e aparecendo no Google antes de sexta."
       }
     ]
   },
   "audiences": {
-    "title": "Who it's for",
+    "title": "Para quem é",
     "items": [
-      "Doctors and dentists with their own practice",
-      "Lawyers and law firms",
-      "Accountants and accounting firms",
-      "Architects and designers",
-      "Psychologists and therapists",
-      "Consulting engineers",
-      "Any independent professional with an existing client base"
+      "Médicos e dentistas com consultório próprio",
+      "Advogados e escritórios jurídicos",
+      "Contadores e escritórios contábeis",
+      "Arquitetos e designers",
+      "Psicólogos e terapeutas",
+      "Engenheiros consultores",
+      "Qualquer profissional liberal com base de clientes própria"
     ]
   },
   "pricingBreakdown": {
-    "title": "Pricing",
-    "setup": "450,000 Gs (~$62) one-time",
-    "monthly": "381,000 Gs/month (~$53) all-inclusive",
-    "annual": "Annual pays 10 months (2 months free)",
+    "title": "Preço",
+    "setup": "450.000 Gs (~$62) uma única vez",
+    "monthly": "381.000 Gs/mês (~$53) tudo incluído",
+    "annual": "Pagando anual bonificamos 2 meses",
     "includes": [
-      "Professional website (up to 8 sections)",
-      "Local SEO optimization for your area",
-      "WhatsApp Business integration with button",
-      "Booking or consultation form",
-      "Hosting + .com.py or .com domain",
-      "Basic consultations dashboard",
-      "Spanish-language WhatsApp support"
+      "Site profissional (até 8 seções)",
+      "Otimização de SEO local para sua zona",
+      "Integração WhatsApp Business com botão",
+      "Formulário de reserva ou consulta",
+      "Hosting + domínio .com.py ou .com",
+      "Dashboard básico de consultas",
+      "Suporte em espanhol pelo WhatsApp"
     ]
   },
   "delivery": {
-    "title": "Promise: 48 hours",
-    "lead": "Not marketing — our standard delivery for clients with materials ready. Measured in weeks, not months.",
+    "title": "Promessa: 48 horas",
+    "lead": "Não é marketing, é nossa entrega padrão para clientes com materiais prontos. Medimos em semanas, não em meses.",
     "items": [
-      "Day 1 — 30-min alignment call on services, area, and messaging",
-      "Day 1 (afternoon) — Structure design and review with you",
-      "Day 2 — Full site loaded and verified",
-      "Day 2 (afternoon) — Express training via 20-min Zoom"
+      "Dia 1 — Chamada de 30 min para alinhar serviços, zona e mensagens",
+      "Dia 1 (tarde) — Design da estrutura e revisão com você",
+      "Dia 2 — Site completo, carregado e verificado",
+      "Dia 2 (tarde) — Capacitação Express por Zoom de 20 minutos"
     ]
   },
   "social": {
-    "title": "Professionals already operating this way",
+    "title": "Profissionais que já operam assim",
     "items": [
-      "28 client sites in production, 4 languages",
-      "Landing pages with under 2-second load on 3G",
-      "Average conversion rate 4.5% on professional landings",
-      "100% publishable on GitHub as proof of delivery"
+      "28 sites de clientes em produção, 4 idiomas",
+      "Landing com tempo de carregamento menor que 2 segundos em 3G",
+      "Taxa de conversão média de 4,5% em landings de profissionais",
+      "100% publicável no GitHub como prova de entrega"
     ]
   },
   "faq": [
     {
-      "q": "How do you deliver a site in 48 hours?",
-      "a": "We use a Next.js engine with per-industry templates. We adapt the structure to your brand, your texts, your services. The site is live and working by day 2."
+      "q": "Como vocês fazem o site em 48 horas?",
+      "a": "Temos um motor Next.js com templates por setor. Adaptamos a estrutura à sua marca, seus textos e seus serviços. O site fica pronto e funcionando no dia 2."
     },
     {
-      "q": "What if I don't have materials (photos, texts, logo)?",
-      "a": "We send an express guide, and if you want we can take photos for you or write professional copy at an additional cost. With materials ready, it's 48h."
+      "q": "E se eu não tiver materiais (fotos, textos, logo)?",
+      "a": "Enviamos um guia express e, se quiser, podemos tirar fotos ou criar textos profissionais por um custo adicional. Com materiais prontos, são 48h."
     },
     {
-      "q": "Does it work for any profession?",
-      "a": "Yes. Lawyers, dentists, accountants, architects, psychologists, engineers. The structure is adaptable."
+      "q": "Funciona para qualquer profissão?",
+      "a": "Sim. Trabalhamos com advogados, dentistas, contadores, arquitetos, psicólogos, engenheiros. A estrutura é adaptável."
     },
     {
-      "q": "Will I show on Google within 48 hours?",
-      "a": "The site is indexed that same day and can appear on Google for your name. For local searches like ‘dentist Villa Morra’ the algorithm takes 2–8 weeks. We explain what to expect."
+      "q": "Apareço no Google em 48 horas?",
+      "a": "O site fica indexado e pode aparecer no Google nesse dia para o seu nome. Para buscas locais como ‘dentista Assunção’, o algoritmo leva de 2 a 8 semanas. Explicamos o que esperar."
     },
     {
-      "q": "Do I pay everything upfront?",
-      "a": "Setup (450K Gs) is paid on signature. Monthly (381K Gs) starts when the site goes to production. No fine print."
+      "q": "Preciso pagar tudo adiantado?",
+      "a": "O setup (450K Gs) é pago na assinatura. O mensal (381K Gs) começa quando o site entra em produção. Sem letras miúdas."
     },
     {
-      "q": "What happens after the first month?",
-      "a": "You continue with the monthly that includes hosting, support, and maintenance. No setup renewal, no hidden costs."
+      "q": "O que acontece depois do primeiro mês?",
+      "a": "Você segue com o mensal que inclui hosting, suporte e manutenção. Sem renovação de setup, sem custos ocultos."
     }
   ],
   "finalCta": {
-    "title": "We reply fast.",
-    "subtitle": "Send us a WhatsApp with your profession and area. Less than 10 minutes for a response.",
-    "button": "Contact us today",
-    "href": "https://wa.me/595991501444?text=Hi%2C%20I%27m%20a%20%5Bprofession%5D%20in%20%5Barea%5D.%20Want%20info%20on%20Plan%20Profesional"
+    "title": "Respondemos na hora.",
+    "subtitle": "Mande um WhatsApp com sua profissão e bairro. Em menos de 10 minutos tem resposta.",
+    "button": "Fale conosco hoje",
+    "href": "https://wa.me/595991501444?text=Ol%C3%A1%2C%20sou%20profissional%20em%20%5Bprofiss%C3%A3o%5D%20em%20%5Bbairro%5D.%20Quero%20info%20do%20Plano%20Profissional"
   }
 }

@@ -1,121 +1,121 @@
 {
   "slug": "hosting",
-  "kind": "Managed Hosting",
+  "kind": "Alleen Hosting",
   "price": {
-    "setup": "0 Gs — migration free",
-    "monthly": "97,000 Gs/month (~$13)",
-    "annual": "Annual pays 10 (12 months for the price of 10)"
+    "setup": "0 Gs — gratis migratie",
+    "monthly": "97.000 Gs/maand (~$13)",
+    "annual": "Jaarlijks betaal je 10 (12 maanden voor de prijs van 10)"
   },
   "hero_section": {
-    "eyebrow": "Managed hosting in Spanish · 24-hour migration",
-    "title": "Your site stable, fast, and supported. Without price hikes every 3 months.",
-    "subtitle": "SSL included, daily backups, 99.5% uptime SLA, Spanish-language support via WhatsApp. We migrate your current site free.",
-    "primaryCta": "Migrate now",
-    "secondaryCta": "Free diagnostic",
-    "primaryCtaHref": "https://wa.me/595991501444?text=Hi%2C%20I%20want%20to%20migrate%20my%20site%20to%20your%20hosting",
-    "secondaryCtaHref": "https://wa.me/595991501444?text=I%27d%20like%20a%20free%20diagnostic%20of%20my%20current%20site"
+    "eyebrow": "Beheerde hosting in het Spaans · Migratie in 24 uur",
+    "title": "Je site stabiel, snel en ondersteund. Zonder prijsveranderingen elke 3 maanden.",
+    "subtitle": "SSL inbegrepen, dagelijkse back-ups, uptime 99,5% met SLA, support in het Spaans via WhatsApp. We migreren je huidige site gratis.",
+    "primaryCta": "Migreer nu",
+    "secondaryCta": "Gratis diagnose",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Hallo%2C%20ik%20wil%20mijn%20site%20naar%20jullie%20hosting%20migreren",
+    "secondaryCtaHref": "https://wa.me/595991501444?text=Ik%20wil%20graag%20een%20gratis%20diagnose%20van%20mijn%20huidige%20site"
   },
   "problem": {
-    "title": "Sound familiar?",
-    "lead": "‘My site is slow. They charged me 200K and left it down. I don't even know where it's hosted.’",
+    "title": "Klinkt bekend?",
+    "lead": "‘Mijn site is traag. Ze rekenden me 200K en lieten hem uit de lucht. Ik weet niet eens waar hij gehost wordt.’",
     "items": [
-      "‘My site runs slow or goes down constantly.’",
-      "‘They charged me 200K Gs and left my site down.’",
-      "‘I don't know where the site is hosted or who runs it.’",
-      "‘They change prices every 3 months without notice.’",
-      "‘Support replies in English and takes 3 days.’"
+      "‘Mijn site is traag of valt vaak uit.’",
+      "‘Ze rekenden me 200K Gs en lieten de site uit de lucht.’",
+      "‘Ik weet niet waar de site gehost wordt of wie hem beheert.’",
+      "‘Ze veranderen elke 3 maanden de prijzen zonder waarschuwing.’",
+      "‘Support antwoordt in het Engels en pas na 3 dagen.’"
     ]
   },
   "solution": {
-    "title": "What you get",
+    "title": "Wat we bieden",
     "items": [
       {
-        "title": "Free migration",
-        "desc": "We move your site to our infrastructure in 24 hours. Without you touching anything."
+        "title": "Gratis migratie",
+        "desc": "We verhuizen je site naar onze infrastructuur in 24 uur. Zonder dat je iets hoeft aan te raken."
       },
       {
-        "title": "SSL included",
-        "desc": "Automatic HTTPS. Google rewards you, your users stay safe."
+        "title": "SSL inbegrepen",
+        "desc": "HTTPS automatisch. Google beloont je, je gebruikers zijn veilig."
       },
       {
-        "title": "Daily backups",
-        "desc": "If something breaks, we restore. 30 days of history, no questions."
+        "title": "Dagelijkse back-ups",
+        "desc": "Als er iets breekt, herstellen we. 30 dagen historisch, zonder vragen."
       },
       {
-        "title": "99.5% uptime with SLA",
-        "desc": "If we go below that number, we refund that day's monthly. Contractually guaranteed."
+        "title": "Uptime 99,5% met SLA",
+        "desc": "Als we onder dat aantal zakken, storten we het maandbedrag van die dag terug. Gegarandeerd per contract."
       },
       {
-        "title": "Spanish support via WhatsApp",
-        "desc": "Talk to a Paraguayan human, not a bot. Response in under 2 working hours."
+        "title": "Support in het Spaans via WhatsApp",
+        "desc": "Je praat met een Paraguyaans mens, niet met een bot. Antwoord binnen 2 werkuren."
       },
       {
-        "title": "No surprise price changes",
-        "desc": "The price you see today is the one you pay next year. Annual renewal, no surprises."
+        "title": "Geen verrassingsprijsveranderingen",
+        "desc": "De prijs die je vandaag ziet, is wat je volgend jaar betaalt. Jaarlijkse hernieuwing zonder verrassingen."
       }
     ]
   },
   "comparison": {
-    "title": "What's different",
-    "headers": ["Aspect", "Traditional hosting", "Ai-Whisperers"],
+    "title": "Wat verandert er",
+    "headers": ["Aspect", "Traditionele hosting", "Ai-Whisperers"],
     "rows": [
-      ["Support language", "English", "Spanish via WhatsApp"],
-      ["Response time", "24–72 hours (ticket)", "Under 2 working hours"],
-      ["Initial migration", "They charge you", "Free"],
-      ["Price changes", "Every 3 months", "Frozen for 12 months"],
-      ["Backups", "Weekly or less", "Daily, 30-day history"],
-      ["Uptime SLA", "Best effort", "99.5% with compensation"]
+      ["Supporttaal", "Engels", "Spaans via WhatsApp"],
+      ["Reactietijd", "24–72 uur (ticket)", "Minder dan 2 werkuren"],
+      ["Eerste migratie", "Ze rekenen ervoor", "Gratis"],
+      ["Prijsveranderingen", "Elke 3 maanden", "Bevroren 12 maanden"],
+      ["Back-ups", "Wekelijks of minder", "Dagelijks, 30 dagen"],
+      ["Uptime-SLA", "Best effort", "99,5% met compensatie"]
     ]
   },
   "suitability": {
-    "title": "Ideal for",
+    "title": "Ideaal voor",
     "items": [
-      "WordPress, Wix, Squarespace sites that feel slow",
-      "E-commerce with periodic outages",
-      "Campaign landing pages that need to stay up",
-      "Any SMB depending on its current provider"
+      "WordPress-, Wix-, Squarespace-sites die traag aanvoelen",
+      "E-commerce met periodieke uitval",
+      "Landingspagina's van campagnes die altijd online moeten zijn",
+      "Elke MKB met een site die afhangt van de huidige provider"
     ]
   },
   "pricingBreakdown": {
-    "title": "Pricing",
-    "setup": "No setup cost — migration free",
-    "monthly": "97,000 Gs/month (~$13) — no extras",
-    "annual": "Annual = pays 10 (2 months free)",
+    "title": "Prijs",
+    "setup": "Geen setup-kosten — gratis migratie",
+    "monthly": "97.000 Gs/maand (~$13) — geen extra's",
+    "annual": "Jaarlijks = betaal 10 (bonus van 2 maanden)",
     "includes": [
-      "Hosting with SSL",
-      "Daily backups (30 days)",
-      "99.5% uptime SLA",
-      "Free migration",
-      "Spanish support via WhatsApp",
-      "Annual renewal, no surprises"
+      "Hosting met SSL",
+      "Dagelijkse back-ups (30 dagen)",
+      "SLA uptime 99,5%",
+      "Gratis migratie",
+      "Support in het Spaans via WhatsApp",
+      "Jaarlijkse hernieuwing zonder verrassingen"
     ]
   },
   "faq": [
     {
-      "q": "How long does migration take?",
-      "a": "24 hours after you send us access. We notify you when ready and you verify before the DNS switch."
+      "q": "Hoe lang duurt de migratie?",
+      "a": "24 uur vanaf het moment dat je ons toegang geeft. We laten je weten wanneer het klaar is en je verifieert voor de DNS-wijziging."
     },
     {
-      "q": "What if my site uses a special CMS?",
-      "a": "We migrate WordPress, Wix, Squarespace, Webflow, static HTML, and Next.js. Something exotic? We evaluate in the free diagnostic."
+      "q": "Wat als mijn huidige site een speciaal CMS gebruikt?",
+      "a": "We migreren WordPress, Wix, Squarespace, Webflow, statische HTML-sites en Next.js. Als je iets exotisch hebt, evalueren we het in de gratis diagnose."
     },
     {
-      "q": "Is 97,000 Gs everything, no extras?",
-      "a": "Yes. SSL, backups, support, SLA — all included. No charges for reasonable traffic."
+      "q": "Zijn 97.000 Gs alles, zonder extra's?",
+      "a": "Ja. SSL, back-ups, support, SLA — alles inbegrepen. Geen kosten voor redelijk verkeer."
     },
     {
-      "q": "What if I want to cancel?",
-      "a": "No lock-in clauses. Cancel whenever you want. We refund the prorated month."
+      "q": "Wat als ik wil opzeggen?",
+      "a": "Geen oneerlijke clausules. Je zegt op wanneer je wilt. We storten het pro rata bedrag van de maand terug."
     },
     {
-      "q": "Can I upgrade to Plan Profesional or Empresa later?",
-      "a": "Of course. The hosting cost is deducted from the full plan and migration remains free."
+      "q": "Kan ik later upgraden naar het Professioneel of Bedrijfsplan?",
+      "a": "Natuurlijk. De hostingkosten worden afgetrokken van het volledige plan en de migratie blijft gratis."
     }
   ],
   "finalCta": {
-    "title": "Switch to supported hosting.",
-    "subtitle": "Send us your site's URL and we'll send a free diagnostic in under 24 hours.",
-    "button": "Get started",
-    "href": "https://wa.me/595991501444?text=Hi%2C%20I%20want%20a%20diagnostic%20of%20my%20current%20site"
+    "title": "Stap over naar beheerde hosting.",
+    "subtitle": "Stuur ons de URL van je site en we bezorgen een gratis diagnose binnen 24 uur.",
+    "button": "Start nu",
+    "href": "https://wa.me/595991501444?text=Hallo%2C%20ik%20wil%20een%20diagnose%20van%20mijn%20huidige%20site"
   }
 }

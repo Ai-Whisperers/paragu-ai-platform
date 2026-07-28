@@ -1,131 +1,131 @@
 {
   "slug": "empresa",
-  "kind": "Plan Empresa",
+  "kind": "Plano Empresa",
   "price": {
-    "setup": "450,000 Gs (~$62)",
-    "monthly": "639,000 Gs/month (~$89)",
-    "annual": "Annual = 2 months free"
+    "setup": "450.000 Gs (~$62)",
+    "monthly": "639.000 Gs/mês (~$89)",
+    "annual": "Anual = 2 meses bonificados"
   },
   "hero": {
-    "eyebrow": "For companies with 10–80 employees",
-    "title": "Know exactly what comes back from every campaign. Every time.",
-    "subtitle": "Institutional website + conversion landing + basic CRM + WhatsApp Business + simple dashboards. For Paraguayan companies already moving volume and want to measure, not guess.",
-    "primaryCta": "Get started",
-    "secondaryCta": "Request a free audit",
-    "primaryCtaHref": "https://wa.me/595991501444?text=Hi%2C%20I%27m%20interested%20in%20the%20Plan%20Empresa%20from%20Ai-Whisperers",
-    "secondaryCtaHref": "https://wa.me/595991501444?text=I%27d%20like%20to%20schedule%20a%20free%2020-min%20audit"
+    "eyebrow": "Para empresas com 10–80 funcionários",
+    "title": "Saiba exatamente o que retorna de cada campanha. Toda vez.",
+    "subtitle": "Site institucional + landing de conversão + CRM básico + WhatsApp Business + dashboards simples. Para empresas paraguaias que já movem volume e querem medir, não adivinhar.",
+    "primaryCta": "Comece agora",
+    "secondaryCta": "Peça uma auditoria gratuita",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20Empresa%20da%20Ai-Whisperers",
+    "secondaryCtaHref": "https://wa.me/595991501444?text=Gostaria%20de%20agendar%20uma%20auditoria%20gratuita%20de%2020%20minutos"
   },
   "problem": {
-    "title": "The real problem",
-    "lead": "You spend on advertising and nobody tells you what comes back. The owner learns it when it's already gone.",
+    "title": "O problema real",
+    "lead": "Você gasta com publicidade e ninguém diz o que volta. O dono fica sabendo quando já foi.",
     "items": [
-      "You burn budget on ads without measuring what clients actually return.",
-      "Campaigns run blind. No tracking, no comparable data.",
-      "Your sales team gets leads with zero context and chases cold.",
-      "Every month the same question: where did the money go?"
+      "Você queima orçamento em anúncios sem medir qual clientela concreta volta.",
+      "As campanhas rodam às cegas. Sem tracking, sem dados comparáveis.",
+      "Sua equipe de vendas recebe leads sem contexto e corre atrás de frio.",
+      "Todo mês a mesma pergunta: para onde foi o dinheiro?"
     ]
   },
   "solution": {
-    "title": "What we deliver",
-    "subtitle": "A system, not a decorative site. 4-week implementation.",
+    "title": "O que entregamos",
+    "subtitle": "Um sistema, não um site decorativo. Implementação em 4 semanas.",
     "items": [
       {
-        "title": "Institutional website + conversion landing",
-        "desc": "Pages that load under 1.5s, mobile-optimized, with CTAs that lead to WhatsApp or forms."
+        "title": "Site institucional + landing de conversão",
+        "desc": "Páginas que carregam em menos de 1,5s, otimizadas para mobile, com CTAs que levam ao WhatsApp ou formulário."
       },
       {
-        "title": "Built-in basic CRM",
-        "desc": "Every lead is logged, tagged by campaign, and assigned. No Excel, no memory."
+        "title": "CRM básico integrado",
+        "desc": "Cada lead é registrado, marcado por campanha e atribuído. Sem Excel, sem memória."
       },
       {
-        "title": "WhatsApp Business connected",
-        "desc": "Direct button to your number, reply templates, sales routing. 94% of Paraguay uses WhatsApp, 98% open it."
+        "title": "WhatsApp Business conectado",
+        "desc": "Botão direto para seu número, modelos de resposta, encaminhamento para vendedores. 94% do Paraguai usa WhatsApp, 98% abre."
       },
       {
-        "title": "Simple dashboards",
-        "desc": "How many leads per day, from which campaign, which sales rep closed. One screen, no PowerBI."
+        "title": "Dashboards simples",
+        "desc": "Quantos leads por dia, de qual campanha, qual vendedor fechou. Uma tela, sem PowerBI."
       },
       {
-        "title": "Free first-month audit",
-        "desc": "We show you where the money leaks today and what to change first. No commitment."
+        "title": "Auditoria grátis no primeiro mês",
+        "desc": "Mostramos onde o dinheiro vaza hoje e o que mudar primeiro. Sem compromisso."
       },
       {
-        "title": "Spanish-language WhatsApp support",
-        "desc": "Talk to us right away. No bots, no waiting for tickets."
+        "title": "Suporte em espanhol pelo WhatsApp",
+        "desc": "Fala com a gente na hora. Sem bots, sem esperar por tickets."
       }
     ]
   },
   "social": {
-    "title": "Teams already operating this way",
+    "title": "Equipes que já operam assim",
     "items": [
-      "28 client sites in production",
-      "3 mid-market py companies currently using our CRM",
-      "Ad audits completed in retail, professional services, hospitality",
-      "Stack verifiable at github.com/Ai-Whisperers"
+      "28 sites de clientes em produção",
+      "3 empresas py mid-market usando nosso CRM atualmente",
+      "Auditorias de anúncios concluídas em varejo, serviços profissionais e gastronomia",
+      "Stack verificável em github.com/Ai-Whisperers"
     ]
   },
   "process": {
-    "title": "How we start",
-    "timeline": "Setup in 2–4 weeks",
+    "title": "Como começamos",
+    "timeline": "Setup em 2–4 semanas",
     "steps": [
       {
         "n": 1,
-        "title": "Initial audit (week 1)",
-        "body": "We map current campaigns, lead sources, and existing metrics. You get a written report."
+        "title": "Auditoria inicial (semana 1)",
+        "body": "Mapeamos suas campanhas atuais, fontes de leads e métricas existentes. Você recebe um relatório."
       },
       {
         "n": 2,
-        "title": "Design and development (weeks 2–3)",
-        "body": "Site + landing + CRM + WhatsApp integration. We show it working before we migrate you."
+        "title": "Design e desenvolvimento (semanas 2–3)",
+        "body": "Site + landing + CRM + integração WhatsApp. Mostramos funcionando antes de migrar."
       },
       {
         "n": 3,
-        "title": "Launch + training (week 4)",
-        "body": "Going to production. We train your team. Priority support the first month."
+        "title": "Lançamento + treinamento (semana 4)",
+        "body": "Vai para produção. Treinamos sua equipe. Suporte prioritário no primeiro mês."
       }
     ]
   },
   "pricingBreakdown": {
-    "title": "Pricing",
-    "setup": "450,000 Gs (~$62) setup, one-time",
-    "monthly": "639,000 Gs/month (~$89) — all-inclusive",
-    "annual": "Annual payment gets 2 months free",
+    "title": "Preço",
+    "setup": "450.000 Gs (~$62) de setup, uma única vez",
+    "monthly": "639.000 Gs/mês (~$89) — tudo incluído",
+    "annual": "Pagamento anual = 2 meses bonificados",
     "includes": [
-      "Institutional website",
-      "1 conversion landing per vertical",
-      "Basic CRM with up to 3 users",
-      "WhatsApp Business API integrated",
-      "Metrics dashboard",
-      "Spanish-language WhatsApp support",
-      "Daily backups + hosting"
+      "Site institucional",
+      "1 landing de conversão por vertical",
+      "CRM básico com até 3 usuários",
+      "WhatsApp Business API integrado",
+      "Dashboard de métricas",
+      "Suporte em espanhol pelo WhatsApp",
+      "Backups diários + hosting"
     ]
   },
   "faq": [
     {
-      "q": "What's included in the 450,000 Gs setup?",
-      "a": "Site design and development, CRM configuration, WhatsApp Business integration, and the initial audit of your campaigns. One payment."
+      "q": "O que inclui o setup de 450.000 Gs?",
+      "a": "Design do site, desenvolvimento, configuração do CRM, integração com WhatsApp Business e a auditoria inicial das suas campanhas. Pagamento único."
     },
     {
-      "q": "Can I pay monthly instead of annual?",
-      "a": "Yes. Monthly is 639,000 Gs. Annual pays 10 months (2 months free)."
+      "q": "Posso pagar mensal em vez de anual?",
+      "a": "Sim. Mensal sai por 639.000 Gs. Anual paga 10 meses (2 meses bonificados)."
     },
     {
-      "q": "How long until my site is in production?",
-      "a": "2–4 weeks to launch, depending on number of pages and whether you already have materials (photos, texts, logo)."
+      "q": "Quanto tempo até meu site estar em produção?",
+      "a": "2 a 4 semanas para o lançamento, dependendo da quantidade de páginas e se você já tem materiais (fotos, textos, logo)."
     },
     {
-      "q": "What if I'm not satisfied?",
-      "a": "Before launch we show you the system running and you test it. If something doesn't fit, we adjust before going to production. After launch there's a 30-day guarantee."
+      "q": "E se eu não ficar satisfeito?",
+      "a": "Antes do lançamento mostramos o sistema funcionando e você testa. Se algo não encaixar, ajustamos antes de ir para produção. Após o lançamento há 30 dias de garantia."
     },
     {
-      "q": "Which industries do you work with?",
-      "a": "Professional services, mid-market retail, multi-location hospitality, private health. If you bill over 50M Gs/month and have a sales team, we're a fit."
+      "q": "Com quais setores vocês trabalham?",
+      "a": "Serviços profissionais, varejo py mid-market, gastronomia com várias unidades, saúde privada. Se você fature mais de 50M Gs/mês e tem equipe de vendas, somos o match."
     }
   ],
   "finalCta": {
-    "title": "Stop operating blind.",
-    "subtitle": "Start with a free 20-minute audit. No commitment, no pitch.",
-    "button": "Contact us today",
-    "href": "https://wa.me/595991501444?text=Hi%2C%20I%27m%20interested%20in%20a%20free%20audit%20for%20Plan%20Empresa"
+    "title": "Pare de operar às cegas.",
+    "subtitle": "Comece com uma auditoria gratuita de 20 minutos. Sem compromisso, sem pitch.",
+    "button": "Fale conosco hoje",
+    "href": "https://wa.me/595991501444?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20auditoria%20gratuita%20para%20o%20Plano%20Empresa"
   }
 }
