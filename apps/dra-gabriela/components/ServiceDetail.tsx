@@ -162,12 +162,12 @@ function buildServiceSchema(data: any, slug: string, locale: string) {
 const SLUG_TO_IMAGE: Record<string, string> = {
   "second-opinion": "/images/services/second-opinion.png",
   "treatment-planning": "/images/services/treatment-planning.png",
-  "general-dentistry": "/images/services/general-dentistry.svg",
+  "general-dentistry": "/images/services/general-dentistry.webp",
   "cosmetic-dentistry": "/images/services/cosmetic-dentistry.png",
   "oral-rehabilitation": "/images/services/oral-rehabilitation.png",
   "segunda-opinion": "/images/services/second-opinion.png",
   "planificacion-tratamiento": "/images/services/treatment-planning.png",
-  "odontologia-general": "/images/services/general-dentistry.svg",
+  "odontologia-general": "/images/services/general-dentistry.webp",
   "estetica-dental": "/images/services/cosmetic-dentistry.png",
   "rehabilitacion-oral": "/images/services/oral-rehabilitation.png",
 }
