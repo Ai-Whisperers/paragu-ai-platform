@@ -1,0 +1,121 @@
+{
+  "slug": "hosting",
+  "kind": "Managed Hosting",
+  "price": {
+    "setup": "0 Gs — migration free",
+    "monthly": "97,000 Gs/month (~$13)",
+    "annual": "Annual pays 10 (12 months for the price of 10)"
+  },
+  "hero_section": {
+    "eyebrow": "Managed hosting in Spanish · 24-hour migration",
+    "title": "Your site stable, fast, and supported. Without price hikes every 3 months.",
+    "subtitle": "SSL included, daily backups, 99.5% uptime SLA, Spanish-language support via WhatsApp. We migrate your current site free.",
+    "primaryCta": "Migrate now",
+    "secondaryCta": "Free diagnostic",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Hi%2C%20I%20want%20to%20migrate%20my%20site%20to%20your%20hosting",
+    "secondaryCtaHref": "https://wa.me/595991501444?text=I%27d%20like%20a%20free%20diagnostic%20of%20my%20current%20site"
+  },
+  "problem": {
+    "title": "Sound familiar?",
+    "lead": "‘My site is slow. They charged me 200K and left it down. I don't even know where it's hosted.’",
+    "items": [
+      "‘My site runs slow or goes down constantly.’",
+      "‘They charged me 200K Gs and left my site down.’",
+      "‘I don't know where the site is hosted or who runs it.’",
+      "‘They change prices every 3 months without notice.’",
+      "‘Support replies in English and takes 3 days.’"
+    ]
+  },
+  "solution": {
+    "title": "What you get",
+    "items": [
+      {
+        "title": "Free migration",
+        "desc": "We move your site to our infrastructure in 24 hours. Without you touching anything."
+      },
+      {
+        "title": "SSL included",
+        "desc": "Automatic HTTPS. Google rewards you, your users stay safe."
+      },
+      {
+        "title": "Daily backups",
+        "desc": "If something breaks, we restore. 30 days of history, no questions."
+      },
+      {
+        "title": "99.5% uptime with SLA",
+        "desc": "If we go below that number, we refund that day's monthly. Contractually guaranteed."
+      },
+      {
+        "title": "Spanish support via WhatsApp",
+        "desc": "Talk to a Paraguayan human, not a bot. Response in under 2 working hours."
+      },
+      {
+        "title": "No surprise price changes",
+        "desc": "The price you see today is the one you pay next year. Annual renewal, no surprises."
+      }
+    ]
+  },
+  "comparison": {
+    "title": "What's different",
+    "headers": ["Aspect", "Traditional hosting", "Ai-Whisperers"],
+    "rows": [
+      ["Support language", "English", "Spanish via WhatsApp"],
+      ["Response time", "24–72 hours (ticket)", "Under 2 working hours"],
+      ["Initial migration", "They charge you", "Free"],
+      ["Price changes", "Every 3 months", "Frozen for 12 months"],
+      ["Backups", "Weekly or less", "Daily, 30-day history"],
+      ["Uptime SLA", "Best effort", "99.5% with compensation"]
+    ]
+  },
+  "suitability": {
+    "title": "Ideal for",
+    "items": [
+      "WordPress, Wix, Squarespace sites that feel slow",
+      "E-commerce with periodic outages",
+      "Campaign landing pages that need to stay up",
+      "Any SMB depending on its current provider"
+    ]
+  },
+  "pricingBreakdown": {
+    "title": "Pricing",
+    "setup": "No setup cost — migration free",
+    "monthly": "97,000 Gs/month (~$13) — no extras",
+    "annual": "Annual = pays 10 (2 months free)",
+    "includes": [
+      "Hosting with SSL",
+      "Daily backups (30 days)",
+      "99.5% uptime SLA",
+      "Free migration",
+      "Spanish support via WhatsApp",
+      "Annual renewal, no surprises"
+    ]
+  },
+  "faq": [
+    {
+      "q": "How long does migration take?",
+      "a": "24 hours after you send us access. We notify you when ready and you verify before the DNS switch."
+    },
+    {
+      "q": "What if my site uses a special CMS?",
+      "a": "We migrate WordPress, Wix, Squarespace, Webflow, static HTML, and Next.js. Something exotic? We evaluate in the free diagnostic."
+    },
+    {
+      "q": "Is 97,000 Gs everything, no extras?",
+      "a": "Yes. SSL, backups, support, SLA — all included. No charges for reasonable traffic."
+    },
+    {
+      "q": "What if I want to cancel?",
+      "a": "No lock-in clauses. Cancel whenever you want. We refund the prorated month."
+    },
+    {
+      "q": "Can I upgrade to Plan Profesional or Empresa later?",
+      "a": "Of course. The hosting cost is deducted from the full plan and migration remains free."
+    }
+  ],
+  "finalCta": {
+    "title": "Switch to supported hosting.",
+    "subtitle": "Send us your site's URL and we'll send a free diagnostic in under 24 hours.",
+    "button": "Get started",
+    "href": "https://wa.me/595991501444?text=Hi%2C%20I%20want%20a%20diagnostic%20of%20my%20current%20site"
+  }
+}

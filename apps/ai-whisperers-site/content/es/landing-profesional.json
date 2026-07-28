@@ -1,0 +1,136 @@
+{
+  "slug": "profesional",
+  "kind": "Plan Profesional",
+  "hero": true,
+  "price": {
+    "setup": "450.000 Gs (~$62)",
+    "monthly": "381.000 Gs/mes (~$53)",
+    "annual": "Pago anual = 2 meses bonificados"
+  },
+  "hero_section": {
+    "eyebrow": "48 horas listo · Para profesionales liberales y PyMEs de 2–10 personas",
+    "title": "Tu consultorio, estudio u oficina en Google, con botón directo a WhatsApp. Listo en 48 horas.",
+    "subtitle": "Sitio profesional + SEO local en tu zona (Villa Morra, Carmelitas, Asunción) + WhatsApp Business + formulario de reserva + dashboard de consultas. Setup 450K Gs + 381K/mes.",
+    "primaryCta": "Empezá ahora",
+    "secondaryCta": "Respondemos al toque",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Hola%2C%20me%20interesa%20el%20Plan%20Profesional%20de%2048%20horas",
+    "secondaryCtaHref": "https://wa.me/595991501444"
+  },
+  "problem": {
+    "title": "Lo que te pasa hoy",
+    "lead": "Tenés clientela por referidos pero no aparecés en Google. Las llamadas se te pierden. Perdés 30–50% de consultas porque nadie responde a tiempo.",
+    "items": [
+      "‘Tengo clientes por referidos pero no aparezco en Google cuando alguien busca mi servicio.’",
+      "‘Las llamadas se me pierden en horarios donde no estoy.’",
+      "‘La gente busca ‘dentista Villa Morra’ o ‘abogado laboralista Asunción’ y me encuentra cualquier otro.’",
+      "‘No tengo forma de saber cuántas consultas me llegan al mes.’"
+    ]
+  },
+  "solution": {
+    "title": "Qué te entregamos en 48 horas",
+    "items": [
+      {
+        "title": "Sitio profesional móvil-first",
+        "desc": "Carga en menos de 2 segundos, se ve perfecto en el celular, con tus servicios, horarios y formas de contacto."
+      },
+      {
+        "title": "SEO local por zona",
+        "desc": "Optimizamos para ‘[tu servicio] + tu barrio’. Villa Morra, Carmelitas, Recoleta, según dónde operás."
+      },
+      {
+        "title": "WhatsApp Business con botón directo",
+        "desc": "El botón principal de cada página abre tu WhatsApp con un mensaje pre-cargado. La gente te contacta en 1 click."
+      },
+      {
+        "title": "Formulario de reserva o consulta",
+        "desc": "Para los que no usan WhatsApp. Confirmación automática por mail."
+      },
+      {
+        "title": "Dashboard de consultas",
+        "desc": "Cuántas consultas por día, de qué búsqueda vinieron, qué canal convirtió más este mes."
+      },
+      {
+        "title": "Entrega en 48 horas",
+        "desc": "Si nos pasás materiales, tenés el sitio publicado y apareciendo en Google antes del viernes."
+      }
+    ]
+  },
+  "audiences": {
+    "title": "Para quién es",
+    "items": [
+      "Médicos y odontólogos con consultorio propio",
+      "Abogados y estudios jurídicos",
+      "Contadores y estudios contables",
+      "Arquitectos y diseñadores",
+      "Psicólogos y terapistas",
+      "Ingenieros consultores",
+      "Cualquier profesional liberal con base de clientes propia"
+    ]
+  },
+  "pricingBreakdown": {
+    "title": "Precio",
+    "setup": "450.000 Gs (~$62) una sola vez",
+    "monthly": "381.000 Gs/mes (~$53) todo incluido",
+    "annual": "Pagando anual te bonificamos 2 meses",
+    "includes": [
+      "Sitio web profesional (hasta 8 secciones)",
+      "Optimización SEO local para tu zona",
+      "Integración WhatsApp Business con botón",
+      "Formulario de reserva o consulta",
+      "Hosting + dominio .com.py o .com",
+      "Dashboard básico de consultas",
+      "Soporte en español por WhatsApp"
+    ]
+  },
+  "delivery": {
+    "title": "Promesa: 48 horas",
+    "lead": "No es marketing, es nuestra entrega estándar para clientes con materiales listos. Lo medimos en semanas, no en meses.",
+    "items": [
+      "Día 1 — Llamada de 30 min para alinear servicios, zona y mensajes",
+      "Día 1 (tarde) — Diseño de estructura y revisión con vos",
+      "Día 2 — Sitio completo, cargado y verificado",
+      "Día 2 (tarde) — Capacitación Express por Zoom de 20 minutos"
+    ]
+  },
+  "social": {
+    "title": "Profesionales que ya operan así",
+    "items": [
+      "28 sitios de clientes en producción, 4 idiomas",
+      "Landing con tiempo de carga menor a 2 segundos en 3G",
+      "Tasa de conversión promedio del 4,5% en landings de profesionales",
+      "100% Publicable en GitHub como prueba de entrega"
+    ]
+  },
+  "faq": [
+    {
+      "q": "¿Cómo hacen el sitio en 48 horas?",
+      "a": "Tenemos un motor Next.js con plantillas por industria. Adaptamos la estructura a tu marca, tus textos y tus servicios. El sitio queda listo y funcionando el día 2."
+    },
+    {
+      "q": "¿Y si no tengo materiales (fotos, textos, logo)?",
+      "a": "Te pasamos una guía express y, si querés, podemos tomarte fotos nosotros o armarte textos profesionales por un costo adicional. Con materiales listos, son 48h."
+    },
+    {
+      "q": "¿Funciona para cualquier profesión?",
+      "a": "Sí. Trabajamos con abogados, dentistas, contadores, arquitectos, psicólogos, ingenieros. La estructura es adaptable."
+    },
+    {
+      "q": "¿Aparezco en Google en 48 horas?",
+      "a": "El sitio queda indexado y podés aparecer en Google ese día para tu nombre. Para aparecer en búsquedas locales tipo ‘dentista Villa Morra’, el algoritmo toma entre 2 y 8 semanas. Te explicamos qué esperar."
+    },
+    {
+      "q": "¿Tengo que pagar todo por adelantado?",
+      "a": "El setup (450K Gs) se paga al firmar. El mensual (381K Gs) arranca cuando el sitio sale a producción. Sin letra chica."
+    },
+    {
+      "q": "¿Qué pasa después del primer mes?",
+      "a": "Seguís con tu mensual que incluye hosting, soporte y mantenimiento. Sin renovación de setup, sin costos ocultos."
+    }
+  ],
+  "finalCta": {
+    "title": "Respondemos al toque.",
+    "subtitle": "Mandanos un WhatsApp con tu profesión y barrio. En menos de 10 minutos tenés respuesta.",
+    "button": "Contactanos hoy",
+    "href": "https://wa.me/595991501444?text=Hola%2C%20soy%20profesional%20en%20%5Bprofesi%C3%B3n%5D%20en%20%5Bzona%5D.%20Quiero%20info%20del%20Plan%20Profesional"
+  }
+}

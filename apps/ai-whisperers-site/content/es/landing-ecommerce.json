@@ -1,0 +1,132 @@
+{
+  "slug": "ecommerce",
+  "kind": "Tienda Online / E-commerce",
+  "price": {
+    "setup": "Desde 450.000 Gs (~$62)",
+    "monthly": "Desde 381.000 Gs/mes (~$53)",
+    "annual": "Pago anual = 2 meses bonificados",
+    "promo": "Primer cliente e-commerce: te bonificamos el setup a cambio de un video testimonial y 3 referidos calificados."
+  },
+  "hero_section": {
+    "eyebrow": "Para retailers py con tienda física en Asunción, Lambaré, San Lorenzo",
+    "title": "Vende online sin saber de tecnología. Tu tienda física más una nueva linea de ventas en 2 semanas.",
+    "subtitle": "Catálogo + pagos con Tigo Money, Personal Pay y transferencia + WhatsApp integrado para coordinar envío + panel simple + 2 rondas de capacitación. Setup desde 450K Gs + 381K/mes.",
+    "primaryCta": "Empezá ahora",
+    "secondaryCta": "Ver demo",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Hola%2C%20tengo%20una%20tienda%20f%C3%ADsica%20y%20quiero%20vender%20online",
+    "secondaryCtaHref": "https://wa.me/595991501444?text=Quisiera%20ver%20una%20demo%20de%20tienda%20online"
+  },
+  "problem": {
+    "title": "Lo que te frena",
+    "lead": "‘Quiero vender online pero me asusta el desarrollo, los envíos, las devoluciones. Vi páginas que costaron 5 millones y no vendieron nada.’",
+    "items": [
+      "Otros te cobraron millones y te entregaron algo inusable.",
+      "No sabés cómo manejar Tigo Money, Personal Pay ni logística.",
+      "Te dijeron ‘esto es 6 meses’ y perdiste la temporada.",
+      "No querés contratar un desarrollador solo para subir fotos."
+    ]
+  },
+  "solution": {
+    "title": "Qué te entregamos en 2 semanas",
+    "items": [
+      {
+        "title": "Catálogo navegable",
+        "desc": "Cada producto con fotos, descripción, precio en Gs y USD. Filtros por categoría. Buscador."
+      },
+      {
+        "title": "Pagos locales integrados",
+        "desc": "Tigo Money, Personal Pay, transferencia bancaria. Sin comisiones internacionales absurdas."
+      },
+      {
+        "title": "WhatsApp para coordinar envío",
+        "desc": "El cliente compra y le llega un mensaje automático a tu WhatsApp con la orden lista para coordinar."
+      },
+      {
+        "title": "Panel simple para vos",
+        "desc": "Subís productos, ves pedidos, cambiás precios. Sin tener que llamar al desarrollador."
+      },
+      {
+        "title": "Capacitación 1 a 1",
+        "desc": "Dos rondas de capacitación con tu equipo. Operación real, no teoría."
+      },
+      {
+        "title": "Diseño adaptado a tu marca",
+        "desc": "Tomamos tus colores, tu logo, tus productos. La tienda se ve como parte de tu marca."
+      }
+    ]
+  },
+  "includes": {
+    "title": "Incluye",
+    "items": [
+      "Catálogo con productos ilimitados",
+      "Pasarela Tigo Money + Personal Pay + transferencia",
+      "Integración WhatsApp Business",
+      "Panel de gestión",
+      "Diseño responsive (móvil + desktop)",
+      "Hosting + SSL + backups",
+      "2 rondas de capacitación con tu equipo",
+      "Soporte vía WhatsApp los primeros 60 días"
+    ]
+  },
+  "logistics": {
+    "title": "Envíos y devoluciones",
+    "items": [
+      "Asunción y área metropolitana: integración opcional con mensajeros locales.",
+      "Interior del país: guía paso a paso para envíos vía transporte público o courrier.",
+      "Política de devoluciones clara: panel para gestionarlas sin tecnicismos."
+    ]
+  },
+  "promo": {
+    "title": "Para el primer cliente e-commerce",
+    "highlight": "Setup bonificado",
+    "description": "Si sos el primer retailer que cierra el plan e-commerce con nosotros, te bonificamos el setup. A cambio: un video testimonial de 90 segundos y 3 referidos calificados de tu red de colegas."
+  },
+  "faq": [
+    {
+      "q": "¿Cuánto tarda en estar lista la tienda?",
+      "a": "2 semanas con productos y materiales listos. Si necesitás ayuda con fotos o textos, te la damos aunque suma tiempo."
+    },
+    {
+      "q": "¿Necesito un dominio propio?",
+      "a": "Te ayudamos a conseguir tu .com.py o podés usar el que ya tengas. Lo incluimos en el setup."
+    },
+    {
+      "q": "¿Puedo agregar productos yo mismo después?",
+      "a": "Sí, el panel es para vos. Te capacitamos en el uso."
+    },
+    {
+      "q": "¿Cuánto cuesta mantener la tienda?",
+      "a": "El plan mensual empieza en 381.000 Gs e incluye hosting, soporte, mantenimiento y backups."
+    },
+    {
+      "q": "¿Qué pasa con los envíos?",
+      "a": "Te enseñamos a configurar envíos dentro del área metropolitana. Para el interior te damos plantillas de coordinación por WhatsApp."
+    },
+    {
+      "q": "¿Puedo ver un demo antes de comprometerme?",
+      "a": "Sí. Te armamos un demo con productos de prueba para que veas cómo se ve y se siente."
+    }
+  ],
+  "pricingBreakdown": {
+    "title": "Precio",
+    "setup": "Desde 450.000 Gs (~$62) — bonificado para el primer cliente e-commerce",
+    "monthly": "Desde 381.000 Gs/mes (~$53)",
+    "annual": "Pago anual = 2 meses bonificados",
+    "includes": [
+      "Catálogo con productos ilimitados",
+      "Pasarela Tigo Money + Personal Pay + transferencia",
+      "Integración WhatsApp Business para envíos",
+      "Panel de gestión para vos",
+      "Diseño adaptado a tu marca (responsive)",
+      "Hosting + SSL + backups diarios",
+      "2 rondas de capacitación con tu equipo",
+      "Soporte vía WhatsApp los primeros 60 días"
+    ]
+  },
+  "finalCta": {
+    "title": "Vende online este mes.",
+    "subtitle": "Mandanos el nombre de tu tienda y te armamos un demo gratis en 48 horas.",
+    "button": "Contactanos hoy",
+    "href": "https://wa.me/595991501444?text=Hola%2C%20tengo%20la%20tienda%20%5Bnombre%5D%20y%20quiero%20vender%20online"
+  }
+}

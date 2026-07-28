@@ -1,0 +1,131 @@
+{
+  "slug": "empresa",
+  "kind": "Plan Empresa",
+  "price": {
+    "setup": "450,000 Gs (~$62)",
+    "monthly": "639,000 Gs/month (~$89)",
+    "annual": "Annual = 2 months free"
+  },
+  "hero": {
+    "eyebrow": "For companies with 10–80 employees",
+    "title": "Know exactly what comes back from every campaign. Every time.",
+    "subtitle": "Institutional website + conversion landing + basic CRM + WhatsApp Business + simple dashboards. For Paraguayan companies already moving volume and want to measure, not guess.",
+    "primaryCta": "Get started",
+    "secondaryCta": "Request a free audit",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Hi%2C%20I%27m%20interested%20in%20the%20Plan%20Empresa%20from%20Ai-Whisperers",
+    "secondaryCtaHref": "https://wa.me/595991501444?text=I%27d%20like%20to%20schedule%20a%20free%2020-min%20audit"
+  },
+  "problem": {
+    "title": "The real problem",
+    "lead": "You spend on advertising and nobody tells you what comes back. The owner learns it when it's already gone.",
+    "items": [
+      "You burn budget on ads without measuring what clients actually return.",
+      "Campaigns run blind. No tracking, no comparable data.",
+      "Your sales team gets leads with zero context and chases cold.",
+      "Every month the same question: where did the money go?"
+    ]
+  },
+  "solution": {
+    "title": "What we deliver",
+    "subtitle": "A system, not a decorative site. 4-week implementation.",
+    "items": [
+      {
+        "title": "Institutional website + conversion landing",
+        "desc": "Pages that load under 1.5s, mobile-optimized, with CTAs that lead to WhatsApp or forms."
+      },
+      {
+        "title": "Built-in basic CRM",
+        "desc": "Every lead is logged, tagged by campaign, and assigned. No Excel, no memory."
+      },
+      {
+        "title": "WhatsApp Business connected",
+        "desc": "Direct button to your number, reply templates, sales routing. 94% of Paraguay uses WhatsApp, 98% open it."
+      },
+      {
+        "title": "Simple dashboards",
+        "desc": "How many leads per day, from which campaign, which sales rep closed. One screen, no PowerBI."
+      },
+      {
+        "title": "Free first-month audit",
+        "desc": "We show you where the money leaks today and what to change first. No commitment."
+      },
+      {
+        "title": "Spanish-language WhatsApp support",
+        "desc": "Talk to us right away. No bots, no waiting for tickets."
+      }
+    ]
+  },
+  "social": {
+    "title": "Teams already operating this way",
+    "items": [
+      "28 client sites in production",
+      "3 mid-market py companies currently using our CRM",
+      "Ad audits completed in retail, professional services, hospitality",
+      "Stack verifiable at github.com/Ai-Whisperers"
+    ]
+  },
+  "process": {
+    "title": "How we start",
+    "timeline": "Setup in 2–4 weeks",
+    "steps": [
+      {
+        "n": 1,
+        "title": "Initial audit (week 1)",
+        "body": "We map current campaigns, lead sources, and existing metrics. You get a written report."
+      },
+      {
+        "n": 2,
+        "title": "Design and development (weeks 2–3)",
+        "body": "Site + landing + CRM + WhatsApp integration. We show it working before we migrate you."
+      },
+      {
+        "n": 3,
+        "title": "Launch + training (week 4)",
+        "body": "Going to production. We train your team. Priority support the first month."
+      }
+    ]
+  },
+  "pricingBreakdown": {
+    "title": "Pricing",
+    "setup": "450,000 Gs (~$62) setup, one-time",
+    "monthly": "639,000 Gs/month (~$89) — all-inclusive",
+    "annual": "Annual payment gets 2 months free",
+    "includes": [
+      "Institutional website",
+      "1 conversion landing per vertical",
+      "Basic CRM with up to 3 users",
+      "WhatsApp Business API integrated",
+      "Metrics dashboard",
+      "Spanish-language WhatsApp support",
+      "Daily backups + hosting"
+    ]
+  },
+  "faq": [
+    {
+      "q": "What's included in the 450,000 Gs setup?",
+      "a": "Site design and development, CRM configuration, WhatsApp Business integration, and the initial audit of your campaigns. One payment."
+    },
+    {
+      "q": "Can I pay monthly instead of annual?",
+      "a": "Yes. Monthly is 639,000 Gs. Annual pays 10 months (2 months free)."
+    },
+    {
+      "q": "How long until my site is in production?",
+      "a": "2–4 weeks to launch, depending on number of pages and whether you already have materials (photos, texts, logo)."
+    },
+    {
+      "q": "What if I'm not satisfied?",
+      "a": "Before launch we show you the system running and you test it. If something doesn't fit, we adjust before going to production. After launch there's a 30-day guarantee."
+    },
+    {
+      "q": "Which industries do you work with?",
+      "a": "Professional services, mid-market retail, multi-location hospitality, private health. If you bill over 50M Gs/month and have a sales team, we're a fit."
+    }
+  ],
+  "finalCta": {
+    "title": "Stop operating blind.",
+    "subtitle": "Start with a free 20-minute audit. No commitment, no pitch.",
+    "button": "Contact us today",
+    "href": "https://wa.me/595991501444?text=Hi%2C%20I%27m%20interested%20in%20a%20free%20audit%20for%20Plan%20Empresa"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "slug": "hosting",
+  "kind": "Solo Hosting",
+  "price": {
+    "setup": "0 Gs — migración gratis",
+    "monthly": "97.000 Gs/mes (~$13)",
+    "annual": "Pago anual paga 10 (12 meses por el precio de 10)"
+  },
+  "hero_section": {
+    "eyebrow": "Hosting gestionado en español · Migración en 24 horas",
+    "title": "Tu sitio estable, rápido y atendido. Sin que te cambien precios cada 3 meses.",
+    "subtitle": "SSL incluido, backups diarios, uptime 99,5% con SLA, soporte en español por WhatsApp. Migramos tu sitio actual gratis.",
+    "primaryCta": "Migrá ahora",
+    "secondaryCta": "Diagnóstico gratis",
+    "primaryCtaHref": "https://wa.me/595991501444?text=Hola%2C%20quiero%20migrar%20mi%20sitio%20a%20su%20hosting",
+    "secondaryCtaHref": "https://wa.me/595991501444?text=Quisiera%20un%20diagn%C3%B3stico%20gratis%20de%20mi%20sitio%20actual"
+  },
+  "problem": {
+    "title": "Suena familiar?",
+    "lead": "‘Mi sitio anda lento. Me cobraron 200K y me lo dejaron abajo. No sé ni dónde está hosteado.’",
+    "items": [
+      "‘Mi sitio anda lento o se cae seguido.’",
+      "‘Me cobraron 200K Gs y me dejaron el sitio caído.’",
+      "‘No sé dónde está hosteado el sitio ni quién lo administra.’",
+      "‘Me cambian precios cada 3 meses sin avisar.’",
+      "‘El soporte responde en inglés y a los 3 días.’"
+    ]
+  },
+  "solution": {
+    "title": "Qué te damos",
+    "items": [
+      {
+        "title": "Migración gratis",
+        "desc": "Movemos tu sitio a nuestra infraestructura en 24 horas. Sin que tengas que tocar nada."
+      },
+      {
+        "title": "SSL incluido",
+        "desc": "HTTPS automático. Google te premia, tus usuarios están seguros."
+      },
+      {
+        "title": "Backups diarios",
+        "desc": "Si algo se rompe, restauramos. 30 días de histórico, sin preguntas."
+      },
+      {
+        "title": "Uptime 99,5% con SLA",
+        "desc": "Si bajamos de ese número, te devolvemos la mensualidad de ese día. Garantizado por contrato."
+      },
+      {
+        "title": "Soporte en español por WhatsApp",
+        "desc": "Hablás con un humano paraguayo, no con un bot. Respuesta en menos de 2 horas hábiles."
+      },
+      {
+        "title": "Sin cambios de precio sorpresa",
+        "desc": "El precio que ves hoy es el que pagás el año que viene. Renovación anual sin sorpresas."
+      }
+    ]
+  },
+  "comparison": {
+    "title": "Qué cambia",
+    "headers": ["Aspecto", "Hosting tradicional", "Ai-Whisperers"],
+    "rows": [
+      ["Idioma del soporte", "Inglés", "Español por WhatsApp"],
+      ["Tiempo de respuesta", "24–72 horas (ticket)", "Menos de 2h hábiles"],
+      ["Migración inicial", "Te cobran", "Gratis"],
+      ["Cambios de precio", "Cada 3 meses", "Congelados por 12 meses"],
+      ["Backups", "Semanales o menos", "Diarios, 30 días"],
+      ["SLA de uptime", "Mejor esfuerzo", "99,5% con compensación"]
+    ]
+  },
+  "suitability": {
+    "title": "Ideal para",
+    "items": [
+      "Sitios WordPress, Wix, Squarespace que se sienten lentos",
+      "E-commerce con caídas periódicas",
+      "Landing pages de campañas que necesitan estar siempre arriba",
+      "Cualquier py con un sitio que dependa de su proveedor actual"
+    ]
+  },
+  "pricingBreakdown": {
+    "title": "Precio",
+    "setup": "Sin costo de setup — migración gratis",
+    "monthly": "97.000 Gs/mes (~$13) — sin extras",
+    "annual": "Anual = paga 10 (bonificación de 2 meses)",
+    "includes": [
+      "Hosting con SSL",
+      "Backups diarios (30 días)",
+      "SLA uptime 99,5%",
+      "Migración gratis",
+      "Soporte en español por WhatsApp",
+      "Renovación anual sin sorpresas"
+    ]
+  },
+  "faq": [
+    {
+      "q": "¿Cuánto tarda la migración?",
+      "a": "24 horas desde que nos pasás acceso. Te avisamos cuando está listo y verificás antes del cambio de DNS."
+    },
+    {
+      "q": "¿Qué pasa si mi sitio actual usa un CMS especial?",
+      "a": "Migramos WordPress, Wix, Squarespace, Webflow, sitios HTML estáticos y Next.js. Si tenés algo exótico, lo evaluamos en el diagnóstico gratis."
+    },
+    {
+      "q": "¿97.000 Gs es todo, sin extras?",
+      "a": "Sí. SSL, backups, soporte, SLA — todo incluido. No hay cargos por tráfico razonable."
+    },
+    {
+      "q": "¿Qué pasa si quiero cancelar?",
+      "a": "Sin cláusulas leoninas. Cancelás cuando quieras. Te devolvemos el proporcional del mes."
+    },
+    {
+      "q": "¿Puedo upgradear al Plan Profesional o Empresa después?",
+      "a": "Por supuesto. El costo del hosting se descuenta del plan completo y la migración queda gratis."
+    }
+  ],
+  "finalCta": {
+    "title": "Pasá a hosting atendido.",
+    "subtitle": "Mandanos la URL de tu sitio y te pasamos un diagnóstico gratis en menos de 24 horas.",
+    "button": "Empezá ahora",
+    "href": "https://wa.me/595991501444?text=Hola%2C%20quiero%20un%20diagn%C3%B3stico%20de%20mi%20sitio%20actual"
+  }
+}
