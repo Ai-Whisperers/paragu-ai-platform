@@ -65,7 +65,7 @@
       "targetKeyword": "residencia en Paraguay"
     },
     "hero": {
-      "eyebrow": "Residencia, empresa e inversión en Paraguay",
+      "eyebrow": "Los primeros pasos esenciales para tu nueva vida en Paraguay",
       "headline": "Tu mudanza a Paraguay, con quien ya la hizo",
       "subheadline": "Residencia, banca, bienes raíces e instalación. Asistencia personal en el sistema paraguayo y burocracia",
       "ctaText": "Agendar consulta gratuita",
@@ -118,9 +118,14 @@
         },
         {
           "icon": "Globe",
-          "title": "Comunidad europea activa",
-          "description": "Más de 30.000 europeos residen en Paraguay. Comunidad brasileña, argentina, alemana y menonita con décadas de presencia.",
-          "imageUrl": "@src:whyParaguay.community"
+          "title": "Comunidad multicultural activa",
+          "description": "Una comunidad multicultural vibrante con presencia brasileña, argentina, alemana y menonita con décadas de arraigo en Paraguay. Una base europea y latinoamericana ya consolidada a la que es fácil integrarse.",
+          "imageUrl": "@src:whyParaguay.community",
+          "bullets": [
+            "Comunidades europea y latinoamericana con décadas de arraigo",
+            "Conexiones directas por aire desde Europa",
+            "Costos de vida notablemente más bajos que Europa Occidental"
+          ]
         }
       ],
       "ctaText": "Ver el proceso completo",
@@ -278,6 +283,43 @@
                 "Informe escrito con hallazgos"
               ],
               "icon": "Shield"
+            }
+          ]
+        },
+        {
+          "id": "logistics-concierge",
+          "title": "Logística y Acompañamiento",
+          "subtitle": "Tu base operativa en Paraguay: vivienda, vehículo y descubrimiento del país.",
+          "items": [
+            {
+              "title": "Recorridos por el País",
+              "description": "Recorridos personalizados por Paraguay para que veas el país antes de decidir dónde radicarme.",
+              "benefits": [
+                "Hasta 50 km de Asunción: medio día de recorrido con móvil, chofer y acompañante bilingüe",
+                "Más de 50 km de Asunción: día completo con la misma dotación",
+                "Itinerario a medida según tus intereses (urbano, rural, fronterizo)"
+              ],
+              "icon": "Map"
+            },
+            {
+              "title": "Facilitación de Alojamiento Inicial",
+              "description": "Te ayudamos a encontrar un Airbnb o alojamiento temporario para tu llegada, mientras buscás el lugar definitivo.",
+              "benefits": [
+                "Búsqueda y reserva de alojamiento temporario",
+                "Coordinación con anfitriones y agentes inmobiliarios locales",
+                "Recomendaciones por barrio según tu perfil"
+              ],
+              "icon": "BedDouble"
+            },
+            {
+              "title": "Acompañamiento en Mudanza",
+              "description": "Coordinación de tu mudanza física: desde el embalaje hasta la entrega en tu nueva casa en Paraguay.",
+              "benefits": [
+                "Contacto con empresas de mudanza internacional",
+                "Coordinación de aduanas y documentación",
+                "Acompañamiento en la entrega final"
+              ],
+              "icon": "Truck"
             }
           ]
         }
@@ -786,12 +828,12 @@
     "team": {
       "eyebrow": "Equipo fundador",
       "title": "Sonia y Luana",
-      "subtitle": "Madre e hija. Una fundó Nexa después de vivir la mudanza en carne propia; la otra coordina cada caso con claridad y seguimiento personal.",
+      "subtitle": "Madre e hija. Una fundó Nexa después de vivir la mudanza en carne propia; la otra camina a su lado, absorbiendo esa experiencia y coordinando cada expediente de punta a punta.",
       "members": [
         {
           "name": "Sonia Weiss van der Pol",
           "role": "Fundadora",
-          "bio": "Sonia es paraguaya y está casada con un ciudadano neerlandés. Recorrió personalmente cada trámite de la mudanza internacional de su familia: residencia, documentación, empresa y banca. Fundó Nexa para que nadie tenga que aprender ese proceso solo.",
+          "bio": "Sonia es paraguaya y está casada con un ciudadano neerlandés. Recorrió personalmente cada trámite de la mudanza internacional de su familia: residencia, documentación, empresa y banca. Fundó Nexa para que nadie tenga que aprender ese proceso solo, transformando su propia experiencia en el pilar y la guía cálida de cada persona que confía en nosotras.",
           "languages": [
             "ES",
             "EN",
@@ -805,17 +847,17 @@
         },
         {
           "name": "Luana Weiss van der Pol",
-          "role": "Directora de Operaciones",
-          "bio": "Luana coordina cada expediente de punta a punta. Desde el primer contacto hasta la conclusión del proceso, su trabajo es que tengas un solo interlocutor y un camino claro.",
+          "role": "Fundadora",
+          "bio": "Como parte de este proyecto familiar, Luana camina codo a codo con Sonia, absorbiendo su experiencia y compartiendo la misma misión: hacer que tu mudanza sea un proceso humano y sin sorpresas. Juntas coordinan cada expediente de punta a punta, asegurando que tengas una guía cercana, un camino claro y la tranquilidad de sentirte en casa desde el primer paso.",
           "languages": [
             "ES",
             "EN",
             "NL"
           ],
           "credentials": [
-            "Operaciones y atención al cliente",
-            "Coordinación de expedientes migratorios",
-            "Seguimiento de cuentas y trámites"
+            "Atención al cliente y coordinación",
+            "Acompañamiento en Migraciones",
+            "Coordinación de cuentas corporativas"
           ],
           "icon": "Heart",
           "memberImage": "@src:team.luana",
@@ -1940,7 +1982,8 @@
     "paragraphs": [
       "Nexa Paraguay no presta asesoría legal, fiscal ni de inversión. Los programas descritos son servicios de acompañamiento para trámites migratorios y administrativos.",
       "Nexa Paraguay está registrada como sujeto obligado ante SEPRELAD (Secretaría de Prevención de Lavado de Dinero o Bienes) y aplica procesos KYC (Know Your Customer) conforme a las resoluciones vigentes.",
-      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios."
+      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios.",
+      "En materia inmobiliaria, Nexa Paraguay no actúa como agente inmobiliario ni como corredor de propiedades. Acompañamos a las personas en la búsqueda, las negociaciones y la revisión de contratos, y aseguramos que los trámites de transferencia sean claros y honestos, pero la relación contractual con el propietario, la agencia o la escribanía es siempre entre el cliente y el prestador del servicio correspondiente."
     ],
     "licenseNumbers": [
       {
@@ -2758,6 +2801,23 @@
               ],
               "image": "@src:office.signing",
               "icon": "CreditCard"
+            },
+            {
+              "title": "Licencia de Conducir Paraguaya",
+              "description": "Tramitación completa para obtener tu licencia de conducir en Paraguay.",
+              "benefits": [
+                "Preparación de requisitos locales",
+                "Acompañamiento presencial a los exámenes",
+                "Seguimiento hasta la emisión del documento"
+              ],
+              "process": "2-4 semanas",
+              "whatYouNeed": [
+                "Cédula paraguaya",
+                "Certificado de aptitud médica",
+                "Pago de tasas municipales"
+              ],
+              "image": "@src:office.signing",
+              "icon": "Car"
             }
           ]
         },
@@ -2799,6 +2859,39 @@
               ],
               "image": "@src:office.exterior",
               "icon": "Calculator"
+            },
+            {
+              "title": "Traducción Certificada",
+              "description": "Traducción oficial y certificada de tus documentos extranjeros al español.",
+              "benefits": [
+                "Traductores certificados y matrícula SET",
+                "Apostilla y legalización si la necesitás",
+                "Tiempos ágiles para tus plazos migratorios"
+              ],
+              "process": "3-10 días hábiles según volumen",
+              "whatYouNeed": [
+                "Documentos originales",
+                "Especificación del idioma destino"
+              ],
+              "image": "@src:office.meeting-room",
+              "icon": "Languages"
+            },
+            {
+              "title": "Formación de Personería Jurídica",
+              "description": "Constitución de S.A. u otras sociedades en Paraguay con todos los registros.",
+              "benefits": [
+                "Redacción de estatutos",
+                "Inscripción en el Registro Público",
+                "Habilitación municipal cuando corresponda"
+              ],
+              "process": "2-4 semanas",
+              "whatYouNeed": [
+                "Cédula de los socios",
+                "RUC previo",
+                "Capital declarado"
+              ],
+              "image": "@src:office.exterior",
+              "icon": "Building"
             }
           ]
         },
@@ -3086,6 +3179,50 @@
           ],
           "notIncluded": []
         }
+      }
+    },
+    "privateFee": {
+      "_meta": {
+        "visibility": "internal",
+        "currency": "USD",
+        "lastUpdated": "2026-08-03"
+      },
+      "radicacion": {
+        "amount": 1500,
+        "currency": "USD",
+        "description": "Tarifa cerrada por el acompañamiento completo de la radicación.",
+        "includes": [
+          "Traslados a Migraciones y oficinas públicas",
+          "Fotocopias legalizadas",
+          "Traducciones (según requerimientos de Migraciones)"
+        ]
+      },
+      "tourLocal": {
+        "amount": 250,
+        "currency": "USD",
+        "unit": "día",
+        "description": "Recorrido personalizado hasta 50 km de Asunción.",
+        "includes": [
+          "Móvil con seguro",
+          "Chofer",
+          "Acompañante bilingüe (español + idioma del cliente)"
+        ]
+      },
+      "tourExtended": {
+        "amount": 450,
+        "currency": "USD",
+        "unit": "día",
+        "description": "Recorrido personalizado más allá de 50 km de Asunción, en el resto del país.",
+        "includes": [
+          "Móvil con seguro",
+          "Chofer",
+          "Acompañante bilingüe (español + idioma del cliente)"
+        ]
+      },
+      "airbnbAssistance": {
+        "amount": 0,
+        "currency": "USD",
+        "description": "Servicio incluido en el acompañamiento. La reserva y el pago se cierran entre el cliente y el agente inmobiliario o anfitrión."
       }
     }
   },
@@ -3576,12 +3713,12 @@
     "team": {
       "eyebrow": "Equipo fundador",
       "title": "Sonia y Luana",
-      "subtitle": "Madre e hija. Una fundó Nexa después de vivir la mudanza en carne propia; la otra coordina cada caso con claridad y seguimiento personal.",
+      "subtitle": "Madre e hija. Una fundó Nexa después de vivir la mudanza en carne propia; la otra camina a su lado, absorbiendo esa experiencia y coordinando cada expediente de punta a punta.",
       "members": [
         {
           "name": "Sonia Weiss van der Pol",
           "role": "Fundadora",
-          "bio": "Sonia es paraguaya y está casada con un ciudadano neerlandés. Recorrió personalmente cada trámite de la mudanza internacional de su familia: residencia, documentación, empresa y banca. Fundó Nexa para que nadie tenga que aprender ese proceso solo.",
+          "bio": "Sonia es paraguaya y está casada con un ciudadano neerlandés. Recorrió personalmente cada trámite de la mudanza internacional de su familia: residencia, documentación, empresa y banca. Fundó Nexa para que nadie tenga que aprender ese proceso solo, transformando su propia experiencia en el pilar y la guía cálida de cada persona que confía en nosotras.",
           "languages": [
             "ES",
             "EN",
@@ -3600,17 +3737,17 @@
         },
         {
           "name": "Luana Weiss van der Pol",
-          "role": "Directora de Operaciones",
-          "bio": "Luana coordina cada expediente de punta a punta. Desde el primer contacto hasta la conclusión del proceso, su trabajo es que tengas un solo interlocutor y un camino claro.",
+          "role": "Fundadora",
+          "bio": "Como parte de este proyecto familiar, Luana camina codo a codo con Sonia, absorbiendo su experiencia y compartiendo la misma misión: hacer que tu mudanza sea un proceso humano y sin sorpresas. Juntas coordinan cada expediente de punta a punta, asegurando que tengas una guía cercana, un camino claro y la tranquilidad de sentirte en casa desde el primer paso.",
           "languages": [
             "ES",
             "EN",
             "NL"
           ],
           "credentials": [
-            "Operations & Client Care",
-            "Especialista en Migraciones",
-            "Coordinadora de cuentas corporativas"
+            "Atención al cliente y coordinación",
+            "Acompañamiento en Migraciones",
+            "Coordinación de cuentas corporativas"
           ],
           "icon": "Heart",
           "memberImage": "@src:team.luana",

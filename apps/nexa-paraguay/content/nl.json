@@ -76,7 +76,7 @@
         }
       ],
       "eyebrow": "Oprichters",
-      "subtitle": "Moeder en dochter. De ene richtte Nexa op na zelf de verhuizing te hebben meegemaakt; de andere coördineert elk dossier met duidelijkheid en persoonlijke opvolging."
+      "subtitle": "Moeder en dochter. De ene richtte Nexa op nadat zij de verhuizing aan den lijve had ondervonden; de andere loopt naast haar, absorbeert die ervaring en coördineert elk dossier van begin tot eind."
     },
     "gallery": {
       "title": "Ons kantoor in Asunción",
@@ -764,7 +764,8 @@
     "paragraphs": [
       "Nexa Paraguay no presta asesoría legal, fiscal ni de inversión. Los programas descritos son servicios de acompañamiento para trámites migratorios y administrativos.",
       "Nexa Paraguay está registrada como sujeto obligado ante SEPRELAD (Secretaría de Prevención de Lavado de Dinero o Bienes) y aplica procesos KYC (Know Your Customer) conforme a las resoluciones vigentes.",
-      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios."
+      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios.",
+      "En materia inmobiliaria, Nexa Paraguay no actúa como agente inmobiliario ni como corredor de propiedades. Acompañamos a las personas en la búsqueda, las negociaciones y la revisión de contratos, y aseguramos que los trámites de transferencia sean claros y honestos, pero la relación contractual con el propietario, la agencia o la escribanía es siempre entre el cliente y el prestador del servicio correspondiente."
     ],
     "licenseNumbers": [
       {
@@ -1361,7 +1362,7 @@
       "targetKeyword": "verhuizen naar Paraguay vanuit Europa"
     },
     "hero": {
-      "eyebrow": "Verblijf, bedrijf en investering in Paraguay",
+      "eyebrow": "De essentiële eerste stappen voor uw nieuwe leven in Paraguay",
       "headline": "Jouw verhuizing naar Paraguay, met iemand die het deed",
       "subheadline": "Verblijf, bankieren, onroerend goed en installatie. Persoonlijke begeleiding in het Paraguayaanse systeem en de bureaucratie.",
       "ctaText": "Gratis consult boeken",
@@ -1424,12 +1425,12 @@
         },
         {
           "icon": "Globe",
-          "title": "Actieve Europese gemeenschap",
-          "description": "Meer dan 30.000 Europeanen wonen in Paraguay. Braziliaanse, Argentijnse, Duitse en Mennonite gemeenschappen met decennia aanwezigheid.",
+          "title": "Actieve multiculturele gemeenschap",
+          "description": "Een levendige multiculturele gemeenschap met Braziliaanse, Argentijnse, Duitse en Mennonite aanwezigheid die al decennia in Paraguay geworteld is. Een gevestigde Europese en Latijns-Amerikaanse basis waarin u zich makkelijk kunt integreren.",
           "bullets": [
-            "30.000+ Europese inwoners",
+            "Europese en Latijns-Amerikaanse gemeenschappen met decennia aanwezigheid",
             "Directe vluchten vanuit Europa",
-            "50-70% lagere kosten"
+            "Kosten van levensonderhoud aanzienlijk lager dan West-Europa"
           ],
           "imageUrl": "@src:whyParaguay.community"
         }
@@ -1580,6 +1581,43 @@
                 "Schriftelijk rapport met bevindingen"
               ],
               "icon": "Shield"
+            }
+          ]
+        },
+        {
+          "id": "logistics-concierge",
+          "title": "Logistiek & Concierge",
+          "subtitle": "Uw operationele basis in Paraguay: huisvesting, voertuig en ontdekking van het land.",
+          "items": [
+            {
+              "title": "Rondreizen door het Land",
+              "description": "Persoonlijke rondreizen door Paraguay zodat u het land kunt zien voordat u beslist waar u zich vestigt.",
+              "benefits": [
+                "Tot 50 km van Asunción: halve dag met voertuig, chauffeur en tweetalige begeleider",
+                "Meer dan 50 km van Asunción: volledige dag met dezelfde opzet",
+                "Route op maat volgens uw interesses (stedelijk, landelijk, grensgebied)"
+              ],
+              "icon": "Map"
+            },
+            {
+              "title": "Facilitering van Aankomstverblijf",
+              "description": "Wij helpen u bij het regelen van Airbnb of tijdelijk verblijf voor uw aankomst, terwijl u naar uw definitieve plek zoekt.",
+              "benefits": [
+                "Zoeken en boeken van tijdelijk verblijf",
+                "Coördinatie met verhuurders en lokale makelaars",
+                "Buurtaanbevelingen op basis van uw profiel"
+              ],
+              "icon": "BedDouble"
+            },
+            {
+              "title": "Verhuiscoördinatie",
+              "description": "Coördinatie van uw fysieke verhuizing: van inpakken tot levering bij uw nieuwe woning in Paraguay.",
+              "benefits": [
+                "Contact met internationale verhuisbedrijven",
+                "Coördinatie van douane en documentatie",
+                "Begeleiding bij de eindlevering"
+              ],
+              "icon": "Truck"
             }
           ]
         }
@@ -2440,6 +2478,23 @@
               ],
               "image": "@src:office.signing",
               "icon": "CreditCard"
+            },
+            {
+              "title": "Paraguayaans Rijbewijs",
+              "description": "Volledige afhandeling voor het verkrijgen van uw Paraguayaanse rijbewijs bij de gemeentelijke autoriteiten.",
+              "benefits": [
+                "Voorbereiding van lokale vereisten",
+                "Persoonlijke begeleiding naar de vereiste examens",
+                "Opvolging tot het document is afgegeven"
+              ],
+              "process": "2-4 weken",
+              "whatYouNeed": [
+                "Paraguayaanse Cédula",
+                "Medisch geschiktheidscertificaat",
+                "Betaling gemeentelijke taksen"
+              ],
+              "image": "@src:office.signing",
+              "icon": "Car"
             }
           ]
         },
@@ -2481,6 +2536,39 @@
               ],
               "image": "@src:office.exterior",
               "icon": "Calculator"
+            },
+            {
+              "title": "Beëdigde Vertaling",
+              "description": "Officiële en gecertificeerde vertaling van uw buitenlandse documenten naar het Spaans.",
+              "benefits": [
+                "Gecertificeerde vertalers, SET-geregistreerd",
+                "Apostille en legalisatie indien nodig",
+                "Snelle levering voor uw migratietermijnen"
+              ],
+              "process": "3-10 werkdagen afhankelijk van het volume",
+              "whatYouNeed": [
+                "Originele documenten",
+                "Specificatie van de doeltaal"
+              ],
+              "image": "@src:office.meeting-room",
+              "icon": "Languages"
+            },
+            {
+              "title": "Bedrijfsstructurering (S.A. en andere)",
+              "description": "Oprichting van een S.A. of andere entiteiten in Paraguay met alle vereiste registraties.",
+              "benefits": [
+                "Opstellen van statuten",
+                "Inschrijving bij het Openbaar Register",
+                "Gemeentelijke vergunning indien vereist"
+              ],
+              "process": "2-4 weken",
+              "whatYouNeed": [
+                "Cédula van alle partners",
+                "Bestaande RUC",
+                "Opgegeven kapitaal"
+              ],
+              "image": "@src:office.exterior",
+              "icon": "Building"
             }
           ]
         },
@@ -2768,6 +2856,50 @@
           "ctaText": "Vind mijn pand",
           "ctaHref": "/contacto"
         }
+      }
+    },
+    "privateFee": {
+      "_meta": {
+        "visibility": "internal",
+        "currency": "EUR",
+        "lastUpdated": "2026-08-03"
+      },
+      "radicacion": {
+        "amount": 1500,
+        "currency": "EUR",
+        "description": "Vaste prijs voor de volledige verblijfsbegeleiding.",
+        "includes": [
+          "Vervoer naar Migraciones en overheidsinstanties",
+          "Gewaarmerkte kopieën",
+          "Vertalingen (volgens vereisten van Migraciones)"
+        ]
+      },
+      "tourLocal": {
+        "amount": 250,
+        "currency": "EUR",
+        "unit": "dag",
+        "description": "Persoonlijke rondreis tot 50 km van Asunción.",
+        "includes": [
+          "Verzekerd voertuig",
+          "Chauffeur",
+          "Tweetalige begeleider (Spaans + taal van de klant)"
+        ]
+      },
+      "tourExtended": {
+        "amount": 450,
+        "currency": "EUR",
+        "unit": "dag",
+        "description": "Persoonlijke rondreis voorbij 50 km van Asunción, waar dan ook in het land.",
+        "includes": [
+          "Verzekerd voertuig",
+          "Chauffeur",
+          "Tweetalige begeleider (Spaans + taal van de klant)"
+        ]
+      },
+      "airbnbAssistance": {
+        "amount": 0,
+        "currency": "EUR",
+        "description": "Inbegrepen bij de begeleiding. De boeking en betaling worden afgesloten tussen de klant en de makelaar of verhuurder."
       }
     }
   },
@@ -3467,12 +3599,12 @@
     "team": {
       "eyebrow": "Oprichters",
       "title": "Sonia en Luana",
-      "subtitle": "Moeder en dochter. De ene richtte Nexa op na zelf de verhuizing te hebben meegemaakt; de andere coördineert elk dossier met duidelijkheid en persoonlijke opvolging.",
+      "subtitle": "Moeder en dochter. De ene richtte Nexa op nadat zij de verhuizing aan den lijve had ondervonden; de andere loopt naast haar, absorbeert die ervaring en coördineert elk dossier van begin tot eind.",
       "members": [
         {
           "name": "Sonia Weiss van der Pol",
           "role": "Oprichtster",
-          "bio": "Sonia is Paraguayaanse en getrouwd met een Nederlandse staatsburger. Zij regelde zelf elk onderdeel van de internationale verhuizing van haar gezin: verblijf, documentatie, bedrijf en bankieren. Zij richtte Nexa op zodat niemand dat proces alleen hoeft te leren.",
+          "bio": "Sonia is Paraguayaanse en getrouwd met een Nederlandse staatsburger. Zij regelde zelf elk onderdeel van de internationale verhuizing van haar gezin: verblijf, documentatie, bedrijf en bankieren. Zij richtte Nexa op zodat niemand dat proces alleen hoeft te leren, door haar eigen ervaring om te zetten in de steunpilaar en warme gids voor iedereen die ons vertrouwt.",
           "languages": [
             "ES",
             "EN",
@@ -3491,17 +3623,17 @@
         },
         {
           "name": "Luana Weiss van der Pol",
-          "role": "Operations Director",
-          "bio": "Luana coördineert elk dossier van begin tot eind. Van het eerste contact tot de afronding is haar werk dat jij één aanspreekpunt hebt en een duidelijk pad.",
+          "role": "Oprichtster",
+          "bio": "Als onderdeel van dit familieproject loopt Luana zij aan zij met Sonia, absorbeert zij haar ervaring en deelt zij dezelfde missie: uw verhuizing tot een menselijk en verrassingsvrij proces maken. Samen coördineren zij elk dossier van begin tot eind, zodat u een persoonlijke gids heeft, een duidelijk pad en de geruststelling dat u zich vanaf de eerste stap thuis voelt.",
           "languages": [
             "ES",
             "EN",
             "NL"
           ],
           "credentials": [
-            "Operaties en klantenzorg",
-            "Coördinatie van migratiedossiers",
-            "Opvolging van rekeningen en formaliteiten"
+            "Klantenzorg en dossiercoördinatie",
+            "Begeleiding bij Migraciones",
+            "Coördinatie van zakelijke rekeningen"
           ],
           "icon": "Heart",
           "memberImage": "@src:team.luana",

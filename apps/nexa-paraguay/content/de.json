@@ -313,7 +313,7 @@
         }
       ],
       "eyebrow": "Gründungsteam",
-      "subtitle": "Mutter und Tochter. Die eine gründete Nexa nach dem selbst erlebten Umzug; die andere koordiniert jeden Fall mit Klarheit und persönlicher Nachverfolgung."
+      "subtitle": "Mutter und Tochter. Die eine gründete Nexa, nachdem sie den Umzug selbst durchlebt hatte; die andere geht Seite an Seite mit ihr, nimmt diese Erfahrung auf und koordiniert jeden Fall von Anfang bis Ende."
     },
     "gallery": {
       "title": "Unser Büro in Asunción",
@@ -1012,6 +1012,23 @@
               ],
               "image": "@src:office.signing",
               "icon": "CreditCard"
+            },
+            {
+              "title": "Paraguayischer Führerschein",
+              "description": "Vollständige Abwicklung für den Erhalt Ihres paraguayischen Führerscheins bei den kommunalen Behörden.",
+              "benefits": [
+                "Vorbereitung der lokalen Anforderungen",
+                "Persönliche Begleitung zu den erforderlichen Prüfungen",
+                "Nachverfolgung bis zur Ausstellung des Dokuments"
+              ],
+              "process": "2-4 Wochen",
+              "whatYouNeed": [
+                "Paraguayische Cédula",
+                "Ärztliches Eignungszeugnis",
+                "Zahlung der kommunalen Gebühren"
+              ],
+              "image": "@src:office.signing",
+              "icon": "Car"
             }
           ]
         },
@@ -1053,6 +1070,39 @@
               ],
               "image": "@src:office.exterior",
               "icon": "Calculator"
+            },
+            {
+              "title": "Beglaubigte Übersetzung",
+              "description": "Offizielle und zertifizierte Übersetzung Ihrer ausländischen Dokumente ins Spanische.",
+              "benefits": [
+                "Zertifizierte, bei SET registrierte Übersetzer",
+                "Apostille und Legalisation bei Bedarf",
+                "Schnelle Bearbeitung für Ihre Migrationstermine"
+              ],
+              "process": "3-10 Werktage je nach Volumen",
+              "whatYouNeed": [
+                "Originaldokumente",
+                "Spezifikation der Zielsprache"
+              ],
+              "image": "@src:office.meeting-room",
+              "icon": "Languages"
+            },
+            {
+              "title": "Unternehmensstrukturierung (S.A. & weitere)",
+              "description": "Gründung einer S.A. oder anderer Gesellschaften in Paraguay mit allen erforderlichen Eintragungen.",
+              "benefits": [
+                "Erstellung der Satzung",
+                "Eintragung im öffentlichen Register",
+                "Kommunale Genehmigung wo erforderlich"
+              ],
+              "process": "2-4 Wochen",
+              "whatYouNeed": [
+                "Cédula aller Gesellschafter",
+                "Bestehende RUC",
+                "Erklärtes Kapital"
+              ],
+              "image": "@src:office.exterior",
+              "icon": "Building"
             }
           ]
         },
@@ -1340,6 +1390,50 @@
           "ctaText": "Meine Immobilie finden",
           "ctaHref": "/contacto"
         }
+      }
+    },
+    "privateFee": {
+      "_meta": {
+        "visibility": "internal",
+        "currency": "EUR",
+        "lastUpdated": "2026-08-03"
+      },
+      "radicacion": {
+        "amount": 1500,
+        "currency": "EUR",
+        "description": "Pauschalpreis für die komplette Aufenthaltsbegleitung.",
+        "includes": [
+          "Transport zu Migraciones und Behörden",
+          "Beglaubigte Kopien",
+          "Übersetzungen (gemäß den Anforderungen von Migraciones)"
+        ]
+      },
+      "tourLocal": {
+        "amount": 250,
+        "currency": "EUR",
+        "unit": "Tag",
+        "description": "Persönliche Rundreise bis 50 km von Asunción.",
+        "includes": [
+          "Versichertes Fahrzeug",
+          "Fahrer",
+          "Zweisprachige Begleitung (Spanisch + Sprache des Kunden)"
+        ]
+      },
+      "tourExtended": {
+        "amount": 450,
+        "currency": "EUR",
+        "unit": "Tag",
+        "description": "Persönliche Rundreise über 50 km von Asunción hinaus, überall im Land.",
+        "includes": [
+          "Versichertes Fahrzeug",
+          "Fahrer",
+          "Zweisprachige Begleitung (Spanisch + Sprache des Kunden)"
+        ]
+      },
+      "airbnbAssistance": {
+        "amount": 0,
+        "currency": "EUR",
+        "description": "In der Begleitung enthalten. Buchung und Zahlung werden zwischen dem Kunden und dem Immobilienmakler oder Gastgeber abgewickelt."
       }
     }
   },
@@ -1798,7 +1892,7 @@
       "targetKeyword": "Umzug nach Paraguay aus Europa"
     },
     "hero": {
-      "eyebrow": "Aufenthalt, Geschäft und Investition in Paraguay",
+      "eyebrow": "Die wesentlichen ersten Schritte für Ihr neues Leben in Paraguay",
       "headline": "Ihr Umzug nach Paraguay, mit jemandem, der es getan hat",
       "subheadline": "Aufenthalt, Bankwesen, Immobilien und Niederlassung. Persönliche Unterstützung im paraguayischen System und der Bürokratie.",
       "ctaText": "Kostenlose Beratung buchen",
@@ -1861,12 +1955,12 @@
         },
         {
           "icon": "Globe",
-          "title": "Aktive europäische Gemeinschaft",
-          "description": "Über 30.000 Europäer leben in Paraguay. Brasilianische, argentinische, deutsche und mennonitische Gemeinschaften mit jahrzehntelanger Präsenz.",
+          "title": "Aktive multikulturelle Gemeinschaft",
+          "description": "Eine lebendige multikulturelle Gemeinschaft mit brasilianischer, argentinischer, deutscher und mennonitischer Präsenz, die seit Jahrzehnten in Paraguay verwurzelt ist. Eine gefestigte europäische und lateinamerikanische Basis, in die man sich leicht integrieren lässt.",
           "bullets": [
-            "30.000+ europäische Einwohner",
+            "Europäische und lateinamerikanische Gemeinschaften mit jahrzehntelanger Präsenz",
             "Direktflüge aus Europa",
-            "50-70% niedrigere Kosten"
+            "Lebenshaltungskosten deutlich niedriger als in Westeuropa"
           ],
           "imageUrl": "@src:whyParaguay.community"
         }
@@ -2017,6 +2111,43 @@
                 "Schriftlicher Bericht mit Ergebnissen"
               ],
               "icon": "Shield"
+            }
+          ]
+        },
+        {
+          "id": "logistics-concierge",
+          "title": "Logistik & Concierge",
+          "subtitle": "Ihre operative Basis in Paraguay: Unterkunft, Fahrzeug und Landerkundung.",
+          "items": [
+            {
+              "title": "Rundreisen durch das Land",
+              "description": "Persönliche Rundreisen durch Paraguay, damit Sie das Land sehen, bevor Sie entscheiden, wo Sie sich niederlassen.",
+              "benefits": [
+                "Bis 50 km von Asunción: halbtägige Rundreise mit Fahrzeug, Fahrer und zweisprachiger Begleitung",
+                "Mehr als 50 km von Asunción: ganztägige Rundreise mit derselben Ausstattung",
+                "Route nach Ihren Interessen (urban, ländlich, Grenzgebiet)"
+              ],
+              "icon": "Map"
+            },
+            {
+              "title": "Ankunftsunterkunft-Vermittlung",
+              "description": "Wir helfen Ihnen, für die Ankunft eine Airbnb- oder vorübergehende Unterkunft zu organisieren, während Sie Ihren langfristigen Ort suchen.",
+              "benefits": [
+                "Suche und Buchung von vorübergehender Unterkunft",
+                "Koordination mit Vermietern und lokalen Immobilienmaklern",
+                "Nachbarschaftsempfehlungen je nach Ihrem Profil"
+              ],
+              "icon": "BedDouble"
+            },
+            {
+              "title": "Umzugskoordination",
+              "description": "Koordination Ihres physischen Umzugs: vom Verpacken bis zur Lieferung in Ihr neues Zuhause in Paraguay.",
+              "benefits": [
+                "Kontakt mit internationalen Umzugsunternehmen",
+                "Koordination von Zoll und Dokumentation",
+                "Begleitung bei der Endlieferung"
+              ],
+              "icon": "Truck"
             }
           ]
         }
@@ -2799,7 +2930,8 @@
     "paragraphs": [
       "Nexa Paraguay no presta asesoría legal, fiscal ni de inversión. Los programas descritos son servicios de acompañamiento para trámites migratorios y administrativos.",
       "Nexa Paraguay está registrada como sujeto obligado ante SEPRELAD (Secretaría de Prevención de Lavado de Dinero o Bienes) y aplica procesos KYC (Know Your Customer) conforme a las resoluciones vigentes.",
-      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios."
+      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios.",
+      "En materia inmobiliaria, Nexa Paraguay no actúa como agente inmobiliario ni como corredor de propiedades. Acompañamos a las personas en la búsqueda, las negociaciones y la revisión de contratos, y aseguramos que los trámites de transferencia sean claros y honestos, pero la relación contractual con el propietario, la agencia o la escribanía es siempre entre el cliente y el prestador del servicio correspondiente."
     ],
     "licenseNumbers": [
       {
@@ -3513,12 +3645,12 @@
     "team": {
       "eyebrow": "Gründungsteam",
       "title": "Sonia und Luana",
-      "subtitle": "Mutter und Tochter. Die eine gründete Nexa nach dem selbst erlebten Umzug; die andere koordiniert jeden Fall mit Klarheit und persönlicher Nachverfolgung.",
+      "subtitle": "Mutter und Tochter. Die eine gründete Nexa, nachdem sie den Umzug selbst durchlebt hatte; die andere geht Seite an Seite mit ihr, nimmt diese Erfahrung auf und koordiniert jeden Fall von Anfang bis Ende.",
       "members": [
         {
           "name": "Sonia Weiss van der Pol",
           "role": "Gründerin",
-          "bio": "Sonia ist Paraguayerin und mit einem niederländischen Staatsbürger verheiratet. Sie hat jeden Schritt der internationalen Umsiedlung ihrer Familie persönlich geregelt: Aufenthalt, Dokumentation, Unternehmen und Bank. Sie gründete Nexa, damit niemand diesen Prozess allein lernen muss.",
+          "bio": "Sonia ist Paraguayerin und mit einem niederländischen Staatsbürger verheiratet. Sie hat jeden Schritt der internationalen Umsiedlung ihrer Familie persönlich geregelt: Aufenthalt, Dokumentation, Unternehmen und Bank. Sie gründete Nexa, damit niemand diesen Prozess allein lernen muss – und macht ihre eigene Erfahrung zum tragenden Pfeiler und warmen Wegweiser für jeden, der uns vertraut.",
           "languages": [
             "ES",
             "EN",
@@ -3537,17 +3669,17 @@
         },
         {
           "name": "Luana Weiss van der Pol",
-          "role": "Operations Director",
-          "bio": "Luana koordiniert jeden Fall von Anfang bis Ende. Vom ersten Kontakt bis zum Abschluss ist ihre Aufgabe, Ihnen einen Ansprechpartner und einen klaren Weg zu geben.",
+          "role": "Gründerin",
+          "bio": "Als Teil dieses Familienprojekts geht Luana Seite an Seite mit Sonia, nimmt deren Erfahrung auf und teilt dieselbe Mission: Ihren Umzug zu einem menschlichen, überraschungsfreien Prozess zu machen. Gemeinsam koordinieren sie jeden Vorgang von Anfang bis Ende – damit Sie eine persönliche Begleitung, einen klaren Weg und die Gewissheit haben, sich vom ersten Schritt an zu Hause zu fühlen.",
           "languages": [
             "ES",
             "EN",
             "NL"
           ],
           "credentials": [
-            "Betrieb und Kundenbetreuung",
-            "Koordination von Migrationsakten",
-            "Nachverfolgung von Konten und Formalitäten"
+            "Kundenbetreuung und Vorgangskoordination",
+            "Begleitung bei Migraciones",
+            "Koordination von Geschäftskonten"
           ],
           "icon": "Heart",
           "memberImage": "@src:team.luana",
