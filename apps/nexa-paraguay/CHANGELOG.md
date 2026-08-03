@@ -22,6 +22,18 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-08-03: fix(nexa): replace Luana placeholder with real photo (consent given) (by Erebus)
+
+- 2026-08-03: fix(nexa): replace Sonia placeholder with real photo (consent given) (by Erebus)
+
+- 2026-08-03: fix(nexa): remove leftover 30,000-Europeans statistic from faqPage (by Erebus)
+
+- 2026-08-03: feat(nexa): content pass per Kiki 2026-08-03 (by Erebus)
+
+- 2026-07-23: fix(profile): mirror Ivan's family-identity corrections in duplicated nexa-paraguay app (by Erebus)
+
+- 2026-07-23: fix(dra-gabriela): aplicar DEFAULT_THEME en no-flash script para lila (by Erebus)
+
 - 2026-07-23: feat(dra-gabriela): precios consistentes 130-150k en todos los JSON (by Erebus)
 
 - 2026-07-22: fix(host-rules): re-apply 5 swarm Host() corrections after merge revert (by Erebus)

@@ -5,8 +5,8 @@
     "country": "Paraguay",
     "capital": "Asunción",
     "currency": "USD",
-    "taxRate": "10%",
-    "processWeeks": "8–12 semanas",
+    "taxRate": "Régimen de tasa única",
+    "processWeeks": "Cronograma personalizado",
     "flagEmoji": "🇵🇾"
   },
   "navigation": {
@@ -107,14 +107,24 @@
         {
           "icon": "TrendingUp",
           "title": "Crecimiento sostenido",
-          "description": "PIB (producto interno bruto)creciendo al 4-5% anual desde 2009. Inflación de un dígito desde 2020. La economía paraguaya no para.",
-          "imageUrl": "@src:whyParaguay.growth"
+          "description": "La economía paraguaya crece de forma sostenida desde hace más de una década, con estabilidad macroeconómica, baja inflación y baja volatilidad. Un entorno confiable para planear a largo plazo.",
+          "imageUrl": "@src:whyParaguay.growth",
+          "bullets": [
+            "Décadas de crecimiento sostenido",
+            "Estabilidad macroeconómica prolongada",
+            "Mercado interno dinámico y diversificado"
+          ]
         },
         {
           "icon": "Landmark",
           "title": "Sistema fiscal territorial",
-          "description": "El IRP(impuesto a la renta personal) grava solo lo que ganás dentro de Paraguay. Ingresos del exterior no tributan. Así de simple.",
-          "imageUrl": "@src:whyParaguay.tax"
+          "description": "Paraguay grava solo lo que generás dentro del país. Los ingresos del exterior no tributan a nivel local. Una arquitectura fiscal simple que conecta con jurisdicciones europeas sin duplicidad.",
+          "imageUrl": "@src:whyParaguay.tax",
+          "bullets": [
+            "Sistema fiscal territorial puro",
+            "Sin retención sobre ingresos de fuente extranjera",
+            "Compatible con planificación patrimonial europea"
+          ]
         },
         {
           "icon": "Globe",
@@ -216,7 +226,7 @@
               "benefits": [
                 "Acompañamiento a la oficina de Identificaciones",
                 "Verificación de documentación previa",
-                "Entrega confirmada en 4-8 semanas"
+                "Entrega confirmada según el cronograma personalizado"
               ],
               "icon": "CreditCard"
             }
@@ -611,57 +621,62 @@
         {
           "icon": "TrendingUp",
           "title": "Economía estable y en crecimiento",
-          "description": "Paraguay lleva 15 años creciendo a tasas que el viejo continente ya no ve. PIB 2024 +4,2%, proyección 2025 +6,0%. Inflación controlada bajo 5%. Economía abierta con tratados comerciales con Brasil, Argentina, Chile, UE, EFTA, Mercosur.",
+          "description": "Paraguay lleva más de una década creciendo de forma sostenida, con estabilidad macroeconómica y baja volatilidad. Un entorno confiable para planear a largo plazo.",
           "items": [
-            "PIB Paraguay 2024: +4,2%",
-            "PIB Paraguay 2025 (proy.): +6,0%",
-            "Inflación controlada bajo 5%"
+            "Crecimiento sostenido durante una década",
+            "Estabilidad macroeconómica prolongada",
+            "Inflación controlada y baja volatilidad"
+          ],
+          "bullets": [
+            "Décadas de crecimiento sostenido",
+            "Estabilidad macroeconómica prolongada",
+            "Mercado interno dinámico"
           ]
         },
         {
           "icon": "Landmark",
           "title": "Sistema fiscal territorial",
-          "description": "Renta generada fuera de Paraguay NO tributa localmente. IRE 10% flat desde 2020 (Ley 6380). Sin control de cambios. Una de las cargas impositivas más bajas de la región.",
+          "description": "La renta generada fuera de Paraguay no tributa localmente. Existe un régimen de tasa única para la actividad local, sin control de cambios. Una de las cargas impositivas más bajas de la región.",
           "items": [
-            "IRE 10% flat desde 2020",
+            "Régimen de tasa única para renta local",
             "Renta extranjera exenta",
-            "Tratados con España, Chile, Taiwán"
+            "Tratados con varios países de la región"
           ]
         },
         {
           "icon": "Home",
           "title": "Bienes raíces en expansión",
-          "description": "Propiedades en zonas premium de Asunción +30% en 5 años. Mercado inmobiliario activo para residentes y extranjeros. Renta en USD con contratos estables.",
+          "description": "Las zonas premium de Asunción muestran un mercado inmobiliario activo, con demanda estable de residentes y extranjeros. Contratos en USD, marco legal claro para residentes.",
           "items": [
-            "Asunción zona premium +30% / 5 años",
-            "Renta en USD",
+            "Mercado activo en zonas premium",
+            "Contratos en USD",
             "Sin restricciones para residentes"
           ]
         },
         {
           "icon": "Sun",
           "title": "Calidad de vida subtropical",
-          "description": "Costo de vida 30-50% menor que en Europa. USD 4.000/mes cubre familia, escuela privada y ayuda doméstica. Asunción combina hospitalidad latinoamericana con infraestructura moderna.",
+          "description": "El costo de vida es notablemente más bajo que en Europa Occidental. Asunción combina hospitalidad latinoamericana con infraestructura moderna, salud privada de calidad y un clima cálido durante todo el año.",
           "items": [
-            "USD 4.000/mes cubre familia tipo",
-            "Hospitalidad arraigada",
+            "Costo de vida inferior a Europa Occidental",
+            "Hospitalidad y cultura de servicio",
             "Clima cálido todo el año"
           ]
         },
         {
           "icon": "Sprout",
           "title": "Potencia agroindustrial",
-          "description": "4.º exportador mundial de soja. Gran exportador de carne. ~100.000 hectáreas transadas por año. Oportunidades reales para inversores europeos con experiencia agrícola.",
+          "description": "Paraguay es uno de los principales exportadores mundiales de soja y un gran exportador de carne. Cadena de valor integrada, con oportunidades reales para inversores europeos con experiencia agrícola.",
           "items": [
-            "4.º exportador mundial de soja",
-            "~100.000 ha transadas/año",
+            "Líder mundial en exportaciones agrícolas",
+            "Gran exportador de carne",
             "Cadena de valor integrada"
           ]
         },
         {
           "icon": "Users",
           "title": "Comunidad europea activa",
-          "description": "Comunidades menonitas con cultura alemana en Chaco. Brasileños, argentinos, europeos. El español se aprende rápido. Nuestros clientes se conectan con una comunidad activa de expatriados.",
+          "description": "Hay comunidades menonitas con cultura alemana en el Chaco, junto con presencia brasileña, argentina y europea. El español se aprende rápido. Nuestros clientes se conectan con una comunidad activa de expatriados.",
           "items": [
             "Menonitas de habla alemana en Chaco",
             "Comunidad brasileña y argentina",
@@ -700,19 +715,16 @@
       "title": "En resumen",
       "items": [
         {
-          "icon": "Clock",
-          "title": "8–12 semanas",
-          "description": "Proceso completo desde presentación."
+          "title": "Cronograma personalizado",
+          "description": "Acompañamiento completo desde la consulta hasta la cédula."
         },
         {
-          "icon": "Users",
-          "title": "Un solo interlocutor",
-          "description": "Nexa coordina todos los profesionales."
+          "title": "Equipo bilingüe",
+          "description": "Neerlandés, alemán, inglés y español — sin intermediarios."
         },
         {
-          "icon": "DollarSign",
-          "title": "Precio fijo",
-          "description": "Todos los honorarios y tasas incluidos."
+          "title": "Coordinación integral",
+          "description": "Migraciones, escribanía, banco, RUC y residencia en un solo flujo."
         }
       ]
     },
@@ -725,7 +737,7 @@
         },
         {
           "q": "¿Cuánto tiempo toma todo el proceso?",
-          "a": "Tramitación presencial en un día. Emisión de residencia y cédula: 45–60 días. Constitución de sociedad y cuenta bancaria: 2–4 semanas. Total: 8–12 semanas."
+          "a": "El cronograma depende del programa. Te lo detallamos en la consulta inicial una vez conocido tu perfil."
         },
         {
           "q": "¿Qué pasa si falta algún documento?",
@@ -745,7 +757,7 @@
     "process": {
       "eyebrow": "Cómo funciona",
       "title": "Tu camino hacia una nueva vida en Paraguay",
-      "totalDuration": "Tiempo estimado total: 8–12 semanas.",
+      "totalDuration": "Tiempo total: depende del programa. Lo confirmamos en la consulta inicial.",
       "ctaLabel": "Iniciar mi proceso",
       "ctaHref": "/contacto",
       "steps": [
@@ -1113,31 +1125,31 @@
           "items": [
             {
               "q": "¿Cuánto cuesta todo el proceso?",
-              "a": "Depende del programa. Puede agendar una consulta gratuita para identificar sus necesidades y definir costos Todos los precios son cerrados en USD."
+              "a": "El costo varía según el programa. Te confirmamos el monto exacto en la consulta inicial, una vez conocido tu perfil."
             },
             {
               "q": "¿Qué NO está incluido?",
-              "a": "Pasajes aéreos, alojamiento en Paraguay, costo de constitución de S.A. (USD 800-1.500), capital mínimo bancario (varía por banco), honorarios notariales para propiedades."
+              "a": "Pasajes aéreos, alojamiento en Paraguay, costos de constitución de sociedad y capital mínimo bancario (varía por entidad). Te detallamos todo antes de empezar."
             },
             {
               "q": "¿Necesito hablar español?",
-              "a": "No. Nuestro equipo habla español, inglés, neerlandés y alemán. Te acompañamos con traducción simultánea a cada cita."
+              "a": "Pasajes aéreos, alojamiento en Paraguay, costos de constitución de sociedad y capital mínimo bancario (varía por entidad). Te detallamos todo antes de empezar."
             },
             {
               "q": "¿Cuántos viajes necesito hacer a Paraguay?",
-              "a": "Uno solo. La jornada operativa se coordina en un día completo."
+              "a": "Sí. Trabajamos con esquema de pagos vinculado a hitos del proceso. Para montos mayores, acordamos un esquema personalizado."
             },
             {
               "q": "¿Cuánto tiempo toma todo el proceso?",
-              "a": "8-12 semanas desde la consulta inicial hasta la cédula en mano. Business y Investor pueden tomar 12-16 semanas por la parte de empresa."
+              "a": "El tiempo total depende del programa. Lo confirmamos en la consulta inicial, una vez revisemos tu perfil."
             },
             {
-              "q": "¿El proceso es 100% legal?",
+              "q": "¿El proceso es completamente legal?",
               "a": "Absolutamente. Trabajamos con estricto apego a la legislación paraguaya. Estamos inscritos como sujeto obligado ante SEPRELAD."
             },
             {
               "q": "¿Qué pasa si me rechazan la residencia?",
-              "a": "Trabajamos en una preselección de elegibilidad antes de empezar. Pero si por alguna razón fuiste rechazado, te devolvemos el 80% del pago y te ayudamos a entender opciones alternativas."
+              "a": "Trabajamos en una preselección de elegibilidad antes de empezar. Si por alguna razón no procedieras, te devolvemos el 80% del pago según lo acordado en el contrato."
             }
           ]
         },
@@ -1164,7 +1176,7 @@
             },
             {
               "q": "¿Cuánto tardan en aprobar mi residencia?",
-              "a": "Migraciones tiene un plazo legal de 90 días, pero en la práctica toma 45-60 días desde tu día operativo en Paraguay."
+              "a": "Migraciones tiene un plazo legal amplio; en la práctica, la emisión de la residencia se tramita con agilidad. Te avisamos apenas esté lista."
             },
             {
               "q": "¿Necesito ir a Migraciones varias veces?",
@@ -1172,7 +1184,7 @@
             },
             {
               "q": "¿Qué pasa si mi cédula tarda en llegar?",
-              "a": "El Departamento de Identificaciones emite la cédula en 4-8 semanas. Te avisamos cuando esté lista y la recogemos por ti."
+              "a": "El Departamento de Identificaciones emite la cédula cuando el expediente queda completo. Te avisamos y la recogemos por ti."
             }
           ]
         },
@@ -1191,7 +1203,7 @@
             },
             {
               "q": "¿Necesito capital mínimo?",
-              "a": "Varía por banco. Algunos piden USD 1.000-5.000 como depósito inicial, otros no piden nada."
+              "a": "Varía por banco. Algunos piden un depósito inicial, otros no. Te guiamos sobre la mejor opción para tu perfil."
             },
             {
               "q": "¿Puedo transferir dinero desde Europa?",
@@ -1199,7 +1211,7 @@
             },
             {
               "q": "¿Necesito declarar el dinero que traigo?",
-              "a": "Para montos superiores a USD 10.000 en efectivo, sí. Para transferencias bancarias, no hay límite."
+              "a": "Sí, hay obligaciones de declaración para montos significativos. Para montos normales, no hay límite. Te orientamos según tu caso."
             }
           ]
         },
@@ -1218,7 +1230,7 @@
             },
             {
               "q": "¿Cuánto cuesta constituir una S.A.?",
-              "a": "USD 800-1.500 dependiendo del tipo y tamaño. Incluye honorarios del escribano y tasas de registro."
+              "a": "Depende del tipo y tamaño. Incluye honorarios notariales y tasas de registro. Te confirmamos el monto antes de avanzar."
             },
             {
               "q": "¿Qué es el RUC?",
@@ -1226,7 +1238,7 @@
             },
             {
               "q": "¿Cuáles son las obligaciones tributarias?",
-              "a": "IRE 10% sobre renta local. Si solo tenés ingresos del exterior, no tributás localmente. Te explicamos todo en la consulta."
+              "a": "Régimen de tasa única sobre renta local. Si solo tenés ingresos del exterior, no tributás localmente. Te explicamos todo en la consulta inicial."
             },
             {
               "q": "¿Qué régimen fiscal me conviene?",
@@ -1241,7 +1253,7 @@
           "items": [
             {
               "q": "¿Es buen momento para comprar propiedades en Paraguay?",
-              "a": "El mercado está en crecimiento sostenido. Los precios en Asunción han subido 5-8% anual en los últimos 3 años."
+              "a": "El mercado inmobiliario en Paraguay se mantiene en crecimiento sostenido. Es un buen momento para evaluar opciones con asesoría local."
             },
             {
               "q": "¿Puedo comprar como extranjero?",
@@ -1253,11 +1265,11 @@
             },
             {
               "q": "¿Cuánto cuesta un departamento decente?",
-              "a": "USD 800-1.500/mes para alquiler 2-3 dormitorios en buena zona. USD 80.000-150.000 para comprar."
+              "a": "El rango es amplio según la zona y el tamaño. Te ayudamos a evaluar opciones según tu presupuesto y necesidades."
             },
             {
               "q": "¿Puedo hipotecar como extranjero?",
-              "a": "Sí, pero los bancos paraguayos piden 30-40% de entrada. Algunos aceptan hipotecas desde el 60% del valor."
+              "a": "Sí, los bancos paraguayos piden un porcentaje de entrada. Algunos aceptan hipotecas con condiciones accesibles. Te acompañamos en la evaluación."
             }
           ]
         },
@@ -1268,7 +1280,7 @@
           "items": [
             {
               "q": "¿Cuánto cuesta vivir en Paraguay?",
-              "a": "USD 1.500-2.500/mes para una persona sola con vida cómoda. USD 3.000-4.500 para una familia con escuela privada."
+              "a": "El costo de vida en Asunción es notablemente más bajo que en Europa Occidental. Cubrimos ejemplos concretos en la consulta inicial según tu perfil."
             },
             {
               "q": "¿Cómo es el sistema de salud?",
@@ -1288,7 +1300,7 @@
             },
             {
               "q": "¿Necesito auto?",
-              "a": "Muy recomendable. El transporte público en Asunción es limitado. Los autos son baratos (USD 8.000-15.000 por uno usado en buen estado)."
+              "a": "Recomendado. El transporte público en Asunción es limitado. Los autos usados son accesibles — te orientamos con proveedores confiables."
             }
           ]
         }
@@ -1332,7 +1344,7 @@
           "items": [
             {
               "q": "Cuánto tiempo toma todo el proceso?",
-              "a": "Tramitación presencial en un día. Emisión de residencia y cédula: 45–60 días. Total: 8–12 semanas."
+              "a": "Tramitación presencial: un solo día. La emisión de residencia y cédula se tramita según los tiempos regulares del proceso. Te acompañamos de punta a punta."
             },
             {
               "q": "Cuántos viajes necesito hacer a Paraguay?",
@@ -1347,7 +1359,7 @@
               "a": "No. Nuestro equipo habla inglés, neerlandés y alemán."
             },
             {
-              "q": "El proceso es 100% legal?",
+              "q": "¿El proceso es completamente legal?",
               "a": "Absolutamente. Estricto apego a la legislación paraguaya e internacional."
             }
           ]
@@ -1449,7 +1461,7 @@
       "fallbackText": "Si WhatsApp no funciona en tu país, escribinos por email a paraguaynexa@gmail.com. Respondemos en 24h hábiles.",
       "calendlyNote": "Pronto: reservas directas por calendario en esta misma página. Por ahora usamos WhatsApp para confirmar horario.",
       "availableHours": "Lunes a Viernes, 9-18h ART (UTC-3)",
-      "responseTime": "Respondemos en menos de 2 horas hábiles",
+      "responseTime": "Respondemos con agilidad en horario hábil",
       "languages": [
         "Español",
         "Inglés",
@@ -1997,7 +2009,7 @@
     "title": "Formulario de atestiguación SEPRELAD",
     "subtitle": "Antes de iniciar servicios de constitución societaria, apertura bancaria o adquisición de inmuebles, completá esta declaración jurada.",
     "submitLabel": "Enviar atestiguación",
-    "successMessage": "Gracias. Un oficial de cumplimiento te contactará en un plazo máximo de 72 horas hábiles.",
+    "successMessage": "Gracias. Un oficial de cumplimiento te contactará a la brevedad para coordinar la entrevista inicial.",
     "whatsappPhone": "595982515138",
     "whatsappFallbackLabel": "¿Dudas? Consultá por WhatsApp",
     "questions": [
@@ -2127,7 +2139,7 @@
         },
         {
           "title": "Guía Fiscal para Extranjeros",
-          "description": "Entiende el sistema tributario paraguayo: IRE 10%, IRP, IVA, tratados de doble imposición y cómo optimizar tu carga fiscal legalmente.",
+          "description": "Entiende el sistema tributario paraguayo: régimen de tasa única, sistema territorial, tratados de doble imposición y cómo optimizar tu carga fiscal de forma legal.",
           "fileUrl": "",
           "ctaText": "Descargar PDF"
         }
@@ -2158,13 +2170,13 @@
       "pillars": [
         {
           "icon": "DollarSign",
-          "title": "Costo de Vida 60% Menor",
-          "description": "Vive cómodamente en Asunción por $1.500-$2.500/mes como pareja. Incluye alquiler premium, alimentos, transporte, ocio y seguro de salud privado. En Europa, el mismo estilo de vida cuesta $4.000-$5.500/mes."
+          "title": "Costo de vida accesible",
+          "description": "El costo de vida en Paraguay es notablemente más bajo que en Europa Occidental. Una familia tipo cubre holgadamente sus necesidades con un presupuesto mensual razonable."
         },
         {
           "icon": "Sun",
           "title": "Clima Subtropical Todo el Año",
-          "description": "2.800 horas de sol anuales (vs 1.600 en Países Bajos). Temperatura media de 23°C. Inviernos suaves (10-25°C), veranos cálidos. Sin huracanes, terremotos ni desastres naturales."
+          "description": "Paraguay ofrece abundantes horas de sol durante todo el año, con temperaturas templadas en invierno y cálidas en verano. El clima es uno de los grandes atractivos para los europeos que se mudan."
         },
         {
           "icon": "Users",
@@ -2397,7 +2409,7 @@
           "id": "diy",
           "name": "DIY",
           "description": "Hacerlo uno mismo.",
-          "price": "USD 800–1.500",
+          "price": "Precio interno — consultar",
           "priceNote": "solo tasas oficiales",
           "included": [
             "Tú llevas todo",
@@ -2412,7 +2424,7 @@
           "id": "gestor",
           "name": "Gestor local",
           "description": "Freelance paraguayo.",
-          "price": "USD 2.500–3.500",
+          "price": "Precio interno — consultar",
           "priceNote": "solo residencia",
           "included": [
             "Solo residencia",
@@ -2427,7 +2439,7 @@
           "id": "nexa",
           "name": "Nexa",
           "description": "Acompañamiento profesional integral.",
-          "price": "Desde $1.500",
+          "price": "Precio interno — consultar",
           "priceNote": "servicio base + add-ons por hora",
           "highlighted": true,
           "badge": "Recomendado",
@@ -2469,9 +2481,9 @@
       "title": "De Holanda a Paraguay: la historia de Sonia",
       "eyebrow": "Fundadora",
       "paragraphs": [
-        "Sonia es paraguaya. Vivió 7 años en Holanda, donde trabajó inicialmente en la industria musical antes de retirarse para dedicarse por completo a su familia. Siempre supo que volvería a Paraguay — su meta era aprender la cultura y el idioma neerlandés para pasárselo a sus hijos, y luego regresar para estar con su mamá.",
-        "Al volver, lo más duro fue reinventarse culturalmente. Los papeles fueron complicados, pero su condición de paraguaya y su red familiar aquí allanaron el camino. Esa vivencia directa del proceso migratorio — desde la burocracia hasta el reencuentro — le mostró que faltaba un servicio que no solo tramitara documentos, sino que acompañara de verdad.",
-        "Hoy Nexa Paraguay es eso: acompañamiento casi familiar a ciudadanos europeos que quieren mudarse. Sonia habla neerlandés, inglés y español, conoce ambas culturas desde adentro, y entiende exactamente lo que sus clientes están viviendo porque ella misma lo vivió. Hasta ahora ha ayudado a 10 personas, todos holandeses, y su mayor orgullo es haberles conseguido propiedades a buen precio, evitando que los estafen."
+        "Sonia es paraguaya. Vivió 7 años en Holanda, donde trabajó inicialmente en la industria musical antes de retirarse para enfocarse en la maternidad y en una vida más pausada.",
+        "Al volver, lo más duro fue reinventarse culturalmente. Los papeles fueron complicados, pero su condición de paraguaya y hablar el idioma la ayudaron a construir una base sólida.",
+        "Hoy Nexa Paraguay es eso: acompañamiento casi familiar a ciudadanos europeos que quieren mudarse. Sonia habla neerlandés, alemán, inglés y español — y trata cada caso como si fuera propio."
       ]
     },
     "cta": {
@@ -2499,31 +2511,31 @@
           "term": "Residencia permanente",
           "slug": "residencia-permanente",
           "q": "¿Qué es la residencia permanente?",
-          "a": "Estatus migratorio permanente en Paraguay. Se obtiene con un proceso de 8–12 semanas desde la presentación completa del expediente."
+          "a": "Estatus migratorio permanente en Paraguay. Te la tramitamos de punta a punta, incluida la presentación ante Migraciones."
         },
         {
-          "term": "Cédula de Identidad",
+          "term": "Cédula de identidad",
           "slug": "cedula-de-identidad",
-          "q": "¿Qué es la cédula de identidad paraguaya?",
-          "a": "DNI paraguayo emitido tras otorgada la residencia. Es el documento oficial de identificación en Paraguay."
+          "q": "¿Qué es la cédula de identidad?",
+          "a": "Documento nacional de identificación paraguayo, emitido tras otorgada la residencia. Es el documento oficial de identificación en Paraguay."
         },
         {
           "term": "RUC",
           "slug": "ruc",
           "q": "¿Qué es el RUC?",
-          "a": "Registro Único del Contribuyente. Identificador tributario, equivalente al NIF europeo. Necesario para operar legalmente en Paraguay."
+          "a": "Registro Único del Contribuyente. Identificador tributario, equivalente al NIF europeo. Necesario para operar legalmente con facturación."
         },
         {
-          "term": "IRE 10%",
+          "term": "IRE",
           "slug": "ire-10",
           "q": "¿Qué es el IRE?",
-          "a": "Impuesto a la Renta Empresarial. Tasa general sobre rentas generadas en Paraguay, con un tipo único del 10%."
+          "a": "Impuesto a la Renta Empresarial. Tasa general sobre rentas generadas en Paraguay. Aplicamos el régimen que mejor se ajuste a tu situación."
         },
         {
-          "term": "Territorialidad",
+          "term": "Sistema territorial",
           "slug": "territorialidad",
-          "q": "¿Qué es el sistema de territorialidad fiscal?",
-          "a": "Sistema fiscal donde solo se grava la renta generada dentro del país. Paraguay grava ingresos de fuente paraguaya, no los ingresos mundiales."
+          "q": "¿Qué es el sistema tributario territorial?",
+          "a": "Sistema fiscal donde solo se grava la renta generada dentro del país. Paraguay grava ingresos de fuente paraguaya, no los del exterior."
         },
         {
           "term": "SEPRELAD",
@@ -2630,13 +2642,13 @@
       "pillars": [
         {
           "icon": "Percent",
-          "title": "10% IRE + 0% extranjero",
-          "description": "Sistema territorial — sin impuesto sobre renta extranjera. Muy por debajo de NL 25% / BE 25% / DE 30%."
+          "title": "Régimen fiscal territorial",
+          "description": "Régimen de tasa única sobre renta local. Renta extranjera exenta. Sin control de cambios. Comparado con los regímenes de tributación mundial de Europa Occidental, ofrece una arquitectura fiscal estructural."
         },
         {
           "icon": "FileCheck",
           "title": "Vía migratoria real",
-          "description": "Residencia completa, no solo visa \"digital nomad\". Sirve para residencia fiscal permanente una vez deshechos los vínculos con NL/BE."
+          "description": "Residencia completa, no solo visa \"digital nomad\". Sirve para residencia fiscal permanente una vez deshechos los vínculos con el país de origen."
         },
         {
           "icon": "Shield",
@@ -2654,7 +2666,7 @@
         },
         {
           "q": "¿Qué pasa con la emigratieheffing sobre una BV?",
-          "a": "El impuesto de salida sobre participación sustancial puede diferirse con la estructura adecuada. Trabajamos en paralelo con asesores fiscales holandeses."
+          "a": "El impuesto de salida sobre participación sustancial puede diferirse con la estructura adecuada. Trabajamos en paralelo con tu asesor NL para sincronizar fechas."
         },
         {
           "q": "¿Paraguay tiene convenio fiscal con NL o BE?",
@@ -2774,7 +2786,7 @@
                 "Acompañamiento presencial a entrevistas",
                 "Seguimiento hasta aprobación de la residencia"
               ],
-              "process": "8-12 semanas desde la consulta inicial",
+              "process": "Después de la consulta inicial: cronograma personalizado por perfil.",
               "whatYouNeed": [
                 "Pasaporte vigente",
                 "Antecedentes penales apostillados",
@@ -2793,7 +2805,7 @@
                 "Acompañamiento presencial el día del enrolamiento",
                 "Seguimiento hasta entrega del documento"
               ],
-              "process": "4-8 semanas después de aprobada la residencia",
+              "process": "Luego de aprobada la residencia: plazos definidos en la consulta.",
               "whatYouNeed": [
                 "Residencia aprobada",
                 "Foto carnet",
@@ -2810,7 +2822,7 @@
                 "Acompañamiento presencial a los exámenes",
                 "Seguimiento hasta la emisión del documento"
               ],
-              "process": "2-4 semanas",
+              "process": "Cronograma definido según la documentación.",
               "whatYouNeed": [
                 "Cédula paraguaya",
                 "Certificado de aptitud médica",
@@ -2834,7 +2846,7 @@
                 "Acompañamiento a sucursal",
                 "Activación de tarjeta y banca online"
               ],
-              "process": "1-2 semanas",
+              "process": "Plazos definidos en la consulta inicial.",
               "whatYouNeed": [
                 "Cédula paraguaya",
                 "Comprobante de domicilio",
@@ -2852,7 +2864,7 @@
                 "Asesoría fiscal inicial (3 meses incluidos)",
                 "Coordinación con contador"
               ],
-              "process": "1 semana",
+              "process": "Plazos definidos en la consulta inicial.",
               "whatYouNeed": [
                 "Cédula paraguaya",
                 "Elección de régimen (persona o empresa)"
@@ -2868,7 +2880,7 @@
                 "Apostilla y legalización si la necesitás",
                 "Tiempos ágiles para tus plazos migratorios"
               ],
-              "process": "3-10 días hábiles según volumen",
+              "process": "Plazos según el volumen del trámite.",
               "whatYouNeed": [
                 "Documentos originales",
                 "Especificación del idioma destino"
@@ -2884,7 +2896,7 @@
                 "Inscripción en el Registro Público",
                 "Habilitación municipal cuando corresponda"
               ],
-              "process": "2-4 semanas",
+              "process": "Cronograma definido según el caso.",
               "whatYouNeed": [
                 "Cédula de los socios",
                 "RUC previo",
@@ -2908,7 +2920,7 @@
                 "Revisión del contrato en español",
                 "Negociación con propietario"
               ],
-              "process": "2-4 semanas",
+              "process": "Cronograma personalizado.",
               "whatYouNeed": [
                 "Cédula paraguaya",
                 "Ingresos demostrables"
@@ -2926,7 +2938,7 @@
                 "Acompañamiento a la firma",
                 "Registro en ARP"
               ],
-              "process": "4-8 semanas",
+              "process": "Plazos definidos según el proceso.",
               "whatYouNeed": [
                 "Cédula paraguaya",
                 "RUC",
@@ -2945,7 +2957,7 @@
                 "Verificación de deuda impositiva",
                 "Informe escrito con hallazgos"
               ],
-              "process": "2-3 semanas",
+              "process": "Cronograma personalizado.",
               "whatYouNeed": [
                 "Datos de la propiedad"
               ],
@@ -3112,7 +3124,7 @@
             "nl": "Permanente Verblijfsvergunning",
             "de": "Daueraufenthaltsgenehmigung"
           },
-          "price": "USD 4.500",
+          "price": "Precio interno — consultar",
           "duration": "10–12 semanas",
           "popular": false,
           "included": [
@@ -3132,7 +3144,7 @@
             "nl": "Verblijf + Bedrijf",
             "de": "Residenz + Unternehmen"
           },
-          "price": "USD 7.500",
+          "price": "Precio interno — consultar",
           "duration": "12–16 semanas",
           "popular": true,
           "included": [
@@ -3151,7 +3163,7 @@
             "nl": "Investeerder Verblijf",
             "de": "Investoren-Residenz"
           },
-          "price": "USD 12.000",
+          "price": "Precio interno — consultar",
           "duration": "12–16 semanas",
           "popular": false,
           "included": [
@@ -3169,7 +3181,7 @@
             "nl": "Grondaankoop",
             "de": "Landerwerb"
           },
-          "price": "USD 2.500",
+          "price": "Precio interno — consultar",
           "duration": "4–6 semanas",
           "popular": false,
           "included": [
@@ -3239,7 +3251,7 @@
     "process": {
       "eyebrow": "Cómo funciona",
       "title": "Tu camino hacia una nueva vida en Paraguay",
-      "totalDuration": "Tiempo estimado total: 8–12 semanas.",
+      "totalDuration": "Tiempo total: depende del programa. Lo confirmamos en la consulta inicial.",
       "ctaLabel": "Iniciar mi proceso",
       "ctaHref": "/contacto",
       "steps": [
@@ -3311,34 +3323,16 @@
       "subtitle": "Lo que necesitás saber antes de empezar.",
       "items": [
         {
-          "icon": "Clock",
-          "title": "8–12 semanas",
-          "description": "Tiempo total desde la primera consulta hasta la cédula en mano.",
-          "image": "@src:process.consultation"
+          "title": "Cronograma personalizado",
+          "description": "Acompañamiento completo desde la consulta hasta la cédula."
         },
         {
-          "icon": "Users",
-          "title": "Un solo interlocutor",
-          "description": "Sonia o Luana asignadas a tu caso. No hablás con 5 personas distintas.",
-          "image": "@src:process.documents"
+          "title": "Equipo bilingüe",
+          "description": "Neerlandés, alemán, inglés y español — sin intermediarios."
         },
         {
-          "icon": "DollarSign",
-          "title": "Precio fijo en USD",
-          "description": "Sin sorpresas, sin costos ocultos. Lo que ves es lo que pagás.",
-          "image": "@src:process.arrival"
-        },
-        {
-          "icon": "Plane",
-          "title": "Un solo viaje",
-          "description": "Tu día operativo en Paraguay cabe en una jornada coordinada.",
-          "image": "@src:process.signing"
-        },
-        {
-          "icon": "FileCheck",
-          "title": "Todo incluido",
-          "description": "Honorarios profesionales, tasas gubernamentales, traducciones, apostillas.",
-          "image": "@src:process.celebration"
+          "title": "Coordinación integral",
+          "description": "Migraciones, escribanía, banco, RUC y residencia en un solo flujo."
         }
       ]
     },
@@ -3352,7 +3346,7 @@
         },
         {
           "q": "¿Cuánto tiempo toma todo el proceso?",
-          "a": "Tramitación presencial: 1 día. Emisión de residencia y cédula: 45–60 días. Constitución de sociedad y cuenta bancaria: 2–4 semanas. Total: 8–12 semanas."
+          "a": "El cronograma depende del programa. Te lo detallamos en la consulta inicial una vez conocido tu perfil."
         },
         {
           "q": "¿Qué pasa si falta algún documento?",
@@ -3372,11 +3366,11 @@
         },
         {
           "q": "¿Qué NO está incluido?",
-          "a": "Pasajes aéreos, alojamiento en Paraguay, costo de constitución de S.A. (USD 800-1.500 según tipo), capital mínimo bancario (varía por banco)."
+          "a": "Pasajes aéreos, alojamiento en Paraguay, costos de constitución de sociedad y capital mínimo bancario (varía por entidad). Te detallamos todo antes de empezar."
         },
         {
           "q": "¿Qué pasa si me rechazan la residencia?",
-          "a": "Trabajamos en una preselección de elegibilidad antes de empezar. Pero si por alguna razón fuiste rechazado, te devolvemos el 80% del pago y te ayudamos a entender opciones alternativas."
+          "a": "Trabajamos en una preselección de elegibilidad antes de empezar. Si por alguna razón no procedieras, te devolvemos la mayor parte del pago según lo acordado en el contrato."
         }
       ]
     },
@@ -3530,7 +3524,7 @@
     "healthcare": {
       "eyebrow": "Salud",
       "title": "Atención médica para tu familia",
-      "description": "Paraguay cuenta con hospitales privados de primer nivel, dentistas, pediatras y especialistas. Todos los datos con GPS para que puedas ubicarlos.",
+      "description": "Paraguay cuenta con hospitales privados de primer nivel, dentistas, pediatras y especialistas. Todos los datos con GPS para que evalúes con tu familia.",
       "items": [
         {
           "name": "Hospital Bautista",
@@ -3842,7 +3836,7 @@
           "items": [
             {
               "title": "Residencia Permanente",
-              "price": "USD 4.500",
+              "price": "Precio interno — consultar",
               "duration": "10–12 semanas",
               "popular": false,
               "tagline": "Para vivir en Paraguay",
@@ -3868,10 +3862,10 @@
           "items": [
             {
               "title": "Residencia + Empresa + Banco",
-              "price": "USD 7.500",
+              "price": "Precio interno — consultar",
               "duration": "12–16 semanas",
               "popular": true,
-              "tagline": "Lo que el 80% de nuestros clientes elige",
+              "tagline": "El más elegido por nuestros clientes",
               "included": [
                 "Todo lo de Residencia Permanente",
                 "Constitución de S.A. paraguaya",
@@ -3895,7 +3889,7 @@
           "items": [
             {
               "title": "Residencia para Inversores",
-              "price": "USD 12.000",
+              "price": "Precio interno — consultar",
               "duration": "12–16 semanas",
               "popular": false,
               "tagline": "Para inversores con patrimonio verificable",
@@ -3921,7 +3915,7 @@
           "items": [
             {
               "title": "Compra de Tierras",
-              "price": "USD 2.500",
+              "price": "Precio interno — consultar",
               "duration": "4–6 semanas",
               "popular": false,
               "tagline": "Solo si ya tenés residencia",
@@ -4077,7 +4071,7 @@
             {
               "title": "Residencia Permanente",
               "duration": "10–12 semanas",
-              "price": "USD 4.500",
+              "price": "Precio interno — consultar",
               "tagline": "Para vivir en Paraguay sin empresa",
               "included": [
                 "Tramitación en Migraciones",
@@ -4088,7 +4082,7 @@
             {
               "title": "Residencia + Empresa + Banco",
               "duration": "12–16 semanas",
-              "price": "USD 7.500",
+              "price": "Precio interno — consultar",
               "tagline": "El programa más popular",
               "popular": true,
               "included": [
@@ -4101,7 +4095,7 @@
             {
               "title": "Residencia para Inversores",
               "duration": "12–16 semanas",
-              "price": "USD 12.000",
+              "price": "Precio interno — consultar",
               "tagline": "Para patrimonios verificables",
               "included": [
                 "Todo lo de Business",
@@ -4113,7 +4107,7 @@
             {
               "title": "Compra de Tierras",
               "duration": "4–6 semanas",
-              "price": "USD 2.500",
+              "price": "Precio interno — consultar",
               "tagline": "Módulo independiente (necesitás residencia previa)",
               "included": [
                 "Due diligence",
@@ -4279,7 +4273,7 @@
     "process": {
       "eyebrow": "Cómo funciona",
       "title": "Tu mudanza paso a paso",
-      "totalDuration": "Duración total: 8-12 semanas.",
+      "totalDuration": "Tiempo total: depende del programa. Lo confirmamos en la consulta inicial.",
       "ctaLabel": "Iniciar mi proceso",
       "ctaHref": "/contacto",
       "steps": []
@@ -4318,7 +4312,7 @@
     "hero": {
       "eyebrow": "Para clientes alemanes",
       "headline": "¿Alemán pensando en Paraguay?",
-      "subheadline": "Sonia y Luana hablan alemán. 7 años viviendo el proceso. Te acompañamos en tu mudanza con contexto fiscal completo.",
+      "subheadline": "Aufenthalt, Bank, Unternehmen, Wohnung — eine Reise, ein fester Ansprechpartner.",
       "ctaPrimaryText": "Agendar consulta en alemán",
       "ctaPrimaryHref": "/contacto",
       "backgroundImage": "@src:hero.localizedDe"
@@ -4332,7 +4326,7 @@
       "eyebrow": "Por qué Sonia",
       "title": "Sonia habla alemán.",
       "paragraphs": [
-        "Sonia vivió 7 años en Holanda. Tramitó su propia residencia. Habla alemán, holandés, inglés y español."
+        "Sonia vivió 7 años en Holanda. Tramitó su propia residencia. Habla alemán, neerlandés, inglés y español."
       ]
     },
     "taxComparison": {
@@ -4369,7 +4363,7 @@
     "process": {
       "eyebrow": "Cómo funciona",
       "title": "Tu mudanza paso a paso",
-      "totalDuration": "Duración total: 8-12 semanas.",
+      "totalDuration": "Tiempo total: depende del programa. Lo confirmamos en la consulta inicial.",
       "ctaLabel": "Iniciar mi proceso",
       "ctaHref": "/contacto",
       "steps": []
