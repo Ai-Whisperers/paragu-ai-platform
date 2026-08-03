@@ -74,7 +74,7 @@ async function BlogContent({ locale, slug }: { locale: string; slug: string }) {
         {post.author && <p className="text-text-muted text-sm mb-6">Por {post.author}</p>}
         {post.excerpt && <p className="text-lg italic text-text-muted mb-8 leading-relaxed">{post.excerpt}</p>}
         <div className="prose prose-stone max-w-none leading-relaxed text-text-muted">
-          {(post.body || '').split('\\n').filter(Boolean).map((p: string, i: number) => <p key={i} className="mb-4">{p}</p>)}
+          {(post.body || post.content || '').split(/\n+/).filter((p: string) => p.trim() && !p.startsWith('#')).map((p: string, i: number) => <p key={i} className="mb-4">{p}</p>)}
         </div>
         {post.tags && <div className="flex gap-2 flex-wrap mt-8">{post.tags.map((t: string, i: number) => <span key={i} className="px-3 py-1 bg-surface-alt rounded-full text-xs text-text-muted">{t}</span>)}</div>}
         <div className="mt-8 pt-8 border-t border-border flex items-center justify-between">
