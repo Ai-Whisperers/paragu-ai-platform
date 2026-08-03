@@ -445,16 +445,17 @@
       },
       "sonia": {
         "src": "/images/team/sonia.webp",
-        "alt": "Sonia Wehrli, Fundadora y Guía Legal de Nexa Paraguay",
         "fallbackSrc": "/images/team/sonia.png",
+        "alt": "Sonia Weiss van der Pol, Fundadora y Guía Legal de Nexa Paraguay",
         "altByLocale": {
-          "es": "Sonia Wehrli, Fundadora y Guía Legal de Nexa Paraguay",
-          "en": "Sonia Wehrli, Founder & Legal Guide at Nexa Paraguay",
-          "nl": "Sonia Wehrli, Oprichtster & Juridisch Gids bij Nexa Paraguay",
-          "de": "Sonia Wehrli, Gründerin & Rechtliche Beraterin bei Nexa Paraguay"
+          "es": "Sonia Weiss van der Pol, Fundadora y Guía Legal de Nexa Paraguay",
+          "en": "Sonia Weiss van der Pol, Founder & Legal Guide at Nexa Paraguay",
+          "nl": "Sonia Weiss van der Pol, Oprichtster & Juridisch Gids bij Nexa Paraguay",
+          "de": "Sonia Weiss van der Pol, Gründerin & Rechtliche Beraterin bei Nexa Paraguay"
         },
-        "status": "REAL_PHOTO_NEEDED",
-        "note": "Replace with real photo of Sonia. Consent required."
+        "credit": "Photo by Sonia Weiss van der Pol, 2026-08-03",
+        "consentConfirmed": true,
+        "license": "Use granted for Nexa Paraguay website only"
       },
       "operations": {
         "src": "/images/team/operations-director.webp",
