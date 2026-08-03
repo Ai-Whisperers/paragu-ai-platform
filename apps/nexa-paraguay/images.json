@@ -503,8 +503,17 @@
       },
       "luana": {
         "src": "/images/team/luana.webp",
-        "alt": "Luana Weiss van der Pol, Operations Director de Nexa Paraguay",
-        "fallbackSrc": "/images/team/luana.png"
+        "fallbackSrc": "/images/team/luana.png",
+        "alt": "Luana Weiss van der Pol, Fundadora y Coordinadora de Nexa Paraguay",
+        "altByLocale": {
+          "es": "Luana Weiss van der Pol, Fundadora y Coordinadora de Nexa Paraguay",
+          "en": "Luana Weiss van der Pol, Founder & Coordinator at Nexa Paraguay",
+          "nl": "Luana Weiss van der Pol, Oprichtster & Co\u00f6rdinator bij Nexa Paraguay",
+          "de": "Luana Weiss van der Pol, Gr\u00fcnderin & Koordinatorin bei Nexa Paraguay"
+        },
+        "credit": "Photo by Luana Weiss van der Pol, 2026-08-03",
+        "consentConfirmed": true,
+        "license": "Use granted for Nexa Paraguay website only"
       }
     },
     "office": {
