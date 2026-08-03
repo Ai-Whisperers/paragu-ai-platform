@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-08-03: fix(nexa): full blog hygiene pass — strip metrics + i18n consistency (by Erebus)
+
 - 2026-08-03: fix(nexa): full content hygiene pass — strip metrics/time + i18n consistency (by Erebus)
 
 - 2026-08-03: fix(nexa): replace Luana placeholder with real photo (consent given) (by Erebus)
