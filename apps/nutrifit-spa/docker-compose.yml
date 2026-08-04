@@ -1,0 +1,19 @@
+services:
+  web:
+    image: nutrifit-spa:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.nutrifit-spa.entrypoints=websecure"
+        - "traefik.http.routers.nutrifit-spa.rule=Host(`nutrifitspa.paragu-ai.com`) || Host(`nutrifit-spa.paragu-ai.com`)"
+        - "traefik.http.routers.nutrifit-spa.tls=true"
+        - "traefik.http.routers.nutrifit-spa.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.nutrifit-spa.middlewares=security-headers@file"
+        - "traefik.http.services.nutrifit-spa.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

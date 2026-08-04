@@ -1,0 +1,19 @@
+services:
+  web:
+    image: viviesteticpy:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.viviesteticpy.entrypoints=websecure"
+        - "traefik.http.routers.viviesteticpy.rule=Host(`viviesteticpy.paragu-ai.com`)"
+        - "traefik.http.routers.viviesteticpy.tls=true"
+        - "traefik.http.routers.viviesteticpy.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.viviesteticpy.middlewares=security-headers@file"
+        - "traefik.http.services.viviesteticpy.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

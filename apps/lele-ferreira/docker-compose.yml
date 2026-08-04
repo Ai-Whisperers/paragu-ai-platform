@@ -1,0 +1,19 @@
+services:
+  web:
+    image: lele-ferreira:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.lele-ferreira.entrypoints=websecure"
+        - "traefik.http.routers.lele-ferreira.rule=Host(`leleferreira.paragu-ai.com`) || Host(`lele-ferreira.paragu-ai.com`)"
+        - "traefik.http.routers.lele-ferreira.tls=true"
+        - "traefik.http.routers.lele-ferreira.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.lele-ferreira.middlewares=security-headers@file"
+        - "traefik.http.services.lele-ferreira.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

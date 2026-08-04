@@ -1,0 +1,19 @@
+services:
+  web:
+    image: clau-bellino:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.clau-bellino.entrypoints=websecure"
+        - "traefik.http.routers.clau-bellino.rule=Host(`claubellino.paragu-ai.com`) || Host(`clau-bellino.paragu-ai.com`)"
+        - "traefik.http.routers.clau-bellino.tls=true"
+        - "traefik.http.routers.clau-bellino.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.clau-bellino.middlewares=security-headers@file"
+        - "traefik.http.services.clau-bellino.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

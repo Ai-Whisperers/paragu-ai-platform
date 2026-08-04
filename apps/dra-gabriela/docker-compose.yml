@@ -1,6 +1,6 @@
 services:
   web:
-    image: dra-gabriela:prod-meta-og-20260714
+    image: dra-gabriela:prod
     deploy:
       replicas: 1
       labels:
@@ -18,15 +18,10 @@ services:
         - "traefik.http.routers.dra-gabriela-www.tls=true"
         - "traefik.http.routers.dra-gabriela-www.tls.certresolver=letsencryptresolver"
         - "traefik.http.routers.dra-gabriela-www.middlewares=dra-gabriela-www-redirect@file,security-headers@file"
-        # Legacy redirect — ometzdental.com → ometzdental.com (301)
-        # NOTE: For now, ometzdental.com serves the site directly
-        # because ometzdental.com DNS does not currently point to this VPS.
-        # Restore the legacy redirect once ometzdental.com is live.
-        - "traefik.http.routers.dra-gabriela-legacy.entrypoints=websecure"
-        - "traefik.http.routers.dra-gabriela-legacy.rule=Host(`ometzdental.com.py`) || Host(`www.ometzdental.com.py`)"
-        - "traefik.http.routers.dra-gabriela-legacy.tls=true"
-        - "traefik.http.routers.dra-gabriela-legacy.tls.certresolver=letsencryptresolver"
-        - "traefik.http.routers.dra-gabriela-legacy.middlewares=dra-gabriela-legacy-redirect@file"
+        # Legacy redirect — removed 2026-07-25 (ometzdental.com is live; .py placeholder was
+        # leftover from when DNS wasn't pointed at this VPS and caused the fleet probe to
+        # alert every 30 min on a non-existent host). The .py host never had a DNS record
+        # and the @file middleware was never defined, so the router was inert + alerting.
         # Secondary router — dragabriela.paragu-ai.com (legacy alias) → 301 to ometzdental.com
         - "traefik.http.routers.dra-gabriela-pa.entrypoints=websecure"
         - "traefik.http.routers.dra-gabriela-pa.rule=Host(`dragabriela.paragu-ai.com`)"

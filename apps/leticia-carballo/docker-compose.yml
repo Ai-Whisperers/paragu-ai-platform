@@ -1,0 +1,19 @@
+services:
+  web:
+    image: leticia-carballo:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.leticia-carballo.entrypoints=websecure"
+        - "traefik.http.routers.leticia-carballo.rule=Host(`leticiacarballo.paragu-ai.com`) || Host(`leticia-carballo.paragu-ai.com`)"
+        - "traefik.http.routers.leticia-carballo.tls=true"
+        - "traefik.http.routers.leticia-carballo.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.leticia-carballo.middlewares=security-headers@file"
+        - "traefik.http.services.leticia-carballo.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

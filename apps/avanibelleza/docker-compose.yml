@@ -1,0 +1,19 @@
+services:
+  web:
+    image: avanibelleza:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.avanibelleza.entrypoints=websecure"
+        - "traefik.http.routers.avanibelleza.rule=Host(`avanibelleza.paragu-ai.com`) || Host(`avani-belleza.paragu-ai.com`)"
+        - "traefik.http.routers.avanibelleza.tls=true"
+        - "traefik.http.routers.avanibelleza.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.avanibelleza.middlewares=security-headers@file"
+        - "traefik.http.services.avanibelleza.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

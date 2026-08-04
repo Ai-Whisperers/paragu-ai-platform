@@ -1,0 +1,266 @@
+{
+  "_meta": {
+    "translationQuality": "native",
+    "author": "ParaguAI / Ai-Whisperers",
+    "lastReviewed": "2026-08-03",
+    "version": "2.0",
+    "generatedBy": "content_writer.py (R35)",
+    "vertical": "barber"
+  },
+  "site": {
+    "vertical": "unknown",
+    "country": "Paraguay",
+    "domain": "peluqueriabarbershop.com.py",
+    "defaultLocale": "es",
+    "locales": [
+      "es"
+    ],
+    "name": "Peluquería Barbershop",
+    "businessName": "Peluquería Barbershop",
+    "shortName": "Peluquería Barbershop",
+    "tagline": "",
+    "phone": "+595 982 992 766",
+    "whatsapp": "595982992766",
+    "email": "",
+    "address": "",
+    "city": "Asunción",
+    "hours": "",
+    "founded": "",
+    "instagram": "",
+    "facebook": "",
+    "url": "https://peluqueriabarbershop.com.py",
+    "description": "Peluquería Barbershop — Local business in Asunción, Paraguay.",
+    "navigation": [
+      {
+        "labelKey": "navigation.home",
+        "path": ""
+      },
+      {
+        "labelKey": "navigation.services",
+        "path": "servicios"
+      },
+      {
+        "labelKey": "navigation.about",
+        "path": "nosotros"
+      },
+      {
+        "labelKey": "navigation.contact",
+        "path": "contacto"
+      }
+    ],
+    "_meta": {
+      "extractedFrom": "WEBSITE_BRIEF.md",
+      "generatedAt": "2026-08-03",
+      "generatedBy": "wire-app.py (R28)"
+    }
+  },
+  "navigation": {
+    "businessName": "Peluquería Barbershop",
+    "items": [
+      {
+        "labelKey": "navigation.home",
+        "path": ""
+      },
+      {
+        "labelKey": "navigation.services",
+        "path": "servicios"
+      },
+      {
+        "labelKey": "navigation.about",
+        "path": "nosotros"
+      },
+      {
+        "labelKey": "navigation.faq",
+        "path": "faq"
+      },
+      {
+        "labelKey": "navigation.contact",
+        "path": "contacto"
+      }
+    ]
+  },
+  "hero": {
+    "headline": "Barbería Profesional en Asunción",
+    "subheadline": "4.6★ en Google · 66+ clientes satisfechos",
+    "description": "Cortes clásicos y modernos, perfiles definidos, y ambiente que invita a quedarse. Atendemos con y sin turno.",
+    "ctaPrimaryText": "Reservar Turno",
+    "ctaSecondaryText": "Ver Servicios",
+    "ctaPrimaryHref": "#contacto",
+    "ctaSecondaryHref": "#servicios"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Tratamientos personalizados · Asunción",
+    "items": [
+      {
+        "title": "Corte de cabello",
+        "description": "Corte profesional con tijera y máquina, lavado y peinado. Incluye consulta de estilo.",
+        "price": "Gs. 50.000",
+        "icon": "scissors"
+      },
+      {
+        "title": "Barba y bigote",
+        "description": "Combo completo: corte, perfilado de barba con navaja, toalla caliente y after shave.",
+        "price": "Gs. 80.000",
+        "icon": "razor"
+      },
+      {
+        "title": "Tratamientos capilares",
+        "description": "Servicio profesional de tratamientos capilares. Realizado por nuestro equipo con productos certificados.",
+        "price": "Consultar",
+        "icon": "heart"
+      },
+      {
+        "title": "Coloración",
+        "description": "Tinturado profesional para cubrir canas o cambiar look. Productos sin amoníaco.",
+        "price": "Gs. 100.000",
+        "icon": "color"
+      },
+      {
+        "title": "Facial express",
+        "description": "Servicio profesional de facial express. Realizado por nuestro equipo con productos certificados.",
+        "price": "Consultar",
+        "icon": "drop"
+      }
+    ]
+  },
+  "packages": {
+    "title": "Paquetes y Promociones",
+    "description": "Ahorrá con nuestros paquetes combinados.",
+    "items": [
+      {
+        "name": "Pack Inicial",
+        "description": "Conocé nuestros servicios con un descuento especial. Ideal para probar Peluquería Barbershop por primera vez.",
+        "originalPrice": "Gs. 300.000",
+        "price": "Gs. 250.000",
+        "icon": "gift",
+        "items": [
+          "Una sesión de cualquier servicio",
+          "Asesoría personalizada"
+        ]
+      },
+      {
+        "name": "Pack Trimestral",
+        "description": "3 sesiones con 15% de descuento. Recomendado para resultados visibles y duraderos.",
+        "originalPrice": "Gs. 600.000",
+        "price": "Gs. 510.000",
+        "icon": "package",
+        "items": [
+          "3 sesiones a elección",
+          "Seguimiento entre sesiones",
+          "Productos de regalo"
+        ]
+      },
+      {
+        "name": "Pack Premium",
+        "description": "La experiencia completa de Peluquería Barbershop. 6 sesiones + atenciones especiales.",
+        "originalPrice": "Gs. 1.200.000",
+        "price": "Gs. 950.000",
+        "icon": "crown",
+        "items": [
+          "6 sesiones a elección",
+          "Atención prioritaria",
+          "Kit de productos",
+          "Sesión de regalo al finalizar"
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Conocé Nuestro Local",
+    "items": [
+      {
+        "caption": "Recepción",
+        "alt": "Recepción del local"
+      },
+      {
+        "caption": "Sala principal",
+        "alt": "Sala donde atendemos"
+      },
+      {
+        "caption": "Servicio 1",
+        "alt": "Momento del servicio"
+      },
+      {
+        "caption": "Servicio 2",
+        "alt": "Aplicación de productos"
+      },
+      {
+        "caption": "Resultado final",
+        "alt": "Resultado del tratamiento"
+      },
+      {
+        "caption": "Equipo",
+        "alt": "Nuestro equipo profesional"
+      }
+    ]
+  },
+  "promos": {
+    "items": [
+      {
+        "title": "15% OFF primera visita",
+        "description": "Mencioná 'WEB' cuando reserves y obtené 15% de descuento en tu primera sesión."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros 66+ clientes",
+    "items": [
+      {
+        "name": "María G.",
+        "rating": 4.6,
+        "text": "Excelente atención y resultados visibles. Peluquería Barbershop superó mis expectativas, lo recomiendo."
+      },
+      {
+        "name": "Lucía R.",
+        "rating": 4.6,
+        "text": "Muy profesionales, el ambiente es súper agradable y los precios son justos. Ya fui varias veces."
+      },
+      {
+        "name": "Carlos P.",
+        "rating": 4.6,
+        "text": "De los mejores lugares de Asunción. Peluquería Barbershop es serio y comprometido con sus clientes."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Reservá tu turno",
+    "description": "Escribinos por WhatsApp o llamanos para agendar tu cita en Peluquería Barbershop.",
+    "cta": {
+      "text": "+595 982 992 766",
+      "label": "WhatsApp"
+    },
+    "whatsappMessage": "¡Hola! Vi la página de Peluquería Barbershop y me gustaría reservar un turno."
+  },
+  "footer": {
+    "businessName": "Peluquería Barbershop",
+    "tagline": "© 2026 Peluquería Barbershop. Todos los derechos reservados.",
+    "credits": "Hecho con ❤️ por ParaguAI"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Respondemos las dudas más comunes de nuestros clientes",
+    "items": []
+  },
+  "pricing": {
+    "title": "Precios Transparentes",
+    "subtitle": "Sin sorpresas. Conocé nuestros precios antes de reservar.",
+    "plans": [
+      {
+        "name": "Por Sesión",
+        "price": "Gs. 50.000–200.000",
+        "description": "Reservá cualquier servicio individual"
+      },
+      {
+        "name": "Mensual",
+        "price": "Gs. 250.000",
+        "description": "Acceso completo durante el mes"
+      },
+      {
+        "name": "Trimestral",
+        "price": "Gs. 650.000",
+        "description": "Mejor precio · incluye beneficios extra"
+      }
+    ]
+  }
+}

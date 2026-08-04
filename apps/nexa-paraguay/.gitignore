@@ -36,3 +36,7 @@ pnpm-debug.log*
 
 # Local tgz packages are no longer used — all @ai-whisperers/* deps are
 # workspace:* references resolved through packages/@ai-whisperers/*.
+data/
+data/hansen/
+data/mapbiomas/
+data/sentinel2/

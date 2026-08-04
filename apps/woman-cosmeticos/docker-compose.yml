@@ -1,0 +1,19 @@
+services:
+  web:
+    image: woman-cosmeticos:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.woman-cosmeticos.entrypoints=websecure"
+        - "traefik.http.routers.woman-cosmeticos.rule=Host(`womancosmeticos.paragu-ai.com`) || Host(`woman-cosmeticos.paragu-ai.com`)"
+        - "traefik.http.routers.woman-cosmeticos.tls=true"
+        - "traefik.http.routers.woman-cosmeticos.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.woman-cosmeticos.middlewares=security-headers@file"
+        - "traefik.http.services.woman-cosmeticos.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

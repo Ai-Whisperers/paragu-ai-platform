@@ -1,0 +1,19 @@
+services:
+  web:
+    image: barbershop-peluqueria:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.barbershop-peluqueria.entrypoints=websecure"
+        - "traefik.http.routers.barbershop-peluqueria.rule=Host(`barbershoppeluqueria.paragu-ai.com`) || Host(`barbershop-peluqueria.paragu-ai.com`)"
+        - "traefik.http.routers.barbershop-peluqueria.tls=true"
+        - "traefik.http.routers.barbershop-peluqueria.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.barbershop-peluqueria.middlewares=security-headers@file"
+        - "traefik.http.services.barbershop-peluqueria.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true

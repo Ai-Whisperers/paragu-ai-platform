@@ -22,6 +22,10 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-08-03: fix(nexa): blog detail page now reads post.content (not post.body) (by Erebus)
+
+- 2026-08-03: fix(nexa): strip metrics from posts-{locale}.json (dynamic /blog/[slug] route) (by Erebus)
+
 - 2026-08-03: fix(nexa): full blog hygiene pass — strip metrics + i18n consistency (by Erebus)
 
 - 2026-08-03: fix(nexa): full content hygiene pass — strip metrics/time + i18n consistency (by Erebus)

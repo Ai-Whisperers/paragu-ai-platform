@@ -1,0 +1,19 @@
+services:
+  web:
+    image: barbye-nails:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.barbye-nails.entrypoints=websecure"
+        - "traefik.http.routers.barbye-nails.rule=Host(`barbyenails.paragu-ai.com`) || Host(`barbye-nails.paragu-ai.com`)"
+        - "traefik.http.routers.barbye-nails.tls=true"
+        - "traefik.http.routers.barbye-nails.tls.certresolver=letsencryptresolver"
+        - "traefik.http.routers.barbye-nails.middlewares=security-headers@file"
+        - "traefik.http.services.barbye-nails.loadbalancer.server.port=3000"
+    networks:
+      - agent-net
+networks:
+  agent-net:
+    external: true
