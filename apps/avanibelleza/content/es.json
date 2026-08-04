@@ -230,7 +230,8 @@
       "text": "+595 994 202 928",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Avani Belleza y me gustaría reservar un turno."
+    "whatsappMessage": "¡Hola! Vi la página de Avani Belleza y me gustaría reservar un turno.",
+    "showForm": true
   },
   "footer": {
     "businessName": "Avani Belleza",

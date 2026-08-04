@@ -70,7 +70,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SchemaMarkup />
       </head>
       <body>
-        <Analytics />
         <TrackCtas />
         {children}
       </body>

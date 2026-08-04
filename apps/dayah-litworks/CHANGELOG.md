@@ -9,6 +9,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-08-04: feat(R41): deploy 10 missing lead sites to Swarm (by Erebus)
+
 - 2026-07-23: fix(dra-gabriela): aplicar DEFAULT_THEME en no-flash script para lila (by Erebus)
 
 - 2026-07-23: feat(dra-gabriela): precios consistentes 130-150k en todos los JSON (by Erebus)

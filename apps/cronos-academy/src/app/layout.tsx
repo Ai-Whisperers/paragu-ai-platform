@@ -50,7 +50,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </head>
       <body style={{ margin: 0, fontFamily: "'Inter', -apple-system, sans-serif", background: '#ffffff', color: '#1a1a2e' }}>
-        <Analytics />
         <TrackCtas />
 
         {children}

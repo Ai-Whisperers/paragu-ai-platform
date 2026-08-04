@@ -6,8 +6,31 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Clau Bellino | Servicios profesionales en Asunción',
   description: 'Clau Bellino — Local business in Asunción, Paraguay.',
-  keywords: '',
+  keywords: ['PY', 'Paraguay', 'Asunción', 'clau-bellino'],
   robots: 'index, follow',
+  alternates: {
+    canonical: 'https://clau-bellino.paragu-ai.com',
+  },
+  openGraph: {
+    title: 'Clau Bellino | Servicios profesionales en Asunción',
+    description: 'Clau Bellino — Local business in Asunción, Paraguay.',
+    url: 'https://clau-bellino.paragu-ai.com',
+    siteName: 'ParaguAI',
+    locale: 'es_PY',
+    type: 'website',
+    images: [{
+      url: 'https://clau-bellino.paragu-ai.com/og/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Clau Bellino | Servicios profesionales en Asunción',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Clau Bellino | Servicios profesionales en Asunción',
+    description: 'Clau Bellino — Local business in Asunción, Paraguay.',
+    images: ['https://clau-bellino.paragu-ai.com/og/og-image.png'],
+  },
 };
 
 async function loadContent(locale: string = 'es') {

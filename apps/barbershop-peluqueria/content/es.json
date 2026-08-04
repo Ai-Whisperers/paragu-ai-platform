@@ -230,7 +230,8 @@
       "text": "+595 982 992 766",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Peluquería Barbershop y me gustaría reservar un turno."
+    "whatsappMessage": "¡Hola! Vi la página de Peluquería Barbershop y me gustaría reservar un turno.",
+    "showForm": true
   },
   "footer": {
     "businessName": "Peluquería Barbershop",

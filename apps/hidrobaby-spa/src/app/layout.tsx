@@ -52,7 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body style={{ margin: 0, fontFamily: "Inter, -apple-system, sans-serif", background: '#ffffff', color: '#1a1a2e' }}>
-        <Analytics />
         <TrackCtas />
 
         <script

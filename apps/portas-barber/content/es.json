@@ -197,7 +197,8 @@
         "label": "Contanos tu idea",
         "required": false
       }
-    ]
+    ],
+    "showForm": true
   },
   "footer": {
     "text": "Portas Barber Shop — Barbería clásica en Av. Santa Teresa, Fernando de la Mora. Experiencia premium.",

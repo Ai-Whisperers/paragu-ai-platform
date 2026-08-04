@@ -230,7 +230,8 @@
       "text": "+595 985 695 929",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Woman Cosmeticos y me gustaría reservar un turno."
+    "whatsappMessage": "¡Hola! Vi la página de Woman Cosmeticos y me gustaría reservar un turno.",
+    "showForm": true
   },
   "footer": {
     "businessName": "Woman Cosmeticos",

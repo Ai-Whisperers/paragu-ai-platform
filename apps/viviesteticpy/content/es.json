@@ -230,7 +230,8 @@
       "text": "+595 976 668 289",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Viviesteticpy y me gustaría reservar un turno."
+    "whatsappMessage": "¡Hola! Vi la página de Viviesteticpy y me gustaría reservar un turno.",
+    "showForm": true
   },
   "footer": {
     "businessName": "Viviesteticpy",

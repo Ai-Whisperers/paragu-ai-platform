@@ -1,0 +1,38 @@
+services:
+  web:
+    image: paragu-ai-leads-api:prod
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=agent-net"
+        - "traefik.http.routers.leads-api.priority=200"
+        - "traefik.http.routers.leads-api.rule=Host(`leads.paragu-ai.com`) || Host(`api.paragu-ai.com`) || (Host(`paragu-ai.com`) && (PathPrefix(`/precios`) || PathPrefix(`/onboarding`) || PathPrefix(`/dashboard`) || PathPrefix(`/pago`)))"
+        - "traefik.http.routers.leads-api.entrypoints=websecure"
+        - "traefik.http.routers.leads-api.tls=true"
+        - "traefik.http.routers.leads-api.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.leads-api.loadbalancer.server.port=3500"
+    environment:
+      - NODE_ENV=production
+      - PORT=3500
+      - DATA_DIR=/var/lib/paragu-ai-leads
+      - KIKI_WHATSAPP=${KIKI_WHATSAPP}
+      - CALLMEBOT_APIKEY=${CALLMEBOT_APIKEY}
+      - KIKI_API_KEY=${KIKI_API_KEY}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+      - STRIPE_PRICE_LITE=${STRIPE_PRICE_LITE}
+      - STRIPE_PRICE_PRO=${STRIPE_PRICE_PRO}
+      - STRIPE_PRICE_EMPRESA=${STRIPE_PRICE_EMPRESA}
+      - PUBLIC_URL=${PUBLIC_URL}
+    volumes:
+      - paragu-ai-leads-data:/var/lib/paragu-ai-leads
+    networks:
+      - agent-net
+
+volumes:
+  paragu-ai-leads-data:
+
+networks:
+  agent-net:
+    external: true

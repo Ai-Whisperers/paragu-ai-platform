@@ -230,7 +230,8 @@
       "text": "+595 981 953 000",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Nutrifit Spa y me gustaría reservar un turno."
+    "whatsappMessage": "¡Hola! Vi la página de Nutrifit Spa y me gustaría reservar un turno.",
+    "showForm": true
   },
   "footer": {
     "businessName": "Nutrifit Spa",

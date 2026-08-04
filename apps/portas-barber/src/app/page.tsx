@@ -6,8 +6,31 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Portas Barber Shop | Barbería clásica en Av. Santa Teresa',
   description: 'Barbería clásica en Av. Santa Teresa, Fernando de la Mora. Experiencia premium. 4.9⭐ 162 reseñas Google.',
-  keywords: 'barbería Santa Teresa Paraguay, corte gentleman, fade',
+  keywords: ['PY', 'Paraguay', 'Asunción', 'portas-barber'],
   robots: 'index, follow',
+  alternates: {
+    canonical: 'https://portas-barber.paragu-ai.com',
+  },
+  openGraph: {
+    title: 'Portas Barber Shop | Barbería clásica en Av. Santa Teresa',
+    description: 'Barbería clásica en Av. Santa Teresa, Fernando de la Mora. Experiencia premium. 4.9⭐ 162 reseñas Google.',
+    url: 'https://portas-barber.paragu-ai.com',
+    siteName: 'ParaguAI',
+    locale: 'es_PY',
+    type: 'website',
+    images: [{
+      url: 'https://portas-barber.paragu-ai.com/og/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Portas Barber Shop | Barbería clásica en Av. Santa Teresa',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Portas Barber Shop | Barbería clásica en Av. Santa Teresa',
+    description: 'Barbería clásica en Av. Santa Teresa, Fernando de la Mora. Experiencia premium. 4.9⭐ 162 reseñas Google.',
+    images: ['https://portas-barber.paragu-ai.com/og/og-image.png'],
+  },
 };
 
 async function loadContent(locale: string = 'es') {

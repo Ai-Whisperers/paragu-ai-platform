@@ -95,7 +95,8 @@
       "text": "+595 981 575 176",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Scott Tatuajes y me gustaría reservar una cita. ¿Podés confirmarme disponibilidad?"
+    "whatsappMessage": "¡Hola! Vi la página de Scott Tatuajes y me gustaría reservar una cita. ¿Podés confirmarme disponibilidad?",
+    "showForm": true
   },
   "footer": {
     "businessName": "Scott Tatuajes",

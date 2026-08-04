@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParaguAI - Dashboard</title>
+  <link rel="canonical" href="https://paragu-ai.com/dashboard">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e1a; color: #fff; line-height: 1.6; }
+    .nav { padding: 1rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
+    .nav a { color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; }
+    .nav a:hover { color: #7DD3FC; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .auth { text-align: center; padding: 4rem 2rem; }
+    .auth input { padding: 0.75rem 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; color: #fff; font-size: 1rem; width: 300px; margin-right: 0.5rem; }
+    .auth button { padding: 0.75rem 1.5rem; background: linear-gradient(90deg, #C084FC, #7DD3FC); color: #0a0e1a; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .stat { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem; }
+    .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; }
+    .stat-value { font-size: 2rem; font-weight: 700; color: #7DD3FC; margin-top: 0.25rem; }
+    .section { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .section h2 { font-size: 1.2rem; margin-bottom: 1rem; color: #C084FC; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; }
+    th { color: rgba(255,255,255,0.6); font-weight: 500; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; }
+    td { color: rgba(255,255,255,0.85); }
+    .empty { color: rgba(255,255,255,0.4); text-align: center; padding: 2rem; }
+    .hidden { display: none; }
+    .error { color: #ff8090; font-size: 0.85rem; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" style="font-weight: 700; font-size: 1.1rem; margin-left: 0;">ParaguAI</a>
+    <div>
+      <a href="/">Inicio</a>
+      <a href="/precios">Precios</a>
+      <a href="/onboarding">Onboarding</a>
+      <a href="/dashboard">Dashboard</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="auth" class="auth">
+      <h1>🔐 Dashboard</h1>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">Ingresá tu API key para ver los leads</p>
+      <input type="password" id="apiKey" placeholder="API Key">
+      <button onclick="load()">Ingresar</button>
+      <p class="error" id="loginError"></p>
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">
+        Dev key: <code>paragu-ai-dev-2026</code>
+      </p>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <h1>📊 Dashboard</h1>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Vista en vivo de leads y suscripciones</p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-label">Total Leads</div>
+          <div class="stat-value" id="totalLeads">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Hoy</div>
+          <div class="stat-value" id="todayLeads">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Esta semana</div>
+          <div class="stat-value" id="weekLeads">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Suscripciones</div>
+          <div class="stat-value" id="totalSubs">—</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Leads por sitio</h2>
+        <table id="leadsBySlug">
+          <thead><tr><th>Sitio</th><th>Leads</th><th>Ver</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Últimos leads</h2>
+        <table id="recentLeads">
+          <thead><tr><th>Fecha</th><th>Sitio</th><th>Nombre</th><th>Teléfono</th><th>Mensaje</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Órdenes de onboarding</h2>
+        <table id="orders">
+          <thead><tr><th>Fecha</th><th>Orden ID</th><th>Negocio</th><th>Plan</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  const API_BASE = 'https://leads.paragu-ai.com';
+  let apiKey = '';
+
+  async function load() {
+    apiKey = document.getElementById('apiKey').value;
+    if (!apiKey) return;
+    document.getElementById('loginError').textContent = '';
+
+    try {
+      // Load stats
+      const statsR = await fetch(`${API_BASE}/api/stats`);
+      const stats = await statsR.json();
+      document.getElementById('totalLeads').textContent = stats.total;
+      document.getElementById('todayLeads').textContent = stats.today;
+      document.getElementById('weekLeads').textContent = stats.week;
+
+      // Load leads by slug
+      const tbody = document.querySelector('#leadsBySlug tbody');
+      tbody.innerHTML = '';
+      if (stats.by_slug && stats.by_slug.length > 0) {
+        stats.by_slug.forEach(s => {
+          const row = document.createElement('tr');
+          row.innerHTML = `<td>${esc(s.slug)}</td><td>${s.n}</td><td><a href="https://${esc(s.slug)}.paragu-ai.com" target="_blank" style="color: #7DD3FC;">Ver →</a></td>`;
+          tbody.appendChild(row);
+        });
+      } else {
+        tbody.innerHTML = '<tr><td colspan="3" class="empty">No hay leads aún</td></tr>';
+      }
+
+      // Load recent leads
+      const leadsR = await fetch(`${API_BASE}/api/leads?key=${apiKey}&limit=20`);
+      if (leadsR.status === 401) {
+        document.getElementById('loginError').textContent = 'API Key incorrecta';
+        return;
+      }
+      const leadsData = await leadsR.json();
+      const lt = document.querySelector('#recentLeads tbody');
+      lt.innerHTML = '';
+      if (leadsData.leads && leadsData.leads.length > 0) {
+        leadsData.leads.forEach(l => {
+          const row = document.createElement('tr');
+          row.innerHTML = `<td>${new Date(l.created_at).toLocaleString('es-PY')}</td><td>${esc(l.slug)}</td><td>${esc(l.name)}</td><td>${esc(l.phone || '—')}</td><td>${esc((l.message || '').slice(0, 50))}</td>`;
+          lt.appendChild(row);
+        });
+      } else {
+        lt.innerHTML = '<tr><td colspan="5" class="empty">No hay leads aún</td></tr>';
+      }
+
+      // Load subscriptions
+      const subsR = await fetch(`${API_BASE}/api/admin/subs?key=${apiKey}`);
+      if (subsR.ok) {
+        const subsData = await subsR.json();
+        document.getElementById('totalSubs').textContent = subsData.stats?.active || 0;
+      } else {
+        document.getElementById('totalSubs').textContent = '0';
+      }
+
+      // Show dashboard
+      document.getElementById('auth').classList.add('hidden');
+      document.getElementById('dashboard').classList.remove('hidden');
+    } catch (e) {
+      document.getElementById('loginError').textContent = 'Error: ' + e.message;
+    }
+  }
+
+  function esc(s) {
+    if (s == null) return '';
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  document.getElementById('apiKey').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') load();
+  });
+  </script>
+</body>
+</html>

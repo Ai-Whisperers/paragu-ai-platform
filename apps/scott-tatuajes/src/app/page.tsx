@@ -6,8 +6,31 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Scott Tatuajes | Tatuajes & Body Piercing en Fernando de la Mora',
   description: 'Scott Tatuajes. Tattoo Studio en Fernando de la Mora, Paraguay. Atención profesional y personalizada.',
-  keywords: 'tatuajes Paraguay, body piercing San Lorenzo',
+  keywords: ['PY', 'Paraguay', 'Asunción', 'scott-tatuajes'],
   robots: 'index, follow',
+  alternates: {
+    canonical: 'https://scott-tatuajes.paragu-ai.com',
+  },
+  openGraph: {
+    title: 'Scott Tatuajes | Tatuajes & Body Piercing en Fernando de la Mora',
+    description: 'Scott Tatuajes. Tattoo Studio en Fernando de la Mora, Paraguay. Atención profesional y personalizada.',
+    url: 'https://scott-tatuajes.paragu-ai.com',
+    siteName: 'ParaguAI',
+    locale: 'es_PY',
+    type: 'website',
+    images: [{
+      url: 'https://scott-tatuajes.paragu-ai.com/og/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Scott Tatuajes | Tatuajes & Body Piercing en Fernando de la Mora',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Scott Tatuajes | Tatuajes & Body Piercing en Fernando de la Mora',
+    description: 'Scott Tatuajes. Tattoo Studio en Fernando de la Mora, Paraguay. Atención profesional y personalizada.',
+    images: ['https://scott-tatuajes.paragu-ai.com/og/og-image.png'],
+  },
 };
 
 async function loadContent(locale: string = 'es') {

@@ -1,6 +1,7 @@
 import { Header } from "./Header"
 import { Footer } from "./Footer"
 
+import ContactForm from './ContactForm';
 type AnyContent = Record<string, any>
 
 function whatsappUrl(phone: string, message: string) {
@@ -285,6 +286,13 @@ export function SectionsRenderer({ content }: { content: AnyContent }) {
       <a className="whatsapp-float" href={bookingUrl} target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp" title="Reservar por WhatsApp" data-cta="floating-whatsapp">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-2.1-1-3.5-2.5-4.5-4.5-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5L8.7 6c-.2-.5-.4-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.2-.2-.3-.5-.4M12 21.8c-1.8 0-3.6-.5-5.1-1.4L1.2 22l1.5-5.5A10 10 0 1 1 12 21.8m0-18.2a8.2 8.2 0 0 0-7 12.5l.2.3-.9 3.3 3.4-.9.3.2A8.2 8.2 0 1 0 12 3.6" /></svg>
       </a>
+            {content.contact?.showForm && (
+        <ContactForm
+          slug={(content as any)?.slug || (content as any)?.site?.slug || 'unknown'}
+          whatsapp={(content as any)?.site?.whatsapp}
+          serviceOptions={((content as any)?.services?.items || []).map((s: any) => s?.title).filter(Boolean)}
+        />
+      )}
       <Footer content={content as any} />
     </>
   )

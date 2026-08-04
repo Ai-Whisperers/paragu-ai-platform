@@ -6,8 +6,31 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Leticia Carballo | Servicios profesionales en Asunción',
   description: 'Leticia Carballo — Local business in Asunción, Paraguay.',
-  keywords: '',
+  keywords: ['PY', 'Paraguay', 'Asunción', 'leticia-carballo'],
   robots: 'index, follow',
+  alternates: {
+    canonical: 'https://leticia-carballo.paragu-ai.com',
+  },
+  openGraph: {
+    title: 'Leticia Carballo | Servicios profesionales en Asunción',
+    description: 'Leticia Carballo — Local business in Asunción, Paraguay.',
+    url: 'https://leticia-carballo.paragu-ai.com',
+    siteName: 'ParaguAI',
+    locale: 'es_PY',
+    type: 'website',
+    images: [{
+      url: 'https://leticia-carballo.paragu-ai.com/og/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Leticia Carballo | Servicios profesionales en Asunción',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Leticia Carballo | Servicios profesionales en Asunción',
+    description: 'Leticia Carballo — Local business in Asunción, Paraguay.',
+    images: ['https://leticia-carballo.paragu-ai.com/og/og-image.png'],
+  },
 };
 
 async function loadContent(locale: string = 'es') {

@@ -26,11 +26,26 @@
   "navigation": {
     "businessName": "Estudio Medieval",
     "items": [
-      { "label": "Inicio", "href": "" },
-      { "label": "Servicios", "href": "/servicios" },
-      { "label": "Galería", "href": "/galeria" },
-      { "label": "Nosotros", "href": "/nosotros" },
-      { "label": "Contacto", "href": "/contacto" }
+      {
+        "label": "Inicio",
+        "href": ""
+      },
+      {
+        "label": "Servicios",
+        "href": "/servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "/galeria"
+      },
+      {
+        "label": "Nosotros",
+        "href": "/nosotros"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto"
+      }
     ],
     "ctaText": "Reservar turno",
     "ctaHref": "https://wa.me/595961482854?text=Hola!%20Quiero%20reservar%20un%20turno%20en%20Estudio%20Medieval"
@@ -44,12 +59,28 @@
     "secondaryCtaText": "Ver trabajos",
     "secondaryCtaHref": "/galeria",
     "stats": [
-      { "value": "8+", "label": "Años en el mercado" },
-      { "value": "392", "label": "Reseñas en Google" },
-      { "value": "4.6", "label": "Estrellas en Google" },
-      { "value": "58K", "label": "Seguidores en Instagram" }
+      {
+        "value": "8+",
+        "label": "Años en el mercado"
+      },
+      {
+        "value": "392",
+        "label": "Reseñas en Google"
+      },
+      {
+        "value": "4.6",
+        "label": "Estrellas en Google"
+      },
+      {
+        "value": "58K",
+        "label": "Seguidores en Instagram"
+      }
     ],
-    "trustBadges": ["S.R.L. Formalmente registrada", "Materiales esterilizados", "Diseño personalizado"],
+    "trustBadges": [
+      "S.R.L. Formalmente registrada",
+      "Materiales esterilizados",
+      "Diseño personalizado"
+    ],
     "cover": "/hero-bg.jpg"
   },
   "about": {
@@ -59,16 +90,37 @@
     "mission": "Brindar un servicio de tatuaje y body piercing de alta calidad, con diseños personalizados, en un ambiente seguro y profesional.",
     "vision": "Ser el estudio de referencia en Paraguay para quienes buscan arte corporal de calidad.",
     "values": [
-      { "title": "Calidad", "desc": "Solo usamos materiales de primera calidad y técnicas profesionales." },
-      { "title": "Seguridad", "desc": "Estrictos protocolos de esterilización y limpieza." },
-      { "title": "Diseño único", "desc": "Cada tatuaje es un diseño original pensado para vos." }
+      {
+        "title": "Calidad",
+        "desc": "Solo usamos materiales de primera calidad y técnicas profesionales."
+      },
+      {
+        "title": "Seguridad",
+        "desc": "Estrictos protocolos de esterilización y limpieza."
+      },
+      {
+        "title": "Diseño único",
+        "desc": "Cada tatuaje es un diseño original pensado para vos."
+      }
     ],
     "stats": [
-      { "value": "8+", "label": "Años" },
-      { "value": "392", "label": "Reviews" },
-      { "value": "58K", "label": "IG Seguidores" }
+      {
+        "value": "8+",
+        "label": "Años"
+      },
+      {
+        "value": "392",
+        "label": "Reviews"
+      },
+      {
+        "value": "58K",
+        "label": "IG Seguidores"
+      }
     ],
-    "images": ["/about-1.jpg", "/about-2.jpg"]
+    "images": [
+      "/about-1.jpg",
+      "/about-2.jpg"
+    ]
   },
   "services": {
     "title": "Nuestros Servicios",
@@ -78,25 +130,45 @@
         "title": "Tatuajes",
         "description": "Todos los estilos: realismo, blackwork, geométrico, old school, new school, acuarela, japonés, y más. Diseño personalizado incluído.",
         "icon": "✒️",
-        "features": ["Diseño original", "Consultoría gratuita", "Presupuesto sin compromiso", "Garantía de retoque"]
+        "features": [
+          "Diseño original",
+          "Consultoría gratuita",
+          "Presupuesto sin compromiso",
+          "Garantía de retoque"
+        ]
       },
       {
         "title": "Body Piercing",
         "description": "Perforaciones corporales de todo tipo: oreja, nariz, labio, ceja, ombligo, íntimo. Materiales quirúrgicos hipoalergénicos.",
         "icon": "💎",
-        "features": ["Titanio quirúrgico", "Hipoalergénico", "Sterilización garantizada", "Asesoría de cuidado"]
+        "features": [
+          "Titanio quirúrgico",
+          "Hipoalergénico",
+          "Sterilización garantizada",
+          "Asesoría de cuidado"
+        ]
       },
       {
         "title": "Consultas de diseño",
         "description": "Te ayudamos a definir tu idea y la adaptamos a tu cuerpo. Primera consulta sin costo.",
         "icon": "📐",
-        "features": ["Sin costo", "Diseños exclusivos", "Adaptación al cuerpo", "Renderizado digital"]
+        "features": [
+          "Sin costo",
+          "Diseños exclusivos",
+          "Adaptación al cuerpo",
+          "Renderizado digital"
+        ]
       },
       {
         "title": "Cobertura y retractaje",
         "description": "Cubrimos tatuajes anteriores que ya no te gusten y retocamos trabajos de otros estudios.",
         "icon": "🎨",
-        "features": ["Cobertura completa", "Negro cover", "Diseño nuevo", "Trabajos en capas"]
+        "features": [
+          "Cobertura completa",
+          "Negro cover",
+          "Diseño nuevo",
+          "Trabajos en capas"
+        ]
       }
     ]
   },
@@ -104,14 +176,46 @@
     "title": "Nuestros Trabajos",
     "intro": "Galería de tatuajes y piercings realizados en Estudio Medieval",
     "items": [
-      { "src": "/gallery/1.jpg", "title": "Brazo completo realismo", "category": "tattoo" },
-      { "src": "/gallery/2.jpg", "title": "Piercing septum", "category": "piercing" },
-      { "src": "/gallery/3.jpg", "title": "Espalda blackwork", "category": "tattoo" },
-      { "src": "/gallery/4.jpg", "title": "Piercing oreja multple", "category": "piercing" },
-      { "src": "/gallery/5.jpg", "title": "Antebrazo japonés", "category": "tattoo" },
-      { "src": "/gallery/6.jpg", "title": "Piercing nariz", "category": "piercing" },
-      { "src": "/gallery/7.jpg", "title": "Pecho geométrico", "category": "tattoo" },
-      { "src": "/gallery/8.jpg", "title": "Cobertura old school", "category": "tattoo" }
+      {
+        "src": "/gallery/1.jpg",
+        "title": "Brazo completo realismo",
+        "category": "tattoo"
+      },
+      {
+        "src": "/gallery/2.jpg",
+        "title": "Piercing septum",
+        "category": "piercing"
+      },
+      {
+        "src": "/gallery/3.jpg",
+        "title": "Espalda blackwork",
+        "category": "tattoo"
+      },
+      {
+        "src": "/gallery/4.jpg",
+        "title": "Piercing oreja multple",
+        "category": "piercing"
+      },
+      {
+        "src": "/gallery/5.jpg",
+        "title": "Antebrazo japonés",
+        "category": "tattoo"
+      },
+      {
+        "src": "/gallery/6.jpg",
+        "title": "Piercing nariz",
+        "category": "piercing"
+      },
+      {
+        "src": "/gallery/7.jpg",
+        "title": "Pecho geométrico",
+        "category": "tattoo"
+      },
+      {
+        "src": "/gallery/8.jpg",
+        "title": "Cobertura old school",
+        "category": "tattoo"
+      }
     ]
   },
   "testimonials": {
@@ -214,21 +318,54 @@
     "cta": "Escribinos por WhatsApp para reservar tu turno",
     "whatsappMessage": "Hola! Vi el sitio web y quiero consultar por un tatuaje/piercing.",
     "formFields": [
-      { "name": "name", "type": "text", "label": "Tu nombre", "required": true },
-      { "name": "phone", "type": "tel", "label": "Teléfono", "required": true },
-      { "name": "service", "type": "select", "label": "¿Qué servicio te interesa?", "required": true },
-      { "name": "message", "type": "textarea", "label": "Contanos tu idea", "required": false }
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Tu nombre",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "label": "Teléfono",
+        "required": true
+      },
+      {
+        "name": "service",
+        "type": "select",
+        "label": "¿Qué servicio te interesa?",
+        "required": true
+      },
+      {
+        "name": "message",
+        "type": "textarea",
+        "label": "Contanos tu idea",
+        "required": false
+      }
     ],
-    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.9!2d-57.5238!3d-25.2967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE3JzQ0LjAiUyA1N8KwMzEnMjMuMiJF!5e0!3m2!1ses!2spy!4v1"
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.9!2d-57.5238!3d-25.2967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE3JzQ0LjAiUyA1N8KwMzEnMjMuMiJF!5e0!3m2!1ses!2spy!4v1",
+    "showForm": true
   },
   "footer": {
     "text": "Estudio Medieval S.R.L — Tatuajes & Body Piercing en San Lorenzo, Paraguay",
     "copyright": "© 2024 Estudio Medieval S.R.L. Todos los derechos reservados.",
     "links": [
-      { "label": "Inicio", "href": "" },
-      { "label": "Servicios", "href": "/servicios" },
-      { "label": "Galería", "href": "/galeria" },
-      { "label": "Contacto", "href": "/contacto" }
+      {
+        "label": "Inicio",
+        "href": ""
+      },
+      {
+        "label": "Servicios",
+        "href": "/servicios"
+      },
+      {
+        "label": "Galería",
+        "href": "/galeria"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto"
+      }
     ],
     "showWhatsapp": true,
     "showSocial": true

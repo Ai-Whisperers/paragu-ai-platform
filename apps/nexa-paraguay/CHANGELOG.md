@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-08-04: feat(R41): deploy 10 missing lead sites to Swarm (by Erebus)
+
 - 2026-08-03: fix(nexa): blog detail page now reads post.content (not post.body) (by Erebus)
 
 - 2026-08-03: fix(nexa): strip metrics from posts-{locale}.json (dynamic /blog/[slug] route) (by Erebus)

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParaguAI - Onboarding | Creá tu sitio en 48h</title>
+  <meta name="description" content="Contanos sobre tu negocio y empezamos a armar tu sitio web profesional. Proceso simple, resultado en 48 horas.">
+  <link rel="canonical" href="https://paragu-ai.com/onboarding">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e1a; color: #fff; line-height: 1.6; }
+    .nav { padding: 1rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
+    .nav a { color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; }
+    .nav a:hover { color: #7DD3FC; }
+    .hero { text-align: center; padding: 3rem 2rem 1rem; }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(90deg, #7DD3FC, #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
+    .form-wrap { max-width: 700px; margin: 2rem auto; padding: 0 2rem 4rem; }
+    .form-section { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .form-section h2 { font-size: 1.1rem; color: #7DD3FC; margin-bottom: 1rem; }
+    label { display: block; font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 0.4rem; margin-top: 0.5rem; }
+    input, textarea, select { width: 100%; padding: 0.6rem 0.875rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; color: #fff; font-size: 0.95rem; font-family: inherit; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: #7DD3FC; }
+    textarea { resize: vertical; min-height: 60px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .btn { display: inline-block; padding: 0.875rem 2rem; background: linear-gradient(90deg, #C084FC, #7DD3FC); color: #0a0e1a; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; width: 100%; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.9; }
+    .btn:disabled { opacity: 0.5; cursor: wait; }
+    .success { background: rgba(91, 192, 122, 0.15); border: 1px solid rgba(91, 192, 122, 0.4); border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem; color: #5bc07a; display: none; }
+    .footer { text-align: center; padding: 2rem; color: rgba(255,255,255,0.4); font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" style="font-weight: 700; font-size: 1.1rem; margin-left: 0;">ParaguAI</a>
+    <div>
+      <a href="/">Inicio</a>
+      <a href="/precios">Precios</a>
+      <a href="/onboarding">Onboarding</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Armemos tu sitio</h1>
+    <p>Contanos sobre tu negocio. En 48 horas te enviamos el sitio listo para revisar.</p>
+  </section>
+
+  <div class="form-wrap">
+    <div class="success" id="success">
+      ¡Recibido! ID de orden: <strong id="orderId"></strong>. Te contactamos por WhatsApp en las próximas 2 horas.
+    </div>
+
+    <form id="briefForm">
+      <div class="form-section">
+        <h2>📋 Tu negocio</h2>
+        <label>Nombre del negocio *</label>
+        <input type="text" name="businessName" required placeholder="Ej: HidroBaby Spa">
+        <label>Categoría</label>
+        <select name="category">
+          <option value="">— Elegir —</option>
+          <option value="spa">Spa / Estética</option>
+          <option value="barbershop">Barbería / Peluquería</option>
+          <option value="gym">Gimnasio / Fitness</option>
+          <option value="nails">Salón de uñas</option>
+          <option value="facial_aesthetics">Estética facial</option>
+          <option value="tattoo">Tatuajes</option>
+          <option value="restaurant">Restaurante</option>
+          <option value="academy">Academia / Clases</option>
+          <option value="other">Otro</option>
+        </select>
+        <div class="grid-2">
+          <div>
+            <label>Ciudad *</label>
+            <input type="text" name="city" required placeholder="Asunción">
+          </div>
+          <div>
+            <label>Barrio/Zona</label>
+            <input type="text" name="neighborhood" placeholder="Villa Morra">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>📞 Contacto</h2>
+        <div class="grid-2">
+          <div>
+            <label>WhatsApp *</label>
+            <input type="tel" name="whatsapp" required placeholder="+595 9XX XXXXXX">
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="tu@email.com">
+          </div>
+        </div>
+        <label>Dueño / Responsable</label>
+        <input type="text" name="ownerName" placeholder="Tu nombre">
+      </div>
+
+      <div class="form-section">
+        <h2>🛠️ Servicios</h2>
+        <label>Listá tus servicios principales (uno por línea) *</label>
+        <textarea name="services" required placeholder="Masaje relajante 60 min&#10;Tratamiento facial&#10;Manicura" rows="4"></textarea>
+        <label>Precios (uno por línea, mismo orden)</label>
+        <textarea name="prices" placeholder="Gs. 200.000&#10;Gs. 250.000&#10;Gs. 100.000" rows="4"></textarea>
+      </div>
+
+      <div class="form-section">
+        <h2>📝 Lo que te diferencia</h2>
+        <label>Descripción corta de tu negocio</label>
+        <textarea name="description" placeholder="Somos una peluquería con 15 años de experiencia, ambiente familiar y los mejores productos." rows="2"></textarea>
+        <label>Horarios</label>
+        <input type="text" name="hours" placeholder="Lun a Vie 9:00 - 19:00, Sáb 9:00 - 14:00">
+        <label>Redes sociales (URLs, separadas por coma)</label>
+        <input type="text" name="social" placeholder="https://instagram.com/..., https://facebook.com/...">
+      </div>
+
+      <div class="form-section">
+        <h2>🎯 Plan</h2>
+        <label>Plan elegido</label>
+        <select name="plan">
+          <option value="lite">Lite — Gs. 1.500.000 (pago único)</option>
+          <option value="pro" selected>Pro — Gs. 2.500.000 (pago único)</option>
+          <option value="empresa">Empresarial — Gs. 5.000.000+</option>
+        </select>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+          * El pago se coordina por WhatsApp después de la primera revisión.
+        </p>
+      </div>
+
+      <button type="submit" class="btn" id="submitBtn">Enviar y empezar</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    ParaguAI · Asunción, Paraguay · WhatsApp +595 981 000000
+  </footer>
+
+  <script>
+  document.getElementById('briefForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const r = await fetch('https://leads.paragu-ai.com/api/onboarding', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await r.json();
+      if (result.ok) {
+        document.getElementById('orderId').textContent = result.order_id;
+        document.getElementById('success').style.display = 'block';
+        document.getElementById('briefForm').style.display = 'none';
+        window.scrollTo(0, 0);
+      } else {
+        alert('Error: ' + (result.message || 'Reintentá por favor'));
+        btn.disabled = false;
+        btn.textContent = 'Enviar y empezar';
+      }
+    } catch (err) {
+      alert('Error de red: ' + err.message);
+      btn.disabled = false;
+      btn.textContent = 'Enviar y empezar';
+    }
+  });
+  </script>
+</body>
+</html>

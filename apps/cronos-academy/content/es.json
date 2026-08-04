@@ -95,7 +95,8 @@
       "text": "+595 962 201 042",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Cronos Academy y me gustaría reservar una cita. ¿Podés confirmarme disponibilidad?"
+    "whatsappMessage": "¡Hola! Vi la página de Cronos Academy y me gustaría reservar una cita. ¿Podés confirmarme disponibilidad?",
+    "showForm": true
   },
   "footer": {
     "businessName": "Cronos Academy",

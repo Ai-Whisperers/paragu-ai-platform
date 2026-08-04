@@ -6,8 +6,31 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Avani Belleza | Servicios profesionales en Asunción',
   description: 'Avani Belleza — Local business in Asunción, Paraguay.',
-  keywords: '',
+  keywords: ['PY', 'Paraguay', 'Asunción', 'avanibelleza'],
   robots: 'index, follow',
+  alternates: {
+    canonical: 'https://avanibelleza.paragu-ai.com',
+  },
+  openGraph: {
+    title: 'Avani Belleza | Servicios profesionales en Asunción',
+    description: 'Avani Belleza — Local business in Asunción, Paraguay.',
+    url: 'https://avanibelleza.paragu-ai.com',
+    siteName: 'ParaguAI',
+    locale: 'es_PY',
+    type: 'website',
+    images: [{
+      url: 'https://avanibelleza.paragu-ai.com/og/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Avani Belleza | Servicios profesionales en Asunción',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Avani Belleza | Servicios profesionales en Asunción',
+    description: 'Avani Belleza — Local business in Asunción, Paraguay.',
+    images: ['https://avanibelleza.paragu-ai.com/og/og-image.png'],
+  },
 };
 
 async function loadContent(locale: string = 'es') {

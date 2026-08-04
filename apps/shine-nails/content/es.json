@@ -207,7 +207,8 @@
         "label": "Contanos tu idea",
         "required": false
       }
-    ]
+    ],
+    "showForm": true
   },
   "footer": {
     "text": "SHINE Nails & Beauty — Uñas acrílicas, gel y esmaltado semipermanente. Manicure y pedicure profesional en San Lorenzo.",

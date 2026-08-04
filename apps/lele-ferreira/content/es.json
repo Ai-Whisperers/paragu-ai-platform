@@ -230,7 +230,8 @@
       "text": "+595 985 598 630",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Lele Ferreira y me gustaría reservar un turno."
+    "whatsappMessage": "¡Hola! Vi la página de Lele Ferreira y me gustaría reservar un turno.",
+    "showForm": true
   },
   "footer": {
     "businessName": "Lele Ferreira",

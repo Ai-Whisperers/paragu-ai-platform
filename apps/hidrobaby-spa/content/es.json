@@ -20,20 +20,47 @@
   },
   "navigation": {
     "items": [
-      { "label": "Inicio", "href": "/" },
-      { "label": "Servicios", "href": "#servicios" },
-      { "label": "Nosotros", "href": "#nosotros" },
-      { "label": "Contacto", "href": "#contacto" }
+      {
+        "label": "Inicio",
+        "href": "/"
+      },
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Nosotros",
+        "href": "#nosotros"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
     ]
   },
   "trustBadges": {
     "title": "¿Por qué elegir HidroBaby Spa?",
     "items": [
-      { "label": "🚰 Agua Ozono", "description": "Desinfección por ozono — único en Paraguay" },
-      { "label": "👩‍⚕️ Staff Profesional", "description": "Obstetras y enfermeras especializadas" },
-      { "label": "⭐ 5.0 Rating", "description": "377 reseñas en Google Maps" },
-      { "label": "🏪 3 Sucursales", "description": "Villa Morra, Mariano Roque Alonso y Luque" },
-      { "label": "🧸 Desde 2 Meses", "description": "Hidroterapia para bebés desde los 2 meses" }
+      {
+        "label": "🚰 Agua Ozono",
+        "description": "Desinfección por ozono — único en Paraguay"
+      },
+      {
+        "label": "👩‍⚕️ Staff Profesional",
+        "description": "Obstetras y enfermeras especializadas"
+      },
+      {
+        "label": "⭐ 5.0 Rating",
+        "description": "377 reseñas en Google Maps"
+      },
+      {
+        "label": "🏪 3 Sucursales",
+        "description": "Villa Morra, Mariano Roque Alonso y Luque"
+      },
+      {
+        "label": "🧸 Desde 2 Meses",
+        "description": "Hidroterapia para bebés desde los 2 meses"
+      }
     ]
   },
   "about": {
@@ -151,7 +178,8 @@
         "whatsapp": "595993444222",
         "map": "https://maps.google.com/?q=HidroBaby+Spa+Luque"
       }
-    ]
+    ],
+    "showForm": true
   },
   "footer": {
     "text": "© 2026 HidroBaby Spa · Fernando de la Mora, Paraguay",

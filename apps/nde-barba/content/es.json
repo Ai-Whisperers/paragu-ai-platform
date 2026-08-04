@@ -203,7 +203,8 @@
         "label": "Contanos tu idea",
         "required": false
       }
-    ]
+    ],
+    "showForm": true
   },
   "footer": {
     "text": "Nde Barba — Barbería y peluquería masculina en Fernando de la Mora. Cortes modernos y clásicos.",

@@ -22,12 +22,30 @@
   "navigation": {
     "businessName": "Arno's",
     "items": [
-      { "label": "Servicios", "href": "#servicios" },
-      { "label": "Cómo reservar", "href": "#experiencia" },
-      { "label": "Trabajos", "href": "#trabajos" },
-      { "label": "Equipo", "href": "#equipo" },
-      { "label": "Horarios", "href": "#horarios" },
-      { "label": "Preguntas", "href": "#faq" }
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Cómo reservar",
+        "href": "#experiencia"
+      },
+      {
+        "label": "Trabajos",
+        "href": "#trabajos"
+      },
+      {
+        "label": "Equipo",
+        "href": "#equipo"
+      },
+      {
+        "label": "Horarios",
+        "href": "#horarios"
+      },
+      {
+        "label": "Preguntas",
+        "href": "#faq"
+      }
     ],
     "ctaText": "Reservar turno",
     "ctaHref": "https://wa.me/595983996086?text=Hola%2C%20vi%20la%20web%20de%20Arno%27s%20y%20quiero%20consultar%20un%20turno."
@@ -50,9 +68,18 @@
   },
   "metrics": {
     "items": [
-      { "value": "30 min", "label": "Respuesta habitual por WhatsApp" },
-      { "value": "0 Gs", "label": "Costo de reserva" },
-      { "value": "24/7", "label": "Consultas por mensaje" }
+      {
+        "value": "30 min",
+        "label": "Respuesta habitual por WhatsApp"
+      },
+      {
+        "value": "0 Gs",
+        "label": "Costo de reserva"
+      },
+      {
+        "value": "24/7",
+        "label": "Consultas por mensaje"
+      }
     ],
     "disclaimer": "Métricas operativas, no reseñas. Cuando lleguen datos confirmados se actualizan aquí."
   },
@@ -110,10 +137,26 @@
     "title": "Del mensaje al sillón en cuatro pasos",
     "intro": "Sin formularios largos ni cuentas nuevas. La confirmación queda en tu WhatsApp.",
     "items": [
-      { "number": "01", "title": "Elegí la consulta", "description": "Seleccioná un servicio orientativo o contanos qué look buscás." },
-      { "number": "02", "title": "Escribí por WhatsApp", "description": "El mensaje sale prearmado para que no tengas que explicar todo de cero." },
-      { "number": "03", "title": "Confirmá detalles", "description": "Acordá servicio, precio, disponibilidad y cualquier requisito antes de ir." },
-      { "number": "04", "title": "Llegá a tu turno", "description": "Guardá la confirmación y la ubicación directamente en el teléfono." }
+      {
+        "number": "01",
+        "title": "Elegí la consulta",
+        "description": "Seleccioná un servicio orientativo o contanos qué look buscás."
+      },
+      {
+        "number": "02",
+        "title": "Escribí por WhatsApp",
+        "description": "El mensaje sale prearmado para que no tengas que explicar todo de cero."
+      },
+      {
+        "number": "03",
+        "title": "Confirmá detalles",
+        "description": "Acordá servicio, precio, disponibilidad y cualquier requisito antes de ir."
+      },
+      {
+        "number": "04",
+        "title": "Llegá a tu turno",
+        "description": "Guardá la confirmación y la ubicación directamente en el teléfono."
+      }
     ]
   },
   "gallery": {
@@ -150,13 +193,41 @@
     "note": "Los turnos se confirman únicamente por WhatsApp. Los días libres cambian según demanda.",
     "statusLabel": "Consultá por WhatsApp",
     "weekly": [
-      { "day": "Lunes", "open": "09:00", "close": "20:00" },
-      { "day": "Martes", "open": "09:00", "close": "20:00" },
-      { "day": "Miércoles", "open": "09:00", "close": "20:00" },
-      { "day": "Jueves", "open": "09:00", "close": "20:00" },
-      { "day": "Viernes", "open": "09:00", "close": "21:00" },
-      { "day": "Sábado", "open": "09:00", "close": "21:00" },
-      { "day": "Domingo", "open": null, "close": null }
+      {
+        "day": "Lunes",
+        "open": "09:00",
+        "close": "20:00"
+      },
+      {
+        "day": "Martes",
+        "open": "09:00",
+        "close": "20:00"
+      },
+      {
+        "day": "Miércoles",
+        "open": "09:00",
+        "close": "20:00"
+      },
+      {
+        "day": "Jueves",
+        "open": "09:00",
+        "close": "20:00"
+      },
+      {
+        "day": "Viernes",
+        "open": "09:00",
+        "close": "21:00"
+      },
+      {
+        "day": "Sábado",
+        "open": "09:00",
+        "close": "21:00"
+      },
+      {
+        "day": "Domingo",
+        "open": null,
+        "close": null
+      }
     ],
     "payments": [
       "Efectivo",
@@ -182,28 +253,56 @@
     "eyebrow": "Antes de reservar",
     "title": "Preguntas frecuentes",
     "items": [
-      { "question": "¿Necesito reservar?", "answer": "Recomendamos escribir por WhatsApp para confirmar disponibilidad antes de ir." },
-      { "question": "¿Cuánto cuesta el servicio?", "answer": "Los precios deben confirmarse con el local porque pueden variar según el servicio y el trabajo solicitado." },
-      { "question": "¿Cuánto dura un turno?", "answer": "La duración depende del servicio. Consultala junto con el horario para organizarte mejor." },
-      { "question": "¿Puedo enviar una foto de referencia?", "answer": "Sí. Podés adjuntarla en WhatsApp y explicar qué querés mantener o cambiar." },
-      { "question": "¿Qué medios de pago aceptan?", "answer": "Efectivo y transferencia. Confirmá opciones adicionales al reservar." },
-      { "question": "¿Atienden sin turno o a niños?", "answer": "Ambas condiciones requieren confirmación directa con el local." }
+      {
+        "question": "¿Necesito reservar?",
+        "answer": "Recomendamos escribir por WhatsApp para confirmar disponibilidad antes de ir."
+      },
+      {
+        "question": "¿Cuánto cuesta el servicio?",
+        "answer": "Los precios deben confirmarse con el local porque pueden variar según el servicio y el trabajo solicitado."
+      },
+      {
+        "question": "¿Cuánto dura un turno?",
+        "answer": "La duración depende del servicio. Consultala junto con el horario para organizarte mejor."
+      },
+      {
+        "question": "¿Puedo enviar una foto de referencia?",
+        "answer": "Sí. Podés adjuntarla en WhatsApp y explicar qué querés mantener o cambiar."
+      },
+      {
+        "question": "¿Qué medios de pago aceptan?",
+        "answer": "Efectivo y transferencia. Confirmá opciones adicionales al reservar."
+      },
+      {
+        "question": "¿Atienden sin turno o a niños?",
+        "answer": "Ambas condiciones requieren confirmación directa con el local."
+      }
     ]
   },
   "trust": {
     "eyebrow": "Confianza",
     "title": "Compromisos verificables",
     "items": [
-      { "title": "Reserva sin costo", "description": "Consultar disponibilidad no tiene costo ni compromiso." },
-      { "title": "Confirmación antes del turno", "description": "Recibís precio y horario exacto antes de comprometerte." },
-      { "title": "Sin datos inventados", "description": "Lo que no esté confirmado por el local se publica como pendiente." }
+      {
+        "title": "Reserva sin costo",
+        "description": "Consultar disponibilidad no tiene costo ni compromiso."
+      },
+      {
+        "title": "Confirmación antes del turno",
+        "description": "Recibís precio y horario exacto antes de comprometerte."
+      },
+      {
+        "title": "Sin datos inventados",
+        "description": "Lo que no esté confirmado por el local se publica como pendiente."
+      }
     ]
   },
   "contact": {
     "title": "Tu próximo corte empieza con un mensaje",
     "subtitle": "Consultá servicio, precio y disponibilidad antes de salir.",
     "ctaLabel": "Reservar por WhatsApp",
-    "whatsappMessage": "Hola, vi la página de Arno's Barber Shop y quiero consultar un turno. ¿Podés confirmarme servicio, precio y disponibilidad?"
+    "whatsappMessage": "Hola, vi la página de Arno's Barber Shop y quiero consultar un turno. ¿Podés confirmarme servicio, precio y disponibilidad?",
+    "showForm": true
   },
   "footer": {
     "text": "Barbería local con reserva directa por WhatsApp.",

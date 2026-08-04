@@ -1,4 +1,5 @@
 'use client';
+import ContactForm from './ContactForm';
 
 import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
@@ -181,9 +182,16 @@ export default function SectionsRenderer({ source }: { source: SectionContent })
         <a href={waHref()} className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-3 font-semibold text-white hover:bg-emerald-600">Reservar por WhatsApp</a>
       </section>
 
+      {(contact as any)?.showForm && (
+        <ContactForm
+          slug={'hidrobaby-spa'}
+          whatsapp={String(site?.whatsapp || '')}
+          serviceOptions={((services as any)?.items || []).map((s: any) => s?.title).filter(Boolean)}
+        />
+      )}
       <footer className="bg-slate-950 py-10 text-center text-sm text-slate-400">
         © 2026 HidroBaby Spa · Fernando de la Mora, Paraguay
-      </footer>
+    </footer>
     </main>
   );
 }

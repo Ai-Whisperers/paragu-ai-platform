@@ -6,8 +6,31 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Cronos Academy | Gimnasio & Fitness en Fernando de la Mora',
   description: 'Cronos Academy. Gym en Fernando de la Mora, Paraguay. Atención profesional y personalizada.',
-  keywords: 'gimnasio Paraguay, entrenamiento San Lorenzo',
+  keywords: ['PY', 'Paraguay', 'Asunción', 'cronos-academy'],
   robots: 'index, follow',
+  alternates: {
+    canonical: 'https://cronos-academy.paragu-ai.com',
+  },
+  openGraph: {
+    title: 'Cronos Academy | Gimnasio & Fitness en Fernando de la Mora',
+    description: 'Cronos Academy. Gym en Fernando de la Mora, Paraguay. Atención profesional y personalizada.',
+    url: 'https://cronos-academy.paragu-ai.com',
+    siteName: 'ParaguAI',
+    locale: 'es_PY',
+    type: 'website',
+    images: [{
+      url: 'https://cronos-academy.paragu-ai.com/og/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Cronos Academy | Gimnasio & Fitness en Fernando de la Mora',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cronos Academy | Gimnasio & Fitness en Fernando de la Mora',
+    description: 'Cronos Academy. Gym en Fernando de la Mora, Paraguay. Atención profesional y personalizada.',
+    images: ['https://cronos-academy.paragu-ai.com/og/og-image.png'],
+  },
 };
 
 async function loadContent(locale: string = 'es') {

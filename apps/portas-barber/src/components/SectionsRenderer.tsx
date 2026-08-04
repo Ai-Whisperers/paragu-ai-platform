@@ -1,6 +1,7 @@
 // SectionsRenderer - Server Component
 // Renders all sections from content/es.json
 
+import ContactForm from './ContactForm';
 interface SectionProps {
   content: any;
   locale?: string;
@@ -224,7 +225,7 @@ function CTASection({ content }: SectionProps) {
   const contact = content?.contact || {};
   const site = content?.site || {};
   const whatsapp = (site.whatsapp || '').replace(/[^0-9]/g, '');
-  const msg = encodeURIComponent(contact.cta?.text || contact.whatsappMessage || 'Hola! Quiero reservar un turno en Portas Barber Shop');
+  const msg = encodeURIComponent(contact.cta?.text || contact.whatsappMessage || ('Hola! Quiero reservar un turno en ' + (site.businessName || site.name) + (site.city ? ' (' + site.city + ')' : '')));
   return (
     <section id="reservar" style={{ padding: '5rem 2rem', background: 'linear-gradient(135deg, #1a1a2e 0%, #e94560 100%)', textAlign: 'center' }}>
       <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
@@ -313,6 +314,13 @@ export function SectionsRenderer({ content, locale }: SectionProps) {
       <TestimonialsSection content={content} />
       <FAQSection content={content} />
       <CTASection content={content} />
+            {content.contact?.showForm && (
+        <ContactForm
+          slug={(content as any)?.slug || (content as any)?.site?.slug || 'unknown'}
+          whatsapp={(content as any)?.site?.whatsapp}
+          serviceOptions={((content as any)?.services?.items || []).map((s: any) => s?.title).filter(Boolean)}
+        />
+      )}
       <Footer content={content} />
     </main>
   );

@@ -236,7 +236,8 @@
       "text": "+595 961 336 346",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Barbye Nails y me gustaría reservar un turno."
+    "whatsappMessage": "¡Hola! Vi la página de Barbye Nails y me gustaría reservar un turno.",
+    "showForm": true
   },
   "footer": {
     "businessName": "Barbye Nails",

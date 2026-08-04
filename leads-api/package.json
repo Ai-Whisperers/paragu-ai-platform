@@ -1,0 +1,20 @@
+{
+  "name": "paragu-ai-leads-api",
+  "version": "1.0.0",
+  "description": "Lead intake API for ParaguAI lead sites",
+  "private": true,
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "better-sqlite3": "^11.5.0",
+    "axios": "^1.7.0",
+        "stripe": "^14.21.0"
+  },
+  "engines": {
+    "node": "20"
+  }
+}

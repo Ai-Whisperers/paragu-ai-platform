@@ -227,7 +227,8 @@
       "text": "+595 981 924 858",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Clau Bellino y me gustaría reservar un turno."
+    "whatsappMessage": "¡Hola! Vi la página de Clau Bellino y me gustaría reservar un turno.",
+    "showForm": true
   },
   "footer": {
     "businessName": "Clau Bellino",

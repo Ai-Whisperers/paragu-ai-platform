@@ -6,8 +6,31 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'XXGym | Gimnasio de musculación y fitness en Fernando zona norte',
   description: 'Gimnasio de musculación y fitness en Fernando zona norte, a 1.6km de la Politécnica. 4.7⭐ 119 reseñas Google.',
-  keywords: 'gimnasio Fernando de la Mora Paraguay, musculación, fitness',
+  keywords: ['PY', 'Paraguay', 'Asunción', 'xxgym'],
   robots: 'index, follow',
+  alternates: {
+    canonical: 'https://xxgym.paragu-ai.com',
+  },
+  openGraph: {
+    title: 'XXGym | Gimnasio de musculación y fitness en Fernando zona norte',
+    description: 'Gimnasio de musculación y fitness en Fernando zona norte, a 1.6km de la Politécnica. 4.7⭐ 119 reseñas Google.',
+    url: 'https://xxgym.paragu-ai.com',
+    siteName: 'ParaguAI',
+    locale: 'es_PY',
+    type: 'website',
+    images: [{
+      url: 'https://xxgym.paragu-ai.com/og/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'XXGym | Gimnasio de musculación y fitness en Fernando zona norte',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'XXGym | Gimnasio de musculación y fitness en Fernando zona norte',
+    description: 'Gimnasio de musculación y fitness en Fernando zona norte, a 1.6km de la Politécnica. 4.7⭐ 119 reseñas Google.',
+    images: ['https://xxgym.paragu-ai.com/og/og-image.png'],
+  },
 };
 
 async function loadContent(locale: string = 'es') {

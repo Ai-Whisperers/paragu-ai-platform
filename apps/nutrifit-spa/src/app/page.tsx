@@ -6,8 +6,31 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Nutrifit Spa | Servicios profesionales en Asunción',
   description: 'Nutrifit Spa — Local business in Asunción, Paraguay.',
-  keywords: '',
+  keywords: ['PY', 'Paraguay', 'Asunción', 'nutrifit-spa'],
   robots: 'index, follow',
+  alternates: {
+    canonical: 'https://nutrifit-spa.paragu-ai.com',
+  },
+  openGraph: {
+    title: 'Nutrifit Spa | Servicios profesionales en Asunción',
+    description: 'Nutrifit Spa — Local business in Asunción, Paraguay.',
+    url: 'https://nutrifit-spa.paragu-ai.com',
+    siteName: 'ParaguAI',
+    locale: 'es_PY',
+    type: 'website',
+    images: [{
+      url: 'https://nutrifit-spa.paragu-ai.com/og/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Nutrifit Spa | Servicios profesionales en Asunción',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nutrifit Spa | Servicios profesionales en Asunción',
+    description: 'Nutrifit Spa — Local business in Asunción, Paraguay.',
+    images: ['https://nutrifit-spa.paragu-ai.com/og/og-image.png'],
+  },
 };
 
 async function loadContent(locale: string = 'es') {

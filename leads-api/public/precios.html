@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParaguAI - Precios | Sitio web profesional desde Gs. 1.500.000/mes</title>
+  <meta name="description" content="Precios claros para sitios web profesionales en Paraguay. Plan Lite, Pro y Empresarial. Sin sorpresas, sin contratos largos.">
+  <link rel="canonical" href="https://paragu-ai.com/precios">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e1a; color: #fff; line-height: 1.6; }
+    .nav { padding: 1rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
+    .nav a { color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; }
+    .nav a:hover { color: #7DD3FC; }
+    .hero { text-align: center; padding: 5rem 2rem 3rem; }
+    .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(90deg, #7DD3FC, #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1100px; margin: 4rem auto; padding: 0 2rem; }
+    .plan { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 2rem; position: relative; }
+    .plan.featured { border-color: #C084FC; background: linear-gradient(135deg, rgba(192,132,252,0.1), rgba(125,211,252,0.05)); }
+    .plan.featured::before { content: "MÁS POPULAR"; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #C084FC; color: #fff; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+    .plan h2 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .plan .price { font-size: 2.5rem; font-weight: 800; margin: 1rem 0; color: #7DD3FC; }
+    .plan .price span { font-size: 1rem; color: rgba(255,255,255,0.6); font-weight: 400; }
+    .plan .desc { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .plan ul { list-style: none; padding: 0; margin: 0 0 1.5rem 0; }
+    .plan li { padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+    .plan li::before { content: "✓"; position: absolute; left: 0; color: #7DD3FC; font-weight: 700; }
+    .plan li.disabled { color: rgba(255,255,255,0.35); }
+    .plan li.disabled::before { content: "·"; color: rgba(255,255,255,0.35); }
+    .cta { display: inline-block; width: 100%; padding: 0.875rem; background: #7DD3FC; color: #0a0e1a; text-align: center; text-decoration: none; border-radius: 6px; font-weight: 600; transition: background 0.2s; }
+    .cta:hover { background: #5EB8E0; }
+    .plan.featured .cta { background: linear-gradient(90deg, #C084FC, #7DD3FC); color: #0a0e1a; }
+    .footer { text-align: center; padding: 3rem 2rem; color: rgba(255,255,255,0.4); font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem; }
+    .compare { max-width: 900px; margin: 4rem auto; padding: 0 2rem; }
+    .compare h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+    .compare table { width: 100%; border-collapse: collapse; background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; }
+    .compare th, .compare td { padding: 0.875rem 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .compare th { background: rgba(125,211,252,0.1); font-weight: 600; color: #7DD3FC; }
+    .compare td { color: rgba(255,255,255,0.85); }
+    .faq { max-width: 700px; margin: 4rem auto; padding: 0 2rem; }
+    .faq h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+    .faq-item { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; cursor: pointer; }
+    .faq-q { font-weight: 600; color: #7DD3FC; margin-bottom: 0.5rem; }
+    .faq-a { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" style="font-weight: 700; font-size: 1.1rem; margin-left: 0;">ParaguAI</a>
+    <div>
+      <a href="/">Inicio</a>
+      <a href="/precios">Precios</a>
+      <a href="https://leads.paragu-ai.com/api/leads?key=paragu-ai-dev-2026">Dashboard</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Precios simples y claros</h1>
+    <p>Sitios web profesionales para tu negocio. Sin sorpresas, sin contratos largos.</p>
+  </section>
+
+  <section class="plans">
+    <div class="plan">
+      <h2>Lite</h2>
+      <div class="price">Gs. 1.500.000 <span>/pago único</span></div>
+      <p class="desc">Ideal para empezar. Una página profesional, lista en 48 horas.</p>
+      <ul>
+        <li>Sitio one-page responsive</li>
+        <li>Hasta 3 secciones (hero, servicios, contacto)</li>
+        <li>WhatsApp click-to-chat</li>
+        <li>Formulario de contacto</li>
+        <li>Dominio .com.py incluido (1 año)</li>
+        <li>SSL con Let's Encrypt</li>
+        <li class="disabled">Analytics y tracking</li>
+        <li class="disabled">SEO optimizado</li>
+        <li class="disabled">Hosting mensual</li>
+      </ul>
+      <a href="https://wa.me/595981000000?text=Hola!%20Quiero%20el%20plan%20Lite" class="cta">Empezar con Lite</a>
+    </div>
+
+    <div class="plan featured">
+      <h2>Pro</h2>
+      <div class="price">Gs. 2.500.000 <span>/pago único</span></div>
+      <p class="desc">Para negocios en crecimiento. Todo incluido, listo para vender.</p>
+      <ul>
+        <li>Todo lo del plan Lite</li>
+        <li>Hasta 5 secciones (galería, FAQ, testimonios, promos)</li>
+        <li>Hasta 5 fotos profesionales</li>
+        <li>Google Analytics 4 instalado</li>
+        <li>Google Search Console configurado</li>
+        <li>SEO básico (meta tags, sitemap, robots.txt)</li>
+        <li>Sitemap submission a Google</li>
+        <li>Hosting 1 año incluido</li>
+        <li class="disabled">Self-service updates</li>
+        <li class="disabled">Multi-idioma (es/en)</li>
+      </ul>
+      <a href="https://wa.me/595981000000?text=Hola!%20Quiero%20el%20plan%20Pro" class="cta">Empezar con Pro</a>
+    </div>
+
+    <div class="plan">
+      <h2>Empresarial</h2>
+      <div class="price">Gs. 5.000.000+ <span>/pago único</span></div>
+      <p class="desc">Para empresas. Multi-idioma, mantenimiento, soporte.</p>
+      <ul>
+        <li>Todo lo del plan Pro</li>
+        <li>Hasta 10 secciones</li>
+        <li>Fotos profesionales ilimitadas</li>
+        <li>Multi-idioma (es/en/pt)</li>
+        <li>Self-service CMS (actualizá vos mismo)</li>
+        <li>Mantenimiento mensual (cambios, fixes)</li>
+        <li>Soporte prioritario (WhatsApp directo)</li>
+        <li>Hosting 1 año incluido</li>
+        <li>Analytics mensuales</li>
+        <li>Integración con tu CRM</li>
+      </ul>
+      <a href="https://wa.me/595981000000?text=Hola!%20Quiero%20el%20plan%20Empresarial" class="cta">Empezar con Empresarial</a>
+    </div>
+  </section>
+
+  <section class="compare">
+    <h2>Comparación rápida</h2>
+    <table>
+      <tr><th>Feature</th><th>Lite</th><th>Pro</th><th>Empresarial</th></tr>
+      <tr><td>Sitio one-page</td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Secciones</td><td>3</td><td>5</td><td>10</td></tr>
+      <tr><td>Fotos profesionales</td><td>—</td><td>5</td><td>Ilimitadas</td></tr>
+      <tr><td>WhatsApp + form</td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Google Analytics</td><td>—</td><td>✓</td><td>✓</td></tr>
+      <tr><td>SEO + sitemap</td><td>—</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Multi-idioma</td><td>—</td><td>—</td><td>es/en/pt</td></tr>
+      <tr><td>Self-service CMS</td><td>—</td><td>—</td><td>✓</td></tr>
+      <tr><td>Mantenimiento mensual</td><td>—</td><td>—</td><td>✓</td></tr>
+      <tr><td>Hosting</td><td>—</td><td>1 año</td><td>1 año</td></tr>
+      <tr><td>SSL</td><td>✓</td><td>✓</td><td>✓</td></tr>
+    </table>
+  </section>
+
+  <section class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item">
+      <div class="faq-q">¿Cuánto tarda en estar listo?</div>
+      <div class="faq-a">48 horas para el plan Lite. 3-5 días para Pro. 1-2 semanas para Empresarial.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Qué pasa si no me gusta?</div>
+      <div class="faq-a">Reembolso completo dentro de los primeros 7 días. Sin preguntas.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Puedo actualizar mi sitio después?</div>
+      <div class="faq-a">Plan Lite: pagas por cambio. Plan Pro: hasta 2 cambios menores gratis el primer mes. Plan Empresarial: mantenimiento mensual incluido.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Y si ya tengo dominio?</div>
+      <div class="faq-a">Lo migramos sin costo. Te ayudamos con todo el setup DNS + SSL.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Aceptan tarjeta de crédito?</div>
+      <div class="faq-a">Sí, vía Stripe. También transferencia bancaria y Tigo Money.</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    ParaguAI · Asunción, Paraguay · WhatsApp +595 981 000000 · Hola, somos el equipo de Kiki + Iván.
+  </footer>
+</body>
+</html>

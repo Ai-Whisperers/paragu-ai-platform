@@ -230,7 +230,8 @@
       "text": "+595 984 904 215",
       "label": "WhatsApp"
     },
-    "whatsappMessage": "¡Hola! Vi la página de Leticia Carballo y me gustaría reservar un turno."
+    "whatsappMessage": "¡Hola! Vi la página de Leticia Carballo y me gustaría reservar un turno.",
+    "showForm": true
   },
   "footer": {
     "businessName": "Leticia Carballo",
