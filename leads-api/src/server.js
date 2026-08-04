@@ -790,6 +790,42 @@ app.get('/api/swarm/health', async (req, res) => {
   }
 });
 
+
+// ============================================================
+// GET /api/status
+// Public endpoint showing which credentials are configured
+// (no actual values exposed)
+// ============================================================
+app.get('/api/status', (req, res) => {
+  res.json({
+    stripe: {
+      configured: !!process.env.STRIPE_SECRET_KEY,
+      plans_configured: [
+        !!process.env.STRIPE_PRICE_LITE,
+        !!process.env.STRIPE_PRICE_PRO,
+        !!process.env.STRIPE_PRICE_EMPRESA,
+      ],
+    },
+    whatsapp_business: {
+      configured: !!(process.env.WABA_PHONE_NUMBER_ID && process.env.WABA_ACCESS_TOKEN),
+      webhook_url: 'https://leads.paragu-ai.com/api/whatsapp-webhook',
+    },
+    google_analytics: {
+      configured: !!process.env.NEXT_PUBLIC_GA_ID,
+      // Note: NEXT_PUBLIC_GA_ID is injected at build time, not server-side
+      // This will always be false here
+    },
+    notifications: {
+      kiki_whatsapp: !!process.env.KIKI_WHATSAPP,
+      callmebot: !!process.env.CALLMEBOT_APIKEY,
+    },
+    admin: {
+      kiki_api_key_set: !!process.env.KIKI_API_KEY,
+    },
+    public_url: process.env.PUBLIC_URL || 'https://paragu-ai.com',
+  });
+});
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`[leads-api] listening on 0.0.0.0:${PORT}`);
   console.log(`[leads-api] data dir: ${DATA_DIR}`);

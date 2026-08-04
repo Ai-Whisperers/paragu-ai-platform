@@ -9,6 +9,8 @@ All notable changes to this site are recorded here. Format: [Keep a Changelog](h
 
 ## [Unreleased]
 
+- 2026-08-04: feat(R42): leads-api + 19 sites with forms, pricing, onboarding, dashboard, atlas swarm (by Erebus)
+
 - 2026-08-04: feat(R41): deploy 10 missing lead sites to Swarm (by Erebus)
 
 - 2026-07-23: fix(dra-gabriela): aplicar DEFAULT_THEME en no-flash script para lila (by Erebus)
