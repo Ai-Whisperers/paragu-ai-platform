@@ -18,25 +18,11 @@
       },
       {
         "label": "Services",
-        "children": [
-          {
-            "label": "Residencia y Documentos",
-            "href": "/servicios#residency-legal"
-          },
-          {
-            "label": "Banca e Impuestos",
-            "href": "/servicios#banking-tax"
-          },
-          {
-            "label": "Bienes Raíces",
-            "href": "/servicios#real-estate"
-          },
-          {
-            "label": "Proceso",
-            "href": "/proceso"
-          }
-        ],
-        "href": "/es/servicios"
+        "href": "/servicios"
+      },
+      {
+        "label": "Process",
+        "href": "/proceso"
       },
       {
         "label": "Why Paraguay",
