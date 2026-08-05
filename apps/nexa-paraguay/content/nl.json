@@ -56,23 +56,18 @@
             "de": "Luana Weiss van der Pol"
           },
           "role": {
-            "es": "Directora de Operaciones",
-            "en": "Operations Director",
-            "nl": "Operations Director",
-            "de": "Operations Director"
+            "es": "Co-Fundadora",
+            "en": "Co-Founder",
+            "nl": "Co-Oprichtster",
+            "de": "Mitgründerin"
           },
           "image": "@img:team.luana",
           "bio": {
-            "es": "Luana coordina cada expediente de punta a punta. Desde el primer contacto hasta la conclusión del proceso, su trabajo es que tengas un solo interlocutor y un camino claro.",
-            "en": "Daughter of Sonia, born in the Netherlands. Speaks Dutch, English, and Spanish. Coordinates the operational side of every case.",
-            "nl": "Luana coördineert elk dossier van begin tot eind. Van het eerste contact tot de afronding is haar werk dat jij één aanspreekpunt hebt en een duidelijk pad.",
-            "de": "Sohnias Tochter, geboren in den Niederlanden. Spricht Niederländisch, Englisch und Spanisch. Koordiniert die operative Seite jedes Falls."
-          },
-          "credentials": [
-            "Operaties en klantenzorg",
-            "Coördinatie van migratiedossiers",
-            "Opvolging van rekeningen en formaliteiten"
-          ]
+            "es": "Hija de Sonia. Coordina cada expediente de principio a fin: desde el primer contacto hasta la conclusión, su trabajo es darte un solo interlocutor y un camino claro.",
+            "en": "Daughter of Sonia. She coordinates every case from start to finish: from first contact to the end, her work is to give you one point of contact and a clear path.",
+            "nl": "Dochter van Sonia. Zij coördineert elk dossier van begin tot eind: van het eerste contact tot de afronding is haar werk dat jij één aanspreekpunt hebt en een duidelijk pad.",
+            "de": "Tochter von Sonia. Sie koordiniert jeden Fall von Anfang bis Ende: Vom ersten Kontakt bis zum Abschluss ist ihre Aufgabe, Ihnen einen Ansprechpartner und einen klaren Weg zu geben."
+          }
         }
       ],
       "eyebrow": "Oprichters",
@@ -847,7 +842,7 @@
       "ctaPrimary": "Open WhatsApp",
       "ctaPrimaryHref": "https://wa.me/595982515138?text=Hola%2C%20quiero%20agendar%20una%20consulta%20gratuita",
       "ctaSecondary": "Bekijk FAQ eerst",
-      "ctaSecondaryHref": "/faq"
+      "ctaSecondaryHref": null
     },
     "booking": {
       "title": "Boek je gratis consult",
@@ -1292,10 +1287,6 @@
             "href": "/sobre"
           },
           {
-            "label": "FAQ",
-            "href": "/faq"
-          },
-          {
             "label": "Privacidad",
             "href": "/privacidad"
           },
@@ -1417,15 +1408,15 @@
   },
   "home": {
     "seo": {
-      "title": "Verhuizen naar Paraguay met Europese begeleiding — Nexa Paraguay",
-      "description": "Permanent verblijf, bankieren, bedrijfsoprichting en onroerend goed voor Europese gezinnen die naar Paraguay willen verhuizen. Persoonlijke, gestructureerde begeleiding in uw taal.",
-      "targetKeyword": "verhuizen naar Paraguay vanuit Europa"
+      "title": "Nexa Paraguay — Jouw verhuizing naar Paraguay, van begin tot eind geregeld",
+      "description": "Verblijf, bankieren, vastgoed en installatie — volledig gecoördineerd door Nexa Paraguay. Diensten naar keuze, geoptimaliseerd proces, professioneel team.",
+      "targetKeyword": "verblijfsvergunning Paraguay"
     },
     "hero": {
-      "eyebrow": "De essentiële eerste stappen voor uw nieuwe leven in Paraguay",
-      "headline": "Jouw verhuizing naar Paraguay, met iemand die het deed",
-      "subheadline": "Verblijf, bankieren, onroerend goed en installatie. Persoonlijke begeleiding in het Paraguayaanse systeem en de bureaucratie.",
-      "ctaText": "Gratis consult boeken",
+      "eyebrow": "De essentiële eerste stappen voor je nieuwe leven in Paraguay.",
+      "headline": "Je aankomst in Paraguay, zonder stress of gedoe.",
+      "subheadline": "Wij brengen je in contact met betrouwbare adviseurs om je verblijfsvergunning, bankrekeningen, huisvesting en alles wat nodig is voor je nieuwe leven te regelen.",
+      "ctaText": "Gratis consult",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Bekijk het proces",
       "secondaryCtaHref": "/proceso",
@@ -1433,394 +1424,180 @@
     },
     "trust": {
       "eyebrow": "WAAROM NEXA",
-      "title": "Verblijfsvergunning, bankrekening en bedrijf — in één dag geregeld",
+      "title": "Verblijf, bankrekening en bedrijf",
+      "subtitle": "Geen outsourcing. Geen onderaanneming. Wij regelen je vertaling en apostille in Asunción.",
       "items": [
         {
           "icon": "Stamp",
-          "title": "Verblijfsvergunning persoonlijk aangevraagd",
-          "description": "Wij begeleiden je bij Migraciones en het verblijfsbureau. Je gaat niet alleen.",
+          "title": "Verblijf persoonlijk aangevraagd",
+          "description": "We begeleiden je bij Migraciones en de radicaciones. Je gaat niet alleen.",
           "image": "@src:trust.migraciones"
         },
         {
           "icon": "CreditCard",
-          "title": "Paraguayaanse identiteitskaart in handen",
-          "description": "Wij bezorgen je Paraguayaanse cédula. Je verlaat het proces met het document, niet met beloftes.",
+          "title": "Paraguayaanse identiteitskaart in de hand",
+          "description": "We bezorgen je Paraguayaanse cédula. Je loopt naar buiten met het document, niet met beloften.",
           "image": "@src:trust.cedula"
         },
         {
           "icon": "Landmark",
           "title": "Bedrijf en bankrekening geïntegreerd",
-          "description": "Wij richten je S.A. op en openen je bankrekening — allemaal in één werkdag aan elkaar gekoppeld.",
+          "description": "We richten je S.A. op en openen je bankrekening — allemaal in één werkdag.",
           "image": "@src:trust.registry"
         }
-      ],
-      "subtitle": "Geen uitbesteding. Geen onderaanneming. Wij regelen uw papierwerk persoonlijk in Asunción."
+      ]
+    },
+    "coreServices": {
+      "eyebrow": "Kerndiensten",
+      "title": "Wij brengen je in contact met betrouwbare experts om je bij elke stap van het proces te begeleiden.",
+      "items": [
+        {
+          "icon": "Stamp",
+          "title": "Verblijfsstatus & Residentie",
+          "description": "Als essentiële eerste stap starten we je procedures bij de immigratiedienst om je legale status te garanderen. Zodra je residentie is goedgekeurd, begeleiden we je persoonlijk bij het aanvragen van je nationale identiteitsbewijs (Cédula)."
+        },
+        {
+          "icon": "Truck",
+          "title": "Logistiek & Verhuizing",
+          "description": "Wij helpen je met huisvesting, voertuigen, mobiele telefonie of het openen van bankrekeningen."
+        },
+        {
+          "icon": "Building",
+          "title": "Bedrijfsstructurering",
+          "description": "Wij brengen je in contact met notarissen en adviseurs voor het aanvragen van je RUC (btw-/belastingnummer) en het oprichten van je bedrijf."
+        }
+      ]
     },
     "whyCountry": {
       "eyebrow": "Waarom Paraguay",
-      "title": "Drie redenen waarom Europa naar de Zuidelijke Kegel verhuist",
-      "subtitle": "Harde cijfers, geen beloftes. Paraguay groeit al 15 jaar op percentages die het oude continent niet meer haalt.",
+      "title": "Waarom Paraguay? / Markinzichten",
+      "subtitle": "Harde cijfers, geen beloften. Paraguay groeit al 15 jaar tegen tarieven die het oude continent niet meer ziet.",
       "pillars": [
         {
           "icon": "TrendingUp",
           "title": "Aanhoudende groei",
-          "description": "De Paraguayaanse economie groeit al meer dan een decennium gestaag, met macro-economische stabiliteit, lage inflatie en lage volatiliteit. Een betrouwbare omgeving voor planning op lange termijn.",
+          "description": "Een BBP dat het afgelopen decennium een overwegend positieve groei heeft laten zien — met uitschieters rond de 4–5% — in combinatie met een stabiele inflatie die sinds 2020 netjes binnen de enkele cijfers blijft. De Paraguayaanse economie staat nooit stil.",
+          "imageUrl": "@src:whyParaguay.growth",
           "bullets": [
             "Decennia van aanhoudende groei",
             "Langdurige macro-economische stabiliteit",
             "Dynamische en gediversifieerde interne markt"
-          ],
-          "imageUrl": "@src:whyParaguay.growth"
+          ]
         },
         {
           "icon": "Landmark",
           "title": "Territoriaal belastingstelsel",
-          "description": "Paraguay belast alleen inkomen dat binnen het land wordt gegenereerd. Buitenlands inkomen wordt lokaal niet belast. Een eenvoudig fiscaal systeem dat aansluit op Europese rechtsgebieden zonder dubbele heffing.",
+          "description": "De IRP (inkomstenbelasting voor particulieren) belast uitsluitend inkomsten die binnen het nationale grondgebied zijn gegenereerd. Inkomsten uit het buitenland zijn volledig belastingvrij. Zo eenvoudig en voordelig is het.",
+          "imageUrl": "@src:whyParaguay.tax",
           "bullets": [
             "Puur territoriaal belastingstelsel",
             "Geen inhouding op buitenlandse inkomsten",
-            "Verenigbaar met Europese vermogensplanning"
-          ],
-          "imageUrl": "@src:whyParaguay.tax"
+            "Compatibel met Europees vermogensplanning"
+          ]
         },
         {
           "icon": "Globe",
           "title": "Actieve multiculturele gemeenschap",
-          "description": "Een levendige multiculturele gemeenschap met Braziliaanse, Argentijnse, Duitse en Mennonite aanwezigheid die al decennia in Paraguay geworteld is. Een gevestigde Europese en Latijns-Amerikaanse basis waarin u zich makkelijk kunt integreren.",
+          "description": "Paraguay consolideert een levendige, multiculturele samenleving en biedt momenteel onderdak aan meer dan 156.000 buitenlandse inwoners.",
+          "imageUrl": "@src:whyParaguay.community",
           "bullets": [
-            "Europese en Latijns-Amerikaanse gemeenschappen met decennia aanwezigheid",
-            "Directe vluchten vanuit Europa",
-            "Kosten van levensonderhoud aanzienlijk lager dan West-Europa"
-          ],
-          "imageUrl": "@src:whyParaguay.community"
-        }
-      ],
-      "ctaText": "Bekijk het volledige proces",
-      "ctaHref": "/nl/proceso"
-    },
-    "process": {
-      "eyebrow": "HOE HET WERKT",
-      "title": "Een helder proces, stap voor stap",
-      "totalDuration": "Totale duur: afhankelijk van het programma. We bevestigen dit tijdens het eerste consult.",
-      "ctaLabel": "Start mijn proces",
-      "ctaHref": "/contacto",
-      "steps": [
-        {
-          "number": 1,
-          "title": "Kies uw diensten",
-          "description": "Kies de specifieke ondersteuning die u nodig heeft. Wij stellen een gepersonaliseerde documentenchecklist en een vaste offerte op — geen verrassingen.",
-          "image": "@src:process.consultation",
-          "duration": "Week 1"
-        },
-        {
-          "number": 2,
-          "title": "Parallelle verwerking",
-          "description": "Terwijl u uw documenten thuis verzamelt, beginnen wij het werk ter plaatse in Paraguay. Wij coördineren de juridische voorbereiding die anders maanden zou duren.",
-          "image": "@src:process.documents",
-          "duration": "Weken 1-5"
-        },
-        {
-          "number": 3,
-          "title": "Week 6",
-          "description": "Reis naar Paraguay met uw documenten klaar. Wij begeleiden u naar de persoonlijke afspraken en zorgen dat elke handtekening, kopie en zegel op zijn plaats is.",
-          "image": "@src:process.arrival",
-          "duration": "U vliegt naar Paraguay met uw documenten klaar. Wij begeleiden u bij de persoonlijke afspraken — alles op één dag."
-        },
-        {
-          "number": 4,
-          "title": "ID en financiële activering",
-          "description": "Zodra uw Paraguayaanse ID is uitgegeven, activeren wij uw financiële infrastructuur. Wij openen de bankrekening, registreren de RUC en verbinden u met het Paraguayaanse financiële systeem.",
-          "image": "@src:process.banking",
-          "duration": "Weken 7–10"
-        },
-        {
-          "number": 5,
-          "title": "Installatie en levensstijl",
-          "description": "Met uw juridische en financiële basis op orde helpen wij u bij de installatie. Van het vinden van een woning tot het aansluiten van nutsvoorzieningen tot het ontdekken van uw favoriete bakkerij in Villa Morra.",
-          "image": "@src:process.completion",
-          "duration": "Weken 10-12"
+            "Europese en Latijns-Amerikaanse gemeenschappen met decennialange wortels",
+            "Rechtstreekse vliegverbindingen vanuit Europa",
+            "Levensonderhoud aanzienlijk goedkoper dan West-Europa"
+          ]
         }
       ]
     },
-    "finalCta": {
-      "title": "Zet de eerste stap",
-      "subtitle": "Boek een gratis consult van 30 minuten. Geen druk, geen verplichting.",
-      "buttonText": "Gratis consult boeken",
-      "buttonHref": "/contacto"
-    },
-    "services": {
-      "eyebrow": "Onze Diensten",
-      "title": "Alles wat je nodig hebt om je te vestigen, te opereren en te leven in Paraguay",
-      "subtitle": "Verblijf, bankieren, belastingen en onroerend goed — persoonlijk afgehandeld door een team dat het proces heeft doorlopen.",
+    "detailedServices": {
+      "eyebrow": "Diensten in Detail",
+      "title": "Diensten in Detail",
+      "subtitle": "Volledige begeleiding van papierwerk tot eigendom.",
       "groups": [
         {
-          "id": "residency-legal",
-          "title": "Verblijfsvergunning en Juridische Documenten",
-          "subtitle": "Je juridische basis in Paraguay",
+          "id": "residency",
+          "title": "Verblijf & Documenten",
           "items": [
             {
-              "title": "Permanent Verblijf",
-              "description": "Wij regelen je verblijfsaanvraag bij Migraciones. Jij tekent alleen.",
-              "benefits": [
-                "Persoonlijke indiening bij Migraciones",
-                "Persoonlijke opvolging tot goedkeuring",
-                "Advies over vereisten per nationaliteit"
-              ],
-              "icon": "FileCheck"
+              "title": "Verblijf bij Immigratie",
+              "description": "Volledige afhandeling van je residentieprocedure bij de Paraguayaanse immigratiedienst."
             },
             {
-              "title": "Paraguayaanse Identiteitskaart",
-              "description": "Wij begeleiden je bij het halen van je identiteitskaart. Je vertrekt met het document, niet met beloftes.",
-              "benefits": [
-                "Begeleiding naar het Identificaciones-kantoor",
-                "Documentatiecontrole vooraf",
-                "Bevestigde levering volgens gepersonaliseerde tijdlijn"
-              ],
-              "icon": "CreditCard"
+              "title": "Paraguayaans Rijbewijs",
+              "description": "Complete ontzorging bij het aanvragen van je rijbewijs bij de gemeentelijke autoriteiten. Dit omvat het voorbereiden van de lokale vereisten, persoonlijke begeleiding naar de examens en opvolging tot het document is afgegeven."
+            },
+            {
+              "title": "Beëdigde Vertaling",
+              "description": "Officiële en gecertificeerde vertalingen van je buitenlandse documenten naar het Spaans."
             }
           ]
         },
         {
           "id": "banking-tax",
-          "title": "Bankieren en Belastingen",
-          "subtitle": "Je financiële voetafdruk in Paraguay",
+          "title": "Bankieren & Belastingen",
           "items": [
             {
-              "title": "Bankrekening Openen",
-              "description": "Wij openen je rekening bij lokale banken. Geen gedoe, geen antwoorden in het Spaans.",
-              "benefits": [
-                "Bankselectie op basis van je profiel",
-                "Begeleiding naar het filiaal",
-                "Activering van kaart en online bankieren"
-              ],
-              "icon": "Landmark"
+              "title": "Zakelijk & Particulier Bankieren",
+              "description": "Het openen van persoonlijke en/of zakelijke rekeningen bij Paraguayaanse banken. Inclusief bankselectie op basis van jouw profiel (Sudameris, Continental, GNB, etc.), coördinatie en de activatie van je bankpas en online bankieren."
             },
             {
-              "title": "Belastingregistratie (RUC)",
-              "description": "Wij schrijven je in bij de SET. Je persoonlijke of zakelijke RUC klaar om te opereren.",
-              "benefits": [
-                "Inschrijving als natuurlijk persoon of S.A.",
-                "Configuratie van belastingregime",
-                "Advies over maandelijkse verplichtingen"
-              ],
-              "icon": "Calculator"
+              "title": "Belastingregistratie",
+              "description": "Inschrijving bij de DNIT (voorheen SET) als natuurlijk persoon (bijvoorbeeld voor de IRP) of als bedrijf. Je persoonlijke of zakelijke RUC (belastingnummer) is direct klaar voor gebruik."
             }
           ]
         },
         {
           "id": "real-estate",
-          "title": "Onroerend Goed",
-          "subtitle": "Vind waar je gaat wonen",
+          "title": "Vastgoed",
           "items": [
             {
-              "title": "Appartementen en Huizen Huren",
-              "description": "Wij zoeken eigendommen in Asunción en de metropool binnen je budget.",
-              "benefits": [
-                "Zoeken in veilige, goed verbonden wijken",
-                "Onderhandeling met eigenaren",
-                "Contractbeoordeling in het Spaans"
-              ],
-              "icon": "House"
+              "title": "Huisvesting Zoeken",
+              "description": "Het vinden van de ideale plek om te wonen, of dat nu voor een maand is of voor het leven. Zoeken naar woningen op basis van budget en levensstijl, inclusief gecoördineerde bezichtigingen, controle van het Spaanse huurcontract vóór ondertekening en onderhandelingen met de eigenaar."
             },
             {
-              "title": "Eigendommen Kopen",
-              "description": "Wij begeleiden je bij de aankoop, van zoeken tot tekenen bij de notaris.",
-              "benefits": [
-                "Advies over wijken naar levensstijl",
-                "Juridische verificatie van het eigendom",
-                "Coördinatie met notaris en register"
-              ],
-              "icon": "KeyRound"
-            },
-            {
-              "title": "Due Diligence",
-              "description": "Wij verifiëren titels, schulden en juridische geschiedenis van elk eigendom vóór aankoop.",
-              "benefits": [
-                "Titelbeoordeling bij het Openbaar Register",
-                "Verificatie van gemeentelijke en belastingschulden",
-                "Schriftelijk rapport met bevindingen"
-              ],
-              "icon": "Shield"
-            }
-          ]
-        },
-        {
-          "id": "logistics-concierge",
-          "title": "Logistiek & Concierge",
-          "subtitle": "Uw operationele basis in Paraguay: huisvesting, voertuig en ontdekking van het land.",
-          "items": [
-            {
-              "title": "Rondreizen door het Land",
-              "description": "Persoonlijke rondreizen door Paraguay zodat u het land kunt zien voordat u beslist waar u zich vestigt.",
-              "benefits": [
-                "Tot 50 km van Asunción: halve dag met voertuig, chauffeur en tweetalige begeleider",
-                "Meer dan 50 km van Asunción: volledige dag met dezelfde opzet",
-                "Route op maat volgens uw interesses (stedelijk, landelijk, grensgebied)"
-              ],
-              "icon": "Map"
-            },
-            {
-              "title": "Facilitering van Aankomstverblijf",
-              "description": "Wij helpen u bij het regelen van Airbnb of tijdelijk verblijf voor uw aankomst, terwijl u naar uw definitieve plek zoekt.",
-              "benefits": [
-                "Zoeken en boeken van tijdelijk verblijf",
-                "Coördinatie met verhuurders en lokale makelaars",
-                "Buurtaanbevelingen op basis van uw profiel"
-              ],
-              "icon": "BedDouble"
-            },
-            {
-              "title": "Verhuiscoördinatie",
-              "description": "Coördinatie van uw fysieke verhuizing: van inpakken tot levering bij uw nieuwe woning in Paraguay.",
-              "benefits": [
-                "Contact met internationale verhuisbedrijven",
-                "Coördinatie van douane en documentatie",
-                "Begeleiding bij de eindlevering"
-              ],
-              "icon": "Truck"
+              "title": "Vastgoedadvies",
+              "description": "Volledige begeleiding bij de aankoop van residentieel of commercieel vastgoed. Dit omvat het zoeken in strategische zones en uitgebreide ondersteuning tijdens de onderhandeling, ondertekening en de officiële registratie."
             }
           ]
         }
-      ],
-      "ctaText": "Gratis consult boeken",
-      "ctaHref": "/nl/agenda"
+      ]
     },
-    "feedback": {
-      "eyebrow": "Wat ze zeggen",
-      "title": "Echte gevallen, echte woorden",
-      "subtitle": "Wat onze klanten delen nadat ze zich in Paraguay hebben gevestigd.",
-      "testimonials": [
+    "process": {
+      "eyebrow": "Hoe het werkt",
+      "title": "Hoe Het Werkt",
+      "ctaLabel": "Start mijn proces",
+      "ctaHref": "/contacto",
+      "steps": [
         {
-          "name": "M. — Duitsland",
-          "role": "Investeerder landbouw",
-          "quote": "In 10 weken had ik verblijfsvergunning, vennootschap en bankrekening. Eén aanspreekpunt."
+          "number": 1,
+          "title": "Selecteer Je Diensten",
+          "description": "Kies de specifieke ondersteuning die je nodig hebt. Wij maken een exacte checklist van de documenten die je in je thuisland moet verzamelen.",
+          "icon": "ClipboardCheck"
         },
         {
-          "name": "J. — Nederland",
-          "role": "SaaS-oprichter",
-          "quote": "De vastgoedtour was cruciaal. Ik vond het juiste pand zonder maanden te verspillen."
+          "number": 2,
+          "title": "Reizen & Indienen",
+          "description": "Reis naar Paraguay met je documenten op orde. Wij begeleiden je persoonlijk naar elke officiële afspraak bij de bevoegde autoriteiten.",
+          "icon": "Plane"
         },
         {
-          "name": "S. — Spanje",
-          "role": "Onafhankelijk consultant",
-          "quote": "Totale kostentransparantie. Geen verrassingen."
-        }
-      ],
-      "ctaText": "Bekijk alle getuigenissen",
-      "ctaHref": "/testimonios"
-    },
-    "programs": {
-      "eyebrow": "PROGRAMMA'S",
-      "title": "Vier diensten, één team",
-      "subtitle": "Verblijf, bankieren, bedrijf en onroerend goed. Offerte op maat voor elke situatie.",
-      "cards": [
-        {
-          "icon": "UserPlus",
-          "tagline": "Permanent verblijf + Paraguayaanse ID. Eén operationele dag, één team.",
-          "title": "Verblijf",
-          "description": "Essentieel verblijfsproces voor individuen en gezinnen.",
-          "price": "USD $4.500",
-          "priceNote": "Alle belastingen en tarieven inbegrepen",
-          "included": [
-            "Volledige documentenchecklist",
-            "Indiening bij Immigratie",
-            "Aanvraagopvolging",
-            "Coördinatie met juridisch vertegenwoordiger",
-            "Ondersteuning tot definitieve goedkeuring"
-          ],
-          "ctaText": "Start mijn verblijf",
-          "ctaHref": "/contacto"
+          "number": 3,
+          "title": "Financiële Inrichting",
+          "description": "Zodra je identiteitskaart (Cédula) is afgegeven, activeren we je financiële infrastructuur in het land: we regelen je RUC en openen je zakelijke of persoonlijke bankrekeningen.",
+          "icon": "Landmark"
         },
         {
-          "icon": "Briefcase",
-          "tagline": "Verblijf, S.A.-bedrijfsoprichting en bankrekeningopening, volledig gecoördineerd.",
-          "title": "Bedrijf",
-          "description": "Volledige opzet voor ondernemers en eigenaren van externe bedrijven.",
-          "price": "USD $7.500",
-          "priceNote": "Inclusief bedrijfsoprichting",
-          "included": [
-            "S.A.-bedrijfsoprichting",
-            "Bankrekeningopening",
-            "RUC + belastingregistratie",
-            "Eerste boekhoudkundige opzet",
-            "Tweetalige juridische ondersteuning"
-          ],
-          "ctaText": "Mijn bedrijf oprichten",
-          "ctaHref": "/contacto"
-        },
-        {
-          "icon": "TrendingUp",
-          "tagline": "Doorlopende ondersteuning voor residenten met economische activiteit in Paraguay.",
-          "title": "Investeerder",
-          "description": "Advies en continue ondersteuning voor serieuze investeerders.",
-          "price": "USD $12.000",
-          "priceNote": "Aangepaste omvang",
-          "included": [
-            "Bedrijfsoprichting en -beheer",
-            "Boekhouding en belastingen (afzonderlijke offerte)",
-            "Fiscaal en juridisch advies per uur",
-            "Prioritaire ondersteuning",
-            "Jaarlijkse evaluatie"
-          ],
-          "ctaText": "Bespreek mijn situatie",
-          "ctaHref": "/contacto"
-        },
-        {
-          "icon": "Map",
-          "tagline": "Zoektocht, due diligence en afsluiting voor aankoop of huur.",
-          "title": "Onroerend goed",
-          "description": "Vind het juiste pand met volledige juridische en notariële ondersteuning.",
-          "price": "USD $2.500",
-          "priceNote": "Vastgoedkosten afzonderlijk",
-          "included": [
-            "Profiel- en criteriumdefinitie",
-            "Vastgoedzoektocht en shortlist",
-            "Juridische en technische due diligence",
-            "Onderhandeling en afsluiting"
-          ],
-          "ctaText": "Vind mijn pand",
-          "ctaHref": "/contacto"
+          "number": 4,
+          "title": "Zorgeloze Vestiging",
+          "description": "Met je juridische en financiële basis op orde, helpen we je om je volledig te vestigen — van het vinden van het perfecte huis of appartement tot het regelen van een betrouwbaar voertuig.",
+          "icon": "Home"
         }
       ]
     },
-    "testimonials": {
-      "eyebrow": "GETUIGENISSEN",
-      "title": "Echte resultaten, echte mensen",
-      "subtitle": "Volledige namen op verzoek beschikbaar met toestemming. Geverifieerde gevallen.",
-      "items": [
-        {
-          "id": "t1",
-          "name": "Erik V.",
-          "origin": "Nederland",
-          "program": "investeerder",
-          "quote": "Vanaf het eerste gesprek had ik het gevoel dat ik met iemand sprak die beide kanten echt begreep. Het fiscale plan heeft me een jaar proberen bespaard.",
-          "image": "@src:testimonials.tm1"
-        },
-        {
-          "id": "t2",
-          "name": "Markus S.",
-          "origin": "Duitsland",
-          "program": "bedrijf",
-          "quote": "Ze coördineerden mijn verblijf, bedrijf en bank in acht weken. Precies wat beloofd was.",
-          "image": "@src:testimonials.tm2"
-        },
-        {
-          "id": "t3",
-          "name": "Sophie B.",
-          "origin": "België",
-          "program": "basis",
-          "quote": "Ik was nerveus over het proces, maar Nexa maakte het makkelijk. Eén reis, alles opgelost.",
-          "image": "@src:testimonials.tm3"
-        },
-        {
-          "id": "t4",
-          "name": "Thomas L.",
-          "origin": "Zwitserland",
-          "program": "land",
-          "quote": "Kocht land in Paraguay met begeleiding van Nexa. De juridische due diligence was grondig en de afsluiting verliep soepel.",
-          "image": "@src:testimonials.tm4"
-        }
-      ]
+    "finalCta": {
+      "title": "Zet de eerste stap",
+      "subtitle": "Boek een gratis consult van 30 minuten.",
+      "buttonText": "Gratis consult",
+      "buttonHref": "/contacto"
     }
   },
   "intakeWizardPage": {
@@ -1908,10 +1685,6 @@
       {
         "label": "Over Nexa",
         "href": "/sobre"
-      },
-      {
-        "label": "FAQ",
-        "href": "/faq"
       },
       {
         "label": "Contact",

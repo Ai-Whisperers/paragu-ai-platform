@@ -47,10 +47,6 @@
         "href": "/sobre"
       },
       {
-        "label": "FAQ",
-        "href": "/faq"
-      },
-      {
         "label": "Contacto",
         "href": "/contacto"
       }
@@ -65,9 +61,9 @@
       "targetKeyword": "residencia en Paraguay"
     },
     "hero": {
-      "eyebrow": "Los primeros pasos esenciales para tu nueva vida en Paraguay",
-      "headline": "Tu mudanza a Paraguay, con quien ya la hizo",
-      "subheadline": "Residencia, banca, bienes raíces e instalación. Asistencia personal en el sistema paraguayo y burocracia",
+      "eyebrow": "The essential first steps for your new life in Paraguay.",
+      "headline": "Your arrival in Paraguay, stress-free and seamless.",
+      "subheadline": "We connect you with trusted advisors to manage your residency, bank accounts, housing, and everything you need for your new life.",
       "ctaText": "Agendar consulta gratuita",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Ver el proceso",
@@ -76,7 +72,8 @@
     },
     "trust": {
       "eyebrow": "POR QUÉ NEXA",
-      "title": "Residencia, cuenta y empresa ",
+      "title": "Residencia, cuenta y empresa",
+      "subtitle": "No tercerizamos. No subcontratamos. Tramitamos la traducción y apostillado de tus documentos en Asunción.",
       "items": [
         {
           "icon": "Stamp",
@@ -87,7 +84,7 @@
         {
           "icon": "CreditCard",
           "title": "Cédula de Identidad Paraguaya",
-          "description": "Te guiamos en la obtencion de tu cédula de identidad paraguaya.",
+          "description": "Te guiamos en la obtención de tu cédula de identidad paraguaya.",
           "image": "@src:trust.cedula"
         },
         {
@@ -96,18 +93,38 @@
           "description": "Constituimos tu sociedad anónima y abrimos la cuenta bancaria.",
           "image": "@src:trust.registry"
         }
-      ],
-      "subtitle": "No tercerizamos. No subcontratamos. Tramitamos  la traduccion y apostillado de tus documentos en asuncion."
+      ]
+    },
+    "coreServices": {
+      "eyebrow": "Servicios Esenciales",
+      "title": "We connect you with trusted experts to guide you every step of the way.",
+      "items": [
+        {
+          "icon": "Stamp",
+          "title": "Residency & Legal Status",
+          "description": "We initiate your paperwork with the Immigration Office to secure your legal status as an essential first step. Once your residency is approved, we accompany you in person to obtain your national ID card (Cédula)."
+        },
+        {
+          "icon": "Truck",
+          "title": "Relocation & Logistics",
+          "description": "We assist you with housing, vehicles, mobile setup, or opening bank accounts."
+        },
+        {
+          "icon": "Building",
+          "title": "Corporate Structuring",
+          "description": "We connect you with notaries and advisors to set up your RUC (Tax ID) and incorporate your business."
+        }
+      ]
     },
     "whyCountry": {
       "eyebrow": "Por qué Paraguay",
-      "title": "Tres razones por las que Europa se muda al Cono Sur",
+      "title": "Why Paraguay? / Market Insights",
       "subtitle": "Datos concretos, no promesas. Paraguay lleva 15 años creciendo a tasas que el viejo continente ya no ve.",
       "pillars": [
         {
           "icon": "TrendingUp",
           "title": "Crecimiento sostenido",
-          "description": "La economía paraguaya crece de forma sostenida desde hace más de una década, con estabilidad macroeconómica, baja inflación y baja volatilidad. Un entorno confiable para planear a largo plazo.",
+          "description": "A GDP that has maintained mostly positive growth over the last decade—frequently hovering around 4–5%—coupled with stable, single-digit inflation since 2020. The Paraguayan economy never stops.",
           "imageUrl": "@src:whyParaguay.growth",
           "bullets": [
             "Décadas de crecimiento sostenido",
@@ -118,7 +135,7 @@
         {
           "icon": "Landmark",
           "title": "Sistema fiscal territorial",
-          "description": "Paraguay grava solo lo que generás dentro del país. Los ingresos del exterior no tributan a nivel local. Una arquitectura fiscal simple que conecta con jurisdicciones europeas sin duplicidad.",
+          "description": "The IRP (Personal Income Tax) exclusively taxes income generated within the national territory. Your foreign-sourced income is tax-free. Simple, straightforward, and highly advantageous.",
           "imageUrl": "@src:whyParaguay.tax",
           "bullets": [
             "Sistema fiscal territorial puro",
@@ -129,7 +146,7 @@
         {
           "icon": "Globe",
           "title": "Comunidad multicultural activa",
-          "description": "Una comunidad multicultural vibrante con presencia brasileña, argentina, alemana y menonita con décadas de arraigo en Paraguay. Una base europea y latinoamericana ya consolidada a la que es fácil integrarse.",
+          "description": "Paraguay fosters a vibrant multicultural community, currently home to over 156,000 foreign residents.",
           "imageUrl": "@src:whyParaguay.community",
           "bullets": [
             "Comunidades europea y latinoamericana con décadas de arraigo",
@@ -137,471 +154,98 @@
             "Costos de vida notablemente más bajos que Europa Occidental"
           ]
         }
-      ],
-      "ctaText": "Ver el proceso completo",
-      "ctaHref": "/es/proceso"
+      ]
+    },
+    "detailedServices": {
+      "eyebrow": "Servicios Detallados",
+      "title": "Detailed Services",
+      "subtitle": "Full-service accompaniment from paperwork to property.",
+      "groups": [
+        {
+          "id": "residency",
+          "title": "Residency & Documents",
+          "items": [
+            {
+              "title": "Residency before Immigration",
+              "description": "Full processing of your residency before the Paraguayan Immigration Office."
+            },
+            {
+              "title": "Paraguayan Driver's License",
+              "description": "End-to-end management to obtain your driver's license from local municipal authorities. This includes preparing local requirements, in-person accompaniment to the required tests, and follow-up until the document is issued."
+            },
+            {
+              "title": "Certified Translation",
+              "description": "Official and certified translation of your foreign documents into Spanish."
+            }
+          ]
+        },
+        {
+          "id": "banking-tax",
+          "title": "Banking & Tax",
+          "items": [
+            {
+              "title": "Personal & Corporate Banking",
+              "description": "Setting up personal and/or business accounts in Paraguayan banks. Includes bank selection tailored to your profile (Sudameris, Continental, GNB, etc.), account coordination, and card/online banking activation."
+            },
+            {
+              "title": "Tax Registration",
+              "description": "Enrollment with the DNIT (formerly SET) as an individual (e.g., for IRP) or as a corporation. Your personal or corporate RUC (Tax ID) will be fully ready to operate."
+            }
+          ]
+        },
+        {
+          "id": "real-estate",
+          "title": "Real Estate",
+          "items": [
+            {
+              "title": "Housing Search",
+              "description": "Finding the ideal place to live, whether for a month or a lifetime. Property scouting tailored to your budget and lifestyle, including coordinated viewings, lease agreement reviews in Spanish before signing, and landlord negotiations."
+            },
+            {
+              "title": "Real Estate Advisory",
+              "description": "Full guidance for purchasing residential or commercial properties. This covers property scouting in strategic areas, along with comprehensive support during the signing and public registration process."
+            }
+          ]
+        }
+      ]
     },
     "process": {
-      "ctaHref": "/contacto",
-      "ctaLabel": "Iniciá mi proceso",
       "eyebrow": "Cómo funciona",
+      "title": "How It Works / Steps",
+      "ctaLabel": "Iniciá mi proceso",
+      "ctaHref": "/contacto",
       "steps": [
         {
           "number": 1,
-          "title": "Elegí tus Servicios",
-          "description": "Elegí el apoyo específico que necesitás. Creamos una lista personalizada de documentos que debés reunir en tu país de origen.",
-          "icon": "ClipboardCheck",
-          "image": {
-            "$img": "process.consultation"
-          }
+          "title": "Select Your Services",
+          "description": "Select the specific support you need. We will create a precise checklist of the documents you must gather in your home country.",
+          "icon": "ClipboardCheck"
         },
         {
           "number": 2,
-          "title": "Tramitación paralela",
-          "description": "Mientras preparás tus documentos en casa, nosotros comenzamos el trabajo en el terreno. Preparamos todas las gestiones locales.",
-          "icon": "Layers",
-          "image": {
-            "$img": "process.documents"
-          }
+          "title": "Travel & Submit",
+          "description": "Travel to Paraguay with your documents ready. We will accompany you in person to every official appointment with the relevant authorities.",
+          "icon": "Plane"
         },
         {
           "number": 3,
-          "title": "Tu Día en Paraguay",
-          "description": "Viajás a Paraguay con tus documentos listos. Te acompañamos en las citas presenciales.",
-          "icon": "CalendarCheck",
-          "image": {
-            "$img": "process.arrival"
-          }
+          "title": "Financial Setup",
+          "description": "Once your ID card (Cédula) is issued, we activate your financial setup in the country: we process your RUC and open your personal or corporate bank accounts.",
+          "icon": "Landmark"
         },
         {
           "number": 4,
-          "title": "Cédula y Activación Financiera",
-          "description": "Una vez emitida tu cédula, activamos tu infraestructura financiera. Gestionamos tu RUC y abrimos tus cuentas bancarias.",
-          "icon": "Building",
-          "image": {
-            "$img": "process.banking"
-          }
-        },
-        {
-          "number": 5,
-          "title": "Instalación y Estilo de Vida",
-          "description": "Con tu base legal y financiera lista, te ayudamos a instalarte: encontrar la casa o departamento perfecto y un vehículo confiable.",
-          "icon": "Home",
-          "image": {
-            "$img": "process.completion"
-          }
+          "title": "Seamless Relocation",
+          "description": "With your legal and financial foundation secured, we help you fully settle down—from finding the perfect home to securing a reliable vehicle.",
+          "icon": "Home"
         }
-      ],
-      "title": "Un proceso claro, paso a paso"
+      ]
     },
     "finalCta": {
       "title": "Dé el primer paso",
       "subtitle": "Agende una consulta gratuita de 30 minutos.",
       "buttonText": "Agendar consulta gratuita",
       "buttonHref": "/contacto"
-    },
-    "services": {
-      "eyebrow": "Nuestros Servicios",
-      "title": "Todo lo que necesitás para migrar, trabajar y vivir en Paraguay",
-      "subtitle": "Residencia, banca, impuestos y bienes raíces — tramitados personalmente por un equipo que ya hizo el proceso.",
-      "groups": [
-        {
-          "id": "residency-legal",
-          "title": "Residencia y Documentos Legales",
-          "subtitle": "Tu base legal en Paraguay",
-          "items": [
-            {
-              "title": "Residencia Permanente",
-              "description": "Gestionamos tu radicación ante Migraciones. Vos solo firmás.",
-              "benefits": [
-                "Tramitación presencial en Migraciones",
-                "Seguimiento personalizado hasta la aprobación",
-                "Asesoría sobre requisitos según tu nacionalidad"
-              ],
-              "icon": "FileCheck"
-            },
-            {
-              "title": "Cédula de Identidad Paraguaya",
-              "description": "Te ayudamos a sacar tu cédula.",
-              "benefits": [
-                "Acompañamiento a la oficina de Identificaciones",
-                "Verificación de documentación previa",
-                "Entrega confirmada según el cronograma personalizado"
-              ],
-              "icon": "CreditCard"
-            }
-          ]
-        },
-        {
-          "id": "banking-tax",
-          "title": "Banca e Impuestos",
-          "subtitle": "Tu huella financiera en Paraguay",
-          "items": [
-            {
-              "title": "Apertura de Cuenta Bancaria",
-              "description": "Te guiamos en la apertura de tu cuenta bancaria.",
-              "benefits": [
-                "Selección del banco según tu perfil",
-                "Acompañamiento a la sucursal",
-                "Activación de tarjeta y banca online"
-              ],
-              "icon": "Landmark"
-            },
-            {
-              "title": "Registro Tributario (RUC)",
-              "description": "Te inscribimos en la SET (subsecretaria de estado de tributacion). Tu RUC personal o empresarial listo para operar.",
-              "benefits": [
-                "Inscripción como persona física o S.A.",
-                "Configuración del régimen impositivo",
-                "Asesoría sobre obligaciones mensuales"
-              ],
-              "icon": "Calculator"
-            }
-          ]
-        },
-        {
-          "id": "real-estate",
-          "title": "Bienes Raíces",
-          "subtitle": "Encontrá el lugar donde vas a vivir",
-          "items": [
-            {
-              "title": "Alquiler de Departamentos y Casas",
-              "description": "Buscamos propiedades en el territorio paraguayo según tu presupuesto y preferencias.",
-              "benefits": [
-                "Búsqueda en zonas seguras y bien conectadas",
-                "Negociación con propietarios",
-                "Revisión del contrato en español"
-              ],
-              "icon": "House"
-            },
-            {
-              "title": "Compra de Propiedades",
-              "description": "Te acompañamos en la compra, desde la búsqueda hasta la firma en la escribanía.",
-              "benefits": [
-                "Asesoría sobre barrios según tu estilo de vida",
-                "Verificación legal de la propiedad",
-                "Coordinación con escribano y registro"
-              ],
-              "icon": "KeyRound"
-            },
-            {
-              "title": "Debida Diligencia",
-              "description": "Verificamos títulos, deudas e historial legal de cualquier propiedad antes de comprar.",
-              "benefits": [
-                "Revisión de títulos en el Registro Público",
-                "Verificación de deudas municipales e impositivas",
-                "Informe escrito con hallazgos"
-              ],
-              "icon": "Shield"
-            }
-          ]
-        },
-        {
-          "id": "logistics-concierge",
-          "title": "Logística y Acompañamiento",
-          "subtitle": "Tu base operativa en Paraguay: vivienda, vehículo y descubrimiento del país.",
-          "items": [
-            {
-              "title": "Recorridos por el País",
-              "description": "Recorridos personalizados por Paraguay para que veas el país antes de decidir dónde radicarme.",
-              "benefits": [
-                "Hasta 50 km de Asunción: medio día de recorrido con móvil, chofer y acompañante bilingüe",
-                "Más de 50 km de Asunción: día completo con la misma dotación",
-                "Itinerario a medida según tus intereses (urbano, rural, fronterizo)"
-              ],
-              "icon": "Map"
-            },
-            {
-              "title": "Facilitación de Alojamiento Inicial",
-              "description": "Te ayudamos a encontrar un Airbnb o alojamiento temporario para tu llegada, mientras buscás el lugar definitivo.",
-              "benefits": [
-                "Búsqueda y reserva de alojamiento temporario",
-                "Coordinación con anfitriones y agentes inmobiliarios locales",
-                "Recomendaciones por barrio según tu perfil"
-              ],
-              "icon": "BedDouble"
-            },
-            {
-              "title": "Acompañamiento en Mudanza",
-              "description": "Coordinación de tu mudanza física: desde el embalaje hasta la entrega en tu nueva casa en Paraguay.",
-              "benefits": [
-                "Contacto con empresas de mudanza internacional",
-                "Coordinación de aduanas y documentación",
-                "Acompañamiento en la entrega final"
-              ],
-              "icon": "Truck"
-            }
-          ]
-        }
-      ],
-      "ctaText": "Agendar consulta gratuita",
-      "ctaHref": "/es/agenda"
-    },
-    "feedback": {
-      "eyebrow": "Lo que dicen",
-      "title": "Casos reales, palabras reales",
-      "subtitle": "Lo que comparten nuestros clientes después de instalarse en Paraguay.",
-      "testimonials": [
-        {
-          "name": "M. — Alemania",
-          "role": "Inversor en agricultura",
-          "quote": "En 10 semanas tenía residencia, sociedad y cuenta bancaria. Un solo interlocutor."
-        },
-        {
-          "name": "J. — Países Bajos",
-          "role": "Fundador SaaS",
-          "quote": "El tour inmobiliario fue clave. Encontré la propiedad correcta sin perder meses."
-        },
-        {
-          "name": "S. — España",
-          "role": "Consultor independiente",
-          "quote": "Transparencia total de costos. Cero sorpresas."
-        }
-      ],
-      "ctaText": "Ver todos los testimonios",
-      "ctaHref": "/testimonios"
-    },
-    "programs": {
-      "eyebrow": {
-        "es": "Nuestros servicios",
-        "en": "Our services",
-        "nl": "Onze diensten",
-        "de": "Unsere Dienstleistungen"
-      },
-      "title": {
-        "es": "Cuatro servicios, un equipo",
-        "en": "Four services, one team",
-        "nl": "Vier diensten, één team",
-        "de": "Vier Dienste, ein Team"
-      },
-      "subtitle": {
-        "es": "Residencia, banca, empresa y bienes raíces. Cotización personalizada para cada caso.",
-        "en": "Residency, banking, company and real estate. Personalized quote for every case.",
-        "nl": "Verblijf, bank, bedrijf en vastgoed. Persoonlijke offerte per zaak.",
-        "de": "Aufenthalt, Bank, Unternehmen und Immobilien. Persönliches Angebot pro Fall."
-      },
-      "cards": [
-        {
-          "id": "residencia",
-          "title": {
-            "es": "Residencia",
-            "en": "Residency",
-            "nl": "Verblijfsvergunning",
-            "de": "Aufenthalt"
-          },
-          "tagline": {
-            "es": "Residencia permanente + cédula paraguaya. .",
-            "en": "Permanent residency + Paraguayan ID. ",
-            "nl": "Permanente verblijfsvergunning + Paraguayaanse ID. ",
-            "de": "Daueraufenthalt + paraguayischer Ausweis. "
-          },
-          "icon": "Home",
-          "included": [
-            {
-              "es": "Solicitud de residencia",
-              "en": "Residency application",
-              "nl": "Verblijfsaanvraag",
-              "de": "Aufenthaltsantrag"
-            },
-            {
-              "es": "Cédula de identidad",
-              "en": "Paraguayan ID card",
-              "nl": "Paraguayaanse ID-kaart",
-              "de": "Paraguayischer Ausweis"
-            },
-            {
-              "es": "Acompañamiento día operativo",
-              "en": "Operational-day guidance",
-              "nl": "Begeleiding operationele dag",
-              "de": "Begleitung am Operationstag"
-            }
-          ],
-          "cta": {
-            "es": "Cotizar",
-            "en": "Get a quote",
-            "nl": "Offerte aanvragen",
-            "de": "Angebot anfragen"
-          }
-        },
-        {
-          "id": "banca-empresa",
-          "title": {
-            "es": "Residencia + Empresa",
-            "en": "Residency + Company",
-            "nl": "Verblijf + Bedrijf",
-            "de": "Residenz + Unternehmen"
-          },
-          "tagline": {
-            "es": "Residencia, sociedad anónima y apertura de cuenta bancaria, todo coordinado.",
-            "en": "Residency, company incorporation and bank account, all coordinated.",
-            "nl": "Verblijf, bedrijfsoprichting en bankrekening, volledig gecoördineerd.",
-            "de": "Aufenthalt, Firmengründung und Bankkonto, komplett koordiniert."
-          },
-          "icon": "Building2",
-          "included": [
-            {
-              "es": "Todo lo de Residencia",
-              "en": "Everything in Residency",
-              "nl": "Alles van Verblijf",
-              "de": "Alles von Residenz"
-            },
-            {
-              "es": "Constitución de sociedad (S.A.)",
-              "en": "Company incorporation (S.A.)",
-              "nl": "Bedrijfsoprichting (S.A.)",
-              "de": "Firmengründung (S.A.)"
-            },
-            {
-              "es": "Apertura de cuenta bancaria local",
-              "en": "Local bank account opening",
-              "nl": "Lokale bankrekening openen",
-              "de": "Lokales Bankkonto eröffnen"
-            },
-            {
-              "es": "RUC + inscripción tributaria",
-              "en": "Tax ID + tax registration",
-              "nl": "Belastingnummer + inschrijving",
-              "de": "Steuernummer + Anmeldung"
-            }
-          ],
-          "cta": {
-            "es": "Cotizar",
-            "en": "Get a quote",
-            "nl": "Offerte aanvragen",
-            "de": "Angebot anfragen"
-          }
-        },
-        {
-          "id": "inversores",
-          "title": {
-            "es": "Asesoría para Inversores",
-            "en": "Investor Advisory",
-            "nl": "Investeringsadvies",
-            "de": "Investorenberatung"
-          },
-          "tagline": {
-            "es": "Acompañamiento continuo para residentes con actividad económica en Paraguay.",
-            "en": "Ongoing support for residents with economic activity in Paraguay.",
-            "nl": "Doorlopende begeleiding voor bewoners met economische activiteit in Paraguay.",
-            "de": "Laufende Betreuung für Residenten mit wirtschaftlicher Aktivität in Paraguay."
-          },
-          "icon": "TrendingUp",
-          "included": [
-            {
-              "es": "Constitución y mantenimiento de sociedad",
-              "en": "Company setup and maintenance",
-              "nl": "Bedrijfsoprichting en -beheer",
-              "de": "Firmengründung und -verwaltung"
-            },
-            {
-              "es": "Contabilidad e impuestos (cotización aparte)",
-              "en": "Accounting and tax (quoted separately)",
-              "nl": "Boekhouding en belasting (apart geprijsd)",
-              "de": "Buchhaltung und Steuern (separat angeboten)"
-            },
-            {
-              "es": "Asesoría fiscal y jurídica por hora",
-              "en": "Tax and legal advisory by hour",
-              "nl": "Fiscaal en juridisch advies per uur",
-              "de": "Steuer- und Rechtsberatung pro Stunde"
-            }
-          ],
-          "cta": {
-            "es": "Cotizar",
-            "en": "Get a quote",
-            "nl": "Offerte aanvragen",
-            "de": "Angebot anfragen"
-          }
-        },
-        {
-          "id": "bienes-raices",
-          "title": {
-            "es": "Bienes Raíces",
-            "en": "Real Estate",
-            "nl": "Vastgoed",
-            "de": "Immobilien"
-          },
-          "tagline": {
-            "es": "Búsqueda, due diligence y escrituración para compra o alquiler.",
-            "en": "Search, due diligence and closing for purchase or rental.",
-            "nl": "Zoeken, due diligence en afsluiting voor aankoop of huur.",
-            "de": "Suche, Prüfung und Abschluss für Kauf oder Miete."
-          },
-          "icon": "KeyRound",
-          "included": [
-            {
-              "es": "Definición de perfil y criterios",
-              "en": "Profile and criteria definition",
-              "nl": "Profiel- en criteriumdefinitie",
-              "de": "Profil- und Kriteriendefinition"
-            },
-            {
-              "es": "Búsqueda y short-list de propiedades",
-              "en": "Search and short-list of properties",
-              "nl": "Zoeken en shortlist van eigendommen",
-              "de": "Suche und Shortlist von Immobilien"
-            },
-            {
-              "es": "Due diligence legal y técnica",
-              "en": "Legal and technical due diligence",
-              "nl": "Juridische en technische due diligence",
-              "de": "Rechtliche und technische Due Diligence"
-            },
-            {
-              "es": "Negociación y escrituración",
-              "en": "Negotiation and closing",
-              "nl": "Onderhandeling en afsluiting",
-              "de": "Verhandlung und Abschluss"
-            }
-          ],
-          "cta": {
-            "es": "Cotizar",
-            "en": "Get a quote",
-            "nl": "Offerte aanvragen",
-            "de": "Angebot anfragen"
-          }
-        }
-      ]
-    },
-    "testimonials": {
-      "eyebrow": "Clientes",
-      "title": "Lo que dicen nuestros clientes",
-      "subtitle": "Nombres disponibles bajo solicitud, con consentimiento. Casos verificados en cartera.",
-      "items": [
-        {
-          "name": "Cliente 1",
-          "origin": "Países Bajos",
-          "program": "residencia",
-          "quote": {
-            "es": "Doce semanas de inicio a fin. Residencia, empresa, cuenta bancaria — todo hecho.",
-            "en": "Twelve weeks from start to finish. Residency, company, bank account — all done.",
-            "nl": "Twaalf weken van start tot finish. Verblijfsvergunning, bedrijf, bankrekening — alles voor elkaar.",
-            "de": "Zwölf Wochen von Anfang bis Ende. Aufenthaltsgenehmigung, Unternehmen, Bankkonto — alles erledigt."
-          }
-        },
-        {
-          "name": "Cliente 2",
-          "origin": "Bélgica",
-          "program": "residencia",
-          "quote": {
-            "es": "Estaba aterrada por el proceso. Nexa lo hizo en un solo viaje tranquilo.",
-            "en": "I was terrified of the process. Nexa did it in one calm trip.",
-            "nl": "Ik was bang voor het proces. Nexa deed het in één rustige reis.",
-            "de": "Ich hatte Angst vor dem Prozess. Nexa hat es in einer ruhigen Reise erledigt."
-          }
-        },
-        {
-          "name": "Cliente 3",
-          "origin": "Alemania",
-          "program": "inversores",
-          "quote": {
-            "es": "Asistimos de manera profesional y honesta para que no tengas que idiar con la burocracia paraguaya.",
-            "en": "Professional and honest guidance. No surprises in costs.",
-            "nl": "Professionele en eerlijke begeleiding. Geen verrassingen in de kosten.",
-            "de": "Professionelle und ehrliche Begleitung. Keine Überraschungen bei den Kosten."
-          }
-        }
-      ]
     }
   },
   "whyCountryPage": {
@@ -859,17 +503,12 @@
         },
         {
           "name": "Luana Weiss van der Pol",
-          "role": "Fundadora",
-          "bio": "Como parte de este proyecto familiar, Luana camina codo a codo con Sonia, absorbiendo su experiencia y compartiendo la misma misión: hacer que tu mudanza sea un proceso humano y sin sorpresas. Juntas coordinan cada expediente de punta a punta, asegurando que tengas una guía cercana, un camino claro y la tranquilidad de sentirte en casa desde el primer paso.",
+          "role": "Co-Fundadora",
+          "bio": "Luana es hija de Sonia. Coordina cada expediente de principio a fin: desde el primer contacto hasta la conclusión, su trabajo es darte un solo interlocutor y un camino claro.",
           "languages": [
             "ES",
             "EN",
             "NL"
-          ],
-          "credentials": [
-            "Atención al cliente y coordinación",
-            "Acompañamiento en Migraciones",
-            "Coordinación de cuentas corporativas"
           ],
           "icon": "Heart",
           "memberImage": "@src:team.luana",
@@ -1448,7 +1087,7 @@
       "ctaPrimary": "Abrir WhatsApp",
       "ctaPrimaryHref": "https://wa.me/595982515138?text=Hola%2C%20quiero%20agendar%20una%20consulta%20gratuita",
       "ctaSecondary": "Ver FAQ primero",
-      "ctaSecondaryHref": "/faq"
+      "ctaSecondaryHref": null
     },
     "booking": {
       "title": "Reservá tu consulta gratuita",
@@ -1469,8 +1108,7 @@
         "Alemán"
       ],
       "ctaSecondary": {
-        "label": "Ver preguntas frecuentes",
-        "href": "/faq"
+        "label": "Ver preguntas frecuentes"
       }
     },
     "contact": {
@@ -2031,10 +1669,6 @@
           {
             "label": "Sobre",
             "href": "/sobre"
-          },
-          {
-            "label": "FAQ",
-            "href": "/faq"
           },
           {
             "label": "Privacidad",

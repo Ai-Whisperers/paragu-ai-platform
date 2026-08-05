@@ -45,11 +45,6 @@ export function ProcessSection({ pageContent, images, locale = 'es' }: { pageCon
           {c.title && (
             <h2 className="text-[clamp(1.5rem_3vw_2.2rem)] font-bold text-primary">{c.title}</h2>
           )}
-          {c.totalDuration && (
-            <div className="inline-block mt-4 px-5 py-1.5 bg-accent/10 border border-accent/30 rounded-full text-accent font-semibold text-sm">
-              {c.totalDuration}
-            </div>
-          )}
         </div>
 
         <div className="relative">
@@ -80,11 +75,6 @@ export function ProcessSection({ pageContent, images, locale = 'es' }: { pageCon
                       <div className="flex-1 min-w-0">
                         <h3 className="font-bold text-primary text-lg mb-2">{step.title}</h3>
                         <p className="text-text-muted text-sm leading-relaxed">{step.description}</p>
-                        {step.duration && (
-                          <span className="inline-block mt-3 text-xs text-accent font-semibold px-3 py-1 bg-accent/10 rounded-full">
-                            {step.duration}
-                          </span>
-                        )}
                       </div>
                     </div>
                   </div>

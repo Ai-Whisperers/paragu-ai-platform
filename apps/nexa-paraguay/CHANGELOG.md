@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-08-04: feat(R42): CREDENTIALS_GUIDE + setup-credentials.sh + /api/status (by Erebus)
+
 - 2026-08-04: feat(R42): leads-api + 19 sites with forms, pricing, onboarding, dashboard, atlas swarm (by Erebus)
 
 - 2026-08-04: feat(R41): deploy 10 missing lead sites to Swarm (by Erebus)

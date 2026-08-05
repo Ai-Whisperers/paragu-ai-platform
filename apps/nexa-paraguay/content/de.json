@@ -46,7 +46,7 @@
       "ctaPrimary": "WhatsApp öffnen",
       "ctaPrimaryHref": "https://wa.me/595982515138?text=Hola%2C%20quiero%20agendar%20una%20consulta%20gratuita",
       "ctaSecondary": "FAQ zuerst ansehen",
-      "ctaSecondaryHref": "/faq"
+      "ctaSecondaryHref": null
     },
     "booking": {
       "title": "Buchen Sie Ihre kostenlose Beratung",
@@ -118,10 +118,6 @@
       {
         "label": "Über Nexa",
         "href": "/sobre"
-      },
-      {
-        "label": "FAQ",
-        "href": "/faq"
       },
       {
         "label": "Kontakt",
@@ -210,10 +206,6 @@
             "href": "/sobre"
           },
           {
-            "label": "FAQ",
-            "href": "/faq"
-          },
-          {
             "label": "Privacidad",
             "href": "/privacidad"
           },
@@ -293,23 +285,18 @@
             "de": "Luana Weiss van der Pol"
           },
           "role": {
-            "es": "Directora de Operaciones",
-            "en": "Operations Director",
-            "nl": "Operations Director",
-            "de": "Operations Director"
+            "es": "Co-Fundadora",
+            "en": "Co-Founder",
+            "nl": "Co-Oprichtster",
+            "de": "Mitgründerin"
           },
           "image": "@img:team.luana",
           "bio": {
-            "es": "Luana coordina cada expediente de punta a punta. Desde el primer contacto hasta la conclusión del proceso, su trabajo es que tengas un solo interlocutor y un camino claro.",
-            "en": "Daughter of Sonia, born in the Netherlands. Speaks Dutch, English, and Spanish. Coordinates the operational side of every case.",
-            "nl": "Dochter van Sonia, geboren in Nederland. Spreekt Nederlands, Engels en Spaans. Coördineert de operationele kant van elke zaak.",
-            "de": "Luana koordiniert jeden Fall von Anfang bis Ende. Vom ersten Kontakt bis zum Abschluss ist ihre Aufgabe, Ihnen einen Ansprechpartner und einen klaren Weg zu geben."
-          },
-          "credentials": [
-            "Betrieb und Kundenbetreuung",
-            "Koordination von Migrationsakten",
-            "Nachverfolgung von Konten und Formalitäten"
-          ]
+            "es": "Hija de Sonia. Coordina cada expediente de principio a fin: desde el primer contacto hasta la conclusión, su trabajo es darte un solo interlocutor y un camino claro.",
+            "en": "Daughter of Sonia. She coordinates every case from start to finish: from first contact to the end, her work is to give you one point of contact and a clear path.",
+            "nl": "Dochter van Sonia. Zij coördineert elk dossier van begin tot eind: van het eerste contact tot de afronding is haar werk dat jij één aanspreekpunt hebt en een duidelijk pad.",
+            "de": "Tochter von Sonia. Sie koordiniert jeden Fall von Anfang bis Ende: Vom ersten Kontakt bis zum Abschluss ist ihre Aufgabe, Ihnen einen Ansprechpartner und einen klaren Weg zu geben."
+          }
         }
       ],
       "eyebrow": "Gründungsteam",
@@ -1938,410 +1925,196 @@
   },
   "home": {
     "seo": {
-      "title": "Umzug nach Paraguay mit europäischer Begleitung — Nexa Paraguay",
-      "description": "Daueraufenthalt, Bankwesen, Firmengründung und Immobilien für europäische Familien, die nach Paraguay umziehen möchten. Persönliche, strukturierte Begleitung in Ihrer Sprache.",
-      "targetKeyword": "Umzug nach Paraguay aus Europa"
+      "title": "Nexa Paraguay — Dein Umzug nach Paraguay, von Anfang bis Ende betreut",
+      "description": "Aufenthalt, Bank, Immobilien und Einleben — komplett koordiniert von Nexa Paraguay. Leistungen nach Wahl, optimierter Prozess, professionelles Team.",
+      "targetKeyword": "Aufenthalt Paraguay"
     },
     "hero": {
-      "eyebrow": "Die wesentlichen ersten Schritte für Ihr neues Leben in Paraguay",
-      "headline": "Ihr Umzug nach Paraguay, mit jemandem, der es getan hat",
-      "subheadline": "Aufenthalt, Bankwesen, Immobilien und Niederlassung. Persönliche Unterstützung im paraguayischen System und der Bürokratie.",
-      "ctaText": "Kostenlose Beratung buchen",
+      "eyebrow": "Die ersten essenziellen Schritte für dein neues Leben in Paraguay.",
+      "headline": "Deine stressfreie und unkomplizierte Ankunft in Paraguay.",
+      "subheadline": "Wir verbinden dich mit vertrauenswürdigen Beratern, um deine Residenz, Bankkonten, Unterkunft und alles Notwendige für dein neues Leben zu regeln.",
+      "ctaText": "Kostenlose Beratung",
       "ctaHref": "/agenda",
-      "secondaryCtaText": "Prozess ansehen",
+      "secondaryCtaText": "Ablauf ansehen",
       "secondaryCtaHref": "/proceso",
       "backgroundImage": "@src:hero.home"
     },
     "trust": {
       "eyebrow": "WARUM NEXA",
-      "title": "Aufenthaltserlaubnis, Bankkonto und Firma — an einem Tag erledigt",
+      "title": "Aufenthalt, Bankkonto und Unternehmen",
+      "subtitle": "Kein Outsourcing. Keine Unterauftragsvergabe. Wir erledigen die Übersetzung und Beglaubigung deiner Dokumente in Asunción.",
       "items": [
         {
           "icon": "Stamp",
-          "title": "Aufenthaltserlaubnis persönlich beantragt",
-          "description": "Wir begleiten Sie durch Migraciones und das Einwanderungsbüro. Sie gehen nicht allein.",
+          "title": "Aufenthalt persönlich beantragt",
+          "description": "Wir begleiten dich bei Migraciones und der Radicaciones-Stelle. Du gehst nicht allein.",
           "image": "@src:trust.migraciones"
         },
         {
           "icon": "CreditCard",
-          "title": "Paraguayischer Ausweis in der Hand",
-          "description": "Wir übergeben Ihnen Ihren paraguayischen Ausweis. Sie verlassen den Prozess mit dem Dokument, nicht mit Versprechen.",
-          "image": "@src:trust.migraciones"
+          "title": "Paraguayischer Personalausweis in der Hand",
+          "description": "Wir liefern deine paraguayische Cédula. Du gehst mit dem Dokument raus, nicht mit Versprechen.",
+          "image": "@src:trust.cedula"
         },
         {
           "icon": "Landmark",
-          "title": "Firma und Bankkonto integriert",
-          "description": "Wir gründen Ihre S.A. und eröffnen Ihr Bankkonto — alles an einem einzigen Arbeitstag verkettet.",
+          "title": "Unternehmen und Bankkonto integriert",
+          "description": "Wir gründen deine S.A. und eröffnen dein Bankkonto — alles an einem Arbeitstag.",
           "image": "@src:trust.registry"
         }
-      ],
-      "subtitle": "Keine Auslagerung. Keine Unterauftragsvergabe. Wir erledigen Ihre Unterlagen persönlich in Asunción."
+      ]
+    },
+    "coreServices": {
+      "eyebrow": "Kernleistungen",
+      "title": "Wir vernetzen dich mit verlässlichen Experten, die dich Schritt für Schritt durch den gesamten Prozess begleiten.",
+      "items": [
+        {
+          "icon": "Stamp",
+          "title": "Einwanderung & Residenz",
+          "description": "Als ersten wichtigen Schritt leiten wir deine Behördengänge bei der Migrationsbehörde ein, um deinen legalen Status zu sichern. Sobald deine Residenz genehmigt ist, begleiten wir dich persönlich bei der Beantragung deines nationalen Personalausweises (Cédula)."
+        },
+        {
+          "icon": "Truck",
+          "title": "Umzug & Logistik",
+          "description": "Wir unterstützen dich bei der Wohnungssuche, dem Autokauf, der Mobilfunkeinrichtung oder der Eröffnung von Bankkonten."
+        },
+        {
+          "icon": "Building",
+          "title": "Unternehmensstrukturierung",
+          "description": "Wir vermitteln dich an Notare und Berater für die Beantragung deiner RUC (Steuernummer) und die Gründung von Unternehmen."
+        }
+      ]
     },
     "whyCountry": {
       "eyebrow": "Warum Paraguay",
-      "title": "Drei Gründe, warum Europa in den Südkegel zieht",
-      "subtitle": "Harte Zahlen, keine Versprechen. Paraguay wächst seit 15 Jahren um Raten, die der alte Kontinent nicht mehr sieht.",
+      "title": "Warum Paraguay? / Markteinblicke",
+      "subtitle": "Harte Zahlen, keine Versprechen. Paraguay wächst seit 15 Jahren mit Raten, die der alte Kontinent nicht mehr sieht.",
       "pillars": [
         {
           "icon": "TrendingUp",
           "title": "Anhaltendes Wachstum",
-          "description": "Die paraguayische Wirtschaft wächst seit über einem Jahrzehnt stetig, mit makroökonomischer Stabilität, niedriger Inflation und geringer Volatilität. Ein verlässliches Umfeld für langfristige Planung.",
+          "description": "Ein BIP, das im letzten Jahrzehnt ein überwiegend positives Wachstum verzeichnete – oft um die 4–5 % – gepaart mit einer kontrollierten Inflation, die seit 2020 stabil im einstelligen Bereich bleibt. Paraguays Wirtschaft steht niemals still.",
+          "imageUrl": "@src:whyParaguay.growth",
           "bullets": [
-            "Jahrzehntelanges nachhaltiges Wachstum",
-            "Anhaltende makroökonomische Stabilität",
+            "Jahrzehntelanges anhaltendes Wachstum",
+            "Langfristige makroökonomische Stabilität",
             "Dynamischer und diversifizierter Binnenmarkt"
-          ],
-          "imageUrl": "@src:whyParaguay.growth"
+          ]
         },
         {
           "icon": "Landmark",
           "title": "Territoriales Steuersystem",
-          "description": "Paraguay besteuert nur Einkommen, das im Land erzielt wird. Auslandseinkünfte werden lokal nicht besteuert. Eine einfache steuerliche Architektur, die sich ohne Doppelbesteuerung mit europäischen Jurisdiktionen verbindet.",
+          "description": "Die IRP (Einkommensteuer für Privatpersonen) besteuert ausschließlich Einkünfte, die innerhalb des nationalen Territoriums erzielt werden. Deine Auslandseinkünfte sind komplett steuerfrei. So einfach und vorteilhaft ist das.",
+          "imageUrl": "@src:whyParaguay.tax",
           "bullets": [
             "Reines territoriales Steuersystem",
             "Keine Quellensteuer auf Auslandseinkünfte",
             "Kompatibel mit europäischer Vermögensplanung"
-          ],
-          "imageUrl": "@src:whyParaguay.tax"
+          ]
         },
         {
           "icon": "Globe",
           "title": "Aktive multikulturelle Gemeinschaft",
-          "description": "Eine lebendige multikulturelle Gemeinschaft mit brasilianischer, argentinischer, deutscher und mennonitischer Präsenz, die seit Jahrzehnten in Paraguay verwurzelt ist. Eine gefestigte europäische und lateinamerikanische Basis, in die man sich leicht integrieren lässt.",
+          "description": "Paraguay festigt ein lebendiges, multikulturelles Zusammenleben und zählt derzeit über 156.000 ausländische Einwohner.",
+          "imageUrl": "@src:whyParaguay.community",
           "bullets": [
-            "Europäische und lateinamerikanische Gemeinschaften mit jahrzehntelanger Präsenz",
-            "Direktflüge aus Europa",
-            "Lebenshaltungskosten deutlich niedriger als in Westeuropa"
-          ],
-          "imageUrl": "@src:whyParaguay.community"
-        }
-      ],
-      "ctaText": "Vollständigen Prozess ansehen",
-      "ctaHref": "/de/proceso"
-    },
-    "process": {
-      "eyebrow": "SO FUNKTIONIERT ES",
-      "title": "Ein klarer Prozess, Schritt für Schritt",
-      "totalDuration": "Gesamtdauer: abhängig vom Programm. Wir bestätigen dies beim Erstgespräch.",
-      "ctaLabel": "Meinen Prozess starten",
-      "ctaHref": "/contacto",
-      "steps": [
-        {
-          "number": 1,
-          "title": "Wählen Sie Ihre Dienstleistungen",
-          "description": "Wählen Sie die spezifische Unterstützung, die Sie benötigen. Wir erstellen eine personalisierte Dokumenten-Checkliste und ein verbindliches Angebot — keine Überraschungen.",
-          "image": "@src:process.consultation",
-          "duration": "Woche 1"
-        },
-        {
-          "number": 2,
-          "title": "Parallele Bearbeitung",
-          "description": "Während Sie Ihre Dokumente zu Hause sammeln, beginnen wir die Arbeit vor Ort in Paraguay. Wir koordinieren die rechtliche Vorbereitung, die sonst Monate dauern würde.",
-          "image": "@src:process.documents",
-          "duration": "Wochen 1-5"
-        },
-        {
-          "number": 3,
-          "title": "Woche 6",
-          "description": "Reisen Sie mit fertigen Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen und stellen sicher, dass jede Unterschrift, Kopie und Siegel an ihrem Platz ist.",
-          "image": "@src:process.arrival",
-          "duration": "Sie fliegen mit Ihren Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen — alles an einem Tag."
-        },
-        {
-          "number": 4,
-          "title": "Ausweis und Finanzaktivierung",
-          "description": "Sobald Ihr paraguayischer Ausweis ausgestellt ist, aktivieren wir Ihre Finanzinfrastruktur. Wir eröffnen das Bankkonto, registrieren den RUC und verbinden Sie mit dem paraguayischen Finanzsystem.",
-          "image": "@src:process.banking",
-          "duration": "Wochen 7–10"
-        },
-        {
-          "number": 5,
-          "title": "Niederlassung und Lebensstil",
-          "description": "Mit Ihrer rechtlichen und finanziellen Basis helfen wir Ihnen bei der Niederlassung. Von der Wohnungssuche über die Anmeldung der Versorgung bis zur Entdeckung Ihrer Lieblingsbäckerei in Villa Morra.",
-          "image": "@src:process.completion",
-          "duration": "Wochen 11–12"
+            "Europäische und lateinamerikanische Gemeinschaften mit jahrzehntelangen Wurzeln",
+            "Direkte Flugverbindungen aus Europa",
+            "Deutlich geringere Lebenshaltungskosten als Westeuropa"
+          ]
         }
       ]
     },
-    "finalCta": {
-      "title": "Machen Sie den ersten Schritt",
-      "subtitle": "Vereinbaren Sie eine kostenlose 30-minütige Beratung. Kein Druck, keine Verpflichtung.",
-      "buttonText": "Kostenlose Beratung vereinbaren",
-      "buttonHref": "/contacto"
-    },
-    "services": {
-      "eyebrow": "Unsere Dienstleistungen",
-      "title": "Alles, was Sie brauchen, um sich niederzulassen, zu arbeiten und in Paraguay zu leben",
-      "subtitle": "Aufenthalt, Bankwesen, Steuern und Immobilien — persönlich betreut von einem Team, das den Prozess durchlaufen hat.",
+    "detailedServices": {
+      "eyebrow": "Dienstleistungen im Detail",
+      "title": "Dienstleistungen im Detail",
+      "subtitle": "Volle Begleitung vom Papierkram bis zur Immobilie.",
       "groups": [
         {
-          "id": "residency-legal",
-          "title": "Aufenthalt und Rechtliche Dokumente",
-          "subtitle": "Ihre rechtliche Grundlage in Paraguay",
+          "id": "residency",
+          "title": "Aufenthalt & Dokumente",
           "items": [
             {
-              "title": "Daueraufenthalt",
-              "description": "Wir bearbeiten Ihren Antrag bei Migraciones. Sie unterschreiben nur.",
-              "benefits": [
-                "Persönliche Antragstellung bei Migraciones",
-                "Persönliche Betreuung bis zur Genehmigung",
-                "Beratung zu Anforderungen nach Nationalität"
-              ],
-              "icon": "FileCheck"
+              "title": "Aufenthalt bei der Migrationsbehörde",
+              "description": "Vollständige Abwicklung deines Residenzverfahrens vor der paraguayischen Migrationsbehörde."
             },
             {
-              "title": "Paraguayischer Ausweis",
-              "description": "Wir begleiten Sie zum Ausweis. Sie gehen mit dem Dokument, nicht mit Versprechen.",
-              "benefits": [
-                "Begleitung zum Identificaciones-Büro",
-                "Dokumentenprüfung im Voraus",
-                "Bestätigte Lieferung gemäß personalisiertem Zeitplan"
-              ],
-              "icon": "CreditCard"
+              "title": "Paraguayischer Führerschein",
+              "description": "Komplette Abwicklung zur Erlangung deines Führerscheins bei den zuständigen kommunalen Behörden. Dies umfasst die Vorbereitung der lokalen Anforderungen, die persönliche Begleitung zu den entsprechenden Prüfungen und die Nachverfolgung bis zur Ausstellung des Dokuments."
+            },
+            {
+              "title": "Beglaubigte Übersetzung",
+              "description": "Offizielle und beglaubigte Übersetzungen deiner Dokumente ins Spanische."
             }
           ]
         },
         {
           "id": "banking-tax",
-          "title": "Bankwesen und Steuern",
-          "subtitle": "Ihr finanzieller Fußabdruck in Paraguay",
+          "title": "Bank & Steuern",
           "items": [
             {
-              "title": "Bankkonto-Eröffnung",
-              "description": "Wir eröffnen Ihr Konto bei lokalen Banken. Keine Umwege, keine spanischen Antworten.",
-              "benefits": [
-                "Bankenauswahl nach Ihrem Profil",
-                "Filialbegleitung",
-                "Karten- und Online-Banking-Aktivierung"
-              ],
-              "icon": "Landmark"
+              "title": "Privat- & Geschäftskunden-Banking",
+              "description": "Eröffnung von Privat- und/oder Geschäftskonten bei paraguayischen Banken. Inklusive der Bankauswahl passend zu deinem Profil (Sudameris, Continental, GNB etc.), Koordination sowie der Aktivierung von Karte und Online-Banking."
             },
             {
-              "title": "Steuerregistrierung (RUC)",
-              "description": "Wir melden Sie bei SET an. Ihre persönliche oder geschäftliche RUC ist betriebsbereit.",
-              "benefits": [
-                "Anmeldung als Privatperson oder S.A.",
-                "Steuerregime-Konfiguration",
-                "Beratung zu monatlichen Verpflichtungen"
-              ],
-              "icon": "Calculator"
+              "title": "Steuerliche Registrierung",
+              "description": "Anmeldung bei der DNIT (ehemals SET) als Privatperson (z. B. für die IRP) oder als Unternehmen. Deine persönliche oder geschäftliche RUC (Steuernummer) ist sofort einsatzbereit."
             }
           ]
         },
         {
           "id": "real-estate",
           "title": "Immobilien",
-          "subtitle": "Finden Sie Ihren Wohnort",
           "items": [
             {
-              "title": "Wohnungs- und Hausmiete",
-              "description": "Wir suchen Immobilien in Asunción und im Großraum innerhalb Ihres Budgets.",
-              "benefits": [
-                "Suche in sicheren, gut angebundenen Vierteln",
-                "Verhandlung mit Eigentümern",
-                "Vertragsprüfung auf Spanisch"
-              ],
-              "icon": "House"
+              "title": "Immobiliensuche",
+              "description": "Den idealen Ort zum Leben finden – ob für einen Monat oder für das ganze Leben. Immobiliensuche basierend auf Budget und Lebensstil, einschließlich koordinierter Besichtigungen, Prüfung des spanischen Mietvertrags vor der Unterzeichnung und Verhandlungen mit dem Eigentümer."
             },
             {
-              "title": "Immobilienkauf",
-              "description": "Wir begleiten Sie beim Kauf, von der Suche bis zur Unterzeichnung beim Notar.",
-              "benefits": [
-                "Beratung zu Vierteln nach Lebensstil",
-                "Rechtliche Überprüfung der Immobilie",
-                "Koordination mit Notar und Register"
-              ],
-              "icon": "KeyRound"
-            },
-            {
-              "title": "Due Diligence",
-              "description": "Wir überprüfen Titel, Schulden und rechtliche Vorgeschichte jeder Immobilie vor dem Kauf.",
-              "benefits": [
-                "Titelprüfung im öffentlichen Register",
-                "Gemeindliche und steuerliche Schuldenprüfung",
-                "Schriftlicher Bericht mit Ergebnissen"
-              ],
-              "icon": "Shield"
-            }
-          ]
-        },
-        {
-          "id": "logistics-concierge",
-          "title": "Logistik & Concierge",
-          "subtitle": "Ihre operative Basis in Paraguay: Unterkunft, Fahrzeug und Landerkundung.",
-          "items": [
-            {
-              "title": "Rundreisen durch das Land",
-              "description": "Persönliche Rundreisen durch Paraguay, damit Sie das Land sehen, bevor Sie entscheiden, wo Sie sich niederlassen.",
-              "benefits": [
-                "Bis 50 km von Asunción: halbtägige Rundreise mit Fahrzeug, Fahrer und zweisprachiger Begleitung",
-                "Mehr als 50 km von Asunción: ganztägige Rundreise mit derselben Ausstattung",
-                "Route nach Ihren Interessen (urban, ländlich, Grenzgebiet)"
-              ],
-              "icon": "Map"
-            },
-            {
-              "title": "Ankunftsunterkunft-Vermittlung",
-              "description": "Wir helfen Ihnen, für die Ankunft eine Airbnb- oder vorübergehende Unterkunft zu organisieren, während Sie Ihren langfristigen Ort suchen.",
-              "benefits": [
-                "Suche und Buchung von vorübergehender Unterkunft",
-                "Koordination mit Vermietern und lokalen Immobilienmaklern",
-                "Nachbarschaftsempfehlungen je nach Ihrem Profil"
-              ],
-              "icon": "BedDouble"
-            },
-            {
-              "title": "Umzugskoordination",
-              "description": "Koordination Ihres physischen Umzugs: vom Verpacken bis zur Lieferung in Ihr neues Zuhause in Paraguay.",
-              "benefits": [
-                "Kontakt mit internationalen Umzugsunternehmen",
-                "Koordination von Zoll und Dokumentation",
-                "Begleitung bei der Endlieferung"
-              ],
-              "icon": "Truck"
+              "title": "Immobilienberatung",
+              "description": "Umfassende Beratung beim Kauf von Wohn- oder Gewerbeimmobilien. Dies beinhaltet die Suche in strategischen Lagen sowie die lückenlose Begleitung bei der Unterzeichnung und der offiziellen Registrierung."
             }
           ]
         }
-      ],
-      "ctaText": "Kostenlose Beratung buchen",
-      "ctaHref": "/de/agenda"
+      ]
     },
-    "feedback": {
-      "eyebrow": "Was sie sagen",
-      "title": "Echte Fälle, echte Worte",
-      "subtitle": "Was unsere Kunden teilen, nachdem sie sich in Paraguay niedergelassen haben.",
-      "testimonials": [
+    "process": {
+      "eyebrow": "Ablauf",
+      "title": "Ablauf",
+      "ctaLabel": "Prozess starten",
+      "ctaHref": "/contacto",
+      "steps": [
         {
-          "name": "M. — Alemania",
-          "role": "Inversor en agricultura",
-          "quote": "En 10 semanas tenía residencia, sociedad y cuenta bancaria. Un solo interlocutor."
+          "number": 1,
+          "title": "Dienstleistungen auswählen",
+          "description": "Wähle die spezifische Unterstützung, die du benötigst. Wir erstellen eine präzise Checkliste der Dokumente, die du in deinem Heimatland zusammentragen musst.",
+          "icon": "ClipboardCheck"
         },
         {
-          "name": "J. — Países Bajos",
-          "role": "Fundador SaaS",
-          "quote": "El tour inmobiliario fue clave. Encontré la propiedad correcta sin perder meses."
+          "number": 2,
+          "title": "Anreisen & Einreichen",
+          "description": "Reise mit deinen fertigen Dokumenten nach Paraguay. Wir begleiten dich persönlich zu jedem deiner offiziellen Termine bei den entsprechenden Behörden.",
+          "icon": "Plane"
         },
         {
-          "name": "S. — España",
-          "role": "Consultor independiente",
-          "quote": "Transparencia total de costos. Cero sorpresas."
-        }
-      ],
-      "ctaText": "Alle Erfahrungsberichte ansehen",
-      "ctaHref": "/testimonios"
-    },
-    "programs": {
-      "eyebrow": "PROGRAMME",
-      "title": "Vier Dienstleistungen, ein Team",
-      "subtitle": "Aufenthalt, Bankwesen, Unternehmen und Immobilien. Individuelles Angebot für jeden Fall.",
-      "cards": [
-        {
-          "icon": "UserPlus",
-          "tagline": "Daueraufenthalt + paraguayischer Personalausweis. Ein Operationstag, ein Team.",
-          "title": "Aufenthalt",
-          "description": "Wesentlicher Aufenthaltsprozess für Einzelpersonen und Familien.",
-          "price": "USD $4,500",
-          "priceNote": "Alle Steuern und Gebühren inklusive",
-          "included": [
-            "Vollständige Dokumenten-Checkliste",
-            "Einreichung bei der Einwanderungsbehörde",
-            "Antragsverfolgung",
-            "Koordination mit dem Rechtsbeistand",
-            "Unterstützung bis zur endgültigen Genehmigung"
-          ],
-          "ctaText": "Meinen Aufenthalt starten",
-          "ctaHref": "/contacto"
+          "number": 3,
+          "title": "Finanzielles Setup",
+          "description": "Sobald deine Identitätskarte (Cédula) ausgestellt ist, aktivieren wir deine finanzielle Infrastruktur im Land: Wir beantragen deine RUC und eröffnen deine geschäftlichen oder privaten Bankkonten.",
+          "icon": "Landmark"
         },
         {
-          "icon": "Briefcase",
-          "tagline": "Aufenthalt, S.A.-Firmengründung und Bankkontoeröffnung, vollständig koordiniert.",
-          "title": "Unternehmen",
-          "description": "Komplette Einrichtung für Unternehmer und Remote-Geschäftsinhaber.",
-          "price": "USD $7,500",
-          "priceNote": "Inklusive Firmengründung",
-          "included": [
-            "S.A.-Firmengründung",
-            "Bankkontoeröffnung",
-            "RUC + Steuerregistrierung",
-            "Erstmalige Buchhaltung",
-            "Zweisprachige Rechtsunterstützung"
-          ],
-          "ctaText": "Mein Unternehmen gründen",
-          "ctaHref": "/contacto"
-        },
-        {
-          "icon": "TrendingUp",
-          "tagline": "Laufende Unterstützung für Residenten mit wirtschaftlicher Aktivität in Paraguay.",
-          "title": "Investor",
-          "description": "Beratung und kontinuierliche Unterstützung für ernsthafte Investoren.",
-          "price": "USD $12,000",
-          "priceNote": "Individueller Umfang",
-          "included": [
-            "Firmengründung und -verwaltung",
-            "Buchhaltung und Steuern (separates Angebot)",
-            "Steuer- und Rechtsberatung pro Stunde",
-            "Vorrangige Unterstützung",
-            "Jährliche Überprüfung"
-          ],
-          "ctaText": "Meinen Fall besprechen",
-          "ctaHref": "/contacto"
-        },
-        {
-          "icon": "Map",
-          "tagline": "Suche, Due Diligence und Abschluss für Kauf oder Miete.",
-          "title": "Immobilien",
-          "description": "Finden Sie die richtige Immobilie mit vollständiger rechtlicher und notarieller Unterstützung.",
-          "price": "USD $2,500",
-          "priceNote": "Immobilienkosten separat",
-          "included": [
-            "Profil- und Kriteriendefinition",
-            "Immobiliensuche und Shortlist",
-            "Rechtliche und technische Due Diligence",
-            "Verhandlung und Abschluss"
-          ],
-          "ctaText": "Meine Immobilie finden",
-          "ctaHref": "/contacto"
+          "number": 4,
+          "title": "Sorgloses Einleben",
+          "description": "Mit deinem fertigen rechtlichen und finanziellen Fundament helfen wir dir, dich komplett einzurichten – vom Finden des perfekten Hauses oder Apartments bis hin zu einem zuverlässigen Fahrzeug.",
+          "icon": "Home"
         }
       ]
     },
-    "testimonials": {
-      "eyebrow": "REFERENZEN",
-      "title": "Echte Ergebnisse, echte Menschen",
-      "subtitle": "Vollständige Namen auf Anfrage mit Einwilligung verfügbar. Verifizierte Fälle.",
-      "items": [
-        {
-          "id": "t1",
-          "name": "Erik V.",
-          "origin": "Niederlande",
-          "program": "investor",
-          "quote": "Vom ersten Anruf an hatte ich das Gefühl, mit jemandem zu sprechen, der beide Seiten wirklich versteht. Der Steuerplan hat mir ein Jahr Versuch und Irrtum erspart.",
-          "image": "@src:testimonials.tm1"
-        },
-        {
-          "id": "t2",
-          "name": "Markus S.",
-          "origin": "Deutschland",
-          "program": "business",
-          "quote": "Sie koordinierten meinen Aufenthalt, meine Firma und meine Bank in acht Wochen. Genau das, was versprochen wurde.",
-          "image": "@src:testimonials.tm2"
-        },
-        {
-          "id": "t3",
-          "name": "Sophie B.",
-          "origin": "Belgien",
-          "program": "base",
-          "quote": "Ich war nervös wegen des Prozesses, aber Nexa hat es einfach gemacht. Eine Reise, alles gelöst.",
-          "image": "@src:testimonials.tm3"
-        },
-        {
-          "id": "t4",
-          "name": "Thomas L.",
-          "origin": "Schweiz",
-          "program": "land",
-          "quote": "Ich habe mit Nexas Begleitung Land in Paraguay gekauft. Die rechtliche Due Diligence war gründlich und der Abschluss verlief reibungslos.",
-          "image": "@src:testimonials.tm4"
-        }
-      ]
+    "finalCta": {
+      "title": "Mache den ersten Schritt",
+      "subtitle": "Buche eine kostenlose 30-minütige Beratung.",
+      "buttonText": "Kostenlose Beratung",
+      "buttonHref": "/contacto"
     }
   },
   "privacyPage": {

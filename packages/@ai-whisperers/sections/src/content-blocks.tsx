@@ -80,7 +80,6 @@ export function TrustSection({ pageContent, data, images }: SectionComponentProp
           {c.items.map((item: any, i: number) => {
             const img = resolveImage(images, item.image)
             const IconComp = getIcon(item.icon)
-            const num = String(i + 1).padStart(2, '0')
             return (
               <div
                 key={i}
@@ -96,16 +95,10 @@ export function TrustSection({ pageContent, data, images }: SectionComponentProp
                       height={250}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute top-3 left-3 w-9 h-9 rounded-full bg-primary text-accent font-bold text-sm flex items-center justify-center shadow-md">
-                      {num}
-                    </div>
                   </div>
                 ) : (
                   <div className="relative aspect-[16/10] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
                     <IconComp className="w-16 h-16 text-accent/90" strokeWidth={1.5} />
-                    <div className="absolute top-3 left-3 w-9 h-9 rounded-full bg-accent text-primary font-bold text-sm flex items-center justify-center shadow-md">
-                      {num}
-                    </div>
                   </div>
                 )}
 
@@ -207,9 +200,6 @@ export function ServicesSection({ pageContent, data, images }: SectionComponentP
                 {/* Group header */}
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center gap-3 mb-3">
-                    <span className="text-xs text-text-muted font-mono uppercase tracking-wider">
-                      {String(gi + 1).padStart(2, '0')} / {String(groups.length).padStart(2, '0')}
-                    </span>
                     <span className="w-8 h-[1px] bg-accent/40" />
                     <span className="text-xs text-accent font-semibold uppercase tracking-wider">
                       {group.title}
@@ -351,8 +341,6 @@ export function ServiceDetailSection({ pageContent, data, images }: SectionCompo
         <div className="w-[60px] h-[3px] bg-accent mx-auto mb-10" />
 
         {groups.map((group: any, gi: number) => {
-          const groupNum = String(gi + 1).padStart(2, '0')
-          const total = String(groups.length).padStart(2, '0')
           const accent = group.accentColor || '#C9A96E'
           // Generate stable ID from group.id or title (for anchor links)
           const groupId = group.id || (group.title || `group-${gi}`)
@@ -365,14 +353,7 @@ export function ServiceDetailSection({ pageContent, data, images }: SectionCompo
             <div key={gi} id={groupId} className="mb-16 last:mb-0 scroll-mt-24">
               {/* Group header */}
               <div className="mb-8">
-                <div className="inline-flex items-center gap-3 mb-3">
-                  <span
-                    className="inline-block px-3 py-1 text-xs font-bold rounded-full"
-                    style={{ background: accent + '15', color: accent }}
-                  >
-                    {groupNum} / {total}
-                  </span>
-                </div>
+                <div className="inline-flex items-center gap-3 mb-3" />
                 <h3 className="font-playfair text-2xl md:text-3xl font-bold text-primary mb-2 leading-tight">
                   {group.title}
                 </h3>
@@ -387,7 +368,6 @@ export function ServiceDetailSection({ pageContent, data, images }: SectionCompo
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-left">
                 {group.items.map((item: any, j: number) => {
                   const img = resolveImage(images, item.image)
-                  const itemNum = `${groupNum}.${String(j + 1).padStart(2, '0')}`
                   return (
                     <div
                       key={j}
@@ -398,14 +378,6 @@ export function ServiceDetailSection({ pageContent, data, images }: SectionCompo
                         className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"
                         style={{ backgroundImage: `linear-gradient(to right, transparent, ${accent}, transparent)` }}
                       />
-
-                      {/* Item number badge */}
-                      <div
-                        className="absolute top-4 right-4 text-[10px] font-bold tracking-wider px-2 py-0.5 rounded-full"
-                        style={{ background: accent + '15', color: accent }}
-                      >
-                        {itemNum}
-                      </div>
 
                       {/* Image */}
                       {img && (
@@ -538,10 +510,6 @@ export function PillarsSection({ pageContent, data, images }: SectionComponentPr
             return (
               <div key={i} className="group relative p-6 rounded-2xl text-left backdrop-blur-[10px] bg-white/[0.04] hover:bg-white/[0.08] border border-accent/15 hover:border-accent/40 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(201,169,110,0.15)] transition-all duration-300 overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
-                {/* Numbered badge */}
-                <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-accent/20 text-accent font-bold text-xs flex items-center justify-center">
-                  {String(i + 1).padStart(2, '0')}
-                </div>
                 {/* Icon or image */}
                 {IconComp ? (
                   <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center mb-4">
@@ -774,7 +742,6 @@ export function WhyCountrySection({ pageContent, data, images }: SectionComponen
           {c.pillars.map((p: any, i: number) => {
             const img = resolveImage(images, p.imageUrl)
             const IconComp = getIcon(p.icon)
-            const num = String(i + 1).padStart(2, '0')
             return (
               <div
                 key={i}
@@ -800,10 +767,6 @@ export function WhyCountrySection({ pageContent, data, images }: SectionComponen
                     {/* Icon overlay */}
                     <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-accent/95 backdrop-blur flex items-center justify-center shadow-md">
                       <IconComp className="w-5 h-5 text-primary" strokeWidth={2.5} />
-                    </div>
-                    {/* Number badge */}
-                    <div className="absolute top-3 left-3 w-10 h-10 rounded-full bg-white/95 text-primary font-bold text-sm flex items-center justify-center shadow-md">
-                      {num}
                     </div>
                   </div>
                 )}

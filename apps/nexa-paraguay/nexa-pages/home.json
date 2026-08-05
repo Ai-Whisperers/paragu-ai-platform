@@ -15,20 +15,20 @@
       "content": "home"
     },
     {
+      "id": "core-services",
+      "content": "home.coreServices"
+    },
+    {
       "id": "why-destination",
       "content": "home"
     },
     {
-      "id": "services",
-      "content": "home"
+      "id": "service-detail",
+      "content": "home.detailedServices"
     },
     {
       "id": "process-timeline",
-      "content": "home"
-    },
-    {
-      "id": "feedback",
-      "content": "home.feedback"
+      "content": "home.process"
     },
     {
       "id": "cta-banner",
