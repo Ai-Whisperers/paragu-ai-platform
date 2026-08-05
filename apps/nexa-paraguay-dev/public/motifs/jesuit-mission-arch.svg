@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96" fill="none" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Single Jesuit mission arch (Trinidad ruins) -->
+  <path d="M14 88 L14 40 Q14 20 40 20 Q66 20 66 40 L66 88"/>
+  <path d="M28 88 L28 44 Q28 36 40 36 Q52 36 52 44 L52 88"/>
+  <line x1="6" y1="88" x2="74" y2="88"/>
+  <!-- Keystone detail -->
+  <path d="M36 28 L44 28 L42 24 L38 24 Z"/>
+  <!-- Sandstone texture lines -->
+  <line x1="14" y1="60" x2="20" y2="60" opacity="0.4"/>
+  <line x1="60" y1="60" x2="66" y2="60" opacity="0.4"/>
+  <line x1="14" y1="74" x2="20" y2="74" opacity="0.4"/>
+  <line x1="60" y1="74" x2="66" y2="74" opacity="0.4"/>
+</svg>

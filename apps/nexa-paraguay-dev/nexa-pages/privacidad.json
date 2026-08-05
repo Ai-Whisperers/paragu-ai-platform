@@ -1,0 +1,34 @@
+{
+  "id": "privacidad",
+  "targetKeyword": "política privacidad Nexa Paraguay",
+  "slug": "privacidad",
+  "titleKey": "privacyPage.seo.title",
+  "descriptionKey": "privacyPage.seo.description",
+  "sections": [
+    {
+      "id": "header",
+      "variant": "standard",
+      "content": "navigation"
+    },
+    {
+      "id": "hero",
+      "variant": "minimal",
+      "content": "privacyPage.hero"
+    },
+    {
+      "id": "faq",
+      "variant": "categorized",
+      "content": "privacyPage.full"
+    },
+    {
+      "id": "cta-banner",
+      "variant": "default",
+      "content": "contactPage.cta"
+    },
+    {
+      "id": "footer",
+      "variant": "standard",
+      "content": "footer"
+    }
+  ]
+}

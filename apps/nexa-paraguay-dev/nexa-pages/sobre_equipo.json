@@ -1,0 +1,44 @@
+{
+  "id": "sobre-equipo",
+  "targetKeyword": "equipo Nexa Paraguay",
+  "slug": "sobre_equipo",
+  "titleKey": "teamPage.seo.title",
+  "descriptionKey": "teamPage.seo.description",
+  "sections": [
+    {
+      "id": "header",
+      "variant": "standard",
+      "content": "navigation"
+    },
+    {
+      "id": "hero",
+      "variant": "minimal",
+      "content": "teamPage.hero"
+    },
+    {
+      "id": "team",
+      "variant": "cards",
+      "content": "teamPage.team"
+    },
+    {
+      "id": "trust-signals",
+      "variant": "credentials",
+      "content": "teamPage.trust"
+    },
+    {
+      "id": "cta",
+      "variant": "default",
+      "content": "teamPage.cta"
+    },
+    {
+      "id": "footer",
+      "variant": "standard",
+      "content": "footer"
+    },
+    {
+      "id": "whatsapp-float",
+      "variant": "standard",
+      "content": "whatsapp"
+    }
+  ]
+}

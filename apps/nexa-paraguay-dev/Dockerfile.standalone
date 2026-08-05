@@ -1,0 +1,74 @@
+# ── Nexa Paraguay DEV — standalone runtime image ──
+# Build context: apps/nexa-paraguay-dev/
+# Assumes `pnpm --filter nexa-paraguay-dev build` has produced `.next/standalone/`
+# at the monorepo root with outputFileTracingRoot = apps/nexa-paraguay-dev, so
+# the entrypoint is apps/nexa-paraguay-dev/server.js.
+#
+# Build:
+#   pnpm --filter nexa-paraguay-dev build
+#   docker build -f apps/nexa-paraguay-dev/Dockerfile.standalone \
+#     -t nexa-paraguay-dev:prod ./apps/nexa-paraguay-dev
+# Run:
+#   docker stack deploy -c apps/nexa-paraguay-dev/docker-compose.yml nexa-paraguay-dev
+
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+# Non-root user
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
+
+# Standalone bundle — entrypoint is apps/nexa-paraguay-dev/server.js
+COPY --chown=nextjs:nodejs .next/standalone/ ./
+COPY --chown=nextjs:nodejs .next/static ./apps/nexa-paraguay-dev/.next/static
+
+# Static + localized content
+COPY --chown=nextjs:nodejs public/images/blog             ./apps/nexa-paraguay-dev/public/images/blog
+COPY --chown=nextjs:nodejs public/images/brand            ./apps/nexa-paraguay-dev/public/images/brand
+COPY --chown=nextjs:nodejs public/images/flags            ./apps/nexa-paraguay-dev/public/images/flags
+COPY --chown=nextjs:nodejs public/images/hero             ./apps/nexa-paraguay-dev/public/images/hero
+COPY --chown=nextjs:nodejs public/images/office           ./apps/nexa-paraguay-dev/public/images/office
+COPY --chown=nextjs:nodejs public/images/process          ./apps/nexa-paraguay-dev/public/images/process
+COPY --chown=nextjs:nodejs public/images/programs         ./apps/nexa-paraguay-dev/public/images/programs
+COPY --chown=nextjs:nodejs public/images/team             ./apps/nexa-paraguay-dev/public/images/team
+COPY --chown=nextjs:nodejs public/images/testimonials     ./apps/nexa-paraguay-dev/public/images/testimonials
+COPY --chown=nextjs:nodejs public/images/trust            ./apps/nexa-paraguay-dev/public/images/trust
+COPY --chown=nextjs:nodejs public/images/why-paraguay     ./apps/nexa-paraguay-dev/public/images/why-paraguay
+COPY --chown=nextjs:nodejs public/images/og-default.svg   ./apps/nexa-paraguay-dev/public/images/og-default.svg
+COPY --chown=nextjs:nodejs public/motifs                   ./apps/nexa-paraguay-dev/public/motifs
+COPY --chown=nextjs:nodejs public/favicon.ico  ./apps/nexa-paraguay-dev/public/favicon.ico
+COPY --chown=nextjs:nodejs public/favicon.svg  ./apps/nexa-paraguay-dev/public/favicon.svg
+COPY --chown=nextjs:nodejs public/icon-192.png ./apps/nexa-paraguay-dev/public/icon-192.png
+COPY --chown=nextjs:nodejs public/icon-512.png ./apps/nexa-paraguay-dev/public/icon-512.png
+COPY --chown=nextjs:nodejs public/robots.txt   ./apps/nexa-paraguay-dev/public/robots.txt
+COPY --chown=nextjs:nodejs public/schema       ./apps/nexa-paraguay-dev/public/schema
+COPY --chown=nextjs:nodejs public/testimonios  ./apps/nexa-paraguay-dev/public/testimonios
+COPY --chown=nextjs:nodejs public/assets       ./apps/nexa-paraguay-dev/public/assets
+COPY --chown=nextjs:nodejs content ./apps/nexa-paraguay-dev/content
+
+# Site config + page data JSONs
+COPY --chown=nextjs:nodejs site.json   ./apps/nexa-paraguay-dev/site.json
+COPY --chown=nextjs:nodejs images.json ./apps/nexa-paraguay-dev/images.json
+COPY --chown=nextjs:nodejs tokens.json ./apps/nexa-paraguay-dev/tokens.json
+
+# Localized page data
+COPY --chown=nextjs:nodejs nexa-pages ./apps/nexa-paraguay-dev/nexa-pages
+
+# Form submissions + lead capture
+RUN mkdir -p /app/.leads /app/data/submissions && \
+    chown -R nextjs:nodejs /app/.leads /app/data/submissions
+
+USER nextjs
+
+EXPOSE 3000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:3000/api/health || exit 1
+
+WORKDIR /app/apps/nexa-paraguay-dev
+CMD ["node", "server.js"]

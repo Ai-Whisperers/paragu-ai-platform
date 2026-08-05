@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" fill="none" stroke="#C9A96E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Asunción skyline — minimal line drawing -->
+  <g>
+    <!-- Loma San Jerónimo (highest point, with antenna) -->
+    <path d="M40 80 L40 56 L46 50 L50 44 L52 40 L52 14"/>
+    <line x1="52" y1="14" x2="52" y2="6"/>
+    <line x1="48" y1="10" x2="56" y2="10"/>
+
+    <!-- Palacio de los López (neoclassical center) -->
+    <path d="M120 80 L120 50 L130 46 L140 42 L160 42 L170 46 L180 50 L180 80"/>
+    <path d="M130 46 L130 38 L170 38 L170 46"/>
+    <line x1="150" y1="42" x2="150" y2="32"/>
+
+    <!-- Towers cluster -->
+    <rect x="220" y="36" width="8" height="44"/>
+    <rect x="232" y="44" width="6" height="36"/>
+    <rect x="244" y="28" width="8" height="52"/>
+    <rect x="258" y="40" width="6" height="40"/>
+
+    <!-- Modern tower -->
+    <rect x="300" y="24" width="10" height="56"/>
+    <line x1="305" y1="20" x2="305" y2="24"/>
+
+    <!-- Manzana de la Rivera (colonial low-rises) -->
+    <path d="M350 80 L350 64 L356 60 L370 60 L376 64 L376 80"/>
+    <path d="M380 80 L380 60 L386 56 L402 56 L408 60 L408 80"/>
+    <path d="M412 80 L412 62 L418 58 L432 58 L438 62 L438 80"/>
+
+    <!-- Dome (cathedral) -->
+    <path d="M460 80 L460 56 Q460 44 470 44 Q480 44 480 56 L480 80"/>
+    <line x1="470" y1="44" x2="470" y2="36"/>
+  </g>
+  <!-- Ground line -->
+  <line x1="0" y1="80" x2="480" y2="80"/>
+</svg>

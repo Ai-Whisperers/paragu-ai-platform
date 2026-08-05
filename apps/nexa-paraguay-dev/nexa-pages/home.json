@@ -1,0 +1,43 @@
+{
+  "id": "home",
+  "targetKeyword": "residencia en Paraguay",
+  "slug": "",
+  "titleKey": "home.seo.title",
+  "descriptionKey": "home.seo.description",
+  "schemaType": "LocalBusiness",
+  "sections": [
+    {
+      "id": "hero",
+      "content": "home"
+    },
+    {
+      "id": "trust-signals",
+      "content": "home"
+    },
+    {
+      "id": "core-services",
+      "content": "home.coreServices"
+    },
+    {
+      "id": "why-destination",
+      "content": "home"
+    },
+    {
+      "id": "service-detail",
+      "content": "home.detailedServices"
+    },
+    {
+      "id": "process-timeline",
+      "content": "home.process"
+    },
+    {
+      "id": "cta-banner",
+      "content": "home"
+    },
+    {
+      "id": "compliance",
+      "variant": "default",
+      "content": "complianceDisclaimer"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+# CODEOWNERS — apps/nexa-paraguay
+# Auto-assigns reviewers for PRs touching this app.
+
+# Default: any platform engineer can review
+*               @Ai-Whisperers/eng
+
+# Client-facing content + config needs sales + founder
+/content/        @Ai-Whisperers/kiki @Ai-Whisperers/ivan
+/nexa-pages/     @Ai-Whisperers/ivan
+/site.json       @Ai-Whisperers/ivan
+/tokens.json     @Ai-Whisperers/ivan
+/images.json     @Ai-Whisperers/ivan
+/email-nurture.json  @Ai-Whisperers/kiki
+
+# Deploys / runtime
+/Dockerfile          @Ai-Whisperers/eng
+/Dockerfile.standalone  @Ai-Whisperers/eng
+/docker-compose.yml  @Ai-Whisperers/eng
+/deploy.sh           @Ai-Whisperers/eng
+/scripts/            @Ai-Whisperers/eng
+/supabase/           @Ai-Whisperers/eng
+/src/app/api/        @Ai-Whisperers/eng
+
+# Research mirror — owned by the private repo's reviewer
+/docs/         @Ai-Whisperers/ivan
+
+# Top-level
+/README.md     @Ai-Whisperers/ivan
+/CHANGELOG.md  @Ai-Whisperers/ivan

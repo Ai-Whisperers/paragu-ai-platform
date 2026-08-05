@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 40" fill="none" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round">
+  <!-- Río Paraná — flowing horizontal line -->
+  <path d="M0 22 Q20 18 40 22 Q60 26 80 20 Q100 14 120 22 Q140 30 160 22 Q180 14 200 22 Q220 30 240 20 Q260 14 280 22 Q300 30 320 22 Q340 14 360 22 Q380 30 400 22 Q420 14 440 22 Q460 30 480 22"/>
+  <path d="M0 28 Q40 24 80 30 Q120 36 160 28 Q200 24 240 32 Q280 36 320 28 Q360 24 400 32 Q440 36 480 28" opacity="0.5"/>
+  <path d="M0 16 Q60 12 120 18 Q180 24 240 16 Q300 12 360 18 Q420 24 480 16" opacity="0.3"/>
+</svg>

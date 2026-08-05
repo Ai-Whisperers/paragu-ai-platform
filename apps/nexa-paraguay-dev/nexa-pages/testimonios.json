@@ -1,0 +1,44 @@
+{
+  "id": "testimonios",
+  "targetKeyword": "testimonios clientes Nexa Paraguay",
+  "slug": "testimonios",
+  "titleKey": "testimoniosPage.seo.title",
+  "descriptionKey": "testimoniosPage.seo.description",
+  "sections": [
+    {
+      "id": "header",
+      "variant": "standard",
+      "content": "navigation"
+    },
+    {
+      "id": "hero",
+      "variant": "minimal",
+      "content": "testimoniosPage.hero"
+    },
+    {
+      "id": "trust",
+      "variant": "credentials",
+      "content": "testimoniosPage.trust"
+    },
+    {
+      "id": "testimonials",
+      "variant": "cards",
+      "content": "testimoniosPage.testimonials"
+    },
+    {
+      "id": "cta",
+      "variant": "default",
+      "content": "testimoniosPage.cta"
+    },
+    {
+      "id": "footer",
+      "variant": "standard",
+      "content": "footer"
+    },
+    {
+      "id": "whatsapp-float",
+      "variant": "standard",
+      "content": "whatsapp"
+    }
+  ]
+}

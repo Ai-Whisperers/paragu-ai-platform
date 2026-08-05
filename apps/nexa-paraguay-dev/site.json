@@ -1,0 +1,86 @@
+{
+  "vertical": "relocacion",
+  "country": "Paraguay",
+  "domain": "nexaparaguay.com.py",
+  "stagingDomain": "staging.nexaparaguay.com.py",
+  "defaultLocale": "nl",
+  "locales": [
+    "nl",
+    "en",
+    "de",
+    "es"
+  ],
+  "integrations": {
+    "hubspot": {
+      "_note": "Set real HUBSPOT_PORTAL_ID and HUBSPOT_FORM_GUID via env vars. Until then, /api/contact falls back to console.log."
+    },
+    "mailchimp": {
+      "_note": "Set real MAILCHIMP_AUDIENCE_ID and MAILCHIMP_API_KEY via env vars. Until then, /api/subscribe falls back to console.log."
+    },
+    "analytics": {
+      "ga4": {
+        "measurementId": "G-XE49GLEP34",
+        "streamName": "nexa-paraguay"
+      }
+    }
+  },
+  "features": {
+    "testimonials": true,
+    "blog": false,
+    "whatsappFloat": true,
+    "heroImages": true,
+    "processImages": true,
+    "_blogNote": "Blog is parked until content is ready. To re-enable: set true + add nav item back."
+  },
+  "images": {
+    "manifest": "/images.json",
+    "hero": "/images/hero/hero-bg.webp"
+  },
+  "contact": {
+    "whatsapp": "595982515138",
+    "email": "paraguaynexa@gmail.com"
+  },
+  "bookingUrl": "https://wa.me/595982515138?text=Quiero%20agendar%20una%20consulta%20gratuita",
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/nexa-paraguay",
+    "instagram": "https://instagram.com/nexaparaguay"
+  },
+  "is_demo": false,
+  "isLiveProduction": true,
+  "chrome": {
+    "header": {
+      "id": "header",
+      "variant": "standard",
+      "content": "navigation"
+    },
+    "footer": [
+      {
+        "id": "whatsapp-float",
+        "variant": "standard",
+        "content": "whatsapp"
+      },
+      {
+        "id": "footer",
+        "variant": "standard",
+        "content": "footer",
+        "styling": {
+          "padding": "none"
+        }
+      }
+    ]
+  },
+  "path": "",
+  "publicUrl": "https://nexa.paragu-ai.com",
+  "pendingDomains": [
+    "nexaparaguay.com.py"
+  ],
+  "pendingDomainsNote": "nexaparaguay.com.py purchased but DNS not yet connected. Switch domain \u2192 nexaparaguay.com.py and add Traefik labels when ready.",
+  "alternateDomains": [
+    "nexaparaguay.com.py",
+    "www.nexaparaguay.com.py",
+    "nexa.paragu-ai.com",
+    "nexa-preview.paragu-ai.com",
+    "nexa-paraguay.paragu-ai.com"
+  ],
+  "canonicalDomain": "nexaparaguay.com.py"
+}

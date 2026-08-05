@@ -1,0 +1,29 @@
+{
+  "id": "terminos",
+  "targetKeyword": "términos Nexa Paraguay",
+  "slug": "terminos",
+  "titleKey": "termsPage.seo.title",
+  "descriptionKey": "termsPage.seo.description",
+  "sections": [
+    {
+      "id": "header",
+      "variant": "standard",
+      "content": "navigation"
+    },
+    {
+      "id": "hero",
+      "variant": "minimal",
+      "content": "termsPage.hero"
+    },
+    {
+      "id": "faq",
+      "variant": "categorized",
+      "content": "termsPage.full"
+    },
+    {
+      "id": "footer",
+      "variant": "standard",
+      "content": "footer"
+    }
+  ]
+}

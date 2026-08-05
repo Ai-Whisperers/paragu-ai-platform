@@ -1,0 +1,62 @@
+# ── Nexa Paraguay — Docker build exclusions ──
+# The Dockerfile copies only what it needs (.next, public, content, etc.).
+# Exclude everything else to keep the build context small and the image
+# cache-friendly.
+
+# Dependencies
+node_modules
+.npm
+.pnpm-store
+
+# NOTE: .next is NOT excluded — the Dockerfile needs the standalone
+# output (apps/nexa-paraguay/.next/standalone/) and static/ at runtime.
+# The Dockerfile copies only the subdirs it needs (server.js, .next/static,
+# public/images, content, etc.), not the full .next tree, so image
+# size stays reasonable. (See Dockerfile.standalone for details.)
+
+# Test artifacts + dev tooling
+coverage
+.nyc_output
+playwright-report
+test-results
+__tests__
+tests
+.specstory
+
+# Local env (real secrets live in Swarm secrets / GitHub Actions)
+.env
+.env.*
+!.env.example
+!.env.example.local
+
+# Editor / OS
+.DS_Store
+.vscode
+.idea
+.cursorindexingignore
+
+# Git
+.git
+.gitignore
+
+# Docker / deploy (the build context is the app dir, not the deploy files)
+Dockerfile
+Dockerfile.standalone
+docker-compose.yml
+docker-compose.*.yml
+deploy.sh
+build.sh
+README.md
+CHANGELOG.md
+CONTRIBUTING.md
+CODEOWNERS
+
+# Heavy / non-shipped assets
+docs
+docs/
+*.log
+*.md
+!README.md
+
+# Local tgz packages — copied explicitly by the Dockerfile, not via COPY . .
+.packages

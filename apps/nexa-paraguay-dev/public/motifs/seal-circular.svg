@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="58" fill="#1B2A4A" stroke="#C9A96E" stroke-width="1.5"/>
+  <circle cx="60" cy="60" r="52" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
+  <path id="topArc" d="M 30 60 A 30 30 0 0 1 90 60" fill="none"/>
+  <text fill="#C9A96E" font-family="serif" font-size="11" font-weight="700" letter-spacing="3">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">NEXA</textPath>
+  </text>
+  <path id="bottomArc" d="M 30 60 A 30 30 0 0 0 90 60" fill="none"/>
+  <text fill="#C9A96E" font-family="serif" font-size="8" letter-spacing="2.5">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">PARAGUAY</textPath>
+  </text>
+  <g transform="translate(60 60)" stroke="#C9A96E" stroke-width="1" fill="none" stroke-linecap="round">
+    <line x1="-12" y1="14" x2="-12" y2="-12"/>
+    <line x1="0" y1="14" x2="-12" y2="-12"/>
+    <line x1="0" y1="14" x2="0" y2="-12"/>
+    <path d="M-12 -12 Q-15 -16 -12 -20 Q-9 -16 -12 -12"/>
+    <path d="M0 -12 Q-3 -16 0 -20 Q3 -16 0 -12"/>
+  </g>
+  <circle cx="22" cy="60" r="1.5" fill="#C9A96E"/>
+  <circle cx="98" cy="60" r="1.5" fill="#C9A96E"/>
+</svg>

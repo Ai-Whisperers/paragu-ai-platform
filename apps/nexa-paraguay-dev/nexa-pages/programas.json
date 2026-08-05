@@ -1,0 +1,44 @@
+{
+  "id": "programas",
+  "targetKeyword": "programas residencia Paraguay",
+  "slug": "programas",
+  "titleKey": "programasPage.seo.title",
+  "descriptionKey": "programasPage.seo.description",
+  "sections": [
+    {
+      "id": "header",
+      "variant": "standard",
+      "content": "navigation"
+    },
+    {
+      "id": "hero",
+      "variant": "minimal",
+      "content": "programasPage.hero"
+    },
+    {
+      "id": "trust",
+      "variant": "credentials",
+      "content": "programasPage.trust"
+    },
+    {
+      "id": "services",
+      "variant": "pricing-table",
+      "content": "programasPage.programs"
+    },
+    {
+      "id": "cta",
+      "variant": "default",
+      "content": "programasPage.cta"
+    },
+    {
+      "id": "footer",
+      "variant": "standard",
+      "content": "footer"
+    },
+    {
+      "id": "whatsapp-float",
+      "variant": "standard",
+      "content": "whatsapp"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+# ── Nexa Paraguay — git exclusions ──
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build artifacts
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.example.local
+
+# Test artifacts
+coverage/
+playwright-report/
+test-results/
+screenshots/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+.cursorindexingignore
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Local tgz packages are no longer used — all @ai-whisperers/* deps are
+# workspace:* references resolved through packages/@ai-whisperers/*.
+data/
+data/hansen/
+data/mapbiomas/
+data/sentinel2/
