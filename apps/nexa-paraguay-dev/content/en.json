@@ -47,9 +47,9 @@
       "targetKeyword": "residency in Paraguay"
     },
     "hero": {
-      "eyebrow": "The essential first steps for your new life in Paraguay.",
+      "eyebrow": "",
       "headline": "Your arrival in Paraguay, stress-free and seamless.",
-      "subheadline": "We connect you with trusted advisors to manage your residency, bank accounts, housing, and everything you need for your new life.",
+      "subheadline": "Your arrival in Paraguay, stress-free and seamless. We connect you with trusted experts to guide you every step of the way.",
       "ctaText": "Book free consultation",
       "ctaHref": "/agenda",
       "secondaryCtaText": "See the process",
@@ -58,26 +58,32 @@
     },
     "trust": {
       "eyebrow": "WHY NEXA",
-      "title": "Residency, bank account and company",
-      "subtitle": "No outsourcing. No subcontracting. We handle your paperwork in person in Asunción.",
+      "title": "",
+      "subtitle": "We connect you with trusted people to help you throughout the process",
       "items": [
         {
           "icon": "Stamp",
-          "title": "Residency filed in person",
-          "description": "We accompany you through Migraciones and the residency office. You don't go alone.",
+          "title": "Residency & Legal Status",
+          "description": "We initiate your paperwork with the Immigration Office to secure your legal status as an essential first step.",
           "image": "@src:trust.migraciones"
         },
         {
           "icon": "CreditCard",
-          "title": "Paraguayan ID card in hand",
-          "description": "We deliver your Paraguayan cédula. You walk out with the document, not with promises.",
+          "title": "National ID Card (Cédula)",
+          "description": "Once your residency is approved, we accompany you in person to obtain your national ID card (Cédula).",
           "image": "@src:trust.cedula"
         },
         {
-          "icon": "Landmark",
-          "title": "Company and bank account integrated",
-          "description": "We incorporate your S.A. and open your bank account — all chained in a single working day.",
-          "image": "@src:trust.registry"
+          "icon": "Truck",
+          "title": "Relocation & Logistics",
+          "description": "We assist you with housing, vehicles, mobile setup, or opening bank accounts.",
+          "image": "@src:trust.relocation"
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Corporate Structuring",
+          "description": "We connect you with notaries and advisors to set up your RUC (Tax ID) and incorporate your business.",
+          "image": "@src:trust.corporate"
         }
       ]
     },
@@ -104,40 +110,40 @@
     },
     "whyCountry": {
       "eyebrow": "Why Paraguay",
-      "title": "Why Paraguay? / Market Insights",
+      "title": "Three reasons why Europeans move to the Southern Cone",
       "subtitle": "Hard numbers, not promises. Paraguay has been growing at rates the old continent no longer sees.",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Sustained growth",
+          "title": "Sustained Growth",
           "description": "A GDP that has maintained mostly positive growth over the last decade—frequently hovering around 4–5%—coupled with stable, single-digit inflation since 2020. The Paraguayan economy never stops.",
           "imageUrl": "@src:whyParaguay.growth",
           "bullets": [
-            "Sustained growth over decades",
-            "Long-running macroeconomic stability",
-            "Dynamic and diversified internal market"
+            "Decades of sustained growth",
+            "Prolonged macroeconomic stability",
+            "Dynamic and diversified domestic market"
           ]
         },
         {
           "icon": "Landmark",
-          "title": "Territorial tax system",
-          "description": "The IRP (Personal Income Tax) exclusively taxes income generated within the national territory. Your foreign-sourced income is tax-free. Simple, straightforward, and highly advantageous.",
+          "title": "Territorial Tax System",
+          "description": "The IRP (Personal Income Tax) exclusively taxes income generated within the national territory. Your foreign-sourced income is tax-free. So simple and advantageous.",
           "imageUrl": "@src:whyParaguay.tax",
           "bullets": [
             "Pure territorial tax system",
             "No withholding on foreign-source income",
-            "Compatible with European estate planning"
+            "Compatible with European wealth planning"
           ]
         },
         {
           "icon": "Globe",
           "title": "Active multicultural community",
-          "description": "Paraguay fosters a vibrant multicultural community, currently home to over 156,000 foreign residents.",
+          "description": "Paraguay consolidates a vibrant multicultural coexistence with 156,804 foreign residents.",
           "imageUrl": "@src:whyParaguay.community",
           "bullets": [
             "European and Latin American communities with decades of roots",
             "Direct air connections from Europe",
-            "Living costs significantly lower than Western Europe"
+            "Significantly lower cost of living than Western Europe"
           ]
         }
       ]
@@ -149,11 +155,16 @@
       "groups": [
         {
           "id": "residency",
-          "title": "Residency & Documents",
+          "title": "Residency & Legal Documents",
+          "subtitle": "The essential first steps for your new life in Paraguay.",
           "items": [
             {
-              "title": "Residency before Immigration",
+              "title": "Permanent Residency",
               "description": "Full processing of your residency before the Paraguayan Immigration Office."
+            },
+            {
+              "title": "National ID Card (Cédula)",
+              "description": "Obtaining your national ID document after the residency process is complete."
             },
             {
               "title": "Paraguayan Driver's License",
@@ -161,20 +172,25 @@
             },
             {
               "title": "Certified Translation",
-              "description": "Official and certified translation of your foreign documents into Spanish."
+              "description": "Official and certified translations of your documents into Spanish.",
+              "bullets": [
+                "Certified translations Spanish-English-Dutch-German",
+                "Full coordination with public translators"
+              ]
             }
           ]
         },
         {
           "id": "banking-tax",
-          "title": "Banking & Tax",
+          "title": "Banking & Tax Setup",
+          "subtitle": "Establishing your financial footprint in the country.",
           "items": [
             {
-              "title": "Personal & Corporate Banking",
+              "title": "Bank Account Opening",
               "description": "Setting up personal and/or business accounts in Paraguayan banks. Includes bank selection tailored to your profile (Sudameris, Continental, GNB, etc.), account coordination, and card/online banking activation."
             },
             {
-              "title": "Tax Registration",
+              "title": "Tax Registration (RUC)",
               "description": "Enrollment with the DNIT (formerly SET) as an individual (e.g., for IRP) or as a corporation. Your personal or corporate RUC (Tax ID) will be fully ready to operate."
             }
           ]
@@ -182,14 +198,15 @@
         {
           "id": "real-estate",
           "title": "Real Estate",
+          "subtitle": "Finding the ideal place to live, whether for a month or a lifetime.",
           "items": [
             {
-              "title": "Housing Search",
-              "description": "Finding the ideal place to live, whether for a month or a lifetime. Property scouting tailored to your budget and lifestyle, including coordinated viewings, lease agreement reviews in Spanish before signing, and landlord negotiations."
+              "title": "Apartment & House Rental",
+              "description": "Property search tailored to your budget and lifestyle. Includes coordinated viewings, lease agreement review in Spanish before signing, and landlord negotiations."
             },
             {
-              "title": "Real Estate Advisory",
-              "description": "Full guidance for purchasing residential or commercial properties. This covers property scouting in strategic areas, along with comprehensive support during the signing and public registration process."
+              "title": "Property Purchases",
+              "description": "Comprehensive advisory for purchasing residential or commercial properties. Covers search in strategic areas and accompaniment to signature and registration."
             }
           ]
         }
@@ -204,25 +221,31 @@
         {
           "number": 1,
           "title": "Select Your Services",
-          "description": "Select the specific support you need. We will create a precise checklist of the documents you must gather in your home country.",
+          "description": "Choose the specific support you need. We will create a precise checklist of the documents you must gather in your home country.",
           "icon": "ClipboardCheck"
         },
         {
           "number": 2,
-          "title": "Travel & Submit",
+          "title": "Parallel Processing",
+          "description": "While you prepare your documents at home, we advance the work in Paraguay, handling all prior local paperwork to optimize your time.",
+          "icon": "FileText"
+        },
+        {
+          "number": 3,
+          "title": "Your Day in Paraguay",
           "description": "Travel to Paraguay with your documents ready. We will accompany you in person to every official appointment with the relevant authorities.",
           "icon": "Plane"
         },
         {
-          "number": 3,
-          "title": "Financial Setup",
-          "description": "Once your ID card (Cédula) is issued, we activate your financial setup in the country: we process your RUC and open your personal or corporate bank accounts.",
+          "number": 4,
+          "title": "Cédula and Financial Activation",
+          "description": "Once your Cédula is issued, we activate your financial infrastructure in the country: we process your RUC and open your personal or corporate bank accounts.",
           "icon": "Landmark"
         },
         {
-          "number": 4,
-          "title": "Seamless Relocation",
-          "description": "With your legal and financial foundation secured, we help you fully settle down—from finding the perfect home to securing a reliable vehicle.",
+          "number": 5,
+          "title": "Settling In & Lifestyle",
+          "description": "With your legal and financial foundation secured, we help you fully settle down—from finding the perfect home or apartment to securing a reliable vehicle.",
           "icon": "Home"
         }
       ]
@@ -2446,6 +2469,21 @@
               ],
               "image": "@src:office.signing",
               "icon": "Car"
+            },
+            {
+              "title": "Certified Translation",
+              "description": "Official and certified translations of your documents into Spanish",
+              "icon": "Languages",
+              "benefits": [
+                "Certified translations Spanish-English-Dutch-German",
+                "Full coordination with public translators"
+              ],
+              "process": "Timelines depend on the volume of work.",
+              "whatYouNeed": [
+                "Original documents",
+                "Target language specification"
+              ],
+              "image": "@src:office.meeting-room"
             }
           ]
         },
@@ -2487,22 +2525,6 @@
               ],
               "image": "@src:office.exterior",
               "icon": "Calculator"
-            },
-            {
-              "title": "Certified Translation",
-              "description": "Official and certified translation of your foreign documents into Spanish.",
-              "benefits": [
-                "Certified translators, SET registered",
-                "Apostille and legalization if needed",
-                "Agile turnaround for your immigration deadlines"
-              ],
-              "process": "Timing depends on transaction volume.",
-              "whatYouNeed": [
-                "Original documents",
-                "Target language specification"
-              ],
-              "image": "@src:office.meeting-room",
-              "icon": "Languages"
             },
             {
               "title": "Corporate Structuring (S.A. & others)",
@@ -2563,22 +2585,6 @@
               ],
               "image": "@src:programs.tier-investor",
               "icon": "KeyRound"
-            },
-            {
-              "title": "Real Estate Due Diligence",
-              "description": "Legal verification of any property before buying.",
-              "benefits": [
-                "Title review at Public Registry",
-                "Municipal debt verification",
-                "Tax debt verification",
-                "Written findings report"
-              ],
-              "process": "Personalized timeline.",
-              "whatYouNeed": [
-                "Property details"
-              ],
-              "image": "@src:office.team-huddle",
-              "icon": "Shield"
             }
           ]
         }
@@ -2628,17 +2634,19 @@
             "ctaHref": "/contacto?servicio=cedula"
           },
           {
-            "title": "Apostille and Translation",
-            "description": "Paraguayan documents legalized for international use and vice versa.",
-            "image": "@src:office.meetingRoom",
+            "title": "Certified Translation",
+            "description": "Official and certified translations of your documents into Spanish.",
             "benefits": [
-              "Hague Apostille for Paraguayan documents",
               "Certified translations Spanish-English-Dutch-German",
-              "Legalization at the Ministry of Foreign Affairs",
               "Full coordination with public translators"
             ],
-            "ctaText": "See details",
-            "ctaHref": "/contacto?servicio=apostilla"
+            "process": "Timelines depend on volume.",
+            "whatYouNeed": [
+              "Original documents",
+              "Target language specification"
+            ],
+            "image": "@src:office.meeting-room",
+            "icon": "Languages"
           }
         ],
         "id": "residency-legal"
@@ -2707,19 +2715,6 @@
             ],
             "ctaText": "See details",
             "ctaHref": "/contacto?servicio=compra"
-          },
-          {
-            "title": "Property Legal Verification",
-            "description": "Legal verification of any property before buying (formerly 'due diligence').",
-            "image": "@src:office.teamHuddle",
-            "benefits": [
-              "Title review at the Public Registry",
-              "Municipal debt and tax verification",
-              "Detailed written report with findings",
-              "Recommendations to mitigate detected risks"
-            ],
-            "ctaText": "See details",
-            "ctaHref": "/contacto?servicio=verificacion"
           }
         ],
         "id": "real-estate"

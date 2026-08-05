@@ -68,10 +68,24 @@ export function TrustSection({ pageContent, data, images }: SectionComponentProp
     <section className="py-20 md:py-24">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-xs text-text-muted uppercase tracking-[3px] mb-3">{c.eyebrow}</p>
-          <h2 className="text-[clamp(1.5rem,2.8vw,2.25rem)] font-playfair font-bold text-primary mb-4 leading-tight">
-            {c.title}
-          </h2>
+          {c.title ? (
+            <>
+              {c.eyebrow && (
+                <p className="text-xs text-text-muted uppercase tracking-[3px] mb-3">{c.eyebrow}</p>
+              )}
+              <h2 className="text-[clamp(1.5rem,2.8vw,2.25rem)] font-playfair font-bold text-primary mb-4 leading-tight">
+                {c.title}
+              </h2>
+            </>
+          ) : (
+            // Luana 2026-08-05: when title is removed, eyebrow becomes the title.
+            // Render it large, bold, and NOT in uppercase tracking — same as H2.
+            c.eyebrow && (
+              <h2 className="text-[clamp(1.5rem,2.8vw,2.25rem)] font-playfair font-bold text-primary mb-4 leading-tight">
+                {c.eyebrow}
+              </h2>
+            )
+          )}
           {c.subtitle && (
             <p className="text-text-muted max-w-2xl mx-auto leading-relaxed">{c.subtitle}</p>
           )}

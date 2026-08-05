@@ -47,9 +47,9 @@
       "targetKeyword": "residencia en Paraguay"
     },
     "hero": {
-      "eyebrow": "The essential first steps for your new life in Paraguay.",
+      "eyebrow": "",
       "headline": "Your arrival in Paraguay, stress-free and seamless.",
-      "subheadline": "We connect you with trusted advisors to manage your residency, bank accounts, housing, and everything you need for your new life.",
+      "subheadline": "Tu llegada a Paraguay, sin estrés ni complicaciones. Te conectamos con asesores de confianza para gestionar tu residencia, cuentas bancarias, vivienda y todo lo necesario para tu nueva vida.",
       "ctaText": "Agendar consulta gratuita",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Ver el proceso",
@@ -58,26 +58,32 @@
     },
     "trust": {
       "eyebrow": "POR QUÉ NEXA",
-      "title": "Residencia, cuenta y empresa",
-      "subtitle": "No tercerizamos. No subcontratamos. Tramitamos la traducción y apostillado de tus documentos en Asunción.",
+      "title": "",
+      "subtitle": "Te conectamos con personas de confianza para ayudarte a lo largo del proceso",
       "items": [
         {
           "icon": "Stamp",
-          "title": "Residencia tramitada en persona",
-          "description": "Acompañamos todo el proceso en Migraciones y la oficina de radicaciones.",
+          "title": "Radicación y Residencia",
+          "description": "Iniciamos tus trámites en Migraciones para asegurar tu estatus legal como primer paso esencial.",
           "image": "@src:trust.migraciones"
         },
         {
           "icon": "CreditCard",
           "title": "Cédula de Identidad Paraguaya",
-          "description": "Te guiamos en la obtención de tu cédula de identidad paraguaya.",
+          "description": "Con la residencia aprobada, te acompañamos presencialmente a gestionar tu documento de identidad nacional.",
           "image": "@src:trust.cedula"
         },
         {
-          "icon": "Landmark",
-          "title": "Registro de Empresa y cuenta bancaria",
-          "description": "Constituimos tu sociedad anónima y abrimos la cuenta bancaria.",
-          "image": "@src:trust.registry"
+          "icon": "Truck",
+          "title": "Logística e mudanza",
+          "description": "Te asistimos con tu casa, auto, telefonía o la apertura de cuentas bancarias",
+          "image": "@src:trust.relocation"
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Estructura Empresarial",
+          "description": "Te enlazamos con escribanos y asesores para la creación de tu RUC (Registro Único de Contribuyente) y la apertura de empresas.",
+          "image": "@src:trust.corporate"
         }
       ]
     },
@@ -104,13 +110,13 @@
     },
     "whyCountry": {
       "eyebrow": "Por qué Paraguay",
-      "title": "Why Paraguay? / Market Insights",
+      "title": "Tres razones por las que Europa se muda al Cono Sur",
       "subtitle": "Datos concretos, no promesas. Paraguay lleva 15 años creciendo a tasas que el viejo continente ya no ve.",
       "pillars": [
         {
           "icon": "TrendingUp",
           "title": "Crecimiento sostenido",
-          "description": "A GDP that has maintained mostly positive growth over the last decade—frequently hovering around 4–5%—coupled with stable, single-digit inflation since 2020. The Paraguayan economy never stops.",
+          "description": "Un PIB que en la última década ha mantenido un crecimiento mayormente positivo, con varios años en torno a ~4–5% y una inflación bajo control, manteniéndose en un solo dígito desde 2020. La economía paraguaya no se detiene.",
           "imageUrl": "@src:whyParaguay.growth",
           "bullets": [
             "Décadas de crecimiento sostenido",
@@ -121,7 +127,7 @@
         {
           "icon": "Landmark",
           "title": "Sistema fiscal territorial",
-          "description": "The IRP (Personal Income Tax) exclusively taxes income generated within the national territory. Your foreign-sourced income is tax-free. Simple, straightforward, and highly advantageous.",
+          "description": "El IRP (Impuesto a la Renta Personal) grava exclusivamente los ingresos generados dentro del territorio nacional. Tus ganancias en el exterior no tributan. Así de simple y ventajoso.",
           "imageUrl": "@src:whyParaguay.tax",
           "bullets": [
             "Sistema fiscal territorial puro",
@@ -132,7 +138,7 @@
         {
           "icon": "Globe",
           "title": "Comunidad multicultural activa",
-          "description": "Paraguay fosters a vibrant multicultural community, currently home to over 156,000 foreign residents.",
+          "description": "Paraguay consolida una vibrante convivencia multicultural con 156.804 residentes extranjeros.",
           "imageUrl": "@src:whyParaguay.community",
           "bullets": [
             "Comunidades europea y latinoamericana con décadas de arraigo",
@@ -149,47 +155,58 @@
       "groups": [
         {
           "id": "residency",
-          "title": "Residency & Documents",
+          "title": "Residencia y Documentos Legales",
+          "subtitle": "Los primeros pasos esenciales para tu vida en Paraguay.",
           "items": [
             {
-              "title": "Residency before Immigration",
-              "description": "Full processing of your residency before the Paraguayan Immigration Office."
+              "title": "Residencia Permanente",
+              "description": "Trámite completo de tu residencia ante Migraciones Paraguay."
             },
             {
-              "title": "Paraguayan Driver's License",
-              "description": "End-to-end management to obtain your driver's license from local municipal authorities. This includes preparing local requirements, in-person accompaniment to the required tests, and follow-up until the document is issued."
+              "title": "Cédula de Identidad Paraguaya",
+              "description": "Obtención de tu documento nacional de identidad."
             },
             {
-              "title": "Certified Translation",
-              "description": "Official and certified translation of your foreign documents into Spanish."
+              "title": "Licencia de Conducir Paraguaya",
+              "description": "Gestión completa para la obtención de tu licencia de conducir ante las autoridades municipales. Incluye la preparación de los requisitos locales, acompañamiento a las pruebas correspondientes y seguimiento hasta la emisión del documento."
+            },
+            {
+              "title": "Traducción Certificada",
+              "description": "Traducciones oficiales y certificadas de tus documentos a español",
+              "bullets": [
+                "Traducciones certificadas español-inglés-neerlandés-alemán",
+                "Coordinación completa con traductores públicos"
+              ]
             }
           ]
         },
         {
           "id": "banking-tax",
-          "title": "Banking & Tax",
+          "title": "Banca y Configuración Fiscal",
+          "subtitle": "Estableciendo tu huella financiera en el país.",
           "items": [
             {
-              "title": "Personal & Corporate Banking",
-              "description": "Setting up personal and/or business accounts in Paraguayan banks. Includes bank selection tailored to your profile (Sudameris, Continental, GNB, etc.), account coordination, and card/online banking activation."
+              "title": "Apertura de Cuenta Bancaria",
+              "description": "Creación de cuenta personal y/o empresarial en bancos paraguayos. Incluye la selección del banco según tu perfil (sudameris, Continental, GNB, etc.), coordinación y activación de tarjeta y banca online."
             },
             {
-              "title": "Tax Registration",
-              "description": "Enrollment with the DNIT (formerly SET) as an individual (e.g., for IRP) or as a corporation. Your personal or corporate RUC (Tax ID) will be fully ready to operate."
+              "title": "Registro Tributario (RUC)",
+              "description": "Inscripción en la SET como persona física (por ejemplo, para el IRP) o empresa. Tu RUC personal o empresarial listo para operar."
             }
           ]
         },
         {
           "id": "real-estate",
-          "title": "Real Estate",
+          "title": "Bienes Raíces",
+          "subtitle": "Encontrar el lugar ideal para vivir, ya sea por un mes o toda la vida.",
           "items": [
             {
-              "title": "Housing Search",
-              "description": "Finding the ideal place to live, whether for a month or a lifetime. Property scouting tailored to your budget and lifestyle, including coordinated viewings, lease agreement reviews in Spanish before signing, and landlord negotiations."
+              "title": "Alquiler de Departamentos y Casas",
+              "description": "Búsqueda de propiedades según presupuesto y estilo de vida. Incluye visitas coordinadas, revisión del contrato en español antes de firmar y negociación con el propietario."
             },
             {
-              "title": "Real Estate Advisory",
-              "description": "Full guidance for purchasing residential or commercial properties. This covers property scouting in strategic areas, along with comprehensive support during the signing and public registration process."
+              "title": "Compra de Propiedades",
+              "description": "Asesoría completa para la compra de propiedades residenciales o comerciales. Abarca la búsqueda en zonas estratégicas y acompañamiento a la firma y registro."
             }
           ]
         }
@@ -203,26 +220,32 @@
       "steps": [
         {
           "number": 1,
-          "title": "Select Your Services",
-          "description": "Select the specific support you need. We will create a precise checklist of the documents you must gather in your home country.",
+          "title": "Elegí tus Servicios",
+          "description": "Selecciona el apoyo específico que necesitas. Creamos una lista con los documentos exactos que deberás reunir en tu país de origen.",
           "icon": "ClipboardCheck"
         },
         {
           "number": 2,
-          "title": "Travel & Submit",
-          "description": "Travel to Paraguay with your documents ready. We will accompany you in person to every official appointment with the relevant authorities.",
-          "icon": "Plane"
+          "title": "Tramitación paralela",
+          "description": "Mientras preparas tus documentos en casa, nosotros adelantamos el trabajo en Paraguay, gestionando todos los trámites locales previos para optimizar tu tiempo.",
+          "icon": "FileText"
         },
         {
           "number": 3,
-          "title": "Financial Setup",
-          "description": "Once your ID card (Cédula) is issued, we activate your financial setup in the country: we process your RUC and open your personal or corporate bank accounts.",
-          "icon": "Landmark"
+          "title": "Tu Día en Paraguay",
+          "description": "Viajas a Paraguay con tus documentos listos. Te acompañamos de forma presencial a cada una de tus citas oficiales ante las autoridades correspondientes",
+          "icon": "Plane"
         },
         {
           "number": 4,
-          "title": "Seamless Relocation",
-          "description": "With your legal and financial foundation secured, we help you fully settle down—from finding the perfect home to securing a reliable vehicle.",
+          "title": "Cédula y Activación Financiera",
+          "description": "Una vez emitida tu cédula, activamos tu infraestructura financiera en el país: gestionamos tu RUC y abrimos tus cuentas bancarias corporativas o personales.",
+          "icon": "Landmark"
+        },
+        {
+          "number": 5,
+          "title": "Instalación y Estilo de Vida",
+          "description": "Con tu base legal y financiera lista, te ayudamos a establecerte por completo: desde encontrar la casa o apartamento perfecto hasta conseguir un vehículo confiable.",
           "icon": "Home"
         }
       ]
@@ -2447,11 +2470,6 @@
           "title": "Constitución certificada",
           "description": "Empresa registrada ante el Registro Público de Comercio.",
           "image": "@src:trust.certificate"
-        },
-        {
-          "title": "Due diligence completa",
-          "description": "Verificación de propiedades con informe detallado.",
-          "image": "@src:trust.registry"
         }
       ]
     },
@@ -2519,6 +2537,21 @@
               ],
               "image": "@src:office.signing",
               "icon": "Car"
+            },
+            {
+              "title": "Traducción Certificada",
+              "description": "Traducciones oficiales y certificadas de tus documentos a español",
+              "icon": "Languages",
+              "benefits": [
+                "Traducciones certificadas español-inglés-neerlandés-alemán",
+                "Coordinación completa con traductores públicos"
+              ],
+              "process": "Plazos según el volumen del trámite.",
+              "whatYouNeed": [
+                "Documentos originales",
+                "Especificación del idioma destino"
+              ],
+              "image": "@src:office.meeting-room"
             }
           ]
         },
@@ -2560,22 +2593,6 @@
               ],
               "image": "@src:office.exterior",
               "icon": "Calculator"
-            },
-            {
-              "title": "Traducción Certificada",
-              "description": "Traducción oficial y certificada de tus documentos extranjeros al español.",
-              "benefits": [
-                "Traductores certificados y matrícula SET",
-                "Apostilla y legalización si la necesitás",
-                "Tiempos ágiles para tus plazos migratorios"
-              ],
-              "process": "Plazos según el volumen del trámite.",
-              "whatYouNeed": [
-                "Documentos originales",
-                "Especificación del idioma destino"
-              ],
-              "image": "@src:office.meeting-room",
-              "icon": "Languages"
             },
             {
               "title": "Formación de Personería Jurídica",
@@ -2622,7 +2639,6 @@
               "description": "Asesoría completa para compra de propiedades residenciales o comerciales.",
               "benefits": [
                 "Búsqueda de propiedades",
-                "Due diligence completo (título, deuda, ARP)",
                 "Coordinación con escribano",
                 "Acompañamiento a la firma",
                 "Registro en ARP"
@@ -2636,22 +2652,6 @@
               ],
               "image": "@src:programs.tier-investor",
               "icon": "KeyRound"
-            },
-            {
-              "title": "Debida Diligencia Inmobiliaria",
-              "description": "Verificación legal de cualquier propiedad antes de comprar.",
-              "benefits": [
-                "Revisión de título en Registro Público",
-                "Verificación de deudas municipales",
-                "Verificación de deuda impositiva",
-                "Informe escrito con hallazgos"
-              ],
-              "process": "Cronograma personalizado.",
-              "whatYouNeed": [
-                "Datos de la propiedad"
-              ],
-              "image": "@src:office.team-huddle",
-              "icon": "Shield"
             }
           ]
         }
@@ -2701,17 +2701,19 @@
             "ctaHref": "/contacto?servicio=cedula"
           },
           {
-            "title": "Apostilla y Traducción",
-            "description": "Documentos paraguayos legalizados para uso internacional y viceversa.",
-            "image": "@src:office.meetingRoom",
+            "title": "Traducción Certificada",
+            "description": "Traducciones oficiales y certificadas de tus documentos a español.",
             "benefits": [
-              "Apostilla de La Haya para documentos paraguayos",
               "Traducciones certificadas español-inglés-neerlandés-alemán",
-              "Legalización en el Ministerio de Relaciones Exteriores",
               "Coordinación completa con traductores públicos"
             ],
-            "ctaText": "Ver detalles",
-            "ctaHref": "/contacto?servicio=apostilla"
+            "process": "Plazos según el volumen del trámite.",
+            "whatYouNeed": [
+              "Documentos originales",
+              "Especificación del idioma destino"
+            ],
+            "image": "@src:office.meeting-room",
+            "icon": "Languages"
           }
         ],
         "id": "residency-legal"
@@ -2780,19 +2782,6 @@
             ],
             "ctaText": "Ver detalles",
             "ctaHref": "/contacto?servicio=compra"
-          },
-          {
-            "title": "Verificación Legal de Propiedad",
-            "description": "Verificación legal de cualquier propiedad antes de comprar (antes llamada 'debida diligencia').",
-            "image": "@src:office.teamHuddle",
-            "benefits": [
-              "Revisión de título en Registro Público",
-              "Verificación de deudas municipales e impuestos",
-              "Informe escrito detallado con hallazgos",
-              "Recomendaciones para mitigar riesgos detectados"
-            ],
-            "ctaText": "Ver detalles",
-            "ctaHref": "/contacto?servicio=verificacion"
           }
         ],
         "id": "real-estate"

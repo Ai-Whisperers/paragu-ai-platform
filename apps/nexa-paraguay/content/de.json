@@ -1071,6 +1071,21 @@
               ],
               "image": "@src:office.signing",
               "icon": "Car"
+            },
+            {
+              "title": "Beglaubigte Übersetzung",
+              "description": "Offizielle und beglaubigte Übersetzungen deiner Dokumente ins Spanische",
+              "icon": "Languages",
+              "benefits": [
+                "Beglaubigte Übersetzungen Spanisch-Englisch-Niederländisch-Deutsch",
+                "Vollständige Koordination mit öffentlichen Übersetzern"
+              ],
+              "process": "Zeitpläne je nach Volumen.",
+              "whatYouNeed": [
+                "Originaldokumente",
+                "Spezifikation der Zielsprache"
+              ],
+              "image": "@src:office.meeting-room"
             }
           ]
         },
@@ -1112,22 +1127,6 @@
               ],
               "image": "@src:office.exterior",
               "icon": "Calculator"
-            },
-            {
-              "title": "Beglaubigte Übersetzung",
-              "description": "Offizielle und zertifizierte Übersetzung Ihrer ausländischen Dokumente ins Spanische.",
-              "benefits": [
-                "Zertifizierte, bei SET registrierte Übersetzer",
-                "Apostille und Legalisation bei Bedarf",
-                "Schnelle Bearbeitung für Ihre Migrationstermine"
-              ],
-              "process": "Zeitplan je nach Transaktionsvolumen.",
-              "whatYouNeed": [
-                "Originaldokumente",
-                "Spezifikation der Zielsprache"
-              ],
-              "image": "@src:office.meeting-room",
-              "icon": "Languages"
             },
             {
               "title": "Unternehmensstrukturierung (S.A. & weitere)",
@@ -1188,22 +1187,6 @@
               ],
               "image": "@src:programs.tier-investor",
               "icon": "KeyRound"
-            },
-            {
-              "title": "Immobilien-Due-Diligence",
-              "description": "Rechtliche Überprüfung jeder Immobilie vor dem Kauf.",
-              "benefits": [
-                "Titelüberprüfung im öffentlichen Register",
-                "Gemeindliche Schuldenüberprüfung",
-                "Steuerschuldenüberprüfung",
-                "Schriftlicher Befundbericht"
-              ],
-              "process": "Personalisierter Zeitplan.",
-              "whatYouNeed": [
-                "Immobiliendaten"
-              ],
-              "image": "@src:office.team-huddle",
-              "icon": "Shield"
             }
           ]
         }
@@ -1253,17 +1236,19 @@
             "ctaHref": "/contacto?servicio=cedula"
           },
           {
-            "title": "Apostille und Übersetzung",
-            "description": "Paraguayische Dokumente legalisiert für den internationalen Gebrauch und umgekehrt.",
-            "image": "@src:office.meetingRoom",
+            "title": "Beglaubigte Übersetzung",
+            "description": "Offizielle und beglaubigte Übersetzungen deiner Dokumente ins Spanische.",
             "benefits": [
-              "Haager Apostille für paraguayische Dokumente",
               "Beglaubigte Übersetzungen Spanisch-Englisch-Niederländisch-Deutsch",
-              "Legalisation im Außenministerium",
-              "Vollständige Koordination mit vereidigten Übersetzern"
+              "Vollständige Koordination mit öffentlichen Übersetzern"
             ],
-            "ctaText": "Details ansehen",
-            "ctaHref": "/contacto?servicio=apostilla"
+            "process": "Zeitpläne je nach Volumen.",
+            "whatYouNeed": [
+              "Originaldokumente",
+              "Spezifikation der Zielsprache"
+            ],
+            "image": "@src:office.meeting-room",
+            "icon": "Languages"
           }
         ],
         "id": "residency-legal"
@@ -1332,19 +1317,6 @@
             ],
             "ctaText": "Details ansehen",
             "ctaHref": "/contacto?servicio=compra"
-          },
-          {
-            "title": "Rechtliche Immobilienüberprüfung",
-            "description": "Rechtliche Überprüfung jeder Immobilie vor dem Kauf (früher 'Due Diligence').",
-            "image": "@src:office.teamHuddle",
-            "benefits": [
-              "Titelüberprüfung im öffentlichen Register",
-              "Überprüfung kommunaler Schulden und Steuern",
-              "Detaillierter schriftlicher Bericht mit Erkenntnissen",
-              "Empfehlungen zur Minderung erkannter Risiken"
-            ],
-            "ctaText": "Details ansehen",
-            "ctaHref": "/contacto?servicio=verificacion"
           }
         ],
         "id": "real-estate"
@@ -1916,9 +1888,9 @@
       "targetKeyword": "Aufenthalt Paraguay"
     },
     "hero": {
-      "eyebrow": "Die ersten essenziellen Schritte für dein neues Leben in Paraguay.",
+      "eyebrow": "",
       "headline": "Deine stressfreie und unkomplizierte Ankunft in Paraguay.",
-      "subheadline": "Wir verbinden dich mit vertrauenswürdigen Beratern, um deine Residenz, Bankkonten, Unterkunft und alles Notwendige für dein neues Leben zu regeln.",
+      "subheadline": "Deine stressfreie und unkomplizierte Ankunft in Paraguay. Wir verbinden dich mit vertrauenswürdigen Beratern, um deine Residenz, Bankkonten, Unterkunft und alles Notwendige für dein neues Leben zu regeln.",
       "ctaText": "Kostenlose Beratung",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Ablauf ansehen",
@@ -1927,26 +1899,32 @@
     },
     "trust": {
       "eyebrow": "WARUM NEXA",
-      "title": "Aufenthalt, Bankkonto und Unternehmen",
-      "subtitle": "Kein Outsourcing. Keine Unterauftragsvergabe. Wir erledigen die Übersetzung und Beglaubigung deiner Dokumente in Asunción.",
+      "title": "",
+      "subtitle": "Wir vernetzen dich mit verlässlichen Personen, die dich während des gesamten Prozesses unterstützen",
       "items": [
         {
           "icon": "Stamp",
-          "title": "Aufenthalt persönlich beantragt",
-          "description": "Wir begleiten dich bei Migraciones und der Radicaciones-Stelle. Du gehst nicht allein.",
+          "title": "Einwanderung & Residenz",
+          "description": "Als ersten wichtigen Schritt leiten wir deine Behördengänge bei der Migrationsbehörde ein, um deinen legalen Status zu sichern.",
           "image": "@src:trust.migraciones"
         },
         {
           "icon": "CreditCard",
-          "title": "Paraguayischer Personalausweis in der Hand",
-          "description": "Wir liefern deine paraguayische Cédula. Du gehst mit dem Dokument raus, nicht mit Versprechen.",
+          "title": "Nationaler Personalausweis (Cédula)",
+          "description": "Sobald deine Residenz genehmigt ist, begleiten wir dich persönlich bei der Beantragung deines nationalen Personalausweises (Cédula).",
           "image": "@src:trust.cedula"
         },
         {
-          "icon": "Landmark",
-          "title": "Unternehmen und Bankkonto integriert",
-          "description": "Wir gründen deine S.A. und eröffnen dein Bankkonto — alles an einem Arbeitstag.",
-          "image": "@src:trust.registry"
+          "icon": "Truck",
+          "title": "Umzug & Logistik",
+          "description": "Wir unterstützen dich bei der Wohnungssuche, dem Autokauf, der Mobilfunkeinrichtung oder der Eröffnung von Bankkonten.",
+          "image": "@src:trust.relocation"
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Unternehmensstrukturierung",
+          "description": "Wir vermitteln dich an Notare und Berater für die Beantragung deiner RUC (Steuernummer) und die Gründung von Unternehmen.",
+          "image": "@src:trust.corporate"
         }
       ]
     },
@@ -1973,7 +1951,7 @@
     },
     "whyCountry": {
       "eyebrow": "Warum Paraguay",
-      "title": "Warum Paraguay? / Markteinblicke",
+      "title": "Drei Gründe, warum Europäer in den Südkegel ziehen",
       "subtitle": "Harte Zahlen, keine Versprechen. Paraguay wächst seit 15 Jahren mit Raten, die der alte Kontinent nicht mehr sieht.",
       "pillars": [
         {
@@ -1982,7 +1960,7 @@
           "description": "Ein BIP, das im letzten Jahrzehnt ein überwiegend positives Wachstum verzeichnete – oft um die 4–5 % – gepaart mit einer kontrollierten Inflation, die seit 2020 stabil im einstelligen Bereich bleibt. Paraguays Wirtschaft steht niemals still.",
           "imageUrl": "@src:whyParaguay.growth",
           "bullets": [
-            "Jahrzehntelanges anhaltendes Wachstum",
+            "Jahrzehnte anhaltenden Wachstums",
             "Langfristige makroökonomische Stabilität",
             "Dynamischer und diversifizierter Binnenmarkt"
           ]
@@ -1994,19 +1972,19 @@
           "imageUrl": "@src:whyParaguay.tax",
           "bullets": [
             "Reines territoriales Steuersystem",
-            "Keine Quellensteuer auf Auslandseinkünfte",
+            "Kein Quellensteuerabzug auf Auslandseinkünfte",
             "Kompatibel mit europäischer Vermögensplanung"
           ]
         },
         {
           "icon": "Globe",
           "title": "Aktive multikulturelle Gemeinschaft",
-          "description": "Paraguay festigt ein lebendiges, multikulturelles Zusammenleben und zählt derzeit über 156.000 ausländische Einwohner.",
+          "description": "Paraguay festigt ein lebendiges, multikulturelles Zusammenleben mit 156.804 ausländischen Einwohnern.",
           "imageUrl": "@src:whyParaguay.community",
           "bullets": [
             "Europäische und lateinamerikanische Gemeinschaften mit jahrzehntelangen Wurzeln",
             "Direkte Flugverbindungen aus Europa",
-            "Deutlich geringere Lebenshaltungskosten als Westeuropa"
+            "Deutlich niedrigere Lebenshaltungskosten als in Westeuropa"
           ]
         }
       ]
@@ -2018,11 +1996,16 @@
       "groups": [
         {
           "id": "residency",
-          "title": "Aufenthalt & Dokumente",
+          "title": "Aufenthalt & Rechtliche Dokumente",
+          "subtitle": "Die ersten essenziellen Schritte für dein neues Leben in Paraguay.",
           "items": [
             {
-              "title": "Aufenthalt bei der Migrationsbehörde",
+              "title": "Daueraufenthalt",
               "description": "Vollständige Abwicklung deines Residenzverfahrens vor der paraguayischen Migrationsbehörde."
+            },
+            {
+              "title": "Nationaler Personalausweis (Cédula)",
+              "description": "Ausstellung deines nationalen Personalausweises nach Abschluss des Residenzverfahrens."
             },
             {
               "title": "Paraguayischer Führerschein",
@@ -2030,20 +2013,25 @@
             },
             {
               "title": "Beglaubigte Übersetzung",
-              "description": "Offizielle und beglaubigte Übersetzungen deiner Dokumente ins Spanische."
+              "description": "Offizielle und beglaubigte Übersetzungen deiner Dokumente ins Spanische.",
+              "bullets": [
+                "Beglaubigte Übersetzungen Spanisch-Englisch-Niederländisch-Deutsch",
+                "Vollständige Koordination mit öffentlichen Übersetzern"
+              ]
             }
           ]
         },
         {
           "id": "banking-tax",
-          "title": "Bank & Steuern",
+          "title": "Banking & Steuerkonfiguration",
+          "subtitle": "Deinen finanziellen Fußabdruck im Land etablieren.",
           "items": [
             {
-              "title": "Privat- & Geschäftskunden-Banking",
+              "title": "Eröffnung eines Bankkontos",
               "description": "Eröffnung von Privat- und/oder Geschäftskonten bei paraguayischen Banken. Inklusive der Bankauswahl passend zu deinem Profil (Sudameris, Continental, GNB etc.), Koordination sowie der Aktivierung von Karte und Online-Banking."
             },
             {
-              "title": "Steuerliche Registrierung",
+              "title": "Steuerliche Registrierung (RUC)",
               "description": "Anmeldung bei der DNIT (ehemals SET) als Privatperson (z. B. für die IRP) oder als Unternehmen. Deine persönliche oder geschäftliche RUC (Steuernummer) ist sofort einsatzbereit."
             }
           ]
@@ -2051,13 +2039,14 @@
         {
           "id": "real-estate",
           "title": "Immobilien",
+          "subtitle": "Den idealen Ort zum Leben finden – ob für einen Monat oder für das ganze Leben.",
           "items": [
             {
-              "title": "Immobiliensuche",
-              "description": "Den idealen Ort zum Leben finden – ob für einen Monat oder für das ganze Leben. Immobiliensuche basierend auf Budget und Lebensstil, einschließlich koordinierter Besichtigungen, Prüfung des spanischen Mietvertrags vor der Unterzeichnung und Verhandlungen mit dem Eigentümer."
+              "title": "Vermietung von Wohnungen & Häusern",
+              "description": "Immobiliensuche basierend auf Budget und Lebensstil. Einschließlich koordinierter Besichtigungen, Prüfung des spanischen Mietvertrags vor der Unterzeichnung und Verhandlungen mit dem Eigentümer."
             },
             {
-              "title": "Immobilienberatung",
+              "title": "Kauf von Immobilien",
               "description": "Umfassende Beratung beim Kauf von Wohn- oder Gewerbeimmobilien. Dies beinhaltet die Suche in strategischen Lagen sowie die lückenlose Begleitung bei der Unterzeichnung und der offiziellen Registrierung."
             }
           ]
@@ -2078,19 +2067,25 @@
         },
         {
           "number": 2,
-          "title": "Anreisen & Einreichen",
+          "title": "Parallele Bearbeitung",
+          "description": "Während du deine Dokumente zu Hause vorbereitest, arbeiten wir in Paraguay voraus und erledigen alle vorherigen lokalen Behördengänge, um deine Zeit zu optimieren.",
+          "icon": "FileText"
+        },
+        {
+          "number": 3,
+          "title": "Dein Tag in Paraguay",
           "description": "Reise mit deinen fertigen Dokumenten nach Paraguay. Wir begleiten dich persönlich zu jedem deiner offiziellen Termine bei den entsprechenden Behörden.",
           "icon": "Plane"
         },
         {
-          "number": 3,
-          "title": "Finanzielles Setup",
-          "description": "Sobald deine Identitätskarte (Cédula) ausgestellt ist, aktivieren wir deine finanzielle Infrastruktur im Land: Wir beantragen deine RUC und eröffnen deine geschäftlichen oder privaten Bankkonten.",
+          "number": 4,
+          "title": "Cédula und Finanzielle Aktivierung",
+          "description": "Sobald deine Cédula ausgestellt ist, aktivieren wir deine finanzielle Infrastruktur im Land: Wir beantragen deine RUC und eröffnen deine geschäftlichen oder privaten Bankkonten.",
           "icon": "Landmark"
         },
         {
-          "number": 4,
-          "title": "Sorgloses Einleben",
+          "number": 5,
+          "title": "Einleben & Lebensstil",
           "description": "Mit deinem fertigen rechtlichen und finanziellen Fundament helfen wir dir, dich komplett einzurichten – vom Finden des perfekten Hauses oder Apartments bis hin zu einem zuverlässigen Fahrzeug.",
           "icon": "Home"
         }

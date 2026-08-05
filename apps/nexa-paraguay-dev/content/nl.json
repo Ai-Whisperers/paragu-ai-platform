@@ -1413,9 +1413,9 @@
       "targetKeyword": "verblijfsvergunning Paraguay"
     },
     "hero": {
-      "eyebrow": "De essentiële eerste stappen voor je nieuwe leven in Paraguay.",
+      "eyebrow": "",
       "headline": "Je aankomst in Paraguay, zonder stress of gedoe.",
-      "subheadline": "Wij brengen je in contact met betrouwbare adviseurs om je verblijfsvergunning, bankrekeningen, huisvesting en alles wat nodig is voor je nieuwe leven te regelen.",
+      "subheadline": "Je aankomst in Paraguay, zonder stress of gedoe. Wij brengen je in contact met betrouwbare adviseurs om je verblijfsvergunning, bankrekeningen, huisvesting en alles wat nodig is voor je nieuwe leven te regelen.",
       "ctaText": "Gratis consult",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Bekijk het proces",
@@ -1424,26 +1424,32 @@
     },
     "trust": {
       "eyebrow": "WAAROM NEXA",
-      "title": "Verblijf, bankrekening en bedrijf",
-      "subtitle": "Geen outsourcing. Geen onderaanneming. Wij regelen je vertaling en apostille in Asunción.",
+      "title": "",
+      "subtitle": "Wij brengen je in contact met vertrouwde personen om je tijdens het hele proces te helpen",
       "items": [
         {
           "icon": "Stamp",
-          "title": "Verblijf persoonlijk aangevraagd",
-          "description": "We begeleiden je bij Migraciones en de radicaciones. Je gaat niet alleen.",
+          "title": "Verblijfsvergunning & Residentie",
+          "description": "Wij starten je procedures bij de immigratiedienst om je legale status te garanderen als essentiële eerste stap.",
           "image": "@src:trust.migraciones"
         },
         {
           "icon": "CreditCard",
-          "title": "Paraguayaanse identiteitskaart in de hand",
-          "description": "We bezorgen je Paraguayaanse cédula. Je loopt naar buiten met het document, niet met beloften.",
+          "title": "Nationale Identiteitskaart (Cédula)",
+          "description": "Zodra je residentie is goedgekeurd, begeleiden we je persoonlijk bij het aanvragen van je nationale identiteitsbewijs (Cédula).",
           "image": "@src:trust.cedula"
         },
         {
-          "icon": "Landmark",
-          "title": "Bedrijf en bankrekening geïntegreerd",
-          "description": "We richten je S.A. op en openen je bankrekening — allemaal in één werkdag.",
-          "image": "@src:trust.registry"
+          "icon": "Truck",
+          "title": "Logistiek & Verhuizing",
+          "description": "Wij helpen je met huisvesting, voertuigen, mobiele telefonie of het openen van bankrekeningen.",
+          "image": "@src:trust.relocation"
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Bedrijfsstructurering",
+          "description": "Wij brengen je in contact met notarissen en adviseurs voor het aanvragen van je RUC (btw-/belastingnummer) en het oprichten van je bedrijf.",
+          "image": "@src:trust.corporate"
         }
       ]
     },
@@ -1470,40 +1476,40 @@
     },
     "whyCountry": {
       "eyebrow": "Waarom Paraguay",
-      "title": "Waarom Paraguay? / Markinzichten",
+      "title": "Drie redenen waarom Europeanen naar de Zuidelijke Kegel verhuizen",
       "subtitle": "Harde cijfers, geen beloften. Paraguay groeit al 15 jaar tegen tarieven die het oude continent niet meer ziet.",
       "pillars": [
         {
           "icon": "TrendingUp",
-          "title": "Aanhoudende groei",
+          "title": "Aanhoudende Groei",
           "description": "Een BBP dat het afgelopen decennium een overwegend positieve groei heeft laten zien — met uitschieters rond de 4–5% — in combinatie met een stabiele inflatie die sinds 2020 netjes binnen de enkele cijfers blijft. De Paraguayaanse economie staat nooit stil.",
           "imageUrl": "@src:whyParaguay.growth",
           "bullets": [
             "Decennia van aanhoudende groei",
             "Langdurige macro-economische stabiliteit",
-            "Dynamische en gediversifieerde interne markt"
+            "Dynamische en gediversifieerde binnenlandse markt"
           ]
         },
         {
           "icon": "Landmark",
-          "title": "Territoriaal belastingstelsel",
-          "description": "De IRP (inkomstenbelasting voor particulieren) belast uitsluitend inkomsten die binnen het nationale grondgebied zijn gegenereerd. Inkomsten uit het buitenland zijn volledig belastingvrij. Zo eenvoudig en voordelig is het.",
+          "title": "Territoriaal Belastingstelsel",
+          "description": "De IRP (Inkomstenbelasting voor particulieren) belast uitsluitend inkomsten die binnen het nationale grondgebied zijn gegenereerd. Inkomsten uit het buitenland zijn volledig belastingvrij. Zo eenvoudig en voordelig is het.",
           "imageUrl": "@src:whyParaguay.tax",
           "bullets": [
             "Puur territoriaal belastingstelsel",
-            "Geen inhouding op buitenlandse inkomsten",
-            "Compatibel met Europees vermogensplanning"
+            "Geen inhouding op inkomsten uit het buitenland",
+            "Compatibel met Europees vermogensbeheer"
           ]
         },
         {
           "icon": "Globe",
           "title": "Actieve multiculturele gemeenschap",
-          "description": "Paraguay consolideert een levendige, multiculturele samenleving en biedt momenteel onderdak aan meer dan 156.000 buitenlandse inwoners.",
+          "description": "Paraguay consolideert een levendige multiculturele samenleving met 156.804 buitenlandse inwoners.",
           "imageUrl": "@src:whyParaguay.community",
           "bullets": [
-            "Europese en Latijns-Amerikaanse gemeenschappen met decennialange wortels",
-            "Rechtstreekse vliegverbindingen vanuit Europa",
-            "Levensonderhoud aanzienlijk goedkoper dan West-Europa"
+            "Europese en Latijns-Amerikaanse gemeenschappen met decennia aan wortels",
+            "Directe luchtverbindingen vanuit Europa",
+            "Aanzienlijk lagere kosten van levensonderhoud dan West-Europa"
           ]
         }
       ]
@@ -1515,11 +1521,16 @@
       "groups": [
         {
           "id": "residency",
-          "title": "Verblijf & Documenten",
+          "title": "Verblijfsvergunning & Juridische Documenten",
+          "subtitle": "De essentiële eerste stappen voor je nieuwe leven in Paraguay.",
           "items": [
             {
-              "title": "Verblijf bij Immigratie",
-              "description": "Volledige afhandeling van je residentieprocedure bij de Paraguayaanse immigratiedienst."
+              "title": "Permanente Verblijfsvergunning",
+              "description": "Volledige afhandeling van je verblijfsprocedure bij de Paraguayaanse immigratiedienst."
+            },
+            {
+              "title": "Nationale Identiteitskaart (Cédula)",
+              "description": "Het verkrijgen van je nationale identiteitsdocument na afronding van het verblijfsproces."
             },
             {
               "title": "Paraguayaans Rijbewijs",
@@ -1527,20 +1538,25 @@
             },
             {
               "title": "Beëdigde Vertaling",
-              "description": "Officiële en gecertificeerde vertalingen van je buitenlandse documenten naar het Spaans."
+              "description": "Officiële en gecertificeerde vertalingen van je documenten naar het Spaans.",
+              "bullets": [
+                "Gecertificeerde vertalingen Spaans-Engels-Nederlands-Duits",
+                "Volledige coördinatie met beëdigde vertalers"
+              ]
             }
           ]
         },
         {
           "id": "banking-tax",
-          "title": "Bankieren & Belastingen",
+          "title": "Bankieren & Belastingconfiguratie",
+          "subtitle": "Je financiële voetafdruk in het land vestigen.",
           "items": [
             {
-              "title": "Zakelijk & Particulier Bankieren",
+              "title": "Openen van een Bankrekening",
               "description": "Het openen van persoonlijke en/of zakelijke rekeningen bij Paraguayaanse banken. Inclusief bankselectie op basis van jouw profiel (Sudameris, Continental, GNB, etc.), coördinatie en de activatie van je bankpas en online bankieren."
             },
             {
-              "title": "Belastingregistratie",
+              "title": "Belastingregistratie (RUC)",
               "description": "Inschrijving bij de DNIT (voorheen SET) als natuurlijk persoon (bijvoorbeeld voor de IRP) of als bedrijf. Je persoonlijke of zakelijke RUC (belastingnummer) is direct klaar voor gebruik."
             }
           ]
@@ -1548,14 +1564,15 @@
         {
           "id": "real-estate",
           "title": "Vastgoed",
+          "subtitle": "De ideale plek vinden om te wonen, of dat nu voor een maand is of voor het leven.",
           "items": [
             {
-              "title": "Huisvesting Zoeken",
-              "description": "Het vinden van de ideale plek om te wonen, of dat nu voor een maand is of voor het leven. Zoeken naar woningen op basis van budget en levensstijl, inclusief gecoördineerde bezichtigingen, controle van het Spaanse huurcontract vóór ondertekening en onderhandelingen met de eigenaar."
+              "title": "Huur van Appartementen & Huizen",
+              "description": "Zoeken naar woningen op basis van budget en levensstijl. Inclusief gecoördineerde bezichtigingen, controle van het Spaanse huurcontract vóór ondertekening en onderhandelingen met de eigenaar."
             },
             {
-              "title": "Vastgoedadvies",
-              "description": "Volledige begeleiding bij de aankoop van residentieel of commercieel vastgoed. Dit omvat het zoeken in strategische zones en uitgebreide ondersteuning tijdens de onderhandeling, ondertekening en de officiële registratie."
+              "title": "Aankoop van Eigendommen",
+              "description": "Volledige begeleiding bij de aankoop van residentieel of commercieel vastgoed. Dit omvat het zoeken in strategische zones en de begeleiding bij ondertekening en registratie."
             }
           ]
         }
@@ -1575,19 +1592,25 @@
         },
         {
           "number": 2,
-          "title": "Reizen & Indienen",
+          "title": "Parallelle Verwerking",
+          "description": "Terwijl jij je documenten thuis verzamelt, werken wij vooruit in Paraguay en regelen we alle voorafgaande lokale procedures om je tijd te optimaliseren.",
+          "icon": "FileText"
+        },
+        {
+          "number": 3,
+          "title": "Jouw Dag in Paraguay",
           "description": "Reis naar Paraguay met je documenten op orde. Wij begeleiden je persoonlijk naar elke officiële afspraak bij de bevoegde autoriteiten.",
           "icon": "Plane"
         },
         {
-          "number": 3,
-          "title": "Financiële Inrichting",
-          "description": "Zodra je identiteitskaart (Cédula) is afgegeven, activeren we je financiële infrastructuur in het land: we regelen je RUC en openen je zakelijke of persoonlijke bankrekeningen.",
+          "number": 4,
+          "title": "Cédula en Financiële Activatie",
+          "description": "Zodra je Cédula is afgegeven, activeren we je financiële infrastructuur in het land: we regelen je RUC en openen je zakelijke of persoonlijke bankrekeningen.",
           "icon": "Landmark"
         },
         {
-          "number": 4,
-          "title": "Zorgeloze Vestiging",
+          "number": 5,
+          "title": "Installatie & Levensstijl",
           "description": "Met je juridische en financiële basis op orde, helpen we je om je volledig te vestigen — van het vinden van het perfecte huis of appartement tot het regelen van een betrouwbaar voertuig.",
           "icon": "Home"
         }
@@ -2296,6 +2319,21 @@
               ],
               "image": "@src:office.signing",
               "icon": "Car"
+            },
+            {
+              "title": "Beëdigde Vertaling",
+              "description": "Officiële en gecertificeerde vertalingen van je documenten naar het Spaans",
+              "icon": "Languages",
+              "benefits": [
+                "Gecertificeerde vertalingen Spaans-Engels-Nederlands-Duits",
+                "Volledige coördinatie met beëdigde vertalers"
+              ],
+              "process": "Planning afhankelijk van het volume.",
+              "whatYouNeed": [
+                "Originele documenten",
+                "Specificatie van de doeltaal"
+              ],
+              "image": "@src:office.meeting-room"
             }
           ]
         },
@@ -2337,22 +2375,6 @@
               ],
               "image": "@src:office.exterior",
               "icon": "Calculator"
-            },
-            {
-              "title": "Beëdigde Vertaling",
-              "description": "Officiële en gecertificeerde vertaling van uw buitenlandse documenten naar het Spaans.",
-              "benefits": [
-                "Gecertificeerde vertalers, SET-geregistreerd",
-                "Apostille en legalisatie indien nodig",
-                "Snelle levering voor uw migratietermijnen"
-              ],
-              "process": "Timing afhankelijk van het transactievolume.",
-              "whatYouNeed": [
-                "Originele documenten",
-                "Specificatie van de doeltaal"
-              ],
-              "image": "@src:office.meeting-room",
-              "icon": "Languages"
             },
             {
               "title": "Bedrijfsstructurering (S.A. en andere)",
@@ -2413,22 +2435,6 @@
               ],
               "image": "@src:programs.tier-investor",
               "icon": "KeyRound"
-            },
-            {
-              "title": "Due Diligence",
-              "description": "Juridische verificatie van elke eigendom vóór aankoop.",
-              "benefits": [
-                "Titelbeoordeling bij Openbaar Register",
-                "Gemeentelijke schuldverificatie",
-                "Belastingschuldverificatie",
-                "Schriftelijk bevindingenrapport"
-              ],
-              "process": "Gepersonaliseerde tijdlijn.",
-              "whatYouNeed": [
-                "Eigendomsgegevens"
-              ],
-              "image": "@src:office.team-huddle",
-              "icon": "Shield"
             }
           ]
         }
@@ -2478,17 +2484,19 @@
             "ctaHref": "/contacto?servicio=cedula"
           },
           {
-            "title": "Apostille en Vertaling",
-            "description": "Paraguayaanse documenten gelegaliseerd voor internationaal gebruik en vice versa.",
-            "image": "@src:office.meetingRoom",
+            "title": "Beëdigde Vertaling",
+            "description": "Officiële en gecertificeerde vertalingen van je documenten naar het Spaans.",
             "benefits": [
-              "Haagse Apostille voor Paraguayaanse documenten",
               "Gecertificeerde vertalingen Spaans-Engels-Nederlands-Duits",
-              "Legaliseren bij het Ministerie van Buitenlandse Zaken",
               "Volledige coördinatie met beëdigde vertalers"
             ],
-            "ctaText": "Bekijk details",
-            "ctaHref": "/contacto?servicio=apostilla"
+            "process": "Planning afhankelijk van volume.",
+            "whatYouNeed": [
+              "Originele documenten",
+              "Specificatie van de doeltaal"
+            ],
+            "image": "@src:office.meeting-room",
+            "icon": "Languages"
           }
         ],
         "id": "residency-legal"
@@ -2557,19 +2565,6 @@
             ],
             "ctaText": "Bekijk details",
             "ctaHref": "/contacto?servicio=compra"
-          },
-          {
-            "title": "Juridische Vastgoedverificatie",
-            "description": "Juridische verificatie van elk vastgoed voor aankoop (voorheen 'due diligence').",
-            "image": "@src:office.teamHuddle",
-            "benefits": [
-              "Titelbeoordeling bij het Openbaar Register",
-              "Verificatie van gemeentelijke schulden en belastingen",
-              "Gedetailleerd schriftelijk rapport met bevindingen",
-              "Aanbevelingen om gedetecteerde risico's te beperken"
-            ],
-            "ctaText": "Bekijk details",
-            "ctaHref": "/contacto?servicio=verificacion"
           }
         ],
         "id": "real-estate"
