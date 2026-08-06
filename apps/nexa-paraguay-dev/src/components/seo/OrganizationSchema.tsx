@@ -16,12 +16,12 @@ export function OrganizationSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://nexa.paragu-ai.com/#organization',
+    '@id': 'https://nexaparaguay.com.py/#organization',
     name: 'Nexa Paraguay',
-    url: 'https://nexa.paragu-ai.com',
+    url: 'https://nexaparaguay.com.py',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://nexa.paragu-ai.com/images/brand/logo.svg',
+      url: 'https://nexaparaguay.com.py/images/brand/logo.svg',
     },
     description:
       'Professional advisory for permanent residency, banking and company incorporation in Paraguay for European citizens.',

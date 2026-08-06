@@ -22,7 +22,7 @@ async function submitHubspot(fields: { name: string; value: string }[], pageName
       body: JSON.stringify({
         fields,
         context: {
-          pageUri: req.headers.get('referer') || 'https://nexa.paragu-ai.com',
+          pageUri: req.headers.get('referer') || 'https://nexaparaguay.com.py',
           pageName,
         },
       }),

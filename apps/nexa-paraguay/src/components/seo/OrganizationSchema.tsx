@@ -13,15 +13,18 @@ export function OrganizationSchema() {
   const siteConfig = loadSiteConfig()
   const phone = siteConfig?.contact?.whatsapp || '595982515138'
   const email = siteConfig?.contact?.email || 'paraguaynexa@gmail.com'
+  // Luana 2026-08-05: nexaparaguay.com.py is the only canonical link.
+  // All other links (nexa.paragu-ai.com) have been removed.
+  const SITE_URL = 'https://nexaparaguay.com.py'
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://nexa.paragu-ai.com/#organization',
+    '@id': `${SITE_URL}/#organization`,
     name: 'Nexa Paraguay',
-    url: 'https://nexa.paragu-ai.com',
+    url: SITE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: 'https://nexa.paragu-ai.com/images/brand/logo.svg',
+      url: `${SITE_URL}/images/brand/logo.svg`,
     },
     description:
       'Professional advisory for permanent residency, banking and company incorporation in Paraguay for European citizens.',

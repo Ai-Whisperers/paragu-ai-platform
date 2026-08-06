@@ -169,7 +169,7 @@ export async function handleRevalidateWebhook(req: { body?: Record<string, any> 
 
   tenantCache.invalidateAll()
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nexa.paragu-ai.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nexaparaguay.com.py'
   const locales = ['nl', 'en', 'es', 'de']
   const staticPaths = ['', 'sobre', 'servicios', 'por-que-paraguay', 'faq', 'blog', 'contacto']
 

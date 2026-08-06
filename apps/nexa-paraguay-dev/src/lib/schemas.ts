@@ -50,7 +50,7 @@ export function generateLocalBusinessSchema(locale = 'es') {
     "@type": "ProfessionalService",
     name: text.name,
     description: text.description,
-    url: "https://nexa.paragu-ai.com",
+    url: "https://nexaparaguay.com.py",
     telephone: text.telephone,
     email: "paraguaynexa@gmail.com",
     address: {
@@ -78,17 +78,17 @@ export function generateArticleSchema(article: {
     "@type": "Article",
     headline: article.title,
     description: article.description,
-    url: `https://nexa.paragu-ai.com/${loc}/blog/${article.slug}`,
+    url: `https://nexaparaguay.com.py/${loc}/blog/${article.slug}`,
     datePublished: article.datePublished || new Date().toISOString(),
     dateModified: article.dateModified || new Date().toISOString(),
-    author: { "@type": "Organization", name: "Nexa Paraguay", url: "https://nexa.paragu-ai.com" },
+    author: { "@type": "Organization", name: "Nexa Paraguay", url: "https://nexaparaguay.com.py" },
     publisher: {
       "@type": "Organization",
       name: "Nexa Paraguay",
-      logo: { "@type": "ImageObject", url: "https://nexa.paragu-ai.com/images/brand/logo.svg" },
+      logo: { "@type": "ImageObject", url: "https://nexaparaguay.com.py/images/brand/logo.svg" },
     },
     ...(article.image && { image: { "@type": "ImageObject", url: article.image } }),
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://nexa.paragu-ai.com/${loc}/blog/${article.slug}` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://nexaparaguay.com.py/${loc}/blog/${article.slug}` },
   }
 }
 
@@ -98,8 +98,8 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Nexa Paraguay",
-    url: "https://nexa.paragu-ai.com",
-    logo: "https://nexa.paragu-ai.com/images/brand/logo.svg",
+    url: "https://nexaparaguay.com.py",
+    logo: "https://nexaparaguay.com.py/images/brand/logo.svg",
     description: "Asesoría profesional para radicación, banca y constitución de sociedad en Paraguay para ciudadanos europeos.",
     email: "paraguaynexa@gmail.com",
     telephone: "+595 21 123 4567",
@@ -137,9 +137,9 @@ export function generateWebPageSchema(pageName: string, description: string, loc
     "@type": "WebPage",
     name: pageName,
     description: description,
-    url: `https://nexa.paragu-ai.com/${locale}`,
+    url: `https://nexaparaguay.com.py/${locale}`,
     inLanguage: locale,
-    isPartOf: { "@type": "WebSite", "@id": "https://nexa.paragu-ai.com" },
-    publisher: { "@type": "Organization", name: loc_titles[locale] || "Nexa Paraguay", url: "https://nexa.paragu-ai.com" },
+    isPartOf: { "@type": "WebSite", "@id": "https://nexaparaguay.com.py" },
+    publisher: { "@type": "Organization", name: loc_titles[locale] || "Nexa Paraguay", url: "https://nexaparaguay.com.py" },
   }
 }

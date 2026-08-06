@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
               { name: 'source', value: source || 'exit-popup' },
             ],
             context: {
-              pageUri: req.headers.get('referer') || 'https://nexa.paragu-ai.com',
+              pageUri: req.headers.get('referer') || 'https://nexaparaguay.com.py',
               pageName: 'Exit Popup',
             },
           }),

@@ -17,20 +17,20 @@ export function ArticleSchema({ article }: { article: ArticleData }) {
     '@type': 'Article',
     headline: article.title,
     description: article.description,
-    url: `https://nexa.paragu-ai.com/${article.locale || 'es'}/blog/${article.slug}`,
+    url: `https://nexaparaguay.com.py/${article.locale || 'es'}/blog/${article.slug}`,
     datePublished: article.datePublished || new Date().toISOString(),
     dateModified: article.dateModified || new Date().toISOString(),
     author: {
       '@type': 'Organization',
       name: 'Nexa Paraguay',
-      url: 'https://nexa.paragu-ai.com',
+      url: 'https://nexaparaguay.com.py',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Nexa Paraguay',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://nexa.paragu-ai.com/images/brand/logo.svg',
+        url: 'https://nexaparaguay.com.py/images/brand/logo.svg',
       },
     },
     ...(article.image && {
@@ -41,7 +41,7 @@ export function ArticleSchema({ article }: { article: ArticleData }) {
     }),
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://nexa.paragu-ai.com/${article.locale || 'es'}/blog/${article.slug}`,
+      '@id': `https://nexaparaguay.com.py/${article.locale || 'es'}/blog/${article.slug}`,
     },
   }
   return (

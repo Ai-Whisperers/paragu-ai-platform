@@ -26,7 +26,7 @@ export function LocalBusinessSchema({ locale = 'es' }: { locale?: string }) {
     '@type': 'ProfessionalService',
     name: t.name,
     description: t.description,
-    url: 'https://nexa.paragu-ai.com',
+    url: 'https://nexaparaguay.com.py',
     telephone: t.telephone,
     email: t.email,
     address: {

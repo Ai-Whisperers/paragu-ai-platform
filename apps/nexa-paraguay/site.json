@@ -70,17 +70,14 @@
     ]
   },
   "path": "",
-  "publicUrl": "https://nexa.paragu-ai.com",
+  "publicUrl": "https://nexaparaguay.com.py",
   "pendingDomains": [
     "nexaparaguay.com.py"
   ],
-  "pendingDomainsNote": "nexaparaguay.com.py purchased but DNS not yet connected. Switch domain \u2192 nexaparaguay.com.py and add Traefik labels when ready.",
+  "pendingDomainsNote": "nexaparaguay.com.py purchased but DNS not yet connected. Switch domain → nexaparaguay.com.py and add Traefik labels when ready.",
   "alternateDomains": [
     "nexaparaguay.com.py",
-    "www.nexaparaguay.com.py",
-    "nexa.paragu-ai.com",
-    "nexa-preview.paragu-ai.com",
-    "nexa-paraguay.paragu-ai.com"
+    "www.nexaparaguay.com.py"
   ],
   "canonicalDomain": "nexaparaguay.com.py"
 }
