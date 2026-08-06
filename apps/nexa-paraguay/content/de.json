@@ -1387,14 +1387,13 @@
         },
         "land": {
           "name": "Immobilien",
-          "tagline": "Suche, Due Diligence und Abschluss für Kauf oder Miete.",
+          "tagline": "Suche und Abschluss für Kauf oder Miete.",
           "description": "Finden Sie die richtige Immobilie mit vollständiger rechtlicher und notarieller Unterstützung.",
           "price": "Interner Preis — auf Anfrage",
           "priceNote": "Immobilienkosten separat",
           "included": [
             "Profil- und Kriteriendefinition",
             "Immobiliensuche und Shortlist",
-            "Rechtliche und technische Due Diligence",
             "Öffentliche Beurkundung"
           ],
           "notIncluded": [
@@ -1449,7 +1448,8 @@
         "currency": "EUR",
         "description": "In der Begleitung enthalten. Buchung und Zahlung werden zwischen dem Kunden und dem Immobilienmakler oder Gastgeber abgewickelt."
       }
-    }
+    },
+    "plans": {}
   },
   "bookingPage": {
     "seo": {
@@ -3687,7 +3687,8 @@
       "buttonText": "Beratung buchen",
       "buttonHref": "/contacto",
       "eyebrow": "Nächster Schritt"
-    }
+    },
+    "plans": {}
   },
   "testimoniosPage": {
     "seo": {

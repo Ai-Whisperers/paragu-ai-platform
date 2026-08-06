@@ -897,7 +897,7 @@
         {
           "id": "propiedades",
           "label": "Bienes raíces",
-          "description": "Compra, alquiler, due diligence",
+          "description": "Compra, alquiler, acompañamiento.",
           "items": [
             {
               "q": "¿Es buen momento para comprar propiedades en Paraguay?",
@@ -2776,7 +2776,6 @@
             "image": "@src:office.signing",
             "benefits": [
               "Búsqueda de propiedades en zonas estratégicas",
-              "Verificación legal completa (título, deuda, ARP)",
               "Coordinación con escribano público",
               "Acompañamiento a la firma y registro en ARP"
             ],
@@ -2847,7 +2846,6 @@
           "included": [
             "Todo lo de Business",
             "Gestión de inversiones",
-            "Due diligence inmobiliario",
             "Asesoría patrimonial"
           ],
           "notIncluded": []
@@ -2863,7 +2861,6 @@
           "duration": "4–6 semanas",
           "popular": false,
           "included": [
-            "Due diligence completo",
             "Escrituración pública",
             "Registro ARP"
           ],
@@ -2914,7 +2911,8 @@
         "currency": "USD",
         "description": "Servicio incluido en el acompañamiento. La reserva y el pago se cierran entre el cliente y el agente inmobiliario o anfitrión."
       }
-    }
+    },
+    "plans": {}
   },
   "processPage": {
     "seo": {
@@ -3620,7 +3618,8 @@
       "buttonText": "Agendar consulta",
       "buttonHref": "/contacto",
       "eyebrow": "Próximo paso"
-    }
+    },
+    "plans": {}
   },
   "testimoniosPage": {
     "seo": {

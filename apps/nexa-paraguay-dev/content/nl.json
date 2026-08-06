@@ -1032,7 +1032,7 @@
         {
           "id": "propiedades",
           "label": "Onroerend Goed",
-          "description": "Kopen, huren, due diligence",
+          "description": "Kopen, huren, begeleiding.",
           "items": [
             {
               "q": "Is het een goed moment om eigendommen te kopen in Paraguay?",
@@ -2635,14 +2635,13 @@
         },
         "land": {
           "name": "Onroerend goed",
-          "tagline": "Zoektocht, due diligence en afsluiting voor aankoop of huur.",
+          "tagline": "Zoektocht en afsluiting voor aankoop of huur.",
           "description": "Vind het juiste pand met volledige juridische en notariële ondersteuning.",
           "price": "Interne prijs — op aanvraag",
           "priceNote": "Vastgoedkosten afzonderlijk",
           "included": [
             "Profiel- en criteriumdefinitie",
             "Vastgoedzoektocht en shortlist",
-            "Juridische en technische due diligence",
             "Openbare bekrachtiging"
           ],
           "notIncluded": [
@@ -2697,7 +2696,8 @@
         "currency": "EUR",
         "description": "Inbegrepen bij de begeleiding. De boeking en betaling worden afgesloten tussen de klant en de makelaar of verhuurder."
       }
-    }
+    },
+    "plans": {}
   },
   "siteName": "Nexa Paraguay",
   "tagline": "Persoonlijke begeleiding voor uw verhuizing naar Paraguay",
@@ -3632,7 +3632,8 @@
       "buttonText": "Consult boeken",
       "buttonHref": "/contacto",
       "eyebrow": "Volgende stap"
-    }
+    },
+    "plans": {}
   },
   "testimoniosPage": {
     "seo": {

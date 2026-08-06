@@ -825,7 +825,7 @@
         {
           "id": "propiedades",
           "label": "Real Estate",
-          "description": "Buying, renting, due diligence",
+          "description": "Buying, renting, guidance.",
           "items": [
             {
               "q": "Is it a good time to buy properties in Paraguay?",
@@ -2709,7 +2709,6 @@
             "image": "@src:office.signing",
             "benefits": [
               "Property search in strategic zones",
-              "Complete legal verification (title, debt, ARP)",
               "Coordination with public notary",
               "Accompaniment to signing and ARP registration"
             ],
@@ -2785,14 +2784,13 @@
         },
         "land": {
           "name": "Real Estate",
-          "tagline": "Search, due diligence, and closing for purchase or rental.",
+          "tagline": "Search and closing for purchase or rental.",
           "description": "Find the right property with full legal and notarial support.",
           "price": "Internal pricing — on request",
           "priceNote": "Property costs separate",
           "included": [
             "Profile and criteria definition",
             "Property search and short-list",
-            "Legal and technical due diligence",
             "Public deed signing"
           ],
           "notIncluded": [
@@ -2847,7 +2845,8 @@
         "currency": "USD",
         "description": "Included in the accompaniment. Booking and payment close between client and real estate agent or host."
       }
-    }
+    },
+    "plans": {}
   },
   "processPage": {
     "seo": {
@@ -3538,7 +3537,8 @@
       "buttonText": "Book consultation",
       "buttonHref": "/contacto",
       "eyebrow": "Next step"
-    }
+    },
+    "plans": {}
   },
   "testimoniosPage": {
     "seo": {
