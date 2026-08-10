@@ -89,7 +89,7 @@
     },
     "coreServices": {
       "eyebrow": "Servicios Esenciales",
-      "title": "We connect you with trusted experts to guide you every step of the way.",
+      "title": "Servicios esenciales para tu mudanza a Paraguay",
       "items": [
         {
           "icon": "Stamp",
@@ -214,7 +214,7 @@
     },
     "process": {
       "eyebrow": "Cómo funciona",
-      "title": "How It Works / Steps",
+      "title": "Cómo funciona",
       "ctaLabel": "Iniciá mi proceso",
       "ctaHref": "/contacto",
       "steps": [
