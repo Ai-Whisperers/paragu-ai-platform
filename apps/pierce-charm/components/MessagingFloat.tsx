@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { whatsappUrl } from "@/lib/site-config";
+import { messagingUrl } from "@/lib/site-config";
 
 interface Props {
   phone: string;
   message?: string;
 }
 
-export function WhatsAppFloat({ phone, message }: Props) {
+export function MessagingFloat({ phone, message }: Props) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -22,14 +22,14 @@ export function WhatsAppFloat({ phone, message }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const href = whatsappUrl(phone, message);
+  const href = messagingUrl(phone, message);
 
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contactar por WhatsApp"
+      aria-label="Contactar por Messaging"
       className="fixed bottom-24 md:bottom-6 right-4 md:right-6 z-40 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full text-white safe-area-bottom animate-pulse-glow tap transition-opacity duration-300"
       style={{
         opacity: visible ? 1 : 0.4,

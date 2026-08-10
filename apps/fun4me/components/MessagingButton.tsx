@@ -2,15 +2,15 @@
 
 import { useState } from 'react'
 
-interface WhatsAppButtonProps {
+interface MessagingButtonProps {
   phone: string
   message?: string
 }
 
-export default function WhatsAppButton({ phone, message = 'Hola, me gustaria obtener mas informacion' }: WhatsAppButtonProps) {
+export default function MessagingButton({ phone, message = 'Hola, me gustaria obtener mas informacion' }: MessagingButtonProps) {
   const [hovered, setHovered] = useState(false)
   const cleanPhone = phone.replace(/[^0-9]/g, '')
-  const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`
+  const url = `tel:+${cleanPhone}?text=${encodeURIComponent(message)}`
 
   return (
     <a

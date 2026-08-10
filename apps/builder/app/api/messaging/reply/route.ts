@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
-import { getAutoReply } from '@/lib/whatsapp/auto-reply'
+import { getAutoReply } from '@/lib/messaging/auto-reply'
 import { logger } from '@/lib/logger'
 
 export const runtime = 'nodejs'
@@ -19,13 +19,13 @@ export async function POST(request: Request) {
 
     const { data: businesses } = await supabase
       .from('businesses')
-      .select('id, slug, name, phone, whatsapp, address, hours, location')
-      .eq('whatsapp_instance', instance)
+      .select('id, slug, name, phone, messaging, address, hours, location')
+      .eq('messaging_instance', instance)
       .limit(1)
 
     const business = (businesses ?? [])[0]
     if (!business) {
-      logger.warn('[whatsapp:reply] no business found for instance', { instance })
+      logger.warn('[messaging:reply] no business found for instance', { instance })
       return NextResponse.json({ ok: true, reply: null })
     }
 
@@ -33,12 +33,12 @@ export async function POST(request: Request) {
     const reply = getAutoReply(cleanMessage, business as unknown as Record<string, unknown>)
 
     if (reply) {
-      logger.info('[whatsapp:reply] auto-reply sent', { businessId: business.id, instance, length: reply.length })
+      logger.info('[messaging:reply] auto-reply sent', { businessId: business.id, instance, length: reply.length })
     }
 
     return NextResponse.json({ ok: true, reply })
   } catch (err) {
-    logger.error('[whatsapp:reply] error', { error: String(err) })
+    logger.error('[messaging:reply] error', { error: String(err) })
     return NextResponse.json({ ok: true, reply: null })
   }
 }

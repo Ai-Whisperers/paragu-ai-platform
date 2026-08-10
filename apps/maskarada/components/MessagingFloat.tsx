@@ -1,11 +1,11 @@
 import { localizedWhatsappLink, type Locale } from "@/lib/content";
 
 const COPY = {
-  es: "Contactar por WhatsApp",
-  en: "Contact us on WhatsApp",
+  es: "Contactar por Messaging",
+  en: "Contact us on Messaging",
 } as const;
 
-export default function WhatsAppFloat({ locale }: { locale: Locale }) {
+export default function MessagingFloat({ locale }: { locale: Locale }) {
   return (
     <a
       href={localizedWhatsappLink(locale)}

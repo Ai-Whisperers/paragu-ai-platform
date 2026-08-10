@@ -2,7 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 
-interface WhatsAppButtonProps {
+interface MessagingButtonProps {
   message?: string
   variant?: "primary" | "secondary"
   size?: "sm" | "md" | "lg"
@@ -19,23 +19,23 @@ const sizes = {
   lg: "px-8 py-4 text-lg gap-3",
 }
 
-export default function WhatsAppButton({
+export default function MessagingButton({
   message = "Hola! Quiero información sobre Trentina Cerveza Artesanal",
   variant = "primary",
   size = "md",
-}: WhatsAppButtonProps) {
-  const whatsappNumber = "595983224473"
+}: MessagingButtonProps) {
+  const messagingNumber = "595983224473"
   const encoded = encodeURIComponent(message)
 
   return (
     <a
-      href={`https://wa.me/${whatsappNumber}?text=${encoded}`}
+      href={`tel:+${messagingNumber}?text=${encoded}`}
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center font-bold rounded transition-all hover:scale-105 ${variants[variant]} ${sizes[size]}`}
     >
       <MessageCircle size={size === "lg" ? 24 : size === "md" ? 20 : 16} />
-      WhatsApp
+      Messaging
     </a>
   )
 }
