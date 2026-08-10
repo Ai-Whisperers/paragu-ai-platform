@@ -15,6 +15,10 @@
       "content": "home"
     },
     {
+      "id": "process-timeline",
+      "content": "home.process"
+    },
+    {
       "id": "core-services",
       "content": "home.coreServices"
     },
@@ -25,10 +29,6 @@
     {
       "id": "service-detail",
       "content": "home.detailedServices"
-    },
-    {
-      "id": "process-timeline",
-      "content": "home.process"
     },
     {
       "id": "cta-banner",
