@@ -302,3 +302,16 @@ changes.
 - Trigger CI for deploy fix verification
 
 - 2026-07-17: deploy trigger (Erebus)
+
+
+## 2026-08-10
+
+### Deploy
+- Site live at https://nexaparaguay.com.py (canonical apex) via Host A Swarm stack `nexa-paraguay_web`
+- Replaces CF Worker placeholder; DNS grey-clouded; LE cert issued 2026-08-10 16:38
+- Image: `nexa-paraguay:prod` (sha256:0841d29a…6ebb), built from main @ `5c01e1b5` / `f3f045e5`
+
+### Content
+- ES `home.process.title`: "How It Works / Steps" → "Cómo funciona"
+- ES `home.coreServices.title`: English → "Servicios esenciales para tu mudanza a Paraguay"
+- Homepage section order: `process-timeline` moved before `core-services` so Cómo funciona appears above the services list
