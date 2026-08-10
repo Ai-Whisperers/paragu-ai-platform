@@ -2,6 +2,12 @@
 
 Single Next.js monorepo for all Ai-Whisperers client sites + shared packages.
 
+## Related repos
+
+- [paragu-ai-clients](https://github.com/Ai-Whisperers/paragu-ai-clients) — simpler sites using HTML/CSS template (replaces ~20 older client repos)
+- [paragu-ai-website](https://github.com/IvanWeissVanDerPol/paragu-ai-website) — public marketing site for ParaguAI
+- [dentist](https://github.com/Ai-Whisperers/dentist) — flagship client example (Ometz Dental)
+
 ## Top-level layout
 ```
 apps/<client>/             -> client website source (one per site)
