@@ -7,17 +7,17 @@ import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import { cleanPhone } from '@/lib/format'
 
-export type WhatsAppContext = 'product' | 'wholesale' | 'delivery' | 'chicken' | 'subscription' | 'general'
+export type MessagingContext = 'product' | 'wholesale' | 'delivery' | 'chicken' | 'subscription' | 'general'
 
-export interface WhatsAppTemplate {
+export interface MessagingTemplate {
   id: string
   label: string
   template: string
-  context: WhatsAppContext
+  context: MessagingContext
   icon: React.ReactNode
 }
 
-export const WHATSAPP_TEMPLATES: WhatsAppTemplate[] = [
+export const MESSAGING_TEMPLATES: MessagingTemplate[] = [
   {
     id: 'product_inquiry',
     label: 'Consultar Producto',
@@ -48,9 +48,9 @@ export const WHATSAPP_TEMPLATES: WhatsAppTemplate[] = [
   }
 ]
 
-export interface SmartWhatsAppButtonProps {
+export interface SmartMessagingButtonProps {
   phone: string
-  context?: WhatsAppContext
+  context?: MessagingContext
   productName?: string
   price?: string
   quantity?: string
@@ -60,7 +60,7 @@ export interface SmartWhatsAppButtonProps {
   children?: React.ReactNode
 }
 
-export function SmartWhatsAppButton({
+export function SmartMessagingButton({
   phone,
   context = 'general',
   productName,
@@ -70,10 +70,10 @@ export function SmartWhatsAppButton({
   size = 'md',
   variant = 'default',
   children
-}: SmartWhatsAppButtonProps) {
+}: SmartMessagingButtonProps) {
   const [isHovered, setIsHovered] = useState(false)
 
-  const buildWhatsAppUrl = (): string => {
+  const buildMessagingUrl = (): string => {
     const cleaned = cleanPhone(phone)
     
     let message = 'Hola! Vi su pagina web y me interesa hacer un pedido.'
@@ -82,7 +82,7 @@ export function SmartWhatsAppButton({
       message = `Hola! Vi el ${productName} a ${price} en su web. Esta disponible? Quiero ${quantity}.`
     }
     
-    return `https://wa.me/${cleaned}?text=${encodeURIComponent(message)}`
+    return `tel:+${cleaned}?text=${encodeURIComponent(message)}`
   }
 
   return (
@@ -99,34 +99,34 @@ export function SmartWhatsAppButton({
       onMouseLeave={() => setIsHovered(false)}
     >
       <a 
-        href={buildWhatsAppUrl()}
+        href={buildMessagingUrl()}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-2"
       >
         <MessageCircle className="w-5 h-5" />
-        {children || 'Pedir por WhatsApp'}
+        {children || 'Pedir por Messaging'}
       </a>
     </Button>
   )
 }
 
-export interface WhatsAppQuickActionsProps {
+export interface MessagingQuickActionsProps {
   phone: string
   productName?: string
   price?: string
   className?: string
 }
 
-export function WhatsAppQuickActions({
+export function MessagingQuickActions({
   phone,
   productName,
   price,
   className
-}: WhatsAppQuickActionsProps) {
+}: MessagingQuickActionsProps) {
   const [selectedAction, setSelectedAction] = useState<string | null>(null)
 
-  const buildActionUrl = (template: WhatsAppTemplate): string => {
+  const buildActionUrl = (template: MessagingTemplate): string => {
     const cleaned = cleanPhone(phone)
     const ctx = template.context
     
@@ -149,7 +149,7 @@ export function WhatsAppQuickActions({
     if (ctx === 'chicken') {
       message = message.replace('{{familySize}}', '[numero]')
     }
-    return `https://wa.me/${cleaned}?text=${encodeURIComponent(message)}`
+    return `tel:+${cleaned}?text=${encodeURIComponent(message)}`
   }
 
   return (
@@ -159,7 +159,7 @@ export function WhatsAppQuickActions({
           Opciones rapidas de contacto:
         </p>
         <div className="grid grid-cols-2 gap-2">
-          {WHATSAPP_TEMPLATES.map((template) => (
+          {MESSAGING_TEMPLATES.map((template) => (
             <a
               key={template.id}
               href={buildActionUrl(template)}
@@ -183,17 +183,17 @@ export function WhatsAppQuickActions({
   )
 }
 
-export interface FloatingWhatsAppProps {
+export interface FloatingMessagingProps {
   phone: string
   message?: string
 }
 
-export function FloatingWhatsApp({ 
+export function FloatingMessaging({ 
   phone, 
   message = 'Hola! Vi su pagina web y me interesa hacer un pedido.' 
-}: FloatingWhatsAppProps) {
+}: FloatingMessagingProps) {
   const cleaned = cleanPhone(phone)
-  const url = `https://wa.me/${cleaned}?text=${encodeURIComponent(message)}`
+  const url = `tel:+${cleaned}?text=${encodeURIComponent(message)}`
 
   return (
     <a
@@ -201,7 +201,7 @@ export function FloatingWhatsApp({
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group"
-      aria-label="Contactar por WhatsApp"
+      aria-label="Contactar por Messaging"
     >
       <MessageCircle className="w-7 h-7" />
       <span className="absolute right-16 bg-white text-foreground px-3 py-1.5 rounded-lg text-sm font-medium shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
@@ -211,4 +211,4 @@ export function FloatingWhatsApp({
   )
 }
 
-export default SmartWhatsAppButton
+export default SmartMessagingButton

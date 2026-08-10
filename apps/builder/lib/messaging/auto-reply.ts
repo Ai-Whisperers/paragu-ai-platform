@@ -24,9 +24,9 @@ const COMMON_QUESTIONS: Array<{ pattern: RegExp; getReply: (biz: Record<string, 
     },
   },
   {
-    pattern: /teléfono|telefono|whatsapp|contacto|llamar|llamarte/i,
+    pattern: /teléfono|telefono|messaging|contacto|llamar|llamarte/i,
     getReply: (biz) => {
-      if (biz.whatsapp) return `📱 Podés contactarnos al ${biz.whatsapp}.`
+      if (biz.messaging) return `📱 Podés contactarnos al ${biz.messaging}.`
       if (biz.phone) return `📱 Nuestro teléfono: ${biz.phone}.`
       return 'Nuestros datos de contacto están en nuestro sitio web.'
     },
@@ -34,7 +34,7 @@ const COMMON_QUESTIONS: Array<{ pattern: RegExp; getReply: (biz: Record<string, 
   {
     pattern: /reservar|turno|cita|agendar|agendá|reserva/i,
     getReply: (biz) => {
-      const wa = biz.whatsapp as string
+      const wa = biz.messaging as string
       if (wa) return `📅 Para reservar un turno, escribinos y te confirmamos disponibilidad. O visitá nuestro sitio web para más información.`
       return '📅 Para reservar un turno, visitá nuestro sitio web o contactanos por este medio.'
     },
