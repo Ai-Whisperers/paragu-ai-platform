@@ -16,11 +16,6 @@
       "content": "testimoniosPage.hero"
     },
     {
-      "id": "trust",
-      "variant": "credentials",
-      "content": "testimoniosPage.trust"
-    },
-    {
       "id": "testimonials",
       "variant": "cards",
       "content": "testimoniosPage.testimonials"

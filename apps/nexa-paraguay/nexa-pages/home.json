@@ -19,10 +19,6 @@
       "content": "home.process"
     },
     {
-      "id": "core-services",
-      "content": "home.coreServices"
-    },
-    {
       "id": "why-destination",
       "content": "home"
     },

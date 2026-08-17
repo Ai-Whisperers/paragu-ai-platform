@@ -33,7 +33,7 @@
     {
       "id": "booking-form",
       "variant": "default",
-      "content": "bookingForm"
+      "content": "agendaPage.programs"
     },
     {
       "id": "compliance",

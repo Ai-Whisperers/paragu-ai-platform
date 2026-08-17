@@ -3,11 +3,11 @@
   "sections": [
     {
       "id": "page-hero",
-      "content": "datos-personales"
+      "content": "datosPersonalesPage.hero"
     },
     {
       "id": "faq-search",
-      "content": "datos-personales.full"
+      "content": "datosPersonalesPage.full"
     }
   ]
 }

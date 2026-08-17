@@ -3,11 +3,11 @@
   "sections": [
     {
       "id": "page-hero",
-      "content": "feedback.hero"
+      "content": "feedbackPage.hero"
     },
     {
       "id": "feedback",
-      "content": "feedback"
+      "content": "feedbackPage.full"
     }
   ]
 }

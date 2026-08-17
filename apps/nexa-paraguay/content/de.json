@@ -44,7 +44,7 @@
       "headline": "Lassen Sie uns über Ihren Fall sprechen",
       "subheadline": "30 Minuten mit Sonia oder Luana. Wir sagen Ihnen, wie lange, was Sie brauchen und wie viel es kostet — bevor Sie sich entscheiden.",
       "ctaPrimary": "WhatsApp öffnen",
-      "ctaPrimaryHref": "https://wa.me/595982515138?text=Hola%2C%20quiero%20agendar%20una%20consulta%20gratuita",
+      "ctaPrimaryHref": "https://wa.me/595982515138?text=Hallo%2C%20ich%20möchte%20gerne%20eine%20kostenlose%20Beratung%20buchen",
       "ctaSecondary": "FAQ zuerst ansehen",
       "ctaSecondaryHref": null
     },
@@ -429,6 +429,72 @@
       "title": "Protección de datos — Nexa Paraguay",
       "description": "Politik zum Schutz personenbezogener Daten und GDPR-Compliance von Nexa Paraguay.",
       "targetKeyword": "protección datos Paraguay"
+    },
+    "hero": {
+      "eyebrow": "Datenschutz",
+      "headline": "Datenschutzerklärung",
+      "subheadline": "Einhaltung des paraguayischen Gesetzes 1682/01 und der EU-Datenschutz-Grundverordnung (DSGVO).",
+      "backgroundImage": "@src:hero.home",
+      "ctaText": "Beratung anfragen",
+      "ctaHref": "/contacto"
+    },
+    "full": {
+      "title": "Wie wir mit Ihren Daten umgehen",
+      "subtitle": "Zusammenfassung unserer Datenschutzerklärung",
+      "categories": [
+        {
+          "id": "que",
+          "label": "Was wir erfassen",
+          "items": [
+            {
+              "q": "Welche personenbezogenen Daten erfassen wir?",
+              "a": "Name, E-Mail, Telefon (optional), Land, Interessenprogramm und angegebenes Ziel, wenn Sie ein Formular ausfüllen oder uns direkt kontaktieren."
+            },
+            {
+              "q": "Erfassen wir sensible Daten?",
+              "a": "Nein. Wir fragen niemals nach ethnischer Herkunft, Religion, sexueller Orientierung, Gesundheit oder politischer Zugehörigkeit. Falls wir sensible Finanzdaten benötigen, fragen wir diese über verschlüsselte Kanäle mit Ihrer ausdrücklichen Zustimmung an."
+            }
+          ]
+        },
+        {
+          "id": "como",
+          "label": "Wie wir sie verwenden",
+          "items": [
+            {
+              "q": "Wie verwenden wir Ihre Daten?",
+              "a": "Nur zur Beantwortung Ihrer Anfrage und, wenn Sie uns ausdrücklich autorisieren, um Ihnen relevante Informationen per E-Mail oder WhatsApp über Ihren Umzug nach Paraguay zu senden."
+            },
+            {
+              "q": "Geben wir Daten an Dritte weiter?",
+              "a": "CRM (HubSpot) und E-Mail-Anbieter (Mailchimp) im Rahmen einer Auftragsverarbeitungsvereinbarung. Wir verkaufen oder teilen Ihre Daten niemals an Dritte zu kommerziellen Zwecken."
+            }
+          ]
+        },
+        {
+          "id": "derechos",
+          "label": "Ihre Rechte",
+          "items": [
+            {
+              "q": "Wie kann ich meine Daten einsehen, korrigieren oder löschen?",
+              "a": "Schreiben Sie uns an paraguaynexa@gmail.com und wir antworten innerhalb von maximal 30 Tagen (Auskunft, Berichtigung, Löschung, Widerspruch)."
+            },
+            {
+              "q": "Wie lange speichern Sie meine Daten?",
+              "a": "24 Monate ab dem letzten Kontakt, sofern nicht gesetzlich erforderlich."
+            }
+          ]
+        },
+        {
+          "id": "autoridad",
+          "label": "Aufsichtsbehörde",
+          "items": [
+            {
+              "q": "An wen kann ich mich beschweren?",
+              "a": "In Paraguay: Dirección Nacional de Protección de Datos Personales (DINAPROD). In der EU: die Aufsichtsbehörde Ihres Wohnsitzlandes."
+            }
+          ]
+        }
+      ]
     }
   },
   "caseStudiesPage": {
@@ -1151,7 +1217,7 @@
       "title": "Preguntas específicas del Benelux",
       "items": [
         {
-          "q": "¿Cómo interactúa Paraguay con box 3?",
+          "q": "Wie interagiert Paraguay mit Box 3?",
           "a": "Nach der Auswanderung und der Lösung der Bindungen (woonplaatsverklaring) gilt box 3 nicht mehr. Wir koordinieren, was das niederländische Finanzamt verlangt."
         },
         {
@@ -1359,7 +1425,7 @@
           "name": "Nexa",
           "description": "Umfassende professionelle Begleitung.",
           "price": "Interner Preis — auf Anfrage",
-          "priceNote": "Basisleistung + Add-ons pro Stunde",
+          "priceNote": "Grundleistung + Add-ons pro Stunde",
           "highlighted": true,
           "badge": "Recomendado",
           "included": [
@@ -2463,7 +2529,7 @@
       {
         "id": "truthfulDeclaration",
         "kind": "checkbox",
-        "label": "Declaro bajo juramento que la información es verdadera y autorizo a Nexa Paraguay a realizar las verificaciones necesarias.",
+        "label": "Ich erkläre unter Eid, dass die Angaben wahrheitsgemäß sind, und ermächtige Nexa Paraguay, die entsprechenden KYC-Prüfungen gemäß Gesetz 8796/01 und den SEPRELAD-Vorschriften durchzuführen.",
         "required": true
       }
     ]
@@ -2620,6 +2686,21 @@
       "messagePlaceholder": "Schreiben Sie Ihren Kommentar oder Ihre Frage...",
       "button": "Senden",
       "thanks": "Vielen Dank für Ihre Nachricht!"
+    },
+    "hero": {
+      "eyebrow": "Deine Meinung",
+      "headline": "Teile deine Erfahrung",
+      "subheadline": "Dein Feedback hilft uns, die Begleitung für zukünftige Familien zu verbessern.",
+      "backgroundImage": "@src:hero.home"
+    },
+    "full": {
+      "title": "Teile deine Erfahrung",
+      "subtitle": "Dein Erfahrungsbericht könnte der nächste sein",
+      "namePlaceholder": "Dein Name",
+      "emailPlaceholder": "deine@email.de",
+      "messagePlaceholder": "Schreib deinen Kommentar oder deine Frage...",
+      "submitText": "Senden",
+      "successMessage": "Danke! Dein Feedback hilft uns, besser zu werden."
     }
   },
   "exitPopup": {
@@ -3499,7 +3580,7 @@
             },
             {
               "q": "What is the service area?",
-              "a": "Paraguay. We operate from Asunción and accompany clients from anywhere in the world."
+              "a": "Wir operieren vonuit Asunción und begleiten Kunden von überall auf der Welt."
             }
           ]
         },
@@ -3535,7 +3616,7 @@
             },
             {
               "q": "Is there a success guarantee?",
-              "a": "No. Nexa is an accompaniment service, not a results guarantee. Times and approvals depend on Paraguayan entities."
+              "a": "Nein. Nexa ist ein Begleitservice, keine Ergebnisgarantie. Laufzeiten und Genehmigungen hängen von Behörden und individuellen Umständen ab."
             }
           ]
         }

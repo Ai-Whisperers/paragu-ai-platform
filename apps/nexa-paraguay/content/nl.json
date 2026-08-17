@@ -723,7 +723,7 @@
     },
     "seo": {
       "title": "Casos de éxito — Nexa Paraguay",
-      "description": "Historias reales de inversores europeos que establecieron su operación con Nexa.",
+      "description": "Echte verhalen van Europese investeerders die hun activiteit met Nexa hebben opgezet.",
       "targetKeyword": "casos de éxito Nexa Paraguay"
     }
   },
@@ -806,10 +806,10 @@
     "title": "Compliance Mededeling",
     "content": "Nexa Paraguay is een geregistreerde meldende entiteit bij de SEPRELAD (Superintendencia de Prevención de Lavado de Dinero). Onze diensten voldoen aan alle toepasselijke Paraguayaanse en internationale regelgeving, inclusief AML/KYC-vereisten. Alle klantrelaties zijn onderworpen aan due diligence, inclusief identiteitsverificatie, verificatie van de herkomst van middelen en openbaarmaking van de uiteindelijke begunstigde.",
     "paragraphs": [
-      "Nexa Paraguay no presta asesoría legal, fiscal ni de inversión. Los programas descritos son servicios de acompañamiento para trámites migratorios y administrativos.",
+      "Nexa Paraguay biedt geen juridisch, fiscaal of investeringsadvies. De beschreven programma’s zijn begeleidingsdiensten voor migratieprocedures, bankencoördinatie en vastgoedadvies — ze vervangen niet het advies van een gediplomeerd advocaat, belastingadviseur of geregistreerd vastgoedmakelaar.",
       "Nexa Paraguay está registrada como sujeto obligado ante SEPRELAD (Secretaría de Prevención de Lavado de Dinero o Bienes) y aplica procesos KYC (Know Your Customer) conforme a las resoluciones vigentes.",
-      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios.",
-      "En materia inmobiliaria, Nexa Paraguay no actúa como agente inmobiliario ni como corredor de propiedades. Acompañamos a las personas en la búsqueda, las negociaciones y la revisión de contratos, y aseguramos que los trámites de transferencia sean claros y honestos, pero la relación contractual con el propietario, la agencia o la escribanía es siempre entre el cliente y el prestador del servicio correspondiente."
+      "Resultaten zijn afhankelijk van de individuele vervulling van vereisten en kunnen variëren. Informatie actueel op de datum van laatste update.",
+      "Op het gebied van onroerend goed treedt Nexa Paraguay niet op als vastgoedmakelaar of -tussenpersoon. We begeleiden mensen bij het zoeken, onderhandelen en ondertekenen, maar alle transacties moeten worden geformaliseerd via een gediplomeerd escribano (notaris) en, indien van toepassing, een geregistreerd makelaar."
     ],
     "licenseNumbers": [
       {
@@ -829,7 +829,7 @@
       "headline": "Laten we over jouw zaak praten",
       "subheadline": "30 minuten met Sonia of Luana. We vertellen je hoe lang, wat je nodig hebt en hoeveel — voordat je iets beslist.",
       "ctaPrimary": "Open WhatsApp",
-      "ctaPrimaryHref": "https://wa.me/595982515138?text=Hola%2C%20quiero%20agendar%20una%20consulta%20gratuita",
+      "ctaPrimaryHref": "https://wa.me/595982515138?text=Hallo%2C%20ik%20wil%20graag%20een%20gratis%20consult%20boeken",
       "ctaSecondary": "Bekijk FAQ eerst",
       "ctaSecondaryHref": null
     },
@@ -1655,7 +1655,7 @@
       "subtitle": "Officiële persberichten van Nexa Paraguay.",
       "items": [
         {
-          "title": "Nexa Paraguay anuncia nuevo programa de residencia para inversores",
+          "title": "Nexa Paraguay kondigt nieuw verblijfsprogramma voor investeerders aan",
           "date": "15 de abril, 2026",
           "summary": "El programa integra residencia permanente, apertura de empresa y cuenta bancaria en un solo proceso coordinado.",
           "link": "#"
@@ -1667,16 +1667,16 @@
           "link": "#"
         },
         {
-          "title": "Alianza estratégica con despachos notariales de Asunción",
+          "title": "Strategisch partnerschap met notariskantoren in Asunción",
           "date": "10 de enero, 2026",
-          "summary": "La alianza permitirá agilizar los procesos de compra de propiedades y debida diligencia para clientes internacionales.",
+          "summary": "Het partnerschap zal vastgoedkoopprocessen en due diligence voor internationale klanten versnellen.",
           "link": "#"
         }
       ]
     },
     "seo": {
       "title": "Prensa — Nexa Paraguay",
-      "description": "Notas de prensa, comunicados y material para medios sobre Nexa Paraguay.",
+      "description": "Persberichten, officiële mededelingen en materialen voor de media over Nexa Paraguay.",
       "targetKeyword": "prensa Nexa Paraguay"
     }
   },
@@ -2024,7 +2024,7 @@
     },
     "seo": {
       "title": "Recursos — Nexa Paraguay",
-      "description": "Guías prácticas, plantillas y herramientas para inversores europeos que se establecen en Paraguay.",
+      "description": "Praktische gidsen, sjablonen en tools voor Europese investeerders die zich in Paraguay vestigen.",
       "targetKeyword": "recursos mudanza Paraguay"
     }
   },
@@ -2495,12 +2495,78 @@
       "title": "Protección de datos — Nexa Paraguay",
       "description": "Política de protección de datos personales y cumplimiento GDPR de Nexa Paraguay.",
       "targetKeyword": "protección datos Paraguay"
+    },
+    "hero": {
+      "eyebrow": "Privacy",
+      "headline": "Bescherming van Persoonsgegevens",
+      "subheadline": "Naleving van de Paraguayaanse Wet 1682/01 en de Algemene Verordening Gegevensbescherming (AVG) van de Europese Unie.",
+      "backgroundImage": "@src:hero.home",
+      "ctaText": "Vraag een consult aan",
+      "ctaHref": "/contacto"
+    },
+    "full": {
+      "title": "Hoe wij met uw gegevens omgaan",
+      "subtitle": "Samenvatting van ons privacybeleid",
+      "categories": [
+        {
+          "id": "que",
+          "label": "Wat wij verzamelen",
+          "items": [
+            {
+              "q": "Welke persoonsgegevens verzamelen wij?",
+              "a": "Naam, e-mail, telefoon (optioneel), land, interesseprogramma en opgegeven doel wanneer u een formulier invult of ons rechtstreeks contacteert."
+            },
+            {
+              "q": "Verzamelen wij gevoelige gegevens?",
+              "a": "Nee. We vragen nooit naar afkomst, religie, seksuele geaardheid, gezondheid of politieke voorkeur. Als we gevoelige financiële gegevens nodig hebben, vragen we die via versleutelde kanalen met uw uitdrukkelijke toestemming."
+            }
+          ]
+        },
+        {
+          "id": "como",
+          "label": "Hoe wij ze gebruiken",
+          "items": [
+            {
+              "q": "Hoe gebruiken wij uw gegevens?",
+              "a": "Alleen om uw vraag te beantwoorden en, als u ons daar uitdrukkelijk toestemming voor geeft, om relevante informatie te sturen per e-mail of WhatsApp over uw verhuizing naar Paraguay."
+            },
+            {
+              "q": "Delen wij gegevens met derden?",
+              "a": "CRM (HubSpot) en e-mailprovider (Mailchimp) onder een verwerkingsovereenkomst. We verkopen of delen uw gegevens nooit met derden voor commerciële doeleinden."
+            }
+          ]
+        },
+        {
+          "id": "derechos",
+          "label": "Uw rechten",
+          "items": [
+            {
+              "q": "Hoe kan ik mijn gegevens inzien, corrigeren of verwijderen?",
+              "a": "Mail ons op paraguaynexa@gmail.com en we reageren binnen maximaal 30 dagen (inzage, correctie, verwijdering, bezwaar)."
+            },
+            {
+              "q": "Hoe lang bewaren jullie mijn gegevens?",
+              "a": "24 maanden na het laatste contact, tenzij wettelijk vereist."
+            }
+          ]
+        },
+        {
+          "id": "autoridad",
+          "label": "Toezichthouder",
+          "items": [
+            {
+              "q": "Bij wie kan ik klagen?",
+              "a": "In Paraguay: Dirección Nacional de Protección de Datos Personales (DINAPROD). In de EU: de toezichthouder van uw land van verblijf."
+            }
+          ]
+        }
+      ]
     }
   },
   "feedbackPage": {
     "seo": {
       "title": "Comentarios — Nexa Paraguay",
-      "description": "Opiniones y comentarios de clientes sobre Nexa Paraguay y el proceso de mudanza.",
+      "description": "Beoordelingen en opmerkingen van klanten over Nexa Paraguay en het verhuisproces.",
       "targetKeyword": "comentarios Nexa Paraguay"
     },
     "fallback": {
@@ -2510,6 +2576,21 @@
       "messagePlaceholder": "Schrijf uw opmerking of vraag...",
       "button": "Verzenden",
       "thanks": "Bedankt voor uw bericht!"
+    },
+    "hero": {
+      "eyebrow": "Jouw mening",
+      "headline": "Deel je ervaring",
+      "subheadline": "Jouw feedback helpt ons de begeleiding voor toekomstige gezinnen te verbeteren.",
+      "backgroundImage": "@src:hero.home"
+    },
+    "full": {
+      "title": "Deel je ervaring",
+      "subtitle": "Jouw getuigenis kan de volgende zijn",
+      "namePlaceholder": "Jouw naam",
+      "emailPlaceholder": "jij@email.nl",
+      "messagePlaceholder": "Schrijf je opmerking of vraag...",
+      "submitText": "Versturen",
+      "successMessage": "Bedankt! Jouw feedback helpt ons verbeteren."
     }
   },
   "exitPopup": {
@@ -3441,7 +3522,7 @@
             },
             {
               "q": "What is the service area?",
-              "a": "Paraguay. We operate from Asunción and accompany clients from anywhere in the world."
+              "a": "We opereren vanuituit Asunción en begeleiden klanten overal ter wereld."
             }
           ]
         },
@@ -3477,7 +3558,7 @@
             },
             {
               "q": "Is there a success guarantee?",
-              "a": "No. Nexa is an accompaniment service, not a results guarantee. Times and approvals depend on Paraguayan entities."
+              "a": "Nee. Nexa is een begeleidingsservice, geen resultaatsgarantie. Doorlooptijden en goedkeuringen zijn afhankelijk van officiële instanties en individuele omstandigheden."
             }
           ]
         }

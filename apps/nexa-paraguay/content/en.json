@@ -947,7 +947,7 @@
       "headline": "Let's talk about your case",
       "subheadline": "30 minutes with Sonia or Luana. We tell you how long, what you need, and how much — before you decide anything.",
       "ctaPrimary": "Open WhatsApp",
-      "ctaPrimaryHref": "https://wa.me/595982515138?text=Hola%2C%20quiero%20agendar%20una%20consulta%20gratuita",
+      "ctaPrimaryHref": "https://wa.me/595982515138?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20consultation",
       "ctaSecondary": "See FAQ first",
       "ctaSecondaryHref": null
     },
@@ -1004,11 +1004,11 @@
         },
         {
           "q": "¿Para qué los usamos?",
-          "a": "Solo para responder a su consulta y, si lo autoriza expresamente, enviarle información relevante por email."
+          "a": "Only to respond to your inquiry and, if you expressly authorize it, to send you relevant information about your move to Paraguay by email or WhatsApp."
         },
         {
           "q": "¿Con quién los compartimos?",
-          "a": "CRM (HubSpot) y proveedor de email (Mailchimp) bajo contrato de tratamiento. No los vendemos ni cedemos a terceros para marketing."
+          "a": "CRM (HubSpot) and email provider (Mailchimp) under a data processing agreement. We never sell or share your data with third parties for commercial purposes."
         },
         {
           "q": "¿Cuánto tiempo los guardamos?",
@@ -1563,7 +1563,7 @@
     "paragraphs": [
       "Nexa Paraguay does not provide legal, tax, or investment advice. The programs described are accompaniment services for immigration procedures, banking coordination, and real estate advisory — they do not replace the advice of a licensed attorney, tax advisor, or registered real estate broker.",
       "Nexa Paraguay está registrada como sujeto obligado ante SEPRELAD (Secretaría de Prevención de Lavado de Dinero o Bienes) y aplica procesos KYC (Know Your Customer) conforme a las resoluciones vigentes.",
-      "Los resultados dependen del cumplimiento individual de requisitos y pueden variar. Información sujeta a cambios regulatorios.",
+      "Results depend on individual fulfilment of requirements and may vary. Information accurate as of the date of last update.",
       "In real estate matters, Nexa Paraguay does not act as a real estate agent or property broker. We accompany people in the search, negotiation, and signing process, but all transactions must be formalized through a licensed escribano (notary) and, when applicable, a registered real estate broker."
     ],
     "licenseNumbers": [
@@ -1674,7 +1674,7 @@
       {
         "id": "truthfulDeclaration",
         "kind": "checkbox",
-        "label": "Declaro bajo juramento que la información es verdadera y autorizo a Nexa Paraguay a realizar las verificaciones necesarias.",
+        "label": "I declare under oath that the information is true and authorize Nexa Paraguay to carry out the relevant KYC verifications under Law 8796/01 and SEPRELAD regulations.",
         "required": true
       }
     ]
@@ -1695,7 +1695,7 @@
     },
     "guides": {
       "title": "Guías y Recursos",
-      "subtitle": "Descarga materiales exclusivos para tu mudanza a Paraguay",
+      "subtitle": "Download exclusive materials for your move to Paraguay",
       "items": [
         {
           "title": "Complete Guide to Residency in Paraguay 2025",
@@ -1734,7 +1734,7 @@
     },
     "hero": {
       "headline": "Calidad de vida en Paraguay",
-      "subheadline": "Lo que realmente vas a experimentar viviendo en Asunción o Ciudad del Este."
+      "subheadline": "What you will really experience living in Asunción or Ciudad del Este."
     },
     "pillars": {
       "eyebrow": "Día a día",
@@ -2077,7 +2077,7 @@
     },
     "hero": {
       "headline": "Glosario de términos clave",
-      "subheadline": "Definiciones claras de los términos que vas a encontrar en el proceso."
+      "subheadline": "Clear definitions of the terms you will encounter during the process."
     },
     "glossary": {
       "title": "Términos frecuentes",
@@ -2236,7 +2236,7 @@
       "title": "Preguntas específicas del Benelux",
       "items": [
         {
-          "q": "¿Cómo interactúa Paraguay con box 3?",
+          "q": "How does Paraguay interact with box 3?",
           "a": "After emigration and severance of ties (woonplaatsverklaring), box 3 no longer applies. We coordinate what the Dutch tax office requires."
         },
         {
@@ -2244,7 +2244,7 @@
           "a": "The exit tax applies to the unrealized capital gain in your BV at the moment of emigration. We help structure the move so you don't pay more than necessary."
         },
         {
-          "q": "¿Paraguay tiene convenio fiscal con NL o BE?",
+          "q": "Does Paraguay have a tax treaty with NL or BE?",
           "a": "No hay convenio bilateral en 2026, pero el sistema territorial de Paraguay lo hace innecesario en la mayoría de casos prácticos."
         },
         {
@@ -2570,6 +2570,21 @@
       "messagePlaceholder": "Write your comment or question...",
       "button": "Enviar",
       "thanks": "¡Gracias por tu mensaje!"
+    },
+    "hero": {
+      "eyebrow": "Your opinion",
+      "headline": "Share your experience",
+      "subheadline": "Your feedback helps us improve the support for future families.",
+      "backgroundImage": "@src:hero.home"
+    },
+    "full": {
+      "title": "Share your experience",
+      "subtitle": "Your testimonial could be next",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "you@email.com",
+      "messagePlaceholder": "Write your comment or question...",
+      "submitText": "Send",
+      "successMessage": "Thank you! Your feedback helps us improve."
     }
   },
   "bookingPage": {
@@ -2593,6 +2608,72 @@
       "title": "Protección de datos — Nexa Paraguay",
       "description": "Personal data protection policy and GDPR compliance of Nexa Paraguay.",
       "targetKeyword": "protección datos Paraguay"
+    },
+    "hero": {
+      "eyebrow": "Privacy",
+      "headline": "Personal Data Protection Policy",
+      "subheadline": "Compliance with Paraguay Law 1682/01 and the EU General Data Protection Regulation (GDPR).",
+      "backgroundImage": "@src:hero.home",
+      "ctaText": "Request a consultation",
+      "ctaHref": "/contacto"
+    },
+    "full": {
+      "title": "How we handle your data",
+      "subtitle": "Summary of our privacy policy",
+      "categories": [
+        {
+          "id": "que",
+          "label": "What we collect",
+          "items": [
+            {
+              "q": "What personal data do we collect?",
+              "a": "Name, email, phone (optional), country, program of interest, and stated objective when you complete a form or contact us directly."
+            },
+            {
+              "q": "Do we collect sensitive data?",
+              "a": "No. We never ask for racial origin, religion, sexual orientation, health, or political affiliation. If we need sensitive financial data, we request it via encrypted channels with your explicit consent."
+            }
+          ]
+        },
+        {
+          "id": "como",
+          "label": "How we use it",
+          "items": [
+            {
+              "q": "How do we use your data?",
+              "a": "Only to respond to your inquiry and, if you expressly authorize us, to send relevant information by email or WhatsApp about your move to Paraguay."
+            },
+            {
+              "q": "Do we share data with third parties?",
+              "a": "CRM (HubSpot) and email provider (Mailchimp) under a data processing agreement. We never sell or share your data with third parties for commercial purposes."
+            }
+          ]
+        },
+        {
+          "id": "derechos",
+          "label": "Your rights",
+          "items": [
+            {
+              "q": "How do I access, rectify, or delete my data?",
+              "a": "Email us at paraguaynexa@gmail.com and we will respond within a maximum of 30 days (access, rectification, erasure, objection)."
+            },
+            {
+              "q": "How long do you keep my data?",
+              "a": "24 months from the last contact, unless legally required."
+            }
+          ]
+        },
+        {
+          "id": "autoridad",
+          "label": "Supervisory authority",
+          "items": [
+            {
+              "q": "Who can I complain to?",
+              "a": "In Paraguay: National Directorate for Personal Data Protection (DINAPROD). In the EU: the supervisory authority of your country of residence."
+            }
+          ]
+        }
+      ]
     }
   },
   "exitPopup": {
@@ -2825,7 +2906,7 @@
   },
   "guidesPage": {
     "seo": {
-      "title": "Guías para mudarse a Paraguay — Recursos gratuitos",
+      "title": "Guides for moving to Paraguay — Free resources",
       "description": "Download free guides on residency, schools, cost of living, and more."
     },
     "hero": {
@@ -2845,7 +2926,7 @@
         },
         {
           "title": "10 cosas que nadie te dice",
-          "description": "Lo que realmente significa mudarse a Paraguay. Tips que solo alguien que lo vivió puede contarte.",
+          "description": "What it really means to move to Paraguay. Tips that only someone who has lived it can share. The full guide: immigration, banking, housing, healthcare, schools.",
           "download_url": "#",
           "lang": "ES/EN",
           "type": "PDF"

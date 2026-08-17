@@ -38,7 +38,7 @@
     {
       "id": "trust-signals",
       "variant": "credentials",
-      "content": "aboutPage.trust"
+      "content": "aboutPage.whyNexa"
     },
     {
       "id": "cta-banner",

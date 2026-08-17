@@ -2649,6 +2649,21 @@
       "messagePlaceholder": "Escribí tu comentario o pregunta...",
       "button": "Enviar",
       "thanks": "¡Gracias por tu mensaje!"
+    },
+    "hero": {
+      "eyebrow": "Tu opinión",
+      "headline": "Contanos tu experiencia",
+      "subheadline": "Tu feedback nos ayuda a mejorar el acompañamiento para futuras familias.",
+      "backgroundImage": "@src:hero.home"
+    },
+    "full": {
+      "title": "Compartí tu experiencia",
+      "subtitle": "Tu testimonio puede ser el próximo",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu@email.com",
+      "messagePlaceholder": "Escribí tu comentario o pregunta...",
+      "submitText": "Enviar",
+      "successMessage": "¡Gracias! Tu feedback nos ayuda a mejorar."
     }
   },
   "bookingPage": {
@@ -2672,6 +2687,72 @@
       "title": "Protección de datos — Nexa Paraguay",
       "description": "Política de protección de datos personales y cumplimiento GDPR de Nexa Paraguay.",
       "targetKeyword": "protección datos Paraguay"
+    },
+    "hero": {
+      "eyebrow": "Privacidad",
+      "headline": "Política de Protección de Datos Personales",
+      "subheadline": "Cumplimiento con la Ley 1682/01 de Paraguay y el Reglamento General de Protección de Datos (GDPR) de la Unión Europea.",
+      "backgroundImage": "@src:hero.home",
+      "ctaText": "Hacer una consulta",
+      "ctaHref": "/contacto"
+    },
+    "full": {
+      "title": "Cómo tratamos tus datos",
+      "subtitle": "Resumen de nuestra política de privacidad",
+      "categories": [
+        {
+          "id": "que",
+          "label": "Qué datos recogemos",
+          "items": [
+            {
+              "q": "¿Qué datos personales recogemos?",
+              "a": "Nombre, email, teléfono (opcional), país, programa de interés y objetivo declarado, cuando completás un formulario o nos contactás directamente."
+            },
+            {
+              "q": "¿Recogemos datos sensibles?",
+              "a": "No. No pedimos origen racial, religión, orientación sexual, salud ni afiliación política. Si necesitáramos datos financieros sensibles, los pedimos por canal cifrado y con tu consentimiento explícito."
+            }
+          ]
+        },
+        {
+          "id": "como",
+          "label": "Cómo los usamos",
+          "items": [
+            {
+              "q": "¿Para qué usamos tus datos?",
+              "a": "Solo para responder a tu consulta y, si lo autorizás expresamente, enviarte información relevante por email o WhatsApp sobre tu mudanza a Paraguay."
+            },
+            {
+              "q": "¿Compartimos datos con terceros?",
+              "a": "CRM (HubSpot) y proveedor de email (Mailchimp) bajo contrato de tratamiento. No los vendemos ni cedemos a terceros con fines comerciales."
+            }
+          ]
+        },
+        {
+          "id": "derechos",
+          "label": "Tus derechos",
+          "items": [
+            {
+              "q": "¿Cómo accedo, rectifico o elimino mis datos?",
+              "a": "Escribinos a paraguaynexa@gmail.com y respondemos en un plazo máximo de 30 días (acceso, rectificación, eliminación, oposición)."
+            },
+            {
+              "q": "¿Cuánto tiempo guardan mis datos?",
+              "a": "24 meses desde el último contacto, salvo requerimiento legal."
+            }
+          ]
+        },
+        {
+          "id": "autoridad",
+          "label": "Autoridad de control",
+          "items": [
+            {
+              "q": "¿A quién puedo reclamar?",
+              "a": "En Paraguay: Dirección Nacional de Protección de Datos Personales (DINAPROD). En la UE: autoridad de control de tu país de residencia."
+            }
+          ]
+        }
+      ]
     }
   },
   "exitPopup": {
