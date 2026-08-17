@@ -2495,7 +2495,7 @@
         },
         {
           "icon": "Sun",
-          "title": "Clima Subtropical Todo el Año",
+          "title": "Ganzjährig subtropisches Klima",
           "description": "Paraguay bietet das ganze Jahr über reichlich Sonnenschein, mit milden Temperaturen im Winter und warmen Sommern. Das Klima ist einer der großen Anziehungspunkte für europäische Zuzügler."
         },
         {
@@ -2508,7 +2508,10 @@
           "title": "Sicherheit und Gelassenheit",
           "description": "Paraguay hat eine der niedrigsten Kriminalitätsraten in Südamerika. Exklusive Viertel wie Villa Morra und Carmelitas bieten Sicherheit rund um die Uhr mit privater Überwachung."
         }
-      ]
+      ],
+      "pillars[1]": {
+        "title": "Ganzjährig subtropisches Klima"
+      }
     },
     "comparison": {
       "title": "Vs. Europa: qué cambia",
@@ -2622,7 +2625,7 @@
   "exitPopup": {
     "title": "Erwägen Sie einen Umzug nach Paraguay?",
     "subtitle": "Laden Sie unseren vollständigen Leitfaden herunter: Kosten, Anforderungen, Verfahren und mehr.",
-    "placeholder": "ihre@email.com",
+    "placeholder": "deine@email.de",
     "ctaLabel": "Kostenlosen Leitfaden herunterladen",
     "closeLabel": "Nein, danke",
     "disclaimer": "Kein Spam. Wir senden den Leitfaden und 1-2 Folge-E-Mails. Sie können sich jederzeit abmelden."

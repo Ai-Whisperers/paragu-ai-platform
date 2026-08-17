@@ -1747,7 +1747,7 @@
         },
         {
           "icon": "Sun",
-          "title": "Clima Subtropical Todo el Año",
+          "title": "Year-round subtropical climate",
           "description": "Paraguay offers abundant sunshine throughout the year, with mild temperatures in winter and warm summers. The climate is one of the great draws for European relocators."
         },
         {
@@ -1760,7 +1760,10 @@
           "title": "Safety and Tranquility",
           "description": "Paraguay has one of the lowest crime rates in South America. Exclusive neighbourhoods such as Villa Morra and Carmelitas offer around-the-clock security with private surveillance."
         }
-      ]
+      ],
+      "pillars[1]": {
+        "title": "Year-round subtropical climate"
+      }
     },
     "comparison": {
       "title": "Vs. Europa: qué cambia",
@@ -2593,11 +2596,11 @@
     }
   },
   "exitPopup": {
-    "title": "¿Considerando mudarte a Paraguay?",
+    "title": "Considering a move to Paraguay?",
     "subtitle": "Download our complete guide with everything you need to know: costs, requirements, procedures, and more.",
-    "placeholder": "tu@email.com",
-    "ctaLabel": "Descargar guía gratuita",
-    "closeLabel": "No, gracias",
+    "placeholder": "you@email.com",
+    "ctaLabel": "Download free guide",
+    "closeLabel": "No, thanks",
     "disclaimer": "No spam. We'll send the guide and 1-2 more emails. You can unsubscribe anytime."
   },
   "retainerPlans": {

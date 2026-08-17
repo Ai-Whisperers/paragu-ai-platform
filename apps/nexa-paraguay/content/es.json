@@ -2677,7 +2677,7 @@
   "exitPopup": {
     "title": "¿Considerando mudarte a Paraguay?",
     "subtitle": "Descargá nuestra guía completa con todo lo que necesitás saber: costos, requisitos, trámites y más.",
-    "placeholder": "tu@email.com",
+    "placeholder": "tu@correo.com",
     "ctaLabel": "Descargar guía gratuita",
     "closeLabel": "No, gracias",
     "disclaimer": "Sin spam. Te enviaremos la guía y 1-2 correos más. Podés cancelar cuando quieras."

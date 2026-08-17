@@ -508,8 +508,8 @@
         "altByLocale": {
           "es": "Luana Weiss van der Pol, Fundadora y Coordinadora de Nexa Paraguay",
           "en": "Luana Weiss van der Pol, Founder & Coordinator at Nexa Paraguay",
-          "nl": "Luana Weiss van der Pol, Oprichtster & Co\u00f6rdinator bij Nexa Paraguay",
-          "de": "Luana Weiss van der Pol, Gr\u00fcnderin & Koordinatorin bei Nexa Paraguay"
+          "nl": "Luana Weiss van der Pol, Oprichtster & Coördinator bij Nexa Paraguay",
+          "de": "Luana Weiss van der Pol, Gründerin & Koordinatorin bei Nexa Paraguay"
         },
         "credit": "Photo by Luana Weiss van der Pol, 2026-08-03",
         "consentConfirmed": true,
@@ -571,6 +571,16 @@
           "nl": "Receptie van het kantoor: aankomstpunt op de operationele dag",
           "de": "Büroempfang: Ankunftspunkt am operativen Tag"
         }
+      },
+      "team-huddle": {
+        "src": "/images/office/team-huddle.webp",
+        "alt": "Nexa Paraguay team meeting",
+        "altByLocale": {
+          "es": "Equipo de Nexa Paraguay en reunión",
+          "en": "Nexa Paraguay team meeting",
+          "nl": "Nexa Paraguay team bijeenkomst",
+          "de": "Nexa Paraguay Team-Meeting"
+        }
       }
     },
     "trust": {
@@ -616,6 +626,46 @@
           "es": "Exterior del edificio del Registro paraguayo — socio institucional",
           "nl": "Buitenkant van het Paraguayaanse registergebouw — institutionele partner",
           "de": "Außenansicht des paraguayischen Registergebäudes — institutioneller Partner"
+        }
+      },
+      "relocation": {
+        "src": "/images/trust/migraciones.webp",
+        "alt": "Logistics and relocation support",
+        "altByLocale": {
+          "es": "Logística y mudanza",
+          "en": "Logistics and relocation",
+          "nl": "Logistiek en verhuizing",
+          "de": "Umzug und Logistik"
+        }
+      },
+      "corporate": {
+        "src": "/images/trust/company-certificate.webp",
+        "alt": "Corporate structuring",
+        "altByLocale": {
+          "es": "Estructura empresarial",
+          "en": "Corporate structuring",
+          "nl": "Bedrijfsstructurering",
+          "de": "Unternehmensstrukturierung"
+        }
+      },
+      "meeting": {
+        "src": "/images/trust/company-certificate.webp",
+        "alt": "Official meeting",
+        "altByLocale": {
+          "es": "Reunión oficial",
+          "en": "Official meeting",
+          "nl": "Officiële afspraak",
+          "de": "Offizieller Termin"
+        }
+      },
+      "team": {
+        "src": "/images/trust/registry-exterior.webp",
+        "alt": "Our team",
+        "altByLocale": {
+          "es": "Nuestro equipo",
+          "en": "Our team",
+          "nl": "Ons team",
+          "de": "Unser Team"
         }
       }
     },

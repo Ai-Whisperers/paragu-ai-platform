@@ -90,7 +90,14 @@ export function TrustSection({ pageContent, data, images }: SectionComponentProp
             <p className="text-text-muted max-w-2xl mx-auto leading-relaxed">{c.subtitle}</p>
           )}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className={`grid gap-6 lg:gap-8 ${
+          // Adaptive grid: choose columns based on item count so the grid never has an orphan row
+          c.items.length === 1 ? 'grid-cols-1 max-w-md mx-auto' :
+          c.items.length === 2 ? 'grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto' :
+          c.items.length === 3 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto' :
+          c.items.length === 4 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' :
+          'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+        }`}>
           {c.items.map((item: any, i: number) => {
             const img = resolveImage(images, item.image)
             const IconComp = getIcon(item.icon)
@@ -752,7 +759,14 @@ export function WhyCountrySection({ pageContent, data, images }: SectionComponen
           )}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className={`grid gap-6 lg:gap-8 ${
+          // Adaptive grid: choose columns based on item count so the grid never has an orphan row
+          c.pillars.length === 1 ? 'grid-cols-1 max-w-md mx-auto' :
+          c.pillars.length === 2 ? 'grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto' :
+          c.pillars.length === 3 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto' :
+          c.pillars.length === 4 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' :
+          'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+        }`}>
           {c.pillars.map((p: any, i: number) => {
             const img = resolveImage(images, p.imageUrl)
             const IconComp = getIcon(p.icon)
