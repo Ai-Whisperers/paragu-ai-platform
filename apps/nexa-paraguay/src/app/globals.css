@@ -70,3 +70,41 @@ img.process-step-img {
   display: block !important;
   margin-bottom: 12px !important;
 }
+/* ── Improved grids: explicit breakpoints for 4-card layouts ── */
+.grid-cols-4-cards {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .grid-cols-4-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid-cols-4-cards { grid-template-columns: repeat(4, 1fr); }
+}
+
+.grid-cols-3-cards {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .grid-cols-3-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid-cols-3-cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+.grid-cols-2-cards {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .grid-cols-2-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Fix 4-card testimonial grids at tablet — was leaving 1 orphan ── */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .grid-cols-features { grid-template-columns: repeat(2, 1fr) !important; }
+}

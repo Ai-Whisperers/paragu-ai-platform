@@ -87,32 +87,6 @@
         }
       ]
     },
-    "coreServices": {
-      "eyebrow": "Servicios Esenciales",
-      "title": "Servicios esenciales para tu mudanza a Paraguay",
-      "items": [
-        {
-          "icon": "Stamp",
-          "title": "Residencia y Documentos Legales",
-          "description": "Desde tu residencia hasta tu cédula y tu licencia de conducir, gestionamos cada documento oficial ante las autoridades paraguayas."
-        },
-        {
-          "icon": "Landmark",
-          "title": "Banca y Configuración Fiscal",
-          "description": "Apertura de cuentas bancarias y registro tributario (RUC) para que tu huella financiera en Paraguay esté lista desde el primer día."
-        },
-        {
-          "icon": "Home",
-          "title": "Bienes Raíces",
-          "description": "Búsqueda de vivienda para alquilar y asesoría completa para comprar propiedad residencial o comercial."
-        },
-        {
-          "icon": "Truck",
-          "title": "Mudanza e Instalación",
-          "description": "Te acompañamos desde tu llegada: vivienda, transporte, conectividad y todo lo que necesitas para asentarte."
-        }
-      ]
-    },
     "whyCountry": {
       "eyebrow": "Por qué Paraguay",
       "title": "Tres razones por las que Europa se muda al Cono Sur",
@@ -392,9 +366,7 @@
           "title": "Selecciona tus Servicios",
           "description": "Elige el apoyo específico que necesitas. Creamos una lista de verificación personalizada de los documentos que debes reunir en tu país de origen, asegurándonos de que no pierdas tiempo con trámites innecesarios.",
           "icon": "ClipboardCheck",
-          "image": {
-            "$img": "process.consultation"
-          },
+          "image": "@src:process.consultation",
           "duration": "Week 1"
         },
         {
@@ -402,9 +374,7 @@
           "title": "Procesamiento Paralelo",
           "description": "Mientras organizas tus documentos en casa, nosotros comenzamos el trabajo sobre el terreno. Preparamos todas las gestiones locales y coordinamos las traducciones o legalizaciones paraguayas necesarias para que todo esté listo para tu llegada.",
           "icon": "Layers",
-          "image": {
-            "$img": "process.documents"
-          },
+          "image": "@src:process.documents",
           "duration": "Weeks 2–5"
         },
         {
@@ -412,9 +382,7 @@
           "title": "Tu Día en Paraguay",
           "description": "Viajás a Paraguay con tus documentos listos. Te acompañamos en las citas presenciales — la mayoría pueden resolverse en un día, pero a veces el proceso toma más. Te confirmamos los tiempos con anticipación.",
           "icon": "CalendarCheck",
-          "image": {
-            "$img": "process.arrival"
-          },
+          "image": "@src:process.arrival",
           "duration": "Week 6"
         },
         {
@@ -422,9 +390,7 @@
           "title": "Cédula y Activación Financiera",
           "description": "Una vez emitida tu Cédula de Identidad Paraguaya, activamos tu infraestructura financiera. Gestionamos tu registro de RUC y facilitamos la apertura de tus cuentas bancarias locales.",
           "icon": "Building",
-          "image": {
-            "$img": "process.banking"
-          },
+          "image": "@src:process.banking",
           "duration": "Weeks 7–9"
         },
         {
@@ -432,9 +398,7 @@
           "title": "Instalación y Estilo de Vida",
           "description": "Con tu base legal y financiera establecida, te ayudamos a instalarte. Esto incluye encontrar la casa o apartamento perfecto para alquilar o comprar, y conseguir un vehículo confiable.",
           "icon": "Home",
-          "image": {
-            "$img": "process.completion"
-          },
+          "image": "@src:process.completion",
           "duration": "Weeks 10–12"
         }
       ]
@@ -2420,12 +2384,10 @@
     },
     "hero": {
       "headline": "Todos los servicios para radicarte en Paraguay",
-      "subheadline": "Residencia, cédula, licencia, traducción certificada, banca, RUC, vivienda y compra de propiedades. Servicios diseñados para europeos que quieren hacer las cosas bien, rápido y con quien ya pasó por el proceso.",
+      "subheadline": "Acompañamiento personal en cada paso. Sonia y Luana coordinan tu residencia, tu mudanza y tu empresa para que nada dependa de un solo trámite.",
       "backgroundImage": "@src:process.consultation",
       "ctaPrimaryText": "Agendar consulta gratuita",
-      "ctaPrimaryHref": "/agenda",
-      "ctaSecondaryText": "Ver el proceso",
-      "ctaSecondaryHref": "/proceso"
+      "ctaPrimaryHref": "/agenda"
     },
     "trust": {
       "eyebrow": "Servicios",
@@ -2438,26 +2400,26 @@
           "description": "Residencia, cédula, licencia y traducción certificada gestionadas ante las autoridades paraguayas."
         },
         {
-          "icon": "Landmark",
-          "title": "Configuración financiera",
-          "description": "Apertura de cuentas en bancos top-tier (Sudameris, Continental, GNB) y registro tributario (RUC)."
+          "icon": "Truck",
+          "title": "Logística e instalación",
+          "description": "Te asistimos con tu casa, auto, telefonía móvil o la apertura de cuentas bancarias."
         },
         {
-          "icon": "Home",
-          "title": "Bienes raíces",
-          "description": "Búsqueda de vivienda para alquilar y asesoría completa para compra de propiedades residenciales o comerciales."
+          "icon": "Briefcase",
+          "title": "Estructura empresarial",
+          "description": "Te conectamos con notarios y asesores para crear tu RUC y constituir una empresa."
         }
       ]
     },
     "services": {
-      "eyebrow": "Servicios",
+      "eyebrow": "Servicios detallados",
       "title": "Servicios detallados",
       "subtitle": "Cada servicio con alcance, tiempos y entregables claros.",
       "groups": [
         {
           "id": "residency-legal",
           "title": "Residencia y Documentos Legales",
-          "subtitle": "Los primeros pasos esenciales para tu vida en Paraguay.",
+          "subtitle": "Iniciamos tus trámites en Migraciones para asegurar tu estatus legal como primer paso esencial. Con la residencia aprobada, te acompañamos presencialmente a obtener tu Cédula.",
           "items": [
             {
               "title": "Residencia Permanente",
@@ -2466,48 +2428,44 @@
             {
               "title": "Cédula de Identidad Paraguaya",
               "description": "Obtención de tu documento nacional de identidad, con acompañamiento presencial."
-            },
-            {
-              "title": "Licencia de Conducir Paraguaya",
-              "description": "Gestión completa para la obtención de tu licencia de conducir ante las autoridades municipales. Incluye la preparación de los requisitos locales, acompañamiento a las pruebas correspondientes y seguimiento hasta la emisión del documento."
-            },
-            {
-              "title": "Traducción Certificada",
-              "description": "Traducciones oficiales y certificadas de tus documentos a español.",
-              "bullets": [
-                "Traducciones certificadas español-inglés-neerlandés-alemán",
-                "Coordinación completa con traductores públicos"
-              ]
             }
           ]
         },
         {
-          "id": "banking-tax",
-          "title": "Banca y Configuración Fiscal",
-          "subtitle": "Estableciendo tu huella financiera en el país.",
-          "items": [
-            {
-              "title": "Apertura de Cuenta Bancaria",
-              "description": "Creación de cuenta personal y/o empresarial en bancos paraguayos. Incluye la selección del banco según tu perfil (Sudameris, Continental, GNB), coordinación y activación de tarjeta y banca online."
-            },
-            {
-              "title": "Registro Tributario (RUC)",
-              "description": "Inscripción en la DNIT (antes SET) como persona física (por ejemplo, para el IRP) o como empresa. Tu RUC personal o empresarial listo para operar."
-            }
-          ]
-        },
-        {
-          "id": "real-estate",
-          "title": "Bienes Raíces Residenciales",
-          "subtitle": "Vivienda para alquilar o comprar.",
+          "id": "relocation-logistics",
+          "title": "Logística e Instalación",
+          "subtitle": "Te asistimos con tu casa, vehículo, telefonía móvil o la apertura de cuentas bancarias.",
           "items": [
             {
               "title": "Búsqueda de Vivienda",
-              "description": "Encontrá el lugar ideal para vivir, sea por un mes o para toda la vida. Búsqueda según tu presupuesto y estilo de vida, con visitas coordinadas, revisión del contrato de alquiler en español antes de firmar y negociación con el propietario."
+              "description": "Encontrá el lugar ideal para vivir, sea por un mes o para toda la vida. Visitas coordinadas, revisión del contrato y negociación con el propietario."
             },
             {
-              "title": "Asesoría en Compra de Propiedades",
-              "description": "Acompañamiento completo en la compra de propiedades residenciales o comerciales. Incluye búsqueda en zonas estratégicas y apoyo integral durante la negociación, firma y registro oficial."
+              "title": "Licencia de Conducir Paraguaya",
+              "description": "Tramitación completa ante las autoridades municipales, incluyendo los requisitos locales, acompañamiento a las pruebas y seguimiento hasta la emisión."
+            },
+            {
+              "title": "Telefonía Móvil",
+              "description": "Activación de línea y datos a tu llegada al país. Coordinamos con el operador elegido para que tengas conectividad desde el primer día."
+            },
+            {
+              "title": "Apertura de Cuenta Bancaria",
+              "description": "Creación de cuenta personal y/o empresarial en bancos paraguayos. Incluye selección del banco según tu perfil (Sudameris, Continental, GNB), coordinación y activación de tarjeta y banca online."
+            }
+          ]
+        },
+        {
+          "id": "corporate-structuring",
+          "title": "Estructura Empresarial",
+          "subtitle": "Te conectamos con notarios y asesores para crear tu RUC (Tax ID) y constituir una empresa.",
+          "items": [
+            {
+              "title": "Registro Tributario (RUC)",
+              "description": "Inscripción en la DNIT (antes SET) como persona física (por ejemplo, para el IRP) o como empresa. Tu RUC personal o empresarial listo para operar."
+            },
+            {
+              "title": "Constitución de Empresa",
+              "description": "Acompañamiento con notarios para la creación de sociedades anónimas (S.A.) o SAS. Incluye redacción de estatutos, registro en el Registro Público y obtención de la habilitación municipal."
             }
           ]
         }
@@ -2568,9 +2526,7 @@
           "detailParagraph": "Durante esta fase inicial, realizamos una videollamada de consulta gratuita donde evaluamos tus necesidades específicas. Te explicamos cada servicio disponible y te recomendamos el programa más adecuado según tu perfil y objetivos. Te entregamos un checklist personalizado con todos los documentos que necesitas reunir.",
           "timeline": "Semana 1",
           "icon": "ClipboardCheck",
-          "image": {
-            "$img": "process.consultation"
-          },
+          "image": "@src:process.consultation",
           "duration": "Week 1"
         },
         {
@@ -2580,9 +2536,7 @@
           "detailParagraph": "Mientras tú reúnes la documentación en tu país (actas, antecedentes penales, certificados), nuestro equipo en Paraguay inicia las gestiones paralelas: coordinación con escribanías, reserva de citas en Migraciones, preparación de formularios y apertura de carpetas. Este trabajo simultáneo reduce el tiempo total del proceso a la mitad.",
           "timeline": "Semanas 2–5",
           "icon": "Layers",
-          "image": {
-            "$img": "process.documents"
-          },
+          "image": "@src:process.documents",
           "duration": "Weeks 2–5"
         },
         {
@@ -2592,9 +2546,7 @@
           "detailParagraph": "Tu día operativo comienza temprano con nuestro equipo. Te recogemos y acompañamos a cada cita: Migraciones para la solicitud de residencia, Departamento de Identificaciones para la cédula, y policía para antecedentes. Todo está pre-coordinado para que no esperes en filas. Almorzamos juntos y cerramos el día con un café en tu futuro barrio.",
           "timeline": "Semana 6",
           "icon": "CalendarCheck",
-          "image": {
-            "$img": "process.arrival"
-          },
+          "image": "@src:process.arrival",
           "duration": "Week 6"
         },
         {
@@ -2604,9 +2556,7 @@
           "detailParagraph": "Cuando tu cédula está lista, iniciamos la activación financiera: apertura de cuenta bancaria (te acompañamos al banco), registro de RUC ante la SET, y si contrataste el programa Business, constitución de tu sociedad ante el Registro Público de Comercio. Todo coordinado para maximizar tu tiempo en Paraguay.",
           "timeline": "Semanas 7–9",
           "icon": "Building",
-          "image": {
-            "$img": "process.banking"
-          },
+          "image": "@src:process.banking",
           "duration": "Weeks 7–9"
         },
         {
@@ -2616,9 +2566,7 @@
           "detailParagraph": "La fase final es la más gratificante: te ayudamos a encontrar vivienda (alquiler temporal o compra definitiva), conseguir vehículo, contratar servicios (agua, luz, internet), y conectar con la comunidad de expats. Nuestro objetivo es que no solo obtengas tus papeles, sino que realmente te establezcas y disfrutes tu nueva vida.",
           "timeline": "Semanas 10–12",
           "icon": "Home",
-          "image": {
-            "$img": "process.completion"
-          },
+          "image": "@src:process.completion",
           "duration": "Weeks 10–12"
         }
       ]
@@ -2778,11 +2726,10 @@
       "headline": "Tu mudanza a Paraguay con toda la familia",
       "subheadline": "Colegios internacionales, salud de primer nivel, barrios seguros. Te ayudamos con cada detalle.",
       "trustBadges": [
-        "8 colegios internacionales",
-        "12 consultorios dentales",
-        "19 parques",
-        "Acompañamiento familiar"
-      ]
+        "Acompañamiento familiar",
+        "Red de colegios"
+      ],
+      "eyebrow": "Familias"
     },
     "schools": {
       "eyebrow": "Educación",
@@ -2900,7 +2847,7 @@
     "activities": {
       "eyebrow": "Actividades",
       "title": "Parques y espacios verdes",
-      "description": "Asunción tiene 19+ parques y espacios verdes con GPS registrados. Desde el enorme Ñu Guasu hasta plazas de barrio.",
+      "description": "Asunción tiene 19+ parques y espacios verdes con GPS registrados. Desde el enorme Ñu Guasu hasta plazas de barrio, las familias tienen opciones al aire libre durante todo el año.",
       "park_count": 19,
       "gym_count": 98,
       "stadium_count": 2

@@ -87,32 +87,6 @@
         }
       ]
     },
-    "coreServices": {
-      "eyebrow": "Essential Services",
-      "title": "The essential first steps for your new life in Paraguay",
-      "items": [
-        {
-          "icon": "Stamp",
-          "title": "Residency & Legal Documents",
-          "description": "From your residency to your national ID and driver's license, we handle every official document before Paraguayan authorities."
-        },
-        {
-          "icon": "Landmark",
-          "title": "Banking & Tax Setup",
-          "description": "Bank account opening and tax registration (RUC) so your financial footprint in Paraguay is ready from day one."
-        },
-        {
-          "icon": "Home",
-          "title": "Real Estate",
-          "description": "Rental property search and full advisory for buying residential or commercial property."
-        },
-        {
-          "icon": "Truck",
-          "title": "Relocation & Settling In",
-          "description": "We support you from arrival: housing, transport, connectivity, and everything you need to settle in."
-        }
-      ]
-    },
     "whyCountry": {
       "eyebrow": "Why Paraguay",
       "title": "Three reasons Europe is moving to the Southern Cone",
@@ -594,25 +568,29 @@
           "id": "t1",
           "name": "Erik V.",
           "origin": "Netherlands",
-          "quote": "From the first call I felt I was talking to someone who actually understood both sides. The fiscal plan saved me a year of trial and error."
+          "quote": "From the first call I felt I was talking to someone who actually understood both sides. The fiscal plan saved me a year of trial and error.",
+          "image": "@src:testimonials.tm1"
         },
         {
           "id": "t2",
           "name": "Markus S.",
           "origin": "Germany",
-          "quote": "They coordinated my residency, company, and bank in eight weeks. Exactly what was promised."
+          "quote": "They coordinated my residency, company, and bank in eight weeks. Exactly what was promised.",
+          "image": "@src:testimonials.tm2"
         },
         {
           "id": "t3",
           "name": "Sophie B.",
           "origin": "Belgium",
-          "quote": "I was nervous about the process but Nexa made it easy. One trip, everything solved."
+          "quote": "I was nervous about the process but Nexa made it easy. One trip, everything solved.",
+          "image": "@src:testimonials.tm3"
         },
         {
           "id": "t4",
           "name": "Thomas L.",
           "origin": "Switzerland",
-          "quote": "Bought land in Paraguay with Nexa's guidance. The legal due diligence was thorough and the closing was smooth."
+          "quote": "Bought land in Paraguay with Nexa's guidance. The legal due diligence was thorough and the closing was smooth.",
+          "image": "@src:testimonials.tm4"
         }
       ]
     },
@@ -2329,12 +2307,10 @@
     },
     "hero": {
       "headline": "All the services you need to settle in Paraguay",
-      "subheadline": "Residency, national ID, driver's license, certified translation, banking, tax registration, housing, and property purchase. Services designed for Europeans who want to do things right, fast, and with someone who's been through the process.",
+      "subheadline": "Personal accompaniment at every step. Sonia and Luana coordinate your residency, your relocation, and your business so nothing depends on a single form.",
       "backgroundImage": "@src:process.consultation",
       "ctaPrimaryText": "Book a free consultation",
-      "ctaPrimaryHref": "/agenda",
-      "ctaSecondaryText": "See the process",
-      "ctaSecondaryHref": "/proceso"
+      "ctaPrimaryHref": "/agenda"
     },
     "trust": {
       "eyebrow": "Services",
@@ -2344,29 +2320,29 @@
         {
           "icon": "Stamp",
           "title": "Official processing",
-          "description": "Residency, national ID, driver's license, and certified translation handled before Paraguayan authorities."
+          "description": "Residency, national ID, driver’s license and certified translation handled before Paraguayan authorities."
         },
         {
-          "icon": "Landmark",
-          "title": "Financial setup",
-          "description": "Bank account opening at top-tier banks (Sudameris, Continental, GNB) and tax registration (RUC)."
+          "icon": "Truck",
+          "title": "Relocation & logistics",
+          "description": "We assist you with housing, vehicles, mobile setup, or opening bank accounts."
         },
         {
-          "icon": "Home",
-          "title": "Real estate",
-          "description": "Rental property search and full advisory for residential or commercial property purchases."
+          "icon": "Briefcase",
+          "title": "Corporate structuring",
+          "description": "We connect you with notaries and advisors to set up your RUC (Tax ID) and incorporate your business."
         }
       ]
     },
     "services": {
-      "eyebrow": "Services",
+      "eyebrow": "Detailed services",
       "title": "Detailed services",
-      "subtitle": "Each service with clear scope, timelines, and deliverables.",
+      "subtitle": "Every service with clear scope, timelines, and deliverables.",
       "groups": [
         {
           "id": "residency-legal",
           "title": "Residency & Legal Documents",
-          "subtitle": "The essential first steps for your life in Paraguay.",
+          "subtitle": "We initiate your paperwork with the Immigration Office to secure your legal status as an essential first step. Once your residency is approved, we accompany you in person to obtain your national ID card (Cédula).",
           "items": [
             {
               "title": "Permanent Residency",
@@ -2375,48 +2351,44 @@
             {
               "title": "Paraguayan National ID (Cédula)",
               "description": "Obtain your national identity document with in-person accompaniment."
-            },
-            {
-              "title": "Paraguayan Driver's License",
-              "description": "End-to-end management to obtain your driver's license from local municipal authorities. This includes preparing local requirements, in-person accompaniment to the required tests, and follow-up until the document is issued."
-            },
-            {
-              "title": "Certified Translation",
-              "description": "Official and certified translation of your foreign documents into Spanish.",
-              "bullets": [
-                "Certified translations Spanish–English–Dutch–German",
-                "Full coordination with sworn translators"
-              ]
             }
           ]
         },
         {
-          "id": "banking-tax",
-          "title": "Banking & Tax Setup",
-          "subtitle": "Establishing your financial footprint in the country.",
-          "items": [
-            {
-              "title": "Bank Account Opening",
-              "description": "Setting up personal and/or business accounts in Paraguayan banks. Includes bank selection tailored to your profile (Sudameris, Continental, GNB, etc.), account coordination, and card/online banking activation."
-            },
-            {
-              "title": "Tax Registration (RUC)",
-              "description": "Enrollment with the DNIT (formerly SET) as an individual (e.g., for IRP) or as a corporation. Your personal or corporate RUC will be fully ready to operate."
-            }
-          ]
-        },
-        {
-          "id": "real-estate",
-          "title": "Residential Real Estate",
-          "subtitle": "Housing to rent or buy.",
+          "id": "relocation-logistics",
+          "title": "Relocation & Logistics",
+          "subtitle": "We assist you with housing, vehicles, mobile setup, or opening bank accounts.",
           "items": [
             {
               "title": "Housing Search",
-              "description": "Finding the ideal place to live, whether for a month or for a lifetime. Property scouting tailored to your budget and lifestyle, including coordinated viewings, lease agreement reviews in Spanish before signing, and landlord negotiations."
+              "description": "Finding the ideal place to live, whether for a month or for a lifetime. Coordinated viewings, lease agreement reviews in Spanish before signing, and landlord negotiations."
             },
             {
-              "title": "Real Estate Advisory",
-              "description": "Full guidance for purchasing residential or commercial properties. This covers property scouting in strategic areas, along with comprehensive support during the signing and public registration process."
+              "title": "Paraguayan Driver’s License",
+              "description": "End-to-end management with municipal authorities, including local requirements, in-person accompaniment to the required tests, and follow-up until the document is issued."
+            },
+            {
+              "title": "Mobile Setup",
+              "description": "Line and data activation on arrival. We coordinate with the operator you choose so you have connectivity from day one."
+            },
+            {
+              "title": "Bank Account Opening",
+              "description": "Setting up personal and/or business accounts in Paraguayan banks. Includes bank selection tailored to your profile (Sudameris, Continental, GNB, etc.), coordination, and card/online banking activation."
+            }
+          ]
+        },
+        {
+          "id": "corporate-structuring",
+          "title": "Corporate Structuring",
+          "subtitle": "We connect you with notaries and advisors to set up your RUC (Tax ID) and incorporate your business.",
+          "items": [
+            {
+              "title": "Tax Registration (RUC)",
+              "description": "Enrollment with the DNIT (formerly SET) as an individual (e.g for IRP) or as a corporation. Your personal or corporate RUC will be fully ready to operate."
+            },
+            {
+              "title": "Business Incorporation",
+              "description": "Accompaniment with notaries for the creation of corporations (S.A.) or simplified stock companies (SAS). Includes drafting of articles of incorporation, public registration, and obtaining municipal licensing."
             }
           ]
         }
@@ -2669,14 +2641,13 @@
       "description": "Everything you need to know about relocating to Paraguay with your family: schools, healthcare, safety, activities, and costs."
     },
     "hero": {
-      "headline": "Tu mudanza a Paraguay con toda la familia",
+      "headline": "Your family move to Paraguay",
       "subheadline": "International schools, top-tier healthcare, safe neighborhoods. We help with every detail.",
       "trustBadges": [
-        "8 colegios internacionales",
-        "12 consultorios dentales",
-        "19 parques",
-        "Acompañamiento familiar"
-      ]
+        "Family accompaniment",
+        "School network"
+      ],
+      "eyebrow": "Families"
     },
     "schools": {
       "eyebrow": "Educación",
@@ -2792,8 +2763,8 @@
       ]
     },
     "activities": {
-      "eyebrow": "Actividades",
-      "title": "Parques y espacios verdes",
+      "eyebrow": "Activities",
+      "title": "Parks and green spaces",
       "description": "Asunción has 19+ parks and green spaces with registered GPS. From the massive Ñu Guasu to neighborhood plazas, families have plenty of outdoor options year-round.",
       "park_count": 19,
       "gym_count": 98,

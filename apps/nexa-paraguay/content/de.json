@@ -385,25 +385,29 @@
           "id": "t1",
           "name": "Erik V.",
           "origin": "Niederlande",
-          "quote": "Vom ersten Anruf an hatte ich das Gefühl, mit jemandem zu sprechen, der beide Seiten wirklich versteht. Der Steuerplan hat mir ein Jahr Versuch und Irrtum erspart."
+          "quote": "Vom ersten Anruf an hatte ich das Gefühl, mit jemandem zu sprechen, der beide Seiten wirklich versteht. Der Steuerplan hat mir ein Jahr Versuch und Irrtum erspart.",
+          "image": "@src:testimonials.tm1"
         },
         {
           "id": "t2",
           "name": "Markus S.",
           "origin": "Deutschland",
-          "quote": "Sie koordinierten meinen Aufenthalt, mein Unternehmen und meine Bank in acht Wochen. Genau das, was versprochen wurde."
+          "quote": "Sie koordinierten meinen Aufenthalt, mein Unternehmen und meine Bank in acht Wochen. Genau das, was versprochen wurde.",
+          "image": "@src:testimonials.tm2"
         },
         {
           "id": "t3",
           "name": "Sophie B.",
           "origin": "Belgien",
-          "quote": "Ich war nervös wegen des Prozesses, aber Nexa hat es einfach gemacht. Eine Reise, alles gelöst."
+          "quote": "Ich war nervös wegen des Prozesses, aber Nexa hat es einfach gemacht. Eine Reise, alles gelöst.",
+          "image": "@src:testimonials.tm3"
         },
         {
           "id": "t4",
           "name": "Thomas L.",
           "origin": "Schweiz",
-          "quote": "Ich habe mit Nexas Begleitung Land in Paraguay gekauft. Die rechtliche Due Diligence war gründlich und der Abschluss verlief reibungslos."
+          "quote": "Ich habe mit Nexas Begleitung Land in Paraguay gekauft. Die rechtliche Due Diligence war gründlich und der Abschluss verlief reibungslos.",
+          "image": "@src:testimonials.tm4"
         }
       ]
     },
@@ -957,13 +961,11 @@
       "targetKeyword": "Paraguay Umzugsdienstleistungen"
     },
     "hero": {
-      "headline": "Alle Dienstleistungen, die du für dein Leben in Paraguay brauchst",
-      "subheadline": "Residenz, Cédula, Führerschein, beglaubigte Übersetzung, Banken, Steuern, Wohnung und Immobilienkauf. Dienstleistungen für Europäer, die es richtig, schnell und mit jemandem machen wollen, der den Prozess kennt.",
+      "headline": "Alle Dienstleistungen für dein Leben in Paraguay",
+      "subheadline": "Persönliche Begleitung bei jedem Schritt. Sonia und Luana koordinieren deine Residenz, deinen Umzug und dein Unternehmen, damit nichts von einem einzigen Formular abhängt.",
       "backgroundImage": "@src:process.consultation",
       "ctaPrimaryText": "Kostenlose Beratung buchen",
-      "ctaPrimaryHref": "/agenda",
-      "ctaSecondaryText": "Ablauf ansehen",
-      "ctaSecondaryHref": "/proceso"
+      "ctaPrimaryHref": "/agenda"
     },
     "trust": {
       "eyebrow": "Dienstleistungen",
@@ -976,26 +978,26 @@
           "description": "Residenz, Cédula, Führerschein und beglaubigte Übersetzung — komplett vor den paraguayischen Behörden abgewickelt."
         },
         {
-          "icon": "Landmark",
-          "title": "Finanzielles Setup",
-          "description": "Kontoeröffnung bei Top-Banken (Sudameris, Continental, GNB) und steuerliche Registrierung (RUC)."
+          "icon": "Truck",
+          "title": "Umzug & Logistik",
+          "description": "Wir unterstützen dich bei Wohnungssuche, Fahrzeugen, Mobilfunk oder Kontoeröffnung."
         },
         {
-          "icon": "Home",
-          "title": "Immobilien",
-          "description": "Wohnungssuche zur Miete und umfassende Beratung beim Kauf von Wohn- oder Gewerbeimmobilien."
+          "icon": "Briefcase",
+          "title": "Unternehmensstrukturierung",
+          "description": "Wir vermitteln dich an Notare und Berater für die Beantragung deiner RUC (Steuernummer) und die Gründung deines Unternehmens."
         }
       ]
     },
     "services": {
-      "eyebrow": "Dienstleistungen",
+      "eyebrow": "Dienstleistungen im Detail",
       "title": "Dienstleistungen im Detail",
       "subtitle": "Jede Dienstleistung mit klarem Umfang, Zeitplan und Ergebnissen.",
       "groups": [
         {
           "id": "residency-legal",
           "title": "Residenz & Rechtliche Dokumente",
-          "subtitle": "Die ersten essenziellen Schritte für dein Leben in Paraguay.",
+          "subtitle": "Wir leiten deine Behördengänge bei der Migrationsbehörde ein, um deinen legalen Status zu sichern. Sobald deine Residenz genehmigt ist, begleiten wir dich persönlich bei der Beantragung deiner Cédula.",
           "items": [
             {
               "title": "Permanente Residenz",
@@ -1003,49 +1005,45 @@
             },
             {
               "title": "Paraguayischer Personalausweis (Cédula)",
-              "description": "Beantragung deines nationalen Personalausweises mit persönlicher Begleitung bei jedem Schritt."
-            },
-            {
-              "title": "Paraguayischer Führerschein",
-              "description": "Komplette Abwicklung zur Erlangung deines Führerscheins bei den zuständigen kommunalen Behörden. Dies umfasst die Vorbereitung der lokalen Anforderungen, die persönliche Begleitung zu den Prüfungen und die Nachverfolgung bis zur Ausstellung des Dokuments."
-            },
-            {
-              "title": "Beglaubigte Übersetzung",
-              "description": "Offizielle und beglaubigte Übersetzungen deiner Dokumente ins Spanische.",
-              "bullets": [
-                "Beglaubigte Übersetzungen Spanisch–Englisch–Niederländisch–Deutsch",
-                "Vollständige Koordination mit vereidigten Übersetzern"
-              ]
+              "description": "Beantragung deines nationalen Personalausweises mit persönlicher Begleitung."
             }
           ]
         },
         {
-          "id": "banking-tax",
-          "title": "Banken & Steuern",
-          "subtitle": "Deinen finanziellen Fußabdruck im Land aufbauen.",
-          "items": [
-            {
-              "title": "Kontoeröffnung",
-              "description": "Eröffnung von Privat- und/oder Geschäftskonten bei paraguayischen Banken. Inklusive der Bankauswahl passend zu deinem Profil (Sudameris, Continental, GNB etc.), Koordination sowie der Aktivierung von Karte und Online-Banking."
-            },
-            {
-              "title": "Steuerliche Registrierung (RUC)",
-              "description": "Anmeldung bei der DNIT (ehemals SET) als Privatperson (z. B. für die IRP) oder als Unternehmen. Deine persönliche oder geschäftliche RUC ist sofort einsatzbereit."
-            }
-          ]
-        },
-        {
-          "id": "real-estate",
-          "title": "Wohnimmobilien",
-          "subtitle": "Wohnung zur Miete oder zum Kauf.",
+          "id": "relocation-logistics",
+          "title": "Umzug & Logistik",
+          "subtitle": "Wir unterstützen dich bei Wohnungssuche, Fahrzeugen, Mobilfunk oder Kontoeröffnung.",
           "items": [
             {
               "title": "Immobiliensuche",
-              "description": "Den idealen Ort zum Leben finden — ob für einen Monat oder für das ganze Leben. Immobiliensuche basierend auf Budget und Lebensstil, einschließlich koordinierter Besichtigungen, Prüfung des spanischen Mietvertrags vor der Unterzeichnung und Verhandlungen mit dem Eigentümer."
+              "description": "Den idealen Ort zum Wohnen finden — ob für einen Monat oder für das ganze Leben. Koordinierte Besichtigungen, Prüfung des Mietvertrags und Verhandlungen mit dem Vermieter."
             },
             {
-              "title": "Immobilienberatung",
-              "description": "Umfassende Beratung beim Kauf von Wohn- oder Gewerbeimmobilien. Dies beinhaltet die Suche in strategischen Lagen sowie die lückenlose Begleitung bei der Unterzeichnung und der offiziellen Registrierung."
+              "title": "Paraguayischer Führerschein",
+              "description": "Komplette Abwicklung bei kommunalen Behörden, einschließlich lokaler Anforderungen, persönlicher Begleitung zu den Prüfungen und Nachverfolgung bis zur Ausstellung."
+            },
+            {
+              "title": "Mobilfunk",
+              "description": "Aktivierung von Leitung und Daten bei der Ankunft. Wir koordinieren mit dem gewählten Anbieter, damit du ab Tag eins erreichbar bist."
+            },
+            {
+              "title": "Kontoeröffnung",
+              "description": "Eröffnung von Privat- und/oder Geschäftskonten bei paraguayischen Banken. Inklusive Bankauswahl passend zu deinem Profil (Sudameris, Continental, GNB), Koordination und Aktivierung von Karte und Online-Banking."
+            }
+          ]
+        },
+        {
+          "id": "corporate-structuring",
+          "title": "Unternehmensstrukturierung",
+          "subtitle": "Wir vermitteln dich an Notare und Berater für die Beantragung deiner RUC (Steuernummer) und die Gründung deines Unternehmens.",
+          "items": [
+            {
+              "title": "Steuerliche Registrierung (RUC)",
+              "description": "Anmeldung bei der DNIT (ehemals SET) als Privatperson (z. B. für die IRP) oder als Unternehmen. Deine persönliche oder geschäftliche RUC ist sofort einsatzbereit."
+            },
+            {
+              "title": "Unternehmensgründung",
+              "description": "Begleitung mit Notaren für die Gründung von Aktiengesellschaften (S.A.) oder vereinfachten Aktiengesellschaften (SAS). Inklusive Erstellung der Gründungsurkunde, Eintragung im Handelsregister und Erlangung der Gemeindelizenz."
             }
           ]
         }
@@ -1556,32 +1554,6 @@
           "title": "Unternehmensstrukturierung",
           "description": "Wir vermitteln dich an Notare und Berater für die Beantragung deiner RUC und die Gründung von Unternehmen.",
           "image": "@src:trust.corporate"
-        }
-      ]
-    },
-    "coreServices": {
-      "eyebrow": "Kernleistungen",
-      "title": "Die ersten essenziellen Schritte für dein neues Leben in Paraguay",
-      "items": [
-        {
-          "icon": "Stamp",
-          "title": "Residenz & Rechtliche Dokumente",
-          "description": "Von deiner Residenz über deine Cédula bis zum Führerschein — wir wickeln jedes offizielle Dokument vor den paraguayischen Behörden ab."
-        },
-        {
-          "icon": "Landmark",
-          "title": "Banken & Steuern",
-          "description": "Eröffnung von Bankkonten und steuerliche Registrierung (RUC), damit dein finanzielles Fundament in Paraguay ab Tag eins steht."
-        },
-        {
-          "icon": "Home",
-          "title": "Immobilien",
-          "description": "Suche nach Mietwohnungen und umfassende Beratung beim Kauf von Wohn- oder Gewerbeimmobilien."
-        },
-        {
-          "icon": "Truck",
-          "title": "Umzug & Eingewöhnung",
-          "description": "Wir begleiten dich ab deiner Ankunft: Wohnung, Transport, Konnektivität und alles, was du zum Ankommen brauchst."
         }
       ]
     },
@@ -2696,14 +2668,13 @@
       "description": "Alles, was Sie über einen Umzug nach Paraguay mit Ihrer Familie wissen müssen: Schulen, Gesundheitswesen, Sicherheit, Aktivitäten und Kosten."
     },
     "hero": {
-      "headline": "Ihr Familienumzug nach Paraguay",
+      "headline": "Dein Familienumzug nach Paraguay",
       "subheadline": "Internationale Schulen, erstklassige Gesundheitsversorgung, sichere Viertel. Wir helfen bei jedem Detail.",
       "trustBadges": [
-        "8 colegios internacionales",
-        "12 consultorios dentales",
-        "19 parques",
-        "Acompañamiento familiar"
-      ]
+        "Familienbegleitung",
+        "Schulnetzwerk"
+      ],
+      "eyebrow": "Familien"
     },
     "schools": {
       "eyebrow": "Educación",
@@ -2820,8 +2791,8 @@
     },
     "activities": {
       "eyebrow": "Aktivitäten",
-      "title": "Parques y espacios verdes",
-      "description": "Asunción hat 19+ Parks und Grünflächen mit registriertem GPS. Vom riesigen Ñu Guasu bis zu Stadtteilplätzen.",
+      "title": "Parks und Grünflächen",
+      "description": "Asunción hat 19+ Parks und Grünflächen mit registriertem GPS. Vom riesigen Ñu Guasu bis zu Stadtteilplätzen haben Familien das ganze Jahr über viele Möglichkeiten im Freien.",
       "park_count": 19,
       "gym_count": 98,
       "stadium_count": 2
@@ -2935,7 +2906,8 @@
         "10+ betreute Familien",
         "Fester Ansprechpartner",
         "Persönliche Betreuung"
-      ]
+      ],
+      "backgroundImage": "@src:hero.localizedDe"
     },
     "whySonia": {
       "eyebrow": "Warum Sonia?",

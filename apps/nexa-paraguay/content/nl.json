@@ -170,25 +170,29 @@
           "id": "t1",
           "name": "Erik V.",
           "origin": "Nederland",
-          "quote": "Vanaf het eerste gesprek had ik het gevoel dat ik met iemand sprak die beide kanten echt begreep. Het fiscale plan heeft me een jaar proberen bespaard."
+          "quote": "Vanaf het eerste gesprek had ik het gevoel dat ik met iemand sprak die beide kanten echt begreep. Het fiscale plan heeft me een jaar proberen bespaard.",
+          "image": "@src:testimonials.tm1"
         },
         {
           "id": "t2",
           "name": "Markus S.",
           "origin": "Duitsland",
-          "quote": "Ze coördineerden mijn verblijf, bedrijf en bank in acht weken. Precies wat beloofd was."
+          "quote": "Ze coördineerden mijn verblijf, bedrijf en bank in acht weken. Precies wat beloofd was.",
+          "image": "@src:testimonials.tm2"
         },
         {
           "id": "t3",
           "name": "Sophie B.",
           "origin": "België",
-          "quote": "Ik was nerveus over het proces, maar Nexa maakte het makkelijk. Eén reis, alles opgelost."
+          "quote": "Ik was nerveus over het proces, maar Nexa maakte het makkelijk. Eén reis, alles opgelost.",
+          "image": "@src:testimonials.tm3"
         },
         {
           "id": "t4",
           "name": "Thomas L.",
           "origin": "Zwitserland",
-          "quote": "Kocht land in Paraguay met begeleiding van Nexa. De juridische due diligence was grondig en de afsluiting verliep soepel."
+          "quote": "Kocht land in Paraguay met begeleiding van Nexa. De juridische due diligence was grondig en de afsluiting verliep soepel.",
+          "image": "@src:testimonials.tm4"
         }
       ]
     },
@@ -1438,32 +1442,6 @@
         }
       ]
     },
-    "coreServices": {
-      "eyebrow": "Kerndiensten",
-      "title": "De essentiële eerste stappen voor je nieuwe leven in Paraguay",
-      "items": [
-        {
-          "icon": "Stamp",
-          "title": "Verblijf & Wettelijke Documenten",
-          "description": "Van je verblijfsvergunning tot je Cédula en rijbewijs — wij regelen elk officieel document bij de Paraguayaanse autoriteiten."
-        },
-        {
-          "icon": "Landmark",
-          "title": "Bankzaken & Belastingen",
-          "description": "Opening van bankrekeningen en belastingregistratie (RUC), zodat je financiële basis in Paraguay vanaf dag één klaar is."
-        },
-        {
-          "icon": "Home",
-          "title": "Vastgoed",
-          "description": "Zoeken van huurwoningen en volledige begeleiding bij de aankoop van residentieel of commercieel vastgoed."
-        },
-        {
-          "icon": "Truck",
-          "title": "Verhuizing & Installatie",
-          "description": "We begeleiden je vanaf je aankomst: huisvesting, transport, connectiviteit en alles wat je nodig hebt om je thuis te voelen."
-        }
-      ]
-    },
     "whyCountry": {
       "eyebrow": "Waarom Paraguay",
       "title": "Drie redenen waarom Europa naar de Zuidelijke Conus verhuist",
@@ -2179,12 +2157,10 @@
     },
     "hero": {
       "headline": "Alle diensten die je nodig hebt om je in Paraguay te vestigen",
-      "subheadline": "Verblijf, Cédula, rijbewijs, beglaubigde vertaling, bankzaken, belastingregistratie, huisvesting en vastgoed. Diensten ontworpen voor Europeanen die het goed, snel en met iemand die het proces heeft doorlopen willen regelen.",
+      "subheadline": "Persoonlijke begeleiding bij elke stap. Sonia en Luana coördineren je verblijf, je verhuizing en je bedrijf, zodat niets afhangt van één formulier.",
       "backgroundImage": "@src:process.consultation",
       "ctaPrimaryText": "Plan een gratis consult",
-      "ctaPrimaryHref": "/agenda",
-      "ctaSecondaryText": "Bekijk het proces",
-      "ctaSecondaryHref": "/proceso"
+      "ctaPrimaryHref": "/agenda"
     },
     "trust": {
       "eyebrow": "Diensten",
@@ -2197,26 +2173,26 @@
           "description": "Verblijf, Cédula, rijbewijs en beglaubigde vertaling — volledig afgehandeld bij de Paraguayaanse autoriteiten."
         },
         {
-          "icon": "Landmark",
-          "title": "Financiële opzet",
-          "description": "Opening van bankrekeningen bij topbanken (Sudameris, Continental, GNB) en belastingregistratie (RUC)."
+          "icon": "Truck",
+          "title": "Verhuizing & logistiek",
+          "description": "Wij helpen je met huisvesting, voertuigen, mobiele telefonie of het openen van bankrekeningen."
         },
         {
-          "icon": "Home",
-          "title": "Vastgoed",
-          "description": "Zoeken van huurwoningen en volledige begeleiding bij de aankoop van residentieel of commercieel vastgoed."
+          "icon": "Briefcase",
+          "title": "Bedrijfsstructurering",
+          "description": "Wij brengen je in contact met notarissen en adviseurs voor het aanvragen van je RUC (belastingnummer) en het oprichten van je bedrijf."
         }
       ]
     },
     "services": {
-      "eyebrow": "Diensten",
+      "eyebrow": "Diensten in detail",
       "title": "Diensten in detail",
       "subtitle": "Elke dienst met duidelijke scope, planning en resultaten.",
       "groups": [
         {
           "id": "residency-legal",
           "title": "Verblijf & Wettelijke Documenten",
-          "subtitle": "De essentiële eerste stappen voor je leven in Paraguay.",
+          "subtitle": "We starten je procedures bij de immigratiedienst om je legale status te garanderen als essentiële eerste stap. Zodra je verblijf is goedgekeurd, begeleiden we je persoonlijk bij het aanvragen van je Cédula.",
           "items": [
             {
               "title": "Permanent Verblijf",
@@ -2224,49 +2200,45 @@
             },
             {
               "title": "Paraguayaans Identiteitsbewijs (Cédula)",
-              "description": "Aanvraag van je nationale identiteitsbewijs, met persoonlijke begeleiding bij elke stap."
-            },
-            {
-              "title": "Paraguayaans Rijbewijs",
-              "description": "Compleet ontzorgingspakket voor het verkrijgen van je rijbewijs bij de gemeentelijke autoriteiten. Dit omvat het voorbereiden van de lokale vereisten, persoonlijke begeleiding naar de examens en opvolging tot het document is afgegeven."
-            },
-            {
-              "title": "Beglaubigde Vertaling",
-              "description": "Officiële en beglaubigde vertalingen van je documenten naar het Spaans.",
-              "bullets": [
-                "Beglaubigde vertalingen Spaans–Engels–Nederlands–Duits",
-                "Volledige coördinatie met beëdigde vertalers"
-              ]
+              "description": "Aanvraag van je nationale identiteitsbewijs, met persoonlijke begeleiding."
             }
           ]
         },
         {
-          "id": "banking-tax",
-          "title": "Bankzaken & Belastingen",
-          "subtitle": "Jouw financiële voetafdruk in het land opzetten.",
-          "items": [
-            {
-              "title": "Bankrekening Openen",
-              "description": "Het openen van persoonlijke en/of zakelijke rekeningen bij Paraguayaanse banken. Inclusief bankselectie op basis van jouw profiel (Sudameris, Continental, GNB, etc.), coördinatie en de activatie van je bankpas en online bankieren."
-            },
-            {
-              "title": "Belastingregistratie (RUC)",
-              "description": "Inschrijving bij de DNIT (voorheen SET) als natuurlijk persoon (bijvoorbeeld voor de IRP) of als bedrijf. Je persoonlijke of zakelijke RUC is direct klaar voor gebruik."
-            }
-          ]
-        },
-        {
-          "id": "real-estate",
-          "title": "Residentieel Vastgoed",
-          "subtitle": "Woning om te huren of te kopen.",
+          "id": "relocation-logistics",
+          "title": "Verhuizing & Logistiek",
+          "subtitle": "Wij helpen je met huisvesting, voertuigen, mobiele telefonie of het openen van bankrekeningen.",
           "items": [
             {
               "title": "Woning Zoeken",
-              "description": "Het vinden van de ideale plek om te wonen, of dat nu voor een maand is of voor het leven. Zoeken naar woningen op basis van budget en levensstijl, inclusief gecoördineerde bezichtigingen, controle van het Spaanse huurcontract vóór ondertekening en onderhandelingen met de eigenaar."
+              "description": "Het vinden van de ideale plek om te wonen, of dat nu voor een maand is of voor het leven. Gecoördineerde bezichtigingen, controle van het huurcontract en onderhandelingen met de verhuurder."
             },
             {
-              "title": "Vastgoedadvies",
-              "description": "Volledige begeleiding bij de aankoop van residentieel of commercieel vastgoed. Dit omvat het zoeken in strategische zones en uitgebreide ondersteuning tijdens de onderhandeling, ondertekening en de officiële registratie."
+              "title": "Paraguayaans Rijbewijs",
+              "description": "Compleet ontzorgingspakket bij gemeentelijke autoriteiten, inclusief lokale vereisten, persoonlijke begeleiding naar examens en opvolging tot het document is afgegeven."
+            },
+            {
+              "title": "Mobiele Telefonie",
+              "description": "Activatie van je lijn en data bij aankomst. We coördineren met de gekozen provider zodat je vanaf dag één bereikbaar bent."
+            },
+            {
+              "title": "Bankrekening Openen",
+              "description": "Opening van persoonlijke en/of zakelijke rekeningen bij Paraguayaanse banken. Inclusief bankselectie op basis van jouw profiel (Sudameris, Continental, GNB), coördinatie en activatie van kaart en online bankieren."
+            }
+          ]
+        },
+        {
+          "id": "corporate-structuring",
+          "title": "Bedrijfsstructurering",
+          "subtitle": "Wij brengen je in contact met notarissen en adviseurs voor het aanvragen van je RUC (belastingnummer) en het oprichten van je bedrijf.",
+          "items": [
+            {
+              "title": "Belastingregistratie (RUC)",
+              "description": "Inschrijving bij de DNIT (voorheen SET) als natuurlijk persoon (bijvoorbeeld voor de IRP) of als bedrijf. Je persoonlijke of zakelijke RUC is direct klaar voor gebruik."
+            },
+            {
+              "title": "Bedrijf Oprichten",
+              "description": "Begeleiding met notarissen voor het oprichten van vennootschappen (S.A.) of SAS. Inclusief het opstellen van statuten, registratie in het Handelsregister en het verkrijgen van gemeentelijke vergunningen."
             }
           ]
         }
@@ -2598,7 +2570,8 @@
         "10+ geholpen",
         "Vaste prijs",
         "Persoonlijke begeleiding"
-      ]
+      ],
+      "backgroundImage": "@src:hero.localizedNl"
     },
     "whySonia": {
       "eyebrow": "Waarom Sonia?",
@@ -2764,13 +2737,12 @@
     },
     "hero": {
       "headline": "Jouw gezinsverhuizing naar Paraguay",
-      "subheadline": "Internationale scholen, salud de primer nivel, barrios seguros. Te ayudamos con cada detalle.",
+      "subheadline": "Internationale scholen, eersteklas gezondheidszorg, veilige wijken. Wij helpen met elk detail.",
       "trustBadges": [
-        "8 colegios internacionales",
-        "12 consultorios dentales",
-        "19 parques",
-        "Acompañamiento familiar"
-      ]
+        "Gezinsbegeleiding",
+        "Schoolnetwerk"
+      ],
+      "eyebrow": "Gezinnen"
     },
     "schools": {
       "eyebrow": "Educación",
@@ -2887,8 +2859,8 @@
     },
     "activities": {
       "eyebrow": "Activiteiten",
-      "title": "Parques y espacios verdes",
-      "description": "Asunción tiene 19+ parques y espacios verdes con GPS registrados. Desde el enorme Ñu Guasu hasta plazas de barrio.",
+      "title": "Parken en groene ruimtes",
+      "description": "Asunción heeft 19+ parken en groene zones met geregistreerde GPS. Van het enorme Ñu Guasu tot buurtpleinen, gezinnen hebben het hele jaar door volop buitenopties.",
       "park_count": 19,
       "gym_count": 98,
       "stadium_count": 2
