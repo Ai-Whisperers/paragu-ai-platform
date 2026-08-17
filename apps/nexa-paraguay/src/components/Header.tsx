@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { trackCtaClick, trackLanguageSwitch } from '@/lib/ga4'
@@ -21,9 +21,9 @@ const LOCALE_FLAGS: Record<string, { label: string; flag: string }> = {
 const LOCALES = ['es', 'en', 'nl', 'de']
 
 export function Header({ navigation, locale }: { navigation: any; locale?: string }) {
-  const [open, setOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const navItems: NavItem[] = navigation?.navItems || []
   const pathname = usePathname()
   const router = useRouter()
@@ -32,125 +32,169 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
     ? locale
     : (pathLocale && LOCALES.includes(pathLocale) ? pathLocale : 'es')
 
+  // Close menus on route change
+  useEffect(() => {
+    setMenuOpen(false)
+    setLangOpen(false)
+  }, [pathname])
+
+  // Close on ESC
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        setMenuOpen(false)
+        setLangOpen(false)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
+
+  // Shadow on scroll
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 8)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
   function switchLocale(newLocale: string) {
-    // Get current path without locale prefix
     const parts = pathname.split('/').filter(Boolean)
     let cleanPath = '/'
     if (parts.length > 0 && LOCALES.includes(parts[0])) {
       cleanPath = '/' + parts.slice(1).join('/') || '/'
     }
-    // Preserve hash fragment for anchor links (e.g. /servicios#residency-legal)
     const hash = typeof window !== 'undefined' ? window.location.hash : ''
     const newPath = '/' + newLocale + cleanPath + hash
     trackLanguageSwitch(currentLocale, newLocale)
     router.push(newPath)
   }
 
+  function resolveHref(href: string) {
+    let h = href || '#'
+    h = h.replace(/^\/s\/[^/]+\/[^/]+/, '')
+    if (!h.startsWith('http') && !h.startsWith('/' + currentLocale)) {
+      h = '/' + currentLocale + h
+    }
+    return h
+  }
+
   return (
-    <header style={{ background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 1px 3px rgba(0,0,0,0.04)', position: 'sticky', top: 0, zIndex: 100 }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0.75rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href={`/${currentLocale}`} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <img src="/images/brand/logo.svg" alt="Nexa Paraguay" width={200} height={56} style={{ height: '36px', width: 'auto' }} />
-        </Link>
-        <button onClick={() => setOpen(!open)} style={{ display: 'none', background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', padding: '0.25rem', color: '#1B2A4A' }}>
-          {open ? '✕' : '☰'}
-        </button>
-        <nav className="hidden md:flex gap-6 items-center">
-          {navItems.map((item, i) => {
-            let href = item.href || '#'
-            href = href.replace(/^\/s\/[^/]+\/[^/]+/, '')
-            if (!href.startsWith('http') && !href.startsWith('/' + currentLocale)) {
-              href = '/' + currentLocale + href
-            }
-            const isActive = pathname === href || pathname === href + '/' || (item.children && item.children.some((c: any) => pathname === c.href))
-            const hasChildren = !!item.children
+    <header style={{
+      background: scrolled ? 'rgba(255,255,255,0.96)' : 'rgba(255,255,255,0.92)',
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)',
+      borderBottom: scrolled ? '1px solid rgba(0,0,0,0.08)' : '1px solid rgba(0,0,0,0.05)',
+      boxShadow: scrolled ? '0 4px 16px rgba(0,0,0,0.06)' : '0 1px 3px rgba(0,0,0,0.04)',
+      position: 'sticky',
+      top: 0,
+      zIndex: 100,
+      transition: 'box-shadow 0.2s, border-color 0.2s, background 0.2s',
+    }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '1rem 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
+        {/* LEFT: hamburger + lang switcher */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: '1 1 0' }}>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              background: menuOpen ? '#1B2A4A' : 'transparent',
+              color: menuOpen ? '#fff' : '#1B2A4A',
+              border: '1px solid ' + (menuOpen ? '#1B2A4A' : 'rgba(27,42,74,0.15)'),
+              borderRadius: '8px',
+              padding: '0.5rem 0.875rem',
+              cursor: 'pointer',
+              fontSize: '0.85rem',
+              fontWeight: 600,
+              transition: 'all 0.15s',
+              fontFamily: 'inherit',
+            }}
+          >
+            {menuOpen ? (
+              <>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span>Cerrar</span>
+              </>
+            ) : (
+              <>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <span>Menú</span>
+              </>
+            )}
+          </button>
 
-            if (hasChildren) {
-              return (
-                <div
-                  key={i}
-                  className="relative"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                >
-                  <a
-                    href={href}
-                    className="text-[0.9rem] font-medium transition-colors py-2 inline-flex items-center gap-1.5"
-                    style={{
-                      color: isActive ? '#C9A96E' : '#333',
-                      borderBottom: '1px dashed #ccc',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    {item.label}
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </a>
-                  {servicesOpen && (
-                    <div
-                      className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-lg border border-border/40 py-2 min-w-[280px] z-50"
-                      style={{ boxShadow: '0 8px 24px rgba(0,0,0,0.12)' }}
-                    >
-                      {item.children?.map((child: any, j: number) => {
-                        let childHref = child.href || '#'
-                        childHref = childHref.replace(/^\/s\/[^/]+\/[^/]+/, '')
-                        if (!childHref.startsWith('http') && !childHref.startsWith('/' + currentLocale)) {
-                          childHref = '/' + currentLocale + childHref
-                        }
-                        return (
-                          <a
-                            key={j}
-                            href={childHref}
-                            className="block px-4 py-2.5 text-sm text-text hover:bg-surface-alt hover:text-accent transition-colors no-underline"
-                          >
-                            {child.label}
-                          </a>
-                        )
-                      })}
-                    </div>
-                  )}
-                </div>
-              )
-            }
-
-            return (
-              <a
-                key={i}
-                href={href}
-                className="text-[0.9rem] font-medium transition-colors py-2"
-                style={{
-                  color: isActive ? '#C9A96E' : '#333',
-                  borderBottom: isActive ? '2px solid #C9A96E' : '2px solid transparent',
-                  textDecoration: 'none',
-                }}
-              >
-                {item.label}
-              </a>
-            )
-          })}
-          {/* Language Switcher Dropdown */}
+          {/* Language switcher */}
           <div style={{ position: 'relative' }}>
             <button
-              onClick={() => setLangOpen(!langOpen)}
-              style={{ background: '#F5F5F0', border: '1px solid #ddd', borderRadius: '6px', padding: '0.3rem 0.6rem', cursor: 'pointer', fontSize: '0.85rem', color: '#333', display: 'flex', alignItems: 'center', gap: '0.3rem' }}
+              onClick={() => { setLangOpen(!langOpen); setMenuOpen(false); }}
               aria-label="Switch language"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.4rem',
+                background: langOpen ? '#F5F5F0' : '#fff',
+                border: '1px solid rgba(27,42,74,0.15)',
+                borderRadius: '8px',
+                padding: '0.5rem 0.75rem',
+                cursor: 'pointer',
+                fontSize: '0.85rem',
+                color: '#1B2A4A',
+                fontWeight: 600,
+                fontFamily: 'inherit',
+              }}
             >
-              {LOCALE_FLAGS[currentLocale] ? (
-                <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-                  <img src={LOCALE_FLAGS[currentLocale].flag} alt={currentLocale} width={18} height={12} style={{ width: '18px', height: '12px', borderRadius: '2px', objectFit: 'cover' }} />
-                  {LOCALE_FLAGS[currentLocale].label}
-                </span>
-              ) : '🌐 NL'}
-              <span style={{ fontSize: '0.7rem' }}>{langOpen ? '▲' : '▼'}</span>
+              {LOCALE_FLAGS[currentLocale] && (
+                <img src={LOCALE_FLAGS[currentLocale].flag} alt={currentLocale} width={18} height={12} style={{ width: '18px', height: '12px', borderRadius: '2px', objectFit: 'cover' }} />
+              )}
+              <span>{LOCALE_FLAGS[currentLocale]?.label || currentLocale.toUpperCase()}</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transform: langOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
             </button>
             {langOpen && (
-              <div style={{ position: 'absolute', top: '100%', right: 0, marginTop: '0.3rem', background: '#fff', border: '1px solid #ddd', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', zIndex: 200, minWidth: '100px' }}>
+              <div style={{ position: 'absolute', top: '100%', left: 0, marginTop: '0.4rem', background: '#fff', border: '1px solid rgba(27,42,74,0.15)', borderRadius: '10px', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', zIndex: 200, minWidth: '140px', overflow: 'hidden' }}>
                 {Object.entries(LOCALE_FLAGS).map(([code, { label, flag }]) => (
                   <button
                     key={code}
                     onClick={() => { setLangOpen(false); switchLocale(code); }}
-                    style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', width: '100%', padding: '0.5rem 0.75rem', textAlign: 'left', background: code === currentLocale ? '#F5F5F0' : 'transparent', border: 'none', cursor: 'pointer', fontSize: '0.85rem', color: '#333', fontWeight: code === currentLocale ? 700 : 400 }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      width: '100%',
+                      padding: '0.625rem 0.875rem',
+                      textAlign: 'left',
+                      background: code === currentLocale ? '#F5F5F0' : 'transparent',
+                      border: 'none',
+                      cursor: 'pointer',
+                      fontSize: '0.875rem',
+                      color: '#1B2A4A',
+                      fontWeight: code === currentLocale ? 700 : 500,
+                      fontFamily: 'inherit',
+                    }}
                   >
                     <img src={flag} alt={code} width={18} height={12} style={{ width: '18px', height: '12px', borderRadius: '2px', objectFit: 'cover' }} />
                     {label}
@@ -159,17 +203,224 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
               </div>
             )}
           </div>
-          {navigation?.ctaText && <a href={(() => { let h = navigation.ctaHref || '#'; h = h.replace(/^\/s\/[^/]+\/[^/]+/, ''); if (!h.startsWith('http') && !h.startsWith('/' + currentLocale)) h = '/' + currentLocale + h; return h; })()} onClick={() => trackCtaClick(navigation?.ctaText || 'header_cta', 'header')} style={{ padding: '0.5rem 1.25rem', background: '#C9A96E', color: '#1B2A4A', borderRadius: '50px', fontWeight: 700, textDecoration: 'none', fontSize: '0.85rem' }}>{navigation.ctaText}</a>}
-        </nav>
+        </div>
+
+        {/* CENTER: large centered logo */}
+        <Link
+          href={`/${currentLocale}`}
+          aria-label="Nexa Paraguay - Home"
+          style={{
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            display: 'flex',
+            alignItems: 'center',
+            textDecoration: 'none',
+          }}
+        >
+          <img
+            src="/images/brand/logo.svg"
+            alt="Nexa Paraguay"
+            width={280}
+            height={78}
+            style={{ height: '52px', width: 'auto', display: 'block' }}
+          />
+        </Link>
+
+        {/* RIGHT: CTA button */}
+        <div style={{ flex: '1 1 0', display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+          {navigation?.ctaText && (
+            <a
+              href={resolveHref(navigation.ctaHref || '#')}
+              onClick={() => trackCtaClick(navigation?.ctaText || 'header_cta', 'header')}
+              style={{
+                padding: '0.625rem 1.25rem',
+                background: '#C9A96E',
+                color: '#1B2A4A',
+                borderRadius: '50px',
+                fontWeight: 700,
+                textDecoration: 'none',
+                fontSize: '0.85rem',
+                whiteSpace: 'nowrap',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.4rem',
+              }}
+            >
+              {navigation.ctaText}
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          )}
+        </div>
       </div>
-      {open && <div onClick={() => setOpen(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.3)', zIndex: 99 }} />}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          button { display: block !important; }
-          nav { display: ${open ? 'flex' : 'none'} !important; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 1.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.12); z-index: 100; gap: 0.75rem; }
-          nav a { padding: 0.5rem 0 !important; }
-        }
-      `}</style>
+
+      {/* DROPDOWN MENU */}
+      {menuOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            onClick={() => setMenuOpen(false)}
+            style={{
+              position: 'fixed',
+              inset: 0,
+              top: '85px',
+              background: 'rgba(27,42,74,0.4)',
+              backdropFilter: 'blur(4px)',
+              WebkitBackdropFilter: 'blur(4px)',
+              zIndex: 98,
+            }}
+          />
+          {/* Menu panel */}
+          <nav
+            style={{
+              position: 'absolute',
+              top: '100%',
+              left: 0,
+              right: 0,
+              background: '#fff',
+              boxShadow: '0 20px 60px rgba(27,42,74,0.18)',
+              zIndex: 99,
+              padding: '2rem 1.25rem 3rem',
+              maxHeight: 'calc(100vh - 85px)',
+              overflowY: 'auto',
+            }}
+            aria-label="Main navigation"
+          >
+            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+              {/* Main nav items */}
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '0.5rem' }}>
+                {navItems.map((item, i) => {
+                  const href = resolveHref(item.href || '#')
+                  const isActive = pathname === href || pathname === href + '/'
+                  const hasChildren = !!item.children && item.children.length > 0
+
+                  if (hasChildren) {
+                    return (
+                      <li key={i}>
+                        <div
+                          style={{
+                            padding: '1.25rem 1.5rem',
+                            background: '#F5F5F0',
+                            borderRadius: '12px',
+                            border: '1px solid rgba(27,42,74,0.06)',
+                          }}
+                        >
+                          <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#C9A96E', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+                            {item.label}
+                          </div>
+                          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '0.5rem' }}>
+                            <li>
+                              <a
+                                href={href}
+                                style={{
+                                  display: 'block',
+                                  padding: '0.625rem 0.875rem',
+                                  color: '#1B2A4A',
+                                  fontWeight: 600,
+                                  fontSize: '0.95rem',
+                                  textDecoration: 'none',
+                                  borderRadius: '8px',
+                                  background: '#fff',
+                                  border: '1px solid rgba(27,42,74,0.1)',
+                                }}
+                              >
+                                {item.label} →
+                              </a>
+                            </li>
+                            {item.children?.map((child: any, j: number) => (
+                              <li key={j}>
+                                <a
+                                  href={resolveHref(child.href || '#')}
+                                  style={{
+                                    display: 'block',
+                                    padding: '0.625rem 0.875rem',
+                                    color: '#1B2A4A',
+                                    fontWeight: 500,
+                                    fontSize: '0.95rem',
+                                    textDecoration: 'none',
+                                    borderRadius: '8px',
+                                    background: '#fff',
+                                    border: '1px solid rgba(27,42,74,0.1)',
+                                  }}
+                                >
+                                  {child.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                    )
+                  }
+
+                  return (
+                    <li key={i}>
+                      <a
+                        href={href}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          padding: '1.25rem 1.5rem',
+                          background: isActive ? '#1B2A4A' : '#F5F5F0',
+                          color: isActive ? '#fff' : '#1B2A4A',
+                          borderRadius: '12px',
+                          fontWeight: 600,
+                          fontSize: '1rem',
+                          textDecoration: 'none',
+                          border: '1px solid ' + (isActive ? '#1B2A4A' : 'rgba(27,42,74,0.06)'),
+                          transition: 'all 0.15s',
+                        }}
+                      >
+                        <span>{item.label}</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </li>
+                  )
+                })}
+              </ul>
+
+              {/* Bottom CTA section */}
+              <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'linear-gradient(135deg, #1B2A4A 0%, #2C3E6B 100%)', borderRadius: '12px', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#C9A96E', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                  ¿Listo para empezar?
+                </div>
+                <div style={{ color: '#fff', fontSize: '1.125rem', fontWeight: 700, marginBottom: '1rem' }}>
+                  {navigation?.ctaText || 'Agendar consulta'}
+                </div>
+                <a
+                  href={resolveHref(navigation?.ctaHref || '/contacto')}
+                  onClick={() => { setMenuOpen(false); trackCtaClick('header_menu_cta', 'header_menu'); }}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    padding: '0.75rem 1.5rem',
+                    background: '#C9A96E',
+                    color: '#1B2A4A',
+                    borderRadius: '50px',
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                    fontSize: '0.95rem',
+                  }}
+                >
+                  {navigation?.ctaText || 'Agendar consulta'}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </>
+      )}
     </header>
   )
 }
