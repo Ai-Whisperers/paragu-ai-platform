@@ -1,5 +1,6 @@
 import { loadPageData, getPageSlugs } from '@/lib/page-data'
 import SectionsRenderer from '@/components/SectionsRenderer'
+import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { LOCALES } from '@/lib/locales'
 import { generateBreadcrumbSchema, generateFaqSchema, generateLocalBusinessSchema, generateOrganizationSchema, generateWebPageSchema } from '@/lib/schemas'
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const { locale, slug } = await params
   const data = await loadPageData(locale, slug)
-  if (!data) return <div className="text-center p-16 text-text-muted">Not found</div>
+  if (!data) notFound()
 
   const baseUrl = `${SITE_URL}/${locale}`
   const pageUrl = `${baseUrl}/${slug}`
