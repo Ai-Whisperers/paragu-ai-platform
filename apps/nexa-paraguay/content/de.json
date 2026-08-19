@@ -235,7 +235,7 @@
       "ctaHref": "/contacto",
       "secondaryCtaText": "Unseren Prozess ansehen",
       "secondaryCtaHref": "/proceso",
-      "image": "@src:team.group"
+      "backgroundImage": "@src:team.group"
     },
     "team": {
       "eyebrow": "Gründungsteam",
@@ -1064,12 +1064,12 @@
           {
             "title": "Permanente Residenz",
             "description": "Vollständige Abwicklung deines Residenzverfahrens vor der paraguayischen Migrationsbehörde.",
-            "image": "@src:trust.migraciones"
+            "image": "@src:services.residencyApplication"
           },
           {
             "title": "Paraguayischer Personalausweis (Cédula)",
             "description": "Beantragung deines nationalen Personalausweises mit persönlicher Begleitung.",
-            "image": "@src:trust.cedula"
+            "image": "@src:services.cedulaPickup"
           }
         ]
       },
@@ -1096,7 +1096,7 @@
           {
             "title": "Kontoeröffnung",
             "description": "Eröffnung von Privat- und/oder Geschäftskonten bei paraguayischen Banken. Inklusive Bankauswahl passend zu deinem Profil (Sudameris, Continental, GNB), Koordination und Aktivierung von Karte und Online-Banking.",
-            "image": "@src:process.banking"
+            "image": "@src:services.bankAccountOpening"
           }
         ]
       },
@@ -1108,12 +1108,12 @@
           {
             "title": "Steuerliche Registrierung (RUC)",
             "description": "Anmeldung bei der DNIT (ehemals SET) als Privatperson (z. B. für die IRP) oder als Unternehmen. Deine persönliche oder geschäftliche RUC ist sofort einsatzbereit.",
-            "image": "@src:process.documents"
+            "image": "@src:services.taxRegistration"
           },
           {
             "title": "Unternehmensgründung",
             "description": "Begleitung mit Notaren für die Gründung von Aktiengesellschaften (S.A.) oder vereinfachten Aktiengesellschaften (SAS). Inklusive Erstellung der Gründungsurkunde, Eintragung im Handelsregister und Erlangung der Gemeindelizenz.",
-            "image": "@src:trust.certificate"
+            "image": "@src:services.companyIncorporation"
           }
         ]
       }
@@ -1476,7 +1476,9 @@
           "description": "Wählen Sie die spezifische Unterstützung, die Sie benötigen. Wir erstellen eine personalisierte Dokumenten-Checkliste und ein verbindliches Angebot — keine Überraschungen.",
           "detailParagraph": "In dieser ersten Phase führen wir ein kostenloses Video-Beratungsgespräch, in dem wir Ihre Situation, Ihre Ziele und Ihren Zeitplan verstehen. Basierend darauf schlagen wir den genauen Umfang vor: nur Aufenthalt, plus Unternehmen, plus Bankwesen, oder das vollständige Paket. Sie wissen genau, was Sie zahlen, bevor Sie sich verpflichten.",
           "duration": "Woche 1",
-          "image": "@src:process.consultation"
+          "image": {
+            "$img": "process.consultation"
+          }
         },
         {
           "number": 2,
@@ -1485,7 +1487,9 @@
           "description": "Während Sie Ihre Dokumente zu Hause sammeln, beginnen wir die Arbeit vor Ort in Paraguay. Wir koordinieren die rechtliche Vorbereitung, die sonst Monate dauern würde.",
           "detailParagraph": "Während Sie die Dokumentation in Ihrem Land sammeln (Geburtsurkunde, Führungszeugnis, berufliche Unterlagen), beginnen wir die Arbeit in Paraguay: rechtliche Vorbereitung, Entwürfe für Firmengründungen, Bank-Vorqualifizierung und Koordination mit den lokalen Behörden. Diese parallele Arbeit macht unseren Zeitplan realistisch — wir warten nicht auf Sie.",
           "duration": "Wochen 2–5",
-          "image": "@src:process.documents"
+          "image": {
+            "$img": "process.documents"
+          }
         },
         {
           "number": 3,
@@ -1494,7 +1498,9 @@
           "description": "Reisen Sie mit fertigen Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen und stellen sicher, dass jede Unterschrift, Kopie und Siegel an ihrem Platz ist.",
           "detailParagraph": "Ihr Operationstag beginnt früh mit unserem Team. Wir holen Sie ab und begleiten Sie durch jeden Termin: Einwanderung, Identifikationen, Bank und alle weiteren Schritte. Wir übersetzen, erklären, lösen. Am Ende des Tages sind Ihre Schlüsseldokumente eingereicht und Ihr Fall wird aktiv bearbeitet.",
           "duration": "Woche 6",
-          "image": "@src:process.arrival"
+          "image": {
+            "$img": "process.arrival"
+          }
         },
         {
           "number": 4,
@@ -1503,7 +1509,9 @@
           "description": "Sobald Ihr paraguayischer Ausweis ausgestellt ist, aktivieren wir Ihre Finanzinfrastruktur. Wir eröffnen das Bankkonto, registrieren den RUC und verbinden Sie mit dem paraguayischen Finanzsystem.",
           "detailParagraph": "Wenn Ihr Ausweis fertig ist, beginnen wir die Finanzaktivierung: Bankkontoeröffnung, RUC-Registrierung, digitale Zertifikate und alle unternehmensbezogenen Schritte. Wir bereiten die Dokumentation vor, koordinieren mit der Bank und begleiten Sie durch die Unterzeichnung.",
           "duration": "Wochen 7–10",
-          "image": "@src:process.banking"
+          "image": {
+            "$img": "process.banking"
+          }
         },
         {
           "number": 5,
@@ -1512,7 +1520,9 @@
           "description": "Mit Ihrer rechtlichen und finanziellen Basis helfen wir Ihnen bei der Niederlassung. Dazu gehören Wohnungssuche, Anmeldung der Versorgung, Schulberatung wenn Sie Kinder haben, und das Entdecken Ihrer Nachbarschaft.",
           "detailParagraph": "Die letzte Phase ist die lohnendste: Wir helfen Ihnen bei der Wohnungssuche (Miete oder Kauf), der Anmeldung der Versorgung, der Schulregistrierung wenn Sie Kinder haben, und beim Entdecken Ihrer Nachbarschaft. Am Ende haben Sie nicht nur einen Aufenthalt — Sie haben ein Zuhause.",
           "duration": "Wochen 11–12",
-          "image": "@src:process.completion"
+          "image": {
+            "$img": "process.completion"
+          }
         }
       ]
     },
@@ -3082,7 +3092,7 @@
     "hero": {
       "headline": "Die Menschen hinter Ihrem Umzug",
       "subheadline": "Ein kleines, mehrsprachiges Team, das den Prozess durchlaufen hat. Keine Auslagerung. Keine Unterauftragsvergabe. Wir bearbeiten Ihren Fall persönlich in Asunción.",
-      "image": "@src:team.group"
+      "backgroundImage": "@src:team.groupCandid"
     },
     "team": {
       "eyebrow": "Gründungsteam",

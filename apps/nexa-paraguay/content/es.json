@@ -390,12 +390,12 @@
     "hero": {
       "headline": "Experiencia convertida en conocimiento",
       "subheadline": "Nexa Paraguay nació con una sola misión: transformar la mudanza de un obstáculo burocrático en una experiencia de bienvenida.",
-      "image": "@src:team.group",
       "eyebrow": "Nuestra historia",
       "ctaText": "Agendar consulta gratuita",
       "ctaHref": "/contacto",
       "secondaryCtaText": "Ver nuestro proceso",
-      "secondaryCtaHref": "/proceso"
+      "secondaryCtaHref": "/proceso",
+      "backgroundImage": "@src:team.group"
     },
     "team": {
       "eyebrow": "Equipo fundador",
@@ -2390,12 +2390,12 @@
           {
             "title": "Residencia Permanente",
             "description": "Tramitación completa de tu residencia ante Migraciones Paraguay.",
-            "image": "@src:trust.migraciones"
+            "image": "@src:services.residencyApplication"
           },
           {
             "title": "Cédula de Identidad Paraguaya",
             "description": "Obtención de tu documento nacional de identidad, con acompañamiento presencial.",
-            "image": "@src:trust.cedula"
+            "image": "@src:services.cedulaPickup"
           }
         ]
       },
@@ -2422,7 +2422,7 @@
           {
             "title": "Apertura de Cuenta Bancaria",
             "description": "Creación de cuenta personal y/o empresarial en bancos paraguayos. Incluye selección del banco según tu perfil (Sudameris, Continental, GNB), coordinación y activación de tarjeta y banca online.",
-            "image": "@src:process.banking"
+            "image": "@src:services.bankAccountOpening"
           }
         ]
       },
@@ -2434,12 +2434,12 @@
           {
             "title": "Registro Tributario (RUC)",
             "description": "Inscripción en la DNIT (antes SET) como persona física (por ejemplo, para el IRP) o como empresa. Tu RUC personal o empresarial listo para operar.",
-            "image": "@src:process.documents"
+            "image": "@src:services.taxRegistration"
           },
           {
             "title": "Constitución de Empresa",
             "description": "Acompañamiento con notarios para la creación de sociedades anónimas (S.A.) o SAS. Incluye redacción de estatutos, registro en el Registro Público y obtención de la habilitación municipal.",
-            "image": "@src:trust.certificate"
+            "image": "@src:services.companyIncorporation"
           }
         ]
       }
@@ -2501,7 +2501,9 @@
           "detailParagraph": "Durante esta fase inicial, realizamos una videollamada de consulta gratuita donde evaluamos tus necesidades específicas. Te explicamos cada servicio disponible y te recomendamos el programa más adecuado según tu perfil y objetivos. Te entregamos un checklist personalizado con todos los documentos que necesitas reunir.",
           "timeline": "Semana 1",
           "icon": "ClipboardCheck",
-          "image": "@src:process.consultation",
+          "image": {
+            "$img": "process.consultation"
+          },
           "duration": "Week 1"
         },
         {
@@ -2511,7 +2513,9 @@
           "detailParagraph": "Mientras tú reúnes la documentación en tu país (actas, antecedentes penales, certificados), nuestro equipo en Paraguay inicia las gestiones paralelas: coordinación con escribanías, reserva de citas en Migraciones, preparación de formularios y apertura de carpetas. Este trabajo simultáneo reduce el tiempo total del proceso a la mitad.",
           "timeline": "Semanas 2–5",
           "icon": "Layers",
-          "image": "@src:process.documents",
+          "image": {
+            "$img": "process.documents"
+          },
           "duration": "Weeks 2–5"
         },
         {
@@ -2521,7 +2525,9 @@
           "detailParagraph": "Tu día operativo comienza temprano con nuestro equipo. Te recogemos y acompañamos a cada cita: Migraciones para la solicitud de residencia, Departamento de Identificaciones para la cédula, y policía para antecedentes. Todo está pre-coordinado para que no esperes en filas. Almorzamos juntos y cerramos el día con un café en tu futuro barrio.",
           "timeline": "Semana 6",
           "icon": "CalendarCheck",
-          "image": "@src:process.arrival",
+          "image": {
+            "$img": "process.arrival"
+          },
           "duration": "Week 6"
         },
         {
@@ -2531,7 +2537,9 @@
           "detailParagraph": "Cuando tu cédula está lista, iniciamos la activación financiera: apertura de cuenta bancaria (te acompañamos al banco), registro de RUC ante la SET, y si contrataste el programa Business, constitución de tu sociedad ante el Registro Público de Comercio. Todo coordinado para maximizar tu tiempo en Paraguay.",
           "timeline": "Semanas 7–9",
           "icon": "Building",
-          "image": "@src:process.banking",
+          "image": {
+            "$img": "process.banking"
+          },
           "duration": "Weeks 7–9"
         },
         {
@@ -2541,7 +2549,9 @@
           "detailParagraph": "La fase final es la más gratificante: te ayudamos a encontrar vivienda (alquiler temporal o compra definitiva), conseguir vehículo, contratar servicios (agua, luz, internet), y conectar con la comunidad de expats. Nuestro objetivo es que no solo obtengas tus papeles, sino que realmente te establezcas y disfrutes tu nueva vida.",
           "timeline": "Semanas 10–12",
           "icon": "Home",
-          "image": "@src:process.completion",
+          "image": {
+            "$img": "process.completion"
+          },
           "duration": "Weeks 10–12"
         }
       ]
@@ -3011,7 +3021,7 @@
     "hero": {
       "headline": "Las personas detrás de tu mudanza",
       "subheadline": "Un equipo pequeño, multilingüe, que ya hizo el proceso. No subcontratamos. No tercerizamos. Tramitamos personalmente en Asunción.",
-      "image": "@src:team.group"
+      "backgroundImage": "@src:team.groupCandid"
     },
     "team": {
       "eyebrow": "Equipo fundador",

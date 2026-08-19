@@ -1,6 +1,6 @@
 {
   "tenant": "nexa-paraguay",
-  "totalImages": 121,
+  "totalImages": 127,
   "basePath": "/images",
   "fallback": "/images/brand/placeholder.png",
   "images": {
@@ -443,6 +443,17 @@
         "src": "/images/team/group-shot.webp",
         "alt": "Equipo Nexa Paraguay"
       },
+      "groupCandid": {
+        "src": "/images/team/group-candid.webp",
+        "alt": "Nexa Paraguay team collaborating around the conference table",
+        "fallbackSrc": "/images/team/group-candid.png",
+        "altByLocale": {
+          "en": "Nexa Paraguay team collaborating around the conference table",
+          "es": "Equipo de Nexa Paraguay colaborando alrededor de la mesa de reuniones",
+          "nl": "Nexa Paraguay-team werkt samen rond de vergadertafel",
+          "de": "Nexa Paraguay Team bei der Zusammenarbeit am Konferenztisch"
+        }
+      },
       "sonia": {
         "src": "/images/team/sonia.webp",
         "fallbackSrc": "/images/team/sonia.png",
@@ -615,6 +626,61 @@
           "es": "Activación de una tarjeta SIM en una tienda de telefonía móvil",
           "nl": "Activeren van een nieuwe simkaart in een telefoonwinkel",
           "de": "Aktivierung einer neuen SIM-Karte in einem Mobilfunkgeschäft"
+        }
+      },
+      "residencyApplication": {
+        "src": "/images/services/residency-application.webp",
+        "alt": "Consultant submitting a permanent residency application at the Migraciones counter",
+        "fallbackSrc": "/images/services/residency-application.png",
+        "altByLocale": {
+          "en": "Submitting a permanent residency application at the immigration office counter",
+          "es": "Presentación de la solicitud de residencia permanente en el mostrador de Migraciones",
+          "nl": "Indienen van de aanvraag voor permanente residentie bij het immigratieloket",
+          "de": "Einreichung des Antrags auf dauerhaften Aufenthalt am Schalter der Migrationsbehörde"
+        }
+      },
+      "cedulaPickup": {
+        "src": "/images/services/cedula-pickup.webp",
+        "alt": "Client receiving the Paraguayan national ID card at the registry counter",
+        "fallbackSrc": "/images/services/cedula-pickup.png",
+        "altByLocale": {
+          "en": "Client receiving the Paraguayan national ID card at the registry counter",
+          "es": "Cliente recibiendo la cédula de identidad paraguaya en el mostrador del registro",
+          "nl": "Klant ontvangt de Paraguayaanse identiteitskaart bij het registerloket",
+          "de": "Klient erhält den paraguayischen Personalausweis am Registerschalter"
+        }
+      },
+      "companyIncorporation": {
+        "src": "/images/services/company-incorporation.webp",
+        "alt": "Notary embossing the official seal on articles of incorporation",
+        "fallbackSrc": "/images/services/company-incorporation.png",
+        "altByLocale": {
+          "en": "Notary embossing the official seal on a company's articles of incorporation",
+          "es": "Escribano estampando el sello oficial en el acta de constitución de una empresa",
+          "nl": "Notaris drukt het officiële zegel op de oprichtingsakte van een vennootschap",
+          "de": "Notar prägt das offizielle Siegel auf die Gründungsurkunde eines Unternehmens"
+        }
+      },
+      "taxRegistration": {
+        "src": "/images/services/tax-registration.webp",
+        "alt": "RUC tax registration with forms and the tax authority portal on a laptop",
+        "fallbackSrc": "/images/services/tax-registration.png",
+        "altByLocale": {
+          "en": "RUC tax registration: forms and laptop showing the tax authority portal",
+          "es": "Registro tributario RUC: formularios y laptop con el portal de la DNIT",
+          "nl": "RUC-belastingregistratie: formulieren en laptop met het portaal van de belastingdienst",
+          "de": "RUC-Steuerregistrierung: Formulare und Laptop mit dem Portal der Steuerbehörde"
+        }
+      },
+      "bankAccountOpening": {
+        "src": "/images/services/bank-account-opening.webp",
+        "alt": "Client signing bank account opening documents at a private banking desk",
+        "fallbackSrc": "/images/services/bank-account-opening.png",
+        "altByLocale": {
+          "en": "Opening a bank account: client signing documents at a private banking desk",
+          "es": "Apertura de cuenta bancaria: cliente firmando documentos en un escritorio de banca privada",
+          "nl": "Bankrekening openen: klant ondertekent documenten aan een private-bankingbureau",
+          "de": "Kontoeröffnung: Klient unterschreibt Dokumente an einem Private-Banking-Schalter"
         }
       }
     },

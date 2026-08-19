@@ -20,7 +20,7 @@
       "ctaHref": "/contacto",
       "secondaryCtaText": "Bekijk ons proces",
       "secondaryCtaHref": "/proceso",
-      "image": "@src:team.group"
+      "backgroundImage": "@src:team.group"
     },
     "team": {
       "eyebrow": "Oprichtend team",
@@ -1784,7 +1784,9 @@
           "description": "Kies de specifieke ondersteuning die u nodig heeft. Wij stellen een gepersonaliseerde documentenchecklist en een vaste offerte op — geen verrassingen.",
           "detailParagraph": "Tijdens deze eerste fase hebben we een gratis videoconsult waarin we uw situatie, uw doelen en uw tijdlijn begrijpen. Op basis daarvan stellen we de exacte omvang voor: alleen verblijf, plus bedrijf, plus bankieren, of het volledige pakket. U weet precies wat u betaalt voordat u zich verbindt.",
           "duration": "Week 1",
-          "image": "@src:process.consultation"
+          "image": {
+            "$img": "process.consultation"
+          }
         },
         {
           "number": 2,
@@ -1793,7 +1795,9 @@
           "description": "Terwijl u uw documenten thuis verzamelt, beginnen wij het werk ter plaatse in Paraguay. Wij coördineren de juridische voorbereiding die anders maanden zou duren.",
           "detailParagraph": "Terwijl u documentatie in uw land verzamelt (geboorteakte, bewijs van goed gedrag, beroepsdocumenten), beginnen wij het werk in Paraguay: juridische voorbereiding, ontwerpen voor bedrijfsoprichting, bank-voorkwalificatie en coördinatie met lokale autoriteiten. Dit parallelle werk maakt onze tijdlijn realistisch — we wachten niet op u.",
           "duration": "Weken 2–5",
-          "image": "@src:process.documents"
+          "image": {
+            "$img": "process.documents"
+          }
         },
         {
           "number": 3,
@@ -1802,7 +1806,9 @@
           "description": "Reis naar Paraguay met uw documenten klaar. Wij begeleiden u naar de persoonlijke afspraken en zorgen dat elke handtekening, kopie en zegel op zijn plaats is.",
           "detailParagraph": "Uw operationele dag begint vroeg met ons team. Wij halen u op en begeleiden u bij elke afspraak: Immigratie, Identificaties, de bank en alle andere stappen. Wij vertalen, wij leggen uit, wij lossen op. Aan het einde van de dag zijn uw sleuteldocumenten ingediend en wordt uw zaak actief verwerkt.",
           "duration": "Week 6",
-          "image": "@src:process.arrival"
+          "image": {
+            "$img": "process.arrival"
+          }
         },
         {
           "number": 4,
@@ -1811,7 +1817,9 @@
           "description": "Zodra uw Paraguayaanse ID is uitgegeven, activeren wij uw financiële infrastructuur. Wij openen de bankrekening, registreren de RUC en verbinden u met het Paraguayaanse financiële systeem.",
           "detailParagraph": "Wanneer uw ID klaar is, starten we de financiële activering: bankrekeningopening, RUC-registratie, digitale certificaten en eventuele bedrijfsgerelateerde stappen. Wij bereiden de documentatie voor, coördineren met de bank en begeleiden u bij de ondertekening.",
           "duration": "Weken 7–10",
-          "image": "@src:process.banking"
+          "image": {
+            "$img": "process.banking"
+          }
         },
         {
           "number": 5,
@@ -1820,7 +1828,9 @@
           "description": "Met uw juridische en financiële basis op orde helpen wij u bij de installatie. Dit omvat het zoeken naar huisvesting, het aansluiten van nutsvoorzieningen, schoolbegeleiding als u kinderen heeft, en het ontdekken van uw buurt.",
           "detailParagraph": "De laatste fase is het meest lonend: we helpen u bij het vinden van huisvesting (huur of koop), het aansluiten van nutsvoorzieningen, schoolregistratie als u kinderen heeft, en het ontdekken van uw buurt. Aan het einde heeft u niet alleen een verblijf — u heeft een thuis.",
           "duration": "Weken 11–12",
-          "image": "@src:process.completion"
+          "image": {
+            "$img": "process.completion"
+          }
         }
       ]
     },
@@ -2163,12 +2173,12 @@
           {
             "title": "Permanent Verblijf",
             "description": "Volledige afhandeling van je residentieprocedure bij de Paraguayaanse immigratiedienst.",
-            "image": "@src:trust.migraciones"
+            "image": "@src:services.residencyApplication"
           },
           {
             "title": "Paraguayaans Identiteitsbewijs (Cédula)",
             "description": "Aanvraag van je nationale identiteitsbewijs, met persoonlijke begeleiding.",
-            "image": "@src:trust.cedula"
+            "image": "@src:services.cedulaPickup"
           }
         ]
       },
@@ -2195,7 +2205,7 @@
           {
             "title": "Bankrekening Openen",
             "description": "Opening van persoonlijke en/of zakelijke rekeningen bij Paraguayaanse banken. Inclusief bankselectie op basis van jouw profiel (Sudameris, Continental, GNB), coördinatie en activatie van kaart en online bankieren.",
-            "image": "@src:process.banking"
+            "image": "@src:services.bankAccountOpening"
           }
         ]
       },
@@ -2207,12 +2217,12 @@
           {
             "title": "Belastingregistratie (RUC)",
             "description": "Inschrijving bij de DNIT (voorheen SET) als natuurlijk persoon (bijvoorbeeld voor de IRP) of als bedrijf. Je persoonlijke of zakelijke RUC is direct klaar voor gebruik.",
-            "image": "@src:process.documents"
+            "image": "@src:services.taxRegistration"
           },
           {
             "title": "Bedrijf Oprichten",
             "description": "Begeleiding met notarissen voor het oprichten van vennootschappen (S.A.) of SAS. Inclusief het opstellen van statuten, registratie in het Handelsregister en het verkrijgen van gemeentelijke vergunningen.",
-            "image": "@src:trust.certificate"
+            "image": "@src:services.companyIncorporation"
           }
         ]
       }
@@ -3024,7 +3034,7 @@
     "hero": {
       "headline": "De mensen achter jouw verhuizing",
       "subheadline": "Een klein, meertalig team dat het proces heeft doorlopen. Geen uitbesteding. Geen onderaanneming. Wij behandelen jouw zaak persoonlijk in Asunción.",
-      "image": "@src:team.group"
+      "backgroundImage": "@src:team.groupCandid"
     },
     "team": {
       "eyebrow": "Oprichters",

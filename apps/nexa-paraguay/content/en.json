@@ -388,7 +388,7 @@
       "ctaHref": "/contacto",
       "secondaryCtaText": "See our process",
       "secondaryCtaHref": "/proceso",
-      "image": "@src:team.group"
+      "backgroundImage": "@src:team.group"
     },
     "team": {
       "eyebrow": "Founding team",
@@ -2316,12 +2316,12 @@
           {
             "title": "Permanent Residency",
             "description": "Full processing of your residency before the Paraguayan Immigration Office.",
-            "image": "@src:trust.migraciones"
+            "image": "@src:services.residencyApplication"
           },
           {
             "title": "Paraguayan National ID (Cédula)",
             "description": "Obtain your national identity document with in-person accompaniment.",
-            "image": "@src:trust.cedula"
+            "image": "@src:services.cedulaPickup"
           }
         ]
       },
@@ -2348,7 +2348,7 @@
           {
             "title": "Bank Account Opening",
             "description": "Setting up personal and/or business accounts in Paraguayan banks. Includes bank selection tailored to your profile (Sudameris, Continental, GNB, etc.), coordination, and card/online banking activation.",
-            "image": "@src:process.banking"
+            "image": "@src:services.bankAccountOpening"
           }
         ]
       },
@@ -2360,12 +2360,12 @@
           {
             "title": "Tax Registration (RUC)",
             "description": "Enrollment with the DNIT (formerly SET) as an individual (e.g for IRP) or as a corporation. Your personal or corporate RUC will be fully ready to operate.",
-            "image": "@src:process.documents"
+            "image": "@src:services.taxRegistration"
           },
           {
             "title": "Business Incorporation",
             "description": "Accompaniment with notaries for the creation of corporations (S.A.) or simplified stock companies (SAS). Includes drafting of articles of incorporation, public registration, and obtaining municipal licensing.",
-            "image": "@src:trust.certificate"
+            "image": "@src:services.companyIncorporation"
           }
         ]
       }
@@ -2427,7 +2427,9 @@
           "description": "Choose the specific support you need. We create a personalized document checklist and a fixed quote — no surprises.",
           "detailParagraph": "During this initial phase, we have a free video consultation call where we understand your situation, your goals, and your timeline. Based on this, we propose the exact scope: residency only, plus company, plus banking, or the full package. You know exactly what you're paying before you commit.",
           "duration": "Week 1",
-          "image": "@src:process.consultation"
+          "image": {
+            "$img": "process.consultation"
+          }
         },
         {
           "number": 2,
@@ -2436,7 +2438,9 @@
           "description": "While you gather your documents at home, we begin work on the ground in Paraguay. We coordinate the legal preparation that would otherwise take months.",
           "detailParagraph": "While you gather documentation in your country (birth certificate, police clearance, professional records), we begin work in Paraguay: legal preparation, company formation drafts, banking pre-qualification, and coordination with the local authorities. This parallel work is what makes our timeline realistic — we don't wait for you.",
           "duration": "Weeks 2–5",
-          "image": "@src:process.documents"
+          "image": {
+            "$img": "process.documents"
+          }
         },
         {
           "number": 3,
@@ -2445,7 +2449,9 @@
           "description": "Travel to Paraguay with your documents ready. We accompany you to the in-person appointments and ensure every signature, copy, and seal is in place.",
           "detailParagraph": "Your operational day starts early with our team. We pick you up and accompany you through each appointment: Immigration, Identifications, the bank, and any other step. We translate, we explain, we solve. By the end of the day, your key documents are filed and your case is in active processing.",
           "duration": "Week 6",
-          "image": "@src:process.arrival"
+          "image": {
+            "$img": "process.arrival"
+          }
         },
         {
           "number": 4,
@@ -2454,7 +2460,9 @@
           "description": "Once your Paraguayan ID is issued, we activate your financial infrastructure. We open the bank account, register the RUC, and connect you to Paraguay's financial system.",
           "detailParagraph": "When your ID is ready, we initiate financial activation: bank account opening, RUC registration, digital certificates, and any company-related steps. We prepare the documentation, coordinate with the bank, and accompany you through signing.",
           "duration": "Weeks 7–10",
-          "image": "@src:process.banking"
+          "image": {
+            "$img": "process.banking"
+          }
         },
         {
           "number": 5,
@@ -2463,7 +2471,9 @@
           "description": "With your legal and financial base in place, we help you settle in. This includes housing search, utility setup, school guidance if you have children, and discovering your neighborhood.",
           "detailParagraph": "The final phase is the most rewarding: we help you find housing (rent or buy), set up utilities, register at schools if you have children, and discover your neighborhood. By the end, you don't just have a residence — you have a home.",
           "duration": "Weeks 11–12",
-          "image": "@src:process.completion"
+          "image": {
+            "$img": "process.completion"
+          }
         }
       ]
     },
@@ -2932,7 +2942,7 @@
     "hero": {
       "headline": "The people behind your relocation",
       "subheadline": "A small, multilingual team that has done the process. No outsourcing. No subcontracting. We handle your case in person in Asunción.",
-      "image": "@src:team.group"
+      "backgroundImage": "@src:team.groupCandid"
     },
     "team": {
       "eyebrow": "Founding team",
