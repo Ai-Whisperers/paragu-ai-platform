@@ -89,40 +89,40 @@
     },
     "whyCountry": {
       "eyebrow": "Why Paraguay",
-      "title": "Three reasons Europe is moving to the Southern Cone",
-      "subtitle": "Hard data, not promises. Paraguay has grown for 15 years at rates the old continent no longer sees.",
+      "title": "What Europe still doesn't know about Paraguay",
+      "subtitle": "Beyond the macro numbers: what actually changes when you relocate.",
       "pillars": [
         {
-          "icon": "TrendingUp",
-          "title": "Sustained growth",
-          "description": "A GDP that has maintained mostly positive growth over the last decade, frequently hovering around 4–5%, coupled with stable single-digit inflation since 2020. The Paraguayan economy never stops.",
-          "imageUrl": "@src:whyParaguay.growth",
+          "icon": "Briefcase",
+          "title": "Open for your business",
+          "description": "Paraguay makes opening a company 100% online, with clear requirements and accessible costs. The country has double-tax treaties with several economies and a regime that favors permanent residents who launch local ventures.",
+          "imageUrl": "@src:whyParaguay.investment",
           "bullets": [
-            "Decades of sustained growth",
-            "Prolonged macroeconomic stability",
-            "Dynamic and diversified domestic market"
+            "100% online setup, no prior trip required",
+            "Simplified regime for entrepreneurs",
+            "Operating costs significantly lower than Europe"
           ]
         },
         {
-          "icon": "Landmark",
-          "title": "Territorial tax system",
-          "description": "The IRP (Personal Income Tax) exclusively taxes income generated within the national territory. Your foreign-sourced income is tax-free.",
-          "imageUrl": "@src:whyParaguay.tax",
+          "icon": "ShieldCheck",
+          "title": "Stability for your family",
+          "description": "Legal certainty, access to quality private healthcare, bilingual education and a more humane pace of life make Paraguay a destination where European families recover time and well-being. Residential-area crime rates are among the lowest in the Southern Cone.",
+          "imageUrl": "@src:whyParaguay.lifestyle",
           "bullets": [
-            "Pure territorial tax system",
-            "No withholding on foreign-source income",
-            "Compatible with European estate planning"
+            "Low crime rates in residential neighborhoods",
+            "Quality private healthcare at Eastern-European costs",
+            "Bilingual schools with international validation"
           ]
         },
         {
-          "icon": "Globe",
-          "title": "Active multicultural community",
-          "description": "Paraguay fosters a vibrant multicultural community, currently home to over 156,000 foreign residents.",
-          "imageUrl": "@src:whyParaguay.community",
+          "icon": "Heart",
+          "title": "Welcomed, not assimilated",
+          "description": "Paraguay does not demand cultural surrender. Italian, German, Brazilian, Argentine and other communities coexist while preserving their identity and learning Spanish at their own pace. Here your European accent is welcome, not foreign.",
+          "imageUrl": "@src:whyParaguay.culture",
           "bullets": [
-            "European and Latin American communities with decades of roots",
-            "Direct flights from Europe",
-            "Living costs notably lower than Western Europe"
+            "Established Italian, German, Brazilian and Argentine communities",
+            "Zero cultural-assimilation pressure",
+            "Warm welcome to permanent residents from day one"
           ]
         }
       ]
@@ -182,7 +182,8 @@
     },
     "hero": {
       "headline": "7 reasons Europeans choose Paraguay as their new home",
-      "subheadline": "Economic growth, tax stability, quality of life and a clear immigration process. Concrete data, not promises."
+      "subheadline": "Economic growth, tax stability, quality of life and a clear immigration process. Concrete data, not promises.",
+      "backgroundImage": "@src:whyParaguay.nature"
     },
     "pillars": {
       "eyebrow": "Why Paraguay",
@@ -2411,7 +2412,8 @@
     },
     "hero": {
       "headline": "The Ideal Path to Residency",
-      "subheadline": "A streamlined collaboration between your country of origin and your new home in Paraguay."
+      "subheadline": "A streamlined collaboration between your country of origin and your new home in Paraguay.",
+      "backgroundImage": "@src:process.operationalDay"
     },
     "process": {
       "eyebrow": "HOW IT WORKS",

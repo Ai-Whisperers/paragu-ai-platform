@@ -102,7 +102,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
       zIndex: 100,
       transition: 'box-shadow 0.2s, border-color 0.2s, background 0.2s',
     }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '1rem 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
         {/* LEFT: hamburger + lang switcher */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: '1 1 0' }}>
           <button
@@ -145,8 +145,33 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
               </>
             )}
           </button>
+        </div>
 
-          {/* Language switcher */}
+        {/* CENTER: large centered logo */}
+        <Link
+          href={`/${currentLocale}`}
+          aria-label="Nexa Paraguay - Home"
+          style={{
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            display: 'flex',
+            alignItems: 'center',
+            textDecoration: 'none',
+          }}
+        >
+          <img
+            src="/images/brand/logo.svg"
+            alt="Nexa Paraguay"
+            width={400}
+            height={112}
+            style={{ height: '68px', width: 'auto', display: 'block' }}
+          />
+        </Link>
+
+        {/* RIGHT: language switcher + CTA button */}
+        <div style={{ flex: '1 1 0', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '0.6rem' }}>
+          {/* Language switcher (moved from left) */}
           <div style={{ position: 'relative' }}>
             <button
               onClick={() => { setLangOpen(!langOpen); setMenuOpen(false); }}
@@ -175,7 +200,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
               </svg>
             </button>
             {langOpen && (
-              <div style={{ position: 'absolute', top: '100%', left: 0, marginTop: '0.4rem', background: '#fff', border: '1px solid rgba(27,42,74,0.15)', borderRadius: '10px', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', zIndex: 200, minWidth: '140px', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', top: '100%', right: 0, marginTop: '0.4rem', background: '#fff', border: '1px solid rgba(27,42,74,0.15)', borderRadius: '10px', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', zIndex: 200, minWidth: '140px', overflow: 'hidden' }}>
                 {Object.entries(LOCALE_FLAGS).map(([code, { label, flag }]) => (
                   <button
                     key={code}
@@ -203,32 +228,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
               </div>
             )}
           </div>
-        </div>
 
-        {/* CENTER: large centered logo */}
-        <Link
-          href={`/${currentLocale}`}
-          aria-label="Nexa Paraguay - Home"
-          style={{
-            position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            display: 'flex',
-            alignItems: 'center',
-            textDecoration: 'none',
-          }}
-        >
-          <img
-            src="/images/brand/logo.svg"
-            alt="Nexa Paraguay"
-            width={280}
-            height={78}
-            style={{ height: '52px', width: 'auto', display: 'block' }}
-          />
-        </Link>
-
-        {/* RIGHT: CTA button */}
-        <div style={{ flex: '1 1 0', display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
           {navigation?.ctaText && (
             <a
               href={resolveHref(navigation.ctaHref || '#')}

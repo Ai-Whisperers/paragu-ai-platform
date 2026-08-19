@@ -25,6 +25,7 @@ import {
   House,
   KeyRound,
   Landmark,
+  Languages,
   Mail,
   MapPin,
   MessageCircle,
@@ -509,12 +510,18 @@ export function PillarsSection({ pageContent, data, images }: SectionComponentPr
   const honestNote = d.honestNote || wrapper?.honestNote
   
   if (!pillars.length) return null
-  // 6-item lists (e.g. whyCountryPage.pillars) wrap 4+2 at 4 columns; use 3 columns
-  // so they pair evenly (3+3). Other counts (e.g. the 4-item "highlights" variants
-  // used on sobre/agenda/calidad-de-vida) keep the original 4-column layout.
-  const gridColsClass = pillars.length === 6
-    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-    : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+  // Layout heuristic:
+  //  - 2 items: centered 2 cols (1x2 or 2x1 depending on viewport)
+  //  - 3 items: 3 cols (1 row)
+  //  - 4 items: 2x2 grid (never 3+1)
+  //  - 6 items: 3 cols x 2 rows (3+3)
+  //  - other: auto-fit
+  let gridColsClass: string
+  if (pillars.length === 2) gridColsClass = "grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
+  else if (pillars.length === 3) gridColsClass = "grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto"
+  else if (pillars.length === 4) gridColsClass = "grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto"
+  else if (pillars.length === 6) gridColsClass = "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+  else gridColsClass = "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
   return (
     <section className="py-20 bg-primary text-white">
       <div className="max-w-6xl mx-auto text-center px-4">
@@ -529,7 +536,7 @@ export function PillarsSection({ pageContent, data, images }: SectionComponentPr
             const ICON_MAP: Record<string, any> = {
               Award, BadgeCheck, Banknote, Briefcase, BriefcaseBusiness, Building, Building2,
               Calculator, Calendar, ClipboardCheck, Clock, CreditCard, FileCheck, FileText,
-              Globe, Heart, Home: House, House, KeyRound, Landmark, Mail, MapPin,
+              Globe, Heart, Home: House, House, KeyRound, Landmark, Languages, Mail, MapPin,
               MessageCircle, Package, Phone, Plane, Search, Shield, ShieldCheck, Sprout,
               Stamp, Star, Sun, TrendingUp, UserCheck, UserPlus, Users,
             }

@@ -1444,40 +1444,40 @@
     },
     "whyCountry": {
       "eyebrow": "Waarom Paraguay",
-      "title": "Drie redenen waarom Europa naar de Zuidelijke Conus verhuist",
-      "subtitle": "Harde cijfers, geen beloftes. Paraguay groeit al 15 jaar op percentages die het oude continent niet meer haalt.",
+      "title": "Wat Europa nog niet weet over Paraguay",
+      "subtitle": "Verder dan de macrocijfers: wat er echt verandert als je verhuist.",
       "pillars": [
         {
-          "icon": "TrendingUp",
-          "title": "Aanhoudende groei",
-          "description": "Een BBP dat het afgelopen decennium een overwegend positieve groei heeft laten zien — met uitschieters rond de 4–5% — in combinatie met een stabiele inflatie die sinds 2020 netjes binnen de enkele cijfers blijft.",
-          "imageUrl": "@src:whyParaguay.growth",
+          "icon": "Briefcase",
+          "title": "Open voor jouw bedrijf",
+          "description": "Paraguay maakt het openen van een bedrijf 100% online mogelijk, met duidelijke vereisten en toegankelijke kosten. Het land heeft dubbelbelastingverdragen met diverse economieën en een regime dat permanente inwoners die lokaal ondernemen bevoordeelt.",
+          "imageUrl": "@src:whyParaguay.investment",
           "bullets": [
-            "Decennia van aanhoudende groei",
-            "Langdurige macro-economische stabiliteit",
-            "Dynamische en gediversifieerde binnenlandse markt"
+            "100% online oprichting, geen voorafgaande reis nodig",
+            "Vereenvoudigd regime voor ondernemers",
+            "Operationele kosten aanzienlijk lager dan Europa"
           ]
         },
         {
-          "icon": "Landmark",
-          "title": "Territoriaal belastingstelsel",
-          "description": "De IRP belast uitsluitend inkomsten die binnen het nationale grondgebied zijn gegenereerd. Inkomsten uit het buitenland zijn volledig belastingvrij.",
-          "imageUrl": "@src:whyParaguay.tax",
+          "icon": "ShieldCheck",
+          "title": "Stabiliteit voor je gezin",
+          "description": "Juridische zekerheid, toegang tot kwalitatieve privégezondheidszorg, tweetalig onderwijs en een menselijker levensritme maken van Paraguay een bestemming waar Europese gezinnen tijd en welzijn terugwinnen. De criminaliteitscijfers in woonwijken behoren tot de laagste van de Zuidelijke Kegel.",
+          "imageUrl": "@src:whyParaguay.lifestyle",
           "bullets": [
-            "Puur territoriaal belastingstelsel",
-            "Geen bronbelasting op buitenlandse inkomsten",
-            "Verenigbaar met Europese vermogensplanning"
+            "Lage criminaliteitscijfers in woonwijken",
+            "Kwalitatieve privégezondheidszorg tegen Oost-Europese kosten",
+            "Tweetalige scholen met internationale erkenning"
           ]
         },
         {
-          "icon": "Globe",
-          "title": "Actieve multiculturele gemeenschap",
-          "description": "Paraguay consolideert een levendige, multiculturele samenleving en biedt momenteel onderdak aan meer dan 156.000 buitenlandse inwoners.",
-          "imageUrl": "@src:whyParaguay.community",
+          "icon": "Heart",
+          "title": "Verwelkomd, niet geassimileerd",
+          "description": "Paraguay eist geen culturele overgave. Italiaanse, Duitse, Braziliaanse, Argentijnse en andere gemeenschappen leven samen met behoud van hun identiteit en leren Spaans in hun eigen tempo. Hier is je Europese accent welkom, niet vreemd.",
+          "imageUrl": "@src:whyParaguay.culture",
           "bullets": [
-            "Europese en Latijns-Amerikaanse gemeenschappen met decennia aan wortels",
-            "Rechtstreekse vluchten vanuit Europa",
-            "Levensonderhoud aanzienlijk lager dan West-Europa"
+            "Gevestigde Italiaanse, Duitse, Braziliaanse en Argentijnse gemeenschappen",
+            "Geen druk tot culturele assimilatie",
+            "Warm welkom voor permanente inwoners vanaf dag één"
           ]
         }
       ]
@@ -1768,7 +1768,8 @@
     },
     "hero": {
       "headline": "Het Ideale Pad naar Verblijf",
-      "subheadline": "Een gestroomlijnde samenwerking tussen uw land van herkomst en uw nieuwe thuis in Paraguay."
+      "subheadline": "Een gestroomlijnde samenwerking tussen uw land van herkomst en uw nieuwe thuis in Paraguay.",
+      "backgroundImage": "@src:process.operationalDay"
     },
     "process": {
       "eyebrow": "HOE HET WERKT",
@@ -2274,7 +2275,8 @@
     },
     "hero": {
       "headline": "7 redenen waarom Europeanen Paraguay als nieuw thuis kiezen",
-      "subheadline": "Economische groei, fiscale stabiliteit, levenskwaliteit en een duidelijk migratieproces. Concrete gegevens, geen beloftes."
+      "subheadline": "Economische groei, fiscale stabiliteit, levenskwaliteit en een duidelijk migratieproces. Concrete gegevens, geen beloftes.",
+      "backgroundImage": "@src:whyParaguay.nature"
     },
     "pillars": {
       "eyebrow": "Waarom Paraguay",

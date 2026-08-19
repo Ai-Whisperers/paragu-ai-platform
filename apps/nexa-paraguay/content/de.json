@@ -1460,7 +1460,8 @@
     },
     "hero": {
       "headline": "Der ideale Weg zum Aufenthalt",
-      "subheadline": "Eine optimierte Zusammenarbeit zwischen Ihrem Herkunftsland und Ihrem neuen Zuhause in Paraguay."
+      "subheadline": "Eine optimierte Zusammenarbeit zwischen Ihrem Herkunftsland und Ihrem neuen Zuhause in Paraguay.",
+      "backgroundImage": "@src:process.operationalDay"
     },
     "process": {
       "eyebrow": "SO FUNKTIONIERT ES",
@@ -1640,40 +1641,40 @@
     },
     "whyCountry": {
       "eyebrow": "Warum Paraguay",
-      "title": "Drei Gründe, warum Europa in den Südkegel zieht",
-      "subtitle": "Harte Daten, keine Versprechen. Paraguay wächst seit 15 Jahren mit Raten, die der alte Kontinent nicht mehr erreicht.",
+      "title": "Was Europa noch nicht über Paraguay weiß",
+      "subtitle": "Jenseits der Makrozahlen: was sich beim Umzug wirklich ändert.",
       "pillars": [
         {
-          "icon": "TrendingUp",
-          "title": "Anhaltendes Wachstum",
-          "description": "Ein BIP, das im letzten Jahrzehnt ein überwiegend positives Wachstum verzeichnete — oft um die 4–5% — gepaart mit einer stabilen Inflation, die seit 2020 im einstelligen Bereich bleibt.",
-          "imageUrl": "@src:whyParaguay.growth",
+          "icon": "Briefcase",
+          "title": "Offen für Ihr Unternehmen",
+          "description": "Paraguay ermöglicht die 100% Online-Gründung von Unternehmen, mit klaren Anforderungen und zugänglichen Kosten. Das Land hat Doppelbesteuerungsabkommen mit mehreren Volkswirtschaften und ein Regime, das dauerhafte Einwohner bevorzugt, die lokal gründen.",
+          "imageUrl": "@src:whyParaguay.investment",
           "bullets": [
-            "Jahrzehntelanges anhaltendes Wachstum",
-            "Langanhaltende makroökonomische Stabilität",
-            "Dynamischer und diversifizierter Binnenmarkt"
+            "100% Online-Gründung, keine vorherige Reise nötig",
+            "Vereinfachtes Regime für Unternehmer",
+            "Betriebskosten deutlich niedriger als in Europa"
           ]
         },
         {
-          "icon": "Landmark",
-          "title": "Territoriales Steuersystem",
-          "description": "Die IRP besteuert ausschließlich Einkünfte, die innerhalb des nationalen Territoriums erzielt werden. Deine Auslandseinkünfte sind komplett steuerfrei.",
-          "imageUrl": "@src:whyParaguay.tax",
+          "icon": "ShieldCheck",
+          "title": "Stabilität für Ihre Familie",
+          "description": "Rechtssicherheit, Zugang zu qualitativ hochwertiger privater Gesundheitsversorgung, zweisprachige Bildung und ein menschlicherer Lebensrhythmus machen Paraguay zu einem Ziel, wo europäische Familien Zeit und Wohlbefinden zurückgewinnen. Die Kriminalitätsraten in Wohngebieten gehören zu den niedrigsten im Südkegel.",
+          "imageUrl": "@src:whyParaguay.lifestyle",
           "bullets": [
-            "Reines Territorialsteuersystem",
-            "Keine Quellensteuer auf ausländische Einkünfte",
-            "Kompatibel mit europäischer Vermögensplanung"
+            "Niedrige Kriminalitätsraten in Wohngebieten",
+            "Private Gesundheitsversorgung auf osteuropäischem Kostenniveau",
+            "Zweisprachige Schulen mit internationaler Anerkennung"
           ]
         },
         {
-          "icon": "Globe",
-          "title": "Aktive multikulturelle Gemeinschaft",
-          "description": "Paraguay festigt ein lebendiges, multikulturelles Zusammenleben und zählt derzeit über 156.000 ausländische Einwohner.",
-          "imageUrl": "@src:whyParaguay.community",
+          "icon": "Heart",
+          "title": "Willkommen, nicht assimiliert",
+          "description": "Paraguay verlangt keine kulturelle Aufgabe. Italienische, deutsche, brasilianische, argentinische und andere Gemeinschaften leben zusammen und bewahren ihre Identität, während sie Spanisch in ihrem eigenen Tempo lernen. Hier ist Ihr europäischer Akzent willkommen, nicht fremd.",
+          "imageUrl": "@src:whyParaguay.culture",
           "bullets": [
-            "Europäische und lateinamerikanische Gemeinschaften mit jahrzehntelangen Wurzeln",
-            "Direktflüge aus Europa",
-            "Lebenshaltungskosten deutlich niedriger als in Westeuropa"
+            "Etablierte italienische, deutsche, brasilianische und argentinische Gemeinschaften",
+            "Kein Druck zur kulturellen Assimilation",
+            "Warmes Willkommen für dauerhafte Einwohner ab Tag eins"
           ]
         }
       ]
@@ -1843,7 +1844,8 @@
     },
     "hero": {
       "headline": "7 Gründe, warum Europäer Paraguay als neues Zuhause wählen",
-      "subheadline": "Wirtschaftswachstum, steuerliche Stabilität, Lebensqualität und ein klarer Einwanderungsprozess. Konkrete Daten, keine Versprechen."
+      "subheadline": "Wirtschaftswachstum, steuerliche Stabilität, Lebensqualität und ein klarer Einwanderungsprozess. Konkrete Daten, keine Versprechen.",
+      "backgroundImage": "@src:whyParaguay.nature"
     },
     "pillars": {
       "eyebrow": "Warum Paraguay",
