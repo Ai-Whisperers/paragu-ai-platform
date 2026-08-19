@@ -22,6 +22,8 @@ summary. Sections are chronological, newest first. **Use
 
 ## [Unreleased]
 
+- 2026-08-19: chore(nexa): retrigger production deploy after central.yml JSON-array output fix (by Erebus)
+
 - 2026-08-19: chore(nexa): retrigger production deploy after central.yml output-plumbing fix (by Erebus)
 
 - 2026-08-05: feat(nexa): simplify nav — Servicios as single link, Proceso as separate link (by Erebus)
