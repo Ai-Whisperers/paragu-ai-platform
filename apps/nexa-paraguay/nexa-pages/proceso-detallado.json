@@ -24,10 +24,6 @@
       "content": "processPage.highlights"
     },
     {
-      "id": "faq",
-      "content": "processPage.faq"
-    },
-    {
       "id": "cta-banner",
       "variant": "solid",
       "content": "processPage"

@@ -30,11 +30,6 @@
       "content": "whyCountryPage.trust"
     },
     {
-      "id": "faq",
-      "variant": "accordion",
-      "content": "whyCountryPage.faq"
-    },
-    {
       "id": "cta-banner",
       "variant": "solid",
       "content": "whyCountryPage.cta"

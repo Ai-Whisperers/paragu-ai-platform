@@ -509,6 +509,12 @@ export function PillarsSection({ pageContent, data, images }: SectionComponentPr
   const honestNote = d.honestNote || wrapper?.honestNote
   
   if (!pillars.length) return null
+  // 6-item lists (e.g. whyCountryPage.pillars) wrap 4+2 at 4 columns; use 3 columns
+  // so they pair evenly (3+3). Other counts (e.g. the 4-item "highlights" variants
+  // used on sobre/agenda/calidad-de-vida) keep the original 4-column layout.
+  const gridColsClass = pillars.length === 6
+    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+    : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
   return (
     <section className="py-20 bg-primary text-white">
       <div className="max-w-6xl mx-auto text-center px-4">
@@ -516,7 +522,7 @@ export function PillarsSection({ pageContent, data, images }: SectionComponentPr
         {title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold mb-3">{title}</h2>}
         <div className="w-[60px] h-[3px] bg-accent mx-auto mb-8" />
         {honestNote && <p className="text-sm text-white/80 italic max-w-[600px] mx-auto mb-8">{d.honestNote}</p>}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className={`grid ${gridColsClass} gap-5`}>
           {pillars.map((p: any, i: number) => {
             const img = resolveImage(images, p.imageUrl || p.image)
             // Try to resolve icon name to a Lucide component

@@ -1,6 +1,6 @@
 {
   "tenant": "nexa-paraguay",
-  "totalImages": 118,
+  "totalImages": 121,
   "basePath": "/images",
   "fallback": "/images/brand/placeholder.png",
   "images": {
@@ -580,6 +580,41 @@
           "en": "Nexa Paraguay team meeting",
           "nl": "Nexa Paraguay team bijeenkomst",
           "de": "Nexa Paraguay Team-Meeting"
+        }
+      }
+    },
+    "services": {
+      "housingSearch": {
+        "src": "/images/services/housing-search.webp",
+        "alt": "Handing over apartment keys in a modern Asunción home",
+        "fallbackSrc": "/images/services/housing-search.png",
+        "altByLocale": {
+          "en": "Handing over apartment keys in a modern Asunción home",
+          "es": "Entrega de llaves de un apartamento moderno en Asunción",
+          "nl": "Overhandiging van appartementsleutels in een modern huis in Asunción",
+          "de": "Schlüsselübergabe einer modernen Wohnung in Asunción"
+        }
+      },
+      "drivingLicense": {
+        "src": "/images/services/driving-license.webp",
+        "alt": "Submitting a driver's license application at a government office counter",
+        "fallbackSrc": "/images/services/driving-license.png",
+        "altByLocale": {
+          "en": "Submitting a driver's license application at a government office counter",
+          "es": "Presentación de una solicitud de licencia de conducir en una oficina pública",
+          "nl": "Indienen van een rijbewijsaanvraag bij een overheidsloket",
+          "de": "Einreichung eines Führerscheinantrags am Schalter einer Behörde"
+        }
+      },
+      "mobilePhone": {
+        "src": "/images/services/mobile-phone.webp",
+        "alt": "Activating a new SIM card in a mobile phone store",
+        "fallbackSrc": "/images/services/mobile-phone.png",
+        "altByLocale": {
+          "en": "Activating a new SIM card in a mobile phone store",
+          "es": "Activación de una tarjeta SIM en una tienda de telefonía móvil",
+          "nl": "Activeren van een nieuwe simkaart in een telefoonwinkel",
+          "de": "Aktivierung einer neuen SIM-Karte in einem Mobilfunkgeschäft"
         }
       }
     },

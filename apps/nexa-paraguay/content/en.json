@@ -127,36 +127,6 @@
         }
       ]
     },
-    "detailedServices": {
-      "eyebrow": "All services",
-      "title": "Detailed services",
-      "subtitle": "Residency, banking, real estate, and relocation — every service with clear scope, timelines, and deliverables.",
-      "groups": [
-        {
-          "id": "residency",
-          "title": "Residency & Legal Documents",
-          "subtitle": "See all legal services →",
-          "items": [],
-          "link": "/servicios#residency-legal"
-        },
-        {
-          "id": "banking-tax",
-          "title": "Banking & Tax Setup",
-          "subtitle": "See all financial services →",
-          "items": [],
-          "link": "/servicios#banking-tax"
-        },
-        {
-          "id": "real-estate",
-          "title": "Residential Real Estate",
-          "subtitle": "See all property options →",
-          "items": [],
-          "link": "/servicios#real-estate"
-        }
-      ],
-      "ctaText": "See all services",
-      "ctaHref": "/servicios"
-    },
     "process": {
       "eyebrow": "How it works",
       "title": "How it works",
@@ -2337,67 +2307,69 @@
         }
       ]
     },
-    "services": {
-      "eyebrow": "Detailed services",
-      "title": "Detailed services",
-      "subtitle": "Every service with clear scope, timelines, and deliverables.",
-      "groups": [
-        {
-          "id": "residency-legal",
-          "title": "Residency & Legal Documents",
-          "subtitle": "We initiate your paperwork with the Immigration Office to secure your legal status as an essential first step. Once your residency is approved, we accompany you in person to obtain your national ID card (Cédula).",
-          "items": [
-            {
-              "title": "Permanent Residency",
-              "description": "Full processing of your residency before the Paraguayan Immigration Office."
-            },
-            {
-              "title": "Paraguayan National ID (Cédula)",
-              "description": "Obtain your national identity document with in-person accompaniment."
-            }
-          ]
-        },
-        {
-          "id": "relocation-logistics",
-          "title": "Relocation & Logistics",
-          "subtitle": "We assist you with housing, vehicles, mobile setup, or opening bank accounts.",
-          "items": [
-            {
-              "title": "Housing Search",
-              "description": "Finding the ideal place to live, whether for a month or for a lifetime. Coordinated viewings, lease agreement reviews in Spanish before signing, and landlord negotiations."
-            },
-            {
-              "title": "Paraguayan Driver’s License",
-              "description": "End-to-end management with municipal authorities, including local requirements, in-person accompaniment to the required tests, and follow-up until the document is issued."
-            },
-            {
-              "title": "Mobile Setup",
-              "description": "Line and data activation on arrival. We coordinate with the operator you choose so you have connectivity from day one."
-            },
-            {
-              "title": "Bank Account Opening",
-              "description": "Setting up personal and/or business accounts in Paraguayan banks. Includes bank selection tailored to your profile (Sudameris, Continental, GNB, etc.), coordination, and card/online banking activation."
-            }
-          ]
-        },
-        {
-          "id": "corporate-structuring",
-          "title": "Corporate Structuring",
-          "subtitle": "We connect you with notaries and advisors to set up your RUC (Tax ID) and incorporate your business.",
-          "items": [
-            {
-              "title": "Tax Registration (RUC)",
-              "description": "Enrollment with the DNIT (formerly SET) as an individual (e.g for IRP) or as a corporation. Your personal or corporate RUC will be fully ready to operate."
-            },
-            {
-              "title": "Business Incorporation",
-              "description": "Accompaniment with notaries for the creation of corporations (S.A.) or simplified stock companies (SAS). Includes drafting of articles of incorporation, public registration, and obtaining municipal licensing."
-            }
-          ]
-        }
-      ]
-    },
-    "groups": {},
+    "groups": [
+      {
+        "id": "residency-legal",
+        "title": "Residency & Legal Documents",
+        "subtitle": "We initiate your paperwork with the Immigration Office to secure your legal status as an essential first step. Once your residency is approved, we accompany you in person to obtain your national ID card (Cédula).",
+        "items": [
+          {
+            "title": "Permanent Residency",
+            "description": "Full processing of your residency before the Paraguayan Immigration Office.",
+            "image": "@src:trust.migraciones"
+          },
+          {
+            "title": "Paraguayan National ID (Cédula)",
+            "description": "Obtain your national identity document with in-person accompaniment.",
+            "image": "@src:trust.cedula"
+          }
+        ]
+      },
+      {
+        "id": "relocation-logistics",
+        "title": "Relocation & Logistics",
+        "subtitle": "We assist you with housing, vehicles, mobile setup, or opening bank accounts.",
+        "items": [
+          {
+            "title": "Housing Search",
+            "description": "Finding the ideal place to live, whether for a month or for a lifetime. Coordinated viewings, lease agreement reviews in Spanish before signing, and landlord negotiations.",
+            "image": "@src:services.housingSearch"
+          },
+          {
+            "title": "Paraguayan Driver’s License",
+            "description": "End-to-end management with municipal authorities, including local requirements, in-person accompaniment to the required tests, and follow-up until the document is issued.",
+            "image": "@src:services.drivingLicense"
+          },
+          {
+            "title": "Mobile Setup",
+            "description": "Line and data activation on arrival. We coordinate with the operator you choose so you have connectivity from day one.",
+            "image": "@src:services.mobilePhone"
+          },
+          {
+            "title": "Bank Account Opening",
+            "description": "Setting up personal and/or business accounts in Paraguayan banks. Includes bank selection tailored to your profile (Sudameris, Continental, GNB, etc.), coordination, and card/online banking activation.",
+            "image": "@src:process.banking"
+          }
+        ]
+      },
+      {
+        "id": "corporate-structuring",
+        "title": "Corporate Structuring",
+        "subtitle": "We connect you with notaries and advisors to set up your RUC (Tax ID) and incorporate your business.",
+        "items": [
+          {
+            "title": "Tax Registration (RUC)",
+            "description": "Enrollment with the DNIT (formerly SET) as an individual (e.g for IRP) or as a corporation. Your personal or corporate RUC will be fully ready to operate.",
+            "image": "@src:process.documents"
+          },
+          {
+            "title": "Business Incorporation",
+            "description": "Accompaniment with notaries for the creation of corporations (S.A.) or simplified stock companies (SAS). Includes drafting of articles of incorporation, public registration, and obtaining municipal licensing.",
+            "image": "@src:trust.certificate"
+          }
+        ]
+      }
+    ],
     "programs": {
       "title": "Programs",
       "programs": {
@@ -2426,7 +2398,10 @@
       "subtitle": "30 minutes to understand your case and give you a clear plan with timelines and costs.",
       "ctaText": "Book a consultation",
       "ctaHref": "/agenda"
-    }
+    },
+    "eyebrow": "Detailed services",
+    "title": "Detailed services",
+    "subtitle": "Every service with clear scope, timelines, and deliverables."
   },
   "processPage": {
     "seo": {

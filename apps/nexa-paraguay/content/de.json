@@ -1055,67 +1055,69 @@
         }
       ]
     },
-    "services": {
-      "eyebrow": "Dienstleistungen im Detail",
-      "title": "Dienstleistungen im Detail",
-      "subtitle": "Jede Dienstleistung mit klarem Umfang, Zeitplan und Ergebnissen.",
-      "groups": [
-        {
-          "id": "residency-legal",
-          "title": "Residenz & Rechtliche Dokumente",
-          "subtitle": "Wir leiten deine Behördengänge bei der Migrationsbehörde ein, um deinen legalen Status zu sichern. Sobald deine Residenz genehmigt ist, begleiten wir dich persönlich bei der Beantragung deiner Cédula.",
-          "items": [
-            {
-              "title": "Permanente Residenz",
-              "description": "Vollständige Abwicklung deines Residenzverfahrens vor der paraguayischen Migrationsbehörde."
-            },
-            {
-              "title": "Paraguayischer Personalausweis (Cédula)",
-              "description": "Beantragung deines nationalen Personalausweises mit persönlicher Begleitung."
-            }
-          ]
-        },
-        {
-          "id": "relocation-logistics",
-          "title": "Umzug & Logistik",
-          "subtitle": "Wir unterstützen dich bei Wohnungssuche, Fahrzeugen, Mobilfunk oder Kontoeröffnung.",
-          "items": [
-            {
-              "title": "Immobiliensuche",
-              "description": "Den idealen Ort zum Wohnen finden — ob für einen Monat oder für das ganze Leben. Koordinierte Besichtigungen, Prüfung des Mietvertrags und Verhandlungen mit dem Vermieter."
-            },
-            {
-              "title": "Paraguayischer Führerschein",
-              "description": "Komplette Abwicklung bei kommunalen Behörden, einschließlich lokaler Anforderungen, persönlicher Begleitung zu den Prüfungen und Nachverfolgung bis zur Ausstellung."
-            },
-            {
-              "title": "Mobilfunk",
-              "description": "Aktivierung von Leitung und Daten bei der Ankunft. Wir koordinieren mit dem gewählten Anbieter, damit du ab Tag eins erreichbar bist."
-            },
-            {
-              "title": "Kontoeröffnung",
-              "description": "Eröffnung von Privat- und/oder Geschäftskonten bei paraguayischen Banken. Inklusive Bankauswahl passend zu deinem Profil (Sudameris, Continental, GNB), Koordination und Aktivierung von Karte und Online-Banking."
-            }
-          ]
-        },
-        {
-          "id": "corporate-structuring",
-          "title": "Unternehmensstrukturierung",
-          "subtitle": "Wir vermitteln dich an Notare und Berater für die Beantragung deiner RUC (Steuernummer) und die Gründung deines Unternehmens.",
-          "items": [
-            {
-              "title": "Steuerliche Registrierung (RUC)",
-              "description": "Anmeldung bei der DNIT (ehemals SET) als Privatperson (z. B. für die IRP) oder als Unternehmen. Deine persönliche oder geschäftliche RUC ist sofort einsatzbereit."
-            },
-            {
-              "title": "Unternehmensgründung",
-              "description": "Begleitung mit Notaren für die Gründung von Aktiengesellschaften (S.A.) oder vereinfachten Aktiengesellschaften (SAS). Inklusive Erstellung der Gründungsurkunde, Eintragung im Handelsregister und Erlangung der Gemeindelizenz."
-            }
-          ]
-        }
-      ]
-    },
-    "groups": {},
+    "groups": [
+      {
+        "id": "residency-legal",
+        "title": "Residenz & Rechtliche Dokumente",
+        "subtitle": "Wir leiten deine Behördengänge bei der Migrationsbehörde ein, um deinen legalen Status zu sichern. Sobald deine Residenz genehmigt ist, begleiten wir dich persönlich bei der Beantragung deiner Cédula.",
+        "items": [
+          {
+            "title": "Permanente Residenz",
+            "description": "Vollständige Abwicklung deines Residenzverfahrens vor der paraguayischen Migrationsbehörde.",
+            "image": "@src:trust.migraciones"
+          },
+          {
+            "title": "Paraguayischer Personalausweis (Cédula)",
+            "description": "Beantragung deines nationalen Personalausweises mit persönlicher Begleitung.",
+            "image": "@src:trust.cedula"
+          }
+        ]
+      },
+      {
+        "id": "relocation-logistics",
+        "title": "Umzug & Logistik",
+        "subtitle": "Wir unterstützen dich bei Wohnungssuche, Fahrzeugen, Mobilfunk oder Kontoeröffnung.",
+        "items": [
+          {
+            "title": "Immobiliensuche",
+            "description": "Den idealen Ort zum Wohnen finden — ob für einen Monat oder für das ganze Leben. Koordinierte Besichtigungen, Prüfung des Mietvertrags und Verhandlungen mit dem Vermieter.",
+            "image": "@src:services.housingSearch"
+          },
+          {
+            "title": "Paraguayischer Führerschein",
+            "description": "Komplette Abwicklung bei kommunalen Behörden, einschließlich lokaler Anforderungen, persönlicher Begleitung zu den Prüfungen und Nachverfolgung bis zur Ausstellung.",
+            "image": "@src:services.drivingLicense"
+          },
+          {
+            "title": "Mobilfunk",
+            "description": "Aktivierung von Leitung und Daten bei der Ankunft. Wir koordinieren mit dem gewählten Anbieter, damit du ab Tag eins erreichbar bist.",
+            "image": "@src:services.mobilePhone"
+          },
+          {
+            "title": "Kontoeröffnung",
+            "description": "Eröffnung von Privat- und/oder Geschäftskonten bei paraguayischen Banken. Inklusive Bankauswahl passend zu deinem Profil (Sudameris, Continental, GNB), Koordination und Aktivierung von Karte und Online-Banking.",
+            "image": "@src:process.banking"
+          }
+        ]
+      },
+      {
+        "id": "corporate-structuring",
+        "title": "Unternehmensstrukturierung",
+        "subtitle": "Wir vermitteln dich an Notare und Berater für die Beantragung deiner RUC (Steuernummer) und die Gründung deines Unternehmens.",
+        "items": [
+          {
+            "title": "Steuerliche Registrierung (RUC)",
+            "description": "Anmeldung bei der DNIT (ehemals SET) als Privatperson (z. B. für die IRP) oder als Unternehmen. Deine persönliche oder geschäftliche RUC ist sofort einsatzbereit.",
+            "image": "@src:process.documents"
+          },
+          {
+            "title": "Unternehmensgründung",
+            "description": "Begleitung mit Notaren für die Gründung von Aktiengesellschaften (S.A.) oder vereinfachten Aktiengesellschaften (SAS). Inklusive Erstellung der Gründungsurkunde, Eintragung im Handelsregister und Erlangung der Gemeindelizenz.",
+            "image": "@src:trust.certificate"
+          }
+        ]
+      }
+    ],
     "programs": {
       "title": "Programme",
       "programs": {
@@ -1144,7 +1146,10 @@
       "subtitle": "30 Minuten, um deinen Fall zu verstehen und dir einen klaren Plan mit Zeitrahmen und Kosten zu geben.",
       "ctaText": "Beratung buchen",
       "ctaHref": "/agenda"
-    }
+    },
+    "eyebrow": "Dienstleistungen im Detail",
+    "title": "Dienstleistungen im Detail",
+    "subtitle": "Jede Dienstleistung mit klarem Umfang, Zeitplan und Ergebnissen."
   },
   "bookingPage": {
     "seo": {
@@ -1662,36 +1667,6 @@
           ]
         }
       ]
-    },
-    "detailedServices": {
-      "eyebrow": "Alle Dienstleistungen",
-      "title": "Dienstleistungen im Detail",
-      "subtitle": "Residenz, Banken, Immobilien und Umzug — jede Dienstleistung mit klarem Umfang, Zeitplan und Ergebnissen.",
-      "groups": [
-        {
-          "id": "residency",
-          "title": "Residenz & Rechtliche Dokumente",
-          "subtitle": "Alle rechtlichen Dienstleistungen ansehen →",
-          "items": [],
-          "link": "/servicios#residency-legal"
-        },
-        {
-          "id": "banking-tax",
-          "title": "Banken & Steuern",
-          "subtitle": "Alle Finanzdienstleistungen ansehen →",
-          "items": [],
-          "link": "/servicios#banking-tax"
-        },
-        {
-          "id": "real-estate",
-          "title": "Wohnimmobilien",
-          "subtitle": "Alle Immobilienoptionen ansehen →",
-          "items": [],
-          "link": "/servicios#real-estate"
-        }
-      ],
-      "ctaText": "Alle Dienstleistungen ansehen",
-      "ctaHref": "/servicios"
     },
     "process": {
       "eyebrow": "Ablauf",

@@ -55,16 +55,19 @@ export function HighlightSection({ pageContent, data }: SectionComponentProps) {
   if (!items.length) return null
   return (
     <section className="py-12 px-4 bg-white">
-      <div className="max-w-[800px] mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center">
         {d.eyebrow && <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{d.eyebrow}</p>}
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold text-primary mb-8">{d.title}</h2>}
-        <div className="flex justify-center gap-[clamp(1.5rem,3vw,3rem)] flex-wrap">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((s: any, i: number) => (
-            <div key={i} className="text-center">
+            <div
+              key={i}
+              className="text-center p-6 bg-white rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
               {s.value && <div className="text-3xl font-extrabold text-primary">{s.value}</div>}
               {s.label && <div className="text-sm text-text-muted mt-1">{s.label}</div>}
               {!s.value && s.title && <h4 className="text-lg font-bold text-primary mb-1">{s.title}</h4>}
-              {!s.value && s.description && <p className="text-text-muted text-sm leading-relaxed max-w-[300px]">{s.description}</p>}
+              {!s.value && s.description && <p className="text-text-muted text-sm leading-relaxed">{s.description}</p>}
             </div>
           ))}
         </div>

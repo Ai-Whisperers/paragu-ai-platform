@@ -23,10 +23,6 @@
       "content": "home"
     },
     {
-      "id": "service-detail",
-      "content": "home.detailedServices"
-    },
-    {
       "id": "cta-banner",
       "content": "home"
     },

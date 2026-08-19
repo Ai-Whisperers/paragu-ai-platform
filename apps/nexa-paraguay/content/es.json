@@ -127,36 +127,6 @@
         }
       ]
     },
-    "detailedServices": {
-      "eyebrow": "Todos los servicios",
-      "title": "Servicios detallados",
-      "subtitle": "Residencia, banca, bienes raíces y mudanza — cada servicio con alcance, tiempos y entregables claros.",
-      "groups": [
-        {
-          "id": "residency",
-          "title": "Residencia y Documentos Legales",
-          "subtitle": "Ver todos los servicios legales →",
-          "items": [],
-          "link": "/servicios#residency-legal"
-        },
-        {
-          "id": "banking-tax",
-          "title": "Banca y Configuración Fiscal",
-          "subtitle": "Ver todos los servicios financieros →",
-          "items": [],
-          "link": "/servicios#banking-tax"
-        },
-        {
-          "id": "real-estate",
-          "title": "Bienes Raíces Residenciales",
-          "subtitle": "Ver todas las opciones inmobiliarias →",
-          "items": [],
-          "link": "/servicios#real-estate"
-        }
-      ],
-      "ctaText": "Ver todos los servicios",
-      "ctaHref": "/servicios"
-    },
     "process": {
       "eyebrow": "Cómo funciona",
       "title": "Cómo funciona",
@@ -2411,67 +2381,69 @@
         }
       ]
     },
-    "services": {
-      "eyebrow": "Servicios detallados",
-      "title": "Servicios detallados",
-      "subtitle": "Cada servicio con alcance, tiempos y entregables claros.",
-      "groups": [
-        {
-          "id": "residency-legal",
-          "title": "Residencia y Documentos Legales",
-          "subtitle": "Iniciamos tus trámites en Migraciones para asegurar tu estatus legal como primer paso esencial. Con la residencia aprobada, te acompañamos presencialmente a obtener tu Cédula.",
-          "items": [
-            {
-              "title": "Residencia Permanente",
-              "description": "Tramitación completa de tu residencia ante Migraciones Paraguay."
-            },
-            {
-              "title": "Cédula de Identidad Paraguaya",
-              "description": "Obtención de tu documento nacional de identidad, con acompañamiento presencial."
-            }
-          ]
-        },
-        {
-          "id": "relocation-logistics",
-          "title": "Logística e Instalación",
-          "subtitle": "Te asistimos con tu casa, vehículo, telefonía móvil o la apertura de cuentas bancarias.",
-          "items": [
-            {
-              "title": "Búsqueda de Vivienda",
-              "description": "Encontrá el lugar ideal para vivir, sea por un mes o para toda la vida. Visitas coordinadas, revisión del contrato y negociación con el propietario."
-            },
-            {
-              "title": "Licencia de Conducir Paraguaya",
-              "description": "Tramitación completa ante las autoridades municipales, incluyendo los requisitos locales, acompañamiento a las pruebas y seguimiento hasta la emisión."
-            },
-            {
-              "title": "Telefonía Móvil",
-              "description": "Activación de línea y datos a tu llegada al país. Coordinamos con el operador elegido para que tengas conectividad desde el primer día."
-            },
-            {
-              "title": "Apertura de Cuenta Bancaria",
-              "description": "Creación de cuenta personal y/o empresarial en bancos paraguayos. Incluye selección del banco según tu perfil (Sudameris, Continental, GNB), coordinación y activación de tarjeta y banca online."
-            }
-          ]
-        },
-        {
-          "id": "corporate-structuring",
-          "title": "Estructura Empresarial",
-          "subtitle": "Te conectamos con notarios y asesores para crear tu RUC (Tax ID) y constituir una empresa.",
-          "items": [
-            {
-              "title": "Registro Tributario (RUC)",
-              "description": "Inscripción en la DNIT (antes SET) como persona física (por ejemplo, para el IRP) o como empresa. Tu RUC personal o empresarial listo para operar."
-            },
-            {
-              "title": "Constitución de Empresa",
-              "description": "Acompañamiento con notarios para la creación de sociedades anónimas (S.A.) o SAS. Incluye redacción de estatutos, registro en el Registro Público y obtención de la habilitación municipal."
-            }
-          ]
-        }
-      ]
-    },
-    "groups": {},
+    "groups": [
+      {
+        "id": "residency-legal",
+        "title": "Residencia y Documentos Legales",
+        "subtitle": "Iniciamos tus trámites en Migraciones para asegurar tu estatus legal como primer paso esencial. Con la residencia aprobada, te acompañamos presencialmente a obtener tu Cédula.",
+        "items": [
+          {
+            "title": "Residencia Permanente",
+            "description": "Tramitación completa de tu residencia ante Migraciones Paraguay.",
+            "image": "@src:trust.migraciones"
+          },
+          {
+            "title": "Cédula de Identidad Paraguaya",
+            "description": "Obtención de tu documento nacional de identidad, con acompañamiento presencial.",
+            "image": "@src:trust.cedula"
+          }
+        ]
+      },
+      {
+        "id": "relocation-logistics",
+        "title": "Logística e Instalación",
+        "subtitle": "Te asistimos con tu casa, vehículo, telefonía móvil o la apertura de cuentas bancarias.",
+        "items": [
+          {
+            "title": "Búsqueda de Vivienda",
+            "description": "Encontrá el lugar ideal para vivir, sea por un mes o para toda la vida. Visitas coordinadas, revisión del contrato y negociación con el propietario.",
+            "image": "@src:services.housingSearch"
+          },
+          {
+            "title": "Licencia de Conducir Paraguaya",
+            "description": "Tramitación completa ante las autoridades municipales, incluyendo los requisitos locales, acompañamiento a las pruebas y seguimiento hasta la emisión.",
+            "image": "@src:services.drivingLicense"
+          },
+          {
+            "title": "Telefonía Móvil",
+            "description": "Activación de línea y datos a tu llegada al país. Coordinamos con el operador elegido para que tengas conectividad desde el primer día.",
+            "image": "@src:services.mobilePhone"
+          },
+          {
+            "title": "Apertura de Cuenta Bancaria",
+            "description": "Creación de cuenta personal y/o empresarial en bancos paraguayos. Incluye selección del banco según tu perfil (Sudameris, Continental, GNB), coordinación y activación de tarjeta y banca online.",
+            "image": "@src:process.banking"
+          }
+        ]
+      },
+      {
+        "id": "corporate-structuring",
+        "title": "Estructura Empresarial",
+        "subtitle": "Te conectamos con notarios y asesores para crear tu RUC (Tax ID) y constituir una empresa.",
+        "items": [
+          {
+            "title": "Registro Tributario (RUC)",
+            "description": "Inscripción en la DNIT (antes SET) como persona física (por ejemplo, para el IRP) o como empresa. Tu RUC personal o empresarial listo para operar.",
+            "image": "@src:process.documents"
+          },
+          {
+            "title": "Constitución de Empresa",
+            "description": "Acompañamiento con notarios para la creación de sociedades anónimas (S.A.) o SAS. Incluye redacción de estatutos, registro en el Registro Público y obtención de la habilitación municipal.",
+            "image": "@src:trust.certificate"
+          }
+        ]
+      }
+    ],
     "programs": {
       "title": "Programas",
       "programs": {
@@ -2500,7 +2472,10 @@
       "subtitle": "30 minutos para entender tu caso y darte un plan claro, con tiempos y costos.",
       "ctaText": "Agendar consulta",
       "ctaHref": "/agenda"
-    }
+    },
+    "eyebrow": "Servicios detallados",
+    "title": "Servicios detallados",
+    "subtitle": "Cada servicio con alcance, tiempos y entregables claros."
   },
   "processPage": {
     "seo": {
