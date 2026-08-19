@@ -24,13 +24,18 @@ export function proxy(request: NextRequest) {
   const segments = pathname.split('/').filter(Boolean)
   const first = segments[0]?.toLowerCase()
 
-  // Root or non-locale-prefixed: redirect to default locale
-  // Examples handled:
-  //   /            -> /nl
-  //   /contacto    -> /es/contacto  (heuristic: if first segment matches a known
-  //                                   Spanish page, prepend /es; otherwise use default)
-  //   /faq         -> /nl/faq
-  if (!first || !isValidLocale(first)) {
+  let locale: string = DEFAULT_LOCALE
+
+  if (first && isValidLocale(first)) {
+    // Path already has a valid locale prefix
+    locale = first
+  } else {
+    // Root or non-locale-prefixed: redirect to default locale
+    // Examples handled:
+    //   /            -> /nl
+    //   /contacto    -> /es/contacto  (heuristic: if first segment matches a known
+    //                                   Spanish page, prepend /es; otherwise use default)
+    //   /faq         -> /nl/faq
     let detectedLocale = DEFAULT_LOCALE
     if (first) {
       // Honor explicit Accept-Language only if user has no LOCALE cookie
@@ -49,10 +54,15 @@ export function proxy(request: NextRequest) {
 
     const url = request.nextUrl.clone()
     url.pathname = `/${detectedLocale}${pathname === '/' ? '' : pathname}`
-    return NextResponse.redirect(url, 307)
+    const redirect = NextResponse.redirect(url, 307)
+    redirect.headers.set('x-next-locale', detectedLocale)
+    return redirect
   }
 
-  return NextResponse.next()
+  // Set x-next-locale header so root layout can read it for <html lang="...">
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set('x-next-locale', locale)
+  return NextResponse.next({ request: { headers: requestHeaders } })
 }
 
 export const config = {
