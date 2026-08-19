@@ -22,7 +22,7 @@ jobs:
   detect-apps:
     runs-on: ubuntu-latest
     outputs:
-      apps: ${{ steps.diff.outputs.apps }}
+      apps: ${{ steps.emit.outputs.apps }}
     steps:
       - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v3
@@ -88,10 +88,12 @@ jobs:
             apps/xxgym:
               - 'apps/xxgym/**'
       - name: Emit changed apps
+        id: emit
         run: |
           APPS=""
+          OUTPUTS='${{ toJson(steps.diff.outputs) }}'
           for app in 3md-website bichos-gym bufete-mendez builder camilo-acosta de-abasto-a-casa escribania-paraguay estudio-medieval fun4me fun4me-store golden-visa-advisory granja-cabral jota-ink-tattoo luis-de-leon-concept magnolia-peluqueria mantraspa meal-prep nde-barba nexa-paraguay ozmontania-website pitchy-website portas-barber reina-de-copas shine-nails trentina-cerveza trentina-site tsuki-restaurante villamayor-asociados xxgym; do
-            VAL="${{ steps.diff.outputs[app] }}"
+            VAL=$(echo "$OUTPUTS" | jq -r --arg k "apps/$app" '.[$k] // "false"')
             if [ "$VAL" = "true" ]; then
               if [ -z "$APPS" ]; then APPS="$app"; else APPS="$APPS,$app"; fi
             fi
@@ -138,6 +140,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: detect-apps
     if: needs.detect-apps.outputs.apps != ''
+    outputs:
+      apps: ${{ needs.detect-apps.outputs.apps }}
     strategy:
       fail-fast: false
       matrix:
@@ -159,6 +163,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    outputs:
+      apps: ${{ needs.build.outputs.apps }}
     strategy:
       fail-fast: false
       matrix:
