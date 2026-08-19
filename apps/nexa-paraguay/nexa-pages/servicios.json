@@ -25,6 +25,16 @@
       "content": "servicesPage"
     },
     {
+      "id": "process-timeline",
+      "variant": "vertical",
+      "content": "processPage.process"
+    },
+    {
+      "id": "highlights",
+      "variant": "grid",
+      "content": "processPage.highlights"
+    },
+    {
       "id": "cta-banner",
       "variant": "gradient",
       "content": "servicesPage.finalCta"
@@ -38,6 +48,11 @@
       "id": "footer",
       "variant": "standard",
       "content": "footer"
+    },
+    {
+      "id": "whatsapp-float",
+      "variant": "standard",
+      "content": "whatsapp"
     }
   ]
 }

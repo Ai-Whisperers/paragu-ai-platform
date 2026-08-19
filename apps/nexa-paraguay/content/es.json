@@ -21,10 +21,6 @@
         "href": "/servicios"
       },
       {
-        "label": "Proceso",
-        "href": "/proceso"
-      },
-      {
         "label": "Por qué Paraguay",
         "href": "/por-que-paraguay"
       },
@@ -53,8 +49,8 @@
       "ctaText": "Agendar consulta gratuita",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Ver el proceso",
-      "secondaryCtaHref": "/proceso",
-      "backgroundImage": "@src:hero.home"
+      "secondaryCtaHref": "/servicios#proceso",
+      "backgroundImage": "@src:hero.asuncionSkyline"
     },
     "trust": {
       "eyebrow": "POR QUÉ NEXA",
@@ -379,7 +375,7 @@
       "ctaText": "Agendar consulta gratuita",
       "ctaHref": "/contacto",
       "secondaryCtaText": "Ver nuestro proceso",
-      "secondaryCtaHref": "/proceso",
+      "secondaryCtaHref": "/servicios#proceso",
       "backgroundImage": "@src:team.group"
     },
     "team": {
@@ -1511,7 +1507,7 @@
         "links": [
           {
             "label": "Proceso",
-            "href": "/proceso"
+            "href": "/servicios#proceso"
           },
           {
             "label": "Residencia y Legal",
@@ -2356,6 +2352,11 @@
             "title": "Residencia Permanente",
             "description": "Tramitación completa de tu residencia ante Migraciones Paraguay.",
             "image": "@src:services.residencyApplication"
+          },
+          {
+            "title": "Traducción Oficial",
+            "description": "Traducción pública de documentos al español por traductor matriculado. Apostillas y legalizaciones de partidas, antecedentes y poderes.",
+            "image": "@src:services.cedulaPickup"
           },
           {
             "title": "Cédula de Identidad Paraguaya",

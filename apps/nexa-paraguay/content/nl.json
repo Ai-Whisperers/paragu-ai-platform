@@ -19,7 +19,7 @@
       "ctaText": "Gratis consult boeken",
       "ctaHref": "/contacto",
       "secondaryCtaText": "Bekijk ons proces",
-      "secondaryCtaHref": "/proceso",
+      "secondaryCtaHref": "/servicios#proceso",
       "backgroundImage": "@src:team.group"
     },
     "team": {
@@ -1249,7 +1249,7 @@
         "links": [
           {
             "label": "Proceso",
-            "href": "/proceso"
+            "href": "/servicios#proceso"
           },
           {
             "label": "Residencia y Legal",
@@ -1422,8 +1422,8 @@
       "ctaText": "Plan een gratis consult",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Bekijk het proces",
-      "secondaryCtaHref": "/proceso",
-      "backgroundImage": "@src:hero.home"
+      "secondaryCtaHref": "/servicios#proceso",
+      "backgroundImage": "@src:hero.asuncionSkyline"
     },
     "trust": {
       "eyebrow": "WAAROM NEXA",
@@ -1596,10 +1596,6 @@
       {
         "label": "Diensten",
         "href": "/servicios"
-      },
-      {
-        "label": "Proces",
-        "href": "/proceso"
       },
       {
         "label": "Waarom Paraguay",
@@ -2202,6 +2198,11 @@
             "title": "Permanent Verblijf",
             "description": "Volledige afhandeling van je residentieprocedure bij de Paraguayaanse immigratiedienst.",
             "image": "@src:services.residencyApplication"
+          },
+          {
+            "title": "Officiële Vertaling",
+            "description": "Officiële vertaling van documenten naar het Spaans door een beëdigd vertaler. Apostilles en legalisaties van aktes, bewijzen en volmachten.",
+            "image": "@src:services.cedulaPickup"
           },
           {
             "title": "Paraguayaans Identiteitsbewijs (Cédula)",

@@ -94,10 +94,6 @@
         "href": "/servicios"
       },
       {
-        "label": "Ablauf",
-        "href": "/proceso"
-      },
-      {
         "label": "Warum Paraguay",
         "href": "/por-que-paraguay"
       },
@@ -151,7 +147,7 @@
         "links": [
           {
             "label": "Proceso",
-            "href": "/proceso"
+            "href": "/servicios#proceso"
           },
           {
             "label": "Residencia y Legal",
@@ -234,7 +230,7 @@
       "ctaText": "Kostenlose Beratung buchen",
       "ctaHref": "/contacto",
       "secondaryCtaText": "Unseren Prozess ansehen",
-      "secondaryCtaHref": "/proceso",
+      "secondaryCtaHref": "/servicios#proceso",
       "backgroundImage": "@src:team.group"
     },
     "team": {
@@ -1081,6 +1077,11 @@
             "image": "@src:services.residencyApplication"
           },
           {
+            "title": "Offizielle Übersetzung",
+            "description": "Beglaubigte Übersetzung von Dokumenten ins Spanische durch einen vereidigten Übersetzer. Apostillen und Legalisierungen von Urkunden, Führungszeugnissen und Vollmachten.",
+            "image": "@src:services.cedulaPickup"
+          },
+          {
             "title": "Paraguayischer Personalausweis (Cédula)",
             "description": "Beantragung deines nationalen Personalausweises mit persönlicher Begleitung.",
             "image": "@src:services.cedulaPickup"
@@ -1619,8 +1620,8 @@
       "ctaText": "Kostenlose Beratung buchen",
       "ctaHref": "/agenda",
       "secondaryCtaText": "Ablauf ansehen",
-      "secondaryCtaHref": "/proceso",
-      "backgroundImage": "@src:hero.home"
+      "secondaryCtaHref": "/servicios#proceso",
+      "backgroundImage": "@src:hero.asuncionSkyline"
     },
     "trust": {
       "eyebrow": "WARUM NEXA",

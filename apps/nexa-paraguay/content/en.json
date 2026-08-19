@@ -21,10 +21,6 @@
         "href": "/servicios"
       },
       {
-        "label": "Process",
-        "href": "/proceso"
-      },
-      {
         "label": "Why Paraguay",
         "href": "/por-que-paraguay"
       },
@@ -53,8 +49,8 @@
       "ctaText": "Book a free consultation",
       "ctaHref": "/agenda",
       "secondaryCtaText": "See the process",
-      "secondaryCtaHref": "/proceso",
-      "backgroundImage": "@src:hero.home"
+      "secondaryCtaHref": "/servicios#proceso",
+      "backgroundImage": "@src:hero.asuncionSkyline"
     },
     "trust": {
       "eyebrow": "WHY NEXA",
@@ -372,7 +368,7 @@
       "ctaText": "Book a free consultation",
       "ctaHref": "/contacto",
       "secondaryCtaText": "See our process",
-      "secondaryCtaHref": "/proceso",
+      "secondaryCtaHref": "/servicios#proceso",
       "backgroundImage": "@src:team.group"
     },
     "team": {
@@ -1463,7 +1459,7 @@
         "links": [
           {
             "label": "Proceso",
-            "href": "/proceso"
+            "href": "/servicios#proceso"
           },
           {
             "label": "Residencia y Legal",
@@ -2316,6 +2312,11 @@
             "title": "Permanent Residency",
             "description": "Full processing of your residency before the Paraguayan Immigration Office.",
             "image": "@src:services.residencyApplication"
+          },
+          {
+            "title": "Official Translation",
+            "description": "Certified translation of documents to Spanish by a sworn translator. Apostilles and legalizations of certificates, background checks, and powers of attorney.",
+            "image": "@src:services.cedulaPickup"
           },
           {
             "title": "Paraguayan National ID (Cédula)",

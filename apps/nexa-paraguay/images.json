@@ -121,13 +121,23 @@
     },
     "hero": {
       "home": {
-        "src": "/images/hero/hero-bg.webp",
+        "src": "/images/hero/asuncion-skyline.webp",
         "alt": "Asunción Paraguay skyline at golden hour",
         "altByLocale": {
           "en": "Asunción Paraguay skyline at golden hour",
           "es": "Silueta de Asunción, Paraguay, al atardecer",
           "nl": "Skyline van Asunción, Paraguay, bij gouden uur",
           "de": "Skyline von Asunción, Paraguay, zur goldenen Stunde"
+        }
+      },
+      "asuncionSkyline": {
+        "src": "/images/hero/asuncion-skyline.webp",
+        "alt": "Panoramic view of Asunción's coastline and skyline",
+        "altByLocale": {
+          "es": "Vista panorámica de la costa y el skyline de Asunción",
+          "en": "Panoramic view of Asunción's coastline and skyline",
+          "nl": "Panoramisch uitzicht op de kustlijn en skyline van Asunción",
+          "de": "Panoramablick auf die Küste und Skyline von Asunción"
         }
       },
       "homeMobile": {
