@@ -46,9 +46,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import { headers } from 'next/headers'
+import { LOCALES } from '@/lib/locales'
+
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Read locale from x-next-locale header set by middleware, or fall back to 'es'
+  // The middleware sets this so the root layout can render the correct <html lang>
+  const headersList = await headers()
+  const locale = headersList.get('x-next-locale') || 'es'
+  const safeLocale = (LOCALES as readonly string[]).includes(locale) ? locale : 'es'
   return (
-    <html lang='en'>
+    <html lang={safeLocale}>
       <head>
         {/* Organization schema — site-wide */}
         <OrganizationSchema />

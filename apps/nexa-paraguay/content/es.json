@@ -439,21 +439,12 @@
       "subtitle": "Donde consulta, firma y banco realmente ocurren. Placeholders de IA abajo — reemplazar por fotos reales antes del lanzamiento.",
       "columns": 3,
       "images": [
-        {
-          "$img": "office.exterior"
-        },
-        {
-          "$img": "office.reception"
-        },
-        {
-          "$img": "office.meetingRoom"
-        },
-        {
-          "$img": "office.signing"
-        },
-        {
-          "$img": "office.teamHuddle"
-        }
+        "@src:office.exterior",
+        "@src:office.meetingRoom",
+        "@src:office.reception",
+        "@src:office.teamRoom",
+        "@src:office.cityView",
+        "@src:office.signature"
       ],
       "lightbox": true
     },
@@ -520,7 +511,8 @@
         "title": "Requisitos importantes",
         "items": [
           "Todos los documentos extranjeros deben estar apostillados o legalizados",
-          "Deben estar traducidos al español por traductor público matriculado si vienen en otro idioma"
+          "Deben estar traducidos al español por traductor público matriculado si vienen en otro idioma",
+          "Cada documento tiene un período de validez: revíselo antes de viajar"
         ]
       },
       "processedLocally": {
@@ -640,22 +632,10 @@
       },
       "image": "@src:team.sonia",
       "credentials": [
-        {
-          "text": {
-            "es": "Licencia de operación: Resolución N° 127/2022",
-            "en": "Operating License: Resolution No. 127/2022",
-            "nl": "Vergunning: Resolutie Nr. 127/2022",
-            "de": "Betriebslizenz: Resolution Nr. 127/2022"
-          }
-        },
-        {
-          "text": {
-            "es": "Miembro de laAsociación de Profesionales de Inmigración",
-            "en": "Member, Association of Immigration Professionals",
-            "nl": "Lid, Vereniging van Immigratieprofessionals",
-            "de": "Mitglied, Verein der Einwanderungsprofis"
-          }
-        }
+        "Fundadora y Directora, Nexa Paraguay",
+        "Fundadora, Proyecto Paraguay (comunidad holandesa en Paraguay)",
+        "Multilingüe: holandés, inglés, español, alemán, guaraní",
+        "10+ años de experiencia en reubicación"
       ]
     }
   },
@@ -3593,34 +3573,90 @@
       ]
     },
     "process": {
-      "eyebrow": "Cómo funciona",
-      "title": "Tu mudanza paso a paso",
-      "totalDuration": "Tiempo total: depende del programa. Lo confirmamos en la consulta inicial.",
-      "ctaLabel": "Iniciar mi proceso",
+      "eyebrow": "El proceso",
+      "title": "Tu mudanza a Paraguay, paso a paso",
+      "totalDuration": "Duración total: depende del programa. Lo confirmamos en la primera consulta.",
+      "ctaLabel": "Empezar ahora",
       "ctaHref": "/contacto",
-      "steps": []
-    },
-    "targetClients": {
-      "eyebrow": "Para quién",
-      "title": "Ideal para",
-      "groups": [
+      "steps": [
         {
-          "id": "investors",
-          "title": "Inversores",
-          "items": []
+          "title": "Consulta inicial (videollamada, 30 min)",
+          "description": "Revisamos tu situación personal, respondemos preguntas y confirmamos si Paraguay es el destino correcto para ti.",
+          "icon": "MessageCircle",
+          "duration": "1 día"
         },
         {
-          "id": "remote",
-          "title": "Trabajadores remotos",
-          "items": []
+          "title": "Documentación y apostillas",
+          "description": "Preparamos juntos tu documentación: antecedentes penales, partidas, poderes. Te indicamos exactamente qué apostillar.",
+          "icon": "FileText",
+          "duration": "2-3 semanas"
+        },
+        {
+          "title": "Llegada a Paraguay",
+          "description": "Un solo viaje de 7-10 días. Te acompañamos en persona a Migraciones, policía, banco y registro civil.",
+          "icon": "Plane",
+          "duration": "7-10 días"
+        },
+        {
+          "title": "Apertura de cuenta bancaria",
+          "description": "Resolvemos el KYC en bancos privados paraguayos con perfil internacional. Cuenta en USD desde el día 1.",
+          "icon": "Landmark",
+          "duration": "3-5 días"
+        },
+        {
+          "title": "Entrega de cédula y residencia",
+          "description": "Recibís tu cédula paraguaya. A partir de ahí, tenés residencia permanente Mercosur.",
+          "icon": "BadgeCheck",
+          "duration": "2-4 semanas"
+        }
+      ]
+    },
+    "targetClients": {
+      "eyebrow": "Para quién es esto",
+      "title": "Ideal para perfiles como el tuyo",
+      "groups": [
+        {
+          "title": "Emprendedores europeos",
+          "description": "Buscan un país con baja carga fiscal, fácil apertura de empresas y residencia Mercosur en semanas.",
+          "icon": "Briefcase"
+        },
+        {
+          "title": "Familias con niños",
+          "description": "Quieren estabilidad, escuelas bilingües, salud privada de calidad y un ritmo de vida más humano.",
+          "icon": "Heart"
         }
       ]
     },
     "costs": {
       "eyebrow": "Costos",
-      "title": "Inversión inicial",
-      "subtitle": "Nuestros programas cerrados en USD.",
-      "items": []
+      "title": "Costos realistas",
+      "subtitle": "Costos mensuales en USD, sin contar alquiler.",
+      "items": [
+        {
+          "label": "Alimentación (2 personas)",
+          "value": "USD 350-500"
+        },
+        {
+          "label": "Servicios (luz, agua, internet)",
+          "value": "USD 80-120"
+        },
+        {
+          "label": "Celular (plan con datos)",
+          "value": "USD 20-35"
+        },
+        {
+          "label": "Transporte (gasolina + Uber)",
+          "value": "USD 100-180"
+        },
+        {
+          "label": "Seguro médico privado",
+          "value": "USD 80-150"
+        },
+        {
+          "label": "Imprevistos",
+          "value": "USD 100"
+        }
+      ]
     },
     "cta": {
       "eyebrow": "Próximo paso",

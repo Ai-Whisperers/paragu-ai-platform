@@ -119,15 +119,18 @@
       "basicDocuments": {
         "title": "Basisdocumenten",
         "items": [
-          "Geldig paspoort (meer dan 6 maanden geldig)",
-          "Identiteitskaart uit land van herkomst (indien van toepassing)",
-          "Geboorteakte, geapostilleerd en vertaald",
-          "Verklaring van goed gedrag uit land van herkomst",
-          "Verklaring van goed gedrag uit land van verblijf (indien anders)",
+          "Geldig paspoort",
+          "Identiteitsbewijs uit land van herkomst (indien van toepassing)",
+          "Geboorteakte",
+          "Strafbladverklaring uit land van herkomst",
+          "Politie-/strafbladcertificaat — Interpol Paraguay",
+          "Bewijs van leven en verblijf in Paraguay",
           "Verklaring van goed gedrag voor buitenlanders, afgegeven in Paraguay",
-          "Medisch attest, afgegeven in Paraguay",
+          "Medisch certificaat afgegeven in Paraguay",
           "Bewijs van legale binnenkomst in het land",
-          "Recente foto's (4x4 cm, witte achtergrond)"
+          "Pasfoto's",
+          "Migratieformulier",
+          "Betaling van migratiekosten"
         ]
       },
       "importantNotes": {
@@ -160,6 +163,17 @@
       "costs": {
         "title": "Kostenramingen",
         "description": "Variëren per nationaliteit, vertalingen, papierwerk, apostilles en type verblijf. We geven u een persoonlijke offerte zonder verplichting."
+      },
+      "processedLocally": {
+        "title": "Wat wij voor u in Paraguay regelen",
+        "items": [
+          "Interpol-certificaat",
+          "Verklaring van goed gedrag in Paraguay",
+          "Medisch certificaat",
+          "Bewijs van leven en verblijf",
+          "Foto's",
+          "Officiële vertalingen"
+        ]
       }
     },
     "testimonials": {
@@ -1014,7 +1028,7 @@
             },
             {
               "q": "Welk belastingregime past bij mij?",
-              "a": "Afhankelijk van je situatie. We adviseren je."
+              "a": "Afhankelijk van je situatie. We adviseren je graag persoonlijk."
             }
           ]
         },
@@ -1960,7 +1974,7 @@
       "title": "Vijf pijlers van het leven hier"
     },
     "seo": {
-      "title": "Calidad de vida en Paraguay — Nexa",
+      "title": "Levenskwaliteit in Paraguay — Nexa Paraguay",
       "description": "Clima, costo de vida, comunidad internacional, seguridad y educación en Asunción.",
       "targetKeyword": "calidad de vida Paraguay"
     }
@@ -1989,7 +2003,26 @@
       ],
       "subtitle": "Praktische documenten om uw dossier voor te bereiden en het proces te begrijpen.",
       "title": "Downloadbare gidsen",
-      "items": []
+      "items": [
+        {
+          "title": "Volledige Gids voor Verblijf in Paraguay 2025",
+          "description": "Alles wat je moet weten om je verblijfsvergunning te krijgen — van aanvraag tot ontvangst van je cedula.",
+          "fileUrl": "/guias/gids-verblijf-2025.pdf",
+          "ctaText": "Download gratis gids"
+        },
+        {
+          "title": "Verhuischecklist naar Paraguay",
+          "description": "Volledige lijst met documenten, procedures en doorlooptijden, zodat je niets mist tijdens je verhuizing.",
+          "fileUrl": "/guias/verhuischecklist.pdf",
+          "ctaText": "Download checklist"
+        },
+        {
+          "title": "Fiscale Gids voor Buitenlanders",
+          "description": "Begrijp het Paraguayaanse belastingstelsel: uniek tarief, territoriale heffing en hoe je dubbele belasting voorkomt.",
+          "fileUrl": "/guias/fiscale-gids-buitenlanders.pdf",
+          "ctaText": "Download gids"
+        }
+      ]
     },
     "hero": {
       "headline": "Bronnen voor Europese investeerders",

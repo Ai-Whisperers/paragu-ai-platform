@@ -488,15 +488,18 @@
       "basicDocuments": {
         "title": "Basic documents",
         "items": [
-          "Valid passport (more than 6 months of validity)",
-          "National ID card from country of origin (if applicable)",
-          "Birth certificate apostilled and translated",
-          "Police clearance certificate from country of origin",
-          "Police clearance certificate from country of residence (if different)",
-          "Certificate of good conduct for foreigners issued in Paraguay",
+          "Valid passport",
+          "National ID of country of origin (if applicable)",
+          "Birth certificate",
+          "Criminal background check from country of origin",
+          "Police/penal record certificate — Interpol Paraguay",
+          "Proof of life and residence in Paraguay",
+          "Background certificate for foreigners issued in Paraguay",
           "Medical certificate issued in Paraguay",
           "Proof of legal entry into the country",
-          "Recent photographs (4x4 cm, white background)"
+          "ID photos",
+          "Immigration form",
+          "Payment of immigration fees"
         ]
       },
       "importantNotes": {
@@ -529,6 +532,17 @@
       "costs": {
         "title": "Cost estimates",
         "description": "Vary by nationality, translations, paperwork, apostilles, and type of residency. We give you a personalized quote with no obligation."
+      },
+      "processedLocally": {
+        "title": "What we process for you in Paraguay",
+        "items": [
+          "Interpol certificate",
+          "Paraguay background check",
+          "Medical certificate",
+          "Proof of life and residence",
+          "Photos",
+          "Official translations"
+        ]
       }
     },
     "testimonials": {
@@ -1699,7 +1713,7 @@
   },
   "qualityOfLifePage": {
     "seo": {
-      "title": "Calidad de vida en Paraguay — Nexa",
+      "title": "Quality of life in Paraguay — Nexa Paraguay",
       "description": "Climate, cost of living, international community, safety, and education in Asunción.",
       "targetKeyword": "calidad de vida Paraguay"
     },
@@ -3513,34 +3527,90 @@
       ]
     },
     "process": {
-      "eyebrow": "How it works",
-      "title": "Your move step by step",
-      "totalDuration": "Total time: depends on the program. We confirm this during the initial consultation.",
-      "ctaLabel": "Start my process",
-      "ctaHref": "/contacto",
-      "steps": []
-    },
-    "targetClients": {
-      "eyebrow": "For whom",
-      "title": "Ideal for",
-      "groups": [
+      "eyebrow": "The process",
+      "title": "Your move to Paraguay, step by step",
+      "totalDuration": "Total duration: depends on the program. We confirm this during the first consultation.",
+      "ctaLabel": "Get started",
+      "ctaHref": "/contact",
+      "steps": [
         {
-          "id": "investors",
-          "title": "Investors",
-          "items": []
+          "title": "Initial consultation (video call, 30 min)",
+          "description": "We review your situation, answer questions, and confirm whether Paraguay is the right destination for you.",
+          "icon": "MessageCircle",
+          "duration": "1 day"
         },
         {
-          "id": "remote",
-          "title": "Remote workers",
-          "items": []
+          "title": "Documentation and apostilles",
+          "description": "We prepare your documents together: criminal records, certificates, powers of attorney. We tell you exactly what needs apostilling.",
+          "icon": "FileText",
+          "duration": "2-3 weeks"
+        },
+        {
+          "title": "Arrival in Paraguay",
+          "description": "A single 7-10 day trip. We accompany you in person to Immigration, police, bank, and civil registry.",
+          "icon": "Plane",
+          "duration": "7-10 days"
+        },
+        {
+          "title": "Bank account opening",
+          "description": "We handle KYC at private Paraguayan banks with international profile. USD account from day 1.",
+          "icon": "Landmark",
+          "duration": "3-5 days"
+        },
+        {
+          "title": "ID and residency delivery",
+          "description": "You receive your Paraguayan ID. From then on, you have permanent Mercosur residency.",
+          "icon": "BadgeCheck",
+          "duration": "2-4 weeks"
+        }
+      ]
+    },
+    "targetClients": {
+      "eyebrow": "Who this is for",
+      "title": "Ideal for profiles like yours",
+      "groups": [
+        {
+          "title": "European entrepreneurs",
+          "description": "Looking for low tax burden, easy company formation, and Mercosur residency in weeks.",
+          "icon": "Briefcase"
+        },
+        {
+          "title": "Families with children",
+          "description": "Want stability, bilingual schools, quality private healthcare, and a more human pace of life.",
+          "icon": "Heart"
         }
       ]
     },
     "costs": {
       "eyebrow": "Costs",
-      "title": "Initial investment",
-      "subtitle": "Our programs fixed in USD.",
-      "items": []
+      "title": "Realistic costs",
+      "subtitle": "Monthly costs in USD, excluding rent.",
+      "items": [
+        {
+          "label": "Food (2 people)",
+          "value": "USD 350-500"
+        },
+        {
+          "label": "Utilities (electricity, water, internet)",
+          "value": "USD 80-120"
+        },
+        {
+          "label": "Mobile phone (data plan)",
+          "value": "USD 20-35"
+        },
+        {
+          "label": "Transportation (gas + Uber)",
+          "value": "USD 100-180"
+        },
+        {
+          "label": "Private health insurance",
+          "value": "USD 80-150"
+        },
+        {
+          "label": "Miscellaneous",
+          "value": "USD 100"
+        }
+      ]
     },
     "cta": {
       "eyebrow": "Next step",

@@ -12,7 +12,7 @@ import {
   type SiteConfig,
 } from "@ai-whisperers/site-seo"
 
-export const SITE_URL = resolveSiteUrl("NEXT_PUBLIC_APP_URL", "https://nexaparaguay.com")
+export const SITE_URL = resolveSiteUrl("NEXT_PUBLIC_APP_URL", "https://nexaparaguay.com.py")
 
 const SITE_CONFIG: SiteConfig = {
   siteUrl: SITE_URL,

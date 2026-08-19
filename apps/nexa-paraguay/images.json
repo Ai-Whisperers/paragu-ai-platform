@@ -592,6 +592,46 @@
           "nl": "Nexa Paraguay team bijeenkomst",
           "de": "Nexa Paraguay Team-Meeting"
         }
+      },
+      "team": {
+        "src": "/images/office/team-huddle.webp",
+        "alt": "The Nexa Paraguay team",
+        "altByLocale": {
+          "es": "El equipo de Nexa Paraguay",
+          "en": "The Nexa Paraguay team",
+          "nl": "Het Nexa Paraguay team",
+          "de": "Das Nexa Paraguay Team"
+        }
+      },
+      "teamRoom": {
+        "src": "/images/office/meeting-room.webp",
+        "alt": "Nexa Paraguay team meeting room",
+        "altByLocale": {
+          "es": "Sala de reuniones del equipo Nexa Paraguay",
+          "en": "Nexa Paraguay team meeting room",
+          "nl": "Nexa Paraguay team vergaderzaal",
+          "de": "Nexa Paraguay Team-Besprechungsraum"
+        }
+      },
+      "cityView": {
+        "src": "/images/office/exterior.webp",
+        "alt": "Asunción city view from the Nexa Paraguay office",
+        "altByLocale": {
+          "es": "Vista de la ciudad de Asunción desde la oficina de Nexa Paraguay",
+          "en": "Asunción city view from the Nexa Paraguay office",
+          "nl": "Uitzicht op de stad Asunción vanuit het Nexa Paraguay-kantoor",
+          "de": "Blick auf die Stadt Asunción vom Nexa Paraguay Büro aus"
+        }
+      },
+      "signature": {
+        "src": "/images/office/signing.webp",
+        "alt": "Document signature moment at Nexa Paraguay",
+        "altByLocale": {
+          "es": "Momento de firma de documentos en Nexa Paraguay",
+          "en": "Document signature moment at Nexa Paraguay",
+          "nl": "Ondertekenmoment van documenten bij Nexa Paraguay",
+          "de": "Dokumentenunterzeichnung bei Nexa Paraguay"
+        }
       }
     },
     "services": {
