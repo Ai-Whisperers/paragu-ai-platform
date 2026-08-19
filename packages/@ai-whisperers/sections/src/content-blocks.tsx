@@ -514,13 +514,14 @@ export function PillarsSection({ pageContent, data, images }: SectionComponentPr
   //  - 2 items: centered 2 cols (1x2 or 2x1 depending on viewport)
   //  - 3 items: 3 cols (1 row)
   //  - 4 items: 2x2 grid (never 3+1)
+  //  - 5 items: 3 cols × 2 rows (3+2)
   //  - 6 items: 3 cols x 2 rows (3+3)
   //  - other: auto-fit
   let gridColsClass: string
   if (pillars.length === 2) gridColsClass = "grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
   else if (pillars.length === 3) gridColsClass = "grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto"
   else if (pillars.length === 4) gridColsClass = "grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto"
-  else if (pillars.length === 6) gridColsClass = "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+  else if (pillars.length === 5 || pillars.length === 6) gridColsClass = "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
   else gridColsClass = "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
   return (
     <section className="py-20 bg-primary text-white">

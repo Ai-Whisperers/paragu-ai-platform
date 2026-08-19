@@ -1462,36 +1462,30 @@
       "subtitle": "Verder dan de macrocijfers: wat er echt verandert als je verhuist.",
       "pillars": [
         {
-          "icon": "Briefcase",
-          "title": "Open voor jouw bedrijf",
-          "description": "Paraguay maakt het openen van een bedrijf 100% online mogelijk, met duidelijke vereisten en toegankelijke kosten. Het land heeft dubbelbelastingverdragen met diverse economieën en een regime dat permanente inwoners die lokaal ondernemen bevoordeelt.",
-          "imageUrl": "@src:whyParaguay.investment",
+          "icon": "TrendingUp",
+          "title": "Aanhoudende groei",
+          "description": "Het BBP (bruto binnenlands product) groeit sinds 2009 met 4-5% per jaar. Inflatie van een cijfer sinds 2020. De Paraguayaanse economie stopt niet.",
           "bullets": [
-            "100% online oprichting, geen voorafgaande reis nodig",
-            "Vereenvoudigd regime voor ondernemers",
-            "Operationele kosten aanzienlijk lager dan Europa"
+            "Een BBP dat het afgelopen decennium overwegend positief is gebleven, met meerdere jaren rond ~4-5% en inflatie onder controle, al sinds 2020 op een cijfer.",
+            "De Paraguayaanse economie stopt niet."
           ]
         },
         {
-          "icon": "ShieldCheck",
-          "title": "Stabiliteit voor je gezin",
-          "description": "Juridische zekerheid, toegang tot kwalitatieve privégezondheidszorg, tweetalig onderwijs en een menselijker levensritme maken van Paraguay een bestemming waar Europese gezinnen tijd en welzijn terugwinnen. De criminaliteitscijfers in woonwijken behoren tot de laagste van de Zuidelijke Kegel.",
-          "imageUrl": "@src:whyParaguay.lifestyle",
+          "icon": "Landmark",
+          "title": "Territoriaal belastingstelsel",
+          "description": "De IRP (inkomstenbelasting) belast alleen wat je binnen Paraguay verdient. Buitenlandse inkomsten worden niet belast. Zo simpel is het.",
           "bullets": [
-            "Lage criminaliteitscijfers in woonwijken",
-            "Kwalitatieve privégezondheidszorg tegen Oost-Europese kosten",
-            "Tweetalige scholen met internationale erkenning"
+            "De IRP (Inkomstenbelasting) belast uitsluitend inkomsten die binnen het nationale grondgebied worden gegenereerd.",
+            "Je buitenlandse inkomsten worden niet belast. Zo simpel en voordelig."
           ]
         },
         {
-          "icon": "Heart",
-          "title": "Verwelkomd, niet geassimileerd",
-          "description": "Paraguay eist geen culturele overgave. Italiaanse, Duitse, Braziliaanse, Argentijnse en andere gemeenschappen leven samen met behoud van hun identiteit en leren Spaans in hun eigen tempo. Hier is je Europese accent welkom, niet vreemd.",
-          "imageUrl": "@src:whyParaguay.culture",
+          "icon": "Users",
+          "title": "Actieve Europese gemeenschap",
+          "description": "Meer dan 30.000 Europeanen wonen in Paraguay. Braziliaanse, Argentijnse, Duitse en Mennonite gemeenschappen met decennia van aanwezigheid.",
           "bullets": [
-            "Gevestigde Italiaanse, Duitse, Braziliaanse en Argentijnse gemeenschappen",
-            "Geen druk tot culturele assimilatie",
-            "Warm welkom voor permanente inwoners vanaf dag één"
+            "Paraguay consolideert een levendig multicultureel samenleven met 156.804 buitenlandse inwoners.",
+            "Warm welkom voor permanente inwoners vanaf dag een."
           ]
         }
       ]
@@ -2358,16 +2352,6 @@
             "Lagere kosten dan West-Europa",
             "Gastvrijheid en servicecultuur",
             "Warm klimaat het hele jaar"
-          ]
-        },
-        {
-          "icon": "Sprout",
-          "title": "Agro-industriële grootmacht",
-          "description": "Paraguay is een van de grootste sojaboeren ter wereld en een grote vleesexporteur. Geïntegreerde waardeketen, met echte kansen voor Europese investeerders met landbouwervaring.",
-          "items": [
-            "Wereldwijd leidende landbouwexporteur",
-            "Grote vleesexporteur",
-            "Geïntegreerde waardeketen"
           ]
         },
         {

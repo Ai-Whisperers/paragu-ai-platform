@@ -93,36 +93,30 @@
       "subtitle": "Más allá de los datos macro: lo que realmente cambia cuando te mudas.",
       "pillars": [
         {
-          "icon": "Briefcase",
-          "title": "Abierto a tu negocio",
-          "description": "Paraguay facilita la apertura de empresas 100% en línea, con requisitos claros y costos accesibles. El país tiene tratados de doble imposición con varias economías y un régimen que favorece a residentes permanentes que emprenden localmente.",
-          "imageUrl": "@src:whyParaguay.investment",
+          "icon": "TrendingUp",
+          "title": "Crecimiento sostenido",
+          "description": "PIB (producto interno bruto) creciendo al 4-5% anual desde 2009. Inflación de un dígito desde 2020. La economía paraguaya no para.",
           "bullets": [
-            "Apertura 100% en línea, sin viaje previo",
-            "Régimen simplificado para emprendedores",
-            "Costos operativos significativamente menores que Europa"
+            "Un PIB que en la ultima decada ha mantenido un crecimiento mayormente positivo, con varios anos en torno a ~4-5% y una inflacion bajo control, manteniendose en un solo digito desde 2020.",
+            "La economia paraguaya no se detiene."
           ]
         },
         {
-          "icon": "ShieldCheck",
-          "title": "Estabilidad para tu familia",
-          "description": "La seguridad jurídica, el acceso a salud privada de calidad, una educación bilingüe y un ritmo de vida más humano hacen de Paraguay un destino donde las familias europeas recuperan tiempo y bienestar. Los índices de criminalidad en zonas residenciales están entre los más bajos del Cono Sur.",
-          "imageUrl": "@src:whyParaguay.lifestyle",
+          "icon": "Landmark",
+          "title": "Sistema fiscal territorial",
+          "description": "El IRP (impuesto a la renta personal) grava solo lo que ganas dentro de Paraguay. Ingresos del exterior no tributan. Asi de simple.",
           "bullets": [
-            "Bajo índice de criminalidad en zonas residenciales",
-            "Salud privada de calidad a costos europeos del Este",
-            "Colegios bilingües con validación internacional"
+            "El IRP (Impuesto a la Renta Personal) grava exclusivamente los ingresos generados dentro del territorio nacional.",
+            "Tus ganancias en el exterior no tributan. Asi de simple y ventajoso."
           ]
         },
         {
-          "icon": "Heart",
-          "title": "Acogida, no asimilación",
-          "description": "Paraguay no exige renuncias culturales. Las comunidades italiana, alemana, brasileña, argentina y de otras nacionalidades conviven manteniendo su identidad y aprendiendo castellano a su propio ritmo. Aquí tu acento europeo es bienvenido, no ajeno.",
-          "imageUrl": "@src:whyParaguay.culture",
+          "icon": "Users",
+          "title": "Comunidad europea activa",
+          "description": "Mas de 30.000 europeos residen en Paraguay. Comunidad brasilena, argentina, alemana y menonita con decadas de presencia.",
           "bullets": [
-            "Comunidades italiana, alemana, brasileña y argentina consolidadas",
-            "Cero exigencia de asimilación cultural",
-            "Bienvenida cálida al residente permanente desde el primer día"
+            "Paraguay consolida una vibrante convivencia multicultural con 156.804 residentes extranjeros.",
+            "Bienvenida calida al residente permanente desde el primer dia."
           ]
         }
       ]
@@ -232,16 +226,6 @@
             "Costo de vida inferior a Europa Occidental",
             "Hospitalidad y cultura de servicio",
             "Clima cálido todo el año"
-          ]
-        },
-        {
-          "icon": "Sprout",
-          "title": "Potencia agroindustrial",
-          "description": "Paraguay es uno de los principales exportadores mundiales de soja y un gran exportador de carne. Cadena de valor integrada, con oportunidades reales para inversores europeos con experiencia agrícola.",
-          "items": [
-            "Líder mundial en exportaciones agrícolas",
-            "Gran exportador de carne",
-            "Cadena de valor integrada"
           ]
         },
         {

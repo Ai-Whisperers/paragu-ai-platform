@@ -93,36 +93,30 @@
       "subtitle": "Beyond the macro numbers: what actually changes when you relocate.",
       "pillars": [
         {
-          "icon": "Briefcase",
-          "title": "Open for your business",
-          "description": "Paraguay makes opening a company 100% online, with clear requirements and accessible costs. The country has double-tax treaties with several economies and a regime that favors permanent residents who launch local ventures.",
-          "imageUrl": "@src:whyParaguay.investment",
+          "icon": "TrendingUp",
+          "title": "Sustained growth",
+          "description": "GDP (gross domestic product) growing at 4-5% annually since 2009. Single-digit inflation since 2020. The Paraguayan economy does not stop.",
           "bullets": [
-            "100% online setup, no prior trip required",
-            "Simplified regime for entrepreneurs",
-            "Operating costs significantly lower than Europe"
+            "A GDP that has maintained mostly positive growth over the past decade, with several years around ~4-5% and inflation under control, remaining in single digits since 2020.",
+            "The Paraguayan economy does not stop."
           ]
         },
         {
-          "icon": "ShieldCheck",
-          "title": "Stability for your family",
-          "description": "Legal certainty, access to quality private healthcare, bilingual education and a more humane pace of life make Paraguay a destination where European families recover time and well-being. Residential-area crime rates are among the lowest in the Southern Cone.",
-          "imageUrl": "@src:whyParaguay.lifestyle",
+          "icon": "Landmark",
+          "title": "Territorial tax system",
+          "description": "The IRP (personal income tax) only taxes what you earn within Paraguay. Foreign income is not taxed. That simple.",
           "bullets": [
-            "Low crime rates in residential neighborhoods",
-            "Quality private healthcare at Eastern-European costs",
-            "Bilingual schools with international validation"
+            "The IRP (Personal Income Tax) exclusively taxes income generated within the national territory.",
+            "Your foreign earnings are not taxed. That simple and advantageous."
           ]
         },
         {
-          "icon": "Heart",
-          "title": "Welcomed, not assimilated",
-          "description": "Paraguay does not demand cultural surrender. Italian, German, Brazilian, Argentine and other communities coexist while preserving their identity and learning Spanish at their own pace. Here your European accent is welcome, not foreign.",
-          "imageUrl": "@src:whyParaguay.culture",
+          "icon": "Users",
+          "title": "Active European community",
+          "description": "Over 30,000 Europeans reside in Paraguay. Brazilian, Argentine, German, and Mennonite communities with decades of presence.",
           "bullets": [
-            "Established Italian, German, Brazilian and Argentine communities",
-            "Zero cultural-assimilation pressure",
-            "Warm welcome to permanent residents from day one"
+            "Paraguay consolidates a vibrant multicultural coexistence with 156,804 foreign residents.",
+            "Warm welcome to permanent residents from day one."
           ]
         }
       ]
@@ -232,16 +226,6 @@
             "Lower cost of living than Western Europe",
             "Hospitality and service culture",
             "Warm climate year-round"
-          ]
-        },
-        {
-          "icon": "Sprout",
-          "title": "Agroindustrial powerhouse",
-          "description": "Paraguay is a leading global soybean exporter and a major beef exporter. Integrated value chain, with real opportunities for European investors with agricultural experience.",
-          "items": [
-            "World-leading agricultural exporter",
-            "Major beef exporter",
-            "Integrated value chain"
           ]
         },
         {

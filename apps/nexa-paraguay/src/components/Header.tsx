@@ -228,32 +228,6 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
               </div>
             )}
           </div>
-
-          {navigation?.ctaText && (
-            <a
-              href={resolveHref(navigation.ctaHref || '#')}
-              onClick={() => trackCtaClick(navigation?.ctaText || 'header_cta', 'header')}
-              style={{
-                padding: '0.625rem 1.25rem',
-                background: '#C9A96E',
-                color: '#1B2A4A',
-                borderRadius: '50px',
-                fontWeight: 700,
-                textDecoration: 'none',
-                fontSize: '0.85rem',
-                whiteSpace: 'nowrap',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.4rem',
-              }}
-            >
-              {navigation.ctaText}
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          )}
         </div>
       </div>
 

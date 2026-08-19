@@ -1659,36 +1659,30 @@
       "subtitle": "Jenseits der Makrozahlen: was sich beim Umzug wirklich ändert.",
       "pillars": [
         {
-          "icon": "Briefcase",
-          "title": "Offen für Ihr Unternehmen",
-          "description": "Paraguay ermöglicht die 100% Online-Gründung von Unternehmen, mit klaren Anforderungen und zugänglichen Kosten. Das Land hat Doppelbesteuerungsabkommen mit mehreren Volkswirtschaften und ein Regime, das dauerhafte Einwohner bevorzugt, die lokal gründen.",
-          "imageUrl": "@src:whyParaguay.investment",
+          "icon": "TrendingUp",
+          "title": "Anhaltendes Wachstum",
+          "description": "BIP (Bruttoinlandsprodukt) wachst seit 2009 mit 4-5% pro Jahr. Einstellige Inflation seit 2020. Die paraguayische Wirtschaft steht nicht still.",
           "bullets": [
-            "100% Online-Gründung, keine vorherige Reise nötig",
-            "Vereinfachtes Regime für Unternehmer",
-            "Betriebskosten deutlich niedriger als in Europa"
+            "Ein BIP, das im letzten Jahrzehnt uberwiegend positiv gewachsen ist, mit mehreren Jahren um ~4-5% und Inflation unter Kontrolle, seit 2020 einstellig.",
+            "Die paraguayische Wirtschaft steht nicht still."
           ]
         },
         {
-          "icon": "ShieldCheck",
-          "title": "Stabilität für Ihre Familie",
-          "description": "Rechtssicherheit, Zugang zu qualitativ hochwertiger privater Gesundheitsversorgung, zweisprachige Bildung und ein menschlicherer Lebensrhythmus machen Paraguay zu einem Ziel, wo europäische Familien Zeit und Wohlbefinden zurückgewinnen. Die Kriminalitätsraten in Wohngebieten gehören zu den niedrigsten im Südkegel.",
-          "imageUrl": "@src:whyParaguay.lifestyle",
+          "icon": "Landmark",
+          "title": "Territoriales Steuersystem",
+          "description": "Die IRP (Einkommensteuer) besteuert nur das, was Sie innerhalb Paraguays verdienen. Auslandische Einkunfte werden nicht besteuert. So einfach ist das.",
           "bullets": [
-            "Niedrige Kriminalitätsraten in Wohngebieten",
-            "Private Gesundheitsversorgung auf osteuropäischem Kostenniveau",
-            "Zweisprachige Schulen mit internationaler Anerkennung"
+            "Die IRP (Einkommensteuer) besteuert ausschliesslich Einkunfte, die innerhalb des Staatsgebiets erzielt werden.",
+            "Ihre auslandischen Gewinne werden nicht besteuert. So einfach und vorteilhaft."
           ]
         },
         {
-          "icon": "Heart",
-          "title": "Willkommen, nicht assimiliert",
-          "description": "Paraguay verlangt keine kulturelle Aufgabe. Italienische, deutsche, brasilianische, argentinische und andere Gemeinschaften leben zusammen und bewahren ihre Identität, während sie Spanisch in ihrem eigenen Tempo lernen. Hier ist Ihr europäischer Akzent willkommen, nicht fremd.",
-          "imageUrl": "@src:whyParaguay.culture",
+          "icon": "Users",
+          "title": "Aktive europaische Gemeinschaft",
+          "description": "Uber 30.000 Europaische leben in Paraguay. Brasilianische, argentinische, deutsche und mennonitische Gemeinschaften mit jahrzehntelanger Prasenz.",
           "bullets": [
-            "Etablierte italienische, deutsche, brasilianische und argentinische Gemeinschaften",
-            "Kein Druck zur kulturellen Assimilation",
-            "Warmes Willkommen für dauerhafte Einwohner ab Tag eins"
+            "Paraguay konsolidiert ein lebendiges multikulturelles Zusammenleben mit 156.804 auslandischen Einwohnern.",
+            "Warmes Willkommen fur dauerhafte Einwohner ab Tag eins."
           ]
         }
       ]
@@ -1908,16 +1902,6 @@
             "Niedrigere Lebenshaltungskosten als in Westeuropa",
             "Gastfreundschaft und Servicekultur",
             "Warmes Klima das ganze Jahr"
-          ]
-        },
-        {
-          "icon": "Sprout",
-          "title": "Agroindustrielle Großmacht",
-          "description": "Paraguay ist einer der größten Sojaexporteure weltweit und ein bedeutender Fleischexporteur. Integrierte Wertschöpfungskette mit echten Chancen für europäische Investoren mit landwirtschaftlicher Erfahrung.",
-          "items": [
-            "Weltweit führender Agrarexporteur",
-            "Großer Fleischexporteur",
-            "Integrierte Wertschöpfungskette"
           ]
         },
         {
