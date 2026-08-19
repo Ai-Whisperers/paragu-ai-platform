@@ -53,12 +53,24 @@ export function HighlightSection({ pageContent, data }: SectionComponentProps) {
   const d = data || pageContent || {}
   const items = d.items || d.pillars || []
   if (!items.length) return null
+  // Layout heuristic (mirrors PillarsSection):
+  //  - 2 items: centered 2 cols
+  //  - 3 items: 3 cols
+  //  - 4 items: 2 cols × 2 rows (NEVER 3+1)
+  //  - 6 items: 3 cols × 2 rows
+  //  - other: auto-fit fallback
+  let gridColsClass: string
+  if (items.length === 2) gridColsClass = "grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
+  else if (items.length === 3) gridColsClass = "grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto"
+  else if (items.length === 4) gridColsClass = "grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto"
+  else if (items.length === 6) gridColsClass = "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+  else gridColsClass = "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
   return (
     <section className="py-12 px-4 bg-white">
       <div className="max-w-4xl mx-auto text-center">
         {d.eyebrow && <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{d.eyebrow}</p>}
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold text-primary mb-8">{d.title}</h2>}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className={`grid ${gridColsClass} gap-5`}>
           {items.map((s: any, i: number) => (
             <div
               key={i}
