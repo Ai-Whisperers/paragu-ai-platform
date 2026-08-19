@@ -26,11 +26,6 @@
       "content": "beneluxPage.pillars"
     },
     {
-      "id": "faq",
-      "variant": "accordion",
-      "content": "beneluxPage.faq"
-    },
-    {
       "id": "cta-banner",
       "variant": "gradient",
       "content": "beneluxPage.cta"

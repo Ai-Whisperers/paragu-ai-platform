@@ -26,11 +26,6 @@
       "content": "processPage.highlights"
     },
     {
-      "id": "faq",
-      "variant": "accordion",
-      "content": "processPage.faq"
-    },
-    {
       "id": "cta-banner",
       "variant": "solid",
       "content": "processPage.cta"
