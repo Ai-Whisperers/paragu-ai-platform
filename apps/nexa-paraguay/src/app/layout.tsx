@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     'Professional advisory for permanent residency, banking & company incorporation in Paraguay. Close guidance for citizens of the Netherlands, Belgium, Germany and all of Europe.',
-  icons: { icon: '/images/brand/favicon.webp' },
+  icons: { icon: '/images/brand/favicon.webp?v=5' },
   openGraph: {
     title: 'Nexa Paraguay — Residency, Banking & Company for Europeans',
     description:
