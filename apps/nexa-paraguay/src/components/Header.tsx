@@ -102,7 +102,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
       zIndex: 100,
       transition: 'box-shadow 0.2s, border-color 0.2s, background 0.2s',
     }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '1rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
         {/* LEFT: hamburger + lang switcher */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: '1 1 0' }}>
           <button
@@ -163,9 +163,9 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
           <img
             src="/images/brand/logo.webp"
             alt="Nexa Paraguay"
-            width={400}
-            height={112}
-            style={{ height: '68px', width: 'auto', display: 'block' }}
+            width={480}
+            height={140}
+            style={{ height: '96px', width: 'auto', display: 'block' }}
           />
         </Link>
 
@@ -240,7 +240,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
             style={{
               position: 'fixed',
               inset: 0,
-              top: '85px',
+              top: '110px',
               background: 'rgba(27,42,74,0.4)',
               backdropFilter: 'blur(4px)',
               WebkitBackdropFilter: 'blur(4px)',
@@ -258,7 +258,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
               boxShadow: '0 20px 60px rgba(27,42,74,0.18)',
               zIndex: 99,
               padding: '2rem 1.25rem 3rem',
-              maxHeight: 'calc(100vh - 85px)',
+              maxHeight: 'calc(100vh - 110px)',
               overflowY: 'auto',
             }}
             aria-label="Main navigation"
