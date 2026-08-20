@@ -161,7 +161,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
           }}
         >
           <img
-            src="/images/brand/logo.svg"
+            src="/images/brand/logo.webp"
             alt="Nexa Paraguay"
             width={400}
             height={112}

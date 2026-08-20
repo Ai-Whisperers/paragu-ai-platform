@@ -24,7 +24,7 @@ export function OrganizationSchema() {
     url: SITE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: `${SITE_URL}/images/brand/logo.svg`,
+      url: `${SITE_URL}/images/brand/logo.webp`,
     },
     description:
       'Professional advisory for permanent residency, banking and company incorporation in Paraguay for European citizens.',

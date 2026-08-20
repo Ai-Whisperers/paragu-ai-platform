@@ -30,7 +30,7 @@ export function ArticleSchema({ article }: { article: ArticleData }) {
       name: 'Nexa Paraguay',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://nexaparaguay.com.py/images/brand/logo.svg',
+        url: 'https://nexaparaguay.com.py/images/brand/logo.webp',
       },
     },
     ...(article.image && {

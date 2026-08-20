@@ -85,7 +85,7 @@ export function generateArticleSchema(article: {
     publisher: {
       "@type": "Organization",
       name: "Nexa Paraguay",
-      logo: { "@type": "ImageObject", url: "https://nexaparaguay.com.py/images/brand/logo.svg" },
+      logo: { "@type": "ImageObject", url: "https://nexaparaguay.com.py/images/brand/logo.webp" },
     },
     ...(article.image && { image: { "@type": "ImageObject", url: article.image } }),
     mainEntityOfPage: { "@type": "WebPage", "@id": `https://nexaparaguay.com.py/${loc}/blog/${article.slug}` },
@@ -99,7 +99,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: "Nexa Paraguay",
     url: "https://nexaparaguay.com.py",
-    logo: "https://nexaparaguay.com.py/images/brand/logo.svg",
+    logo: "https://nexaparaguay.com.py/images/brand/logo.webp",
     description: "Asesoría profesional para radicación, banca y constitución de sociedad en Paraguay para ciudadanos europeos.",
     email: "paraguaynexa@gmail.com",
     telephone: "+595 21 123 4567",
