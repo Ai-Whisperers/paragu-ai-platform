@@ -1,6 +1,7 @@
 import { loadPageData } from '@/lib/page-data'
 import SectionsRenderer from '@/components/SectionsRenderer'
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { LOCALES } from '@/lib/locales'
 
 interface Props { params: Promise<{ locale: string; path: string[] }> }
@@ -51,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, path } = await params
   const slug = path.join('_')
   const data = await loadPageData(locale, slug)
-  if (!data) return {}
+  if (!data) return { title: 'Not Found' }
   return {
     title: data.pageConfig?.title || data.content?.siteName || 'Nexa Paraguay',
     description: data.pageConfig?.description || data.content?.description || '',
@@ -62,6 +63,6 @@ export default async function CatchallPage({ params }: Props) {
   const { locale, path } = await params
   const slug = path.join('_')
   const data = await loadPageData(locale, slug)
-  if (!data) return <div className="text-center p-16 text-text-muted">Page not found</div>
+  if (!data) notFound()
   return <SectionsRenderer content={data.content} pageConfig={data.pageConfig} images={data.images?.images || {}} locale={data.locale} />
 }
