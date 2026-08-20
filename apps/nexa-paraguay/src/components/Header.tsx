@@ -161,11 +161,11 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
           }}
         >
           <img
-            src="/images/brand/logo.webp"
+            src="/images/brand/logo.webp?v=3"
             alt="Nexa Paraguay"
-            width={480}
+            width={500}
             height={140}
-            style={{ height: '96px', width: 'auto', display: 'block' }}
+            style={{ height: '112px', width: 'auto', display: 'block', maxWidth: 'none' }}
           />
         </Link>
 
@@ -240,7 +240,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
             style={{
               position: 'fixed',
               inset: 0,
-              top: '110px',
+              top: '130px',
               background: 'rgba(27,42,74,0.4)',
               backdropFilter: 'blur(4px)',
               WebkitBackdropFilter: 'blur(4px)',
@@ -258,7 +258,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
               boxShadow: '0 20px 60px rgba(27,42,74,0.18)',
               zIndex: 99,
               padding: '2rem 1.25rem 3rem',
-              maxHeight: 'calc(100vh - 110px)',
+              maxHeight: 'calc(100vh - 130px)',
               overflowY: 'auto',
             }}
             aria-label="Main navigation"
