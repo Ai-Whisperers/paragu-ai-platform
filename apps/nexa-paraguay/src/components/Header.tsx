@@ -102,9 +102,9 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
       zIndex: 100,
       transition: 'box-shadow 0.2s, border-color 0.2s, background 0.2s',
     }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '1rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0.5rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
         {/* LEFT: hamburger + lang switcher */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: '1 1 0' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: '0 0 auto' }}>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -152,25 +152,24 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
           href={`/${currentLocale}`}
           aria-label="Nexa Paraguay - Home"
           style={{
-            position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-50%)',
             display: 'flex',
             alignItems: 'center',
             textDecoration: 'none',
+            flex: '1 1 auto',
+            justifyContent: 'center',
           }}
         >
           <img
-            src="/images/brand/logo.webp?v=3"
+            src="/images/brand/logo.webp?v=4"
             alt="Nexa Paraguay"
             width={500}
             height={140}
-            style={{ height: '112px', width: 'auto', display: 'block', maxWidth: 'none' }}
+            style={{ height: '56px', width: 'auto', display: 'block', maxWidth: 'none' }}
           />
         </Link>
 
-        {/* RIGHT: language switcher + CTA button */}
-        <div style={{ flex: '1 1 0', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '0.6rem' }}>
+        {/* RIGHT: language switcher */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flex: '0 0 auto', justifyContent: 'flex-end' }}>
           {/* Language switcher (moved from left) */}
           <div style={{ position: 'relative' }}>
             <button
@@ -240,7 +239,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
             style={{
               position: 'fixed',
               inset: 0,
-              top: '130px',
+              top: '85px',
               background: 'rgba(27,42,74,0.4)',
               backdropFilter: 'blur(4px)',
               WebkitBackdropFilter: 'blur(4px)',
@@ -258,7 +257,7 @@ export function Header({ navigation, locale }: { navigation: any; locale?: strin
               boxShadow: '0 20px 60px rgba(27,42,74,0.18)',
               zIndex: 99,
               padding: '2rem 1.25rem 3rem',
-              maxHeight: 'calc(100vh - 130px)',
+              maxHeight: 'calc(100vh - 85px)',
               overflowY: 'auto',
             }}
             aria-label="Main navigation"
