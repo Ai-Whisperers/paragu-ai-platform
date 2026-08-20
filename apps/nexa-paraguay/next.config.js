@@ -43,9 +43,6 @@ const nextConfig = {
   transpilePackages: [
     "@ai-whisperers/*",
   ],
-  experimental: {
-    webpackBuildWorker: false,
-  },
   async headers() {
     return [
       { source: '/(.*)', headers: securityHeaders },
