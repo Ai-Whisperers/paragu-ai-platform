@@ -1,0 +1,166 @@
+/* SaludAbierta PY — globals.css
+   Mobile-first, trauma-informed, no gradients, no third-party tracking */
+
+@import "tailwindcss";
+
+@theme {
+  /* ParaguAI Paraguay palette - inheriting from monorepo CLAUDE.md */
+  --color-primary: #1B2A4A;
+  --color-primary-light: #2C3E6B;
+  --color-accent: #C9A96E;
+  --color-accent-dark: #B89450;
+  --color-accent-light: rgba(201, 169, 110, 0.15);
+  --color-bg: #FAF8F5;
+  --color-bg-alt: #F5F5EE;
+  --color-surface: #FFFFFF;
+  --color-text: #1B2A4A;
+  --color-text-muted: #5C6B7A;
+  --color-text-light: #8B95A1;
+  --color-border: #E0E0E0;
+  --color-border-light: #F0F0F0;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-error-dark: #991b1b;
+  --color-info: #3b82f6;
+
+  /* Grade colors for hospitals */
+  --color-grade-a: #10b981;
+  --color-grade-b: #84cc16;
+  --color-grade-c: #eab308;
+  --color-grade-d: #f97316;
+  --color-grade-f: #dc2626;
+}
+
+/* Base */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  margin: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+h4 { font-size: clamp(1.05rem, 1.5vw, 1.2rem); }
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  color: var(--color-accent-dark);
+}
+
+/* Skip to content (accessibility) */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Grade badges */
+.grade-A { background: var(--color-grade-a); color: white; }
+.grade-B { background: var(--color-grade-b); color: white; }
+.grade-C { background: var(--color-grade-c); color: white; }
+.grade-D { background: var(--color-grade-d); color: white; }
+.grade-F { background: var(--color-grade-f); color: white; }
+
+/* Cards */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+.card:hover {
+  border-color: var(--color-accent);
+}
+
+/* Disclaimer banner */
+.disclaimer-banner {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 3px solid var(--color-warning);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+/* Emergency exit button (trauma-informed UX) */
+.emergency-exit {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--color-error);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 50;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.emergency-exit:hover {
+  color: white;
+  background: var(--color-error-dark);
+}
+
+/* Print friendly */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; color: black; }
+  .card { border: 1px solid #ccc; page-break-inside: avoid; }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

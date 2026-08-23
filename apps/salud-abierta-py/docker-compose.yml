@@ -1,0 +1,76 @@
+# ── SaludAbierta PY — Swarm stack (production) ──
+# This compose file is the source of truth for the salud-abierta-py stack.
+# It runs 2 replicas behind Traefik on the agent-net overlay network.
+# It serves:
+#   - salud-abierta.paragu-ai.com (canonical, paragu-ai subdomain)
+#   - salud-abierta-preview.paragu-ai.com (preview alias)
+#
+# Deploy:
+#   pnpm --filter salud-abierta-py build
+#   ./deploy.sh
+#   # OR: docker stack deploy -c docker-compose.yml salud-abierta --with-registry-auth
+
+services:
+  web:
+    image: salud-abierta-py:prod
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        order: start-first
+        delay: 10s
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        order: stop-first
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 60s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL:-https://salud-abierta.paragu-ai.com}
+      - NEXT_PUBLIC_SITE_URL=https://salud-abierta.paragu-ai.com
+      - NEXT_TELEMETRY_DISABLED=1
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=agent-net"
+      # Canonical: salud-abierta.paragu-ai.com
+      - "traefik.http.routers.salud-abierta-canonical.entrypoints=websecure"
+      - "traefik.http.routers.salud-abierta-canonical.rule=Host(`salud-abierta.paragu-ai.com`)"
+      - "traefik.http.routers.salud-abierta-canonical.tls=true"
+      - "traefik.http.routers.salud-abierta-canonical.tls.certresolver=letsencryptresolver"
+      - "traefik.http.routers.salud-abierta-canonical.middlewares=salud-abierta-compress@docker,security-headers@file"
+      - "traefik.http.routers.salud-abierta-canonical.service=salud-abierta"
+      # Preview alias: salud-abierta-preview.paragu-ai.com
+      - "traefik.http.routers.salud-abierta-preview.entrypoints=websecure"
+      - "traefik.http.routers.salud-abierta-preview.rule=Host(`salud-abierta-preview.paragu-ai.com`)"
+      - "traefik.http.routers.salud-abierta-preview.tls=true"
+      - "traefik.http.routers.salud-abierta-preview.tls.certresolver=letsencryptresolver"
+      - "traefik.http.routers.salud-abierta-preview.middlewares=salud-abierta-compress@docker,security-headers@file"
+      - "traefik.http.routers.salud-abierta-preview.service=salud-abierta"
+      # Service definition
+      - "traefik.http.services.salud-abierta.loadbalancer.server.port=3000"
+      - "traefik.http.services.salud-abierta.loadbalancer.healthcheck.path=/api/health"
+      - "traefik.http.services.salud-abierta.loadbalancer.healthcheck.interval=30s"
+    networks:
+      - agent-net
+
+networks:
+  agent-net:
+    external: true
