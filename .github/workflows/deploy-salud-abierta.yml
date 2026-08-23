@@ -1,0 +1,80 @@
+name: Build and Deploy SaludAbierta PY
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/salud-abierta-py/**'
+      - '.github/workflows/deploy-salud-abierta.yml'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install pnpm
+        run: npm install -g pnpm@9.15.9
+
+      - name: Install dependencies
+        run: |
+          cd apps/salud-abierta-py
+          pnpm install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate static assets
+        run: |
+          cd apps/salud-abierta-py
+          python3 scripts/generate-assets.py
+          python3 scripts/generate-sitemap.py
+
+      - name: Build
+        run: |
+          cd apps/salud-abierta-py
+          pnpm build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Re-generate sitemap after build
+        run: |
+          cd apps/salud-abierta-py
+          python3 scripts/generate-sitemap.py
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/salud-abierta-py/out
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Summary
+        run: |
+          echo "✅ Site deployed to: ${{ steps.deployment.outputs.page_url }}"
+          echo "✅ Commit: ${{ github.sha }}"
+          echo "✅ Triggered by: ${{ github.event_name }}"
