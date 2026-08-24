@@ -1,17 +1,23 @@
 #!/usr/bin/env bash
 # ── SaludAbierta PY — Swarm deploy ──
-# Builds from apps/salud-abierta-py/.next/standalone using Dockerfile.standalone,
-# tags the image with git short SHA + timestamp, and rolls the
-# salud-abierta_web service forward. Cleans up old image tags.
+# Builds the Docker image from apps/salud-abierta-py/.next (produced by
+# `pnpm build` on the host), transfers to Host A via SSH, and rolls the
+# salud-abierta_web service forward.
 #
 # Usage:
-#   ./deploy.sh                    # build + rolling update
-#   ./deploy.sh --no-build         # only re-tag + update (for rollbacks)
-#   SERVICE=salud-abierta-preview_web ./deploy.sh   # update a different service
+#   ./deploy.sh                    # build + transfer + rolling update
+#   ./deploy.sh --no-build         # only transfer existing image
+#   SERVICE=salud-abierta_web ./deploy.sh   # update a different service
 set -euo pipefail
 
 APP_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "$APP_DIR/../.." && pwd)"
+
+# SSH to Host A
+HOST_A_HOST="${HOST_A_HOST:-38.9.96.179}"
+HOST_A_USER="${HOST_A_USER:-root}"
+SSH_KEY="${SSH_KEY:-/opt/data/.ssh/id_ed25519}"
+SSH_TARGET="${HOST_A_USER}@${HOST_A_HOST}"
 
 SERVICE="${SERVICE:-salud-abierta_web}"
 APP_NAME="salud-abierta-py"
@@ -32,39 +38,42 @@ for arg in "$@"; do
 done
 
 if [ "$DO_BUILD" = "1" ]; then
-  if [ ! -d "$APP_DIR/.next/standalone" ]; then
-    echo "ERROR: $APP_DIR/.next/standalone not found — run 'pnpm build' first" >&2
+  if [ ! -d "$APP_DIR/.next" ]; then
+    echo "ERROR: $APP_DIR/.next not found — run 'pnpm build' first" >&2
     exit 1
   fi
 
-  VERSION=$(git -C "$REPO_ROOT" rev-parse --short HEAD 2>/dev/null || echo "local")
-  DATE=$(date +%Y%m%d-%H%M)
-  TAG="${APP_NAME}:prod-${VERSION}-${DATE}"
-  LATEST="${APP_NAME}:prod"
+  echo "→ Building Docker image..."
+  cd "$REPO_ROOT"
+  SHA="$(git rev-parse --short HEAD 2>/dev/null || echo "no-git")"
+  TS="$(date +%Y%m%d-%H%M%S)"
+  TAG="${APP_NAME}:prod-${SHA}-${TS}"
 
-  echo "--- Building $TAG (from $APP_DIR, using Dockerfile.standalone) ---"
   docker build \
     -f "$APP_DIR/Dockerfile.standalone" \
-    -t "$TAG" -t "$LATEST" \
-    "$APP_DIR"
+    -t "$TAG" \
+    -t "${APP_NAME}:prod" \
+    . 2>&1 | tail -20
 
-  IMAGE="$TAG"
-else
-  echo "--- --no-build: using existing ${APP_NAME}:prod image ---"
-  IMAGE="${APP_NAME}:prod"
+  echo "✓ Image built: $TAG"
+  echo ""
 fi
 
-if ! docker service ls --format '{{.Name}}' | grep -q "^${SERVICE}$"; then
-  echo "Service $SERVICE not found in Swarm — skipping update" >&2
-  exit 0
-fi
+echo "→ Saving image + transferring to Host A..."
+TAG="${TAG:-${APP_NAME}:prod}"
+docker save "$TAG" | ssh -i "$SSH_KEY" "$SSH_TARGET" "docker load"
 
-echo "--- Deploying $SERVICE (rolling update) ---"
-docker service update --image "$IMAGE" "$SERVICE"
+echo ""
+echo "→ Triggering service update on Host A..."
+ssh -i "$SSH_KEY" "$SSH_TARGET" "
+  set -e
+  cd /opt/stacks/salud-abierta-py
+  docker service update --force --image '$TAG' $SERVICE
+"
 
-echo "--- Cleaning up old ${APP_NAME}:prod-* images (keep last 3) ---"
-docker images "$APP_NAME" --format '{{.Tag}} {{.ID}}' | \
-  grep '^prod-' | sort -r | tail -n +4 | awk '{print $2}' | \
-  xargs -r docker rmi -f 2>/dev/null || true
-
-echo "--- done: $IMAGE on $SERVICE ---"
+echo ""
+echo "✓ Deployed."
+echo ""
+echo "Verify:"
+echo "  curl -sS https://salud-abierta.paragu-ai.com/api/health/"
+echo "  https://salud-abierta.paragu-ai.com/"
