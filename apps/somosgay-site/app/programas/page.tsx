@@ -25,7 +25,7 @@ const servicesJsonLd = [
     "@id": `${SITE_URL}/programas/${p.id}/#service`,
     name: p.name,
     serviceType: p.tagline,
-    description: p.description,
+    description: p.description ?? p.tagline,
     url: `${SITE_URL}/programas/${p.id}`,
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: { "@type": "Country", name: "Paraguay" },

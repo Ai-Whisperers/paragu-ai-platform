@@ -499,32 +499,46 @@
         "id": "clinica-kunuu",
         "name": "Clínica Kunu'u",
         "tagline": "Salud comunitaria LGTBI+",
+        "description": "Testeo gratuito de VIH, PrEP, sífilis y Hepatitis B. Atención psicológica y psiquiátrica. Reducción de daños.",
         "href": "/clinica-kunuu",
-        "is_flagship": true
+        "flagship": true,
+        "color": "purple"
       },
       {
         "id": "centro-tekohara",
         "name": "Centro Comunitario Tekoharã",
         "tagline": "Espacio seguro de encuentro y formación",
-        "href": "/programas/centro-tekohara"
+        "description": "Centro comunitario donde la comunidad LGTBI+ se reúne, se forma y se acompaña. Espacio afirmativo y libre de discriminación.",
+        "href": "/programas/centro-tekohara",
+        "flagship": false,
+        "color": "teal"
       },
       {
         "id": "nande-rekora",
         "name": "Ñande Rekorã",
         "tagline": "Sistema de cuidado mutuo",
-        "href": "/programas/nande-rekora"
+        "description": "Red de acompañamiento y cuidado entre pares para personas LGTBI+ en situación de vulnerabilidad.",
+        "href": "/programas/nande-rekora",
+        "flagship": false,
+        "color": "rainbow2"
       },
       {
         "id": "karu-pora",
         "name": "Karu Porã",
         "tagline": "Seguridad alimentaria",
-        "href": "/programas/karu-pora"
+        "description": "Asistencia alimentaria para personas LGTBI+ en situación de calle o precariedad económica.",
+        "href": "/programas/karu-pora",
+        "flagship": false,
+        "color": "rainbow3"
       },
       {
         "id": "programa-kunuu",
         "name": "Programa Kunu'u",
         "tagline": "Prevención combinada y campañas PrEP",
-        "href": "/programas/programa-kunuu"
+        "description": "Campañas de prevención combinada del VIH, distribución de PrEP y materiales en español y guaraní.",
+        "href": "/programas/programa-kunuu",
+        "flagship": false,
+        "color": "rainbow4"
       }
     ]
   },
