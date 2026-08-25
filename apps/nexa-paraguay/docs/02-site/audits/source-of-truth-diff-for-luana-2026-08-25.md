@@ -167,6 +167,21 @@ Estas referencias a "Mariscal López" y "30 días" se quedan en otros documentos
 - EN: "We are Paraguayans" → "We are Paraguayan women"
 - DE: "Wir sind Paraguayern" → "Wir sind paraguayische Frauen"
 
+
+
+---
+
+## Cambio 5 (agregado después de segunda revisión de Luana)
+
+**Aclaración importante**: "casados con holandeses" era incorrecto. Solo **Sonia Weiss está casada con un holandés** — **Luana es su hija y co-fundadora**, no casada con un holandés.
+
+**Fix aplicado** (reformula la oración para evitar el error):
+
+- ES: "nos casamos con holandeses" → "Sonia se casó con un holandés y juntas pasamos por todo este proceso"
+- NL: "getrouwd met Nederlanders" → "waarvan Sonia getrouwd is met een Nederlander"
+- EN: "married Dutch citizens" → "where Sonia is married to a Dutch citizen"
+- DE: "Niederländer heirateten" → "wobei Sonia mit einem Niederländer verheiratet ist"
+
 ## Próximos pasos
 
 1. **Vos revisás este documento** — confirmás que los cambios son correctos

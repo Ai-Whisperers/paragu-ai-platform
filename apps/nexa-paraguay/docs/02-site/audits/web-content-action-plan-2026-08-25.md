@@ -29,10 +29,10 @@ This document outlines **4 phases of work** across **10 distinct content updates
 **Content source**: Direct quotes from interview
 
 **Spanish draft** (already drafted in web-specialist recommendations):
-> "¿Mudarte a Paraguay sin que te estafen? La mayoría de las agencias holandesas cobran tarifas infladas por una cédula y luego desaparecen. Nosotros somos paraguayas que vivimos en los Países Bajos, nos casamos con holandeses, y pasamos por todo este proceso. Te acompañamos en persona — sin paquetes sorpresas, sin letra chica, sin burbuja WAPI. Especializados en el campo, no en zonas turísticas de Asunción."
+> "¿Mudarte a Paraguay sin que te estafen? La mayoría de las agencias holandesas cobran tarifas infladas por una cédula y luego desaparecen. Nosotros somos paraguayas que vivimos en los Países Bajos, Sonia se casó con un holandés y juntas pasamos por todo este proceso. Te acompañamos en persona — sin paquetes sorpresas, sin letra chica, sin burbuja WAPI. Especializados en el campo, no en zonas turísticas de Asunción."
 
 **Dutch draft** (use Sonia's actual interview voice):
-> "Verhuizen naar Paraguay zonder te worden genaaid? De meeste Nederlandse agencies rekenen veel te hoge tarieven voor een cédula en verdwijnen dan. Wij zijn Paraguayse vrouwen die in Nederland woonden, getrouwd met Nederlanders, en dit hele proces hebben meegemaakt. We begeleiden je persoonlijk — geen verrassingspakketten, geen kleine lettertjes, geen WAPI-bubbel. Gespecialiseerd in het platteland, niet in toeristische wijken."
+> "Verhuizen naar Paraguay zonder te worden genaaid? De meeste Nederlandse agencies rekenen veel te hoge tarieven voor een cédula en verdwijnen dan. Wij zijn Paraguayse vrouwen die in Nederland woonden, waarvan Sonia getrouwd is met een Nederlander, en dit hele proces hebben meegemaakt. We begeleiden je persoonlijk — geen verrassingspakketten, geen kleine lettertjes, geen WAPI-bubbel. Gespecialiseerd in het platteland, niet in toeristische wijken."
 
 **Files**:
 - `apps/nexa-paraguay/content/{es,en,nl,de}.json` — add elevator pitch to `home.hero`

@@ -54,9 +54,9 @@ These are the **must-haves**. The consultant said each one of these would direct
 - The pitch should answer: *What is Nexa? Who is it for? Why should I care in 5 seconds?*
 - Suggested draft (for Luana to review):
 
-> **¿Mudarte a Paraguay sin que te estafen?** La mayoría de las agencias holandesas cobran tarifas infladas por una cédula y luego desaparecen. Nosotros somos paraguayas que vivimos en los Países Bajos, nos casamos con holandeses, y pasamos por todo este proceso. Te acompañamos en persona — sin paquetes sorpresas, sin letra chica, sin burbuja WAPI. Especializados en el campo, no en zonas turísticas de Asunción.
+> **¿Mudarte a Paraguay sin que te estafen?** La mayoría de las agencias holandesas cobran tarifas infladas por una cédula y luego desaparecen. Nosotros somos paraguayas que vivimos en los Países Bajos, Sonia se casó con un holandés y juntas pasamos por todo este proceso. Te acompañamos en persona — sin paquetes sorpresas, sin letra chica, sin burbuja WAPI. Especializados en el campo, no en zonas turísticas de Asunción.
 
-> **Verhuizen naar Paraguay zonder te worden genaaid?** De meeste Nederlandse agencies rekenen veel te hoge tarieven voor een cédula en verdwijnen dan. Wij zijn Paraguayse vrouwen die in Nederland woonden, getrouwd met Nederlanders, en dit hele proces hebben meegemaakt. We begeleiden je persoonlijk — geen verrassingspakketten, geen kleine lettertjes, geen WAPI-bubbel. Gespecialiseerd in het platteland, niet in toeristische wijken.
+> **Verhuizen naar Paraguay zonder te worden genaaid?** De meeste Nederlandse agencies rekenen veel te hoge tarieven voor een cédula en verdwijnen dan. Wij zijn Paraguayse vrouwen die in Nederland woonden, waarvan Sonia getrouwd is met een Nederlander, en dit hele proces hebben meegemaakt. We begeleiden je persoonlijk — geen verrassingspakketten, geen kleine lettertjes, geen WAPI-bubbel. Gespecialiseerd in het platteland, niet in toeristische wijken.
 
 **Luana's task**: Review, edit, approve.
 
