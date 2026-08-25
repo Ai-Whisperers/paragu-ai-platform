@@ -182,6 +182,29 @@ Estas referencias a "Mariscal López" y "30 días" se quedan en otros documentos
 - EN: "married Dutch citizens" → "where Sonia is married to a Dutch citizen"
 - DE: "Niederländer heirateten" → "wobei Sonia mit einem Niederländer verheiratet ist"
 
+
+
+---
+
+## Cambio 6 (tercera revisión de Luana — estructura completa)
+
+**Luana clarificó**: "solo Sonia está casada con un holandés, Luana es su hija y co-fundadora".
+
+**Problema con versiones anteriores**: Decían "Sonia se casó con un holandés y **juntas** pasamos por todo este proceso" — suena como si ambas (Sonia + Luana) fueran la unidad casada.
+
+**Fix aplicado**: Reestructuré la oración para que sea una historia familiar cohesiva:
+
+- ES: "Somos una familia con un pie en Paraguay y otro en Holanda. Vivimos 7 años en los Países Bajos, **donde Sonia se casó con un holandés y nació Luana**. Volvimos a Paraguay..."
+- NL: "Wij zijn een familie met één been in Paraguay en één in Nederland. We woonden 7 jaar in Nederland, **waar Sonia trouwde met een Nederlander en Luana werd geboren**. We kwamen terug naar Paraguay..."
+- EN: "We are a family with one foot in Paraguay and another in the Netherlands. We lived 7 years in the Netherlands, **where Sonia married a Dutch citizen and Luana was born**. We came back to Paraguay..."
+- DE: "Wir sind eine Familie mit einem Bein in Paraguay und einem in den Niederlanden. Wir lebten 7 Jahre in den Niederlanden, **wo Sonia einen Niederländer heiratete und Luana geboren wurde**. Wir kehrten nach Paraguay zurück..."
+
+**Esta versión logra**:
+1. Reconoce que es una **familia** (no solo dos mujeres), Sonia + esposo holandés + Luana
+2. Cuenta la historia cronológicamente: Holanda → matrimonio → nacimiento de Luana → regreso
+3. Luana queda incluida naturalmente como hija de ese matrimonio
+4. Mantiene "juntas" / "together" implicando que ambas pasaron por el proceso
+
 ## Próximos pasos
 
 1. **Vos revisás este documento** — confirmás que los cambios son correctos
