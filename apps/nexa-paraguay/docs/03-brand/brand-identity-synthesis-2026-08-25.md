@@ -177,7 +177,7 @@ Create a cohesive visual + verbal identity that:
 ### Success Metrics
 - **Trust signals**: Increase in consultation requests (currently low per audit)
 - **Brand recall**: Visitors remember "Nexa" and the Paraguay map association
-- **Conversion**: More qualified leads (people who actually want countryside, not Mariscal López)
+- **Conversion**: More qualified leads (people who actually want countryside, not the trendy tourist areas)
 - **Inbound**: Spanish and Dutch expats find Nexa when searching for "honest relocation Paraguay"
 
 ### Target Audience
@@ -267,7 +267,7 @@ Based on the audit + interview, here's what the website needs to convey in **5 s
 
 4. **Real people in real photos** — every interview answer mentioned your family, your home, your animals. Show those. No stock. No AI faces.
 
-5. **The 6-month timeline is a real promise** — "give yourself that grace" — most agencies say "easy, fast, 30 days." You say "real, slow, 6 months." That's a differentiator.
+5. **The 6-month timeline is a real promise** — "give yourself that grace" — most agencies promise "fast, easy moves." You say "real, gradual, 6 months." That's a differentiator.
 
 6. **Don't compete on cédula** — your brother handles that. You compete on trust, transparency, and the lifestyle beyond the paperwork.
 

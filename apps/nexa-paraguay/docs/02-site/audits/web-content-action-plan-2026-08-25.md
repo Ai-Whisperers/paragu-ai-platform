@@ -29,10 +29,10 @@ This document outlines **4 phases of work** across **10 distinct content updates
 **Content source**: Direct quotes from interview
 
 **Spanish draft** (already drafted in web-specialist recommendations):
-> "¿Mudarte a Paraguay sin que te estafen? La mayoría de las agencias holandesas te cobran €2,800 por una cédula y desaparecen. Nosotros somos paraguayos que vivimos en Holanda, nos casamos con holandeses, y pasamos por todo este proceso. Te acompañamos en persona — sin paquetes sorpresas, sin letra chica, sin burbuja WAPI. Especializados en el campo, no en Mariscal López."
+> "¿Mudarte a Paraguay sin que te estafen? La mayoría de las agencias holandesas cobran tarifas infladas por una cédula y luego desaparecen. Nosotros somos paraguayos que vivimos en Holanda, nos casamos con holandeses, y pasamos por todo este proceso. Te acompañamos en persona — sin paquetes sorpresas, sin letra chica, sin burbuja WAPI. Especializados en el campo, no en Mariscal López."
 
 **Dutch draft** (use Sonia's actual interview voice):
-> "Verhuizen naar Paraguay zonder te worden genaaid? De meeste Nederlandse agencies rekenen €2,800 voor een cédula en verdwijnen dan. Wij zijn Paraguayanen die in Nederland woonden, getrouwd met Nederlanders, en dit hele proces hebben meegemaakt. We begeleiden je persoonlijk — geen verrassingspakketten, geen kleine lettertjes, geen WAPI-bubbel. Gespecialiseerd in het platteland, niet in Mariscal López."
+> "Verhuizen naar Paraguay zonder te worden genaaid? De meeste Nederlandse agencies rekenen veel te hoge tarieven voor een cédula en verdwijnen dan. Wij zijn Paraguayanen die in Nederland woonden, getrouwd met Nederlanders, en dit hele proces hebben meegemaakt. We begeleiden je persoonlijk — geen verrassingspakketten, geen kleine lettertjes, geen WAPI-bubbel. Gespecialiseerd in het platteland, niet in Mariscal López."
 
 **Files**:
 - `apps/nexa-paraguay/content/{es,en,nl,de}.json` — add elevator pitch to `home.hero`
@@ -49,7 +49,7 @@ This document outlines **4 phases of work** across **10 distinct content updates
 >
 > Fundé Nexa porque vi a una pareja holandesa pagar el doble por una casa en un barrio que yo jamás habría recomendado. Como paraguaya que vivió 7 años en los Países Bajos — casada con un holandés, criando hijos entre dos culturas — entiendo lo que se siente llegar a un país nuevo sin saber en quién confiar.
 >
-> Hoy vivo en una propiedad rodeada de árboles, a minutos de Asunción, con tres perros, tres gatos y pronto gallinas. No estoy en una oficina en Mariscal López. Estoy en la vida que te estoy ayudando a conseguir.
+> Hoy vivo en una propiedad rodeada de árboles, a minutos de Asunción, con tres perros, tres gatos y pronto gallinas. No estoy en una oficina en una zona turística de Asunción. Estoy en la vida que te estoy ayudando a conseguir.
 >
 > "Es completamente normal tener miedo. Yo también lo sentí. Mudarse a un país nuevo es un cambio enorme y lleva tiempo adaptarse — unos seis meses. Date esa gracia. Día a día, empiezas a entender cómo funcionan las cosas." — Sonia
 
@@ -58,7 +58,7 @@ This document outlines **4 phases of work** across **10 distinct content updates
 >
 > Ik heb Nexa opgericht omdat ik een Nederlands stel de dubbele prijs zag betalen voor een huis in een buurt die ik nooit zou aanbevelen. Als Paraguayse die 7 jaar in Nederland woonde — getrouwd met een Nederlander, kinderen opvoedend tussen twee culturen — begrijp ik hoe het voelt om in een nieuw land te komen zonder te weten wie je kunt vertrouwen.
 >
-> Nu woon ik op een terrein met bomen, minuten van Asunción, met drie honden, drie katten en binnenkort kippen. Ik zit niet op een kantoor in Mariscal López. Ik leef het leven waar ik je bij help.
+> Nu woon ik op een terrein met bomen, minuten van Asunción, met drie honden, drie katten en binnenkort kippen. Ik zit niet op een kantoor in een toeristische buurt van Asunción. Ik leef het leven waar ik je bij help.
 >
 > "Het is volkomen normaal om bang te zijn. Ik voelde het ook. Verhuizen naar een nieuw land is een enorme verandering en het kost tijd om je aan te passen — zo'n zes maanden. Geef jezelf die ruimte. Dag bij dag begin je te begrijpen hoe dingen werken." — Sonia
 
@@ -184,7 +184,7 @@ This document outlines **4 phases of work** across **10 distinct content updates
 **Based on interview content**:
 - Warm, slightly desaturated
 - Real people in real moments
-- NO stock, NO AI faces, NO Mariscal López nightlife
+- NO stock, NO AI faces, NO trendy-neighborhood nightlife
 - Countryside life: trees, gardens, animals, family
 
 **Files**:
