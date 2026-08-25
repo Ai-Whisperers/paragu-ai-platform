@@ -205,6 +205,25 @@ Estas referencias a "Mariscal López" y "30 días" se quedan en otros documentos
 3. Luana queda incluida naturalmente como hija de ese matrimonio
 4. Mantiene "juntas" / "together" implicando que ambas pasaron por el proceso
 
+
+
+---
+
+## Cambio 7 (cuarta revisión — extracción de la cláusula)
+
+**Acción**: Quité la cláusula intermedia "donde Sonia se casó con un holandés y nació Luana" porque:
+- Hacía la oración larga y enredada
+- Añadía información familiar que no es esencial para el hero
+- Después de quitarla, el flujo queda más limpio
+
+**Antes (ES)**:
+> "...Vivimos 7 años en los Países Bajos, donde Sonia se casó con un holandés y nació Luana. Volvimos a Paraguay..."
+
+**Después (ES)**:
+> "...Vivimos 7 años en los Países Bajos. Volvimos a Paraguay..."
+
+Aplicado a los 4 idiomas (ES/NL/EN/DE). El resto del texto queda intacto.
+
 ## Próximos pasos
 
 1. **Vos revisás este documento** — confirmás que los cambios son correctos
