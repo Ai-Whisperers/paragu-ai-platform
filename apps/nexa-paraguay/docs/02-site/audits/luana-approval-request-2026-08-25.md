@@ -23,16 +23,16 @@ Cada cambio muestra:
 **Dónde**: La parte superior de `/es/`, `/en/`, `/nl/`, `/de/` — es lo primero que ven los visitantes.
 
 **Texto en español**:
-> ¿Mudarte a Paraguay sin que te estafen? La mayoría de las agencias holandesas cobran tarifas infladas por una cédula y luego desaparecen. Nosotros somos paraguayos que vivimos en Holanda, nos casamos con holandeses, y pasamos por todo este proceso. Te acompañamos en persona — sin paquetes sorpresas, sin letra chica, sin burbuja WAPI. Especializados en el campo, no en zonas turísticas de Asunción.
+> ¿Mudarte a Paraguay sin que te estafen? La mayoría de las agencias holandesas cobran tarifas infladas por una cédula y luego desaparecen. Somos paraguayas que vivimos en los Países Bajos, nos casamos con holandeses, y pasamos por todo este proceso. Te acompañamos en persona — sin paquetes sorpresas, sin letra chica, sin burbuja WAPI. Especializados en el campo, no en zonas turísticas de Asunción.
 
 **Texto en holandés** (idioma prioritario para tu público):
-> Verhuizen naar Paraguay zonder te worden genaaid? De meeste Nederlandse agencies rekenen veel te hoge tarieven voor een cédula en verdwijnen dan. Wij zijn Paraguayanen die in Nederland woonden, getrouwd met Nederlanders, en dit hele proces hebben meegemaakt. We begeleiden je persoonlijk — geen verrassingspakketten, geen kleine lettertjes, geen WAPI-bubbel. Gespecialiseerd in het platteland, niet in toeristische wijken.
+> Verhuizen naar Paraguay zonder te worden genaaid? De meeste Nederlandse agencies rekenen veel te hoge tarieven voor een cédula en verdwijnen dan. Wij zijn Paraguayse vrouwen die in Nederland woonden, getrouwd met Nederlanders, en dit hele proces hebben meegemaakt. We begeleiden je persoonlijk — geen verrassingspakketten, geen kleine lettertjes, geen WAPI-bubbel. Gespecialiseerd in het platteland, niet in toeristische wijken.
 
 **Texto en inglés** (traducción):
-> Moving to Paraguay without being scammed? Most Dutch agencies charge inflated fees for a cédula and then disappear. We are Paraguayans who lived in the Netherlands, married Dutch citizens, and went through this entire process ourselves. We accompany you in person — no surprise packages, no fine print, no WAPI bubble. Specialized in the countryside, not in tourist areas of Asunción.
+> Moving to Paraguay without being scammed? Most Dutch agencies charge inflated fees for a cédula and then disappear. We are Paraguayan women who lived in the Netherlands, married Dutch citizens, and went through this entire process ourselves. We accompany you in person — no surprise packages, no fine print, no WAPI bubble. Specialized in the countryside, not in tourist areas of Asunción.
 
 **Texto en alemán** (traducción):
-> Nach Paraguay ziehen ohne abgezockt zu werden? Die meisten niederländischen Agenturen verlangen überhöhte Gebühren für einen Cédula und verschwinden dann. Wir sind Paraguayern, die in den Niederlanden lebten, Niederländer heirateten und diesen gesamten Prozess selbst durchliefen. Wir begleiten Sie persönlich — keine Überraschungspakete, kein Kleingedrucktes, keine WAPI-Blase. Spezialisiert auf das Land, nicht auf Touristengebiete in Asunción.
+> Nach Paraguay ziehen ohne abgezockt zu werden? Die meisten niederländischen Agenturen verlangen überhöhte Gebühren für einen Cédula und verschwinden dann. Wir sind paraguayische Frauen, die in den Niederlanden lebten, Niederländer heirateten und diesen gesamten Prozess selbst durchliefen. Wir begleiten Sie persönlich — keine Überraschungspakete, kein Kleingedrucktes, keine WAPI-Blase. Spezialisiert auf das Land, nicht auf Touristengebiete in Asunción.
 
 **Imagen que acompañará al texto**: necesito una foto del campo paraguayo (no de la ciudad de Asunción). Si tienes una foto tuya en tu casa con los perros, los árboles, etc., sería ideal.
 

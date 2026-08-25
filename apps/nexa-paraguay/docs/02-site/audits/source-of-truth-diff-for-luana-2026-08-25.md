@@ -152,6 +152,21 @@ Estas referencias a "Mariscal López" y "30 días" se quedan en otros documentos
 
 ---
 
+
+
+---
+
+## Cambio 4 (agregado después de revisión de Luana)
+
+**Problema**: Decía "somos paraguayos" pero **son mujeres** (Sonia + Luana), y "casados con holandeses" (plural masculino) — pero solo **Sonia's madre está casada con un holandés**.
+
+**Fix aplicado** en todos los idiomas (Hero + Your Story sections):
+
+- ES: "somos paraguayos" → "somos paraguayas", "vivimos en Holanda" → "vivimos en los Países Bajos"
+- NL: "Wij zijn Paraguayanen" → "Wij zijn Paraguayse vrouwen"
+- EN: "We are Paraguayans" → "We are Paraguayan women"
+- DE: "Wir sind Paraguayern" → "Wir sind paraguayische Frauen"
+
 ## Próximos pasos
 
 1. **Vos revisás este documento** — confirmás que los cambios son correctos
