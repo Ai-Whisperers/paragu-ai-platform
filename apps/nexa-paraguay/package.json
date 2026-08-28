@@ -12,6 +12,11 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:playwright": "playwright test",
+    "i18n:check": "node scripts/check-locale-parity.mjs",
+    "i18n:fill": "node scripts/fill-locales.mjs --write",
+    "i18n:fill:dry": "node scripts/fill-locales.mjs",
+    "pretest": "pnpm run i18n:check",
+    "prebuild": "pnpm run i18n:check",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "health": "./scripts/health-check.sh"

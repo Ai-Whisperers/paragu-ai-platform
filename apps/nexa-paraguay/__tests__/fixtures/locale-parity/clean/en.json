@@ -1,0 +1,15 @@
+{
+  "siteName": "Nexa Paraguay",
+  "home": {
+    "hero": {
+      "eyebrow": "Residency in Paraguay",
+      "headline": "Live well in Paraguay"
+    }
+  },
+  "faq": {
+    "items": [
+      { "q": "How long does it take?", "a": "Three months." },
+      { "q": "What does it cost?", "a": "It varies." }
+    ]
+  }
+}

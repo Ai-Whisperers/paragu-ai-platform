@@ -1,0 +1,15 @@
+{
+  "siteName": "Nexa Paraguay",
+  "home": {
+    "hero": {
+      "eyebrow": "Verblijf in Paraguay",
+      "headline": "Goed leven in Paraguay"
+    }
+  },
+  "faq": {
+    "items": [
+      { "q": "Hoe lang duurt het?", "a": "Drie maanden." },
+      { "q": "Wat kost het?", "a": "Varieert." }
+    ]
+  }
+}

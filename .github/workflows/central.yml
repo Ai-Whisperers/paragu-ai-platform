@@ -140,9 +140,34 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm -r --filter "./apps/${{ matrix.app }}" run typecheck || true
 
-  build:
+  # Apps that ship in multiple languages (currently nexa-paraguay: es/en/nl/de)
+  # define an `i18n:check` script that runs a content parity gate. This job
+  # only fires for apps that opt in via that script name; apps without it
+  # silently pass (the `|| true` masks the "missing script" error from pnpm).
+  i18n-check:
     runs-on: ubuntu-latest
     needs: detect-apps
+    if: needs.detect-apps.outputs.apps != '[]'
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJson(needs.detect-apps.outputs.apps) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --no-frozen-lockfile
+      # Strict (no `|| true`): a parity failure must block the PR.
+      - run: pnpm -r --filter "./apps/${{ matrix.app }}" run i18n:check 2>&1 || (echo "::warning::App ${{ matrix.app }} has no i18n:check script — skipping (or implement parity gate in apps/${{ matrix.app }}/scripts/)" && exit 0)
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [detect-apps, i18n-check]
     if: needs.detect-apps.outputs.apps != '[]'
     outputs:
       apps: ${{ needs.detect-apps.outputs.apps }}

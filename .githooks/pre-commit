@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# ── Nexa Paraguay — pre-commit locale parity gate ──
+#
+# Runs `pnpm i18n:check` only when one or more content/*.json files are
+# staged. Cheap, fast, and avoids the dependency cost of husky/lint-staged.
+#
+# Install once per clone:
+#   git config core.hooksPath .githooks
+#
+# Bypass when you really need to (rebase, cherry-pick, emergency hotfix):
+#   git commit --no-verify
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+APP_DIR="$REPO_ROOT/apps/nexa-paraguay"
+
+# Only run if any content/*.json is staged for this app.
+if ! git diff --cached --name-only | grep -qE "^apps/nexa-paraguay/content/[^/]+\.json$"; then
+  exit 0
+fi
+
+echo "▸ pre-commit: locale parity check (apps/nexa-paraguay/content/*.json)"
+
+if ! command -v node >/dev/null 2>&1; then
+  echo "  ⚠ node not found; skipping i18n:check. Install Node 20+ to enable this gate."
+  exit 0
+fi
+
+# Use the project-local script directly — no pnpm needed, so this works
+# even mid-install / in minimal CI images.
+cd "$APP_DIR"
+if ! node scripts/check-locale-parity.mjs; then
+  echo ""
+  echo "  ✖ locale parity check failed."
+  echo "    Fix the issues above, or seed missing keys with:"
+  echo "      cd apps/nexa-paraguay && pnpm i18n:fill"
+  echo "    To bypass this check (NOT recommended): git commit --no-verify"
+  exit 1
+fi
+
+exit 0

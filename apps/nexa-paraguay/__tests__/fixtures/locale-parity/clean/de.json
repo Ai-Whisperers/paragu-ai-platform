@@ -1,0 +1,15 @@
+{
+  "siteName": "Nexa Paraguay",
+  "home": {
+    "hero": {
+      "eyebrow": "Aufenthalt in Paraguay",
+      "headline": "Gut leben in Paraguay"
+    }
+  },
+  "faq": {
+    "items": [
+      { "q": "Wie lange dauert es?", "a": "Drei Monate." },
+      { "q": "Was kostet es?", "a": "Variiert." }
+    ]
+  }
+}

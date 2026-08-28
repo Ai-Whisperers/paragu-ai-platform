@@ -1,0 +1,15 @@
+{
+  "specialist": {
+    "bio": {
+      "es": "Paraguaya, casada con un ciudadano neerlandés.",
+      "en": "Paraguayan, married to a Dutch national.",
+      "nl": "Paraguayaanse, getrouwd met een Nederlandse staatsburger.",
+      "de": "Paraguayerin, verheiratet mit einem niederländischen Staatsbürger."
+    }
+  },
+  "home": {
+    "hero": {
+      "headline": "Gut leben in Paraguay"
+    }
+  }
+}
