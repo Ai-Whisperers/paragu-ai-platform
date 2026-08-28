@@ -112,13 +112,16 @@ Empty / whitespace values per locale:
 
 | Section | Drift | Work type | Priority |
 |---|---|---|---|
-| `dutchLanding` (92) | High | **Content design decision** (Sonia) — bring other locales up to Dutch design, or pull Dutch back | P0 (blocking) |
-| `comparisonPage` (90) | High | **Content design decision** — Dutch has 48 leaves, others have 144 | P0 (blocking) |
-| `blog` (30) | Medium | Per-locale post translations; many will be `[ES→XX]` placeholders until translated | P1 |
-| `faqPage` (28) | Low | Only used by 2 pages (terminos, privacidad) | P3 |
-| `processPage`, `deutschlandPage`, `resourcesPage` (12-15 each) | Low | Per-locale gaps; autofill is fine | P2 |
-| `whyCountryPage`, `aboutPage`, `contactPage` (1-7) | Low | Trivial — autofill + manual review | P2 |
-| `complianceDisclaimer`, `whatsapp`, `seo` (2-3) | Low | Trivial | P3 |
-| `termsPage` (1) | Low | Single key | P3 |
+| `dutchLanding` (52/28/42) | High | **Content design decision** (Sonia) — bring other locales up to Dutch design (134 leaves) or pull Dutch back (82 leaves) | P0 (blocking) |
+| `comparisonPage` (0/0/0) | Done | Translated in this branch | ✅ |
+| `blog` (24 in en, 12 in de) | Medium | Per-locale post translations; mostly posts 23-25 which exist in en/nl/de but not in es | P1 |
+| `processPage.process.steps[*].timeline` (0) | Done | Translated in this branch | ✅ |
+| `contactPage.booking.ctaSecondary.label` (0) | Done | Translated in this branch | ✅ |
+| `termsPage.seo.targetKeyword` (0) | Done | Translated in this branch | ✅ |
+| `complianceDisclaimer.{title,content}` (in nl/de, missing in es) | Low | Spanish source missing | P2 |
+| `resourcesPage.guides` (15 in en, 5 in de) | Low | `fileUrl` empty in es; PDF download items need real URLs | P2 |
+| `deutschlandPage` (4-6 per locale) | Low | Only `de.json` has the real German content; en/nl need either translation or page-level redirect | P3 |
+| `whyCountryPage` (5-7 per locale) | Low | Small gaps | P2 |
+| `aboutPage` (4-8 per locale) | Low | Small gaps | P2 |
 
-Empty strings (61 total) are split across the same sections, mostly in `home.hero.eyebrow`, `footer.phone`, and `*.cta.eyebrow/tagline/whatsapp`. They need real translations, not placeholders.
+Empty strings (0 remaining — all genuinely-empty UI slots are now properly skipped by the lib's `esEmpties` set; only real content gaps like `nl.prensa.hero` and `blog.posts[23-25]` remain, classified as drift above).

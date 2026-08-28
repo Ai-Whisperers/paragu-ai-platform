@@ -104,6 +104,22 @@ export function runParityCheck(opts = {}) {
 
   // Empties + placeholder markers, per locale. These are reported with
   // their actual (un-collapsed) paths so the team can grep for them.
+  //
+  // An empty string in a non-ES locale is only a real problem if the
+  // Spanish source has a non-empty value at the same path. An empty
+  // value across all 4 locales (including ES) is usually an intentional
+  // UI slot (e.g. `*.cta.eyebrow` when the section doesn't use an
+  // eyebrow line) — every component renders `{eyebrow && <Eyebrow/>}`,
+  // so empty is a valid state and not a translation gap.
+  const esEmpties = new Set()
+  if (locales.es?.ok) {
+    for (const k of leafStringPaths(locales.es.data)) {
+      if (isMetaKey(k)) continue
+      const v = getAtPath(locales.es.data, k)
+      if (typeof v === "string" && v.trim() === "") esEmpties.add(k)
+    }
+  }
+
   const empties = {}
   const placeholders = {}
   for (const l of LOCALES) {
@@ -114,7 +130,7 @@ export function runParityCheck(opts = {}) {
       if (isMetaKey(k)) continue
       const value = getAtPath(locales[l].data, k)
       if (typeof value !== "string") continue
-      if (value.trim() === "") empties[l].push(k)
+      if (value.trim() === "" && !esEmpties.has(k)) empties[l].push(k)
       if (/^\[ES→[a-z]{2}\]/.test(value)) placeholders[l].push(k)
     }
   }

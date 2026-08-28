@@ -32,7 +32,9 @@
       "tagline",
       "whatsapp",
       "whyCountryPage"
-    ]
+    ],
+    "filledAt": "2026-08-28T19:47:03.469Z",
+    "filledBy": "scripts/fill-locales.mjs"
   },
   "contactPage": {
     "seo": {
@@ -65,7 +67,10 @@
         "Englisch",
         "Niederländisch",
         "Deutsch"
-      ]
+      ],
+      "ctaSecondary": {
+        "label": "Häufig gestellte Fragen ansehen"
+      }
     },
     "contact": {
       "title": "Kontaktdaten",
@@ -75,7 +80,10 @@
       "phone": "+595 21 327 9485",
       "address": "Asunción, Paraguay",
       "hours": {
-        "de": "Montag bis Freitag 9-18h ART"
+        "de": "Montag bis Freitag 9-18h ART",
+        "en": "Monday to Friday 9-18h",
+        "es": "Lunes a Viernes 9-18h",
+        "nl": "Maandag tot vrijdag 9-18h"
       },
       "languages": [
         "ES · EN · NL · DE"
@@ -396,28 +404,32 @@
           "name": "Erik V.",
           "origin": "Niederlande",
           "quote": "Vom ersten Anruf an hatte ich das Gefühl, mit jemandem zu sprechen, der beide Seiten wirklich versteht. Der Steuerplan hat mir ein Jahr Versuch und Irrtum erspart.",
-          "image": "@src:testimonials.tm1"
+          "image": "@src:testimonials.tm1",
+          "program": "business"
         },
         {
           "id": "t2",
           "name": "Markus S.",
           "origin": "Deutschland",
           "quote": "Sie koordinierten meinen Aufenthalt, mein Unternehmen und meine Bank in acht Wochen. Genau das, was versprochen wurde.",
-          "image": "@src:testimonials.tm2"
+          "image": "@src:testimonials.tm2",
+          "program": "investor"
         },
         {
           "id": "t3",
           "name": "Sophie B.",
           "origin": "Belgien",
           "quote": "Ich war nervös wegen des Prozesses, aber Nexa hat es einfach gemacht. Eine Reise, alles gelöst.",
-          "image": "@src:testimonials.tm3"
+          "image": "@src:testimonials.tm3",
+          "program": "base"
         },
         {
           "id": "t4",
           "name": "Thomas L.",
           "origin": "Schweiz",
           "quote": "Ich habe mit Nexas Begleitung Land in Paraguay gekauft. Die rechtliche Due Diligence war gründlich und der Abschluss verlief reibungslos.",
-          "image": "@src:testimonials.tm4"
+          "image": "@src:testimonials.tm4",
+          "program": "land"
         }
       ]
     },
@@ -897,6 +909,36 @@
         "_metric_stripped": true,
         "_title_stripped": true,
         "_excerpt_stripped": true
+      },
+      {
+        "author": "[ES→de]",
+        "category": "[ES→de]",
+        "content": "[ES→de]",
+        "date": "[ES→de]",
+        "excerpt": "[ES→de]",
+        "image": "[ES→de]",
+        "slug": "[ES→de]",
+        "title": "[ES→de]"
+      },
+      {
+        "author": "[ES→de]",
+        "category": "[ES→de]",
+        "content": "[ES→de]",
+        "date": "[ES→de]",
+        "excerpt": "[ES→de]",
+        "image": "[ES→de]",
+        "slug": "[ES→de]",
+        "title": "[ES→de]"
+      },
+      {
+        "author": "[ES→de]",
+        "category": "[ES→de]",
+        "content": "[ES→de]",
+        "date": "[ES→de]",
+        "excerpt": "[ES→de]",
+        "image": "[ES→de]",
+        "slug": "[ES→de]",
+        "title": "[ES→de]"
       }
     ]
   },
@@ -949,20 +991,40 @@
         {
           "title": "Vollständiger Leitfaden zur Residenz in Paraguay 2025",
           "description": "Alles, was du wissen musst: Anforderungen, Zeitpläne, Kosten und Schritt-für-Schritt-Prozess zur Erlangung deiner permanenten Residenz. 45 Seiten praktischer Informationen.",
-          "fileUrl": "",
+          "fileUrl": "[ES→de]",
           "ctaText": "Descargar PDF"
         },
         {
           "title": "Checklist de Mudanza a Paraguay",
           "description": "Vollständige Liste der Dokumente, Verfahren und Schritte vor, während und nach deinem Umzug. Keine Überraschungen.",
-          "fileUrl": "",
+          "fileUrl": "[ES→de]",
           "ctaText": "Descargar PDF"
         },
         {
           "title": "Guía Fiscal para Extranjeros",
           "description": "Verstehen Sie das paraguayische Steuersystem: Pauschalregime, territoriales System, Doppelbesteuerungsabkommen und wie Sie Ihre Steuerlast legal optimieren.",
-          "fileUrl": "",
+          "fileUrl": "[ES→de]",
           "ctaText": "Descargar PDF"
+        }
+      ],
+      "features": [
+        {
+          "description": "[ES→de]",
+          "href": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
+        },
+        {
+          "description": "[ES→de]",
+          "href": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
+        },
+        {
+          "description": "[ES→de]",
+          "href": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
         }
       ]
     },
@@ -1288,124 +1350,124 @@
       ],
       "items": [
         {
-          "Indicador": "Impuesto a la Renta Máximo",
-          "Paraguay": "10%",
-          "Países Bajos": "49.5%",
-          "Bélgica": "50%",
-          "Alemania": "45%",
-          "España": "47%"
+          "Indicador": "Maximale Einkommensteuer",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
           "Indicador": "Kapitalertragsteuer",
-          "Paraguay": "0%",
-          "Países Bajos": "25%",
-          "Bélgica": "30%",
-          "Alemania": "26.4%",
-          "España": "26%"
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "IVA / VAT",
-          "Paraguay": "10%",
-          "Países Bajos": "21%",
-          "Bélgica": "21%",
-          "Alemania": "19%",
-          "España": "21%"
+          "Indicador": "Mehrwertsteuer",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Costo Vida (pareja, mensual)",
-          "Paraguay": "$1.500-$2.500",
-          "Países Bajos": "$4.000-$5.500",
-          "Bélgica": "$3.500-$5.000",
-          "Alemania": "$3.500-$5.000",
-          "España": "$2.500-$3.500"
+          "Indicador": "Lebenshaltungskosten (Paar, monatlich)",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Alquiler 2 hab. (centro)",
-          "Paraguay": "$500-$800",
-          "Países Bajos": "$1.800-$2.500",
-          "Bélgica": "$1.200-$1.800",
-          "Alemania": "$1.500-$2.200",
-          "España": "$900-$1.500"
+          "Indicador": "Miete 2-Zi. (Stadtzentrum)",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Precio m² vivienda",
-          "Paraguay": "$1.200",
-          "Países Bajos": "$5.000",
-          "Bélgica": "$3.500",
-          "Alemania": "$5.500",
-          "España": "$3.000"
+          "Indicador": "Preis pro m² Wohnfläche",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Seguridad (Global Peace Index)",
-          "Paraguay": "1/5 (baja criminalidad)",
-          "Países Bajos": "2/5",
-          "Bélgica": "2/5",
-          "Alemania": "2/5",
-          "España": "2/5"
+          "Indicador": "Sicherheit (Global Peace Index)",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Horas de sol anuales",
-          "Paraguay": "2.800",
-          "Países Bajos": "1.600",
-          "Bélgica": "1.500",
-          "Alemania": "1.700",
-          "España": "2.600"
+          "Indicador": "Sonnenstunden pro Jahr",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Impuesto a herencias",
-          "Paraguay": "0%",
-          "Países Bajos": "10-40%",
-          "Bélgica": "3-80%",
-          "Alemania": "7-50%",
-          "España": "7-34%"
+          "Indicador": "Erbschaftssteuer",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Doble ciudadanía permitida",
-          "Paraguay": "Sí",
-          "Países Bajos": "Limitado",
-          "Bélgica": "Sí",
-          "Alemania": "Limitado",
-          "España": "Sí"
+          "Indicador": "Doppelte Staatsbürgerschaft erlaubt",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Tratado doble imposición",
-          "Paraguay": "—",
-          "Países Bajos": "Sí ✓",
-          "Bélgica": "Sí ✓",
-          "Alemania": "Sí ✓",
-          "España": "Sí ✓"
+          "Indicador": "Doppelbesteuerungsabkommen",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Internet fibra óptica",
-          "Paraguay": "Sí, hasta 1GB",
-          "Países Bajos": "Sí",
-          "Bélgica": "Sí",
-          "Alemania": "Sí",
-          "España": "Sí"
+          "Indicador": "Glasfaser-Internet",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Residencia para inversores",
-          "Paraguay": "Sí, desde $5.000",
-          "Países Bajos": "No",
-          "Bélgica": "No",
-          "Alemania": "No",
-          "España": "Sí, desde €500K"
+          "Indicador": "Aufenthaltserlaubnis für Investoren",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Cobertura salud privada/mes",
-          "Paraguay": "$50-$100",
-          "Países Bajos": "€120-€180",
-          "Bélgica": "€150-€200",
-          "Alemania": "€200-€400",
-          "España": "€50-€150"
+          "Indicador": "Private Krankenversicherung/Monat",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         },
         {
-          "Indicador": "Impuesto a dividendos",
-          "Paraguay": "0% (renta extranjera)",
-          "Países Bajos": "15%",
-          "Bélgica": "30%",
-          "Alemania": "25%",
-          "España": "19%"
+          "Indicador": "Dividendensteuer",
+          "Paraguay": "Paraguay",
+          "Países Bajos": "Niederlande",
+          "Bélgica": "Belgien",
+          "Alemania": "Deutschland",
+          "España": "Spanien"
         }
       ],
       "featureColumnLabel": "Característica",
@@ -1486,59 +1548,19 @@
       "ctaHref": "/intake",
       "steps": [
         {
-          "number": 1,
-          "title": "Wählen Sie Ihre Dienstleistungen",
-          "shortTitle": "Dienste wählen",
-          "description": "Wählen Sie die spezifische Unterstützung, die Sie benötigen. Wir erstellen eine personalisierte Dokumenten-Checkliste und ein verbindliches Angebot — keine Überraschungen.",
-          "detailParagraph": "In dieser ersten Phase führen wir ein kostenloses Video-Beratungsgespräch, in dem wir Ihre Situation, Ihre Ziele und Ihren Zeitplan verstehen. Basierend darauf schlagen wir den genauen Umfang vor: nur Aufenthalt, plus Unternehmen, plus Bankwesen, oder das vollständige Paket. Sie wissen genau, was Sie zahlen, bevor Sie sich verpflichten.",
-          "duration": "Woche 1",
-          "image": {
-            "$img": "process.consultation"
-          }
+          "timeline": "Woche 1"
         },
         {
-          "number": 2,
-          "title": "Parallele Bearbeitung",
-          "shortTitle": "Parallele Bearbeitung",
-          "description": "Während Sie Ihre Dokumente zu Hause sammeln, beginnen wir die Arbeit vor Ort in Paraguay. Wir koordinieren die rechtliche Vorbereitung, die sonst Monate dauern würde.",
-          "detailParagraph": "Während Sie die Dokumentation in Ihrem Land sammeln (Geburtsurkunde, Führungszeugnis, berufliche Unterlagen), beginnen wir die Arbeit in Paraguay: rechtliche Vorbereitung, Entwürfe für Firmengründungen, Bank-Vorqualifizierung und Koordination mit den lokalen Behörden. Diese parallele Arbeit macht unseren Zeitplan realistisch — wir warten nicht auf Sie.",
-          "duration": "Wochen 2–5",
-          "image": {
-            "$img": "process.documents"
-          }
+          "timeline": "Wochen 2–5"
         },
         {
-          "number": 3,
-          "title": "Ihr Tag in Paraguay",
-          "shortTitle": "Ihr Tag in Paraguay",
-          "description": "Reisen Sie mit fertigen Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen und stellen sicher, dass jede Unterschrift, Kopie und Siegel an ihrem Platz ist.",
-          "detailParagraph": "Ihr Operationstag beginnt früh mit unserem Team. Wir holen Sie ab und begleiten Sie durch jeden Termin: Einwanderung, Identifikationen, Bank und alle weiteren Schritte. Wir übersetzen, erklären, lösen. Am Ende des Tages sind Ihre Schlüsseldokumente eingereicht und Ihr Fall wird aktiv bearbeitet.",
-          "duration": "Woche 6",
-          "image": {
-            "$img": "process.arrival"
-          }
+          "timeline": "Woche 6"
         },
         {
-          "number": 4,
-          "title": "Ausweis und Finanzaktivierung",
-          "shortTitle": "Ausweis und Bank",
-          "description": "Sobald Ihr paraguayischer Ausweis ausgestellt ist, aktivieren wir Ihre Finanzinfrastruktur. Wir eröffnen das Bankkonto, registrieren den RUC und verbinden Sie mit dem paraguayischen Finanzsystem.",
-          "detailParagraph": "Wenn Ihr Ausweis fertig ist, beginnen wir die Finanzaktivierung: Bankkontoeröffnung, RUC-Registrierung, digitale Zertifikate und alle unternehmensbezogenen Schritte. Wir bereiten die Dokumentation vor, koordinieren mit der Bank und begleiten Sie durch die Unterzeichnung.",
-          "duration": "Wochen 7–10",
-          "image": {
-            "$img": "process.banking"
-          }
+          "timeline": "Wochen 7–9"
         },
         {
-          "number": 5,
-          "title": "Niederlassung und Lebensstil",
-          "shortTitle": "Niederlassung",
-          "description": "Mit Ihrer rechtlichen und finanziellen Basis helfen wir Ihnen bei der Niederlassung. Dazu gehören Wohnungssuche, Anmeldung der Versorgung, Schulberatung wenn Sie Kinder haben, und das Entdecken Ihrer Nachbarschaft.",
-          "detailParagraph": "Die letzte Phase ist die lohnendste: Wir helfen Ihnen bei der Wohnungssuche (Miete oder Kauf), der Anmeldung der Versorgung, der Schulregistrierung wenn Sie Kinder haben, und beim Entdecken Ihrer Nachbarschaft. Am Ende haben Sie nicht nur einen Aufenthalt — Sie haben ein Zuhause.",
-          "duration": "Wochen 11–12",
-          "image": {
-            "$img": "process.completion"
-          }
+          "timeline": "Wochen 10–12"
         }
       ]
     },
@@ -1996,35 +2018,40 @@
           "title": "Wählen Sie Ihre Dienstleistungen",
           "description": "Wählen Sie die spezifische Unterstützung, die Sie benötigen. Wir erstellen eine personalisierte Dokumenten-Checkliste und ein verbindliches Angebot — keine Überraschungen.",
           "image": "@src:process.consultation",
-          "duration": "Woche 1"
+          "duration": "Woche 1",
+          "icon": "ClipboardCheck"
         },
         {
           "number": 2,
           "title": "Parallele Bearbeitung",
           "description": "Während Sie Ihre Dokumente zu Hause sammeln, beginnen wir die Arbeit vor Ort in Paraguay.",
           "image": "@src:process.documents",
-          "duration": "Wochen 2–5"
+          "duration": "Wochen 2–5",
+          "icon": "Layers"
         },
         {
           "number": 3,
           "title": "Ihr Tag in Paraguay",
           "description": "Reisen Sie mit fertigen Dokumenten nach Paraguay. Wir begleiten Sie zu den persönlichen Terminen.",
           "image": "@src:process.arrival",
-          "duration": "Woche 6"
+          "duration": "Woche 6",
+          "icon": "CalendarCheck"
         },
         {
           "number": 4,
           "title": "Ausweis und Finanzaktivierung",
           "description": "Sobald Ihr paraguayischer Ausweis ausgestellt ist, aktivieren wir Ihre Finanzinfrastruktur.",
           "image": "@src:process.banking",
-          "duration": "Wochen 7–10"
+          "duration": "Wochen 7–10",
+          "icon": "Building"
         },
         {
           "number": 5,
           "title": "Niederlassung und Lebensstil",
           "description": "Mit Ihrer rechtlichen und finanziellen Basis helfen wir Ihnen bei der Niederlassung.",
           "image": "@src:process.completion",
-          "duration": "Wochen 11–12"
+          "duration": "Wochen 11–12",
+          "icon": "Home"
         }
       ]
     }
@@ -2283,7 +2310,14 @@
               "q": "Ist der Prozess vollständig legal?",
               "a": "Es ist nicht notwendig. Obwohl der Prozess auf Spanisch durchgeführt wird, arbeiten wir mit vereidigten Übersetzern und begleiten Sie zu jedem Termin."
             }
-          ]
+          ],
+          "id": "immigration",
+          "label": {
+            "de": "Einwanderung",
+            "en": "Immigration",
+            "es": "Inmigración",
+            "nl": "Immigratie"
+          }
         },
         {
           "title": "Kosten und Zahlung",
@@ -2304,7 +2338,14 @@
               "q": "Wie viel kostet die jährliche Aufrechterhaltung des Aufenthalts?",
               "a": "Die jährliche Aufrechterhaltung der Aufenthaltserlaubnis ist minimal. Sie umfasst die RUC-Erneuerung (Steuerregistrierung), mögliche Apostille-Erneuerungen und grundlegende Verwaltungsschritte. Wir beraten Sie zu den tatsächlichen Kosten im Erstgespräch auf Basis Ihres Falls."
             }
-          ]
+          ],
+          "id": "banking",
+          "label": {
+            "de": "Bankwesen & Finanzen",
+            "en": "Banking & Finance",
+            "es": "Banca y Finanzas",
+            "nl": "Bankieren & Financiën"
+          }
         },
         {
           "title": "Unternehmen und Bankwesen",
@@ -2325,7 +2366,14 @@
               "q": "Was passiert nach dem ersten Jahr (Investor)?",
               "a": "Wir schlagen einen Kontinuitätsplan vor, der jährliche Compliance, Steuerberatung und alle operativen Unterstützungen umfasst, die Ihr Fall benötigt."
             }
-          ]
+          ],
+          "id": "legal",
+          "label": {
+            "de": "Recht & Gesellschaft",
+            "en": "Legal & Company",
+            "es": "Legal y Sociedad",
+            "nl": "Juridisch & Bedrijf"
+          }
         },
         {
           "title": "Familie und Aufenthalt",
@@ -2354,7 +2402,14 @@
               "q": "Was passiert, wenn mein Aufenthaltsantrag abgelehnt wird?",
               "a": "Aufenthaltsanträge werden bei ordnungsgemäßer Vorbereitung selten abgelehnt. Im unwahrscheinlichen Fall einer Ablehnung analysieren wir die Ursache, beheben sie und reichen den Antrag erneut ein. Wir bieten fortlaufende Unterstützung, bis Ihr Aufenthalt genehmigt ist."
             }
-          ]
+          ],
+          "id": "costs",
+          "label": {
+            "de": "Kosten & Zahlung",
+            "en": "Costs & Payment",
+            "es": "Costos y Pago",
+            "nl": "Kosten & Betaling"
+          }
         }
       ]
     }
@@ -2524,7 +2579,10 @@
     "home": {
       "title": "nexa-paraguay - Paraguay",
       "description": "Sitio web de nexa-paraguay"
-    }
+    },
+    "ogImage": "[ES→de]",
+    "siteDescription": "[ES→de]",
+    "twitterHandle": "[ES→de]"
   },
   "qualityOfLifePage": {
     "seo": {
@@ -2964,7 +3022,8 @@
   "deutschlandPage": {
     "seo": {
       "title": "Von Deutschland nach Paraguay umziehen — Nexa Paraguay",
-      "description": "Ich bin Sonia. Ich lebte 7 Jahre in den Niederlanden und helfe deutschen Unternehmern, Selbstständigen und Familien beim Umzug nach Paraguay."
+      "description": "Ich bin Sonia. Ich lebte 7 Jahre in den Niederlanden und helfe deutschen Unternehmern, Selbstständigen und Familien beim Umzug nach Paraguay.",
+      "targetKeyword": "Auswanderung Paraguay"
     },
     "hero": {
       "headline": "Ich bin Sonia. Ich helfe Deutschen beim Umzug nach Paraguay.",
@@ -2977,7 +3036,8 @@
         "Fester Ansprechpartner",
         "Persönliche Betreuung"
       ],
-      "backgroundImage": "@src:hero.localizedDe"
+      "backgroundImage": "@src:hero.localizedDe",
+      "eyebrow": "Für deutsche Kunden"
     },
     "whySonia": {
       "eyebrow": "Warum Sonia?",
@@ -3002,13 +3062,17 @@
           "title": "Ankommen & Ankommen",
           "description": "Wir aktivieren Ihre Steuer-ID (RUC) und Ihr Bankkonto. Bei Bedarf helfen wir auch bei der Wohnungssuche."
         }
-      ]
+      ],
+      "ctaHref": "/contacto",
+      "ctaLabel": "Meinen Prozess starten",
+      "totalDuration": "Tiempo total: depende del programa. Lo confirmamos en la consulta inicial."
     },
     "cta": {
       "title": "Bereit für den ersten Schritt?",
       "subtitle": "Kostenloses 30-Minuten-Gespräch. Auf Deutsch, ohne Verpflichtungen.",
       "buttonText": "Gespräch vereinbaren",
-      "buttonHref": "/de/contacto"
+      "buttonHref": "/de/contacto",
+      "eyebrow": "Nächster Schritt"
     },
     "taxComparison": {
       "eyebrow": "Comparativa fiscal",
@@ -3522,7 +3586,8 @@
   "termsPage": {
     "seo": {
       "title": "Geschäftsbedingungen — Nexa Paraguay",
-      "description": "Geschäftsbedingungen der Nexa Paraguay Dienste."
+      "description": "Geschäftsbedingungen der Nexa Paraguay Dienste.",
+      "targetKeyword": "Nexa Paraguay AGB"
     },
     "hero": {
       "headline": "Geschäftsbedingungen",
@@ -3608,6 +3673,24 @@
       "title": "Sie ist Niederländerin. Und hat den Prozess schon gemacht.",
       "paragraphs": [
         "Sonia lebte 7 Jahre in den Niederlanden. Sie hat ihre eigene Aufenthaltserlaubnis, ihre eigene Firma, ihr eigenes Bankkonto abgewickelt. Jetzt macht sie das Gleiche für jeden Nexa-Kunden."
+      ],
+      "description": "[ES→de]",
+      "highlights": [
+        {
+          "description": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
+        },
+        {
+          "description": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
+        },
+        {
+          "description": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
+        }
       ]
     },
     "taxComparison": {
@@ -3639,7 +3722,35 @@
           "Paraguay": "0%",
           "Países Bajos": "10-40%"
         }
-      ]
+      ],
+      "comparisonTable": [
+        {
+          "category": "[ES→de]",
+          "netherlands": "[ES→de]",
+          "paraguay": "[ES→de]"
+        },
+        {
+          "category": "[ES→de]",
+          "netherlands": "[ES→de]",
+          "paraguay": "[ES→de]"
+        },
+        {
+          "category": "[ES→de]",
+          "netherlands": "[ES→de]",
+          "paraguay": "[ES→de]"
+        },
+        {
+          "category": "[ES→de]",
+          "netherlands": "[ES→de]",
+          "paraguay": "[ES→de]"
+        },
+        {
+          "category": "[ES→de]",
+          "netherlands": "[ES→de]",
+          "paraguay": "[ES→de]"
+        }
+      ],
+      "subtitle": "[ES→de]"
     },
     "process": {
       "eyebrow": "Der Prozess",
@@ -3694,6 +3805,30 @@
           "description": "Wünschen Stabilität, zweisprachige Schulen, qualitativ hochwertige private Gesundheitsversorgung und einen menschlicheren Lebensrhythmus.",
           "icon": "Heart"
         }
+      ],
+      "ctaHref": "[ES→de]",
+      "ctaText": "[ES→de]",
+      "profiles": [
+        {
+          "description": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
+        },
+        {
+          "description": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
+        },
+        {
+          "description": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
+        },
+        {
+          "description": "[ES→de]",
+          "icon": "[ES→de]",
+          "title": "[ES→de]"
+        }
       ]
     },
     "costs": {
@@ -3703,27 +3838,39 @@
       "items": [
         {
           "label": "Essen (2 Personen)",
-          "value": "USD 350-500"
+          "value": "USD 350-500",
+          "amount": "[ES→de]",
+          "category": "[ES→de]"
         },
         {
           "label": "Nebenkosten (Strom, Wasser, Internet)",
-          "value": "USD 80-120"
+          "value": "USD 80-120",
+          "amount": "[ES→de]",
+          "category": "[ES→de]"
         },
         {
           "label": "Mobiltelefon (Datentarif)",
-          "value": "USD 20-35"
+          "value": "USD 20-35",
+          "amount": "[ES→de]",
+          "category": "[ES→de]"
         },
         {
           "label": "Transport (Benzin + Uber)",
-          "value": "USD 100-180"
+          "value": "USD 100-180",
+          "amount": "[ES→de]",
+          "category": "[ES→de]"
         },
         {
           "label": "Private Krankenversicherung",
-          "value": "USD 80-150"
+          "value": "USD 80-150",
+          "amount": "[ES→de]",
+          "category": "[ES→de]"
         },
         {
           "label": "Sonstiges",
-          "value": "USD 100"
+          "value": "USD 100",
+          "amount": "[ES→de]",
+          "category": "[ES→de]"
         }
       ]
     },
