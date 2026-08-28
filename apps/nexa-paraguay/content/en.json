@@ -1687,21 +1687,21 @@
       "items": [
         {
           "title": "Complete Guide to Residency in Paraguay 2025",
-          "description": "Everything you need to know: requirements, timelines, costs, and step-by-step process to obtain your permanent residency. 45 pages of practical information.",
+          "description": "Everything you need to know: requirements, timelines, costs and step-by-step process to obtain your permanent residency. 45 pages of practical information.",
           "fileUrl": "",
-          "ctaText": "Descargar PDF"
+          "ctaText": "Download PDF"
         },
         {
-          "title": "Checklist de Mudanza a Paraguay",
-          "description": "Lista completa de documentos, trámites y pasos a seguir antes, durante y después de tu mudanza. No olvides nada importante.",
+          "title": "Moving Checklist for Paraguay",
+          "description": "Complete list of documents, procedures and steps to follow before, during and after your move. Don't miss anything important.",
           "fileUrl": "",
-          "ctaText": "Descargar PDF"
+          "ctaText": "Download PDF"
         },
         {
-          "title": "Guía Fiscal para Extranjeros",
+          "title": "Tax Guide for Foreigners",
           "description": "Understand the Paraguayan tax system: flat-rate regime, territorial system, double-tax treaties, and how to legally optimize your tax burden.",
           "fileUrl": "",
-          "ctaText": "Descargar PDF"
+          "ctaText": "Download PDF"
         }
       ],
       "features": [
@@ -3743,7 +3743,7 @@
     }
   },
   "_meta": {
-    "filledAt": "2026-08-28T19:47:03.468Z",
+    "filledAt": "2026-08-28T21:03:35.940Z",
     "filledBy": "scripts/fill-locales.mjs"
   }
 }

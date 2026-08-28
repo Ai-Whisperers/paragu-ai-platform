@@ -519,6 +519,16 @@ for (const key of [...allKeys].sort()) {
         continue
       }
       const placeholder = source ? `[ES→${lang}] ${source}` : `[ES→${lang}]`
+      // Skip when source is empty AND the target is also empty or a bare
+      // placeholder: the team has intentionally not filled this value
+      // (e.g. fileUrl for a localized PDF that hasn't been uploaded yet),
+      // or the autofill already wrote a placeholder here in a previous run
+      // (idempotency). Writing another `[ES→en]` is misleading — there's
+      // no Spanish source to translate FROM in the first place. Better
+      // to leave the value alone.
+      if (!source && (existing == null || (typeof existing === "string" && (existing.trim() === "" || isPlaceholder)))) {
+        continue
+      }
       if (!plan[lang]) plan[lang] = []
       plan[lang].push({ key, placeholder })
       if (write) {

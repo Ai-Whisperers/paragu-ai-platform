@@ -33,7 +33,7 @@
       "whatsapp",
       "whyCountryPage"
     ],
-    "filledAt": "2026-08-28T19:47:03.469Z",
+    "filledAt": "2026-08-28T21:03:35.944Z",
     "filledBy": "scripts/fill-locales.mjs"
   },
   "contactPage": {
@@ -941,19 +941,19 @@
           "title": "Vollständiger Leitfaden zur Residenz in Paraguay 2025",
           "description": "Alles, was du wissen musst: Anforderungen, Zeitpläne, Kosten und Schritt-für-Schritt-Prozess zur Erlangung deiner permanenten Residenz. 45 Seiten praktischer Informationen.",
           "fileUrl": "",
-          "ctaText": "Descargar PDF"
+          "ctaText": "PDF herunterladen"
         },
         {
-          "title": "Checklist de Mudanza a Paraguay",
-          "description": "Vollständige Liste der Dokumente, Verfahren und Schritte vor, während und nach deinem Umzug. Keine Überraschungen.",
+          "title": "Umzugs-Checkliste für Paraguay",
+          "description": "Vollständige Liste der Dokumente, Verfahren und Schritte vor, während und nach deinem Umzug. Vergiss nichts Wichtiges.",
           "fileUrl": "",
-          "ctaText": "Descargar PDF"
+          "ctaText": "PDF herunterladen"
         },
         {
-          "title": "Guía Fiscal para Extranjeros",
+          "title": "Steuerleitfaden für Ausländer",
           "description": "Verstehen Sie das paraguayische Steuersystem: Pauschalregime, territoriales System, Doppelbesteuerungsabkommen und wie Sie Ihre Steuerlast legal optimieren.",
           "fileUrl": "",
-          "ctaText": "Descargar PDF"
+          "ctaText": "PDF herunterladen"
         }
       ],
       "features": [
