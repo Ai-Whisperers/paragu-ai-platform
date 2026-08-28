@@ -415,7 +415,6 @@
     "gallery": {
       "title": "Our office in Asunción",
       "subtitle": "Where consultation, signing, and banking actually happen. AI placeholders below — replaced when we have real photos.",
-      "columns": [],
       "images": [
         "@src:office.exterior",
         "@src:office.meetingRoom",
@@ -950,8 +949,7 @@
       "subheadline": "30 minutes with Sonia or Luana. We tell you how long, what you need, and how much — before you decide anything.",
       "ctaPrimary": "Open WhatsApp",
       "ctaPrimaryHref": "https://wa.me/595982515138?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20consultation",
-      "ctaSecondary": "See FAQ first",
-      "ctaSecondaryHref": null
+      "ctaSecondary": "See FAQ first"
     },
     "booking": {
       "title": "Book your free consultation",
@@ -1231,7 +1229,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Banking",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1245,7 +1242,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Banca",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1259,7 +1255,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Process",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1273,7 +1268,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Inversión Inmobiliaria",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1287,7 +1281,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Company",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1301,7 +1294,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Life",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1315,7 +1307,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Emprendimiento",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1329,7 +1320,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Tax",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1343,7 +1333,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "About",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1357,7 +1346,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Inmigración",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1371,7 +1359,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Impuestos",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1385,7 +1372,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Market",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1399,7 +1385,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Comparativa",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1413,7 +1398,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Market",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1427,7 +1411,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Process",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1441,7 +1424,6 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Residencia",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
@@ -1455,42 +1437,11 @@
         "author": "Nexa Paraguay",
         "date": "2026-05-07",
         "category": "Process",
-        "tags": [],
         "image": "/images/blog/default-cover.webp",
         "content": "## Coming soon\n\nThis article is being prepared. We will let you know when it is ready.\n\nNeed this information now? Book a consultation with our team.",
         "_metric_stripped": true,
         "_title_stripped": true,
         "_excerpt_stripped": true
-      },
-      {
-        "author": "[ES→en]",
-        "category": "[ES→en]",
-        "content": "[ES→en]",
-        "date": "[ES→en]",
-        "excerpt": "[ES→en]",
-        "image": "[ES→en]",
-        "slug": "[ES→en]",
-        "title": "[ES→en]"
-      },
-      {
-        "author": "[ES→en]",
-        "category": "[ES→en]",
-        "content": "[ES→en]",
-        "date": "[ES→en]",
-        "excerpt": "[ES→en]",
-        "image": "[ES→en]",
-        "slug": "[ES→en]",
-        "title": "[ES→en]"
-      },
-      {
-        "author": "[ES→en]",
-        "category": "[ES→en]",
-        "content": "[ES→en]",
-        "date": "[ES→en]",
-        "excerpt": "[ES→en]",
-        "image": "[ES→en]",
-        "slug": "[ES→en]",
-        "title": "[ES→en]"
       }
     ]
   },
@@ -1501,7 +1452,6 @@
     "whatsapp": "595982515138",
     "instagram": "https://instagram.com/nexaparaguay",
     "facebook": "https://facebook.com/nexaparaguay",
-    "navLinks": [],
     "siblingSites": [
       {
         "slug": "nexa-paraguay",
@@ -1738,40 +1688,20 @@
         {
           "title": "Complete Guide to Residency in Paraguay 2025",
           "description": "Everything you need to know: requirements, timelines, costs, and step-by-step process to obtain your permanent residency. 45 pages of practical information.",
-          "fileUrl": "[ES→en]",
+          "fileUrl": "",
           "ctaText": "Descargar PDF"
         },
         {
           "title": "Checklist de Mudanza a Paraguay",
           "description": "Lista completa de documentos, trámites y pasos a seguir antes, durante y después de tu mudanza. No olvides nada importante.",
-          "fileUrl": "[ES→en]",
+          "fileUrl": "",
           "ctaText": "Descargar PDF"
         },
         {
           "title": "Guía Fiscal para Extranjeros",
           "description": "Understand the Paraguayan tax system: flat-rate regime, territorial system, double-tax treaties, and how to legally optimize your tax burden.",
-          "fileUrl": "[ES→en]",
+          "fileUrl": "",
           "ctaText": "Descargar PDF"
-        }
-      ],
-      "features": [
-        {
-          "description": "[ES→en]",
-          "href": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
-        },
-        {
-          "description": "[ES→en]",
-          "href": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
-        },
-        {
-          "description": "[ES→en]",
-          "href": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
         }
       ]
     },
@@ -2107,8 +2037,7 @@
     },
     "team": {
       "eyebrow": "Equipo",
-      "title": "Real people with real names and experience",
-      "members": []
+      "title": "Real people with real names and experience"
     },
     "story": {
       "title": "From the Netherlands to Paraguay: Sonia's Story",
@@ -2323,10 +2252,7 @@
     "home": {
       "title": "nexa-paraguay - Paraguay",
       "description": "Sitio web de nexa-paraguay"
-    },
-    "ogImage": "[ES→en]",
-    "siteDescription": "[ES→en]",
-    "twitterHandle": "[ES→en]"
+    }
   },
   "prensa": {
     "seo": {
@@ -2487,7 +2413,6 @@
       "title": "Fees",
       "subtitle": "One-time and monthly."
     },
-    "plans": {},
     "finalCta": {
       "eyebrow": "Ready to start?",
       "title": "Book your free consultation",
@@ -2518,19 +2443,59 @@
       "ctaHref": "/intake",
       "steps": [
         {
-          "timeline": "Week 1"
+          "number": 1,
+          "title": "Choose your services",
+          "shortTitle": "Choose services",
+          "description": "Choose the specific support you need. We create a personalized document checklist and a fixed quote — no surprises.",
+          "detailParagraph": "During this initial phase, we have a free video consultation call where we understand your situation, your goals, and your timeline. Based on this, we propose the exact scope: residency only, plus company, plus banking, or the full package. You know exactly what you're paying before you commit.",
+          "duration": "Week 1",
+          "image": {
+            "$img": "process.consultation"
+          }
         },
         {
-          "timeline": "Weeks 2–5"
+          "number": 2,
+          "title": "Parallel processing",
+          "shortTitle": "Parallel processing",
+          "description": "While you gather your documents at home, we begin work on the ground in Paraguay. We coordinate the legal preparation that would otherwise take months.",
+          "detailParagraph": "While you gather documentation in your country (birth certificate, police clearance, professional records), we begin work in Paraguay: legal preparation, company formation drafts, banking pre-qualification, and coordination with the local authorities. This parallel work is what makes our timeline realistic — we don't wait for you.",
+          "duration": "Weeks 2–5",
+          "image": {
+            "$img": "process.documents"
+          }
         },
         {
-          "timeline": "Week 6"
+          "number": 3,
+          "title": "Your day in Paraguay",
+          "shortTitle": "Your day in Paraguay",
+          "description": "Travel to Paraguay with your documents ready. We accompany you to the in-person appointments and ensure every signature, copy, and seal is in place.",
+          "detailParagraph": "Your operational day starts early with our team. We pick you up and accompany you through each appointment: Immigration, Identifications, the bank, and any other step. We translate, we explain, we solve. By the end of the day, your key documents are filed and your case is in active processing.",
+          "duration": "Week 6",
+          "image": {
+            "$img": "process.arrival"
+          }
         },
         {
-          "timeline": "Weeks 7–9"
+          "number": 4,
+          "title": "ID and financial activation",
+          "shortTitle": "ID and banking",
+          "description": "Once your Paraguayan ID is issued, we activate your financial infrastructure. We open the bank account, register the RUC, and connect you to Paraguay's financial system.",
+          "detailParagraph": "When your ID is ready, we initiate financial activation: bank account opening, RUC registration, digital certificates, and any company-related steps. We prepare the documentation, coordinate with the bank, and accompany you through signing.",
+          "duration": "Weeks 7–10",
+          "image": {
+            "$img": "process.banking"
+          }
         },
         {
-          "timeline": "Weeks 10–12"
+          "number": 5,
+          "title": "Settling in and lifestyle",
+          "shortTitle": "Settling in",
+          "description": "With your legal and financial base in place, we help you settle in. This includes housing search, utility setup, school guidance if you have children, and discovering your neighborhood.",
+          "detailParagraph": "The final phase is the most rewarding: we help you find housing (rent or buy), set up utilities, register at schools if you have children, and discover your neighborhood. By the end, you don't just have a residence — you have a home.",
+          "duration": "Weeks 11–12",
+          "image": {
+            "$img": "process.completion"
+          }
         }
       ]
     },
@@ -3239,8 +3204,7 @@
       "buttonText": "Book consultation",
       "buttonHref": "/contacto",
       "eyebrow": "Next step"
-    },
-    "plans": {}
+    }
   },
   "testimoniosPage": {
     "seo": {
@@ -3535,24 +3499,6 @@
       "title": "She is Dutch. And she already did the process.",
       "paragraphs": [
         "Sonia lived 7 years in Holland. She processed her own residency, her own company, her own bank account. Now she does the same for each Nexa client."
-      ],
-      "description": "[ES→en]",
-      "highlights": [
-        {
-          "description": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
-        },
-        {
-          "description": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
-        },
-        {
-          "description": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
-        }
       ]
     },
     "taxComparison": {
@@ -3584,35 +3530,7 @@
           "Paraguay": "0%",
           "Países Bajos": "10-40%"
         }
-      ],
-      "comparisonTable": [
-        {
-          "category": "[ES→en]",
-          "netherlands": "[ES→en]",
-          "paraguay": "[ES→en]"
-        },
-        {
-          "category": "[ES→en]",
-          "netherlands": "[ES→en]",
-          "paraguay": "[ES→en]"
-        },
-        {
-          "category": "[ES→en]",
-          "netherlands": "[ES→en]",
-          "paraguay": "[ES→en]"
-        },
-        {
-          "category": "[ES→en]",
-          "netherlands": "[ES→en]",
-          "paraguay": "[ES→en]"
-        },
-        {
-          "category": "[ES→en]",
-          "netherlands": "[ES→en]",
-          "paraguay": "[ES→en]"
-        }
-      ],
-      "subtitle": "[ES→en]"
+      ]
     },
     "process": {
       "eyebrow": "The process",
@@ -3667,30 +3585,6 @@
           "description": "Want stability, bilingual schools, quality private healthcare, and a more human pace of life.",
           "icon": "Heart"
         }
-      ],
-      "ctaHref": "[ES→en]",
-      "ctaText": "[ES→en]",
-      "profiles": [
-        {
-          "description": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
-        },
-        {
-          "description": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
-        },
-        {
-          "description": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
-        },
-        {
-          "description": "[ES→en]",
-          "icon": "[ES→en]",
-          "title": "[ES→en]"
-        }
       ]
     },
     "costs": {
@@ -3700,39 +3594,27 @@
       "items": [
         {
           "label": "Food (2 people)",
-          "value": "USD 350-500",
-          "amount": "[ES→en]",
-          "category": "[ES→en]"
+          "value": "USD 350-500"
         },
         {
           "label": "Utilities (electricity, water, internet)",
-          "value": "USD 80-120",
-          "amount": "[ES→en]",
-          "category": "[ES→en]"
+          "value": "USD 80-120"
         },
         {
           "label": "Mobile phone (data plan)",
-          "value": "USD 20-35",
-          "amount": "[ES→en]",
-          "category": "[ES→en]"
+          "value": "USD 20-35"
         },
         {
           "label": "Transportation (gas + Uber)",
-          "value": "USD 100-180",
-          "amount": "[ES→en]",
-          "category": "[ES→en]"
+          "value": "USD 100-180"
         },
         {
           "label": "Private health insurance",
-          "value": "USD 80-150",
-          "amount": "[ES→en]",
-          "category": "[ES→en]"
+          "value": "USD 80-150"
         },
         {
           "label": "Miscellaneous",
-          "value": "USD 100",
-          "amount": "[ES→en]",
-          "category": "[ES→en]"
+          "value": "USD 100"
         }
       ]
     },
@@ -3801,21 +3683,7 @@
       "title": "Your move step by step",
       "totalDuration": "Total time: depends on the program. We confirm this during the initial consultation.",
       "ctaLabel": "Start my process",
-      "ctaHref": "/contacto",
-      "steps": [
-        {
-          "description": "[ES→en]",
-          "title": "[ES→en]"
-        },
-        {
-          "description": "[ES→en]",
-          "title": "[ES→en]"
-        },
-        {
-          "description": "[ES→en]",
-          "title": "[ES→en]"
-        }
-      ]
+      "ctaHref": "/contacto"
     },
     "targetClients": {
       "eyebrow": "For whom",
@@ -3823,21 +3691,18 @@
       "groups": [
         {
           "id": "investors",
-          "title": "Investors",
-          "items": []
+          "title": "Investors"
         },
         {
           "id": "remote",
-          "title": "Remote workers",
-          "items": []
+          "title": "Remote workers"
         }
       ]
     },
     "costs": {
       "eyebrow": "Costs",
       "title": "Initial investment",
-      "subtitle": "Our programs fixed in USD.",
-      "items": []
+      "subtitle": "Our programs fixed in USD."
     },
     "cta": {
       "eyebrow": "Next step",
