@@ -181,4 +181,48 @@ describe("locale-parity (unit, synthetic fixtures)", () => {
       expect(r.allKeys).toContain("siteName")
     })
   })
+
+  describe("intentionally-empty UI slots are NOT flagged", () => {
+    // *.cta.eyebrow, home.hero.eyebrow, etc. are empty in all 4 locales
+    // because the team deliberately omits the eyebrow line when the
+    // section doesn't use one. Every component renders
+    // `{eyebrow && <Eyebrow/>}` so an empty string is a valid state.
+    // The parity gate must NOT report these as drift/empties.
+    const r = check("intentional-empty")
+
+    it("loads all 4 locales", () => {
+      for (const l of LOCALES) expect(r.locales[l].ok).toBe(true)
+    })
+
+    it("does not flag cta.eyebrow as drift (it's empty everywhere)", () => {
+      expect(r.drift).toEqual([])
+    })
+
+    it("does not flag cta.eyebrow or home.hero.eyebrow as empty", () => {
+      for (const l of LOCALES) {
+        expect(r.empties[l], `${l} empties`).toEqual([])
+      }
+    })
+
+    it("still counts the non-empty keys (cta.title, etc.) as content", () => {
+      expect(r.allKeys).toContain("cta.title")
+      expect(r.allKeys).toContain("home.hero.headline")
+    })
+  })
+
+  describe("real empty values ARE flagged (Spanish has content, others don't)", () => {
+    // es.json has cta.eyebrow="Reserva" but en/nl/de have it empty.
+    // This is a real translation gap, not an intentional empty.
+    const r = check("real-empty")
+
+    it("flags the empty cta.eyebrow in en/nl/de", () => {
+      expect(r.empties.en).toContain("cta.eyebrow")
+      expect(r.empties.nl).toContain("cta.eyebrow")
+      expect(r.empties.de).toContain("cta.eyebrow")
+    })
+
+    it("does NOT flag cta.eyebrow as empty in es (it has content)", () => {
+      expect(r.empties.es).toEqual([])
+    })
+  })
 })
