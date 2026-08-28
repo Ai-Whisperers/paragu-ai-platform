@@ -301,7 +301,7 @@
       "subtitle": "Consulta gratuita de 30 minutos — consejo honesto, sin ventas.",
       "buttonText": "Reserva consulta",
       "buttonHref": "/contacto",
-      "eyebrow": "",
+      "eyebrow": "COMENCEMOS",
       "tagline": "",
       "whatsapp": ""
     },
@@ -511,11 +511,13 @@
         "types": [
           {
             "name": "Residencia temporal",
-            "description": "Generalmente válida por 2 años. Luego permite pedir residencia permanente."
+            "description": "Generalmente válida por 2 años. Luego permite pedir residencia permanente.",
+            "duration": "Hasta 2 años"
           },
           {
             "name": "Residencia permanente",
-            "description": "Dependiendo del caso: por vínculo familiar, inversión, Mercosur, después de temporal, o para jubilados y rentistas."
+            "description": "Dependiendo del caso: por vínculo familiar, inversión, Mercosur, después de temporal, o para jubilados y rentistas.",
+            "duration": "Indefinida"
           }
         ]
       },
@@ -666,6 +668,14 @@
             {
               "q": "¿Qué pasa si me rechazan la residencia?",
               "a": "Trabajamos en una preselección de elegibilidad antes de empezar. Si por alguna razón no procedieras, te devolvemos el 80% del pago según lo acordado en el contrato."
+            },
+            {
+              "q": "¿Cuánto tiempo toma?",
+              "a": "El tiempo total depende del programa. Lo confirmamos en la consulta inicial una vez que revisamos tu perfil."
+            },
+            {
+              "q": "¿Qué pasa si mi residencia es rechazada?",
+              "a": "Absolutamente. Trabajamos en estricto cumplimiento de la legislación paraguaya. Estamos registrados ante la SEPRELAD como sujetos obligados."
             }
           ]
         },
@@ -827,7 +837,7 @@
       "subtitle": "Reserva una consulta gratuita de 30 minutos — te responderemos todo.",
       "buttonText": "Obtén respuestas",
       "buttonHref": "/contacto",
-      "eyebrow": "",
+      "eyebrow": "COMENCEMOS",
       "tagline": "",
       "whatsapp": ""
     },
@@ -878,7 +888,8 @@
               "q": "¿El proceso es completamente legal?",
               "a": "Absolutamente. Estricto apego a la legislación paraguaya e internacional."
             }
-          ]
+          ],
+          "title": "Proceso"
         },
         {
           "id": "banking",
@@ -897,7 +908,8 @@
               "q": "Ofrecen garantía de apertura bancaria?",
               "a": "La decisión final es del banco. Garantizamos preparación profesional y coordinación institucional."
             }
-          ]
+          ],
+          "title": "Costos y pago"
         },
         {
           "id": "legal",
@@ -920,7 +932,8 @@
               "q": "Qué pasa si cambian las leyes durante mi proceso?",
               "a": "Monitoreamos el entorno regulatorio y le informamos inmediatamente si hay cambios relevantes."
             }
-          ]
+          ],
+          "title": "Empresa y banca"
         },
         {
           "id": "costs",
@@ -947,7 +960,8 @@
               "q": "Qué pasa después del primer año (Investor)?",
               "a": "Propuesta de continuidad adaptada a sus necesidades actuales."
             }
-          ]
+          ],
+          "title": "Familia y residencia"
         }
       ]
     }
@@ -1583,7 +1597,9 @@
       }
     ],
     "linkText": "Ver declaración AML completa",
-    "linkHref": "/privacidad#aml"
+    "linkHref": "/privacidad#aml",
+    "title": "Aviso de cumplimiento",
+    "content": "Nexa Paraguay está registrada como sujeto obligado ante la SEPRELAD (Secretaría de Prevención de Lavado de Dinero o Bienes). Nuestros servicios cumplen con todas las regulaciones paraguayas e internacionales aplicables, incluidos los requisitos AML/KYC. Todas las relaciones con clientes están sujetas a la debida diligencia, incluida la verificación de identidad, la verificación del origen de los fondos y la divulgación del beneficiario final."
   },
   "seprealadAttestation": {
     "title": "Formulario de atestiguación SEPRELAD",
@@ -1722,6 +1738,26 @@
           "description": "Entiende el sistema tributario paraguayo: régimen de tasa única, sistema territorial, tratados de doble imposición y cómo optimizar tu carga fiscal de forma legal.",
           "fileUrl": "",
           "ctaText": "Descargar PDF"
+        }
+      ],
+      "features": [
+        {
+          "icon": "FileText",
+          "title": "Guía: Residencia paraguaya",
+          "description": "Todo lo que necesitás para radicarte en Paraguay: cronograma, documentos, costos y requisitos.",
+          "href": "/sites/nexa-paraguay/guias/01-guia-residencia-paraguaya-espanol.md"
+        },
+        {
+          "icon": "Calculator",
+          "title": "Régimen tributario territorial",
+          "description": "Régimen territorial de Paraguay, IRE del 10% y tratamiento de rentas del extranjero, explicado para inversores europeos.",
+          "href": "/sites/nexa-paraguay/guias/02-belastingstelsel-territoriaal-espanol.md"
+        },
+        {
+          "icon": "Home",
+          "title": "Costo de vida en Asunción",
+          "description": "Presupuesto mensual realista por barrio, vivienda, educación y salud privada. (Español)",
+          "href": "/sites/nexa-paraguay/guias/03-guide-cost-of-living-asuncion-espanol.md"
         }
       ]
     },
@@ -2270,7 +2306,10 @@
     "home": {
       "title": "nexa-paraguay - Paraguay",
       "description": "Sitio web de nexa-paraguay"
-    }
+    },
+    "ogImage": "/images/brand/og-default.webp",
+    "siteDescription": "Nexa Paraguay — Tu mudanza a Paraguay, gestionada de principio a fin. Acompañamiento profesional en residencia, banca, vivienda e instalación.",
+    "twitterHandle": "@nexaparaguay"
   },
   "prensa": {
     "seo": {
@@ -2471,7 +2510,8 @@
           "image": {
             "$img": "process.consultation"
           },
-          "duration": "Week 1"
+          "duration": "Week 1",
+          "shortTitle": "Selecciona tus Servicios"
         },
         {
           "number": 2,
@@ -2483,7 +2523,8 @@
           "image": {
             "$img": "process.documents"
           },
-          "duration": "Weeks 2–5"
+          "duration": "Weeks 2–5",
+          "shortTitle": "Procesamiento Paralelo"
         },
         {
           "number": 3,
@@ -2495,7 +2536,8 @@
           "image": {
             "$img": "process.arrival"
           },
-          "duration": "Week 6"
+          "duration": "Week 6",
+          "shortTitle": "Tu Día en"
         },
         {
           "number": 4,
@@ -2507,7 +2549,8 @@
           "image": {
             "$img": "process.banking"
           },
-          "duration": "Weeks 7–9"
+          "duration": "Weeks 7–9",
+          "shortTitle": "Cédula y Activación"
         },
         {
           "number": 5,
@@ -2519,7 +2562,8 @@
           "image": {
             "$img": "process.completion"
           },
-          "duration": "Weeks 10–12"
+          "duration": "Weeks 10–12",
+          "shortTitle": "Instalación y Estilo"
         }
       ]
     },

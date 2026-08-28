@@ -1703,6 +1703,26 @@
           "fileUrl": "",
           "ctaText": "Descargar PDF"
         }
+      ],
+      "features": [
+        {
+          "icon": "FileText",
+          "title": "Guide: Paraguayan Residency",
+          "description": "Everything you need to settle in Paraguay: timeline, documents, costs and requirements.",
+          "href": "/sites/nexa-paraguay/guias/01-guia-residencia-paraguaya-english.md"
+        },
+        {
+          "icon": "Calculator",
+          "title": "Territorial Tax System",
+          "description": "Paraguay's territorial regime, 10% IRE and treatment of foreign income, explained for European investors.",
+          "href": "/sites/nexa-paraguay/guias/02-belastingstelsel-territoriaal-english.md"
+        },
+        {
+          "icon": "Home",
+          "title": "Cost of Living in Asunción",
+          "description": "Realistic monthly budget per neighborhood, housing, education and private healthcare. (English)",
+          "href": "/sites/nexa-paraguay/guias/03-guide-cost-of-living-asuncion-english.md"
+        }
       ]
     },
     "newsletter": {
@@ -2451,7 +2471,9 @@
           "duration": "Week 1",
           "image": {
             "$img": "process.consultation"
-          }
+          },
+          "timeline": "Semana 1",
+          "icon": "ClipboardCheck"
         },
         {
           "number": 2,
@@ -2462,7 +2484,9 @@
           "duration": "Weeks 2–5",
           "image": {
             "$img": "process.documents"
-          }
+          },
+          "timeline": "Semanas 2–5",
+          "icon": "Layers"
         },
         {
           "number": 3,
@@ -2473,7 +2497,9 @@
           "duration": "Week 6",
           "image": {
             "$img": "process.arrival"
-          }
+          },
+          "timeline": "Semana 6",
+          "icon": "CalendarCheck"
         },
         {
           "number": 4,
@@ -2484,7 +2510,9 @@
           "duration": "Weeks 7–10",
           "image": {
             "$img": "process.banking"
-          }
+          },
+          "timeline": "Semanas 7–9",
+          "icon": "Building"
         },
         {
           "number": 5,
@@ -2495,7 +2523,9 @@
           "duration": "Weeks 11–12",
           "image": {
             "$img": "process.completion"
-          }
+          },
+          "timeline": "Semanas 10–12",
+          "icon": "Home"
         }
       ]
     },

@@ -955,6 +955,26 @@
           "fileUrl": "",
           "ctaText": "Descargar PDF"
         }
+      ],
+      "features": [
+        {
+          "icon": "FileText",
+          "title": "Leitfaden: Paraguayische Aufenthaltserlaubnis",
+          "description": "Alles, was Sie für die Niederlassung in Paraguay brauchen: Zeitplan, Dokumente, Kosten und Anforderungen.",
+          "href": "/sites/nexa-paraguay/guias/01-guia-residencia-paraguaya-deutsch.md"
+        },
+        {
+          "icon": "Calculator",
+          "title": "Territoriales Steuersystem",
+          "description": "Paraguays territoriales System, 10% IRE und Behandlung von Auslandseinkünften, erklärt für europäische Investoren.",
+          "href": "/sites/nexa-paraguay/guias/02-belastingstelsel-territoriaal-deutsch.md"
+        },
+        {
+          "icon": "Home",
+          "title": "Lebenshaltungskosten in Asunción",
+          "description": "Realistisches Monatsbudget pro Viertel, Wohnen, Bildung und private Gesundheitsversorgung. (Deutsch)",
+          "href": "/sites/nexa-paraguay/guias/03-guide-cost-of-living-asuncion-deutsch.md"
+        }
       ]
     },
     "newsletter": {
@@ -1484,7 +1504,9 @@
           "duration": "Woche 1",
           "image": {
             "$img": "process.consultation"
-          }
+          },
+          "timeline": "Semana 1",
+          "icon": "ClipboardCheck"
         },
         {
           "number": 2,
@@ -1495,7 +1517,9 @@
           "duration": "Wochen 2–5",
           "image": {
             "$img": "process.documents"
-          }
+          },
+          "timeline": "Semanas 2–5",
+          "icon": "Layers"
         },
         {
           "number": 3,
@@ -1506,7 +1530,9 @@
           "duration": "Woche 6",
           "image": {
             "$img": "process.arrival"
-          }
+          },
+          "timeline": "Semana 6",
+          "icon": "CalendarCheck"
         },
         {
           "number": 4,
@@ -1517,7 +1543,9 @@
           "duration": "Wochen 7–10",
           "image": {
             "$img": "process.banking"
-          }
+          },
+          "timeline": "Semanas 7–9",
+          "icon": "Building"
         },
         {
           "number": 5,
@@ -1528,7 +1556,9 @@
           "duration": "Wochen 11–12",
           "image": {
             "$img": "process.completion"
-          }
+          },
+          "timeline": "Semanas 10–12",
+          "icon": "Home"
         }
       ]
     },

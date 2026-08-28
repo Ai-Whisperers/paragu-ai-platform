@@ -1935,7 +1935,9 @@
           "duration": "Week 1",
           "image": {
             "$img": "process.consultation"
-          }
+          },
+          "timeline": "Semana 1",
+          "icon": "ClipboardCheck"
         },
         {
           "number": 2,
@@ -1946,7 +1948,9 @@
           "duration": "Weken 2–5",
           "image": {
             "$img": "process.documents"
-          }
+          },
+          "timeline": "Semanas 2–5",
+          "icon": "Layers"
         },
         {
           "number": 3,
@@ -1957,7 +1961,9 @@
           "duration": "Week 6",
           "image": {
             "$img": "process.arrival"
-          }
+          },
+          "timeline": "Semana 6",
+          "icon": "CalendarCheck"
         },
         {
           "number": 4,
@@ -1968,7 +1974,9 @@
           "duration": "Weken 7–10",
           "image": {
             "$img": "process.banking"
-          }
+          },
+          "timeline": "Semanas 7–9",
+          "icon": "Building"
         },
         {
           "number": 5,
@@ -1979,7 +1987,9 @@
           "duration": "Weken 11–12",
           "image": {
             "$img": "process.completion"
-          }
+          },
+          "timeline": "Semanas 10–12",
+          "icon": "Home"
         }
       ]
     },
