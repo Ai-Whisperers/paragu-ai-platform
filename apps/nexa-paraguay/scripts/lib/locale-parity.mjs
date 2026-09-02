@@ -135,7 +135,13 @@ export function runParityCheck(opts = {}) {
     }
   }
 
-  return { locales, drift, empties, placeholders, allKeys }
+  // Spanish-in-non-es detection. This is a separate report from drift
+  // because the gate's drift count is correct (all 4 locales have the
+  // key) but the *content* in some non-es locales is in Spanish. The
+  // team should treat this as a separate category of bug.
+  const spanishInNonEs = findSpanishInNonEs(locales)
+
+  return { locales, drift, empties, placeholders, allKeys, spanishInNonEs }
 }
 
 /** Strip a trailing `.xx` locale code so per-locale sub-keys collapse
@@ -152,6 +158,102 @@ export function logicalKey(key) {
  *  in drift and emptiness reports. Currently only `_meta` is recognized. */
 export function isMetaKey(key) {
   return key === "_meta" || key.startsWith("_meta.")
+}
+
+// ---- Spanish-in-non-es detector ---------------------------------------
+//
+// The parity gate counts key presence, not content language. So a non-es
+// locale that has a real Spanish string at a path that exists in all 4
+// locales slips through: the gate sees `all 4 locales have the key`,
+// but a Dutch reader is actually shown Spanish text.
+//
+// This detector flags that class. It's intentionally conservative: false
+// negatives are OK (a translator will still see the bug when they read
+// the file), but false positives are bad (they add noise to the gate and
+// make the team ignore it).
+//
+// High-confidence Spanish markers that don't appear in en/nl/de text:
+//   - Inverted punctuation: ¿ ... ?
+//   - Spanish-specific function words used in combinations that aren't
+//     common in en/nl/de: "para qué", "qué es", "cómo ...", "escriba a",
+//     "no hay", "sí," at sentence start, "tiempo total", "crónica"
+//   - Per-character: ñ, accented vowels at non-trivial density
+//
+// We require multiple independent signals to fire, so "Guía" or "Paraguay"
+// alone (proper nouns shared with English) doesn't trigger.
+
+/** A piece of Spanish copy-paste text. The path is the dot/bracket path
+ *  in the locale's JSON. The locale is en/nl/de (we don't scan es).
+ *
+ *  Each entry is a [regex, weight] pair. The detector fires when the sum
+ *  of weights is >= 3 (tunable — see findSpanishInNonEs). Strong markers
+ *  (inverted punctuation, ñ) get higher weight. */
+const SPANISH_MARKERS = [
+  // Inverted punctuation — only Spanish uses these (very strong signal)
+  [/\B¿/, 3],
+  [/^[¿¡]/, 3],
+  // ñ — only Spanish uses this letter
+  [/ñ/, 3],
+  // Accented characters (á é í ó ú) that would be unusual in plain
+  // EN/NL/DE text — appear in loanwords but accumulate quickly in Spanish
+  [/[áéíóúüÁÉÍÓÚÜ]/, 1],
+  // Spanish-only common words (function words and nouns that don't
+  // appear in EN/NL/DE)
+  [/\b(?:está|estás|aquí|allí|información|dirección|también|cómo|cuál|cuáles|dónde|cuándo|qué|quién|quiénes|para qué|por qué|sección|secciones|número|números|teléfono|teléfonos|informes|servicio|servicios|empresa|empresas|programa|programas|condiciones|condición|información|informaciones|cliente|clientes|persona|personas|familia|familias|hijo|hijos|hermano|hermanos|esposa|esposo|menor|menores)\b/i, 1],
+  // Spanish-only phrase patterns
+  [/\b(?:para qué|por qué|cómo (?:se|se puede|se hace)|escriba (?:a|al)|no hay (?:un|una|convención|convenio)|sí, (?:puede|hay|existe|el|la|los|las)|tiempo total|el programa|sujeto obligado|base legal|trato de forma)\b/i, 2],
+  // Spanish-only verbs/nouns (no EN/NL/DE equivalent)
+  [/\b(?:escriba|incluye|incluyen|incluir|recibe|reciben|recibir|cuentan|cuenta con|siguiente|siguientes|propiedades|extranjero|extranjera|extranjeros|extranjeras|sistema (?:territorial|tributario|fiscal)|sujeta a|sometido a|cuya|cuyos|cuyas|debidamente|también|asimismo|no obstante)\b/i, 1],
+]
+
+/** Returns a list of `{path, locale, snippet}` for strings in en/nl/de
+ *  that look like Spanish copy-paste. `minLen` controls the minimum
+ *  string length to consider (default 25 chars — short strings are too
+ *  easy to mis-flag, but FAQ items are often 25-40 chars). The detection
+ *  fires when the sum of marker weights is >= 3. */
+export function findSpanishInNonEs(locales, minLen = 25) {
+  const out = []
+  for (const lang of LOCALES) {
+    if (lang === "es") continue
+    const loc = locales[lang]
+    if (!loc?.ok) continue
+    for (const path of leafStringPaths(loc.data)) {
+      if (isMetaKey(path)) continue
+      // Skip per-locale sub-keys (e.g. `aboutPage.specialist.bio.es`).
+      // These are locale-switched values, not translations of each other.
+      // The `.es` sub-key is *meant* to be Spanish, the `.en` is meant to be
+      // English, etc. So a Spanish string at a `.es` path is not a bug.
+      if (/\.[a-z]{2}(?:\[\d+\])?$/.test(path)) continue
+      const v = getAtPath(loc.data, path)
+      if (typeof v !== "string" || v.length < minLen) continue
+      // Strip URLs and code identifiers (not translatable text)
+      const stripped = v
+        .replace(/https?:\/\/\S+/g, "")
+        .replace(/@src:\w+/g, "")
+        .replace(/\{\$img:\s*\w+\}/g, "")
+        .replace(/\/sites\/[^\s]+/g, "")
+        .trim()
+      // Allow very short strings if they contain a strong signal
+      // (inverted punctuation or ñ — both unique to Spanish)
+      const isShortWithStrongSignal =
+        stripped.length < minLen &&
+        stripped.length >= 10 &&
+        (/¿/.test(stripped) || /¡/.test(stripped) || /ñ/.test(stripped))
+      if (stripped.length < minLen && !isShortWithStrongSignal) continue
+      // Sum the weights of matching markers. Inverted-punctuation and ñ
+      // count for 3 each (very strong signals); word/phrase markers count
+      // for 1 or 2. Threshold of 3 means: either one very-strong signal,
+      // or one phrase + one word, or three words.
+      let score = 0
+      for (const [re, weight] of SPANISH_MARKERS) {
+        if (re.test(stripped)) score += weight
+      }
+      if (score >= 3) {
+        out.push({ path, locale: lang, snippet: v.slice(0, 120), score })
+      }
+    }
+  }
+  return out
 }
 
 function getAtPath(obj, path) {
@@ -215,6 +317,27 @@ export function formatReport(r) {
       lines.push(`  - ${k}  missing in: ${missing.join(", ")}`)
     }
     if (r.drift.length > 30) lines.push(`  …and ${r.drift.length - 30} more`)
+  }
+
+  if (r.spanishInNonEs && r.spanishInNonEs.length) {
+    lines.push("")
+    lines.push(
+      `Spanish copy-paste in non-es locales (${r.spanishInNonEs.length} — the gate counts keys, not content language; this catches Spanish text appearing in en/nl/de):`
+    )
+    // Group by locale for readability
+    const byLocale = { en: [], nl: [], de: [] }
+    for (const item of r.spanishInNonEs) byLocale[item.locale]?.push(item)
+    for (const l of LOCALES) {
+      if (l === "es") continue
+      const items = byLocale[l]
+      if (!items?.length) continue
+      lines.push(`  ${l} (${items.length}):`)
+      for (const item of items.slice(0, 20)) {
+        lines.push(`    - ${item.path}  [score=${item.score}]`)
+        lines.push(`        ${item.snippet}`)
+      }
+      if (items.length > 20) lines.push(`    …and ${items.length - 20} more`)
+    }
   }
 
   return lines.join("\n")

@@ -1,0 +1,15 @@
+{
+  "siteName": "Nexa Paraguay",
+  "hero": {
+    "headline": "Vivir bien en Paraguay"
+  },
+  "policy": {
+    "intro": "Nexa Paraguay está registrada como sujeto obligado ante SEPRELAD. La información personal se trata de forma confidencial y solo se utiliza para los fines del servicio contratado. La base legal del tratamiento es la ejecución del contrato."
+  },
+  "questions": [
+    {
+      "q": "¿Cómo ejerzo mis derechos?",
+      "a": "Escriba a paraguaynexa@gmail.com y responderemos en un plazo máximo de 30 días."
+    }
+  ]
+}

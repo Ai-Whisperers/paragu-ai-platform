@@ -1,0 +1,15 @@
+{
+  "siteName": "Nexa Paraguay",
+  "hero": {
+    "headline": "Goed wonen in Paraguay"
+  },
+  "policy": {
+    "intro": "Nexa Paraguay is geregistreerd als verplichte entiteit bij SEPRELAD. Persoonlijke informatie wordt vertrouwelijk behandeld."
+  },
+  "questions": [
+    {
+      "q": "¿Cómo ejerzo mis derechos?",
+      "a": "Stuur ons een e-mail naar paraguaynexa@gmail.com en we reageren binnen maximaal 30 dagen."
+    }
+  ]
+}

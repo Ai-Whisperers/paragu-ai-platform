@@ -1,0 +1,15 @@
+{
+  "siteName": "Nexa Paraguay",
+  "hero": {
+    "headline": "Gut leben in Paraguay"
+  },
+  "policy": {
+    "intro": "Nexa Paraguay ist als Verpflichteter bei SEPRELAD registriert. Personenbezogene Daten werden vertraulich behandelt."
+  },
+  "questions": [
+    {
+      "q": "¿Cómo ejerzo mis derechos?",
+      "a": "Schreiben Sie an paraguaynexa@gmail.com und wir antworten innerhalb von maximal 30 Tagen."
+    }
+  ]
+}

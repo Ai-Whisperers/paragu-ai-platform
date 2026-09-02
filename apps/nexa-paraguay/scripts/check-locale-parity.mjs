@@ -24,6 +24,7 @@ const allLoaded = LOCALES.every((l) => result.locales[l].ok)
 const hasDrift = result.drift.length > 0
 const hasEmpties = LOCALES.some((l) => result.empties[l].length > 0)
 const hasPlaceholders = LOCALES.some((l) => result.placeholders[l].length > 0)
+const hasSpanishCopyPaste = (result.spanishInNonEs?.length ?? 0) > 0
 
 const report = formatReport(result)
 
@@ -34,7 +35,7 @@ if (!allLoaded) {
   process.exit(2)
 }
 
-if (hasDrift || hasEmpties || hasPlaceholders) {
+if (hasDrift || hasEmpties || hasPlaceholders || hasSpanishCopyPaste) {
   console.error(report)
   console.error("")
   console.error("FAILED: locale drift detected.")
@@ -48,6 +49,11 @@ if (hasDrift || hasEmpties || hasPlaceholders) {
   if (hasPlaceholders) {
     const total = LOCALES.reduce((n, l) => n + result.placeholders[l].length, 0)
     console.error(`  - ${total} untranslated [ES→XX] placeholder(s) — translate and remove marker`)
+  }
+  if (hasSpanishCopyPaste) {
+    console.error(
+      `  - ${result.spanishInNonEs.length} Spanish copy-paste string(s) appearing in en/nl/de — translate and remove Spanish`
+    )
   }
   console.error("")
   console.error("To re-seed missing keys with placeholders (so the site stays up):")

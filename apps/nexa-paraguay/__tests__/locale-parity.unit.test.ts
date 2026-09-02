@@ -21,6 +21,7 @@ interface ParityResult {
   placeholders: Record<Locale, string[]>
   allKeys: string[]
   locales: Record<Locale, { ok: boolean; data: unknown; error?: string }>
+  spanishInNonEs: { path: string; locale: string; snippet: string; score: number }[]
 }
 
 const fixturesRoot = "__tests__/fixtures/locale-parity"
@@ -223,6 +224,55 @@ describe("locale-parity (unit, synthetic fixtures)", () => {
 
     it("does NOT flag cta.eyebrow as empty in es (it has content)", () => {
       expect(r.empties.es).toEqual([])
+    })
+  })
+
+  describe("Spanish copy-paste in non-es locales", () => {
+    // Fixture: en.json has 3 strings in Spanish (policy.intro, questions[0].q,
+    // questions[0].a); nl.json and de.json have 1 each (questions[0].q).
+    // The drift/empties/placeholders checks miss these because the keys
+    // exist in all 4 locales — but the *content* is Spanish.
+    const r = check("spanish-copy-paste")
+
+    it("loads all 4 locales", () => {
+      for (const l of LOCALES) {
+        expect(r.locales[l].ok, `load ${l}: ${r.locales[l].error}`).toBe(true)
+      }
+    })
+
+    it("does not flag drift, empties, or placeholders (the keys all exist)", () => {
+      expect(r.drift, formatReport(r as never)).toEqual([])
+      for (const l of LOCALES) {
+        expect(r.empties[l]).toEqual([])
+        expect(r.placeholders[l]).toEqual([])
+      }
+    })
+
+    it("flags Spanish copy-paste in en (3 strings)", () => {
+      const en = r.spanishInNonEs.filter((i) => i.locale === "en")
+      const paths = en.map((i) => i.path).sort()
+      expect(paths).toEqual(["policy.intro", "questions[0].a", "questions[0].q"])
+    })
+
+    it("flags Spanish copy-paste in nl (1 string)", () => {
+      const nl = r.spanishInNonEs.filter((i) => i.locale === "nl")
+      expect(nl.map((i) => i.path).sort()).toEqual(["questions[0].q"])
+    })
+
+    it("flags Spanish copy-paste in de (1 string)", () => {
+      const de = r.spanishInNonEs.filter((i) => i.locale === "de")
+      expect(de.map((i) => i.path).sort()).toEqual(["questions[0].q"])
+    })
+
+    it("does not scan es (no items reported for es locale)", () => {
+      expect(r.spanishInNonEs.filter((i) => i.locale === "es")).toEqual([])
+    })
+
+    it("gives inverted-punctuation strings a strong score (weight 3+3=6 minimum)", () => {
+      const inverted = r.spanishInNonEs.filter((i) => i.snippet.includes("¿"))
+      for (const item of inverted) {
+        expect(item.score).toBeGreaterThanOrEqual(6)
+      }
     })
   })
 })
