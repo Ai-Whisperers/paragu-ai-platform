@@ -141,7 +141,17 @@ export function runParityCheck(opts = {}) {
   // team should treat this as a separate category of bug.
   const spanishInNonEs = findSpanishInNonEs(locales)
 
-  return { locales, drift, empties, placeholders, allKeys, spanishInNonEs }
+  // Sub-key consistency: when es.json has a per-locale sub-object
+  // {es, en, nl, de}, the .en/.nl/.de sub-keys should be the canonical
+  // translations stored in en.json/nl.json/de.json at the same path.
+  // If they diverge, a Spanish user sees the .es sub-key value (correct)
+  // but an English user on /en/... sees a different translation than a
+  // Spanish speaker on /es/... would think they're reading. This is a
+  // content-architecture issue (two separate translations exist for the
+  // same logical field), reported as 'subKeyMismatches'.
+  const subKeyMismatches = findSubKeyMismatches(locales)
+
+  return { locales, drift, empties, placeholders, allKeys, spanishInNonEs, subKeyMismatches }
 }
 
 /** Strip a trailing `.xx` locale code so per-locale sub-keys collapse
@@ -274,6 +284,81 @@ function getAtPath(obj, path) {
   return cur
 }
 
+/** Find per-locale sub-key consistency mismatches.
+ *
+ * For each path where es.json has a per-locale sub-object {es, en, nl, de},
+ * the .en/.nl/.de sub-keys should be the canonical translations stored in
+ * en.json/nl.json/de.json at the same path. If they diverge, the content
+ * team has been editing the sub-object versions and the top-level versions
+ * independently, producing two different translations for the same field.
+ *
+ * Returns an array of {path, lang, subKey, esValue, otherValue} entries.
+ * This is a content-architecture issue (two translations exist for the
+ * same logical field), not a translation bug per se. The gate reports it
+ * as a separate category so the team can pick which version to canonicalize.
+ */
+export function findSubKeyMismatches(locales) {
+  const out = []
+  const es = locales.es
+  if (!es?.ok) return out
+
+  function* walk(o, path = "") {
+    if (Array.isArray(o)) {
+      for (let i = 0; i < o.length; i++) yield* walk(o[i], `${path}[${i}]`)
+      return
+    }
+    if (o && typeof o === "object") {
+      const keys = Object.keys(o)
+      if (
+        keys.length > 0 &&
+        keys.length === LOCALES.length &&
+        LOCALES.every((l) => keys.includes(l)) &&
+        keys.every((k) => typeof o[k] === "string")
+      ) {
+        // This is a per-locale sub-object.
+        yield path
+        return
+      }
+      for (const [k, v] of Object.entries(o)) {
+        yield* walk(v, path ? `${path}.${k}` : k)
+      }
+    }
+  }
+
+  for (const path of walk(es.data)) {
+    // es.json has a per-locale sub-object at this path
+    const esSub = getAtPath(es.data, path)
+    if (!esSub) continue
+    for (const targetLang of LOCALES) {
+      if (targetLang === "es") continue
+      const targetVal = getAtPath(locales[targetLang]?.data ?? {}, path)
+      // The target locale either has a per-locale sub-object (compare
+      // .targetLang sub-key) or a plain string (compare directly).
+      let targetTranslation
+      if (typeof targetVal === "object" && targetVal !== null) {
+        targetTranslation = targetVal[targetLang]
+      } else if (typeof targetVal === "string") {
+        targetTranslation = targetVal
+      }
+      // Compare: the .targetLang sub-key in esSub should match the
+      // canonical translation in targetLang.json
+      const esSubVal = esSub[targetLang]
+      if (typeof esSubVal === "string" && typeof targetTranslation === "string") {
+        if (esSubVal !== targetTranslation && esSubVal !== "" && targetTranslation !== "") {
+          out.push({
+            path,
+            lang: targetLang,
+            subKey: targetLang,
+            esValue: esSubVal,
+            otherValue: targetTranslation,
+          })
+        }
+      }
+    }
+  }
+  return out
+}
+
 /** Human-readable report used by both the test (on failure) and the CLI. */
 export function formatReport(r) {
   const lines = []
@@ -337,6 +422,26 @@ export function formatReport(r) {
         lines.push(`        ${item.snippet}`)
       }
       if (items.length > 20) lines.push(`    …and ${items.length - 20} more`)
+    }
+  }
+
+  if (r.subKeyMismatches && r.subKeyMismatches.length) {
+    lines.push("")
+    lines.push(
+      `Per-locale sub-key mismatches (${r.subKeyMismatches.length} — es.json's per-locale sub-object and en/nl/de.json's value at the same path have drifted apart. This means a Spanish reader on /es/... and an English reader on /en/... see different translations of the same field. Pick one as canonical and copy across):`
+    )
+    const byLocale = { en: [], nl: [], de: [] }
+    for (const item of r.subKeyMismatches) byLocale[item.lang]?.push(item)
+    for (const l of LOCALES) {
+      if (l === "es") continue
+      const items = byLocale[l]
+      if (!items?.length) continue
+      lines.push(`  ${l} (${items.length}):`)
+      for (const item of items.slice(0, 10)) {
+        lines.push(`    - ${item.path}.${item.subKey} (es.json.${item.subKey}): ${item.esValue.slice(0, 50) || "(empty)"}`)
+        lines.push(`      vs ${item.path} (${l}.json): ${item.otherValue.slice(0, 50) || "(empty)"}`)
+      }
+      if (items.length > 10) lines.push(`    …and ${items.length - 10} more`)
     }
   }
 

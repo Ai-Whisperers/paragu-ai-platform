@@ -25,6 +25,7 @@ const hasDrift = result.drift.length > 0
 const hasEmpties = LOCALES.some((l) => result.empties[l].length > 0)
 const hasPlaceholders = LOCALES.some((l) => result.placeholders[l].length > 0)
 const hasSpanishCopyPaste = (result.spanishInNonEs?.length ?? 0) > 0
+const hasSubKeyMismatches = (result.subKeyMismatches?.length ?? 0) > 0
 
 const report = formatReport(result)
 
@@ -35,7 +36,7 @@ if (!allLoaded) {
   process.exit(2)
 }
 
-if (hasDrift || hasEmpties || hasPlaceholders || hasSpanishCopyPaste) {
+if (hasDrift || hasEmpties || hasPlaceholders || hasSpanishCopyPaste || hasSubKeyMismatches) {
   console.error(report)
   console.error("")
   console.error("FAILED: locale drift detected.")
@@ -53,6 +54,11 @@ if (hasDrift || hasEmpties || hasPlaceholders || hasSpanishCopyPaste) {
   if (hasSpanishCopyPaste) {
     console.error(
       `  - ${result.spanishInNonEs.length} Spanish copy-paste string(s) appearing in en/nl/de — translate and remove Spanish`
+    )
+  }
+  if (hasSubKeyMismatches) {
+    console.error(
+      `  - ${result.subKeyMismatches.length} per-locale sub-key mismatch(es) — es.json's per-locale sub-object and en/nl/de.json's value at the same path have drifted`
     )
   }
   console.error("")

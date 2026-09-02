@@ -523,15 +523,15 @@
     "testimonials": {
       "eyebrow": {
         "es": "Casos de éxito",
-        "en": "Success Stories",
-        "nl": "Succesverhalen",
-        "de": "Erfolgsgeschichten"
+        "en": "WHAT THEY SAY",
+        "nl": "WAT ZE ZEGGEN",
+        "de": "WAS SIE SAGEN"
       },
       "title": {
         "es": "Lo que dicen nuestros clientes",
-        "en": "What Our Clients Say",
-        "nl": "Wat Onze Klanten Zeggen",
-        "de": "Was Unsere Kunden Sagen"
+        "en": "Verified testimonials",
+        "nl": "Geverifieerde getuigenissen",
+        "de": "Verifizierte Referenzen"
       },
       "items": [
         {
@@ -541,9 +541,9 @@
           "program": "business",
           "quote": {
             "es": "Después de 12 semanas teníamos nuestra residencia, empresa y cuenta bancaria en Paraguay. El equipo de Sonia hizo todo incredibly bien.",
-            "en": "After 12 weeks we had our residency, company and bank account in Paraguay. Sonia's team was exceptional throughout.",
-            "nl": "Na 12 weken hadden we onze verblijfsvergunning, bedrijf en bankrekening in Paraguay. Sonja's team was uitzonderlijk.",
-            "de": "Nach 12 Wochen hatten wir unsere Aufenthaltsgenehmigung, unser Unternehmen und unser Bankkonto in Paraguay. Sonjas Team war außergewöhnlich."
+            "en": "From the first call I felt I was talking to someone who actually understood both sides. The fiscal plan saved me a year of trial and error.",
+            "nl": "Vanaf het eerste gesprek had ik het gevoel dat ik met iemand sprak die beide kanten echt begreep. Het fiscale plan heeft me een jaar proberen bespaard.",
+            "de": "Vom ersten Anruf an hatte ich das Gefühl, mit jemandem zu sprechen, der beide Seiten wirklich versteht. Der Steuerplan hat mir ein Jahr Versuch und Irrtum erspart."
           },
           "image": "@src:testimonials.tm1"
         },
@@ -554,9 +554,9 @@
           "program": "investor",
           "quote": {
             "es": "La coordinación bancaria era la parte más difícil y Nexa lo manejó todo. No tuve que preocuparme por nada.",
-            "en": "The banking coordination was the hardest part and Nexa handled everything. I didn't have to worry about a thing.",
-            "nl": "De bankcoördinatie was het moeilijkste onderdeel en Nexa regelde alles. Ik hoefde nergens over in te zitten.",
-            "de": "Die Bankkoordination war der schwierigste Teil und Nexa hat alles erledigt. Ich musste mir keine Sorgen machen."
+            "en": "They coordinated my residency, company, and bank in eight weeks. Exactly what was promised.",
+            "nl": "Ze coördineerden mijn verblijf, bedrijf en bank in acht weken. Precies wat beloofd was.",
+            "de": "Sie koordinierten meinen Aufenthalt, mein Unternehmen und meine Bank in acht Wochen. Genau das, was versprochen wurde."
           },
           "image": "@src:testimonials.tm2"
         },
@@ -567,9 +567,9 @@
           "program": "base",
           "quote": {
             "es": "Estaba nerviosa por el proceso pero Nexa lo hizo fácil. Un solo viaje, todo solucionado.",
-            "en": "I was nervous about the process but Nexa made it seamless. One trip, everything done.",
-            "nl": "Ik was nerveus over het proces maar Nexa maakte het naadloos. Eén reis, alles geregeld.",
-            "de": "Ich war nervös wegen des Prozesses, aber Nexa hat alles nahtlos gemacht. Eine Reise, alles erledigt."
+            "en": "I was nervous about the process but Nexa made it easy. One trip, everything solved.",
+            "nl": "Ik was nerveus over het proces, maar Nexa maakte het makkelijk. Eén reis, alles opgelost.",
+            "de": "Ich war nervös wegen des Prozesses, aber Nexa hat es einfach gemacht. Eine Reise, alles gelöst."
           },
           "image": "@src:testimonials.tm3"
         },
@@ -580,9 +580,9 @@
           "program": "land",
           "quote": {
             "es": "Compré tierras en Paraguay con la guía de Nexa. El due diligence legal fue exhaustivo.",
-            "en": "Bought land in Paraguay with Nexa's guidance. The legal due diligence was thorough.",
-            "nl": "Grond gekocht in Paraguay met begeleiding van Nexa. De juridische due diligence was grondig.",
-            "de": "Habe Land in Paraguay mit der Anleitung von Nexa gekauft. Die rechtliche Due Diligence war gründlich."
+            "en": "Bought land in Paraguay with Nexa's guidance. The legal due diligence was thorough and the closing was smooth.",
+            "nl": "Kocht land in Paraguay met begeleiding van Nexa. De juridische due diligence was grondig en de afsluiting verliep soepel.",
+            "de": "Ich habe mit Nexas Begleitung Land in Paraguay gekauft. Die rechtliche Due Diligence war gründlich und der Abschluss verlief reibungslos."
           },
           "image": "@src:testimonials.tm4"
         }
@@ -598,9 +598,9 @@
       },
       "bio": {
         "es": "Paraguaya, casada con un ciudadano neerlandés. Vivió en carne propia la mudanza internacional de su familia y fundó Nexa para acompañar a quienes quieren una buena vida en Paraguay, no solo un permiso.",
-        "en": "Paraguayan, married to a Dutch national. She personally navigated her family's international relocation and founded Nexa to support people building a life in Paraguay, not just getting a permit.",
+        "en": "Paraguayan, married to a Dutch national. She personally lived through her family’s international relocation and founded Nexa to support people who want a good life in Paraguay, not just a permit.",
         "nl": "Paraguayaanse, getrouwd met een Nederlandse staatsburger. Doorliep zelf de internationale verhuizing van haar gezin en richtte Nexa op om mensen te begeleiden naar een goed leven in Paraguay, niet alleen een vergunning.",
-        "de": "Paraguayerin, verheiratet mit einem niederländischen Staatsbürger. Sie durchlief persönlich die internationale Umsiedlung ihrer Familie und gründete Nexa, um Menschen beim Aufbau eines guten Lebens in Paraguay zu begleiten, nicht nur bei einer Genehmigung."
+        "de": "Paraguayerin, verheiratet mit einem niederländischen Staatsbürger. Sie durchlief persönlich die internationale Umsiedlung ihrer Familie und gründete Nexa, um Menschen beim Aufbau eines guten Lebens in Paraguay zu begleiten — nicht nur bei einer Genehmigung."
       },
       "image": "@src:team.sonia",
       "credentials": [
@@ -884,9 +884,9 @@
       "address": "Asunción, Paraguay",
       "hours": {
         "es": "Lunes a Viernes 9-18h",
-        "en": "Monday to Friday 9-18h",
-        "nl": "Maandag tot vrijdag 9-18h",
-        "de": "Montag bis Freitag 9-18h"
+        "en": "Monday to Friday 9-18h ART",
+        "nl": "Maandag tot vrijdag 9-18h ART",
+        "de": "Montag bis Freitag 9-18h ART"
       },
       "languages": [
         "ES · EN · NL · DE"

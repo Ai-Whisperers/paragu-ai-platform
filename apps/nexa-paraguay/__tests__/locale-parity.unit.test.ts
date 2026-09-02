@@ -22,6 +22,7 @@ interface ParityResult {
   allKeys: string[]
   locales: Record<Locale, { ok: boolean; data: unknown; error?: string }>
   spanishInNonEs: { path: string; locale: string; snippet: string; score: number }[]
+  subKeyMismatches: { path: string; lang: string; subKey: string; esValue: string; otherValue: string }[]
 }
 
 const fixturesRoot = "__tests__/fixtures/locale-parity"
@@ -273,6 +274,36 @@ describe("locale-parity (unit, synthetic fixtures)", () => {
       for (const item of inverted) {
         expect(item.score).toBeGreaterThanOrEqual(6)
       }
+    })
+  })
+
+  describe("per-locale sub-key consistency", () => {
+    // Fixture: es.json has a sub-object {es, en, nl, de} for headline.
+    // en.json's headline value differs from es.json's .en sub-key (mismatch).
+    // nl.json's headline value matches es.json's .nl sub-key (consistent).
+    // de.json's headline value differs from es.json's .de sub-key (mismatch).
+    const r = check("sub-key-consistency-mismatch")
+
+    it("flags en.json's headline as a sub-key mismatch", () => {
+      const en_mismatches = r.subKeyMismatches.filter((m) => m.lang === "en")
+      expect(en_mismatches.length).toBe(1)
+      expect(en_mismatches[0].path).toBe("headline")
+      expect(en_mismatches[0].subKey).toBe("en")
+    })
+
+    it("flags de.json's headline as a sub-key mismatch", () => {
+      const de_mismatches = r.subKeyMismatches.filter((m) => m.lang === "de")
+      expect(de_mismatches.length).toBe(1)
+      expect(de_mismatches[0].path).toBe("headline")
+    })
+
+    it("does NOT flag nl.json's headline (matches es.json's .nl sub-key)", () => {
+      const nl_mismatches = r.subKeyMismatches.filter((m) => m.lang === "nl")
+      expect(nl_mismatches).toEqual([])
+    })
+
+    it("does not scan es (no items reported for es locale)", () => {
+      expect(r.subKeyMismatches.filter((m) => m.lang === "es")).toEqual([])
     })
   })
 })
