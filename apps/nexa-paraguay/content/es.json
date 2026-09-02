@@ -301,9 +301,7 @@
       "subtitle": "Consulta gratuita de 30 minutos — consejo honesto, sin ventas.",
       "buttonText": "Reserva consulta",
       "buttonHref": "/contacto",
-      "eyebrow": "COMENCEMOS",
-      "tagline": "",
-      "whatsapp": ""
+      "eyebrow": "COMENCEMOS"
     },
     "process": {
       "eyebrow": "Cómo funciona",
@@ -837,9 +835,7 @@
       "subtitle": "Reserva una consulta gratuita de 30 minutos — te responderemos todo.",
       "buttonText": "Obtén respuestas",
       "buttonHref": "/contacto",
-      "eyebrow": "COMENCEMOS",
-      "tagline": "",
-      "whatsapp": ""
+      "eyebrow": "COMENCEMOS"
     },
     "story": {
       "title": "Nuestra Historia",
@@ -1706,7 +1702,10 @@
       }
     ]
   },
-  "whatsapp": "595982515138",
+  "whatsapp": {
+    "buttonText": "WhatsApp",
+    "message": "Hola, me interesa recibir más información sobre Nexa Paraguay."
+  },
   "resourcesPage": {
     "seo": {
       "title": "Recursos — Nexa Paraguay",
