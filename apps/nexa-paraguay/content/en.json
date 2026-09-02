@@ -1,14 +1,6 @@
 {
   "siteName": "Nexa Paraguay",
   "tagline": "Close guidance for your relocation to Paraguay",
-  "placeholders": {
-    "country": "Paraguay",
-    "capital": "Asunción",
-    "currency": "USD",
-    "taxRate": "Flat-rate regime",
-    "processWeeks": "Personalised timeline",
-    "flagEmoji": "🇵🇾"
-  },
   "navigation": {
     "businessName": "Nexa Paraguay",
     "navItems": [
@@ -805,116 +797,6 @@
         "Sonia is Paraguayan. She lived 7 years in the Netherlands, where she initially worked in the cleaning industry.",
         "What was hardest about coming back was reinventing herself culturally. The paperwork was complicated, but the hardest part was rebuilding her life in a country that was both hers and foreign at the same time.",
         "Nexa Paraguay is exactly that: almost-family accompaniment for European citizens who decide to live in Paraguay."
-      ]
-    },
-    "faq": {
-      "eyebrow": "FAQ",
-      "title": "Questions by topic",
-      "categories": [
-        {
-          "title": "Process",
-          "items": [
-            {
-              "q": "How long does the whole process take?",
-              "a": "In-person filing: a single day. Residency and ID issuance follow the regular processing windows. We accompany you end to end."
-            },
-            {
-              "q": "How many trips do I need to make to Paraguay?",
-              "a": "Our program is designed so that a single trip is sufficient for the operational day. After that, you only need to travel if you want to oversee the case in person or for personal matters."
-            },
-            {
-              "q": "What if a document is missing?",
-              "a": "We detect it before your trip. Our pre-validation guarantees that you arrive in Paraguay with everything you need."
-            },
-            {
-              "q": "What happens if laws change during my process?",
-              "a": "We monitor the regulatory environment and inform you immediately if there are changes that affect your case."
-            },
-            {
-              "q": "Is the process fully legal?",
-              "a": "It is not necessary. Although the process is conducted in Spanish, we work with sworn translators and accompany you to every appointment."
-            }
-          ],
-          "id": "immigration",
-          "label": {
-            "de": "Einwanderung",
-            "en": "Immigration",
-            "es": "Inmigración",
-            "nl": "Immigratie"
-          }
-        },
-        {
-          "title": "Costs and payment",
-          "items": [
-            {
-              "q": "What does the price include?",
-              "a": "Professional fees, VAT, official rates, banking coordination, property tour (when applicable), and full accompaniment during the operational day."
-            },
-            {
-              "q": "What is NOT included?",
-              "a": "International flights, accommodation, personal expenses, certified translations and apostilles in your country of origin."
-            }
-          ],
-          "id": "banking",
-          "label": {
-            "de": "Bankwesen & Finanzen",
-            "en": "Banking & Finance",
-            "es": "Banca y Finanzas",
-            "nl": "Bankieren & Financiën"
-          }
-        },
-        {
-          "title": "Company and banking",
-          "items": [
-            {
-              "q": "Can I open a bank account as a foreigner?",
-              "a": "Yes. It is the most complex process, but we prepare your financial profile and coordinate everything with the bank to maximize success."
-            },
-            {
-              "q": "What type of company is formed?",
-              "a": "Our legal team recommends the most convenient corporate type (generally S.A. for liability protection). We explain the differences during the consultation."
-            },
-            {
-              "q": "Do you offer a bank account opening guarantee?",
-              "a": "The final decision is the bank's. We guarantee professional preparation and coordination — if there are objective reasons for rejection, we help you with alternatives."
-            }
-          ],
-          "id": "legal",
-          "label": {
-            "de": "Recht & Gesellschaft",
-            "en": "Legal & Company",
-            "es": "Legal y Sociedad",
-            "nl": "Juridisch & Bedrijf"
-          }
-        },
-        {
-          "title": "Family and residency",
-          "items": [
-            {
-              "q": "Can I bring my family?",
-              "a": "Yes. Each family member requires their own residency process. We coordinate cases together to maximize efficiency."
-            },
-            {
-              "q": "Can I keep my original citizenship?",
-              "a": "Yes, Paraguay allows dual citizenship with most countries. You will not lose your original nationality."
-            },
-            {
-              "q": "How long can I be outside Paraguay without losing my residency?",
-              "a": "Permanent residency requires you to be physically in Paraguay at least 1 day every 3 years. Temporary residency has more specific requirements — we explain them during the consultation."
-            },
-            {
-              "q": "What is the difference between permanent residency and citizenship?",
-              "a": "Permanent residency allows you to live, work, and own property in Paraguay indefinitely, with the requirement of visiting at least 1 day every 3 years. Paraguayan citizenship requires 3 years of residency, renouncing your original citizenship (except for nationals of Spain, Italy, and a few other countries with bilateral agreements), and confers voting rights and a Paraguayan passport."
-            }
-          ],
-          "id": "costs",
-          "label": {
-            "de": "Kosten & Zahlung",
-            "en": "Costs & Payment",
-            "es": "Costos y Pago",
-            "nl": "Kosten & Betaling"
-          }
-        }
       ]
     }
   },

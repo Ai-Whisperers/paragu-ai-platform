@@ -1186,116 +1186,6 @@
         "Het moeilijkste aan de terugkeer was zichzelf cultureel heruitvinden. Het papierwerk was ingewikkeld, maar het moeilijkste was haar leven opnieuw opbouwen in een land dat tegelijkertijd van haar en vreemd was.",
         "Nexa Paraguay is precies dat: bijna-familiaire begeleiding voor Europese burgers die besluiten in Paraguay te wonen."
       ]
-    },
-    "faq": {
-      "eyebrow": "FAQ",
-      "title": "Vragen per onderwerp",
-      "categories": [
-        {
-          "title": "Proces",
-          "items": [
-            {
-              "q": "Hoe lang duurt het hele proces?",
-              "a": "Persoonlijke indiening: één enkele dag. Verlening van verblijf en identiteitskaart volgen de reguliere verwerkingsvensters. We begeleiden je van begin tot eind."
-            },
-            {
-              "q": "Hoeveel reizen moet ik naar Paraguay maken?",
-              "a": "Ons programma is zo ontworpen dat één enkele reis voldoende is voor de operationele dag. Daarna hoeft u alleen te reizen als u de zaak persoonlijk wilt volgen of voor persoonlijke zaken."
-            },
-            {
-              "q": "Wat als een document ontbreekt?",
-              "a": "We detecteren het voor uw reis. Onze voorvalidatie garandeert dat u in Paraguay aankomt met alles wat u nodig heeft."
-            },
-            {
-              "q": "Wat gebeurt er als de wetten veranderen tijdens mijn proces?",
-              "a": "Wij volgen de regelgevende omgeving en informeren u onmiddellijk als er wijzigingen zijn die uw zaak beïnvloeden."
-            },
-            {
-              "q": "Is het proces volledig legaal?",
-              "a": "Het is niet noodzakelijk. Hoewel het proces in het Spaans verloopt, werken we met beëdigde vertalers en begeleiden we u bij elke afspraak."
-            }
-          ],
-          "id": "immigration",
-          "label": {
-            "de": "Einwanderung",
-            "en": "Immigration",
-            "es": "Inmigración",
-            "nl": "Immigratie"
-          }
-        },
-        {
-          "title": "Kosten en betaling",
-          "items": [
-            {
-              "q": "Wat is inbegrepen in de prijs?",
-              "a": "Professionele honoraria, BTW, officiële tarieven, bankencoördinatie, vastgoedbezichtiging (indien van toepassing) en volledige begeleiding op de operationele dag."
-            },
-            {
-              "q": "Wat is NIET inbegrepen?",
-              "a": "Internationale vluchten, accommodatie, persoonlijke uitgaven, beëdigde vertalingen en apostilles in uw land van herkomst."
-            }
-          ],
-          "id": "banking",
-          "label": {
-            "de": "Bankwesen & Finanzen",
-            "en": "Banking & Finance",
-            "es": "Banca y Finanzas",
-            "nl": "Bankieren & Financiën"
-          }
-        },
-        {
-          "title": "Bedrijf en bankieren",
-          "items": [
-            {
-              "q": "Kan ik als buitenlander een bankrekening openen?",
-              "a": "Ja. Het is het meest complexe proces, maar wij bereiden uw financieel profiel voor en coördineren alles met de bank om het succes te maximaliseren."
-            },
-            {
-              "q": "Welk type bedrijf wordt opgericht?",
-              "a": "Ons juridisch team beveelt het meest geschikte bedrijfstype aan (meestal S.A. voor aansprakelijkheidsbescherming). We leggen de verschillen uit tijdens het consult."
-            },
-            {
-              "q": "Bieden jullie garantie op bankrekeningopening?",
-              "a": "De eindbeslissing is aan de bank. Wij garanderen professionele voorbereiding en coördinatie — als er objectieve redenen voor afwijzing zijn, helpen we u met alternatieven."
-            }
-          ],
-          "id": "legal",
-          "label": {
-            "de": "Recht & Gesellschaft",
-            "en": "Legal & Company",
-            "es": "Legal y Sociedad",
-            "nl": "Juridisch & Bedrijf"
-          }
-        },
-        {
-          "title": "Familie en verblijf",
-          "items": [
-            {
-              "q": "Kan ik mijn familie meenemen?",
-              "a": "Ja. Elk familielid heeft een eigen verblijfsproces nodig. Wij coördineren de zaken samen om de efficiëntie te maximaliseren."
-            },
-            {
-              "q": "Kan ik mijn oorspronkelijke nationaliteit behouden?",
-              "a": "Ja, Paraguay staat dubbele nationaliteit toe met de meeste landen. U verliest uw oorspronkelijke nationaliteit niet."
-            },
-            {
-              "q": "Hoe lang kan ik buiten Paraguay zijn zonder mijn verblijf te verliezen?",
-              "a": "Permanent verblijf vereist dat u minstens 1 dag per 3 jaar fysiek in Paraguay aanwezig bent. Tijdelijk verblijf heeft specifiekere vereisten — we leggen ze uit tijdens het consult."
-            },
-            {
-              "q": "Wat is het verschil tussen permanent verblijf en staatsburgerschap?",
-              "a": "Permanent verblijf staat u toe om onbeperkt in Paraguay te wonen, te werken en eigendom te bezitten, met de vereiste om minstens 1 dag per 3 jaar op bezoek te komen. Het Paraguayaanse staatsburgerschap vereist 3 jaar verblijf, afstand doen van uw oorspronkelijke nationaliteit (behalve voor onderdanen van Spanje, Italië en enkele andere landen met bilaterale akkoorden), en geeft stemrecht en een Paraguayaans paspoort."
-            }
-          ],
-          "id": "costs",
-          "label": {
-            "de": "Kosten & Zahlung",
-            "en": "Costs & Payment",
-            "es": "Costos y Pago",
-            "nl": "Kosten & Betaling"
-          }
-        }
-      ]
     }
   },
   "footer": {
@@ -1695,14 +1585,6 @@
         "href": "/contacto"
       }
     ]
-  },
-  "placeholders": {
-    "capital": "Asunción",
-    "country": "Paraguay",
-    "currency": "USD",
-    "flagEmoji": "🇵🇾",
-    "processWeeks": "Persoonlijk tijdschema",
-    "taxRate": "Vlak tarief"
   },
   "prensa": {
     "hero": {

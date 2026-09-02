@@ -1,14 +1,6 @@
 {
   "siteName": "Nexa Paraguay",
   "tagline": "Acompañamiento de cerca para tu mudanza a Paraguay",
-  "placeholders": {
-    "country": "Paraguay",
-    "capital": "Asunción",
-    "currency": "USD",
-    "taxRate": "Régimen de tasa única",
-    "processWeeks": "Cronograma personalizado",
-    "flagEmoji": "🇵🇾"
-  },
   "navigation": {
     "businessName": "Nexa Paraguay",
     "navItems": [
@@ -844,121 +836,6 @@
         "Nexa Paraguay nace de una historia real. Sonia, su fundadora, vivió 7 años en Holanda, donde experimentó en carne propia lo que es llegar a un país sin hablar el idioma ni tener una red de apoyo. Trabajó en la industria musical y luego se dedicó a su familia, siempre con la certeza de que volvería a Paraguay.",
         "Al regresar, enfrentó la burocracia, el desafío de reinventarse culturalmente y la necesidad de reconstruir su vida desde cero. Esa experiencia le mostró que faltaba un servicio que no solo procesara papeles, sino que acompañara de verdad — desde los primeros documentos hasta la mudanza completa.",
         "Hoy ayuda a ciudadanos europeos a mudarse a Paraguay con el mismo acompañamiento cercano que a ella le hubiera gustado tener. Habla neerlandés, inglés y español, conoce ambas culturas, y entiende exactamente lo que sus clientes están viviendo."
-      ]
-    },
-    "faq": {
-      "eyebrow": "FAQ",
-      "title": {
-        "es": "Preguntas frecuentes",
-        "en": "Frequently Asked Questions",
-        "nl": "Veelgestelde vragen",
-        "de": "Häufig gestellte Fragen"
-      },
-      "categories": [
-        {
-          "id": "immigration",
-          "label": {
-            "es": "Inmigración",
-            "en": "Immigration",
-            "nl": "Immigratie",
-            "de": "Einwanderung"
-          },
-          "items": [
-            {
-              "q": "Cuánto tiempo toma todo el proceso?",
-              "a": "Tramitación presencial: un solo día. La emisión de residencia y cédula se tramita según los tiempos regulares del proceso. Te acompañamos de punta a punta."
-            },
-            {
-              "q": "Cuántos viajes necesito hacer a Paraguay?",
-              "a": "Nuestro programa está diseñado para que un solo viaje sea suficiente."
-            },
-            {
-              "q": "Puedo traer a mi familia?",
-              "a": "Sí. Cada miembro requiere su propio proceso de residencia."
-            },
-            {
-              "q": "Necesito hablar español para obtener la residencia?",
-              "a": "No. Nuestro equipo habla inglés, neerlandés y alemán."
-            },
-            {
-              "q": "¿El proceso es completamente legal?",
-              "a": "Absolutamente. Estricto apego a la legislación paraguaya e internacional."
-            }
-          ],
-          "title": "Proceso"
-        },
-        {
-          "id": "banking",
-          "label": {
-            "es": "Banca y Finanzas",
-            "en": "Banking & Finance",
-            "nl": "Bankieren & Financiën",
-            "de": "Bankwesen & Finanzen"
-          },
-          "items": [
-            {
-              "q": "Puedo abrir una cuenta bancaria siendo extranjero?",
-              "a": "Sí. Preparamos su perfil financiero y coordinamos con la entidad para maximizar las probabilidades de aprobación."
-            },
-            {
-              "q": "Ofrecen garantía de apertura bancaria?",
-              "a": "La decisión final es del banco. Garantizamos preparación profesional y coordinación institucional."
-            }
-          ],
-          "title": "Costos y pago"
-        },
-        {
-          "id": "legal",
-          "label": {
-            "es": "Legal y Sociedad",
-            "en": "Legal & Company",
-            "nl": "Juridisch & Bedrijf",
-            "de": "Recht & Gesellschaft"
-          },
-          "items": [
-            {
-              "q": "Qué tipo de sociedad se constituye?",
-              "a": "Nuestro equipo legal recomienda el tipo societario más conveniente (generalmente EAS o SA) según su caso."
-            },
-            {
-              "q": "Qué pasa si faltan documentos?",
-              "a": "Lo detectamos antes de su viaje. Nuestra validación previa garantiza que llegue con todo en orden."
-            },
-            {
-              "q": "Qué pasa si cambian las leyes durante mi proceso?",
-              "a": "Monitoreamos el entorno regulatorio y le informamos inmediatamente si hay cambios relevantes."
-            }
-          ],
-          "title": "Empresa y banca"
-        },
-        {
-          "id": "costs",
-          "label": {
-            "es": "Costos y Pago",
-            "en": "Costs & Payment",
-            "nl": "Kosten & Betaling",
-            "de": "Kosten & Zahlung"
-          },
-          "items": [
-            {
-              "q": "Qué incluye el precio?",
-              "a": "Honorarios profesionales, IVA, tasas oficiales, coordinación bancaria, tour inmobiliario y asesoramiento integral."
-            },
-            {
-              "q": "Qué NO está incluido?",
-              "a": "Vuelos internacionales, alojamiento, gastos personales, traducciones juradas y apostillas en su país de origen."
-            },
-            {
-              "q": "Cómo se realiza el pago?",
-              "a": "Pago anticipado por transferencia bancaria. Sin cargos adicionales."
-            },
-            {
-              "q": "Qué pasa después del primer año (Investor)?",
-              "a": "Propuesta de continuidad adaptada a sus necesidades actuales."
-            }
-          ],
-          "title": "Familia y residencia"
-        }
       ]
     }
   },

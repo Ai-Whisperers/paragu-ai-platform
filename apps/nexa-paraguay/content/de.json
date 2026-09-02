@@ -986,14 +986,6 @@
       "privacyLabel": "Mit deiner Anmeldung akzeptierst du unsere Datenschutzrichtlinie."
     }
   },
-  "placeholders": {
-    "country": "Paraguay",
-    "capital": "Asunción",
-    "currency": "USD",
-    "taxRate": "Pauschaltarif",
-    "processWeeks": "Persönlicher Zeitplan",
-    "flagEmoji": "🇵🇾"
-  },
   "intakeWizardPage": {
     "seo": {
       "title": "Finden Sie Ihr ideales Programm — Nexa Paraguay",
@@ -2279,116 +2271,6 @@
         "Sonia ist Paraguayerin. Sie lebte 7 Jahre in den Niederlanden, wo sie zunächst in der Reinigungsbranche arbeitete.",
         "Am schwierigsten an der Rückkehr war es, sich kulturell neu zu erfinden. Die Bürokratie war kompliziert, aber das Schwierigste war, ihr Leben in einem Land wieder aufzubauen, das gleichzeitig ihres und fremd war.",
         "Nexa Paraguay ist genau das: fast familiäre Begleitung für europäische Bürger, die sich entscheiden, in Paraguay zu leben."
-      ]
-    },
-    "faq": {
-      "eyebrow": "FAQ",
-      "title": "Fragen nach Thema",
-      "categories": [
-        {
-          "title": "Prozess",
-          "items": [
-            {
-              "q": "Wie lange dauert der gesamte Prozess?",
-              "a": "Persönliche Antragstellung: ein einziger Tag. Aufenthalt und Ausweisausstellung folgen den regulären Bearbeitungsfenstern. Wir begleiten Sie durchgehend."
-            },
-            {
-              "q": "Wie viele Reisen muss ich nach Paraguay machen?",
-              "a": "Unser Programm ist so konzipiert, dass eine einzige Reise für den Operationstag ausreicht. Danach müssen Sie nur reisen, wenn Sie den Fall persönlich überwachen möchten oder aus persönlichen Gründen."
-            },
-            {
-              "q": "Was, wenn ein Dokument fehlt?",
-              "a": "Wir erkennen es vor Ihrer Reise. Unsere Vorab-Validierung garantiert, dass Sie mit allem, was Sie brauchen, in Paraguay ankommen."
-            },
-            {
-              "q": "Was passiert, wenn sich die Gesetze während meines Prozesses ändern?",
-              "a": "Wir überwachen das regulatorische Umfeld und informieren Sie sofort, wenn es Änderungen gibt, die Ihren Fall betreffen."
-            },
-            {
-              "q": "Ist der Prozess vollständig legal?",
-              "a": "Es ist nicht notwendig. Obwohl der Prozess auf Spanisch durchgeführt wird, arbeiten wir mit vereidigten Übersetzern und begleiten Sie zu jedem Termin."
-            }
-          ],
-          "id": "immigration",
-          "label": {
-            "de": "Einwanderung",
-            "en": "Immigration",
-            "es": "Inmigración",
-            "nl": "Immigratie"
-          }
-        },
-        {
-          "title": "Kosten und Zahlung",
-          "items": [
-            {
-              "q": "Was beinhaltet der Preis?",
-              "a": "Professionelle Honorare, Mehrwertsteuer, offizielle Gebühren, Bankenkoordination, Immobilienbesichtigung (falls zutreffend) und vollständige Begleitung am Operationstag."
-            },
-            {
-              "q": "Was ist NICHT enthalten?",
-              "a": "Internationale Flüge, Unterkunft, persönliche Ausgaben, beglaubigte Übersetzungen und Apostillen in Ihrem Herkunftsland."
-            }
-          ],
-          "id": "banking",
-          "label": {
-            "de": "Bankwesen & Finanzen",
-            "en": "Banking & Finance",
-            "es": "Banca y Finanzas",
-            "nl": "Bankieren & Financiën"
-          }
-        },
-        {
-          "title": "Unternehmen und Bankwesen",
-          "items": [
-            {
-              "q": "Kann ich als Ausländer ein Bankkonto eröffnen?",
-              "a": "Ja. Es ist der komplexeste Prozess, aber wir bereiten Ihr Finanzprofil vor und koordinieren alles mit der Bank, um den Erfolg zu maximieren."
-            },
-            {
-              "q": "Welche Art von Unternehmen wird gegründet?",
-              "a": "Unser Rechtsteam empfiehlt die günstigste Unternehmensform (im Allgemeinen S.A. zum Haftungsschutz). Wir erklären die Unterschiede während der Beratung."
-            },
-            {
-              "q": "Bieten Sie eine Garantie für die Kontoeröffnung?",
-              "a": "Die endgültige Entscheidung liegt bei der Bank. Wir garantieren professionelle Vorbereitung und Koordination — wenn es objektive Gründe für eine Ablehnung gibt, helfen wir Ihnen mit Alternativen."
-            }
-          ],
-          "id": "legal",
-          "label": {
-            "de": "Recht & Gesellschaft",
-            "en": "Legal & Company",
-            "es": "Legal y Sociedad",
-            "nl": "Juridisch & Bedrijf"
-          }
-        },
-        {
-          "title": "Familie und Aufenthalt",
-          "items": [
-            {
-              "q": "Kann ich meine Familie mitbringen?",
-              "a": "Ja. Jedes Familienmitglied benötigt einen eigenen Aufenthaltsprozess. Wir koordinieren die Fälle gemeinsam, um die Effizienz zu maximieren."
-            },
-            {
-              "q": "Kann ich meine ursprüngliche Staatsbürgerschaft behalten?",
-              "a": "Ja, Paraguay erlaubt mit den meisten Ländern doppelte Staatsbürgerschaft. Sie verlieren Ihre ursprüngliche Nationalität nicht."
-            },
-            {
-              "q": "Wie lange kann ich außerhalb von Paraguay sein, ohne meinen Aufenthalt zu verlieren?",
-              "a": "Der Daueraufenthalt erfordert, dass Sie mindestens 1 Tag alle 3 Jahre physisch in Paraguay sind. Der vorübergehende Aufenthalt hat spezifischere Anforderungen — wir erklären sie während der Beratung."
-            },
-            {
-              "q": "Was ist der Unterschied zwischen Daueraufenthalt und Staatsbürgerschaft?",
-              "a": "Der Daueraufenthalt erlaubt es Ihnen, unbegrenzt in Paraguay zu leben, zu arbeiten und Eigentum zu besitzen, mit der Anforderung, alle 3 Jahre mindestens 1 Tag zu besuchen. Die paraguayische Staatsbürgerschaft erfordert 3 Jahre Aufenthalt, Verzicht auf Ihre ursprüngliche Staatsbürgerschaft (außer für Staatsbürger von Spanien, Italien und einigen anderen Ländern mit bilateralen Abkommen) und gewährt Wahlrecht und einen paraguayischen Pass."
-            }
-          ],
-          "id": "costs",
-          "label": {
-            "de": "Kosten & Zahlung",
-            "en": "Costs & Payment",
-            "es": "Costos y Pago",
-            "nl": "Kosten & Betaling"
-          }
-        }
       ]
     }
   },
