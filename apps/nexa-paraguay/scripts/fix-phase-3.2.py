@@ -64,36 +64,58 @@ def fix_locale(lang, content):
                 "message": "Hola, me interesa recibir más información sobre Nexa Paraguay.",
             }
 
-    # 4. deutschlandPage.process.steps[0..2] (en + nl) — translate from de
-    if lang in ("en", "nl"):
+    # 4. deutschlandPage.process.steps[0..2] (en + nl + es) — translate from de
+    if lang in ("en", "nl", "es"):
         dp = out.get("deutschlandPage", {})
         proc = dp.get("process", {})
         steps = proc.get("steps", [])
-        if steps:
-            # Read de.json for the source content
-            with open("content/de.json") as f:
-                de_data = json.load(f)
-            de_steps = de_data.get("deutschlandPage", {}).get("process", {}).get("steps", [])
-            if de_steps:
-                if lang == "en":
-                    translations = [
-                        ("Preparation in Germany", "We review your documents, apostille them and prepare the dossier. You collect everything conveniently from home."),
-                        ("One trip to Paraguay", "You fly to Asunción. In one coordinated day we complete all the government procedures — migration, police, Cédula."),
-                        ("Arrival & settling in", "We activate your tax ID (RUC) and your bank account. If needed, we also help with finding a home."),
-                    ]
-                else:  # nl
-                    translations = [
-                        ("Voorbereiding in Duitsland", "Wij beoordelen uw documenten, apostilleren ze en stellen het dossier samen. U verzamelt alles gemakkelijk vanuit huis."),
-                        ("Eén reis naar Paraguay", "U vliegt naar Asunción. Op één gecoördineerde dag ronden we alle overheidsprocedures af — migratie, politie, Cédula."),
-                        ("Aankomst & installatie", "We activeren uw belastingnummer (RUC) en uw bankrekening. Indien nodig helpen we ook bij het vinden van een woning."),
-                    ]
-                for i, (title, desc) in enumerate(translations):
-                    if i < len(steps):
-                        if isinstance(steps[i], dict):
-                            steps[i]["title"] = title
-                            steps[i]["description"] = desc
-                    elif i < len(de_steps):
-                        steps.append({"title": title, "description": desc})
+        # Read de.json for the source content
+        with open("content/de.json") as f:
+            de_data = json.load(f)
+        de_steps = de_data.get("deutschlandPage", {}).get("process", {}).get("steps", [])
+        if de_steps:
+            if lang == "en":
+                translations = [
+                    ("Preparation in Germany", "We review your documents, apostille them and prepare the dossier. You collect everything conveniently from home."),
+                    ("One trip to Paraguay", "You fly to Asunción. In one coordinated day we complete all the government procedures — migration, police, Cédula."),
+                    ("Arrival & settling in", "We activate your tax ID (RUC) and your bank account. If needed, we also help with finding a home."),
+                ]
+            elif lang == "nl":
+                translations = [
+                    ("Voorbereiding in Duitsland", "Wij beoordelen uw documenten, apostilleren ze en stellen het dossier samen. U verzamelt alles gemakkelijk vanuit huis."),
+                    ("Eén reis naar Paraguay", "U vliegt naar Asunción. Op één gecoördineerde dag ronden we alle overheidsprocedures af — migratie, politie, Cédula."),
+                    ("Aankomst & installatie", "We activeren uw belastingnummer (RUC) en uw bankrekening. Indien nodig helpen we ook bij het vinden van een woning."),
+                ]
+            else:  # es
+                translations = [
+                    ("Preparación en Alemania", "Revisamos tus documentos, los apostillamos y preparamos el dossier. Tú recopilas todo cómodamente desde casa."),
+                    ("Un viaje a Paraguay", "Vuelas a Asunción. En un día coordinado completamos todos los trámites — migración, policía, Cédula."),
+                    ("Llegada e instalación", "Activamos tu número fiscal (RUC) y tu cuenta bancaria. Si lo necesitas, también ayudamos con la búsqueda de vivienda."),
+                ]
+            # Set the steps list to the translated versions, replacing whatever was there
+            new_steps = []
+            for i, (title, desc) in enumerate(translations):
+                new_steps.append({"title": title, "description": desc})
+            proc["steps"] = new_steps
+
+    if lang in ("en", "nl", "de"):
+        # faqPage.faq.categories[1..3].items[2..5] drift — these keys
+        # are not rendered (the rendered FAQ uses faqPage.full which is
+        # already aligned across all 4 locales). They exist only because
+        # the legacy faqPage.faq section has been edited independently
+        # per locale (different topics). Removing the drift items from
+        # en/nl/de brings them in line with es (which has fewer items).
+        faq = out.get("faqPage", {}).get("faq", {})
+        cats = faq.get("categories", [])
+        # cat[1]: es has 2 items; en/nl/de have 4 — drop items[2..3]
+        if len(cats) >= 2 and len(cats[1].get("items", [])) > 2:
+            cats[1]["items"] = cats[1]["items"][:2]
+        # cat[2]: es has 3 items; en/nl/de have 4 — drop items[3]
+        if len(cats) >= 3 and len(cats[2].get("items", [])) > 3:
+            cats[2]["items"] = cats[2]["items"][:3]
+        # cat[3]: es has 4 items; en/nl/de have 6 — drop items[4..5]
+        if len(cats) >= 4 and len(cats[3].get("items", [])) > 4:
+            cats[3]["items"] = cats[3]["items"][:4]
 
 
 def main():

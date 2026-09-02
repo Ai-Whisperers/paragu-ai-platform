@@ -2327,14 +2327,6 @@
             {
               "q": "Was ist NICHT enthalten?",
               "a": "Internationale Flüge, Unterkunft, persönliche Ausgaben, beglaubigte Übersetzungen und Apostillen in Ihrem Herkunftsland."
-            },
-            {
-              "q": "Wie erfolgt die Zahlung?",
-              "a": "Vorauszahlung per Banküberweisung. Keine zusätzlichen Gebühren."
-            },
-            {
-              "q": "Wie viel kostet die jährliche Aufrechterhaltung des Aufenthalts?",
-              "a": "Die jährliche Aufrechterhaltung der Aufenthaltserlaubnis ist minimal. Sie umfasst die RUC-Erneuerung (Steuerregistrierung), mögliche Apostille-Erneuerungen und grundlegende Verwaltungsschritte. Wir beraten Sie zu den tatsächlichen Kosten im Erstgespräch auf Basis Ihres Falls."
             }
           ],
           "id": "banking",
@@ -2359,10 +2351,6 @@
             {
               "q": "Bieten Sie eine Garantie für die Kontoeröffnung?",
               "a": "Die endgültige Entscheidung liegt bei der Bank. Wir garantieren professionelle Vorbereitung und Koordination — wenn es objektive Gründe für eine Ablehnung gibt, helfen wir Ihnen mit Alternativen."
-            },
-            {
-              "q": "Was passiert nach dem ersten Jahr (Investor)?",
-              "a": "Wir schlagen einen Kontinuitätsplan vor, der jährliche Compliance, Steuerberatung und alle operativen Unterstützungen umfasst, die Ihr Fall benötigt."
             }
           ],
           "id": "legal",
@@ -2391,14 +2379,6 @@
             {
               "q": "Was ist der Unterschied zwischen Daueraufenthalt und Staatsbürgerschaft?",
               "a": "Der Daueraufenthalt erlaubt es Ihnen, unbegrenzt in Paraguay zu leben, zu arbeiten und Eigentum zu besitzen, mit der Anforderung, alle 3 Jahre mindestens 1 Tag zu besuchen. Die paraguayische Staatsbürgerschaft erfordert 3 Jahre Aufenthalt, Verzicht auf Ihre ursprüngliche Staatsbürgerschaft (außer für Staatsbürger von Spanien, Italien und einigen anderen Ländern mit bilateralen Abkommen) und gewährt Wahlrecht und einen paraguayischen Pass."
-            },
-            {
-              "q": "Kann ich mit dem Aufenthalt legal arbeiten?",
-              "a": "Ja, der Daueraufenthalt erlaubt es Ihnen, legal in Paraguay zu arbeiten, ob als Angestellter oder unabhängig. Sie können auch Direktor oder Aktionär von Unternehmen ohne zusätzliche Einschränkungen sein."
-            },
-            {
-              "q": "Was passiert, wenn mein Aufenthaltsantrag abgelehnt wird?",
-              "a": "Aufenthaltsanträge werden bei ordnungsgemäßer Vorbereitung selten abgelehnt. Im unwahrscheinlichen Fall einer Ablehnung analysieren wir die Ursache, beheben sie und reichen den Antrag erneut ein. Wir bieten fortlaufende Unterstützung, bis Ihr Aufenthalt genehmigt ist."
             }
           ],
           "id": "costs",
@@ -3655,7 +3635,13 @@
       "subheadline": "Sonia ist Paraguayerin und mit einem Niederländer verheiratet; Luana koordiniert jeden Fall. Wir begleiten Niederländer beim Umzug mit Steuerkontext, box 3 und emigratieheffing.",
       "ctaPrimaryText": "Beratung auf Niederländisch vereinbaren",
       "ctaPrimaryHref": "/contacto",
-      "backgroundImage": "@src:hero.localizedNl"
+      "backgroundImage": "@src:hero.localizedNl",
+      "trustBadges": [
+        "7 Jahre in den Niederlanden",
+        "10+ geholfen",
+        "Festpreis",
+        "Persönliche Begleitung"
+      ]
     },
     "seo": {
       "title": "Umzug Niederlande-Paraguay — Nexa Paraguay",
@@ -3667,6 +3653,24 @@
       "title": "Sie ist Niederländerin. Und hat den Prozess schon gemacht.",
       "paragraphs": [
         "Sonia lebte 7 Jahre in den Niederlanden. Sie hat ihre eigene Aufenthaltserlaubnis, ihre eigene Firma, ihr eigenes Bankkonto abgewickelt. Jetzt macht sie das Gleiche für jeden Nexa-Kunden."
+      ],
+      "description": "Sonia lebte 7 Jahre in den Niederlanden. Sie hat ihre eigene Aufenthaltserlaubnis, ihr eigenes Unternehmen und ihre eigenen Bankkonten eingerichtet. Sie weiß, was es bedeutet, sein Land zu verlassen — und ohne die Sprache zu sprechen in einem neuen Land anzukommen. Deshalb begleitet sie jeden Kunden persönlich, nicht nur auf dem Papier.",
+      "highlights": [
+        {
+          "icon": "🗣️",
+          "title": "Niederländisch sprechend",
+          "description": "Kommunikation auf Niederländisch — keine Sprachreibung"
+        },
+        {
+          "icon": "🇳🇱",
+          "title": "7 Jahre in NL gelebt",
+          "description": "Wir kennen die niederländische Kultur, das Steuersystem und die Bürokratie"
+        },
+        {
+          "icon": "🤝",
+          "title": "Persönliche Begleitung",
+          "description": "Nicht nur ein Büro — wir begleiten Sie als Mensch, nicht als Akte"
+        }
       ]
     },
     "taxComparison": {
@@ -3677,26 +3681,32 @@
         "Paraguay",
         "Niederlande"
       ],
-      "items": [
+      "subtitle": "Paraguay besteuert 0% ausländische Einkünfte. Keine Vermögenssteuer. Keine Erbschaftssteuer.",
+      "comparisonTable": [
         {
-          "Concepto": "Max Einkommensteuer",
-          "Paraguay": "10%",
-          "Países Bajos": "49.5%"
+          "category": "Einkommensteuer (ausländische Einkünfte)",
+          "netherlands": "49,5%",
+          "paraguay": "0%"
         },
         {
-          "Concepto": "Kapitalerträge",
-          "Paraguay": "0%",
-          "Países Bajos": "25%"
+          "category": "Vermögenssteuer (Box 3)",
+          "netherlands": "36% auf tatsächliche Rendite (2028)",
+          "paraguay": "0%"
         },
         {
-          "Concepto": "MwSt",
-          "Paraguay": "10%",
-          "Países Bajos": "21%"
+          "category": "Erbschaftssteuer",
+          "netherlands": "10-40%",
+          "paraguay": "0% (ausländische Quelle)"
         },
         {
-          "Concepto": "Erbschaft",
-          "Paraguay": "0%",
-          "Países Bajos": "10-40%"
+          "category": "Mehrwertsteuer",
+          "netherlands": "21%",
+          "paraguay": "10%"
+        },
+        {
+          "category": "Körperschaftssteuer",
+          "netherlands": "25,8%",
+          "paraguay": "10% (nur lokaler Gewinn)"
         }
       ]
     },
@@ -3753,7 +3763,31 @@
           "description": "Wünschen Stabilität, zweisprachige Schulen, qualitativ hochwertige private Gesundheitsversorgung und einen menschlicheren Lebensrhythmus.",
           "icon": "Heart"
         }
-      ]
+      ],
+      "profiles": [
+        {
+          "icon": "💻",
+          "title": "Freiberufler und Selbstständige",
+          "description": "Arbeiten Sie für internationale Kunden, zahlen Sie einen Pauschalsteuersatz in Paraguay. Keine Devisenkontrollen, kein Einbehalt auf ausländische Einkünfte."
+        },
+        {
+          "icon": "👨‍👩‍👧‍👦",
+          "title": "Familien",
+          "description": "Ziehen Sie mit Ihrer Familie in ein sicheres, warmes Land. Internationale Schulen ab 9.000 USD/Jahr. Niedrigere Kosten, höhere Lebensqualität."
+        },
+        {
+          "icon": "🏖️",
+          "title": "Rentner",
+          "description": "Ihre Rente und Pension werden in Paraguay nicht besteuert. Gesundheitsversorgung ist ausgezeichnet und erschwinglich."
+        },
+        {
+          "icon": "📈",
+          "title": "Investoren",
+          "description": "Keine Vermögenssteuer. Keine Besteuerung nicht realisierter Gewinne. Ihr Portfolio wächst unversteuert."
+        }
+      ],
+      "ctaText": "Kostenloses Gespräch buchen",
+      "ctaHref": "/kontakt"
     },
     "costs": {
       "eyebrow": "Kosten",
@@ -3762,27 +3796,39 @@
       "items": [
         {
           "label": "Essen (2 Personen)",
-          "value": "USD 350-500"
+          "value": "USD 350-500",
+          "category": "Miete (Villa Morra, 2 Schlafzimmer)",
+          "amount": "$700-1.200"
         },
         {
           "label": "Nebenkosten (Strom, Wasser, Internet)",
-          "value": "USD 80-120"
+          "value": "USD 80-120",
+          "category": "Lebensmittel (Familie)",
+          "amount": "$400-600"
         },
         {
           "label": "Mobiltelefon (Datentarif)",
-          "value": "USD 20-35"
+          "value": "USD 20-35",
+          "category": "Nebenkosten (Strom, Wasser, Internet)",
+          "amount": "$100-200"
         },
         {
           "label": "Transport (Benzin + Uber)",
-          "value": "USD 100-180"
+          "value": "USD 100-180",
+          "category": "Internationale Schule (pro Kind)",
+          "amount": "$900-1.500"
         },
         {
           "label": "Private Krankenversicherung",
-          "value": "USD 80-150"
+          "value": "USD 80-150",
+          "category": "Private Krankenversicherung",
+          "amount": "$50-100"
         },
         {
           "label": "Sonstiges",
-          "value": "USD 100"
+          "value": "USD 100",
+          "category": "Haushaltshilfe",
+          "amount": "$50-100"
         }
       ]
     },

@@ -1272,14 +1272,6 @@
             {
               "q": "Wat is NIET inbegrepen?",
               "a": "Internationale vluchten, accommodatie, persoonlijke uitgaven, beëdigde vertalingen en apostilles in uw land van herkomst."
-            },
-            {
-              "q": "Hoe wordt de betaling gedaan?",
-              "a": "Vooruitbetaling per bankoverschrijving. Geen extra kosten."
-            },
-            {
-              "q": "Hoeveel kost het om het verblijf jaarlijks te onderhouden?",
-              "a": "Het jaarlijkse onderhoud van de verblijfsvergunning is minimaal. Het omvat de RUC-verlenging (belastingregistratie), mogelijke apostille-verlengingen en basis administratieve stappen. We begeleiden u over de werkelijke kosten tijdens het eerste consult op basis van uw situatie."
             }
           ],
           "id": "banking",
@@ -1304,10 +1296,6 @@
             {
               "q": "Bieden jullie garantie op bankrekeningopening?",
               "a": "De eindbeslissing is aan de bank. Wij garanderen professionele voorbereiding en coördinatie — als er objectieve redenen voor afwijzing zijn, helpen we u met alternatieven."
-            },
-            {
-              "q": "Wat gebeurt er na het eerste jaar (Investeerder)?",
-              "a": "Wij stellen een continuïteitsplan voor dat jaarlijkse compliance, fiscaal advies en alle operationele ondersteuning omvat die uw zaak nodig heeft."
             }
           ],
           "id": "legal",
@@ -1336,14 +1324,6 @@
             {
               "q": "Wat is het verschil tussen permanent verblijf en staatsburgerschap?",
               "a": "Permanent verblijf staat u toe om onbeperkt in Paraguay te wonen, te werken en eigendom te bezitten, met de vereiste om minstens 1 dag per 3 jaar op bezoek te komen. Het Paraguayaanse staatsburgerschap vereist 3 jaar verblijf, afstand doen van uw oorspronkelijke nationaliteit (behalve voor onderdanen van Spanje, Italië en enkele andere landen met bilaterale akkoorden), en geeft stemrecht en een Paraguayaans paspoort."
-            },
-            {
-              "q": "Kan ik legaal werken met het verblijf?",
-              "a": "Ja, permanent verblijf staat u toe om legaal in Paraguay te werken, of als werknemer of zelfstandige. U kunt ook directeur of aandeelhouder zijn van bedrijven zonder extra beperkingen."
-            },
-            {
-              "q": "Wat gebeurt er als mijn verblijfsaanvraag wordt afgewezen?",
-              "a": "Verblijfsaanvragen worden zelden afgewezen wanneer ze goed zijn voorbereid. In het onwaarschijnlijke geval van afwijzing analyseren we de oorzaak, pakken deze aan en dienen de aanvraag opnieuw in. We bieden doorlopende ondersteuning totdat uw verblijf is goedgekeurd."
             }
           ],
           "id": "costs",
@@ -2802,7 +2782,8 @@
   "dutchLanding": {
     "seo": {
       "title": "Holandesa naar Paraguay verhuizen — Nexa Paraguay",
-      "description": "Ik ben Sonia. Ik woonde 7 jaar in Nederland en help Nederlandse ondernemers, ZZPers en gezinnen met hun verhuizing naar Paraguay."
+      "description": "Ik ben Sonia. Ik woonde 7 jaar in Nederland en help Nederlandse ondernemers, ZZPers en gezinnen met hun verhuizing naar Paraguay.",
+      "targetKeyword": "emigreren naar Paraguay"
     },
     "hero": {
       "headline": "Ik ben Sonia. Ik woonde 7 jaar in Nederland.",
@@ -2815,7 +2796,8 @@
         "Vaste prijs",
         "Persoonlijke begeleiding"
       ],
-      "backgroundImage": "@src:hero.localizedNl"
+      "backgroundImage": "@src:hero.localizedNl",
+      "eyebrow": "Voor Nederlandse klanten"
     },
     "whySonia": {
       "eyebrow": "Waarom Sonia?",
@@ -2837,6 +2819,9 @@
           "title": "Persoonlijke begeleiding",
           "description": "Niet zomaar een kantoor — ik begeleid je als mens, niet als dossier"
         }
+      ],
+      "paragraphs": [
+        "Sonia woonde 7 jaar in Nederland. Ze heeft zelf haar verblijfsvergunning, bedrijf en bankzaken geregeld. Ze weet wat het betekent om je land te verlaten — en om je weg te vinden in een nieuwe cultuur zonder de taal te spreken."
       ]
     },
     "taxComparison": {
@@ -2868,14 +2853,6 @@
           "category": "Ondernemingsbelasting",
           "netherlands": "25,8%",
           "paraguay": "10% (alleen lokale winst)"
-        }
-      ],
-      "items": [
-        {
-          "Concepto": "IVA"
-        },
-        {
-          "Concepto": "Herencias"
         }
       ]
     },
@@ -2920,7 +2897,8 @@
           "icon": "BadgeCheck"
         }
       ],
-      "ctaHref": "/contacto"
+      "ctaHref": "/contacto",
+      "ctaLabel": "Begin nu"
     },
     "targetClients": {
       "eyebrow": "Voor wie?",
@@ -2951,10 +2929,14 @@
       "ctaHref": "/nl/contacto",
       "groups": [
         {
-          "icon": "Briefcase"
+          "icon": "Briefcase",
+          "title": "Europese ondernemers",
+          "description": "Zoeken een land met lage belastingen, eenvoudige bedrijfsoprichting"
         },
         {
-          "icon": "Heart"
+          "icon": "Heart",
+          "title": "Europese ondernemers",
+          "description": "Zoeken een land met lage belastingen, eenvoudige bedrijfsoprichting"
         }
       ]
     },
@@ -2965,29 +2947,39 @@
       "items": [
         {
           "category": "Huur (Villa Morra, 2-slaapkamer)",
-          "amount": "$700-1.200"
+          "amount": "$700-1.200",
+          "label": "Huur",
+          "value": "$700-1.200"
         },
         {
           "category": "Boodschappen (gezin)",
-          "amount": "$400-600"
+          "amount": "$400-600",
+          "label": "Boodschappen",
+          "value": "$400-600"
         },
         {
           "category": "Nutsvoorzieningen",
-          "amount": "$100-200"
+          "amount": "$100-200",
+          "label": "Nutsvoorzieningen",
+          "value": "$100-200"
         },
         {
           "category": "Internationale school (per kind)",
           "amount": "$900-1.500",
-          "label": "Transporte (gasolina + Uber)"
+          "label": "Transporte (gasolina + Uber)",
+          "value": "$900-1.500"
         },
         {
           "category": "Zorgverzekering (privaat)",
-          "amount": "$50-100"
+          "amount": "$50-100",
+          "label": "Zorgverzekering",
+          "value": "$50-100"
         },
         {
           "category": "Huishoudelijke hulp",
           "amount": "$50-100",
-          "label": "Imprevistos"
+          "label": "Imprevistos",
+          "value": "$50-100"
         }
       ]
     },
@@ -2995,7 +2987,8 @@
       "title": "Klaar voor de stap?",
       "subtitle": "Plan een gratis gesprek van 30 minuten. Geen verplichtingen.",
       "buttonText": "Plan gratis gesprek",
-      "buttonHref": "/nl/contacto"
+      "buttonHref": "/nl/contacto",
+      "eyebrow": "Volgende stap"
     }
   },
   "familiesPage": {
@@ -3809,7 +3802,21 @@
       "title": "Your move step by step",
       "totalDuration": "Totale duur: afhankelijk van het programma. We bevestigen dit tijdens het eerste consult.",
       "ctaLabel": "Start my process",
-      "ctaHref": "/contacto"
+      "ctaHref": "/contacto",
+      "steps": [
+        {
+          "title": "Voorbereiding in Duitsland",
+          "description": "Wij beoordelen uw documenten, apostilleren ze en stellen het dossier samen. U verzamelt alles gemakkelijk vanuit huis."
+        },
+        {
+          "title": "Eén reis naar Paraguay",
+          "description": "U vliegt naar Asunción. Op één gecoördineerde dag ronden we alle overheidsprocedures af — migratie, politie, Cédula."
+        },
+        {
+          "title": "Aankomst & installatie",
+          "description": "We activeren uw belastingnummer (RUC) en uw bankrekening. Indien nodig helpen we ook bij het vinden van een woning."
+        }
+      ]
     },
     "targetClients": {
       "eyebrow": "For whom",

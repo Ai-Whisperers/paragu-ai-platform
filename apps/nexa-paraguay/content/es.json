@@ -3555,7 +3555,13 @@
       "subheadline": "Sonia es paraguaya y está casada con un ciudadano neerlandés; Luana coordina cada caso. Acompañamos a holandeses en su mudanza con contexto fiscal, box 3 y emigratieheffing.",
       "ctaPrimaryText": "Agendar consulta en neerlandés",
       "ctaPrimaryHref": "/contacto",
-      "backgroundImage": "@src:hero.localizedNl"
+      "backgroundImage": "@src:hero.localizedNl",
+      "trustBadges": [
+        "7 años en Holanda",
+        "10+ clientes ayudados",
+        "Precio fijo",
+        "Acompañamiento personal"
+      ]
     },
     "seo": {
       "title": "Mudanza Holanda-Paraguay — Nexa Paraguay",
@@ -3567,6 +3573,24 @@
       "title": "Ella es holandesa. Y ya hizo el proceso.",
       "paragraphs": [
         "Sonia vivió 7 años en Holanda. Tramitó su propia residencia, su propia empresa, su propia cuenta bancaria. Ahora hace lo mismo por cada cliente de Nexa."
+      ],
+      "description": "Sonia vivió 7 años en Holanda. Tramitó su propia residencia, su propia empresa, sus propias cuentas bancarias. Conoce lo que significa dejar tu país — y llegar a uno nuevo sin hablar el idioma. Por eso acompaña a cada cliente en persona, no solo en el papel.",
+      "highlights": [
+        {
+          "icon": "🗣️",
+          "title": "Hablamos holandés",
+          "description": "Comunicación en holandés — sin fricción por el idioma"
+        },
+        {
+          "icon": "🇳🇱",
+          "title": "7 años en Holanda",
+          "description": "Conocemos la cultura holandesa, el sistema fiscal y la burocracia"
+        },
+        {
+          "icon": "🤝",
+          "title": "Acompañamiento personal",
+          "description": "No somos una oficina — te acompañamos como persona, no como expediente"
+        }
       ]
     },
     "taxComparison": {
@@ -3577,26 +3601,32 @@
         "Paraguay",
         "Países Bajos"
       ],
-      "items": [
+      "subtitle": "Paraguay grava 0% sobre ingresos del extranjero. Sin impuesto al patrimonio. Sin impuesto a la herencia.",
+      "comparisonTable": [
         {
-          "Concepto": "IR Máximo",
-          "Paraguay": "10%",
-          "Países Bajos": "49.5%"
+          "category": "Impuesto a la renta (ingresos del extranjero)",
+          "netherlands": "49,5%",
+          "paraguay": "0%"
         },
         {
-          "Concepto": "Ganancias de Capital",
-          "Paraguay": "0%",
-          "Países Bajos": "25%"
+          "category": "Impuesto al patrimonio (Box 3)",
+          "netherlands": "36% sobre rendimiento real (2028)",
+          "paraguay": "0%"
         },
         {
-          "Concepto": "IVA",
-          "Paraguay": "10%",
-          "Países Bajos": "21%"
+          "category": "Impuesto a la herencia",
+          "netherlands": "10-40%",
+          "paraguay": "0% (fuente extranjera)"
         },
         {
-          "Concepto": "Herencias",
-          "Paraguay": "0%",
-          "Países Bajos": "10-40%"
+          "category": "IVA",
+          "netherlands": "21%",
+          "paraguay": "10%"
+        },
+        {
+          "category": "Impuesto de sociedades",
+          "netherlands": "25,8%",
+          "paraguay": "10% (solo ganancia local)"
         }
       ]
     },
@@ -3653,7 +3683,31 @@
           "description": "Quieren estabilidad, escuelas bilingües, salud privada de calidad y un ritmo de vida más humano.",
           "icon": "Heart"
         }
-      ]
+      ],
+      "profiles": [
+        {
+          "icon": "💻",
+          "title": "Autónomos y freelancers",
+          "description": "Trabajan para clientes internacionales, tributan tarifa plana en Paraguay. Sin controles de cambio, sin retención sobre ingresos extranjeros."
+        },
+        {
+          "icon": "👨‍👩‍👧‍👦",
+          "title": "Familias",
+          "description": "Mudarse con la familia a un país cálido y seguro. Colegios internacionales desde $9K/año. Menores costos, mayor calidad de vida."
+        },
+        {
+          "icon": "🏖️",
+          "title": "Jubilados",
+          "description": "Tu jubilación y pensión no tributan en Paraguay. Atención médica excelente y accesible."
+        },
+        {
+          "icon": "📈",
+          "title": "Inversores",
+          "description": "Sin impuesto al patrimonio. Sin gravamen sobre ganancias no realizadas. Tu cartera crece sin impuestos."
+        }
+      ],
+      "ctaText": "Reserva consulta gratuita",
+      "ctaHref": "/contacto"
     },
     "costs": {
       "eyebrow": "Costos",
@@ -3662,27 +3716,39 @@
       "items": [
         {
           "label": "Alimentación (2 personas)",
-          "value": "USD 350-500"
+          "value": "USD 350-500",
+          "category": "Alquiler (Villa Morra, 2 dormitorios)",
+          "amount": "$700-1.200"
         },
         {
           "label": "Servicios (luz, agua, internet)",
-          "value": "USD 80-120"
+          "value": "USD 80-120",
+          "category": "Comida (familia)",
+          "amount": "$400-600"
         },
         {
           "label": "Celular (plan con datos)",
-          "value": "USD 20-35"
+          "value": "USD 20-35",
+          "category": "Servicios (luz, agua, internet)",
+          "amount": "$100-200"
         },
         {
           "label": "Transporte (gasolina + Uber)",
-          "value": "USD 100-180"
+          "value": "USD 100-180",
+          "category": "Colegio internacional (por hijo)",
+          "amount": "$900-1.500"
         },
         {
           "label": "Seguro médico privado",
-          "value": "USD 80-150"
+          "value": "USD 80-150",
+          "category": "Seguro médico privado",
+          "amount": "$50-100"
         },
         {
           "label": "Imprevistos",
-          "value": "USD 100"
+          "value": "USD 100",
+          "category": "Empleada doméstica",
+          "amount": "$50-100"
         }
       ]
     },
@@ -3752,7 +3818,20 @@
       "totalDuration": "Tiempo total: depende del programa. Lo confirmamos en la consulta inicial.",
       "ctaLabel": "Iniciar mi proceso",
       "ctaHref": "/contacto",
-      "steps": []
+      "steps": [
+        {
+          "title": "Preparación en Alemania",
+          "description": "Revisamos tus documentos, los apostillamos y preparamos el dossier. Tú recopilas todo cómodamente desde casa."
+        },
+        {
+          "title": "Un viaje a Paraguay",
+          "description": "Vuelas a Asunción. En un día coordinado completamos todos los trámites — migración, policía, Cédula."
+        },
+        {
+          "title": "Llegada e instalación",
+          "description": "Activamos tu número fiscal (RUC) y tu cuenta bancaria. Si lo necesitas, también ayudamos con la búsqueda de vivienda."
+        }
+      ]
     },
     "targetClients": {
       "eyebrow": "Para quién",
