@@ -44,8 +44,18 @@ export default async function Page({ params }: Props) {
   const pageUrl = `${baseUrl}/${slug}`
   const pageName = data.pageConfig?.title || data.content?.siteName || slug
 
-  // FAQ items — prefer faqPage.full.items (new structured data)
-  const faqItems = data.content?.faqPage?.full?.items || data.content?.faq?.items || []
+  // FAQ items — flatten faqPage.full.categories[].items[] into a single
+  // array. The categories are a presentation grouping; for the JSON-LD
+  // schema we want a flat list of all Q&A pairs.
+  const faqItems = (() => {
+    const cats = data.content?.faqPage?.full?.categories
+    if (Array.isArray(cats)) {
+      return cats.flatMap((c: { items?: { q?: string; a?: string }[] }) =>
+        Array.isArray(c.items) ? c.items.filter((i) => i?.q && i?.a) : []
+      )
+    }
+    return data.content?.faq?.items ?? []
+  })()
   // Homepage or sobre page → add LocalBusiness schema
   const showLocalBusiness = slug === 'home' || slug === 'sobre' || slug === 'about'
 
