@@ -162,10 +162,28 @@ export async function loadBlogPost(locale: string, slug: string): Promise<any> {
   if (!contentRaw) return null
   const content = localizeLinkFieldsDeep(localizeDeep(contentRaw, locale), locale)
 
-  const posts = loadJson<any>('content', 'blog', `posts-${locale}.json`) || loadJson<any>('content', 'blog', 'posts.json')
-  if (!posts) return null
-  const list = posts.posts || posts
-  const post = Array.isArray(list) ? list.find((p: any) => p.slug === slug) : null
+  const primary = loadJson<any>('content', 'blog', `posts-${locale}.json`) || loadJson<any>('content', 'blog', 'posts.json')
+  const list = primary?.posts || primary || []
+  let post = Array.isArray(list) ? list.find((p: any) => p.slug === slug) : null
+
+  if (!post) {
+    // Fall back to content/<locale>.json's blog.posts array (used by the
+    // blog index page). The 23 posts there have the same field shape but
+    // their content is locale-aware via per-locale sub-objects.
+    const mainContent = loadJson<Record<string, any>>('content', `${locale}.json`)
+    const mainPosts = mainContent?.blog?.posts
+    if (Array.isArray(mainPosts)) {
+      const raw = mainPosts.find((p: any) => p.slug === slug)
+      if (raw) {
+        // Apply localizeDeep so sub-objects like {es,en,nl,de}.title become
+        // a single string for the current locale, matching the shape of
+        // the posts from content/blog/posts-<locale>.json
+        const localized = localizeDeep(raw, locale)
+        post = localized
+      }
+    }
+  }
+
   if (!post) return null
 
   const result = { content, locale, post }
@@ -182,9 +200,26 @@ export function getPageSlugs(): string[] {
 export function getBlogSlugs(locale: string): string[] {
   const localizedPosts = join(/* turbopackIgnore: true */ process.cwd(), 'content', 'blog', `posts-${locale}.json`)
   const fallbackPosts = join(/* turbopackIgnore: true */ process.cwd(), 'content', 'blog', 'posts.json')
-  const posts = existsSync(localizedPosts)
+  const slugs = new Set<string>()
+  // The blog index page (BlogSection.tsx) reads from content/<locale>.json's
+  // blog.posts array (23 posts per locale). The individual blog page
+  // routing (loadBlogPost above) reads from content/blog/posts-<locale>.json
+  // (4 posts per locale). For the static route generation to cover every
+  // post visible in the index, we need to union the slugs from both sources.
+  const primary = existsSync(localizedPosts)
     ? loadJson<any>('content', 'blog', `posts-${locale}.json`)
     : (existsSync(fallbackPosts) ? loadJson<any>('content', 'blog', 'posts.json') : null)
-  if (!posts) return []
-  return (posts.posts || posts).filter((p: any) => p.slug).map((p: any) => p.slug)
+  if (primary) {
+    for (const p of primary.posts || primary) {
+      if (p?.slug) slugs.add(p.slug)
+    }
+  }
+  // Also include slugs from the main content file (used by the index page)
+  const mainContent = loadJson<any>('content', `${locale}.json`)
+  if (mainContent?.blog?.posts) {
+    for (const p of mainContent.blog.posts) {
+      if (p?.slug) slugs.add(p.slug)
+    }
+  }
+  return [...slugs]
 }
