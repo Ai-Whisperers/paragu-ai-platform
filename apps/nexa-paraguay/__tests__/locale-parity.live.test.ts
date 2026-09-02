@@ -47,12 +47,17 @@ describe("locale parity: es / en / nl / de", () => {
   })
 
   it("every locale has the same set of top-level section keys", () => {
+    // _meta is internal autofill bookkeeping, not user-facing content.
+    // Different locales have different _meta shapes (some have notes,
+    // some have filledAt, es has none), so it should be excluded from
+    // the parity check.
+    const isMetaKey = (k: string) => k === "_meta" || k.startsWith("_meta.")
     const byLang = result.locales as Record<string, { ok: boolean; data: any; error?: string }>
     const ref = "es" in byLang ? "es" : Object.keys(byLang)[0]
-    const refTop = new Set(Object.keys(byLang[ref].data ?? {}))
+    const refTop = new Set(Object.keys(byLang[ref].data ?? {}).filter((k) => !isMetaKey(k)))
     for (const [lang, status] of Object.entries(byLang)) {
       if (!status.ok) continue
-      const top = new Set(Object.keys(status.data))
+      const top = new Set(Object.keys(status.data).filter((k) => !isMetaKey(k)))
       const missing = [...refTop].filter((k) => !top.has(k))
       const extra = [...top].filter((k) => !refTop.has(k))
       expect(
