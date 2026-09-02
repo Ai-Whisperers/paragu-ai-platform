@@ -12,10 +12,18 @@ export function BlogSection({ data, pageContent, locale }: any) {
   const section = data || pageContent?.blog
   if (!section) return null
 
-  const allPosts = section.posts || section.items || []
-  if (!allPosts.length) return null
-
   const lang = resolveClientLocale(locale)
+  const allPosts = (section.posts || section.items || []).filter(
+    (p: any) => {
+      // Hide posts with no body in the current locale — they would render
+      // as blank pages. The posts are still routable via direct URL.
+      const body = typeof p.body === 'object' && p.body !== null
+        ? p.body[lang] || ''
+        : p.body || ''
+      return body.trim().length > 0
+    }
+  )
+  if (!allPosts.length) return null
   const [page, setPage] = useState(1)
   const [categoryFilter, setCategoryFilter] = useState('all')
 
