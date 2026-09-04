@@ -309,7 +309,7 @@ export function Hero({ c, locale }: HeroProps) {
           </div>
 
           {/* Right: visual — image carousel */}
-          <div className="relative max-w-md mx-auto lg:max-w-none">
+          <div className="relative max-w-md sm:max-w-lg mx-auto lg:max-w-none">
             {heroImage ? (
               <div className="relative">
                 <div className="absolute -inset-4 rounded-3xl border-2 border-accent/40 pointer-events-none" aria-hidden="true" />
