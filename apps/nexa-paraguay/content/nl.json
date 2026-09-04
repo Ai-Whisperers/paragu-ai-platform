@@ -302,7 +302,7 @@
     },
     "seo": {
       "title": "Benelux desk — Nexa Paraguay",
-      "description": "Mesa dedicada a inversores holandeses y belgas. Fundador neerlandófono nativo, conocimiento de box 3 y emigratieheffing.",
+      "description": "Speciale desk voor Nederlandse en Belgische investeerders. Moedertaalspreker Nederlands, kennis van box 3 en emigratieheffing.",
       "targetKeyword": "Benelux mudanza Paraguay"
     }
   },
@@ -690,7 +690,7 @@
       "title": "Wat reeds gevestigden zeggen"
     },
     "seo": {
-      "title": "Casos de éxito — Nexa Paraguay",
+      "title": "Succesverhalen — Nexa Paraguay",
       "description": "Echte verhalen van Europese investeerders die hun activiteit met Nexa hebben opgezet.",
       "targetKeyword": "casos de éxito Nexa Paraguay"
     }
@@ -885,7 +885,7 @@
       "subtitle": "Actuele gegevens om de beste beslissing te nemen."
     },
     "seo": {
-      "title": "Nexa vs. DIY vs. gestoría — comparativa",
+      "title": "Nexa vs. DIY vs. gestoría — vergelijking",
       "description": "Een eerlijke vergelijking tussen zelf doen, een lokale tussenpersoon inhuren, of met Nexa werken.",
       "targetKeyword": "comparación mudanza Paraguay"
     }
@@ -904,7 +904,7 @@
         "label": "SEPRELAD — Secretaría de Prevención de Lavado de Dinero o Bienes"
       }
     ],
-    "linkText": "Ver declaración AML completa",
+    "linkText": "Bekijk volledige AML verklaring",
     "linkHref": "/privacidad#aml"
   },
   "contactPage": {
@@ -1228,7 +1228,7 @@
             "href": "/servicios#proceso"
           },
           {
-            "label": "Residencia y Legal",
+            "label": "Verblijf & Juridisch",
             "href": "/servicios#residency-legal"
           },
           {
@@ -1236,7 +1236,7 @@
             "href": "/servicios#banking-tax"
           },
           {
-            "label": "Bienes Raíces",
+            "label": "Vastgoed",
             "href": "/servicios#real-estate"
           }
         ]
@@ -1380,7 +1380,7 @@
     },
     "seo": {
       "title": "Glosario — Nexa Paraguay",
-      "description": "Términos clave: residencia permanente, cédula, RUC, IRE, territorialidad, SEPRELAD, KYC.",
+      "description": "Sleuteltermen: permanente verblijfsvergunning, cédula, RUC, IRE, territorialiteit, SEPRELAD, KYC.",
       "targetKeyword": "glosario términos Paraguay"
     }
   },
@@ -1597,7 +1597,7 @@
       "items": [
         {
           "title": "Nexa Paraguay kondigt nieuw verblijfsprogramma voor investeerders aan",
-          "date": "15 de abril, 2026",
+          "date": "15 april 2026",
           "summary": "Het programma integreert permanente verblijfsvergunning, bedrijfsoprichting en bankrekeningopening in één gecoördineerd proces.",
           "link": "#"
         },
@@ -2478,7 +2478,7 @@
   },
   "datosPersonalesPage": {
     "seo": {
-      "title": "Protección de datos — Nexa Paraguay",
+      "title": "Gegevensbescherming — Nexa Paraguay",
       "description": "Política de protección de datos personales y cumplimiento GDPR de Nexa Paraguay.",
       "targetKeyword": "protección datos Paraguay"
     },

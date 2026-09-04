@@ -867,11 +867,11 @@
       "title": "Puntos clave",
       "items": [
         {
-          "q": "¿Qué datos recogemos?",
+          "q": "What data do we collect?",
           "a": "Name, email, phone (optional), country, program of interest, and stated objective, when you complete a form."
         },
         {
-          "q": "¿Para qué los usamos?",
+          "q": "What do we use it for?",
           "a": "Only to respond to your inquiry and, if you expressly authorize it, to send you relevant information about your move to Paraguay by email or WhatsApp."
         },
         {
@@ -1347,7 +1347,7 @@
             "href": "/servicios#proceso"
           },
           {
-            "label": "Residencia y Legal",
+            "label": "Residency & Legal",
             "href": "/servicios#residency-legal"
           },
           {
@@ -1355,7 +1355,7 @@
             "href": "/servicios#banking-tax"
           },
           {
-            "label": "Bienes Raíces",
+            "label": "Real Estate",
             "href": "/servicios#real-estate"
           }
         ]
@@ -1421,7 +1421,7 @@
         "label": "SEPRELAD — Secretariat for the Prevention of Money Laundering"
       }
     ],
-    "linkText": "Ver declaración AML completa",
+    "linkText": "View full AML declaration",
     "linkHref": "/privacidad#aml"
   },
   "seprealadAttestation": {
@@ -1540,11 +1540,11 @@
       "targetKeyword": "recursos mudanza Paraguay"
     },
     "hero": {
-      "headline": "Recursos para inversores europeos",
+      "headline": "Resources for European investors",
       "subheadline": "Practical guides, templates, and tools to prepare your residency, company, and banking process."
     },
     "guides": {
-      "title": "Guías y Recursos",
+      "title": "Guides & Resources",
       "subtitle": "Download exclusive materials for your move to Paraguay",
       "items": [
         {
@@ -1592,7 +1592,7 @@
       "subtitle": "Once a month, regulatory updates and practical cases. No spam.",
       "ctaText": "Suscribirme",
       "emailPlaceholder": "tu@correo.com",
-      "successMessage": "¡Suscripción confirmada!",
+      "successMessage": "Subscription confirmed!",
       "privacyLabel": "By subscribing you accept our privacy policy."
     }
   },
@@ -1603,12 +1603,12 @@
       "targetKeyword": "calidad de vida Paraguay"
     },
     "hero": {
-      "headline": "Calidad de vida en Paraguay",
+      "headline": "Quality of Life in Paraguay",
       "subheadline": "What you will really experience living in Asunción or Ciudad del Este."
     },
     "pillars": {
-      "eyebrow": "Día a día",
-      "title": "Calidad de Vida en Paraguay",
+      "eyebrow": "Day to day",
+      "title": "Quality of Life in Paraguay",
       "pillars": [
         {
           "icon": "DollarSign",
@@ -1622,7 +1622,7 @@
         },
         {
           "icon": "Users",
-          "title": "Comunidad de Expats Activa",
+          "title": "Active Expat Community",
           "description": "Active expat community with groups, events, and international schools."
         },
         {
@@ -1636,13 +1636,13 @@
       }
     },
     "comparison": {
-      "title": "Vs. Europa: qué cambia",
+      "title": "Vs. Europe: what changes",
       "subtitle": "Resumen honesto. Sin idealizar.",
       "items": [
         {
           "icon": "Check",
           "title": "Servicios privados accesibles",
-          "description": "Salud, educación internacional y servicio doméstico a precios razonables."
+          "description": "Healthcare, international education, and domestic services at reasonable prices."
         },
         {
           "icon": "Check",
@@ -1651,7 +1651,7 @@
         },
         {
           "icon": "AlertTriangle",
-          "title": "Infraestructura en desarrollo",
+          "title": "Developing infrastructure",
           "description": "Some areas have occasional power outages or poorly paved streets."
         }
       ]
@@ -1666,12 +1666,12 @@
   },
   "caseStudiesPage": {
     "seo": {
-      "title": "Casos de éxito — Nexa Paraguay",
+      "title": "Success Stories — Nexa Paraguay",
       "description": "Real stories from European investors who set up their operation with Nexa.",
       "targetKeyword": "casos de éxito Nexa Paraguay"
     },
     "hero": {
-      "headline": "Casos de éxito",
+      "headline": "Success Stories",
       "subheadline": "Real stories from clients who built their operation in Paraguay with professional support."
     },
     "testimonials": {
@@ -1681,7 +1681,7 @@
       "items": [
         {
           "name": "M. — Alemania",
-          "role": "Inversor en agricultura",
+          "role": "Agricultural investor",
           "quote": "In 10 weeks I had residency, a company, and a bank account. A single point of contact."
         },
         {
@@ -1859,7 +1859,7 @@
           "included": [
             "Tú llevas todo",
             "3–6 meses promedio",
-            "Riesgo alto de error",
+            "High risk of error",
             "Sin soporte post-trámite"
           ],
           "ctaLabel": "—",
@@ -1945,7 +1945,7 @@
       "targetKeyword": "glosario términos Paraguay"
     },
     "hero": {
-      "headline": "Glosario de términos clave",
+      "headline": "Glossary of key terms",
       "subheadline": "Clear definitions of the terms you will encounter during the process."
     },
     "glossary": {
@@ -2507,7 +2507,7 @@
   },
   "datosPersonalesPage": {
     "seo": {
-      "title": "Protección de datos — Nexa Paraguay",
+      "title": "Data Protection — Nexa Paraguay",
       "description": "Personal data protection policy and GDPR compliance of Nexa Paraguay.",
       "targetKeyword": "protección datos Paraguay"
     },

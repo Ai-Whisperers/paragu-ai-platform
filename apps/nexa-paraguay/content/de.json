@@ -156,7 +156,7 @@
             "href": "/servicios#proceso"
           },
           {
-            "label": "Residencia y Legal",
+            "label": "Aufenthalt & Recht",
             "href": "/servicios#residency-legal"
           },
           {
@@ -164,7 +164,7 @@
             "href": "/servicios#banking-tax"
           },
           {
-            "label": "Bienes Raíces",
+            "label": "Immobilien",
             "href": "/servicios#real-estate"
           }
         ]
@@ -445,7 +445,7 @@
   },
   "datosPersonalesPage": {
     "seo": {
-      "title": "Protección de datos — Nexa Paraguay",
+      "title": "Datenschutz — Nexa Paraguay",
       "description": "Politik zum Schutz personenbezogener Daten und GDPR-Compliance von Nexa Paraguay.",
       "targetKeyword": "protección datos Paraguay"
     },
@@ -518,12 +518,12 @@
   },
   "caseStudiesPage": {
     "seo": {
-      "title": "Casos de éxito — Nexa Paraguay",
+      "title": "Erfolgsgeschichten — Nexa Paraguay",
       "description": "Echte Geschichten europäischer Investoren, die ihre Operation mit Nexa aufgebaut haben.",
       "targetKeyword": "casos de éxito Nexa Paraguay"
     },
     "hero": {
-      "headline": "Casos de éxito",
+      "headline": "Erfolgsgeschichten",
       "subheadline": "Echte Geschichten von Kunden, die ihre Operation in Paraguay mit professioneller Begleitung aufgebaut haben."
     },
     "testimonials": {
@@ -533,7 +533,7 @@
       "items": [
         {
           "name": "M. — Alemania",
-          "role": "Inversor en agricultura",
+          "role": "Landwirtschaftlicher Investor",
           "quote": "In 10 Wochen hatte ich Residenz, Gesellschaft und Bankkonto. Ein einziger Ansprechpartner."
         },
         {
@@ -930,11 +930,11 @@
       "targetKeyword": "recursos mudanza Paraguay"
     },
     "hero": {
-      "headline": "Recursos para inversores europeos",
+      "headline": "Ressourcen für europäische Investoren",
       "subheadline": "Praktische Leitfäden, Vorlagen und Tools zur Vorbereitung Ihres Aufenthalts-, Gesellschafts- und Bankprozesses."
     },
     "guides": {
-      "title": "Guías y Recursos",
+      "title": "Leitfäden & Ressourcen",
       "subtitle": "Lade exklusive Materialien für deinen Umzug nach Paraguay herunter",
       "items": [
         {
@@ -982,7 +982,7 @@
       "subtitle": "Einmal im Monat regulatorische Neuigkeiten und Praxisfälle. Kein Spam.",
       "ctaText": "Suscribirme",
       "emailPlaceholder": "tu@correo.com",
-      "successMessage": "¡Suscripción confirmada!",
+      "successMessage": "Abonnement bestätigt!",
       "privacyLabel": "Mit deiner Anmeldung akzeptierst du unsere Datenschutzrichtlinie."
     }
   },
@@ -1195,7 +1195,7 @@
       "subheadline": "Für niederländische und belgische Investoren, die Paraguay evaluieren. Niederländischsprachige Führung in Europa, mit umfassendem europäischen Steuerkontext."
     },
     "trust": {
-      "eyebrow": "Para holandeses y belgas",
+      "eyebrow": "Für Niederländer und Belgier",
       "title": "Was ändert sich mit einem niederländischsprachigen Gründer",
       "items": [
         {
@@ -2288,7 +2288,7 @@
         "label": "SEPRELAD — Sekretariat zur Verhinderung von Geldwäsche"
       }
     ],
-    "linkText": "Ver declaración AML completa",
+    "linkText": "Vollständige AML-Erklärung anzeigen",
     "linkHref": "/privacidad#aml"
   },
   "prensa": {
