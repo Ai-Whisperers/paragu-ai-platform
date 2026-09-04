@@ -15,6 +15,11 @@
           "en": "Write to me on WhatsApp",
           "es": "Escribime por WhatsApp"
         }
+      },
+      "image": "/images/hero/dra-gp-hero-doctor.webp",
+      "badge": {
+        "en": "Dra. Gabriella — Te escucho",
+        "es": "Dra. Gabriella — I listen"
       }
     },
     {
@@ -32,6 +37,11 @@
           "en": "Tell me what you lived through",
           "es": "Contame qué viviste"
         }
+      },
+      "image": "/images/services-empathy/teaching.webp",
+      "badge": {
+        "en": "80% conversation, first visit",
+        "es": "80% conversación, primera visita"
       }
     },
     {
@@ -50,6 +60,11 @@
           "es": "Ver cómo puedo ayudarte"
         },
         "href": "#services"
+      },
+      "image": "/images/hero/dra-gp-hero-clinic.webp",
+      "badge": {
+        "en": "Written plan, always",
+        "es": "Plan escrito, siempre"
       }
     }
   ]
