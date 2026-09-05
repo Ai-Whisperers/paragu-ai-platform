@@ -17,7 +17,7 @@ export const DEFAULT_LOCALE: Locale = "es";
 
 const cached: Record<Locale, Content> = {
   es: es as Content,
-  gn: gn as Content,
+  gn: gn as unknown as Content,
 };
 
 /**

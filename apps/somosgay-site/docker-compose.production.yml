@@ -1,0 +1,57 @@
+# ── SOMOSGAY — Swarm stack (production) ──
+# Source of truth for the somosgay-site stack on Host A.
+# Serves somosgay.paragu-ai.com behind Traefik v3.7 on the
+# traefik-public overlay network.
+#
+# Deploy:
+#   pnpm --filter somosgay-site build
+#   ./deploy.sh
+#   # OR: docker stack deploy -c docker-compose.production.yml somosgay-site --with-registry-auth
+
+services:
+  web:
+    image: somosgay-site:prod
+    deploy:
+      mode: replicated
+      replicas: 1
+      update_config:
+        parallelism: 1
+        order: start-first
+        delay: 10s
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        order: stop-first
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 60s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+      labels:
+        - "traefik.enable=true"
+        - "traefik.swarm.network=traefik-public"
+        - "traefik.http.routers.somosgay-site.entrypoints=websecure"
+        - "traefik.http.routers.somosgay-site.rule=Host(`somosgay.paragu-ai.com`)"
+        - "traefik.http.routers.somosgay-site.tls=true"
+        - "traefik.http.routers.somosgay-site.tls.certresolver=le"
+        - "traefik.http.services.somosgay-site.loadbalancer.server.port=3000"
+        - "traefik.http.middlewares.security-headers@file"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_APP_URL=https://somosgay.paragu-ai.com
+      - NEXT_PUBLIC_WHATSAPP_NUMBER=${NEXT_PUBLIC_WHATSAPP_NUMBER:-595986173200}
+      - HOSTNAME=0.0.0.0
+      - PORT=3000
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true
